@@ -40,9 +40,12 @@ namespace Flipbit.Core.Whois.Visitors
 
                 whoIsServer = whoIsServer.SubstringAfterChar(":").Trim();
 
-                using (var tcpReader = TcpReaderFactory.Create())
+                if (!string.IsNullOrEmpty(whoIsServer))
                 {
-                    record.Text = tcpReader.Read(whoIsServer, 43, record.Domain);
+                    using (var tcpReader = TcpReaderFactory.Create())
+                    {
+                        record.Text = tcpReader.Read(whoIsServer, 43, record.Domain);
+                    }
                 }
             }
 
