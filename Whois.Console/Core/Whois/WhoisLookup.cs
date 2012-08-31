@@ -66,6 +66,9 @@ namespace Flipbit.Core.Whois
 
                     // PT domains
                     new DnsPtVisitor(encoding),
+
+                    // BR domains
+                    new RegistroBrVisitor(encoding),
                 };
         }
 
