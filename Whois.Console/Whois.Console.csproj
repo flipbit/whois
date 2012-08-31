@@ -66,6 +66,7 @@
     <Compile Include="Core\Whois\TcpReader.cs" />
     <Compile Include="Core\Whois\TcpReaderFactory.cs" />
     <Compile Include="Core\Whois\Validators\DomainValidator.cs" />
+    <Compile Include="Core\Whois\Visitors\DnsPtVisitor.cs" />
     <Compile Include="Core\Whois\Visitors\DownloadSecondaryServerVisitor.cs" />
     <Compile Include="Core\Whois\Visitors\DownloadVisitor.cs" />
     <Compile Include="Core\Whois\Visitors\ExpandResultsVisitor.cs" />

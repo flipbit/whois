@@ -62,7 +62,10 @@ namespace Flipbit.Core.Whois
                     new MarkMonitorVisitor(encoding),
 
                     // RIPN
-                    new RipnVisitor(encoding)
+                    new RipnVisitor(encoding),
+
+                    // PT domains
+                    new DnsPtVisitor(encoding),
                 };
         }
 

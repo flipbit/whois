@@ -65,6 +65,7 @@
     <Compile Include="Core\Whois\Strings\SubstringByCharExtensionTest.cs" />
     <Compile Include="Core\Whois\TcpReaderTest.cs" />
     <Compile Include="Core\Whois\Validators\DomainValidatorTest.cs" />
+    <Compile Include="Core\Whois\Visitors\DnsPtVisitorTest.cs" />
     <Compile Include="Core\Whois\Visitors\DownloadSecondaryServerVisitorTest.cs" />
     <Compile Include="Core\Whois\Visitors\DownloadVisitorTest.cs" />
     <Compile Include="Core\Whois\Visitors\ExpandResultsVisitorTest.cs" />
