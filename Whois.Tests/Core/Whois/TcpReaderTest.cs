@@ -1,5 +1,6 @@
 ﻿using System;
 using System.Collections;
+using System.Text;
 using Flipbit.Core.Whois.Arrays;
 using NUnit.Framework;
 
@@ -23,6 +24,36 @@ namespace Flipbit.Core.Whois
 
             // Just check the domain name is in the response
             Assert.Greater(result.IndexOfLineContaining("cogworks.co.uk"), -1);
+        }
+
+        [Test]
+        public void TestReadWhoisForSapoPt()
+        {
+            ArrayList result;
+            var encoding = Encoding.GetEncoding("ISO-8859-1");
+
+            using (var reader = new TcpReader(encoding))
+            {
+                result = reader.Read("whois.dns.pt", 43, "sapo.pt");
+            }
+
+            // Just check the domain name is in the response
+            Assert.Greater(result.IndexOfLineContaining("sapo.pt"), -1);
+        }
+
+        [Test]
+        public void TestReadWhoisForUolComBr()
+        {
+            ArrayList result;
+            var encoding = Encoding.GetEncoding("ISO-8859-1");
+
+            using (var reader = new TcpReader(encoding))
+            {
+                result = reader.Read("registro.br", 43, "uol.com.br");
+            }
+
+            // Just check the domain name is in the response
+            Assert.Greater(result.IndexOfLineContaining("uol.com.br"), -1);
         }
 
         [Test]
