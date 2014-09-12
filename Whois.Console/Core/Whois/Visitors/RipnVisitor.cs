@@ -22,8 +22,7 @@ namespace Flipbit.Core.Whois.Visitors
         /// <summary>
         /// Initializes a new instance of the <see cref="RipnVisitor"/> class.
         /// </summary>
-        public RipnVisitor()
-            : this(Encoding.UTF8)
+        public RipnVisitor(): this(Encoding.UTF8)
         {
         }
 

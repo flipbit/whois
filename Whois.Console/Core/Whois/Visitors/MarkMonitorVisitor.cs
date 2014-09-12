@@ -22,8 +22,7 @@ namespace Flipbit.Core.Whois.Visitors
         /// <summary>
         /// Initializes a new instance of the <see cref="MarkMonitorVisitor"/> class.
         /// </summary>
-        public MarkMonitorVisitor()
-            : this(Encoding.UTF8)
+        public MarkMonitorVisitor() : this(Encoding.UTF8)
         {
         }
 

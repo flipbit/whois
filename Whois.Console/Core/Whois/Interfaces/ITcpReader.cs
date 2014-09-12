@@ -16,6 +16,13 @@ namespace Flipbit.Core.Whois.Interfaces
         /// <returns>The current character encoding used by the current reader.</returns>
         Encoding CurrentEncoding { get; }
 
+        /// <summary>
+        /// Reads data from the specified URL and port.
+        /// </summary>
+        /// <param name="url">The URL.</param>
+        /// <param name="port">The port.</param>
+        /// <param name="command">The command.</param>
+        /// <returns></returns>
         ArrayList Read(string url, int port, string command);
     }
 }

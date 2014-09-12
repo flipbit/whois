@@ -25,8 +25,7 @@ namespace Flipbit.Core.Whois.Visitors
         /// <summary>
         /// Initializes a new instance of the <see cref="DownloadVisitor"/> class.
         /// </summary>
-        public DownloadVisitor()
-            : this(Encoding.UTF8)
+        public DownloadVisitor() : this(Encoding.UTF8)
         {
         }
 

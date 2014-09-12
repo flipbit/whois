@@ -25,8 +25,7 @@ namespace Flipbit.Core.Whois.Visitors
         /// <summary>
         /// Initializes a new instance of the <see cref="WhoisServerVisitor"/> class.
         /// </summary>
-        public WhoisServerVisitor()
-            : this(Encoding.UTF8)
+        public WhoisServerVisitor() : this(Encoding.UTF8)
         {
         }
 

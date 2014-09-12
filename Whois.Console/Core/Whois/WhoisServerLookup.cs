@@ -21,8 +21,7 @@ namespace Flipbit.Core.Whois
         /// <summary>
         /// Initializes a new instance of the <see cref="WhoisServerLookup"/> class.
         /// </summary>
-        public WhoisServerLookup()
-            : this(Encoding.UTF8)
+        public WhoisServerLookup(): this(Encoding.UTF8)
         {
         }
 

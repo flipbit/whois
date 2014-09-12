@@ -6,7 +6,7 @@ namespace Flipbit
     class Program
     {
         /// <summary>
-        /// Simple program to do a WHOIS lookup on cogworks.co.uk then exit.
+        /// Simple program to do a WHOIS lookup then exit.
         /// </summary>
         /// <param name="args">The args.</param>
         static void Main(string[] args)

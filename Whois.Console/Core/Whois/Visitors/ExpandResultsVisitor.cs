@@ -26,8 +26,7 @@ namespace Flipbit.Core.Whois.Visitors
         /// <summary>
         /// Initializes a new instance of the <see cref="ExpandResultsVisitor"/> class.
         /// </summary>
-        public ExpandResultsVisitor()
-            : this(Encoding.UTF8)
+        public ExpandResultsVisitor() : this(Encoding.UTF8)
         {
         }
 
@@ -37,7 +36,6 @@ namespace Flipbit.Core.Whois.Visitors
         /// <param name="encoding">The encoding used to read and write strings.</param>
         public ExpandResultsVisitor(Encoding encoding)
         {
-            // You should use an IoC container to do this.
             TcpReaderFactory = new TcpReaderFactory();
 
             CurrentEncoding = encoding;

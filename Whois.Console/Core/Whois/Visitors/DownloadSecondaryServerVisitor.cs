@@ -27,8 +27,7 @@ namespace Flipbit.Core.Whois.Visitors
         /// <summary>
         /// Initializes a new instance of the <see cref="DownloadSecondaryServerVisitor"/> class.
         /// </summary>
-        public DownloadSecondaryServerVisitor()
-            : this(Encoding.UTF8)
+        public DownloadSecondaryServerVisitor() : this(Encoding.UTF8)
         {
         }
 

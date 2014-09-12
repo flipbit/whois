@@ -27,9 +27,9 @@ namespace Flipbit.Core.Whois
 
                 reader = new StreamReader(tcpClient.GetStream(), CurrentEncoding);
                 writer = new StreamWriter(tcpClient.GetStream())
-                    {
-                        NewLine = "\r\n",
-                    };
+                {
+                    NewLine = "\r\n",
+                };
             }
             catch (SocketException ex)
             {
@@ -87,8 +87,7 @@ namespace Flipbit.Core.Whois
         /// <summary>
         /// Initializes a new instance of the <see cref="TcpReader"/> class.
         /// </summary>
-        public TcpReader()
-            : this(Encoding.UTF8)
+        public TcpReader() : this(Encoding.UTF8)
         {
         }
 
