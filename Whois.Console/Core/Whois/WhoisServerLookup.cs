@@ -1,4 +1,5 @@
 ﻿using System;
+using System.Text;
 using System.Net;
 using System.Net.Sockets;
 using Flipbit.Core.Whois.Interfaces;
@@ -10,6 +11,30 @@ namespace Flipbit.Core.Whois
     /// </summary>
     public class WhoisServerLookup : IWhoisServerLookup
     {
+        /// <summary>
+        /// Gets the current character encoding that the current WhoisServerLookup
+        /// object is using.
+        /// </summary>
+        /// <returns>The current character encoding used by the current WhoisServerLookup.</returns>
+        public Encoding CurrentEncoding { get; private set; }
+
+        /// <summary>
+        /// Initializes a new instance of the <see cref="WhoisServerLookup"/> class.
+        /// </summary>
+        public WhoisServerLookup()
+            : this(Encoding.UTF8)
+        {
+        }
+
+        /// <summary>
+        /// Initializes a new instance of the <see cref="WhoisServerLookup"/> class.
+        /// </summary>
+        /// <param name="encoding">The encoding used to read and write strings.</param>
+        public WhoisServerLookup(Encoding encoding)
+        {
+            CurrentEncoding = encoding;
+        }
+
         /// <summary>
         /// Gets the TLD for a given domain.
         /// </summary>

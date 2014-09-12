@@ -1,4 +1,5 @@
-﻿using Flipbit.Core.Whois.Domain;
+﻿using System.Text;
+using Flipbit.Core.Whois.Domain;
 using Flipbit.Core.Whois.Interfaces;
 
 namespace Flipbit.Core.Whois.Visitors
@@ -8,7 +9,14 @@ namespace Flipbit.Core.Whois.Visitors
     /// </summary>
     public class DownloadVisitor : IWhoisVisitor
     {
-         /// <summary>
+        /// <summary>
+        /// Gets the current character encoding that the current WhoisVisitor
+        /// object is using.
+        /// </summary>
+        /// <returns>The current character encoding used by the current visitor.</returns>
+        public Encoding CurrentEncoding { get; private set; }
+
+        /// <summary>
         /// Gets or sets the TCP reader factory.
         /// </summary>
         /// <value>The TCP reader factory.</value>
@@ -18,9 +26,20 @@ namespace Flipbit.Core.Whois.Visitors
         /// Initializes a new instance of the <see cref="DownloadVisitor"/> class.
         /// </summary>
         public DownloadVisitor()
+            : this(Encoding.UTF8)
+        {
+        }
+
+        /// <summary>
+        /// Initializes a new instance of the <see cref="DownloadVisitor"/> class.
+        /// </summary>
+        /// <param name="encoding">The encoding used to read and write strings.</param>
+        public DownloadVisitor(Encoding encoding)
         {
             // You should use an IoC container to do this.
-            TcpReaderFactory = new TcpReaderFactory();    
+            TcpReaderFactory = new TcpReaderFactory();
+
+            CurrentEncoding = encoding;
         }
 
         /// <summary>
@@ -30,7 +49,7 @@ namespace Flipbit.Core.Whois.Visitors
         /// <returns></returns>
         public WhoisRecord Visit(WhoisRecord record)
         {
-            using (var tcpReader = TcpReaderFactory.Create())
+            using (var tcpReader = TcpReaderFactory.Create(CurrentEncoding))
             {
                 record.Text = tcpReader.Read(record.Server, 43, record.Domain);
             }

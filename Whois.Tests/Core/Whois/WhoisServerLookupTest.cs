@@ -79,6 +79,22 @@ namespace Flipbit.Core.Whois
         }
 
         [Test]
+        public void TestGetNameServerForPtDomain()
+        {
+            var server = lookup.Lookup("example.pt");
+
+            Assert.AreEqual("whois.dns.pt", server);
+        }
+
+        [Test]
+        public void TestGetNameServerForBrDomain()
+        {
+            var server = lookup.Lookup("example.com.br");
+
+            Assert.AreEqual("registro.br", server);
+        }
+
+        [Test]
         public void TestGetNameServerForInvalidDomain()
         {
             try

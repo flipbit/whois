@@ -1,5 +1,6 @@
 ﻿using System;
 using System.Collections;
+using System.Text;
 using System.IO;
 using System.Net.Sockets;
 using Flipbit.Core.Whois.Interfaces;
@@ -24,8 +25,11 @@ namespace Flipbit.Core.Whois
             {
                 tcpClient.Connect(domain, port);
 
-                reader = new StreamReader(tcpClient.GetStream());
-                writer = new StreamWriter(tcpClient.GetStream()) { NewLine = "\r\n" };
+                reader = new StreamReader(tcpClient.GetStream(), CurrentEncoding);
+                writer = new StreamWriter(tcpClient.GetStream())
+                    {
+                        NewLine = "\r\n",
+                    };
             }
             catch (SocketException ex)
             {
@@ -74,11 +78,29 @@ namespace Flipbit.Core.Whois
         #endregion
 
         /// <summary>
+        /// Gets the current character encoding that the current TcpReader
+        /// object is using.
+        /// </summary>
+        /// <returns>The current character encoding used by the current reader.</returns>
+        public Encoding CurrentEncoding { get; private set; }
+
+        /// <summary>
         /// Initializes a new instance of the <see cref="TcpReader"/> class.
         /// </summary>
         public TcpReader()
+            : this(Encoding.UTF8)
+        {
+        }
+
+        /// <summary>
+        /// Initializes a new instance of the <see cref="TcpReader"/> class.
+        /// </summary>
+        /// <param name="encoding">The encoding used to read and write strings.</param>
+        public TcpReader(Encoding encoding)
         {
             tcpClient = new TcpClient();
+
+            CurrentEncoding = encoding;
         }
 
         /// <summary>

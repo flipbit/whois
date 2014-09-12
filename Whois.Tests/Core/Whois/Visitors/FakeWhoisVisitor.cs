@@ -1,4 +1,5 @@
 ﻿using System.Collections;
+using System.Text;
 using Flipbit.Core.Whois.Domain;
 using Flipbit.Core.Whois.Interfaces;
 
@@ -10,6 +11,8 @@ namespace Flipbit.Core.Whois.Visitors
     internal class FakeWhoisVisitor : IWhoisVisitor
     {
         private readonly string fakeContent;
+
+        public Encoding CurrentEncoding { get; private set; }
 
         public FakeWhoisVisitor(string content)
         {

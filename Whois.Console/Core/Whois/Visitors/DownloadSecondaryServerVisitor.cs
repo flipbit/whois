@@ -1,4 +1,5 @@
-﻿using Flipbit.Core.Whois.Arrays;
+﻿using System.Text;
+using Flipbit.Core.Whois.Arrays;
 using Flipbit.Core.Whois.Domain;
 using Flipbit.Core.Whois.Interfaces;
 using Flipbit.Core.Whois.Strings;
@@ -17,12 +18,30 @@ namespace Flipbit.Core.Whois.Visitors
         public ITcpReaderFactory TcpReaderFactory { get; set; }
 
         /// <summary>
+        /// Gets the current character encoding that the current WhoisVisitor
+        /// object is using.
+        /// </summary>
+        /// <returns>The current character encoding used by the current visitor.</returns>
+        public Encoding CurrentEncoding { get; private set; }
+
+        /// <summary>
         /// Initializes a new instance of the <see cref="DownloadSecondaryServerVisitor"/> class.
         /// </summary>
         public DownloadSecondaryServerVisitor()
+            : this(Encoding.UTF8)
+        {
+        }
+
+        /// <summary>
+        /// Initializes a new instance of the <see cref="DownloadSecondaryServerVisitor"/> class.
+        /// </summary>
+        /// <param name="encoding">The encoding used to read and write strings.</param>
+        public DownloadSecondaryServerVisitor(Encoding encoding)
         {
             // You should use an IoC container to do this.
-            TcpReaderFactory = new TcpReaderFactory();    
+            TcpReaderFactory = new TcpReaderFactory();
+
+            CurrentEncoding = encoding;
         }
 
         /// <summary>
@@ -40,9 +59,12 @@ namespace Flipbit.Core.Whois.Visitors
 
                 whoIsServer = whoIsServer.SubstringAfterChar(":").Trim();
 
-                using (var tcpReader = TcpReaderFactory.Create())
+                if (!string.IsNullOrEmpty(whoIsServer))
                 {
-                    record.Text = tcpReader.Read(whoIsServer, 43, record.Domain);
+                    using (var tcpReader = TcpReaderFactory.Create(CurrentEncoding))
+                    {
+                        record.Text = tcpReader.Read(whoIsServer, 43, record.Domain);
+                    }
                 }
             }
 

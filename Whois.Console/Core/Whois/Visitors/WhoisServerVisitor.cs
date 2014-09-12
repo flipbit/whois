@@ -1,4 +1,5 @@
-﻿using Flipbit.Core.Whois.Domain;
+﻿using System.Text;
+using Flipbit.Core.Whois.Domain;
 using Flipbit.Core.Whois.Interfaces;
 
 namespace Flipbit.Core.Whois.Visitors
@@ -15,11 +16,29 @@ namespace Flipbit.Core.Whois.Visitors
         public IWhoisServerLookup WhoisServerLookup { get; set; }
 
         /// <summary>
+        /// Gets the current character encoding that the current TcpReader
+        /// object is using.
+        /// </summary>
+        /// <returns>The current character encoding used by the current reader.</returns>
+        public Encoding CurrentEncoding { get; private set; }
+
+        /// <summary>
         /// Initializes a new instance of the <see cref="WhoisServerVisitor"/> class.
         /// </summary>
         public WhoisServerVisitor()
+            : this(Encoding.UTF8)
         {
-            WhoisServerLookup = new WhoisServerLookup();
+        }
+
+        /// <summary>
+        /// Initializes a new instance of the <see cref="WhoisServerVisitor"/> class.
+        /// </summary>
+        /// <param name="encoding">The encoding used to read and write strings.</param>
+        public WhoisServerVisitor(Encoding encoding)
+        {
+            WhoisServerLookup = new WhoisServerLookup(encoding);
+
+            CurrentEncoding = encoding;
         }
 
         /// <summary>
