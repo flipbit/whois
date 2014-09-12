@@ -1,7 +1,6 @@
 ﻿using System;
-using Flipbit.Core.Whois;
 
-namespace Flipbit
+namespace Whois
 {
     class Program
     {

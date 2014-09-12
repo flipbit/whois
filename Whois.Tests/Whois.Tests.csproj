@@ -8,9 +8,9 @@
     <ProjectGuid>{4A7B8356-8CF9-44A7-A1C1-F8A71E566AA7}</ProjectGuid>
     <OutputType>Library</OutputType>
     <AppDesignerFolder>Properties</AppDesignerFolder>
-    <RootNamespace>Flipbit</RootNamespace>
+    <RootNamespace>Whois</RootNamespace>
     <AssemblyName>Whois.Tests</AssemblyName>
-    <TargetFrameworkVersion>v3.5</TargetFrameworkVersion>
+    <TargetFrameworkVersion>v4.0</TargetFrameworkVersion>
     <FileAlignment>512</FileAlignment>
     <StartupObject>
     </StartupObject>
@@ -18,6 +18,7 @@
     </FileUpgradeFlags>
     <OldToolsVersion>3.5</OldToolsVersion>
     <UpgradeBackupLocation />
+    <TargetFrameworkProfile />
   </PropertyGroup>
   <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
     <DebugSymbols>true</DebugSymbols>
@@ -55,38 +56,35 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
-    <Compile Include="Core\Whois\Arrays\AsStringExtensionTest.cs" />
-    <Compile Include="Core\Whois\Arrays\ContainingExtensionTest.cs" />
-    <Compile Include="Core\Whois\Arrays\EndsWithExtensionTest.cs" />
-    <Compile Include="Core\Whois\Arrays\StartsWithExtensionTest.cs" />
-    <Compile Include="Core\Whois\FakeTcpReader.cs" />
-    <Compile Include="Core\Whois\FakeTcpReaderFactory.cs" />
-    <Compile Include="Core\Whois\FakeWhoisServerLookup.cs" />
-    <Compile Include="Core\Whois\Strings\SubstringByCharExtensionTest.cs" />
-    <Compile Include="Core\Whois\TcpReaderTest.cs" />
-    <Compile Include="Core\Whois\Validators\DomainValidatorTest.cs" />
-    <Compile Include="Core\Whois\Visitors\RegistroBrVisitorTest.cs" />
-    <Compile Include="Core\Whois\Visitors\DnsPtVisitorTest.cs" />
-    <Compile Include="Core\Whois\Visitors\DownloadSecondaryServerVisitorTest.cs" />
-    <Compile Include="Core\Whois\Visitors\DownloadVisitorTest.cs" />
-    <Compile Include="Core\Whois\Visitors\ExpandResultsVisitorTest.cs" />
-    <Compile Include="Core\Whois\Visitors\FakeWhoisVisitor.cs" />
-    <Compile Include="Core\Whois\Visitors\MarkMonitorVisitorTest.cs" />
-    <Compile Include="Core\Whois\Visitors\NominetVisitorTest.cs" />
-    <Compile Include="Core\Whois\Visitors\RipnVisitorTest.cs" />
-    <Compile Include="Core\Whois\Visitors\WhoisServerVisitorTest.cs" />
-    <Compile Include="Core\Whois\WhoisLookupTest.cs" />
-    <Compile Include="Core\Whois\WhoisServerLookupTest.cs" />
+    <Compile Include="Arrays\AsStringExtensionTest.cs" />
+    <Compile Include="Arrays\ContainingExtensionTest.cs" />
+    <Compile Include="Arrays\EndsWithExtensionTest.cs" />
+    <Compile Include="Arrays\StartsWithExtensionTest.cs" />
+    <Compile Include="FakeTcpReader.cs" />
+    <Compile Include="FakeTcpReaderFactory.cs" />
+    <Compile Include="FakeWhoisServerLookup.cs" />
+    <Compile Include="Strings\SubstringByCharExtensionTest.cs" />
+    <Compile Include="TcpReaderTest.cs" />
+    <Compile Include="Validators\DomainValidatorTest.cs" />
+    <Compile Include="Visitors\RegistroBrVisitorTest.cs" />
+    <Compile Include="Visitors\DnsPtVisitorTest.cs" />
+    <Compile Include="Visitors\DownloadSecondaryServerVisitorTest.cs" />
+    <Compile Include="Visitors\DownloadVisitorTest.cs" />
+    <Compile Include="Visitors\ExpandResultsVisitorTest.cs" />
+    <Compile Include="Visitors\FakeWhoisVisitor.cs" />
+    <Compile Include="Visitors\MarkMonitorVisitorTest.cs" />
+    <Compile Include="Visitors\NominetVisitorTest.cs" />
+    <Compile Include="Visitors\RipnVisitorTest.cs" />
+    <Compile Include="Visitors\WhoisServerVisitorTest.cs" />
+    <Compile Include="WhoisLookupTest.cs" />
+    <Compile Include="WhoisServerLookupTest.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
   </ItemGroup>
   <ItemGroup>
-    <ProjectReference Include="..\Whois.Console\Whois.Console.csproj">
-      <Project>{611C1679-3605-49A6-902F-DEBFBBC9E0A4}</Project>
-      <Name>Whois.Console</Name>
+    <ProjectReference Include="..\Whois\Whois.csproj">
+      <Project>{EC562E36-605B-46D5-92D2-BAD0C6C6E863}</Project>
+      <Name>Whois</Name>
     </ProjectReference>
-  </ItemGroup>
-  <ItemGroup>
-    <Folder Include="DLL\" />
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
   <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 

@@ -8,14 +8,15 @@
     <ProjectGuid>{611C1679-3605-49A6-902F-DEBFBBC9E0A4}</ProjectGuid>
     <OutputType>Exe</OutputType>
     <AppDesignerFolder>Properties</AppDesignerFolder>
-    <RootNamespace>Flipbit</RootNamespace>
+    <RootNamespace>Whois</RootNamespace>
     <AssemblyName>whois</AssemblyName>
-    <TargetFrameworkVersion>v3.5</TargetFrameworkVersion>
+    <TargetFrameworkVersion>v4.0</TargetFrameworkVersion>
     <FileAlignment>512</FileAlignment>
     <FileUpgradeFlags>
     </FileUpgradeFlags>
     <OldToolsVersion>3.5</OldToolsVersion>
     <UpgradeBackupLocation />
+    <TargetFrameworkProfile />
   </PropertyGroup>
   <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
     <DebugSymbols>true</DebugSymbols>
@@ -49,36 +50,14 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
-    <Compile Include="Core\Whois\Arrays\ArrayFinder.cs" />
-    <Compile Include="Core\Whois\Arrays\AsStringExtension.cs" />
-    <Compile Include="Core\Whois\Arrays\ContainsExtension.cs" />
-    <Compile Include="Core\Whois\Arrays\ContainsFinder.cs" />
-    <Compile Include="Core\Whois\Arrays\EndsWithExtension.cs" />
-    <Compile Include="Core\Whois\Arrays\EndsWithFinder.cs" />
-    <Compile Include="Core\Whois\Arrays\StartsWithExtension.cs" />
-    <Compile Include="Core\Whois\Arrays\StartsWithFinder.cs" />
-    <Compile Include="Core\Whois\Domain\WhoisRecord.cs" />
-    <Compile Include="Core\Whois\Interfaces\ITcpReader.cs" />
-    <Compile Include="Core\Whois\Interfaces\ITcpReaderFactory.cs" />
-    <Compile Include="Core\Whois\Interfaces\IWhoisServerLookup.cs" />
-    <Compile Include="Core\Whois\Interfaces\IWhoisVisitor.cs" />
-    <Compile Include="Core\Whois\Strings\SubstringByCharExtension.cs" />
-    <Compile Include="Core\Whois\TcpReader.cs" />
-    <Compile Include="Core\Whois\TcpReaderFactory.cs" />
-    <Compile Include="Core\Whois\Validators\DomainValidator.cs" />
-    <Compile Include="Core\Whois\Visitors\RegistroBrVisitor.cs" />
-    <Compile Include="Core\Whois\Visitors\DnsPtVisitor.cs" />
-    <Compile Include="Core\Whois\Visitors\DownloadSecondaryServerVisitor.cs" />
-    <Compile Include="Core\Whois\Visitors\DownloadVisitor.cs" />
-    <Compile Include="Core\Whois\Visitors\ExpandResultsVisitor.cs" />
-    <Compile Include="Core\Whois\Visitors\MarkMonitorVisitor.cs" />
-    <Compile Include="Core\Whois\Visitors\NominetVisitor.cs" />
-    <Compile Include="Core\Whois\Visitors\RipnVisitor.cs" />
-    <Compile Include="Core\Whois\Visitors\WhoisServerVisitor.cs" />
-    <Compile Include="Core\Whois\WhoisLookup.cs" />
-    <Compile Include="Core\Whois\WhoisServerLookup.cs" />
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
+  </ItemGroup>
+  <ItemGroup>
+    <ProjectReference Include="..\Whois\Whois.csproj">
+      <Project>{EC562E36-605B-46D5-92D2-BAD0C6C6E863}</Project>
+      <Name>Whois</Name>
+    </ProjectReference>
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
   <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 

@@ -5,6 +5,8 @@ Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Whois.Console", "Whois.Cons
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Whois.Tests", "Whois.Tests\Whois.Tests.csproj", "{4A7B8356-8CF9-44A7-A1C1-F8A71E566AA7}"
 EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Whois", "Whois\Whois.csproj", "{EC562E36-605B-46D5-92D2-BAD0C6C6E863}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -19,6 +21,10 @@ Global
 		{4A7B8356-8CF9-44A7-A1C1-F8A71E566AA7}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{4A7B8356-8CF9-44A7-A1C1-F8A71E566AA7}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{4A7B8356-8CF9-44A7-A1C1-F8A71E566AA7}.Release|Any CPU.Build.0 = Release|Any CPU
+		{EC562E36-605B-46D5-92D2-BAD0C6C6E863}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{EC562E36-605B-46D5-92D2-BAD0C6C6E863}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{EC562E36-605B-46D5-92D2-BAD0C6C6E863}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{EC562E36-605B-46D5-92D2-BAD0C6C6E863}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
