@@ -1,4 +1,6 @@
 ﻿using System.Collections;
+using System.IO;
+using System.Text;
 using Flipbit.Core.Whois.Interfaces;
 
 namespace Flipbit.Core.Whois
@@ -8,6 +10,13 @@ namespace Flipbit.Core.Whois
     /// </summary>
     internal class FakeTcpReader : ITcpReader
     {
+        public Encoding CurrentEncoding { get; private set; }
+
+        public FakeTcpReader(Encoding encoding)
+        {
+            CurrentEncoding = encoding;
+        }
+
         public ArrayList Read(string url, int port, string command)
         {
             var response = new ArrayList();
@@ -25,9 +34,40 @@ namespace Flipbit.Core.Whois
                 case "=google.com":
                     response.AddRange(FakeGoogleResponse2.Split('\n'));
                     break;
+
+                case "sapo.pt":
+                    {
+                        // Encode the fake response properly to simulate exactly how a real
+                        // response would look like since it is encoded in ISO-8859-1
+                        var srcEncoding = Encoding.UTF8;
+                        var dstEncoding = Encoding.GetEncoding("ISO-8859-1");
+
+                        var encodedResponse = EncodeResponse(FakeSapoResponse, srcEncoding, dstEncoding);
+                        response.AddRange(encodedResponse.Split('\n'));
+                        break;
+                    }
+                case "uol.com.br":
+                    {
+                        // Encode the fake response properly to simulate exactly how a real
+                        // response would look like since it is encoded in ISO-8859-1
+                        var srcEncoding = Encoding.UTF8;
+                        var dstEncoding = Encoding.GetEncoding("ISO-8859-1");
+
+                        var encodedResponse = EncodeResponse(FakeUolResponse, srcEncoding, dstEncoding);
+                        response.AddRange(encodedResponse.Split('\n'));
+                        break;
+                    }
             };
 
             return response;
+        }
+
+        private string EncodeResponse(string fakeResponse, Encoding srcEncoding, Encoding dstEncoding)
+        {
+            var convertedBytes = Encoding.Convert(srcEncoding, dstEncoding,
+                srcEncoding.GetBytes(fakeResponse));
+
+            return CurrentEncoding.GetString(convertedBytes);
         }
 
         public void Dispose()
@@ -478,6 +518,103 @@ source:     TC-RIPN
 
 
 Last updated on 2009.06.12 18:12:58 MSK/MSD";
+
+        // Retrieved 31st August, 2012
+        public const string FakeSapoResponse =
+            @"Nome de domínio / Domain Name: sapo.pt
+Data de registo / Creation Date (dd/mm/yyyy): 30/10/2002
+Data de expiração / Expiration Date (dd/mm/yyyy): 02/11/2012
+Estado / Status: ACTIVE
+
+Titular / Registrant
+   PT Comunicações S.A.
+   Rua Andrade Corvo, Nº 6
+   Lisboa
+   1050-009 Lisboa
+   Email: gestao.dominios@telecom.pt
+
+Entidade Gestora / Billing Contact
+   PT Comunicações S.A.
+   Email: gestao.dominios@telecom.pt
+
+Responsável Técnico / Tech Contact
+   PT Comunicações S.A.
+   Email: gestao.dominios@telecom.pt
+
+Nameserver Information
+   Nameserver: sapo.pt	NS	ns2.sapo.pt.
+   Nameserver: sapo.pt	NS	dns02.sapo.pt.
+   Nameserver: sapo.pt	NS	ns.sapo.pt.
+   Nameserver: sapo.pt	NS	dns01.sapo.pt.
+   Nameserver: ns2.sapo.pt.	A	212.55.154.194
+   Nameserver: dns02.sapo.pt.	AAAA	2001:8a0:2206:4:213:13:30:116
+   Nameserver: ns.sapo.pt.	A	212.55.154.202
+   Nameserver: dns01.sapo.pt.	AAAA	2001:8a0:2106:4:213:13:28:116
+   Nameserver: dns01.sapo.pt.	A	213.13.28.116
+   Nameserver: dns02.sapo.pt.	A	213.13.30.116
+";
+
+        // Retrieved 31st August, 2012
+        public const string FakeUolResponse =
+            @"
+% Copyright (c) Nic.br
+%  The use of the data below is only permitted as described in
+%  full by the terms of use (http://registro.br/termo/en.html),
+%  being prohibited its distribution, comercialization or
+%  reproduction, in particular, to use it for advertising or
+%  any similar purpose.
+%  2012-08-31 01:37:25 (BRT -03:00)
+
+domain:      uol.com.br
+owner:       Universo Online S.A.
+ownerid:     001.109.184/0004-38
+responsible: Contato da Entidade UOL
+country:     BR
+owner-c:     CAU12
+admin-c:     CAU12
+tech-c:      CTU6
+billing-c:   CCU10
+nserver:     eliot.uol.com.br 200.221.11.98 
+nsstat:      20120830 AA
+nslastaa:    20120830
+nserver:     borges.uol.com.br 200.147.255.105 
+nsstat:      20120830 AA
+nslastaa:    20120830
+nserver:     charles.uol.com.br 200.147.38.8 
+nsstat:      20120830 AA
+nslastaa:    20120830
+created:     19960424 #7137
+expires:     20130424
+changed:     20120308
+status:      published
+
+nic-hdl-br:  CAU12
+person:      Contato Administrativo - UOL
+e-mail:      l-registrobr-uol@corp.uol.com.br
+created:     20031202
+changed:     20100106
+
+nic-hdl-br:  CCU10
+person:      Contato de Cobranca - UOL
+e-mail:      l-adm-dns@uolinc.com
+created:     20031202
+changed:     20070301
+
+nic-hdl-br:  CTU6
+person:      Contato Tecnico - UOL
+e-mail:      l-adm-dns@uolinc.com
+created:     20031202
+changed:     20070301
+
+% Security and mail abuse issues should also be addressed to
+% cert.br, http://www.cert.br/, respectivelly to cert@cert.br
+% and mail-abuse@cert.br
+%
+% whois.registro.br accepts only direct match queries. Types
+% of queries are: domain (.br), ticket, provider, ID, CIDR
+% block, IP and ASN.
+
+";
 
         #endregion
     }

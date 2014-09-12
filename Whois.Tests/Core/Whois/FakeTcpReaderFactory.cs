@@ -1,4 +1,5 @@
-﻿using Flipbit.Core.Whois.Interfaces;
+﻿using System.Text;
+using Flipbit.Core.Whois.Interfaces;
 
 namespace Flipbit.Core.Whois
 {
@@ -9,7 +10,12 @@ namespace Flipbit.Core.Whois
     {
         public ITcpReader Create()
         {
-            return new FakeTcpReader();
+            return new FakeTcpReader(Encoding.UTF8);
+        }
+
+        public ITcpReader Create(Encoding encoding)
+        {
+            return new FakeTcpReader(encoding);
         }
     }
 }

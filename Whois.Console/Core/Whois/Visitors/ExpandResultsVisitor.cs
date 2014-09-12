@@ -1,4 +1,5 @@
-﻿using Flipbit.Core.Whois.Arrays;
+﻿using System.Text;
+using Flipbit.Core.Whois.Arrays;
 using Flipbit.Core.Whois.Domain;
 using Flipbit.Core.Whois.Interfaces;
 
@@ -9,7 +10,14 @@ namespace Flipbit.Core.Whois.Visitors
     /// </summary>
     public class ExpandResultsVisitor : IWhoisVisitor
     {
-                 /// <summary>
+        /// <summary>
+        /// Gets the current character encoding that the current WhoisVisitor
+        /// object is using.
+        /// </summary>
+        /// <returns>The current character encoding used by the current visitor.</returns>
+        public Encoding CurrentEncoding { get; private set; }
+
+        /// <summary>
         /// Gets or sets the TCP reader factory.
         /// </summary>
         /// <value>The TCP reader factory.</value>
@@ -18,10 +26,19 @@ namespace Flipbit.Core.Whois.Visitors
         /// <summary>
         /// Initializes a new instance of the <see cref="ExpandResultsVisitor"/> class.
         /// </summary>
-        public ExpandResultsVisitor()
+        public ExpandResultsVisitor() : this(Encoding.UTF8)
         {
-            // You should use an IoC container to do this.
-            TcpReaderFactory = new TcpReaderFactory();    
+        }
+
+        /// <summary>
+        /// Initializes a new instance of the <see cref="ExpandResultsVisitor"/> class.
+        /// </summary>
+        /// <param name="encoding">The encoding used to read and write strings.</param>
+        public ExpandResultsVisitor(Encoding encoding)
+        {
+            TcpReaderFactory = new TcpReaderFactory();
+
+            CurrentEncoding = encoding;
         }
 
         /// <summary>
@@ -34,9 +51,9 @@ namespace Flipbit.Core.Whois.Visitors
             // Check to narrow down search results
             if (record.Text.AsString().Contains("=xxx"))
             {
-                using (var tcpReader = TcpReaderFactory.Create())
+                using (var tcpReader = TcpReaderFactory.Create(CurrentEncoding))
                 {
-                    record.Text= tcpReader.Read(record.Server, 43, "=" + record.Domain);
+                    record.Text = tcpReader.Read(record.Server, 43, "=" + record.Domain);
                 }
             }
             return record;

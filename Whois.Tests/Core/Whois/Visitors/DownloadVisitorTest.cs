@@ -1,4 +1,5 @@
-﻿using Flipbit.Core.Whois.Arrays;
+﻿using System.Text;
+using Flipbit.Core.Whois.Arrays;
 using Flipbit.Core.Whois.Domain;
 using NUnit.Framework;
 
@@ -36,6 +37,36 @@ namespace Flipbit.Core.Whois.Visitors
 
             // Should returned multiple matches (extra spam records)
             Assert.Greater(record.Text.IndexOfLineContaining(@"To single out one record, look it up with ""xxx"""), -1);
+        }
+
+        [Test]
+        public void TestDownloadSapoPt()
+        {
+            var encoding = Encoding.GetEncoding("ISO-8859-1");
+            visitor = new DownloadVisitor(encoding) { TcpReaderFactory = new FakeTcpReaderFactory() };
+
+            var record = new WhoisRecord { Domain = "sapo.pt" };
+            visitor.Visit(record);
+
+            const string text = "Nome de domínio / Domain Name: sapo.pt";
+
+            // Should have returned record in Portuguese (pt-PT)
+            Assert.Greater(record.Text.IndexOfLineContaining(text), -1);
+        }
+
+        [Test]
+        public void TestDownloadUolComBr()
+        {
+            var encoding = Encoding.GetEncoding("ISO-8859-1");
+            visitor = new DownloadVisitor(encoding) { TcpReaderFactory = new FakeTcpReaderFactory() };
+
+            var record = new WhoisRecord { Domain = "uol.com.br" };
+            visitor.Visit(record);
+
+            const string text = "cert@cert.br";
+
+            // Should have returned record in Brazilian Portuguese (pt-BR)
+            Assert.Greater(record.Text.IndexOfLineContaining(text), -1);
         }
     }
 }

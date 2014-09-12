@@ -1,5 +1,6 @@
 ﻿using System;
 using System.Text;
+using System.Globalization;
 using Flipbit.Core.Whois.Arrays;
 using Flipbit.Core.Whois.Domain;
 using Flipbit.Core.Whois.Interfaces;
@@ -8,9 +9,9 @@ using Flipbit.Core.Whois.Strings;
 namespace Flipbit.Core.Whois.Visitors
 {
     /// <summary>
-    /// Parses Nominet UK WHOIS data
+    /// Parses DNS.PT WHOIS data
     /// </summary>
-    public class RipnVisitor : IWhoisVisitor
+    public class DnsPtVisitor : IWhoisVisitor
     {
         /// <summary>
         /// Gets the current character encoding that the current WhoisVisitor
@@ -20,17 +21,17 @@ namespace Flipbit.Core.Whois.Visitors
         public Encoding CurrentEncoding { get; private set; }
 
         /// <summary>
-        /// Initializes a new instance of the <see cref="RipnVisitor"/> class.
+        /// Initializes a new instance of the <see cref="DnsPtVisitor"/> class.
         /// </summary>
-        public RipnVisitor(): this(Encoding.UTF8)
+        public DnsPtVisitor() : this(Encoding.UTF8)
         {
         }
 
         /// <summary>
-        /// Initializes a new instance of the <see cref="RipnVisitor"/> class.
+        /// Initializes a new instance of the <see cref="DnsPtVisitor"/> class.
         /// </summary>
         /// <param name="encoding">The encoding used to read and write strings.</param>
-        public RipnVisitor(Encoding encoding)
+        public DnsPtVisitor(Encoding encoding)
         {
             CurrentEncoding = encoding;
         }
@@ -42,23 +43,23 @@ namespace Flipbit.Core.Whois.Visitors
         /// <returns></returns>
         public WhoisRecord Visit(WhoisRecord record)
         {
-            var referralIndex = record.Text.IndexOfLineContaining("created:");
+            var referralIndex = record.Text.IndexOfLineContaining("Creation Date (dd/mm/yyyy): ");
 
             if (referralIndex > -1)
             {
-                var registationString = record.Text.Containing("created:", referralIndex);
+                var registationString = record.Text.Containing("Creation Date (dd/mm/yyyy): ", referralIndex);
 
                 registationString = registationString.SubstringAfterChar(":").Trim();
 
                 DateTime registrationDate;
 
-                if (DateTime.TryParse(registationString, out registrationDate))
+                if (DateTime.TryParseExact(registationString, "dd/MM/yyyy", CultureInfo.InvariantCulture, DateTimeStyles.None, out registrationDate))
                 {
                     record.Created = registrationDate;
                 }
             }
 
-            return record;
+            return record; //created:
         }
     }
 }
