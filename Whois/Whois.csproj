@@ -40,21 +40,14 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="Extensions\ArrayListExtensions.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
-    <Compile Include="Arrays\ArrayFinder.cs" />
-    <Compile Include="Arrays\AsStringExtension.cs" />
-    <Compile Include="Arrays\ContainsExtension.cs" />
-    <Compile Include="Arrays\ContainsFinder.cs" />
-    <Compile Include="Arrays\EndsWithExtension.cs" />
-    <Compile Include="Arrays\EndsWithFinder.cs" />
-    <Compile Include="Arrays\StartsWithExtension.cs" />
-    <Compile Include="Arrays\StartsWithFinder.cs" />
     <Compile Include="Domain\WhoisRecord.cs" />
     <Compile Include="Interfaces\ITcpReader.cs" />
     <Compile Include="Interfaces\ITcpReaderFactory.cs" />
     <Compile Include="Interfaces\IWhoisServerLookup.cs" />
     <Compile Include="Interfaces\IWhoisVisitor.cs" />
-    <Compile Include="Strings\SubstringByCharExtension.cs" />
+    <Compile Include="Extensions\StringExtensions.cs" />
     <Compile Include="TcpReader.cs" />
     <Compile Include="TcpReaderFactory.cs" />
     <Compile Include="Validators\DomainValidator.cs" />

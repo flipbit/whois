@@ -11,7 +11,7 @@ The TLD WHOIS server is then queried in order to get the WHOIS information for t
 made using TCP.
 
 <div style="text-align: center;">
-    <img src="https://raw.github.com/flipbit/whois/master/Documents/Workflow.png" alt="Whois Query Flow Diagram" />
+    <img src="https://raw.github.com/flipbit/whois/master/Docs/Workflow.png" alt="Whois Query Flow Diagram" />
 </div>
 
 ### Extending

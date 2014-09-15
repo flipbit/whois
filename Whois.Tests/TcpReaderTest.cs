@@ -2,7 +2,7 @@
 using System.Collections;
 using System.Text;
 using NUnit.Framework;
-using Whois.Arrays;
+using Whois.Extensions;
 
 namespace Whois
 {

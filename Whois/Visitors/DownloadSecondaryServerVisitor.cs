@@ -1,8 +1,7 @@
 ﻿using System.Text;
-using Whois.Arrays;
 using Whois.Domain;
+using Whois.Extensions;
 using Whois.Interfaces;
-using Whois.Strings;
 
 namespace Whois.Visitors
 {

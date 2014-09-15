@@ -1,7 +1,7 @@
 ﻿using System.Text;
 using NUnit.Framework;
-using Whois.Arrays;
 using Whois.Domain;
+using Whois.Extensions;
 
 namespace Whois.Visitors
 {

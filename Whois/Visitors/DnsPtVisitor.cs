@@ -1,10 +1,9 @@
 ﻿using System;
 using System.Text;
 using System.Globalization;
-using Whois.Arrays;
 using Whois.Domain;
+using Whois.Extensions;
 using Whois.Interfaces;
-using Whois.Strings;
 
 namespace Whois.Visitors
 {

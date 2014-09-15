@@ -1,6 +1,6 @@
 ﻿using System;
 using System.Collections;
-using Whois.Arrays;
+using Whois.Extensions;
 
 namespace Whois.Domain
 {

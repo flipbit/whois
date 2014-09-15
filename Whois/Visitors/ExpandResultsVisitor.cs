@@ -1,6 +1,6 @@
 ﻿using System.Text;
-using Whois.Arrays;
 using Whois.Domain;
+using Whois.Extensions;
 using Whois.Interfaces;
 
 namespace Whois.Visitors
