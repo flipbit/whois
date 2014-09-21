@@ -1,8 +1,25 @@
-C# WHOIS
+.NET WHOIS Lookup
 =====
 
-C# WHOIS is a drop-in library that enables you to query WHOIS information for domain registrations in .NET projects.  
-The library doesn't have any dependencies and returns a structured object representing the WHOIS data.
+.NET WHOIS is a drop-in library that enables you to query WHOIS information for domain registrations in .NET projects.  The library doesn't have any dependencies and returns an object representing the WHOIS data.
+
+### Installation
+
+You can install the library via the NuGet GUI or by entering the following command into the Package Manager Console:
+
+    Install-Package Whois
+    
+The source code is available on Github and can be downloaded and compiled.
+
+### Usage
+
+To use the library, reference it in your project and then use the following code:
+
+    using namespace Whois;
+    
+    var whois = new WhoisLookup().Lookup("github.com");
+    
+    Console.WriteLine(whois.ToString());
 
 ### How The Library Works
 
