@@ -3,15 +3,20 @@
   <PropertyGroup>
     <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
     <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
-    <ProductVersion>8.0.30703</ProductVersion>
+    <ProductVersion>9.0.30729</ProductVersion>
     <SchemaVersion>2.0</SchemaVersion>
-    <ProjectGuid>{EC562E36-605B-46D5-92D2-BAD0C6C6E863}</ProjectGuid>
-    <OutputType>Library</OutputType>
+    <ProjectGuid>{611C1679-3605-49A6-902F-DEBFBBC9E0A4}</ProjectGuid>
+    <OutputType>Exe</OutputType>
     <AppDesignerFolder>Properties</AppDesignerFolder>
     <RootNamespace>Whois</RootNamespace>
-    <AssemblyName>Whois</AssemblyName>
-    <TargetFrameworkVersion>v4.0</TargetFrameworkVersion>
+    <AssemblyName>whois</AssemblyName>
+    <TargetFrameworkVersion>v3.5</TargetFrameworkVersion>
     <FileAlignment>512</FileAlignment>
+    <FileUpgradeFlags>
+    </FileUpgradeFlags>
+    <OldToolsVersion>3.5</OldToolsVersion>
+    <UpgradeBackupLocation />
+    <TargetFrameworkProfile />
   </PropertyGroup>
   <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
     <DebugSymbols>true</DebugSymbols>
@@ -32,39 +37,30 @@
   </PropertyGroup>
   <ItemGroup>
     <Reference Include="System" />
-    <Reference Include="System.Core" />
-    <Reference Include="System.Xml.Linq" />
-    <Reference Include="System.Data.DataSetExtensions" />
-    <Reference Include="Microsoft.CSharp" />
+    <Reference Include="System.Core">
+      <RequiredTargetFramework>3.5</RequiredTargetFramework>
+    </Reference>
+    <Reference Include="System.Xml.Linq">
+      <RequiredTargetFramework>3.5</RequiredTargetFramework>
+    </Reference>
+    <Reference Include="System.Data.DataSetExtensions">
+      <RequiredTargetFramework>3.5</RequiredTargetFramework>
+    </Reference>
     <Reference Include="System.Data" />
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
-    <Compile Include="Extensions\ArrayListExtensions.cs" />
+    <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
-    <Compile Include="Domain\WhoisRecord.cs" />
-    <Compile Include="Interfaces\ITcpReader.cs" />
-    <Compile Include="Interfaces\ITcpReaderFactory.cs" />
-    <Compile Include="Interfaces\IWhoisServerLookup.cs" />
-    <Compile Include="Interfaces\IWhoisVisitor.cs" />
-    <Compile Include="Extensions\StringExtensions.cs" />
-    <Compile Include="TcpReader.cs" />
-    <Compile Include="TcpReaderFactory.cs" />
-    <Compile Include="Validators\DomainValidator.cs" />
-    <Compile Include="Visitors\DnsPtVisitor.cs" />
-    <Compile Include="Visitors\DownloadSecondaryServerVisitor.cs" />
-    <Compile Include="Visitors\DownloadVisitor.cs" />
-    <Compile Include="Visitors\ExpandResultsVisitor.cs" />
-    <Compile Include="Visitors\MarkMonitorVisitor.cs" />
-    <Compile Include="Visitors\NominetVisitor.cs" />
-    <Compile Include="Visitors\RegistroBrVisitor.cs" />
-    <Compile Include="Visitors\RipnVisitor.cs" />
-    <Compile Include="Visitors\WhoisServerVisitor.cs" />
-    <Compile Include="WhoisLookup.cs" />
-    <Compile Include="WhoisServerLookup.cs" />
   </ItemGroup>
   <ItemGroup>
-    <None Include="Whois.nuspec" />
+    <None Include="app.config" />
+  </ItemGroup>
+  <ItemGroup>
+    <ProjectReference Include="..\Whois\Whois.Net35.csproj">
+      <Project>{EC562E36-605B-46D5-92D2-BAD0C6C6E863}</Project>
+      <Name>Whois.Net35</Name>
+    </ProjectReference>
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
   <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 

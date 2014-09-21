@@ -1,11 +1,11 @@
 ﻿
 Microsoft Visual Studio Solution File, Format Version 11.00
 # Visual Studio 2010
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Whois.Console", "Whois.Console\Whois.Console.csproj", "{611C1679-3605-49A6-902F-DEBFBBC9E0A4}"
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Whois.Console", "Whois.Console\Whois.Console.Net35.csproj", "{611C1679-3605-49A6-902F-DEBFBBC9E0A4}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Whois.Tests", "Whois.Tests\Whois.Tests.csproj", "{4A7B8356-8CF9-44A7-A1C1-F8A71E566AA7}"
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Whois.Tests", "Whois.Tests\Whois.Tests.Net35.csproj", "{4A7B8356-8CF9-44A7-A1C1-F8A71E566AA7}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Whois", "Whois\Whois.csproj", "{EC562E36-605B-46D5-92D2-BAD0C6C6E863}"
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Whois", "Whois\Whois.Net35.csproj", "{EC562E36-605B-46D5-92D2-BAD0C6C6E863}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution

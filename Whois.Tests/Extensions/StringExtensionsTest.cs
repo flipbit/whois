@@ -23,7 +23,6 @@ namespace Whois.Extensions
             Assert.AreEqual("ana", "banana".SubstringAfterChar("n"));
         }
 
-
         [Test]
         public void TestSubStringBeforeWithMatchingString()
         {

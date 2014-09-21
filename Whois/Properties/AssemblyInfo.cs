@@ -1,16 +1,15 @@
 using System.Reflection;
-using System.Runtime.CompilerServices;
 using System.Runtime.InteropServices;
 
 // General Information about an assembly is controlled through the following 
 // set of attributes. Change these attribute values to modify the information
 // associated with an assembly.
-[assembly: AssemblyTitle("Whois")]
-[assembly: AssemblyDescription("")]
+[assembly: AssemblyTitle("WHOIS")]
+[assembly: AssemblyDescription("An Extensible WHOIS Library written in C#")]
 [assembly: AssemblyConfiguration("")]
-[assembly: AssemblyCompany("Microsoft")]
-[assembly: AssemblyProduct("Whois")]
-[assembly: AssemblyCopyright("Copyright © Microsoft 2014")]
+[assembly: AssemblyCompany("flipbit.co.uk")]
+[assembly: AssemblyProduct("WHOIS")]
+[assembly: AssemblyCopyright("Copyright © Chris Wood 2014")]
 [assembly: AssemblyTrademark("")]
 [assembly: AssemblyCulture("")]
 
@@ -33,4 +32,4 @@ using System.Runtime.InteropServices;
 // by using the '*' as shown below:
 // [assembly: AssemblyVersion("1.0.0.0")]
 [assembly: AssemblyVersion("1.0.0.0")]
-[assembly: AssemblyFileVersion("1.0.0.17716")]
+[assembly: AssemblyFileVersion("1.0.0.17719")]

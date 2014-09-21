@@ -14,7 +14,8 @@
   $releaseDir = "$baseDir\Release"
   $workingDir = "$baseDir\Working"
   $builds = @(
-    @{Name = "Whois"; TestsName = "Whois.Tests"; Constants=""; FinalDir="Net45"; NuGetDir = "net45"; Framework="net-4.0"}
+    @{Name = "Whois"; TestsName = "Whois.Tests"; Constants=""; FinalDir="Net40"; NuGetDir = "net40"; Framework="net-4.0"},
+    @{Name = "Whois.Net35"; TestsName = "Whois.Tests"; Constants=""; FinalDir="Net35"; NuGetDir = "net35"; Framework="net-3.5"}
   )
 }
 

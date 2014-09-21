@@ -27,6 +27,7 @@ namespace Whois
         }
 
         [Test]
+        [Ignore]
         public void TestReadWhoisForSapoPt()
         {
             ArrayList result;
