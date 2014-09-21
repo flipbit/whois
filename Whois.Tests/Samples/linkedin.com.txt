@@ -1,0 +1,88 @@
+Domain Name: linkedin.com
+Registry Domain ID: 91818680_DOMAIN_COM-VRSN
+Registrar WHOIS Server: whois.markmonitor.com
+Registrar URL: http://www.markmonitor.com
+Updated Date: 2014-01-28T13:33:43-0800
+Creation Date: 2002-11-02T07:38:11-0800
+Registrar Registration Expiration Date: 2020-11-02T07:38:11-0800
+Registrar: MarkMonitor, Inc.
+Registrar IANA ID: 292
+Registrar Abuse Contact Email: abusecomplaints@markmonitor.com
+Registrar Abuse Contact Phone: +1.2083895740
+Domain Status: clientUpdateProhibited
+Domain Status: clientTransferProhibited
+Domain Status: clientDeleteProhibited
+Registry Registrant ID: 
+Registrant Name: Host Master
+Registrant Organization: LinkedIn Corporation
+Registrant Street: 2029 Stierlin Court, 
+Registrant City: Mountain View
+Registrant State/Province: CA
+Registrant Postal Code: 94043
+Registrant Country: US
+Registrant Phone: +1.6506873600
+Registrant Phone Ext: 
+Registrant Fax: +1.6506870505
+Registrant Fax Ext: 
+Registrant Email: hostmaster@linkedin.com
+Registry Admin ID: 
+Admin Name: Host Master
+Admin Organization: LinkedIn Corporation
+Admin Street: 2029 Stierlin Court, 
+Admin City: Mountain View
+Admin State/Province: CA
+Admin Postal Code: 94043
+Admin Country: US
+Admin Phone: +1.6506873600
+Admin Phone Ext: 
+Admin Fax: +1.6506870505
+Admin Fax Ext: 
+Admin Email: hostmaster@linkedin.com
+Registry Tech ID: 
+Tech Name: Host Master
+Tech Organization: LinkedIn Corporation
+Tech Street: 2029 Stierlin Court, 
+Tech City: Mountain View
+Tech State/Province: CA
+Tech Postal Code: 94043
+Tech Country: US
+Tech Phone: +1.6506873600
+Tech Phone Ext: 
+Tech Fax: +1.6506870505
+Tech Fax Ext: 
+Tech Email: hostmaster@linkedin.com
+Name Server: ns2.linkedin.com
+Name Server: ns4.p43.dynect.net
+Name Server: ns1.linkedin.com
+Name Server: ns2.p43.dynect.net
+Name Server: ns4.linkedin.com
+Name Server: ns3.linkedin.com
+Name Server: ns1.p43.dynect.net
+Name Server: ns3.p43.dynect.net
+URL of the ICANN WHOIS Data Problem Reporting System: http://wdprs.internic.net/
+>>> Last update of WHOIS database: 2014-09-21T11:50:34-0700 <<<
+
+The Data in MarkMonitor.com's WHOIS database is provided by MarkMonitor.com for
+information purposes, and to assist persons in obtaining information about or
+related to a domain name registration record.  MarkMonitor.com does not guarantee
+its accuracy.  By submitting a WHOIS query, you agree that you will use this Data
+only for lawful purposes and that, under no circumstances will you use this Data to:
+ (1) allow, enable, or otherwise support the transmission of mass unsolicited,
+     commercial advertising or solicitations via e-mail (spam); or
+ (2) enable high volume, automated, electronic processes that apply to
+     MarkMonitor.com (or its systems).
+MarkMonitor.com reserves the right to modify these terms at any time.
+By submitting this query, you agree to abide by this policy.
+
+MarkMonitor is the Global Leader in Online Brand Protection.
+
+MarkMonitor Domain Management(TM)
+MarkMonitor Brand Protection(TM)
+MarkMonitor AntiPiracy(TM)
+MarkMonitor AntiFraud(TM)
+Professional and Managed Services
+
+Visit MarkMonitor at http://www.markmonitor.com
+Contact us at +1.8007459229
+In Europe, at +44.02032062220
+--

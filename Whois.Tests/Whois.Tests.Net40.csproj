@@ -5,13 +5,15 @@
     <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
     <ProductVersion>9.0.30729</ProductVersion>
     <SchemaVersion>2.0</SchemaVersion>
-    <ProjectGuid>{611C1679-3605-49A6-902F-DEBFBBC9E0A4}</ProjectGuid>
-    <OutputType>Exe</OutputType>
+    <ProjectGuid>{4A7B8356-8CF9-44A7-A1C1-F8A71E566AA7}</ProjectGuid>
+    <OutputType>Library</OutputType>
     <AppDesignerFolder>Properties</AppDesignerFolder>
     <RootNamespace>Whois</RootNamespace>
-    <AssemblyName>whois</AssemblyName>
-    <TargetFrameworkVersion>v4.5</TargetFrameworkVersion>
+    <AssemblyName>Whois.Tests</AssemblyName>
+    <TargetFrameworkVersion>v4.0</TargetFrameworkVersion>
     <FileAlignment>512</FileAlignment>
+    <StartupObject>
+    </StartupObject>
     <FileUpgradeFlags>
     </FileUpgradeFlags>
     <OldToolsVersion>3.5</OldToolsVersion>
@@ -38,6 +40,9 @@
     <Prefer32Bit>false</Prefer32Bit>
   </PropertyGroup>
   <ItemGroup>
+    <Reference Include="nunit.framework">
+      <HintPath>..\packages\NUnit.2.6.3\lib\nunit.framework.dll</HintPath>
+    </Reference>
     <Reference Include="System" />
     <Reference Include="System.Core">
       <RequiredTargetFramework>3.5</RequiredTargetFramework>
@@ -52,16 +57,34 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
-    <Compile Include="Program.cs" />
+    <Compile Include="Extensions\ArrayListExtensionsTest.cs" />
+    <Compile Include="FakeTcpReader.cs" />
+    <Compile Include="FakeTcpReaderFactory.cs" />
+    <Compile Include="FakeWhoisServerLookup.cs" />
+    <Compile Include="Extensions\StringExtensionsTest.cs" />
+    <Compile Include="TcpReaderTest.cs" />
+    <Compile Include="Validators\DomainValidatorTest.cs" />
+    <Compile Include="Visitors\RegistroBrVisitorTest.cs" />
+    <Compile Include="Visitors\DnsPtVisitorTest.cs" />
+    <Compile Include="Visitors\DownloadSecondaryServerVisitorTest.cs" />
+    <Compile Include="Visitors\DownloadVisitorTest.cs" />
+    <Compile Include="Visitors\ExpandResultsVisitorTest.cs" />
+    <Compile Include="Visitors\FakeWhoisVisitor.cs" />
+    <Compile Include="Visitors\MarkMonitorVisitorTest.cs" />
+    <Compile Include="Visitors\NominetVisitorTest.cs" />
+    <Compile Include="Visitors\RipnVisitorTest.cs" />
+    <Compile Include="Visitors\WhoisServerVisitorTest.cs" />
+    <Compile Include="WhoisLookupTest.cs" />
+    <Compile Include="WhoisServerLookupTest.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
   </ItemGroup>
   <ItemGroup>
-    <None Include="app.config" />
+    <None Include="packages.config" />
   </ItemGroup>
   <ItemGroup>
-    <ProjectReference Include="..\Whois\Whois.csproj">
+    <ProjectReference Include="..\Whois\Whois.Net40.csproj">
       <Project>{ec562e36-605b-46d5-92d2-bad0c6c6e863}</Project>
-      <Name>Whois</Name>
+      <Name>Whois.Net40</Name>
     </ProjectReference>
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />

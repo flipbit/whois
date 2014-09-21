@@ -3,19 +3,15 @@
   <PropertyGroup>
     <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
     <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
-    <ProductVersion>9.0.30729</ProductVersion>
+    <ProductVersion>8.0.30703</ProductVersion>
     <SchemaVersion>2.0</SchemaVersion>
-    <ProjectGuid>{611C1679-3605-49A6-902F-DEBFBBC9E0A4}</ProjectGuid>
-    <OutputType>Exe</OutputType>
+    <ProjectGuid>{EC562E36-605B-46D5-92D2-BAD0C6C6E863}</ProjectGuid>
+    <OutputType>Library</OutputType>
     <AppDesignerFolder>Properties</AppDesignerFolder>
     <RootNamespace>Whois</RootNamespace>
-    <AssemblyName>whois</AssemblyName>
-    <TargetFrameworkVersion>v4.5</TargetFrameworkVersion>
+    <AssemblyName>Whois</AssemblyName>
+    <TargetFrameworkVersion>v4.0</TargetFrameworkVersion>
     <FileAlignment>512</FileAlignment>
-    <FileUpgradeFlags>
-    </FileUpgradeFlags>
-    <OldToolsVersion>3.5</OldToolsVersion>
-    <UpgradeBackupLocation />
     <TargetFrameworkProfile />
   </PropertyGroup>
   <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
@@ -26,7 +22,6 @@
     <DefineConstants>DEBUG;TRACE</DefineConstants>
     <ErrorReport>prompt</ErrorReport>
     <WarningLevel>4</WarningLevel>
-    <Prefer32Bit>false</Prefer32Bit>
   </PropertyGroup>
   <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
     <DebugType>pdbonly</DebugType>
@@ -35,34 +30,41 @@
     <DefineConstants>TRACE</DefineConstants>
     <ErrorReport>prompt</ErrorReport>
     <WarningLevel>4</WarningLevel>
-    <Prefer32Bit>false</Prefer32Bit>
   </PropertyGroup>
   <ItemGroup>
     <Reference Include="System" />
-    <Reference Include="System.Core">
-      <RequiredTargetFramework>3.5</RequiredTargetFramework>
-    </Reference>
-    <Reference Include="System.Xml.Linq">
-      <RequiredTargetFramework>3.5</RequiredTargetFramework>
-    </Reference>
-    <Reference Include="System.Data.DataSetExtensions">
-      <RequiredTargetFramework>3.5</RequiredTargetFramework>
-    </Reference>
+    <Reference Include="System.Core" />
+    <Reference Include="System.Xml.Linq" />
+    <Reference Include="System.Data.DataSetExtensions" />
     <Reference Include="System.Data" />
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
-    <Compile Include="Program.cs" />
+    <Compile Include="Extensions\ArrayListExtensions.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="Domain\WhoisRecord.cs" />
+    <Compile Include="Interfaces\ITcpReader.cs" />
+    <Compile Include="Interfaces\ITcpReaderFactory.cs" />
+    <Compile Include="Interfaces\IWhoisServerLookup.cs" />
+    <Compile Include="Interfaces\IWhoisVisitor.cs" />
+    <Compile Include="Extensions\StringExtensions.cs" />
+    <Compile Include="TcpReader.cs" />
+    <Compile Include="TcpReaderFactory.cs" />
+    <Compile Include="Validators\DomainValidator.cs" />
+    <Compile Include="Visitors\DnsPtVisitor.cs" />
+    <Compile Include="Visitors\DownloadSecondaryServerVisitor.cs" />
+    <Compile Include="Visitors\DownloadVisitor.cs" />
+    <Compile Include="Visitors\ExpandResultsVisitor.cs" />
+    <Compile Include="Visitors\MarkMonitorVisitor.cs" />
+    <Compile Include="Visitors\NominetVisitor.cs" />
+    <Compile Include="Visitors\RegistroBrVisitor.cs" />
+    <Compile Include="Visitors\RipnVisitor.cs" />
+    <Compile Include="Visitors\WhoisServerVisitor.cs" />
+    <Compile Include="WhoisLookup.cs" />
+    <Compile Include="WhoisServerLookup.cs" />
   </ItemGroup>
   <ItemGroup>
-    <None Include="app.config" />
-  </ItemGroup>
-  <ItemGroup>
-    <ProjectReference Include="..\Whois\Whois.csproj">
-      <Project>{ec562e36-605b-46d5-92d2-bad0c6c6e863}</Project>
-      <Name>Whois</Name>
-    </ProjectReference>
+    <None Include="Whois.nuspec" />
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
   <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 

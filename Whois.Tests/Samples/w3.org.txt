@@ -1,0 +1,68 @@
+Domain Name:W3.ORG
+Domain ID: D1266030-LROR
+Creation Date: 1994-07-06T04:00:00Z
+Updated Date: 2010-01-27T12:13:03Z
+Registry Expiry Date: 2019-07-05T04:00:00Z
+Sponsoring Registrar:Gandi SAS (R42-LROR)
+Sponsoring Registrar IANA ID: 81
+WHOIS Server: 
+Referral URL: 
+Domain Status: clientDeleteProhibited
+Domain Status: clientTransferProhibited
+Registrant ID:TBL1-GANDI
+Registrant Name:Tim Berners-Lee
+Registrant Organization:W3C
+Registrant Street: W3C
+Registrant City:Cambridge
+Registrant State/Province:MA
+Registrant Postal Code:02139
+Registrant Country:US
+Registrant Phone:+1.6172535702
+Registrant Phone Ext: 
+Registrant Fax: +1.6172585999
+Registrant Fax Ext: 
+Registrant Email:7f539cd059e166c69c613639d55f3c24-135433@contact.gandi.net
+Admin ID:RA1687-GANDI
+Admin Name:Registrar Administration
+Admin Organization:W3C
+Admin Street: 32 Vassar St G504
+Admin City:Cambridge
+Admin State/Province:MA
+Admin Postal Code:02139
+Admin Country:US
+Admin Phone:+1.6172585967
+Admin Phone Ext: 
+Admin Fax: 
+Admin Fax Ext: 
+Admin Email:d903baab93ef7020c0f1bab9d05f5a96-1062668@contact.gandi.net
+Tech ID:ST285-GANDI
+Tech Name:W3C Systeam
+Tech Organization:W3C
+Tech Street: W3C MIT CSAIL 32 Vassar St G515
+Tech City:Cambridge
+Tech State/Province:MA
+Tech Postal Code:02139
+Tech Country:US
+Tech Phone:+1.6172532613
+Tech Phone Ext: 
+Tech Fax: +1.6172585999
+Tech Fax Ext: 
+Tech Email:4f00717a527a369a16daff7988adfbcd-135431@contact.gandi.net
+Name Server:NS1.W3.ORG
+Name Server:NS2.W3.ORG
+Name Server:NS3.W3.ORG
+Name Server: 
+Name Server: 
+Name Server: 
+Name Server: 
+Name Server: 
+Name Server: 
+Name Server: 
+Name Server: 
+Name Server: 
+Name Server: 
+DNSSEC:Unsigned
+
+Access to Public Interest Registry WHOIS information is provided to assist persons in determining the contents of a domain name registration record in the Public Interest Registry registry database. The data in this record is provided by Public Interest Registry for informational purposes only, and Public Interest Registry does not guarantee its accuracy. This service is intended only for query-based access. You agree that you will use this data only for lawful purposes and that, under no circumstances will you use this data to(a) allow, enable, or otherwise support the transmission by e-mail, telephone, or facsimile of mass unsolicited, commercial advertising or solicitations to entities other than the data recipient's own existing customers; or (b) enable high volume, automated, electronic processes that send queries or data to the systems of Registry Operator, a Registrar, or Afilias except as reasonably necessary to register domain names or modify existing registrations. All rights reserved. Public Interest Registry reserves the right to modify these terms at any time. By submitting this query, you agree to abide by this policy.
+
+

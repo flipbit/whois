@@ -14,8 +14,9 @@
   $releaseDir = "$baseDir\Release"
   $workingDir = "$baseDir\Working"
   $builds = @(
-    @{Name = "Whois"; TestsName = "Whois.Tests"; Constants=""; FinalDir="Net40"; NuGetDir = "net40"; Framework="net-4.0"},
-    @{Name = "Whois.Net35"; TestsName = "Whois.Tests"; Constants=""; FinalDir="Net35"; NuGetDir = "net35"; Framework="net-3.5"}
+    @{Name = "Whois"; TestsName = "Whois.Tests"; Constants=""; FinalDir="Net45"; NuGetDir = "net45"; Framework="net-4.5"},
+    @{Name = "Whois.Net40"; TestsName = "Whois.Tests.Net40"; Constants=""; FinalDir="Net40"; NuGetDir = "net40"; Framework="net-4.0"},
+    @{Name = "Whois.Net35"; TestsName = "Whois.Tests.Net35"; Constants=""; FinalDir="Net35"; NuGetDir = "net35"; Framework="net-3.5"}
   )
 }
 
@@ -75,8 +76,7 @@ task Package -depends Build {
     New-Item -Path $workingDir\NuGet -ItemType Directory    
     Copy-Item -Path "$buildDir\Whois.nuspec" -Destination $workingDir\NuGet\Whois.nuspec -recurse
 
-    New-Item -Path $workingDir\NuGet\tools -ItemType Directory
-    Copy-Item -Path "$buildDir\install.ps1" -Destination $workingDir\NuGet\tools\install.ps1 -recurse
+    Copy-Item -Path "$sourceDir\Whois\Readme.txt" -Destination $workingDir\NuGet\Readme.txt -recurse
     
     foreach ($build in $builds)
     {
@@ -150,19 +150,7 @@ function GetConstants($constants, $includeSigned)
 
 function GetVersion($majorVersion)
 {
-    $now = [DateTime]::Now
-    
-    $year = $now.Year - 2000
-    $month = $now.Month
-    $totalMonthsSince2000 = ($year * 12) + $month
-    $day = $now.Day
-    $minor = "{0}{1:00}" -f $totalMonthsSince2000, $day
-    
-    $hour = $now.Hour
-    $minute = $now.Minute
-    $revision = "{0:00}{1:00}" -f $hour, $minute
-    
-    return $majorVersion + "." + $minor
+    return "1.0"
 }
 
 function Update-AssemblyInfoFiles ([string] $sourceDir, [string] $assemblyVersionNumber, [string] $fileVersionNumber)

@@ -1,0 +1,83 @@
+
+
+Domain Name: MYSPACE.COM
+Registry Domain ID:  
+Registrar WHOIS Server: whois.networksolutions.com
+Registrar URL: http://networksolutions.com
+Updated Date: 2013-04-19T00:00:00Z
+Creation Date: 1996-02-22T00:00:00Z
+Registrar Registration Expiration Date: 2023-02-23T00:00:00Z
+Registrar: NETWORK SOLUTIONS, LLC.
+Registrar IANA ID: 2
+Registrar Abuse Contact Email: abuse@web.com
+Registrar Abuse Contact Phone: +1.8003337680
+Reseller: 
+Domain Status: clientTransferProhibited
+Registry Registrant ID: 
+Registrant Name: PERFECT PRIVACY, LLC
+Registrant Organization: 
+Registrant Street: 12808 Gran Bay Parkway West
+Registrant City: Jacksonville
+Registrant State/Province: FL
+Registrant Postal Code: 32258
+Registrant Country: US
+Registrant Phone: +1.5707088780
+Registrant Phone Ext: 
+Registrant Fax: 
+Registrant Fax Ext: 
+Registrant Email: gb94w3ct7hr@networksolutionsprivateregistration.com
+Registry Admin ID: 
+Admin Name: PERFECT PRIVACY, LLC
+Admin Organization: 
+Admin Street: 12808 Gran Bay Parkway West
+Admin City: Jacksonville
+Admin State/Province: FL
+Admin Postal Code: 32258
+Admin Country: US
+Admin Phone: +1.5707088780
+Admin Phone Ext: 
+Admin Fax: 
+Admin Fax Ext: 
+Admin Email: gb94w3ct7hr@networksolutionsprivateregistration.com
+Registry Tech ID: 
+Tech Name: PERFECT PRIVACY, LLC
+Tech Organization: 
+Tech Street: 12808 Gran Bay Parkway West
+Tech City: Jacksonville
+Tech State/Province: FL
+Tech Postal Code: 32258
+Tech Country: US
+Tech Phone: +1.5707088780
+Tech Phone Ext: 
+Tech Fax: 
+Tech Fax Ext: 
+Tech Email: gb94w3ct7hr@networksolutionsprivateregistration.com
+Name Server: NS7-67.AKAM.NET
+Name Server: NS5-67.AKAM.NET
+Name Server: NS1-128.AKAM.NET
+Name Server: NS4-66.AKAM.NET
+DNSSEC: not signed
+URL of the ICANN WHOIS Data Problem Reporting System: http://wdprs.internic.net/
+>>> Last update of whois database: Sun, 21 Sep 2014 18:53:21 UTC <<<
+
+This listing is a Network Solutions Private Registration. Mail
+correspondence to this address must be sent via USPS Express Mail(TM) or
+USPS Certified Mail(R); all other mail will not be processed. Be sure to
+include the registrant's domain name in the address.
+
+The data in Networksolutions.com's WHOIS database is provided to you by
+Networksolutions.com for information purposes only, that is, to assist you in
+obtaining information about or related to a domain name registration
+record. Networksolutions.com makes this information available "as is," and
+does not guarantee its accuracy. By submitting a WHOIS query, you
+agree that you will use this data only for lawful purposes and that,
+under no circumstances will you use this data to: (1) allow, enable,
+or otherwise support the transmission of mass unsolicited, commercial
+advertising or solicitations via direct mail, electronic mail, or by
+telephone; or (2) enable high volume, automated, electronic processes
+that apply to Networksolutions.com  (or its systems). The compilation,
+repackaging, dissemination or other use of this data is expressly
+prohibited without the prior written consent of Networksolutions.com.
+Networksolutions.com reserves the right to modify these terms at any time.
+By submitting this query, you agree to abide by these terms.
+

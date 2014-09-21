@@ -1,15 +1,16 @@
 using System.Reflection;
+using System.Runtime.CompilerServices;
 using System.Runtime.InteropServices;
 
 // General Information about an assembly is controlled through the following 
 // set of attributes. Change these attribute values to modify the information
 // associated with an assembly.
-[assembly: AssemblyTitle("Whois.Tests")]
+[assembly: AssemblyTitle("Whois.Tests.Integration")]
 [assembly: AssemblyDescription("")]
 [assembly: AssemblyConfiguration("")]
-[assembly: AssemblyCompany("Flipbit.co.uk")]
-[assembly: AssemblyProduct("Whois.Tests")]
-[assembly: AssemblyCopyright("Copyright © Flipbit.co.uk 2009")]
+[assembly: AssemblyCompany("")]
+[assembly: AssemblyProduct("Whois.Tests.Integration")]
+[assembly: AssemblyCopyright("Copyright ©  2014")]
 [assembly: AssemblyTrademark("")]
 [assembly: AssemblyCulture("")]
 
@@ -19,7 +20,7 @@ using System.Runtime.InteropServices;
 [assembly: ComVisible(false)]
 
 // The following GUID is for the ID of the typelib if this project is exposed to COM
-[assembly: Guid("a6add154-8153-49ee-8f04-0dd8a0e09882")]
+[assembly: Guid("7699e638-7c35-43ec-807f-7b4dbed22f7f")]
 
 // Version information for an assembly consists of the following four values:
 //
