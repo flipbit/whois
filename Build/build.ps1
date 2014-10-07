@@ -16,7 +16,8 @@
   $builds = @(
     @{Name = "Whois"; TestsName = "Whois.Tests"; Constants=""; FinalDir="Net45"; NuGetDir = "net45"; Framework="net-4.5"},
     @{Name = "Whois.Net40"; TestsName = "Whois.Tests.Net40"; Constants=""; FinalDir="Net40"; NuGetDir = "net40"; Framework="net-4.0"},
-    @{Name = "Whois.Net35"; TestsName = "Whois.Tests.Net35"; Constants=""; FinalDir="Net35"; NuGetDir = "net35"; Framework="net-3.5"}
+    @{Name = "Whois.Net35"; TestsName = "Whois.Tests.Net35"; Constants=""; FinalDir="Net35"; NuGetDir = "net35"; Framework="net-3.5"},
+    @{Name = "Whois.Net20"; TestsName = "Whois.Tests.Net20"; Constants=""; FinalDir="Net20"; NuGetDir = "net20"; Framework="net-2.0"}
   )
 }
 

@@ -10,7 +10,7 @@
     <AppDesignerFolder>Properties</AppDesignerFolder>
     <RootNamespace>Whois</RootNamespace>
     <AssemblyName>Whois</AssemblyName>
-    <TargetFrameworkVersion>v4.5</TargetFrameworkVersion>
+    <TargetFrameworkVersion>v2.0</TargetFrameworkVersion>
     <FileAlignment>512</FileAlignment>
     <TargetFrameworkProfile />
   </PropertyGroup>
@@ -22,7 +22,6 @@
     <DefineConstants>DEBUG;TRACE</DefineConstants>
     <ErrorReport>prompt</ErrorReport>
     <WarningLevel>4</WarningLevel>
-    <Prefer32Bit>false</Prefer32Bit>
   </PropertyGroup>
   <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
     <DebugType>pdbonly</DebugType>
@@ -31,21 +30,15 @@
     <DefineConstants>TRACE</DefineConstants>
     <ErrorReport>prompt</ErrorReport>
     <WarningLevel>4</WarningLevel>
-    <Prefer32Bit>false</Prefer32Bit>
   </PropertyGroup>
   <ItemGroup>
     <Reference Include="System" />
-    <Reference Include="System.Core" />
-    <Reference Include="System.Xml.Linq" />
-    <Reference Include="System.Data.DataSetExtensions" />
-    <Reference Include="Microsoft.CSharp" />
     <Reference Include="System.Data" />
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
-    <Compile Include="Domain\Contact.cs" />
-    <Compile Include="EmbeddedPatternReader.cs" />
     <Compile Include="Extensions\ArrayListExtensions.cs" />
+    <Compile Include="Extensions\ExtensionAttribute.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
     <Compile Include="Domain\WhoisRecord.cs" />
     <Compile Include="Interfaces\ITcpReader.cs" />
@@ -55,12 +48,7 @@
     <Compile Include="Extensions\StringExtensions.cs" />
     <Compile Include="TcpReader.cs" />
     <Compile Include="TcpReaderFactory.cs" />
-    <Compile Include="Tokens\Token.cs" />
-    <Compile Include="Tokens\Tokenizer.cs" />
-    <Compile Include="Tokens\TokenReplacement.cs" />
-    <Compile Include="Tokens\TokenResult.cs" />
     <Compile Include="Validators\DomainValidator.cs" />
-    <Compile Include="Visitors\PatternExtractorVisitor.cs" />
     <Compile Include="Visitors\DnsPtVisitor.cs" />
     <Compile Include="Visitors\DownloadSecondaryServerVisitor.cs" />
     <Compile Include="Visitors\DownloadVisitor.cs" />
@@ -75,10 +63,6 @@
   </ItemGroup>
   <ItemGroup>
     <None Include="Whois.nuspec" />
-  </ItemGroup>
-  <ItemGroup>
-    <EmbeddedResource Include="Patterns\Csc.txt" />
-    <Content Include="Readme.txt" />
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
   <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 

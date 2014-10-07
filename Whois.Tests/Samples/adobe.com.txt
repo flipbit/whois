@@ -23,9 +23,9 @@ Registrant State/Province: CA
 Registrant Postal Code: 95110
 Registrant Country: US
 Registrant Phone: +1.4085366000
-Registrant Phone Ext: 
-Registrant Fax: 
-Registrant Fax Ext: 
+Registrant Phone Ext: 100
+Registrant Fax: 123456
+Registrant Fax Ext: 200
 Registrant Email: dns-admin@adobe.com
 Registry Admin ID: 
 Admin Name: DNS Admin

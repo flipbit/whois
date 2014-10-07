@@ -10,7 +10,7 @@
     <AppDesignerFolder>Properties</AppDesignerFolder>
     <RootNamespace>Whois</RootNamespace>
     <AssemblyName>Whois.Tests</AssemblyName>
-    <TargetFrameworkVersion>v4.5</TargetFrameworkVersion>
+    <TargetFrameworkVersion>v2.0</TargetFrameworkVersion>
     <FileAlignment>512</FileAlignment>
     <StartupObject>
     </StartupObject>
@@ -28,7 +28,6 @@
     <DefineConstants>DEBUG;TRACE</DefineConstants>
     <ErrorReport>prompt</ErrorReport>
     <WarningLevel>4</WarningLevel>
-    <Prefer32Bit>false</Prefer32Bit>
   </PropertyGroup>
   <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
     <DebugType>pdbonly</DebugType>
@@ -37,36 +36,23 @@
     <DefineConstants>TRACE</DefineConstants>
     <ErrorReport>prompt</ErrorReport>
     <WarningLevel>4</WarningLevel>
-    <Prefer32Bit>false</Prefer32Bit>
   </PropertyGroup>
   <ItemGroup>
     <Reference Include="nunit.framework">
       <HintPath>..\packages\NUnit.2.6.3\lib\nunit.framework.dll</HintPath>
     </Reference>
     <Reference Include="System" />
-    <Reference Include="System.Core">
-      <RequiredTargetFramework>3.5</RequiredTargetFramework>
-    </Reference>
-    <Reference Include="System.Xml.Linq">
-      <RequiredTargetFramework>3.5</RequiredTargetFramework>
-    </Reference>
-    <Reference Include="System.Data.DataSetExtensions">
-      <RequiredTargetFramework>3.5</RequiredTargetFramework>
-    </Reference>
     <Reference Include="System.Data" />
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
-    <Compile Include="EmbeddedPatternReaderTest.cs" />
     <Compile Include="Extensions\ArrayListExtensionsTest.cs" />
     <Compile Include="FakeTcpReader.cs" />
     <Compile Include="FakeTcpReaderFactory.cs" />
     <Compile Include="FakeWhoisServerLookup.cs" />
     <Compile Include="Extensions\StringExtensionsTest.cs" />
     <Compile Include="TcpReaderTest.cs" />
-    <Compile Include="Tokens\TokenizerTest.cs" />
     <Compile Include="Validators\DomainValidatorTest.cs" />
-    <Compile Include="Visitors\PatternExtractorVisitorTest.cs" />
     <Compile Include="Visitors\RegistroBrVisitorTest.cs" />
     <Compile Include="Visitors\DnsPtVisitorTest.cs" />
     <Compile Include="Visitors\DownloadSecondaryServerVisitorTest.cs" />
@@ -83,23 +69,12 @@
   </ItemGroup>
   <ItemGroup>
     <None Include="packages.config" />
-    <EmbeddedResource Include="Patterns\InvalidExtension.rtf" />
   </ItemGroup>
   <ItemGroup>
-    <Folder Include="Samples\" />
-  </ItemGroup>
-  <ItemGroup>
-    <ProjectReference Include="..\Whois\Whois.csproj">
-      <Project>{ec562e36-605b-46d5-92d2-bad0c6c6e863}</Project>
-      <Name>Whois</Name>
+    <ProjectReference Include="..\Whois\Whois.Net35.csproj">
+      <Project>{EC562E36-605B-46D5-92D2-BAD0C6C6E863}</Project>
+      <Name>Whois.Net35</Name>
     </ProjectReference>
-  </ItemGroup>
-  <ItemGroup>
-    <EmbeddedResource Include="Patterns\TestPatternOne.txt" />
-    <EmbeddedResource Include="Patterns\TestPatternTwo.txt" />
-  </ItemGroup>
-  <ItemGroup>
-    <EmbeddedResource Include="InvalidNamespace.txt" />
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
   <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 

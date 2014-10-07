@@ -1,5 +1,7 @@
 ﻿using System;
 using System.Collections;
+using System.Collections.Generic;
+using System.Net.Mime;
 using Whois.Extensions;
 
 namespace Whois.Domain
@@ -7,8 +9,10 @@ namespace Whois.Domain
     /// <summary>
     /// Represents WHOIS information for a domain.
     /// </summary>
-    public class WhoisRecord
+    public class WhoisRecord : ICloneable
     {
+        private string text;
+
         /// <summary>
         /// Initializes a new instance of the <see cref="WhoisRecord"/> class.
         /// </summary>
@@ -23,9 +27,16 @@ namespace Whois.Domain
         /// <param name="text">The text.</param>
         public WhoisRecord(string text)
         {
+            this.text = text;
+
             Text = new ArrayList();
 
             Text.AddRange(text.Split('\n'));
+        }
+
+        public IEnumerable<string> AsStrings
+        {
+            get { return text.Split('\n'); }
         }
 
         /// <summary>
@@ -53,6 +64,30 @@ namespace Whois.Domain
         public DateTime? Created { get; set; }
 
         /// <summary>
+        /// Gets or sets the registrant.
+        /// </summary>
+        /// <value>
+        /// The registrant.
+        /// </value>
+        public Contact Registrant { get; set; }
+
+        /// <summary>
+        /// Gets or sets the technical contact.
+        /// </summary>
+        /// <value>
+        /// The technical contact.
+        /// </value>
+        public Contact TechnicalContact { get; set; }
+
+        /// <summary>
+        /// Gets or sets the admin contact.
+        /// </summary>
+        /// <value>
+        /// The admin contact.
+        /// </value>
+        public Contact AdminContact { get; set; }
+
+        /// <summary>
         /// Returns a <see cref="T:System.String"/> that represents the current <see cref="T:System.Object"/>.
         /// </summary>
         /// <returns>
@@ -61,6 +96,15 @@ namespace Whois.Domain
         public override string ToString()
         {
             return Text.AsString();
+        }
+
+        public object Clone()
+        {
+            var clone = new WhoisRecord(text);
+
+
+
+            return clone;
         }
     }
 }
