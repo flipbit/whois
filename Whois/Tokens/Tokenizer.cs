@@ -1,6 +1,8 @@
 ﻿using System;
+using System.Collections;
 using System.Collections.Generic;
 using System.Linq;
+using System.Runtime.Remoting.Lifetime;
 using Whois.Extensions;
 
 namespace Whois.Tokens
@@ -149,9 +151,28 @@ namespace Whois.Tokens
 
                 if (path.Length == 1)
                 {
-                    var convertedValue = Convert.ChangeType(value, propertyInfo.PropertyType);
+                    if (propertyInfo.PropertyType.GetGenericTypeDefinition() == typeof(IList<>) && propertyInfo.PropertyType.IsGenericType)
+                    {
+                        var list = propertyInfo.GetValue(@object, null); 
 
-                    propertyInfo.SetValue(@object, convertedValue);
+                        if (list == null)
+                        {
+                            var genericType = propertyInfo.PropertyType.GetGenericArguments()[0];
+                            var enumerableType = typeof (List<>);
+                            var constructedEnumerableType = enumerableType.MakeGenericType(genericType);
+                            list = Activator.CreateInstance(constructedEnumerableType);
+
+                            propertyInfo.SetValue(@object, list);
+                        }
+
+                        list.GetType().GetMethod("Add").Invoke(list, new[] { value });
+                    }
+                    else
+                    {
+                        var convertedValue = Convert.ChangeType(value, propertyInfo.PropertyType);
+
+                        propertyInfo.SetValue(@object, convertedValue);
+                    }
 
                     break;
                 }

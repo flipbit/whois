@@ -1,4 +1,6 @@
 ﻿using System;
+using System.Collections;
+using System.Collections.Generic;
 using NUnit.Framework;
 
 namespace Whois.Tokens
@@ -13,6 +15,8 @@ namespace Whois.Tokens
             public string Message { get; set; }
 
             public int Counter { get; set; }
+
+            public IList<string> List { get; set; }
 
             public TestClass Nested { get; set; }
         }
@@ -206,6 +210,30 @@ end #{TestClass.Nested.Counter}";
             var result = tokenizer.SetValue(new TestClass(), "TestClass.Nested.Message", "Nested Hello");
 
             Assert.AreEqual("Nested Hello", result.Nested.Message);
+        }
+
+        [Test]
+        public void TestSetListValueString()
+        {
+            var result = tokenizer.SetValue(new TestClass(), "TestClass.List", "First");
+
+            Assert.AreEqual(1, result.List.Count);
+            Assert.AreEqual("First", result.List[0]);
+        }
+
+        [Test]
+        public void TestSetMultipleListValueString()
+        {
+            var testClass = new TestClass();
+
+            tokenizer.SetValue(testClass, "TestClass.List", "First");
+            tokenizer.SetValue(testClass, "TestClass.List", "Second");
+            tokenizer.SetValue(testClass, "TestClass.List", "Third");
+
+            Assert.AreEqual(3, testClass.List.Count);
+            Assert.AreEqual("First", testClass.List[0]);
+            Assert.AreEqual("Second", testClass.List[1]);
+            Assert.AreEqual("Third", testClass.List[2]);
         }
 
         [Test]
