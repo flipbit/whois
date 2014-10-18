@@ -65,6 +65,13 @@ namespace Whois.Visitors
             Assert.AreEqual(null, record.TechnicalContact.FaxNumber);
             Assert.AreEqual(null, record.TechnicalContact.FaxNumberExt);
             Assert.AreEqual("dns-tech@adobe.com", record.TechnicalContact.Email);
+
+            Assert.AreEqual(5, record.Nameservers.Count);
+            Assert.AreEqual("adobe-dns-03.adobe.com", record.Nameservers[0]);
+            Assert.AreEqual("adobe-dns-01.adobe.com", record.Nameservers[1]);
+            Assert.AreEqual("adobe-dns-02.adobe.com", record.Nameservers[2]);
+            Assert.AreEqual("adobe-dns-05.adobe.com", record.Nameservers[3]);
+            Assert.AreEqual("adobe-dns-04.adobe.com", record.Nameservers[4]);
         }
     }
 }

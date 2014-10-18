@@ -18,6 +18,8 @@ namespace Whois.Domain
         /// </summary>
         public WhoisRecord()
         {
+            Nameservers = new List<string>();
+
             Text = new ArrayList();
         }
 
@@ -27,6 +29,8 @@ namespace Whois.Domain
         /// <param name="text">The text.</param>
         public WhoisRecord(string text)
         {
+            Nameservers = new List<string>();
+
             this.text = text;
 
             Text = new ArrayList();
@@ -86,6 +90,8 @@ namespace Whois.Domain
         /// The admin contact.
         /// </value>
         public Contact AdminContact { get; set; }
+
+        public IList<string> Nameservers { get; private set; }
 
         /// <summary>
         /// Returns a <see cref="T:System.String"/> that represents the current <see cref="T:System.Object"/>.

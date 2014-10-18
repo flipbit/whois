@@ -151,7 +151,7 @@ namespace Whois.Tokens
 
                 if (path.Length == 1)
                 {
-                    if (propertyInfo.PropertyType.GetGenericTypeDefinition() == typeof(IList<>) && propertyInfo.PropertyType.IsGenericType)
+                    if (propertyInfo.PropertyType.IsGenericType && propertyInfo.PropertyType.GetGenericTypeDefinition() == typeof(IList<>))
                     {
                         var list = propertyInfo.GetValue(@object, null); 
 
@@ -162,7 +162,7 @@ namespace Whois.Tokens
                             var constructedEnumerableType = enumerableType.MakeGenericType(genericType);
                             list = Activator.CreateInstance(constructedEnumerableType);
 
-                            propertyInfo.SetValue(@object, list);
+                            propertyInfo.SetValue(@object, list, null);
                         }
 
                         list.GetType().GetMethod("Add").Invoke(list, new[] { value });
@@ -171,19 +171,19 @@ namespace Whois.Tokens
                     {
                         var convertedValue = Convert.ChangeType(value, propertyInfo.PropertyType);
 
-                        propertyInfo.SetValue(@object, convertedValue);
+                        propertyInfo.SetValue(@object, convertedValue, null);
                     }
 
                     break;
                 }
 
-                var currentValue = propertyInfo.GetValue(@object);
+                var currentValue = propertyInfo.GetValue(@object, null);
 
                 if (currentValue == null)
                 {
                     currentValue = Activator.CreateInstance(propertyInfo.PropertyType);
 
-                    propertyInfo.SetValue(@object, currentValue);
+                    propertyInfo.SetValue(@object, currentValue, null);
                 }
 
                 SetInnerValue(currentValue, path.Skip(1).ToArray(), value);

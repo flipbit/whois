@@ -1,27 +1,25 @@
-﻿using System;
+﻿using Whois.Commands;
 
 namespace Whois
 {
+    /// <summary>
+    /// WHOIS demo application
+    /// </summary>
     class Program
     {
         /// <summary>
-        /// Simple program to do a WHOIS lookup then exit.
+        /// Main entry point for the application.
         /// </summary>
         /// <param name="args">The args.</param>
         static void Main(string[] args)
         {
-            if (args == null || args.Length == 0)
-            {
-                Console.WriteLine("Usage: whois [domain]");
-            }
-            else
-            {
-                var result = new WhoisLookup().Lookup(args[0]);
+            var runner = new WhoisRunner();
 
-                Console.WriteLine(result.ToString());
-                Console.WriteLine("");
-                Console.WriteLine("Domain Created: {0:dd-MM-yyyy}", result.Created);
-            }
+            runner.Commands.Add(new WhoisCommand());
+            runner.Commands.Add(new ExitCommand());
+            runner.Commands.Add(new HelpCommand());
+
+            runner.Run(args);
         }
     }
 }
