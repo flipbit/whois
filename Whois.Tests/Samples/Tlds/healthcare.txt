@@ -1,0 +1,46 @@
+% IANA WHOIS server
+% for more information on IANA, visit http://www.iana.org
+% This query returned 1 object
+
+domain:       HEALTHCARE
+
+organisation: Silver Glen, LLC
+address:      c/o Donuts Inc., 10500 NE 8th Street, Suite 350
+address:      Bellevue, Washington 98004
+address:      United States
+
+contact:      administrative
+name:         Richard Tindal
+organisation: Donuts Inc.
+address:      c/o Donuts Inc., 10500 NE 8th Street, Suite 350
+address:      Bellevue, Washington 98004
+address:      United States
+phone:        +1.425.283.8248
+fax-no:       +1.425.671.0020
+e-mail:       richard@donuts.co
+
+contact:      technical
+name:         Chris Cowherd
+organisation: Donuts Inc.
+address:      c/o Donuts Inc., 10500 NE 8th Street, Suite 350
+address:      Bellevue, Washington 98004
+address:      United States
+phone:        +1.425.296.6802
+fax-no:       +1.425.671.0020
+e-mail:       chris@donuts.co
+
+nserver:      DEMAND.ALPHA.ARIDNS.NET.AU 2001:dcd:1:0:0:0:0:7 37.209.192.7
+nserver:      DEMAND.BETA.ARIDNS.NET.AU 2001:dcd:2:0:0:0:0:7 37.209.194.7
+nserver:      DEMAND.DELTA.ARIDNS.NET.AU 2001:dcd:4:0:0:0:0:7 37.209.198.7
+nserver:      DEMAND.GAMMA.ARIDNS.NET.AU 2001:dcd:3:0:0:0:0:7 37.209.196.7
+ds-rdata:     26635 8 2 5C91D05C265CA8F7A34AC651D4B83C4431289327C9F2223EEC43CB8131128CA5
+
+whois:        whois.donuts.co
+
+status:       ACTIVE
+remarks:      Registration information: http://donuts.co
+
+created:      2014-07-24
+changed:      2014-07-30
+source:       IANA
+

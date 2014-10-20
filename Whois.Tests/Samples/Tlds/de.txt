@@ -1,0 +1,48 @@
+% IANA WHOIS server
+% for more information on IANA, visit http://www.iana.org
+% This query returned 1 object
+
+domain:       DE
+
+organisation: DENIC eG
+address:      Kaiserstrasse 75-77
+address:      Frankfurt am Main  60329
+address:      Germany
+
+contact:      administrative
+name:         Vorstand DENIC eG
+organisation: DENIC eG
+address:      Kaiserstrasse 75-77
+address:      Frankfurt am Main  60329
+address:      Germany
+phone:        +49 69 27235 0
+fax-no:       +49 69 27235 235
+e-mail:       vorstand@denic.de
+
+contact:      technical
+name:         Business Services
+organisation: DENIC eG
+address:      Kaiserstrasse 75-77
+address:      Frankfurt am Main  60329
+address:      Germany
+phone:        +49 69 27235 272
+fax-no:       +49 69 27235 234
+e-mail:       dbs@denic.de
+
+nserver:      A.NIC.DE 194.0.0.53 2001:678:2:0:0:0:0:53
+nserver:      F.NIC.DE 2a02:568:0:2:0:0:0:53 81.91.164.5
+nserver:      L.DE.NET 2001:668:1f:11:0:0:0:105 77.67.63.105
+nserver:      N.DE.NET 194.146.107.6 2001:67c:1011:1:0:0:0:53
+nserver:      S.DE.NET 195.243.137.26
+nserver:      Z.NIC.DE 194.246.96.1
+ds-rdata:     24220 8 2 ffe926aca67ed94089390250f1f294ac84a6d84f9121df73a79e439f42e820c2
+
+whois:        whois.denic.de
+
+status:       ACTIVE
+remarks:      Registration information: http://www.denic.de/
+
+created:      1986-11-05
+changed:      2012-04-19
+source:       IANA
+

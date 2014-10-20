@@ -1,0 +1,49 @@
+% IANA WHOIS server
+% for more information on IANA, visit http://www.iana.org
+% This query returned 1 object
+
+domain:       BW
+
+organisation: Botswana Communications Regulatory Authority (BOCRA)
+address:      Plot 206/207 Independence Avenue
+address:      Private Bag 00495
+address:      Gaborone
+address:      Botswana
+
+contact:      administrative
+name:         Snr Engineer ccTLD
+organisation: Botswana Communications Regulatory Authority (BOCRA)
+address:      Plot 206/207 Independence Avenue
+address:      Private Bag 00495
+address:      Gaborone
+address:      Botswana
+phone:        +267 368 5557
+fax-no:       +267 395 7976
+e-mail:       kamanga@bocra.org.bw
+
+contact:      technical
+name:         Snr Engineer ccTLD
+organisation: Botswana Communications Regulatory Authority (BOCRA)
+address:      Plot 206/207 Independence Avenue
+address:      Private Bag 00495
+address:      Gaborone
+address:      Botswana
+phone:        +267 368 5557
+fax-no:       +267 395 7976
+e-mail:       kamanga@bocra.org.bw
+
+nserver:      DNS1.NIC.NET.BW 168.167.98.226 2c0f:ff00:1:3:0:0:0:226
+nserver:      DNS2.NIC.NET.BW 168.167.98.218 2c0f:ff00:1:5:0:0:0:218
+nserver:      NS-BW.AFRINIC.NET 196.216.168.72 2001:43f8:120:0:0:0:0:72
+nserver:      NS1.BTC.BW 168.167.168.34 2c0f:ff00:0:4:0:0:0:2
+nserver:      PCH.NIC.NET.BW 204.61.216.70
+
+whois:        whois.nic.net.bw
+
+status:       ACTIVE
+remarks:      Registration information: https://registry.nic.net.bw
+
+created:      1993-03-19
+changed:      2014-05-31
+source:       IANA
+

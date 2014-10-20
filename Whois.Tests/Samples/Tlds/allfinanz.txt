@@ -1,0 +1,50 @@
+% IANA WHOIS server
+% for more information on IANA, visit http://www.iana.org
+% This query returned 1 object
+
+domain:       ALLFINANZ
+
+organisation: Allfinanz Deutsche Vermögensberatung Aktiengesellschaft
+address:      Münchener Strasse 1
+address:      Hessen
+address:      60329 Frankfurt am Main
+address:      Germany
+
+contact:      administrative
+name:         Director, Digital Media
+organisation: Allfinanz Deutsche Vermögensberatung Aktiengesellschaft
+address:      Münchener Strasse 1
+address:      Hessen
+address:      60329 Frankfurt am Main
+address:      Germany
+phone:        +49.692992060
+fax-no:       +49.6929920619128
+e-mail:       mail@allfinanz-registry.de
+
+contact:      technical
+name:         CTO
+organisation: KSregistry GmbH
+address:      KSregistry GmbH
+address:      Im Oberen Werk 1
+address:      66386 St. Ingbert
+address:      Germany
+phone:        +49.68949396250
+fax-no:       +49.68949396251
+e-mail:       icann@ksregistry.com
+
+nserver:      NS1A.KSREGISTRY.NET 2001:dd8:7:6075:dc:0:0:1 203.119.88.75
+nserver:      NS1B.KSREGISTRY.NET 2620:0171:0a00:00ad:0:0:0:75 72.0.48.75
+nserver:      NS2A.KSREGISTRY.COM 2001:dd8:7:6076:dc:0:0:1 203.119.88.76
+nserver:      NS2B.KSREGISTRY.COM 2620:0171:0a00:00ad:0:0:0:76 72.0.48.76
+ds-rdata:     31054 8 2 bd406ed913b56c7f177ab296278a41aad9dd11adfadb38eef607e8fe977077d7
+
+whois:        whois.ksregistry.net
+
+status:       ACTIVE
+remarks:      Registration information:
+remarks:      http://www.allfinanz-registry.de
+
+created:      2014-09-25
+changed:      2014-10-01
+source:       IANA
+

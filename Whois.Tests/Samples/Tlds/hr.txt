@@ -1,0 +1,48 @@
+% IANA WHOIS server
+% for more information on IANA, visit http://www.iana.org
+% This query returned 1 object
+
+domain:       HR
+
+organisation: CARNet - Croatian Academic and Research Network
+address:      Josipa Marohnica 5
+address:      Zagreb  10000
+address:      Croatia
+
+contact:      administrative
+name:         CARNet DNS-Admin
+organisation: CARNet - Croatian Academic and Research Network
+address:      Josipa Marohnica 5
+address:      Zagreb  10000
+address:      Croatia
+phone:        +385 1 66 61 686
+fax-no:       +385 1 66 61 615
+e-mail:       dns-admin@carnet.hr
+
+contact:      technical
+name:         CARNet Hostmaster
+organisation: CARNet - Croatian Academic and Research Network
+address:      Josipa Marohnica 5
+address:      Zagreb  10000
+address:      Croatia
+phone:        +385 1 66 61 616
+fax-no:       +385 1 66 61 615
+e-mail:       hostmaster@carnet.hr
+
+nserver:      DNS-HR.UNIVIE.AC.AT 2001:628:453:bb:0:0:0:7 78.104.145.7
+nserver:      HR-NS-1.CARNET.HR 161.53.160.100 2001:b68:ff:1:0:0:0:100
+nserver:      N3NS.NIC.ES 194.69.254.42 2001:67c:21cc:2000:0:0:64:42
+nserver:      PCH.CARNET.HR 2001:500:14:6090:ad:0:0:1 204.61.216.90
+nserver:      SNS-PB.ISC.ORG 192.5.4.1 2001:500:2e:0:0:0:0:1
+ds-rdata:     53482 8 1 E7DE0B5B896EB7490EC31C423D070719F0CB776B
+ds-rdata:     53482 8 2 02D9770A4D8C5646E5EA0F4032638B4360E27D3455C83BCC95E6D2ED50D79F60
+
+whois:        whois.dns.hr
+
+status:       ACTIVE
+remarks:      Registration information: http://www.dns.hr
+
+created:      1993-02-27
+changed:      2014-08-28
+source:       IANA
+

@@ -1,0 +1,49 @@
+% IANA WHOIS server
+% for more information on IANA, visit http://www.iana.org
+% This query returned 1 object
+
+domain:       ID
+
+organisation: Perkumpulan Pengelola Nama Domain Internet Indonesia (PANDI)
+address:      Oleos 2 Building. 6th floor,
+address:      Jalan Kebagusan I No. 6,
+address:      Pasar Minggu
+address:      Jakarta Selatan, DKI Jakarta 12520
+address:      Indonesia
+
+contact:      administrative
+name:         Muhammad Neil El Himam
+organisation: Ministry of Communication and Information Technology
+address:      Jalan Medan Merdeka Barat No.17
+address:      Jakarta Pusat DKI Jakarta 10110
+address:      Indonesia
+phone:        +62 8179006366
+fax-no:       +62 21 3835845
+e-mail:       neil@pandi.or.id
+
+contact:      technical
+name:         Aidil Chendramata
+organisation: Ministry of Communication and Information Technology
+address:      Jalan Medan Merdeka Barat No.9
+address:      Jakarta Pusat DKI Jakarta 10110
+address:      Indonesia
+phone:        +62 817758377
+fax-no:       +62 21 3845786
+e-mail:       aidil@pandi.or.id
+
+nserver:      G.DNS.ID 2001:dd8:1f:4:0:0:0:84 203.119.112.84
+nserver:      NS1.ID 2001:e00:1800:0:0:0:0:2 202.155.30.227
+nserver:      NS1.INDO.NET.ID 202.159.32.2
+nserver:      NS1.RAD.NET.ID 202.154.1.2
+nserver:      NS2.CBN.NET.ID 2001:d10:a:53:0:0:0:53 202.158.40.1
+nserver:      SEC3.APNIC.NET 2001:dc0:1:0:4777:0:0:140 202.12.28.140
+
+whois:        whois.pandi.or.id
+
+status:       ACTIVE
+remarks:      Registration information: https://register.pandi.or.id
+
+created:      1993-02-27
+changed:      2014-05-28
+source:       IANA
+

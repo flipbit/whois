@@ -1,0 +1,46 @@
+% IANA WHOIS server
+% for more information on IANA, visit http://www.iana.org
+% This query returned 1 object
+
+domain:       AD
+
+organisation: Andorra Telecom
+address:      Carrer Mossèn Lluís Pujol, 8-14
+address:      Santa Coloma  AD500
+address:      Andorra
+
+contact:      administrative
+name:         Joan-Marc Lauga Courtil
+organisation: Andorra Telecom
+address:      Carrer Mossèn Lluís Pujol, 8-14
+address:      Santa Coloma  AD500
+address:      Andorra
+phone:        +376 875274
+fax-no:       +376 863667
+e-mail:       joan-marc.lauga@andorratelecom.ad
+
+contact:      technical
+name:         Sergi Lucas
+organisation: Andorra Telecom
+address:      Carrer Mossèn Lluís Pujol, 8-14
+address:      Santa Coloma AD500
+address:      Andorra
+phone:        +376 875000
+fax-no:       +376 863667
+e-mail:       sergi.lucas@andorratelecom.ad
+
+nserver:      AD.CCTLD.AUTHDNS.RIPE.NET 193.0.9.53 2001:67c:e0:0:0:0:0:53
+nserver:      AD.NS.NIC.ES 194.69.254.15
+nserver:      DNSC.AD 194.158.74.10 2a02:8060:32fa:0:0:0:0:b
+nserver:      DNSM.AD 194.158.74.9 2a02:8060:32fa:0:0:0:0:a
+nserver:      NS-EXT.ISC.ORG 2001:4f8:0:2:0:0:0:13 204.152.184.64
+nserver:      NS3.NIC.FR 192.134.0.49 2001:660:3006:1:0:0:1:1
+ds-rdata:     48403 5 2 8591417D07A1300A5D92D47150C409063681614CFEDD2EDA75C0AF8CB9148602
+
+status:       ACTIVE
+remarks:      Registration information: http://www.nic.ad
+
+created:      1996-01-09
+changed:      2014-05-14
+source:       IANA
+

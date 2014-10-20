@@ -1,0 +1,48 @@
+% IANA WHOIS server
+% for more information on IANA, visit http://www.iana.org
+% This query returned 1 object
+
+domain:       CI
+
+organisation: INP-HB Institut National Polytechnique Felix Houphouet Boigny
+address:      BP 1093
+address:      Yamoussoukro
+address:      Cote d'Ivoire
+
+contact:      administrative
+name:         Bobouo Nakounou
+organisation: INP-HB Institut National Polytechnique Felix Houphouet Boigny
+address:      BP 1093
+address:      Yamoussoukro
+address:      Cote d'Ivoire
+phone:        +225 30 64 05 41
+fax-no:       +225 22 44 66 00
+e-mail:       bobouo@nic.ci
+
+contact:      technical
+name:         Souleymane Oumtanaga
+organisation: INP-HB Institut National Polytechnique Felix Houphouet Boigny
+address:      BP 1093
+address:      Yamoussoukro
+address:      Cote d'Ivoire
+phone:        +225 07 90 02 31
+fax-no:       +225 22 44 66 00
+e-mail:       oumtana@nic.ci
+
+nserver:      CI.CCTLD.AUTHDNS.RIPE.NET 193.0.9.67 2001:67c:e0:0:0:0:0:67
+nserver:      CI.HOSTING.NIC.FR 192.134.0.49 2001:660:3006:1:0:0:1:1
+nserver:      NS-CI.AFRINIC.NET 196.216.168.30 2001:43f8:120:0:0:0:0:30
+nserver:      NS.NIC.CI 213.136.100.81
+nserver:      NS1.IRD.FR 193.50.53.3
+nserver:      NS1.NIC.CI 213.136.100.83
+nserver:      PHLOEM.UOREGON.EDU 128.223.32.35 2001:468:d01:20:0:0:80df:2023
+
+whois:        whois.nic.ci
+
+status:       ACTIVE
+remarks:      Registration information: http://www.nic.ci
+
+created:      1995-02-14
+changed:      2014-02-04
+source:       IANA
+

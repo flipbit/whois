@@ -1,0 +1,45 @@
+% IANA WHOIS server
+% for more information on IANA, visit http://www.iana.org
+% This query returned 1 object
+
+domain:       CM
+
+organisation: Cameroon Telecommunications (CAMTEL)
+address:      Boulevard du 20 mai
+address:      Yaounde  P.O Box 1571
+address:      Cameroon
+
+contact:      administrative
+name:         NGUIAMBA NLOUTSIRI Emmanuel
+organisation: CAMTEL
+address:      Boulevard du 20 mai
+address:      Yaounde  P.O Box 1571
+address:      Cameroon
+phone:        +237 223 4065
+fax-no:       +237 223 0303
+e-mail:       camtel@camnet.cm
+
+contact:      technical
+name:         BIKOE Jean-Ernest
+organisation: CAMTEL
+address:      Boulevard du 20 mai
+address:      Yaounde  P.O Box 1571
+address:      Cameroon
+phone:        +237 223 4065
+fax-no:       +237 223 0303
+e-mail:       jean-ernest.bikoe@camnet.cm
+
+nserver:      AUTH02.NS.UU.NET 198.6.1.82
+nserver:      CM.CCTLD.AUTHDNS.RIPE.NET 193.0.9.68 2001:67c:e0:0:0:0:0:68
+nserver:      KIM.CAMNET.CM 195.24.192.35
+nserver:      LOM.CAMNET.CM 195.24.192.34
+nserver:      NS.ITU.CH 156.106.192.121
+nserver:      SANAGA.CAMNET.CM 195.24.192.17
+
+status:       ACTIVE
+remarks:      Registration information: http://www.info.camnet.cm
+
+created:      1995-04-29
+changed:      2012-07-12
+source:       IANA
+

@@ -1,0 +1,46 @@
+% IANA WHOIS server
+% for more information on IANA, visit http://www.iana.org
+% This query returned 1 object
+
+domain:       DZ
+
+organisation: CERIST
+address:      Rue des Trois Feres Aissiou, Ben-Aknoun
+address:      Algiers  16035
+address:      Algeria
+
+contact:      administrative
+name:         Moussa Benhamadi
+organisation: CERIST
+address:      Rue des Trois Feres Aissiou, Ben-Aknoun
+address:      Algiers  16035
+address:      Algeria
+phone:        +213 21 91 54 34
+fax-no:       +213 21 91 62 10
+e-mail:       mbenhamadi@wissal.dz
+
+contact:      technical
+name:         Aouaouche El-Maouhab
+organisation: CERIST
+address:      Rue des Trois Freres Aissiou, Ben-Aknoun
+address:      Algiers  16035
+address:      Algeria
+phone:        +213 21 91 54 34
+fax-no:       +213 21 91 62 10
+e-mail:       elmaouhab@wissal.dz
+
+nserver:      DZ.CCTLD.AUTHDNS.RIPE.NET 193.0.9.71 2001:67c:e0:0:0:0:0:71
+nserver:      NS-DZ.AFRINIC.NET 196.216.168.36 2001:43f8:120:0:0:0:0:36
+nserver:      NS1.NIC.DZ 193.194.64.242 2001:4340:1030:2:0:0:0:2
+nserver:      NS2.NIC.DZ 213.179.160.66
+nserver:      NS3.NIC.FR 192.134.0.49 2001:660:3006:1:0:0:1:1
+
+whois:        whois.nic.dz
+
+status:       ACTIVE
+remarks:      Registration information: http://www.nic.dz
+
+created:      1994-01-03
+changed:      2013-08-08
+source:       IANA
+

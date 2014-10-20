@@ -1,0 +1,49 @@
+% IANA WHOIS server
+% for more information on IANA, visit http://www.iana.org
+% This query returned 1 object
+
+domain:       BNPPARIBAS
+
+organisation: BNP Paribas
+address:      16 Boulevard des Italiens,
+address:      Paris, 75009
+address:      France
+
+contact:      administrative
+name:         Project manager
+organisation: BNP Paribas
+address:      16 Rue du Hanovre,
+address:      Paris, 75002
+address:      France
+phone:        +33 1 42 98 02 65
+fax-no:       +33 1 57 43 74 03
+e-mail:       tld@bnpparibas.com
+
+contact:      technical
+name:         Senior Director, DNS Infrastructure Group
+organisation: Afilias
+address:      Building 3, Suite 105
+address:      300 Welsh Road,
+address:      Horsham, PA 19044
+address:      United States
+phone:        +1 215 706 5700
+fax-no:       +1 215 706 5701
+e-mail:       tld-tech-poc@afilias.info
+
+nserver:      A0.NIC.BNPPARIBAS 2a01:8840:3e:0:0:0:0:9 65.22.64.9
+nserver:      A2.NIC.BNPPARIBAS 2a01:8840:41:0:0:0:0:9 65.22.67.9
+nserver:      B0.NIC.BNPPARIBAS 2a01:8840:3f:0:0:0:0:9 65.22.65.9
+nserver:      C0.NIC.BNPPARIBAS 2a01:8840:40:0:0:0:0:9 65.22.66.9
+ds-rdata:     825 7 1 2c6c5821939cb3bc107e8a64c4aa3940e772da6d
+ds-rdata:     825 7 2 3a7cb9dbc2606bcd95a6ce88d4d833b6cfcb7b43c84dadd3cfa7ff7373c1c91b
+
+whois:        whois.afilias-srs.net
+
+status:       ACTIVE
+remarks:      Registration information:
+remarks:      http://www.bnpparibas.com/en/about-us
+
+created:      2014-07-31
+changed:      2014-08-14
+source:       IANA
+

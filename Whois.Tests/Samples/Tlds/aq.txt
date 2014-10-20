@@ -1,0 +1,41 @@
+% IANA WHOIS server
+% for more information on IANA, visit http://www.iana.org
+% This query returned 1 object
+
+domain:       AQ
+
+organisation: Antarctica Network Information Centre Limited
+address:      2116/26 Albert Street
+address:      Auckland Central Auckland 1010
+address:      New Zealand
+
+contact:      administrative
+name:         Peter Mott
+organisation: Antarctica Network Information Centre Limited
+address:      2116/26 Albert Street
+address:      Auckland Central Auckland 1010
+address:      New Zealand
+phone:        +64 21 279 4995
+e-mail:       info@icenic.aq
+
+contact:      technical
+name:         Peter Mott
+organisation: LocalCloud Limited
+address:      P O Box 105 271
+address:      Auckland City
+address:      Auckland 1143
+address:      New Zealand
+phone:        +64 21 279 4995
+e-mail:       hostmaster@localcloud.co.nz
+
+nserver:      FORK.STH.DNSNODE.NET 2a01:3f0:0:306:0:0:0:53 77.72.229.254
+nserver:      NS1.DNS.AQ 203.119.56.132
+nserver:      NS99.DNS.NET.NZ 2001:dce:2000:2:0:0:0:131 202.46.190.131
+nserver:      SNS-PB.ISC.ORG 192.5.4.1 2001:500:2e:0:0:0:0:1
+
+status:       ACTIVE
+
+created:      1992-02-26
+changed:      2014-03-13
+source:       IANA
+

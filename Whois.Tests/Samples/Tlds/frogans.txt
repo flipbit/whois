@@ -1,0 +1,47 @@
+% IANA WHOIS server
+% for more information on IANA, visit http://www.iana.org
+% This query returned 1 object
+
+domain:       FROGANS
+
+organisation: OP3FT
+address:      6, square Mozart
+address:      75016 Paris
+address:      France
+
+contact:      administrative
+name:         President of the Board of Directors
+organisation: OP3FT
+address:      6, square Mozart
+address:      75016 Paris
+address:      France
+phone:        +33 153920040
+fax-no:       +33 153922846
+e-mail:       amaury.grimbert@op3ft.org
+
+contact:      technical
+name:         Project Manager
+organisation: AFNIC
+address:      1, rue Stephenson
+address:      Immeuble Stephenson
+address:      78180 Montigny-Le-Bretonneux
+address:      France
+phone:        +33 672217740
+fax-no:       +33 139308301
+e-mail:       pocfrogans@afnic.fr
+
+nserver:      D.NIC.FR 194.0.9.1 2001:678:c:0:0:0:0:1
+nserver:      F.EXT.NIC.FR 194.146.106.46 2001:67c:1010:11:0:0:0:53
+nserver:      G.EXT.NIC.FR 194.0.36.1 2001:678:4c:0:0:0:0:1
+ds-rdata:     30964 8 2 193361315b319d5e472bb0f1ffbac2cde8e5fdfda1aae5a11a942f8131cdbab4
+ds-rdata:     8152 8 2 28a56d69ea7f1d02a3a5452f5301c46341605c630dc0aa1b6b731d7b0517cee4
+
+whois:        whois-frogans.nic.fr
+
+status:       ACTIVE
+remarks:      Registration information: http://www.frogans.org
+
+created:      2014-04-03
+changed:      2014-04-21
+source:       IANA
+

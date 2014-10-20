@@ -1,0 +1,46 @@
+% IANA WHOIS server
+% for more information on IANA, visit http://www.iana.org
+% This query returned 1 object
+
+domain:       GENT
+
+organisation: COMBELL GROUP NV/SA
+address:      Skaldenstraat 121
+address:      9042 GENT
+address:      Belgium
+
+contact:      administrative
+name:         Jimmy Cappaert
+organisation: COMBELL GROUP NV/SA
+address:      Skaldenstraat 121
+address:      9042 GENT
+address:      Belgium
+phone:        +3292187979
+fax-no:       +3292187978
+e-mail:       jimmy@combellgroup.com
+
+contact:      technical
+name:         Jimmy Cappaert
+organisation: COMBELL GROUP NV/SA
+address:      Skaldenstraat 121
+address:      9042 GENT
+address:      Belgium
+phone:        +3292187979
+fax-no:       +3292187978
+e-mail:       jimmy@combellgroup.com
+
+nserver:      A.NS.NIC.GENT 2a02:2790:0:2:0:0:0:53 89.207.184.98
+nserver:      C.NS.NIC.GENT 54.247.68.190
+nserver:      X.NS.NIC.GENT 195.253.64.4 2a01:5b0:4:0:0:0:0:4
+nserver:      Y.NS.NIC.GENT 195.253.64.7 2a01:5b0:4:0:0:0:0:7
+ds-rdata:     19200 7 2 11F029AD7E87D944ABD918B837C1E5D75E400598DCD66630B37E48D8D149F97E
+
+whois:        whois.nic.gent
+
+status:       ACTIVE
+remarks:      Registration information: http://www.dotgent.com
+
+created:      2014-07-03
+changed:      2014-07-14
+source:       IANA
+

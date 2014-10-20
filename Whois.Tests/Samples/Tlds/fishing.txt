@@ -1,0 +1,38 @@
+% IANA WHOIS server
+% for more information on IANA, visit http://www.iana.org
+% This query returned 1 object
+
+domain:       FISHING
+
+organisation: Top Level Domain Holdings Limited
+address:      Craigmuir Chambers, Road Town Tortola VG 1110
+address:      Virgin Islands, British
+
+contact:      administrative
+name:         Admin Contact
+organisation: Minds + Machines Ltd
+address:      32 Nassau St, Dublin 2
+address:      Ireland
+phone:        +353.14301689
+e-mail:       support@mm-registry.com
+
+contact:      technical
+name:         Director of Software Development
+organisation: Minds + Machines Ltd
+address:      32 Nassau St, Dublin 2
+address:      Ireland
+phone:        +353.14301689
+e-mail:       support@mm-registry.com
+
+nserver:      A.NS.NIC.FISHING 2620:0171:0a02:00ad:0:0:0:5 72.0.50.5
+nserver:      B.NS.NIC.FISHING 2620:0171:0d02:00dc:0:0:0:5 72.42.114.5
+ds-rdata:     64262 8 2 0FB7BC6935F3E4B3EE50474615D238A21CBD0ED00CD1C2E029AF21FF86F3AD4D
+
+whois:        whois-dub.mm-registry.com
+
+status:       ACTIVE
+
+created:      2014-02-28
+changed:      2014-03-31
+source:       IANA
+

@@ -1,0 +1,45 @@
+% IANA WHOIS server
+% for more information on IANA, visit http://www.iana.org
+% This query returned 1 object
+
+domain:       DESI
+
+organisation: Desi Networks LLC
+address:      6813 Marbury Road
+address:      Bethesda, MD 20817
+address:      United States
+
+contact:      administrative
+name:         Siddharth Ohri
+organisation: Desi Networks, LLC
+address:      6813 Marbury Road
+address:      Bethesda, MD 20817
+address:      United States
+phone:        1-202-236-4338
+e-mail:       sohri@dotdesi.com
+
+contact:      technical
+name:         Registry Service
+organisation: KSregistry GmbH
+address:      Im Oberen Werk 1
+address:      66386 St. Ingbert
+address:      Germany
+phone:        +49 6894 9396 250
+fax-no:       +49 6894 93 96 251
+e-mail:       icann@ksregistry.com
+
+nserver:      NS1A.KSREGISTRY.NET 2001:dd8:7:6075:dc:0:0:1 203.119.88.75
+nserver:      NS1B.KSREGISTRY.NET 2620:0171:0a00:00ad:0:0:0:75 72.0.48.75
+nserver:      NS2A.KSREGISTRY.COM 2001:dd8:7:6076:dc:0:0:1 203.119.88.76
+nserver:      NS2B.KSREGISTRY.COM 2620:0171:0a00:00ad:0:0:0:76 72.0.48.76
+ds-rdata:     1892 8 2 fc7c536b22b06b60f540f4bbc7861a644fc03235d96febc3d53c805d1baf43dc
+
+whois:        whois.ksregistry.net
+
+status:       ACTIVE
+remarks:      Registration information: http://www.dotdesi.com/
+
+created:      2014-03-06
+changed:      2014-04-10
+source:       IANA
+

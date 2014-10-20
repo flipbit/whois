@@ -1,0 +1,49 @@
+% IANA WHOIS server
+% for more information on IANA, visit http://www.iana.org
+% This query returned 1 object
+
+domain:       FOO
+
+organisation: Charleston Road Registry Inc.
+address:      1600 Amphitheatre Parkway Mountain View, California - 94043 US
+address:      United States
+
+contact:      administrative
+name:         TLD Manager
+organisation: Google Inc
+address:      1101 New York Avenue, N.W.
+address:      Second Floor
+address:      Washington, DC 20005
+address:      United States
+phone:        202.346.1230
+fax-no:       202.346.1101
+e-mail:       tas-contact10@google.com
+
+contact:      technical
+name:         Seth Goldman
+organisation: Google Inc
+address:      76 Ninth Avenue
+address:      4th Floor
+address:      New York, NY 10011
+address:      United States
+phone:         650.253.2181
+fax-no:       212.565.0001
+e-mail:       crr-tech@google.com
+
+nserver:      NS-TLD1.CHARLESTONROADREGISTRY.COM 2001:4860:4802:32:0:0:0:69 216.239.32.105
+nserver:      NS-TLD2.CHARLESTONROADREGISTRY.COM 2001:4860:4802:34:0:0:0:69 216.239.34.105
+nserver:      NS-TLD3.CHARLESTONROADREGISTRY.COM 2001:4860:4802:36:0:0:0:69 216.239.36.105
+nserver:      NS-TLD4.CHARLESTONROADREGISTRY.COM 2001:4860:4802:38:0:0:0:69 216.239.38.105
+nserver:      NS-TLD5.CHARLESTONROADREGISTRY.COM 2001:4860:4805:0:0:0:0:69 216.239.60.105
+ds-rdata:     45076 8 2 A1FB538DA27DE8AE1C4AEECEFDA9439B9F75C7A962EBF18C241DB1C6EDB0A891
+
+whois:        domain-registry-whois.l.google.com
+
+status:       ACTIVE
+remarks:      Registration information:
+remarks:      http://www.charlestonroadregistry.com/
+
+created:      2014-03-20
+changed:      2014-04-21
+source:       IANA
+

@@ -1,0 +1,49 @@
+% IANA WHOIS server
+% for more information on IANA, visit http://www.iana.org
+% This query returned 1 object
+
+domain:       BUZZ
+
+organisation: DOTSTRATEGY CO.
+address:      1920 Centennial Club Drive,
+address:      Conway,
+address:      AR 72034
+address:      United States
+
+contact:      administrative
+name:         William Doshier
+organisation: dotStrategy, Co
+address:      1920 Centennial Club Dr.,
+address:      Conway, AR 72034
+address:      United States
+phone:        5013529385
+fax-no:       5015683834
+e-mail:       bill@nameshops.com
+
+contact:      technical
+name:         Sean Kaine
+organisation: Neustar Inc.
+address:      46000 Center Oak Plaza,
+address:      Sterling, VA 20166
+address:      United States
+phone:        571-434-5168
+fax-no:       571-434-5401
+e-mail:       sean.kaine@neustar.biz
+
+nserver:      NS1.DNS.NIC.BUZZ 156.154.144.29 2610:a1:1071:0:0:0:0:1d
+nserver:      NS2.DNS.NIC.BUZZ 156.154.145.29 2610:a1:1072:0:0:0:0:1d
+nserver:      NS3.DNS.NIC.BUZZ 156.154.159.29 2610:a1:1073:0:0:0:0:1d
+nserver:      NS4.DNS.NIC.BUZZ 156.154.156.29 2610:a1:1074:0:0:0:0:1d
+nserver:      NS5.DNS.NIC.BUZZ 156.154.157.29 2610:a1:1075:0:0:0:0:1d
+nserver:      NS6.DNS.NIC.BUZZ 156.154.158.29 2610:a1:1076:0:0:0:0:1d
+nserver:      NS7.DNS.NIC.BUZZ 2001:503:7bbb:ffff:ffff:ffff:ffff:ff7e 207.34.5.10
+ds-rdata:     47864 8 1 455F2C4738D8D597E70EE16AD30C249839C13EC9
+ds-rdata:     47864 8 2 A7178B083CB8C38492BBA8B7BF71F2D86B892CD851FECB81EE2FFFB55097F78A
+
+status:       ACTIVE
+remarks:      Registration information: http://www.buzznames.biz
+
+created:      2013-12-12
+changed:      2013-12-18
+source:       IANA
+

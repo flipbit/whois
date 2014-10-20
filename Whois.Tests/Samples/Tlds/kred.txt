@@ -1,0 +1,44 @@
+% IANA WHOIS server
+% for more information on IANA, visit http://www.iana.org
+% This query returned 1 object
+
+domain:       KRED
+
+organisation: KredTLD Pty Ltd
+address:      322/5 Lime St, Sydney, NSW 2000
+address:      Australia
+
+contact:      administrative
+name:         Michael Deparini
+organisation: KredTLD Pty Ltd
+address:      322/5 Lime St, Sydney, NSW 2000
+address:      Australia
+phone:        +1-925-667-6051
+e-mail:       dotkred@peoplebrowsr.com
+
+contact:      technical
+name:         Sean Kaine
+organisation: Neustar, Inc.
+address:      46000 Center Oak Plaza,
+address:      Sterling, VA 20166
+address:      United States
+phone:        +1 571 434 5168
+fax-no:       +1 571 434 5401
+e-mail:       tldlaunch@neustar.biz
+
+nserver:      NS1.DNS.NIC.KRED 156.154.144.99 2610:a1:1071:0:0:0:0:63
+nserver:      NS2.DNS.NIC.KRED 156.154.145.99 2610:a1:1072:0:0:0:0:63
+nserver:      NS3.DNS.NIC.KRED 156.154.159.99 2610:a1:1073:0:0:0:0:63
+nserver:      NS4.DNS.NIC.KRED 156.154.156.99 2610:a1:1074:0:0:0:0:63
+nserver:      NS5.DNS.NIC.KRED 156.154.157.99 2610:a1:1075:0:0:0:0:63
+nserver:      NS6.DNS.NIC.KRED 156.154.158.99 2610:a1:1076:0:0:0:0:63
+ds-rdata:     11480 8 1 74E467BCA5017FCD4F9F52618BBA52BAAB535461
+ds-rdata:     11480 8 2 A9C2AD21A0CAFA1DB04731EF4647140962C88A2DA406C53E8A9D4B3CC46F7F9F
+
+status:       ACTIVE
+remarks:      Registration information: http://www.peoplebrowsr.com
+
+created:      2014-02-20
+changed:      2014-02-27
+source:       IANA
+

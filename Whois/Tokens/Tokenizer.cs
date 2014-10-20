@@ -40,6 +40,11 @@ namespace Whois.Tokens
         {
             var result = new TokenResult<T>(target);
 
+            return Parse(result, pattern, input);
+        }
+
+        public TokenResult<T> Parse<T>(TokenResult<T> result, string pattern, string input) where T : class
+        {
             // Extract all the tokens from the pattern
             var tokens = GetTokens(pattern);
 
@@ -52,13 +57,13 @@ namespace Whois.Tokens
                 var value = input.SubstringAfterChar(token.Prefix).SubstringBeforeChar(token.Suffix);
 
                 // Use reflection to set the property on the object with the token value
-                result.Value = SetValue(target, token.Value, value);
+                result.Value = SetValue(result.Value, token.Value, value);
 
                 // Add the match to the result collection
                 result.Replacements.Add(token);
             }
 
-            return result;
+            return result;            
         }
 
         public TokenResult<T> Parse<T>(T target, string pattern, IEnumerable<string> input) where T : class
@@ -69,9 +74,11 @@ namespace Whois.Tokens
 
             foreach (var line in input)
             {
+                if (string.IsNullOrWhiteSpace(line)) continue;
+
                 foreach (var patternLine in patternLines)
                 {
-                    result = Parse(result.Value, patternLine.Trim(), line.Trim());
+                    result = Parse(result, patternLine.Trim(), line.Trim());
                 }
             }
 

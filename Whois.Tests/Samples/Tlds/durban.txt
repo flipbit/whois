@@ -1,0 +1,50 @@
+% IANA WHOIS server
+% for more information on IANA, visit http://www.iana.org
+% This query returned 1 object
+
+domain:       DURBAN
+
+organisation: ZA Central Registry NPC trading as ZA Central Registry
+address:      COZA House
+address:      Gazelle Close
+address:      Corporate Park South
+address:      Midrand
+address:      1685
+address:      South Africa
+
+contact:      administrative
+name:         Neil Duncan Dundas
+organisation: ZA Central Registry NPC trading as ZA Central Registry
+address:      PO Box 4620
+address:      Halfway House
+address:      1685
+address:      South Africa
+phone:        +27113140077
+fax-no:       +27113140088
+e-mail:       icann@registry.net.za
+
+contact:      technical
+name:         CTO
+organisation: Domain Name Services Pty Ltd
+address:      PO Box 11272
+address:      Hatfield
+address:      0028
+address:      South Africa
+phone:        +27113140077
+fax-no:       +27113140088
+e-mail:       theo@dnservices.co.za
+
+nserver:      COZA1.DNSNODE.NET 194.146.106.74 2001:67c:1010:18:0:0:0:53
+nserver:      NS.COZA.NET.ZA 2001:43f8:30:0:0:0:0:200 206.223.136.200
+nserver:      NS1.COZA.NET.ZA 66.135.62.20
+ds-rdata:     6964 8 2 DCC58F3187B8500A48828AB3D2099E5BB30B9A8577746043CF25F308629B240C
+
+whois:        durban-whois.registry.net.za
+
+status:       ACTIVE
+remarks:      Registration information: http://www.registry.net.za
+
+created:      2014-06-05
+changed:      2014-06-19
+source:       IANA
+

@@ -1,0 +1,48 @@
+% IANA WHOIS server
+% for more information on IANA, visit http://www.iana.org
+% This query returned 1 object
+
+domain:       HIV
+
+organisation: dotHIV gemeinnuetziger e.V.
+address:      Lehmbruckstr. 3
+address:      Berlin, Berlin 10245
+address:      Germany
+
+contact:      administrative
+name:         CEO
+organisation: dotHIV gemeinnütziger e.V.
+address:      Lehmbruckstr. 3
+address:      Berlin, Berlin 10245
+address:      Germany
+phone:        +49 176 244 383 16
+fax-no:       +49 30 55229087
+e-mail:       mail@dothiv-registry.net
+
+contact:      technical
+name:         Senior Director, DNS Infrastructure Group
+organisation: Afilias
+address:      Building 3, Suite 105
+address:      300 Welsh Road
+address:      Horsham, PA 19044
+address:      United States
+phone:        +1 215.706.5700
+fax-no:       +1 215.706.5701
+e-mail:       tld-tech-poc@afilias.info
+
+nserver:      A0.NIC.HIV 2a01:8840:de:0:0:0:0:17 65.22.228.17
+nserver:      A2.NIC.HIV 2a01:8840:e1:0:0:0:0:17 65.22.231.17
+nserver:      B0.NIC.HIV 2a01:8840:df:0:0:0:0:17 65.22.229.17
+nserver:      C0.NIC.HIV 2a01:8840:e0:0:0:0:0:17 65.22.230.17
+ds-rdata:     47635 7 1 30305403ca4c590cee9b54dc662ea9d27d8774a4
+ds-rdata:     47635 7 2 dc16ef34da7a694b7d5c6d4b93a105c330d07e90fb5f62c79ec2bebe14e49b2b
+
+whois:        whois.afilias-srs.net
+
+status:       ACTIVE
+remarks:      Registration information: http://www.dothiv.org
+
+created:      2014-05-22
+changed:      2014-05-31
+source:       IANA
+

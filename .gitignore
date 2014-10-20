@@ -29,6 +29,6 @@ _ReSharper*/
 [Tt]est[Rr]esult*
 Working
 Build/build.txt
-
+artifacts/
 packages
 !packages/repositories.config

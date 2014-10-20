@@ -1,0 +1,45 @@
+% IANA WHOIS server
+% for more information on IANA, visit http://www.iana.org
+% This query returned 1 object
+
+domain:       KW
+
+organisation: Ministry of Communications
+address:      P.O. Box No. 318
+address:      Safat  11111
+address:      Kuwait
+
+contact:      administrative
+name:         Saud Alshomer
+organisation: Ministry of Communications
+address:      P.O. Box No. 318
+address:      Safat  11111
+address:      Kuwait
+phone:        +965 24843577
+fax-no:       +965 24998493
+e-mail:       saud@moc.kw
+
+contact:      technical
+name:         Youssef Al-Mesfer
+organisation: Kuwait Institute for Scientific Research
+address:      P.O. Box 24885
+address:      Kuwait Safat 13109
+address:      Kuwait
+phone:        +965 2498 9774
+fax-no:       +965 2498 9699
+e-mail:       ymesfer@kisr.edu.kw
+
+nserver:      DNS1.KW 161.252.48.140
+nserver:      DNS2.KW 161.252.48.150
+nserver:      DNS3.KW 161.252.48.145
+nserver:      KWNS.KEMS.NET 168.187.5.12
+nserver:      SEC1.APNIC.NET 2001:dc0:2001:a:4608:0:0:59 202.12.29.59
+nserver:      SNS-PB.ISC.ORG 192.5.4.1 2001:500:2e:0:0:0:0:1
+
+status:       ACTIVE
+remarks:      Registration information: http://www.kw/
+
+created:      1992-10-26
+changed:      2011-03-10
+source:       IANA
+

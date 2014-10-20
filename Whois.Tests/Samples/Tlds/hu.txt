@@ -1,0 +1,48 @@
+% IANA WHOIS server
+% for more information on IANA, visit http://www.iana.org
+% This query returned 1 object
+
+domain:       HU
+
+organisation: Council of Hungarian Internet Providers (CHIP)
+address:      Victor Hugo u. 18-22.
+address:      Budapest  H-1132
+address:      Hungary
+
+contact:      administrative
+name:         Balazs Martos
+organisation: Council of Hungarian Internet Providers (CHIP)
+address:      Victor Hugo u. 18-22.
+address:      Budapest  H-1132
+address:      Hungary
+phone:        +36 1 238 0115
+fax-no:       +36 1 238 0114
+e-mail:       iszt@nic.hu
+
+contact:      technical
+name:         CHIP Hostmaster
+organisation: Council of Hungarian Internet Providers (CHIP)
+address:      Victor Hugo u. 18-22.
+address:      Budapest  H-1132
+address:      Hungary
+phone:        +36 1 238 0115
+fax-no:       +36 1 238 0114
+e-mail:       hostmaster@nic.hu
+
+nserver:      A.HU 193.239.148.1 2001:738:4:8000:0:0:0:48
+nserver:      B.HU 193.239.149.161 2001:738:4:4000:0:0:0:3
+nserver:      C.HU 193.6.16.1
+nserver:      D.HU 195.70.35.250
+nserver:      E.HU 194.0.25.11 2001:678:20:0:0:0:0:11
+nserver:      NS-COM.NIC.HU 194.0.1.12 2001:678:4:0:0:0:0:c
+nserver:      NS2.NIC.FR 192.93.0.4 2001:660:3005:1:0:0:1:2
+
+whois:        whois.nic.hu
+
+status:       ACTIVE
+remarks:      Registration information: http://www.nic.hu
+
+created:      1990-11-07
+changed:      2014-03-27
+source:       IANA
+

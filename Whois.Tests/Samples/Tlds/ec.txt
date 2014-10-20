@@ -1,0 +1,48 @@
+% IANA WHOIS server
+% for more information on IANA, visit http://www.iana.org
+% This query returned 1 object
+
+domain:       EC
+
+organisation: NIC.EC (NICEC) S.A.
+address:      Av. 9 de Octubre 100
+address:      Piso 22
+address:      Guayaquil Guayas
+address:      Ecuador
+
+contact:      administrative
+name:         Victor Abboud
+organisation: NIC.EC (NICEC) S.A.
+address:      Av. 9 de Octubre 100
+address:      Piso 22
+address:      Guayaquil Guayas
+address:      Ecuador
+phone:        +5934 2515912
+fax-no:       +5934 2515434
+e-mail:       vabboud@nic.ec
+
+contact:      technical
+name:         DNS Administrator
+organisation: NIC.EC (NICEC) S.A.
+address:      Av. 9 de Octubre 100
+address:      Piso 22
+address:      Guayaquil Guayas
+address:      Ecuador
+phone:        +5934 2515355
+fax-no:       +5934 2515434
+e-mail:       dnsadmin@nic.ec
+
+nserver:      N1.NIC.EC 200.12.198.1 2801:0:61:0:0:0:0:1
+nserver:      N2.NIC.EC 200.12.199.1 2801:0:60:0:0:0:0:1
+nserver:      N3.DNS.EC 2001:500:14:6039:ad:0:0:1 204.61.216.39
+nserver:      SNS-PB.ISC.ORG 192.5.4.1 2001:500:2e:0:0:0:0:1
+
+whois:        whois.nic.ec
+
+status:       ACTIVE
+remarks:      Registration information: http://www.nic.ec
+
+created:      1991-02-01
+changed:      2012-08-31
+source:       IANA
+

@@ -1,0 +1,43 @@
+% IANA WHOIS server
+% for more information on IANA, visit http://www.iana.org
+% This query returned 1 object
+
+domain:       BV
+
+organisation: UNINETT Norid A/S
+address:      Abelsgate 5
+address:      Trondheim  N-7465
+address:      Norway
+
+contact:      administrative
+name:         Hilde Thunem
+organisation: UNINETT Norid A/S
+address:      Abelsgate 5
+address:      Trondheim  N-7465
+address:      Norway
+phone:        +47 73 55 79 00
+fax-no:       +47 73 55 79 99
+e-mail:       hilde.thunem@uninett.no
+
+contact:      technical
+name:         Jarle Greipsland
+organisation: UNINETT Norid A/S
+address:      Abelsgate 5
+address:      Trondheim  N-7465
+address:      Norway
+phone:        +47 73 55 79 00
+fax-no:       +47 73 55 79 99
+e-mail:       jarle@uninett.no
+
+nserver:      NAC.NO 128.39.2.22 2001:700:0:102:0:0:0:aa53
+nserver:      NN.UNINETT.NO 158.38.0.181 2001:700:0:503:0:0:aa:5302
+nserver:      SERVER.NORDU.NET 193.10.252.19 2001:948:4:2:0:0:0:19
+
+status:       ACTIVE
+remarks:      Registration information:
+remarks:      http://www.norid.no/omnorid/toppdomenet-bv.en.html
+
+created:      1997-08-21
+changed:      2014-05-14
+source:       IANA
+

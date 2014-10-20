@@ -1,0 +1,51 @@
+% IANA WHOIS server
+% for more information on IANA, visit http://www.iana.org
+% This query returned 1 object
+
+domain:       KIM
+
+organisation: Afilias Limited
+address:      Afilias Limited
+address:      2 La Touche House
+address:      Dublin 1
+address:      Ireland
+
+contact:      administrative
+name:         Senior Vice President
+organisation: Afilias Limited
+address:      Afilias Limited
+address:      Building 3, Suite 105, 300 Welsh Rd
+address:      Horsham
+address:      PA 19044
+address:      United States
+phone:        +1 215 706 5700
+fax-no:       +1 215 706 5701
+e-mail:       tld-admin-poc@afilias.info
+
+contact:      technical
+name:         Sr Director
+organisation: Afilias Limited
+address:      Building 3, Suite 105, 300 Welsh Rd
+address:      Horsham
+address:      PA 19044
+address:      United States
+phone:        +1 215 706 5700
+fax-no:       +1 215 706 5701
+e-mail:       tld-tech-poc@afilias.info
+
+nserver:      A0.NIC.KIM 2a01:8840:1e:0:0:0:0:1 65.22.28.1
+nserver:      A2.NIC.KIM 2a01:8840:21:0:0:0:0:1 65.22.31.1
+nserver:      B0.NIC.KIM 2a01:8840:1f:0:0:0:0:1 65.22.29.1
+nserver:      C0.NIC.KIM 2a01:8840:20:0:0:0:0:1 65.22.30.1
+ds-rdata:     24474 7 1 2dd484eef79401cbfca231e6cbf4f1bb165cce14
+ds-rdata:     24474 7 2 2384a0380782da192d1c1f6da55a106551ef4c5233cd479536101921d35411e5
+
+whois:        whois.afilias.net
+
+status:       ACTIVE
+remarks:      Registration information: http://afilias.info
+
+created:      2013-12-19
+changed:      2014-01-23
+source:       IANA
+

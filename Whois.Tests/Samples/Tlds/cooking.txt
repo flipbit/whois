@@ -1,0 +1,38 @@
+% IANA WHOIS server
+% for more information on IANA, visit http://www.iana.org
+% This query returned 1 object
+
+domain:       COOKING
+
+organisation: Top Level Domain Holdings Limited
+address:      Craigmuir Chambers, Road Town Tortola VG 1110
+address:      Virgin Islands, British
+
+contact:      administrative
+name:         Admin Contact
+organisation: Minds + Machines Ltd
+address:      32 Nassau St, Dublin 2
+address:      Ireland
+phone:        353.14301689
+e-mail:       support@mm-registry.com
+
+contact:      technical
+name:         Directory of Software Development
+organisation: Minds + Machines Ltd
+address:      32 Nassau St, Dublin 2
+address:      Ireland
+phone:        +353.14301689
+e-mail:       support@mm-registry.com
+
+nserver:      A.NS.NIC.COOKING 2620:0171:0a02:00ad:0:0:0:10 72.0.50.10
+nserver:      B.NS.NIC.COOKING 2620:0171:0d02:00dc:0:0:0:10 72.42.114.10
+ds-rdata:     57727 8 2 8899B23CE9872CA38EB6753A566D58F716313098726158CA6F292A9207C615ED
+
+whois:        whois-dub.mm-registry.com
+
+status:       ACTIVE
+
+created:      2014-02-28
+changed:      2014-03-31
+source:       IANA
+

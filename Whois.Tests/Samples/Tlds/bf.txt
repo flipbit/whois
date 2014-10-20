@@ -1,0 +1,43 @@
+% IANA WHOIS server
+% for more information on IANA, visit http://www.iana.org
+% This query returned 1 object
+
+domain:       BF
+
+organisation: ARCE-AutoritÈ de RÈgulation des Communications Electroniques
+address:      01 BP 6437
+address:      Ouagadougou  01
+address:      Burkina Faso
+
+contact:      administrative
+name:         Serge Roland Sanou
+organisation: ARCE-AutoritÈ de RÈgulation des Communications Electroniques
+address:      01 BP 6437
+address:      Ouagadougou  01
+address:      Burkina Faso
+phone:        +22650375360
+fax-no:       +22650375364
+e-mail:       serge.sanou@arce.bf
+
+contact:      technical
+name:         Emmanuel Guigma
+organisation: ONATEL SA - Office National des TÈlÈcommunications
+address:      01 BP 10000
+address:      Ouagadougou  01
+address:      Burkina Faso
+phone:        +22670201338
+fax-no:       +22650375364
+e-mail:       guigma@onatel.bf
+
+nserver:      NAHOURI.ONATEL.BF 206.82.130.196
+nserver:      NS1.AS6453.NET 66.198.145.55
+nserver:      NS1.IRD.FR 193.50.53.3
+nserver:      NS2.AS6453.NET 66.198.145.99
+
+status:       ACTIVE
+remarks:      Registration information: http://www.arce.bf/domaine.php
+
+created:      1993-03-29
+changed:      2011-02-07
+source:       IANA
+

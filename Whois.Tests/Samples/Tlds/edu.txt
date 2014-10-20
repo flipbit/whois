@@ -1,0 +1,49 @@
+% IANA WHOIS server
+% for more information on IANA, visit http://www.iana.org
+% This query returned 1 object
+
+domain:       EDU
+
+organisation: EDUCAUSE
+address:      282 Century Place, Suite 5000
+address:      Louisville, CO  80027
+address:      United States
+
+contact:      administrative
+name:         Information Services Administration
+organisation: EDUCAUSE
+address:      4772 Walnut Street, Suite 206
+address:      Boulder Colorado 80301
+address:      United States
+phone:        +1-303-449-4430
+fax-no:       +1-303-440-0461
+e-mail:       netadmin@educause.edu
+
+contact:      technical
+name:         Registry Customer Service
+organisation: VeriSign Global Registry
+address:      12061 Bluemont Way
+address:      Reston Virginia 20190
+address:      United States
+phone:        +1-703-925-6999
+fax-no:       +1-703-948-3978
+e-mail:       info@verisign-grs.com
+
+nserver:      A.EDU-SERVERS.NET 192.5.6.30
+nserver:      C.EDU-SERVERS.NET 192.26.92.30
+nserver:      D.EDU-SERVERS.NET 192.31.80.30
+nserver:      F.EDU-SERVERS.NET 192.35.51.30
+nserver:      G.EDU-SERVERS.NET 192.42.93.30 2001:503:cc2c:0:0:0:2:36
+nserver:      L.EDU-SERVERS.NET 192.41.162.30
+ds-rdata:     28065 8 2 4172496CDE85534E51129040355BD04B1FCFEBAE996DFDDE652006F6F8B2CE76
+
+whois:        whois.educause.edu
+
+status:       ACTIVE
+remarks:      Registration information:
+remarks:      http://www.educause.edu/edudomain
+
+created:      1985-01-01
+changed:      2014-06-18
+source:       IANA
+

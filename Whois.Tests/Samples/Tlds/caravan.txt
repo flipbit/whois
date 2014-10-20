@@ -1,0 +1,45 @@
+% IANA WHOIS server
+% for more information on IANA, visit http://www.iana.org
+% This query returned 1 object
+
+domain:       CARAVAN
+
+organisation: Caravan International, Inc.
+address:      401 N Michigan Ave, Chicago, IL 60611
+address:      United States
+
+contact:      administrative
+name:         Ray Koltys
+organisation: Caravan International, Inc.
+address:      401 N Michigan Ave, Chicago, IL 60611
+address:      United States
+phone:        +1-312-321-9800
+fax-no:       +1-312-321-9810
+e-mail:       tld.registry@caravan.com
+
+contact:      technical
+name:         Sean Kaine
+organisation: Neustar, Inc.
+address:      46000 Center Oak Plaza,
+address:      Sterling, VA 20166
+address:      United States
+phone:        +1-571-434-5168
+fax-no:       +1-571-434-5401
+e-mail:       tldlaunch@neustar.biz
+
+nserver:      NS1.DNS.NIC.CARAVAN 156.154.144.32 2610:a1:1071:0:0:0:0:20
+nserver:      NS2.DNS.NIC.CARAVAN 156.154.145.32 2610:a1:1072:0:0:0:0:20
+nserver:      NS3.DNS.NIC.CARAVAN 156.154.159.32 2610:a1:1073:0:0:0:0:20
+nserver:      NS4.DNS.NIC.CARAVAN 156.154.156.32 2610:a1:1074:0:0:0:0:20
+nserver:      NS5.DNS.NIC.CARAVAN 156.154.157.32 2610:a1:1075:0:0:0:0:20
+nserver:      NS6.DNS.NIC.CARAVAN 156.154.158.32 2610:a1:1076:0:0:0:0:20
+ds-rdata:     57656 8 1 86F649C433DDA79032AA002DA8E3671E56C2A7B9
+ds-rdata:     57656 8 2 601BC4A9BFDE2727C6517167893EA79A4B12D5F20DD8E911E39282AAC490CF17
+
+status:       ACTIVE
+remarks:      Registration information: http://www.caravan.com
+
+created:      2014-05-22
+changed:      2014-08-15
+source:       IANA
+

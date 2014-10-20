@@ -1,0 +1,46 @@
+% IANA WHOIS server
+% for more information on IANA, visit http://www.iana.org
+% This query returned 1 object
+
+domain:       AN
+
+organisation: University of Curacao
+address:      Jan Noorduynweg 111
+address:      Willemstad
+address:      Curaçao
+
+contact:      administrative
+name:         Leendert J.J. Pengel
+organisation: University of Curacao
+address:      Jan Noorduynweg 111
+address:      Willemstad
+address:      Curaçao
+phone:        +599 97442248
+fax-no:       +599 97442255
+e-mail:       an_registry@uoc.cw
+
+contact:      technical
+name:         Leendert J.J. Pengel
+organisation: University of Curacao
+address:      Jan Noorduynweg 111
+address:      Willemstad
+address:      Curaçao
+phone:        +599 97442248
+fax-no:       +599 97442255
+e-mail:       an_registry@uoc.cw
+
+nserver:      AN.CCTLD.AUTHDNS.RIPE.NET 193.0.9.58 2001:67c:e0:0:0:0:0:58
+nserver:      ENGINE0.UNA.AN 200.26.199.99
+nserver:      ENGINE2.UNA.AN 65.174.238.100
+nserver:      ENGINE3.UNA.AN 200.26.199.102
+nserver:      KADUSHI.CURINFO.AN 65.208.122.63
+nserver:      NS0.JA.NET 128.86.1.20 193.63.94.20 2001:630:0:8:0:0:0:14 2001:630:0:9:0:0:0:14
+nserver:      NS01-SERVER.CURINFO.AN 65.208.122.36
+
+status:       ACTIVE
+remarks:      Registration information: http://www.uoc.cw/an_domreg
+
+created:      1993-09-09
+changed:      2014-05-14
+source:       IANA
+

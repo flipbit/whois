@@ -1,0 +1,50 @@
+% IANA WHOIS server
+% for more information on IANA, visit http://www.iana.org
+% This query returned 1 object
+
+domain:       CL
+
+organisation: NIC Chile (University of Chile)
+address:      Miraflores 222, Piso 14
+address:      Santiago RM 832-0198
+address:      Chile
+
+contact:      administrative
+name:         Patricio V. Poblete, Director
+organisation: NIC Chile
+organisation: University of Chile
+address:      Miraflores 222, Piso 14
+address:      Santiago RM 832-0198
+address:      Chile
+phone:        +56 2 940 7700
+fax-no:       +56 2 940 7701
+e-mail:       ppoblete@nic.cl
+
+contact:      technical
+name:         Jose M. Piquer, Technical Director
+organisation: NIC Chile
+organisation: University of Chile
+address:      Miraflores 222, Piso 14
+address:      Santiago RM 832-0198
+address:      Chile
+phone:        +56 2 940 7700
+fax-no:       +56 2 940 7701
+e-mail:       jpiquer@nic.cl
+
+nserver:      A.NIC.CL 200.1.121.10
+nserver:      B.NIC.CL 200.7.4.7 2001:1398:274:0:200:7:4:7
+nserver:      C.NIC.CL 200.16.112.16
+nserver:      CL-NS.ANYCAST.PCH.NET 2001:500:14:6030:ad:0:0:1 204.61.216.30
+nserver:      CL1.DNSNODE.NET 194.146.106.34 2001:67c:1010:8:0:0:0:53
+nserver:      SNS-PB.ISC.ORG 192.5.4.1 2001:500:2e:0:0:0:0:1
+ds-rdata:     21199 8 2 7D756DFFAB6D3CD9C786FF5C659954C22944FAEF9433EEE26F1D84EB5370B394
+
+whois:        whois.nic.cl
+
+status:       ACTIVE
+remarks:      Registration information: http://www.nic.cl/
+
+created:      1995-01-27
+changed:      2011-06-08
+source:       IANA
+

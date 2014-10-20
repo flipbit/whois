@@ -1,0 +1,47 @@
+% IANA WHOIS server
+% for more information on IANA, visit http://www.iana.org
+% This query returned 1 object
+
+domain:       CUISINELLA
+
+organisation: SALM S.A.S.
+address:      5, rue Clemenceau
+address:      68660 LIEPVRE
+address:      France
+
+contact:      administrative
+name:         Francine Hattermann
+organisation: SALM S.A.S.
+address:      5, rue Clemenceau
+address:      68660 LIEPVRE
+address:      France
+phone:        +33389582524
+fax-no:       +33389582591
+e-mail:       administrative-contact-cuisinella@salm.fr
+
+contact:      technical
+name:         Patrick Haist
+organisation: SALM S.A.S.
+address:      5, rue Clemenceau
+address:      68660 LIEPVRE
+address:      France
+phone:        +33389582376
+fax-no:       +33389582591
+e-mail:       technical-contact-cuisinella@salm.fr
+
+nserver:      A.NIC.CUISINELLA 2001:dcd:1:0:0:0:0:9 37.209.192.9
+nserver:      B.NIC.CUISINELLA 2001:dcd:2:0:0:0:0:9 37.209.194.9
+nserver:      C.NIC.CUISINELLA 2001:dcd:3:0:0:0:0:9 37.209.196.9
+nserver:      D.NIC.CUISINELLA 2001:dcd:4:0:0:0:0:9 37.209.198.9
+ds-rdata:     20374 8 1 5B3E8D5C440257767C64BC22854936B52E1706A0
+ds-rdata:     20374 8 2 16351A3A6705FFA670C59B579ED052F8E54488CBADE24A8E4929BCE6ADF21EE0
+
+whois:        whois.nic.cuisinella
+
+status:       ACTIVE
+remarks:      Registration information: http://nic.cuisinella/
+
+created:      2014-06-19
+changed:      2014-09-04
+source:       IANA
+

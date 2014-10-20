@@ -1,0 +1,48 @@
+% IANA WHOIS server
+% for more information on IANA, visit http://www.iana.org
+% This query returned 1 object
+
+domain:       HN
+
+organisation: Red de Desarrollo Sostenible Honduras
+address:      Col. Las Colinas, Bloque RR, Casa 2016
+address:      Boulevard Francia
+address:      Tegucigalpa Francisco Morazán 4959
+address:      Honduras
+
+contact:      administrative
+name:         Maria Raquel Isaula Peralta
+organisation: Red de Desarrollo Sostenible Honduras
+address:      Col. Las Colinas, Bloque RR, Casa 2016
+address:      Boulevard Francia
+address:      Tegucigalpa Francisco Morazán 4959
+address:      Honduras
+phone:        +504 235 4141/42/43/44/45
+fax-no:       +504 235 5721
+e-mail:       raquel@rds.org.hn
+
+contact:      technical
+name:         Jan Alvarado
+organisation: Red de Desarrollo Sostenible Honduras
+address:      Col. Las Colinas, Bloque RR, Casa 2016
+address:      Boulevard Francia
+address:      Tegucigalpa Francisco Morazán 4959
+address:      Honduras
+phone:        +504 2235 4141/42/43/44/45
+fax-no:       +504 2235 5721
+e-mail:       janalvarado@rds.org.hn
+
+nserver:      NICMX-ANYCAST.RDS.ORG.HN 200.33.111.1
+nserver:      PCH-ANYCAST.RDS.ORG.HN 2001:500:14:6064:ad:0:0:1 204.61.216.64
+nserver:      SNS-PB.ISC.ORG 192.5.4.1 2001:500:2e:0:0:0:0:1
+ds-rdata:     20599 8 2 B7CA2A70DEA7188CB7319A8049164EF9D0E3496D8FE4E3C135CBA8452544BA72
+
+whois:        whois.nic.hn
+
+status:       ACTIVE
+remarks:      Registration information: http://www.nic.hn
+
+created:      1993-04-16
+changed:      2013-06-19
+source:       IANA
+

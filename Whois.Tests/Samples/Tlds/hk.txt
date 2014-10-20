@@ -1,0 +1,55 @@
+% IANA WHOIS server
+% for more information on IANA, visit http://www.iana.org
+% This query returned 1 object
+
+domain:       HK
+
+organisation: Hong Kong Internet Registration Corporation Ltd.
+address:      Unit 2002-2005, 20/F, ING Tower
+address:      308 Des Voeux Road Central
+address:      Sheung Wan
+address:      Hong Kong
+
+contact:      administrative
+name:         Jonathan Shea
+organisation: Hong Kong Internet Registration Corporation Ltd.
+address:      Unit 2002-2005, 20/F, ING Tower
+address:      308 Des Voeux Road Central
+address:      Sheung Wan
+address:      Hong Kong
+phone:        +852 2319 1313
+fax-no:       +852 2319 2626
+e-mail:       ceo@hkirc.hk
+
+contact:      technical
+name:         Ben Lee
+organisation: Hong Kong Internet Registration Corporation Ltd.
+address:      Unit 2002-2005, 20/F, ING Tower
+address:      308 Des Voeux Road Central
+address:      Sheung Wan
+address:      Hong Kong
+phone:        +852 2319 1313
+fax-no:       +852 2319 2626
+e-mail:       hk.tech@hkirc.hk
+
+nserver:      B.HKIRC.NET.HK 2001:dca:1000:0:0:0:cb77:5713 203.119.87.19
+nserver:      C.HKIRC.NET.HK 2001:dca:4000:0:0:0:cb77:2da 203.119.2.218
+nserver:      D.HKIRC.NET.HK 203.119.87.218
+nserver:      S.HKIRC.NET.HK 128.32.136.3 2607:f140:ffff:fffe:0:0:0:3
+nserver:      T.HKIRC.NET.HK 128.32.136.14 2607:f140:ffff:fffe:0:0:0:e
+nserver:      U.HKIRC.NET.HK 210.201.138.58 2404:0:10a0:0:0:0:0:58
+nserver:      V.HKIRC.NET.HK 2001:500:14:6046:ad:0:0:1 204.61.216.46
+nserver:      W.HKIRC.NET.HK 2001:dc0:1:0:4777:0:0:140 202.12.28.140
+nserver:      X.HKIRC.NET.HK 202.45.188.39 2405:3001:1:3a:0:0:0:27
+nserver:      Y.HKIRC.NET.HK 137.189.6.21 2405:3000:3:6:0:0:0:15
+nserver:      Z.HKIRC.NET.HK 194.146.106.70 2001:67c:1010:17:0:0:0:53
+
+whois:        whois.hkirc.hk
+
+status:       ACTIVE
+remarks:      Registration information: http://www.hkirc.hk
+
+created:      1990-01-03
+changed:      2014-06-27
+source:       IANA
+

@@ -1,0 +1,41 @@
+% IANA WHOIS server
+% for more information on IANA, visit http://www.iana.org
+% This query returned 1 object
+
+domain:       ER
+
+organisation: Eritrea Telecommunication Services Corporation (EriTel)
+address:      11 sematat street
+address:      Asmara Central Zone 234
+address:      Eritrea
+
+contact:      administrative
+name:         Moa Tedros
+organisation: Eritrea Telecommunication Services Corporation (EriTel)
+address:      11 sematat street
+address:      Asmara Central Zone 234
+address:      Eritrea
+phone:        +291 1 200339
+fax-no:       +291 1 120938
+e-mail:       moa_tedros05@yahoo.com
+
+contact:      technical
+name:         Eng. Mekonneen  Fessahazion
+organisation: Ministry of Transport and Communication
+address:      Egri Mekel Street
+address:      Asmara Central Zone 4918
+address:      Eritrea
+phone:        +291 1 189193
+fax-no:       +291 1 185019
+e-mail:       mokiefzn@gmail.com
+
+nserver:      ER.CCTLD.AUTHDNS.RIPE.NET 193.0.9.72 2001:67c:e0:0:0:0:0:72
+nserver:      SAWANEW.NOC.NET.ER 196.200.96.1
+nserver:      ZARANEW.NOC.NET.ER 196.200.96.2
+
+status:       ACTIVE
+
+created:      1996-09-24
+changed:      2012-07-18
+source:       IANA
+

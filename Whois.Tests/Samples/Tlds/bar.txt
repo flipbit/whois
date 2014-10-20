@@ -1,0 +1,47 @@
+% IANA WHOIS server
+% for more information on IANA, visit http://www.iana.org
+% This query returned 1 object
+
+domain:       BAR
+
+organisation: Punto 2012 Sociedad Anonima Promotora de Inversion de Capital Variable
+address:      Juan Escutia 29 Col. Condesa
+address:      Mexico, D.F. 06140
+address:      Mexico
+
+contact:      administrative
+name:         CEO
+organisation: Punto 2012 Sociedad Anonima Promotora de Inversion de Capital Variable
+address:      Juan Escutia 29 Col. Condesa
+address:      Mexico, D.F. 06140
+address:      Mexico
+phone:        +52.5585895544
+fax-no:       +52.5552505187
+e-mail:       info@punto2012.com
+
+contact:      technical
+name:         CTO
+organisation: CentralNic
+address:      35-39 Moorgate
+address:      London EC2R 6AR
+address:      United Kingdom
+phone:        +44.2033880600
+fax-no:       +44.2033880601
+e-mail:       tld.ops@centralnic.com
+
+nserver:      A.NIC.BAR 194.169.218.56 2001:67c:13cc:0:0:0:1:56
+nserver:      B.NIC.BAR 185.24.64.56 2a04:2b00:13cc:0:0:0:1:56
+nserver:      C.NIC.BAR 194.0.2.2 2001:678:5:0:0:0:0:2
+nserver:      D.NIC.BAR 194.0.1.45 2001:678:4:0:0:0:0:2d
+ds-rdata:     55406 8 1 EECF54C6DAB2CF3FA76EFFCE97B78F432050DA9E
+ds-rdata:     55406 8 2 8E8E102E6751DA62E354BD322C9BDD42C29BF6A413B29DA5BDC579E2ED3C8DA1
+
+whois:        whois.nic.bar
+
+status:       ACTIVE
+remarks:      Registration information: http://nic.bar
+
+created:      2014-02-13
+changed:      2014-03-11
+source:       IANA
+

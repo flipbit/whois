@@ -1,0 +1,40 @@
+% IANA WHOIS server
+% for more information on IANA, visit http://www.iana.org
+% This query returned 1 object
+
+domain:       KIWI
+
+organisation: DOT KIWI LIMITED
+address:      Level 2, 65 Upper Queen St Auckland
+address:      New Zealand
+
+contact:      administrative
+name:         Tim Johnson
+organisation: DOT KIWI LIMITED
+address:      PO Box 8207, Symonds St, Auckland 1150
+address:      New Zealand
+phone:        +6493070040
+e-mail:       info@hello.kiwi
+
+contact:      technical
+name:         Andy Wiens
+organisation: Minds + Machines Ltd
+address:      32 Nassau St, Minds + Machines Ltd., Dublin 2
+address:      ￼
+address:      Ireland
+phone:        +35316778933
+e-mail:       support@mm-registry.com
+
+nserver:      A.NS.NIC.KIWI 2620:0171:0a02:00ad:0:0:0:4 72.0.50.4
+nserver:      B.NS.NIC.KIWI 2620:0171:0d02:00dc:0:0:0:4 72.42.114.4
+ds-rdata:     5786 8 2 ADFED621AFE74743D01AF9CD0F380F4F95EF756080321CD541A1D6B31B3FDD30
+
+whois:        whois.nic.kiwi
+
+status:       ACTIVE
+remarks:      Registration information: http://hello.kiwi
+
+created:      2013-11-25
+changed:      2014-08-21
+source:       IANA
+

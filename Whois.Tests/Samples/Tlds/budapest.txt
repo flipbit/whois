@@ -1,0 +1,39 @@
+% IANA WHOIS server
+% for more information on IANA, visit http://www.iana.org
+% This query returned 1 object
+
+domain:       BUDAPEST
+
+organisation: Top Level Domain Holdings Limited
+address:      Craigmuir Chambers, Road Town Tortola VG 1110
+address:      Virgin Islands, British
+
+contact:      administrative
+name:         Admin Contact
+organisation: Minds + Machines Ltd
+address:      32 Nassau St, Dublin 2
+address:      Ireland
+phone:        +353.14301689
+e-mail:       support@mm-registry.com
+
+contact:      technical
+name:         Tech Contact
+organisation: Minds + Machines Ltd
+address:      32 Nassau St, Dublin 2
+address:      Ireland
+phone:        +353.14301689
+e-mail:       support@mm-registry.com
+
+nserver:      A.NS.NIC.BUDAPEST 2620:0171:0a02:00ad:0:0:0:9 72.0.50.9
+nserver:      B.NS.NIC.BUDAPEST 2620:0171:0d02:00dc:0:0:0:9 72.42.114.9
+ds-rdata:     49886 8 2 8151518D311595937A9B56F2823F16079FC0CC7FCCF184D6CF1118A386FEF606
+
+whois:        whois-dub.mm-registry.com
+
+status:       ACTIVE
+remarks:      Registration information: http://mm-registry.com/
+
+created:      2014-02-28
+changed:      2014-09-23
+source:       IANA
+

@@ -1,0 +1,47 @@
+% IANA WHOIS server
+% for more information on IANA, visit http://www.iana.org
+% This query returned 1 object
+
+domain:       FEEDBACK
+
+organisation: Top Level Spectrum, Inc.
+address:      1845 West Mercer Way
+address:      Mercer Island, WA 98040
+address:      United States
+
+contact:      administrative
+name:         Jay Westerdal
+organisation: Top Level Spectrum, Inc.
+address:      1845 West Mercer Way
+address:      Mercer Island, WA 98040
+address:      United States
+phone:        206-397-8825
+fax-no:       206-238-1232
+e-mail:       contact@topspectrum.com
+
+contact:      technical
+name:         CTO
+organisation: CentralNic
+address:      35-39 Moorgate
+address:      London EC2R 6AR
+address:      United Kingdom
+phone:        +44.2033880600
+fax-no:       +44.2033880601
+e-mail:       tld.ops@centralnic.com
+
+nserver:      A.NIC.FEEDBACK 194.169.218.50 2001:67c:13cc:0:0:0:1:50
+nserver:      B.NIC.FEEDBACK 185.24.64.50 2a04:2b00:13cc:0:0:0:1:50
+nserver:      C.NIC.FEEDBACK 194.0.2.2 2001:678:5:0:0:0:0:2
+nserver:      D.NIC.FEEDBACK 194.0.1.45 2001:678:4:0:0:0:0:2d
+ds-rdata:     16786 8 1 884C8D6BEB8DA7F0108A0760CCFCFC018A973DDE
+ds-rdata:     16786 8 2 00F7F4B6DF67DC7B828C14829884908EE92E57FE312ED483C43DA299FA5DDAE5
+
+whois:        whois.centralnic.com
+
+status:       ACTIVE
+remarks:      Registration information: http://centralnic.com
+
+created:      2014-03-06
+changed:      2014-04-10
+source:       IANA
+

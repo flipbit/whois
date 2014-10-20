@@ -1,0 +1,50 @@
+% IANA WHOIS server
+% for more information on IANA, visit http://www.iana.org
+% This query returned 1 object
+
+domain:       AG
+
+organisation: UHSA School of Medicine
+address:      P.O. Box 510
+address:      Saints Johns
+address:      Antigua And Barbuda
+
+contact:      administrative
+name:         George S. Daniel
+organisation: UHSA School of Medicine
+address:      P.O. Box 510
+address:      Saints Johns
+address:      Antigua And Barbuda
+phone:        +1 268 460 1391
+fax-no:       +1 268 460 1477
+e-mail:       daniel@uhsa.edu.ag
+
+contact:      technical
+name:         Hostmaster
+organisation: NetNames
+address:      Queens House
+address:      180-182 Tottenham Court Road
+address:      London  W1P 9LE
+address:      United Kingdom
+phone:        +44 171 291 3900
+fax-no:       +44 171 291 3939
+e-mail:       corporate-services@netnames.com
+
+nserver:      A0.CCTLD.AFILIAS-NST.INFO 199.254.59.1 2001:500:25:0:0:0:0:1
+nserver:      A2.CCTLD.AFILIAS-NST.INFO 199.249.116.1 2001:500:44:0:0:0:0:1
+nserver:      B0.CCTLD.AFILIAS-NST.ORG 199.254.60.1 2001:500:26:0:0:0:0:1
+nserver:      B2.CCTLD.AFILIAS-NST.ORG 199.249.124.1 2001:500:4c:0:0:0:0:1
+nserver:      C0.CCTLD.AFILIAS-NST.INFO 199.254.61.1 2001:500:27:0:0:0:0:1
+nserver:      D0.CCTLD.AFILIAS-NST.ORG 199.254.62.1 2001:500:28:0:0:0:0:1
+ds-rdata:     55656 7 1 57F9FF89CE3A02AE33EC017A7C83ED54D925AA13
+ds-rdata:     55656 7 2 B8DC00C070D5BFC5C1C3BA08E5205A1E7F15EABFBFD6359D11E0E62D2FFFA57F
+
+whois:        whois.nic.ag
+
+status:       ACTIVE
+remarks:      Registration information: http://www.nic.ag
+
+created:      1991-09-03
+changed:      2011-01-03
+source:       IANA
+

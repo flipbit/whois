@@ -1,0 +1,38 @@
+% IANA WHOIS server
+% for more information on IANA, visit http://www.iana.org
+% This query returned 1 object
+
+domain:       GOP
+
+organisation: Republican State Leadership Committee, Inc.
+address:      1201 F Street NW Suite 675 Washington DC 20004
+address:      United States
+
+contact:      administrative
+name:         VP Sales and Marketing
+organisation: Republican State Leadership Committee
+address:      1201 F Street NW Suite 675 Washington DC 20004
+address:      United States
+phone:        +1.2024487988
+e-mail:       wmartinez@rslc.com
+
+contact:      technical
+name:         Director of Software Development
+organisation: Minds + Machines Ltd
+address:      32 Nassau St, Dublin 2
+address:      Ireland
+phone:        +353.14301689
+e-mail:       support@mm-registry.com
+
+nserver:      A.NS.NIC.GOP 2620:0171:0a02:00ad:0:0:0:19 72.0.50.19
+nserver:      B.NS.NIC.GOP 2620:0171:0d02:00dc:0:0:0:19 72.42.114.19
+ds-rdata:     3380 8 2 1A7111EAD180BD47D1A86E35D8B3A3936691C4DD2C4B7AFA39ACE1BF0A7BDB8A
+
+whois:        whois-cl01.mm-registry.com
+
+status:       ACTIVE
+
+created:      2014-03-06
+changed:      2014-04-04
+source:       IANA
+

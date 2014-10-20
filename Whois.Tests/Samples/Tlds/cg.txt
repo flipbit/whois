@@ -1,0 +1,43 @@
+% IANA WHOIS server
+% for more information on IANA, visit http://www.iana.org
+% This query returned 1 object
+
+domain:       CG
+
+organisation: ONPT Congo and Interpoint Switzerland
+address:      Avenue E. Patrice Lumumba
+address:      Brazzaville  BRV
+address:      Congo
+
+contact:      administrative
+name:         Monsieur Akouala
+organisation: ONPT Congo and Interpoint Switzerland
+address:      Avenue Patrice Lumumba
+address:      Brazzaville
+address:      Congo
+phone:        +242 81 00 24
+fax-no:       +242 81 07 52
+e-mail:       cg-admin@dnsafrica.net
+
+contact:      technical
+name:         Frederic Gregoire
+organisation: NIC Congo Liaison Office in Switzerland
+organisation: Interpoint SARL
+address:      Case Postale 1336
+address:      Lausanne  1001
+address:      Switzerland
+phone:        +41 44 274 23 80
+fax-no:       +41 44 274 23 80
+e-mail:       frg@dnsafrica.net
+
+nserver:      DNS.DNSAFRICA.NET 213.193.157.30
+nserver:      DNS.PRINCETON.EDU 128.112.129.15
+nserver:      SUNIC.SUNET.SE 192.36.125.2 2001:6b0:7:0:0:0:0:2
+
+status:       ACTIVE
+remarks:      Registration information: http://www.nic.cg
+
+created:      1997-01-14
+changed:      2008-09-24
+source:       IANA
+

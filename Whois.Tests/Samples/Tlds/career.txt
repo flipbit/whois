@@ -1,0 +1,48 @@
+% IANA WHOIS server
+% for more information on IANA, visit http://www.iana.org
+% This query returned 1 object
+
+domain:       CAREER
+
+organisation: dotCareer LLC
+address:      3029 Prospect Avenue
+address:      Cleveland, OH 44115
+address:      United States
+
+contact:      administrative
+name:         Ray Fassett
+organisation: dotCareer LLC
+address:      3029 Prospect Avenue
+address:      Cleveland, OH 44115
+address:      United States
+phone:        216-426-1500
+fax-no:       216-588-1558
+e-mail:       ray@goto.jobs
+
+contact:      technical
+name:         Registry Customer Service
+organisation: Verisign, Inc.
+address:      12061 Bluemont Way
+address:      Reston Virginia 20190
+address:      United States
+phone:        703-925-6999
+fax-no:       703-948-3978
+e-mail:       info@verisign-grs.com
+
+nserver:      A5.NSTLD.COM 192.5.6.34
+nserver:      C5.NSTLD.COM 192.26.92.34
+nserver:      D5.NSTLD.COM 192.31.80.34
+nserver:      F5.NSTLD.COM 192.35.51.34 2001:503:d414:0:0:0:2:34
+nserver:      G5.NSTLD.COM 192.42.93.34
+nserver:      H5.NSTLD.COM 192.54.112.34 2001:502:08cc:0:0:0:2:34
+nserver:      L5.NSTLD.COM 192.41.162.34
+ds-rdata:     39768 8 2 71C47D2FAAB90E2460AB6E7AF972993415D7426F3782A32AF438C681484CF6DA
+
+whois:        whois.nic.career
+
+status:       ACTIVE
+
+created:      2014-03-20
+changed:      2014-04-11
+source:       IANA
+

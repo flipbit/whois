@@ -1,0 +1,43 @@
+% IANA WHOIS server
+% for more information on IANA, visit http://www.iana.org
+% This query returned 1 object
+
+domain:       FK
+
+organisation: Falkland Islands Government
+address:      Ross Road
+address:      Stanley  FIQQ 1ZZ
+address:      Falkland Islands (malvinas)
+
+contact:      administrative
+name:         Head of Regulatory Services & Director of Civil Aviation
+organisation: Falkland Islands Government
+address:      Secretariat
+address:      Stanley  FIQQ 1ZZ
+address:      Falkland Islands (malvinas)
+phone:        +500 27305
+fax-no:       +500 27306
+e-mail:       bwilks.civilaviation@sec.gov.fk
+
+contact:      technical
+name:         IP Networks Manager
+organisation: Sure South Atlantic Ltd.
+address:      Ross Road
+address:      Stanley  FIQQ 1ZZ
+address:      Falkland Islands (malvinas)
+phone:        + 500 20800
+fax-no:       + 500 20890
+e-mail:       ipn.support@sure.co.fk
+
+nserver:      EURO-NS1.CW.NET 141.1.27.248
+nserver:      EURO-NS2.CW.NET 212.80.175.2
+nserver:      EURO-NS3.CW.NET 141.1.27.251
+nserver:      NS.HORIZON.NET.FK 195.248.193.250
+
+status:       ACTIVE
+remarks:      Registration information: http://www.fidc.co.fk/
+
+created:      1997-03-26
+changed:      2014-09-10
+source:       IANA
+

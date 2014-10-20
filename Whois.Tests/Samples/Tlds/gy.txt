@@ -1,0 +1,49 @@
+% IANA WHOIS server
+% for more information on IANA, visit http://www.iana.org
+% This query returned 1 object
+
+domain:       GY
+
+organisation: University of Guyana
+address:      Turkeyen Campus
+address:      P.O. Box 101110
+address:      Georgetown
+address:      Guyana
+
+contact:      administrative
+name:         Rayman Khan
+organisation: University of Guyana, Centre for Information Technology
+address:      Turkeyen Campus
+address:      P.O. Box 101110
+address:      Georgetown
+address:      Guyana
+phone:        +592 2225405
+fax-no:       +592 2225443
+e-mail:       admin@registry.gy
+
+contact:      technical
+name:         DNS Admin
+organisation: University of Guyana, Centre for Information Technology
+address:      Turkeyen Campus
+address:      Georgetown  P.O. Box 101110
+address:      Guyana
+phone:        +592 2225426
+fax-no:       +592 2225443
+e-mail:       tech@registry.gy
+
+nserver:      GY-NS.ANYCAST.PCH.NET 2001:500:14:6034:ad:0:0:1 204.61.216.34
+nserver:      GY.CCTLD.AUTHDNS.RIPE.NET 193.0.9.79 2001:67c:e0:0:0:0:0:79
+nserver:      NS1.GTT.CO.GY 190.80.0.41
+nserver:      NS2.GTT.CO.GY 190.80.0.42
+nserver:      PHLOEM.UOREGON.EDU 128.223.32.35 2001:468:d01:20:0:0:80df:2023
+nserver:      SNS-PB.ISC.ORG 192.5.4.1 2001:500:2e:0:0:0:0:1
+
+whois:        whois.registry.gy
+
+status:       ACTIVE
+remarks:      Registration information: http://registry.gy/
+
+created:      1994-09-13
+changed:      2011-11-03
+source:       IANA
+

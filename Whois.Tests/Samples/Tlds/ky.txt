@@ -1,0 +1,44 @@
+% IANA WHOIS server
+% for more information on IANA, visit http://www.iana.org
+% This query returned 1 object
+
+domain:       KY
+
+organisation: The Information and Communications Technology Authority
+address:      P.O. Box 2502
+address:      Grand Cayman  KY1-1104
+address:      Cayman Islands
+
+contact:      administrative
+name:         Managing Director
+organisation: The Information and Communications Technology Authority
+address:      P.O. Box 2502
+address:      Grand Cayman  KY1-1104
+address:      Cayman Islands
+phone:        1-345-946-4282
+fax-no:       1-345-945-8284
+e-mail:       md@icta.ky
+
+contact:      technical
+name:         Stephen Bernacki
+organisation: Perimeter eSecurity
+address:      440 Wheelers Farms Road #202
+address:      Milford Connecticut 06461
+address:      United States
+phone:        +1 800 234 2175
+e-mail:       kysupport@perimeterusa.com
+
+nserver:      KYNSE01.PERIMETERUSA.COM 216.54.168.26
+nserver:      KYNSE02.PERIMETERUSA.COM 216.54.168.27
+nserver:      KYNSE03.PERIMETERUSA.COM 216.54.168.28
+nserver:      KYNSW01.PERIMETERUSA.COM 165.212.160.15
+nserver:      KYNSW02.PERIMETERUSA.COM 165.212.160.16
+nserver:      KYNSW03.PERIMETERUSA.COM 165.212.160.17
+
+status:       ACTIVE
+remarks:      Registration information: http://www.nic.ky
+
+created:      1995-05-03
+changed:      2014-09-04
+source:       IANA
+

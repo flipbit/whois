@@ -1,0 +1,45 @@
+% IANA WHOIS server
+% for more information on IANA, visit http://www.iana.org
+% This query returned 1 object
+
+domain:       FJ
+
+organisation: The University of the South Pacific
+organisation: IT Services
+address:      Suva
+address:      Fiji
+
+contact:      administrative
+name:         Manager Systems & Networks
+organisation: The University of the South Pacific
+organisation: IT Services
+address:      Suva
+address:      Fiji
+phone:        +679 321 2114
+fax-no:       +679 330 4089
+e-mail:       domreg@usp.ac.fj
+
+contact:      technical
+name:         Manager Systems & Networks
+organisation: The University of the South Pacific
+organisation: IT Services
+address:      Suva
+address:      Fiji
+phone:        +679 321 2114
+fax-no:       +679 330 4089
+e-mail:       domreg@usp.ac.fj
+
+nserver:      ADNS1.BERKELEY.EDU 128.32.136.3 2607:f140:ffff:fffe:0:0:0:3
+nserver:      ADNS2.BERKELEY.EDU 128.32.136.14
+nserver:      AUTH00.NS.UU.NET 198.6.1.65 2600:803:408:2:0:0:0:10
+nserver:      MANU.USP.AC.FJ 144.120.8.10
+nserver:      RIP.PSG.COM 147.28.0.39 2001:418:1:0:0:0:0:39
+nserver:      TERI.USP.AC.FJ 144.120.8.1
+
+status:       ACTIVE
+remarks:      Registration information: http://domains.fj/
+
+created:      1992-06-03
+changed:      2009-05-26
+source:       IANA
+

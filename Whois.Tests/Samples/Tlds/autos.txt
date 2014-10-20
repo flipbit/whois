@@ -1,0 +1,48 @@
+% IANA WHOIS server
+% for more information on IANA, visit http://www.iana.org
+% This query returned 1 object
+
+domain:       AUTOS
+
+organisation: DERAutos, LLC
+address:      150 Granby Street
+address:      Norfolk, VA 23510
+address:      United States
+
+contact:      administrative
+name:         Executive Vice President
+organisation: DERAutos, LLC
+address:      150 Granby Street
+address:      Norfolk, VA 23510
+address:      United States
+phone:        757-351-8802
+fax-no:       757-664-2164
+e-mail:       gfridelltld@dominionenterprises.com
+
+contact:      technical
+name:         Senior Director, DNS Infrastructure Group
+organisation: Afilias
+address:      300 Welsh Road, Building 3, Suite 105
+address:      Horsham, PA 19044
+address:      United States
+phone:        +1 215.706.5700
+fax-no:       +1 215.706.5701
+e-mail:       tld-tech-poc@afilias.info
+
+nserver:      A0.NIC.AUTOS 2a01:8840:62:0:0:0:0:9 65.22.100.9
+nserver:      A2.NIC.AUTOS 2a01:8840:65:0:0:0:0:9 65.22.103.9
+nserver:      B0.NIC.AUTOS 2a01:8840:63:0:0:0:0:9 65.22.101.9
+nserver:      C0.NIC.AUTOS 2a01:8840:64:0:0:0:0:9 65.22.102.9
+ds-rdata:     9921 7 1 301e847de091749f937c4db50ac5e04f932c79a2
+ds-rdata:     9921 7 2 efa96a0007f3e902ea89ea6116964cb4a3b8230739e67885332462b4c676eb00
+
+whois:        whois.afilias-srs.net
+
+status:       ACTIVE
+remarks:      Registration information:
+remarks:      http://www.dominionenterprises.com
+
+created:      2014-05-01
+changed:      2014-05-22
+source:       IANA
+

@@ -1,0 +1,45 @@
+% IANA WHOIS server
+% for more information on IANA, visit http://www.iana.org
+% This query returned 1 object
+
+domain:       GF
+
+organisation: Net Plus
+address:      Boulevard de la Republique 2
+address:      BP 125
+address:      97 323 Cayenne cedex
+address:      97300
+address:      French Guiana
+
+contact:      administrative
+name:         Frederic Trichet
+organisation: Net Plus
+address:      Boulevard de la Republique 2
+address:      BP 125
+address:      97 323 Cayenne cedex
+address:      97300
+address:      French Guiana
+phone:        +594 29 13 31
+fax-no:       +594 29 13 27
+e-mail:       admin@nic.gf
+
+contact:      technical
+name:         David Cyrille
+organisation: Mediaserv
+address:      ZI Champigny
+address:      Ducos  97224
+address:      Martinique
+phone:        +596 596 77 25 11
+fax-no:       +596 596 56 41 29
+e-mail:       tech@nic.gf
+
+nserver:      NS1-GP.MEDIASERV.NET 213.188.172.1
+nserver:      NS1-MQ.MEDIASERV.NET 213.16.20.3
+
+status:       ACTIVE
+remarks:      Registration information: http://www.nplus.gf/
+
+created:      1996-07-25
+changed:      2011-07-14
+source:       IANA
+

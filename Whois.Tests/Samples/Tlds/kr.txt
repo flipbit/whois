@@ -1,0 +1,46 @@
+% IANA WHOIS server
+% for more information on IANA, visit http://www.iana.org
+% This query returned 1 object
+
+domain:       KR
+
+organisation: Korea Internet & Security Agency (KISA)
+address:      Korea Network Information Center(KRNIC), Daedong Bldg., 109 Jungdae-ro, Songpa-gu, Seoul,  138-803
+address:      Korea, Republic Of
+
+contact:      administrative
+name:         Kilnam Chon
+organisation: Korea Network Information Center (KRNIC)
+address:      Korea Network Information Center(KRNIC), Daedong Bldg., 109 Jungdae-ro, Songpa-gu, Seoul,  138-803
+address:      Korea, Republic Of
+phone:        +82 10 8581 3514
+fax-no:       +82 2 405 5149
+e-mail:       chonkn@gmail.com
+
+contact:      technical
+name:         Internet Address Technology Team Manager
+organisation: Korea Internet & Security Agency (KISA)
+address:      Korea Network Information Center(KRNIC), Daedong Bldg., 109 Jungdae-ro, Songpa-gu, Seoul,  138-803
+address:      Korea, Republic Of
+phone:        +82 2 405 6612
+fax-no:       +82 2 405 5149
+e-mail:       techc@kisa.or.kr
+
+nserver:      B.DNS.KR 61.74.75.1
+nserver:      C.DNS.KR 203.248.246.220
+nserver:      D.DNS.KR 203.83.159.1
+nserver:      E.DNS.KR 2001:dcc:5:0:0:0:0:100 202.30.124.100
+nserver:      F.DNS.KR 218.38.181.90
+nserver:      G.DNS.KR 2001:dc5:a:0:0:0:0:1 202.31.190.1
+ds-rdata:     17625 7 2 FB939059F4B67BBA1E8AC37E35811E506488B2D8CFF807AF873B2116B5676B5C
+ds-rdata:     10746 7 2 A626C147CF76351B03CD26C03EBCC78C0DE48D87DD81F0919995824336236F96
+
+whois:        whois.kr
+
+status:       ACTIVE
+remarks:      Registration information: http://www.nic.or.kr/
+
+created:      1986-09-29
+changed:      2014-01-13
+source:       IANA
+

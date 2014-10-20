@@ -1,0 +1,43 @@
+% IANA WHOIS server
+% for more information on IANA, visit http://www.iana.org
+% This query returned 1 object
+
+domain:       ARCHI
+
+organisation: STARTING DOT LIMITED
+address:      First Floor, Fitzwilton House, Wilton Place, Dublin, Dublin 2
+address:      Ireland
+
+contact:      administrative
+name:         Godefroy Jordan
+organisation: STARTING DOT LIMITED
+address:      3 B boulevard de la Saussaye Neuilly sur Seine - 92200 FR
+address:      France
+phone:        +35312548968
+fax-no:       +33977196810
+e-mail:       contact@startingdot.com
+
+contact:      technical
+name:         CTO
+organisation: KSregistry GmbH
+address:      KSregistry, Im Oberen Werk 1, St. Ingbert, 66386, Saareland
+address:      Germany
+phone:        +4968949396250
+fax-no:       +4968949396251
+e-mail:       icann@ksregistry.com
+
+nserver:      NS1A.KSREGISTRY.NET 2001:dd8:7:6075:dc:0:0:1 203.119.88.75
+nserver:      NS1B.KSREGISTRY.NET 2620:0171:0a00:00ad:0:0:0:75 72.0.48.75
+nserver:      NS2A.KSREGISTRY.COM 2001:dd8:7:6076:dc:0:0:1 203.119.88.76
+nserver:      NS2B.KSREGISTRY.COM 2620:0171:0a00:00ad:0:0:0:76 72.0.48.76
+ds-rdata:     10604 8 2 b0d6bfba488683bad270c5d8a1b85fbe010b8eca41c3b1382de5cab342cfc9b6
+
+whois:        whois.ksregistry.net
+
+status:       ACTIVE
+remarks:      Registration information: http://startingdot.com/
+
+created:      2014-03-20
+changed:      2014-03-31
+source:       IANA
+

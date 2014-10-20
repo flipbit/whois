@@ -1,0 +1,46 @@
+% IANA WHOIS server
+% for more information on IANA, visit http://www.iana.org
+% This query returned 1 object
+
+domain:       LACAIXA
+
+organisation: CAIXA D'ESTALVIS I PENSIONS DE BARCELONA
+address:      Av. Diagonal 621-629
+address:      08028 Barcelona
+address:      Spain
+
+contact:      administrative
+name:         .lacaixa Admin Contact
+organisation: CORE Association
+address:      Cours de Rive 2
+address:      CH-1204 Geneva
+address:      Switzerland
+phone:        +41 22 312 5610
+fax-no:       +41 22 312 5612
+e-mail:       secretariat@corenic.org
+
+contact:      technical
+name:         .lacaixa Tech Contact
+organisation: CORE Association
+address:      urs de Rive 2
+address:      CH-1204 Geneva
+address:      Switzerland
+phone:        +41 22 312 5610
+fax-no:       +41 22 312 5612
+e-mail:       dnsmaster@corenic.org
+
+nserver:      ANYCAST10.IRONDNS.NET 195.253.64.12 2a01:5b0:4:0:0:0:0:c
+nserver:      ANYCAST23.IRONDNS.NET 195.253.65.11 2a01:5b0:5:0:0:0:0:b
+nserver:      ANYCAST24.IRONDNS.NET 195.253.65.12 2a01:5b0:5:0:0:0:0:c
+nserver:      ANYCAST9.IRONDNS.NET 195.253.64.11 2a01:5b0:4:0:0:0:0:b
+ds-rdata:     36309 10 2 1472BAB3DDF6CA893B478BB871E9C9A21C0E01D468C9A9117771E29BCC93D1B9
+
+whois:        whois.nic.lacaixa
+
+status:       ACTIVE
+remarks:      Registration information: http://www.lacaixa.com
+
+created:      2014-07-10
+changed:      2014-07-18
+source:       IANA
+

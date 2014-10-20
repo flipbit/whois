@@ -65,6 +65,7 @@
     <Compile Include="Extensions\StringExtensionsTest.cs" />
     <Compile Include="TcpReaderTest.cs" />
     <Compile Include="Tokens\TokenizerTest.cs" />
+    <Compile Include="TopDomains\TestTopDomains.cs" />
     <Compile Include="Validators\DomainValidatorTest.cs" />
     <Compile Include="Visitors\PatternExtractorVisitorTest.cs" />
     <Compile Include="Visitors\RegistroBrVisitorTest.cs" />
@@ -86,7 +87,7 @@
     <EmbeddedResource Include="Patterns\InvalidExtension.rtf" />
   </ItemGroup>
   <ItemGroup>
-    <Folder Include="Samples\" />
+    <Folder Include="Samples\Tlds\" />
   </ItemGroup>
   <ItemGroup>
     <ProjectReference Include="..\Whois\Whois.csproj">
@@ -99,7 +100,31 @@
     <EmbeddedResource Include="Patterns\TestPatternTwo.txt" />
   </ItemGroup>
   <ItemGroup>
-    <EmbeddedResource Include="InvalidNamespace.txt" />
+    <Content Include="Samples\Domains\adobe.com.txt" />
+    <Content Include="Samples\Domains\amazon.com.txt" />
+    <Content Include="Samples\Domains\apple.com.txt" />
+    <Content Include="Samples\Domains\baidu.com.txt" />
+    <Content Include="Samples\Domains\blogspot.com.txt" />
+    <Content Include="Samples\Domains\digg.com.txt" />
+    <Content Include="Samples\Domains\facebook.com.txt" />
+    <Content Include="Samples\Domains\flickr.com.txt" />
+    <Content Include="Samples\Domains\google.com.txt" />
+    <Content Include="Samples\Domains\linkedin.com.txt" />
+    <Content Include="Samples\Domains\microsoft.com.txt" />
+    <Content Include="Samples\Domains\myspace.com.txt" />
+    <Content Include="Samples\Domains\pinterest.com.txt" />
+    <Content Include="Samples\Domains\qq.com.txt" />
+    <Content Include="Samples\Domains\stumbleupon.com.txt" />
+    <Content Include="Samples\Domains\tumblr.com.txt" />
+    <Content Include="Samples\Domains\twitter.com.txt" />
+    <Content Include="Samples\Domains\vimeo.com.txt" />
+    <Content Include="Samples\Domains\w3.org.txt" />
+    <Content Include="Samples\Domains\wikipedia.org.txt" />
+    <Content Include="Samples\Domains\wordpress.com.txt" />
+    <Content Include="Samples\Domains\wordpress.org.txt" />
+    <Content Include="Samples\Domains\yahoo.com.txt" />
+    <Content Include="Samples\Domains\youtu.be.txt" />
+    <Content Include="Samples\Domains\youtube.com.txt" />
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
   <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 

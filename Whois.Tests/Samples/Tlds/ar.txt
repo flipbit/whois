@@ -1,0 +1,46 @@
+% IANA WHOIS server
+% for more information on IANA, visit http://www.iana.org
+% This query returned 1 object
+
+domain:       AR
+
+organisation: Presidencia de la Nación – Secretaría Legal y Técnica
+address:      Balcarce N°50 – Planta Baja
+address:      Buenos Aires C1064AAB
+address:      Argentina
+
+contact:      administrative
+name:         Sr. Gabriel Brenta
+organisation: Presidencia de la Nación – Secretaría Legal y Técnica - Dirección Nacional del Registro de Dominios de Internet
+address:      juncal N°847 – Planta Baja
+address:      Buenos Aires C1064AAB
+address:      Argentina
+phone:        +54 11 5218-1350
+fax-no:       +54 11 5218-1350
+e-mail:       brentag@nic.gob.ar
+
+contact:      technical
+name:         Sr. Luciano Minuchin
+organisation: Presidencia de la Nación – Secretaría Legal y Técnica - Dirección General de Sistemas Informaticos
+address:      juncal N°847 – Planta Baja
+address:      Buenos Aires C1064AAB
+address:      Argentina
+phone:        +54 11 5218 1350
+fax-no:       +54 11 5218 1350
+e-mail:       minuchinl@nic.gob.ar
+
+nserver:      A.DNS.AR 200.108.145.50 2801:140:0:0:0:0:0:10
+nserver:      AR.CCTLD.AUTHDNS.RIPE.NET 193.0.9.59 2001:67c:e0:0:0:0:0:59
+nserver:      ATHEA.AR 200.16.98.2
+nserver:      C.DNS.AR 200.108.148.50 2801:140:10:0:0:0:0:10
+nserver:      CTINA.AR 200.16.97.17
+nserver:      NS2.SWITCH.CH 130.59.138.49 2001:620:0:1b:5054:ff:fe74:8780
+nserver:      RELAY1.MECON.GOV.AR 168.101.16.10
+
+status:       ACTIVE
+remarks:      Registration information: https://nic.ar
+
+created:      1987-09-23
+changed:      2014-09-15
+source:       IANA
+

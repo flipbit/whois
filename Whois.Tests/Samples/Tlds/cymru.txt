@@ -1,0 +1,55 @@
+% IANA WHOIS server
+% for more information on IANA, visit http://www.iana.org
+% This query returned 1 object
+
+domain:       CYMRU
+
+organisation: Nominet UK
+address:      Minerva House,
+address:      Edmund Halley Road,
+address:      Oxford Science Park,
+address:      Oxford,
+address:      OX4 4DQ
+address:      United Kingdom
+
+contact:      administrative
+name:         Chief Operating Officer
+organisation: Nominet UK
+address:      Minerva House,
+address:      Edmund Halley Road,
+address:      Oxford Science Park,
+address:      Oxford,
+address:      OX4 4DQ
+address:      United Kingdom
+phone:        +44(0) 1865 332211
+e-mail:       od@nominet.org.uk
+
+contact:      technical
+name:         Chief Technology Officer
+organisation: Nominet UK
+address:      Minerva House,
+address:      Edmund Halley Road,
+address:      Oxford Science Park,
+address:      Oxford,
+address:      OX4 4DQ
+address:      United Kingdom
+phone:        +44(0) 1865 332211
+e-mail:       td@nominet.org.uk
+
+nserver:      NS1.NIC.UK 195.66.240.130 2a01:40:1001:35:0:0:0:2
+nserver:      NS2.NIC.UK 217.79.164.131
+nserver:      NS4.NIC.UK 194.83.244.131 2001:630:181:35:0:0:0:83
+nserver:      NS5.NIC.UK 213.246.167.131
+nserver:      NS6.NIC.UK 213.248.254.130
+nserver:      NS7.NIC.UK 212.121.40.130
+ds-rdata:     35389 8 2 1b2d8a367c28bc2534c6ae619c8586e5059c992ac035bf3971311550f39760db
+
+whois:        whois.nic.cymru
+
+status:       ACTIVE
+remarks:      Registration information: http://ourhomeonline.org.uk
+
+created:      2014-07-31
+changed:      2014-08-08
+source:       IANA
+

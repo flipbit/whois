@@ -1,0 +1,46 @@
+% IANA WHOIS server
+% for more information on IANA, visit http://www.iana.org
+% This query returned 1 object
+
+domain:       GU
+
+organisation: University of Guam
+organisation: Computer Center
+address:      UOG Station
+address:      Mangilao  96923
+address:      Guam
+
+contact:      administrative
+name:         Dr. Luan Nguyen
+organisation: University of Guam
+organisation: Computer Center
+address:      UOG Station
+address:      Mangilao  96923
+address:      Guam
+phone:        +671 735 2635
+fax-no:       +671 734 9422
+e-mail:       nguyen@uguam.uog.edu
+
+contact:      technical
+name:         Rudolph E. Villaverde
+organisation: University of Guam
+organisation: Computer Center
+address:      303 University Drive
+address:      Mangilao  96923
+address:      Guam
+phone:        +671 734 9314
+fax-no:       +671 734 9422
+e-mail:       rev5@uog9.uog.edu
+
+nserver:      GU.CCTLD.AUTHDNS.RIPE.NET 193.0.9.78 2001:67c:e0:0:0:0:0:78
+nserver:      NS.EDU.GU 168.123.2.50
+nserver:      NS.GU 168.123.4.10
+nserver:      NSUOG.EDU.GU 67.98.164.133
+
+status:       ACTIVE
+remarks:      Registration information: http://gadao.gov.gu
+
+created:      1994-04-15
+changed:      2014-08-06
+source:       IANA
+

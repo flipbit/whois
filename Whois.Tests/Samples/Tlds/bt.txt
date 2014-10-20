@@ -1,0 +1,48 @@
+% IANA WHOIS server
+% for more information on IANA, visit http://www.iana.org
+% This query returned 1 object
+
+domain:       BT
+
+organisation: Ministry of Information and Communications
+address:      Old DrukAir Office, Thimphu
+address:      Thimphu
+address:      Bhutan
+
+contact:      administrative
+name:         Tshering Norbu, General Manager
+organisation: Bhutan Telecom Ltd.
+address:      2/28 Drophen Lam
+address:      PO Box 134
+address:      Thimphu
+address:      Bhutan
+phone:        +975 2 320118
+fax-no:       +975 2 328160
+e-mail:       tshering.norbu@bt.bt
+
+contact:      technical
+name:         Tshering Norbu, General Manager
+organisation: Bhutan Telecom Ltd.
+address:      2/28 Drophen Lam
+address:      PO Box 134
+address:      Thimphu
+address:      Bhutan
+phone:        +975 2 320118
+fax-no:       +975 2 328160
+e-mail:       tshering.norbu@bt.bt
+
+nserver:      AUTH00.NS.UU.NET 198.6.1.65 2600:803:408:2:0:0:0:10
+nserver:      AUTH61.NS.UU.NET 198.6.1.182
+nserver:      BT.CCTLD.AUTHDNS.RIPE.NET 193.0.9.65 2001:67c:e0:0:0:0:0:65
+nserver:      NS.ITU.CH 156.106.192.121
+nserver:      NS1.DRUKNET.BT 202.144.128.200 2405:d000:0:100:0:0:0:200
+nserver:      NS2.DRUKNET.BT 202.144.128.210 2405:d000:0:100:0:0:0:210
+nserver:      NS3.DRUKNET.BT 2001:500:14:6017:ad:0:0:1 204.61.216.17
+
+status:       ACTIVE
+remarks:      Registration information: http://www.nic.bt
+
+created:      1997-07-16
+changed:      2012-08-11
+source:       IANA
+

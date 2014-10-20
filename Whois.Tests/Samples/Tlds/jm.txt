@@ -1,0 +1,46 @@
+% IANA WHOIS server
+% for more information on IANA, visit http://www.iana.org
+% This query returned 1 object
+
+domain:       JM
+
+organisation: University of West Indies
+address:      7 Gibraltar Road
+address:      Kingston  7
+address:      Jamaica
+
+contact:      administrative
+name:         Jeremy M. Whyte
+organisation: Mona Information Technology Services
+organisation: University of the West Indies
+address:      7 Gibraltar Road
+address:      Kingston  7
+address:      Jamaica
+phone:        +1 876 927 2148
+fax-no:       +1 876 927 0997
+e-mail:       jeremy.whyte@uwimona.edu.jm
+
+contact:      technical
+name:         Domain Master
+organisation: Mona Information Technology Services
+organisation: University of the West Indies
+address:      7 Gilbraltar Road
+address:      Mona
+address:      Kingston  7
+address:      Jamaica
+phone:        +1 876 927 2148
+fax-no:       +1 876 927 0997
+e-mail:       dmaster@ns.jm
+
+nserver:      JM.CCTLD.AUTHDNS.RIPE.NET 193.0.9.82 2001:67c:e0:0:0:0:0:82
+nserver:      NS.JM 196.2.1.6
+nserver:      NS.UTECHJAMAICA.EDU.JM 200.9.115.2
+nserver:      NS3-JM.FSL.ORG.JM 196.3.191.66
+nserver:      PHLOEM.UOREGON.EDU 128.223.32.35 2001:468:d01:20:0:0:80df:2023
+
+status:       ACTIVE
+
+created:      1991-09-24
+changed:      2011-12-06
+source:       IANA
+

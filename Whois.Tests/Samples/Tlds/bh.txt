@@ -1,0 +1,42 @@
+% IANA WHOIS server
+% for more information on IANA, visit http://www.iana.org
+% This query returned 1 object
+
+domain:       BH
+
+organisation: Telecommunications Regulatory Authority (TRA)
+address:      PO Box 10353
+address:      Manama
+address:      Bahrain
+
+contact:      administrative
+name:         Domain Name
+organisation: Telecommunications Regulatory Authority (TRA)
+address:      PO Box 10353
+address:      Manama
+address:      Bahrain
+phone:        +973 17520000
+fax-no:       +973 17532125
+e-mail:       dn@tra.org.bh
+
+contact:      technical
+name:         Domain Name
+organisation: Telecommunications Regulatory Authority (TRA)
+address:      PO Box 10353
+address:      Manama
+address:      Bahrain
+phone:        +973 17520000
+fax-no:       +973 17532125
+e-mail:       dn@tra.org.bh
+
+nserver:      NS.BATELCO.COM.BH 193.188.97.197
+nserver:      NS2.BATELCO.COM.BH 193.188.97.212
+nserver:      NS3.BATELCO.COM.BH 193.188.97.193
+nserver:      NS4.BATELCO.COM.BH 193.188.97.209
+
+status:       ACTIVE
+
+created:      1994-02-01
+changed:      2014-01-13
+source:       IANA
+

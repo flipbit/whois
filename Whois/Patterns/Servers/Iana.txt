@@ -1,0 +1,38 @@
+% IANA WHOIS server
+% for more information on IANA, visit http://www.iana.org
+% This query returned 1 object
+
+domain:       #{WhoisServerRecord.TLD}
+
+organisation: #{WhoisServerRecord.Organization.Name}
+address:      #{WhoisServerRecord.Organization.Address}
+
+contact:      administrative
+name:         #{WhoisServerRecord.AdminContact.Name}
+organisation: #{WhoisServerRecord.AdminContact.Organization}
+address:      #{WhoisServerRecord.AdminContact.Address}
+phone:        #{WhoisServerRecord.AdminContact.TelephoneNumber}
+fax-no:       #{WhoisServerRecord.AdminContact.FaxNumber}
+e-mail:       #{WhoisServerRecord.AdminContact.Email}
+
+contact:      technical
+name:         Chris Cowherd
+organisation: Donuts Inc.
+address:      c/o Donuts Inc., 10500 NE 8th Street, Suite 350
+address:      Bellevue, Washington 98004
+address:      United States
+phone:        +1.425.296.6802
+fax-no:       +1.425.671.0020
+e-mail:       chris@donuts.co
+
+nserver:      #{WhoisServerRecord.NameServers.Raw}
+
+whois:        #{WhoisServerRecord.Url}
+
+status:       ACTIVE
+remarks:      #{WhoisServerRecord.Remarks}
+
+created:      #{WhoisServerRecord.Created}
+changed:      #{WhoisServerRecord.Changed}
+source:       IANA
+

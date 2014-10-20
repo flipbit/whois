@@ -1,0 +1,45 @@
+% IANA WHOIS server
+% for more information on IANA, visit http://www.iana.org
+% This query returned 1 object
+
+domain:       AO
+
+organisation: Faculdade de Engenharia da Universidade Agostinho Neto
+address:      Av. 4 de Fevereiro, nº 7, 2º andar
+address:      Luanda  CP 815
+address:      Angola
+
+contact:      administrative
+name:         João Sebastião Teta
+organisation: Faculdade de Engenharia da Universidade Agostinho Neto
+address:      Casa A09, Rua do Dande, Condomínio Caju, Talatona, Luanda
+address:      Postal code: 1556
+address:      Angola
+phone:        +244 222 331500
+fax-no:       +244 222 331500
+e-mail:       joao.teta@uan.ao
+
+contact:      technical
+name:         Assis Guerreiro
+organisation: Fundacao Para A Computacao Cientifica Nacional
+address:      Av. do Brasil 101
+address:      Lisboa  1700-066
+address:      Portugal
+phone:        +351 21 8440100
+fax-no:       +351 21 8472157
+e-mail:       assis.guerreiro@fccn.pt
+
+nserver:      AUTH02.NS.UU.NET 198.6.1.82
+nserver:      NS-EXT.ISC.ORG 2001:4f8:0:2:0:0:0:13 204.152.184.64
+nserver:      NS02.DNS.AO 197.149.149.11 2c0f:f828:2:0:0:0:0:b
+nserver:      NS02.FCCN.PT 193.136.2.228 2001:690:a80:4001:0:0:0:200
+nserver:      NS03.FCCN.PT 138.246.255.249 2001:4ca0:106:0:250:56ff:fea9:3fd
+nserver:      PHOBOS.FCCN.PT 193.136.7.17
+
+status:       ACTIVE
+remarks:      Registration information: http://www.dns.ao/
+
+created:      1995-11-15
+changed:      2012-12-21
+source:       IANA
+

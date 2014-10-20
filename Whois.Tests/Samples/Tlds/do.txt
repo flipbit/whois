@@ -1,0 +1,49 @@
+% IANA WHOIS server
+% for more information on IANA, visit http://www.iana.org
+% This query returned 1 object
+
+domain:       DO
+
+organisation: Pontificia Universidad Catolica Madre y Maestra
+organisation: Recinto Santo Tomas de Aquino
+address:      Ave. Abraham Lincoln Esq. Romulo Betancourt
+address:      Santo Domingo  2748
+address:      Dominican Republic
+
+contact:      administrative
+name:         VICERRECTORIA DE ADMINISTRACION Y FINANZAS
+organisation: Pontificia Universidad Catolica Madre y Maestra
+organisation: Recinto Santo Tomas de Aquino
+address:      Ave. Abraham Lincoln Esq. Romulo Betancourt
+address:      Santo Domingo  2748
+address:      Dominican Republic
+phone:        809 535-0111 EXT. 2141
+fax-no:       809 534-7060, 809 286-0012, 809 508-0486
+e-mail:       iadames@pucmmsti.edu.do
+
+contact:      technical
+name:         Clara Collado
+organisation: Pontificia Universidad Catolica Madre y Maestra
+address:      Ave. Abraham Lincoln Esq. Romulo Betancourt
+address:      Santo Domingo  2748
+address:      Dominican Republic
+phone:        809 535-0111 EXT. 2049
+fax-no:       809 286-0012, 809 535-8326
+e-mail:       claracollado@pucmm.edu.do
+
+nserver:      DO-DNS.NIC.PR 134.202.1.121
+nserver:      NS.NIC.DO 200.16.91.228 2001:13e0:85d0:101:0:0:0:228
+nserver:      NS1.NIC.DO 200.16.91.226 2001:13e0:85d0:101:0:0:0:226
+nserver:      NS2.NIC.DO 200.16.90.162 2001:13e0:5d0:101:0:0:0:162
+nserver:      NS3.NIC.DO 149.20.61.87 2001:4f8:3:3d:2e0:81ff:fe46:41f2
+nserver:      NS3.NIC.MX 200.33.111.1
+nserver:      PHLOEM.UOREGON.EDU 128.223.32.35 2001:468:d01:20:0:0:80df:2023
+nserver:      SNS-PB.ISC.ORG 192.5.4.1 2001:500:2e:0:0:0:0:1
+
+status:       ACTIVE
+remarks:      Registration information: http://www.nic.do
+
+created:      1991-08-25
+changed:      2013-05-24
+source:       IANA
+

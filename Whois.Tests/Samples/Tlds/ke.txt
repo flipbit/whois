@@ -1,0 +1,50 @@
+% IANA WHOIS server
+% for more information on IANA, visit http://www.iana.org
+% This query returned 1 object
+
+domain:       KE
+
+organisation: Kenya Network Information Center (KeNIC)
+address:      P.O. Box 1461
+address:      Waiyaki Way, CCK Complex
+address:      Nairobi  00606
+address:      Kenya
+
+contact:      administrative
+name:         KeNIC Admin.
+organisation: Kenya Network Information Center (KeNIC)
+address:      P.O. Box 1461
+address:      Waiyaki Way, CCK Complex
+address:      Nairobi  00606
+address:      Kenya
+phone:        +254 20 4450057, +254 20 4450058
+fax-no:       +254 20 4450087
+e-mail:       admin@kenic.or.ke
+
+contact:      technical
+name:         Technical Support
+organisation: Kenya Network Information Center (KeNIC)
+address:      P.O. Box 1461
+address:      Waiyaki Way, CCK Complex
+address:      Nairobi  00606
+address:      Kenya
+phone:        +254 20 4450057, 254 20 4450058
+fax-no:       +254 20 4450087
+e-mail:       tech@kenic.or.ke
+
+nserver:      MZIZI.KENIC.OR.KE 196.1.4.130 198.32.67.9
+nserver:      NS-KE.AFRINIC.NET 196.216.168.22 2001:43f8:120:0:0:0:0:22
+nserver:      NS.ANYCAST.KENIC.OR.KE 2001:500:14:6007:ad:0:0:1 204.61.216.7
+nserver:      NS1.COZA.NET.ZA 66.135.62.20
+ds-rdata:     37471 5 1 05BEACA628DC8A283B5C88612A0883AB862D1CBB
+ds-rdata:     37471 5 2 502A5D3BE6C48572CB22AD5D9008A11FBD1E4EB2458B1D4C630252C42C1EE0AA
+
+whois:        whois.kenic.or.ke
+
+status:       ACTIVE
+remarks:      Registration information: http://www.kenic.or.ke
+
+created:      1993-04-29
+changed:      2014-03-20
+source:       IANA
+

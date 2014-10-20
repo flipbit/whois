@@ -1,0 +1,48 @@
+% IANA WHOIS server
+% for more information on IANA, visit http://www.iana.org
+% This query returned 1 object
+
+domain:       GH
+
+organisation: Network Computer Systems Limited
+address:      7 Sixth Avenue, Ridge
+address:      Private Mail Bag - Osu
+address:      Accra
+address:      Ghana
+
+contact:      administrative
+name:         Executive Chairman
+organisation: Network Computer Systems Limited
+address:      7 Sixth Avenue, Ridge
+address:      Private Mail Bag - Osu
+address:      Accra
+address:      Ghana
+phone:        +233302220622
+fax-no:       +233302762173
+e-mail:       quaynor@ghana.com
+
+contact:      technical
+name:         CTO
+organisation: Network Computer Systems
+address:      7 Sixth Avenue, Ridge
+address:      Private Mail Bag - Osu
+address:      Accra
+address:      Ghana
+phone:        +233302220622
+fax-no:       +233302762173
+e-mail:       tevie@ghana.com
+
+nserver:      AUSTIN.GH.COM 196.3.64.1
+nserver:      FORK.STH.DNSNODE.NET 2a01:3f0:0:306:0:0:0:53 77.72.229.254
+nserver:      HIPPO.RU.AC.ZA 146.231.128.1 2001:4200:1010:0:0:0:0:1
+nserver:      MANTSE.GH.COM 193.194.185.2
+nserver:      NS1.DNS.AQ 203.119.56.132
+nserver:      RIP.PSG.COM 147.28.0.39 2001:418:1:0:0:0:0:39
+
+status:       ACTIVE
+remarks:      Registration information: http://www.ghana.com.gh/
+
+created:      1995-01-19
+changed:      2011-05-30
+source:       IANA
+

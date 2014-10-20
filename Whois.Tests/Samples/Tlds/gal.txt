@@ -1,0 +1,47 @@
+% IANA WHOIS server
+% for more information on IANA, visit http://www.iana.org
+% This query returned 1 object
+
+domain:       GAL
+
+organisation: Asociación puntoGAL
+address:      Tabernas 11, A Coruña 15701, Galicia
+address:      Spain
+
+contact:      administrative
+name:         TLD Administrative Contact
+organisation: CORE Association
+address:      World Trade Center II
+address:      29 route de Pre-Bois
+address:      Geneva 1215
+address:      Switzerland
+phone:        +41 22 929 57 44
+fax-no:       +41 22 929 57 45
+e-mail:       secretariat@corenic.org
+
+contact:      technical
+name:         TLD TechAdmin
+organisation: CORE Association
+address:      World Trade Center II
+address:      29 route de Pre-Bois
+address:      Geneva 1215
+address:      Switzerland
+phone:        ‎+41 22 929 57 44‎
+fax-no:       ‎+41 22 929 57 45‎
+e-mail:       dnsmaster@corenic.org
+
+nserver:      ANYCAST10.IRONDNS.NET 195.253.64.12 2a01:5b0:4:0:0:0:0:c
+nserver:      ANYCAST23.IRONDNS.NET 195.253.65.11 2a01:5b0:5:0:0:0:0:b
+nserver:      ANYCAST24.IRONDNS.NET 195.253.65.12 2a01:5b0:5:0:0:0:0:c
+nserver:      ANYCAST9.IRONDNS.NET 195.253.64.11 2a01:5b0:4:0:0:0:0:b
+ds-rdata:     32469 10 2 31D40665954899244190D71E2365CF3623A825580B9BF277953ADEF2599B49AB
+
+whois:        whois.gal.coreregistry.net
+
+status:       ACTIVE
+remarks:      Registration information: http://www.puntogal.org
+
+created:      2014-03-13
+changed:      2014-04-11
+source:       IANA
+

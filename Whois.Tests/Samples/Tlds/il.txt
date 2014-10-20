@@ -1,0 +1,50 @@
+% IANA WHOIS server
+% for more information on IANA, visit http://www.iana.org
+% This query returned 1 object
+
+domain:       IL
+
+organisation: Internet Society of Israel
+address:      Bareket 6, POB 7210
+address:      Petach Tikva  49517
+address:      Israel
+
+contact:      administrative
+name:         Doron Shikmoni
+organisation: Internet Society of Israel
+address:      Bareket 6, POB 7210
+address:      Petach Tikva  49517
+address:      Israel
+phone:        +972 3 9700900
+fax-no:       +972 3 9700901
+e-mail:       doron@isoc.org.il
+
+contact:      technical
+name:         Simon Shickman
+organisation: The Hebrew University of Jerusalem
+organisation: Computation Center
+address:      Givat-Ram
+address:      Jerusalem  91904
+address:      Israel
+phone:        +972 2 658 4138
+e-mail:       simon@cc.huji.ac.il
+
+nserver:      ILNS.ILAN.NET.IL 128.139.35.5
+nserver:      LOOKUP.IUCC.AC.IL 128.139.34.240 2001:bf8:900:6:0:0:808b:22f0
+nserver:      NS1.NS.IL 194.146.106.122 2001:67c:1010:31:0:0:0:53
+nserver:      NSA.NS.IL 192.115.210.58
+nserver:      NSB.NS.IL 192.115.210.60
+nserver:      NSD.NS.IL 149.20.56.132 2001:4f8:3:37:0:0:0:11
+nserver:      NSE.NS.IL 192.115.141.253
+nserver:      NSG.NS.IL 2a02:568:ffff:8:0:0:0:53 81.91.161.212
+nserver:      SNS-PB.ISC.ORG 192.5.4.1 2001:500:2e:0:0:0:0:1
+
+whois:        whois.isoc.org.il
+
+status:       ACTIVE
+remarks:      Registration information: http://www.isoc.org.il/domains
+
+created:      1985-10-24
+changed:      2014-10-15
+source:       IANA
+

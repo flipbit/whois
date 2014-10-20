@@ -1,0 +1,47 @@
+% IANA WHOIS server
+% for more information on IANA, visit http://www.iana.org
+% This query returned 1 object
+
+domain:       AE
+
+organisation: Telecommunication Regulatory Authority (TRA)
+address:      P.O. Box 116688
+address:      Dubai
+address:      United Arab Emirates
+
+contact:      administrative
+name:         Mohammed Gheyath
+organisation: Telecommunication Regulatory Authority (TRA)
+address:      P.O. Box 116688
+address:      Dubai
+address:      United Arab Emirates
+phone:        +971 4 220 8888
+fax-no:       +971 4 230 0140
+e-mail:       iana@tra.gov.ae
+
+contact:      technical
+name:         Mohammad Al Zarooni
+organisation: .ae Domain Administration (.aeDA)
+address:      P.O. Box 116688
+address:      Dubai
+address:      United Arab Emirates
+phone:        +971 4 230 0018
+fax-no:       +971 4 230 0011
+e-mail:       dns@aeda.ae
+
+nserver:      AE.CCTLD.AUTHDNS.RIPE.NET 193.0.9.54 2001:67c:e0:0:0:0:0:54
+nserver:      NS1.AEDNS.AE 79.98.120.73
+nserver:      NS2.AEDNS.AE 79.98.121.73
+nserver:      NSEXT-PCH.AEDNS.AE 199.4.137.1 2001:500:7d:0:0:0:0:1
+nserver:      SEC3.APNIC.NET 2001:dc0:1:0:4777:0:0:140 202.12.28.140
+nserver:      SNS-PB.ISC.ORG 192.5.4.1 2001:500:2e:0:0:0:0:1
+
+whois:        whois.aeda.net.ae
+
+status:       ACTIVE
+remarks:      Registration information: http://aeda.ae/
+
+created:      1992-12-01
+changed:      2011-10-20
+source:       IANA
+

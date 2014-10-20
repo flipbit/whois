@@ -1,0 +1,48 @@
+% IANA WHOIS server
+% for more information on IANA, visit http://www.iana.org
+% This query returned 1 object
+
+domain:       GLOBAL
+
+organisation: Dot GLOBAL AS
+address:      House of Business, Tjuvholmen Allé 3
+address:      Oslo,  0252
+address:      Norway
+
+contact:      administrative
+name:         CEO
+organisation: Dot Global AS
+address:      House of Business, Tjuvholmen Allé 3
+address:      Oslo,  0252
+address:      Norway
+phone:        +4722836609
+fax-no:       +4722837011
+e-mail:       contact@dotglobal.info
+
+contact:      technical
+name:         Senior Director, DNS Infrastructure Group
+organisation: Afilias
+address:      Building 3, Suite 105
+address:      300 Welsh Road
+address:      Horsham, PA 19044
+address:      United States
+phone:        +1 215.706.5700
+fax-no:       +1 215.706.5701
+e-mail:       tld-tech-poc@afilias.info
+
+nserver:      A0.NIC.GLOBAL 2a01:8840:4e:0:0:0:0:1 65.22.80.1
+nserver:      A2.NIC.GLOBAL 2a01:8840:51:0:0:0:0:1 65.22.83.1
+nserver:      B0.NIC.GLOBAL 2a01:8840:4f:0:0:0:0:1 65.22.81.1
+nserver:      C0.NIC.GLOBAL 2a01:8840:50:0:0:0:0:1 65.22.82.1
+ds-rdata:     61854 7 1 80b9fc7e8d300ede5c7b6251d628deeaa1faf482
+ds-rdata:     61854 7 2 cf2738415cc653988b39dfa98b9eb38de908e73224dc144f7eefd54600940bd7
+
+whois:        whois.afilias-srs.net
+
+status:       ACTIVE
+remarks:      Registration information: http://www.dotglobal.info
+
+created:      2014-05-29
+changed:      2014-06-11
+source:       IANA
+

@@ -1,0 +1,50 @@
+% IANA WHOIS server
+% for more information on IANA, visit http://www.iana.org
+% This query returned 1 object
+
+domain:       KRD
+
+organisation: KRG Department of Information Technology
+address:      Nr 9, Pank Village
+address:      Erbil
+address:      Kurdistan Region
+address:      Iraq
+
+contact:      administrative
+name:         Hiwa Afandi
+organisation: Kurdistan Regional Government
+address:      Nr 9, Pank Village
+address:      Erbil
+address:      Kurdistan Region
+address:      Iraq
+phone:        +9647504458604
+fax-no:       +9647504458604
+e-mail:       hiwa.afandi@krg.org
+
+contact:      technical
+name:         Hiwa Afandi
+organisation: Kurdistan Regional Government
+address:      Nr 9, Pank Village
+address:      Erbil
+address:      Kurdistan Region
+address:      Iraq
+phone:        +9647504458604
+fax-no:       +9647504458604
+e-mail:       hiwa.afandi@krg.org
+
+nserver:      A.NIC.KRD 2001:dcd:1:0:0:0:0:10 37.209.192.10
+nserver:      B.NIC.KRD 2001:dcd:2:0:0:0:0:10 37.209.194.10
+nserver:      C.NIC.KRD 2001:dcd:3:0:0:0:0:10 37.209.196.10
+nserver:      D.NIC.KRD 2001:dcd:4:0:0:0:0:10 37.209.198.10
+ds-rdata:     47215 8 1 0985C39330DE86B0C5E4B1472DA7260A8430B36E
+ds-rdata:     47215 8 2 4A57C80D440CC38C74CDCAE2F3D0C8604934A4B1D2B22AE76C64580C70CC5CDE
+
+whois:        whois.aridnrs.net.au
+
+status:       ACTIVE
+remarks:      Registration information: http://www.dit.krg.org/
+
+created:      2014-07-10
+changed:      2014-08-07
+source:       IANA
+

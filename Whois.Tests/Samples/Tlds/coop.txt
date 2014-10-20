@@ -1,0 +1,48 @@
+% IANA WHOIS server
+% for more information on IANA, visit http://www.iana.org
+% This query returned 1 object
+
+domain:       COOP
+
+organisation: DotCooperation LLC
+address:      1401 New York Avenue, N.W.
+address:      Suite 1100
+address:      Washington DC 20005
+address:      United States
+
+contact:      administrative
+name:         Patricia Sterner
+organisation: DotCooperation LLC
+address:      1401 New York Avenue, N.W.
+address:      Suite 1100
+address:      Washington DC 20005
+address:      United States
+phone:        +1 202 383 5453
+fax-no:       +1 202 628 6726
+e-mail:       psterner@ncba.coop
+
+contact:      technical
+name:         Jonathan Stanton
+organisation: Midcounties Co-operative Domains Ltd
+address:      Warwick Technology Park
+address:      Gallows Hill
+address:      Warwick CV34 6DA
+address:      United Kingdom
+phone:        +44 1926 516 391
+fax-no:       +44 1926 516 151
+e-mail:       epp@nic.coop
+
+nserver:      COOP1.DYNTLD.NET 208.78.70.80
+nserver:      COOP2.DYNTLD.NET 204.13.250.80
+nserver:      COOP3.DYNTLD.NET 208.78.71.80
+nserver:      COOP4.DYNTLD.NET 204.13.251.80
+
+whois:        whois.nic.coop
+
+status:       ACTIVE
+remarks:      Registration information: http://www.nic.coop
+
+created:      2001-12-15
+changed:      2014-10-18
+source:       IANA
+

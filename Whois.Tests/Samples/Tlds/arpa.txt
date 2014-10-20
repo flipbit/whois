@@ -1,0 +1,62 @@
+% IANA WHOIS server
+% for more information on IANA, visit http://www.iana.org
+% This query returned 1 object
+
+domain:       ARPA
+
+organisation: Internet Architecture Board (IAB)
+address:      c/o IETF Administrative Support Activity, ISOC
+address:      1775 Wiehle Ave.
+address:      Suite 102
+address:      Reston, Virginia 20190-5108
+address:      United States
+
+contact:      administrative
+name:         Internet Architecture Board (IAB)
+organisation: Internet Architecture Board (IAB)
+address:      c/o IETF Administrative Support Activity, ISOC
+address:      1775 Wiehle Ave.
+address:      Suite 102
+address:      Reston, Virginia 20190-5108
+address:      United States
+phone:        +1 703 326 9880
+fax-no:       +1 703 326 9881
+e-mail:       iab@iab.org
+
+contact:      technical
+name:         Internet Assigned Numbers Authority (IANA)
+organisation: Internet Corporation for Assigned Names and Numbers (ICANN)
+address:      12025 Waterfront Drive
+address:      Suite 300
+address:      Los Angeles, California 90094
+address:      United States
+phone:        +1 310 301 5800
+fax-no:       +1 310 823-8649
+e-mail:       tld-contact@iana.org
+
+nserver:      A.ROOT-SERVERS.NET 198.41.0.4 2001:503:ba3e:0:0:0:2:30
+nserver:      B.ROOT-SERVERS.NET 192.228.79.201 2001:500:84:0:0:0:0:b
+nserver:      C.ROOT-SERVERS.NET 192.33.4.12 2001:500:2:0:0:0:0:c
+nserver:      D.ROOT-SERVERS.NET 199.7.91.13 2001:500:2d:0:0:0:0:d
+nserver:      E.ROOT-SERVERS.NET 192.203.230.10
+nserver:      F.ROOT-SERVERS.NET 192.5.5.241 2001:500:2f:0:0:0:0:f
+nserver:      G.ROOT-SERVERS.NET 192.112.36.4
+nserver:      H.ROOT-SERVERS.NET 128.63.2.53 2001:500:1:0:0:0:803f:235
+nserver:      I.ROOT-SERVERS.NET 192.36.148.17 2001:7fe:0:0:0:0:0:53
+nserver:      K.ROOT-SERVERS.NET 193.0.14.129 2001:7fd:0:0:0:0:0:1
+nserver:      L.ROOT-SERVERS.NET 199.7.83.42 2001:500:3:0:0:0:0:42
+nserver:      M.ROOT-SERVERS.NET 2001:dc3:0:0:0:0:0:35 202.12.27.33
+ds-rdata:     42581 8 1 778606D9623F843F156E7D11ACBF815EB67AB516
+ds-rdata:     42581 8 2 F28391C1ED4DC0F151EDD251A3103DCE0B9A5A251ACF6E24073771D71F3C40F9
+
+whois:        whois.iana.org
+
+status:       ACTIVE
+remarks:      Registration information: http://www.iana.org/arpa-dom/
+remarks:      IAB assigned the technical role to the IANA Department
+remarks:      of ICANN; see RFC 3172.
+
+created:      1985-01-01
+changed:      2014-09-30
+source:       IANA
+

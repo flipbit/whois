@@ -1,0 +1,46 @@
+% IANA WHOIS server
+% for more information on IANA, visit http://www.iana.org
+% This query returned 1 object
+
+domain:       ET
+
+organisation: Ethio telecom
+address:      P.O. Box 1047
+address:      W. Churchill Rd.
+address:      Addis Ababa Region 14
+address:      Ethiopia
+
+contact:      administrative
+name:         Project Management Office
+organisation: Ethio telecom
+address:      P.O. Box 1047
+address:      W. Churchill Rd.
+address:      Addis Ababa Region 14
+address:      Ethiopia
+phone:        +251 911 528 585
+fax-no:       +251 115 515 777
+e-mail:       jean-marie.veron@ethiotelecom.et
+
+contact:      technical
+name:         IT Services Officer
+organisation: Ethio telecom
+address:      P.O. Box 1047
+address:      W. Churchill Rd.
+address:      Addis Ababa Region 14
+address:      Ethiopia
+phone:        +251 911 256 562
+fax-no:       +251 115 523 296
+e-mail:       etc-adm@ethionet.et
+
+nserver:      ET.CCTLD.AUTHDNS.RIPE.NET 193.0.9.73 2001:67c:e0:0:0:0:0:73
+nserver:      NS1.TELECOM.NET.ET 213.55.64.36
+nserver:      NS2.TELECOM.NET.ET 213.55.64.38
+nserver:      PHLOEM.UOREGON.EDU 128.223.32.35 2001:468:d01:20:0:0:80df:2023
+
+status:       ACTIVE
+remarks:      Registration information: http://www.ethiotelecom.et
+
+created:      1995-10-15
+changed:      2012-01-05
+source:       IANA
+

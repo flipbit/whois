@@ -1,0 +1,53 @@
+% IANA WHOIS server
+% for more information on IANA, visit http://www.iana.org
+% This query returned 1 object
+
+domain:       GR
+
+organisation: ICS-FORTH GR
+address:      100 Nikolaou Plastira str.
+address:      Vassilika Vouton
+address:      Heraklion, Crete
+address:      GR-70013
+address:      Greece
+
+contact:      administrative
+name:         Vaggelis Segredakis
+organisation: ICS-FORTH GR
+address:      100 Nikolaou Plastira str.
+address:      Vassilika Vouton
+address:      Heraklion, Crete
+address:      GR-70013
+address:      Greece
+phone:        +30 281 0391450
+fax-no:       +30 281 0391451
+e-mail:       gr-noc@ics.forth.gr
+
+contact:      technical
+name:         Vaggelis Segredakis
+organisation: ICS-FORTH GR
+address:      100 Nikolaou Plastira str.
+address:      Vassilika Vouton
+address:      Heraklion, Crete
+address:      GR-70013
+address:      Greece
+phone:        +30 281 0391450
+fax-no:       +30 281 0391451
+e-mail:       gr-noc@ics.forth.gr
+
+nserver:      ESTIA.ICS.FORTH.GR 139.91.191.3 2001:648:2c30:0:0:0:191:3
+nserver:      GR-AT.ICS.FORTH.GR 78.104.145.227
+nserver:      GR-BR.ICS.FORTH.GR 200.160.7.163
+nserver:      GR-IX.ICS.FORTH.GR 176.126.38.132 2001:7f8:6e:1:0:0:0:132
+nserver:      GR-M.ICS.FORTH.GR 194.0.4.10 2001:678:7:0:0:0:4:10
+nserver:      GRDNS-DE.DENIC.DE 81.91.161.80
+nserver:      GRDNS.ICS.FORTH.GR 139.91.1.1
+ds-rdata:     35136 7 2 F7BF4C362B838C2069C9083FD38846BBB5D79EDBDE298F9268997307EA7DD5C3
+
+status:       ACTIVE
+remarks:      Registration information: http://www.gr
+
+created:      1989-02-19
+changed:      2014-07-11
+source:       IANA
+

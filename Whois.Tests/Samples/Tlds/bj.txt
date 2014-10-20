@@ -1,0 +1,45 @@
+% IANA WHOIS server
+% for more information on IANA, visit http://www.iana.org
+% This query returned 1 object
+
+domain:       BJ
+
+organisation: Benin Telecoms S.A.
+address:      Avenue Clozel GANHI
+address:      Cotonou 01 BP 5959
+address:      Benin
+
+contact:      administrative
+name:         Abdoul-Akim ADJIBOLA
+organisation: Benin Telecoms S.A.
+address:      Avenue Clozel GANHI
+address:      Cotonou 01 BP 5959
+address:      Benin
+phone:        +229 90 15 09 15
+fax-no:       +229 21 31 38 43
+e-mail:       aadjibola@benintelecoms.bj
+
+contact:      technical
+name:         Marius SAH
+organisation: Benin Telecoms S.A.
+address:      Avenue Clozel GANHI
+address:      Cotonou 01 BP 5959
+address:      Benin
+phone:        +229 90 07 75 56
+e-mail:       msah@benintelecoms.bj
+
+nserver:      BJ.CCTLD.AUTHDNS.RIPE.NET 193.0.9.63 2001:67c:e0:0:0:0:0:63
+nserver:      BOW.RAIN.FR 194.51.3.49
+nserver:      NAKAYO.LELAND.BJ 81.91.225.1
+nserver:      NS-BJ.AFRINIC.NET 196.216.168.33 2001:43f8:120:0:0:0:0:33
+nserver:      NS1.INTNET.BJ 81.91.225.18
+
+whois:        whois.nic.bj
+
+status:       ACTIVE
+remarks:      Registration information: http://www.nic.bj
+
+created:      1996-01-18
+changed:      2012-09-29
+source:       IANA
+

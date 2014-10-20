@@ -1,0 +1,47 @@
+% IANA WHOIS server
+% for more information on IANA, visit http://www.iana.org
+% This query returned 1 object
+
+domain:       CV
+
+organisation: Agência Nacional das Comunicações (ANAC)
+address:      Edifício do MIT
+address:      Ponta Belém
+address:      Praia, Santiago  892
+address:      Cape Verde
+
+contact:      administrative
+name:         Suzete Júlia Dias Monteiro Centeio
+organisation: Agência Nacional das Comunicações (ANAC)
+address:      Edifício do MIT
+address:      Ponta Belém
+address:      Praia, Santiago  892
+address:      Cape Verde
+phone:        +238 260 4400/10
+fax-no:       +238 261 3079
+e-mail:       suzete.centeio@anac.cv
+
+contact:      technical
+name:         Assis Neves Guerreiro
+organisation: Associação DNS.PT
+address:      Rua Latino Coelho, nº13, 5ºpiso
+address:      1050-132 Lisboa
+address:      Portugal
+phone:        (+351) 211308200
+fax-no:       (+351) 211312720
+e-mail:       assis.guerreiro@dns.pt
+
+nserver:      AUTH02.NS.UU.NET 198.6.1.82
+nserver:      NS-EXT.ISC.ORG 2001:4f8:0:2:0:0:0:13 204.152.184.64
+nserver:      NS.DNS.CV 41.221.192.220
+nserver:      NS01.FCCN.PT 193.136.192.40 2001:690:a00:4001:0:0:0:200
+nserver:      PHOBOS.FCCN.PT 193.136.7.17
+nserver:      SNS-PB.ISC.ORG 192.5.4.1 2001:500:2e:0:0:0:0:1
+
+status:       ACTIVE
+remarks:      Registration information: http://www.dns.cv/
+
+created:      1996-10-21
+changed:      2014-06-23
+source:       IANA
+

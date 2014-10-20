@@ -1,0 +1,45 @@
+% IANA WHOIS server
+% for more information on IANA, visit http://www.iana.org
+% This query returned 1 object
+
+domain:       BI
+
+organisation: Centre National de l'Informatique
+address:      155 - 161 Chaussee P. L. Rwagasore
+address:      Bujumbura  BP 2270
+address:      Burundi
+
+contact:      administrative
+name:         Victor Ciza
+organisation: Centre National de l'Informatique
+address:      157 Chee P. L. Rwagasore
+address:      Bujumbura  BP 2270
+address:      Burundi
+phone:        +257 22 22 5005
+e-mail:       admin@nic.bi
+
+contact:      technical
+name:         Felix Ndayirukiye
+organisation: Centre National de l'Informatique
+address:      157 Chee P. L. Rwagasore
+address:      Bujumbura  BP 2270
+address:      Burundi
+phone:        +257 22 219230
+e-mail:       tech@nic.bi
+
+nserver:      ANYNS.NIC.BI 2001:500:14:6061:ad:0:0:1 204.61.216.61
+nserver:      BI.CCTLD.AUTHDNS.RIPE.NET 193.0.9.62 2001:67c:e0:0:0:0:0:62
+nserver:      DNS.PRINCETON.EDU 128.112.129.15
+nserver:      NS-BI.AFRINIC.NET 196.216.168.23 2001:43f8:120:0:0:0:0:23
+nserver:      NS.NIC.BI 196.2.8.205
+nserver:      NS1.NIC.BI 196.2.12.205
+
+whois:        whois1.nic.bi
+
+status:       ACTIVE
+remarks:      Registration information: http://www.nic.bi
+
+created:      1996-10-21
+changed:      2012-04-21
+source:       IANA
+

@@ -1,0 +1,45 @@
+% IANA WHOIS server
+% for more information on IANA, visit http://www.iana.org
+% This query returned 1 object
+
+domain:       KZ
+
+organisation: Association of IT Companies of Kazakhstan
+address:      6/5 Kabanbai Batyra
+address:      Office 3
+address:      Astana AST 010000
+address:      Kazakhstan
+
+contact:      administrative
+name:         Nurlan Issin
+organisation: Association of IT Companies of Kazakhstan
+address:      6/5 Kabanbai Batyra
+address:      Office 3
+address:      Astana AST 010000
+address:      Kazakhstan
+phone:        +7 (7172) 92-55-52
+fax-no:       +7 (7172) 92 54 11
+e-mail:       info@itk.kz
+
+contact:      technical
+name:         Pavel Gusev
+organisation: KazNIC Organization
+address:      Momyshuly, 22
+address:      Semey VKO 071400
+address:      Kazakhstan
+phone:        +7 (7222) 52-58-00
+fax-no:       +7 (7222) 56-33-64
+e-mail:       pg@nic.kz
+
+nserver:      KZ.CCTLD.AUTHDNS.RIPE.NET 193.0.9.87 2001:67c:e0:0:0:0:0:87
+nserver:      NS.NIC.KZ 194.0.21.5
+
+whois:        whois.nic.kz
+
+status:       ACTIVE
+remarks:      Registration information: http://www.nic.kz
+
+created:      1994-09-19
+changed:      2011-10-12
+source:       IANA
+

@@ -1,0 +1,38 @@
+% IANA WHOIS server
+% for more information on IANA, visit http://www.iana.org
+% This query returned 1 object
+
+domain:       HORSE
+
+organisation: Top Level Domain Holdings Limited
+address:      Craigmuir Chambers, Road Town Tortola VG 1110
+address:      Virgin Islands, British
+
+contact:      administrative
+name:         Admin Contact
+organisation: Minds + Machines Ltd
+address:      32 Nassau St, Dublin 2
+address:      Ireland
+phone:        +353.14301689
+e-mail:       support@mm-registry.com
+
+contact:      technical
+name:         Director of Software Development
+organisation: Minds + Machines Ltd
+address:      32 Nassau St, Dublin 2
+address:      Ireland
+phone:        +353.14301689
+e-mail:       support@mm-registry.com
+
+nserver:      A.NS.NIC.HORSE 2620:0171:0a02:00ad:0:0:0:8 72.0.50.8
+nserver:      B.NS.NIC.HORSE 2620:0171:0d02:00dc:0:0:0:8 72.42.114.8
+ds-rdata:     36637 8 2 665BE35CF145D55C223033FBF7B126B7E9E5D7D8A4C3A3F7CA2EA5609442FE05
+
+whois:        whois-dub.mm-registry.com
+
+status:       ACTIVE
+
+created:      2014-02-28
+changed:      2014-03-31
+source:       IANA
+

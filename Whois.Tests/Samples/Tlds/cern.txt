@@ -1,0 +1,45 @@
+% IANA WHOIS server
+% for more information on IANA, visit http://www.iana.org
+% This query returned 1 object
+
+domain:       CERN
+
+organisation: European Organization for Nuclear Research ("CERN")
+address:      Route de Meyrin
+address:      Geneve  CH-1211
+address:      Switzerland
+
+contact:      administrative
+name:         Dan Noyes
+organisation: European Organization for Nuclear Research ("CERN")
+address:      Route de Meyrin, Meyrin, Geneve, CH-1211
+address:      Switzerland
+phone:        +41 22 767 3559
+fax-no:       +41 22 767 9599
+e-mail:       cern.gtld@cern.ch
+
+contact:      technical
+name:         Senior Director, DNS Infrastructure Group
+organisation: Afilias
+address:      Building 3, Suite 105, 300 Welsh Road, Horsham, PA, 19044
+address:      United States
+phone:        +1 215.706.5700
+fax-no:       +1 215.706.5701
+e-mail:       tld-tech-poc@afilias.info
+
+nserver:      A0.NIC.CERN 2a01:8840:da:0:0:0:0:1 65.22.224.1
+nserver:      A2.NIC.CERN 2a01:8840:dd:0:0:0:0:1 65.22.227.1
+nserver:      B0.NIC.CERN 2a01:8840:db:0:0:0:0:1 65.22.225.1
+nserver:      C0.NIC.CERN 2a01:8840:dc:0:0:0:0:1 65.22.226.1
+ds-rdata:     63043 7 1 c4095a121939e6e0b2000850f63010ce003f1907
+ds-rdata:     63043 7 2 61e362b956dc54fffaad2a41b5f81b2967febacf39ae1bcb78a8fa76699ffc0f
+
+whois:        whois.afilias-srs.net
+
+status:       ACTIVE
+remarks:      Registration information: http://www.cern.ch
+
+created:      2014-08-13
+changed:      2014-08-16
+source:       IANA
+

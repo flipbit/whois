@@ -1,0 +1,45 @@
+% IANA WHOIS server
+% for more information on IANA, visit http://www.iana.org
+% This query returned 1 object
+
+domain:       KH
+
+organisation: Ministry of Post and Telecommunications
+address:      Corner of Street 13 & 102
+address:      Phnom Penh
+address:      Cambodia
+
+contact:      administrative
+name:         Mrs. Lim Yatal
+organisation: Ministry of Post and Telecommunications
+address:      Corner of Street 13 & 102
+address:      Wat Phnom, Phnom Penh
+address:      Cambodia
+phone:        +855 23 725 384
+fax-no:       +855 23 426 011
+e-mail:       dns-admin@dns.net.kh
+
+contact:      technical
+name:         Chakrya Moa
+organisation: Ministry of Post and Telecommunications
+address:      Corner of Street 13 & 102
+address:      Phnom Penh
+address:      Cambodia
+phone:        +855 23 724 223
+fax-no:       +855 23 426 011
+e-mail:       chakrya@camnet.com.kh
+
+nserver:      DNS1.ONLINE.COM.KH 203.189.128.1
+nserver:      NS-KH.RIPE.NET 193.0.12.37
+nserver:      NS.CAMNET.COM.KH 203.223.32.3
+nserver:      NS.TELESURF.COM.KH 203.144.65.3
+nserver:      NS1.DNS.NET.KH 203.223.32.21
+nserver:      SEC3.APNIC.NET 2001:dc0:1:0:4777:0:0:140 202.12.28.140
+
+status:       ACTIVE
+remarks:      Registration information: http://www.camnet.com.kh/
+
+created:      1996-02-20
+changed:      2011-03-04
+source:       IANA
+

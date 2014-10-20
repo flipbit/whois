@@ -53,6 +53,18 @@ namespace Whois.Visitors
         /// <returns></returns>
         public WhoisRecord Visit(WhoisRecord record)
         {
+            var results = MatchPatterns(record);
+
+            if (results.Any())
+            {
+                record = results.First().Value;
+            }
+
+            return record;
+        }
+
+        public IList<TokenResult<WhoisRecord>> MatchPatterns(WhoisRecord record)
+        {
             var results = new List<TokenResult<WhoisRecord>>();
 
             var patterns = GetEmbeddedPatterns();
@@ -68,12 +80,7 @@ namespace Whois.Visitors
                 results.Add(result);
             }
 
-            if (results.Count > 0)
-            {
-                record = results.OrderBy(r => r.Replacements.Count).First().Value;
-            }
-
-            return record;
+            return results.OrderBy(r => r.Replacements.Count).ToList();
         }
     }
 }

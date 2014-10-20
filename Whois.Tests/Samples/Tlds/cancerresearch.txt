@@ -1,0 +1,51 @@
+% IANA WHOIS server
+% for more information on IANA, visit http://www.iana.org
+% This query returned 1 object
+
+domain:       CANCERRESEARCH
+
+organisation: Australian Cancer Research Foundation
+address:      Suite 409, Strand Arcade,
+address:      412 George Street,
+address:      SYDNEY
+address:      NSW 2000
+address:      Australia
+
+contact:      administrative
+name:         Cheryl Riddington
+organisation: Australian Cancer Research Foundation
+address:      GPO Box 9989,
+address:      SYDNEY
+address:      NSW 2001
+address:      Australia
+phone:        +61292237833
+fax-no:       +61292231800
+e-mail:       criddington@acrf.com.au
+
+contact:      technical
+name:         Cheryl Riddington
+organisation: Australian Cancer Research Foundation
+address:      GPO Box 9989,
+address:      SYDNEY
+address:      NSW 2001
+address:      Australia
+phone:        +61292237833
+fax-no:       +61292231800
+e-mail:       criddington@acrf.com.au
+
+nserver:      A.NIC.CANCERRESEARCH 2001:dcd:1:0:0:0:0:9 37.209.192.9
+nserver:      B.NIC.CANCERRESEARCH 2001:dcd:2:0:0:0:0:9 37.209.194.9
+nserver:      C.NIC.CANCERRESEARCH 2001:dcd:3:0:0:0:0:9 37.209.196.9
+nserver:      D.NIC.CANCERRESEARCH 2001:dcd:4:0:0:0:0:9 37.209.198.9
+ds-rdata:     57460 8 1 0309F41F203AD04982AA0AE0049BAD8105079C5F
+ds-rdata:     57460 8 2 9D9A9BB93032656925B36EF6D89E801A9D3C87FFD4E7E1FC5F9C58EEBE95E6F8
+
+whois:        whois.nic.cancerresearch
+
+status:       ACTIVE
+remarks:      Registration information: http://www.acrf.com.au
+
+created:      2014-06-19
+changed:      2014-07-03
+source:       IANA
+

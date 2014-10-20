@@ -1,0 +1,48 @@
+% IANA WHOIS server
+% for more information on IANA, visit http://www.iana.org
+% This query returned 1 object
+
+domain:       GMX
+
+organisation: 1&1 Mail & Media GmbH
+address:      Brauerstrasse 48
+address:      76135 Karlsruhe
+address:      Baden-Württemberg
+address:      Germany
+
+contact:      administrative
+name:         Holger Exner
+organisation: 1&1 Mail & Media GmbH
+address:      Brauerstrasse 48
+address:      76135 Karlsruhe
+address:      Baden-Württemberg
+address:      Germany
+phone:        +49 721 91373 4221
+fax-no:       +49 721 91374 2978
+e-mail:       gmxregistry@1und1.de
+
+contact:      technical
+name:         ironDNS Support
+organisation: Knipp Medien und Kommunikation GmbH
+address:      Martin-Schmeisser-Weg 9
+address:      44227 Dortmund
+address:      Germany
+phone:        +49 231 9703 0
+fax-no:       +49 231 9703 200
+e-mail:       dnsmaster@irondns.net
+
+nserver:      ANYCAST10.IRONDNS.NET 195.253.64.12 2a01:5b0:4:0:0:0:0:c
+nserver:      ANYCAST23.IRONDNS.NET 195.253.65.11 2a01:5b0:5:0:0:0:0:b
+nserver:      ANYCAST24.IRONDNS.NET 195.253.65.12 2a01:5b0:5:0:0:0:0:c
+nserver:      ANYCAST9.IRONDNS.NET 195.253.64.11 2a01:5b0:4:0:0:0:0:b
+ds-rdata:     49537 10 2 EE15CF33C2E02F308291960DF44A5A87E16C0535E34178528780A9A4F28A736F
+
+whois:        whois-fe1.gmx.tango.knipp.de
+
+status:       ACTIVE
+remarks:      Registration information: http://cp.gmx.tango.knipp.de
+
+created:      2014-08-07
+changed:      2014-09-05
+source:       IANA
+

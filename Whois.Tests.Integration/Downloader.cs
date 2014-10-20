@@ -1,4 +1,5 @@
-﻿using System.Diagnostics;
+﻿using System;
+using System.Diagnostics;
 using System.IO;
 using System.Threading;
 using NUnit.Framework;
@@ -30,7 +31,33 @@ namespace Whois
 
                 File.WriteAllText(@"..\..\..\Whois.Tests\Samples\" + line + ".txt", whois.ToString());
 
-                Thread.Sleep(10000);
+                Thread.Sleep(60000);
+            }
+        }
+
+        [Test]
+        [Ignore]
+        public void DownloadTldsAsSamples()
+        {
+            var lines = File.ReadAllLines(@"..\..\Data\tlds.txt");
+            var serverLookup = new IanaServerLookup();
+            serverLookup.TcpReaderFactory = new TcpReaderFactory();
+
+            foreach (var line in lines)
+            {
+                if (string.IsNullOrWhiteSpace(line)) continue;
+                if (line.StartsWith("#")) continue;
+
+                var fileName = @"..\..\..\Whois.Tests\Samples\Tlds\" + line.ToLower() + ".txt";
+
+                if (File.Exists(fileName)) continue;
+ 
+                var tld = serverLookup.Lookup(line.ToLower());
+
+                File.WriteAllText(fileName, tld);
+                Console.WriteLine("{0}: {1:####,##0} byte(s)", line.ToLower(), tld.Length);
+
+                Thread.Sleep(60000);
             }
         }
     }

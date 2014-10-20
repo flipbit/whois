@@ -1,0 +1,50 @@
+% IANA WHOIS server
+% for more information on IANA, visit http://www.iana.org
+% This query returned 1 object
+
+domain:       BZ
+
+organisation: University of Belize
+address:      Stann Creek Street Extension
+address:      P.O. Box 340
+address:      Belmopan
+address:      Belize
+
+contact:      administrative
+name:         Juan Carlos Namis
+organisation: University Management Ltd
+address:      115 Barrack Road
+address:      Third Floor
+address:      Belize City
+address:      Belize
+phone:        +501 223 1607
+fax-no:       +501 223 2242
+e-mail:       hostmaster@belizenic.bz
+
+contact:      technical
+name:         Juan Carlos Namis
+organisation: University Management Ltd
+address:      115 Barrack Road
+address:      Third Floor
+address:      Belize City
+address:      Belize
+phone:        +501 610 5124
+fax-no:       +501 223 2242
+e-mail:       jcnamis@belizenic.bz
+
+nserver:      A0.CCTLD.AFILIAS-NST.INFO 199.254.59.1 2001:500:25:0:0:0:0:1
+nserver:      A2.CCTLD.AFILIAS-NST.INFO 199.249.116.1 2001:500:44:0:0:0:0:1
+nserver:      B0.CCTLD.AFILIAS-NST.ORG 199.254.60.1 2001:500:26:0:0:0:0:1
+nserver:      B2.CCTLD.AFILIAS-NST.ORG 199.249.124.1 2001:500:4c:0:0:0:0:1
+nserver:      C0.CCTLD.AFILIAS-NST.INFO 199.254.61.1 2001:500:27:0:0:0:0:1
+nserver:      D0.CCTLD.AFILIAS-NST.ORG 199.254.62.1 2001:500:28:0:0:0:0:1
+ds-rdata:     16455 7 1 409aa5cd776352aeab7a46b64ee7ba8061cb9374
+ds-rdata:     16455 7 2 457c64669c357af4aabdeb16a6a119b22d3fcb339bbf3c1701aa84cbc3e105f3
+
+status:       ACTIVE
+remarks:      Registration information: http://www.belizenic.bz
+
+created:      1991-09-03
+changed:      2010-10-18
+source:       IANA
+

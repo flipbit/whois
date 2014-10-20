@@ -1,0 +1,46 @@
+% IANA WHOIS server
+% for more information on IANA, visit http://www.iana.org
+% This query returned 1 object
+
+domain:       GOV
+
+organisation: General Services Administration
+organisation: Attn: QTDC, 2E08 (.gov Domain Registration)
+address:      10304 Eaton Place
+address:      Fairfax Virginia 22030
+address:      United States
+
+contact:      administrative
+name:         Program Manager
+organisation: General Services Administration, Office of Governmentwide Policy
+address:      One Constitution Square
+address:      1275 First Street,NE
+address:      Washington, DC 20417
+address:      United States
+phone:        +1 202 501 0282
+e-mail:       lee.ellis@gsa.gov
+
+contact:      technical
+name:         Registry Customer Service
+organisation: Verisign, Inc.
+address:      12061 Bluemont Way
+address:      Reston Virginia 20190
+address:      United States
+phone:        +1 877 734 4688
+fax-no:       +1 540 301 0160
+e-mail:       registrar@dotgov.gov
+
+nserver:      A.GOV-SERVERS.NET 2001:500:4431:0:0:0:2:30 69.36.157.30
+nserver:      B.GOV-SERVERS.NET 209.112.123.30
+ds-rdata:     7698 8 1 6F109B46A80CEA9613DC86D5A3E065520505AAFE
+ds-rdata:     7698 8 2 6BC949E638442EAD0BDAF0935763C8D003760384FF15EBBD5CE86BB5559561F0
+
+whois:        whois.dotgov.gov
+
+status:       ACTIVE
+remarks:      Registration information: http://www.dotgov.gov
+
+created:      1985-01-01
+changed:      2013-09-10
+source:       IANA
+

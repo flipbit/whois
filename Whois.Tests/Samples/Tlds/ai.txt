@@ -1,0 +1,42 @@
+% IANA WHOIS server
+% for more information on IANA, visit http://www.iana.org
+% This query returned 1 object
+
+domain:       AI
+
+organisation: Government of Anguilla
+address:      The Valley
+address:      Anguilla
+
+contact:      administrative
+name:         Director of Public Utilities
+organisation: Government of Anguilla
+address:      Ministry of Infrastructure, Communications and Utilities, Coronation Avenue, P.O. Box 60
+address:      Anguilla
+phone:        +1 264-497-2651/2442
+fax-no:       +1 264-497-3651
+e-mail:       crefton.niles@gov.ai
+
+contact:      technical
+name:         Vincent Aron Cate
+organisation: DataHaven.Net Ltd.
+address:      949 Shoal Bay
+address:      The Valley
+address:      Anguilla
+phone:        +1 264 497 3255
+fax-no:       +1 264 497 8470
+e-mail:       vincecate@gmail.com
+
+nserver:      NS1.PAIR.COM 209.68.1.11
+nserver:      NS2.OFFSHORE.AI 108.166.113.245
+nserver:      WHOIS.AI 209.59.119.1
+
+whois:        whois.ai
+
+status:       ACTIVE
+remarks:      Registration information: http://whois.ai
+
+created:      1995-02-16
+changed:      2012-05-02
+source:       IANA
+

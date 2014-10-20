@@ -1,0 +1,45 @@
+% IANA WHOIS server
+% for more information on IANA, visit http://www.iana.org
+% This query returned 1 object
+
+domain:       FM
+
+organisation: FSM Telecommunications Corporation
+address:      P.O. Box 1210
+address:      Kolonia Pohnpei 96941
+address:      Micronesia, Federated States Of
+
+contact:      administrative
+name:         Fredy Perman
+organisation: FSM Telecommunications Corporation
+address:      P.O. Box 1210
+address:      Kolonia Pohnpei 96941
+address:      Micronesia, Federated States Of
+phone:        +691 320 2740
+fax-no:       +691 320 2745
+e-mail:       fredy.perman@fsmtc.fm
+
+contact:      technical
+name:         Tyler Hubbard
+organisation: FSM Telecommunications Corporation
+address:      P.O. Box 1210
+address:      Kolonia Pohnpei 96941
+address:      Micronesia, Federated States Of
+phone:        +691 320 2740
+fax-no:       +691 320 2745
+e-mail:       thubbard@fsmtc.fm
+
+nserver:      TLD1.ULTRADNS.NET 2001:502:d399:0:0:0:0:1 204.74.112.1
+nserver:      TLD2.ULTRADNS.NET 204.74.113.1
+nserver:      TLD3.ULTRADNS.ORG 199.7.66.1
+nserver:      TLD4.ULTRADNS.ORG 199.7.67.1 2001:502:100e:0:0:0:0:1
+nserver:      TLD5.ULTRADNS.INFO 192.100.59.11
+nserver:      TLD6.ULTRADNS.CO.UK 198.133.199.11
+
+status:       ACTIVE
+remarks:      Registration information: http://www.dot.fm/
+
+created:      1995-04-19
+changed:      2013-05-16
+source:       IANA
+

@@ -1,0 +1,38 @@
+% IANA WHOIS server
+% for more information on IANA, visit http://www.iana.org
+% This query returned 1 object
+
+domain:       COUNTRY
+
+organisation: Top Level Domain Holdings Limited
+address:      Craigmuir Chambers, Road Town Tortola VG 1110
+address:      Virgin Islands, British
+
+contact:      administrative
+name:         Admin Contact
+organisation: Minds + Machines Ltd
+address:      32 Nassau St, Dublin 2
+address:      Ireland
+phone:        +353.14301689
+e-mail:       support@mm-registry.com
+
+contact:      technical
+name:         Director of Software Development
+organisation: Minds + Machines Ltd
+address:      32 Nassau St, Dublin 2
+address:      Ireland
+phone:        +353.14301689
+e-mail:       support@mm-registry.com
+
+nserver:      A.NS.NIC.COUNTRY 2620:0171:0a02:00ad:0:0:0:17 72.0.50.17
+nserver:      B.NS.NIC.COUNTRY 2620:0171:0d02:00dc:0:0:0:17 72.42.114.17
+ds-rdata:     2705 8 2 6EE6B796B61C72E15174930066AA40B92E0183A406561272E6B574770551652E
+
+whois:        whois-dub.mm-registry.com
+
+status:       ACTIVE
+
+created:      2014-02-28
+changed:      2014-03-31
+source:       IANA
+

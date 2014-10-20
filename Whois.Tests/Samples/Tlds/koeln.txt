@@ -1,0 +1,49 @@
+% IANA WHOIS server
+% for more information on IANA, visit http://www.iana.org
+% This query returned 1 object
+
+domain:       KOELN
+
+organisation: NetCologne Gesellschaft für Telekommunikation mbH
+address:      Am Coloneum 9
+address:      50829 Cologne
+address:      North Rhine-Westphalia
+address:      Germany
+
+contact:      administrative
+name:         Hartmut Schulz
+organisation: NetCologne Gesellschaft für Telekommunikation mbH
+address:      Am Coloneum 9
+address:      50829 Cologne
+address:      North Rhine-Westphalia
+address:      Germany
+phone:        +49 221 2222 228
+fax-no:       +49 221 2222 7228
+e-mail:       hschulz@dotkoeln.de
+
+contact:      technical
+name:          ironDNS Support
+organisation: Knipp Medien und Kommunikation GmbH
+address:      Martin-Schmeisser-Weg 9
+address:      44227 Dortmund
+address:      North Rhine-Westphalia
+address:      Germany
+phone:        +49 231 9703 0
+fax-no:       +49 231 9703 200
+e-mail:       dnsmaster@irondns.net
+
+nserver:      ANYCAST10.IRONDNS.NET 195.253.64.12 2a01:5b0:4:0:0:0:0:c
+nserver:      ANYCAST23.IRONDNS.NET 195.253.65.11 2a01:5b0:5:0:0:0:0:b
+nserver:      ANYCAST24.IRONDNS.NET 195.253.65.12 2a01:5b0:5:0:0:0:0:c
+nserver:      ANYCAST9.IRONDNS.NET 195.253.64.11 2a01:5b0:4:0:0:0:0:b
+ds-rdata:     6046 10 2 72629095CBD39549967DDC7685372E9BB38B25F0412C6DF8F90CF09128E92627
+
+whois:        whois-fe1.pdt.koeln.tango.knipp.de
+
+status:       ACTIVE
+remarks:      Registration information: http://www.dotkoeln.de
+
+created:      2014-02-20
+changed:      2014-03-05
+source:       IANA
+

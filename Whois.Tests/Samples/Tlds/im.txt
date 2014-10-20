@@ -1,0 +1,46 @@
+% IANA WHOIS server
+% for more information on IANA, visit http://www.iana.org
+% This query returned 1 object
+
+domain:       IM
+
+organisation: Isle of Man Government
+address:      Bucks Road
+address:      Douglas Isle of Man IM1
+address:      United Kingdom
+
+contact:      administrative
+name:         Brian Osborn
+organisation: Information Systems Division,
+organisation: Isle of Man Government
+address:      St Andrew's House
+address:      Finch Road
+address:      Douglas Isle of Man IM1 3PX
+address:      United Kingdom
+phone:        +44 1624 685685
+e-mail:       imdomainadmin@nic.im
+
+contact:      technical
+name:         Phil Adcock
+organisation: Domicilium (IoM) Ltd
+address:      Isle of Man Datacentre
+address:      Ronaldsway Isle of Man IM9 2RS
+address:      United Kingdom
+phone:        +44 1624 825278
+fax-no:       +44 1624 829525
+e-mail:       padcock@domicilium.com
+
+nserver:      BARNEY.ADVSYS.CO.UK 217.23.160.50
+nserver:      HOPPY.IOM.COM 217.23.163.140
+nserver:      NS4.JA.NET 193.62.157.66 2001:630:0:47:0:0:0:42
+nserver:      PEBBLES.IOM.COM 80.168.83.242
+
+whois:        whois.nic.im
+
+status:       ACTIVE
+remarks:      Registration information: http://www.nic.im
+
+created:      1996-09-11
+changed:      2010-01-07
+source:       IANA
+

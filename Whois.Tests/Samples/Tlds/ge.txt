@@ -1,0 +1,43 @@
+% IANA WHOIS server
+% for more information on IANA, visit http://www.iana.org
+% This query returned 1 object
+
+domain:       GE
+
+organisation: Caucasus Online
+address:      71 Vazha-Pshavela Ave.
+address:      Tbilisi  0186
+address:      Georgia
+
+contact:      administrative
+name:         Ia Peradze
+organisation: Caucasus Online
+address:      71 Vazha-Pshavela Ave.
+address:      Tbilisi  0186
+address:      Georgia
+phone:        +995 32 480000
+fax-no:       +995 32 001367
+e-mail:       info@nic.ge
+
+contact:      technical
+name:         Irakli Bakhtadze
+organisation: Caucasus Online
+address:      37 Rustaveli Avenue
+address:      Tbilisi  0108
+address:      Georgia
+phone:        +995 32 223932
+fax-no:       +995 32 936013
+e-mail:       ib@caucasus.net
+
+nserver:      GE.HOSTMASTER.UA 195.47.253.18 2001:67c:258:0:0:0:0:18
+nserver:      NS.NIC.GE 212.72.130.11
+nserver:      NS.UU.NET 137.39.1.3
+nserver:      NS2.NIC.FR 192.93.0.4 2001:660:3005:1:0:0:1:2
+
+status:       ACTIVE
+remarks:      Registration information: http://georgia.net.ge/domain/
+
+created:      1992-12-02
+changed:      2012-06-12
+source:       IANA
+

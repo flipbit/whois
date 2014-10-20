@@ -1,0 +1,46 @@
+% IANA WHOIS server
+% for more information on IANA, visit http://www.iana.org
+% This query returned 1 object
+
+domain:       AM
+
+organisation: Internet Society
+address:      17 A. Khachatryan str, apt 3
+address:      Yerevan 0012
+address:      Armenia
+
+contact:      administrative
+name:         Dr. Igor Mkrtumyan
+organisation: Internet Society
+address:      17 A. Khachatryan str, apt 3
+address:      Yerevan 0012
+address:      Armenia
+phone:        +374 91 415539
+e-mail:       imkrtumyan@amnic.net
+
+contact:      technical
+name:         Hrant Dadivanyan
+organisation: Internet Society
+address:      17 A. Khachatryan str, apt 3
+address:      Yerevan 0012
+address:      Armenia
+phone:        +374 91 420214
+e-mail:       ran@psg.com
+
+nserver:      AM.CCTLD.AUTHDNS.RIPE.NET 193.0.9.57 2001:67c:e0:0:0:0:0:57
+nserver:      FORK.STH.DNSNODE.NET 2a01:3f0:0:306:0:0:0:53 77.72.229.254
+nserver:      NS-CDN.AMNIC.NET 194.0.1.26 2001:678:4:0:0:0:0:1a
+nserver:      NS-PRI.AMNIC.NET 195.43.74.53 2001:67c:21c:53:0:0:0:1
+nserver:      RIP.PSG.COM 147.28.0.39 2001:418:1:0:0:0:0:39
+nserver:      SNS-PB.ISC.ORG 192.5.4.1 2001:500:2e:0:0:0:0:1
+ds-rdata:     35415 7 2 56E1AC0DBB69569959A3064BD0A4E6562C8FE6AA6AEAAF4D260503D8B6828CC3
+
+whois:        whois.amnic.net
+
+status:       ACTIVE
+remarks:      Registration information: https://www.amnic.net/
+
+created:      1994-08-26
+changed:      2014-07-18
+source:       IANA
+

@@ -1,0 +1,51 @@
+% IANA WHOIS server
+% for more information on IANA, visit http://www.iana.org
+% This query returned 1 object
+
+domain:       AT
+
+organisation: nic.at GmbH
+address:      Jakob-Haringer-Strasse 8
+address:      Salzburg  A-5020
+address:      Austria
+
+contact:      administrative
+name:         Geschaeftsfuehrer NIC.AT
+organisation: nic.at GmbH
+address:      Jakob-Haringer-Strasse 8
+address:      Salzburg  A-5020
+address:      Austria
+phone:        +43 662 4669-14
+fax-no:       +43 662 4669-19
+e-mail:       gf@nic.at
+
+contact:      technical
+name:         Technik NIC.AT
+organisation: nic.at GmbH c/o Vienna University Computer Center
+address:      Universitaetsstrasse 7
+address:      Vienna  A-1010
+address:      Austria
+phone:        +43 1 4277 14035
+fax-no:       +43 1 4277 9140
+e-mail:       tech-nic-at@nic.at
+
+nserver:      D.NS.AT 2a02:568:20:1:0:0:0:d 81.91.161.98
+nserver:      J.NS.AT 194.146.106.50 2001:67c:1010:12:0:0:0:53
+nserver:      N.NS.AT 81.91.173.130
+nserver:      NS1.UNIVIE.AC.AT 2001:628:2030:4301:0:0:0:2 78.104.144.2
+nserver:      NS2.UNIVIE.AC.AT 192.92.125.2 2001:678:1c:0:0:0:0:2
+nserver:      NS9.UNIVIE.AC.AT 194.0.10.100 2001:678:d:0:0:0:0:cafe
+nserver:      R.NS.AT 194.0.25.10 2001:678:20:0:0:0:0:10
+nserver:      U.NS.AT 195.66.241.82
+ds-rdata:     56489 8 2 2e48d4aae2f5d5022f156516846803a58f3b2f8a854aad238ec766de6ad98af2
+ds-rdata:     60836 8 2 6bb14ac9ab00b37afe0bb5570048dfd13b16c8bf3512846c627ce560f026ce39
+
+whois:        whois.nic.at
+
+status:       ACTIVE
+remarks:      Registration information: http://www.nic.at/
+
+created:      1988-01-20
+changed:      2014-01-10
+source:       IANA
+

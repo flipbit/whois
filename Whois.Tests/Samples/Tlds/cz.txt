@@ -1,0 +1,46 @@
+% IANA WHOIS server
+% for more information on IANA, visit http://www.iana.org
+% This query returned 1 object
+
+domain:       CZ
+
+organisation: CZ.NIC, z.s.p.o
+address:      Americka 23
+address:      Prague 2  120 00
+address:      Czech Republic
+
+contact:      administrative
+name:         Ondrej Filip
+organisation: CZ.NIC, z.s.p.o.
+address:      Americka 23
+address:      Prague 2  120 00
+address:      Czech Republic
+phone:        +420 222745111
+fax-no:       +420 222745112
+e-mail:       admin@nic.cz
+
+contact:      technical
+name:         Martin Peterka
+organisation: CZ.NIC, z.s.p.o.
+address:      Americka 23
+address:      Prague 2  120 00
+address:      Czech Republic
+phone:        +420 222745111
+fax-no:       +420 222745112
+e-mail:       tech@nic.cz
+
+nserver:      A.NS.NIC.CZ 194.0.12.1 2001:678:f:0:0:0:0:1
+nserver:      B.NS.NIC.CZ 194.0.13.1 2001:678:10:0:0:0:0:1
+nserver:      C.NS.NIC.CZ 194.0.14.1 2001:678:11:0:0:0:0:1
+nserver:      D.NS.NIC.CZ 193.29.206.1 2001:678:1:0:0:0:0:1
+ds-rdata:     54576 10 2 397e50c85ede9cde33f363a9e66fd1b216d788f8dd438a57a423a386869c8f06
+
+whois:        whois.nic.cz
+
+status:       ACTIVE
+remarks:      Registration information: http://www.nic.cz/
+
+created:      1993-01-13
+changed:      2013-11-25
+source:       IANA
+

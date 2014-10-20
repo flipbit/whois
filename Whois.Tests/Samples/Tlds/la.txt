@@ -1,0 +1,51 @@
+% IANA WHOIS server
+% for more information on IANA, visit http://www.iana.org
+% This query returned 1 object
+
+domain:       LA
+
+organisation: Lao National Internet Committee (LANIC), Ministry of Posts and Telecommunications
+address:      Lane Xang Avenue, Chanthaboury
+address:      Vientiane Capital, Lao People's Democratic Republic (Lao PDR)
+address:      01000
+address:      Lao People's Democratic Republic
+
+contact:      administrative
+name:         Mr. Thansamay Kommasith
+organisation: Lao National Internet Committee
+address:      Lane Xang Avenue, Chanthaboury
+address:      Vientiane Capital
+address:      01000
+address:      Lao People's Democratic Republic
+phone:        +856 21 254150
+fax-no:       +856 21 254150
+e-mail:       admincontact@lanic.la
+
+contact:      technical
+name:         Mr. Khamkit Saysongkham
+organisation: Lao National Internet Committee
+address:      Lane Xang Avenue, Chanthaboury
+address:      Vientiane Capital
+address:      01000
+address:      Lao People's Democratic Republic
+phone:        +856 21 254150
+fax-no:       +856 21 254150
+e-mail:       technicalcontact@lanic.la
+
+nserver:      NS1.NIC.LA 194.0.2.2 2001:678:5:0:0:0:0:2
+nserver:      NS2.NIC.LA 194.169.218.14 2001:67c:13cc:0:0:0:1:14
+nserver:      NS3.NIC.LA 185.24.64.14 2a04:2b00:13cc:0:0:0:1:14
+nserver:      NS4.NIC.LA 194.169.218.15 2001:67c:13cc:0:0:0:1:15
+nserver:      NS5.NIC.LA 185.24.64.15 2a04:2b00:13cc:0:0:0:1:15
+ds-rdata:     42973 7 2 E7D0C3BCDF60E8D842E882D90B4EC263C8889B760098492C798841C13B4EA13F
+ds-rdata:     42973 7 1 1F0CEFA420E9101BB5791F3AB93E85917A72978B
+
+whois:        whois.nic.la
+
+status:       ACTIVE
+remarks:      Registration information: http://www.la
+
+created:      1996-05-14
+changed:      2014-03-05
+source:       IANA
+

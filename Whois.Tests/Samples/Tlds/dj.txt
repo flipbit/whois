@@ -1,0 +1,44 @@
+% IANA WHOIS server
+% for more information on IANA, visit http://www.iana.org
+% This query returned 1 object
+
+domain:       DJ
+
+organisation: Djibouti Telecom S.A
+address:      3, BD Georges Pompidou
+address:      P.O. BOX 2105
+address:      Djibouti  990000
+address:      Djibouti
+
+contact:      administrative
+name:         ADJIB Admin Contact
+organisation: Djibouti Telecom S.A
+address:      3, BD Georges Pompidou
+address:      P.O. BOX 2105
+address:      Djibouti  990000
+address:      Djibouti
+phone:        00253 321100
+fax-no:       00253 355757
+e-mail:       dj-admin@nic.dj
+
+contact:      technical
+name:         ADJIB Tech Contact
+organisation: Djibouti Telecom S.A
+address:      3, BD Georges Pompidou
+address:      P.O. BOX 2105
+address:      Djibouti  990000
+address:      Djibouti
+phone:        00253 321306
+fax-no:       00253 300013
+e-mail:       dj-tech@nic.dj
+
+nserver:      BOW.INTNET.DJ 193.251.143.162
+nserver:      BOW.RAIN.FR 194.51.3.49
+
+status:       ACTIVE
+remarks:      Registration information: http://www.nic.dj
+
+created:      1996-05-22
+changed:      2010-03-08
+source:       IANA
+
