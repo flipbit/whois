@@ -2,14 +2,13 @@
 using System.Text;
 using System.Net;
 using System.Net.Sockets;
-using Whois.Interfaces;
 
-namespace Whois
+namespace Whois.Servers
 {
     /// <summary>
     /// Class to lookup a WHOIS server for a given domain name.
     /// </summary>
-    public class WhoisServerLookup : IWhoisServerLookup
+    public class InternicServerLookup : IWhoisServerLookup
     {
         /// <summary>
         /// Gets the current character encoding that the current WhoisServerLookup
@@ -19,17 +18,17 @@ namespace Whois
         public Encoding CurrentEncoding { get; private set; }
 
         /// <summary>
-        /// Initializes a new instance of the <see cref="WhoisServerLookup"/> class.
+        /// Initializes a new instance of the <see cref="InternicServerLookup"/> class.
         /// </summary>
-        public WhoisServerLookup(): this(Encoding.UTF8)
+        public InternicServerLookup(): this(Encoding.UTF8)
         {
         }
 
         /// <summary>
-        /// Initializes a new instance of the <see cref="WhoisServerLookup"/> class.
+        /// Initializes a new instance of the <see cref="InternicServerLookup"/> class.
         /// </summary>
         /// <param name="encoding">The encoding used to read and write strings.</param>
-        public WhoisServerLookup(Encoding encoding)
+        public InternicServerLookup(Encoding encoding)
         {
             CurrentEncoding = encoding;
         }
@@ -58,7 +57,7 @@ namespace Whois
         /// </summary>
         /// <param name="domain">The domain.</param>
         /// <returns></returns>
-        public string Lookup(string domain)
+        public IWhoisServer Lookup(string domain)
         {
             // This is the default WHOIS server
             var server = "whois.internic.net";
@@ -89,7 +88,7 @@ namespace Whois
 
             }
 
-            return server;
+            return new WhoisServer(tld, server);
         }
     }
 }

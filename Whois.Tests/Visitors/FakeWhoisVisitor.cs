@@ -12,7 +12,7 @@ namespace Whois.Visitors
     {
         private readonly string fakeContent;
 
-        public Encoding CurrentEncoding { get; private set; }
+        public Encoding Encoding { get; private set; }
 
         public FakeWhoisVisitor(string content)
         {

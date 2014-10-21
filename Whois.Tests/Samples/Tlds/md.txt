@@ -1,0 +1,47 @@
+% IANA WHOIS server
+% for more information on IANA, visit http://www.iana.org
+% This query returned 1 object
+
+domain:       MD
+
+organisation: MoldData S.E.
+address:      Armeneasca str.37/1
+address:      Chisinau Moldova 2012
+address:      Moldova, Republic Of
+
+contact:      administrative
+name:         Dorian Bodiu
+organisation: MoldData S.E.
+address:      Armeneasca str.37/1
+address:      Chisinau Moldova 2012
+address:      Moldova, Republic Of
+phone:        +373 22 541000
+fax-no:       +373 22 54 49 56
+e-mail:       administrator@molddata.md
+
+contact:      technical
+name:         Vasile Berzoi
+organisation: MoldData S.E.
+address:      Armeneasca str.37/1
+address:      Chisinau Moldova 2012
+address:      Moldova, Republic Of
+phone:        +373 22 54 52 64
+fax-no:       +373 22 54 52 66
+e-mail:       vasile_berzoi@yahoo.com
+
+nserver:      DNS-MD.ROTLD.RO 192.162.16.19 2a03:5e80:0:4:192:162:16:19
+nserver:      MD.CCTLD.AUTHDNS.RIPE.NET 193.0.9.93 2001:67c:e0:0:0:0:0:93
+nserver:      NS-EXT.ISC.ORG 2001:4f8:0:2:0:0:0:13 204.152.184.64
+nserver:      NS-INT.DNS.MD 217.26.144.5
+nserver:      NSB.DNS.MD 217.26.144.15
+nserver:      NSF.DNS.MD 86.106.212.21
+
+whois:        whois.nic.md
+
+status:       ACTIVE
+remarks:      Registration information: http://www.register.md
+
+created:      1994-03-24
+changed:      2014-09-30
+source:       IANA
+

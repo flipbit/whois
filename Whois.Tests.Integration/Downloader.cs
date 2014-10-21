@@ -3,6 +3,8 @@ using System.Diagnostics;
 using System.IO;
 using System.Threading;
 using NUnit.Framework;
+using Whois.Net;
+using Whois.Servers;
 
 namespace Whois
 {
@@ -52,10 +54,10 @@ namespace Whois
 
                 if (File.Exists(fileName)) continue;
  
-                var tld = serverLookup.Lookup(line.ToLower());
+                var tld = serverLookup.Lookup(line.ToLower()) as WhoisServerRecord;
 
-                File.WriteAllText(fileName, tld);
-                Console.WriteLine("{0}: {1:####,##0} byte(s)", line.ToLower(), tld.Length);
+                File.WriteAllText(fileName, tld.RawResponse);
+                Console.WriteLine("{0}: {1:####,##0} byte(s)", line.ToLower(), tld.RawResponse.Length);
 
                 Thread.Sleep(60000);
             }

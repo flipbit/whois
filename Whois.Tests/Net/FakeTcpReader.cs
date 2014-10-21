@@ -1,8 +1,7 @@
 ﻿using System.Collections;
 using System.Text;
-using Whois.Interfaces;
 
-namespace Whois
+namespace Whois.Net
 {
     /// <summary>
     /// Fakes out TCP responses for testing
@@ -11,52 +10,59 @@ namespace Whois
     {
         public Encoding CurrentEncoding { get; private set; }
 
-        public FakeTcpReader(Encoding encoding)
-        {
-            CurrentEncoding = encoding;
-        }
+        private ArrayList response = new ArrayList();
 
+        public FakeTcpReader(string response)
+        {
+            var lines = response.Split('\n');
+
+            foreach (var line in lines)
+            {
+                this.response.Add(line.Trim());
+            }
+        }
+        
         public ArrayList Read(string url, int port, string command)
         {
-            var response = new ArrayList();
+            //var response = new ArrayList();
 
-            switch (command)
-            {
-                case "cogworks.co.uk":
-                    response.AddRange(FakeCogworksResponse.Split('\n'));
-                    break;
+            //switch (command)
+            //{
+            //    case "cogworks.co.uk":
+            //        response.AddRange(FakeCogworksResponse.Split('\n'));
+            //        break;
 
-                case "google.com":
-                    response.AddRange(url == "whois.markmonitor.com" ? FakeGoogleResponse3.Split('\n') : FakeGoogleResponse1.Split('\n'));
-                    break;
+            //    case "google.com":
+            //        response.AddRange(url == "whois.markmonitor.com" ? FakeGoogleResponse3.Split('\n') : FakeGoogleResponse1.Split('\n'));
+            //        break;
 
-                case "=google.com":
-                    response.AddRange(FakeGoogleResponse2.Split('\n'));
-                    break;
+            //    case "=google.com":
+            //        response.AddRange(FakeGoogleResponse2.Split('\n'));
+            //        break;
 
-                case "sapo.pt":
-                    {
-                        // Encode the fake response properly to simulate exactly how a real
-                        // response would look like since it is encoded in ISO-8859-1
-                        var srcEncoding = Encoding.UTF8;
-                        var dstEncoding = Encoding.GetEncoding("ISO-8859-1");
+            //    case "sapo.pt":
+            //        {
+            //            // Encode the fake response properly to simulate exactly how a real
+            //            // response would look like since it is encoded in ISO-8859-1
+            //            var srcEncoding = Encoding.UTF8;
+            //            var dstEncoding = Encoding.GetEncoding("ISO-8859-1");
 
-                        var encodedResponse = EncodeResponse(FakeSapoResponse, srcEncoding, dstEncoding);
-                        response.AddRange(encodedResponse.Split('\n'));
-                        break;
-                    }
-                case "uol.com.br":
-                    {
-                        // Encode the fake response properly to simulate exactly how a real
-                        // response would look like since it is encoded in ISO-8859-1
-                        var srcEncoding = Encoding.UTF8;
-                        var dstEncoding = Encoding.GetEncoding("ISO-8859-1");
+            //            var encodedResponse = EncodeResponse(FakeSapoResponse, srcEncoding, dstEncoding);
+            //            response.AddRange(encodedResponse.Split('\n'));
+            //            break;
+            //        }
+            //    case "uol.com.br":
+            //        {
+            //            // Encode the fake response properly to simulate exactly how a real
+            //            // response would look like since it is encoded in ISO-8859-1
+            //            var srcEncoding = Encoding.UTF8;
+            //            var dstEncoding = Encoding.GetEncoding("ISO-8859-1");
 
-                        var encodedResponse = EncodeResponse(FakeUolResponse, srcEncoding, dstEncoding);
-                        response.AddRange(encodedResponse.Split('\n'));
-                        break;
-                    }
-            };
+            //            var encodedResponse = EncodeResponse(FakeUolResponse, srcEncoding, dstEncoding);
+            //            response.AddRange(encodedResponse.Split('\n'));
+            //            break;
+            //        }
+            //};
 
             return response;
         }

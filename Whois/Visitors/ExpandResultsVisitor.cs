@@ -2,6 +2,7 @@
 using Whois.Domain;
 using Whois.Extensions;
 using Whois.Interfaces;
+using Whois.Net;
 
 namespace Whois.Visitors
 {

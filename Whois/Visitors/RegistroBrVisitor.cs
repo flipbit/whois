@@ -17,7 +17,7 @@ namespace Whois.Visitors
         /// object is using.
         /// </summary>
         /// <returns>The current character encoding used by the current visitor.</returns>
-        public Encoding CurrentEncoding { get; private set; }
+        public Encoding Encoding { get; private set; }
 
         /// <summary>
         /// Initializes a new instance of the <see cref="RegistroBrVisitor"/> class.
@@ -32,7 +32,7 @@ namespace Whois.Visitors
         /// <param name="encoding">The encoding used to read and write strings.</param>
         public RegistroBrVisitor(Encoding encoding)
         {
-            CurrentEncoding = encoding;
+            Encoding = encoding;
         }
 
         /// <summary>

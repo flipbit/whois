@@ -1,0 +1,51 @@
+% IANA WHOIS server
+% for more information on IANA, visit http://www.iana.org
+% This query returned 1 object
+
+domain:       LGBT
+
+organisation: Afilias Limited
+address:      2 La Touche House
+address:      IFSC
+address:      Dublin 1
+address:      Ireland
+
+contact:      administrative
+name:         Senior Vice President
+organisation: Afilias
+address:      Building 3, Suite 105
+address:      300 Welsh Road
+address:      Horsham, PA 19044
+address:      United States
+phone:        +1 215.706.5700
+fax-no:       +1 215.706.5701
+e-mail:       tld-admin-poc@afilias.info
+
+contact:      technical
+name:         Senior Director, DNS Infrastructure Group
+organisation: Afilias
+address:      Building 3, Suite 105
+address:      300 Welsh Road
+address:      Horsham, PA 19044
+address:      United States
+phone:        +1 215.706.5700
+fax-no:       +1 215.706.5701
+e-mail:       tld-tech-poc@afilias.info
+
+nserver:      A0.NIC.LGBT 2a01:8840:22:0:0:0:0:1 65.22.32.1
+nserver:      A2.NIC.LGBT 2a01:8840:25:0:0:0:0:1 65.22.35.1
+nserver:      B0.NIC.LGBT 2a01:8840:23:0:0:0:0:1 65.22.33.1
+nserver:      C0.NIC.LGBT 2a01:8840:24:0:0:0:0:1 65.22.34.1
+ds-rdata:     58564 7 1 cec20dec329596bf1aba47ba1ca47ebaa1ab543b
+ds-rdata:     58564 7 2 40c36c222c2cda089502f1f320c49dade0237f269a2b8f4ef5906a3df1707ca8
+
+whois:        whois.afilias.net
+
+status:       ACTIVE
+remarks:      Registration information:
+remarks:      http://www.afilias.info/contact-us
+
+created:      2014-06-26
+changed:      2014-07-18
+source:       IANA
+

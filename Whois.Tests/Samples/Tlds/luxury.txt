@@ -1,0 +1,43 @@
+% IANA WHOIS server
+% for more information on IANA, visit http://www.iana.org
+% This query returned 1 object
+
+domain:       LUXURY
+
+organisation: Luxury Partners LLC
+address:      427 North Camden Drive, Beverly Hills, CA 90210
+address:      United States
+
+contact:      administrative
+name:         Kirsten Hansen
+organisation: Luxury Partners LLC
+address:      427 North Camden Drive, Beverly Hills, CA 90210
+address:      United States
+phone:        +1 310 402 2487
+fax-no:       +1 310 402 2491
+e-mail:       management@dotluxury.com
+
+contact:      technical
+name:         Monica Kirchner
+organisation: Luxury Partners LLC
+address:      427 North Camden Drive, Beverly Hills, CA 90210
+address:      United States
+phone:        +1 310 402 2487
+fax-no:       +1 310 402 2491
+e-mail:       monica.kirchner@dotluxury.com
+
+nserver:      A.NIC.LUXURY 2001:dcd:1:0:0:0:0:10 37.209.192.10
+nserver:      B.NIC.LUXURY 2001:dcd:2:0:0:0:0:10 37.209.194.10
+nserver:      C.NIC.LUXURY 2001:dcd:3:0:0:0:0:10 37.209.196.10
+nserver:      D.NIC.LUXURY 2001:dcd:4:0:0:0:0:10 37.209.198.10
+ds-rdata:     3664 8 2 D602E8F4FD9729146D1FB1D249544DCEECE615E528EB2E4997FB1760B004D67E
+
+whois:        whois.nic.luxury
+
+status:       ACTIVE
+remarks:      Registration information: http://www.dotluxury.com
+
+created:      2014-01-09
+changed:      2014-02-20
+source:       IANA
+

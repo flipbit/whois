@@ -5,7 +5,7 @@ using System.IO;
 using System.Net.Sockets;
 using Whois.Interfaces;
 
-namespace Whois
+namespace Whois.Net
 {
     /// <summary>
     /// Class to allow access to TCP services

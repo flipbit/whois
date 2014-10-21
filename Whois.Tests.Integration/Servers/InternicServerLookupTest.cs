@@ -1,49 +1,17 @@
 ﻿using System;
 using NUnit.Framework;
 
-namespace Whois
+namespace Whois.Servers
 {
     [TestFixture]
-    public class WhoisServerLookupTest
+    public class InternicServerLookupTest
     {
-        private WhoisServerLookup lookup;
+        private InternicServerLookup lookup;
 
         [SetUp]
         public void SetUp()
         {
-            lookup = new WhoisServerLookup();
-        }
-
-        [Test]
-        public void TestGetTldForNullInput()
-        {
-            var tld = lookup.GetTld(null);
-
-            Assert.AreEqual(string.Empty, tld);
-        }
-
-        [Test]
-        public void TestGetTldForInvalidInput()
-        {
-            var tld = lookup.GetTld("invalid domain name");
-
-            Assert.AreEqual(string.Empty, tld);
-        }
-
-        [Test]
-        public void TestGetTldCountrySpecificDomain()
-        {
-            var tld = lookup.GetTld("example.co.uk");
-
-            Assert.AreEqual("uk", tld);
-        }
-
-        [Test]
-        public void TestGetTldInternationalDomain()
-        {
-            var tld = lookup.GetTld("example.com");
-
-            Assert.AreEqual("com", tld);
+            lookup = new InternicServerLookup();
         }
 
         [Test]
@@ -51,7 +19,7 @@ namespace Whois
         {
             var server = lookup.Lookup("exmaple.com");
 
-            Assert.AreEqual("whois.verisign-grs.com", server);
+            Assert.AreEqual("whois.verisign-grs.com", server.Url);
         }
 
         [Test]
@@ -59,7 +27,7 @@ namespace Whois
         {
             var server = lookup.Lookup("exmaple.co.uk");
 
-            Assert.AreEqual("whois.nic.uk", server);
+            Assert.AreEqual("whois.nic.uk", server.Url);
         }
 
         [Test]
@@ -67,7 +35,7 @@ namespace Whois
         {
             var server = lookup.Lookup("exmaple.de");
 
-            Assert.AreEqual("whois.denic.de", server);
+            Assert.AreEqual("whois.denic.de", server.Url);
         }
 
         [Test]
@@ -75,7 +43,7 @@ namespace Whois
         {
             var server = lookup.Lookup("exmaple.tk");
 
-            Assert.AreEqual("whois.dot.tk", server);
+            Assert.AreEqual("whois.dot.tk", server.Url);
         }
 
         [Test]
@@ -83,7 +51,7 @@ namespace Whois
         {
             var server = lookup.Lookup("example.pt");
 
-            Assert.AreEqual("whois.dns.pt", server);
+            Assert.AreEqual("whois.dns.pt", server.Url);
         }
 
         [Test]
@@ -91,7 +59,7 @@ namespace Whois
         {
             var server = lookup.Lookup("example.com.br");
 
-            Assert.AreEqual("registro.br", server);
+            Assert.AreEqual("registro.br", server.Url);
         }
 
         [Test]

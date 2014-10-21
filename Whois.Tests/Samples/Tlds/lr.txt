@@ -1,0 +1,41 @@
+% IANA WHOIS server
+% for more information on IANA, visit http://www.iana.org
+% This query returned 1 object
+
+domain:       LR
+
+organisation: Data Technology Solutions, Inc.
+address:      First National Merchant Bank Plaza
+address:      Broadstreet
+address:      Monrovia  10-6053
+address:      Liberia
+
+contact:      administrative
+name:         Mai Bright Urey
+organisation: Data Technology Solutions, Inc.
+address:      First National Merchant Bank Plaza
+address:      Broadstreet
+address:      Monrovia  10-6053
+address:      Liberia
+phone:        +231 227083
+fax-no:       +231 227083
+e-mail:       murey@liberia.net
+
+contact:      technical
+name:         Randy Bush
+address:      PO Box 128
+address:      Kapa`au Hawai`i 96755
+address:      United States
+e-mail:       randy@psg.com
+
+nserver:      FORK.STH.DNSNODE.NET 2a01:3f0:0:306:0:0:0:53 77.72.229.254
+nserver:      HIPPO.RU.AC.ZA 146.231.128.1 2001:4200:1010:0:0:0:0:1
+nserver:      RIP.PSG.COM 147.28.0.39 2001:418:1:0:0:0:0:39
+
+status:       ACTIVE
+remarks:      Registration information: http://psg.com/dns/lr
+
+created:      1997-04-09
+changed:      2012-04-19
+source:       IANA
+

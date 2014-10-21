@@ -2,6 +2,7 @@
 using NUnit.Framework;
 using Whois.Domain;
 using Whois.Extensions;
+using Whois.Net;
 
 namespace Whois.Visitors
 {

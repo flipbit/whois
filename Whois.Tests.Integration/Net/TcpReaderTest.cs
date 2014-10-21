@@ -4,7 +4,7 @@ using System.Text;
 using NUnit.Framework;
 using Whois.Extensions;
 
-namespace Whois
+namespace Whois.Net
 {
     /// <summary>
     /// These tests will only pass if your connected to the Internet

@@ -1,0 +1,54 @@
+% IANA WHOIS server
+% for more information on IANA, visit http://www.iana.org
+% This query returned 1 object
+
+domain:       LT
+
+organisation: Kaunas University of Technology
+address:      Information Technology Department
+address:      Internet Service Centre
+address:      Studentu 48a
+address:      Kaunas  LT-51367
+address:      Lithuania
+
+contact:      administrative
+name:         Daiva Tamulioniene
+organisation: Kaunas University of Technology
+address:      Information Technology Department
+address:      Internet Service Centre
+address:      Studentu 48a
+address:      Kaunas  LT-51367
+address:      Lithuania
+phone:        +370 37 300736
+fax-no:       +370 37 300643
+e-mail:       daiva@litnet.lt
+
+contact:      technical
+name:         Tomas Mackus
+organisation: Kaunas University of Technology
+address:      Information Technology Department
+address:      Internet Service Centre
+address:      Studentu 48a
+address:      Kaunas  LT-51367
+address:      Lithuania
+phone:        +370 37 353325
+fax-no:       +370 37 300643
+e-mail:       hostmaster@litnet.lt
+
+nserver:      A.TLD.LT 195.8.218.131
+nserver:      B.TLD.LT 194.0.20.1 2001:678:19:0:0:0:0:1
+nserver:      C.TLD.LT 194.0.1.4 2001:678:4:0:0:0:0:4
+nserver:      D.TLD.LT 194.0.3.1 2001:678:6:0:0:0:0:1
+nserver:      E.TLD.LT 194.0.18.1
+nserver:      F.TLD.LT 194.0.19.1 2001:678:8c:0:0:0:0:1
+ds-rdata:     23086 8 2 1ace0e153397336e60dc36f80f2906feda3fa37c38d561fe67613b800de222fd
+
+whois:        whois.domreg.lt
+
+status:       ACTIVE
+remarks:      Registration information: http://www.domreg.lt
+
+created:      1992-06-03
+changed:      2014-03-05
+source:       IANA
+

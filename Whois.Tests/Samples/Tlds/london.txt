@@ -1,0 +1,39 @@
+% IANA WHOIS server
+% for more information on IANA, visit http://www.iana.org
+% This query returned 1 object
+
+domain:       LONDON
+
+organisation: Dot London Domains Limited
+address:      London & Partners, 6th Floor, 2 More London Riverside, London, SE1 2RR
+address:      United Kingdom
+
+contact:      administrative
+name:         Head of Technology
+organisation: London & Partners
+address:      London & Partners, 6th Floor, 2 More London Riverside, London, SE1 2RR
+address:      United Kingdom
+phone:        +44 (0)20 7234 5800
+e-mail:       dlsupport@londonandpartners.com
+
+contact:      technical
+name:         Director of Software Development
+organisation: Minds + Machines Ltd
+address:      32 Nassau St, Dublin 2
+address:      Ireland
+phone:        +353.16778933
+e-mail:       support@mm-registry.com
+
+nserver:      A.NS.NIC.LONDON 2620:0171:0a02:00ad:0:0:0:11 72.0.50.11
+nserver:      B.NS.NIC.LONDON 2620:0171:0d02:00dc:0:0:0:11 72.42.114.11
+ds-rdata:     27077 8 2 2756E9F7A79F2C26BA652C0C9BE19056AB89A0C7CFE90468713FDE7182DD393B
+
+whois:        whois-lon.mm-registry.com
+
+status:       ACTIVE
+remarks:      Registration information: http://mydotlondon.com/
+
+created:      2014-02-13
+changed:      2014-03-22
+source:       IANA
+

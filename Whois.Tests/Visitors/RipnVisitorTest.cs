@@ -1,6 +1,7 @@
 ﻿using System;
 using NUnit.Framework;
 using Whois.Domain;
+using Whois.Net;
 
 namespace Whois.Visitors
 {

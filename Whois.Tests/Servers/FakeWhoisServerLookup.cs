@@ -1,7 +1,6 @@
 ﻿using System.Text;
-using Whois.Interfaces;
 
-namespace Whois
+namespace Whois.Servers
 {
     /// <summary>
     /// Fake class used for testing.
@@ -10,9 +9,9 @@ namespace Whois
     {
         public Encoding CurrentEncoding { get; private set; }
 
-        public string Lookup(string domain)
+        public IWhoisServer Lookup(string domain)
         {
-            return "test.whois.com";
+            return new WhoisServer("com", "test.whois.com");
         }
     }
 }

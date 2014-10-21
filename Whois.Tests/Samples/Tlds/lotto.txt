@@ -1,0 +1,51 @@
+% IANA WHOIS server
+% for more information on IANA, visit http://www.iana.org
+% This query returned 1 object
+
+domain:       LOTTO
+
+organisation: Afilias Limited
+address:      2 La Touche House
+address:      IFSC
+address:      Dublin 1
+address:      Ireland
+
+contact:      administrative
+name:         Senior Vice President
+organisation: Afilias
+address:      Building 3, Suite 105
+address:      300 Welsh Road
+address:      Horsham, PA 19044
+address:      United States
+phone:        +1 215.706.5700
+fax-no:       +1 215.706.5701
+e-mail:       tld-admin-poc@afilias.info
+
+contact:      technical
+name:         Senior Director, DNS Infrastructure Group
+organisation: Afilias
+address:      Building 3, Suite 105
+address:      300 Welsh Road
+address:      Horsham, PA 19044
+address:      United States
+phone:        +1 215.706.5700
+fax-no:       +1 215.706.5701
+e-mail:       tld-tech-poc@afilias.info
+
+nserver:      A0.NIC.LOTTO 2a01:8840:1e:0:0:0:0:25 65.22.28.25
+nserver:      A2.NIC.LOTTO 2a01:8840:21:0:0:0:0:25 65.22.31.25
+nserver:      B0.NIC.LOTTO 2a01:8840:1f:0:0:0:0:25 65.22.29.25
+nserver:      C0.NIC.LOTTO 2a01:8840:20:0:0:0:0:25 65.22.30.25
+ds-rdata:     7423 7 1 710366ed9bc579189753497510f1ad9e5b8f11cc
+ds-rdata:     7423 7 2 6ab77222150520ee2c05b26ee79292e996d62a78f0f41ffe4b0fb6f8fc6a6c72
+
+whois:        whois.afilias.net
+
+status:       ACTIVE
+remarks:      Registration information:
+remarks:      http://www.afilias.info/contact-us
+
+created:      2014-06-05
+changed:      2014-06-19
+source:       IANA
+

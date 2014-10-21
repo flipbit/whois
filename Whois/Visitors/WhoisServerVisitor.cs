@@ -1,6 +1,7 @@
 ﻿using System.Text;
 using Whois.Domain;
 using Whois.Interfaces;
+using Whois.Servers;
 
 namespace Whois.Visitors
 {
@@ -35,7 +36,7 @@ namespace Whois.Visitors
         /// <param name="encoding">The encoding used to read and write strings.</param>
         public WhoisServerVisitor(Encoding encoding)
         {
-            WhoisServerLookup = new WhoisServerLookup(encoding);
+            WhoisServerLookup = new InternicServerLookup(encoding);
 
             CurrentEncoding = encoding;
         }
@@ -47,7 +48,7 @@ namespace Whois.Visitors
         /// <returns></returns>
         public WhoisRecord Visit(WhoisRecord record)
         {
-            record.Server = WhoisServerLookup.Lookup(record.Domain);
+            record.Server = WhoisServerLookup.Lookup(record.Domain).Url;
 
             return record;
         }

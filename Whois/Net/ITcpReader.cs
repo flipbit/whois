@@ -2,7 +2,7 @@
 using System.Collections;
 using System.Text;
 
-namespace Whois.Interfaces
+namespace Whois.Net
 {
     /// <summary>
     /// Interface to allow access to TCP services

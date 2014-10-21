@@ -1,0 +1,52 @@
+% IANA WHOIS server
+% for more information on IANA, visit http://www.iana.org
+% This query returned 1 object
+
+domain:       LV
+
+organisation: University of Latvia
+organisation: Institute of Mathematics and Computer Science
+organisation: Department of Network Solutions (DNS)
+address:      Rainis Boulevard 29
+address:      Riga  LV-1459
+address:      Latvia
+
+contact:      administrative
+name:         Guntis Barzdins
+organisation: Institute of Mathematics and Computer Science
+organisation: Department of Network Solutions (DNS)
+address:      Rainis Boulevard 29
+address:      Riga  LV-1459
+address:      Latvia
+phone:        +371 6721 1241
+fax-no:       +371 6782 0153
+e-mail:       guntis@latnet.lv
+
+contact:      technical
+name:         Martins Medens
+organisation: Institute of Mathematics and Computer Science
+organisation: Department of Network Solutions (DNS)
+address:      Rainis Boulevard 29
+address:      Riga  LV-1459
+address:      Latvia
+phone:        +371 67 085858
+fax-no:       +371 67 820 153
+e-mail:       hostmaster@latnet.lv
+
+nserver:      A.NIC.LV 194.0.48.1 2001:678:7c:0:0:0:0:7c
+nserver:      B.NIC.LV 92.240.70.1
+nserver:      C.NIC.LV 194.0.1.24 2001:678:4:0:0:0:0:18
+nserver:      D.NIC.LV 194.0.8.1 2001:678:b:1:0:0:0:1
+nserver:      LV.CCTLD.AUTHDNS.RIPE.NET 193.0.9.89 2001:67c:e0:0:0:0:0:89
+nserver:      SUNIC.SUNET.SE 192.36.125.2 2001:6b0:7:0:0:0:0:2
+ds-rdata:     42018 8 2 7E932A4F9CF9B1CD047C277E3CD323A53D42347D47C7BF1DD6018FF4B344FC1C
+
+whois:        whois.nic.lv
+
+status:       ACTIVE
+remarks:      Registration information: http://www.nic.lv/
+
+created:      1993-04-29
+changed:      2014-04-10
+source:       IANA
+

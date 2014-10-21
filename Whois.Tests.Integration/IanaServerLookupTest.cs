@@ -1,4 +1,6 @@
 ﻿using NUnit.Framework;
+using Whois.Net;
+using Whois.Servers;
 
 namespace Whois
 {

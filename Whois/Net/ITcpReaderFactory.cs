@@ -1,6 +1,6 @@
 ﻿using System.Text;
 
-namespace Whois.Interfaces
+namespace Whois.Net
 {
     /// <summary>
     /// Defines an interface to a faactory class that creates <see cref="ITcpReader"/> objects.

@@ -1,0 +1,50 @@
+% IANA WHOIS server
+% for more information on IANA, visit http://www.iana.org
+% This query returned 1 object
+
+domain:       LC
+
+organisation: University of Puerto Rico
+address:      Central Administration Building
+address:      P.O. Box 364984G
+address:      San Juan  00936
+address:      Puerto Rico
+
+contact:      administrative
+name:         Dr. Patrick W. Lay
+organisation: ISIS World Corporation
+address:      #4 Colony House
+address:      John Compton Highway
+address:      Castries
+address:      Saint Lucia
+phone:        758 572-8188
+fax-no:       758 452-0065
+e-mail:       drlay@nic.ag
+
+contact:      technical
+name:         Patrick W. Lay
+organisation: NIC LC
+address:      #4 Colony House
+address:      John Compton Highway
+address:      Castries
+address:      Saint Lucia
+phone:        758 572 8188
+fax-no:       758 452 0065
+e-mail:       drlay@nic.ag
+
+nserver:      A0.CCTLD.AFILIAS-NST.INFO 199.254.59.1 2001:500:25:0:0:0:0:1
+nserver:      A2.CCTLD.AFILIAS-NST.INFO 199.249.116.1 2001:500:44:0:0:0:0:1
+nserver:      B0.CCTLD.AFILIAS-NST.ORG 199.254.60.1 2001:500:26:0:0:0:0:1
+nserver:      B2.CCTLD.AFILIAS-NST.ORG 199.249.124.1 2001:500:4c:0:0:0:0:1
+nserver:      C0.CCTLD.AFILIAS-NST.INFO 199.254.61.1 2001:500:27:0:0:0:0:1
+nserver:      D0.CCTLD.AFILIAS-NST.ORG 199.254.62.1 2001:500:28:0:0:0:0:1
+ds-rdata:     31275 7 1 8FFD793EA49828F8FAE71E6EAF8CD2A6A329361F
+ds-rdata:     31275 7 2 611D7AF20FB91770B598BFFE4DFDAAFE29F106EFCDE36387F4963700A77622EE
+
+status:       ACTIVE
+remarks:      Registration information: http://www.nic.lc
+
+created:      1991-09-03
+changed:      2013-06-24
+source:       IANA
+

@@ -1,6 +1,7 @@
 ﻿using NUnit.Framework;
 using Whois.Domain;
 using Whois.Extensions;
+using Whois.Net;
 
 namespace Whois.Visitors
 {
@@ -8,11 +9,13 @@ namespace Whois.Visitors
     public class ExpandResultsVisitorTest
     {
         private ExpandResultsVisitor visitor;
+        private FakeTcpReaderFactory factory;
 
         [SetUp]
         public void SetUp()
         {
-            visitor = new ExpandResultsVisitor { TcpReaderFactory = new FakeTcpReaderFactory() };
+            factory = new FakeTcpReaderFactory();
+            visitor = new ExpandResultsVisitor { TcpReaderFactory = factory };
         }
 
         [Test]

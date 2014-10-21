@@ -1,6 +1,8 @@
 ﻿using System.Text;
 using Whois.Domain;
 using Whois.Interfaces;
+using Whois.Net;
+using Whois.Servers;
 
 namespace Whois.Visitors
 {
@@ -14,13 +16,21 @@ namespace Whois.Visitors
         /// object is using.
         /// </summary>
         /// <returns>The current character encoding used by the current visitor.</returns>
-        public Encoding CurrentEncoding { get; private set; }
+        public Encoding Encoding { get; private set; }
 
         /// <summary>
         /// Gets or sets the TCP reader factory.
         /// </summary>
         /// <value>The TCP reader factory.</value>
         public ITcpReaderFactory TcpReaderFactory { get; set; }
+
+        /// <summary>
+        /// Gets or sets the whois server lookup.
+        /// </summary>
+        /// <value>
+        /// The whois server lookup.
+        /// </value>
+        public IWhoisServerLookup WhoisServerLookup { get; set; }
 
         /// <summary>
         /// Initializes a new instance of the <see cref="DownloadVisitor"/> class.
@@ -35,10 +45,10 @@ namespace Whois.Visitors
         /// <param name="encoding">The encoding used to read and write strings.</param>
         public DownloadVisitor(Encoding encoding)
         {
-            // You should use an IoC container to do this.
             TcpReaderFactory = new TcpReaderFactory();
+            WhoisServerLookup = new IanaServerLookup();
 
-            CurrentEncoding = encoding;
+            Encoding = encoding;
         }
 
         /// <summary>
@@ -48,7 +58,7 @@ namespace Whois.Visitors
         /// <returns></returns>
         public WhoisRecord Visit(WhoisRecord record)
         {
-            using (var tcpReader = TcpReaderFactory.Create(CurrentEncoding))
+            using (var tcpReader = TcpReaderFactory.Create(Encoding))
             {
                 record.Text = tcpReader.Read(record.Server, 43, record.Domain);
             }

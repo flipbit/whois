@@ -1,7 +1,7 @@
 ﻿using System.Text;
 using Whois.Interfaces;
 
-namespace Whois
+namespace Whois.Net
 {
     /// <summary>
     /// Factory class to create <see cref="TcpReader"/> objects.

@@ -1,0 +1,49 @@
+% IANA WHOIS server
+% for more information on IANA, visit http://www.iana.org
+% This query returned 1 object
+
+domain:       LY
+
+organisation: General Post and Telecommunication Company
+address:      Al Zawia st.
+address:      GPTC Tower
+address:      Tripoli
+address:      Libya
+
+contact:      administrative
+name:         Marwan K. Maghur (LY ccTLD Director)
+organisation: General Post and Telecommunication Company
+address:      Al Zawia st.
+address:      GPTC Tower
+address:      Tripoli
+address:      Libya
+phone:        +218 91 2123880
+fax-no:       +218 21 3614170
+e-mail:       marwan@lttnet.net
+
+contact:      technical
+name:         Khaled Esheh  (Technical Manager)
+organisation: Libya Telecom and Technology
+address:      Alshut Road
+address:      P.O. Box 91612
+address:      Tripoli
+address:      Libya
+phone:        +218 21 3400020
+fax-no:       +218 21 3400039
+e-mail:       khaleds@lttnet.net
+
+nserver:      DNS.LTTNET.NET 62.240.36.9
+nserver:      DNS1.LTTNET.NET 62.68.42.9
+nserver:      LY.CCTLD.AUTHDNS.RIPE.NET 193.0.9.90 2001:67c:e0:0:0:0:0:90
+nserver:      NS-LY.AFRINIC.NET 196.216.168.24 2001:43f8:120:0:0:0:0:24
+nserver:      PHLOEM.UOREGON.EDU 128.223.32.35 2001:468:d01:20:0:0:80df:2023
+
+whois:        whois.nic.ly
+
+status:       ACTIVE
+remarks:      Registration information: http://www.nic.ly/
+
+created:      1997-04-23
+changed:      2014-10-07
+source:       IANA
+
