@@ -84,6 +84,14 @@ namespace Whois
         public IList<string> Nameservers { get; private set; }
 
         /// <summary>
+        /// Gets or sets the WHOIS redirection response from the parent WHOIS server.
+        /// </summary>
+        /// <value>
+        /// The redirect.
+        /// </value>
+        public WhoisRedirect Redirect { get; set; }
+
+        /// <summary>
         /// Returns a <see cref="T:System.String"/> that represents the current <see cref="T:System.Object"/>.
         /// </summary>
         /// <returns>

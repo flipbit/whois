@@ -36,7 +36,6 @@ namespace Whois.Visitors
         /// <param name="encoding">The encoding used to read and write strings.</param>
         public RedirectVisitor(Encoding encoding)
         {
-            // You should use an IoC container to do this.
             TcpReaderFactory = new TcpReaderFactory();
 
             Encoding = encoding;
@@ -49,21 +48,16 @@ namespace Whois.Visitors
         /// <returns></returns>
         public WhoisRecord Visit(WhoisRecord record)
         {
-            var referralIndex = record.Text.IndexOf(": " + record.Domain);
+            WhoisRedirect redirect;
 
-            if (referralIndex > -1)
+            if (IsARedirectRecord(record, out redirect))
             {
-                //var whoIsServer = record.Text.Containing("whois", referralIndex);
+                record.Redirect = redirect;
 
-                //whoIsServer = whoIsServer.SubstringAfterChar(":").Trim();
-
-                //if (!string.IsNullOrEmpty(whoIsServer))
-                //{
-                //    using (var tcpReader = TcpReaderFactory.Create(Encoding))
-                //    {
-                //        record.Text = tcpReader.Read(whoIsServer, 43, record.Domain);
-                //    }
-                //}
+                using (var tcpReader = TcpReaderFactory.Create(Encoding))
+                {
+                    record.Text = tcpReader.Read(redirect.Url, 43, record.Domain);
+                }
             }
 
             return record;
