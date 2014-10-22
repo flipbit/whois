@@ -1,5 +1,4 @@
 ﻿using System.Text;
-using Whois.Domain;
 using Whois.Interfaces;
 using Whois.Servers;
 
@@ -21,7 +20,7 @@ namespace Whois.Visitors
         /// object is using.
         /// </summary>
         /// <returns>The current character encoding used by the current reader.</returns>
-        public Encoding CurrentEncoding { get; private set; }
+        public Encoding Encoding { get; private set; }
 
         /// <summary>
         /// Initializes a new instance of the <see cref="WhoisServerVisitor"/> class.
@@ -36,9 +35,9 @@ namespace Whois.Visitors
         /// <param name="encoding">The encoding used to read and write strings.</param>
         public WhoisServerVisitor(Encoding encoding)
         {
-            WhoisServerLookup = new InternicServerLookup(encoding);
+            WhoisServerLookup = new IanaServerLookup();
 
-            CurrentEncoding = encoding;
+            Encoding = encoding;
         }
 
         /// <summary>
@@ -48,7 +47,11 @@ namespace Whois.Visitors
         /// <returns></returns>
         public WhoisRecord Visit(WhoisRecord record)
         {
-            record.Server = WhoisServerLookup.Lookup(record.Domain).Url;
+            var server = WhoisServerLookup.Lookup(record.Domain);
+
+            // TODO: Validation on server
+
+            record.Server = server;
 
             return record;
         }

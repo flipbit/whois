@@ -1,0 +1,67 @@
+Domain Name:NETWORKADVERTISING.ORG
+Domain ID: D11985181-LROR
+Creation Date: 1999-11-02T00:18:51Z
+Updated Date: 2013-11-03T19:56:39Z
+Registry Expiry Date: 2015-11-02T00:18:51Z
+Sponsoring Registrar:Register.com, Inc. (R71-LROR)
+Sponsoring Registrar IANA ID: 9
+WHOIS Server: 
+Referral URL: 
+Domain Status: clientTransferProhibited
+Registrant ID:dae3be4f17abf747
+Registrant Name:James  Campbell
+Registrant Organization:Network Advertising Initiative
+Registrant Street: 62 Portland Rd
+Registrant City:Kennebunk
+Registrant State/Province:ME
+Registrant Postal Code:04043
+Registrant Country:US
+Registrant Phone:+1.2074673500
+Registrant Phone Ext: 
+Registrant Fax: +1.2074673500
+Registrant Fax Ext: 
+Registrant Email:campbell@digitalpolicygroup.com
+Admin ID:dae3be4f17abf747
+Admin Name:James  Campbell
+Admin Organization:Network Advertising Initiative
+Admin Street: 62 Portland Rd
+Admin City:Kennebunk
+Admin State/Province:ME
+Admin Postal Code:04043
+Admin Country:US
+Admin Phone:+1.2074673500
+Admin Phone Ext: 
+Admin Fax: +1.2074673500
+Admin Fax Ext: 
+Admin Email:campbell@digitalpolicygroup.com
+Tech ID:dae3be4f17abf747
+Tech Name:James  Campbell
+Tech Organization:Network Advertising Initiative
+Tech Street: 62 Portland Rd
+Tech City:Kennebunk
+Tech State/Province:ME
+Tech Postal Code:04043
+Tech Country:US
+Tech Phone:+1.2074673500
+Tech Phone Ext: 
+Tech Fax: +1.2074673500
+Tech Fax Ext: 
+Tech Email:campbell@digitalpolicygroup.com
+Name Server:DNS01.GPN.REGISTER.COM
+Name Server:DNS02.GPN.REGISTER.COM
+Name Server:DNS03.GPN.REGISTER.COM
+Name Server:DNS04.GPN.REGISTER.COM
+Name Server:DNS05.GPN.REGISTER.COM
+Name Server: 
+Name Server: 
+Name Server: 
+Name Server: 
+Name Server: 
+Name Server: 
+Name Server: 
+Name Server: 
+DNSSEC:Unsigned
+
+Access to Public Interest Registry WHOIS information is provided to assist persons in determining the contents of a domain name registration record in the Public Interest Registry registry database. The data in this record is provided by Public Interest Registry for informational purposes only, and Public Interest Registry does not guarantee its accuracy. This service is intended only for query-based access. You agree that you will use this data only for lawful purposes and that, under no circumstances will you use this data to(a) allow, enable, or otherwise support the transmission by e-mail, telephone, or facsimile of mass unsolicited, commercial advertising or solicitations to entities other than the data recipient's own existing customers; or (b) enable high volume, automated, electronic processes that send queries or data to the systems of Registry Operator, a Registrar, or Afilias except as reasonably necessary to register domain names or modify existing registrations. All rights reserved. Public Interest Registry reserves the right to modify these terms at any time. By submitting this query, you agree to abide by this policy.
+
+

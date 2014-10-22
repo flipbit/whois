@@ -1,0 +1,19 @@
+% By submitting a query to RIPN's Whois Service
+% you agree to abide by the following terms of use:
+% http://www.ripn.net/about/servpol.html#3.2 (in Russian) 
+% http://www.ripn.net/about/en/servpol.html#3.2 (in English).
+
+domain:        NAROD.RU
+nserver:       ns1.ucoz.net.
+nserver:       ns2.ucoz.net.
+state:         REGISTERED, DELEGATED, VERIFIED
+org:           LLC "Ucoz Media"
+registrar:     RU-CENTER-RU
+admin-contact: https://www.nic.ru/whois
+created:       1999.12.09
+paid-till:     2015.01.01
+free-date:     2015.02.01
+source:        TCI
+
+Last updated on 2014.10.21 17:46:35 MSK
+

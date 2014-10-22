@@ -56,6 +56,9 @@ namespace Whois.Tokens
                 // Extract token value from the input text
                 var value = input.SubstringAfterChar(token.Prefix).SubstringBeforeChar(token.Suffix);
 
+                // Perform token operation
+                value = token.PerformOperation(value);
+
                 // Use reflection to set the property on the object with the token value
                 result.Value = SetValue(result.Value, token.Value, value);
 
@@ -64,6 +67,14 @@ namespace Whois.Tokens
             }
 
             return result;            
+        }
+
+
+        public TokenResult<T> Parse<T>(string pattern, IEnumerable<string> input) where T : class, new()
+        {
+            var target = new T();
+
+            return Parse(target, pattern, input);
         }
 
         public TokenResult<T> Parse<T>(T target, string pattern, IEnumerable<string> input) where T : class
@@ -97,6 +108,12 @@ namespace Whois.Tokens
             token.Prefix = pattern.SubstringBeforeChar("#{");
             token.Suffix = pattern.SubstringAfterChar("}").SubstringBeforeChar("#{");
             token.Value = pattern.SubstringBeforeChar("}").SubstringAfterChar("#{");
+
+            if (token.Value.Contains(":"))
+            {
+                token.Operation = token.Value.SubstringAfterChar(":");
+                token.Value = token.Value.SubstringBeforeChar(":");
+            }
 
             return token;
         }

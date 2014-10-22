@@ -1,4 +1,6 @@
-﻿using System.Text;
+﻿using System;
+using System.Text;
+using Whois.Cache;
 using Whois.Interfaces;
 
 namespace Whois.Net
@@ -25,7 +27,20 @@ namespace Whois.Net
         /// <returns></returns>
         public ITcpReader Create(Encoding encoding)
         {
-            return new TcpReader(encoding);
+            ITcpReader reader;
+
+            var cachePath = Environment.GetEnvironmentVariable("WHOIS_CACHE_PATH");
+
+            if (string.IsNullOrEmpty(cachePath))
+            {
+                reader = new TcpReader(encoding);
+            }
+            else
+            {
+                reader = new TcpReaderFileCache();
+            }
+
+            return reader;
         }
     }
 }

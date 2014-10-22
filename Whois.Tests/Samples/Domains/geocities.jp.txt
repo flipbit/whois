@@ -1,0 +1,47 @@
+[ JPRS database provides information on network administration. Its use is    ]
+[ restricted to network administration purposes. For further information,     ]
+[ use 'whois -h whois.jprs.jp help'. To suppress Japanese output, add'/e'     ]
+[ at the end of command, e.g. 'whois -h whois.jprs.jp xxx/e'.                 ]
+[                                                                             ]
+[ Notice -------------------------------------------------------------------- ]
+[ JPRS will change JPRS WHOIS (web-based and port 43 Whois service) about the ]
+[ following two points on January 18, 2015.                                   ]
+[                                                                             ]
+[  1) Change of the format of response about gTLD domain name                 ]
+[  2) Change of the character encoding                                        ]
+[                                                                             ]
+[ For further information, please see the following webpage.                  ]
+[ http://jprs.jp/whatsnew/notice/2014/20140319-whois.html (only in Japanese)  ]
+[ --------------------------------------------------------------------------- ]
+
+Domain Information: [ドメイン情報]
+[Domain Name]                   GEOCITIES.JP
+
+[登録者名]                      ヤフー株式会社
+[Registrant]                    Yahoo Japan Corporation
+
+[Name Server]                   ns01.yahoo.co.jp
+[Name Server]                   ns02.yahoo.co.jp
+[Name Server]                   ns11.yahoo.co.jp
+[Name Server]                   ns12.yahoo.co.jp
+[Signing Key]                   
+
+[登録年月日]                    2001/05/07
+[有効期限]                      2015/05/31
+[状態]                          Active
+[最終更新]                      2014/06/01 01:05:11 (JST)
+
+Contact Information: [公開連絡窓口]
+[名前]                          今子 さゆり
+[Name]                          Imako Sayuri
+[Email]                         jpnic-contact@mail.yahoo.co.jp
+[Web Page]                       
+[郵便番号]                      106-6182
+[住所]                          東京都港区六本木6-10-1
+                                六本木ヒルズ森タワー
+[Postal Address]                Roppongi Hills Mori Tower
+                                10-1, Roppongi 6-chome
+                                Minato-ku,
+[電話番号]                      03-6440-6000
+[FAX番号]                       
+

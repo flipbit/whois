@@ -1,0 +1,75 @@
+Domain Name:MOZILLA.ORG
+Domain ID: D1409563-LROR
+Creation Date: 1998-01-24T05:00:00Z
+Updated Date: 2013-12-08T01:16:57Z
+Registry Expiry Date: 2015-01-23T05:00:00Z
+Sponsoring Registrar:MarkMonitor Inc. (R37-LROR)
+Sponsoring Registrar IANA ID: 292
+WHOIS Server: 
+Referral URL: 
+Domain Status: clientDeleteProhibited
+Domain Status: clientTransferProhibited
+Domain Status: clientUpdateProhibited
+Registrant ID:mmr-33684
+Registrant Name:DNS Admin
+Registrant Organization:Mozilla Foundation
+Registrant Street: 650 Castro St Ste 300
+Registrant City:Mountain View
+Registrant State/Province:CA
+Registrant Postal Code:94041
+Registrant Country:US
+Registrant Phone:+1.6509030800
+Registrant Phone Ext: 
+Registrant Fax: 
+Registrant Fax Ext: 
+Registrant Email:hostmaster@mozilla.com
+Admin ID:mmr-33680
+Admin Name:DNS Admin
+Admin Organization:Mozilla Corporation
+Admin Street: 331 E. Evelyn Ave
+Admin City:Mountain View
+Admin State/Province:CA
+Admin Postal Code:94041
+Admin Country:US
+Admin Phone:+1.6509030800
+Admin Phone Ext: 
+Admin Fax: 
+Admin Fax Ext: 
+Admin Email:hostmaster@mozilla.com
+Tech ID:mmr-33680
+Tech Name:DNS Admin
+Tech Organization:Mozilla Corporation
+Tech Street: 331 E. Evelyn Ave
+Tech City:Mountain View
+Tech State/Province:CA
+Tech Postal Code:94041
+Tech Country:US
+Tech Phone:+1.6509030800
+Tech Phone Ext: 
+Tech Fax: 
+Tech Fax Ext: 
+Tech Email:hostmaster@mozilla.com
+Name Server:NS5-65.AKAM.NET
+Name Server:NS7-66.AKAM.NET
+Name Server:NS4-64.AKAM.NET
+Name Server:NS1-240.AKAM.NET
+Name Server: 
+Name Server: 
+Name Server: 
+Name Server: 
+Name Server: 
+Name Server: 
+Name Server: 
+Name Server: 
+Name Server: 
+DNSSEC:signedDelegation
+DS Created 1:2013-12-08T01:16:56Z
+DS Key Tag 1:44421
+Algorithm 1:7
+Digest Type 1:1
+Digest 1:E5052BDB5E59FB7D1FF4F56E99ECA86D29EB9834
+DS Maximum Signature Life 1:1814400 seconds
+
+Access to Public Interest Registry WHOIS information is provided to assist persons in determining the contents of a domain name registration record in the Public Interest Registry registry database. The data in this record is provided by Public Interest Registry for informational purposes only, and Public Interest Registry does not guarantee its accuracy. This service is intended only for query-based access. You agree that you will use this data only for lawful purposes and that, under no circumstances will you use this data to(a) allow, enable, or otherwise support the transmission by e-mail, telephone, or facsimile of mass unsolicited, commercial advertising or solicitations to entities other than the data recipient's own existing customers; or (b) enable high volume, automated, electronic processes that send queries or data to the systems of Registry Operator, a Registrar, or Afilias except as reasonably necessary to register domain names or modify existing registrations. All rights reserved. Public Interest Registry reserves the right to modify these terms at any time. By submitting this query, you agree to abide by this policy.
+
+

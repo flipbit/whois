@@ -1,7 +1,6 @@
 ﻿using System.Collections.Generic;
 using System.Linq;
 using System.Text;
-using Whois.Domain;
 using Whois.Interfaces;
 using Whois.Tokens;
 
@@ -20,14 +19,14 @@ namespace Whois.Visitors
         public Encoding Encoding { get; private set; }
 
         /// <summary>
-        /// Initializes a new instance of the <see cref="MarkMonitorVisitor"/> class.
+        /// Initializes a new instance of the <see cref="PatternExtractorVisitor" /> class.
         /// </summary>
         public PatternExtractorVisitor() : this(Encoding.UTF8)
         {
         }
 
         /// <summary>
-        /// Initializes a new instance of the <see cref="MarkMonitorVisitor"/> class.
+        /// Initializes a new instance of the <see cref="PatternExtractorVisitor" /> class.
         /// </summary>
         /// <param name="encoding">The encoding used to read and write strings.</param>
         public PatternExtractorVisitor(Encoding encoding)
@@ -43,7 +42,7 @@ namespace Whois.Visitors
         {
             var reader = new EmbeddedPatternReader();
 
-            return reader.ReadNamespace(GetType().Assembly, "Whois.Patterns");
+            return reader.ReadNamespace(GetType().Assembly, "Whois.Patterns.Domains");
         } 
 
         /// <summary>

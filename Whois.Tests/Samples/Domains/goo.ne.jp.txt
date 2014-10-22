@@ -1,0 +1,38 @@
+[ JPRS database provides information on network administration. Its use is    ]
+[ restricted to network administration purposes. For further information,     ]
+[ use 'whois -h whois.jprs.jp help'. To suppress Japanese output, add'/e'     ]
+[ at the end of command, e.g. 'whois -h whois.jprs.jp xxx/e'.                 ]
+[                                                                             ]
+[ Notice -------------------------------------------------------------------- ]
+[ JPRS will change JPRS WHOIS (web-based and port 43 Whois service) about the ]
+[ following two points on January 18, 2015.                                   ]
+[                                                                             ]
+[  1) Change of the format of response about gTLD domain name                 ]
+[  2) Change of the character encoding                                        ]
+[                                                                             ]
+[ For further information, please see the following webpage.                  ]
+[ http://jprs.jp/whatsnew/notice/2014/20140319-whois.html (only in Japanese)  ]
+[ --------------------------------------------------------------------------- ]
+
+Domain Information: [ドメイン情報]
+a. [ドメイン名]                 GOO.NE.JP
+b. [ねっとわーくさーびすめい]   つうしんによりあくせすされるでんしめでぃあ
+                                じょうでのあらゆるじょうほうげんのいんでっくすさくせいおよびけんさく
+                                ・こうこくさーびす
+c. [ネットワークサービス名]     通信によりアクセスされる電子メディア上での
+                                あらゆる情報源のインデックス作成及び検索・広告サービス
+d. [Network Service Name]       GOO
+k. [組織種別]                   ネットワークサービス
+l. [Organization Type]          Network Service
+m. [登録担当者]                 HS8389JP
+n. [技術連絡担当者]             SH820JP
+p. [ネームサーバ]               ns1.goo.ne.jp
+p. [ネームサーバ]               ns2.goo.ne.jp
+p. [ネームサーバ]               ns.intervia.ad.jp
+p. [ネームサーバ]               ns.via.or.jp
+s. [署名鍵]                     
+[状態]                          Connected (2015/06/30)
+[登録年月日]                    2004/06/15
+[接続年月日]                    2004/06/15
+[最終更新]                      2014/07/01 01:15:54 (JST)
+

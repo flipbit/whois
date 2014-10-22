@@ -1,10 +1,11 @@
 ﻿using System;
-using System.Diagnostics;
 using System.IO;
+using System.Linq;
 using System.Threading;
 using NUnit.Framework;
 using Whois.Net;
 using Whois.Servers;
+using Whois.Visitors;
 
 namespace Whois
 {
@@ -27,11 +28,15 @@ namespace Whois
 
             foreach (var line in lines)
             {
-                Debug.WriteLine("Looking up: " + line);
+                var fileName = string.Format(@"..\..\..\Whois.Tests\Samples\Domains\{0}.txt", line);
+
+                if (File.Exists(fileName)) continue;
 
                 var whois = lookup.Lookup(line);
 
-                File.WriteAllText(@"..\..\..\Whois.Tests\Samples\" + line + ".txt", whois.ToString());
+                Console.WriteLine("Writing: {0}, {1:###,##0} byte(s)", line, whois.ToString().Length);
+
+                File.WriteAllText(fileName, whois.ToString());
 
                 Thread.Sleep(60000);
             }
@@ -60,6 +65,34 @@ namespace Whois
                 Console.WriteLine("{0}: {1:####,##0} byte(s)", line.ToLower(), tld.RawResponse.Length);
 
                 Thread.Sleep(60000);
+            }
+        }
+
+        [Test]
+        [Ignore]
+        public void ShowSampleStatistics()
+        {
+            var files = Directory.GetFiles(@"..\..\..\Whois.Tests\Samples\Domains", "*.txt");
+            var visitor = new PatternExtractorVisitor();
+
+            foreach (var file in files)
+            {
+                var text = File.ReadAllText(file);
+
+                var record = new WhoisRecord(text);
+
+                var matches = visitor.MatchPatterns(record);
+
+                if (matches.Any())
+                {
+                    var match = matches.First();
+
+                    Console.WriteLine("{0} matches: {1}", match.Replacements.Count, Path.GetFileName(file));
+                }
+                else
+                {
+                    Console.WriteLine("No matches: {0}", file);
+                }
             }
         }
     }

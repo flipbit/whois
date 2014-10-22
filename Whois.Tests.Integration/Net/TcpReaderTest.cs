@@ -15,7 +15,7 @@ namespace Whois.Net
         [Test]
         public void TestReadWhoisForCogworksCoUk()
         {
-            ArrayList result;
+            string result;
 
             using (var reader = new TcpReader())
             {
@@ -23,14 +23,14 @@ namespace Whois.Net
             }
 
             // Just check the domain name is in the response
-            Assert.Greater(result.IndexOfLineContaining("cogworks.co.uk"), -1);
+            Assert.Greater(result.IndexOf("cogworks.co.uk"), -1);
         }
 
         [Test]
         [Ignore]
         public void TestReadWhoisForSapoPt()
         {
-            ArrayList result;
+            string result;
             var encoding = Encoding.GetEncoding("ISO-8859-1");
 
             using (var reader = new TcpReader(encoding))
@@ -39,13 +39,13 @@ namespace Whois.Net
             }
 
             // Just check the domain name is in the response
-            Assert.Greater(result.IndexOfLineContaining("sapo.pt"), -1);
+            Assert.Greater(result.IndexOf("sapo.pt"), -1);
         }
 
         [Test]
         public void TestReadWhoisForUolComBr()
         {
-            ArrayList result;
+            string result;
             var encoding = Encoding.GetEncoding("ISO-8859-1");
 
             using (var reader = new TcpReader(encoding))
@@ -54,13 +54,13 @@ namespace Whois.Net
             }
 
             // Just check the domain name is in the response
-            Assert.Greater(result.IndexOfLineContaining("uol.com.br"), -1);
+            Assert.Greater(result.IndexOf("uol.com.br"), -1);
         }
 
         [Test]
         public void TestReadWhoisForUnknownDomain()
         {
-            ArrayList result;
+            string result;
 
             using (var reader = new TcpReader())
             {
@@ -68,7 +68,7 @@ namespace Whois.Net
             }
 
             // SHould never be registered (as invalid)
-            Assert.AreEqual(result.IndexOfLineContaining("Registered on:"), -1);
+            Assert.AreEqual(result.IndexOf("Registered on:"), -1);
         }
 
         [Test]

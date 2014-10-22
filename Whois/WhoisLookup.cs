@@ -1,6 +1,5 @@
 ﻿using System.Collections.Generic;
 using System.Text;
-using Whois.Domain;
 using Whois.Interfaces;
 using Whois.Visitors;
 
@@ -9,7 +8,7 @@ namespace Whois
     /// <summary>
     /// Looks up WHOIS information for a given domain.
     /// </summary>
-    public class WhoisLookup
+    public class WhoisLookup : IWhoisLookup
     {
         /// <summary>
         /// Gets the current character encoding that the current WhoisLookup
@@ -51,22 +50,10 @@ namespace Whois
                     new ExpandResultsVisitor(encoding),
 
                     // Check to see if a secondard WHOIS server needs to be queried
-                    new DownloadSecondaryServerVisitor(encoding),
+                    new RedirectVisitor(encoding),
 
-                    // UK domains
-                    new NominetVisitor(encoding),
-
-                    // MarkMonitor (e.g. Google)
-                    new MarkMonitorVisitor(encoding),
-
-                    // RIPN
-                    new RipnVisitor(encoding),
-
-                    // PT domains
-                    new DnsPtVisitor(encoding),
-
-                    // BR domains
-                    new RegistroBrVisitor(encoding),
+                    // Populate Structured WHOIS object
+                    new PatternExtractorVisitor(encoding)
                 };
         }
 

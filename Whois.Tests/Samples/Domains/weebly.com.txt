@@ -1,0 +1,353 @@
+
+Whois Server Version 2.0
+
+Domain names in the .com and .net domains can now be registered
+with many different competing registrars. Go to http://www.internic.net
+for detailed information.
+
+Aborting search 50 records found .....
+   Server Name: WEEBLY.COM.A2KSTL.COM
+   IP Address: 199.34.228.58
+   Registrar: GODADDY.COM, LLC
+   Whois Server: whois.godaddy.com
+   Referral URL: http://registrar.godaddy.com
+
+   Server Name: WEEBLY.COM.ABACKROADJOURNEY.COM
+   IP Address: 199.34.228.59
+   Registrar: GODADDY.COM, LLC
+   Whois Server: whois.godaddy.com
+   Referral URL: http://registrar.godaddy.com
+
+   Server Name: WEEBLY.COM.ALAJMIX.COM
+   IP Address: 199.34.228.73
+   Registrar: GODADDY.COM, LLC
+   Whois Server: whois.godaddy.com
+   Referral URL: http://registrar.godaddy.com
+
+   Server Name: WEEBLY.COM.ALLENPETIT.COM
+   IP Address: 199.34.228.57
+   Registrar: DOMAIN.COM, LLC
+   Whois Server: whois.domain.com
+   Referral URL: http://www.domain.com
+
+   Server Name: WEEBLY.COM.ARTINZENMASSAGE.COM
+   IP Address: 199.34.228.57
+   Registrar: GODADDY.COM, LLC
+   Whois Server: whois.godaddy.com
+   Referral URL: http://registrar.godaddy.com
+
+   Server Name: WEEBLY.COM.ATELOGO.INFO
+   Registrar: TUCOWS DOMAINS INC.
+   Whois Server: whois.tucows.com
+   Referral URL: http://domainhelp.opensrs.net
+
+   Server Name: WEEBLY.COM.AU
+   Registrar: CRAZY DOMAINS FZ-LLC
+   Whois Server: whois.crazydomains.com
+   Referral URL: http://www.crazydomains.com 
+
+   Server Name: WEEBLY.COM.BLUECASTLEFARMS.COM
+   IP Address: 199.34.228.100
+   Registrar: DOMAIN.COM, LLC
+   Whois Server: whois.domain.com
+   Referral URL: http://www.domain.com
+
+   Server Name: WEEBLY.COM.CHERYLSTEIMEL.COM
+   IP Address: 199.34.228.59
+   Registrar: GODADDY.COM, LLC
+   Whois Server: whois.godaddy.com
+   Referral URL: http://registrar.godaddy.com
+
+   Server Name: WEEBLY.COM.COLLAGENCREATIVE.COM
+   IP Address: 199.34.228.56
+   Registrar: GKG.NET, INC.
+   Whois Server: whois.gkg.net
+   Referral URL: http://www.gkg.net
+
+   Server Name: WEEBLY.COM.COLLEENROLLINS.COM
+   IP Address: 199.34.228.100
+   Registrar: WILD WEST DOMAINS, LLC
+   Whois Server: whois.wildwestdomains.com
+   Referral URL: http://www.wildwestdomains.com
+
+   Server Name: WEEBLY.COM.CONNECT----PROGRESS.COM
+   IP Address: 199.34.228.67
+   Registrar: WILD WEST DOMAINS, LLC
+   Whois Server: whois.wildwestdomains.com
+   Referral URL: http://www.wildwestdomains.com
+
+   Server Name: WEEBLY.COM.COURTS-FOR-SPORTS.COM
+   IP Address: 199.34.228.55
+   IP Address: 199.34.228.56
+   IP Address: 199.34.228.57
+   IP Address: 199.34.228.58
+   IP Address: 199.34.228.59
+   Registrar: WILD WEST DOMAINS, LLC
+   Whois Server: whois.wildwestdomains.com
+   Referral URL: http://www.wildwestdomains.com
+
+   Server Name: WEEBLY.COM.CSQRCONCEPTS.COM
+   IP Address: 199.34.228.100
+   Registrar: GODADDY.COM, LLC
+   Whois Server: whois.godaddy.com
+   Referral URL: http://registrar.godaddy.com
+
+   Server Name: WEEBLY.COM.CUSTOMARYPRODUCTS.NET
+   IP Address: 199.34.228.56
+   Registrar: WILD WEST DOMAINS, LLC
+   Whois Server: whois.wildwestdomains.com
+   Referral URL: http://www.wildwestdomains.com
+
+   Server Name: WEEBLY.COM.CWRDIGITALMEDIA.COM
+   IP Address: 199.34.228.56
+   Registrar: GODADDY.COM, LLC
+   Whois Server: whois.godaddy.com
+   Referral URL: http://registrar.godaddy.com
+
+   Server Name: WEEBLY.COM.DAVIDLERICKSON.COM
+   IP Address: 199.34.228.59
+   Registrar: GODADDY.COM, LLC
+   Whois Server: whois.godaddy.com
+   Referral URL: http://registrar.godaddy.com
+
+   Server Name: WEEBLY.COM.DEBONAIRWRITER.COM
+   IP Address: 199.34.228.100
+   IP Address: 199.34.228.55
+   Registrar: GODADDY.COM, LLC
+   Whois Server: whois.godaddy.com
+   Referral URL: http://registrar.godaddy.com
+
+   Server Name: WEEBLY.COM.DINGOWOLFWARRIOR.COM
+   IP Address: 199.34.228.58
+   Registrar: WILD WEST DOMAINS, LLC
+   Whois Server: whois.wildwestdomains.com
+   Referral URL: http://www.wildwestdomains.com
+
+   Server Name: WEEBLY.COM.DINGOWOLFWARRIOR.NET
+   IP Address: 199.34.228.70
+   Registrar: WILD WEST DOMAINS, LLC
+   Whois Server: whois.wildwestdomains.com
+   Referral URL: http://www.wildwestdomains.com
+
+   Server Name: WEEBLY.COM.ESSENTRICSCOLORADO.COM
+   IP Address: 199.34.228.59
+   Registrar: GODADDY.COM, LLC
+   Whois Server: whois.godaddy.com
+   Referral URL: http://registrar.godaddy.com
+
+   Server Name: WEEBLY.COM.ESSIAC-TEA.NET
+   IP Address: 199.34.228.72
+   Registrar: DOMAIN.COM, LLC
+   Whois Server: whois.domain.com
+   Referral URL: http://www.domain.com
+
+   Server Name: WEEBLY.COM.FASTFRENCH4BUSYPEOPLE.COM
+   IP Address: 199.34.228.59
+   Registrar: TUCOWS DOMAINS INC.
+   Whois Server: whois.tucows.com
+   Referral URL: http://domainhelp.opensrs.net
+
+   Server Name: WEEBLY.COM.FUMBLEBREWSKI.COM
+   IP Address: 199.34.228.76
+   Registrar: WILD WEST DOMAINS, LLC
+   Whois Server: whois.wildwestdomains.com
+   Referral URL: http://www.wildwestdomains.com
+
+   Server Name: WEEBLY.COM.FUSEDMEDIAPRODUCTIONS.COM
+   IP Address: 199.34.228.100
+   Registrar: DOMAIN.COM, LLC
+   Whois Server: whois.domain.com
+   Referral URL: http://www.domain.com
+
+   Server Name: WEEBLY.COM.GARYFONTAINE.COM
+   IP Address: 199.34.228.100
+   Registrar: GODADDY.COM, LLC
+   Whois Server: whois.godaddy.com
+   Referral URL: http://registrar.godaddy.com
+
+   Server Name: WEEBLY.COM.GETKDZLIT.COM
+   IP Address: 199.34.228.100
+   Registrar: DOMAIN.COM, LLC
+   Whois Server: whois.domain.com
+   Referral URL: http://www.domain.com
+
+   Server Name: WEEBLY.COM.HASLETCOFFEECOMPANY.COM
+   IP Address: 199.34.228.59
+   Registrar: GODADDY.COM, LLC
+   Whois Server: whois.godaddy.com
+   Referral URL: http://registrar.godaddy.com
+
+   Server Name: WEEBLY.COM.HAVEYOUSEENMYBABYDADDY.COM
+   IP Address: 199.34.228.100
+   Registrar: WILD WEST DOMAINS, LLC
+   Whois Server: whois.wildwestdomains.com
+   Referral URL: http://www.wildwestdomains.com
+
+   Server Name: WEEBLY.COM.ICANDOITTV.COM
+   IP Address: 199.34.228.100
+   Registrar: GMO INTERNET, INC. DBA ONAMAE.COM
+   Whois Server: whois.discount-domain.com
+   Referral URL: http://www.onamae.com
+
+   Server Name: WEEBLY.COM.JACKIESTRADINGPOST.COM
+   IP Address: 65.49.35.140
+   Registrar: DOMAIN.COM, LLC
+   Whois Server: whois.domain.com
+   Referral URL: http://www.domain.com
+
+   Server Name: WEEBLY.COM.JENNIFERMIRACLE.COM
+   IP Address: 199.34.228.59
+   Registrar: GODADDY.COM, LLC
+   Whois Server: whois.godaddy.com
+   Referral URL: http://registrar.godaddy.com
+
+   Server Name: WEEBLY.COM.JEWELHOMECARE.COM
+   IP Address: 199.34.228.57
+   Registrar: GKG.NET, INC.
+   Whois Server: whois.gkg.net
+   Referral URL: http://www.gkg.net
+
+   Server Name: WEEBLY.COM.JOEMACRIART.COM
+   IP Address: 199.34.228.100
+   Registrar: GODADDY.COM, LLC
+   Whois Server: whois.godaddy.com
+   Referral URL: http://registrar.godaddy.com
+
+   Server Name: WEEBLY.COM.JTCUSTOMLEATHER.COM
+   IP Address: 199.34.228.100
+   Registrar: GODADDY.COM, LLC
+   Whois Server: whois.godaddy.com
+   Referral URL: http://registrar.godaddy.com
+
+   Server Name: WEEBLY.COM.JUKEBOX6.COM
+   IP Address: 199.34.228.41
+   Registrar: GODADDY.COM, LLC
+   Whois Server: whois.godaddy.com
+   Referral URL: http://registrar.godaddy.com
+
+   Server Name: WEEBLY.COM.LUXEBOUTIQUEDESIGNS.COM
+   IP Address: 199.34.228.56
+   Registrar: GODADDY.COM, LLC
+   Whois Server: whois.godaddy.com
+   Referral URL: http://registrar.godaddy.com
+
+   Server Name: WEEBLY.COM.LYCIANWAYFETHIYE.COM
+   IP Address: 199.34.228.56
+   Registrar: GODADDY.COM, LLC
+   Whois Server: whois.godaddy.com
+   Referral URL: http://registrar.godaddy.com
+
+   Server Name: WEEBLY.COM.MAGNOLIAMONOGRAMMING.COM
+   IP Address: 199.34.228.100
+   Registrar: GODADDY.COM, LLC
+   Whois Server: whois.godaddy.com
+   Referral URL: http://registrar.godaddy.com
+
+   Server Name: WEEBLY.COM.MAKINLIFESWEET.COM
+   IP Address: 199.34.228.70
+   Registrar: GODADDY.COM, LLC
+   Whois Server: whois.godaddy.com
+   Referral URL: http://registrar.godaddy.com
+
+   Server Name: WEEBLY.COM.MALIKNAVEED.COM
+   IP Address: 199.34.228.74
+   Registrar: NAMESILO, LLC
+   Whois Server: whois.namesilo.com
+   Referral URL: http://www.namesilo.com
+
+   Server Name: WEEBLY.COM.MCCXXIII.COM
+   IP Address: 199.34.228.74
+   Registrar: GODADDY.COM, LLC
+   Whois Server: whois.godaddy.com
+   Referral URL: http://registrar.godaddy.com
+
+   Server Name: WEEBLY.COM.MRSYNIGUEZ.COM
+   IP Address: 199.34.228.100
+   Registrar: GODADDY.COM, LLC
+   Whois Server: whois.godaddy.com
+   Referral URL: http://registrar.godaddy.com
+
+   Server Name: WEEBLY.COM.NANCYHARTART.COM
+   IP Address: 65.49.35.140
+   Registrar: DOMAIN.COM, LLC
+   Whois Server: whois.domain.com
+   Referral URL: http://www.domain.com
+
+   Server Name: WEEBLY.COM.NOWISEEPRODUCTIONS.COM
+   IP Address: 199.34.228.58
+   Registrar: 1 API GMBH
+   Whois Server: whois.1api.net
+   Referral URL: http://www.1api.net
+
+   Server Name: WEEBLY.COM.NZVALUES.COM
+   IP Address: 199.34.228.44
+   Registrar: GODADDY.COM, LLC
+   Whois Server: whois.godaddy.com
+   Referral URL: http://registrar.godaddy.com
+
+   Server Name: WEEBLY.COM.OSCARSTILE.COM
+   IP Address: 199.34.228.58
+   Registrar: DOMAIN.COM, LLC
+   Whois Server: whois.domain.com
+   Referral URL: http://www.domain.com
+
+   Server Name: WEEBLY.COM.PACIFICTIMESTUDIO.COM
+   IP Address: 201.57.89.123
+   Registrar: GODADDY.COM, LLC
+   Whois Server: whois.godaddy.com
+   Referral URL: http://registrar.godaddy.com
+
+   Server Name: WEEBLY.COM.PEREZYAIR.COM
+   IP Address: 199.34.228.100
+   Registrar: DOMAIN.COM, LLC
+   Whois Server: whois.domain.com
+   Referral URL: http://www.domain.com
+
+   Domain Name: WEEBLY.COM
+   Registrar: REGISTER.COM, INC.
+   Whois Server: whois.register.com
+   Referral URL: http://www.register.com
+   Name Server: NS1.P29.DYNECT.NET
+   Name Server: NS2.P29.DYNECT.NET
+   Name Server: NS3.P29.DYNECT.NET
+   Name Server: NS4.P29.DYNECT.NET
+   Status: clientTransferProhibited
+   Updated Date: 25-jan-2013
+   Creation Date: 29-mar-2006
+   Expiration Date: 29-mar-2020
+
+>>> Last update of whois database: Tue, 21 Oct 2014 11:50:29 GMT <<<
+
+NOTICE: The expiration date displayed in this record is the date the 
+registrar's sponsorship of the domain name registration in the registry is 
+currently set to expire. This date does not necessarily reflect the expiration 
+date of the domain name registrant's agreement with the sponsoring 
+registrar.  Users may consult the sponsoring registrar's Whois database to 
+view the registrar's reported date of expiration for this registration.
+
+TERMS OF USE: You are not authorized to access or query our Whois 
+database through the use of electronic processes that are high-volume and 
+automated except as reasonably necessary to register domain names or 
+modify existing registrations; the Data in VeriSign Global Registry 
+Services' ("VeriSign") Whois database is provided by VeriSign for 
+information purposes only, and to assist persons in obtaining information 
+about or related to a domain name registration record. VeriSign does not 
+guarantee its accuracy. By submitting a Whois query, you agree to abide 
+by the following terms of use: You agree that you may use this Data only 
+for lawful purposes and that under no circumstances will you use this Data 
+to: (1) allow, enable, or otherwise support the transmission of mass 
+unsolicited, commercial advertising or solicitations via e-mail, telephone, 
+or facsimile; or (2) enable high volume, automated, electronic processes 
+that apply to VeriSign (or its computer systems). The compilation, 
+repackaging, dissemination or other use of this Data is expressly 
+prohibited without the prior written consent of VeriSign. You agree not to 
+use electronic processes that are automated and high-volume to access or 
+query the Whois database except as reasonably necessary to register 
+domain names or modify existing registrations. VeriSign reserves the right 
+to restrict your access to the Whois database in its sole discretion to ensure 
+operational stability.  VeriSign may restrict or terminate your access to the 
+Whois database for failure to abide by these terms of use. VeriSign 
+reserves the right to modify these terms at any time. 
+
+The Registry database contains ONLY .COM, .NET, .EDU domains and
+Registrars.

@@ -1,6 +1,5 @@
 ﻿using System.Text;
 using NUnit.Framework;
-using Whois.Domain;
 using Whois.Extensions;
 using Whois.Net;
 
@@ -26,7 +25,7 @@ namespace Whois.Visitors
             visitor.Visit(record);
 
             // Should of gone to NOMINET
-            Assert.Greater(record.Text.IndexOfLineContaining("Nominet"), -1);
+            Assert.Greater(record.Text.IndexOf("Nominet"), -1);
         }
 
         [Test]
@@ -37,7 +36,7 @@ namespace Whois.Visitors
             visitor.Visit(record);
 
             // Should returned multiple matches (extra spam records)
-            Assert.Greater(record.Text.IndexOfLineContaining(@"To single out one record, look it up with ""xxx"""), -1);
+            Assert.Greater(record.Text.IndexOf(@"To single out one record, look it up with ""xxx"""), -1);
         }
 
         [Test]
@@ -52,7 +51,7 @@ namespace Whois.Visitors
             const string text = "Nome de domínio / Domain Name: sapo.pt";
 
             // Should have returned record in Portuguese (pt-PT)
-            Assert.Greater(record.Text.IndexOfLineContaining(text), -1);
+            Assert.Greater(record.Text.IndexOf(text), -1);
         }
 
         [Test]
@@ -67,7 +66,7 @@ namespace Whois.Visitors
             const string text = "cert@cert.br";
 
             // Should have returned record in Brazilian Portuguese (pt-BR)
-            Assert.Greater(record.Text.IndexOfLineContaining(text), -1);
+            Assert.Greater(record.Text.IndexOf(text), -1);
         }
     }
 }

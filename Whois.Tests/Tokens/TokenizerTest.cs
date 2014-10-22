@@ -1,5 +1,4 @@
 ﻿using System;
-using System.Collections;
 using System.Collections.Generic;
 using NUnit.Framework;
 
@@ -30,12 +29,13 @@ namespace Whois.Tokens
         [Test]
         public void TestGetTokenFromMiddleOfString()
         {
-            const string pattern = "test #{TestClass.Message} string";
+            const string pattern = "test #{TestClass.Message:ToUpper()} string";
 
             var token = tokenizer.GetNextToken(pattern);
 
             Assert.AreEqual("test ", token.Prefix);
             Assert.AreEqual("TestClass.Message", token.Value);
+            Assert.AreEqual("ToUpper()", token.Operation);
             Assert.AreEqual(" string", token.Suffix);
         }
 
@@ -235,7 +235,7 @@ end #{TestClass.Nested.Counter}";
             Assert.AreEqual("Second", testClass.List[1]);
             Assert.AreEqual("Third", testClass.List[2]);
         }
-
+        
         [Test]
         public void TestMultipleLinePatterns()
         {

@@ -1,6 +1,4 @@
 ﻿using System.Text;
-using Whois.Domain;
-using Whois.Extensions;
 using Whois.Interfaces;
 using Whois.Net;
 
@@ -16,7 +14,7 @@ namespace Whois.Visitors
         /// object is using.
         /// </summary>
         /// <returns>The current character encoding used by the current visitor.</returns>
-        public Encoding CurrentEncoding { get; private set; }
+        public Encoding Encoding { get; private set; }
 
         /// <summary>
         /// Gets or sets the TCP reader factory.
@@ -39,7 +37,7 @@ namespace Whois.Visitors
         {
             TcpReaderFactory = new TcpReaderFactory();
 
-            CurrentEncoding = encoding;
+            Encoding = encoding;
         }
 
         /// <summary>
@@ -50,11 +48,11 @@ namespace Whois.Visitors
         public WhoisRecord Visit(WhoisRecord record)
         {
             // Check to narrow down search results
-            if (record.Text.AsString().Contains("=xxx"))
+            if (record.Text.Contains("=xxx"))
             {
-                using (var tcpReader = TcpReaderFactory.Create(CurrentEncoding))
+                using (var tcpReader = TcpReaderFactory.Create(Encoding))
                 {
-                    record.Text = tcpReader.Read(record.Server, 43, "=" + record.Domain);
+                    record.Text = tcpReader.Read(record.Server.Url, 43, "=" + record.Domain);
                 }
             }
             return record;

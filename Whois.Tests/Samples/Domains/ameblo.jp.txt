@@ -1,0 +1,48 @@
+[ JPRS database provides information on network administration. Its use is    ]
+[ restricted to network administration purposes. For further information,     ]
+[ use 'whois -h whois.jprs.jp help'. To suppress Japanese output, add'/e'     ]
+[ at the end of command, e.g. 'whois -h whois.jprs.jp xxx/e'.                 ]
+[                                                                             ]
+[ Notice -------------------------------------------------------------------- ]
+[ JPRS will change JPRS WHOIS (web-based and port 43 Whois service) about the ]
+[ following two points on January 18, 2015.                                   ]
+[                                                                             ]
+[  1) Change of the format of response about gTLD domain name                 ]
+[  2) Change of the character encoding                                        ]
+[                                                                             ]
+[ For further information, please see the following webpage.                  ]
+[ http://jprs.jp/whatsnew/notice/2014/20140319-whois.html (only in Japanese)  ]
+[ --------------------------------------------------------------------------- ]
+
+Domain Information: [ドメイン情報]
+[Domain Name]                   AMEBLO.JP
+
+[登録者名]                      株式会社　サイバーエージェント
+[Registrant]                    CyberAgent, Inc.
+
+[Name Server]                   ns-1218.awsdns-24.org
+[Name Server]                   ns-124.awsdns-15.com
+[Name Server]                   ns-2038.awsdns-62.co.uk
+[Name Server]                   ns-863.awsdns-43.net
+[Signing Key]                   
+
+[登録年月日]                    2004/07/30
+[有効期限]                      2015/07/31
+[状態]                          Active
+[最終更新]                      2014/08/01 01:05:11 (JST)
+
+Contact Information: [公開連絡窓口]
+[名前]                          株式会社　サイバーエージェント
+[Name]                          CyberAgent, Inc.
+[Email]                         support@ameba.jp
+[Web Page]                       
+[郵便番号]                      150-0043
+[住所]                          東京都渋谷区
+                                道玄坂2-11-1
+                                サイバーエージェントビル8階
+[Postal Address]                Shibuya-ku
+                                2-11-1 Dogenzaka
+                                Cyberagent Building 8F
+[電話番号]                      03-5459-0239
+[FAX番号]                       03-5459-1880
+

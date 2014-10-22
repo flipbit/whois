@@ -1,0 +1,67 @@
+Domain Name:GNU.ORG
+Domain ID: D899661-LROR
+Creation Date: 1995-11-24T05:00:00Z
+Updated Date: 2014-08-04T18:24:11Z
+Registry Expiry Date: 2022-11-23T05:00:00Z
+Sponsoring Registrar:Gandi SAS (R42-LROR)
+Sponsoring Registrar IANA ID: 81
+WHOIS Server: 
+Referral URL: 
+Domain Status: clientTransferProhibited
+Registrant ID:0-443631-Gandi
+Registrant Name:GNU/FSF Hostmaster
+Registrant Organization:Free Software Foundation
+Registrant Street: 51 Franklin Street, Fifth Floor
+Registrant City:Boston
+Registrant State/Province:MA
+Registrant Postal Code:02110-1301
+Registrant Country:US
+Registrant Phone:+1.6175425942
+Registrant Phone Ext: 
+Registrant Fax: +1.6175422652
+Registrant Fax Ext: 
+Registrant Email:hostmaster@gnu.org
+Admin ID:GH297-GANDI
+Admin Name:GNU/FSF Hostmaster
+Admin Organization:Free Software Foundation
+Admin Street: 51 Franklin Street, Fifth Floor
+Admin City:Boston
+Admin State/Province:MA
+Admin Postal Code:02110-1301
+Admin Country:US
+Admin Phone:+1.6175425942
+Admin Phone Ext: 
+Admin Fax: +1.6175422652
+Admin Fax Ext: 
+Admin Email:hostmaster@gnu.org
+Tech ID:AR41-GANDI
+Tech Name:Service Technique
+Tech Organization:GANDI SARL
+Tech Street: 63 - 65 Boulevard Massena
+Tech City:Paris
+Tech State/Province:
+Tech Postal Code:75013
+Tech Country:FR
+Tech Phone:+33.143737851
+Tech Phone Ext: 
+Tech Fax: 
+Tech Fax Ext: 
+Tech Email:support@gandi.net
+Name Server:NS1.GNU.ORG
+Name Server:NS2.GNU.ORG
+Name Server:NS3.GNU.ORG
+Name Server: 
+Name Server: 
+Name Server: 
+Name Server: 
+Name Server: 
+Name Server: 
+Name Server: 
+Name Server: 
+Name Server: 
+Name Server: 
+DNSSEC:Unsigned
+
+Access to Public Interest Registry WHOIS information is provided to assist persons in determining the contents of a domain name registration record in the Public Interest Registry registry database. The data in this record is provided by Public Interest Registry for informational purposes only, and Public Interest Registry does not guarantee its accuracy. This service is intended only for query-based access. You agree that you will use this data only for lawful purposes and that, under no circumstances will you use this data to(a) allow, enable, or otherwise support the transmission by e-mail, telephone, or facsimile of mass unsolicited, commercial advertising or solicitations to entities other than the data recipient's own existing customers; or (b) enable high volume, automated, electronic processes that send queries or data to the systems of Registry Operator, a Registrar, or Afilias except as reasonably necessary to register domain names or modify existing registrations. All rights reserved. Public Interest Registry reserves the right to modify these terms at any time. By submitting this query, you agree to abide by this policy.
+
+

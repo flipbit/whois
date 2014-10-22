@@ -1,0 +1,359 @@
+
+Whois Server Version 2.0
+
+Domain names in the .com and .net domains can now be registered
+with many different competing registrars. Go to http://www.internic.net
+for detailed information.
+
+Aborting search 50 records found .....
+   Server Name: WIX.COM.ADIWEIZMANN.COM
+   IP Address: 23.236.62.147
+   Registrar: GKG.NET, INC.
+   Whois Server: whois.gkg.net
+   Referral URL: http://www.gkg.net
+
+   Server Name: WIX.COM.ADTORREJONCF.COM
+   IP Address: 216.139.213.144
+   Registrar: PDR LTD. D/B/A PUBLICDOMAINREGISTRY.COM
+   Whois Server: whois.PublicDomainRegistry.com
+   Referral URL: http://www.PublicDomainRegistry.com
+
+   Server Name: WIX.COM.ALADZAJKOV.COM
+   IP Address: 216.139.213.144
+   Registrar: DOMAIN.COM, LLC
+   Whois Server: whois.domain.com
+   Referral URL: http://www.domain.com
+
+   Server Name: WIX.COM.ALLSTARMAGAZINE.NET
+   IP Address: 216.139.213.144
+   Registrar: GODADDY.COM, LLC
+   Whois Server: whois.godaddy.com
+   Referral URL: http://registrar.godaddy.com
+
+   Server Name: WIX.COM.AMEDIEADVERTISING.COM
+   IP Address: 216.139.213.144
+   Registrar: GODADDY.COM, LLC
+   Whois Server: whois.godaddy.com
+   Referral URL: http://registrar.godaddy.com
+
+   Server Name: WIX.COM.ANASTASIOSD.COM
+   IP Address: 216.185.152.151
+   Registrar: GODADDY.COM, LLC
+   Whois Server: whois.godaddy.com
+   Referral URL: http://registrar.godaddy.com
+
+   Server Name: WIX.COM.ANTHONYACCOUNTINGSERVICES-QUEENSLAND.COM
+   IP Address: 216.185.152.156
+   Registrar: CRAZY DOMAINS FZ-LLC
+   Whois Server: whois.crazydomains.com
+   Referral URL: http://www.crazydomains.com 
+
+   Server Name: WIX.COM.APETITOCO.COM
+   IP Address: 216.185.152.146
+   Registrar: GODADDY.COM, LLC
+   Whois Server: whois.godaddy.com
+   Referral URL: http://registrar.godaddy.com
+
+   Server Name: WIX.COM.ATLCARGO.COM
+   IP Address: 216.185.152.144
+   Registrar: DOMAIN.COM, LLC
+   Whois Server: whois.domain.com
+   Referral URL: http://www.domain.com
+
+   Server Name: WIX.COM.BABIESRTALKING.NET
+   IP Address: 216.139.213.144
+   Registrar: NETWORK SOLUTIONS, LLC.
+   Whois Server: whois.networksolutions.com
+   Referral URL: http://networksolutions.com
+
+   Server Name: WIX.COM.BACK2SCHOOLTOUR.COM
+   IP Address: 216.139.213.90
+   IP Address: 95.211.144.195
+   Registrar: GODADDY.COM, LLC
+   Whois Server: whois.godaddy.com
+   Referral URL: http://registrar.godaddy.com
+
+   Server Name: WIX.COM.BALONCESTOCAPITAL.COM
+   IP Address: 216.139.213.144
+   Registrar: GODADDY.COM, LLC
+   Whois Server: whois.godaddy.com
+   Referral URL: http://registrar.godaddy.com
+
+   Server Name: WIX.COM.BEEJUMPER.COM
+   IP Address: 216.185.152.149
+   Registrar: GODADDY.COM, LLC
+   Whois Server: whois.godaddy.com
+   Referral URL: http://registrar.godaddy.com
+
+   Server Name: WIX.COM.BOONESPOINTECABINS.COM
+   IP Address: 216.139.213.144
+   Registrar: GODADDY.COM, LLC
+   Whois Server: whois.godaddy.com
+   Referral URL: http://registrar.godaddy.com
+
+   Server Name: WIX.COM.BRAVOFOTOGRAFIA.COM
+   IP Address: 216.139.213.144
+   Registrar: DOMAIN.COM, LLC
+   Whois Server: whois.domain.com
+   Referral URL: http://www.domain.com
+
+   Server Name: WIX.COM.BREEZIEFBABY.COM
+   IP Address: 216.185.152.147
+   Registrar: GODADDY.COM, LLC
+   Whois Server: whois.godaddy.com
+   Referral URL: http://registrar.godaddy.com
+
+   Server Name: WIX.COM.CABOFITNESSCOACH.COM
+   IP Address: 216.139.213.90
+   IP Address: 94.75.229.100
+   Registrar: GODADDY.COM, LLC
+   Whois Server: whois.godaddy.com
+   Referral URL: http://registrar.godaddy.com
+
+   Server Name: WIX.COM.CASTLECABLETV.COM
+   IP Address: 216.139.213.144
+   Registrar: DOMAIN.COM, LLC
+   Whois Server: whois.domain.com
+   Referral URL: http://www.domain.com
+
+   Server Name: WIX.COM.CATHEDRALCOMMUNITYCHURCH.COM
+   IP Address: 216.139.213.144
+   Registrar: ENOM, INC.
+   Whois Server: whois.enom.com
+   Referral URL: http://www.enom.com
+
+   Server Name: WIX.COM.CAUGHTUPFISHING.COM
+   IP Address: 216.139.213.144
+   Registrar: GODADDY.COM, LLC
+   Whois Server: whois.godaddy.com
+   Referral URL: http://registrar.godaddy.com
+
+   Server Name: WIX.COM.CELIATHECELIAC.COM
+   IP Address: 94.75.229.100
+   IP Address: 216.139.213.90
+   Registrar: WILD WEST DOMAINS, LLC
+   Whois Server: whois.wildwestdomains.com
+   Referral URL: http://www.wildwestdomains.com
+
+   Server Name: WIX.COM.CHASEALANMOORE.COM
+   IP Address: 23.236.62.147
+   Registrar: GODADDY.COM, LLC
+   Whois Server: whois.godaddy.com
+   Referral URL: http://registrar.godaddy.com
+
+   Server Name: WIX.COM.CHERYLNWARNER.COM
+   IP Address: 216.139.213.90
+   IP Address: 95.211.144.195
+   Registrar: WILD WEST DOMAINS, LLC
+   Whois Server: whois.wildwestdomains.com
+   Referral URL: http://www.wildwestdomains.com
+
+   Server Name: WIX.COM.CIRCLESROUNDTHESUN.COM
+   IP Address: 216.139.213.144
+   Registrar: DOMAIN.COM, LLC
+   Whois Server: whois.domain.com
+   Referral URL: http://www.domain.com
+
+   Server Name: WIX.COM.COAST2COASTESOLUTIONS.COM
+   IP Address: 216.185.152.157
+   Registrar: NAME.COM, INC.
+   Whois Server: whois.name.com
+   Referral URL: http://www.name.com
+
+   Server Name: WIX.COM.COFFEEPHOTOWORK.COM
+   IP Address: 173.193.106.12
+   Registrar: CV. JOGJACAMP
+   Whois Server: whois.resellercamp.com
+   Referral URL: http://www.resellercamp.com
+
+   Server Name: WIX.COM.CONSTANTA365.COM
+   IP Address: 216.139.213.90
+   Registrar: REGISTRAR OF DOMAIN NAMES REG.RU LLC
+   Whois Server: whois.reg.ru
+   Referral URL: http://www.reg.ru
+
+   Server Name: WIX.COM.COOLPEOPLEMAG.COM
+   IP Address: 216.185.152.155
+   Registrar: GODADDY.COM, LLC
+   Whois Server: whois.godaddy.com
+   Referral URL: http://registrar.godaddy.com
+
+   Server Name: WIX.COM.COUNSELINGFORGROWTHANDCHANGE.NET
+   IP Address: 216.139.213.90
+   IP Address: 94.75.229.100
+   Registrar: GODADDY.COM, LLC
+   Whois Server: whois.godaddy.com
+   Referral URL: http://registrar.godaddy.com
+
+   Server Name: WIX.COM.CRASHANDSAFETY.COM
+   IP Address: 216.139.213.144
+   Registrar: FASTDOMAIN, INC.
+   Whois Server: whois.fastdomain.com
+   Referral URL: http://www.fastdomain.com
+
+   Server Name: WIX.COM.CRAZY4YOGURT.COM
+   IP Address: 216.139.213.144
+   Registrar: GODADDY.COM, LLC
+   Whois Server: whois.godaddy.com
+   Referral URL: http://registrar.godaddy.com
+
+   Server Name: WIX.COM.CREATIVE-NBS.COM
+   IP Address: 216.139.210.195
+   IP Address: 94.75.229.100
+   Registrar: GODADDY.COM, LLC
+   Whois Server: whois.godaddy.com
+   Referral URL: http://registrar.godaddy.com
+
+   Server Name: WIX.COM.CVPRODUCTIONZ.COM
+   IP Address: 216.185.152.157
+   Registrar: GODADDY.COM, LLC
+   Whois Server: whois.godaddy.com
+   Referral URL: http://registrar.godaddy.com
+
+   Server Name: WIX.COM.DENISEROUSSELSART.COM
+   IP Address: 216.139.213.144
+   Registrar: GODADDY.COM, LLC
+   Whois Server: whois.godaddy.com
+   Referral URL: http://registrar.godaddy.com
+
+   Server Name: WIX.COM.DESIGNINSPIRED.NET
+   IP Address: 216.185.152.150
+   Registrar: DOMAIN.COM, LLC
+   Whois Server: whois.domain.com
+   Referral URL: http://www.domain.com
+
+   Server Name: WIX.COM.DEVELOPMENTSWELIKE.COM
+   IP Address: 216.185.152.151
+   Registrar: CRAZY DOMAINS FZ-LLC
+   Whois Server: whois.crazydomains.com
+   Referral URL: http://www.crazydomains.com 
+
+   Server Name: WIX.COM.DIFFERWEAR.COM
+   IP Address: 216.185.152.148
+   Registrar: NAME.COM, INC.
+   Whois Server: whois.name.com
+   Referral URL: http://www.name.com
+
+   Server Name: WIX.COM.DIVERSITYHAIRDESIGN.COM
+   IP Address: 216.139.213.90
+   Registrar: PDR LTD. D/B/A PUBLICDOMAINREGISTRY.COM
+   Whois Server: whois.PublicDomainRegistry.com
+   Referral URL: http://www.PublicDomainRegistry.com
+
+   Server Name: WIX.COM.DLOVELYSHOP.COM
+   IP Address: 216.185.152.156
+   Registrar: GODADDY.COM, LLC
+   Whois Server: whois.godaddy.com
+   Referral URL: http://registrar.godaddy.com
+
+   Server Name: WIX.COM.DOUGKACENA.COM
+   IP Address: 216.185.152.144
+   Registrar: WILD WEST DOMAINS, LLC
+   Whois Server: whois.wildwestdomains.com
+   Referral URL: http://www.wildwestdomains.com
+
+   Server Name: WIX.COM.EAGLEONEPHOTOGRAPHY.COM
+   IP Address: 216.139.213.144
+   Registrar: GODADDY.COM, LLC
+   Whois Server: whois.godaddy.com
+   Referral URL: http://registrar.godaddy.com
+
+   Server Name: WIX.COM.EPIPHANYSTUDIOS.NET
+   IP Address: 216.185.152.154
+   Registrar: GODADDY.COM, LLC
+   Whois Server: whois.godaddy.com
+   Referral URL: http://registrar.godaddy.com
+
+   Server Name: WIX.COM.ERDLB.COM
+   IP Address: 216.185.152.156
+   Registrar: GODADDY.COM, LLC
+   Whois Server: whois.godaddy.com
+   Referral URL: http://registrar.godaddy.com
+
+   Server Name: WIX.COM.ERICJUBB.COM
+   IP Address: 216.185.152.147
+   Registrar: GODADDY.COM, LLC
+   Whois Server: whois.godaddy.com
+   Referral URL: http://registrar.godaddy.com
+
+   Server Name: WIX.COM.FASHIONABLYADVANTAGEDMAG.COM
+   IP Address: 216.139.213.144
+   Registrar: GODADDY.COM, LLC
+   Whois Server: whois.godaddy.com
+   Referral URL: http://registrar.godaddy.com
+
+   Server Name: WIX.COM.FERGOSPORTS.COM
+   IP Address: 216.185.152.151
+   Registrar: GODADDY.COM, LLC
+   Whois Server: whois.godaddy.com
+   Referral URL: http://registrar.godaddy.com
+
+   Server Name: WIX.COM.FINDINGHOMESTORIES.COM
+   IP Address: 216.185.152.151
+   Registrar: WILD WEST DOMAINS, LLC
+   Whois Server: whois.wildwestdomains.com
+   Referral URL: http://www.wildwestdomains.com
+
+   Server Name: WIX.COM.FIVESTARHEALTHCAREINC.COM
+   IP Address: 23.236.62.147
+   Registrar: GODADDY.COM, LLC
+   Whois Server: whois.godaddy.com
+   Referral URL: http://registrar.godaddy.com
+
+   Server Name: WIX.COM.FOLKTAP.COM
+   IP Address: 216.139.213.144
+   Registrar: DOMAIN.COM, LLC
+   Whois Server: whois.domain.com
+   Referral URL: http://www.domain.com
+
+   Domain Name: WIX.COM
+   Registrar: GODADDY.COM, LLC
+   Whois Server: whois.godaddy.com
+   Referral URL: http://registrar.godaddy.com
+   Name Server: NS1.P14.DYNECT.NET
+   Name Server: NS2.P14.DYNECT.NET
+   Name Server: NS3.P14.DYNECT.NET
+   Name Server: NS4.P14.DYNECT.NET
+   Status: clientDeleteProhibited
+   Status: clientRenewProhibited
+   Status: clientTransferProhibited
+   Status: clientUpdateProhibited
+   Updated Date: 06-jul-2014
+   Creation Date: 12-may-1995
+   Expiration Date: 13-may-2021
+
+>>> Last update of whois database: Tue, 21 Oct 2014 12:46:14 GMT <<<
+
+NOTICE: The expiration date displayed in this record is the date the 
+registrar's sponsorship of the domain name registration in the registry is 
+currently set to expire. This date does not necessarily reflect the expiration 
+date of the domain name registrant's agreement with the sponsoring 
+registrar.  Users may consult the sponsoring registrar's Whois database to 
+view the registrar's reported date of expiration for this registration.
+
+TERMS OF USE: You are not authorized to access or query our Whois 
+database through the use of electronic processes that are high-volume and 
+automated except as reasonably necessary to register domain names or 
+modify existing registrations; the Data in VeriSign Global Registry 
+Services' ("VeriSign") Whois database is provided by VeriSign for 
+information purposes only, and to assist persons in obtaining information 
+about or related to a domain name registration record. VeriSign does not 
+guarantee its accuracy. By submitting a Whois query, you agree to abide 
+by the following terms of use: You agree that you may use this Data only 
+for lawful purposes and that under no circumstances will you use this Data 
+to: (1) allow, enable, or otherwise support the transmission of mass 
+unsolicited, commercial advertising or solicitations via e-mail, telephone, 
+or facsimile; or (2) enable high volume, automated, electronic processes 
+that apply to VeriSign (or its computer systems). The compilation, 
+repackaging, dissemination or other use of this Data is expressly 
+prohibited without the prior written consent of VeriSign. You agree not to 
+use electronic processes that are automated and high-volume to access or 
+query the Whois database except as reasonably necessary to register 
+domain names or modify existing registrations. VeriSign reserves the right 
+to restrict your access to the Whois database in its sole discretion to ensure 
+operational stability.  VeriSign may restrict or terminate your access to the 
+Whois database for failure to abide by these terms of use. VeriSign 
+reserves the right to modify these terms at any time. 
+
+The Registry database contains ONLY .COM, .NET, .EDU domains and
+Registrars.

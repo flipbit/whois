@@ -1,0 +1,58 @@
+
+    Domain name:
+        telegraph.co.uk
+
+    Registrant:
+        Telegraph Media Group Limited
+
+    Registrant type:
+        UK Limited Company, (Company number: 451593)
+
+    Registrant's address:
+        111 Buckingham Palace Road
+        itsecurity@telegraph.co.uk
+        London
+        London
+        SW1W 0DT
+        United Kingdom
+
+    Data validation:
+        Registrant contact details validated by Nominet on 07-May-2014
+
+    Registrar:
+        Ascio Technologies Inc t/a Ascio Technologies inc [Tag = ASCIO]
+        URL: http://www.ascio.com
+
+    Relevant dates:
+        Registered on: before Aug-1996
+        Expiry date:  29-Jul-2015
+        Last updated:  07-May-2014
+
+    Registration status:
+        Registered until expiry date.
+
+    Name servers:
+        eur3.akam.net
+        ns1-224.akam.net
+        ns1-63.akam.net
+        usc4.akam.net
+        use1.akam.net
+        use2.akam.net
+        use4.akam.net
+        usw2.akam.net
+
+    WHOIS lookup made at 14:04:40 21-Oct-2014
+
+-- 
+This WHOIS information is provided for free by Nominet UK the central registry
+for .uk domain names. This information and the .uk WHOIS are:
+
+    Copyright Nominet UK 1996 - 2014.
+
+You may not access the .uk WHOIS or use any data from it except as permitted
+by the terms of use available in full at http://www.nominet.org.uk/whoisterms,
+which includes restrictions on: (A) use of the data for advertising, or its
+repackaging, recompilation, redistribution or reuse (B) obscuring, removing
+or hiding any or all of this notice and (C) exceeding query rate or volume
+limits. The data is provided on an 'as-is' basis and may lag behind the
+register. Access may be withdrawn or restricted at any time. 

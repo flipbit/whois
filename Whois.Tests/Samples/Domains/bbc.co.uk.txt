@@ -1,0 +1,53 @@
+
+    Domain name:
+        bbc.co.uk
+
+    Registrant:
+        British Broadcasting Corporation
+
+    Registrant type:
+        UK Corporation by Royal Charter
+
+    Registrant's address:
+        British Broadcasting Corporation
+        Broadcasting House
+        Portland Place
+        London
+        W1A 1AA
+        United Kingdom
+
+    Data validation:
+        Registrant contact details validated by Nominet on 12-Jun-2014
+
+    Registrar:
+        British Broadcasting Corporation [Tag = BBC]
+        URL: http://www.bbc.co.uk
+
+    Relevant dates:
+        Registered on: before Aug-1996
+        Expiry date:  13-Dec-2014
+        Last updated:  12-Jun-2014
+
+    Registration status:
+        Registered until expiry date.
+
+    Name servers:
+        ns1.rbsov.bbc.co.uk       212.58.241.67
+        ns1.tcams.bbc.co.uk       212.72.49.3
+        ns1.thdow.bbc.co.uk       212.58.240.163
+
+    WHOIS lookup made at 12:51:45 21-Oct-2014
+
+-- 
+This WHOIS information is provided for free by Nominet UK the central registry
+for .uk domain names. This information and the .uk WHOIS are:
+
+    Copyright Nominet UK 1996 - 2014.
+
+You may not access the .uk WHOIS or use any data from it except as permitted
+by the terms of use available in full at http://www.nominet.org.uk/whoisterms,
+which includes restrictions on: (A) use of the data for advertising, or its
+repackaging, recompilation, redistribution or reuse (B) obscuring, removing
+or hiding any or all of this notice and (C) exceeding query rate or volume
+limits. The data is provided on an 'as-is' basis and may lag behind the
+register. Access may be withdrawn or restricted at any time. 

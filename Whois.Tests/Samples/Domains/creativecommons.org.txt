@@ -1,0 +1,67 @@
+Domain Name:CREATIVECOMMONS.ORG
+Domain ID: D51996382-LROR
+Creation Date: 2001-01-15T16:51:44Z
+Updated Date: 2013-11-06T23:56:40Z
+Registry Expiry Date: 2021-01-15T16:51:44Z
+Sponsoring Registrar:Gandi SAS (R42-LROR)
+Sponsoring Registrar IANA ID: 81
+WHOIS Server: 
+Referral URL: 
+Domain Status: clientTransferProhibited
+Registrant ID:NK554-GANDI
+Registrant Name:Matt Lee
+Registrant Organization:Creative Commons
+Registrant Street: PO Box 1866
+Registrant City:Mountain View
+Registrant State/Province:CA
+Registrant Postal Code:94042
+Registrant Country:US
+Registrant Phone:+1.4154295471
+Registrant Phone Ext: 
+Registrant Fax: +1.6509651605
+Registrant Fax Ext: 
+Registrant Email:183137095f86398691b5d9824f46c239-983951@contact.gandi.net
+Admin ID:NK554-GANDI
+Admin Name:Matt Lee
+Admin Organization:Creative Commons
+Admin Street: PO Box 1866
+Admin City:Mountain View
+Admin State/Province:CA
+Admin Postal Code:94042
+Admin Country:US
+Admin Phone:+1.4154295471
+Admin Phone Ext: 
+Admin Fax: +1.6509651605
+Admin Fax Ext: 
+Admin Email:183137095f86398691b5d9824f46c239-983951@contact.gandi.net
+Tech ID:NK554-GANDI
+Tech Name:Matt Lee
+Tech Organization:Creative Commons
+Tech Street: PO Box 1866
+Tech City:Mountain View
+Tech State/Province:CA
+Tech Postal Code:94042
+Tech Country:US
+Tech Phone:+1.4154295471
+Tech Phone Ext: 
+Tech Fax: +1.6509651605
+Tech Fax Ext: 
+Tech Email:183137095f86398691b5d9824f46c239-983951@contact.gandi.net
+Name Server:NS-1088.AWSDNS-08.ORG
+Name Server:NS-1742.AWSDNS-25.CO.UK
+Name Server:NS-819.AWSDNS-38.NET
+Name Server:NS-455.AWSDNS-56.COM
+Name Server: 
+Name Server: 
+Name Server: 
+Name Server: 
+Name Server: 
+Name Server: 
+Name Server: 
+Name Server: 
+Name Server: 
+DNSSEC:Unsigned
+
+Access to Public Interest Registry WHOIS information is provided to assist persons in determining the contents of a domain name registration record in the Public Interest Registry registry database. The data in this record is provided by Public Interest Registry for informational purposes only, and Public Interest Registry does not guarantee its accuracy. This service is intended only for query-based access. You agree that you will use this data only for lawful purposes and that, under no circumstances will you use this data to(a) allow, enable, or otherwise support the transmission by e-mail, telephone, or facsimile of mass unsolicited, commercial advertising or solicitations to entities other than the data recipient's own existing customers; or (b) enable high volume, automated, electronic processes that send queries or data to the systems of Registry Operator, a Registrar, or Afilias except as reasonably necessary to register domain names or modify existing registrations. All rights reserved. Public Interest Registry reserves the right to modify these terms at any time. By submitting this query, you agree to abide by this policy.
+
+

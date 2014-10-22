@@ -1,0 +1,19 @@
+% By submitting a query to RIPN's Whois Service
+% you agree to abide by the following terms of use:
+% http://www.ripn.net/about/servpol.html#3.2 (in Russian) 
+% http://www.ripn.net/about/en/servpol.html#3.2 (in English).
+
+domain:        YANDEX.RU
+nserver:       ns1.yandex.ru. 213.180.193.1, 2a02:6b8::1
+nserver:       ns2.yandex.ru. 93.158.134.1, 2a02:6b8:0:1::1
+state:         REGISTERED, DELEGATED, VERIFIED
+org:           YANDEX, LLC.
+registrar:     RU-CENTER-RU
+admin-contact: https://www.nic.ru/whois
+created:       1997.09.23
+paid-till:     2015.10.01
+free-date:     2015.11.01
+source:        TCI
+
+Last updated on 2014.10.21 15:56:33 MSK
+

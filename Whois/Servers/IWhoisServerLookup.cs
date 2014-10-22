@@ -1,5 +1,4 @@
 ﻿using System.Text;
-using Whois.Domain;
 
 namespace Whois.Servers
 {

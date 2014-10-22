@@ -1,0 +1,21 @@
+% By submitting a query to RIPN's Whois Service
+% you agree to abide by the following terms of use:
+% http://www.ripn.net/about/servpol.html#3.2 (in Russian) 
+% http://www.ripn.net/about/en/servpol.html#3.2 (in English).
+
+domain:        RAMBLER.RU
+nserver:       ns2.rambler.ru. 81.19.66.61
+nserver:       ns3.rambler.ru. 81.19.66.62
+nserver:       ns4.rambler.ru. 81.19.67.89
+nserver:       ns5.rambler.ru. 81.19.67.90
+state:         REGISTERED, DELEGATED, VERIFIED
+org:           Rambler Internet Holdings, LLC
+registrar:     RU-CENTER-RU
+admin-contact: https://www.nic.ru/whois
+created:       1996.09.26
+paid-till:     2015.08.01
+free-date:     2015.09.01
+source:        TCI
+
+Last updated on 2014.10.21 16:36:33 MSK
+

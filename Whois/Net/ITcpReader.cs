@@ -23,6 +23,6 @@ namespace Whois.Net
         /// <param name="port">The port.</param>
         /// <param name="command">The command.</param>
         /// <returns></returns>
-        ArrayList Read(string url, int port, string command);
+        string Read(string url, int port, string command);
     }
 }

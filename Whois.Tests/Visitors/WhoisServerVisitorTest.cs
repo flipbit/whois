@@ -1,5 +1,4 @@
 ﻿using NUnit.Framework;
-using Whois.Domain;
 using Whois.Servers;
 
 namespace Whois.Visitors

@@ -1,0 +1,68 @@
+Domain Name:ARCHIVE.ORG
+Domain ID: D2445039-LROR
+Creation Date: 1995-12-14T05:00:00Z
+Updated Date: 2013-03-04T00:20:16Z
+Registry Expiry Date: 2022-12-13T05:00:00Z
+Sponsoring Registrar:easyDNS Technologies Inc. (R1247-LROR)
+Sponsoring Registrar IANA ID: 469
+WHOIS Server: 
+Referral URL: 
+Domain Status: clientTransferProhibited
+Domain Status: clientUpdateProhibited
+Registrant ID:tuPYhPbV5VJa0FS2
+Registrant Name:Internet Archive
+Registrant Organization:Internet Archive
+Registrant Street: 300 Funston Avenue
+Registrant City:San Francisco
+Registrant State/Province:CA
+Registrant Postal Code:94118
+Registrant Country:US
+Registrant Phone:+1.4155616767
+Registrant Phone Ext: 
+Registrant Fax: +1.1231231234
+Registrant Fax Ext: 
+Registrant Email:info@archive.org
+Admin ID:tu1R9cns9Biz7aUp
+Admin Name:Internet Archive
+Admin Organization:
+Admin Street: 300 Funston Avenue
+Admin City:San Francisco
+Admin State/Province:CA
+Admin Postal Code:94118
+Admin Country:US
+Admin Phone:+1.4155616767
+Admin Phone Ext: 
+Admin Fax: 
+Admin Fax Ext: 
+Admin Email:info@archive.org
+Tech ID:tu1R9cns9Biz7aUp
+Tech Name:Internet Archive
+Tech Organization:
+Tech Street: 300 Funston Avenue
+Tech City:San Francisco
+Tech State/Province:CA
+Tech Postal Code:94118
+Tech Country:US
+Tech Phone:+1.4155616767
+Tech Phone Ext: 
+Tech Fax: 
+Tech Fax Ext: 
+Tech Email:info@archive.org
+Name Server:NS1.ARCHIVE.ORG
+Name Server:NS2.ARCHIVE.ORG
+Name Server:SFBA.SNS-PB.ISC.ORG
+Name Server:ORD.SNS-PB.ISC.ORG
+Name Server:AMS.SNS-PB.ISC.ORG
+Name Server:NS3.ARCHIVE.ORG
+Name Server: 
+Name Server: 
+Name Server: 
+Name Server: 
+Name Server: 
+Name Server: 
+Name Server: 
+DNSSEC:Unsigned
+
+Access to Public Interest Registry WHOIS information is provided to assist persons in determining the contents of a domain name registration record in the Public Interest Registry registry database. The data in this record is provided by Public Interest Registry for informational purposes only, and Public Interest Registry does not guarantee its accuracy. This service is intended only for query-based access. You agree that you will use this data only for lawful purposes and that, under no circumstances will you use this data to(a) allow, enable, or otherwise support the transmission by e-mail, telephone, or facsimile of mass unsolicited, commercial advertising or solicitations to entities other than the data recipient's own existing customers; or (b) enable high volume, automated, electronic processes that send queries or data to the systems of Registry Operator, a Registrar, or Afilias except as reasonably necessary to register domain names or modify existing registrations. All rights reserved. Public Interest Registry reserves the right to modify these terms at any time. By submitting this query, you agree to abide by this policy.
+
+

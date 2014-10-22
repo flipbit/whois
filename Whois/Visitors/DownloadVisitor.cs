@@ -1,5 +1,5 @@
-﻿using System.Text;
-using Whois.Domain;
+﻿using System;
+using System.Text;
 using Whois.Interfaces;
 using Whois.Net;
 using Whois.Servers;
@@ -58,9 +58,14 @@ namespace Whois.Visitors
         /// <returns></returns>
         public WhoisRecord Visit(WhoisRecord record)
         {
+            if (record.Server == null)
+            {
+                throw new ArgumentException("Given WhoisRecord does not have the Server property set");
+            }
+
             using (var tcpReader = TcpReaderFactory.Create(Encoding))
             {
-                record.Text = tcpReader.Read(record.Server, 43, record.Domain);
+                record.Text = tcpReader.Read(record.Server.Url, 43, record.Domain);
             }
 
             return record;

@@ -1,0 +1,72 @@
+Domain Name:WIKIMEDIA.ORG
+Domain ID: D95346862-LROR
+Creation Date: 2003-03-16T08:22:47Z
+Updated Date: 2014-09-29T23:01:40Z
+Registry Expiry Date: 2015-03-16T08:22:47Z
+Sponsoring Registrar:MarkMonitor Inc. (R37-LROR)
+Sponsoring Registrar IANA ID: 292
+WHOIS Server: 
+Referral URL: 
+Domain Status: clientDeleteProhibited
+Domain Status: clientTransferProhibited
+Domain Status: clientUpdateProhibited
+Registrant ID:mmr-116560
+Registrant Name:Domain Admin
+Registrant Organization:Wikimedia Foundation, Inc.
+Registrant Street: 149 New Montgomery Street
+Registrant Street: Third Floor
+Registrant City:San Francisco
+Registrant State/Province:CA
+Registrant Postal Code:94105
+Registrant Country:US
+Registrant Phone:+1.4158396885
+Registrant Phone Ext: 
+Registrant Fax: +1.4158820495
+Registrant Fax Ext: 
+Registrant Email:dns-admin@wikimedia.org
+Admin ID:mmr-116560
+Admin Name:Domain Admin
+Admin Organization:Wikimedia Foundation, Inc.
+Admin Street: 149 New Montgomery Street
+Admin Street: Third Floor
+Admin City:San Francisco
+Admin State/Province:CA
+Admin Postal Code:94105
+Admin Country:US
+Admin Phone:+1.4158396885
+Admin Phone Ext: 
+Admin Fax: +1.4158820495
+Admin Fax Ext: 
+Admin Email:dns-admin@wikimedia.org
+Tech ID:mmr-116560
+Tech Name:Domain Admin
+Tech Organization:Wikimedia Foundation, Inc.
+Tech Street: 149 New Montgomery Street
+Tech Street: Third Floor
+Tech City:San Francisco
+Tech State/Province:CA
+Tech Postal Code:94105
+Tech Country:US
+Tech Phone:+1.4158396885
+Tech Phone Ext: 
+Tech Fax: +1.4158820495
+Tech Fax Ext: 
+Tech Email:dns-admin@wikimedia.org
+Name Server:NS0.WIKIMEDIA.ORG
+Name Server:NS1.WIKIMEDIA.ORG
+Name Server:NS2.WIKIMEDIA.ORG
+Name Server: 
+Name Server: 
+Name Server: 
+Name Server: 
+Name Server: 
+Name Server: 
+Name Server: 
+Name Server: 
+Name Server: 
+Name Server: 
+DNSSEC:Unsigned
+
+Access to Public Interest Registry WHOIS information is provided to assist persons in determining the contents of a domain name registration record in the Public Interest Registry registry database. The data in this record is provided by Public Interest Registry for informational purposes only, and Public Interest Registry does not guarantee its accuracy. This service is intended only for query-based access. You agree that you will use this data only for lawful purposes and that, under no circumstances will you use this data to(a) allow, enable, or otherwise support the transmission by e-mail, telephone, or facsimile of mass unsolicited, commercial advertising or solicitations to entities other than the data recipient's own existing customers; or (b) enable high volume, automated, electronic processes that send queries or data to the systems of Registry Operator, a Registrar, or Afilias except as reasonably necessary to register domain names or modify existing registrations. All rights reserved. Public Interest Registry reserves the right to modify these terms at any time. By submitting this query, you agree to abide by this policy.
+
+

@@ -52,17 +52,15 @@ namespace Whois.Net
             }
         }
 
-        private ArrayList Response()
+        private void Read(StringBuilder sb)
         {
-            var list = new ArrayList();
-
             try
             {
                 var response = reader.ReadLine();
 
                 while (response != null)
                 {
-                    list.Add(response);
+                    sb.AppendLine(response);
 
                     response = reader.ReadLine();
                 }
@@ -71,8 +69,6 @@ namespace Whois.Net
             {
                 throw new ApplicationException("Error whilst reading data: " + ex.Message);
             }
-
-            return list;
         } 
 
         #endregion
@@ -109,9 +105,9 @@ namespace Whois.Net
         /// <param name="port">The port.</param>
         /// <param name="command">The command.</param>
         /// <returns></returns>
-        public ArrayList Read(string url, int port, string command)
+        public string Read(string url, int port, string command)
         {
-            var result = new ArrayList();
+            var sb = new StringBuilder();
 
             var connected = Connect(url, port);
 
@@ -119,10 +115,10 @@ namespace Whois.Net
             {
                 Write(command);
 
-                result = Response();
+                Read(sb);
             }
 
-            return result;
+            return sb.ToString();
         }
 
         /// <summary>

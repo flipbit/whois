@@ -2,7 +2,6 @@
 using System.Collections.Generic;
 using System.IO;
 using NUnit.Framework;
-using Whois.Domain;
 using Whois.Visitors;
 
 namespace Whois.TopDomains

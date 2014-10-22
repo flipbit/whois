@@ -47,14 +47,6 @@
     <Reference Include="System.Core">
       <RequiredTargetFramework>3.5</RequiredTargetFramework>
     </Reference>
-    <Reference Include="System.Xml.Linq">
-      <RequiredTargetFramework>3.5</RequiredTargetFramework>
-    </Reference>
-    <Reference Include="System.Data.DataSetExtensions">
-      <RequiredTargetFramework>3.5</RequiredTargetFramework>
-    </Reference>
-    <Reference Include="System.Data" />
-    <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
     <Compile Include="EmbeddedPatternReaderTest.cs" />
@@ -68,15 +60,11 @@
     <Compile Include="TopDomains\TestTopDomains.cs" />
     <Compile Include="Validators\DomainValidatorTest.cs" />
     <Compile Include="Visitors\PatternExtractorVisitorTest.cs" />
-    <Compile Include="Visitors\RegistroBrVisitorTest.cs" />
-    <Compile Include="Visitors\DnsPtVisitorTest.cs" />
     <Compile Include="Visitors\DownloadSecondaryServerVisitorTest.cs" />
     <Compile Include="Visitors\DownloadVisitorTest.cs" />
     <Compile Include="Visitors\ExpandResultsVisitorTest.cs" />
     <Compile Include="Visitors\FakeWhoisVisitor.cs" />
-    <Compile Include="Visitors\MarkMonitorVisitorTest.cs" />
-    <Compile Include="Visitors\NominetVisitorTest.cs" />
-    <Compile Include="Visitors\RipnVisitorTest.cs" />
+    <Compile Include="Visitors\RedirectVisitorTest.cs" />
     <Compile Include="Visitors\WhoisServerVisitorTest.cs" />
     <Compile Include="WhoisLookupTest.cs" />
     <Compile Include="Servers\InternicServerLookupTest.cs" />

@@ -1,6 +1,5 @@
 ﻿using System.Collections;
 using System.Text;
-using Whois.Domain;
 using Whois.Interfaces;
 
 namespace Whois.Visitors
@@ -21,7 +20,7 @@ namespace Whois.Visitors
 
         public WhoisRecord Visit(WhoisRecord record)
         {
-            record.Text = new ArrayList { fakeContent };
+            record.Text =  fakeContent;
 
             return record;
         }

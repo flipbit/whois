@@ -1,0 +1,69 @@
+Domain Name:APACHE.ORG
+Domain ID: D706686-LROR
+Creation Date: 1995-04-11T04:00:00Z
+Updated Date: 2012-03-11T12:18:23Z
+Registry Expiry Date: 2021-04-12T04:00:00Z
+Sponsoring Registrar:Domain.com, LLC (R1915-LROR)
+Sponsoring Registrar IANA ID: 886
+WHOIS Server: 
+Referral URL: 
+Domain Status: clientDeleteProhibited
+Domain Status: clientTransferProhibited
+Domain Status: clientUpdateProhibited
+Registrant ID:DOT-7YVY6BU0O2IJ
+Registrant Name:Host Master
+Registrant Organization:Apache Software Foundation
+Registrant Street: 1901 Munsey Drive
+Registrant City:Forest Hill
+Registrant State/Province:MD
+Registrant Postal Code:21050-2747
+Registrant Country:US
+Registrant Phone:+1.14104200140
+Registrant Phone Ext: 
+Registrant Fax: 
+Registrant Fax Ext: 
+Registrant Email:hostmaster-2005-alpha@apache.org
+Admin ID:DOT-4ALI66NRVV19
+Admin Name:Host Master
+Admin Organization:Apache Software Foundation
+Admin Street: 1901 Munsey Drive
+Admin City:Forest Hill
+Admin State/Province:MD
+Admin Postal Code:21050-2747
+Admin Country:US
+Admin Phone:+1.14104200140
+Admin Phone Ext: 
+Admin Fax: 
+Admin Fax Ext: 
+Admin Email:hostmaster-2005-alpha@apache.org
+Tech ID:DOT-L1P3U1WVW24O
+Tech Name:Host Master
+Tech Organization:Apache Software Foundation
+Tech Street: 1901 Munsey Drive
+Tech City:Forest Hill
+Tech State/Province:MD
+Tech Postal Code:21050-2747
+Tech Country:US
+Tech Phone:+1.14104200140
+Tech Phone Ext: 
+Tech Fax: 
+Tech Fax Ext: 
+Tech Email:hostmaster-2005-alpha@apache.org
+Name Server:NS2.SURFNET.NL
+Name Server:NS3.NO-IP.COM
+Name Server:NS2.NO-IP.COM
+Name Server:NS1.NO-IP.COM
+Name Server:NS4.NO-IP.COM
+Name Server: 
+Name Server: 
+Name Server: 
+Name Server: 
+Name Server: 
+Name Server: 
+Name Server: 
+Name Server: 
+DNSSEC:Unsigned
+
+Access to Public Interest Registry WHOIS information is provided to assist persons in determining the contents of a domain name registration record in the Public Interest Registry registry database. The data in this record is provided by Public Interest Registry for informational purposes only, and Public Interest Registry does not guarantee its accuracy. This service is intended only for query-based access. You agree that you will use this data only for lawful purposes and that, under no circumstances will you use this data to(a) allow, enable, or otherwise support the transmission by e-mail, telephone, or facsimile of mass unsolicited, commercial advertising or solicitations to entities other than the data recipient's own existing customers; or (b) enable high volume, automated, electronic processes that send queries or data to the systems of Registry Operator, a Registrar, or Afilias except as reasonably necessary to register domain names or modify existing registrations. All rights reserved. Public Interest Registry reserves the right to modify these terms at any time. By submitting this query, you agree to abide by this policy.
+
+

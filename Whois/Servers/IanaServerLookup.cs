@@ -90,7 +90,7 @@ namespace Whois.Servers
         {
             using (var tcpReader = TcpReaderFactory.Create())
             {
-                return tcpReader.Read("whois.iana.org", 43, tld.ToUpper()).AsString();
+                return tcpReader.Read("whois.iana.org", 43, tld.ToUpper());
             }
         }
     }

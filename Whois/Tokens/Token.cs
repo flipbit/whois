@@ -1,3 +1,5 @@
+using System;
+
 namespace Whois.Tokens
 {
     /// <summary>
@@ -30,6 +32,14 @@ namespace Whois.Tokens
         public string Value { get; set; }
 
         /// <summary>
+        /// Gets or sets the operation to perform on the replaced value.
+        /// </summary>
+        /// <value>
+        /// The operation.
+        /// </value>
+        public string Operation { get; set; }
+
+        /// <summary>
         /// Determines whether this instance is contained within the given input.
         /// </summary>
         /// <param name="input">The input.</param>
@@ -37,6 +47,32 @@ namespace Whois.Tokens
         public bool ContainedIn(string input)
         {
             return input.Contains(Prefix) && input.Contains(Suffix);
+        }
+
+        public string PerformOperation(string value)
+        {
+            string result;
+
+            switch (Operation)
+            {
+                case "ToUpper()":
+                    result = value.ToUpper();
+                    break;
+
+                case "ToLower()":
+                    result = value.ToLower();
+                    break;
+
+                case "":
+                case null:
+                    result = value;
+                    break;
+
+                default:
+                    throw new ArgumentException("Unknown Token Operation: " + Operation);
+            }
+
+            return result;
         }
     }
 }

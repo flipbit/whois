@@ -1,0 +1,36 @@
+Domain Name: goo.gl
+Domain ID: Imp619-GL
+WHOIS Server: 
+Referral URL: 
+Updated Date: 2013-12-02T19:11:52.689Z
+Creation Date: 2005-06-22T02:00:00.000Z
+Registry Expiry Date: 2015-01-01T03:00:00.000Z
+Sponsoring Registrar: MarkMonitor
+Sponsoring Registrar IANA ID: 
+Domain Status: clientDeleteProhibited
+Domain Status: clientTransferProhibited
+Domain Status: clientRenewProhibited
+Domain Status: clientUpdateProhibited
+Domain Status: ok
+Registrant Name: Google Inc.
+Registrant Street: 1600 Amphitheatre Parkway
+Registrant City: Mountain View
+Registrant State/Province: CA
+Registrant Postal Code: 94043
+Registrant Country: US
+Registrant Phone: +1.6303300100
+Registrant Phone Ext: 
+Registrant Email: dns-admin@google.com
+Name Server: ns1.google.com
+Name Server: ns2.google.com
+Name Server: ns3.google.com
+Name Server: ns4.google.com
+DNSSEC: unsigned
+Additional Section
+Sponsoring Registrar URL: http://www.markmonitor.com
+Sponsoring Registrar Address: 391 N Ancestor Place  Boise, ID 83704 US
+Sponsoring Registrar Country: US
+Sponsoring Registrar Customer Service Contact: Domain Administrator
+Sponsoring Registrar Customer Service Email: ccops@markmonitor.com
+
+>>> Last update of WHOIS database: 2014-10-21T11:20:12.580Z <<<

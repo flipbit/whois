@@ -1,0 +1,68 @@
+Domain Name:JOOMLA.ORG
+Domain ID: D107234346-LROR
+Creation Date: 2005-08-21T09:09:46Z
+Updated Date: 2014-07-21T20:47:22Z
+Registry Expiry Date: 2015-08-21T09:09:46Z
+Sponsoring Registrar:TPP Wholesale Pty Ltd (R1378-LROR)
+Sponsoring Registrar IANA ID: 900
+WHOIS Server: 
+Referral URL: 
+Domain Status: clientTransferProhibited
+Domain Status: clientUpdateProhibited
+Registrant ID:NR-15927
+Registrant Name:James Vasile
+Registrant Organization:Open Source Matters
+Registrant Street: PO Box 4668 #88354
+Registrant City:New York
+Registrant State/Province:New York
+Registrant Postal Code:10163-4668
+Registrant Country:US
+Registrant Phone:+12.125800800
+Registrant Phone Ext: 
+Registrant Fax: 
+Registrant Fax Ext: 
+Registrant Email:admin@opensourcematters.org
+Admin ID:NR-15926
+Admin Name:Brad Baker
+Admin Organization:Bradleebaker
+Admin Street: PO Box 5300
+Admin City:Greystanes
+Admin State/Province:NSW
+Admin Postal Code:2145
+Admin Country:AU
+Admin Phone:+61.411065584
+Admin Phone Ext: 
+Admin Fax: 
+Admin Fax Ext: 
+Admin Email:brad.baker@joomla.org
+Tech ID:NR-15928
+Tech Name:Brad Baker
+Tech Organization:Bradleebaker
+Tech Street: PO Box 5300
+Tech City:Greystanes
+Tech State/Province:NSW
+Tech Postal Code:2145
+Tech Country:AU
+Tech Phone:+61.411065584
+Tech Phone Ext: 
+Tech Fax: 
+Tech Fax Ext: 
+Tech Email:brad.baker@joomla.org
+Name Server:DNS1.DIRECTROUTER.NET
+Name Server:DNS2.DIRECTROUTER.NET
+Name Server:DNS3.DIRECTROUTER.NET
+Name Server: 
+Name Server: 
+Name Server: 
+Name Server: 
+Name Server: 
+Name Server: 
+Name Server: 
+Name Server: 
+Name Server: 
+Name Server: 
+DNSSEC:Unsigned
+
+Access to Public Interest Registry WHOIS information is provided to assist persons in determining the contents of a domain name registration record in the Public Interest Registry registry database. The data in this record is provided by Public Interest Registry for informational purposes only, and Public Interest Registry does not guarantee its accuracy. This service is intended only for query-based access. You agree that you will use this data only for lawful purposes and that, under no circumstances will you use this data to(a) allow, enable, or otherwise support the transmission by e-mail, telephone, or facsimile of mass unsolicited, commercial advertising or solicitations to entities other than the data recipient's own existing customers; or (b) enable high volume, automated, electronic processes that send queries or data to the systems of Registry Operator, a Registrar, or Afilias except as reasonably necessary to register domain names or modify existing registrations. All rights reserved. Public Interest Registry reserves the right to modify these terms at any time. By submitting this query, you agree to abide by this policy.
+
+
