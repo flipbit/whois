@@ -1,6 +1,5 @@
 ﻿using System.Collections.Generic;
 using System.Text;
-using Whois.Interfaces;
 using Whois.Visitors;
 
 namespace Whois

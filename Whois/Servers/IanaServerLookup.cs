@@ -1,7 +1,5 @@
-﻿using Whois.Extensions;
-using Whois.Interfaces;
-using Whois.Net;
-using Whois.Tokens;
+﻿using Whois.Net;
+using Tokens;
 
 namespace Whois.Servers
 {

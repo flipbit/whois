@@ -47,6 +47,9 @@
     <Reference Include="System.Core">
       <RequiredTargetFramework>3.5</RequiredTargetFramework>
     </Reference>
+    <Reference Include="Tokenizer">
+      <HintPath>..\packages\Tokenizer.0.9.1\lib\net45\Tokenizer.dll</HintPath>
+    </Reference>
   </ItemGroup>
   <ItemGroup>
     <Compile Include="EmbeddedPatternReaderTest.cs" />
@@ -56,7 +59,6 @@
     <Compile Include="Servers\FakeWhoisServerLookup.cs" />
     <Compile Include="Extensions\StringExtensionsTest.cs" />
     <Compile Include="Servers\IanaServerLookupTest.cs" />
-    <Compile Include="Tokens\TokenizerTest.cs" />
     <Compile Include="TopDomains\TestTopDomains.cs" />
     <Compile Include="Validators\DomainValidatorTest.cs" />
     <Compile Include="Visitors\PatternExtractorVisitorTest.cs" />
@@ -71,10 +73,11 @@
     <Compile Include="Properties\AssemblyInfo.cs" />
   </ItemGroup>
   <ItemGroup>
-    <None Include="packages.config" />
     <EmbeddedResource Include="Patterns\InvalidExtension.rtf" />
   </ItemGroup>
-  <ItemGroup />
+  <ItemGroup>
+    <None Include="packages.config" />
+  </ItemGroup>
   <ItemGroup>
     <ProjectReference Include="..\Whois\Whois.csproj">
       <Project>{ec562e36-605b-46d5-92d2-bad0c6c6e863}</Project>

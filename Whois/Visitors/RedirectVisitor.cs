@@ -1,7 +1,6 @@
 ﻿using System.Text;
-using Whois.Interfaces;
 using Whois.Net;
-using Whois.Tokens;
+using Tokens;
 
 namespace Whois.Visitors
 {

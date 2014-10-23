@@ -1,7 +1,6 @@
 ﻿using System;
 using System.Text;
 using Whois.Cache;
-using Whois.Interfaces;
 
 namespace Whois.Net
 {

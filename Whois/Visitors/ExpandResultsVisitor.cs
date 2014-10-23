@@ -1,5 +1,4 @@
 ﻿using System.Text;
-using Whois.Interfaces;
 using Whois.Net;
 
 namespace Whois.Visitors

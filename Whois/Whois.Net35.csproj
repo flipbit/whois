@@ -34,6 +34,10 @@
   <ItemGroup>
     <Reference Include="System" />
     <Reference Include="System.Core" />
+    <Reference Include="Tokenizer, Version=1.0.0.0, Culture=neutral, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>..\packages\Tokenizer.0.9.1\lib\net35\Tokenizer.dll</HintPath>
+    </Reference>
   </ItemGroup>
   <ItemGroup>
     <Compile Include="Cache\FileStore.cs" />
@@ -55,10 +59,6 @@
     <Compile Include="Servers\IWhoisServerLookup.cs" />
     <Compile Include="Servers\WhoisServer.cs" />
     <Compile Include="Servers\WhoisServerRecord.cs" />
-    <Compile Include="Tokens\Token.cs" />
-    <Compile Include="Tokens\Tokenizer.cs" />
-    <Compile Include="Tokens\TokenReplacement.cs" />
-    <Compile Include="Tokens\TokenResult.cs" />
     <Compile Include="Validators\DomainValidator.cs" />
     <Compile Include="Visitors\DownloadVisitor.cs" />
     <Compile Include="Visitors\ExpandResultsVisitor.cs" />

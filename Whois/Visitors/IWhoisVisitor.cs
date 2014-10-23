@@ -1,6 +1,6 @@
 ﻿using System.Text;
 
-namespace Whois.Interfaces
+namespace Whois.Visitors
 {
     /// <summary>
     /// Interface to download WHOIS records

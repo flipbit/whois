@@ -1,8 +1,7 @@
 ﻿using System.Collections.Generic;
 using System.Linq;
 using System.Text;
-using Whois.Interfaces;
-using Whois.Tokens;
+using Tokens;
 
 namespace Whois.Visitors
 {

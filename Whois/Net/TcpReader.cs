@@ -3,7 +3,6 @@ using System.Collections;
 using System.Text;
 using System.IO;
 using System.Net.Sockets;
-using Whois.Interfaces;
 
 namespace Whois.Net
 {

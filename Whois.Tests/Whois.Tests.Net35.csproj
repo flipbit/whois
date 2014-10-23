@@ -44,6 +44,10 @@
     <Reference Include="System.Core">
       <RequiredTargetFramework>3.5</RequiredTargetFramework>
     </Reference>
+    <Reference Include="Tokenizer, Version=1.0.0.0, Culture=neutral, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>..\packages\Tokenizer.0.9.1\lib\net35\Tokenizer.dll</HintPath>
+    </Reference>
   </ItemGroup>
   <ItemGroup>
     <Compile Include="EmbeddedPatternReaderTest.cs" />
@@ -54,7 +58,6 @@
     <Compile Include="Servers\FakeWhoisServerLookup.cs" />
     <Compile Include="Servers\IanaServerLookupTest.cs" />
     <Compile Include="Servers\InternicServerLookupTest.cs" />
-    <Compile Include="Tokens\TokenizerTest.cs" />
     <Compile Include="TopDomains\TestTopDomains.cs" />
     <Compile Include="Validators\DomainValidatorTest.cs" />
     <Compile Include="Visitors\DownloadSecondaryServerVisitorTest.cs" />
