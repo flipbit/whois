@@ -23,7 +23,7 @@ namespace Whois.Visitors
 
             record = visitor.Visit(record);
 
-            Assert.AreEqual("test.whois.com", record.Server);
+            Assert.AreEqual("test.whois.com", record.Server.Url);
         }
     }
 }

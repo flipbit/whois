@@ -27,7 +27,7 @@ namespace Whois
 
             var result = lookup.Lookup("example.com");
 
-            Assert.AreEqual("first\r\n", result.ToString());
+            Assert.AreEqual("first", result.ToString());
         }
 
         [Test]
@@ -38,7 +38,7 @@ namespace Whois
 
             var result = lookup.Lookup("example.com");
 
-            Assert.AreEqual("second\r\n", result.ToString());
+            Assert.AreEqual("second", result.ToString());
         }
     }
 }

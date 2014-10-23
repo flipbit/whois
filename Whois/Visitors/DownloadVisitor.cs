@@ -2,7 +2,6 @@
 using System.Text;
 using Whois.Interfaces;
 using Whois.Net;
-using Whois.Servers;
 
 namespace Whois.Visitors
 {
@@ -25,14 +24,6 @@ namespace Whois.Visitors
         public ITcpReaderFactory TcpReaderFactory { get; set; }
 
         /// <summary>
-        /// Gets or sets the whois server lookup.
-        /// </summary>
-        /// <value>
-        /// The whois server lookup.
-        /// </value>
-        public IWhoisServerLookup WhoisServerLookup { get; set; }
-
-        /// <summary>
         /// Initializes a new instance of the <see cref="DownloadVisitor"/> class.
         /// </summary>
         public DownloadVisitor() : this(Encoding.UTF8)
@@ -46,7 +37,6 @@ namespace Whois.Visitors
         public DownloadVisitor(Encoding encoding)
         {
             TcpReaderFactory = new TcpReaderFactory();
-            WhoisServerLookup = new IanaServerLookup();
 
             Encoding = encoding;
         }

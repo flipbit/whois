@@ -85,7 +85,7 @@ namespace Whois.Tokens
 
             foreach (var line in input)
             {
-                if (string.IsNullOrWhiteSpace(line)) continue;
+                if (string.IsNullOrEmpty(line)) continue;
 
                 foreach (var patternLine in patternLines)
                 {

@@ -52,7 +52,7 @@ namespace Whois
 
             foreach (var line in lines)
             {
-                if (string.IsNullOrWhiteSpace(line)) continue;
+                if (string.IsNullOrEmpty(line)) continue;
                 if (line.StartsWith("#")) continue;
 
                 var fileName = @"..\..\..\Whois.Tests\Samples\Tlds\" + line.ToLower() + ".txt";

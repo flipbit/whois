@@ -40,31 +40,48 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="Cache\FileStore.cs" />
+    <Compile Include="Cache\IFileStore.cs" />
+    <Compile Include="Cache\TcpReaderFileCache.cs" />
+    <Compile Include="Contact.cs" />
+    <Compile Include="EmbeddedPatternReader.cs" />
     <Compile Include="Extensions\ArrayListExtensions.cs" />
+    <Compile Include="IWhoisLookup.cs" />
+    <Compile Include="Net\ITcpReader.cs" />
+    <Compile Include="Net\ITcpReaderFactory.cs" />
+    <Compile Include="Net\TcpReader.cs" />
+    <Compile Include="Net\TcpReaderFactory.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
-    <Compile Include="Domain\WhoisRecord.cs" />
-    <Compile Include="Interfaces\ITcpReader.cs" />
-    <Compile Include="Interfaces\ITcpReaderFactory.cs" />
-    <Compile Include="Interfaces\IWhoisServerLookup.cs" />
-    <Compile Include="Interfaces\IWhoisVisitor.cs" />
     <Compile Include="Extensions\StringExtensions.cs" />
-    <Compile Include="TcpReader.cs" />
-    <Compile Include="TcpReaderFactory.cs" />
+    <Compile Include="Servers\IanaServerLookup.cs" />
+    <Compile Include="Servers\InternicServerLookup.cs" />
+    <Compile Include="Servers\IWhoisServer.cs" />
+    <Compile Include="Servers\IWhoisServerLookup.cs" />
+    <Compile Include="Servers\WhoisServer.cs" />
+    <Compile Include="Servers\WhoisServerRecord.cs" />
+    <Compile Include="Tokens\Token.cs" />
+    <Compile Include="Tokens\Tokenizer.cs" />
+    <Compile Include="Tokens\TokenReplacement.cs" />
+    <Compile Include="Tokens\TokenResult.cs" />
     <Compile Include="Validators\DomainValidator.cs" />
-    <Compile Include="Visitors\DnsPtVisitor.cs" />
-    <Compile Include="Visitors\DownloadSecondaryServerVisitor.cs" />
     <Compile Include="Visitors\DownloadVisitor.cs" />
     <Compile Include="Visitors\ExpandResultsVisitor.cs" />
-    <Compile Include="Visitors\MarkMonitorVisitor.cs" />
-    <Compile Include="Visitors\NominetVisitor.cs" />
-    <Compile Include="Visitors\RegistroBrVisitor.cs" />
-    <Compile Include="Visitors\RipnVisitor.cs" />
+    <Compile Include="Visitors\IWhoisVisitor.cs" />
+    <Compile Include="Visitors\PatternExtractorVisitor.cs" />
+    <Compile Include="Visitors\RedirectVisitor.cs" />
     <Compile Include="Visitors\WhoisServerVisitor.cs" />
     <Compile Include="WhoisLookup.cs" />
-    <Compile Include="WhoisServerLookup.cs" />
+    <Compile Include="WhoisRecord.cs" />
+    <Compile Include="WhoisRedirect.cs" />
   </ItemGroup>
   <ItemGroup>
     <None Include="Whois.nuspec" />
+  </ItemGroup>
+  <ItemGroup>
+    <EmbeddedResource Include="Patterns\Domains\Csc.txt" />
+    <EmbeddedResource Include="Patterns\Redirects\Iana.txt" />
+    <EmbeddedResource Include="Patterns\Servers\Iana.txt" />
+    <Content Include="Readme.txt" />
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
   <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 

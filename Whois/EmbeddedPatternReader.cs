@@ -70,7 +70,7 @@ namespace Whois
             {
                 var result = Read(assembly, name);
 
-                if (!string.IsNullOrWhiteSpace(result)) results.Add(result);
+                if (!string.IsNullOrEmpty(result)) results.Add(result);
             }
 
             return results;

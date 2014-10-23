@@ -29,7 +29,9 @@ namespace Whois.Cache
 
         public string GetFileName(string area, string key)
         {
-            return Path.Combine(BaseFolderPath, area, key + ".txt");
+            var folderName = Path.Combine(BaseFolderPath, area);
+
+            return Path.Combine(folderName, key + ".txt");
         }
 
         /// <summary>
