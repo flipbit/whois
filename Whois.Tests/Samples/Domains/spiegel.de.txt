@@ -1,0 +1,2 @@
+Domain: spiegel.de
+Status: connect

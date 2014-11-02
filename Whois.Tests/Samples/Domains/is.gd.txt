@@ -1,0 +1,68 @@
+; The data in the WHOIS database of KSregistry GmbH is provided by
+; KSregistry GmbH for information purposes, and to assist persons in
+; obtaining information about or related to domain name registration
+; records. KSregistry GmbH does not guarantee its accuracy.
+; By submitting a WHOIS query, you agree that you will use this data
+; only for lawful purposes and that, under no circumstances, you will
+; use this data to
+; 1) allow, enable, or otherwise support the transmission of mass
+;    unsolicited, commercial advertising or solicitations via E-mail
+;    (spam); or
+; 2) enable high volume, automated, electronic processes that apply
+;    to KSregistry GmbH or its systems.
+; KSregistry GmbH reserves the right to modify these terms.
+; By submitting this query, you agree to abide by this policy.
+
+domain name: IS.GD
+registrar: Gandi SAS
+url: http://www.gandi.net
+status: clienttransferprohibited
+created date: 2007-09-12 00:00:00
+updated date: 2014-05-30 15:24:52
+expiration date: 2016-09-12 00:00:00
+
+owner-contact: P-KKC23
+owner-organization: Memset
+owner-name: Kate Craig-Wood
+owner-street: Building 87 Dunsfold Park
+owner-city: Cranleigh
+owner-zip: GU6 8TB
+owner-country: GB
+owner-phone: +44.8006349270
+owner-email: tech@memset.com
+
+admin-contact: P-KKC23
+admin-organization: Memset
+admin-name: Kate Craig-Wood
+admin-street: Building 87 Dunsfold Park
+admin-city: Cranleigh
+admin-zip: GU6 8TB
+admin-country: GB
+admin-phone: +44.8006349270
+admin-email: tech@memset.com
+
+tech-contact: P-KKC23
+tech-organization: Memset
+tech-name: Kate Craig-Wood
+tech-street: Building 87 Dunsfold Park
+tech-city: Cranleigh
+tech-zip: GU6 8TB
+tech-country: GB
+tech-phone: +44.8006349270
+tech-email: tech@memset.com
+
+billing-contact: P-KKC23
+billing-organization: Memset
+billing-name: Kate Craig-Wood
+billing-street: Building 87 Dunsfold Park
+billing-city: Cranleigh
+billing-zip: GU6 8TB
+billing-country: GB
+billing-phone: +44.8006349270
+billing-email: tech@memset.com
+
+nameserver: andy.ns.cloudflare.com
+nameserver: coco.ns.cloudflare.com
+
+; Please register your domains at; http://www.gandi.net
+

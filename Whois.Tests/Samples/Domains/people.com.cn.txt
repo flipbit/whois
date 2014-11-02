@@ -1,0 +1,15 @@
+Domain Name: people.com.cn
+ROID: 20021209s10011s00106982-cn
+Domain Status: serverDeleteProhibited
+Domain Status: serverUpdateProhibited
+Domain Status: serverTransferProhibited
+Registrant ID: sfn5729950739244
+Registrant: 人民网股份有限公司
+Registrant Contact Email: 357717122@qq.com
+Sponsoring Registrar: 北京中科三方网络技术有限公司
+Name Server: dns2.peopledaily.com.cn
+Name Server: dns1.peopledaily.com.cn
+Name Server: dns3.peopledaily.com.cn
+Registration Date: 2000-09-28 00:00:00
+Expiration Date: 2015-09-28 00:00:00
+DNSSEC: unsigned

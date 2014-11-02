@@ -1,0 +1,72 @@
+
+Domain Name: marketwatch.com
+Registry Domain ID: 2273867_DOMAIN_COM-VRSN
+Registrar WHOIS Server: whois.corporatedomains.com
+Registrar URL: www.cscprotectsbrands.com
+Updated Date: 2013-12-11 16:34:28 -0500
+Creation Date: 1997-07-31 00:00:00 -0400
+Registrar Registration Expiration Date: 2018-07-30 00:00:00 -0400
+Registrar: CSC CORPORATE DOMAINS, INC.
+Registrar IANA ID: 299
+Registrar Abuse Contact Email: admin@internationaladmin.com
+Registrar Abuse Contact Phone: +1.8887802723
+Domain Status: serverTransferProhibited
+Domain Status: serverDeleteProhibited
+Domain Status: clientTransferProhibited
+Domain Status: serverUpdateProhibited
+Registry Registrant ID: 
+Registrant Name: Domain Administrator
+Registrant Organization: Dow Jones & Company, Inc.
+Registrant Street: PO Box 300
+Registrant City: Princeton
+Registrant State/Province: NJ
+Registrant Postal Code: 08543
+Registrant Country: US
+Registrant Phone: +1.6095204000
+Registrant Phone Ext: 
+Registrant Fax: +1.6095209090
+Registrant Fax Ext: 
+Registrant Email: DomainAdmin@dowjones.com
+Registry Admin ID: 
+Admin Name: Domain Administrator
+Admin Organization: Dow Jones & Company, Inc.
+Admin Street: PO Box 300
+Admin City: Princeton
+Admin State/Province: NJ
+Admin Postal Code: 08543
+Admin Country: US
+Admin Phone: +1.6095204000
+Admin Phone Ext: 
+Admin Fax: +1.6095209090
+Admin Fax Ext: 
+Admin Email: DomainAdmin@dowjones.com
+Registry Tech ID: 
+Tech Name: Domain Administrator
+Tech Organization: Dow Jones & Company, Inc.
+Tech Street: PO Box 300
+Tech City: Princeton
+Tech State/Province: NJ
+Tech Postal Code: 08543
+Tech Country: US
+Tech Phone: +1.6095204000
+Tech Phone Ext: 
+Tech Fax: +1.6095209090
+Tech Fax Ext: 
+Tech Email: DomainAdmin@dowjones.com
+Name Server: sb-ns.marketwatch.com
+Name Server: sec-ns.marketwatch.com
+DNSSEC: 
+URL of the ICANN WHOIS Data Problem Reporting System: http://wdprs.internic.net/
+>>> Last update of WHOIS database: 2013-12-11 16:34:28 -0500 <<<
+
+
+Corporation Service Company(c) (CSC)  The Trusted Partner of More than 50% of the 100 Best Global Brands.
+
+Contact us to learn more about our enterprise solutions for Global Domain Name Registration and Management, Trademark Research and Watching, Brand, Logo and Auction Monitoring, as well SSL Certificate Services and DNS Hosting.
+
+NOTICE: You are not authorized to access or query our WHOIS database through the use of high-volume, automated, electronic processes or for the purpose or purposes of using the data in any manner that violates these terms of use. The Data in the CSC WHOIS database is provided by CSC for information purposes only, and to assist persons in obtaining information about or related to a domain name registration record. CSC does not guarantee its accuracy. By submitting a WHOIS query, you agree to abide by the following terms of use: you agree that you may use this Data only for lawful purposes and that under no circumstances will you use this Data to: (1) allow, enable, or otherwise support the transmission of mass unsolicited, commercial advertising or solicitations via direct mail, e-mail, telephone, or facsimile; or (2) enable high volume, automated, electronic processes that apply to CSC (or its computer systems). CSC reserves the right to terminate your access to the WHOIS database in its sole discretion for any violations by you of these terms of use. CSC reserves the right to modify these terms at any time.
+
+Register your domain name at http://www.cscglobal.com
+
+For more information on Whois status codes, please visit https://www.icann.org/resources/pages/epp-status-codes-2014-06-16-en
+

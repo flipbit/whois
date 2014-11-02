@@ -13,6 +13,8 @@ Registrant ID:TBL1-GANDI
 Registrant Name:Tim Berners-Lee
 Registrant Organization:W3C
 Registrant Street: W3C
+Registrant Street: MIT Room 32-G524
+Registrant Street: 32 Vassar St
 Registrant City:Cambridge
 Registrant State/Province:MA
 Registrant Postal Code:02139
@@ -26,6 +28,7 @@ Admin ID:RA1687-GANDI
 Admin Name:Registrar Administration
 Admin Organization:W3C
 Admin Street: 32 Vassar St G504
+Admin Street: MIT CSAIL
 Admin City:Cambridge
 Admin State/Province:MA
 Admin Postal Code:02139

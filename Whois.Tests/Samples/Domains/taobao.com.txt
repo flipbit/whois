@@ -1,66 +1,84 @@
+Domain Name: taobao.com
+Registry Domain ID: 97031786_DOMAIN_COM-VRSN
+Registrar WHOIS Server: whois.markmonitor.com
+Registrar URL: http://www.markmonitor.com
+Updated Date: 2014-09-27T04:00:06-0700
+Creation Date: 2003-04-20T20:50:05-0700
+Registrar Registration Expiration Date: 2016-04-20T20:50:05-0700
+Registrar: MarkMonitor, Inc.
+Registrar IANA ID: 292
+Registrar Abuse Contact Email: abusecomplaints@markmonitor.com
+Registrar Abuse Contact Phone: +1.2083895740
+Domain Status: clientUpdateProhibited
+Domain Status: clientTransferProhibited
+Domain Status: clientDeleteProhibited
+Registry Registrant ID: 
+Registrant Name: Timothy Alexander Steinert
+Registrant Organization: Zhejiang Taobao Network Limited (浙江淘宝网络有限公司)
+Registrant Street: No. 21 Feng Ling Road, Wuchang Street, Yuhang District
+Registrant City: Hangzhou
+Registrant State/Province: Zhejiang
+Registrant Postal Code: 
+Registrant Country: CN
+Registrant Phone: +852.22155100
+Registrant Phone Ext: 
+Registrant Fax: +852.22155200
+Registrant Fax Ext: 
+Registrant Email: dnsadmin@hk.alibaba-inc.com
+Registry Admin ID: 
+Admin Name: Timothy Alexander Steinert
+Admin Organization: Zhejiang Taobao Network Limited (浙江淘宝网络有限公司)
+Admin Street: No. 21 Feng Ling Road, Wuchang Street, Yuhang District
+Admin City: Hangzhou
+Admin State/Province: Zhejiang
+Admin Postal Code: 
+Admin Country: CN
+Admin Phone: +852.22155100
+Admin Phone Ext: 
+Admin Fax: +852.22155200
+Admin Fax Ext: 
+Admin Email: dnsadmin@hk.alibaba-inc.com
+Registry Tech ID: 
+Tech Name: Timothy Alexander Steinert
+Tech Organization: Zhejiang Taobao Network Limited (浙江淘宝网络有限公司)
+Tech Street: No. 21 Feng Ling Road, Wuchang Street, Yuhang District
+Tech City: Hangzhou
+Tech State/Province: Zhejiang
+Tech Postal Code: 
+Tech Country: CN
+Tech Phone: +852.22155100
+Tech Phone Ext: 
+Tech Fax: +852.22155200
+Tech Fax Ext: 
+Tech Email: dnsadmin@hk.alibaba-inc.com
+Name Server: ns5.taobao.com
+Name Server: ns7.taobao.com
+Name Server: ns4.taobao.com
+Name Server: ns6.taobao.com
+URL of the ICANN WHOIS Data Problem Reporting System: http://wdprs.internic.net/
+>>> Last update of WHOIS database: 2014-10-22T03:10:55-0700 <<<
 
-Whois Server Version 2.0
+The Data in MarkMonitor.com's WHOIS database is provided by MarkMonitor.com for
+information purposes, and to assist persons in obtaining information about or
+related to a domain name registration record.  MarkMonitor.com does not guarantee
+its accuracy.  By submitting a WHOIS query, you agree that you will use this Data
+only for lawful purposes and that, under no circumstances will you use this Data to:
+ (1) allow, enable, or otherwise support the transmission of mass unsolicited,
+     commercial advertising or solicitations via e-mail (spam); or
+ (2) enable high volume, automated, electronic processes that apply to
+     MarkMonitor.com (or its systems).
+MarkMonitor.com reserves the right to modify these terms at any time.
+By submitting this query, you agree to abide by this policy.
 
-Domain names in the .com and .net domains can now be registered
-with many different competing registrars. Go to http://www.internic.net
-for detailed information.
+MarkMonitor is the Global Leader in Online Brand Protection.
 
-   Server Name: TAOBAO.COM.MORE.INFO.AT.WWW.BEYONDWHOIS.COM
-   IP Address: 203.36.226.2
-   Registrar: INSTRA CORPORATION PTY, LTD.
-   Whois Server: whois.instra.net
-   Referral URL: http://www.instra.com
+MarkMonitor Domain Management(TM)
+MarkMonitor Brand Protection(TM)
+MarkMonitor AntiPiracy(TM)
+MarkMonitor AntiFraud(TM)
+Professional and Managed Services
 
-   Domain Name: TAOBAO.COM
-   Registrar: MARKMONITOR INC.
-   Whois Server: whois.markmonitor.com
-   Referral URL: http://www.markmonitor.com
-   Name Server: NS4.TAOBAO.COM
-   Name Server: NS5.TAOBAO.COM
-   Name Server: NS6.TAOBAO.COM
-   Name Server: NS7.TAOBAO.COM
-   Status: clientDeleteProhibited
-   Status: clientTransferProhibited
-   Status: clientUpdateProhibited
-   Status: serverDeleteProhibited
-   Status: serverTransferProhibited
-   Status: serverUpdateProhibited
-   Updated Date: 15-sep-2014
-   Creation Date: 21-apr-2003
-   Expiration Date: 21-apr-2016
+Visit MarkMonitor at http://www.markmonitor.com
+Contact us at +1.8007459229
+In Europe, at +44.02032062220
 
->>> Last update of whois database: Tue, 21 Oct 2014 12:36:09 GMT <<<
-
-NOTICE: The expiration date displayed in this record is the date the 
-registrar's sponsorship of the domain name registration in the registry is 
-currently set to expire. This date does not necessarily reflect the expiration 
-date of the domain name registrant's agreement with the sponsoring 
-registrar.  Users may consult the sponsoring registrar's Whois database to 
-view the registrar's reported date of expiration for this registration.
-
-TERMS OF USE: You are not authorized to access or query our Whois 
-database through the use of electronic processes that are high-volume and 
-automated except as reasonably necessary to register domain names or 
-modify existing registrations; the Data in VeriSign Global Registry 
-Services' ("VeriSign") Whois database is provided by VeriSign for 
-information purposes only, and to assist persons in obtaining information 
-about or related to a domain name registration record. VeriSign does not 
-guarantee its accuracy. By submitting a Whois query, you agree to abide 
-by the following terms of use: You agree that you may use this Data only 
-for lawful purposes and that under no circumstances will you use this Data 
-to: (1) allow, enable, or otherwise support the transmission of mass 
-unsolicited, commercial advertising or solicitations via e-mail, telephone, 
-or facsimile; or (2) enable high volume, automated, electronic processes 
-that apply to VeriSign (or its computer systems). The compilation, 
-repackaging, dissemination or other use of this Data is expressly 
-prohibited without the prior written consent of VeriSign. You agree not to 
-use electronic processes that are automated and high-volume to access or 
-query the Whois database except as reasonably necessary to register 
-domain names or modify existing registrations. VeriSign reserves the right 
-to restrict your access to the Whois database in its sole discretion to ensure 
-operational stability.  VeriSign may restrict or terminate your access to the 
-Whois database for failure to abide by these terms of use. VeriSign 
-reserves the right to modify these terms at any time. 
-
-The Registry database contains ONLY .COM, .NET, .EDU domains and
-Registrars.

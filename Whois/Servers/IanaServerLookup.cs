@@ -71,7 +71,8 @@ namespace Whois.Servers
             var text = GetWhoisServerResponse(tld);
 
             var tokenizer = new Tokenizer();
-            
+            tokenizer.Options.ThrowExceptionOnMissingProperty = true;
+
             var record = tokenizer.Parse<WhoisServerRecord>(Pattern, text);
 
             record.Value.RawResponse = text;

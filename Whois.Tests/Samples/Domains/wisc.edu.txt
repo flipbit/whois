@@ -1,0 +1,67 @@
+
+This Registry database contains ONLY .EDU domains. 
+The data in the EDUCAUSE Whois database is provided 
+by EDUCAUSE for information purposes in order to 
+assist in the process of obtaining information about 
+or related to .edu domain registration records. 
+
+The EDUCAUSE Whois database is authoritative for the 
+.EDU domain.         
+
+A Web interface for the .EDU EDUCAUSE Whois Server is 
+available at: http://whois.educause.net 
+
+By submitting a Whois query, you agree that this information 
+will not be used to allow, enable, or otherwise support 
+the transmission of unsolicited commercial advertising or 
+solicitations via e-mail.  The use of electronic processes to 
+harvest information from this server is generally prohibited 
+except as reasonably necessary to register or modify .edu 
+domain names.
+
+You may use "%" as a wildcard in your search. For further 
+information regarding the use of this WHOIS server, please 
+type: help 
+
+--------------------------
+
+Domain Name: WISC.EDU
+
+Registrant:
+   University of Wisconsin
+   Division of Information Technology
+   1210 West Dayton Street B332
+   Madison, WI 53706
+   UNITED STATES
+
+Administrative Contact:
+ Hostmaster
+   University of Wisconsin - Madison
+   Division of Information Technology
+   1210 West Dayton Street B332
+   Madison, WI 53706
+   UNITED STATES
+   (608) 263-4188
+   hostmaster@wisc.edu
+
+Technical Contact:
+ NOC
+   University of Wisconsin - Madison
+   Division of Information Technology
+   1210 West Dayton Street B332
+   Madison, WI 53706
+   UNITED STATES
+   (608) 263-4188
+   noc@doit.wisc.edu
+
+Name Servers: 
+   ADNS1.DOIT.WISC.EDU      144.92.9.21, 128.104.30.60, 2607:f388::a53:1
+   ADNS2.DOIT.WISC.EDU      144.92.20.99, 2607:f388::a53:2
+   ADNS3.DOIT.WISC.EDU      144.92.104.21, 2607:f388::a53:3
+   DNS2.ITD.UMICH.EDU       
+
+Domain record activated:    30-Sep-1985
+Domain record last updated: 12-May-2010
+Domain expires:             31-Jul-2015
+
+

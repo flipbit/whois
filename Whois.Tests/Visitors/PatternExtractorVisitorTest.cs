@@ -32,9 +32,9 @@ namespace Whois.Visitors
             Assert.AreEqual("95110", record.Registrant.PostalCode);
             Assert.AreEqual("US", record.Registrant.Country);
             Assert.AreEqual("+1.4085366000", record.Registrant.PhoneNumber);
-            Assert.AreEqual("100", record.Registrant.PhoneNumberExt);
-            Assert.AreEqual("123456", record.Registrant.FaxNumber);
-            Assert.AreEqual("200", record.Registrant.FaxNumberExt);
+            Assert.AreEqual("", record.Registrant.PhoneNumberExt);
+            Assert.AreEqual("", record.Registrant.FaxNumber);
+            Assert.AreEqual("", record.Registrant.FaxNumberExt);
             Assert.AreEqual("dns-admin@adobe.com", record.Registrant.Email);
 
             Assert.IsNotNull(record.AdminContact);
@@ -46,9 +46,9 @@ namespace Whois.Visitors
             Assert.AreEqual("95110", record.AdminContact.PostalCode);
             Assert.AreEqual("US", record.AdminContact.Country);
             Assert.AreEqual("+1.4085366000", record.AdminContact.PhoneNumber);
-            Assert.AreEqual(null, record.AdminContact.PhoneNumberExt);
-            Assert.AreEqual(null, record.AdminContact.FaxNumber);
-            Assert.AreEqual(null, record.AdminContact.FaxNumberExt);
+            Assert.AreEqual("", record.AdminContact.PhoneNumberExt);
+            Assert.AreEqual("", record.AdminContact.FaxNumber);
+            Assert.AreEqual("", record.AdminContact.FaxNumberExt);
             Assert.AreEqual("dns-admin@adobe.com", record.AdminContact.Email);
 
             Assert.IsNotNull(record.TechnicalContact);
@@ -60,9 +60,9 @@ namespace Whois.Visitors
             Assert.AreEqual("95110", record.TechnicalContact.PostalCode);
             Assert.AreEqual("US", record.TechnicalContact.Country);
             Assert.AreEqual("+1.4085366000", record.TechnicalContact.PhoneNumber);
-            Assert.AreEqual(null, record.TechnicalContact.PhoneNumberExt);
-            Assert.AreEqual(null, record.TechnicalContact.FaxNumber);
-            Assert.AreEqual(null, record.TechnicalContact.FaxNumberExt);
+            Assert.AreEqual("", record.TechnicalContact.PhoneNumberExt);
+            Assert.AreEqual("", record.TechnicalContact.FaxNumber);
+            Assert.AreEqual("", record.TechnicalContact.FaxNumberExt);
             Assert.AreEqual("dns-tech@adobe.com", record.TechnicalContact.Email);
 
             Assert.AreEqual(5, record.Nameservers.Count);

@@ -1,0 +1,69 @@
+
+Domain Name: icq.com
+Registry Domain ID: 2893942_DOMAIN_COM-VRSN
+Registrar WHOIS Server: whois.corporatedomains.com
+Registrar URL: www.cscprotectsbrands.com
+Updated Date: 2014-04-14 05:03:35 -0400
+Creation Date: 1998-12-29 00:00:00 -0500
+Registrar Registration Expiration Date: 2014-11-17 17:20:25 -0500
+Registrar: CSC CORPORATE DOMAINS, INC.
+Registrar IANA ID: 299
+Registrar Abuse Contact Email: admin@internationaladmin.com
+Registrar Abuse Contact Phone: +1.8887802723
+Domain Status: clientTransferProhibited
+Registry Registrant ID: 
+Registrant Name: Domain Admin
+Registrant Organization: ICQ LLC
+Registrant Street: 22000 AOL Way
+Registrant City: Dulles
+Registrant State/Province: VA
+Registrant Postal Code: 20166
+Registrant Country: US
+Registrant Phone: +703.2654670
+Registrant Phone Ext: 
+Registrant Fax: 
+Registrant Fax Ext: 
+Registrant Email: domain-admin@icq.com
+Registry Admin ID: 
+Admin Name: Domain Admin
+Admin Organization: ICQ LLC
+Admin Street: 22000 AOL Way
+Admin City: Dulles
+Admin State/Province: VA
+Admin Postal Code: 20166
+Admin Country: US
+Admin Phone: +1.7032654670
+Admin Phone Ext: 
+Admin Fax: 
+Admin Fax Ext: 
+Admin Email: domain-admin@icq.com
+Registry Tech ID: 
+Tech Name: Domain Admin
+Tech Organization: ICQ LLC
+Tech Street: 22000 AOL Way
+Tech City: Dulles
+Tech State/Province: VA
+Tech Postal Code: 20166
+Tech Country: US
+Tech Phone: +1.7032654670
+Tech Phone Ext: 
+Tech Fax: 
+Tech Fax Ext: 
+Tech Email: domain-admin@icq.com
+Name Server: ns1.mail.ru
+Name Server: ns2.mail.ru
+DNSSEC: 
+URL of the ICANN WHOIS Data Problem Reporting System: http://wdprs.internic.net/
+>>> Last update of WHOIS database: 2014-04-14 05:03:35 -0400 <<<
+
+
+Corporation Service Company(c) (CSC)  The Trusted Partner of More than 50% of the 100 Best Global Brands.
+
+Contact us to learn more about our enterprise solutions for Global Domain Name Registration and Management, Trademark Research and Watching, Brand, Logo and Auction Monitoring, as well SSL Certificate Services and DNS Hosting.
+
+NOTICE: You are not authorized to access or query our WHOIS database through the use of high-volume, automated, electronic processes or for the purpose or purposes of using the data in any manner that violates these terms of use. The Data in the CSC WHOIS database is provided by CSC for information purposes only, and to assist persons in obtaining information about or related to a domain name registration record. CSC does not guarantee its accuracy. By submitting a WHOIS query, you agree to abide by the following terms of use: you agree that you may use this Data only for lawful purposes and that under no circumstances will you use this Data to: (1) allow, enable, or otherwise support the transmission of mass unsolicited, commercial advertising or solicitations via direct mail, e-mail, telephone, or facsimile; or (2) enable high volume, automated, electronic processes that apply to CSC (or its computer systems). CSC reserves the right to terminate your access to the WHOIS database in its sole discretion for any violations by you of these terms of use. CSC reserves the right to modify these terms at any time.
+
+Register your domain name at http://www.cscglobal.com
+
+For more information on Whois status codes, please visit https://www.icann.org/resources/pages/epp-status-codes-2014-06-16-en
+

@@ -81,7 +81,7 @@ namespace Whois.Visitors
 
                 var tokenizer = new Tokenizer();
 
-                var text = record.Text.Split('\n');
+                var text = record.Text;
 
                 var tokenResult = tokenizer.Parse<WhoisRedirect>(pattern, text);
 

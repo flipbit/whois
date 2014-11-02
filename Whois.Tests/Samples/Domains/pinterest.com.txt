@@ -58,7 +58,7 @@ Name Server: ns-1826.awsdns-36.co.uk
 Name Server: ns-1226.awsdns-25.org
 DNSSEC:
 URL of the ICANN WHOIS Data Problem Reporting System: http://wdprs.internic.net/
->>> Last update of WHOIS database: 2014-09-21T18:52:43 UTC <<<
+>>> Last update of WHOIS database: 2014-10-22T09:15:14 UTC <<<
 
 The data in Ascio Technologies' WHOIS database is provided 
 by Ascio Technologies for information purposes only. By submitting 

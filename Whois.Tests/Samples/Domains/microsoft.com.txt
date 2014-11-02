@@ -2,7 +2,7 @@ Domain Name: microsoft.com
 Registry Domain ID: 2724960_DOMAIN_COM-VRSN
 Registrar WHOIS Server: whois.markmonitor.com
 Registrar URL: http://www.markmonitor.com
-Updated Date: 2013-08-11T04:00:51-0700
+Updated Date: 2014-10-15T04:00:12-0700
 Creation Date: 1991-05-01T21:00:00-0700
 Registrar Registration Expiration Date: 2021-05-02T21:00:00-0700
 Registrar: MarkMonitor, Inc.
@@ -51,13 +51,12 @@ Tech Phone Ext:
 Tech Fax: +1.4259367329
 Tech Fax Ext: 
 Tech Email: msnhst@microsoft.com
-Name Server: ns4.msft.net
 Name Server: ns1.msft.net
 Name Server: ns3.msft.net
-Name Server: ns5.msft.net
+Name Server: ns4.msft.net
 Name Server: ns2.msft.net
 URL of the ICANN WHOIS Data Problem Reporting System: http://wdprs.internic.net/
->>> Last update of WHOIS database: 2014-09-21T11:45:53-0700 <<<
+>>> Last update of WHOIS database: 2014-10-22T02:21:30-0700 <<<
 
 The Data in MarkMonitor.com's WHOIS database is provided by MarkMonitor.com for
 information purposes, and to assist persons in obtaining information about or
@@ -82,4 +81,4 @@ Professional and Managed Services
 Visit MarkMonitor at http://www.markmonitor.com
 Contact us at +1.8007459229
 In Europe, at +44.02032062220
---
+

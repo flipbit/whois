@@ -1,0 +1,78 @@
+
+
+Domain Name: FT.COM
+Registry Domain ID:  
+Registrar WHOIS Server: whois.networksolutions.com
+Registrar URL: http://networksolutions.com
+Updated Date: 2010-07-20T00:00:00Z
+Creation Date: 1994-11-30T00:00:00Z
+Registrar Registration Expiration Date: 2015-11-29T00:00:00Z
+Registrar: NETWORK SOLUTIONS, LLC.
+Registrar IANA ID: 2
+Registrar Abuse Contact Email: abuse@web.com
+Registrar Abuse Contact Phone: +1.8003337680
+Reseller: 
+Domain Status: clientTransferProhibited
+Registry Registrant ID: 
+Registrant Name: THE FINANCIAL TIMES LIMITED
+Registrant Organization: THE FINANCIAL TIMES LIMITED
+Registrant Street: Number One Southwark Bridge
+Registrant City: London
+Registrant State/Province: 
+Registrant Postal Code: SE1 9HL
+Registrant Country: UK
+Registrant Phone: +44.2078733000
+Registrant Phone Ext: 
+Registrant Fax: +44.2078733928
+Registrant Fax Ext: 
+Registrant Email: company.secretary@ft.com
+Registry Admin ID: 
+Admin Name: The Financial Times Ltd
+Admin Organization: The Financial Times Ltd
+Admin Street: Number One Southwark Brige
+Admin City: London
+Admin State/Province: SE1 9HL
+Admin Postal Code: null
+Admin Country: UK
+Admin Phone: +44.2078733000
+Admin Phone Ext: 
+Admin Fax: +44.2078733928
+Admin Fax Ext: 
+Admin Email: company.secretary@FT.COM
+Registry Tech ID: 
+Tech Name: Support, FT
+Tech Organization: Financial Times
+Tech Street: No 1 Southwark Bridge
+Tech City: London
+Tech State/Province: London
+Tech Postal Code: SE1 9HL
+Tech Country: UK
+Tech Phone: +44.2078733265
+Tech Phone Ext: 
+Tech Fax: 
+Tech Fax Ext: 
+Tech Email: ftepops@FT.COM
+Name Server: NS1.P23.DYNECT.NET
+Name Server: NS2.P23.DYNECT.NET
+Name Server: NS3.P23.DYNECT.NET
+Name Server: NS4.P23.DYNECT.NET
+DNSSEC: not signed
+URL of the ICANN WHOIS Data Problem Reporting System: http://wdprs.internic.net/
+>>> Last update of whois database: Wed, 22 Oct 2014 11:45:04 GMT <<<
+
+The data in Networksolutions.com's WHOIS database is provided to you by
+Networksolutions.com for information purposes only, that is, to assist you in
+obtaining information about or related to a domain name registration
+record. Networksolutions.com makes this information available "as is," and
+does not guarantee its accuracy. By submitting a WHOIS query, you
+agree that you will use this data only for lawful purposes and that,
+under no circumstances will you use this data to: (1) allow, enable,
+or otherwise support the transmission of mass unsolicited, commercial
+advertising or solicitations via direct mail, electronic mail, or by
+telephone; or (2) enable high volume, automated, electronic processes
+that apply to Networksolutions.com  (or its systems). The compilation,
+repackaging, dissemination or other use of this data is expressly
+prohibited without the prior written consent of Networksolutions.com.
+Networksolutions.com reserves the right to modify these terms at any time.
+By submitting this query, you agree to abide by these terms.
+

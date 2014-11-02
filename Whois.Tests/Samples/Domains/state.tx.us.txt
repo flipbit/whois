@@ -1,0 +1,120 @@
+Domain Name:                                 STATE.TX.US
+Domain ID:                                   D3624365-US
+Sponsoring Registrar:                        US LOCALITY
+Registrar URL (registration services):       www.whois.us
+Domain Status:                               serverTransferProhibited
+Registrant ID:                               USCT-NEUS-L748
+Registrant Name:                             Bryan Bradsby
+Registrant Organization:                     State of Texas -  Dept of Information Resources
+Registrant Address1:                         Telecom Division
+Registrant Address2:                         PO Box 13564
+Registrant Address3:                         SHB-120
+Registrant City:                             Austin
+Registrant State/Province:                   TX
+Registrant Postal Code:                      78701
+Registrant Country:                          United States
+Registrant Country Code:                     US
+Registrant Phone Number:                     +1.5129362248
+Registrant Facsimile Number:                 +1.5124633456
+Registrant Email:                            domain-contact9@capnet.state.tx.us
+Registrant Application Purpose:              P5
+Registrant Nexus Category:                   C21
+Administrative Contact ID:                   USCT-NEUS-L748
+Administrative Contact Name:                 Bryan Bradsby
+Administrative Contact Organization:         State of Texas -  Dept of Information Resources
+Administrative Contact Address1:             Telecom Division
+Administrative Contact Address2:             PO Box 13564
+Administrative Contact Address3:             SHB-120
+Administrative Contact City:                 Austin
+Administrative Contact State/Province:       TX
+Administrative Contact Postal Code:          78701
+Administrative Contact Country:              United States
+Administrative Contact Country Code:         US
+Administrative Contact Phone Number:         +1.5129362248
+Administrative Contact Facsimile Number:     +1.5124633456
+Administrative Contact Email:                domain-contact9@capnet.state.tx.us
+Administrative Application Purpose:          P5
+Administrative Nexus Category:               C21
+Billing Contact ID:                          USCT-NEUS-X74W
+Billing Contact Name:                        Bill Miller
+Billing Contact Organization:                Dept of Information Resources
+Billing Contact Address1:                    PO Box 13564
+Billing Contact Address2:                    WPC-1386
+Billing Contact City:                        Austin
+Billing Contact State/Province:              TX
+Billing Contact Postal Code:                 78701
+Billing Contact Country:                     United States
+Billing Contact Country Code:                US
+Billing Contact Phone Number:                +1.5124633358
+Billing Contact Facsimile Number:            +1.5124754759
+Billing Contact Email:                       Bill.Miller@dir.state.tx.us
+Technical Contact ID:                        USCT-NEUS-L748
+Technical Contact Name:                      Bryan Bradsby
+Technical Contact Organization:              State of Texas -  Dept of Information Resources
+Technical Contact Address1:                  Telecom Division
+Technical Contact Address2:                  PO Box 13564
+Technical Contact Address3:                  SHB-120
+Technical Contact City:                      Austin
+Technical Contact State/Province:            TX
+Technical Contact Postal Code:               78701
+Technical Contact Country:                   United States
+Technical Contact Country Code:              US
+Technical Contact Phone Number:              +1.5129362248
+Technical Contact Facsimile Number:          +1.5124633456
+Technical Contact Email:                     domain-contact9@capnet.state.tx.us
+Technical Application Purpose:               P5
+Technical Nexus Category:                    C21
+Delegated Manager Contact ID:                USDM-NEDM-8478
+Delegated Manager Contact Name:              Bryan Bradsby
+Delegated Manager Contact Organization:      State of Texas - Dept. of Information Resources
+Delegated Manager Contact Address1:          Telecom Divsion
+Delegated Manager Contact Address2:          P.O. Box 13564
+Delegated Manager Contact Address3:          SHB-120
+Delegated Manager Contact City:              Austin
+Delegated Manager Contact State/Province:    TX
+Delegated Manager Contact Postal Code:       78701
+Delegated Manager Contact Country:           United States
+Delegated Manager Contact Country Code:      US
+Delegated Manager Contact Phone Number:      +1.5129362248
+Delegated Manager Contact Facsimile Number:  +1.5124633456
+Delegated Manager Contact Email:             domain-contact9@capnet.state.tx.us
+Name Server:                                 TYBALT.CALTECH.EDU
+Name Server:                                 NS9.TEX-AN.NET
+Name Server:                                 NS.CAPNET.STATE.TX.US
+Name Server:                                 NS2.OTS.UTSYSTEM.EDU
+Name Server:                                 NS3.TAMU.EDU
+Name Server:                                 NS.TX.NET
+Created by Registrar:                        REGISTRY REGISTRAR
+Last Updated by Registrar:                   NEULEVELCSR
+Last Transferred Date:                       Fri Feb 07 15:54:23 GMT 2003
+Domain Registration Date:                    Thu Feb 06 20:36:27 GMT 2003
+Domain Expiration Date:                      Fri Feb 06 20:36:27 GMT 2015
+Domain Last Updated Date:                    Fri Nov 09 11:56:09 GMT 2012
+
+>>>> Whois database was last updated on: Wed Oct 22 12:14:39 GMT 2014 <<<<
+
+NeuStar, Inc., the Registry Administrator for .US, has collected this
+information for the WHOIS database through a .US-Accredited Registrar.
+This information is provided to you for informational purposes only and is
+designed to assist persons in determining contents of a domain name
+registration record in the NeuStar registry database. NeuStar makes this
+information available to you "as is" and does not guarantee its accuracy.
+By submitting a WHOIS query, you agree that you will use this data only for
+lawful purposes and that, under no circumstances will you use this data:
+(1) to allow, enable, or otherwise support the transmission of mass
+unsolicited, commercial advertising or solicitations via direct mail,
+electronic mail, or by telephone; (2) in contravention of any applicable
+data and privacy protection laws; or (3) to enable high volume, automated,
+electronic processes that apply to the registry (or its systems). Compilation,
+repackaging, dissemination, or other use of the WHOIS database in its
+entirety, or of a substantial portion thereof, is not allowed without
+NeuStar's prior written permission. NeuStar reserves the right to modify or
+change these conditions at any time without prior or subsequent notification
+of any kind. By executing this query, in any manner whatsoever, you agree to
+abide by these terms.
+
+NOTE: FAILURE TO LOCATE A RECORD IN THE WHOIS DATABASE IS NOT INDICATIVE
+OF THE AVAILABILITY OF A DOMAIN NAME.
+
+All domain names are subject to certain additional domain name registration
+rules.  For details, please visit our site at www.whois.us.

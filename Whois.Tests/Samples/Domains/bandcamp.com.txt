@@ -1,61 +1,68 @@
+Domain Name: BANDCAMP.COM
+Registry Domain ID: 
+Registrar WHOIS Server: whois.domaindiscover.com
+Registrar URL: https://www.tierra.net
+Updated Date: 2014-10-17T17:26:36Z
+Creation Date: 2003-06-11T14:36:45Z
+Registrar Registration Expiration Date: 2018-01-01T14:26:17Z
+Registrar: TIERRANET INC. DBA DOMAINDISCOVER
+Registrar IANA ID: 86
+Registrar Abuse Contact Email: icann-abuse-reports@tierra.net
+Registrar Abuse Contact Phone: +1.6193932105
+Reseller: 
+Domain Status: clientTransferProhibited
+Registry Registrant ID:
+Registrant Name: Domain Admin
+Registrant Organization: Bandcamp, Inc.
+Registrant Street: 178 Castro St
+Registrant City: San Francisco
+Registrant State/Province: CA
+Registrant Postal Code: 94114
+Registrant Country: US
+Registrant Phone: +1.4154310871
+Registrant Phone Ext:
+Registrant Fax: 
+Registrant Fax Ext:
+Registrant Email: whois@emailaddressprotection.com
+Registry Admin ID:
+Admin Name: Domain Admin
+Admin Organization: Bandcamp, Inc.
+Admin Street: 178 Castro St
+Admin City: San Francisco
+Admin State/Province: CA
+Admin Postal Code: 94114
+Admin Country: US
+Admin Phone: +1.4154310871
+Admin Phone Ext:
+Admin Fax: 
+Admin Fax Ext:
+Admin Email: whois@emailaddressprotection.com
+Registry Tech ID:
+Tech Name: Domain Admin
+Tech Organization: Bandcamp, Inc.
+Tech Street: 178 Castro St
+Tech City: San Francisco
+Tech State/Province: CA
+Tech Postal Code: 94114
+Tech Country: US
+Tech Phone: +1.4154310871
+Tech Phone Ext:
+Tech Fax: 
+Tech Fax Ext:
+Tech Email: whois@emailaddressprotection.com
+Name Server: DNS3.EASYDNS.ORG
+Name Server: DNS4.EASYDNS.INFO
+Name Server: NS-321.AWSDNS-40.COM
+Name Server: NS-958.AWSDNS-55.NET
+DNSSEC: 
+URL of the ICANN WHOIS Data Problem Reporting System: http://wdprs.internic.net/
+>>> Last update of WHOIS database: 2014-10-22T03:35:14Z <<<
 
-Whois Server Version 2.0
-
-Domain names in the .com and .net domains can now be registered
-with many different competing registrars. Go to http://www.internic.net
-for detailed information.
-
-   Server Name: BANDCAMP.COM.NEMVENOM.COM
-   IP Address: 75.126.76.138
-   Registrar: GODADDY.COM, LLC
-   Whois Server: whois.godaddy.com
-   Referral URL: http://registrar.godaddy.com
-
-   Domain Name: BANDCAMP.COM
-   Registrar: TIERRANET INC. D/B/A DOMAINDISCOVER
-   Whois Server: whois.domaindiscover.com
-   Referral URL: http://www.domaindiscover.com
-   Name Server: DNS3.EASYDNS.ORG
-   Name Server: DNS4.EASYDNS.INFO
-   Name Server: NS-321.AWSDNS-40.COM
-   Name Server: NS-958.AWSDNS-55.NET
-   Status: clientTransferProhibited
-   Updated Date: 18-oct-2014
-   Creation Date: 11-jun-2003
-   Expiration Date: 02-jan-2018
-
->>> Last update of whois database: Tue, 21 Oct 2014 14:10:53 GMT <<<
-
-NOTICE: The expiration date displayed in this record is the date the 
-registrar's sponsorship of the domain name registration in the registry is 
-currently set to expire. This date does not necessarily reflect the expiration 
-date of the domain name registrant's agreement with the sponsoring 
-registrar.  Users may consult the sponsoring registrar's Whois database to 
-view the registrar's reported date of expiration for this registration.
-
-TERMS OF USE: You are not authorized to access or query our Whois 
-database through the use of electronic processes that are high-volume and 
-automated except as reasonably necessary to register domain names or 
-modify existing registrations; the Data in VeriSign Global Registry 
-Services' ("VeriSign") Whois database is provided by VeriSign for 
-information purposes only, and to assist persons in obtaining information 
-about or related to a domain name registration record. VeriSign does not 
-guarantee its accuracy. By submitting a Whois query, you agree to abide 
-by the following terms of use: You agree that you may use this Data only 
-for lawful purposes and that under no circumstances will you use this Data 
-to: (1) allow, enable, or otherwise support the transmission of mass 
-unsolicited, commercial advertising or solicitations via e-mail, telephone, 
-or facsimile; or (2) enable high volume, automated, electronic processes 
-that apply to VeriSign (or its computer systems). The compilation, 
-repackaging, dissemination or other use of this Data is expressly 
-prohibited without the prior written consent of VeriSign. You agree not to 
-use electronic processes that are automated and high-volume to access or 
-query the Whois database except as reasonably necessary to register 
-domain names or modify existing registrations. VeriSign reserves the right 
-to restrict your access to the Whois database in its sole discretion to ensure 
-operational stability.  VeriSign may restrict or terminate your access to the 
-Whois database for failure to abide by these terms of use. VeriSign 
-reserves the right to modify these terms at any time. 
-
-The Registry database contains ONLY .COM, .NET, .EDU domains and
-Registrars.
+This WHOIS database is provided for information purposes only. We do
+not guarantee the accuracy of this data. The following uses of this 
+system are expressly prohibited: (1) use of this system for unlawful 
+purposes; (2) use of this system to collect information used in the 
+mass transmission of unsolicited commercial messages in any medium; 
+(3) use of high volume, automated, electronic processes against this 
+database. By submitting this query, you agree to abide by this 
+policy.

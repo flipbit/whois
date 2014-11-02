@@ -1,0 +1,69 @@
+Domain Name:OPENSOURCE.ORG
+Domain ID: D865457-LROR
+Creation Date: 1998-02-11T05:00:00Z
+Updated Date: 2012-12-21T19:30:11Z
+Registry Expiry Date: 2018-02-10T05:00:00Z
+Sponsoring Registrar:CSL Computer Service Langenbach GmbH d/b/a joker.com a German GmbH (R25-LROR)
+Sponsoring Registrar IANA ID: 113
+WHOIS Server: 
+Referral URL: 
+Domain Status: clientTransferProhibited
+Registrant ID:CORG-310515
+Registrant Name:Domain Admin
+Registrant Organization:Open Source Initiative
+Registrant Street: P.O. Box 410990, #256
+Registrant City:San Francisco
+Registrant State/Province:
+Registrant Postal Code:94114-0990
+Registrant Country:US
+Registrant Phone:+1.7733511729
+Registrant Phone Ext: 
+Registrant Fax: 
+Registrant Fax Ext: 
+Registrant Email:hostmaster@opensource.org
+Admin ID:CORG-310514
+Admin Name:Domain Admin
+Admin Organization:Open Source Initiative
+Admin Street: 855 El Camino Real
+Admin Street: Ste 13A, #270
+Admin City:Palo Alto
+Admin State/Province:CA
+Admin Postal Code:94301
+Admin Country:US
+Admin Phone:+1.4158575398
+Admin Phone Ext: 
+Admin Fax: 
+Admin Fax Ext: 
+Admin Email:hostmaster@opensource.org
+Tech ID:CORG-310514
+Tech Name:Domain Admin
+Tech Organization:Open Source Initiative
+Tech Street: 855 El Camino Real
+Tech Street: Ste 13A, #270
+Tech City:Palo Alto
+Tech State/Province:CA
+Tech Postal Code:94301
+Tech Country:US
+Tech Phone:+1.4158575398
+Tech Phone Ext: 
+Tech Fax: 
+Tech Fax Ext: 
+Tech Email:hostmaster@opensource.org
+Name Server:US.NS.OPENSOURCE.ORG
+Name Server:PERRO.CYRIUS.COM
+Name Server: 
+Name Server: 
+Name Server: 
+Name Server: 
+Name Server: 
+Name Server: 
+Name Server: 
+Name Server: 
+Name Server: 
+Name Server: 
+Name Server: 
+DNSSEC:Unsigned
+
+Access to Public Interest Registry WHOIS information is provided to assist persons in determining the contents of a domain name registration record in the Public Interest Registry registry database. The data in this record is provided by Public Interest Registry for informational purposes only, and Public Interest Registry does not guarantee its accuracy. This service is intended only for query-based access. You agree that you will use this data only for lawful purposes and that, under no circumstances will you use this data to(a) allow, enable, or otherwise support the transmission by e-mail, telephone, or facsimile of mass unsolicited, commercial advertising or solicitations to entities other than the data recipient's own existing customers; or (b) enable high volume, automated, electronic processes that send queries or data to the systems of Registry Operator, a Registrar, or Afilias except as reasonably necessary to register domain names or modify existing registrations. All rights reserved. Public Interest Registry reserves the right to modify these terms at any time. By submitting this query, you agree to abide by this policy.
+
+

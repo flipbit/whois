@@ -1,54 +1,64 @@
+Domain Name: a8.net
+Registry Domain ID: 2208922_DOMAIN_NET-VRSN
+Registrar WHOIS Server: whois.melbourneit.com
+Registrar URL: http://www.melbourneit.com.au
+Updated Date: 2014-08-01T02:19:43Z
+Creation Date: 1998-09-25T04:00:00Z
+Registrar Registration Expiration Date: 2015-09-24T04:00:00Z
+Registrar: Melbourne IT Ltd
+Registrar IANA ID: 13
+Registrar Abuse Contact Email: abuse@melbourneit.com.au
+Registrar Abuse Contact Phone: +61.386242300
+Domain Status: ok
+Registry Registrant ID: 
+Registrant Name: F@N Communications, Inc
+Registrant Organization: _
+Registrant Street: 1-1-8 Shibuya
+Registrant City: Shibuya-ku
+Registrant State/Province: Tokyo
+Registrant Postal Code: 150-0002
+Registrant Country: JP
+Registrant Phone: +81.81662654830
+Registrant Phone Ext: 
+Registrant Fax: 
+Registrant Fax Ext: 
+Registrant Email: nic-staff@sakura.ad.jp
+Registry Admin ID: 
+Admin Name: FAN Communications
+Admin Organization: _
+Admin Street: 1-1-8 Shibuya
+Admin City: Shibuya-ku
+Admin State/Province: Tokyo
+Admin Postal Code: 150-0002
+Admin Country: JP
+Admin Phone: +81.81357663780
+Admin Phone Ext: 
+Admin Fax: 
+Admin Fax Ext: 
+Admin Email: domain-info@fancs.com
+Registry Tech ID: 
+Tech Name: FAN Communications
+Tech Organization: _
+Tech Street: 1-1-8 Shibuya
+Tech City: Shibuya-ku
+Tech State/Province: Tokyo
+Tech Postal Code: 150-0002
+Tech Country: JP
+Tech Phone: +81.81357663780
+Tech Phone Ext: 
+Tech Fax: 
+Tech Fax Ext: 
+Tech Email: domain-info@fancs.com
+Name Server: DNS0.A8.NET
+Name Server: DNS10.A8.NET
+Name Server: DNS1.A8.NET
+DNSSEC: unsigned
+URL of the ICANN WHOIS Data Problem Reporting System: http://wdrprs.internic.net
+>>> Last update of WHOIS database: 2014-10-22T10:18:56Z
 
-Whois Server Version 2.0
+TERMS OF USE OF MELBOURNE IT WHOIS DATABASE
+The WHOIS database is operated by Melbourne IT Ltd ('we', 'our' or 'us'). Your access to, and use of, our WHOIS database and the information made available on our WHOIS database is subject to these Terms of Use and our Privacy Policy. All information contained in our WHOIS database is provided 'as is'. We take no responsibility for any error or omission in our WHOIS database. The data in our WHOIS database is provided to you for your information only. You may use the information in our WHOIS database only for the purpose of obtaining information about or related to a domain name registration record ('Permitted Purpose'). You agree not to use high-volume, automated electronic processes to access or query our WHOIS database. By submitting a WHOIS query to us, you agree that you will only use the data obtained from a WHOIS query for the Permitted Purpose and for lawful purposes, and that you will not: (a) allow, enable, or otherwise support the transmission of mass, unsolicited, commercial advertising or solicitations by e-mail, telephone, or facsimile; or (b) enable high volume, automated, electronic processes that send queries or data to the systems of any Registry Operator or ICANN-Accredited registrar, except as reasonably necessary to register domain names or modify existing domain name registrations. You also agree that the copying, reproduction, translation, compilation, re-packaging, dissemination or other use of the data in our WHOIS database is prohibited without our prior written consent. We reserve the right to terminate your access to our WHOIS database at any time, and for any reason, including (without limitation) if you fail to comply with any provision of these Terms of Use, or we consider that you are excessively querying our WHOIS database. These Terms of Use may be modified by us at any time without notice by our amending the Terms of Use on this web page. You agree that your use of our WHOIS database following any modification to these Terms of Use will constitute your acceptance of these Terms of Use (as modified from time to time).
 
-Domain names in the .com and .net domains can now be registered
-with many different competing registrars. Go to http://www.internic.net
-for detailed information.
 
-   Domain Name: A8.NET
-   Registrar: MELBOURNE IT, LTD. D/B/A INTERNET NAMES WORLDWIDE
-   Whois Server: whois.melbourneit.com
-   Referral URL: http://www.melbourneit.com
-   Name Server: DNS0.A8.NET
-   Name Server: DNS1.A8.NET
-   Name Server: DNS10.A8.NET
-   Status: ok
-   Updated Date: 01-aug-2014
-   Creation Date: 25-sep-1998
-   Expiration Date: 24-sep-2015
 
->>> Last update of whois database: Tue, 21 Oct 2014 14:04:52 GMT <<<
 
-NOTICE: The expiration date displayed in this record is the date the 
-registrar's sponsorship of the domain name registration in the registry is 
-currently set to expire. This date does not necessarily reflect the expiration 
-date of the domain name registrant's agreement with the sponsoring 
-registrar.  Users may consult the sponsoring registrar's Whois database to 
-view the registrar's reported date of expiration for this registration.
-
-TERMS OF USE: You are not authorized to access or query our Whois 
-database through the use of electronic processes that are high-volume and 
-automated except as reasonably necessary to register domain names or 
-modify existing registrations; the Data in VeriSign Global Registry 
-Services' ("VeriSign") Whois database is provided by VeriSign for 
-information purposes only, and to assist persons in obtaining information 
-about or related to a domain name registration record. VeriSign does not 
-guarantee its accuracy. By submitting a Whois query, you agree to abide 
-by the following terms of use: You agree that you may use this Data only 
-for lawful purposes and that under no circumstances will you use this Data 
-to: (1) allow, enable, or otherwise support the transmission of mass 
-unsolicited, commercial advertising or solicitations via e-mail, telephone, 
-or facsimile; or (2) enable high volume, automated, electronic processes 
-that apply to VeriSign (or its computer systems). The compilation, 
-repackaging, dissemination or other use of this Data is expressly 
-prohibited without the prior written consent of VeriSign. You agree not to 
-use electronic processes that are automated and high-volume to access or 
-query the Whois database except as reasonably necessary to register 
-domain names or modify existing registrations. VeriSign reserves the right 
-to restrict your access to the Whois database in its sole discretion to ensure 
-operational stability.  VeriSign may restrict or terminate your access to the 
-Whois database for failure to abide by these terms of use. VeriSign 
-reserves the right to modify these terms at any time. 
-
-The Registry database contains ONLY .COM, .NET, .EDU domains and
-Registrars.

@@ -3,7 +3,7 @@
    Status: ACTIVE
 
 
->>> Last update of whois database: 2014-10-21T16:19:34Z <<<
+>>> Last update of whois database: 2014-10-22T11:11:07Z <<<
 Please be advised that this whois server only contains information pertaining
 to the .GOV domain. For information for other domains please use the whois
 server at RS.INTERNIC.NET. 

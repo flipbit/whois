@@ -1,0 +1,76 @@
+
+
+Domain Name: YELLOWBOOK.COM
+Registry Domain ID:  
+Registrar WHOIS Server: whois.networksolutions.com
+Registrar URL: http://networksolutions.com
+Updated Date: 2009-11-12T00:00:00Z
+Creation Date: 1995-09-01T00:00:00Z
+Registrar Registration Expiration Date: 2019-08-31T00:00:00Z
+Registrar: NETWORK SOLUTIONS, LLC.
+Registrar IANA ID: 2
+Registrar Abuse Contact Email: abuse@web.com
+Registrar Abuse Contact Phone: +1.8003337680
+Reseller: 
+Domain Status: clientTransferProhibited
+Registry Registrant ID: 
+Registrant Name: Yellow Book USA, Inc.
+Registrant Organization: Yellow Book USA, Inc.
+Registrant Street: 2560 Renaissance Blvd.
+Registrant City: King of Prussia
+Registrant State/Province: PA
+Registrant Postal Code: 19406
+Registrant Country: US
+Registrant Phone: +1.8005815040
+Registrant Phone Ext: 
+Registrant Fax: +1.6107312610
+Registrant Fax Ext: 
+Registrant Email: DNSAdmin@yellowbook.com
+Registry Admin ID: 
+Admin Name: Hendler, Michael
+Admin Organization: Yellowbook.com
+Admin Street: 100 N CENTRE AVE
+Admin City: ROCKVILLE CTR
+Admin State/Province: NY
+Admin Postal Code: 11570-3905
+Admin Country: US
+Admin Phone: +1.5167632115
+Admin Phone Ext: 
+Admin Fax: +1.5167661219
+Admin Fax Ext: 
+Admin Email: michael.hendler@YELLOWBOOK.COM
+Registry Tech ID: 
+Tech Name: Server
+Tech Organization: Server Engineer
+Tech Street: Yellowbook USA
+Tech City: King Of Prussia
+Tech State/Province: PA
+Tech Postal Code: 19406
+Tech Country: US
+Tech Phone: +1.9999999999
+Tech Phone Ext: 
+Tech Fax: +1.9999999999
+Tech Fax Ext: 
+Tech Email: srveng@YELLOWBOOK.COM
+Name Server: DNS07.YELLOWBOOK.COM
+Name Server: DNS08.YELLOWBOOK.COM
+DNSSEC: not signed
+URL of the ICANN WHOIS Data Problem Reporting System: http://wdprs.internic.net/
+>>> Last update of whois database: Wed, 22 Oct 2014 12:19:43 GMT <<<
+
+The data in Networksolutions.com's WHOIS database is provided to you by
+Networksolutions.com for information purposes only, that is, to assist you in
+obtaining information about or related to a domain name registration
+record. Networksolutions.com makes this information available "as is," and
+does not guarantee its accuracy. By submitting a WHOIS query, you
+agree that you will use this data only for lawful purposes and that,
+under no circumstances will you use this data to: (1) allow, enable,
+or otherwise support the transmission of mass unsolicited, commercial
+advertising or solicitations via direct mail, electronic mail, or by
+telephone; or (2) enable high volume, automated, electronic processes
+that apply to Networksolutions.com  (or its systems). The compilation,
+repackaging, dissemination or other use of this data is expressly
+prohibited without the prior written consent of Networksolutions.com.
+Networksolutions.com reserves the right to modify these terms at any time.
+By submitting this query, you agree to abide by these terms.
+

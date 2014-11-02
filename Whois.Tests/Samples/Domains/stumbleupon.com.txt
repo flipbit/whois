@@ -2,9 +2,9 @@ Domain Name: stumbleupon.com
 Registry Domain ID: 
 Registrar WHOIS Server: whois.markmonitor.com
 Registrar URL: http://www.markmonitor.com
-Updated Date: 2014-07-11T04:01:03-0700
+Updated Date: 2014-10-05T02:06:54-0700
 Creation Date: 2001-11-05T20:47:44-0800
-Registrar Registration Expiration Date: 2014-11-05T20:47:44-0800
+Registrar Registration Expiration Date: 2019-11-05T00:00:00-0800
 Registrar: MarkMonitor, Inc.
 Registrar IANA ID: 292
 Registrar Abuse Contact Email: abusecomplaints@markmonitor.com
@@ -51,12 +51,12 @@ Tech Phone Ext:
 Tech Fax: +1.4154306301
 Tech Fax Ext: 
 Tech Email: hostmaster@stumbleupon.com
+Name Server: ns1.p08.dynect.net
 Name Server: ns4.p08.dynect.net
 Name Server: ns2.p08.dynect.net
-Name Server: ns1.p08.dynect.net
 Name Server: ns3.p08.dynect.net
 URL of the ICANN WHOIS Data Problem Reporting System: http://wdprs.internic.net/
->>> Last update of WHOIS database: 2014-09-21T11:47:06-0700 <<<
+>>> Last update of WHOIS database: 2014-10-22T02:26:42-0700 <<<
 
 The Data in MarkMonitor.com's WHOIS database is provided by MarkMonitor.com for
 information purposes, and to assist persons in obtaining information about or
@@ -81,4 +81,4 @@ Professional and Managed Services
 Visit MarkMonitor at http://www.markmonitor.com
 Contact us at +1.8007459229
 In Europe, at +44.02032062220
---
+

@@ -1,0 +1,68 @@
+
+This Registry database contains ONLY .EDU domains. 
+The data in the EDUCAUSE Whois database is provided 
+by EDUCAUSE for information purposes in order to 
+assist in the process of obtaining information about 
+or related to .edu domain registration records. 
+
+The EDUCAUSE Whois database is authoritative for the 
+.EDU domain.         
+
+A Web interface for the .EDU EDUCAUSE Whois Server is 
+available at: http://whois.educause.net 
+
+By submitting a Whois query, you agree that this information 
+will not be used to allow, enable, or otherwise support 
+the transmission of unsolicited commercial advertising or 
+solicitations via e-mail.  The use of electronic processes to 
+harvest information from this server is generally prohibited 
+except as reasonably necessary to register or modify .edu 
+domain names.
+
+You may use "%" as a wildcard in your search. For further 
+information regarding the use of this WHOIS server, please 
+type: help 
+
+--------------------------
+
+Domain Name: YALE.EDU
+
+Registrant:
+   Yale University
+   25 Science Park
+   150 Munson St
+   New Haven, CT 06520
+   UNITED STATES
+
+Administrative Contact:
+   George Fainsilber
+   Yale University
+   25 Science Park
+   150 Munson St
+   New Haven, CT 06520
+   UNITED STATES
+   (203) 436-5913
+   dcsunix@yale.edu
+
+Technical Contact:
+   George Fainsilber
+   Yale University
+   25 Science Park
+   150 Munson St.
+   New Haven, CT 06520
+   UNITED STATES
+   (203) 436-5913
+   dcsunix@yale.edu
+
+Name Servers: 
+   SERV1.NET.YALE.EDU            130.132.1.9
+   SERV2.NET.YALE.EDU            130.132.1.10
+   SERV3.NET.YALE.EDU            130.132.1.11
+   SERV4.NET.YALE.EDU            130.132.89.9
+   YALE-SERVER.UCHICAGO.EDU      
+
+Domain record activated:    17-Mar-1987
+Domain record last updated: 07-May-2013
+Domain expires:             31-Jul-2015
+
+

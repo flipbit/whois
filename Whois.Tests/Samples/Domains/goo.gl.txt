@@ -33,4 +33,4 @@ Sponsoring Registrar Country: US
 Sponsoring Registrar Customer Service Contact: Domain Administrator
 Sponsoring Registrar Customer Service Email: ccops@markmonitor.com
 
->>> Last update of WHOIS database: 2014-10-21T11:20:12.580Z <<<
+>>> Last update of WHOIS database: 2014-10-22T09:18:49.697Z <<<

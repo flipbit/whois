@@ -1,0 +1,9 @@
+Domain Name: ow.ly
+- Domain Status: Strings shorter than four symbols long are to be registered directly under .ly ONLY through Libya Telecom and Technology co. (LTT) in the upcoming period to guarantee that registrants have Local presence.
+--
+Whois information provided by:
+LY Registry
+whois.nic.ly
+-For Whois usage policy please check:
+ http://whois.nic.ly/policy.php
+

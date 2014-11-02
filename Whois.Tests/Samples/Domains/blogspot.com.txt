@@ -51,12 +51,12 @@ Tech Phone Ext:
 Tech Fax: +1.6506188571
 Tech Fax Ext: 
 Tech Email: dns-admin@google.com
-Name Server: ns4.google.com
-Name Server: ns2.google.com
-Name Server: ns1.google.com
 Name Server: ns3.google.com
+Name Server: ns2.google.com
+Name Server: ns4.google.com
+Name Server: ns1.google.com
 URL of the ICANN WHOIS Data Problem Reporting System: http://wdprs.internic.net/
->>> Last update of WHOIS database: 2014-09-21T11:50:40-0700 <<<
+>>> Last update of WHOIS database: 2014-10-22T01:58:57-0700 <<<
 
 The Data in MarkMonitor.com's WHOIS database is provided by MarkMonitor.com for
 information purposes, and to assist persons in obtaining information about or

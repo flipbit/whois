@@ -71,7 +71,7 @@ Domain Expiration Date:                      Mon Apr 25 23:59:59 GMT 2016
 Domain Last Updated Date:                    Wed Jul 23 11:30:13 GMT 2014
 DNSSEC:                                      false
 
->>>> Whois database was last updated on: Tue Oct 21 12:03:30 GMT 2014 <<<<
+>>>> Whois database was last updated on: Wed Oct 22 09:43:25 GMT 2014 <<<<
 .CO Internet, S.A.S., the Administrator for .CO, has collected this
 information for the WHOIS database through Accredited Registrars.  
 This information is provided to you for informational purposes only 

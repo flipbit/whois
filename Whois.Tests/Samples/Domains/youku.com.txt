@@ -1,0 +1,80 @@
+Domain Name:youku.com
+Registry Domain ID:
+Registrar WHOIS Server: whois.hichina.com
+Registrar URL: http://www.net.cn/
+Updated Date:2013-11-07T09:37:27Z
+Creation Date:2003-12-22T08:57:45Z
+Registrar Registration Expiration Date:2020-12-22T09:57:45Z
+Registrar: HICHINA ZHICHENG TECHNOLOGY LTD.
+Registrar IANA ID: 420
+Registrar Abuse Contact Email: abuse@list.alibaba-inc.com
+Registrar Abuse Contact Phone: +86.4006008500
+Reseller:
+Domain Status:clientDeleteProhibited
+Domain Status:clientTransferProhibited
+Domain Status:clientUpdateProhibited
+Registry Registrant ID:whois-protect
+Registrant Name:YinSi BaoHu Yi KaiQi (Hidden by Whois Privacy Protection Service)
+Registrant Organization:YinSi BaoHu Yi KaiQi (Hidden by Whois Privacy Protection Service)
+Registrant Street:3/F.,HiChina Mansion,No.27 Gulouwai Avenue,Dongcheng District,Beijing 100120,China,
+Registrant City:Beijing
+Registrant State/Province:Beijing
+Registrant Postal Code:100120
+Registrant Country:CN
+Registrant Phone:+8610.65985888
+Registrant Phone Ext:
+Registrant Fax:+8610.65985438
+Registrant Fax Ext:
+Registrant Email:YuMing@YinSiBaoHu.AliYun.com
+Registry Admin ID:whois-protect
+Admin Name:YinSi BaoHu Yi KaiQi (Hidden by Whois Privacy Protection Service)
+Admin Organization:YinSi BaoHu Yi KaiQi (Hidden by Whois Privacy Protection Service)
+Admin Street:3/F.,HiChina Mansion,No.27 Gulouwai Avenue,Dongcheng District,Beijing 100120,China,
+Admin City:Beijing
+Admin State/Province:Beijing
+Admin Postal Code:100120
+Admin Country:CN
+Admin Phone:+8610.65985888
+Admin Phone Ext:
+Admin Fax:+8610.65985438
+Admin Fax Ext:
+Admin Email:YuMing@YinSiBaoHu.AliYun.com
+Registry Tech ID:whois-protect
+Tech Name:YinSi BaoHu Yi KaiQi (Hidden by Whois Privacy Protection Service)
+Tech Organization:YinSi BaoHu Yi KaiQi (Hidden by Whois Privacy Protection Service)
+Tech Street:3/F.,HiChina Mansion,No.27 Gulouwai Avenue,Dongcheng District,Beijing 100120,China,
+Tech City:Beijing
+Tech State/Province:Beijing
+Tech Postal Code:100120
+Tech Country:CN
+Tech Phone:+8610.65985888
+Tech Phone Ext:
+Tech Fax:+8610.65985438
+Tech Fax Ext:
+Tech Email:YuMing@YinSiBaoHu.AliYun.com
+Name Server:ns1.youku.com
+Name Server:ns2.youku.com
+Name Server:ns3.youku.com
+Name Server:ns4.youku.com
+DNSSEC:unsigned
+URL of the ICANN WHOIS Data Problem Reporting System: http://wdprs.internic.net/
+>>> Last update of WHOIS database:2013-11-07T09:37:27Z<<<
+
+Registry Billing ID:whois-protect
+Billing Name:YinSi BaoHu Yi KaiQi (Hidden by Whois Privacy Protection Service)
+Billing Organization:YinSi BaoHu Yi KaiQi (Hidden by Whois Privacy Protection Service)
+Billing Street:3/F.,HiChina Mansion,No.27 Gulouwai Avenue,Dongcheng District,Beijing 100120,China,
+Billing City:Beijing
+Billing State/Province:Beijing
+Billing Postal Code:100120
+Billing Country:CN
+Billing Phone:+8610.65985888
+Billing Phone Ext:
+Billing Fax:+8610.65985438
+Billing Fax Ext:
+Billing Email:YuMing@YinSiBaoHu.AliYun.com
+
+Important Reminder: Per ICANN 2013RAA`s request, Hichina has modified domain names`whois format of dot com/net/cc/tv, you could refer to section 1.4 posted by ICANN on http://www.icann.org/en/resources/registrars/raa/approved-with-specs-27jun13-en.htm#whois The data in this whois database is provided to you for information purposes only, that is, to assist you in obtaining information about or related to a domain name registration record. We make this information available "as is," and do not guarantee its accuracy. By submitting a whois query, you agree that you will use this data only for lawful purposes and that, under no circumstances will you use this data to: (1)enable high volume, automated, electronic processes that stress or load this whois database system providing you this information; or (2) allow, enable, or otherwise support the transmission of mass unsolicited, commercial advertising or solicitations via direct mail, electronic mail, or by telephone.  The compilation, repackaging, dissemination or other use of this data is expressly prohibited without prior written consent from us. We reserve the right to modify these terms at any time. By submitting this query, you agree to abide by these terms.<a href='http://www.net.cn/?utm_campaign=Corn&utm_medium=banner&utm_source=whois' target='_blank'><img src='http://whois.hichina.com/images/whois-banner.gif' border='0'></a>
+ 
+For complete domain details go to:http://whois.www.net.cn/whois/domain/youku.com
+

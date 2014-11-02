@@ -1,55 +1,83 @@
+Domain Name: soundcloud.com
+Registry Domain ID: 188932544_DOMAIN_COM-VRSN
+Registrar WHOIS Server: whois.gandi.net
+Registrar URL: http://www.gandi.net
+Updated Date: 2014-06-19T10:52:14Z
+Creation Date: 2005-07-25T10:33:38Z
+Registrar Registration Expiration Date: 2017-06-08T03:59:59Z
+Registrar: GANDI SAS
+Registrar IANA ID: 81
+Registrar Abuse Contact Email: abuse@support.gandi.net
+Registrar Abuse Contact Phone: +33.170377661
+Reseller: SoundCloud Ltd.
+Domain Status: clientTransferProhibited
+Domain Status: 
+Domain Status: 
+Domain Status: 
+Domain Status: 
+Registry Registrant ID: 
+Registrant Name: Eric Wahlforss
+Registrant Organization: SoundCloud Ltd.
+Registrant Street: Greifswalder Str 212-213
+Registrant City: Berlin
+Registrant State/Province: 
+Registrant Postal Code: 10405
+Registrant Country: DE
+Registrant Phone: +49.3024781000
+Registrant Phone Ext:
+Registrant Fax: 
+Registrant Fax Ext:
+Registrant Email: 0a258520f4beb37df849e739d57308c5-1431577@contact.gandi.net
+Registry Admin ID: 
+Admin Name: Eric Wahlforss
+Admin Organization: SoundCloud Ltd.
+Admin Street: Greifswalder Str 212-213
+Admin City: Berlin
+Admin State/Province: 
+Admin Postal Code: 10405
+Admin Country: DE
+Admin Phone: +49.3024781000
+Admin Phone Ext:
+Admin Fax: 
+Admin Fax Ext:
+Admin Email: 0a258520f4beb37df849e739d57308c5-1431577@contact.gandi.net
+Registry Tech ID: 
+Tech Name: Eric Wahlforss
+Tech Organization: SoundCloud Ltd.
+Tech Street: Greifswalder Str 212-213
+Tech City: Berlin
+Tech State/Province: 
+Tech Postal Code: 10405
+Tech Country: DE
+Tech Phone: +49.3024781000
+Tech Phone Ext:
+Tech Fax: 
+Tech Fax Ext:
+Tech Email: 0a258520f4beb37df849e739d57308c5-1431577@contact.gandi.net
+Name Server: NS1.P20.DYNECT.NET
+Name Server: NS2.P20.DYNECT.NET
+Name Server: NS3.P20.DYNECT.NET
+Name Server: NS4.P20.DYNECT.NET
+Name Server: 
+Name Server: 
+Name Server: 
+Name Server: 
+Name Server: 
+Name Server: 
+DNSSEC: Unsigned
+URL of the ICANN WHOIS Data Problem Reporting System: http://wdprs.internic.net/
+>>> Last update of WHOIS database: 2014-10-22T10:17:07Z <<<
 
-Whois Server Version 2.0
+Reseller Email: 
+Reseller URL: 
 
-Domain names in the .com and .net domains can now be registered
-with many different competing registrars. Go to http://www.internic.net
-for detailed information.
-
-   Domain Name: SOUNDCLOUD.COM
-   Registrar: GANDI SAS
-   Whois Server: whois.gandi.net
-   Referral URL: http://www.gandi.net
-   Name Server: NS1.P20.DYNECT.NET
-   Name Server: NS2.P20.DYNECT.NET
-   Name Server: NS3.P20.DYNECT.NET
-   Name Server: NS4.P20.DYNECT.NET
-   Status: clientTransferProhibited
-   Updated Date: 19-jun-2014
-   Creation Date: 25-jul-2005
-   Expiration Date: 08-jun-2017
-
->>> Last update of whois database: Tue, 21 Oct 2014 12:59:17 GMT <<<
-
-NOTICE: The expiration date displayed in this record is the date the 
-registrar's sponsorship of the domain name registration in the registry is 
-currently set to expire. This date does not necessarily reflect the expiration 
-date of the domain name registrant's agreement with the sponsoring 
-registrar.  Users may consult the sponsoring registrar's Whois database to 
-view the registrar's reported date of expiration for this registration.
-
-TERMS OF USE: You are not authorized to access or query our Whois 
-database through the use of electronic processes that are high-volume and 
-automated except as reasonably necessary to register domain names or 
-modify existing registrations; the Data in VeriSign Global Registry 
-Services' ("VeriSign") Whois database is provided by VeriSign for 
-information purposes only, and to assist persons in obtaining information 
-about or related to a domain name registration record. VeriSign does not 
-guarantee its accuracy. By submitting a Whois query, you agree to abide 
-by the following terms of use: You agree that you may use this Data only 
-for lawful purposes and that under no circumstances will you use this Data 
-to: (1) allow, enable, or otherwise support the transmission of mass 
-unsolicited, commercial advertising or solicitations via e-mail, telephone, 
-or facsimile; or (2) enable high volume, automated, electronic processes 
-that apply to VeriSign (or its computer systems). The compilation, 
-repackaging, dissemination or other use of this Data is expressly 
-prohibited without the prior written consent of VeriSign. You agree not to 
-use electronic processes that are automated and high-volume to access or 
-query the Whois database except as reasonably necessary to register 
-domain names or modify existing registrations. VeriSign reserves the right 
-to restrict your access to the Whois database in its sole discretion to ensure 
-operational stability.  VeriSign may restrict or terminate your access to the 
-Whois database for failure to abide by these terms of use. VeriSign 
-reserves the right to modify these terms at any time. 
-
-The Registry database contains ONLY .COM, .NET, .EDU domains and
-Registrars.
+Personal data access and use are governed by French law, any use for
+the purpose of unsolicited mass commercial advertising as well as any
+mass or automated inquiries (for any intent other than the
+registration or modification of a domain name) are strictly forbidden.
+Copy of whole or part of our database without Gandi's endorsement is
+strictly forbidden.
+The owner of a domain is the person specified as "Registrant Name" for
+a natural person and "Registrant Organization" for a legal person.
+Domain ownership disputes should be settled using ICANN's Uniform
+Dispute Resolution Policy: http://www.icann.org/en/help/dndr#udrp

@@ -73,7 +73,7 @@ Domain Expiration Date:                      Sat May 02 23:59:59 GMT 2015
 Domain Last Updated Date:                    Fri May 02 02:16:16 GMT 2014
 DNSSEC:                                      false
 
->>>> Whois database was last updated on: Tue Oct 21 11:56:44 GMT 2014 <<<<
+>>>> Whois database was last updated on: Wed Oct 22 09:39:24 GMT 2014 <<<<
 
 NeuStar, Inc., the Registry Administrator for .US, has collected this
 information for the WHOIS database through a .US-Accredited Registrar.

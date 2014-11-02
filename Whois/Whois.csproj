@@ -38,7 +38,7 @@
     <Reference Include="System.Core" />
     <Reference Include="Tokenizer, Version=1.0.0.0, Culture=neutral, processorArchitecture=MSIL">
       <SpecificVersion>False</SpecificVersion>
-      <HintPath>..\packages\Tokenizer.0.9.1\lib\net40\Tokenizer.dll</HintPath>
+      <HintPath>..\packages\Tokenizer.1.0.1\lib\net40\Tokenizer.dll</HintPath>
     </Reference>
   </ItemGroup>
   <ItemGroup>
@@ -46,7 +46,9 @@
     <Compile Include="Cache\IFileStore.cs" />
     <Compile Include="Cache\TcpReaderFileCache.cs" />
     <Compile Include="IWhoisLookup.cs" />
+    <Compile Include="Servers\Contact.cs" />
     <Compile Include="Servers\IWhoisServer.cs" />
+    <Compile Include="Servers\Organization.cs" />
     <Compile Include="Servers\WhoisServer.cs" />
     <Compile Include="Servers\WhoisServerRecord.cs" />
     <Compile Include="Servers\IanaServerLookup.cs" />

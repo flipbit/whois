@@ -73,7 +73,7 @@ namespace Whois.Visitors
 
                 var clone = record.Clone() as WhoisRecord;
 
-                var result = tokenizer.Parse(clone, pattern, record.AsStrings);
+                var result = tokenizer.Parse(clone, pattern, record.Text);
 
                 results.Add(result);
             }

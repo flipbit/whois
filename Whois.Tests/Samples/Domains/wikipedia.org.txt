@@ -14,6 +14,7 @@ Registrant ID:mmr-116560
 Registrant Name:Domain Admin
 Registrant Organization:Wikimedia Foundation, Inc.
 Registrant Street: 149 New Montgomery Street
+Registrant Street: Third Floor
 Registrant City:San Francisco
 Registrant State/Province:CA
 Registrant Postal Code:94105
@@ -27,6 +28,7 @@ Admin ID:mmr-116560
 Admin Name:Domain Admin
 Admin Organization:Wikimedia Foundation, Inc.
 Admin Street: 149 New Montgomery Street
+Admin Street: Third Floor
 Admin City:San Francisco
 Admin State/Province:CA
 Admin Postal Code:94105
@@ -40,6 +42,7 @@ Tech ID:mmr-116560
 Tech Name:Domain Admin
 Tech Organization:Wikimedia Foundation, Inc.
 Tech Street: 149 New Montgomery Street
+Tech Street: Third Floor
 Tech City:San Francisco
 Tech State/Province:CA
 Tech Postal Code:94105

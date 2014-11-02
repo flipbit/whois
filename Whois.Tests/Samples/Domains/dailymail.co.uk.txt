@@ -34,7 +34,7 @@
         ns5.anlremote.com
         ns6.associated.co.uk      195.234.240.251
 
-    WHOIS lookup made at 14:21:52 21-Oct-2014
+    WHOIS lookup made at 11:22:55 22-Oct-2014
 
 -- 
 This WHOIS information is provided for free by Nominet UK the central registry

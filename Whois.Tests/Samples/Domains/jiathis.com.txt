@@ -1,0 +1,79 @@
+Domain Name: JIATHIS.COM
+Registry Domain ID: 1553976970_DOMAIN_COM-VRSN
+Registrar WHOIS Server: whois.godaddy.com
+Registrar URL: http://www.godaddy.com
+Update Date: 2012-01-02 00:37:35
+Creation Date: 2009-04-29 23:56:17
+Registrar Registration Expiration Date: 2016-04-29 23:56:17
+Registrar: GoDaddy.com, LLC
+Registrar IANA ID: 146
+Registrar Abuse Contact Email: abuse@godaddy.com
+Registrar Abuse Contact Phone: +1.480-624-2505
+Domain Status: clientTransferProhibited
+Domain Status: clientUpdateProhibited
+Domain Status: clientRenewProhibited
+Domain Status: clientDeleteProhibited
+Registry Registrant ID: 
+Registrant Name: Ling Yun Cai
+Registrant Organization: Beijing Hua Da Shi Dai Tech Corp. Ltd.
+Registrant Street: Beijing Chao Yang GuoMao JianWai SOHO 18#
+Registrant City: Beijing
+Registrant State/Province: Beijing
+Registrant Postal Code: 100032
+Registrant Country: China
+Registrant Phone: +86.59000021
+Registrant Phone Ext: 
+Registrant Fax: 
+Registrant Fax Ext: 
+Registrant Email: cly1975@gmail.com
+Registry Admin ID: 
+Admin Name: Ling Yun Cai
+Admin Organization: Beijing Hua Da Shi Dai Tech Corp. Ltd.
+Admin Street: Beijing Chao Yang GuoMao JianWai SOHO 18#
+Admin City: Beijing
+Admin State/Province: Beijing
+Admin Postal Code: 100032
+Admin Country: China
+Admin Phone: +86.59000021
+Admin Phone Ext: 
+Admin Fax: 
+Admin Fax Ext: 
+Admin Email: cly1975@gmail.com
+Registry Tech ID: 
+Tech Name: Ling Yun Cai
+Tech Organization: Beijing Hua Da Shi Dai Tech Corp. Ltd.
+Tech Street: Beijing Chao Yang GuoMao JianWai SOHO 18#
+Tech City: Beijing
+Tech State/Province: Beijing
+Tech Postal Code: 100032
+Tech Country: China
+Tech Phone: +86.59000021
+Tech Phone Ext: 
+Tech Fax: 
+Tech Fax Ext: 
+Tech Email: cly1975@gmail.com
+Name Server: NS2.DNSV2.COM
+Name Server: NS1.DNSV2.COM
+DNSSEC: unsigned
+URL of the ICANN WHOIS Data Problem Reporting System: http://wdprs.internic.net/
+Last update of WHOIS database: 2014-10-22T12:00:00Z
+
+The data contained in GoDaddy.com, LLC's WhoIs database,
+while believed by the company to be reliable, is provided "as is"
+with no guarantee or warranties regarding its accuracy.  This
+information is provided for the sole purpose of assisting you
+in obtaining information about domain name registration records.
+Any use of this data for any other purpose is expressly forbidden without the prior written
+permission of GoDaddy.com, LLC.  By submitting an inquiry,
+you agree to these terms of usage and limitations of warranty.  In particular,
+you agree not to use this data to allow, enable, or otherwise make possible,
+dissemination or collection of this data, in part or in its entirety, for any
+purpose, such as the transmission of unsolicited advertising and
+and solicitations of any kind, including spam.  You further agree
+not to use this data to enable high volume, automated or robotic electronic
+processes designed to collect or compile this data for any purpose,
+including mining this data for your own personal or commercial purposes. 
+
+Please note: the registrant of the domain name is specified
+in the "registrant" section.  In most cases, GoDaddy.com, LLC 
+is not the registrant of domain names listed in this database.

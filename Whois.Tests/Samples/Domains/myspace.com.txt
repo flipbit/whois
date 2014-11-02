@@ -4,7 +4,7 @@ Domain Name: MYSPACE.COM
 Registry Domain ID:  
 Registrar WHOIS Server: whois.networksolutions.com
 Registrar URL: http://networksolutions.com
-Updated Date: 2013-04-19T00:00:00Z
+Updated Date: 2014-10-01T00:00:00Z
 Creation Date: 1996-02-22T00:00:00Z
 Registrar Registration Expiration Date: 2023-02-23T00:00:00Z
 Registrar: NETWORK SOLUTIONS, LLC.
@@ -14,56 +14,51 @@ Registrar Abuse Contact Phone: +1.8003337680
 Reseller: 
 Domain Status: clientTransferProhibited
 Registry Registrant ID: 
-Registrant Name: PERFECT PRIVACY, LLC
-Registrant Organization: 
-Registrant Street: 12808 Gran Bay Parkway West
-Registrant City: Jacksonville
-Registrant State/Province: FL
-Registrant Postal Code: 32258
+Registrant Name: Myspace LLC
+Registrant Organization: Myspace LLC
+Registrant Street: 407 N Maple Dr
+Registrant City: Beverly Hills
+Registrant State/Province: CA
+Registrant Postal Code: 90210
 Registrant Country: US
-Registrant Phone: +1.5707088780
+Registrant Phone: +1.3109697471
 Registrant Phone Ext: 
 Registrant Fax: 
 Registrant Fax Ext: 
-Registrant Email: gb94w3ct7hr@networksolutionsprivateregistration.com
+Registrant Email: lchun@yahoo.com
 Registry Admin ID: 
-Admin Name: PERFECT PRIVACY, LLC
-Admin Organization: 
-Admin Street: 12808 Gran Bay Parkway West
-Admin City: Jacksonville
-Admin State/Province: FL
-Admin Postal Code: 32258
+Admin Name: Wang, Peter
+Admin Organization: Myspace LLC
+Admin Street: 407 N Maple Dr
+Admin City: Beverly Hills
+Admin State/Province: CA
+Admin Postal Code: 90210
 Admin Country: US
-Admin Phone: +1.5707088780
+Admin Phone: +1.4242026001
 Admin Phone Ext: 
 Admin Fax: 
 Admin Fax Ext: 
-Admin Email: gb94w3ct7hr@networksolutionsprivateregistration.com
+Admin Email: pwang@myspace-inc.com
 Registry Tech ID: 
-Tech Name: PERFECT PRIVACY, LLC
-Tech Organization: 
-Tech Street: 12808 Gran Bay Parkway West
-Tech City: Jacksonville
-Tech State/Province: FL
-Tech Postal Code: 32258
+Tech Name: Wang, Peter
+Tech Organization: Myspace LLC
+Tech Street: 407 N Maple Dr
+Tech City: Beverly Hills
+Tech State/Province: CA
+Tech Postal Code: 90210
 Tech Country: US
-Tech Phone: +1.5707088780
+Tech Phone: +1.4242026001
 Tech Phone Ext: 
 Tech Fax: 
 Tech Fax Ext: 
-Tech Email: gb94w3ct7hr@networksolutionsprivateregistration.com
+Tech Email: pwang@myspace-inc.com
 Name Server: NS7-67.AKAM.NET
 Name Server: NS5-67.AKAM.NET
 Name Server: NS1-128.AKAM.NET
 Name Server: NS4-66.AKAM.NET
 DNSSEC: not signed
 URL of the ICANN WHOIS Data Problem Reporting System: http://wdprs.internic.net/
->>> Last update of whois database: Sun, 21 Sep 2014 18:53:21 UTC <<<
-
-This listing is a Network Solutions Private Registration. Mail
-correspondence to this address must be sent via USPS Express Mail(TM) or
-USPS Certified Mail(R); all other mail will not be processed. Be sure to
-include the registrant's domain name in the address.
+>>> Last update of whois database: Wed, 22 Oct 2014 05:31:12 GMT <<<
 
 The data in Networksolutions.com's WHOIS database is provided to you by
 Networksolutions.com for information purposes only, that is, to assist you in

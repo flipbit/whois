@@ -1,0 +1,84 @@
+Domain Name: webmd.com
+Registry Domain ID: 
+Registrar WHOIS Server: whois.markmonitor.com
+Registrar URL: http://www.markmonitor.com
+Updated Date: 2014-03-18T04:00:29-0700
+Creation Date: 1998-04-06T00:00:00-0700
+Registrar Registration Expiration Date: 2023-04-04T21:00:00-0700
+Registrar: MarkMonitor, Inc.
+Registrar IANA ID: 292
+Registrar Abuse Contact Email: abusecomplaints@markmonitor.com
+Registrar Abuse Contact Phone: +1.2083895740
+Domain Status: clientUpdateProhibited
+Domain Status: clientTransferProhibited
+Domain Status: clientDeleteProhibited
+Registry Registrant ID: 
+Registrant Name: Domain Admin
+Registrant Organization: WebMD, LLC
+Registrant Street: 111 Eighth Ave, 
+Registrant City: New York
+Registrant State/Province: NY
+Registrant Postal Code: 10011
+Registrant Country: US
+Registrant Phone: +1.2126243700
+Registrant Phone Ext: 
+Registrant Fax: 
+Registrant Fax Ext: 
+Registrant Email: dnsadm@webmd.net
+Registry Admin ID: 
+Admin Name: Domain Admin
+Admin Organization: WebMD, LLC
+Admin Street: 111 Eighth Ave, 
+Admin City: New York
+Admin State/Province: NY
+Admin Postal Code: 10011
+Admin Country: US
+Admin Phone: +1.2126243700
+Admin Phone Ext: 
+Admin Fax: 
+Admin Fax Ext: 
+Admin Email: dnsadm@webmd.net
+Registry Tech ID: 
+Tech Name: Domain Admin
+Tech Organization: WebMD, LLC
+Tech Street: 111 Eighth Ave, 
+Tech City: New York
+Tech State/Province: NY
+Tech Postal Code: 10011
+Tech Country: US
+Tech Phone: +1.2126243700
+Tech Phone Ext: 
+Tech Fax: 
+Tech Fax Ext: 
+Tech Email: dnsadm@webmd.net
+Name Server: ns2.p10.dynect.net
+Name Server: ns3.p10.dynect.net
+Name Server: ns1.p10.dynect.net
+Name Server: ns4.p10.dynect.net
+URL of the ICANN WHOIS Data Problem Reporting System: http://wdprs.internic.net/
+>>> Last update of WHOIS database: 2014-10-22T04:38:53-0700 <<<
+
+The Data in MarkMonitor.com's WHOIS database is provided by MarkMonitor.com for
+information purposes, and to assist persons in obtaining information about or
+related to a domain name registration record.  MarkMonitor.com does not guarantee
+its accuracy.  By submitting a WHOIS query, you agree that you will use this Data
+only for lawful purposes and that, under no circumstances will you use this Data to:
+ (1) allow, enable, or otherwise support the transmission of mass unsolicited,
+     commercial advertising or solicitations via e-mail (spam); or
+ (2) enable high volume, automated, electronic processes that apply to
+     MarkMonitor.com (or its systems).
+MarkMonitor.com reserves the right to modify these terms at any time.
+By submitting this query, you agree to abide by this policy.
+
+MarkMonitor is the Global Leader in Online Brand Protection.
+
+MarkMonitor Domain Management(TM)
+MarkMonitor Brand Protection(TM)
+MarkMonitor AntiPiracy(TM)
+MarkMonitor AntiFraud(TM)
+Professional and Managed Services
+
+Visit MarkMonitor at http://www.markmonitor.com
+Contact us at +1.8007459229
+In Europe, at +44.02032062220
+

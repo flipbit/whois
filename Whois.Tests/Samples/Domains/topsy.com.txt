@@ -1,0 +1,68 @@
+Domain Name: TOPSY.COM
+Registry Domain ID: 
+Registrar WHOIS Server: whois.domaindiscover.com
+Registrar URL: https://www.tierra.net
+Updated Date: 2014-01-21T13:17:24Z
+Creation Date: 1996-08-26T20:00:00Z
+Registrar Registration Expiration Date: 2020-08-25T20:00:00Z
+Registrar: TIERRANET INC. DBA DOMAINDISCOVER
+Registrar IANA ID: 86
+Registrar Abuse Contact Email: icann-abuse-reports@tierra.net
+Registrar Abuse Contact Phone: +1.6193932105
+Reseller: 
+Domain Status: ok
+Registry Registrant ID:
+Registrant Name: Network Administrator
+Registrant Organization: Topsy Labs, Inc.
+Registrant Street: 140 2nd St.
+Registrant City: San Francisco
+Registrant State/Province: CA
+Registrant Postal Code: 94105
+Registrant Country: US
+Registrant Phone: +1.4152300980
+Registrant Phone Ext:
+Registrant Fax: 
+Registrant Fax Ext:
+Registrant Email: ops@topsy.com
+Registry Admin ID:
+Admin Name: Network Administrator
+Admin Organization: Topsy Labs, Inc.
+Admin Street: 140 2nd St.
+Admin City: San Francisco
+Admin State/Province: CA
+Admin Postal Code: 94105
+Admin Country: US
+Admin Phone: +1.4152300980
+Admin Phone Ext:
+Admin Fax: 
+Admin Fax Ext:
+Admin Email: ops@topsy.com
+Registry Tech ID:
+Tech Name: Network Administrator
+Tech Organization: Topsy Labs, Inc.
+Tech Street: 140 2nd St.
+Tech City: San Francisco
+Tech State/Province: CA
+Tech Postal Code: 94105
+Tech Country: US
+Tech Phone: +1.4152300980
+Tech Phone Ext:
+Tech Fax: 
+Tech Fax Ext:
+Tech Email: ops@topsy.com
+Name Server: NS-1156.AWSDNS-16.ORG
+Name Server: NS-1901.AWSDNS-45.CO.UK
+Name Server: NS-457.AWSDNS-57.COM
+Name Server: NS-590.AWSDNS-09.NET
+DNSSEC: 
+URL of the ICANN WHOIS Data Problem Reporting System: http://wdprs.internic.net/
+>>> Last update of WHOIS database: 2014-10-22T04:42:48Z <<<
+
+This WHOIS database is provided for information purposes only. We do
+not guarantee the accuracy of this data. The following uses of this 
+system are expressly prohibited: (1) use of this system for unlawful 
+purposes; (2) use of this system to collect information used in the 
+mass transmission of unsolicited commercial messages in any medium; 
+(3) use of high volume, automated, electronic processes against this 
+database. By submitting this query, you agree to abide by this 
+policy.

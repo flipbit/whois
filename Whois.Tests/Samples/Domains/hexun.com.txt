@@ -1,0 +1,57 @@
+Domain Name: hexun.com
+Registry Domain ID:
+Registrar WHOIS Server: whois.35.com
+Registrar URL: http://www.35.com
+Updated Date: 2011-07-03 22:12:43
+Creation Date: 2003-08-24
+Registrar Registration Expiration Date: 2016-08-24
+Registrar: 35 Technology Co., Ltd.
+Registrar IANA ID: 1316
+Registrar Abuse Contact Email: abuse@35.cn
+Registrar Abuse Contact Phone: +86.5925391800
+Domain Status: ok
+Registry Registrant ID:
+Registrant Name:Beijing Hexunzaixian Xinxizixun
+Registrant Organization:Beijing Hexunzaixian Xinxizixun
+Registrant Street:No.22 chao-yang-man-wai street,beijing
+Registrant City:beijing
+Registrant State/Province:Beijing
+Registrant Postal Code:100020
+Registrant Country:CN
+Registrant Phone:+86.1085650803
+Registrant Phone Ext:
+Registrant Fax:+86.1085650806
+Registrant Fax Ext:
+Registrant Email:govunit@staff.hexun.com
+Registry Admin ID:
+Admin Name:Beijing Hexunzaixian Xinxizixun
+Admin Organization:Beijing Hexunzaixian Xinxizixun
+Admin Street:No.22 chao-yang-man-wai street,beijing
+Admin City:beijing
+Admin State/Province:Beijing
+Admin Postal Code:100020
+Admin Country:CN
+Admin Phone:+86.1085650803
+Admin Phone Ext:
+Admin Fax:+86.1085650806
+Admin Fax Ext:
+Admin Email:govunit@staff.hexun.com
+Registry Tech ID:
+Tech Name:Beijing Hexunzaixian Xinxizixun
+Tech Organization:Beijing Hexunzaixian Xinxizixun
+Tech Street:No.22 chao-yang-man-wai street,beijing
+Tech City:beijing
+Tech State/Province:Beijing
+Tech Postal Code:100020
+Tech Country:CN
+Tech Phone:+86.1085650803
+Tech Phone Ext:
+Tech Fax:+86.1085650806
+Tech Fax Ext:
+Tech Email:govunit@staff.hexun.com
+Name Server: ns.hexun.com
+Name Server: ns2.hexun.com
+Name Server: ns3.hexun.com
+DNSSEC: unsigned
+URL of the ICANN WHOIS Data Problem Reporting System:http://wdprs.internic.net/
+>>> Last update of WHOIS database: 2011-07-03 22:12:43 <<<

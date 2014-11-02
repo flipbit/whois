@@ -1,0 +1,72 @@
+
+Domain Name: nature.com
+Registry Domain ID: 1716459_DOMAIN_COM-VRSN
+Registrar WHOIS Server: whois.corporatedomains.com
+Registrar URL: www.cscprotectsbrands.com
+Updated Date: 2014-08-06 02:03:18 -0400
+Creation Date: 1994-08-11 00:00:00 -0400
+Registrar Registration Expiration Date: 2016-08-10 00:00:00 -0400
+Registrar: CSC CORPORATE DOMAINS, INC.
+Registrar IANA ID: 299
+Registrar Abuse Contact Email: admin@internationaladmin.com
+Registrar Abuse Contact Phone: +1.8887802723
+Domain Status: serverTransferProhibited
+Domain Status: serverDeleteProhibited
+Domain Status: clientTransferProhibited
+Domain Status: serverUpdateProhibited
+Registry Registrant ID: 
+Registrant Name: Roger Hirschkind
+Registrant Organization: Macmillan Publishers Limited
+Registrant Street: 4 Crinan Street
+Registrant City: London
+Registrant State/Province: EN
+Registrant Postal Code: N1 9XW
+Registrant Country: GB
+Registrant Phone: +1.2124518802
+Registrant Phone Ext: 
+Registrant Fax: 
+Registrant Fax Ext: 
+Registrant Email: roger.hirschkind@macmillan.com
+Registry Admin ID: 
+Admin Name: Roger Hirschkind
+Admin Organization: Macmillan Publishers Limited
+Admin Street: 4 Crinan Street
+Admin City: London
+Admin State/Province: EN
+Admin Postal Code: N1 9XW
+Admin Country: GB
+Admin Phone: +1.2124518802
+Admin Phone Ext: 
+Admin Fax: 
+Admin Fax Ext: 
+Admin Email: roger.hirschkind@macmillan.com
+Registry Tech ID: 
+Tech Name: Michael Badami
+Tech Organization: Macmillan Publishers Limited
+Tech Street: 4 Crinan Street
+Tech City: London
+Tech State/Province: EN
+Tech Postal Code: N1 9XW
+Tech Country: GB
+Tech Phone: +1.2124518802
+Tech Phone Ext: 
+Tech Fax: 
+Tech Fax Ext: 
+Tech Email: michael.badami@macmillan.com
+Name Server: ns1-n.dns.pipex.net
+Name Server: ns0-n.dns.pipex.net
+DNSSEC: 
+URL of the ICANN WHOIS Data Problem Reporting System: http://wdprs.internic.net/
+>>> Last update of WHOIS database: 2014-08-06 02:03:18 -0400 <<<
+
+
+Corporation Service Company(c) (CSC)  The Trusted Partner of More than 50% of the 100 Best Global Brands.
+
+Contact us to learn more about our enterprise solutions for Global Domain Name Registration and Management, Trademark Research and Watching, Brand, Logo and Auction Monitoring, as well SSL Certificate Services and DNS Hosting.
+
+NOTICE: You are not authorized to access or query our WHOIS database through the use of high-volume, automated, electronic processes or for the purpose or purposes of using the data in any manner that violates these terms of use. The Data in the CSC WHOIS database is provided by CSC for information purposes only, and to assist persons in obtaining information about or related to a domain name registration record. CSC does not guarantee its accuracy. By submitting a WHOIS query, you agree to abide by the following terms of use: you agree that you may use this Data only for lawful purposes and that under no circumstances will you use this Data to: (1) allow, enable, or otherwise support the transmission of mass unsolicited, commercial advertising or solicitations via direct mail, e-mail, telephone, or facsimile; or (2) enable high volume, automated, electronic processes that apply to CSC (or its computer systems). CSC reserves the right to terminate your access to the WHOIS database in its sole discretion for any violations by you of these terms of use. CSC reserves the right to modify these terms at any time.
+
+Register your domain name at http://www.cscglobal.com
+
+For more information on Whois status codes, please visit https://www.icann.org/resources/pages/epp-status-codes-2014-06-16-en
+

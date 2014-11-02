@@ -54,7 +54,7 @@ Tech Email: domain@fb.com
 Name Server: b.ns.facebook.com
 Name Server: a.ns.facebook.com
 URL of the ICANN WHOIS Data Problem Reporting System: http://wdprs.internic.net/
->>> Last update of WHOIS database: 2014-09-21T11:48:37-0700 <<<
+>>> Last update of WHOIS database: 2014-10-22T01:59:02-0700 <<<
 
 The Data in MarkMonitor.com's WHOIS database is provided by MarkMonitor.com for
 information purposes, and to assist persons in obtaining information about or

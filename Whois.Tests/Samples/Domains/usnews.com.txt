@@ -1,0 +1,76 @@
+
+
+Domain Name: USNEWS.COM
+Registry Domain ID:  
+Registrar WHOIS Server: whois.networksolutions.com
+Registrar URL: http://networksolutions.com
+Updated Date: 2014-01-21T00:00:00Z
+Creation Date: 1995-01-20T00:00:00Z
+Registrar Registration Expiration Date: Sun Jan 21 00:00:00 EST 2024T00:00:00Z
+Registrar: NETWORK SOLUTIONS, LLC.
+Registrar IANA ID: 2
+Registrar Abuse Contact Email: abuse@web.com
+Registrar Abuse Contact Phone: +1.8003337680
+Reseller: 
+Domain Status: clientTransferProhibited
+Registry Registrant ID: 
+Registrant Name: U.S. News & World Report L.P.
+Registrant Organization: U.S. News & World Report L.P.
+Registrant Street: 1050 Thomas Jefferson St. NW
+Registrant City: Washington
+Registrant State/Province: DC
+Registrant Postal Code: 20007
+Registrant Country: US
+Registrant Phone: +1.2029552443
+Registrant Phone Ext: 
+Registrant Fax: +1.9999999999
+Registrant Fax Ext: 
+Registrant Email: yshu@usnews.com
+Registry Admin ID: 
+Admin Name: U.S. News & World Report L.P.
+Admin Organization: U.S. News & World Report L.P.
+Admin Street: 1050 Thomas Jefferson St. NW
+Admin City: Washington
+Admin State/Province: DC
+Admin Postal Code: 20007
+Admin Country: US
+Admin Phone: +1.2029552443
+Admin Phone Ext: 
+Admin Fax: +1.9999999999
+Admin Fax Ext: 
+Admin Email: dns-admin@usnews.com
+Registry Tech ID: 
+Tech Name: Kupferman, Matt
+Tech Organization: USN
+Tech Street: 1050 Thomas Jefferson Street NW
+Tech City: Washington
+Tech State/Province: DC
+Tech Postal Code: 20007
+Tech Country: US
+Tech Phone: +1.2029552114
+Tech Phone Ext: 
+Tech Fax: 
+Tech Fax Ext: 
+Tech Email: hostmaster@kupferman.net
+Name Server: AUTH1.DNS.COGENTCO.COM
+Name Server: AUTH2.DNS.COGENTCO.COM
+DNSSEC: not signed
+URL of the ICANN WHOIS Data Problem Reporting System: http://wdprs.internic.net/
+>>> Last update of whois database: Wed, 22 Oct 2014 12:15:43 GMT <<<
+
+The data in Networksolutions.com's WHOIS database is provided to you by
+Networksolutions.com for information purposes only, that is, to assist you in
+obtaining information about or related to a domain name registration
+record. Networksolutions.com makes this information available "as is," and
+does not guarantee its accuracy. By submitting a WHOIS query, you
+agree that you will use this data only for lawful purposes and that,
+under no circumstances will you use this data to: (1) allow, enable,
+or otherwise support the transmission of mass unsolicited, commercial
+advertising or solicitations via direct mail, electronic mail, or by
+telephone; or (2) enable high volume, automated, electronic processes
+that apply to Networksolutions.com  (or its systems). The compilation,
+repackaging, dissemination or other use of this data is expressly
+prohibited without the prior written consent of Networksolutions.com.
+Networksolutions.com reserves the right to modify these terms at any time.
+By submitting this query, you agree to abide by these terms.
+

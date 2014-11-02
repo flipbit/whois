@@ -1,0 +1,74 @@
+ 
+Domain Name: SHAREASALE.COM
+Registry Domain ID: 18408969_DOMAIN_COM-VRSN
+Registrar WHOIS Server: whois.directnic.com
+Registrar URL: http://www.directnic.com
+Updated Date: 2014-01-05T15:12:55+00:00
+Creation Date: 2000-01-25T16:12:02+00:00
+Registrar Registration Expiration Date: 2016-01-25T16:12:02+00:00
+Registrar: DNC Holdings, Inc.
+Registrar IANA ID: 291
+Registrar Abuse Contact Email: abuse@directnic.com
+Registrar Abuse Contact Phone: +1.8668569598
+Domain Status: clientTransferProhibited
+Domain Status: clientUpdateProhibited
+Domain Status: clientDeleteProhibited
+Domain Status: renewPeriod
+Registrant Name: Shareasale .com
+Registrant Organization: Shareasale.com
+Registrant Street: 154 W. Hubbard STE 305 
+Registrant City: Chicago
+Registrant State/Province: IL
+Registrant Postal Code: 60610
+Registrant Country: US
+Registrant Phone: +1.3125959846
+Registrant Phone Ext:
+Registrant Fax: 
+Registrant Fax Ext: 
+Registrant Email: shareasale@shareasale.com
+Admin Name: Shareasale .com
+Admin Organization: Shareasale.com
+Admin Street: 154 W. Hubbard STE 305 
+Admin City: Chicago
+Admin State/Province: IL
+Admin Postal Code: 60610
+Admin Country: US
+Admin Phone: +1.3125959846
+Admin Phone Ext:
+Admin Fax: 
+Admin Fax Ext: 
+Admin Email: shareasale@shareasale.com
+Tech Name: Shareasale .com
+Tech Organization: Shareasale.com
+Tech Street: 154 W. Hubbard STE 305 
+Tech City: Chicago
+Tech State/Province: IL
+Tech Postal Code: 60610
+Tech Country: US
+Tech Phone: +1.3125959846
+Tech Phone Ext:
+Tech Fax: 
+Tech Fax Ext: 
+Tech Email: shareasale@shareasale.com
+Name Server: NS-1448.AWSDNS-53.ORG
+Name Server: NS-1839.AWSDNS-37.CO.UK
+Name Server: NS-151.AWSDNS-18.COM
+Name Server: NS-513.AWSDNS-00.NET
+URL of the ICANN WHOIS Data Problem Reporting System
+http://wdprs.internic.net
+>>> Last update of WHOIS database: 2014-10-22T12:19:04+00:00 <<<
+
+
+The compilation, repackaging, dissemination, or other use of this WHOIS
+data is expressly prohibited without the prior written consent of
+DNC Holdings, Inc.
+
+DNC Holdings reserves the right to terminate your access to its WHOIS
+database in its sole discretion, including without limitation, for
+excessive querying of the database or for failure to otherwise abide by
+this policy.
+
+DNC Holdings reserves the right to modify these terms at any time.
+
+NOTE: THE WHOIS DATABASE IS A CONTACT DATABASE ONLY.
+LACK OF A DOMAIN RECORD DOES NOT SIGNIFY DOMAIN AVAILABILITY.

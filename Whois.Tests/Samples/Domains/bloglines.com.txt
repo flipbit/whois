@@ -1,0 +1,88 @@
+Domain Name: bloglines.com
+Registry Domain ID: 97634175_DOMAIN_COM-VRSN
+Registrar WHOIS Server: whois.markmonitor.com
+Registrar URL: http://www.markmonitor.com
+Updated Date: 2014-10-14T12:48:08-0700
+Creation Date: 2003-05-07T13:50:07-0700
+Registrar Registration Expiration Date: 2016-05-07T13:50:07-0700
+Registrar: MarkMonitor, Inc.
+Registrar IANA ID: 292
+Registrar Abuse Contact Email: abusecomplaints@markmonitor.com
+Registrar Abuse Contact Phone: +1.2083895740
+Domain Status: clientUpdateProhibited
+Domain Status: clientTransferProhibited
+Domain Status: clientDeleteProhibited
+Registry Registrant ID: 
+Registrant Name: DNS Manager
+Registrant Organization: Ask.com
+Registrant Street: 555 12th Street, Suite 500
+Registrant City: Oakland
+Registrant State/Province: CA
+Registrant Postal Code: 94607
+Registrant Country: US
+Registrant Phone: +1.5109857400
+Registrant Phone Ext: 
+Registrant Fax: +1.5109857507
+Registrant Fax Ext: 
+Registrant Email: dnsmanager@askjeeves.com
+Registry Admin ID: 
+Admin Name: DNS Manager
+Admin Organization: Ask.com
+Admin Street: 555 12th Street, Suite 500
+Admin City: Oakland
+Admin State/Province: CA
+Admin Postal Code: 94607
+Admin Country: US
+Admin Phone: +1.5109857400
+Admin Phone Ext: 
+Admin Fax: +1.5109857507
+Admin Fax Ext: 
+Admin Email: dnsmanager@askjeeves.com
+Registry Tech ID: 
+Tech Name: DNS Manager
+Tech Organization: Ask.com
+Tech Street: 555 12th Street, Suite 500
+Tech City: Oakland
+Tech State/Province: CA
+Tech Postal Code: 94607
+Tech Country: US
+Tech Phone: +1.5109857400
+Tech Phone Ext: 
+Tech Fax: +1.5109857507
+Tech Fax Ext: 
+Tech Email: dnsmanager@askjeeves.com
+Name Server: pdns4.ultradns.org
+Name Server: udns1.ultradns.net
+Name Server: pdns6.ultradns.co.uk
+Name Server: pdns1.ultradns.net
+Name Server: udns2.ultradns.net
+Name Server: pdns5.ultradns.info
+Name Server: pdns2.ultradns.net
+Name Server: pdns3.ultradns.org
+URL of the ICANN WHOIS Data Problem Reporting System: http://wdprs.internic.net/
+>>> Last update of WHOIS database: 2014-10-22T05:00:00-0700 <<<
+
+The Data in MarkMonitor.com's WHOIS database is provided by MarkMonitor.com for
+information purposes, and to assist persons in obtaining information about or
+related to a domain name registration record.  MarkMonitor.com does not guarantee
+its accuracy.  By submitting a WHOIS query, you agree that you will use this Data
+only for lawful purposes and that, under no circumstances will you use this Data to:
+ (1) allow, enable, or otherwise support the transmission of mass unsolicited,
+     commercial advertising or solicitations via e-mail (spam); or
+ (2) enable high volume, automated, electronic processes that apply to
+     MarkMonitor.com (or its systems).
+MarkMonitor.com reserves the right to modify these terms at any time.
+By submitting this query, you agree to abide by this policy.
+
+MarkMonitor is the Global Leader in Online Brand Protection.
+
+MarkMonitor Domain Management(TM)
+MarkMonitor Brand Protection(TM)
+MarkMonitor AntiPiracy(TM)
+MarkMonitor AntiFraud(TM)
+Professional and Managed Services
+
+Visit MarkMonitor at http://www.markmonitor.com
+Contact us at +1.8007459229
+In Europe, at +44.02032062220
+

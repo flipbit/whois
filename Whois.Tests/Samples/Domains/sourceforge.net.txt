@@ -1,56 +1,92 @@
+Domain Name: SOURCEFORGE.NET
+Registry Domain ID: 8919427_DOMAIN_NET-VRSN
+Registrar WHOIS Server: whois.tucows.com
+Registrar URL: http://tucowsdomains.com
+Updated Date: 2013-07-11 09:27:07
+Creation Date: 1999-08-08 04:48:02
+Registrar Registration Expiration Date: 2015-08-08 04:47:54
+Registrar: TUCOWS, INC.
+Registrar IANA ID: 69
+Registrar Abuse Contact Email: domainabuse@tucows.com
+Registrar Abuse Contact Phone: +1.4165350123
+Domain Status: clientTransferProhibited
+Domain Status: clientUpdateProhibited
+Registry Registrant ID: 
+Registrant Name: Host Master
+Registrant Organization: Dice Holdings, Inc.
+Registrant Street: ATTN Slashdot Media 1040 Avenue of the Americas 16th Floor
+Registrant City: New York
+Registrant State/Province: NY
+Registrant Postal Code: 10018
+Registrant Country: US
+Registrant Phone: +1.8557527436
+Registrant Phone Ext: 
+Registrant Fax: 
+Registrant Fax Ext: 
+Registrant Email: hostmaster@slashdotmedia.com
+Registry Admin ID: 
+Admin Name: DNS Admin
+Admin Organization: Dice Holdings, Inc.
+Admin Street: ATTN Slashdot Media 1040 Avenue of the Americas 16th Floor
+Admin City: New York
+Admin State/Province: NY
+Admin Postal Code: 10018
+Admin Country: US
+Admin Phone: +1.8557527436
+Admin Phone Ext: 
+Admin Fax: 
+Admin Fax Ext: 
+Admin Email: dns-admin@slashdotmedia.com
+Registry Tech ID: 
+Tech Name: DNS Technical
+Tech Organization: Dice Holdings, Inc.
+Tech Street: ATTN Slashdot Media 1040 Avenue of the Americas 16th Floor
+Tech City: New York
+Tech State/Province: NY
+Tech Postal Code: 10018
+Tech Country: US
+Tech Phone: +1.8557527436
+Tech Phone Ext: 
+Tech Fax: 
+Tech Fax Ext: 
+Tech Email: dns-tech@slashdotmedia.com
+Name Server: NS1.P03.DYNECT.NET
+Name Server: NS2.P03.DYNECT.NET
+Name Server: NS4.P03.DYNECT.NET
+Name Server: NS3.P03.DYNECT.NET
+DNSSEC: Unsigned
+URL of the ICANN WHOIS Data Problem Reporting System: http://wdprs.internic.net/
+>>> Last update of WHOIS database: 2013-07-11 09:27:07 <<<
 
-Whois Server Version 2.0
+The Data in the Tucows Registrar WHOIS database is provided to you by Tucows
+for information purposes only, and may be used to assist you in obtaining
+information about or related to a domain name's registration record.
 
-Domain names in the .com and .net domains can now be registered
-with many different competing registrars. Go to http://www.internic.net
-for detailed information.
+Tucows makes this information available "as is," and does not guarantee its
+accuracy.
 
-   Domain Name: SOURCEFORGE.NET
-   Registrar: TUCOWS DOMAINS INC.
-   Whois Server: whois.tucows.com
-   Referral URL: http://domainhelp.opensrs.net
-   Name Server: NS1.P03.DYNECT.NET
-   Name Server: NS2.P03.DYNECT.NET
-   Name Server: NS3.P03.DYNECT.NET
-   Name Server: NS4.P03.DYNECT.NET
-   Status: clientTransferProhibited
-   Status: clientUpdateProhibited
-   Updated Date: 28-aug-2013
-   Creation Date: 08-aug-1999
-   Expiration Date: 08-aug-2015
+By submitting a WHOIS query, you agree that you will use this data only for
+lawful purposes and that, under no circumstances will you use this data to:
+a) allow, enable, or otherwise support the transmission by e-mail,
+telephone, or facsimile of mass, unsolicited, commercial advertising or
+solicitations to entities other than the data recipient's own existing
+customers; or (b) enable high volume, automated, electronic processes that
+send queries or data to the systems of any Registry Operator or
+ICANN-Accredited registrar, except as reasonably necessary to register
+domain names or modify existing registrations.
 
->>> Last update of whois database: Tue, 21 Oct 2014 12:08:48 GMT <<<
+The compilation, repackaging, dissemination or other use of this Data is
+expressly prohibited without the prior written consent of Tucows.
 
-NOTICE: The expiration date displayed in this record is the date the 
-registrar's sponsorship of the domain name registration in the registry is 
-currently set to expire. This date does not necessarily reflect the expiration 
-date of the domain name registrant's agreement with the sponsoring 
-registrar.  Users may consult the sponsoring registrar's Whois database to 
-view the registrar's reported date of expiration for this registration.
+Tucows reserves the right to terminate your access to the Tucows WHOIS
+database in its sole discretion, including without limitation, for excessive
+querying of the WHOIS database or for failure to otherwise abide by this
+policy.
 
-TERMS OF USE: You are not authorized to access or query our Whois 
-database through the use of electronic processes that are high-volume and 
-automated except as reasonably necessary to register domain names or 
-modify existing registrations; the Data in VeriSign Global Registry 
-Services' ("VeriSign") Whois database is provided by VeriSign for 
-information purposes only, and to assist persons in obtaining information 
-about or related to a domain name registration record. VeriSign does not 
-guarantee its accuracy. By submitting a Whois query, you agree to abide 
-by the following terms of use: You agree that you may use this Data only 
-for lawful purposes and that under no circumstances will you use this Data 
-to: (1) allow, enable, or otherwise support the transmission of mass 
-unsolicited, commercial advertising or solicitations via e-mail, telephone, 
-or facsimile; or (2) enable high volume, automated, electronic processes 
-that apply to VeriSign (or its computer systems). The compilation, 
-repackaging, dissemination or other use of this Data is expressly 
-prohibited without the prior written consent of VeriSign. You agree not to 
-use electronic processes that are automated and high-volume to access or 
-query the Whois database except as reasonably necessary to register 
-domain names or modify existing registrations. VeriSign reserves the right 
-to restrict your access to the Whois database in its sole discretion to ensure 
-operational stability.  VeriSign may restrict or terminate your access to the 
-Whois database for failure to abide by these terms of use. VeriSign 
-reserves the right to modify these terms at any time. 
+Tucows reserves the right to modify these terms at any time.
 
-The Registry database contains ONLY .COM, .NET, .EDU domains and
-Registrars.
+By submitting this query, you agree to abide by these terms.
+
+NOTE: THE WHOIS DATABASE IS A CONTACT DATABASE ONLY.  LACK OF A DOMAIN
+RECORD DOES NOT SIGNIFY DOMAIN AVAILABILITY.
+

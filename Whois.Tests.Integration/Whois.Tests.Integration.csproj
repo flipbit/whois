@@ -36,8 +36,9 @@
     </Reference>
     <Reference Include="System" />
     <Reference Include="System.Core" />
-    <Reference Include="Tokenizer">
-      <HintPath>..\packages\Tokenizer.0.9.1\lib\net45\Tokenizer.dll</HintPath>
+    <Reference Include="Tokenizer, Version=1.0.0.0, Culture=neutral, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>..\packages\Tokenizer.1.0.1\lib\net45\Tokenizer.dll</HintPath>
     </Reference>
   </ItemGroup>
   <ItemGroup>

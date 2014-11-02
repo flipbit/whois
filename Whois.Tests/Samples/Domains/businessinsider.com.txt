@@ -1,0 +1,84 @@
+Domain Name: BUSINESSINSIDER.COM
+Registry Domain ID: 1291499_DOMAIN_COM-VRSN
+Registrar WHOIS Server: whois.godaddy.com
+Registrar URL: http://www.godaddy.com
+Update Date: 2013-06-14 07:45:10
+Creation Date: 1998-03-06 00:00:00
+Registrar Registration Expiration Date: 2022-09-07 22:59:59
+Registrar: GoDaddy.com, LLC
+Registrar IANA ID: 146
+Registrar Abuse Contact Email: abuse@godaddy.com
+Registrar Abuse Contact Phone: +1.480-624-2505
+Domain Status: clientTransferProhibited
+Domain Status: clientUpdateProhibited
+Domain Status: clientRenewProhibited
+Domain Status: clientDeleteProhibited
+Registry Registrant ID: 
+Registrant Name: Julie Hansen
+Registrant Organization: Silicon Alley Insider, Inc.
+Registrant Street: 257 Park Avenue South
+Registrant Street: 13th floor
+Registrant City: new york
+Registrant State/Province: New York
+Registrant Postal Code: 10010
+Registrant Country: United States
+Registrant Phone: +1.6463766050
+Registrant Phone Ext: 
+Registrant Fax: 
+Registrant Fax Ext: 
+Registrant Email: domains@businessinsider.com
+Registry Admin ID: 
+Admin Name: Julie Hansen
+Admin Organization: Silicon Alley Insider, Inc.
+Admin Street: 257 Park Avenue South
+Admin Street: 13th floor
+Admin City: new york
+Admin State/Province: New York
+Admin Postal Code: 10010
+Admin Country: United States
+Admin Phone: +1.6463766050
+Admin Phone Ext: 
+Admin Fax: 
+Admin Fax Ext: 
+Admin Email: domains@businessinsider.com
+Registry Tech ID: 
+Tech Name: Julie Hansen
+Tech Organization: Silicon Alley Insider, Inc.
+Tech Street: 257 Park Avenue South
+Tech Street: 13th floor
+Tech City: new york
+Tech State/Province: New York
+Tech Postal Code: 10010
+Tech Country: United States
+Tech Phone: +1.6463766050
+Tech Phone Ext: 
+Tech Fax: 
+Tech Fax Ext: 
+Tech Email: domains@businessinsider.com
+Name Server: NS1.P14.DYNECT.NET
+Name Server: NS2.P14.DYNECT.NET
+Name Server: NS3.P14.DYNECT.NET
+Name Server: NS4.P14.DYNECT.NET
+DNSSEC: unsigned
+URL of the ICANN WHOIS Data Problem Reporting System: http://wdprs.internic.net/
+Last update of WHOIS database: 2014-10-22T11:00:00Z
+
+The data contained in GoDaddy.com, LLC's WhoIs database,
+while believed by the company to be reliable, is provided "as is"
+with no guarantee or warranties regarding its accuracy.  This
+information is provided for the sole purpose of assisting you
+in obtaining information about domain name registration records.
+Any use of this data for any other purpose is expressly forbidden without the prior written
+permission of GoDaddy.com, LLC.  By submitting an inquiry,
+you agree to these terms of usage and limitations of warranty.  In particular,
+you agree not to use this data to allow, enable, or otherwise make possible,
+dissemination or collection of this data, in part or in its entirety, for any
+purpose, such as the transmission of unsolicited advertising and
+and solicitations of any kind, including spam.  You further agree
+not to use this data to enable high volume, automated or robotic electronic
+processes designed to collect or compile this data for any purpose,
+including mining this data for your own personal or commercial purposes. 
+
+Please note: the registrant of the domain name is specified
+in the "registrant" section.  In most cases, GoDaddy.com, LLC 
+is not the registrant of domain names listed in this database.

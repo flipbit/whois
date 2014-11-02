@@ -1,0 +1,72 @@
+Domain Name: YCOMBINATOR.COM
+Registry Domain ID: 147225527_DOMAIN_COM-VRSN
+Registrar WHOIS Server: whois.easydns.com
+Registrar URL: http://www.easydns.com
+Updated Date: 2013-10-30 06:02:40
+Creation Date: 2005-03-20 23:51:07
+Registrar Registration Expiration Date: 2017-03-20 22:51:07
+Registrar: easyDNS Technologies, Inc.
+Registrar IANA ID: 469
+Registrar Abuse Contact Email: abuse@easydns.com
+Registrar Abuse Contact Phone: +1.4165358672
+Domain Status: clientTransferProhibited
+Domain Status: clientUpdateProhibited
+Registry Registrant ID: 
+Registrant Name: Paul Graham
+Registrant Organization: Y Combinator LLC
+Registrant Street: 320 Pioneer Way
+Registrant City: Mountain View
+Registrant State/Province: CA
+Registrant Postal Code: 94041
+Registrant Country: US
+Registrant Phone: +1.4150000000
+Registrant Phone Ext: 
+Registrant Fax: 
+Registrant Fax Ext: 
+Registrant Email: pg@ycombinator.com
+Registry Admin ID: 
+Admin Name: Kirsty Nathoo
+Admin Organization: Y Combinator LLC
+Admin Street: 320 Pioneer Way
+Admin City: Mountain View
+Admin State/Province: CA
+Admin Postal Code: 94041
+Admin Country: US
+Admin Phone: +1.4150000000
+Admin Phone Ext: 
+Admin Fax: 
+Admin Fax Ext: 
+Admin Email: kirsty@ycombinator.com
+Registry Tech ID: 
+Tech Name: Robert Morris
+Tech Organization: Y Combinator LLC
+Tech Street: 32 Pioneer Way
+Tech City: Mountain View
+Tech State/Province: CA
+Tech Postal Code: 94041
+Tech Country: US
+Tech Phone: +1.6170000000
+Tech Phone Ext: 
+Tech Fax: 
+Tech Fax Ext: 
+Tech Email: rtm@ycombinator.com
+Name Server: SUE.NS.CLOUDFLARE.COM
+Name Server: THEO.NS.CLOUDFLARE.COM
+DNSSEC: Unsigned
+URL of the ICANN WHOIS Data Problem Reporting System: http://wdprs.internic.net/
+>>> Last update of WHOIS database: 2013-10-30 06:02:40 <<<
+
+This domain is being managed via EASYDNS
+
+The DNS Hosting specialists since 1998
+
+DNS Hosting / Dynamic DNS / Failover DNS / DNS Anycast
+
+Unconditional Guarantee, No tricks, No gimmicks: http://easyDNS.com
+
+System Status Updates: http://easyurl.net/easystatus
+
+( Follow us on Twitter http://twitter.com/easydns )
+
+
+You have 100 lookups left today

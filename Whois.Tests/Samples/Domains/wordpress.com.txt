@@ -51,14 +51,14 @@ Tech Phone Ext:
 Tech Fax: 
 Tech Fax Ext: 
 Tech Email: domains@automattic.com
-Name Server: ns1.wordpress.com
-Name Server: ns2.wordpress.com
-Name Server: ns5.wordpress.com
+Name Server: ns4.wordpress.com
 Name Server: ns3.wordpress.com
 Name Server: ns6.wordpress.com
-Name Server: ns4.wordpress.com
+Name Server: ns2.wordpress.com
+Name Server: ns1.wordpress.com
+Name Server: ns5.wordpress.com
 URL of the ICANN WHOIS Data Problem Reporting System: http://wdprs.internic.net/
->>> Last update of WHOIS database: 2014-09-21T11:51:51-0700 <<<
+>>> Last update of WHOIS database: 2014-10-22T02:06:29-0700 <<<
 
 The Data in MarkMonitor.com's WHOIS database is provided by MarkMonitor.com for
 information purposes, and to assist persons in obtaining information about or

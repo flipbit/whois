@@ -41,7 +41,7 @@
         use4.akam.net
         usw2.akam.net
 
-    WHOIS lookup made at 14:04:40 21-Oct-2014
+    WHOIS lookup made at 11:18:27 22-Oct-2014
 
 -- 
 This WHOIS information is provided for free by Nominet UK the central registry

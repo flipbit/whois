@@ -51,16 +51,16 @@ Tech Phone Ext:
 Tech Fax: +1.6465134321
 Tech Fax Ext: 
 Tech Email: domains@tumblr.com
-Name Server: pdns4.ultradns.org
-Name Server: ns1.p03.dynect.net
-Name Server: ns2.p03.dynect.net
-Name Server: pdns3.ultradns.org
 Name Server: ns3.p03.dynect.net
+Name Server: ns1.p03.dynect.net
+Name Server: pdns3.ultradns.org
+Name Server: ns2.p03.dynect.net
+Name Server: pdns4.ultradns.org
 Name Server: pdns6.ultradns.co.uk
 Name Server: ns4.p03.dynect.net
 Name Server: pdns2.ultradns.net
 URL of the ICANN WHOIS Data Problem Reporting System: http://wdprs.internic.net/
->>> Last update of WHOIS database: 2014-09-21T11:46:42-0700 <<<
+>>> Last update of WHOIS database: 2014-10-22T02:06:40-0700 <<<
 
 The Data in MarkMonitor.com's WHOIS database is provided by MarkMonitor.com for
 information purposes, and to assist persons in obtaining information about or

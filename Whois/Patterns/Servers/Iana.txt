@@ -2,7 +2,7 @@
 % for more information on IANA, visit http://www.iana.org
 % This query returned 1 object
 
-domain:       #{WhoisServerRecord.TLD}
+domain:       #{WhoisServerRecord.TLD:ToLower()}
 
 organisation: #{WhoisServerRecord.Organization.Name}
 address:      #{WhoisServerRecord.Organization.Address}
@@ -16,16 +16,14 @@ fax-no:       #{WhoisServerRecord.AdminContact.FaxNumber}
 e-mail:       #{WhoisServerRecord.AdminContact.Email}
 
 contact:      technical
-name:         Chris Cowherd
-organisation: Donuts Inc.
-address:      c/o Donuts Inc., 10500 NE 8th Street, Suite 350
-address:      Bellevue, Washington 98004
-address:      United States
-phone:        +1.425.296.6802
-fax-no:       +1.425.671.0020
-e-mail:       chris@donuts.co
+name:         #{WhoisServerRecord.TechContact.Name}
+organisation: #{WhoisServerRecord.TechContact.Organization}
+address:      #{WhoisServerRecord.TechContact.Address}
+phone:        #{WhoisServerRecord.TechContact.TelephoneNumber}
+fax-no:       #{WhoisServerRecord.TechContact.FaxNumber}
+e-mail:       #{WhoisServerRecord.TechContact.Email}
 
-nserver:      #{WhoisServerRecord.NameServers.Raw}
+nserver:      #{WhoisServerRecord.NameServers}
 
 whois:        #{WhoisServerRecord.Url}
 

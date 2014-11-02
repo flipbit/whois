@@ -51,14 +51,14 @@ Tech Phone Ext:
 Tech Fax: +1.2062667010
 Tech Fax Ext: 
 Tech Email: hostmaster@amazon.com
-Name Server: ns3.p31.dynect.net
+Name Server: pdns6.ultradns.co.uk
+Name Server: ns4.p31.dynect.net
 Name Server: pdns1.ultradns.net
 Name Server: ns1.p31.dynect.net
-Name Server: ns4.p31.dynect.net
-Name Server: pdns6.ultradns.co.uk
 Name Server: ns2.p31.dynect.net
+Name Server: ns3.p31.dynect.net
 URL of the ICANN WHOIS Data Problem Reporting System: http://wdprs.internic.net/
->>> Last update of WHOIS database: 2014-09-21T11:52:21-0700 <<<
+>>> Last update of WHOIS database: 2014-10-22T02:10:49-0700 <<<
 
 The Data in MarkMonitor.com's WHOIS database is provided by MarkMonitor.com for
 information purposes, and to assist persons in obtaining information about or
@@ -83,4 +83,4 @@ Professional and Managed Services
 Visit MarkMonitor at http://www.markmonitor.com
 Contact us at +1.8007459229
 In Europe, at +44.02032062220
-
+--

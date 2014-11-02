@@ -1,0 +1,19 @@
+Domain Name:                     privacy.gov.au
+Last Modified:                   10-Mar-2014 02:17:04 UTC
+Status:                          ok
+Registrar Name:                  Department of Finance
+
+Registrant:                      Office of the Australian Information Commissioner
+Eligibility Type:                Other
+
+Registrant Contact ID:           GOVAU-MATH1167
+Registrant Contact Name:         IT Services
+Registrant Contact Email:        Visit whois.ausregistry.com.au for Web based WhoIs
+
+Tech Contact ID:                 GOVAU-MATH1168
+Tech Contact Name:               IT Services
+Tech Contact Email:              Visit whois.ausregistry.com.au for Web based WhoIs
+
+Name Server:                     ns3.netregistry.net
+Name Server:                     ns1.netregistry.net
+DNSSEC:                          unsigned

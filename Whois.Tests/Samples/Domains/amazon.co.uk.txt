@@ -42,7 +42,7 @@
         pdns5.ultradns.info
         pdns6.ultradns.co.uk      204.74.115.1  2610:00a1:1017:0000:0000:0000:0000:0001
 
-    WHOIS lookup made at 13:57:34 21-Oct-2014
+    WHOIS lookup made at 11:16:35 22-Oct-2014
 
 -- 
 This WHOIS information is provided for free by Nominet UK the central registry

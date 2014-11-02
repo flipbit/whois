@@ -1,0 +1,90 @@
+
+
+Domain Name: EHOW.COM
+Registry Domain ID: 4989277_DOMAIN_COM-VRSN
+Registrar WHOIS Server: whois.enom.com
+Registrar URL: www.enom.com
+Updated Date: 2014-10-21 17:24:53Z
+Creation Date: 1998-11-16 00:00:00Z
+Registrar Registration Expiration Date: 2020-11-15 05:00:00Z
+Registrar: ENOM, INC.
+Registrar IANA ID: 48
+Registrar Abuse Contact Email: abuse@enom.com
+Registrar Abuse Contact Phone: +1.4252982646
+Domain Status: clientTransferProhibited
+Registry Registrant ID: 
+Registrant Name: WHOIS AGENT
+Registrant Organization: WHOIS PRIVACY PROTECTION SERVICE, INC.
+Registrant Street: PO BOX 639
+Registrant Street: C/O EHOW.COM
+Registrant City: KIRKLAND
+Registrant State/Province: WA
+Registrant Postal Code: 98083
+Registrant Country: US
+Registrant Phone: +1.4252740657
+Registrant Phone Ext: 
+Registrant Fax: +1.4259744730
+Registrant Fax Ext:
+Registrant Email: CFJTQHJLMW@WHOISPRIVACYPROTECT.COM
+Registry Admin ID: 
+Admin Name: WHOIS AGENT
+Admin Organization: WHOIS PRIVACY PROTECTION SERVICE, INC.
+Admin Street: PO BOX 639
+Admin Street: C/O EHOW.COM
+Admin City: KIRKLAND
+Admin State/Province: WA
+Admin Postal Code: 98083
+Admin Country: US
+Admin Phone: +1.4252740657
+Admin Phone Ext: 
+Admin Fax: +1.4259744730
+Admin Fax Ext:
+Admin Email: CFJTQHJLMW@WHOISPRIVACYPROTECT.COM
+Registry Tech ID: 
+Tech Name: WHOIS AGENT
+Tech Organization: WHOIS PRIVACY PROTECTION SERVICE, INC.
+Tech Street: PO BOX 639
+Tech Street: C/O EHOW.COM
+Tech City: KIRKLAND
+Tech State/Province: WA
+Tech Postal Code: 98083
+Tech Country: US
+Tech Phone: +1.4252740657
+Tech Phone Ext: 
+Tech Fax: +1.4259744730
+Tech Fax Ext: 
+Tech Email: CFJTQHJLMW@WHOISPRIVACYPROTECT.COM
+Name Server: ASIA3.AKAM.NET
+Name Server: AUS1.AKAM.NET
+Name Server: EUR2.AKAM.NET
+Name Server: EUR4.AKAM.NET
+Name Server: NS1-242.AKAM.NET
+Name Server: NS1-35.AKAM.NET
+Name Server: USE4.AKAM.NET
+Name Server: USW1.AKAM.NET
+Name Server: USW5.AKAM.NET
+DNSSEC: unSigned
+URL of the ICANN WHOIS Data Problem Reporting System: http://wdprs.internic.net/
+Last update of WHOIS database: 2014-10-21 17:24:53Z
+
+The data in this whois database is provided to you for information
+purposes only, that is, to assist you in obtaining information about or
+related to a domain name registration record. We make this information
+available "as is," and do not guarantee its accuracy. By submitting a
+whois query, you agree that you will use this data only for lawful
+purposes and that, under no circumstances will you use this data to: (1)
+enable high volume, automated, electronic processes that stress or load
+this whois database system providing you this information; or (2) allow,
+enable, or otherwise support the transmission of mass unsolicited,
+commercial advertising or solicitations via direct mail, electronic
+mail, or by telephone. The compilation, repackaging, dissemination or
+other use of this data is expressly prohibited without prior written
+consent from us.  
+
+We reserve the right to modify these terms at any time. By submitting 
+this query, you agree to abide by these terms.
+Version 6.3 4/3/2002
+
+eHow.com is a leading online resource and community with the mission to offer real world solutions for everyday questions.  By coupling professional content and expert insight, we provide trustworthy information to the tens of millions of users who visit the website every month.
+
+With the integration of social media and user publishing, eHow.com offers a creative outlet for real people to share real knowledge.

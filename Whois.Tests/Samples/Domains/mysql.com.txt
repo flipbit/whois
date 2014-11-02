@@ -1,61 +1,108 @@
+Domain Name: MYSQL.COM
+Registry Domain ID: 3383022_DOMAIN_COM-VRSN
+Registrar WHOIS Server: whois.tucows.com
+Registrar URL: http://tucowsdomains.com
+Updated Date: 2014-04-17 11:01:47
+Creation Date: 1999-02-03 05:00:00
+Registrar Registration Expiration Date: 2020-02-28 02:45:40
+Registrar: TUCOWS, INC.
+Registrar IANA ID: 69
+Registrar Abuse Contact Email: domainabuse@tucows.com
+Registrar Abuse Contact Phone: +1.4165350123
+Reseller: Oracle Corporation
+Reseller: domain-contact_ww_grp@oracle.com
+Reseller: +1.6505062220
+Reseller: http://www.oracle.com
+Domain Status: clientTransferProhibited
+Domain Status: clientUpdateProhibited
+Domain Status: serverDeleteProhibited
+Domain Status: serverTransferProhibited
+Domain Status: serverUpdateProhibited
+Registry Registrant ID: 
+Registrant Name: Domain Administrator
+Registrant Organization: Oracle Corporation
+Registrant Street: 500 Oracle Parkway M/S 501ip3
+Registrant City: Redwood Shores
+Registrant State/Province: CA
+Registrant Postal Code: 94065
+Registrant Country: US
+Registrant Phone: +1.6505062220
+Registrant Phone Ext: 
+Registrant Fax: +1.6505062220
+Registrant Fax Ext: 
+Registrant Email: domain-contact_ww_grp@oracle.com
+Registry Admin ID: 
+Admin Name: Domain Administrator
+Admin Organization: Oracle Corporation
+Admin Street: 500 Oracle Parkway M/S 501ip3
+Admin City: Redwood Shores
+Admin State/Province: CA
+Admin Postal Code: 94065
+Admin Country: US
+Admin Phone: +1.6505062220
+Admin Phone Ext: 
+Admin Fax: +1.6505062220
+Admin Fax Ext: 
+Admin Email: domain-contact_ww_grp@oracle.com
+Registry Tech ID: 
+Tech Name: Billing Contact
+Tech Organization: Oracle Corporation
+Tech Street: 500 Oracle Parkway M/S 501ip3
+Tech City: Redwood Shores
+Tech State/Province: CA
+Tech Postal Code: 94065
+Tech Country: US
+Tech Phone: +1.6505062120
+Tech Phone Ext: 
+Tech Fax: +1.6505062120
+Tech Fax Ext: 
+Tech Email: network-contact_ww_grp@oracle.com
+Name Server: ORCLDNS1.ULTRADNS.COM
+Name Server: ORCLDNS6.ULTRADNS.CO.UK
+Name Server: ORCLDNS4.ULTRADNS.ORG
+Name Server: ORCLDNS5.ULTRADNS.INFO
+Name Server: ORCLDNS2.ULTRADNS.NET
+Name Server: ORCLDNS3.ULTRADNS.BIZ
+DNSSEC: Unsigned
+URL of the ICANN WHOIS Data Problem Reporting System: http://wdprs.internic.net/
+>>> Last update of WHOIS database: 2014-04-17 11:01:47 <<<
 
-Whois Server Version 2.0
+Registration Service Provider:
+    Oracle Corporation, domain-contact_ww_grp@oracle.com
+    +1.6505062220
+    +1.6505062220 (fax)
+    http://www.oracle.com
 
-Domain names in the .com and .net domains can now be registered
-with many different competing registrars. Go to http://www.internic.net
-for detailed information.
 
-   Domain Name: MYSQL.COM
-   Registrar: TUCOWS DOMAINS INC.
-   Whois Server: whois.tucows.com
-   Referral URL: http://domainhelp.opensrs.net
-   Name Server: ORCLDNS1.ULTRADNS.COM
-   Name Server: ORCLDNS2.ULTRADNS.NET
-   Name Server: ORCLDNS3.ULTRADNS.BIZ
-   Name Server: ORCLDNS4.ULTRADNS.ORG
-   Name Server: ORCLDNS5.ULTRADNS.INFO
-   Name Server: ORCLDNS6.ULTRADNS.CO.UK
-   Status: clientTransferProhibited
-   Status: clientUpdateProhibited
-   Status: serverDeleteProhibited
-   Status: serverTransferProhibited
-   Status: serverUpdateProhibited
-   Updated Date: 17-apr-2014
-   Creation Date: 03-feb-1999
-   Expiration Date: 28-feb-2020
+The Data in the Tucows Registrar WHOIS database is provided to you by Tucows
+for information purposes only, and may be used to assist you in obtaining
+information about or related to a domain name's registration record.
 
->>> Last update of whois database: Tue, 21 Oct 2014 16:30:05 GMT <<<
+Tucows makes this information available "as is," and does not guarantee its
+accuracy.
 
-NOTICE: The expiration date displayed in this record is the date the 
-registrar's sponsorship of the domain name registration in the registry is 
-currently set to expire. This date does not necessarily reflect the expiration 
-date of the domain name registrant's agreement with the sponsoring 
-registrar.  Users may consult the sponsoring registrar's Whois database to 
-view the registrar's reported date of expiration for this registration.
+By submitting a WHOIS query, you agree that you will use this data only for
+lawful purposes and that, under no circumstances will you use this data to:
+a) allow, enable, or otherwise support the transmission by e-mail,
+telephone, or facsimile of mass, unsolicited, commercial advertising or
+solicitations to entities other than the data recipient's own existing
+customers; or (b) enable high volume, automated, electronic processes that
+send queries or data to the systems of any Registry Operator or
+ICANN-Accredited registrar, except as reasonably necessary to register
+domain names or modify existing registrations.
 
-TERMS OF USE: You are not authorized to access or query our Whois 
-database through the use of electronic processes that are high-volume and 
-automated except as reasonably necessary to register domain names or 
-modify existing registrations; the Data in VeriSign Global Registry 
-Services' ("VeriSign") Whois database is provided by VeriSign for 
-information purposes only, and to assist persons in obtaining information 
-about or related to a domain name registration record. VeriSign does not 
-guarantee its accuracy. By submitting a Whois query, you agree to abide 
-by the following terms of use: You agree that you may use this Data only 
-for lawful purposes and that under no circumstances will you use this Data 
-to: (1) allow, enable, or otherwise support the transmission of mass 
-unsolicited, commercial advertising or solicitations via e-mail, telephone, 
-or facsimile; or (2) enable high volume, automated, electronic processes 
-that apply to VeriSign (or its computer systems). The compilation, 
-repackaging, dissemination or other use of this Data is expressly 
-prohibited without the prior written consent of VeriSign. You agree not to 
-use electronic processes that are automated and high-volume to access or 
-query the Whois database except as reasonably necessary to register 
-domain names or modify existing registrations. VeriSign reserves the right 
-to restrict your access to the Whois database in its sole discretion to ensure 
-operational stability.  VeriSign may restrict or terminate your access to the 
-Whois database for failure to abide by these terms of use. VeriSign 
-reserves the right to modify these terms at any time. 
+The compilation, repackaging, dissemination or other use of this Data is
+expressly prohibited without the prior written consent of Tucows.
 
-The Registry database contains ONLY .COM, .NET, .EDU domains and
-Registrars.
+Tucows reserves the right to terminate your access to the Tucows WHOIS
+database in its sole discretion, including without limitation, for excessive
+querying of the WHOIS database or for failure to otherwise abide by this
+policy.
+
+Tucows reserves the right to modify these terms at any time.
+
+By submitting this query, you agree to abide by these terms.
+
+NOTE: THE WHOIS DATABASE IS A CONTACT DATABASE ONLY.  LACK OF A DOMAIN
+RECORD DOES NOT SIGNIFY DOMAIN AVAILABILITY.
+

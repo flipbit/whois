@@ -1,0 +1,69 @@
+Domain Name:UN.ORG
+Domain ID: D404063-LROR
+Creation Date: 1995-01-31T05:00:00Z
+Updated Date: 2010-11-19T14:18:06Z
+Registry Expiry Date: 2015-02-01T05:00:00Z
+Sponsoring Registrar:Network Solutions, LLC (R63-LROR)
+Sponsoring Registrar IANA ID: 2
+WHOIS Server: 
+Referral URL: 
+Domain Status: clientTransferProhibited
+Registrant ID:42850152-NSI
+Registrant Name:United Nations
+Registrant Organization:United Nations
+Registrant Street: 405 E42nd St
+Registrant City:New York
+Registrant State/Province:NY
+Registrant Postal Code:10017
+Registrant Country:US
+Registrant Phone:+1.2129631234
+Registrant Phone Ext: 
+Registrant Fax: 
+Registrant Fax Ext: 
+Registrant Email:chapmanm@un.org
+Admin ID:38452398-NSI
+Admin Name:Malcolm Chapman
+Admin Organization:United Nations
+Admin Street: 405 E42nd St
+Admin Street: S-1933
+Admin City:New York
+Admin State/Province:NY
+Admin Postal Code:10017
+Admin Country:US
+Admin Phone:+1.9173672774
+Admin Phone Ext: 
+Admin Fax: 
+Admin Fax Ext: 
+Admin Email:chapmanm@un.org
+Tech ID:38452398-NSI
+Tech Name:Malcolm Chapman
+Tech Organization:United Nations
+Tech Street: 405 E42nd St
+Tech Street: S-1933
+Tech City:New York
+Tech State/Province:NY
+Tech Postal Code:10017
+Tech Country:US
+Tech Phone:+1.9173672774
+Tech Phone Ext: 
+Tech Fax: 
+Tech Fax Ext: 
+Tech Email:chapmanm@un.org
+Name Server:NS1.UN.ORG
+Name Server:NS2.UN.ORG
+Name Server:NS3.UN.ORG
+Name Server: 
+Name Server: 
+Name Server: 
+Name Server: 
+Name Server: 
+Name Server: 
+Name Server: 
+Name Server: 
+Name Server: 
+Name Server: 
+DNSSEC:Unsigned
+
+Access to Public Interest Registry WHOIS information is provided to assist persons in determining the contents of a domain name registration record in the Public Interest Registry registry database. The data in this record is provided by Public Interest Registry for informational purposes only, and Public Interest Registry does not guarantee its accuracy. This service is intended only for query-based access. You agree that you will use this data only for lawful purposes and that, under no circumstances will you use this data to(a) allow, enable, or otherwise support the transmission by e-mail, telephone, or facsimile of mass unsolicited, commercial advertising or solicitations to entities other than the data recipient's own existing customers; or (b) enable high volume, automated, electronic processes that send queries or data to the systems of Registry Operator, a Registrar, or Afilias except as reasonably necessary to register domain names or modify existing registrations. All rights reserved. Public Interest Registry reserves the right to modify these terms at any time. By submitting this query, you agree to abide by this policy.
+
+

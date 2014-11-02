@@ -1,0 +1,80 @@
+
+Domain Name: CARGOCOLLECTIVE.COM
+Registry Domain ID: 1542275594_DOMAIN_COM-VRSN
+Registrar WHOIS Server: whois.1api.net
+Registrar URL: http://www.1api.net
+Updated Date: 2014-09-04T21:35:11Z
+Creation Date: 2009-02-12T22:55:32Z
+Registrar Registration Expiration Date: 2015-02-12T22:55:32Z
+Registrar: 1API GmbH
+Registrar IANA ID: 1387
+Registrar Abuse Contact Email: abuse@1api.net
+Registrar Abuse Contact Phone: +49.68416984x200
+Reseller: iwantmyname http://iwantmyname.com
+Domain Status: clientTransferProhibited - http://www.icann.org/epp#clientTransferProhibited
+Registry Registrant ID: 
+Registrant Name: Cargo Collective
+Registrant Organization: Cargo Collective Inc
+Registrant Street: 3006 N Coolidge Ave
+Registrant City: Los Angeles
+Registrant State/Province: CA
+Registrant Postal Code: 90039
+Registrant Country: US
+Registrant Phone: +1.2132900705
+Registrant Phone Ext: 
+Registrant Fax: 
+Registrant Fax Ext: 
+Registrant Email: hello@cargocollective.com
+Registry Admin ID: 
+Admin Name: Cargo Collective
+Admin Organization: Cargo Collective Inc
+Admin Street: 3006 N Coolidge Ave
+Admin City: Los Angeles
+Admin State/Province: CA
+Admin Postal Code: 90039
+Admin Country: US
+Admin Phone: +1.2132900705
+Admin Phone Ext: 
+Admin Fax: 
+Admin Fax Ext: 
+Admin Email: hello@cargocollective.com
+Registry Tech ID: 
+Tech Name: Cargo Collective
+Tech Organization: Cargo Collective Inc
+Tech Street: 3006 N Coolidge Ave
+Tech City: Los Angeles
+Tech State/Province: CA
+Tech Postal Code: 90039
+Tech Country: US
+Tech Phone: +1.2132900705
+Tech Phone Ext: 
+Tech Fax: 
+Tech Fax Ext: 
+Tech Email: hello@cargocollective.com
+Name Server: dns2.stabletransit.com
+Name Server: dns1.stabletransit.com
+DNSSEC: unsigned
+URL of the ICANN WHOIS Data Problem Reporting System:
+http://wdprs.internic.net/
+>>> Last update of WHOIS database: 2014-10-22T12:00:50Z <<<
+
+For more information on Whois status codes, please visit https://www.icann.org/resources/pages/epp-status-codes-2014-06-16-en.
+
+; This data is provided for information purposes, and to assist persons
+; obtaining information about or related to domain name registration
+; records. We do not guarantee its accuracy.
+; By submitting a WHOIS query, you agree that you will use this data
+; only for lawful purposes and that, under no circumstances, you will
+; use this data to
+; 1) allow, enable, or otherwise support the transmission of mass
+;    unsolicited, commercial advertising or solicitations via E-mail
+;    (spam); or
+; 2) enable high volume, automated, electronic processes that apply
+;    to this WHOIS server.
+; These terms may be changed without prior notice.
+; By submitting this query, you agree to abide by this policy.
+
+; Painless Domain Management
+; Need help? Send us an email:
+; help@support.iwantmyname.com
+

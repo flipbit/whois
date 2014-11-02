@@ -44,9 +44,8 @@
     <Reference Include="System.Core">
       <RequiredTargetFramework>3.5</RequiredTargetFramework>
     </Reference>
-    <Reference Include="Tokenizer, Version=1.0.0.0, Culture=neutral, processorArchitecture=MSIL">
-      <SpecificVersion>False</SpecificVersion>
-      <HintPath>..\packages\Tokenizer.0.9.1\lib\net35\Tokenizer.dll</HintPath>
+    <Reference Include="Tokenizer">
+      <HintPath>..\packages\Tokenizer.1.0.1\lib\net35\Tokenizer.dll</HintPath>
     </Reference>
   </ItemGroup>
   <ItemGroup>
@@ -71,7 +70,6 @@
     <Compile Include="Properties\AssemblyInfo.cs" />
   </ItemGroup>
   <ItemGroup>
-    <None Include="packages.config" />
     <EmbeddedResource Include="Patterns\InvalidExtension.rtf" />
   </ItemGroup>
   <ItemGroup>
@@ -669,6 +667,9 @@
     <Content Include="Samples\Tlds\marketing.txt" />
     <Content Include="Samples\Tlds\mc.txt" />
     <Content Include="Samples\Tlds\md.txt" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="packages.config" />
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
   <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 

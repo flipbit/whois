@@ -36,7 +36,7 @@
         ns1.tcams.bbc.co.uk       212.72.49.3
         ns1.thdow.bbc.co.uk       212.58.240.163
 
-    WHOIS lookup made at 12:51:45 21-Oct-2014
+    WHOIS lookup made at 10:35:59 22-Oct-2014
 
 -- 
 This WHOIS information is provided for free by Nominet UK the central registry

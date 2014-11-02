@@ -1,0 +1,78 @@
+
+
+Domain Name: FREEWEBS.COM
+Registry Domain ID: 28996232_DOMAIN_COM-VRSN
+Registrar WHOIS Server: whois.enom.com
+Registrar URL: www.enom.com
+Updated Date: 
+Creation Date: 2000-06-11 07:32:58Z
+Registrar Registration Expiration Date: 2015-06-11 07:32:58Z
+Registrar: ENOM, INC.
+Registrar IANA ID: 48
+Registrar Abuse Contact Email: abuse@enom.com
+Registrar Abuse Contact Phone: +1.4252982646
+Domain Status: clientTransferProhibited
+Registry Registrant ID: 
+Registrant Name: WEBS INC
+Registrant Organization: WEBS, INC.
+Registrant Street: 1100 WAYNE AVENUE, SUITE 801
+Registrant City: SILVER SPRING
+Registrant State/Province: MD
+Registrant Postal Code: 20910
+Registrant Country: US
+Registrant Phone: +1.3019609000
+Registrant Phone Ext: 
+Registrant Fax: +1.3019609010
+Registrant Fax Ext:
+Registrant Email: INQUIRIES@WEBS.COM
+Registry Admin ID: 
+Admin Name: WEBS INC
+Admin Organization: WEBS, INC.
+Admin Street: 1100 WAYNE AVENUE, SUITE 801
+Admin City: SILVER SPRING
+Admin State/Province: MD
+Admin Postal Code: 20910
+Admin Country: US
+Admin Phone: +1.3019609000
+Admin Phone Ext: 
+Admin Fax: +1.3019609010
+Admin Fax Ext:
+Admin Email: INQUIRIES@WEBS.COM
+Registry Tech ID: 
+Tech Name: WEBS INC
+Tech Organization: WEBS, INC.
+Tech Street: 1100 WAYNE AVENUE, SUITE 801
+Tech City: SILVER SPRING
+Tech State/Province: MD
+Tech Postal Code: 20910
+Tech Country: US
+Tech Phone: +1.3019609000
+Tech Phone Ext: 
+Tech Fax: +1.3019609010
+Tech Fax Ext: 
+Tech Email: INQUIRIES@WEBS.COM
+Name Server: NS1.FREEWEBS.COM
+Name Server: NS2.FREEWEBS.COM
+DNSSEC: unSigned
+URL of the ICANN WHOIS Data Problem Reporting System: http://wdprs.internic.net/
+Last update of WHOIS database: 
+
+The data in this whois database is provided to you for information
+purposes only, that is, to assist you in obtaining information about or
+related to a domain name registration record. We make this information
+available "as is," and do not guarantee its accuracy. By submitting a
+whois query, you agree that you will use this data only for lawful
+purposes and that, under no circumstances will you use this data to: (1)
+enable high volume, automated, electronic processes that stress or load
+this whois database system providing you this information; or (2) allow,
+enable, or otherwise support the transmission of mass unsolicited,
+commercial advertising or solicitations via direct mail, electronic
+mail, or by telephone. The compilation, repackaging, dissemination or
+other use of this data is expressly prohibited without prior written
+consent from us.  
+
+We reserve the right to modify these terms at any time. By submitting 
+this query, you agree to abide by these terms.
+Version 6.3 4/3/2002
+
+Get Noticed on the Internet!  Increase visibility for this domain name by listing it at www.whoisbusinesslistings.com

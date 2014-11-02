@@ -33,7 +33,7 @@
         ns1.surfnet.nl.               
 
 
-    WHOIS lookup made at 12:57:50 21-Oct-2014
+    WHOIS lookup made at 10:42:07 22-Oct-2014
 
 -- 
 This WHOIS information is provided for free by Nominet UK the central registry

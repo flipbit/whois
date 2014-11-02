@@ -1,59 +1,75 @@
 
-Whois Server Version 2.0
+Domain Name: macromedia.com
+Registry Domain ID: 1918081_DOMAIN_COM-VRSN
+Registrar WHOIS Server: whois.corporatedomains.com
+Registrar URL: www.cscprotectsbrands.com
+Updated Date: 2014-05-10 01:17:41 -0400
+Creation Date: 1993-05-13 00:00:00 -0400
+Registrar Registration Expiration Date: 2015-05-14 00:00:00 -0400
+Registrar: CSC CORPORATE DOMAINS, INC.
+Registrar IANA ID: 299
+Registrar Abuse Contact Email: admin@internationaladmin.com
+Registrar Abuse Contact Phone: +1.8887802723
+Domain Status: serverTransferProhibited
+Domain Status: serverDeleteProhibited
+Domain Status: clientTransferProhibited
+Domain Status: serverUpdateProhibited
+Registry Registrant ID: 
+Registrant Name: Domain Administrator
+Registrant Organization: Adobe Systems Incorporated
+Registrant Street: 345 Park Avenue
+Registrant City: San Jose
+Registrant State/Province: CA
+Registrant Postal Code: 95110
+Registrant Country: US
+Registrant Phone: +1.4085366000
+Registrant Phone Ext: 
+Registrant Fax: 
+Registrant Fax Ext: 
+Registrant Email: dns-admin@adobe.com
+Registry Admin ID: 
+Admin Name: DNS Admin
+Admin Organization: Adobe Systems Incorporated
+Admin Street: 345 Park Avenue
+Admin City: San Jose
+Admin State/Province: CA
+Admin Postal Code: 95110
+Admin Country: US
+Admin Phone: +1.4085366000
+Admin Phone Ext: 
+Admin Fax: 
+Admin Fax Ext: 
+Admin Email: dns-admin@adobe.com
+Registry Tech ID: 
+Tech Name: DNS Tech
+Tech Organization: Adobe Systems Incorporated
+Tech Street: 345 Park Avenue
+Tech City: San Jose
+Tech State/Province: CA
+Tech Postal Code: 95110
+Tech Country: US
+Tech Phone: +1.4085366000
+Tech Phone Ext: 
+Tech Fax: 
+Tech Fax Ext: 
+Tech Email: dns-tech@adobe.com
+Name Server: adobe-dns-02.adobe.com
+Name Server: adobe-dns-01.adobe.com
+Name Server: adobe-dns-03.adobe.com
+Name Server: adobe-dns-04.adobe.com
+Name Server: adobe-dns-05.adobe.com
+DNSSEC: 
+URL of the ICANN WHOIS Data Problem Reporting System: http://wdprs.internic.net/
+>>> Last update of WHOIS database: 2014-05-10 01:17:41 -0400 <<<
 
-Domain names in the .com and .net domains can now be registered
-with many different competing registrars. Go to http://www.internic.net
-for detailed information.
 
-   Domain Name: MACROMEDIA.COM
-   Registrar: CSC CORPORATE DOMAINS, INC.
-   Whois Server: whois.corporatedomains.com
-   Referral URL: http://www.cscglobal.com
-   Name Server: ADOBE-DNS-01.ADOBE.COM
-   Name Server: ADOBE-DNS-02.ADOBE.COM
-   Name Server: ADOBE-DNS-03.ADOBE.COM
-   Name Server: ADOBE-DNS-04.ADOBE.COM
-   Name Server: ADOBE-DNS-05.ADOBE.COM
-   Status: clientTransferProhibited
-   Status: serverDeleteProhibited
-   Status: serverTransferProhibited
-   Status: serverUpdateProhibited
-   Updated Date: 10-may-2014
-   Creation Date: 13-may-1993
-   Expiration Date: 14-may-2015
+Corporation Service Company(c) (CSC)  The Trusted Partner of More than 50% of the 100 Best Global Brands.
 
->>> Last update of whois database: Tue, 21 Oct 2014 11:54:29 GMT <<<
+Contact us to learn more about our enterprise solutions for Global Domain Name Registration and Management, Trademark Research and Watching, Brand, Logo and Auction Monitoring, as well SSL Certificate Services and DNS Hosting.
 
-NOTICE: The expiration date displayed in this record is the date the 
-registrar's sponsorship of the domain name registration in the registry is 
-currently set to expire. This date does not necessarily reflect the expiration 
-date of the domain name registrant's agreement with the sponsoring 
-registrar.  Users may consult the sponsoring registrar's Whois database to 
-view the registrar's reported date of expiration for this registration.
+NOTICE: You are not authorized to access or query our WHOIS database through the use of high-volume, automated, electronic processes or for the purpose or purposes of using the data in any manner that violates these terms of use. The Data in the CSC WHOIS database is provided by CSC for information purposes only, and to assist persons in obtaining information about or related to a domain name registration record. CSC does not guarantee its accuracy. By submitting a WHOIS query, you agree to abide by the following terms of use: you agree that you may use this Data only for lawful purposes and that under no circumstances will you use this Data to: (1) allow, enable, or otherwise support the transmission of mass unsolicited, commercial advertising or solicitations via direct mail, e-mail, telephone, or facsimile; or (2) enable high volume, automated, electronic processes that apply to CSC (or its computer systems). CSC reserves the right to terminate your access to the WHOIS database in its sole discretion for any violations by you of these terms of use. CSC reserves the right to modify these terms at any time.
 
-TERMS OF USE: You are not authorized to access or query our Whois 
-database through the use of electronic processes that are high-volume and 
-automated except as reasonably necessary to register domain names or 
-modify existing registrations; the Data in VeriSign Global Registry 
-Services' ("VeriSign") Whois database is provided by VeriSign for 
-information purposes only, and to assist persons in obtaining information 
-about or related to a domain name registration record. VeriSign does not 
-guarantee its accuracy. By submitting a Whois query, you agree to abide 
-by the following terms of use: You agree that you may use this Data only 
-for lawful purposes and that under no circumstances will you use this Data 
-to: (1) allow, enable, or otherwise support the transmission of mass 
-unsolicited, commercial advertising or solicitations via e-mail, telephone, 
-or facsimile; or (2) enable high volume, automated, electronic processes 
-that apply to VeriSign (or its computer systems). The compilation, 
-repackaging, dissemination or other use of this Data is expressly 
-prohibited without the prior written consent of VeriSign. You agree not to 
-use electronic processes that are automated and high-volume to access or 
-query the Whois database except as reasonably necessary to register 
-domain names or modify existing registrations. VeriSign reserves the right 
-to restrict your access to the Whois database in its sole discretion to ensure 
-operational stability.  VeriSign may restrict or terminate your access to the 
-Whois database for failure to abide by these terms of use. VeriSign 
-reserves the right to modify these terms at any time. 
+Register your domain name at http://www.cscglobal.com
 
-The Registry database contains ONLY .COM, .NET, .EDU domains and
-Registrars.
+For more information on Whois status codes, please visit https://www.icann.org/resources/pages/epp-status-codes-2014-06-16-en
+

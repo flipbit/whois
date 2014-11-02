@@ -1,0 +1,105 @@
+Domain Name: BIGCARTEL.COM
+Registry Domain ID: 290751185_DOMAIN_COM-VRSN
+Registrar WHOIS Server: whois.tucows.com
+Registrar URL: http://tucowsdomains.com
+Updated Date: 2014-09-12 10:53:52
+Creation Date: 2005-12-19 17:38:29
+Registrar Registration Expiration Date: 2023-12-19 17:38:29
+Registrar: TUCOWS, INC.
+Registrar IANA ID: 69
+Registrar Abuse Contact Email: domainabuse@tucows.com
+Registrar Abuse Contact Phone: +1.4165350123
+Reseller: Hover
+Reseller: help@hover.com
+Reseller: 416.538.5498
+Reseller: http://help.hover.com
+Domain Status: clientTransferProhibited
+Domain Status: clientUpdateProhibited
+Registry Registrant ID: 
+Registrant Name: Contact Privacy Inc. Customer 0131235336
+Registrant Organization: Contact Privacy Inc. Customer 0131235336
+Registrant Street: 96 Mowat Ave
+Registrant City: Toronto
+Registrant State/Province: ON
+Registrant Postal Code: M6K 3M1
+Registrant Country: CA
+Registrant Phone: +1.4165385457
+Registrant Phone Ext: 
+Registrant Fax: 
+Registrant Fax Ext: 
+Registrant Email: bigcartel.com@contactprivacy.com
+Registry Admin ID: 
+Admin Name: Contact Privacy Inc. Customer 0131235336
+Admin Organization: Contact Privacy Inc. Customer 0131235336
+Admin Street: 96 Mowat Ave
+Admin City: Toronto
+Admin State/Province: ON
+Admin Postal Code: M6K 3M1
+Admin Country: CA
+Admin Phone: +1.4165385457
+Admin Phone Ext: 
+Admin Fax: 
+Admin Fax Ext: 
+Admin Email: bigcartel.com@contactprivacy.com
+Registry Tech ID: 
+Tech Name: Contact Privacy Inc. Customer 0131235336
+Tech Organization: Contact Privacy Inc. Customer 0131235336
+Tech Street: 96 Mowat Ave
+Tech City: Toronto
+Tech State/Province: ON
+Tech Postal Code: M6K 3M1
+Tech Country: CA
+Tech Phone: +1.4165385457
+Tech Phone Ext: 
+Tech Fax: 
+Tech Fax Ext: 
+Tech Email: bigcartel.com@contactprivacy.com
+Name Server: NS1.P05.DYNECT.NET
+Name Server: NS2.P05.DYNECT.NET
+Name Server: NS4.P05.DYNECT.NET
+Name Server: NS3.P05.DYNECT.NET
+DNSSEC: Unsigned
+URL of the ICANN WHOIS Data Problem Reporting System: http://wdprs.internic.net/
+>>> Last update of WHOIS database: 2014-09-12 10:53:52 <<<
+
+Registration Service Provider:
+    Hover, help@hover.com
+    416.538.5498
+    http://help.hover.com
+
+
+This domain's privacy is protected by contactprivacy.com. To reach the domain contacts,
+please go to http://www.contactprivacy.com and follow the instructions.
+
+The Data in the Tucows Registrar WHOIS database is provided to you by Tucows
+for information purposes only, and may be used to assist you in obtaining
+information about or related to a domain name's registration record.
+
+Tucows makes this information available "as is," and does not guarantee its
+accuracy.
+
+By submitting a WHOIS query, you agree that you will use this data only for
+lawful purposes and that, under no circumstances will you use this data to:
+a) allow, enable, or otherwise support the transmission by e-mail,
+telephone, or facsimile of mass, unsolicited, commercial advertising or
+solicitations to entities other than the data recipient's own existing
+customers; or (b) enable high volume, automated, electronic processes that
+send queries or data to the systems of any Registry Operator or
+ICANN-Accredited registrar, except as reasonably necessary to register
+domain names or modify existing registrations.
+
+The compilation, repackaging, dissemination or other use of this Data is
+expressly prohibited without the prior written consent of Tucows.
+
+Tucows reserves the right to terminate your access to the Tucows WHOIS
+database in its sole discretion, including without limitation, for excessive
+querying of the WHOIS database or for failure to otherwise abide by this
+policy.
+
+Tucows reserves the right to modify these terms at any time.
+
+By submitting this query, you agree to abide by these terms.
+
+NOTE: THE WHOIS DATABASE IS A CONTACT DATABASE ONLY.  LACK OF A DOMAIN
+RECORD DOES NOT SIGNIFY DOMAIN AVAILABILITY.
+

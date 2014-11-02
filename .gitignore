@@ -32,3 +32,4 @@ Build/build.txt
 artifacts/
 packages
 !packages/repositories.config
+cache/

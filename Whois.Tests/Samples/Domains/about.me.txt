@@ -1,0 +1,92 @@
+WHOIS TERMS & CONDITIONS: Access to .ME WHOIS information is provided to 
+assist persons in determining the contents of a domain name registration 
+record in the .ME registry database. The data in this record is provided by 
+.ME Registry for informational purposes only, and .ME Registry does not 
+guarantee its accuracy. This service is intended only for query-based 
+access. You agree that you will use this data only for lawful purposes 
+and that, under no circumstances will you use this data to: (a) allow, 
+enable, or otherwise support the transmission by e-mail, telephone, 
+facsimile, or other electronic processes of mass unsolicited, commercial 
+advertising or solicitations to entities other than the data recipient's own 
+existing customers; or (b) enable high volume, automated, electronic 
+processes that send queries or data to the systems of Registry Operator, 
+except as reasonably necessary to register domain names or modify existing 
+registrations. All rights reserved. .ME Registry reserves the right to modify 
+these terms at any time. By submitting this query, you agree to abide by this 
+policy.
+
+Domain ID:D2598-ME
+Domain Name:ABOUT.ME
+Domain Create Date:29-Apr-2008 17:53:02 UTC
+Domain Last Updated Date:21-Dec-2012 22:59:26 UTC
+Domain Expiration Date:29-Apr-2020 17:53:02 UTC
+Last Transferred Date:19-Apr-2011 16:12:49 UTC
+Trademark Name:Registry Reserved Name
+Trademark Country:ME
+Trademark Number:Registry Reserved Name
+Date Trademark Applied For:1900-01-01
+Date Trademark Registered:1900-01-01
+Sponsoring Registrar:Melbourne IT Ltd R55-ME
+Created by:doMEn reserved R5-ME
+Last Updated by Registrar:Melbourne IT Ltd R55-ME
+Domain Status:OK
+Registrant ID:ABOUTME
+Registrant Name:c/o True Ventures
+Registrant Organization:About.me, LLC
+Registrant Address:Pier 38, The Embarcadero
+Registrant Address2:
+Registrant Address3:
+Registrant City:San Francisco
+Registrant State/Province:CA
+Registrant Country/Economy:US
+Registrant Postal Code:94107
+Registrant Phone:+1.7032654670
+Registrant Phone Ext.:
+Registrant FAX:
+Registrant FAX Ext.:
+Registrant E-mail:domain-adm@corp.aol.com
+Admin ID:FR-129a90dd9466
+Admin Name:Domain Admin
+Admin Organization:AOL Inc.
+Admin Address:22000 AOL Way
+Admin Address2:
+Admin Address3:
+Admin City:Dulles
+Admin State/Province:VA
+Admin Country/Economy:US
+Admin Postal Code:20166
+Admin Phone:+1.7032654670
+Admin Phone Ext.:
+Admin FAX:
+Admin FAX Ext.:
+Admin E-mail:domain-adm@corp.aol.com
+Tech ID:FR-129a90dd9466
+Tech Name:Domain Admin
+Tech Organization:AOL Inc.
+Tech Address:22000 AOL Way
+Tech Address2:
+Tech Address3:
+Tech City:Dulles
+Tech State/Province:VA
+Tech Country/Economy:US
+Tech Postal Code:20166
+Tech Phone:+1.7032654670
+Tech Phone Ext.:
+Tech FAX:
+Tech FAX Ext.:
+Tech E-mail:domain-adm@corp.aol.com
+Nameservers:DNS-01.NS.AOL.COM
+Nameservers:DNS-02.NS.AOL.COM
+Nameservers:DNS-06.NS.AOL.COM
+Nameservers:DNS-07.NS.AOL.COM
+Nameservers: 
+Nameservers: 
+Nameservers: 
+Nameservers: 
+Nameservers: 
+Nameservers: 
+Nameservers: 
+Nameservers: 
+Nameservers: 
+
+

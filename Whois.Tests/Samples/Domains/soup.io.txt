@@ -1,0 +1,15 @@
+
+Domain : soup.io
+Status : Live
+Expiry : 2015-08-07
+
+NS 1   : ns1.easyname.eu
+NS 2   : ns2.easyname.eu
+
+Owner  : Stephan Zeinler
+Owner  : euphoria GmbH
+Owner  : Rotenturmstrasse 17/15
+Owner  : Wien
+Owner  : AT
+
+

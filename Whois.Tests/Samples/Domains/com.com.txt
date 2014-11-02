@@ -1,0 +1,83 @@
+
+
+Domain Name: COM.COM
+Registry Domain ID: 544_DOMAIN_COM-VRSN
+Registrar WHOIS Server: whois.enom.com
+Registrar URL: www.enom.com
+Updated Date: 2014-09-18 11:09:23Z
+Creation Date: 1995-04-13 04:00:00Z
+Registrar Registration Expiration Date: 2023-04-14 04:00:00Z
+Registrar: ENOM, INC.
+Registrar IANA ID: 48
+Registrar Abuse Contact Email: abuse@enom.com
+Registrar Abuse Contact Phone: +1.4252982646
+Domain Status: clientTransferProhibited
+Registry Registrant ID: 
+Registrant Name: WHOIS AGENT
+Registrant Organization: WHOIS PRIVACY PROTECTION SERVICE, INC.
+Registrant Street: PO BOX 639
+Registrant Street: C/O COM.COM
+Registrant City: KIRKLAND
+Registrant State/Province: WA
+Registrant Postal Code: 98083
+Registrant Country: US
+Registrant Phone: +1.4252740657
+Registrant Phone Ext: 
+Registrant Fax: +1.4259744730
+Registrant Fax Ext:
+Registrant Email: QJBXJLSFMS@WHOISPRIVACYPROTECT.COM
+Registry Admin ID: 
+Admin Name: WHOIS AGENT
+Admin Organization: WHOIS PRIVACY PROTECTION SERVICE, INC.
+Admin Street: PO BOX 639
+Admin Street: C/O COM.COM
+Admin City: KIRKLAND
+Admin State/Province: WA
+Admin Postal Code: 98083
+Admin Country: US
+Admin Phone: +1.4252740657
+Admin Phone Ext: 
+Admin Fax: +1.4259744730
+Admin Fax Ext:
+Admin Email: QJBXJLSFMS@WHOISPRIVACYPROTECT.COM
+Registry Tech ID: 
+Tech Name: WHOIS AGENT
+Tech Organization: WHOIS PRIVACY PROTECTION SERVICE, INC.
+Tech Street: PO BOX 639
+Tech Street: C/O COM.COM
+Tech City: KIRKLAND
+Tech State/Province: WA
+Tech Postal Code: 98083
+Tech Country: US
+Tech Phone: +1.4252740657
+Tech Phone Ext: 
+Tech Fax: +1.4259744730
+Tech Fax Ext: 
+Tech Email: QJBXJLSFMS@WHOISPRIVACYPROTECT.COM
+Name Server: NS-1084.AWSDNS-07.ORG
+Name Server: NS-180.AWSDNS-22.COM
+Name Server: NS-2015.AWSDNS-59.CO.UK
+Name Server: NS-895.AWSDNS-47.NET
+DNSSEC: unSigned
+URL of the ICANN WHOIS Data Problem Reporting System: http://wdprs.internic.net/
+Last update of WHOIS database: 2014-09-18 11:09:23Z
+
+The data in this whois database is provided to you for information
+purposes only, that is, to assist you in obtaining information about or
+related to a domain name registration record. We make this information
+available "as is," and do not guarantee its accuracy. By submitting a
+whois query, you agree that you will use this data only for lawful
+purposes and that, under no circumstances will you use this data to: (1)
+enable high volume, automated, electronic processes that stress or load
+this whois database system providing you this information; or (2) allow,
+enable, or otherwise support the transmission of mass unsolicited,
+commercial advertising or solicitations via direct mail, electronic
+mail, or by telephone. The compilation, repackaging, dissemination or
+other use of this data is expressly prohibited without prior written
+consent from us.  
+
+We reserve the right to modify these terms at any time. By submitting 
+this query, you agree to abide by these terms.
+Version 6.3 4/3/2002
+
+Get Noticed on the Internet!  Increase visibility for this domain name by listing it at www.whoisbusinesslistings.com

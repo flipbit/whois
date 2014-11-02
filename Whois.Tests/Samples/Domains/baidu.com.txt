@@ -51,13 +51,13 @@ Tech Phone Ext:
 Tech Fax: +86.1059927435
 Tech Fax Ext: 
 Tech Email: domainmaster@baidu.com
-Name Server: dns.baidu.com
-Name Server: ns3.baidu.com
-Name Server: ns4.baidu.com
-Name Server: ns7.baidu.com
 Name Server: ns2.baidu.com
+Name Server: ns3.baidu.com
+Name Server: dns.baidu.com
+Name Server: ns7.baidu.com
+Name Server: ns4.baidu.com
 URL of the ICANN WHOIS Data Problem Reporting System: http://wdprs.internic.net/
->>> Last update of WHOIS database: 2014-09-21T11:52:12-0700 <<<
+>>> Last update of WHOIS database: 2014-10-22T02:22:26-0700 <<<
 
 The Data in MarkMonitor.com's WHOIS database is provided by MarkMonitor.com for
 information purposes, and to assist persons in obtaining information about or

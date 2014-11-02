@@ -1,0 +1,88 @@
+Domain Name: REVERBNATION.COM
+Registry Domain ID: 482936085_DOMAIN_COM-VRSN
+Registrar WHOIS Server: whois.godaddy.com
+Registrar URL: http://www.godaddy.com
+Update Date: 2014-04-18 15:30:28
+Creation Date: 2006-06-12 08:32:27
+Registrar Registration Expiration Date: 2019-06-12 08:32:27
+Registrar: GoDaddy.com, LLC
+Registrar IANA ID: 146
+Registrar Abuse Contact Email: abuse@godaddy.com
+Registrar Abuse Contact Phone: +1.480-624-2505
+Domain Status: clientTransferProhibited
+Domain Status: clientUpdateProhibited
+Domain Status: clientRenewProhibited
+Domain Status: clientDeleteProhibited
+Registry Registrant ID: 
+Registrant Name: Edward Carlson
+Registrant Organization: eMinor Inc
+Registrant Street: 501 Washington St
+Registrant Street: Suite J
+Registrant City: Durham
+Registrant State/Province: North Carolina
+Registrant Postal Code: 27701
+Registrant Country: United States
+Registrant Phone: 9193212268
+Registrant Phone Ext: 
+Registrant Fax: 
+Registrant Fax Ext: 
+Registrant Email: jedcarlson@eminorinc.com
+Registry Admin ID: 
+Admin Name: Edward Carlson
+Admin Organization: eMinor Inc
+Admin Street: 501 Washington St
+Admin Street: Suite J
+Admin City: Durham
+Admin State/Province: North Carolina
+Admin Postal Code: 27701
+Admin Country: United States
+Admin Phone: 9193212268
+Admin Phone Ext: 
+Admin Fax: 
+Admin Fax Ext: 
+Admin Email: jedcarlson@eminorinc.com
+Registry Tech ID: 
+Tech Name: Edward Carlson
+Tech Organization: eMinor Inc
+Tech Street: 501 Washington St
+Tech Street: Suite J
+Tech City: Durham
+Tech State/Province: North Carolina
+Tech Postal Code: 27701
+Tech Country: United States
+Tech Phone: 9193212268
+Tech Phone Ext: 
+Tech Fax: 
+Tech Fax Ext: 
+Tech Email: jedcarlson@eminorinc.com
+Name Server: PDNS01.DOMAINCONTROL.COM
+Name Server: PDNS02.DOMAINCONTROL.COM
+Name Server: NS12.DNSMADEEASY.COM
+Name Server: NS13.DNSMADEEASY.COM
+Name Server: NS10.DNSMADEEASY.COM
+Name Server: NS11.DNSMADEEASY.COM
+Name Server: NS14.DNSMADEEASY.COM
+Name Server: NS15.DNSMADEEASY.COM
+DNSSEC: unsigned
+URL of the ICANN WHOIS Data Problem Reporting System: http://wdprs.internic.net/
+Last update of WHOIS database: 2014-10-22T11:00:00Z
+
+The data contained in GoDaddy.com, LLC's WhoIs database,
+while believed by the company to be reliable, is provided "as is"
+with no guarantee or warranties regarding its accuracy.  This
+information is provided for the sole purpose of assisting you
+in obtaining information about domain name registration records.
+Any use of this data for any other purpose is expressly forbidden without the prior written
+permission of GoDaddy.com, LLC.  By submitting an inquiry,
+you agree to these terms of usage and limitations of warranty.  In particular,
+you agree not to use this data to allow, enable, or otherwise make possible,
+dissemination or collection of this data, in part or in its entirety, for any
+purpose, such as the transmission of unsolicited advertising and
+and solicitations of any kind, including spam.  You further agree
+not to use this data to enable high volume, automated or robotic electronic
+processes designed to collect or compile this data for any purpose,
+including mining this data for your own personal or commercial purposes. 
+
+Please note: the registrant of the domain name is specified
+in the "registrant" section.  In most cases, GoDaddy.com, LLC 
+is not the registrant of domain names listed in this database.

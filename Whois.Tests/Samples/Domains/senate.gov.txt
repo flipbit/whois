@@ -1,0 +1,9 @@
+% DOTGOV WHOIS Server ready
+   Domain Name: SENATE.GOV
+   Status: ACTIVE
+
+
+>>> Last update of whois database: 2014-10-22T11:20:53Z <<<
+Please be advised that this whois server only contains information pertaining
+to the .GOV domain. For information for other domains please use the whois
+server at RS.INTERNIC.NET. 

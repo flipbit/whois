@@ -1,55 +1,81 @@
+Domain Name: issuu.com
+Registry Domain ID:
+Registrar WHOIS Server: whois.ascio.com
+Registrar URL: http://www.ascio.com 
+Updated Date: 2014-08-28T11:51:21Z
+Creation Date: 2012-06-04T07:45:14Z
+Registrar Registration Expiration Date: 2015-04-19T00:00:00Z
+Registrar: Ascio Technologies, Inc
+Registrar IANA ID: 106
+Registrar Abuse Contact Email: abuse@ascio.com
+Registrar Abuse Contact Phone: +44.2070159370
+Reseller:
+Domain Status: ACTIVE
+Registry Registrant ID:
+Registrant Name:  
+Registrant Organization: Issuu ApS
+Registrant Street: Gasværksvej 16, 3. sal
+Registrant City: Koebenhavn V 
+Registrant State/Province: 
+Registrant Postal Code: 1656
+Registrant Country: DK
+Registrant Phone:
+Registrant Phone Ext:
+Registrant Fax:
+Registrant Fax Ext:
+Registrant Email:
+Registry Admin ID:
+Admin Name: Kim B. Nielsen
+Admin Organization: 
+Admin Street: Sydvestvej 100
+Admin Street: Att. Webhotel.Net Division
+Admin City:  Glostrup
+Admin State/Province: DK
+Admin Postal Code: 2600
+Admin Country: DK
+Admin Phone: +45.70232470
+Admin Phone Ext:
+Admin Fax: +45.70232480
+Admin Fax Ext:
+Admin Email: dns@cohaesio.net
+Registry Tech ID:
+Tech Name: Kim B. Nielsen
+Tech Organization: 
+Tech Street: Sydvestvej 100
+Tech Street: Att. Webhotel.Net Division
+Tech City: Glostrup 
+Tech State/Province: DK
+Tech Postal Code: 2600
+Tech Country: DK
+Tech Phone: +45.70232490
+Tech Phone Ext:
+Tech Fax: +45.70232480  
+Tech Fax Ext: 
+Tech Email: dns@cohaesio.net
+Name Server: NS-426.AWSDNS-53.COM
+Name Server: NS-1582.AWSDNS-05.CO.UK
+Name Server: NS-1343.AWSDNS-39.ORG
+Name Server: NS-757.AWSDNS-30.NET
+DNSSEC:
+URL of the ICANN WHOIS Data Problem Reporting System: http://wdprs.internic.net/
+>>> Last update of WHOIS database: 2014-10-22T10:12:31 UTC <<<
 
-Whois Server Version 2.0
-
-Domain names in the .com and .net domains can now be registered
-with many different competing registrars. Go to http://www.internic.net
-for detailed information.
-
-   Domain Name: ISSUU.COM
-   Registrar: ASCIO TECHNOLOGIES, INC. DANMARK - FILIAL AF ASCIO TECHNOLOGIES, INC. USA
-   Whois Server: whois.ascio.com
-   Referral URL: http://www.ascio.com
-   Name Server: NS-1343.AWSDNS-39.ORG
-   Name Server: NS-1582.AWSDNS-05.CO.UK
-   Name Server: NS-426.AWSDNS-53.COM
-   Name Server: NS-757.AWSDNS-30.NET
-   Status: ok
-   Updated Date: 20-apr-2014
-   Creation Date: 19-apr-2007
-   Expiration Date: 19-apr-2015
-
->>> Last update of whois database: Tue, 21 Oct 2014 12:42:13 GMT <<<
-
-NOTICE: The expiration date displayed in this record is the date the 
-registrar's sponsorship of the domain name registration in the registry is 
-currently set to expire. This date does not necessarily reflect the expiration 
-date of the domain name registrant's agreement with the sponsoring 
-registrar.  Users may consult the sponsoring registrar's Whois database to 
-view the registrar's reported date of expiration for this registration.
-
-TERMS OF USE: You are not authorized to access or query our Whois 
-database through the use of electronic processes that are high-volume and 
-automated except as reasonably necessary to register domain names or 
-modify existing registrations; the Data in VeriSign Global Registry 
-Services' ("VeriSign") Whois database is provided by VeriSign for 
-information purposes only, and to assist persons in obtaining information 
-about or related to a domain name registration record. VeriSign does not 
-guarantee its accuracy. By submitting a Whois query, you agree to abide 
-by the following terms of use: You agree that you may use this Data only 
-for lawful purposes and that under no circumstances will you use this Data 
-to: (1) allow, enable, or otherwise support the transmission of mass 
-unsolicited, commercial advertising or solicitations via e-mail, telephone, 
-or facsimile; or (2) enable high volume, automated, electronic processes 
-that apply to VeriSign (or its computer systems). The compilation, 
-repackaging, dissemination or other use of this Data is expressly 
-prohibited without the prior written consent of VeriSign. You agree not to 
-use electronic processes that are automated and high-volume to access or 
-query the Whois database except as reasonably necessary to register 
-domain names or modify existing registrations. VeriSign reserves the right 
-to restrict your access to the Whois database in its sole discretion to ensure 
-operational stability.  VeriSign may restrict or terminate your access to the 
-Whois database for failure to abide by these terms of use. VeriSign 
-reserves the right to modify these terms at any time. 
-
-The Registry database contains ONLY .COM, .NET, .EDU domains and
-Registrars.
+The data in Ascio Technologies' WHOIS database is provided 
+by Ascio Technologies for information purposes only. By submitting 
+a WHOIS query, you agree that you will use this data only for lawful 
+purpose. In addition, you agree not to:
+(a) use the data to allow, enable, or otherwise support any marketing
+activities, regardless of the medium used. Such media include but are 
+not limited to e-mail, telephone, facsimile, postal mail, SMS, and
+wireless alerts; or
+(b) use the data to enable high volume, automated, electronic processes
+that sendqueries or data to the systems of any Registry Operator or 
+ICANN-Accredited registrar, except as reasonably necessary to register 
+domain names or modify existing registrations.
+(c) sell or redistribute the data except insofar as it has been 
+incorporated into a value-added product or service that does not permit
+the extraction of a substantial portion of the bulk data from the value-added
+product or service for use by other parties.
+Ascio Technologies reserves the right to modify these terms at any time.
+Ascio Technologies cannot guarantee the accuracy of the data provided.
+By accessing and using Ascio Technologies WHOIS service, you agree to these terms.

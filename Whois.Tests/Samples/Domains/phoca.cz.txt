@@ -1,1 +1,84 @@
-Your connection limit exceeded. Please slow down and try again later.
+%  (c) 2006-2014 CZ.NIC, z.s.p.o.
+% 
+% Intended use of supplied data and information
+% 
+% Data contained in the domain name register, as well as information
+% supplied through public information services of CZ.NIC association,
+% are appointed only for purposes connected with Internet network
+% administration and operation, or for the purpose of legal or other
+% similar proceedings, in process as regards a matter connected
+% particularly with holding and using a concrete domain name.
+% 
+% Full text available at:
+% http://www.nic.cz/page/306/intended-use-of-supplied-data-and-information/
+% 
+% See also a search service at http://www.nic.cz/whois/
+% 
+% 
+% Whoisd Server Version: 3.10.0
+% Timestamp: Wed Oct 22 12:19:30 2014
+
+domain:       phoca.cz
+registrant:   SB:SUB000029824-ZONER
+admin-c:      PER000029824-ZONER
+nsset:        NSS:SUB100000001-ZONER:553
+registrar:    REG-ZONER
+registered:   08.08.2007 07:15:00
+changed:      04.04.2012 04:37:56
+expire:       08.08.2015
+
+contact:      SB:SUB000029824-ZONER
+name:         Lenka Medunová
+address:      Bratrstva 38
+address:      Znojmo
+address:      66902
+address:      CZ
+e-mail:       medunova.lenka@seznam.cz
+registrar:    REG-ZONER
+created:      08.08.2007 06:55:00
+
+contact:      PER000029824-ZONER
+name:         Lenka Medunová
+address:      Bratrstva 38
+address:      Znojmo
+address:      66902
+address:      CZ
+phone:        +420.724272988
+e-mail:       medunova.lenka@seznam.cz
+registrar:    REG-ZONER
+created:      08.08.2007 06:15:00
+
+nsset:        NSS:SUB100000001-ZONER:553
+nserver:      ns2.videon-znojmo.cz 
+nserver:      ns1.videon-znojmo.cz 
+tech-c:       SB:SUB100000001-ZONER
+tech-c:       PER000000001-ZONER
+registrar:    REG-ZONER
+created:      01.10.2007 02:00:00
+
+contact:      SB:SUB100000001-ZONER
+org:          ZONER software a.s.
+name:         ZONER software a.s.
+address:      Nové sady 18
+address:      Brno
+address:      60200
+address:      CZ
+e-mail:       admin@zoner.cz
+registrar:    REG-ZONER
+created:      10.08.2001 22:13:00
+changed:      30.03.2010 13:54:49
+
+contact:      PER000000001-ZONER
+name:         Petr Horinek
+address:      Nové sady 18
+address:      Brno
+address:      60200
+address:      CZ
+phone:        +420.543257244
+fax-no:       +420.543257245
+e-mail:       auto-reg@admin.czechia.com
+registrar:    REG-ZONER
+created:      10.08.2001 22:13:00
+changed:      26.08.2005 15:05:00
+
+

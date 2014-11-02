@@ -1,395 +1,92 @@
+Domain Name: GODADDY.COM
+Registry Domain ID: 4013247_DOMAIN_COM-VRSN
+Registrar WHOIS Server: whois.godaddy.com
+Registrar URL: http://www.godaddy.com
+Update Date: 2013-06-02 07:16:24
+Creation Date: 1999-03-02 00:00:00
+Registrar Registration Expiration Date: 2021-11-01 06:59:59
+Registrar: GoDaddy.com, LLC
+Registrar IANA ID: 146
+Registrar Abuse Contact Email: abuse@godaddy.com
+Registrar Abuse Contact Phone: +1.480-624-2505
+Domain Status: clientTransferProhibited
+Domain Status: clientUpdateProhibited
+Domain Status: clientRenewProhibited
+Domain Status: clientDeleteProhibited
+Registry Registrant ID: 
+Registrant Name: Domain Administrator
+Registrant Organization: Go Daddy Operating Company, LLC
+Registrant Street: 14455 N Hayden Rd Suite 219
+Registrant City: Scottsdale
+Registrant State/Province: Arizona
+Registrant Postal Code: 85260
+Registrant Country: United States
+Registrant Phone: +1.4805058800
+Registrant Phone Ext: 
+Registrant Fax: +1.4805058844
+Registrant Fax Ext: 
+Registrant Email: companynames@godaddy.com
+Registry Admin ID: 
+Admin Name: Domain Administrator
+Admin Organization: Go Daddy Operating Company, LLC
+Admin Street: 14455 N Hayden Rd Suite 219
+Admin City: Scottsdale
+Admin State/Province: Arizona
+Admin Postal Code: 85260
+Admin Country: United States
+Admin Phone: +1.4805058800
+Admin Phone Ext: 
+Admin Fax: +1.4805058844
+Admin Fax Ext: 
+Admin Email: companynames@godaddy.com
+Registry Tech ID: 
+Tech Name: Domain Administrator
+Tech Organization: Go Daddy Operating Company, LLC
+Tech Street: 14455 N Hayden Rd Suite 219
+Tech City: Scottsdale
+Tech State/Province: Arizona
+Tech Postal Code: 85260
+Tech Country: United States
+Tech Phone: +1.4805058800
+Tech Phone Ext: 
+Tech Fax: +1.4805058844
+Tech Fax Ext: 
+Tech Email: companynames@godaddy.com
+Name Server: CNS1.GODADDY.COM
+Name Server: CNS2.GODADDY.COM
+Name Server: CNS3.GODADDY.COM
+Name Server: A11-64.AKAM.NET
+Name Server: A1-245.AKAM.NET
+Name Server: A20-65.AKAM.NET
+Name Server: A6-66.AKAM.NET
+Name Server: A8-67.AKAM.NET
+Name Server: A9-67.AKAM.NET
+DNSSEC: unsigned
+URL of the ICANN WHOIS Data Problem Reporting System: http://wdprs.internic.net/
+Last update of WHOIS database: 2014-10-22T10:00:00Z
 
-Whois Server Version 2.0
+****************************************************
+See Business Registration Listing
+****************************************************
+Copy and paste the link below to view additional details:
+http://who.godaddy.com/whoischeck.aspx?domain=GODADDY.COM
 
-Domain names in the .com and .net domains can now be registered
-with many different competing registrars. Go to http://www.internic.net
-for detailed information.
+The data contained in GoDaddy.com, LLC's WhoIs database,
+while believed by the company to be reliable, is provided "as is"
+with no guarantee or warranties regarding its accuracy.  This
+information is provided for the sole purpose of assisting you
+in obtaining information about domain name registration records.
+Any use of this data for any other purpose is expressly forbidden without the prior written
+permission of GoDaddy.com, LLC.  By submitting an inquiry,
+you agree to these terms of usage and limitations of warranty.  In particular,
+you agree not to use this data to allow, enable, or otherwise make possible,
+dissemination or collection of this data, in part or in its entirety, for any
+purpose, such as the transmission of unsolicited advertising and
+and solicitations of any kind, including spam.  You further agree
+not to use this data to enable high volume, automated or robotic electronic
+processes designed to collect or compile this data for any purpose,
+including mining this data for your own personal or commercial purposes. 
 
-Aborting search 50 records found .....
-   Registrar Name: GODADDY.COM, LLC
-   Address: 14455 N Hayden Suite 226, Scottsdale, AZ 85260, US
-   Phone Number: 480 505 8800
-   Email: registrar_routine@godaddy.com
-   Whois Server: whois.godaddy.com
-   Referral URL: registrar.godaddy.com
-   Admin Contact: Admin Contact
-   Phone Number: Not Applicable
-   Email: reg_admin@godaddy.com
-   Admin Contact: Mike Zimmerman
-   Phone Number: 4805058800
-   Email: mz@godaddy.com
-   Admin Contact: Erin O'shea
-   Phone Number: 480-366-3195
-   Email: eoshea@godaddy.com
-   Admin Contact: Jill Titzer
-   Phone Number: 480-505-8800
-   Email: icannpolicy@godaddy.com
-   Billing Contact: Kasi Smith
-   Phone Number: 480-505-8800 x 4176
-   Email: sfranco@gdaddy.com
-   Billing Contact: Billing Contact
-   Phone Number: Not Applicable
-   Email: registryfunds@godaddy.com
-   Billing Contact: Tammy Michaud
-   Phone Number: 480-505-8800
-   Email: tmichaud@godaddy.com
-   Billing Contact: Erin O'shea
-   Phone Number: 480-366-3195
-   Email: eoshea@godaddy.com
-   Billing Contact: Sheri Franco
-   Phone Number: 480-505-8800 x4279
-   Email: sfranco@godaddy.com
-   Technical Contact: Technical Contact
-   Phone Number: Not Applicable
-   Email: reg_technical@godaddy.com
-
-   Registrar Name: GODADDY.COM, INC.
-   Address: 14455 N Hayden Suite 226, Scottsdale, AZ 85260, US
-   Phone Number: 480 505 8800
-   Email: registrar_routine@godaddy.com
-   Whois Server: whois.iana.org
-   Referral URL: http://www.iana.org
-   Registrar Contact: No Contact
-
-   Server Name: GODADDY.COM.3KINGSTRAVEL.NET
-   IP Address: 23.229.135.99
-   Registrar: GODADDY.COM, LLC
-   Whois Server: whois.godaddy.com
-   Referral URL: http://registrar.godaddy.com
-
-   Server Name: GODADDY.COM.4XESCORT.COM
-   IP Address: 97.74.144.203
-   Registrar: GODADDY.COM, LLC
-   Whois Server: whois.godaddy.com
-   Referral URL: http://registrar.godaddy.com
-
-   Server Name: GODADDY.COM.ADASAPHOTOGRAPHICART.COM
-   IP Address: 216.69.185.51
-   IP Address: 208.109.255.51
-   Registrar: GODADDY.COM, LLC
-   Whois Server: whois.godaddy.com
-   Referral URL: http://registrar.godaddy.com
-
-   Server Name: GODADDY.COM.ADDITIONALEARNINGS-TIPS.COM
-   IP Address: 146.255.45.1
-   Registrar: GODADDY.COM, LLC
-   Whois Server: whois.godaddy.com
-   Referral URL: http://registrar.godaddy.com
-
-   Server Name: GODADDY.COM.AFORMINTERNATIONAL.NET
-   IP Address: 50.62.160.155
-   Registrar: GODADDY.COM, LLC
-   Whois Server: whois.godaddy.com
-   Referral URL: http://registrar.godaddy.com
-
-   Server Name: GODADDY.COM.AFRICENTREPRENEURS.COM
-   IP Address: 192.186.194.121
-   Registrar: GODADDY.COM, LLC
-   Whois Server: whois.godaddy.com
-   Referral URL: http://registrar.godaddy.com
-
-   Server Name: GODADDY.COM.ALEADINGLIMO.COM
-   IP Address: 50.63.110.1
-   Registrar: GODADDY.COM, LLC
-   Whois Server: whois.godaddy.com
-   Referral URL: http://registrar.godaddy.com
-
-   Server Name: GODADDY.COM.ALEXANDREAREINA.COM
-   IP Address: 173.201.216.63
-   Registrar: GODADDY.COM, LLC
-   Whois Server: whois.godaddy.com
-   Referral URL: http://registrar.godaddy.com
-
-   Server Name: GODADDY.COM.ALLINSU-RANCE.COM
-   IP Address: 146.255.45.1
-   Registrar: GODADDY.COM, LLC
-   Whois Server: whois.godaddy.com
-   Referral URL: http://registrar.godaddy.com
-
-   Server Name: GODADDY.COM.AND.ALEX.FUCKED.BY.WWW.DNDIALOG.COM
-   IP Address: 81.177.3.240
-   Registrar: MONIKER ONLINE SERVICES LLC
-   Whois Server: whois.moniker.com
-   Referral URL: http://www.moniker.com
-
-   Server Name: GODADDY.COM.ARIESRISK.COM
-   IP Address: 192.186.194.121
-   Registrar: GODADDY.COM, LLC
-   Whois Server: whois.godaddy.com
-   Referral URL: http://registrar.godaddy.com
-
-   Server Name: GODADDY.COM.ARMANIART.COM
-   IP Address: 97.74.182.128
-   Registrar: GODADDY.COM, LLC
-   Whois Server: whois.godaddy.com
-   Referral URL: http://registrar.godaddy.com
-
-   Server Name: GODADDY.COM.ARTSDESIGNGALLERY.COM
-   IP Address: 97.74.144.7
-   Registrar: GODADDY.COM, LLC
-   Whois Server: whois.godaddy.com
-   Referral URL: http://registrar.godaddy.com
-
-   Server Name: GODADDY.COM.AU
-   Registrar: CRAZY DOMAINS FZ-LLC
-   Whois Server: whois.crazydomains.com
-   Referral URL: http://www.crazydomains.com 
-
-   Server Name: GODADDY.COM.BANGALORESRESTAURANTS.COM
-   IP Address: 173.201.98.128
-   Registrar: GODADDY.COM, LLC
-   Whois Server: whois.godaddy.com
-   Referral URL: http://registrar.godaddy.com
-
-   Server Name: GODADDY.COM.BERNADETTEHAROLD.COM
-   IP Address: 72.167.131.9
-   Registrar: GODADDY.COM, LLC
-   Whois Server: whois.godaddy.com
-   Referral URL: http://registrar.godaddy.com
-
-   Server Name: GODADDY.COM.BUYBESTLINKS.COM
-   IP Address: 192.186.207.228
-   Registrar: GODADDY.COM, LLC
-   Whois Server: whois.godaddy.com
-   Referral URL: http://registrar.godaddy.com
-
-   Server Name: GODADDY.COM.CENTRODECALIDADYPRODUCTIVIDAD.COM
-   IP Address: 50.63.217.1
-   Registrar: GODADDY.COM, LLC
-   Whois Server: whois.godaddy.com
-   Referral URL: http://registrar.godaddy.com
-
-   Server Name: GODADDY.COM.CHILDHOODTRAUMARECOVERY.COM
-   IP Address: 118.121.41.137
-   Registrar: GODADDY.COM, LLC
-   Whois Server: whois.godaddy.com
-   Referral URL: http://registrar.godaddy.com
-
-   Server Name: GODADDY.COM.CHRISTAMELNYKHINES.COM
-   IP Address: 97.74.181.1
-   Registrar: GODADDY.COM, LLC
-   Whois Server: whois.godaddy.com
-   Referral URL: http://registrar.godaddy.com
-
-   Server Name: GODADDY.COM.CLAUSENASSOCIATES.COM
-   IP Address: 192.186.236.96
-   Registrar: WEBNAMES.CA INC.
-   Whois Server: whois.webnames.ca
-   Referral URL: http://www.webnames.ca
-
-   Server Name: GODADDY.COM.CLIFFYCELLS.COM
-   IP Address: 97.74.215.83
-   Registrar: GODADDY.COM, LLC
-   Whois Server: whois.godaddy.com
-   Referral URL: http://registrar.godaddy.com
-
-   Server Name: GODADDY.COM.COASTLINE-FM.COM
-   IP Address: 50.63.202.25
-   Registrar: GODADDY.COM, LLC
-   Whois Server: whois.godaddy.com
-   Referral URL: http://registrar.godaddy.com
-
-   Server Name: GODADDY.COM.DCSCHOOLHUB.COM
-   IP Address: 54.236.190.129
-   Registrar: GODADDY.COM, LLC
-   Whois Server: whois.godaddy.com
-   Referral URL: http://registrar.godaddy.com
-
-   Server Name: GODADDY.COM.DYNAMICVALUES.COM
-   IP Address: 50.62.98.1
-   Registrar: DOMAIN.COM, LLC
-   Whois Server: whois.domain.com
-   Referral URL: http://www.domain.com
-
-   Server Name: GODADDY.COM.EDIFICENORTHWEST.COM
-   IP Address: 23.229.190.73
-   Registrar: GODADDY.COM, LLC
-   Whois Server: whois.godaddy.com
-   Referral URL: http://registrar.godaddy.com
-
-   Server Name: GODADDY.COM.EENGURRA.COM
-   IP Address: 184.168.46.68
-   Registrar: GODADDY.COM, LLC
-   Whois Server: whois.godaddy.com
-   Referral URL: http://registrar.godaddy.com
-
-   Server Name: GODADDY.COM.ENVIROWOLF.COM
-   IP Address: 50.63.76.1
-   Registrar: GODADDY.COM, LLC
-   Whois Server: whois.godaddy.com
-   Referral URL: http://registrar.godaddy.com
-
-   Server Name: GODADDY.COM.EZGRAPHICSLOGOS.COM
-   IP Address: 68.178.254.180
-   Registrar: DOMAIN.COM, LLC
-   Whois Server: whois.domain.com
-   Referral URL: http://www.domain.com
-
-   Server Name: GODADDY.COM.FLETCHERANDFLETCHERPHOTOGRAPHY.COM
-   IP Address: 97.74.215.40
-   Registrar: GODADDY.COM, LLC
-   Whois Server: whois.godaddy.com
-   Referral URL: http://registrar.godaddy.com
-
-   Server Name: GODADDY.COM.FLORIDASURETY.COM
-   IP Address: 97.74.215.145
-   Registrar: GODADDY.COM, LLC
-   Whois Server: whois.godaddy.com
-   Referral URL: http://registrar.godaddy.com
-
-   Server Name: GODADDY.COM.GDDAS.COM
-   IP Address: 184.168.18.1
-   Registrar: NAMESILO, LLC
-   Whois Server: whois.namesilo.com
-   Referral URL: http://www.namesilo.com
-
-   Server Name: GODADDY.COM.GENUINETIMEPIECE.COM
-   IP Address: 50.62.235.1
-   Registrar: GODADDY.COM, LLC
-   Whois Server: whois.godaddy.com
-   Referral URL: http://registrar.godaddy.com
-
-   Server Name: GODADDY.COM.GGONYA.NET
-   IP Address: 64.202.165.10
-   IP Address: 64.202.167.92
-   Registrar: A TECHNOLOGY COMPANY, INC.
-   Whois Server: whois.namesystem.com
-   Referral URL: http://www.NameSystem.com
-
-   Server Name: GODADDY.COM.GIGSPICK.COM
-   IP Address: 192.186.199.38
-   Registrar: NAME.COM, INC.
-   Whois Server: whois.name.com
-   Referral URL: http://www.name.com
-
-   Server Name: GODADDY.COM.GINERREALESTATE.COM
-   IP Address: 50.63.81.1
-   Registrar: GODADDY.COM, LLC
-   Whois Server: whois.godaddy.com
-   Referral URL: http://registrar.godaddy.com
-
-   Server Name: GODADDY.COM.GLOBALEMAC.COM
-   IP Address: 50.62.160.240
-   Registrar: GODADDY.COM, LLC
-   Whois Server: whois.godaddy.com
-   Referral URL: http://registrar.godaddy.com
-
-   Server Name: GODADDY.COM.GLORY-HAIRSALON.COM
-   IP Address: 72.167.70.1
-   Registrar: GODADDY.COM, LLC
-   Whois Server: whois.godaddy.com
-   Referral URL: http://registrar.godaddy.com
-
-   Server Name: GODADDY.COM.GRAYRAYNEFABRICS.COM
-   IP Address: 50.62.246.1
-   Registrar: WILD WEST DOMAINS, LLC
-   Whois Server: whois.wildwestdomains.com
-   Referral URL: http://www.wildwestdomains.com
-
-   Server Name: GODADDY.COM.HARVESTINGHAPPINESSTALKRADIO.COM
-   IP Address: 50.63.32.1
-   Registrar: WILD WEST DOMAINS, LLC
-   Whois Server: whois.wildwestdomains.com
-   Referral URL: http://www.wildwestdomains.com
-
-   Server Name: GODADDY.COM.HOTBIKINIRATER.COM
-   IP Address: 50.63.71.1
-   Registrar: WILD WEST DOMAINS, LLC
-   Whois Server: whois.wildwestdomains.com
-   Referral URL: http://www.wildwestdomains.com
-
-   Server Name: GODADDY.COM.HYUNSIKYOO.COM
-   IP Address: 50.63.121.1
-   Registrar: DOTNAME KOREA CORP
-   Whois Server: whois.dotname.co.kr
-   Referral URL: http://www.dotname.co.kr
-
-   Server Name: GODADDY.COM.INDYMETROWOMAN.COM
-   IP Address: 68.178.254.122
-   Registrar: GODADDY.COM, LLC
-   Whois Server: whois.godaddy.com
-   Referral URL: http://registrar.godaddy.com
-
-   Server Name: GODADDY.COM.INSULSTONE.COM
-   IP Address: 23.229.182.196
-   Registrar: GODADDY.COM, LLC
-   Whois Server: whois.godaddy.com
-   Referral URL: http://registrar.godaddy.com
-
-   Server Name: GODADDY.COM.ISLANDTRAMS.COM
-   IP Address: 204.93.213.45
-   Registrar: GODADDY.COM, LLC
-   Whois Server: whois.godaddy.com
-   Referral URL: http://registrar.godaddy.com
-
-   Server Name: GODADDY.COM.IXCANADESIGNS.COM
-   IP Address: 69.65.27.131
-   Registrar: GODADDY.COM, LLC
-   Whois Server: whois.godaddy.com
-   Referral URL: http://registrar.godaddy.com
-
-   Server Name: GODADDY.COM.J4JATT.COM
-   IP Address: 192.186.227.68
-   Registrar: PDR LTD. D/B/A PUBLICDOMAINREGISTRY.COM
-   Whois Server: whois.PublicDomainRegistry.com
-   Referral URL: http://www.PublicDomainRegistry.com
-
-   Domain Name: GODADDY.COM
-   Registrar: GODADDY.COM, LLC
-   Whois Server: whois.godaddy.com
-   Referral URL: http://registrar.godaddy.com
-   Name Server: A1-245.AKAM.NET
-   Name Server: A11-64.AKAM.NET
-   Name Server: A20-65.AKAM.NET
-   Name Server: A6-66.AKAM.NET
-   Name Server: A8-67.AKAM.NET
-   Name Server: A9-67.AKAM.NET
-   Name Server: CNS1.GODADDY.COM
-   Name Server: CNS2.GODADDY.COM
-   Name Server: CNS3.GODADDY.COM
-   Status: clientDeleteProhibited
-   Status: clientRenewProhibited
-   Status: clientTransferProhibited
-   Status: clientUpdateProhibited
-   Status: serverDeleteProhibited
-   Status: serverTransferProhibited
-   Status: serverUpdateProhibited
-   Updated Date: 09-apr-2014
-   Creation Date: 02-mar-1999
-   Expiration Date: 01-nov-2021
-
->>> Last update of whois database: Tue, 21 Oct 2014 12:41:13 GMT <<<
-
-NOTICE: The expiration date displayed in this record is the date the 
-registrar's sponsorship of the domain name registration in the registry is 
-currently set to expire. This date does not necessarily reflect the expiration 
-date of the domain name registrant's agreement with the sponsoring 
-registrar.  Users may consult the sponsoring registrar's Whois database to 
-view the registrar's reported date of expiration for this registration.
-
-TERMS OF USE: You are not authorized to access or query our Whois 
-database through the use of electronic processes that are high-volume and 
-automated except as reasonably necessary to register domain names or 
-modify existing registrations; the Data in VeriSign Global Registry 
-Services' ("VeriSign") Whois database is provided by VeriSign for 
-information purposes only, and to assist persons in obtaining information 
-about or related to a domain name registration record. VeriSign does not 
-guarantee its accuracy. By submitting a Whois query, you agree to abide 
-by the following terms of use: You agree that you may use this Data only 
-for lawful purposes and that under no circumstances will you use this Data 
-to: (1) allow, enable, or otherwise support the transmission of mass 
-unsolicited, commercial advertising or solicitations via e-mail, telephone, 
-or facsimile; or (2) enable high volume, automated, electronic processes 
-that apply to VeriSign (or its computer systems). The compilation, 
-repackaging, dissemination or other use of this Data is expressly 
-prohibited without the prior written consent of VeriSign. You agree not to 
-use electronic processes that are automated and high-volume to access or 
-query the Whois database except as reasonably necessary to register 
-domain names or modify existing registrations. VeriSign reserves the right 
-to restrict your access to the Whois database in its sole discretion to ensure 
-operational stability.  VeriSign may restrict or terminate your access to the 
-Whois database for failure to abide by these terms of use. VeriSign 
-reserves the right to modify these terms at any time. 
-
-The Registry database contains ONLY .COM, .NET, .EDU domains and
-Registrars.
+Please note: the registrant of the domain name is specified
+in the "registrant" section.  In most cases, GoDaddy.com, LLC 
+is not the registrant of domain names listed in this database.

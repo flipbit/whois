@@ -2,13 +2,13 @@ Domain Name:qq.com
 Registry Domain ID:
 Registrar WHOIS Server: whois.hichina.com
 Registrar URL: http://www.net.cn/
-Updated Date:2014-09-10T05:36:49Z
+Updated Date:2014-09-23T06:46:43Z
 Creation Date:1995-05-04T04:00:00Z
 Registrar Registration Expiration Date:2018-05-05T04:00:00Z
 Registrar: HICHINA ZHICHENG TECHNOLOGY LTD.
 Registrar IANA ID: 420
 Registrar Abuse Contact Email: abuse@list.alibaba-inc.com
-Registrar Abuse Contact Phone: +86.1064242299
+Registrar Abuse Contact Phone: +86.4006008500
 Reseller:
 Domain Status:clientDeleteProhibited
 Domain Status:clientTransferProhibited
@@ -58,7 +58,7 @@ Name Server:ns3.qq.com
 Name Server:ns4.qq.com
 DNSSEC:unsigned
 URL of the ICANN WHOIS Data Problem Reporting System: http://wdprs.internic.net/
->>> Last update of WHOIS database:2014-09-10T05:36:49Z<<<
+>>> Last update of WHOIS database:2014-09-23T06:46:43Z<<<
 
 Registry Billing ID:hc316926121-cn
 Billing Name:liguo zhou

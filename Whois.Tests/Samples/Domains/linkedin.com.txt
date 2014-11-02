@@ -51,16 +51,16 @@ Tech Phone Ext:
 Tech Fax: +1.6506870505
 Tech Fax Ext: 
 Tech Email: hostmaster@linkedin.com
-Name Server: ns2.linkedin.com
-Name Server: ns4.p43.dynect.net
-Name Server: ns1.linkedin.com
-Name Server: ns2.p43.dynect.net
-Name Server: ns4.linkedin.com
 Name Server: ns3.linkedin.com
-Name Server: ns1.p43.dynect.net
+Name Server: ns2.p43.dynect.net
 Name Server: ns3.p43.dynect.net
+Name Server: ns2.linkedin.com
+Name Server: ns1.linkedin.com
+Name Server: ns4.linkedin.com
+Name Server: ns1.p43.dynect.net
+Name Server: ns4.p43.dynect.net
 URL of the ICANN WHOIS Data Problem Reporting System: http://wdprs.internic.net/
->>> Last update of WHOIS database: 2014-09-21T11:50:34-0700 <<<
+>>> Last update of WHOIS database: 2014-10-22T02:08:55-0700 <<<
 
 The Data in MarkMonitor.com's WHOIS database is provided by MarkMonitor.com for
 information purposes, and to assist persons in obtaining information about or

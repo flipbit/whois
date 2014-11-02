@@ -1,70 +1,84 @@
+Domain Name: blog.com
+Registry Domain ID: 1106392_DOMAIN_COM-VRSN
+Registrar WHOIS Server: whois.rrpproxy.net
+Registrar URL: http://www.portugalmail.net
+Updated Date: 2014-10-14T19:29:04.0Z
+Creation Date: 1998-04-14T04:00:00.0Z
+Registrar Registration Expiration Date: 2021-04-13T04:00:00.0Z
+Registrar: Key-Systems GmbH
+Registrar IANA ID: 269
+Registrar Abuse Contact Email: abuse@key-systems.net
+Registrar Abuse Contact Phone: +49.68949396850
+Domain Status: ACTIVE
+Registry Registrant ID: P-DKA6445
+Registrant Name: Domain Administrator
+Registrant Organization: Blog.com International
+Registrant Street: Rua Ricardo Severo, 3 - 5 Dto.
+Registrant City: Porto
+Registrant State/Province: 
+Registrant Postal Code: 4050-515
+Registrant Country: PT
+Registrant Phone: +351.226062272
+Registrant Phone Ext: 
+Registrant Fax: +351.220001224
+Registrant Fax Ext: 
+Registrant Email: admin.domains@co.blog.com
+Registry Admin ID: P-CVA1597
+Admin Name: ccTLD Administrator
+Admin Organization: Blog.com International
+Admin Street: Rua Ricardo Severo, 3 - 5 Dto.
+Admin City: Porto
+Admin State/Province: 
+Admin Postal Code: 4050-515
+Admin Country: PT
+Admin Phone: +351.226062272
+Admin Phone Ext: 
+Admin Fax: +351.220001224
+Admin Fax Ext: 
+Admin Email: admin.domains@co.blog.com
+Registry Tech ID: P-CGT777
+Tech Name: ccTLD Tech Administrator
+Tech Organization: Blog.com International
+Tech Street: 501 Silverside Rd. Ste 105
+Tech City: Wilmington
+Tech Postal Code: 19809
+Tech State/Province: 
+Tech Country: US
+Tech Phone: +1.3022958718
+Tech Phone Ext: 
+Tech Fax: +1.3022958719
+Tech Fax Ext: 
+Tech Email: tech.domains@co.blog.com
+Name Server: o.ns.blog.com 
+Name Server: p.ns.blog.com 
+DNSSEC: unsigned
+URL of the ICANN WHOIS Data Problem Reporting System: http://wdprs.internic.net/
+>>> Last update of WHOIS database: 2014-10-22T10:29:38.0Z <<<
 
-Whois Server Version 2.0
-
-Domain names in the .com and .net domains can now be registered
-with many different competing registrars. Go to http://www.internic.net
-for detailed information.
-
-   Server Name: BLOG.COMEX.BE
-   Registrar: OVH
-   Whois Server: whois.ovh.com
-   Referral URL: http://www.ovh.com
-
-   Server Name: BLOG.COMIYO.COM
-   IP Address: 106.187.91.92
-   Registrar: GODADDY.COM, LLC
-   Whois Server: whois.godaddy.com
-   Referral URL: http://registrar.godaddy.com
-
-   Server Name: BLOG.COMMUNITURE.COM
-   IP Address: 49.212.175.245
-   Registrar: GMO INTERNET, INC. DBA ONAMAE.COM
-   Whois Server: whois.discount-domain.com
-   Referral URL: http://www.onamae.com
-
-   Domain Name: BLOG.COM
-   Registrar: KEY-SYSTEMS GMBH
-   Whois Server: whois.rrpproxy.net
-   Referral URL: http://www.key-systems.net
-   Name Server: O.NS.BLOG.COM
-   Name Server: P.NS.BLOG.COM
-   Status: ok
-   Updated Date: 14-oct-2014
-   Creation Date: 14-apr-1998
-   Expiration Date: 13-apr-2021
-
->>> Last update of whois database: Tue, 21 Oct 2014 13:47:01 GMT <<<
-
-NOTICE: The expiration date displayed in this record is the date the 
-registrar's sponsorship of the domain name registration in the registry is 
-currently set to expire. This date does not necessarily reflect the expiration 
-date of the domain name registrant's agreement with the sponsoring 
-registrar.  Users may consult the sponsoring registrar's Whois database to 
-view the registrar's reported date of expiration for this registration.
-
-TERMS OF USE: You are not authorized to access or query our Whois 
-database through the use of electronic processes that are high-volume and 
-automated except as reasonably necessary to register domain names or 
-modify existing registrations; the Data in VeriSign Global Registry 
-Services' ("VeriSign") Whois database is provided by VeriSign for 
-information purposes only, and to assist persons in obtaining information 
-about or related to a domain name registration record. VeriSign does not 
-guarantee its accuracy. By submitting a Whois query, you agree to abide 
-by the following terms of use: You agree that you may use this Data only 
-for lawful purposes and that under no circumstances will you use this Data 
-to: (1) allow, enable, or otherwise support the transmission of mass 
-unsolicited, commercial advertising or solicitations via e-mail, telephone, 
-or facsimile; or (2) enable high volume, automated, electronic processes 
-that apply to VeriSign (or its computer systems). The compilation, 
-repackaging, dissemination or other use of this Data is expressly 
-prohibited without the prior written consent of VeriSign. You agree not to 
-use electronic processes that are automated and high-volume to access or 
-query the Whois database except as reasonably necessary to register 
-domain names or modify existing registrations. VeriSign reserves the right 
-to restrict your access to the Whois database in its sole discretion to ensure 
-operational stability.  VeriSign may restrict or terminate your access to the 
-Whois database for failure to abide by these terms of use. VeriSign 
-reserves the right to modify these terms at any time. 
-
-The Registry database contains ONLY .COM, .NET, .EDU domains and
-Registrars.
+Registry Billing ID: P-CVA1597
+Billing Name: ccTLD Administrator
+Billing Organization: Blog.com International
+Billing Street: Rua Ricardo Severo, 3 - 5 Dto.
+Billing City: Porto
+Billing State/Province: 
+Billing Postal Code: 4050-515
+Billing Country: PT
+Billing Phone: +351.226062272
+Billing Phone Ext: 
+Billing Fax: +351.220001224
+Billing Fax Ext: 
+Billing Email: admin.domains@co.blog.com
+; Please register your domains at; http://www.portugalmail.net; This data is provided by Blog.com International
+; for information purposes, and to assist persons obtaining information
+; about or related to domain name registration records.
+; Blog.com International does not guarantee its accuracy.
+; By submitting a WHOIS query, you agree that you will use this data
+; only for lawful purposes and that, under no circumstances, you will
+; use this data to
+; 1) allow, enable, or otherwise support the transmission of mass
+;    unsolicited, commercial advertising or solicitations via E-mail
+;    (spam); or
+; 2) enable high volume, automated, electronic processes that apply
+;    to this WHOIS server.
+; These terms may be changed without prior notice.
+; By submitting this query, you agree to abide by this policy.
