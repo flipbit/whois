@@ -39,7 +39,7 @@ however this can easily be extended by writing new visitors.
 
 ### Further Reading
 
-Further deatils about how the library works can be found on [this blog post] [2].
+Further details about how the library works can be found on [this blog post] [2].
 
   [1]: http://www.centergate.com/                                           "CenterGate's WHOIS lookup service"
   [2]: http://flipbit.co.uk/2009/06/querying-whois-server-data-with-c.html  "Querying WHOIS server data with C#"
