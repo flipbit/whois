@@ -15,11 +15,11 @@ The source code is available on Github and can be downloaded and compiled.
 
 To use the library, reference it in your project and then use the following code:
 
-    using namespace Whois;
-    
-    var whois = new WhoisLookup().Lookup("github.com");
-    
-    Console.WriteLine(whois.ToString());
+```csharp
+using namespace Whois;
+var whois = new WhoisLookup().Lookup("github.com");
+Console.WriteLine(whois.ToString());
+```
 
 ### How The Library Works
 
