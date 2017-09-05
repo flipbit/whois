@@ -15,11 +15,11 @@ The source code is available on Github and can be downloaded and compiled.
 
 To use the library, reference it in your project and then use the following code:
 
-    using namespace Whois;
-    
-    var whois = new WhoisLookup().Lookup("github.com");
-    
-    Console.WriteLine(whois.ToString());
+```csharp
+using namespace Whois;
+var whois = new WhoisLookup().Lookup("github.com");
+Console.WriteLine(whois.ToString());
+```
 
 ### How The Library Works
 
@@ -39,7 +39,7 @@ however this can easily be extended by writing new visitors.
 
 ### Further Reading
 
-Further deatils about how the library works can be found on [this blog post] [2].
+Further details about how the library works can be found on [this blog post] [2].
 
   [1]: http://www.centergate.com/                                           "CenterGate's WHOIS lookup service"
   [2]: http://flipbit.co.uk/2009/06/querying-whois-server-data-with-c.html  "Querying WHOIS server data with C#"
