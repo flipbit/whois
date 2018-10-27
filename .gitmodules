@@ -1,3 +1,0 @@
-[submodule "Build"]
-	path = Build
-	url = https://github.com/flipbit/nant-to-nuget.git

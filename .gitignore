@@ -33,3 +33,4 @@ artifacts/
 packages
 !packages/repositories.config
 cache/
+.vs/
