@@ -12,6 +12,8 @@ namespace Whois.Visitors
                 throw new WhoisException($"Domain Name not specified.");
             }
 
+            state.Domain = state.Domain.Trim();
+
             if (IsValidDomainName(state.Domain) == false)
             {
                 throw new WhoisException($"Domain Name is invalid: {state.Domain}");

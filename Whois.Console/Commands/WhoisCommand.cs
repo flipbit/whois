@@ -1,6 +1,7 @@
 ﻿using System;
 using Contastic;
 using Newtonsoft.Json;
+using Whois.JsonModels;
 
 namespace Whois.Commands
 {
@@ -36,13 +37,15 @@ namespace Whois.Commands
 
         public override int Execute(Options parameters)
         {
+            WhoisLookup.AddPattern("hello", "test");
+
             var record = WhoisLookup.Lookup(parameters.DomainName);
 
             if (parameters.Json)
             {
                 if (record.ParsedResponse != null)
                 {
-                    var json = JsonConvert.SerializeObject(record.ParsedResponse, Formatting.Indented);
+                    var json = JsonConvert.SerializeObject(new WhoisResponse(record.ParsedResponse), Formatting.Indented);
                     Console.WriteLine(json);
                 }
                 else

@@ -17,7 +17,7 @@ namespace Whois.Servers
         [Test]
         public void TestGetNameServerForComDomain()
         {
-            var server = lookup.Lookup("exmaple.com");
+            var server = lookup.Lookup("com");
 
             Assert.AreEqual("whois.verisign-grs.com", server.Url);
         }
@@ -25,7 +25,7 @@ namespace Whois.Servers
         [Test]
         public void TestGetNameServerForUkDomain()
         {
-            var server = lookup.Lookup("exmaple.co.uk");
+            var server = lookup.Lookup("uk");
 
             Assert.AreEqual("whois.nic.uk", server.Url);
         }
@@ -33,7 +33,7 @@ namespace Whois.Servers
         [Test]
         public void TestGetNameServerForDeDomain()
         {
-            var server = lookup.Lookup("exmaple.de");
+            var server = lookup.Lookup("de");
 
             Assert.AreEqual("whois.denic.de", server.Url);
         }
@@ -41,7 +41,7 @@ namespace Whois.Servers
         [Test]
         public void TestGetNameServerForTkDomain()
         {
-            var server = lookup.Lookup("exmaple.tk");
+            var server = lookup.Lookup("tk");
 
             Assert.AreEqual("whois.dot.tk", server.Url);
         }
@@ -49,7 +49,7 @@ namespace Whois.Servers
         [Test]
         public void TestGetNameServerForPtDomain()
         {
-            var server = lookup.Lookup("example.pt");
+            var server = lookup.Lookup("pt");
 
             Assert.AreEqual("whois.dns.pt", server.Url);
         }
@@ -57,9 +57,9 @@ namespace Whois.Servers
         [Test]
         public void TestGetNameServerForBrDomain()
         {
-            var server = lookup.Lookup("example.com.br");
+            var server = lookup.Lookup("com.br");
 
-            Assert.AreEqual("registro.br", server.Url);
+            Assert.AreEqual("whois.internic.net", server.Url);
         }
 
         [Test]
@@ -71,12 +71,12 @@ namespace Whois.Servers
 
                 Assert.Fail("Should of thrown an exception!");
             }
-            catch (ApplicationException)
+            catch (WhoisException)
             {                
             }
-            catch (Exception)
+            catch (Exception e)
             {
-                Assert.Fail("Unexpected exception thrown!");
+                Assert.Fail($"Unexpected exception thrown: {e.GetType().Name}");
             }
         }
     }

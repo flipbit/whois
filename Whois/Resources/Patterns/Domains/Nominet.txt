@@ -8,17 +8,17 @@
         {Registrant.Type?$}
 
     Registrant's address:
-        {Registrant.Address#$}
+        {Registrant.Address*$}
 
     Registrar:
         {Registrar.Name?$}
         URL: {Registrar.Url?$}
 
     Relevant dates:
-        Registered on: {Created?$}
-        Expiry date:  {Expiration$:ToDateTime(dd-MMM-yyyy)}
-        Last updated:  {Updated$:ToDateTime(dd-MMM-yyyy)}
+        Registered on: {Created?$:ToDateTime(dd-MMM-yyyy)}
+        Expiry date:  {Expiration?$:ToDateTime(dd-MMM-yyyy)}
+        Last updated:  {Updated?$:ToDateTime(dd-MMM-yyyy)}
 
     Name servers:
-        {WhoisRecord.NameServers$}
-        {WhoisRecord.NameServers#$}
+        {NameServers$}
+        {NameServers*$}

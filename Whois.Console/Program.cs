@@ -1,4 +1,5 @@
-﻿using Serilog;
+﻿using System;
+using Serilog;
 using Whois.Commands;
 
 namespace Whois
@@ -16,13 +17,15 @@ namespace Whois
         {
             var log = new LoggerConfiguration()
                 .WriteTo
-                .Console(outputTemplate: "{Timestamp:HH:mm} [{Level}] ({Name:l}) {Message}{NewLine}{Exception}")
+                .Console(outputTemplate: "{Timestamp:HH:mm} [{Level}] {Message}{NewLine}{Exception}")
                 .WriteTo
                 .RollingFile("whois-{date}.txt")
                 .MinimumLevel.Debug()
                 .CreateLogger();
 
             Log.Logger = log;
+
+            Console.Title = "WHOIS";
 
             var runner = new WhoisRunner();
 

@@ -4,10 +4,6 @@ namespace Whois
 {
     public class LookupState
     {
-        public LookupState()
-        {
-        }
-
         public string Domain { get; set; }
 
         public string Tld { get; set; }
@@ -17,7 +13,5 @@ namespace Whois
         public WhoisOptions Options { get; set; }
 
         public WhoisResponse Response { get; set; }
-
-        public bool ParseResponse { get; set; }
     }
 }

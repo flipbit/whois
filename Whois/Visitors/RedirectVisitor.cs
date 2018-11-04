@@ -59,8 +59,6 @@ namespace Whois.Visitors
                 }
             }
 
-            Log.Warn("No WHOIS redirect found for: {0}", response.Domain);
-
             return false;
         }
     }

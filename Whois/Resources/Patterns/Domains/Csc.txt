@@ -1,4 +1,4 @@
-﻿Domain Name: {DomainName?$}
+﻿Domain Name: {DomainName?$:ToLower()}
 Registry Domain ID: {RegistryDomainId?$}
 Registrar WHOIS Server: {Registrar.WhoisServerUrl}
 Registrar URL: {Registrar.Url}
@@ -7,7 +7,7 @@ Creation Date: {Registered?$:ToDateTime("yyyy-MM-ddTHH:mm:ssZ")}
 Registrar Registration Expiration Date: {Expiration?$:ToDateTime("yyyy-MM-ddTHH:mm:ssZ")}
 Registrar: {Registrar.Name?$}
 Registrar IANA ID: {Registrar.IanaId?$}
-Domain Status: {DomainStatus#}
+Domain Status: {DomainStatus*:SubstringBefore(" ")}
 Registry Registrant ID: {Registrant.RegistryId?$}
 Registrant Name: {Registrant.Name?$} 
 Registrant Organization: {Registrant.Organization?$}
@@ -47,7 +47,7 @@ Tech Phone Ext: {TechnicalContact.TelephoneNumberExt?$}
 Tech Fax: {TechnicalContact.FaxNumber?$}
 Tech Fax Ext: {TechnicalContact.FaxNumberExt?$}
 Tech Email: {TechnicalContact.Email?$}
-Name Server: {NameServers#}
+Name Server: {NameServers*}
 DNSSEC: {DnsSecStatus$?}
 Registrar Abuse Contact Email: {Registrar.AbuseEmail$?}
 Registrar Abuse Contact Phone: {Registrar.AbuseTelephoneNumber$?}

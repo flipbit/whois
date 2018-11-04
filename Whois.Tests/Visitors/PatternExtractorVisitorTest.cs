@@ -24,7 +24,7 @@ namespace Whois.Visitors
             var state = new LookupState
             {
                 Response = new WhoisResponse(sample),
-                ParseResponse = true
+                Options = new WhoisOptions {  ParseWhoisResponse = true }
             };
             
             visitor.Visit(state);

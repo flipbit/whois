@@ -1,6 +1,8 @@
 ﻿using System.Collections.Generic;
 using System.Text;
 using System.Threading.Tasks;
+using Tokens.Transformers;
+using Tokens.Validators;
 using Whois.Logging;
 using Whois.Models;
 using Whois.Visitors;
@@ -13,6 +15,7 @@ namespace Whois
     public class WhoisLookup : IWhoisLookup
     {
         private static readonly ILog Log = LogProvider.GetCurrentClassLogger();
+        private PatternExtractorVisitor patternExtractorVisitor;
 
         public WhoisOptions Options { get; set; }
 
@@ -31,6 +34,8 @@ namespace Whois
         /// </summary>
         public WhoisLookup(WhoisOptions options) 
         {
+            patternExtractorVisitor = new PatternExtractorVisitor();
+
             Options = options;
 
             Visitors = new List<IWhoisVisitor>
@@ -48,7 +53,7 @@ namespace Whois
                 new RedirectVisitor(),
 
                 // Populate Structured WHOIS object
-                new PatternExtractorVisitor()
+                patternExtractorVisitor 
             };
         }
 
@@ -74,8 +79,7 @@ namespace Whois
             var state = new LookupState
             {
                 Options = Options.Clone(),
-                Domain = domain,
-                ParseResponse = true
+                Domain = domain
             };
 
             state.Options.DefaultEncoding = encoding;
@@ -86,6 +90,26 @@ namespace Whois
             }
 
             return state.Response;
+        }
+
+        public void AddPattern(string content, string name)
+        {
+            patternExtractorVisitor.AddPattern(content, name);
+        }
+
+        public void ClearPatterns()
+        {
+            patternExtractorVisitor.ClearPatterns();
+        }
+
+        public void RegisterPatternTransformer<T>() where T : ITokenTransformer
+        {
+            patternExtractorVisitor.RegisterPatternTransformer<T>();
+        }
+
+        public void RegisterPatternValidator<T>() where T : ITokenValidator
+        {
+            patternExtractorVisitor.RegisterPatternValidator<T>();
         }
     }
 }

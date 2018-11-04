@@ -5,12 +5,12 @@
 domain:       {Tld:ToLower}
 
 organisation: {Organization.Name?}
-address:      {Organization.Address#}
+address:      {Organization.Address*}
 
 contact:      administrative
 name:         {AdminContact.Name?}
 organisation: {AdminContact.Organization?}
-address:      {AdminContact.Address#}
+address:      {AdminContact.Address*}
 phone:        {AdminContact.TelephoneNumber?}
 fax-no:       {AdminContact.FaxNumber?}
 e-mail:       {AdminContact.Email?}
@@ -18,13 +18,13 @@ e-mail:       {AdminContact.Email?}
 contact:      technical
 name:         {TechContact.Name?}
 organisation: {TechContact.Organization?}
-address:      {TechContact.Address#}
+address:      {TechContact.Address*}
 phone:        {TechContact.TelephoneNumber?}
 fax-no:       {TechContact.FaxNumber?}
 e-mail:       {TechContact.Email?}
 
-nserver:      {NameServers$#}
-nserver:      {NameServers$#}
+nserver:      {NameServers$*}
+nserver:      {NameServers$*}
 
 whois:        {Url$?}
 

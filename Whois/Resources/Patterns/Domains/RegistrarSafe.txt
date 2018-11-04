@@ -1,7 +1,7 @@
 ﻿---
 OutOfOrder: true
 ---
-Domain Name: {DomainName$}
+Domain Name: {DomainName$:ToLower()}
 Registry Domain ID: {RegistryDomainId$}
 Registrar WHOIS Server: {Registrar.WhoisServerUrl}
 Registrar URL: {Registrar.Url}
@@ -12,7 +12,7 @@ Registrar: {Registrar.Name?$}
 Registrar IANA ID: {Registrar.IanaId?$}
 Registrar Abuse Contact Email: {Registrar.AbuseEmail$?}
 Registrar Abuse Contact Phone: {Registrar.AbuseTelephoneNumber$?}
-Domain Status: {DomainStatus#}
+Domain Status: {DomainStatus*:SubstringBefore(" ")}
 Registry Registrant ID: {Registrant.RegistryId?$}
 Registrant Name: {Registrant.Name?$}
 Registrant Organization: {Registrant.Organization?$}
@@ -52,5 +52,5 @@ Tech Phone Ext: {TechnicalContact.TelephoneNumberExt?$}
 Tech Fax: {TechnicalContact.FaxNumber?$}
 Tech Fax Ext: {TechnicalContact.FaxNumberExt?$}
 Tech Email: {TechnicalContact.Email?$}
-Name Server: {NameServers#}
+Name Server: {NameServers*}
 DNSSEC: {DnsSecStatus$?}

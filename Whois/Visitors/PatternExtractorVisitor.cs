@@ -1,6 +1,8 @@
 ﻿using System;
 using System.Threading.Tasks;
 using Tokens;
+using Tokens.Transformers;
+using Tokens.Validators;
 using Whois.Logging;
 using Whois.Models;
 using Whois.Resources;
@@ -28,23 +30,52 @@ namespace Whois.Visitors
 
         public Task<LookupState> Visit(LookupState state)
         {
-            if (state.ParseResponse == false)
+            if (state.Options.ParseWhoisResponse == false)
             {
                 return Task.FromResult(state);
             }
 
-            if (matcher.TryMatch<ParsedWhoisResponse>(state.Response.Content, out var match))
+            try
             {
-                Log.Debug("Parsed WHOIS data using pattern {0} - {1} replacement(s) made.", match.Template.Name, match.Matches);
+                if (matcher.TryMatch<ParsedWhoisResponse>(state.Response.Content, out var match))
+                {
+                    Log.Debug("Parsed WHOIS data using pattern {0} - {1} replacement(s) made.", match.Template.Name, match.Matches);
 
-                state.Response.ParsedResponse = match.Result;
+                    state.Response.ParsedResponse = match.Result;
+                }
+                else
+                {
+                    Log.Debug("Unable to parse WHOIS data.");
+                }
             }
-            else
+            catch (Exception e)
             {
-                Log.Debug("Unable to parse WHOIS data.");
+                Log.Error(e, "Error parsing WHOIS DATA for: {0}", state.Domain);
+
+                if (state.Options.ThrowOnParsingException) throw;
             }
 
             return Task.FromResult(state);
+        }
+
+        public void AddPattern(string content, string name)
+        {
+            matcher.AddPattern(content, name);
+        }
+
+        public void ClearPatterns()
+        {
+            matcher.ClearPatterns();
+        }
+
+        public void RegisterPatternValidator<T>() where T : ITokenValidator
+        {
+            matcher.RegisterValidator<T>();
+        }
+
+        public void RegisterPatternTransformer<T>() where T : ITokenTransformer
+        {
+            matcher.RegisterTransformer<T>();
         }
     }
 }

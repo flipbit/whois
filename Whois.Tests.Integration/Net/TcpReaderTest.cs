@@ -1,5 +1,6 @@
 ﻿using System;
 using System.Text;
+using System.Threading.Tasks;
 using NUnit.Framework;
 
 namespace Whois.Net
@@ -11,15 +12,13 @@ namespace Whois.Net
     public class TcpReaderTest
     {
         [Test]
-        public void TestReadWhoisForCogworksCoUk()
+        public async Task TestReadWhoisForCogworksCoUk()
         {
             string result;
 
             using (var reader = new TcpReader())
             {
-                //result = reader.Read("whois.nic.uk", 43, "cogworks.co.uk", Encoding.UTF8);
-                result = reader.Read("whois.registrarsafe.com", 43, "facebook.com", Encoding.UTF8);
-
+                result = await reader.Read("whois.nic.uk", 43, "cogworks.co.uk", Encoding.UTF8);
             }
 
             // Just check the domain name is in the response
@@ -28,13 +27,13 @@ namespace Whois.Net
 
         [Test]
         [Ignore("Not working")]
-        public void TestReadWhoisForSapoPt()
+        public async Task TestReadWhoisForSapoPt()
         {
             string result;
 
             using (var reader = new TcpReader())
             {
-                result = reader.Read("whois.dns.pt", 43, "sapo.pt", Encoding.GetEncoding("ISO-8859-1"));
+                result = await reader.Read("whois.dns.pt", 43, "sapo.pt", Encoding.GetEncoding("ISO-8859-1"));
             }
 
             // Just check the domain name is in the response
@@ -42,13 +41,13 @@ namespace Whois.Net
         }
 
         [Test]
-        public void TestReadWhoisForUolComBr()
+        public async Task TestReadWhoisForUolComBr()
         {
             string result;
 
             using (var reader = new TcpReader())
             {
-                result = reader.Read("registro.br", 43, "uol.com.br", Encoding.GetEncoding("ISO-8859-1"));
+                result = await reader.Read("registro.br", 43, "uol.com.br", Encoding.GetEncoding("ISO-8859-1"));
             }
 
             // Just check the domain name is in the response
@@ -56,13 +55,13 @@ namespace Whois.Net
         }
 
         [Test]
-        public void TestReadWhoisForUnknownDomain()
+        public async Task TestReadWhoisForUnknownDomain()
         {
             string result;
 
             using (var reader = new TcpReader())
             {
-                result = reader.Read("whois.nic.uk", 43, "invalid domain", Encoding.UTF8);
+                result = await reader.Read("whois.nic.uk", 43, "invalid domain", Encoding.UTF8);
             }
 
             // SHould never be registered (as invalid)
@@ -70,18 +69,18 @@ namespace Whois.Net
         }
 
         [Test]
-        public void TestReadWhenInvalidHost()
+        public async Task TestReadWhenInvalidHost()
         {
             try
             {
                 using (var reader = new TcpReader())
                 {
-                    reader.Read("invalid domain", 43, "invalid domain", Encoding.UTF8);
+                    await reader.Read("invalid domain", 43, "invalid domain", Encoding.UTF8);
                 }
 
                 Assert.Fail("Should of thrown an exception!");
             }
-            catch (ApplicationException)
+            catch (WhoisException)
             {
                 // Should thrown an exception
             }

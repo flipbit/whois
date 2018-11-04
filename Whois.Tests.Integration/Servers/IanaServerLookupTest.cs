@@ -1,5 +1,4 @@
 ﻿using NUnit.Framework;
-using Whois.Net;
 using Whois.Servers;
 
 namespace Whois
@@ -18,9 +17,9 @@ namespace Whois
         [Test]
         public void TestLookupCom()
         {
-            var result = lookup.Lookup("google.be");
+            var result = lookup.Lookup("com");
 
-            Assert.AreEqual("", result);
+            Assert.AreEqual("whois.verisign-grs.com", result.ParsedWhoisServer.Url);
         }
     }
 }
