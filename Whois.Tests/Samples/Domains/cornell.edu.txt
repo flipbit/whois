@@ -1,67 +1,60 @@
+This Registry database contains ONLY .EDU domains.
+The data in the EDUCAUSE Whois database is provided
+by EDUCAUSE for information purposes in order to
+assist in the process of obtaining information about
+or related to .edu domain registration records.
 
-This Registry database contains ONLY .EDU domains. 
-The data in the EDUCAUSE Whois database is provided 
-by EDUCAUSE for information purposes in order to 
-assist in the process of obtaining information about 
-or related to .edu domain registration records. 
+The EDUCAUSE Whois database is authoritative for the
+.EDU domain.
 
-The EDUCAUSE Whois database is authoritative for the 
-.EDU domain.         
+A Web interface for the .EDU EDUCAUSE Whois Server is
+available at: http://whois.educause.edu
 
-A Web interface for the .EDU EDUCAUSE Whois Server is 
-available at: http://whois.educause.net 
-
-By submitting a Whois query, you agree that this information 
-will not be used to allow, enable, or otherwise support 
-the transmission of unsolicited commercial advertising or 
-solicitations via e-mail.  The use of electronic processes to 
-harvest information from this server is generally prohibited 
-except as reasonably necessary to register or modify .edu 
+By submitting a Whois query, you agree that this information
+will not be used to allow, enable, or otherwise support
+the transmission of unsolicited commercial advertising or
+solicitations via e-mail.  The use of electronic processes to
+harvest information from this server is generally prohibited
+except as reasonably necessary to register or modify .edu
 domain names.
 
-You may use "%" as a wildcard in your search. For further 
-information regarding the use of this WHOIS server, please 
-type: help 
-
---------------------------
+-------------------------------------------------------------
 
 Domain Name: CORNELL.EDU
 
 Registrant:
-   Cornell University
-   Cornell Information Technologies
-   Network Operations Center 729 Rhodes Hall
-   Ithaca, NY 14853
-   UNITED STATES
+	Cornell University
+	Cornell Information Technologies
+	Network Operations Center 729 Rhodes Hall
+	Ithaca, NY 14853
+	United States of America
 
 Administrative Contact:
-
-   Cornell Information Technologies
-   Cornell Information Technologies
-   Cornell University
-   729 Rhodes Hall
-   Ithaca, NY 14853
-   UNITED STATES
-   +1-607-255-5500
-   noc@cornell.edu
+	Domain Admin
+	Cornell Information Technologies
+	Cornell University
+	729 Rhodes Hall
+	Ithaca, NY 14853
+	United States of America
+	+1.6072555500
+	noc@cornell.edu
 
 Technical Contact:
-   Daniel Eckstrom
-   Cornell Information Technologies
-   Cornell University
-   731 Rhodes Hall
-   Ithaca, NY 14853
-   UNITED STATES
-   +1-607-255-5902
-   de10@cornell.edu
+	Daniel Eckstrom
+	Cornell Information Technologies
+	Cornell University
+	731 Rhodes Hall
+	Ithaca, NY 14853
+	United States of America
+	+1.6072555902
+	de10@cornell.edu
 
-Name Servers: 
-   BIGRED.CIT.CORNELL.EDU      128.253.180.35
-   DNS.CIT.CORNELL.EDU         192.35.82.53
-   DRDNS.CIT.CORNELL.EDU       192.195.74.252
+Name Servers:
+	BIGRED.CIT.CORNELL.EDU
+	DNS.CIT.CORNELL.EDU
+	DRDNS.CIT.CORNELL.EDU
+	DRDNS2.CIT.CORNELL.EDU
 
 Domain record activated:    15-Jul-1985
-Domain record last updated: 20-Sep-2012
-Domain expires:             31-Jul-2015
-
-
+Domain record last updated: 26-Sep-2018
+Domain expires:             31-Jul-2019

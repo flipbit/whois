@@ -3,20 +3,19 @@ Domain Name: sfgate.com
 Registry Domain ID: 1069098_DOMAIN_COM-VRSN
 Registrar WHOIS Server: whois.corporatedomains.com
 Registrar URL: www.cscprotectsbrands.com
-Updated Date: 2014-04-25 13:36:48 -0400
-Creation Date: 1994-03-29 00:00:00 -0500
-Registrar Registration Expiration Date: 2015-03-30 00:00:00 -0400
+Updated Date: 2018-05-08T14:26:50Z
+Creation Date: 1994-03-29T05:00:00Z
+Registrar Registration Expiration Date: 2019-03-30T04:00:00Z
 Registrar: CSC CORPORATE DOMAINS, INC.
 Registrar IANA ID: 299
-Registrar Abuse Contact Email: admin@internationaladmin.com
+Registrar Abuse Contact Email: domainabuse@cscglobal.com
 Registrar Abuse Contact Phone: +1.8887802723
-Domain Status: serverTransferProhibited
-Domain Status: serverDeleteProhibited
-Domain Status: clientTransferProhibited
-Domain Status: serverUpdateProhibited
+Domain Status: clientTransferProhibited http://www.icann.org/epp#clientTransferProhibited
+Domain Status: serverDeleteProhibited http://www.icann.org/epp#serverDeleteProhibited
+Domain Status: serverTransferProhibited http://www.icann.org/epp#serverTransferProhibited
 Registry Registrant ID: 
-Registrant Name: Domain Administrator
-Registrant Organization: The Hearst Corporation
+Registrant Name: Hearst Communications, Inc.
+Registrant Organization: Hearst Communications, Inc.
 Registrant Street: 300 West 57th Street
 Registrant City: New York
 Registrant State/Province: NY
@@ -28,38 +27,42 @@ Registrant Fax: +1.2126492035
 Registrant Fax Ext: 
 Registrant Email: domains@hearst.com
 Registry Admin ID: 
-Admin Name: The Hearst Corporation
-Admin Organization: The Hearst Corporation
-Admin Street: 959 8th Avenue
+Admin Name: Hearst Communications, Inc.
+Admin Organization: Hearst Communications, Inc.
+Admin Street: 300 West 57th Street
 Admin City: New York
 Admin State/Province: NY
 Admin Postal Code: 10019
 Admin Country: US
 Admin Phone: +1.2126492000
 Admin Phone Ext: 
-Admin Fax: +1.2126492639
+Admin Fax: +1.2126492035
 Admin Fax Ext: 
 Admin Email: domains@hearst.com
 Registry Tech ID: 
-Tech Name: The Gate
-Tech Organization: The Gate
-Tech Street: 1001 Van Ness Ave
-Tech City: San Francisco
-Tech State/Province: CA
-Tech Postal Code: 94109-6913
+Tech Name: Peter Mastren
+Tech Organization: Hearst Newspapers, LLC
+Tech Street: 801 Texas Ave
+Tech City: Houston
+Tech State/Province: TX
+Tech Postal Code: 77002
 Tech Country: US
-Tech Phone: +1.4154476343
+Tech Phone: +1.7133627689
 Tech Phone Ext: 
-Tech Fax: +1.4154476303
+Tech Fax: 
 Tech Fax Ext: 
-Tech Email: dns@SFGATE.COM
-Name Server: ns2.hearstnp.com
+Tech Email: domains@hearstnp.com
+Name Server: ns4.hearstnp.com
+Name Server: ns5.hearstnp.com
+Name Server: ns6.hearstnp.com
 Name Server: ns1.hearstnp.com
+Name Server: ns2.hearstnp.com
 Name Server: ns3.hearstnp.com
-DNSSEC: 
+DNSSEC: unsigned
 URL of the ICANN WHOIS Data Problem Reporting System: http://wdprs.internic.net/
->>> Last update of WHOIS database: 2014-04-25 13:36:48 -0400 <<<
+>>> Last update of WHOIS database: 2018-05-08T14:26:50Z <<<
 
+For more information on Whois status codes, please visit https://icann.org/epp
 
 Corporation Service Company(c) (CSC)  The Trusted Partner of More than 50% of the 100 Best Global Brands.
 
@@ -68,6 +71,3 @@ Contact us to learn more about our enterprise solutions for Global Domain Name R
 NOTICE: You are not authorized to access or query our WHOIS database through the use of high-volume, automated, electronic processes or for the purpose or purposes of using the data in any manner that violates these terms of use. The Data in the CSC WHOIS database is provided by CSC for information purposes only, and to assist persons in obtaining information about or related to a domain name registration record. CSC does not guarantee its accuracy. By submitting a WHOIS query, you agree to abide by the following terms of use: you agree that you may use this Data only for lawful purposes and that under no circumstances will you use this Data to: (1) allow, enable, or otherwise support the transmission of mass unsolicited, commercial advertising or solicitations via direct mail, e-mail, telephone, or facsimile; or (2) enable high volume, automated, electronic processes that apply to CSC (or its computer systems). CSC reserves the right to terminate your access to the WHOIS database in its sole discretion for any violations by you of these terms of use. CSC reserves the right to modify these terms at any time.
 
 Register your domain name at http://www.cscglobal.com
-
-For more information on Whois status codes, please visit https://www.icann.org/resources/pages/epp-status-codes-2014-06-16-en
-

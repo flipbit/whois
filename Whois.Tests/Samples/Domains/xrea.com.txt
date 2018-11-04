@@ -2,86 +2,100 @@ Domain Name: xrea.com
 Registry Domain ID: 75301985_DOMAIN_COM-VRSN
 Registrar WHOIS Server: whois.rrpproxy.net
 Registrar URL: http://www.value-domain.com
-Updated Date: 2014-07-29T13:40:21.0Z
-Creation Date: 2001-07-24T06:19:52.0Z
-Registrar Registration Expiration Date: 2015-07-24T06:19:52.0Z
+Updated Date: 2018-05-24T22:00:04Z
+Creation Date: 2001-07-24T06:19:52Z
+Registrar Registration Expiration Date: 2019-07-24T06:19:52Z
 Registrar: Key-Systems GmbH
 Registrar IANA ID: 269
 Registrar Abuse Contact Email: abuse@key-systems.net
 Registrar Abuse Contact Phone: +49.68949396850
-Domain Status: clientTransferProhibited
-Registry Registrant ID: P-WAP439
-Registrant Name: Whois Privacy Protection Service by VALUE-DOMAIN
-Registrant Organization: Whois Privacy Protection Service by VALUE-DOMAIN
-Registrant Street: Chuo-ku Minamisenba 3-1-8
-Registrant City: Osaka
-Registrant State/Province: Osaka
-Registrant Postal Code: 542-0081
-Registrant Country: JP
-Registrant Phone: +81.662416585
-Registrant Phone Ext: 
-Registrant Fax: +81.662416586
-Registrant Fax Ext: 
-Registrant Email: whoisproxy@value-domain.com
-Registry Admin ID: P-WAP439
-Admin Name: Whois Privacy Protection Service by VALUE-DOMAIN
-Admin Organization: Whois Privacy Protection Service by VALUE-DOMAIN
-Admin Street: Chuo-ku Minamisenba 3-1-8
-Admin City: Osaka
-Admin State/Province: Osaka
-Admin Postal Code: 542-0081
-Admin Country: JP
-Admin Phone: +81.662416585
-Admin Phone Ext: 
-Admin Fax: +81.662416586
-Admin Fax Ext: 
-Admin Email: whoisproxy@value-domain.com
-Registry Tech ID: P-WAP439
-Tech Name: Whois Privacy Protection Service by VALUE-DOMAIN
-Tech Organization: Whois Privacy Protection Service by VALUE-DOMAIN
-Tech Street: Chuo-ku Minamisenba 3-1-8
-Tech City: Osaka
-Tech Postal Code: 542-0081
-Tech State/Province: Osaka
-Tech Country: JP
-Tech Phone: +81.662416585
-Tech Phone Ext: 
-Tech Fax: +81.662416586
-Tech Fax Ext: 
-Tech Email: whoisproxy@value-domain.com
+Domain Status: clientTransferProhibited https://icann.org/epp#clientTransferProhibited
+Registry Registrant ID: REDACTED FOR PRIVACY
+Registrant Name: REDACTED FOR PRIVACY  
+Registrant Organization: REDACTED FOR PRIVACY
+Registrant Street: REDACTED FOR PRIVACY
+Registrant Street: REDACTED FOR PRIVACY
+Registrant Street: REDACTED FOR PRIVACY
+Registrant City: REDACTED FOR PRIVACY
+Registrant State/Province: REDACTED FOR PRIVACY
+Registrant Postal Code: REDACTED FOR PRIVACY
+Registrant Country: REDACTED FOR PRIVACY
+Registrant Phone: REDACTED FOR PRIVACY
+Registrant Phone Ext: REDACTED FOR PRIVACY
+Registrant Fax: REDACTED FOR PRIVACY
+Registrant Fax Ext: REDACTED FOR PRIVACY
+Registrant Email: info@domain-contact.org
+Registry Admin ID: REDACTED FOR PRIVACY
+Admin Name: REDACTED FOR PRIVACY  
+Admin Organization: REDACTED FOR PRIVACY
+Admin Street: REDACTED FOR PRIVACY
+Admin Street: REDACTED FOR PRIVACY
+Admin Street: REDACTED FOR PRIVACY
+Admin City: REDACTED FOR PRIVACY
+Admin State/Province: REDACTED FOR PRIVACY
+Admin Postal Code: REDACTED FOR PRIVACY
+Admin Country: REDACTED FOR PRIVACY
+Admin Phone: REDACTED FOR PRIVACY
+Admin Phone Ext: REDACTED FOR PRIVACY
+Admin Fax: REDACTED FOR PRIVACY
+Admin Fax Ext: REDACTED FOR PRIVACY
+Admin Email: info@domain-contact.org
+Registry Tech ID: REDACTED FOR PRIVACY
+Tech Name: REDACTED FOR PRIVACY  
+Tech Organization: REDACTED FOR PRIVACY
+Tech Street: REDACTED FOR PRIVACY
+Tech Street: REDACTED FOR PRIVACY
+Tech Street: REDACTED FOR PRIVACY
+Tech City: REDACTED FOR PRIVACY
+Tech State/Province: REDACTED FOR PRIVACY
+Tech Postal Code: REDACTED FOR PRIVACY
+Tech Country: REDACTED FOR PRIVACY
+Tech Phone: REDACTED FOR PRIVACY
+Tech Phone Ext: REDACTED FOR PRIVACY
+Tech Fax: REDACTED FOR PRIVACY
+Tech Fax Ext: REDACTED FOR PRIVACY
+Tech Email: info@domain-contact.org
+Registry Billing ID: REDACTED FOR PRIVACY
+Billing Name: REDACTED FOR PRIVACY  
+Billing Organization: REDACTED FOR PRIVACY
+Billing Street: REDACTED FOR PRIVACY
+Billing Street: REDACTED FOR PRIVACY
+Billing Street: REDACTED FOR PRIVACY
+Billing City: REDACTED FOR PRIVACY
+Billing State/Province: REDACTED FOR PRIVACY
+Billing Postal Code: REDACTED FOR PRIVACY
+Billing Country: REDACTED FOR PRIVACY
+Billing Phone: REDACTED FOR PRIVACY
+Billing Phone Ext: REDACTED FOR PRIVACY
+Billing Fax: REDACTED FOR PRIVACY
+Billing Fax Ext: REDACTED FOR PRIVACY
+Billing Email: info@domain-contact.org
 Name Server: ns1.value-domain.com 
 Name Server: ns2.value-domain.com 
 Name Server: ns3.value-domain.com 
 Name Server: ns4.value-domain.com 
 Name Server: ns5.value-domain.com 
 DNSSEC: unsigned
-URL of the ICANN WHOIS Data Problem Reporting System: http://wdprs.internic.net/
->>> Last update of WHOIS database: 2014-10-22T10:53:58.0Z <<<
+URL of the ICANN WHOIS Data Problem Reporting System: https://wdprs.internic.net/
+>>> Last update of WHOIS database: 2018-11-01T09:06:30Z <<<
 
-Registry Billing ID: P-WAP439
-Billing Name: Whois Privacy Protection Service by VALUE-DOMAIN
-Billing Organization: Whois Privacy Protection Service by VALUE-DOMAIN
-Billing Street: Chuo-ku Minamisenba 3-1-8
-Billing City: Osaka
-Billing State/Province: Osaka
-Billing Postal Code: 542-0081
-Billing Country: JP
-Billing Phone: +81.662416585
-Billing Phone Ext: 
-Billing Fax: +81.662416586
-Billing Fax Ext: 
-Billing Email: whoisproxy@value-domain.com
-; Please register your domains at; http://www.value-domain.com; This data is provided by VALUE-DOMAIN
-; for information purposes, and to assist persons obtaining information
-; about or related to domain name registration records.
-; VALUE-DOMAIN does not guarantee its accuracy.
-; By submitting a WHOIS query, you agree that you will use this data
-; only for lawful purposes and that, under no circumstances, you will
-; use this data to
-; 1) allow, enable, or otherwise support the transmission of mass
-;    unsolicited, commercial advertising or solicitations via E-mail
-;    (spam); or
-; 2) enable high volume, automated, electronic processes that apply
-;    to this WHOIS server.
-; These terms may be changed without prior notice.
-; By submitting this query, you agree to abide by this policy.
+For more information on Whois status codes, please visit https://www.icann.org/epp
+
+To contact the registered registrant please proceed to:
+https://www.domain-contact.org
+
+Please register your domains at; http://www.value-domain.com
+This data is provided by 
+for information purposes, and to assist persons obtaining information
+about or related to domain name registration records.
+ does not guarantee its accuracy.
+By submitting a WHOIS query, you agree that you will use this data
+only for lawful purposes and that, under no circumstances, you will
+use this data to
+1) allow, enable, or otherwise support the transmission of mass
+   unsolicited, commercial advertising or solicitations via E-mail
+   (spam) or
+2) enable high volume, automated, electronic processes that apply
+   to this WHOIS server.
+These terms may be changed without prior notice.
+By submitting this query, you agree to abide by this policy.

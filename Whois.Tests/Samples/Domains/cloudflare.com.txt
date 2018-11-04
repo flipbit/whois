@@ -1,79 +1,75 @@
-
-
 Domain Name: CLOUDFLARE.COM
-Registry Domain ID:  
-Registrar WHOIS Server: whois.networksolutions.com
-Registrar URL: http://networksolutions.com
-Updated Date: 2013-06-21T00:00:00Z
-Creation Date: 2010-02-03T00:00:00Z
-Registrar Registration Expiration Date: 2023-02-17T00:00:00Z
-Registrar: NETWORK SOLUTIONS, LLC.
-Registrar IANA ID: 2
-Registrar Abuse Contact Email: abuse@web.com
-Registrar Abuse Contact Phone: +1.8003337680
-Reseller: 
-Domain Status: clientTransferProhibited
-Domain Status: serverDeleteProhibited
-Domain Status: serverTransferProhibited
-Domain Status: serverUpdateProhibited
+Registry Domain ID: 1542998887_DOMAIN_COM-VRSN
+Registrar WHOIS Server: whois.cloudflare.com
+Registrar URL: http://www.cloudflare.com/registrar
+Updated Date: 2018-09-25T06:04:48
+Creation Date: 2009-02-17T22:07:54
+Registrar Registration Expiration Date: 2024-02-17T22:07:54
+Registrar: CloudFlare, Inc.
+Registrar IANA ID: 1910
+Domain Status: clientDeleteProhibited https://icann.org/epp#clientDeleteProhibited
+Domain Status: clientTransferProhibited https://icann.org/epp#clientTransferProhibited
+Domain Status: clientUpdateProhibited https://icann.org/epp#clientUpdateProhibited
+Domain Status: serverDeleteProhibited https://icann.org/epp#serverDeleteProhibited
+Domain Status: serverTransferProhibited https://icann.org/epp#serverTransferProhibited
+Domain Status: serverUpdateProhibited https://icann.org/epp#serverUpdateProhibited
 Registry Registrant ID: 
-Registrant Name: CloudFlare, Inc.
-Registrant Organization: CloudFlare, Inc.
-Registrant Street: 665 Third Street
-Registrant City: San Francisco
-Registrant State/Province: CA
-Registrant Postal Code: 94107
-Registrant Country: US
-Registrant Phone: +1.6503198930
+Registrant Name: REDACTED FOR PRIVACY
+Registrant Organization: REDACTED FOR PRIVACY
+Registrant Street: REDACTED FOR PRIVACY 
+Registrant City: REDACTED FOR PRIVACY
+Registrant State/Province: REDACTED FOR PRIVACY
+Registrant Postal Code: REDACTED FOR PRIVACY
+Registrant Country: REDACTED FOR PRIVACY
+Registrant Phone: REDACTED FOR PRIVACY
 Registrant Phone Ext: 
-Registrant Fax: +1.6502307173
+Registrant Fax: REDACTED FOR PRIVACY
 Registrant Fax Ext: 
-Registrant Email: domains@cloudflare.com
+Registrant Email: REDACTED FOR PRIVACY
 Registry Admin ID: 
-Admin Name: Rao, Srikanth
-Admin Organization: CloudFlare, Inc.
-Admin Street: 665 Third Street
-Admin City: San Francisco
-Admin State/Province: CA
-Admin Postal Code: 94107
-Admin Country: US
-Admin Phone: +1.6503198930
+Admin Name: REDACTED FOR PRIVACY
+Admin Organization: REDACTED FOR PRIVACY
+Admin Street: REDACTED FOR PRIVACY 
+Admin City: REDACTED FOR PRIVACY
+Admin State/Province: REDACTED FOR PRIVACY
+Admin Postal Code: REDACTED FOR PRIVACY
+Admin Country: REDACTED FOR PRIVACY
+Admin Phone: REDACTED FOR PRIVACY
 Admin Phone Ext: 
-Admin Fax: +1.6502307173
+Admin Fax: REDACTED FOR PRIVACY
 Admin Fax Ext: 
-Admin Email: domains@cloudflare.com
+Admin Email: REDACTED FOR PRIVACY
 Registry Tech ID: 
-Tech Name: Rao, Srikanth
-Tech Organization: CloudFlare, Inc.
-Tech Street: 665 Third Street
-Tech City: San Francisco
-Tech State/Province: CA
-Tech Postal Code: 94107
-Tech Country: US
-Tech Phone: +1.6503198930
+Tech Name: REDACTED FOR PRIVACY
+Tech Organization: REDACTED FOR PRIVACY
+Tech Street: REDACTED FOR PRIVACY 
+Tech City: REDACTED FOR PRIVACY
+Tech State/Province: REDACTED FOR PRIVACY
+Tech Postal Code: REDACTED FOR PRIVACY
+Tech Country: REDACTED FOR PRIVACY
+Tech Phone: REDACTED FOR PRIVACY
 Tech Phone Ext: 
-Tech Fax: +1.6502307173
+Tech Fax: REDACTED FOR PRIVACY
 Tech Fax Ext: 
-Tech Email: domains@cloudflare.com
-Name Server: DNS2.CLOUDFLARE.COM
-Name Server: DNS3.CLOUDFLARE.COM
-DNSSEC: not signed
-URL of the ICANN WHOIS Data Problem Reporting System: http://wdprs.internic.net/
->>> Last update of whois database: Wed, 22 Oct 2014 11:20:13 GMT <<<
+Tech Email: REDACTED FOR PRIVACY
+Name Server: ns3.cloudflare.com
+Name Server: ns5.cloudflare.com
+Name Server: ns4.cloudflare.com
+Name Server: ns6.cloudflare.com
+Name Server: ns7.cloudflare.com
 
-The data in Networksolutions.com's WHOIS database is provided to you by
-Networksolutions.com for information purposes only, that is, to assist you in
-obtaining information about or related to a domain name registration
-record. Networksolutions.com makes this information available "as is," and
-does not guarantee its accuracy. By submitting a WHOIS query, you
-agree that you will use this data only for lawful purposes and that,
-under no circumstances will you use this data to: (1) allow, enable,
-or otherwise support the transmission of mass unsolicited, commercial
-advertising or solicitations via direct mail, electronic mail, or by
-telephone; or (2) enable high volume, automated, electronic processes
-that apply to Networksolutions.com  (or its systems). The compilation,
-repackaging, dissemination or other use of this data is expressly
-prohibited without the prior written consent of Networksolutions.com.
-Networksolutions.com reserves the right to modify these terms at any time.
+Registrar Abuse Contact Email: registrar-abuse@cloudflare.com
+Registrar Abuse Contact Phone: +1.6503198930
+URL of the ICANN WHOIS Data Problem Reporting System: http://wdprs.internic.net/
+>>> Last update of WHOIS database: 2018-09-25T06:04:48 <<<
+
+"For more information on Whois status codes, please visit https://icann.org/epp"
+
+Data in the CloudFlare Registrar WHOIS database is provided to you by CloudFlare
+under the terms and conditions at https://www.cloudflare.com/registrar-terms
+
 By submitting this query, you agree to abide by these terms.
 
+CloudFlare Registrar protects websites from domain hijacking and provides
+a secure foundation, using strict, offline-only change control
+for high-value domains.

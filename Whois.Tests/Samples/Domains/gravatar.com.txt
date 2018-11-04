@@ -2,60 +2,41 @@ Domain Name: gravatar.com
 Registry Domain ID: 124897858_DOMAIN_COM-VRSN
 Registrar WHOIS Server: whois.markmonitor.com
 Registrar URL: http://www.markmonitor.com
-Updated Date: 2013-09-26T04:00:12-0700
+Updated Date: 2018-08-27T04:00:03-0700
 Creation Date: 2004-07-15T13:57:48-0700
 Registrar Registration Expiration Date: 2019-07-15T13:57:48-0700
 Registrar: MarkMonitor, Inc.
 Registrar IANA ID: 292
 Registrar Abuse Contact Email: abusecomplaints@markmonitor.com
 Registrar Abuse Contact Phone: +1.2083895740
-Domain Status: clientUpdateProhibited
-Domain Status: clientTransferProhibited
-Domain Status: clientDeleteProhibited
-Registry Registrant ID: 
-Registrant Name: Domain Admin
+Domain Status: clientUpdateProhibited (https://www.icann.org/epp#clientUpdateProhibited)
+Domain Status: clientTransferProhibited (https://www.icann.org/epp#clientTransferProhibited)
+Domain Status: clientDeleteProhibited (https://www.icann.org/epp#clientDeleteProhibited)
 Registrant Organization: Automattic, Inc.
-Registrant Street: 60 29th Street, #343
-Registrant City: San Francisco
 Registrant State/Province: CA
-Registrant Postal Code: 94110
 Registrant Country: US
-Registrant Phone: +1.8772738550
-Registrant Phone Ext: 
-Registrant Fax: 
-Registrant Fax Ext: 
-Registrant Email: domains@automattic.com
-Registry Admin ID: 
-Admin Name: Domain Admin
 Admin Organization: Automattic, Inc.
-Admin Street: 60 29th Street, #343
-Admin City: San Francisco
 Admin State/Province: CA
-Admin Postal Code: 94110
 Admin Country: US
-Admin Phone: +1.8772738550
-Admin Phone Ext: 
-Admin Fax: 
-Admin Fax Ext: 
-Admin Email: domains@automattic.com
-Registry Tech ID: 
-Tech Name: Domain Admin
 Tech Organization: Automattic, Inc.
-Tech Street: 60 29th Street, #343
-Tech City: San Francisco
 Tech State/Province: CA
-Tech Postal Code: 94110
 Tech Country: US
-Tech Phone: +1.8772738550
-Tech Phone Ext: 
-Tech Fax: 
-Tech Fax Ext: 
-Tech Email: domains@automattic.com
 Name Server: ns3.automattic.com
 Name Server: ns2.automattic.com
 Name Server: ns1.automattic.com
+DNSSEC: unsigned
 URL of the ICANN WHOIS Data Problem Reporting System: http://wdprs.internic.net/
->>> Last update of WHOIS database: 2014-10-22T03:27:16-0700 <<<
+>>> Last update of WHOIS database: 2018-11-01T01:56:42-0700 <<<
+
+If certain contact information is not shown for a Registrant, Administrative,
+or Technical contact, and you wish to send a message to these contacts, please
+send your message to whoisrelay@markmonitor.com and specify the domain name in
+the subject line. We will forward that message to the underlying contact.
+
+If you have a legitimate interest in viewing the non-public WHOIS details, send
+your request and the reasons for your request to abusecomplaints@markmonitor.com
+and specify the domain name in the subject line. We will review that request and
+may ask for supporting documentation and explanation.
 
 The Data in MarkMonitor.com's WHOIS database is provided by MarkMonitor.com for
 information purposes, and to assist persons in obtaining information about or
@@ -80,4 +61,7 @@ Professional and Managed Services
 Visit MarkMonitor at http://www.markmonitor.com
 Contact us at +1.8007459229
 In Europe, at +44.02032062220
+
+For more information on Whois status codes, please visit
+ https://www.icann.org/resources/pages/epp-status-codes-2014-06-16-en
 

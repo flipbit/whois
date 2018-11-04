@@ -1,70 +1,98 @@
-
 Domain Name: newsvine.com
 Registry Domain ID: 139397985_DOMAIN_COM-VRSN
-Registrar WHOIS Server: whois.corporatedomains.com
-Registrar URL: www.cscprotectsbrands.com
-Updated Date: 2014-02-13 13:04:47 -0500
-Creation Date: 2005-01-11 14:13:14 -0500
-Registrar Registration Expiration Date: 2015-01-11 14:13:14 -0500
-Registrar: CSC CORPORATE DOMAINS, INC.
-Sponsoring Registrar IANA ID: 299
-Registrar Abuse Contact Email: admin@internationaladmin.com
-Registrar Abuse Contact Phone: +1.8887802723
+Registrar WHOIS Server: whois.markmonitor.com
+Registrar URL: http://www.markmonitor.com
+Updated Date: 2017-08-09T04:00:07-0700
+Creation Date: 2005-01-11T11:13:14-0800
+Registrar Registration Expiration Date: 2019-01-11T00:00:00-0800
+Registrar: MarkMonitor, Inc.
+Registrar IANA ID: 292
+Registrar Abuse Contact Email: abusecomplaints@markmonitor.com
+Registrar Abuse Contact Phone: +1.2083895740
+Domain Status: clientUpdateProhibited (https://www.icann.org/epp#clientUpdateProhibited)
+Domain Status: clientTransferProhibited (https://www.icann.org/epp#clientTransferProhibited)
+Domain Status: clientDeleteProhibited (https://www.icann.org/epp#clientDeleteProhibited)
 Registry Registrant ID: 
 Registrant Name: Domain Administrator
-Registrant Organization: General Electric Company
-Registrant Street: 3135 Easton Turnpike
-Registrant City: Fairfield
-Registrant State/Province: CT
-Registrant Postal Code: 06828-0001
+Registrant Organization: NBCUniversal Media, LLC
+Registrant Street: 904 Sylvan Avenue, 
+Registrant City: Englewood Cliffs
+Registrant State/Province: nj
+Registrant Postal Code: 07632
 Registrant Country: US
-Registrant Phone: +1.2033732962
+Registrant Phone: +1.8187771000
 Registrant Phone Ext: 
-Registrant Fax: +1.2033732962
+Registrant Fax: 
 Registrant Fax Ext: 
-Registrant Email: domain.admin@ge.com
+Registrant Email: domain.admin@nbcuni.com
 Registry Admin ID: 
 Admin Name: Domain Administrator
-Admin Organization: General Electric Company
-Admin Street: 3135 Easton Turnpike
-Admin City: Fairfield
-Admin State/Province: CT
-Admin Postal Code: 06828-0001
+Admin Organization: NBCUniversal Media, LLC
+Admin Street: 904 Sylvan Avenue, 
+Admin City: Englewood Cliffs
+Admin State/Province: nj
+Admin Postal Code: 07632
 Admin Country: US
-Admin Phone: +1.2033732962
+Admin Phone: +1.8187771000
 Admin Phone Ext: 
-Admin Fax: +1.2033732962
+Admin Fax: 
 Admin Fax Ext: 
-Admin Email: domain.admin@ge.com
+Admin Email: domain.admin@nbcuni.com
 Registry Tech ID: 
 Tech Name: Domain Administrator
-Tech Organization: General Electric Company
-Tech Street: 3135 Easton Turnpike
-Tech City: Fairfield
-Tech State/Province: CT
-Tech Postal Code: 06828-0001
+Tech Organization: NBCUniversal Media, LLC
+Tech Street: 904 Sylvan Avenue, 
+Tech City: Englewood Cliffs
+Tech State/Province: nj
+Tech Postal Code: 07632
 Tech Country: US
-Tech Phone: +1.2033732962
+Tech Phone: +1.8187771000
 Tech Phone Ext: 
-Tech Fax: +1.2033732962
+Tech Fax: 
 Tech Fax Ext: 
-Tech Email: domain.admin@ge.com
+Tech Email: domain.admin@nbcuni.com
 Name Server: nsa2.newsvine.com
-Name Server: ns2.newsvine.com
 Name Server: ns1.newsvine.com
+Name Server: ns2.newsvine.com
 Name Server: nsa1.newsvine.com
-DNSSEC: 
+DNSSEC: unsigned
 URL of the ICANN WHOIS Data Problem Reporting System: http://wdprs.internic.net/
->>> Last update of WHOIS database: 2014-02-13 13:04:47 -0500 <<<
+>>> Last update of WHOIS database: 2018-11-01T02:08:20-0700 <<<
 
+If certain contact information is not shown for a Registrant, Administrative,
+or Technical contact, and you wish to send a message to these contacts, please
+send your message to whoisrelay@markmonitor.com and specify the domain name in
+the subject line. We will forward that message to the underlying contact.
 
-Corporation Service Company(c) (CSC)  The Trusted Partner of More than 50% of the 100 Best Global Brands.
+If you have a legitimate interest in viewing the non-public WHOIS details, send
+your request and the reasons for your request to abusecomplaints@markmonitor.com
+and specify the domain name in the subject line. We will review that request and
+may ask for supporting documentation and explanation.
 
-Contact us to learn more about our enterprise solutions for Global Domain Name Registration and Management, Trademark Research and Watching, Brand, Logo and Auction Monitoring, as well SSL Certificate Services and DNS Hosting.
+The Data in MarkMonitor.com's WHOIS database is provided by MarkMonitor.com for
+information purposes, and to assist persons in obtaining information about or
+related to a domain name registration record.  MarkMonitor.com does not guarantee
+its accuracy.  By submitting a WHOIS query, you agree that you will use this Data
+only for lawful purposes and that, under no circumstances will you use this Data to:
+ (1) allow, enable, or otherwise support the transmission of mass unsolicited,
+     commercial advertising or solicitations via e-mail (spam); or
+ (2) enable high volume, automated, electronic processes that apply to
+     MarkMonitor.com (or its systems).
+MarkMonitor.com reserves the right to modify these terms at any time.
+By submitting this query, you agree to abide by this policy.
 
-NOTICE: You are not authorized to access or query our WHOIS database through the use of high-volume, automated, electronic processes or for the purpose or purposes of using the data in any manner that violates these terms of use. The Data in the CSC WHOIS database is provided by CSC for information purposes only, and to assist persons in obtaining information about or related to a domain name registration record. CSC does not guarantee its accuracy. By submitting a WHOIS query, you agree to abide by the following terms of use: you agree that you may use this Data only for lawful purposes and that under no circumstances will you use this Data to: (1) allow, enable, or otherwise support the transmission of mass unsolicited, commercial advertising or solicitations via direct mail, e-mail, telephone, or facsimile; or (2) enable high volume, automated, electronic processes that apply to CSC (or its computer systems). CSC reserves the right to terminate your access to the WHOIS database in its sole discretion for any violations by you of these terms of use. CSC reserves the right to modify these terms at any time.
+MarkMonitor is the Global Leader in Online Brand Protection.
 
-Register your domain name at http://www.cscglobal.com
+MarkMonitor Domain Management(TM)
+MarkMonitor Brand Protection(TM)
+MarkMonitor AntiPiracy(TM)
+MarkMonitor AntiFraud(TM)
+Professional and Managed Services
 
-For more information on Whois status codes, please visit https://www.icann.org/resources/pages/epp-status-codes-2014-06-16-en
+Visit MarkMonitor at http://www.markmonitor.com
+Contact us at +1.8007459229
+In Europe, at +44.02032062220
+
+For more information on Whois status codes, please visit
+ https://www.icann.org/resources/pages/epp-status-codes-2014-06-16-en
 

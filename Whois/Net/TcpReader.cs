@@ -3,6 +3,7 @@ using System.Collections;
 using System.Text;
 using System.IO;
 using System.Net.Sockets;
+using System.Threading.Tasks;
 
 namespace Whois.Net
 {
@@ -11,20 +12,18 @@ namespace Whois.Net
     /// </summary>
     public class TcpReader : ITcpReader, IDisposable
     {
-        #region Private
-
         private readonly TcpClient tcpClient;
 
         private StreamReader reader;
         private StreamWriter writer;
 
-        private bool Connect(string domain, int port)
+        private async Task<bool> Connect(string domain, int port, Encoding encoding)
         {
             try
             {
-                tcpClient.Connect(domain, port);
+                await tcpClient.ConnectAsync(domain, port);
 
-                reader = new StreamReader(tcpClient.GetStream(), CurrentEncoding);
+                reader = new StreamReader(tcpClient.GetStream(), encoding);
                 writer = new StreamWriter(tcpClient.GetStream())
                 {
                     NewLine = "\r\n",
@@ -32,89 +31,63 @@ namespace Whois.Net
             }
             catch (SocketException ex)
             {
-                throw new ApplicationException("Couldn't connect to " + domain + ": " + ex.Message);
+                throw new WhoisException("Couldn't connect to " + domain + ": " + ex.Message, ex);
             }
 
             return tcpClient.Connected;
         }
 
-        private void Write(string content)
+        private async Task Write(string content)
         {
             try
             {
-                writer.WriteLine(content);
-                writer.Flush();
+                await writer.WriteLineAsync(content);
+                await writer.FlushAsync();
             }
             catch (Exception ex)
             {
-                throw new ApplicationException("Error whilst writing data: " + ex.Message);
+                throw new WhoisException("Error whilst writing data: " + ex.Message);
             }
         }
 
-        private void Read(StringBuilder sb)
+        private async Task Read(StringBuilder sb)
         {
             try
             {
-                var response = reader.ReadLine();
+                var response = await reader.ReadLineAsync();
 
                 while (response != null)
                 {
                     sb.AppendLine(response);
 
-                    response = reader.ReadLine();
+                    response = await reader.ReadLineAsync();
                 }
             }
             catch (Exception ex)
             {
-                throw new ApplicationException("Error whilst reading data: " + ex.Message);
+                throw new WhoisException("Error whilst reading data: " + ex.Message);
             }
         } 
 
-        #endregion
-
-        /// <summary>
-        /// Gets the current character encoding that the current TcpReader
-        /// object is using.
-        /// </summary>
-        /// <returns>The current character encoding used by the current reader.</returns>
-        public Encoding CurrentEncoding { get; private set; }
-
         /// <summary>
         /// Initializes a new instance of the <see cref="TcpReader"/> class.
         /// </summary>
-        public TcpReader() : this(Encoding.UTF8)
-        {
-        }
-
-        /// <summary>
-        /// Initializes a new instance of the <see cref="TcpReader"/> class.
-        /// </summary>
-        /// <param name="encoding">The encoding used to read and write strings.</param>
-        public TcpReader(Encoding encoding)
+        public TcpReader()
         {
             tcpClient = new TcpClient();
-
-            CurrentEncoding = encoding;
         }
 
-        /// <summary>
-        /// Reads the specified URL.
-        /// </summary>
-        /// <param name="url">The URL.</param>
-        /// <param name="port">The port.</param>
-        /// <param name="command">The command.</param>
-        /// <returns></returns>
-        public string Read(string url, int port, string command)
+        public async Task<string> Read(string url, int port, string command, Encoding encoding)
         {
             var sb = new StringBuilder();
 
-            var connected = Connect(url, port);
+            var connected = await Connect(url, port, encoding);
 
             if (connected)
             {
-                Write(command);
+                await Write(command);
 
-                Read(sb);
+                await Read(sb);
             }
 
             return sb.ToString();
@@ -125,13 +98,16 @@ namespace Whois.Net
         /// </summary>
         public void Dispose()
         {
-            if (tcpClient != null)
+            if (tcpClient?.Connected == true)
             {
-                if (tcpClient.Connected)
-                {
-                    tcpClient.Close();
-                }
+                tcpClient.Close();
             }
+
+#if !NET452
+            tcpClient?.Dispose();
+#endif
+            reader?.Dispose();
+            writer?.Dispose();
         }
     }
 }

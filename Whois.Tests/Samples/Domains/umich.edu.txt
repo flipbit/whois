@@ -1,68 +1,59 @@
+This Registry database contains ONLY .EDU domains.
+The data in the EDUCAUSE Whois database is provided
+by EDUCAUSE for information purposes in order to
+assist in the process of obtaining information about
+or related to .edu domain registration records.
 
-This Registry database contains ONLY .EDU domains. 
-The data in the EDUCAUSE Whois database is provided 
-by EDUCAUSE for information purposes in order to 
-assist in the process of obtaining information about 
-or related to .edu domain registration records. 
+The EDUCAUSE Whois database is authoritative for the
+.EDU domain.
 
-The EDUCAUSE Whois database is authoritative for the 
-.EDU domain.         
+A Web interface for the .EDU EDUCAUSE Whois Server is
+available at: http://whois.educause.edu
 
-A Web interface for the .EDU EDUCAUSE Whois Server is 
-available at: http://whois.educause.net 
-
-By submitting a Whois query, you agree that this information 
-will not be used to allow, enable, or otherwise support 
-the transmission of unsolicited commercial advertising or 
-solicitations via e-mail.  The use of electronic processes to 
-harvest information from this server is generally prohibited 
-except as reasonably necessary to register or modify .edu 
+By submitting a Whois query, you agree that this information
+will not be used to allow, enable, or otherwise support
+the transmission of unsolicited commercial advertising or
+solicitations via e-mail.  The use of electronic processes to
+harvest information from this server is generally prohibited
+except as reasonably necessary to register or modify .edu
 domain names.
 
-You may use "%" as a wildcard in your search. For further 
-information regarding the use of this WHOIS server, please 
-type: help 
-
---------------------------
+-------------------------------------------------------------
 
 Domain Name: UMICH.EDU
 
 Registrant:
-   University of Michigan -- ITD
-   ITCS, Arbor Lakes
-   4251 Plymouth Road
-   Ann Arbor, MI 48105-2785
-   UNITED STATES
+	University of Michigan -- ITD
+	ITCS, Arbor Lakes
+	4251 Plymouth Road
+	Ann Arbor, MI 48105-2785
+	United States of America
 
 Administrative Contact:
-
-   Domain Registration
-   University of Michigan
-   ITS, Arbor Lakes
-   4251 Plymouth Road
-   Ann Arbor, MI 48105-3640
-   UNITED STATES
-   (734) 764-1817
-   domainreg@umich.edu
+	Domain Admin
+	University of Michigan
+	ITS, Arbor Lakes
+	4251 Plymouth Road
+	Ann Arbor, MI 48105-3640
+	United States of America
+	+1.7347641817
+	domainreg@umich.edu
 
 Technical Contact:
+	 
+	University of Michigan
+	ITS, Arbor Lakes
+	4251 Plymouth Road
+	Ann Arbor, MI 48105-3640
+	United States of America
+	+1.7347641817
+	domainreg@umich.edu
 
-   Domain Registration
-   University of Michigan
-   ITS, Arbor Lakes
-   4251 Plymouth Road
-   Ann Arbor, MI 48105-3640
-   UNITED STATES
-   (734) 764-1817
-   domainreg@umich.edu
-
-Name Servers: 
-   DNS1.ITD.UMICH.EDU      192.12.80.214
-   DNS2.ITD.UMICH.EDU      192.12.80.222
-   DNS.CS.WISC.EDU         
+Name Servers:
+	DNS.CS.WISC.EDU
+	DNS1.ITD.UMICH.EDU
+	DNS2.ITD.UMICH.EDU
 
 Domain record activated:    07-Oct-1985
-Domain record last updated: 14-Feb-2014
-Domain expires:             31-Jul-2015
-
-
+Domain record last updated: 01-Jun-2018
+Domain expires:             31-Jul-2021

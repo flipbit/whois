@@ -1,80 +1,68 @@
-Domain Name:comsenz.com
-Registry Domain ID:
-Registrar WHOIS Server: whois.hichina.com
-Registrar URL: http://www.net.cn/
-Updated Date:2013-01-09T03:32:17Z
-Creation Date:2004-03-05T01:10:04Z
-Registrar Registration Expiration Date:2016-03-05T01:10:04Z
-Registrar: HICHINA ZHICHENG TECHNOLOGY LTD.
-Registrar IANA ID: 420
-Registrar Abuse Contact Email: abuse@list.alibaba-inc.com
-Registrar Abuse Contact Phone: +86.1064242299
-Reseller:
-Domain Status:clientDeleteProhibited
-Domain Status:clientTransferProhibited
-Domain Status:clientUpdateProhibited
-Registry Registrant ID:hc058028379-cn
-Registrant Name:liguo zhou
-Registrant Organization:Tencent Technology (beijing) Company Limited
-Registrant Street:BJ haidianqv,,
-Registrant City:BJ
-Registrant State/Province:Beijing
-Registrant Postal Code:100085
-Registrant Country:CN
-Registrant Phone:+86.075586013388
-Registrant Phone Ext:88524
-Registrant Fax:+86.075586013091
-Registrant Fax Ext:88524
-Registrant Email:dns@tencent.com
-Registry Admin ID:admin
-Admin Name:admin
-Admin Organization:HiChina Web Solutions (Hong Kong) Limited
-Admin Street:3/F., HiChina Mansion,,No.27 Gulouwai Avenue Dongcheng District,,Beijing, China
-Admin City:Beijing
-Admin State/Province:Beijing
-Admin Postal Code:100011
-Admin Country:CN
-Admin Phone:+86.01064242299
-Admin Phone Ext:
-Admin Fax:+86.01064254247
-Admin Fax Ext:
-Admin Email:domainadm@hichina.com
-Registry Tech ID:tech
-Tech Name:tech
-Tech Organization:HiChina Web Solutions (Hong Kong) Limited
-Tech Street:3/F., HiChina Mansion,,No.27 Gulouwai Avenue Dongcheng District,,Beijing, China
-Tech City:Beijing
-Tech State/Province:Beijing
-Tech Postal Code:100011
-Tech Country:CN
-Tech Phone:+86.01064242299
-Tech Phone Ext:
-Tech Fax:+86.01064254247
-Tech Fax Ext:
-Tech Email:domainadm@hichina.com
-Name Server:ns1.qq.com
-Name Server:ns2.qq.com
-Name Server:ns3.qq.com
-Name Server:ns4.qq.com
-DNSSEC:unsigned
+Domain Name: comsenz.com
+Registry Domain ID: 113273404_DOMAIN_COM-VRSN
+Registrar WHOIS Server: whois.markmonitor.com
+Registrar URL: http://www.markmonitor.com
+Updated Date: 2018-08-12T21:23:11-0700
+Creation Date: 2004-03-04T17:10:04-0800
+Registrar Registration Expiration Date: 2021-03-04T17:10:04-0800
+Registrar: MarkMonitor, Inc.
+Registrar IANA ID: 292
+Registrar Abuse Contact Email: abusecomplaints@markmonitor.com
+Registrar Abuse Contact Phone: +1.2083895740
+Domain Status: clientUpdateProhibited (https://www.icann.org/epp#clientUpdateProhibited)
+Domain Status: clientTransferProhibited (https://www.icann.org/epp#clientTransferProhibited)
+Domain Status: clientDeleteProhibited (https://www.icann.org/epp#clientDeleteProhibited)
+Registrant Organization: Shenzhen Tencent Computer Systems CO.,Ltd
+Registrant State/Province: Guang Dong
+Registrant Country: CN
+Admin Organization: Shenzhen Tencent Computer Systems CO.,Ltd
+Admin State/Province: Guang Dong
+Admin Country: CN
+Tech Organization: Shenzhen Tencent Computer Systems CO.,Ltd
+Tech State/Province: Guang Dong
+Tech Country: CN
+Name Server: ns2.qq.com
+Name Server: ns4.qq.com
+Name Server: ns3.qq.com
+Name Server: ns1.qq.com
+DNSSEC: unsigned
 URL of the ICANN WHOIS Data Problem Reporting System: http://wdprs.internic.net/
->>> Last update of WHOIS database:2013-01-09T03:32:17Z<<<
+>>> Last update of WHOIS database: 2018-11-01T01:56:52-0700 <<<
 
-Registry Billing ID:billing
-Billing Name:billing
-Billing Organization:HiChina Web Solutions (Hong Kong) Limited
-Billing Street:3/F., HiChina Mansion,,No.27 Gulouwai Avenue Dongcheng District,,Beijing, China
-Billing City:Beijing
-Billing State/Province:Beijing
-Billing Postal Code:100011
-Billing Country:CN
-Billing Phone:+86.01064242299
-Billing Phone Ext:
-Billing Fax:+86.01064254247
-Billing Fax Ext:
-Billing Email:domainadm@hichina.com
+If certain contact information is not shown for a Registrant, Administrative,
+or Technical contact, and you wish to send a message to these contacts, please
+send your message to whoisrelay@markmonitor.com and specify the domain name in
+the subject line. We will forward that message to the underlying contact.
 
-Important Reminder: Per ICANN 2013RAA`s request, Hichina has modified domain names`whois format of dot com/net/cc/tv, you could refer to section 1.4 posted by ICANN on http://www.icann.org/en/resources/registrars/raa/approved-with-specs-27jun13-en.htm#whois The data in this whois database is provided to you for information purposes only, that is, to assist you in obtaining information about or related to a domain name registration record. We make this information available "as is," and do not guarantee its accuracy. By submitting a whois query, you agree that you will use this data only for lawful purposes and that, under no circumstances will you use this data to: (1)enable high volume, automated, electronic processes that stress or load this whois database system providing you this information; or (2) allow, enable, or otherwise support the transmission of mass unsolicited, commercial advertising or solicitations via direct mail, electronic mail, or by telephone.  The compilation, repackaging, dissemination or other use of this data is expressly prohibited without prior written consent from us. We reserve the right to modify these terms at any time. By submitting this query, you agree to abide by these terms.<a href='http://www.net.cn/?utm_campaign=Corn&utm_medium=banner&utm_source=whois' target='_blank'><img src='http://whois.hichina.com/images/whois-banner.gif' border='0'></a>
- 
-For complete domain details go to:http://whois.www.net.cn/whois/domain/comsenz.com
+If you have a legitimate interest in viewing the non-public WHOIS details, send
+your request and the reasons for your request to abusecomplaints@markmonitor.com
+and specify the domain name in the subject line. We will review that request and
+may ask for supporting documentation and explanation.
 
+The Data in MarkMonitor.com's WHOIS database is provided by MarkMonitor.com for
+information purposes, and to assist persons in obtaining information about or
+related to a domain name registration record.  MarkMonitor.com does not guarantee
+its accuracy.  By submitting a WHOIS query, you agree that you will use this Data
+only for lawful purposes and that, under no circumstances will you use this Data to:
+ (1) allow, enable, or otherwise support the transmission of mass unsolicited,
+     commercial advertising or solicitations via e-mail (spam); or
+ (2) enable high volume, automated, electronic processes that apply to
+     MarkMonitor.com (or its systems).
+MarkMonitor.com reserves the right to modify these terms at any time.
+By submitting this query, you agree to abide by this policy.
+
+MarkMonitor is the Global Leader in Online Brand Protection.
+
+MarkMonitor Domain Management(TM)
+MarkMonitor Brand Protection(TM)
+MarkMonitor AntiPiracy(TM)
+MarkMonitor AntiFraud(TM)
+Professional and Managed Services
+
+Visit MarkMonitor at http://www.markmonitor.com
+Contact us at +1.8007459229
+In Europe, at +44.02032062220
+
+For more information on Whois status codes, please visit
+ https://www.icann.org/resources/pages/epp-status-codes-2014-06-16-en
+--

@@ -12,7 +12,7 @@ namespace Whois
         [SetUp]
         public void SetUp()
         {
-            lookup = new IanaServerLookup { TcpReaderFactory = new TcpReaderFactory() };
+            lookup = new IanaServerLookup();
         }
 
         [Test]

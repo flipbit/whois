@@ -6,14 +6,15 @@
 domain:        UCOZ.RU
 nserver:       ns1.ucoz.ru. 195.216.243.104
 nserver:       ns2.ucoz.ru. 213.174.157.200
+nserver:       ns3.ucoz.ru. 190.115.19.142
 state:         REGISTERED, DELEGATED, VERIFIED
 org:           Compubyte Limited
 registrar:     RU-CENTER-RU
 admin-contact: https://www.nic.ru/whois
-created:       2005.08.21
-paid-till:     2015.08.21
-free-date:     2015.09.21
+created:       2005-08-20T20:00:00Z
+paid-till:     2019-08-20T21:00:00Z
+free-date:     2019-09-21
 source:        TCI
 
-Last updated on 2014.10.22 15:16:31 MSK
+Last updated on 2018-11-01T09:16:31Z
 

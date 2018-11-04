@@ -2,64 +2,65 @@ Domain Name: CPANEL.NET
 Registry Domain ID: 41945574_DOMAIN_NET-VRSN
 Registrar WHOIS Server: whois.tucows.com
 Registrar URL: http://tucowsdomains.com
-Updated Date: 2012-05-08 09:40:43
-Creation Date: 2000-11-12 01:12:26
-Registrar Registration Expiration Date: 2020-11-12 01:12:26
+Updated Date: 2018-06-23T03:09:22
+Creation Date: 2000-11-12T01:12:26
+Registrar Registration Expiration Date: 2026-11-12T01:12:26
 Registrar: TUCOWS, INC.
 Registrar IANA ID: 69
+Reseller: cPanel Inc
+Domain Status: clientTransferProhibited https://icann.org/epp#clientTransferProhibited
+Domain Status: clientUpdateProhibited https://icann.org/epp#clientUpdateProhibited
+Domain Status: serverDeleteProhibited https://icann.org/epp#serverDeleteProhibited
+Domain Status: serverTransferProhibited https://icann.org/epp#serverTransferProhibited
+Registry Registrant ID: 
+Registrant Name: REDACTED FOR PRIVACY
+Registrant Organization: REDACTED FOR PRIVACY
+Registrant Street: REDACTED FOR PRIVACY 
+Registrant City: REDACTED FOR PRIVACY
+Registrant State/Province: REDACTED FOR PRIVACY
+Registrant Postal Code: REDACTED FOR PRIVACY
+Registrant Country: REDACTED FOR PRIVACY
+Registrant Phone: REDACTED FOR PRIVACY
+Registrant Phone Ext: 
+Registrant Fax: REDACTED FOR PRIVACY
+Registrant Fax Ext: 
+Registrant Email: REDACTED FOR PRIVACY
+Registry Admin ID: 
+Admin Name: REDACTED FOR PRIVACY
+Admin Organization: REDACTED FOR PRIVACY
+Admin Street: REDACTED FOR PRIVACY 
+Admin City: REDACTED FOR PRIVACY
+Admin State/Province: REDACTED FOR PRIVACY
+Admin Postal Code: REDACTED FOR PRIVACY
+Admin Country: REDACTED FOR PRIVACY
+Admin Phone: REDACTED FOR PRIVACY
+Admin Phone Ext: 
+Admin Fax: REDACTED FOR PRIVACY
+Admin Fax Ext: 
+Admin Email: REDACTED FOR PRIVACY
+Registry Tech ID: 
+Tech Name: REDACTED FOR PRIVACY
+Tech Organization: REDACTED FOR PRIVACY
+Tech Street: REDACTED FOR PRIVACY 
+Tech City: REDACTED FOR PRIVACY
+Tech State/Province: REDACTED FOR PRIVACY
+Tech Postal Code: REDACTED FOR PRIVACY
+Tech Country: REDACTED FOR PRIVACY
+Tech Phone: REDACTED FOR PRIVACY
+Tech Phone Ext: 
+Tech Fax: REDACTED FOR PRIVACY
+Tech Fax Ext: 
+Tech Email: REDACTED FOR PRIVACY
+Name Server: c.cpanel.net
+Name Server: hg.cpanel.net
+Name Server: mn.cpanel.net
+
 Registrar Abuse Contact Email: domainabuse@tucows.com
 Registrar Abuse Contact Phone: +1.4165350123
-Reseller: cPanel Inc
-Reseller: registry@cpanel.net
-Reseller: +1.5704437700
-Reseller: http://www.cpanel.net/
-Domain Status: serverDeleteProhibited
-Domain Status: serverTransferProhibited
-Registry Registrant ID: 
-Registrant Name: J Nick Koston
-Registrant Organization: cPanel Inc
-Registrant Street: 3131 West Alabama Suite 100
-Registrant City: Houston
-Registrant State/Province: TX
-Registrant Postal Code: 77098
-Registrant Country: US
-Registrant Phone: +1.7135290800
-Registrant Phone Ext: 
-Registrant Fax: +1.7135290807
-Registrant Fax Ext: 
-Registrant Email: registry@cpanel.net
-Registry Admin ID: 
-Admin Name: J Nick Koston
-Admin Organization: cPanel Inc
-Admin Street: 3131 West Alabama Suite 100
-Admin City: Houston
-Admin State/Province: TX
-Admin Postal Code: 77098
-Admin Country: US
-Admin Phone: +1.7135290800
-Admin Phone Ext: 
-Admin Fax: +1.7135290807
-Admin Fax Ext: 
-Admin Email: registry@cpanel.net
-Registry Tech ID: 
-Tech Name: J Nick Koston
-Tech Organization: cPanel Inc
-Tech Street: 3131 West Alabama Suite 100
-Tech City: Houston
-Tech State/Province: TX
-Tech Postal Code: 77098
-Tech Country: US
-Tech Phone: +1.7135290800
-Tech Phone Ext: 
-Tech Fax: +1.7135290807
-Tech Fax Ext: 
-Tech Email: registry@cpanel.net
-Name Server: C.CPANEL.NET
-Name Server: HG.CPANEL.NET
-Name Server: FE.CPANEL.NET
-DNSSEC: Unsigned
 URL of the ICANN WHOIS Data Problem Reporting System: http://wdprs.internic.net/
->>> Last update of WHOIS database: 2012-05-08 09:40:43 <<<
+>>> Last update of WHOIS database: 2018-06-23T03:09:22 <<<
+
+"For more information on Whois status codes, please visit https://icann.org/epp"
 
 Registration Service Provider:
     cPanel Inc, registry@cpanel.net

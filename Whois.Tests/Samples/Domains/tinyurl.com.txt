@@ -2,65 +2,63 @@ Domain Name: TINYURL.COM
 Registry Domain ID: 83069101_DOMAIN_COM-VRSN
 Registrar WHOIS Server: whois.tucows.com
 Registrar URL: http://tucowsdomains.com
-Updated Date: 2014-05-01 12:21:53
-Creation Date: 2002-01-27 06:17:41
-Registrar Registration Expiration Date: 2018-01-27 06:17:41
+Updated Date: 2016-09-06T15:29:05
+Creation Date: 2002-01-27T06:17:41
+Registrar Registration Expiration Date: 2026-01-27T06:17:41
 Registrar: TUCOWS, INC.
 Registrar IANA ID: 69
+Domain Status: clientTransferProhibited https://icann.org/epp#clientTransferProhibited
+Domain Status: clientUpdateProhibited https://icann.org/epp#clientUpdateProhibited
+Registry Registrant ID: 
+Registrant Name: REDACTED FOR PRIVACY
+Registrant Organization: REDACTED FOR PRIVACY
+Registrant Street: REDACTED FOR PRIVACY 
+Registrant City: REDACTED FOR PRIVACY
+Registrant State/Province: REDACTED FOR PRIVACY
+Registrant Postal Code: REDACTED FOR PRIVACY
+Registrant Country: REDACTED FOR PRIVACY
+Registrant Phone: REDACTED FOR PRIVACY
+Registrant Phone Ext: 
+Registrant Fax: REDACTED FOR PRIVACY
+Registrant Fax Ext: 
+Registrant Email: REDACTED FOR PRIVACY
+Registry Admin ID: 
+Admin Name: REDACTED FOR PRIVACY
+Admin Organization: REDACTED FOR PRIVACY
+Admin Street: REDACTED FOR PRIVACY 
+Admin City: REDACTED FOR PRIVACY
+Admin State/Province: REDACTED FOR PRIVACY
+Admin Postal Code: REDACTED FOR PRIVACY
+Admin Country: REDACTED FOR PRIVACY
+Admin Phone: REDACTED FOR PRIVACY
+Admin Phone Ext: 
+Admin Fax: REDACTED FOR PRIVACY
+Admin Fax Ext: 
+Admin Email: REDACTED FOR PRIVACY
+Registry Tech ID: 
+Tech Name: REDACTED FOR PRIVACY
+Tech Organization: REDACTED FOR PRIVACY
+Tech Street: REDACTED FOR PRIVACY 
+Tech City: REDACTED FOR PRIVACY
+Tech State/Province: REDACTED FOR PRIVACY
+Tech Postal Code: REDACTED FOR PRIVACY
+Tech Country: REDACTED FOR PRIVACY
+Tech Phone: REDACTED FOR PRIVACY
+Tech Phone Ext: 
+Tech Fax: REDACTED FOR PRIVACY
+Tech Fax Ext: 
+Tech Email: REDACTED FOR PRIVACY
+Name Server: revolution.ns.tinyurl.com
+Name Server: constitution.ns.tinyurl.com
+Name Server: liberty.ns.tinyurl.com
+Name Server: freedom.ns.tinyurl.com
+
 Registrar Abuse Contact Email: domainabuse@tucows.com
 Registrar Abuse Contact Phone: +1.4165350123
-Domain Status: clientTransferProhibited
-Domain Status: clientUpdateProhibited
-Registry Registrant ID: 
-Registrant Name: Kevin Gilbertson
-Registrant Organization: TinyURL, LLC
-Registrant Street: 4047 86th LN NE
-Registrant City: Blaine
-Registrant State/Province: MN
-Registrant Postal Code: 55014
-Registrant Country: US
-Registrant Phone: +1.7633900044
-Registrant Phone Ext: 
-Registrant Fax: 
-Registrant Fax Ext: 
-Registrant Email: domains@tinyurl.com
-Registry Admin ID: 
-Admin Name: Kevin Gilbertson
-Admin Organization: TinyURL, LLC
-Admin Street: 4047 86th LN NE
-Admin City: Blaine
-Admin State/Province: MN
-Admin Postal Code: 55014
-Admin Country: US
-Admin Phone: +1.7633900044
-Admin Phone Ext: 
-Admin Fax: 
-Admin Fax Ext: 
-Admin Email: domains@tinyurl.com
-Registry Tech ID: 
-Tech Name: Kevin Gilbertson
-Tech Organization: TinyURL, LLC
-Tech Street: 4047 86th LN NE
-Tech City: Blaine
-Tech State/Province: MN
-Tech Postal Code: 55014
-Tech Country: US
-Tech Phone: +1.7633900044
-Tech Phone Ext: 
-Tech Fax: 
-Tech Fax Ext: 
-Tech Email: domains@tinyurl.com
-Name Server: EUR2.AKAM.NET
-Name Server: USE2.AKAM.NET
-Name Server: EUR6.AKAM.NET
-Name Server: NS1-245.AKAM.NET
-Name Server: USE3.AKAM.NET
-Name Server: EUR5.AKAM.NET
-Name Server: USW2.AKAM.NET
-Name Server: NS1-208.AKAM.NET
-DNSSEC: Unsigned
 URL of the ICANN WHOIS Data Problem Reporting System: http://wdprs.internic.net/
->>> Last update of WHOIS database: 2014-05-01 12:21:53 <<<
+>>> Last update of WHOIS database: 2016-09-06T15:29:05 <<<
+
+"For more information on Whois status codes, please visit https://icann.org/epp"
 
 The Data in the Tucows Registrar WHOIS database is provided to you by Tucows
 for information purposes only, and may be used to assist you in obtaining

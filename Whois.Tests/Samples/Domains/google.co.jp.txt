@@ -2,34 +2,23 @@
 [ restricted to network administration purposes. For further information,     ]
 [ use 'whois -h whois.jprs.jp help'. To suppress Japanese output, add'/e'     ]
 [ at the end of command, e.g. 'whois -h whois.jprs.jp xxx/e'.                 ]
-[                                                                             ]
-[ Notice -------------------------------------------------------------------- ]
-[ JPRS will change JPRS WHOIS (web-based and port 43 Whois service) about the ]
-[ following two points on January 18, 2015.                                   ]
-[                                                                             ]
-[  1) Change of the format of response about gTLD domain name                 ]
-[  2) Change of the character encoding                                        ]
-[                                                                             ]
-[ For further information, please see the following webpage.                  ]
-[ http://jprs.jp/whatsnew/notice/2014/20140319-whois.html (only in Japanese)  ]
-[ --------------------------------------------------------------------------- ]
 
-Domain Information: [$B%I%a%$%s>pJs(B]
-a. [$B%I%a%$%sL>(B]                 GOOGLE.CO.JP
-e. [$B$=$7$-$a$$(B]                 $B$0!<$0$k$+$V$7$-$+$$$7$c(B
-f. [$BAH?%L>(B]                     $B%0!<%0%k3t<02q<R(B
+Domain Information: [ドメイン情報]
+a. [ドメイン名]                 GOOGLE.CO.JP
+e. [そしきめい]                 ぐーぐるかぶしきかいしゃ
+f. [組織名]                     グーグル株式会社
 g. [Organization]               Google Japan
-k. [$BAH?%<oJL(B]                   $B3t<02q<R(B
+k. [組織種別]                   株式会社
 l. [Organization Type]          corporation
-m. [$BEPO?C4Ev<T(B]                 DL152JP
-n. [$B5;=QO"MmC4Ev<T(B]             TW124137JP
-p. [$B%M!<%`%5!<%P(B]               ns1.google.com
-p. [$B%M!<%`%5!<%P(B]               ns2.google.com
-p. [$B%M!<%`%5!<%P(B]               ns3.google.com
-p. [$B%M!<%`%5!<%P(B]               ns4.google.com
-s. [$B=pL>80(B]                     
-[$B>uBV(B]                          Connected (2015/03/31)
-[$BEPO?G/7nF|(B]                    2001/03/22
-[$B@\B3G/7nF|(B]                    2001/03/22
-[$B:G=*99?7(B]                      2014/04/01 01:18:23 (JST)
+m. [登録担当者]                 DL152JP
+n. [技術連絡担当者]             TW124137JP
+p. [ネームサーバ]               ns1.google.com
+p. [ネームサーバ]               ns2.google.com
+p. [ネームサーバ]               ns3.google.com
+p. [ネームサーバ]               ns4.google.com
+s. [署名鍵]                     
+[状態]                          Connected (2019/03/31)
+[登録年月日]                    2001/03/22
+[接続年月日]                    2001/03/22
+[最終更新]                      2018/04/01 01:06:23 (JST)
 

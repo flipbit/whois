@@ -1,25 +1,21 @@
-
-
 Domain Name: MYSPACE.COM
-Registry Domain ID:  
+Registry Domain ID: 3877095_DOMAIN_COM-VRSN
 Registrar WHOIS Server: whois.networksolutions.com
 Registrar URL: http://networksolutions.com
-Updated Date: 2014-10-01T00:00:00Z
-Creation Date: 1996-02-22T00:00:00Z
-Registrar Registration Expiration Date: 2023-02-23T00:00:00Z
+Updated Date: 2017-12-17T19:27:37Z
+Creation Date: 1996-02-22T05:00:00Z
+Registrar Registration Expiration Date: 2023-02-23T05:00:00Z
 Registrar: NETWORK SOLUTIONS, LLC.
 Registrar IANA ID: 2
-Registrar Abuse Contact Email: abuse@web.com
-Registrar Abuse Contact Phone: +1.8003337680
 Reseller: 
-Domain Status: clientTransferProhibited
+Domain Status: clientTransferProhibited https://icann.org/epp#clientTransferProhibited
 Registry Registrant ID: 
 Registrant Name: Myspace LLC
 Registrant Organization: Myspace LLC
-Registrant Street: 407 N Maple Dr
-Registrant City: Beverly Hills
+Registrant Street: 407 N MAPLE DR
+Registrant City: BEVERLY HILLS
 Registrant State/Province: CA
-Registrant Postal Code: 90210
+Registrant Postal Code: 90210-3818
 Registrant Country: US
 Registrant Phone: +1.3109697471
 Registrant Phone Ext: 
@@ -52,13 +48,18 @@ Tech Phone Ext:
 Tech Fax: 
 Tech Fax Ext: 
 Tech Email: pwang@myspace-inc.com
-Name Server: NS7-67.AKAM.NET
-Name Server: NS5-67.AKAM.NET
-Name Server: NS1-128.AKAM.NET
-Name Server: NS4-66.AKAM.NET
-DNSSEC: not signed
+Name Server: NS-CLOUD-D1.GOOGLEDOMAINS.COM
+Name Server: NS-CLOUD-D2.GOOGLEDOMAINS.COM
+Name Server: NS-CLOUD-D3.GOOGLEDOMAINS.COM
+Name Server: NS-CLOUD-D4.GOOGLEDOMAINS.COM
+DNSSEC: unsigned
+Registrar Abuse Contact Email: abuse@web.com
+Registrar Abuse Contact Phone: +1.8003337680
 URL of the ICANN WHOIS Data Problem Reporting System: http://wdprs.internic.net/
->>> Last update of whois database: Wed, 22 Oct 2014 05:31:12 GMT <<<
+>>> Last update of WHOIS database: 2018-10-31T20:31:40Z <<<
+
+For more information on Whois status codes, please visit https: //www.icann.org/resources/pages/epp-status-codes-2014-06-16-en
+
 
 The data in Networksolutions.com's WHOIS database is provided to you by
 Networksolutions.com for information purposes only, that is, to assist you in
@@ -76,3 +77,5 @@ prohibited without the prior written consent of Networksolutions.com.
 Networksolutions.com reserves the right to modify these terms at any time.
 By submitting this query, you agree to abide by these terms.
 
+For more information on Whois status codes, please visit
+https: //www.icann.org/resources/pages/epp-status-codes-2014-06-16-en.

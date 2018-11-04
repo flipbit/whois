@@ -1,110 +1,63 @@
-Domain Name:                                 IMAGESHACK.US
-Domain ID:                                   D4989393-US
-Sponsoring Registrar:                        GoDaddy.com, Inc.
-Sponsoring Registrar IANA ID:                146
-Registrar URL (registration services):       whois.godaddy.com
-Domain Status:                               clientDeleteProhibited
-Domain Status:                               clientRenewProhibited
-Domain Status:                               clientTransferProhibited
-Domain Status:                               clientUpdateProhibited
-Registrant ID:                               CR15130212
-Registrant Name:                             DNS OPS
-Registrant Organization:                     ImageShack Corp
-Registrant Address1:                         236 N Santa Cruz Ave
-Registrant Address2:                         Suite 100
-Registrant City:                             Los Gatos
-Registrant State/Province:                   California
-Registrant Postal Code:                      95030
-Registrant Country:                          United States
-Registrant Country Code:                     US
-Registrant Phone Number:                     +1.4086123954
-Registrant Facsimile Number:                 +1.4086123960
-Registrant Email:                            sysops@imageshack.net
-Registrant Application Purpose:              P3
-Registrant Nexus Category:                   C11
-Administrative Contact ID:                   CR15130216
-Administrative Contact Name:                 DNS OPS
-Administrative Contact Organization:         ImageShack Corp
-Administrative Contact Address1:             236 N Santa Cruz Ave
-Administrative Contact Address2:             Suite 100
-Administrative Contact City:                 Los Gatos
-Administrative Contact State/Province:       California
-Administrative Contact Postal Code:          95030
-Administrative Contact Country:              United States
-Administrative Contact Country Code:         US
-Administrative Contact Phone Number:         +1.4086123954
-Administrative Contact Facsimile Number:     +1.4086123960
-Administrative Contact Email:                sysops@imageshack.net
-Administrative Application Purpose:          P3
-Administrative Nexus Category:               C11
-Billing Contact ID:                          CR15130218
-Billing Contact Name:                        DNS OPS
-Billing Contact Organization:                ImageShack Corp
-Billing Contact Address1:                    236 N Santa Cruz Ave
-Billing Contact Address2:                    Suite 100
-Billing Contact City:                        Los Gatos
-Billing Contact State/Province:              California
-Billing Contact Postal Code:                 95030
-Billing Contact Country:                     United States
-Billing Contact Country Code:                US
-Billing Contact Phone Number:                +1.4086123954
-Billing Contact Facsimile Number:            +1.4086123960
-Billing Contact Email:                       sysops@imageshack.net
-Billing Application Purpose:                 P3
-Billing Nexus Category:                      C11
-Technical Contact ID:                        CR15130214
-Technical Contact Name:                      DNS OPS
-Technical Contact Organization:              ImageShack Corp
-Technical Contact Address1:                  236 N Santa Cruz Ave
-Technical Contact Address2:                  Suite 100
-Technical Contact City:                      Los Gatos
-Technical Contact State/Province:            California
-Technical Contact Postal Code:               95030
-Technical Contact Country:                   United States
-Technical Contact Country Code:              US
-Technical Contact Phone Number:              +1.4086123954
-Technical Contact Facsimile Number:          +1.4086123960
-Technical Contact Email:                     sysops@imageshack.net
-Technical Application Purpose:               P3
-Technical Nexus Category:                    C11
-DNSSEC:                                      unsigned
-Name Server:                                 NS3.IMAGESHACK.US
-Name Server:                                 NS7.IMAGESHACK.US
-Created by Registrar:                        GoDaddy.com, Inc.
-Last Updated by Registrar:                   GoDaddy.com, Inc.
-Domain Registration Date:                    Wed Nov 12 22:54:10 GMT 2003
-Domain Expiration Date:                      Sat Nov 11 23:59:59 GMT 2017
-Domain Last Updated Date:                    Mon Oct 20 19:00:07 GMT 2014
-Name Value Pair:                             Variant=IMAGESHACK.US
+Domain Name: IMAGESHACK.US
+Registry Domain ID: D4989393-US
+Registrar WHOIS Server: whois.godaddy.com
+Registrar URL: http://www.godaddy.com
+Updated Date: 2017-11-12T10:45:44Z
+Creation Date: 2003-11-12T22:54:10Z
+Registrar Registration Expiration Date: 2018-11-11T23:59:59Z
+Registrar: GoDaddy.com, LLC
+Registrar IANA ID: 146
+Registrar Abuse Contact Email: abuse@godaddy.com
+Registrar Abuse Contact Phone: +1.4806242505
+Domain Status: clientTransferProhibited http://www.icann.org/epp#clientTransferProhibited
+Domain Status: clientUpdateProhibited http://www.icann.org/epp#clientUpdateProhibited
+Domain Status: clientRenewProhibited http://www.icann.org/epp#clientRenewProhibited
+Domain Status: clientDeleteProhibited http://www.icann.org/epp#clientDeleteProhibited
+Registrant Organization: ImageShack Corp
+Registrant State/Province: California
+Registrant Country: US
+Registrant Email: Select Contact Domain Holder link at https://www.godaddy.com/whois/results.aspx?domain=IMAGESHACK.US
+Admin Email: Select Contact Domain Holder link at https://www.godaddy.com/whois/results.aspx?domain=IMAGESHACK.US
+Tech Email: Select Contact Domain Holder link at https://www.godaddy.com/whois/results.aspx?domain=IMAGESHACK.US
+Name Server: NS2.IMAGESHACK.US
+Name Server: NS3.IMAGESHACK.US
+Name Server: NS4.IMAGESHACK.US
+Name Server: NS5.IMAGESHACK.US
+DNSSEC: unsigned
+URL of the ICANN WHOIS Data Problem Reporting System: http://wdprs.internic.net/
+>>> Last update of WHOIS database: 2018-11-01T09:00:00Z <<<
 
+For more information on Whois status codes, please visit https://www.icann.org/resources/pages/epp-status-codes-2014-06-16-en
 
->>>> Whois database was last updated on: Wed Oct 22 10:30:41 GMT 2014 <<<<
+****************************************************
+See Business Registration Listing
+****************************************************
+Copy and paste the link below to view additional details:
+http://who.godaddy.com/whoischeck.aspx?domain=IMAGESHACK.US
 
+Notes: 
 
-NeuStar, Inc., the Registry Administrator for .US, has collected this
-information for the WHOIS database through a .US-Accredited Registrar.
-This information is provided to you for informational purposes only and is
-designed to assist persons in determining contents of a domain name
-registration record in the NeuStar registry database. NeuStar makes this
-information available to you "as is" and does not guarantee its accuracy.
-By submitting a WHOIS query, you agree that you will use this data only for
-lawful purposes and that, under no circumstances will you use this data:
-(1) to allow, enable, or otherwise support the transmission of mass
-unsolicited, commercial advertising or solicitations via direct mail,
-electronic mail, or by telephone; (2) in contravention of any applicable
-data and privacy protection laws; or (3) to enable high volume, automated,
-electronic processes that apply to the registry (or its systems). Compilation,
-repackaging, dissemination, or other use of the WHOIS database in its
-entirety, or of a substantial portion thereof, is not allowed without
-NeuStar's prior written permission. NeuStar reserves the right to modify or
-change these conditions at any time without prior or subsequent notification
-of any kind. By executing this query, in any manner whatsoever, you agree to
-abide by these terms.
+IMPORTANT: Port43 will provide the ICANN-required minimum data set per 
+ICANN Temporary Specification, adopted 17 May 2018. 
+Visit https://whois.godaddy.com to look up contact data for domains 
+not covered by GDPR policy.
 
-NOTE: FAILURE TO LOCATE A RECORD IN THE WHOIS DATABASE IS NOT INDICATIVE
-OF THE AVAILABILITY OF A DOMAIN NAME.
+The data contained in GoDaddy.com, LLC's WhoIs database,
+while believed by the company to be reliable, is provided "as is"
+with no guarantee or warranties regarding its accuracy.  This
+information is provided for the sole purpose of assisting you
+in obtaining information about domain name registration records.
+Any use of this data for any other purpose is expressly forbidden without the prior written
+permission of GoDaddy.com, LLC.  By submitting an inquiry,
+you agree to these terms of usage and limitations of warranty.  In particular,
+you agree not to use this data to allow, enable, or otherwise make possible,
+dissemination or collection of this data, in part or in its entirety, for any
+purpose, such as the transmission of unsolicited advertising and
+and solicitations of any kind, including spam.  You further agree
+not to use this data to enable high volume, automated or robotic electronic
+processes designed to collect or compile this data for any purpose,
+including mining this data for your own personal or commercial purposes. 
 
-All domain names are subject to certain additional domain name registration
-rules.  For details, please visit our site at www.whois.us.
-
-
+Please note: the registrant of the domain name is specified
+in the "registrant" section.  In most cases, GoDaddy.com, LLC 
+is not the registrant of domain names listed in this database.

@@ -2,61 +2,46 @@ Domain Name: constantcontact.com
 Registry Domain ID: 2071990_DOMAIN_COM-VRSN
 Registrar WHOIS Server: whois.markmonitor.com
 Registrar URL: http://www.markmonitor.com
-Updated Date: 2014-10-14T13:16:36-0700
+Updated Date: 2018-08-28T02:10:48-0700
 Creation Date: 1998-09-29T21:00:00-0700
-Registrar Registration Expiration Date: 2016-09-28T21:00:00-0700
+Registrar Registration Expiration Date: 2020-09-28T00:00:00-0700
 Registrar: MarkMonitor, Inc.
 Registrar IANA ID: 292
 Registrar Abuse Contact Email: abusecomplaints@markmonitor.com
 Registrar Abuse Contact Phone: +1.2083895740
-Domain Status: clientUpdateProhibited
-Domain Status: clientTransferProhibited
-Domain Status: clientDeleteProhibited
-Registry Registrant ID: 
-Registrant Name: Domain Administrator
+Domain Status: clientUpdateProhibited (https://www.icann.org/epp#clientUpdateProhibited)
+Domain Status: clientTransferProhibited (https://www.icann.org/epp#clientTransferProhibited)
+Domain Status: clientDeleteProhibited (https://www.icann.org/epp#clientDeleteProhibited)
 Registrant Organization: Constant Contact, Inc.
-Registrant Street: 1601 Trapelo Road, Suite 329
-Registrant City: Waltham
 Registrant State/Province: MA
-Registrant Postal Code: 02451
 Registrant Country: US
-Registrant Phone: +1.7814728103
-Registrant Phone Ext: 
-Registrant Fax: +1.7814728101
-Registrant Fax Ext: 
-Registrant Email: it@constantcontact.com
-Registry Admin ID: 
-Admin Name: Domain Administrator
 Admin Organization: Constant Contact, Inc.
-Admin Street: 1601 Trapelo Road, Suite 329
-Admin City: Waltham
 Admin State/Province: MA
-Admin Postal Code: 02451
 Admin Country: US
-Admin Phone: +1.7814728103
-Admin Phone Ext: 
-Admin Fax: +1.7814728101
-Admin Fax Ext: 
-Admin Email: it@constantcontact.com
-Registry Tech ID: 
-Tech Name: Domain Administrator
 Tech Organization: Constant Contact, Inc.
-Tech Street: 1601 Trapelo Road, Suite 329
-Tech City: Waltham
 Tech State/Province: MA
-Tech Postal Code: 02451
 Tech Country: US
-Tech Phone: +1.7814728103
-Tech Phone Ext: 
-Tech Fax: +1.7814728101
-Tech Fax Ext: 
-Tech Email: it@constantcontact.com
 Name Server: ns2.p15.dynect.net
+Name Server: ns-1112.awsdns-11.org
+Name Server: ns-1900.awsdns-45.co.uk
 Name Server: ns4.p15.dynect.net
+Name Server: ns-204.awsdns-25.com
 Name Server: ns3.p15.dynect.net
 Name Server: ns1.p15.dynect.net
+Name Server: ns-661.awsdns-18.net
+DNSSEC: unsigned
 URL of the ICANN WHOIS Data Problem Reporting System: http://wdprs.internic.net/
->>> Last update of WHOIS database: 2014-10-22T03:12:56-0700 <<<
+>>> Last update of WHOIS database: 2018-11-01T01:48:52-0700 <<<
+
+If certain contact information is not shown for a Registrant, Administrative,
+or Technical contact, and you wish to send a message to these contacts, please
+send your message to whoisrelay@markmonitor.com and specify the domain name in
+the subject line. We will forward that message to the underlying contact.
+
+If you have a legitimate interest in viewing the non-public WHOIS details, send
+your request and the reasons for your request to abusecomplaints@markmonitor.com
+and specify the domain name in the subject line. We will review that request and
+may ask for supporting documentation and explanation.
 
 The Data in MarkMonitor.com's WHOIS database is provided by MarkMonitor.com for
 information purposes, and to assist persons in obtaining information about or
@@ -81,4 +66,7 @@ Professional and Managed Services
 Visit MarkMonitor at http://www.markmonitor.com
 Contact us at +1.8007459229
 In Europe, at +44.02032062220
---
+
+For more information on Whois status codes, please visit
+ https://www.icann.org/resources/pages/epp-status-codes-2014-06-16-en
+

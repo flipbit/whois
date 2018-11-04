@@ -2,23 +2,18 @@ Domain Name: WIKIA.COM
 Registry Domain ID: 107924245_DOMAIN_COM-VRSN
 Registrar WHOIS Server: whois.tucows.com
 Registrar URL: http://tucowsdomains.com
-Updated Date: 2012-01-19 08:16:58
-Creation Date: 2003-12-09 00:08:32
-Registrar Registration Expiration Date: 2020-12-09 00:08:32
+Updated Date: 2016-10-22T02:13:16
+Creation Date: 2003-12-09T00:08:32
+Registrar Registration Expiration Date: 2020-12-09T00:08:32
 Registrar: TUCOWS, INC.
 Registrar IANA ID: 69
-Registrar Abuse Contact Email: domainabuse@tucows.com
-Registrar Abuse Contact Phone: +1.4165350123
 Reseller: Hover
-Reseller: help@hover.com
-Reseller: 416.538.5498
-Reseller: http://help.hover.com
-Domain Status: clientTransferProhibited
-Domain Status: clientUpdateProhibited
+Domain Status: clientTransferProhibited https://icann.org/epp#clientTransferProhibited
+Domain Status: clientUpdateProhibited https://icann.org/epp#clientUpdateProhibited
 Registry Registrant ID: 
 Registrant Name: Contact Privacy Inc. Customer 0130027609
 Registrant Organization: Contact Privacy Inc. Customer 0130027609
-Registrant Street: 96 Mowat Ave
+Registrant Street: 96 Mowat Ave 
 Registrant City: Toronto
 Registrant State/Province: ON
 Registrant Postal Code: M6K 3M1
@@ -31,7 +26,7 @@ Registrant Email: wikia.com@contactprivacy.com
 Registry Admin ID: 
 Admin Name: Contact Privacy Inc. Customer 0130027609
 Admin Organization: Contact Privacy Inc. Customer 0130027609
-Admin Street: 96 Mowat Ave
+Admin Street: 96 Mowat Ave 
 Admin City: Toronto
 Admin State/Province: ON
 Admin Postal Code: M6K 3M1
@@ -44,7 +39,7 @@ Admin Email: wikia.com@contactprivacy.com
 Registry Tech ID: 
 Tech Name: Contact Privacy Inc. Customer 0130027609
 Tech Organization: Contact Privacy Inc. Customer 0130027609
-Tech Street: 96 Mowat Ave
+Tech Street: 96 Mowat Ave 
 Tech City: Toronto
 Tech State/Province: ON
 Tech Postal Code: M6K 3M1
@@ -54,22 +49,23 @@ Tech Phone Ext:
 Tech Fax: 
 Tech Fax Ext: 
 Tech Email: wikia.com@contactprivacy.com
-Name Server: NS1.P11.DYNECT.NET
-Name Server: NS2.P11.DYNECT.NET
-Name Server: NS4.P11.DYNECT.NET
-Name Server: NS3.P11.DYNECT.NET
-DNSSEC: Unsigned
+Name Server: ns1.p11.dynect.net
+Name Server: ns3.p11.dynect.net
+Name Server: ns2.p11.dynect.net
+Name Server: ns4.p11.dynect.net
+
+Registrar Abuse Contact Email: domainabuse@tucows.com
+Registrar Abuse Contact Phone: +1.4165350123
 URL of the ICANN WHOIS Data Problem Reporting System: http://wdprs.internic.net/
->>> Last update of WHOIS database: 2012-01-19 08:16:58 <<<
+>>> Last update of WHOIS database: 2016-10-22T02:13:16 <<<
+
+"For more information on Whois status codes, please visit https://icann.org/epp"
 
 Registration Service Provider:
     Hover, help@hover.com
-    416.538.5498
-    http://help.hover.com
+    +1.8667316556
+    https://help.hover.com
 
-
-This domain's privacy is protected by contactprivacy.com. To reach the domain contacts,
-please go to http://www.contactprivacy.com and follow the instructions.
 
 The Data in the Tucows Registrar WHOIS database is provided to you by Tucows
 for information purposes only, and may be used to assist you in obtaining

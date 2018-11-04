@@ -1,27 +1,24 @@
-Domain Name: ORACLE.COM
+Domain Name: oracle.com
 Registry Domain ID: 607513_DOMAIN_COM-VRSN
-Registrar WHOIS Server: whois.tucows.com
-Registrar URL: http://tucowsdomains.com
-Updated Date: 2014-04-19 10:51:14
-Creation Date: 1988-12-02 05:00:00
-Registrar Registration Expiration Date: 2016-12-01 05:00:00
-Registrar: TUCOWS, INC.
-Registrar IANA ID: 69
-Registrar Abuse Contact Email: domainabuse@tucows.com
-Registrar Abuse Contact Phone: +1.4165350123
-Reseller: Oracle Corporation
-Reseller: domain-contact_ww_grp@oracle.com
-Reseller: +1.6505062220
-Reseller: http://www.oracle.com
-Domain Status: clientTransferProhibited
-Domain Status: clientUpdateProhibited
-Domain Status: serverDeleteProhibited
-Domain Status: serverTransferProhibited
-Domain Status: serverUpdateProhibited
+Registrar WHOIS Server: whois.markmonitor.com
+Registrar URL: http://www.markmonitor.com
+Updated Date: 2018-10-30T02:24:31-0700
+Creation Date: 1988-12-01T21:00:00-0800
+Registrar Registration Expiration Date: 2019-11-30T00:00:00-0800
+Registrar: MarkMonitor, Inc.
+Registrar IANA ID: 292
+Registrar Abuse Contact Email: abusecomplaints@markmonitor.com
+Registrar Abuse Contact Phone: +1.2083895740
+Domain Status: clientUpdateProhibited (https://www.icann.org/epp#clientUpdateProhibited)
+Domain Status: clientTransferProhibited (https://www.icann.org/epp#clientTransferProhibited)
+Domain Status: clientDeleteProhibited (https://www.icann.org/epp#clientDeleteProhibited)
+Domain Status: serverUpdateProhibited (https://www.icann.org/epp#serverUpdateProhibited)
+Domain Status: serverTransferProhibited (https://www.icann.org/epp#serverTransferProhibited)
+Domain Status: serverDeleteProhibited (https://www.icann.org/epp#serverDeleteProhibited)
 Registry Registrant ID: 
 Registrant Name: Domain Administrator
 Registrant Organization: Oracle Corporation
-Registrant Street: 500 Oracle Parkway M/S 501ip3
+Registrant Street: 500 Oracle Parkway M/S 501ip3, 
 Registrant City: Redwood Shores
 Registrant State/Province: CA
 Registrant Postal Code: 94065
@@ -34,7 +31,7 @@ Registrant Email: domain-contact_ww_grp@oracle.com
 Registry Admin ID: 
 Admin Name: Domain Administrator
 Admin Organization: Oracle Corporation
-Admin Street: 500 Oracle Parkway M/S 501ip3
+Admin Street: 500 Oracle Parkway M/S 501ip3, 
 Admin City: Redwood Shores
 Admin State/Province: CA
 Admin Postal Code: 94065
@@ -45,9 +42,9 @@ Admin Fax: +1.6505062120
 Admin Fax Ext: 
 Admin Email: domain-contact_ww_grp@oracle.com
 Registry Tech ID: 
-Tech Name: Billing Contact
+Tech Name: Domain Administrator
 Tech Organization: Oracle Corporation
-Tech Street: 500 Oracle Parkway M/S 501ip3
+Tech Street: 500 Oracle Parkway M/S 501ip3, 
 Tech City: Redwood Shores
 Tech State/Province: CA
 Tech Postal Code: 94065
@@ -57,52 +54,50 @@ Tech Phone Ext:
 Tech Fax: +1.6505062120
 Tech Fax Ext: 
 Tech Email: network-contact_ww_grp@oracle.com
-Name Server: ORCLDNS1.ULTRADNS.COM
-Name Server: ORCLDNS6.ULTRADNS.CO.UK
-Name Server: ORCLDNS4.ULTRADNS.ORG
-Name Server: ORCLDNS5.ULTRADNS.INFO
-Name Server: ORCLDNS2.ULTRADNS.NET
-Name Server: ORCLDNS3.ULTRADNS.BIZ
-DNSSEC: Unsigned
+Name Server: ns2.p04.dynect.net
+Name Server: ns1.p04.dynect.net
+Name Server: ns4.p04.dynect.net
+Name Server: orcldns1.ultradns.com
+Name Server: orcldns2.ultradns.net
+Name Server: ns3.p04.dynect.net
+DNSSEC: unsigned
 URL of the ICANN WHOIS Data Problem Reporting System: http://wdprs.internic.net/
->>> Last update of WHOIS database: 2014-04-19 10:51:14 <<<
+>>> Last update of WHOIS database: 2018-11-01T02:12:56-0700 <<<
 
-Registration Service Provider:
-    Oracle Corporation, domain-contact_ww_grp@oracle.com
-    +1.6505062220
-    +1.6505062220 (fax)
-    http://www.oracle.com
+If certain contact information is not shown for a Registrant, Administrative,
+or Technical contact, and you wish to send a message to these contacts, please
+send your message to whoisrelay@markmonitor.com and specify the domain name in
+the subject line. We will forward that message to the underlying contact.
 
+If you have a legitimate interest in viewing the non-public WHOIS details, send
+your request and the reasons for your request to abusecomplaints@markmonitor.com
+and specify the domain name in the subject line. We will review that request and
+may ask for supporting documentation and explanation.
 
-The Data in the Tucows Registrar WHOIS database is provided to you by Tucows
-for information purposes only, and may be used to assist you in obtaining
-information about or related to a domain name's registration record.
+The Data in MarkMonitor.com's WHOIS database is provided by MarkMonitor.com for
+information purposes, and to assist persons in obtaining information about or
+related to a domain name registration record.  MarkMonitor.com does not guarantee
+its accuracy.  By submitting a WHOIS query, you agree that you will use this Data
+only for lawful purposes and that, under no circumstances will you use this Data to:
+ (1) allow, enable, or otherwise support the transmission of mass unsolicited,
+     commercial advertising or solicitations via e-mail (spam); or
+ (2) enable high volume, automated, electronic processes that apply to
+     MarkMonitor.com (or its systems).
+MarkMonitor.com reserves the right to modify these terms at any time.
+By submitting this query, you agree to abide by this policy.
 
-Tucows makes this information available "as is," and does not guarantee its
-accuracy.
+MarkMonitor is the Global Leader in Online Brand Protection.
 
-By submitting a WHOIS query, you agree that you will use this data only for
-lawful purposes and that, under no circumstances will you use this data to:
-a) allow, enable, or otherwise support the transmission by e-mail,
-telephone, or facsimile of mass, unsolicited, commercial advertising or
-solicitations to entities other than the data recipient's own existing
-customers; or (b) enable high volume, automated, electronic processes that
-send queries or data to the systems of any Registry Operator or
-ICANN-Accredited registrar, except as reasonably necessary to register
-domain names or modify existing registrations.
+MarkMonitor Domain Management(TM)
+MarkMonitor Brand Protection(TM)
+MarkMonitor AntiPiracy(TM)
+MarkMonitor AntiFraud(TM)
+Professional and Managed Services
 
-The compilation, repackaging, dissemination or other use of this Data is
-expressly prohibited without the prior written consent of Tucows.
+Visit MarkMonitor at http://www.markmonitor.com
+Contact us at +1.8007459229
+In Europe, at +44.02032062220
 
-Tucows reserves the right to terminate your access to the Tucows WHOIS
-database in its sole discretion, including without limitation, for excessive
-querying of the WHOIS database or for failure to otherwise abide by this
-policy.
-
-Tucows reserves the right to modify these terms at any time.
-
-By submitting this query, you agree to abide by these terms.
-
-NOTE: THE WHOIS DATABASE IS A CONTACT DATABASE ONLY.  LACK OF A DOMAIN
-RECORD DOES NOT SIGNIFY DOMAIN AVAILABILITY.
+For more information on Whois status codes, please visit
+ https://www.icann.org/resources/pages/epp-status-codes-2014-06-16-en
 

@@ -1,90 +1,52 @@
 Domain Name: VK.COM
 Registry Domain ID: 3206186_DOMAIN_COM-VRSN
-Registrar WHOIS Server: whois.godaddy.com
-Registrar URL: http://www.godaddy.com
-Update Date: 2009-08-28 14:49:08
-Creation Date: 1997-06-23 23:00:00
-Registrar Registration Expiration Date: 2015-06-22 23:00:00
-Registrar: GoDaddy.com, LLC
-Registrar IANA ID: 146
-Registrar Abuse Contact Email: abuse@godaddy.com
-Registrar Abuse Contact Phone: +1.480-624-2505
-Domain Status: clientTransferProhibited
-Domain Status: clientUpdateProhibited
-Domain Status: clientRenewProhibited
-Domain Status: clientDeleteProhibited
+Registrar WHOIS Server: whois.nic.ru
+Registrar URL: http://www.nic.ru
+Creation Date: 1997-06-24T04:00:00Z
+Registrar Registration Expiration Date: 2019-06-22T21:00:00Z
+Registrar: Regional Network Information Center, JSC dba RU-CENTER
+Registrar IANA ID: 463
+Registrar Abuse Contact Email: tld-abuse@nic.ru
+Registrar Abuse Contact Phone: +7.4959944601
+Domain Status: clientTransferProhibited https://icann.org/epp#clientTransferProhibited
 Registry Registrant ID: 
-Registrant Name: Registration Private
-Registrant Organization: Domains By Proxy, LLC
-Registrant Street: DomainsByProxy.com
-Registrant Street: 14747 N Northsight Blvd Suite 111, PMB 309
-Registrant City: Scottsdale
-Registrant State/Province: Arizona
-Registrant Postal Code: 85260
-Registrant Country: United States
-Registrant Phone: +1.4806242599
+Registrant Name: Privacy protection service - whoisproxy.ru
+Registrant Organization: Privacy protection service - whoisproxy.ru
+Registrant Street: PO box 99, whoisproxy.ru
+Registrant City: Moscow
+Registrant State/Province: Moscow
+Registrant Postal Code: 123308
+Registrant Country: RU
+Registrant Phone: +7.4957856536
 Registrant Phone Ext: 
-Registrant Fax: +1.4806242598
-Registrant Fax Ext: 
-Registrant Email: VK.COM@domainsbyproxy.com
+Registrant Email: vk.com@whoisproxy.ru
 Registry Admin ID: 
-Admin Name: Registration Private
-Admin Organization: Domains By Proxy, LLC
-Admin Street: DomainsByProxy.com
-Admin Street: 14747 N Northsight Blvd Suite 111, PMB 309
-Admin City: Scottsdale
-Admin State/Province: Arizona
-Admin Postal Code: 85260
-Admin Country: United States
-Admin Phone: +1.4806242599
+Admin Name: Privacy protection service - whoisproxy.ru
+Admin Organization: Privacy protection service - whoisproxy.ru
+Admin Street: PO box 99, whoisproxy.ru
+Admin City: Moscow
+Admin State/Province: Moscow
+Admin Postal Code: 123308
+Admin Country: RU
+Admin Phone: +7.4957856536
 Admin Phone Ext: 
-Admin Fax: +1.4806242598
-Admin Fax Ext: 
-Admin Email: VK.COM@domainsbyproxy.com
+Admin Email: vk.com@whoisproxy.ru
 Registry Tech ID: 
-Tech Name: Registration Private
-Tech Organization: Domains By Proxy, LLC
-Tech Street: DomainsByProxy.com
-Tech Street: 14747 N Northsight Blvd Suite 111, PMB 309
-Tech City: Scottsdale
-Tech State/Province: Arizona
-Tech Postal Code: 85260
-Tech Country: United States
-Tech Phone: +1.4806242599
+Tech Name: Privacy protection service - whoisproxy.ru
+Tech Organization: Privacy protection service - whoisproxy.ru
+Tech Street: PO box 99, whoisproxy.ru
+Tech City: Moscow
+Tech State/Province: Moscow
+Tech Postal Code: 123308
+Tech Country: RU
+Tech Phone: +7.4957856536
 Tech Phone Ext: 
-Tech Fax: +1.4806242598
-Tech Fax Ext: 
-Tech Email: VK.COM@domainsbyproxy.com
-Name Server: NS1.VKONTAKTE.RU
-Name Server: NS2.VKONTAKTE.RU
-Name Server: NS3.VKONTAKTE.RU
-Name Server: NS4.VKONTAKTE.RU
+Tech Email: vk.com@whoisproxy.ru
+Name Server: ns1.vkontakte.ru
+Name Server: ns2.vkontakte.ru
+Name Server: ns3.vkontakte.ru
+Name Server: ns4.vkontakte.ru
 DNSSEC: unsigned
 URL of the ICANN WHOIS Data Problem Reporting System: http://wdprs.internic.net/
-Last update of WHOIS database: 2014-10-22T09:00:00Z
-
-****************************************************
-See Business Registration Listing
-****************************************************
-Copy and paste the link below to view additional details:
-http://who.godaddy.com/whoischeck.aspx?domain=VK.COM
-
-The data contained in GoDaddy.com, LLC's WhoIs database,
-while believed by the company to be reliable, is provided "as is"
-with no guarantee or warranties regarding its accuracy.  This
-information is provided for the sole purpose of assisting you
-in obtaining information about domain name registration records.
-Any use of this data for any other purpose is expressly forbidden without the prior written
-permission of GoDaddy.com, LLC.  By submitting an inquiry,
-you agree to these terms of usage and limitations of warranty.  In particular,
-you agree not to use this data to allow, enable, or otherwise make possible,
-dissemination or collection of this data, in part or in its entirety, for any
-purpose, such as the transmission of unsolicited advertising and
-and solicitations of any kind, including spam.  You further agree
-not to use this data to enable high volume, automated or robotic electronic
-processes designed to collect or compile this data for any purpose,
-including mining this data for your own personal or commercial purposes. 
-
-Please note: the registrant of the domain name is specified
-in the "registrant" section.  In most cases, GoDaddy.com, LLC 
-is not the registrant of domain names listed in this database.
+For more information on Whois status codes, please visit: https://icann.org/epp
+>>> Last update of WHOIS database: 2018.10.31T20:45:10Z <<<

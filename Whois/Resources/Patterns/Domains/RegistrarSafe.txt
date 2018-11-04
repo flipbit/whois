@@ -1,0 +1,56 @@
+﻿---
+OutOfOrder: true
+---
+Domain Name: {DomainName$}
+Registry Domain ID: {RegistryDomainId$}
+Registrar WHOIS Server: {Registrar.WhoisServerUrl}
+Registrar URL: {Registrar.Url}
+Updated Date: {Updated?$:ToDateTime("yyyy-MM-ddTHH:mm:ssZ")}
+Creation Date: {Registered?$:ToDateTime("yyyy-MM-ddTHH:mm:ssZ")}
+Registrar Registration Expiration Date: {Expiration?$:ToDateTime("yyyy-MM-ddTHH:mm:ssZ")}
+Registrar: {Registrar.Name?$}
+Registrar IANA ID: {Registrar.IanaId?$}
+Registrar Abuse Contact Email: {Registrar.AbuseEmail$?}
+Registrar Abuse Contact Phone: {Registrar.AbuseTelephoneNumber$?}
+Domain Status: {DomainStatus#}
+Registry Registrant ID: {Registrant.RegistryId?$}
+Registrant Name: {Registrant.Name?$}
+Registrant Organization: {Registrant.Organization?$}
+Registrant Street: {Registrant.Address?$}
+Registrant City: {Registrant.Address?$}
+Registrant State/Province: {Registrant.Address?$}
+Registrant Postal Code: {Registrant.Address?$}
+Registrant Country: {Registrant.Address?$}
+Registrant Phone: {Registrant.TelephoneNumber?$}
+Registrant Phone Ext: {Registrant.TelephoneNumberExt?$}
+Registrant Fax: {Registrant.FaxNumber?$}
+Registrant Fax Ext: {Registrant.FaxNumberExt?$}
+Registrant Email: {Registrant.Email} 
+Registry Admin ID: {AdminContact.RegistryId?$}
+Admin Name: {AdminContact.Name?$}
+Admin Organization: {AdminContact.Organization?$}
+Admin Street: {AdminContact.Address?$}
+Admin City: {AdminContact.Address?$}
+Admin State/Province: {AdminContact.Address?$}
+Admin Postal Code: {AdminContact.Address?$}
+Admin Country: {AdminContact.Address?$}
+Admin Phone: {AdminContact.TelephoneNumber?$}
+Admin Phone Ext: {AdminContact.TelephoneNumberExt?$}
+Admin Fax: {AdminContact.FaxNumber?$}
+Admin Fax Ext:{AdminContact.FaxNumberExt?$}
+Admin Email: {AdminContact.Email}
+Registry Tech ID: {TechnicalContact.RegistryId}
+Tech Name: {TechnicalContact.Name}
+Tech Organization: {TechnicalContact.Organization}
+Tech Street: {TechnicalContact.Address?$}
+Tech City: {TechnicalContact.Address?$}
+Tech State/Province: {TechnicalContact.Address?$}
+Tech Postal Code: {TechnicalContact.Address?$}
+Tech Country: {TechnicalContact.Address?$}
+Tech Phone: {TechnicalContact.TelephoneNumber?$}
+Tech Phone Ext: {TechnicalContact.TelephoneNumberExt?$}
+Tech Fax: {TechnicalContact.FaxNumber?$}
+Tech Fax Ext: {TechnicalContact.FaxNumberExt?$}
+Tech Email: {TechnicalContact.Email?$}
+Name Server: {NameServers#}
+DNSSEC: {DnsSecStatus$?}

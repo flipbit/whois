@@ -2,59 +2,25 @@ Domain Name: GODADDY.COM
 Registry Domain ID: 4013247_DOMAIN_COM-VRSN
 Registrar WHOIS Server: whois.godaddy.com
 Registrar URL: http://www.godaddy.com
-Update Date: 2013-06-02 07:16:24
-Creation Date: 1999-03-02 00:00:00
-Registrar Registration Expiration Date: 2021-11-01 06:59:59
+Updated Date: 2013-06-02T12:16:24Z
+Creation Date: 1999-03-02T05:00:00Z
+Registrar Registration Expiration Date: 2021-11-01T11:59:59Z
 Registrar: GoDaddy.com, LLC
 Registrar IANA ID: 146
 Registrar Abuse Contact Email: abuse@godaddy.com
-Registrar Abuse Contact Phone: +1.480-624-2505
-Domain Status: clientTransferProhibited
-Domain Status: clientUpdateProhibited
-Domain Status: clientRenewProhibited
-Domain Status: clientDeleteProhibited
-Registry Registrant ID: 
-Registrant Name: Domain Administrator
+Registrar Abuse Contact Phone: +1.4806242505
+Domain Status: clientTransferProhibited http://www.icann.org/epp#clientTransferProhibited
+Domain Status: clientUpdateProhibited http://www.icann.org/epp#clientUpdateProhibited
+Domain Status: clientRenewProhibited http://www.icann.org/epp#clientRenewProhibited
+Domain Status: clientDeleteProhibited http://www.icann.org/epp#clientDeleteProhibited
 Registrant Organization: Go Daddy Operating Company, LLC
-Registrant Street: 14455 N Hayden Rd Suite 219
-Registrant City: Scottsdale
 Registrant State/Province: Arizona
-Registrant Postal Code: 85260
-Registrant Country: United States
-Registrant Phone: +1.4805058800
-Registrant Phone Ext: 
-Registrant Fax: +1.4805058844
-Registrant Fax Ext: 
-Registrant Email: companynames@godaddy.com
-Registry Admin ID: 
-Admin Name: Domain Administrator
-Admin Organization: Go Daddy Operating Company, LLC
-Admin Street: 14455 N Hayden Rd Suite 219
-Admin City: Scottsdale
-Admin State/Province: Arizona
-Admin Postal Code: 85260
-Admin Country: United States
-Admin Phone: +1.4805058800
-Admin Phone Ext: 
-Admin Fax: +1.4805058844
-Admin Fax Ext: 
-Admin Email: companynames@godaddy.com
-Registry Tech ID: 
-Tech Name: Domain Administrator
-Tech Organization: Go Daddy Operating Company, LLC
-Tech Street: 14455 N Hayden Rd Suite 219
-Tech City: Scottsdale
-Tech State/Province: Arizona
-Tech Postal Code: 85260
-Tech Country: United States
-Tech Phone: +1.4805058800
-Tech Phone Ext: 
-Tech Fax: +1.4805058844
-Tech Fax Ext: 
-Tech Email: companynames@godaddy.com
+Registrant Country: US
+Registrant Email: Select Contact Domain Holder link at https://www.godaddy.com/whois/results.aspx?domain=GODADDY.COM
+Admin Email: Select Contact Domain Holder link at https://www.godaddy.com/whois/results.aspx?domain=GODADDY.COM
+Tech Email: Select Contact Domain Holder link at https://www.godaddy.com/whois/results.aspx?domain=GODADDY.COM
 Name Server: CNS1.GODADDY.COM
 Name Server: CNS2.GODADDY.COM
-Name Server: CNS3.GODADDY.COM
 Name Server: A11-64.AKAM.NET
 Name Server: A1-245.AKAM.NET
 Name Server: A20-65.AKAM.NET
@@ -63,13 +29,16 @@ Name Server: A8-67.AKAM.NET
 Name Server: A9-67.AKAM.NET
 DNSSEC: unsigned
 URL of the ICANN WHOIS Data Problem Reporting System: http://wdprs.internic.net/
-Last update of WHOIS database: 2014-10-22T10:00:00Z
+>>> Last update of WHOIS database: 2018-10-31T20:00:00Z <<<
 
-****************************************************
-See Business Registration Listing
-****************************************************
-Copy and paste the link below to view additional details:
-http://who.godaddy.com/whoischeck.aspx?domain=GODADDY.COM
+For more information on Whois status codes, please visit https://www.icann.org/resources/pages/epp-status-codes-2014-06-16-en
+
+Notes: 
+
+IMPORTANT: Port43 will provide the ICANN-required minimum data set per 
+ICANN Temporary Specification, adopted 17 May 2018. 
+Visit https://whois.godaddy.com to look up contact data for domains 
+not covered by GDPR policy.
 
 The data contained in GoDaddy.com, LLC's WhoIs database,
 while believed by the company to be reliable, is provided "as is"

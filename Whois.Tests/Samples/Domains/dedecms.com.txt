@@ -1,58 +1,37 @@
-
-Domain Name: dedecms.com
-Registry Domain ID:
+Domain Name: dedecms.com                                                                                        
+Registry Domain ID: 123614621_DOMAIN_COM-VRSN
 Registrar WHOIS Server: whois.onlinenic.com
 Registrar URL: http://www.onlinenic.com
-Updated Date: 2013-07-24 03:54:25
-Creation Date: 2004-06-28
-Registrar Registration Expiration Date: 2015-06-28
+Updated Date: 2015-04-21T02:53:07Z
+Creation Date: 2004-06-28T04:00:00Z
+Registrar Registration Expiration Date: 2020-06-28T04:00:00Z
 Registrar: Onlinenic Inc
 Registrar IANA ID: 82
 Registrar Abuse Contact Email: onlinenic-enduser@onlinenic.com
 Registrar Abuse Contact Phone: +1.5107698492
-Reseller: Yizhen Chen                                                 
-Domain Status: ok
-Registry Registrant ID:
-Registrant Name: Shanghai Zhuozhuo Network Technology Co.,Ltd.
-Registrant Organization: DESDEV
-Registrant Street: 232 West Yindu get a get on the 15th
-Registrant City: Shanghai
-Registrant State/Province: Shanghai
-Registrant Postal Code: 200241
-Registrant Country: CN
-Registrant Phone: +86.2137788569
-Registrant Phone Ext:
-Registrant Fax: +86.2137788569
-Registrant Fax Ext:
-Registrant Email: wind@desdev.cn
-Registry Admin ID:
-Admin Name: lin xue
-Admin Organization: DESDEV
-Admin Street: 232 West Yindu get a get on the 15th
-Admin City: Shanghai
-Admin State/Province: Shanghai
-Admin Postal Code: 200241
-Admin Country: CN
-Admin Phone: +86.2137788569
-Admin Phone Ext:
-Admin Fax: +86.2137788569
-Admin Fax Ext:
-Admin Email: wind@desdev.cn
-Registry Tech ID:
-Tech Name: lin xue
-Tech Organization: DESDEV
-Tech Street: 232 West Yindu get a get on the 15th
-Tech City: Shanghai
-Tech State/Province: Shanghai
-Tech Postal Code: 200241
-Tech Country: CN
-Tech Phone: +86.2137788569
-Tech Phone Ext:
-Tech Fax: +86.2137788569
-Tech Fax Ext:
-Tech Email: wind@desdev.cn
+Domain Status: clientDeleteProhibited https://icann.org/epp#clientDeleteProhibited
+Domain Status: clientTransferProhibited https://icann.org/epp#clientTransferProhibited
 Name Server: ns1.dns-diy.net
 Name Server: ns2.dns-diy.net
-DNSSEC: unSigned
+DNSSEC: unsigned
 URL of the ICANN WHOIS Data Problem Reporting System: http://wdprs.internic.net/
->>> Last update of WHOIS database: 2013-07-24 03:54:25 <<<
+>>> Last update of WHOIS database: 2015-04-21T02:53:07Z <<<
+
+
+
+For more information on Whois status codes, please visit https://icann.org/epp
+
+This data is provided by OnlineNIC, Inc.
+for information purposes, and to assist persons obtaining information
+about or related to domain name registration records.
+OnlineNIC, Inc. does not guarantee its accuracy.
+By submitting a WHOIS query, you agree that you will use this data
+only for lawful purposes and that, under no circumstances, you will
+use this data to
+1) allow, enable, or otherwise support the transmission of mass
+unsolicited, commercial advertising or solicitations via E-mail
+ (spam); or
+2) enable high volume, automated, electronic processes that apply
+to this WHOIS server.
+These terms may be changed without prior notice.
+By submitting this query, you agree to abide by this policy.

@@ -2,68 +2,39 @@ Domain Name: EXAMINER.COM
 Registry Domain ID: 4987507_DOMAIN_COM-VRSN
 Registrar WHOIS Server: whois.godaddy.com
 Registrar URL: http://www.godaddy.com
-Update Date: 2013-12-20 16:34:49
-Creation Date: 1994-09-12 23:00:00
-Registrar Registration Expiration Date: 2015-10-01 22:59:59
+Updated Date: 2017-07-20T19:52:36Z
+Creation Date: 1994-09-13T04:00:00Z
+Registrar Registration Expiration Date: 2019-10-02T03:59:59Z
 Registrar: GoDaddy.com, LLC
 Registrar IANA ID: 146
 Registrar Abuse Contact Email: abuse@godaddy.com
-Registrar Abuse Contact Phone: +1.480-624-2505
-Domain Status: clientTransferProhibited
-Domain Status: clientUpdateProhibited
-Domain Status: clientRenewProhibited
-Domain Status: clientDeleteProhibited
-Registry Registrant ID: 
-Registrant Name: Domain Manager
-Registrant Organization: Clarity Digital Group
-Registrant Street: 555 17th St
-Registrant Street: Suite 700
-Registrant City: Denver
+Registrar Abuse Contact Phone: +1.4806242505
+Domain Status: clientTransferProhibited http://www.icann.org/epp#clientTransferProhibited
+Domain Status: clientUpdateProhibited http://www.icann.org/epp#clientUpdateProhibited
+Domain Status: clientRenewProhibited http://www.icann.org/epp#clientRenewProhibited
+Domain Status: clientDeleteProhibited http://www.icann.org/epp#clientDeleteProhibited
+Registrant Organization: AXS Digital Media Group, LLC
 Registrant State/Province: Colorado
-Registrant Postal Code: 80202
-Registrant Country: United States
-Registrant Phone: +1.3032918800
-Registrant Phone Ext: 
-Registrant Fax: 
-Registrant Fax Ext: 
-Registrant Email: domains@claritydg.com
-Registry Admin ID: 
-Admin Name: Domain Manager
-Admin Organization: Clarity Digital Group
-Admin Street: 555 17th St
-Admin Street: Suite 700
-Admin City: Denver
-Admin State/Province: Colorado
-Admin Postal Code: 80202
-Admin Country: United States
-Admin Phone: +1.3032918800
-Admin Phone Ext: 
-Admin Fax: 
-Admin Fax Ext: 
-Admin Email: domains@claritydg.com
-Registry Tech ID: 
-Tech Name: Domain Manager
-Tech Organization: Clarity Digital Group
-Tech Street: 555 17th St
-Tech Street: Suite 700
-Tech City: Denver
-Tech State/Province: Colorado
-Tech Postal Code: 80202
-Tech Country: United States
-Tech Phone: +1.3032991412
-Tech Phone Ext: 
-Tech Fax: 
-Tech Fax Ext: 
-Tech Email: domains@claritydg.com
-Name Server: PDNS1.ULTRADNS.NET
-Name Server: PDNS2.ULTRADNS.NET
-Name Server: PDNS3.ULTRADNS.ORG
-Name Server: PDNS4.ULTRADNS.ORG
-Name Server: PDNS5.ULTRADNS.INFO
-Name Server: PDNS6.ULTRADNS.CO.UK
+Registrant Country: US
+Registrant Email: Select Contact Domain Holder link at https://www.godaddy.com/whois/results.aspx?domain=EXAMINER.COM
+Admin Email: Select Contact Domain Holder link at https://www.godaddy.com/whois/results.aspx?domain=EXAMINER.COM
+Tech Email: Select Contact Domain Holder link at https://www.godaddy.com/whois/results.aspx?domain=EXAMINER.COM
+Name Server: NS-1686.AWSDNS-18.CO.UK
+Name Server: NS-1060.AWSDNS-04.ORG
+Name Server: NS-850.AWSDNS-42.NET
+Name Server: NS-363.AWSDNS-45.COM
 DNSSEC: unsigned
 URL of the ICANN WHOIS Data Problem Reporting System: http://wdprs.internic.net/
-Last update of WHOIS database: 2014-10-22T11:00:00Z
+>>> Last update of WHOIS database: 2018-11-01T09:00:00Z <<<
+
+For more information on Whois status codes, please visit https://www.icann.org/resources/pages/epp-status-codes-2014-06-16-en
+
+Notes: 
+
+IMPORTANT: Port43 will provide the ICANN-required minimum data set per 
+ICANN Temporary Specification, adopted 17 May 2018. 
+Visit https://whois.godaddy.com to look up contact data for domains 
+not covered by GDPR policy.
 
 The data contained in GoDaddy.com, LLC's WhoIs database,
 while believed by the company to be reliable, is provided "as is"

@@ -14,6 +14,6 @@ Name Server: ns3.sina.com.cn
 Name Server: ns2.sina.com.cn
 Name Server: ns4.sina.com.cn
 Name Server: ns1.sina.com.cn
-Registration Date: 1998-11-20 00:00:00
-Expiration Date: 2019-12-04 09:32:35
+Registration Time: 1998-11-20 00:00:00
+Expiration Time: 2019-12-04 09:32:35
 DNSSEC: unsigned

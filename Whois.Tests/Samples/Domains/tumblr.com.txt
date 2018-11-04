@@ -2,65 +2,47 @@ Domain Name: tumblr.com
 Registry Domain ID: 477969468_DOMAIN_COM-VRSN
 Registrar WHOIS Server: whois.markmonitor.com
 Registrar URL: http://www.markmonitor.com
-Updated Date: 2013-09-09T09:43:13-0700
+Updated Date: 2018-05-03T16:52:21-0700
 Creation Date: 2006-06-08T15:11:40-0700
 Registrar Registration Expiration Date: 2023-06-08T15:11:40-0700
 Registrar: MarkMonitor, Inc.
 Registrar IANA ID: 292
 Registrar Abuse Contact Email: abusecomplaints@markmonitor.com
 Registrar Abuse Contact Phone: +1.2083895740
-Domain Status: clientUpdateProhibited
-Domain Status: clientTransferProhibited
-Domain Status: clientDeleteProhibited
-Registry Registrant ID: 
-Registrant Name: Domain Administrator
+Domain Status: clientUpdateProhibited (https://www.icann.org/epp#clientUpdateProhibited)
+Domain Status: clientTransferProhibited (https://www.icann.org/epp#clientTransferProhibited)
+Domain Status: clientDeleteProhibited (https://www.icann.org/epp#clientDeleteProhibited)
+Domain Status: serverUpdateProhibited (https://www.icann.org/epp#serverUpdateProhibited)
+Domain Status: serverTransferProhibited (https://www.icann.org/epp#serverTransferProhibited)
+Domain Status: serverDeleteProhibited (https://www.icann.org/epp#serverDeleteProhibited)
 Registrant Organization: Tumblr, Inc.
-Registrant Street: 35 East 21st Street, 10th floor
-Registrant City: New York
 Registrant State/Province: NY
-Registrant Postal Code: 10010
 Registrant Country: US
-Registrant Phone: +1.2127965360
-Registrant Phone Ext: 
-Registrant Fax: +1.6465134321
-Registrant Fax Ext: 
-Registrant Email: domains@tumblr.com
-Registry Admin ID: 
-Admin Name: Domain Administrator
 Admin Organization: Tumblr, Inc.
-Admin Street: 35 East 21st Street, 10th floor
-Admin City: New York
 Admin State/Province: NY
-Admin Postal Code: 10010
 Admin Country: US
-Admin Phone: +1.2127965360
-Admin Phone Ext: 
-Admin Fax: +1.6465134321
-Admin Fax Ext: 
-Admin Email: domains@tumblr.com
-Registry Tech ID: 
-Tech Name: Domain Administrator
 Tech Organization: Tumblr, Inc.
-Tech Street: 35 East 21st Street, 10th floor
-Tech City: New York
 Tech State/Province: NY
-Tech Postal Code: 10010
 Tech Country: US
-Tech Phone: +1.2127965360
-Tech Phone Ext: 
-Tech Fax: +1.6465134321
-Tech Fax Ext: 
-Tech Email: domains@tumblr.com
-Name Server: ns3.p03.dynect.net
-Name Server: ns1.p03.dynect.net
-Name Server: pdns3.ultradns.org
-Name Server: ns2.p03.dynect.net
-Name Server: pdns4.ultradns.org
-Name Server: pdns6.ultradns.co.uk
-Name Server: ns4.p03.dynect.net
-Name Server: pdns2.ultradns.net
+Name Server: ns3.edgecastdns.net
+Name Server: ns1.edgecastdns.net
+Name Server: ns4.edgecastdns.net
+Name Server: ns2.yahoo.com
+Name Server: ns2.edgecastdns.net
+Name Server: ns1.yahoo.com
+DNSSEC: unsigned
 URL of the ICANN WHOIS Data Problem Reporting System: http://wdprs.internic.net/
->>> Last update of WHOIS database: 2014-10-22T02:06:40-0700 <<<
+>>> Last update of WHOIS database: 2018-10-31T13:30:52-0700 <<<
+
+If certain contact information is not shown for a Registrant, Administrative,
+or Technical contact, and you wish to send a message to these contacts, please
+send your message to whoisrelay@markmonitor.com and specify the domain name in
+the subject line. We will forward that message to the underlying contact.
+
+If you have a legitimate interest in viewing the non-public WHOIS details, send
+your request and the reasons for your request to abusecomplaints@markmonitor.com
+and specify the domain name in the subject line. We will review that request and
+may ask for supporting documentation and explanation.
 
 The Data in MarkMonitor.com's WHOIS database is provided by MarkMonitor.com for
 information purposes, and to assist persons in obtaining information about or
@@ -85,4 +67,7 @@ Professional and Managed Services
 Visit MarkMonitor at http://www.markmonitor.com
 Contact us at +1.8007459229
 In Europe, at +44.02032062220
---
+
+For more information on Whois status codes, please visit
+ https://www.icann.org/resources/pages/epp-status-codes-2014-06-16-en
+

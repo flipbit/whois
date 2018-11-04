@@ -2,50 +2,41 @@
     Domain name:
         guardian.co.uk
 
-    Registrant:
-        Guardian News & Media Limited
-
-    Registrant type:
-        UK Limited Company, (Company number: 00908396)
-
-    Registrant's address:
-        Kings Place
-        90 York Way
-        London
-        N1 9GU
-        United Kingdom
-
     Data validation:
-        Registrant contact details validated by Nominet on 10-Dec-2012
+        Nominet was able to match the registrant's name and address against a 3rd party data source on 15-Oct-2015
 
     Registrar:
-        TUCOWS Inc t/a TUCOWS [Tag = TUCOWS-CA]
-        URL: http://www.tucowsdomains.com
+        GoDaddy.com, LLP. [Tag = GODADDY]
+        URL: http://uk.godaddy.com
 
     Relevant dates:
         Registered on: before Aug-1996
         Expiry date:  16-Jun-2022
-        Last updated:  15-May-2014
+        Last updated:  05-Jul-2017
 
     Registration status:
         Registered until expiry date.
 
     Name servers:
-        ns1.p05.dynect.net
-        ns2.p05.dynect.net
-        ns3.p05.dynect.net
-        ns4.p05.dynect.net
+        dns1.p02.nsone.net
+        dns2.p02.nsone.net
+        dns3.p02.nsone.net
+        dns4.p02.nsone.net
+        ns01.theguardiandns.com
+        ns02.theguardiandns.com
+        ns03.theguardiandns.com
+        ns04.theguardiandns.com
 
-    WHOIS lookup made at 11:11:43 22-Oct-2014
+    WHOIS lookup made at 20:52:13 31-Oct-2018
 
 -- 
 This WHOIS information is provided for free by Nominet UK the central registry
 for .uk domain names. This information and the .uk WHOIS are:
 
-    Copyright Nominet UK 1996 - 2014.
+    Copyright Nominet UK 1996 - 2018.
 
 You may not access the .uk WHOIS or use any data from it except as permitted
-by the terms of use available in full at http://www.nominet.org.uk/whoisterms,
+by the terms of use available in full at https://www.nominet.uk/whoisterms,
 which includes restrictions on: (A) use of the data for advertising, or its
 repackaging, recompilation, redistribution or reuse (B) obscuring, removing
 or hiding any or all of this notice and (C) exceeding query rate or volume

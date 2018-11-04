@@ -1,62 +1,46 @@
 Domain Name: alibaba.com
-Registry Domain ID: 
+Registry Domain ID: 5435352_DOMAIN_COM-VRSN
 Registrar WHOIS Server: whois.markmonitor.com
 Registrar URL: http://www.markmonitor.com
-Updated Date: 2014-07-31T04:00:49-0700
+Updated Date: 2014-10-28T12:38:28-0700
 Creation Date: 1999-04-14T21:00:00-0700
 Registrar Registration Expiration Date: 2022-05-23T12:54:58-0700
 Registrar: MarkMonitor, Inc.
 Registrar IANA ID: 292
 Registrar Abuse Contact Email: abusecomplaints@markmonitor.com
 Registrar Abuse Contact Phone: +1.2083895740
-Domain Status: clientUpdateProhibited
-Domain Status: clientTransferProhibited
-Domain Status: clientDeleteProhibited
-Registry Registrant ID: 
-Registrant Name: Timothy Alexander Steinert
+Domain Status: clientUpdateProhibited (https://www.icann.org/epp#clientUpdateProhibited)
+Domain Status: clientTransferProhibited (https://www.icann.org/epp#clientTransferProhibited)
+Domain Status: clientDeleteProhibited (https://www.icann.org/epp#clientDeleteProhibited)
+Domain Status: serverUpdateProhibited (https://www.icann.org/epp#serverUpdateProhibited)
+Domain Status: serverTransferProhibited (https://www.icann.org/epp#serverTransferProhibited)
+Domain Status: serverDeleteProhibited (https://www.icann.org/epp#serverDeleteProhibited)
 Registrant Organization: Hangzhou Alibaba Advertising Co., Ltd.(杭州阿里巴巴广告有限公司)
-Registrant Street: No. 699 Wangshang Road , Binjiang District
-Registrant City: Hangzhou
 Registrant State/Province: Zhejiang
-Registrant Postal Code: 310052
 Registrant Country: CN
-Registrant Phone: +852.22155100
-Registrant Phone Ext: 
-Registrant Fax: +852.22155200
-Registrant Fax Ext: 
-Registrant Email: dnsadmin@hk.alibaba-inc.com
-Registry Admin ID: 
-Admin Name: Timothy Alexander Steinert
 Admin Organization: Hangzhou Alibaba Advertising Co., Ltd.(杭州阿里巴巴广告有限公司)
-Admin Street: No. 699 Wangshang Road , Binjiang District
-Admin City: Hangzhou
 Admin State/Province: Zhejiang
-Admin Postal Code: 310052
 Admin Country: CN
-Admin Phone: +852.22155100
-Admin Phone Ext: 
-Admin Fax: +852.22155200
-Admin Fax Ext: 
-Admin Email: dnsadmin@hk.alibaba-inc.com
-Registry Tech ID: 
-Tech Name: Timothy Alexander Steinert
 Tech Organization: Hangzhou Alibaba Advertising Co., Ltd.(杭州阿里巴巴广告有限公司)
-Tech Street: No. 699 Wangshang Road , Binjiang District
-Tech City: Hangzhou
 Tech State/Province: Zhejiang
-Tech Postal Code: 310052
 Tech Country: CN
-Tech Phone: +852.22155100
-Tech Phone Ext: 
-Tech Fax: +852.22155200
-Tech Fax Ext: 
-Tech Email: dnsadmin@hk.alibaba-inc.com
 Name Server: ns8.alibabaonline.com
-Name Server: nshz.alibabaonline.com
-Name Server: nsp.alibabaonline.com
 Name Server: nsp2.alibabaonline.com
+Name Server: nsp.alibabaonline.com
+Name Server: nshz.alibabaonline.com
+DNSSEC: unsigned
 URL of the ICANN WHOIS Data Problem Reporting System: http://wdprs.internic.net/
->>> Last update of WHOIS database: 2014-10-22T03:23:23-0700 <<<
+>>> Last update of WHOIS database: 2018-11-01T01:50:06-0700 <<<
+
+If certain contact information is not shown for a Registrant, Administrative,
+or Technical contact, and you wish to send a message to these contacts, please
+send your message to whoisrelay@markmonitor.com and specify the domain name in
+the subject line. We will forward that message to the underlying contact.
+
+If you have a legitimate interest in viewing the non-public WHOIS details, send
+your request and the reasons for your request to abusecomplaints@markmonitor.com
+and specify the domain name in the subject line. We will review that request and
+may ask for supporting documentation and explanation.
 
 The Data in MarkMonitor.com's WHOIS database is provided by MarkMonitor.com for
 information purposes, and to assist persons in obtaining information about or
@@ -81,4 +65,7 @@ Professional and Managed Services
 Visit MarkMonitor at http://www.markmonitor.com
 Contact us at +1.8007459229
 In Europe, at +44.02032062220
+
+For more information on Whois status codes, please visit
+ https://www.icann.org/resources/pages/epp-status-codes-2014-06-16-en
 --

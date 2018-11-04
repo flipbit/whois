@@ -2,23 +2,18 @@ Domain Name: DIGG.COM
 Registry Domain ID: 20261849_DOMAIN_COM-VRSN
 Registrar WHOIS Server: whois.tucows.com
 Registrar URL: http://tucowsdomains.com
-Updated Date: 2014-02-06 08:21:35
-Creation Date: 2000-02-20 16:55:16
-Registrar Registration Expiration Date: 2016-02-20 16:55:16
+Updated Date: 2018-05-22T13:50:11
+Creation Date: 2000-02-20T16:55:16
+Registrar Registration Expiration Date: 2019-02-20T16:55:16
 Registrar: TUCOWS, INC.
 Registrar IANA ID: 69
-Registrar Abuse Contact Email: domainabuse@tucows.com
-Registrar Abuse Contact Phone: +1.4165350123
 Reseller: Hover
-Reseller: help@hover.com
-Reseller: 416.538.5498
-Reseller: http://help.hover.com
-Domain Status: clientTransferProhibited
-Domain Status: clientUpdateProhibited
+Domain Status: clientTransferProhibited https://icann.org/epp#clientTransferProhibited
+Domain Status: clientUpdateProhibited https://icann.org/epp#clientUpdateProhibited
 Registry Registrant ID: 
 Registrant Name: Contact Privacy Inc. Customer 0134889628
 Registrant Organization: Contact Privacy Inc. Customer 0134889628
-Registrant Street: 96 Mowat Ave
+Registrant Street: 96 Mowat Ave 
 Registrant City: Toronto
 Registrant State/Province: ON
 Registrant Postal Code: M6K 3M1
@@ -31,7 +26,7 @@ Registrant Email: digg.com@contactprivacy.com
 Registry Admin ID: 
 Admin Name: Contact Privacy Inc. Customer 0134889628
 Admin Organization: Contact Privacy Inc. Customer 0134889628
-Admin Street: 96 Mowat Ave
+Admin Street: 96 Mowat Ave 
 Admin City: Toronto
 Admin State/Province: ON
 Admin Postal Code: M6K 3M1
@@ -44,7 +39,7 @@ Admin Email: digg.com@contactprivacy.com
 Registry Tech ID: 
 Tech Name: Contact Privacy Inc. Customer 0134889628
 Tech Organization: Contact Privacy Inc. Customer 0134889628
-Tech Street: 96 Mowat Ave
+Tech Street: 96 Mowat Ave 
 Tech City: Toronto
 Tech State/Province: ON
 Tech Postal Code: M6K 3M1
@@ -54,22 +49,23 @@ Tech Phone Ext:
 Tech Fax: 
 Tech Fax Ext: 
 Tech Email: digg.com@contactprivacy.com
-Name Server: NS-929.AWSDNS-52.NET
-Name Server: NS-1886.AWSDNS-43.CO.UK
-Name Server: NS-1131.AWSDNS-13.ORG
-Name Server: NS-147.AWSDNS-18.COM
-DNSSEC: Unsigned
+Name Server: ns-147.awsdns-18.com
+Name Server: ns-929.awsdns-52.net
+Name Server: ns-1131.awsdns-13.org
+Name Server: ns-1886.awsdns-43.co.uk
+
+Registrar Abuse Contact Email: domainabuse@tucows.com
+Registrar Abuse Contact Phone: +1.4165350123
 URL of the ICANN WHOIS Data Problem Reporting System: http://wdprs.internic.net/
->>> Last update of WHOIS database: 2014-02-06 08:21:35 <<<
+>>> Last update of WHOIS database: 2018-05-22T13:50:11 <<<
+
+"For more information on Whois status codes, please visit https://icann.org/epp"
 
 Registration Service Provider:
     Hover, help@hover.com
-    416.538.5498
-    http://help.hover.com
+    +1.8667316556
+    https://help.hover.com
 
-
-This domain's privacy is protected by contactprivacy.com. To reach the domain contacts,
-please go to http://www.contactprivacy.com and follow the instructions.
 
 The Data in the Tucows Registrar WHOIS database is provided to you by Tucows
 for information purposes only, and may be used to assist you in obtaining

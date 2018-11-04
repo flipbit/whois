@@ -6,11 +6,11 @@
 %% version              : FRNIC-2.5
 %%
 %% Rights restricted by copyright.
-%% See http://www.afnic.fr/afnic/web/mentions-legales-whois_en
+%% See https://www.afnic.fr/en/products-and-services/services/whois/whois-special-notice/
 %%
 %% Use '-h' option to obtain more information about this service.
 %%
-%% [212.240.29.210 REQUEST] >> free.fr
+%% [79.209.236.127 REQUEST] >> free.fr
 %%
 %% RL Net [##########] - RL IP [#########.]
 %%
@@ -18,15 +18,15 @@
 domain:      free.fr
 status:      ACTIVE
 hold:        NO
-holder-c:    FS2921-FRNIC
-admin-c:     ACP23-FRNIC
-tech-c:      TCP8-FRNIC
+holder-c:    FS1435-FRNIC
+admin-c:     FS1435-FRNIC
+tech-c:      FS1435-FRNIC
 zone-c:      NFC1-FRNIC
 nsl-id:      NSL11274-FRNIC
 registrar:   ONLINE SAS
-anniversary: 23/12
+Expiry Date: 23/12/2018
 created:     15/03/1999
-last-update: 23/12/2008
+last-update: 23/12/2017
 source:      FRNIC
 
 ns-list:     NSL11274-FRNIC
@@ -37,72 +37,64 @@ source:      FRNIC
 registrar:   ONLINE SAS
 type:        Isp Option 1
 address:     8 Rue de la Ville l'Evêque
-address:     PARIS
+address:     75008 PARIS
 country:     FR
 phone:       +33 1 84 13 00 01
 fax-no:      +33 1 73 50 29 01
-e-mail:      hebergement@online.net
+e-mail:      hostmaster@online.net
 website:     http://www.online.net
 anonymous:   NO
 registered:  01/04/1999
 source:      FRNIC
 
-nic-hdl:     FS2921-FRNIC
+nic-hdl:     FS1435-FRNIC
 type:        ORGANIZATION
-contact:     FREE SAS
-address:     8, rue de la ville l'Eveque
+contact:     Free SAS
+address:     16 rue de la ville l'Eveque
 address:     75008 Paris
 country:     FR
-phone:       +33 1 73 50 20 00
-fax-no:      +33 1 73 50 25 01
-e-mail:      free.282193@spamfree.bookmyname.com
+phone:       +33.173502000
+fax-no:      +33.173502501
+e-mail:      26ec12896f4b2cdf.152599@spamfree.bookmyname.com
 registrar:   ONLINE SAS
-changed:     04/04/2013 nic@nic.fr
+changed:     04/07/2018 nic@nic.fr
 anonymous:   NO
 obsoleted:   NO
-eligstatus:  ok
-eligdate:    23/12/2008 00:00:00
+eligstatus:  not identified
+reachstatus: not identified
 source:      FRNIC
 
-nic-hdl:     ACP23-FRNIC
-type:        ROLE
-contact:     Administrative Contact for ProXad
-address:     Free SAS / ProXad
-address:     8, rue de la ville l'Eveque
+nic-hdl:     FS1435-FRNIC
+type:        ORGANIZATION
+contact:     Free SAS
+address:     16 rue de la ville l'Eveque
 address:     75008 Paris
 country:     FR
-phone:       +33 1 73 50 20 00
-fax-no:      +33 1 73 50 25 01
-e-mail:      hostmaster@proxad.net
-trouble:     Information: http://www.proxad.net/
-trouble:     Spam/Abuse requests: mailto:abuse@proxad.net
-admin-c:     RA999-FRNIC
-tech-c:      NH1184-FRNIC
-notify:      ripe-notify@proxad.net
+phone:       +33.173502000
+fax-no:      +33.173502501
+e-mail:      26ec12896f4b2cdf.152599@spamfree.bookmyname.com
 registrar:   ONLINE SAS
-changed:     17/02/2004 nhyvernat+ripe@corp.free.fr
+changed:     04/07/2018 nic@nic.fr
 anonymous:   NO
 obsoleted:   NO
+eligstatus:  not identified
+reachstatus: not identified
 source:      FRNIC
 
-nic-hdl:     TCP8-FRNIC
-type:        ROLE
-contact:     Technical Contact for ProXad
-address:     Free SAS / ProXad
-address:     8, rue de la ville l'Eveque
+nic-hdl:     FS1435-FRNIC
+type:        ORGANIZATION
+contact:     Free SAS
+address:     16 rue de la ville l'Eveque
 address:     75008 Paris
 country:     FR
-phone:       +33 1 73 50 20 00
-fax-no:      +33 1 73 50 25 01
-e-mail:      hostmaster@proxad.net
-trouble:     Information: http://www.proxad.net/
-trouble:     Spam/Abuse requests: mailto:abuse@proxad.net
-admin-c:     RA999-FRNIC
-tech-c:      NH1184-FRNIC
-notify:      ripe-notify@proxad.net
+phone:       +33.173502000
+fax-no:      +33.173502501
+e-mail:      26ec12896f4b2cdf.152599@spamfree.bookmyname.com
 registrar:   ONLINE SAS
-changed:     17/02/2004 nhyvernat+ripe@corp.free.fr
+changed:     04/07/2018 nic@nic.fr
 anonymous:   NO
 obsoleted:   NO
+eligstatus:  not identified
+reachstatus: not identified
 source:      FRNIC
 

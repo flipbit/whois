@@ -2,66 +2,39 @@ Domain Name: KICKSTARTER.COM
 Registry Domain ID: 2758686_DOMAIN_COM-VRSN
 Registrar WHOIS Server: whois.godaddy.com
 Registrar URL: http://www.godaddy.com
-Update Date: 2013-08-28 08:29:45
-Creation Date: 1998-12-15 00:00:00
-Registrar Registration Expiration Date: 2018-12-14 00:00:00
+Updated Date: 2018-03-28T21:39:59Z
+Creation Date: 1998-12-15T05:00:00Z
+Registrar Registration Expiration Date: 2020-12-14T05:00:00Z
 Registrar: GoDaddy.com, LLC
 Registrar IANA ID: 146
 Registrar Abuse Contact Email: abuse@godaddy.com
-Registrar Abuse Contact Phone: +1.480-624-2505
-Domain Status: clientTransferProhibited
-Domain Status: clientUpdateProhibited
-Domain Status: clientRenewProhibited
-Domain Status: clientDeleteProhibited
-Registry Registrant ID: 
-Registrant Name: Domain Administrator
+Registrar Abuse Contact Phone: +1.4806242505
+Domain Status: clientTransferProhibited http://www.icann.org/epp#clientTransferProhibited
+Domain Status: clientUpdateProhibited http://www.icann.org/epp#clientUpdateProhibited
+Domain Status: clientRenewProhibited http://www.icann.org/epp#clientRenewProhibited
+Domain Status: clientDeleteProhibited http://www.icann.org/epp#clientDeleteProhibited
 Registrant Organization: Kickstarter
-Registrant Street: 155 Rivington St.
-Registrant Street: Second Floor
-Registrant City: New York
 Registrant State/Province: New York
-Registrant Postal Code: 10002
-Registrant Country: United States
-Registrant Phone: +1.6465969536
-Registrant Phone Ext: 
-Registrant Fax: 
-Registrant Fax Ext: 
-Registrant Email: domains@kickstarter.com
-Registry Admin ID: 
-Admin Name: Domain Administrator
-Admin Organization: Kickstarter
-Admin Street: 155 Rivington St.
-Admin Street: Second Floor
-Admin City: New York
-Admin State/Province: New York
-Admin Postal Code: 10002
-Admin Country: United States
-Admin Phone: +1.6465969536
-Admin Phone Ext: 
-Admin Fax: 
-Admin Fax Ext: 
-Admin Email: domains@kickstarter.com
-Registry Tech ID: 
-Tech Name: Domain Administrator
-Tech Organization: Kickstarter
-Tech Street: 155 Rivington St.
-Tech Street: Second Floor
-Tech City: New York
-Tech State/Province: New York
-Tech Postal Code: 10002
-Tech Country: United States
-Tech Phone: +1.6465969536
-Tech Phone Ext: 
-Tech Fax: 
-Tech Fax Ext: 
-Tech Email: domains@kickstarter.com
+Registrant Country: US
+Registrant Email: Select Contact Domain Holder link at https://www.godaddy.com/whois/results.aspx?domain=KICKSTARTER.COM
+Admin Email: Select Contact Domain Holder link at https://www.godaddy.com/whois/results.aspx?domain=KICKSTARTER.COM
+Tech Email: Select Contact Domain Holder link at https://www.godaddy.com/whois/results.aspx?domain=KICKSTARTER.COM
 Name Server: NS-51.AWSDNS-06.COM
 Name Server: NS-1820.AWSDNS-35.CO.UK
 Name Server: NS-1497.AWSDNS-59.ORG
 Name Server: NS-652.AWSDNS-17.NET
 DNSSEC: unsigned
 URL of the ICANN WHOIS Data Problem Reporting System: http://wdprs.internic.net/
-Last update of WHOIS database: 2014-10-22T10:00:00Z
+>>> Last update of WHOIS database: 2018-11-01T09:00:00Z <<<
+
+For more information on Whois status codes, please visit https://www.icann.org/resources/pages/epp-status-codes-2014-06-16-en
+
+Notes: 
+
+IMPORTANT: Port43 will provide the ICANN-required minimum data set per 
+ICANN Temporary Specification, adopted 17 May 2018. 
+Visit https://whois.godaddy.com to look up contact data for domains 
+not covered by GDPR policy.
 
 The data contained in GoDaddy.com, LLC's WhoIs database,
 while believed by the company to be reliable, is provided "as is"

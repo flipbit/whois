@@ -2,64 +2,70 @@ Domain Name: HISTATS.COM
 Registry Domain ID: 483189985_DOMAIN_COM-VRSN
 Registrar WHOIS Server: whois.godaddy.com
 Registrar URL: http://www.godaddy.com
-Update Date: 2013-05-20 09:03:41
-Creation Date: 2006-06-12 11:33:36
-Registrar Registration Expiration Date: 2015-06-12 11:33:36
+Updated Date: 2017-04-09T21:30:44Z
+Creation Date: 2006-06-12T16:33:36Z
+Registrar Registration Expiration Date: 2019-06-12T16:33:36Z
 Registrar: GoDaddy.com, LLC
 Registrar IANA ID: 146
 Registrar Abuse Contact Email: abuse@godaddy.com
-Registrar Abuse Contact Phone: +1.480-624-2505
-Domain Status: clientTransferProhibited
-Domain Status: clientUpdateProhibited
-Domain Status: clientRenewProhibited
-Domain Status: clientDeleteProhibited
-Registry Registrant ID: 
+Registrar Abuse Contact Phone: +1.4806242505
+Domain Status: ok http://www.icann.org/epp#ok
+Registry Registrant ID: Not Available From Registry
 Registrant Name: Registration Private
 Registrant Organization: Domains By Proxy, LLC
 Registrant Street: DomainsByProxy.com
-Registrant Street: 14747 N Northsight Blvd Suite 111, PMB 309
+Registrant Street: 14455 N. Hayden Road
 Registrant City: Scottsdale
 Registrant State/Province: Arizona
 Registrant Postal Code: 85260
-Registrant Country: United States
+Registrant Country: US
 Registrant Phone: +1.4806242599
 Registrant Phone Ext: 
 Registrant Fax: +1.4806242598
 Registrant Fax Ext: 
 Registrant Email: HISTATS.COM@domainsbyproxy.com
-Registry Admin ID: 
+Registry Admin ID: Not Available From Registry
 Admin Name: Registration Private
 Admin Organization: Domains By Proxy, LLC
 Admin Street: DomainsByProxy.com
-Admin Street: 14747 N Northsight Blvd Suite 111, PMB 309
+Admin Street: 14455 N. Hayden Road
 Admin City: Scottsdale
 Admin State/Province: Arizona
 Admin Postal Code: 85260
-Admin Country: United States
+Admin Country: US
 Admin Phone: +1.4806242599
 Admin Phone Ext: 
 Admin Fax: +1.4806242598
 Admin Fax Ext: 
 Admin Email: HISTATS.COM@domainsbyproxy.com
-Registry Tech ID: 
+Registry Tech ID: Not Available From Registry
 Tech Name: Registration Private
 Tech Organization: Domains By Proxy, LLC
 Tech Street: DomainsByProxy.com
-Tech Street: 14747 N Northsight Blvd Suite 111, PMB 309
+Tech Street: 14455 N. Hayden Road
 Tech City: Scottsdale
 Tech State/Province: Arizona
 Tech Postal Code: 85260
-Tech Country: United States
+Tech Country: US
 Tech Phone: +1.4806242599
 Tech Phone Ext: 
 Tech Fax: +1.4806242598
 Tech Fax Ext: 
 Tech Email: HISTATS.COM@domainsbyproxy.com
-Name Server: NS1.SOFTLAYER.COM
-Name Server: NS2.SOFTLAYER.COM
+Name Server: NS112.OVH.NET
+Name Server: DNS112.OVH.NET
 DNSSEC: unsigned
 URL of the ICANN WHOIS Data Problem Reporting System: http://wdprs.internic.net/
-Last update of WHOIS database: 2014-10-22T10:00:00Z
+>>> Last update of WHOIS database: 2018-11-01T08:00:00Z <<<
+
+For more information on Whois status codes, please visit https://www.icann.org/resources/pages/epp-status-codes-2014-06-16-en
+
+Notes: 
+
+IMPORTANT: Port43 will provide the ICANN-required minimum data set per 
+ICANN Temporary Specification, adopted 17 May 2018. 
+Visit https://whois.godaddy.com to look up contact data for domains 
+not covered by GDPR policy.
 
 The data contained in GoDaddy.com, LLC's WhoIs database,
 while believed by the company to be reliable, is provided "as is"

@@ -1,62 +1,43 @@
 Domain Name: etsy.com
-Registry Domain ID: 
+Registry Domain ID: 111315648_DOMAIN_COM-VRSN
 Registrar WHOIS Server: whois.markmonitor.com
 Registrar URL: http://www.markmonitor.com
-Updated Date: 2014-07-10T04:00:28-0700
+Updated Date: 2018-05-31T04:00:46-0700
 Creation Date: 2004-02-05T15:50:06-0800
 Registrar Registration Expiration Date: 2021-02-05T15:50:06-0800
 Registrar: MarkMonitor, Inc.
 Registrar IANA ID: 292
 Registrar Abuse Contact Email: abusecomplaints@markmonitor.com
 Registrar Abuse Contact Phone: +1.2083895740
-Domain Status: clientUpdateProhibited
-Domain Status: clientTransferProhibited
-Domain Status: clientDeleteProhibited
-Registry Registrant ID: 
-Registrant Name: Domain Admin
-Registrant Organization: Etsy Inc.
-Registrant Street: 55 Washington Street, Suite 512
-Registrant City: Brooklyn
-Registrant State/Province: New York
-Registrant Postal Code: 11201
+Domain Status: clientUpdateProhibited (https://www.icann.org/epp#clientUpdateProhibited)
+Domain Status: clientTransferProhibited (https://www.icann.org/epp#clientTransferProhibited)
+Domain Status: clientDeleteProhibited (https://www.icann.org/epp#clientDeleteProhibited)
+Registrant Organization: Etsy, Inc.
+Registrant State/Province: NY
 Registrant Country: US
-Registrant Phone: +1.7188557955
-Registrant Phone Ext: 
-Registrant Fax: +1.7188557956
-Registrant Fax Ext: 
-Registrant Email: dns-admin@etsy.com
-Registry Admin ID: 
-Admin Name: Domain Admin
-Admin Organization: Etsy Inc.
-Admin Street: 55 Washington Street, Suite 512
-Admin City: Brooklyn
-Admin State/Province: New York
-Admin Postal Code: 11201
+Admin Organization: Etsy, Inc.
+Admin State/Province: NY
 Admin Country: US
-Admin Phone: +1.7188557955
-Admin Phone Ext: 
-Admin Fax: +1.7188557956
-Admin Fax Ext: 
-Admin Email: dns-admin@etsy.com
-Registry Tech ID: 
-Tech Name: Domain Admin
-Tech Organization: Etsy Inc.
-Tech Street: 55 Washington Street, Suite 512
-Tech City: Brooklyn
-Tech State/Province: New York
-Tech Postal Code: 11201
+Tech Organization: Etsy, Inc.
+Tech State/Province: NY
 Tech Country: US
-Tech Phone: +1.7188557955
-Tech Phone Ext: 
-Tech Fax: +1.7188557956
-Tech Fax Ext: 
-Tech Email: dns-admin@etsy.com
-Name Server: ns3.p28.dynect.net
+Name Server: ns-1264.awsdns-30.org
+Name Server: ns-162.awsdns-20.com
 Name Server: ns1.p28.dynect.net
-Name Server: ns4.p28.dynect.net
-Name Server: ns2.p28.dynect.net
+Name Server: ns3.p28.dynect.net
+DNSSEC: unsigned
 URL of the ICANN WHOIS Data Problem Reporting System: http://wdprs.internic.net/
->>> Last update of WHOIS database: 2014-10-22T03:16:20-0700 <<<
+>>> Last update of WHOIS database: 2018-11-01T01:45:42-0700 <<<
+
+If certain contact information is not shown for a Registrant, Administrative,
+or Technical contact, and you wish to send a message to these contacts, please
+send your message to whoisrelay@markmonitor.com and specify the domain name in
+the subject line. We will forward that message to the underlying contact.
+
+If you have a legitimate interest in viewing the non-public WHOIS details, send
+your request and the reasons for your request to abusecomplaints@markmonitor.com
+and specify the domain name in the subject line. We will review that request and
+may ask for supporting documentation and explanation.
 
 The Data in MarkMonitor.com's WHOIS database is provided by MarkMonitor.com for
 information purposes, and to assist persons in obtaining information about or
@@ -81,4 +62,7 @@ Professional and Managed Services
 Visit MarkMonitor at http://www.markmonitor.com
 Contact us at +1.8007459229
 In Europe, at +44.02032062220
+
+For more information on Whois status codes, please visit
+ https://www.icann.org/resources/pages/epp-status-codes-2014-06-16-en
 

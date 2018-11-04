@@ -1,96 +1,57 @@
-﻿using Whois.Net;
+﻿using System;
+using System.Text;
+using System.Threading.Tasks;
+using Whois.Net;
 using Tokens;
+using Whois.Logging;
+using Whois.Models;
+using Whois.Resources;
 
 namespace Whois.Servers
 {
     /// <summary>
-    /// Class to lookup a WHOIS server for a given domain name.
+    /// Class to lookup a WHOIS server for a TLD from IANA 
     /// </summary>
     public class IanaServerLookup : IWhoisServerLookup
     {
-        /// <summary>
-        /// Gets or sets the TCP reader factory.
-        /// </summary>
-        /// <value>
-        /// The TCP reader factory.
-        /// </value>
-        public ITcpReaderFactory TcpReaderFactory { get; set; }
+        private const string IanaUrl = "whois.iana.org";
+        private static readonly ILog Log = LogProvider.GetCurrentClassLogger();
 
-        /// <summary>
-        /// Initializes a new instance of the <see cref="InternicServerLookup"/> class.
-        /// </summary>
-        public IanaServerLookup()
+        public WhoisServer Lookup(string tld)
         {
-            TcpReaderFactory = new TcpReaderFactory();
+            return LookupAsync(tld).Result;
         }
 
-        /// <summary>
-        /// Gets the TLD for a given domain.
-        /// </summary>
-        /// <param name="domain">The domain.</param>
-        /// <returns></returns>
-        public string GetTld(string domain)
-        {
-            var tld = domain;
+        public async Task<WhoisServer> LookupAsync(string tld)
+        {            
+            var content = await GetWhoisServerResponse(tld);
 
-            if (!string.IsNullOrEmpty(domain))
-            {
-                var parts = domain.Split('.');
+            // Reflect the raw response onto a ParsedWhoisServer object
+            var parsed = new Tokenizer()
+                .Parse<ParsedWhoisServer>(Embedded.Patterns.Servers.Iana, content);
 
-                if (parts.Length > 1) tld = parts[parts.Length - 1];
-            }
+            var response = new WhoisServer(tld, parsed.Url);
 
-            return tld;
+            response.Content = content;
+            response.ParsedWhoisServer = parsed;
+
+            return response;
         }
 
-        /// <summary>
-        /// Gets the pattern used to decode IANA WHOIS server reponses.
-        /// </summary>
-        /// <value>
-        /// The pattern.
-        /// </value>
-        public string Pattern
+        private async Task<string> GetWhoisServerResponse(string tld)
         {
-            get
-            {
-                var reader = new EmbeddedPatternReader();
-                
-                return reader.Read(GetType().Assembly, "Whois.Patterns.Servers.Iana.txt");
-            }
-        }
+            string response;
 
-        /// <summary>
-        /// Lookups the WHOIS server for the specified domain.
-        /// </summary>
-        /// <param name="domain">The domain.</param>
-        /// <returns></returns>
-        public IWhoisServer Lookup(string domain)
-        {
-            var tld = GetTld(domain);
+            Log.Debug("Looking up Root TLD server for {0} from {1}", tld, IanaUrl);
 
-            var text = GetWhoisServerResponse(tld);
-
-            var tokenizer = new Tokenizer();
-            tokenizer.Options.ThrowExceptionOnMissingProperty = true;
-
-            var record = tokenizer.Parse<WhoisServerRecord>(Pattern, text);
-
-            record.Value.RawResponse = text;
-
-            return record.Value;
-        }
-
-        /// <summary>
-        /// Queries the WHOIS server with the given TLD.
-        /// </summary>
-        /// <param name="tld">The TLD.</param>
-        /// <returns></returns>
-        private string GetWhoisServerResponse(string tld)
-        {
             using (var tcpReader = TcpReaderFactory.Create())
             {
-                return tcpReader.Read("whois.iana.org", 43, tld.ToUpper());
+                response = await tcpReader.Read(IanaUrl, 43, tld.ToUpper(), Encoding.UTF8);
             }
+
+            Log.Debug("Received {0:###,###,##0} byte(s).", response.Length);
+
+            return response;
         }
     }
 }

@@ -6,14 +6,15 @@
 domain:        MAIL.RU
 nserver:       ns1.mail.ru. 217.69.139.112
 nserver:       ns2.mail.ru. 94.100.180.138
+nserver:       ns3.mail.ru. 185.30.176.202
 state:         REGISTERED, DELEGATED, VERIFIED
 org:           MGL Mail.ru Internet Assets Limited
 registrar:     RU-CENTER-RU
 admin-contact: https://www.nic.ru/whois
-created:       1997.09.27
-paid-till:     2015.10.01
-free-date:     2015.11.01
+created:       1997-09-27T14:33:26Z
+paid-till:     2019-09-30T21:00:00Z
+free-date:     2019-11-01
 source:        TCI
 
-Last updated on 2014.10.22 13:46:30 MSK
+Last updated on 2018-10-31T20:41:30Z
 

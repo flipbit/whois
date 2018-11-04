@@ -1,4 +1,6 @@
 ﻿using System.Text;
+using System.Threading.Tasks;
+using Whois.Models;
 
 namespace Whois.Visitors
 {
@@ -9,18 +11,16 @@ namespace Whois.Visitors
     {
         private readonly string fakeContent;
 
-        public Encoding Encoding { get; private set; }
-
         public FakeWhoisVisitor(string content)
         {
             fakeContent = content;
         }
 
-        public WhoisRecord Visit(WhoisRecord record)
+        public Task<LookupState> Visit(LookupState record)
         {
-            record.Text =  fakeContent;
+            record.Response = new WhoisResponse(fakeContent);
 
-            return record;
+            return Task.FromResult(record);
         }
     }
 }

@@ -1,64 +1,63 @@
-Domain Name: a8.net
+Domain Name: A8.NET
 Registry Domain ID: 2208922_DOMAIN_NET-VRSN
-Registrar WHOIS Server: whois.melbourneit.com
-Registrar URL: http://www.melbourneit.com.au
-Updated Date: 2014-08-01T02:19:43Z
+Registrar WHOIS Server: whois.jprs.jp
+Registrar URL: https://jprs.jp/registrar/
+Updated Date: 2018-07-30T02:02:16Z
 Creation Date: 1998-09-25T04:00:00Z
-Registrar Registration Expiration Date: 2015-09-24T04:00:00Z
-Registrar: Melbourne IT Ltd
-Registrar IANA ID: 13
-Registrar Abuse Contact Email: abuse@melbourneit.com.au
-Registrar Abuse Contact Phone: +61.386242300
-Domain Status: ok
-Registry Registrant ID: 
+Registrar Registration Expiration Date: 2019-09-24T04:00:00Z
+Registrar: Japan Registry Services Co.,Ltd.(JPRS)
+Registrar IANA ID: 1485
+Registrar Abuse Contact Email: gtld-abuse@jprs.jp
+Registrar Abuse Contact Phone: +81.352158457
+Domain Status: ok  https://icann.org/epp#ok
+Registry Registrant ID: Not Available From Registry
 Registrant Name: F@N Communications, Inc
-Registrant Organization: _
 Registrant Street: 1-1-8 Shibuya
 Registrant City: Shibuya-ku
 Registrant State/Province: Tokyo
 Registrant Postal Code: 150-0002
 Registrant Country: JP
-Registrant Phone: +81.81662654830
-Registrant Phone Ext: 
-Registrant Fax: 
-Registrant Fax Ext: 
-Registrant Email: nic-staff@sakura.ad.jp
-Registry Admin ID: 
-Admin Name: FAN Communications
-Admin Organization: _
+Registrant Phone: +81.662654830
+Registrant Email: mit-staff@sakura.ad.jp
+Registry Admin ID: Not Available From Registry
+Admin Name: Communications FAN
 Admin Street: 1-1-8 Shibuya
 Admin City: Shibuya-ku
 Admin State/Province: Tokyo
 Admin Postal Code: 150-0002
 Admin Country: JP
-Admin Phone: +81.81357663780
-Admin Phone Ext: 
-Admin Fax: 
-Admin Fax Ext: 
-Admin Email: domain-info@fancs.com
-Registry Tech ID: 
-Tech Name: FAN Communications
-Tech Organization: _
+Admin Phone: +81.357663780
+Admin Email: mit-staff@sakura.ad.jp
+Registry Tech ID: Not Available From Registry
+Tech Name: Communications FAN
 Tech Street: 1-1-8 Shibuya
 Tech City: Shibuya-ku
 Tech State/Province: Tokyo
 Tech Postal Code: 150-0002
 Tech Country: JP
-Tech Phone: +81.81357663780
-Tech Phone Ext: 
-Tech Fax: 
-Tech Fax Ext: 
+Tech Phone: +81.357663780
 Tech Email: domain-info@fancs.com
-Name Server: DNS0.A8.NET
-Name Server: DNS10.A8.NET
-Name Server: DNS1.A8.NET
+Name Server: NS-124.AWSDNS-15.COM
+Name Server: NS-888.AWSDNS-47.NET
+Name Server: NS-1261.AWSDNS-29.ORG
+Name Server: NS-2044.AWSDNS-63.CO.UK
 DNSSEC: unsigned
-URL of the ICANN WHOIS Data Problem Reporting System: http://wdrprs.internic.net
->>> Last update of WHOIS database: 2014-10-22T10:18:56Z
+URL of the ICANN WHOIS Data Problem Reporting System: http://wdprs.internic.net/
+>>> Last update of WHOIS database: 2018-11-01T09:03:04Z <<<
 
-TERMS OF USE OF MELBOURNE IT WHOIS DATABASE
-The WHOIS database is operated by Melbourne IT Ltd ('we', 'our' or 'us'). Your access to, and use of, our WHOIS database and the information made available on our WHOIS database is subject to these Terms of Use and our Privacy Policy. All information contained in our WHOIS database is provided 'as is'. We take no responsibility for any error or omission in our WHOIS database. The data in our WHOIS database is provided to you for your information only. You may use the information in our WHOIS database only for the purpose of obtaining information about or related to a domain name registration record ('Permitted Purpose'). You agree not to use high-volume, automated electronic processes to access or query our WHOIS database. By submitting a WHOIS query to us, you agree that you will only use the data obtained from a WHOIS query for the Permitted Purpose and for lawful purposes, and that you will not: (a) allow, enable, or otherwise support the transmission of mass, unsolicited, commercial advertising or solicitations by e-mail, telephone, or facsimile; or (b) enable high volume, automated, electronic processes that send queries or data to the systems of any Registry Operator or ICANN-Accredited registrar, except as reasonably necessary to register domain names or modify existing domain name registrations. You also agree that the copying, reproduction, translation, compilation, re-packaging, dissemination or other use of the data in our WHOIS database is prohibited without our prior written consent. We reserve the right to terminate your access to our WHOIS database at any time, and for any reason, including (without limitation) if you fail to comply with any provision of these Terms of Use, or we consider that you are excessively querying our WHOIS database. These Terms of Use may be modified by us at any time without notice by our amending the Terms of Use on this web page. You agree that your use of our WHOIS database following any modification to these Terms of Use will constitute your acceptance of these Terms of Use (as modified from time to time).
+For more information on Whois status codes, please visit https://icann.org/epp
 
+JPRS WHOIS LEGAL DISCLAIMER:
 
+The WHOIS service (the "Service") offered by Japan Registry Services Co.,Ltd. (JPRS) and the access to the records in the JPRS WHOIS database (the "Database") are provided for information purposes and query-based public access.
 
+Neither JPRS nor any of its officers, directors, employees or agents makes any warranty as to the results to be obtained from use of the Service. JPRS specifically disclaims all warranties of any kind, whether express, implied or statutory, including, but not limited to, any warranties of title, non-infringement, merchantability or fitness for a particular purpose.
+In no event shall JPRS nor anyone else involved in creating, supporting, producing or delivering the Service be liable to you for any lost profits or costs, even if JPRS or such person has been advised of the possibility of such damages.
 
+JPRS allows you to use the Service only for lawful purposes and that, under no circumstances shall you use the Service to: (a) allow, enable or otherwise support the transmission by e-mail, telephone, postal mail, facsimile or other means of mass unsolicited, commercial advertising or solicitations to entities other than the data recipient's own existing customers; or (b) enable high volume, automated, electronic processes that send queries or data to the systems of any registry operator or ICANN-accredited registrar, except as reasonably necessary to register domain names or modify existing registrations.
+
+By submitting the query you agree to abide by these terms and further agree that JPRS may take measures to limit the use of the Service in order to protect the privacy of its registrants or the integrity of the Database.
+
+JPRS reserves the right to modify or change these terms at any time without prior or subsequent notification of any kind.
+
+For further information, use 'whois -h whois.jprs.jp help'. To express Japanese output, add '/j' at the end of command, e.g. 'whois -h whois.jprs.jp xxx/j'.

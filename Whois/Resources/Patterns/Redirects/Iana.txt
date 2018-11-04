@@ -1,0 +1,33 @@
+domain:       {WhoisServer.TLD:ToLower}
+
+organisation: {WhoisServer.Organization.Name}
+address:      {WhoisServer.Organization.Address#}
+
+contact:      administrative
+name:         {WhoisServer.AdminContact.Name}
+organisation: {WhoisServer.AdminContact.Organization}
+address:      {WhoisServer.AdminContact.Address#}
+phone:        {WhoisServer.AdminContact.PhoneNumber}
+fax-no:       {WhoisServer.AdminContact.FaxNumber}
+e-mail:       {WhoisServer.AdminContact.Email}
+
+contact:      technical
+name:         {WhoisServer.TechContact.Name}
+organisation: {WhoisServer.TechContact.Organization}
+address:      {WhoisServer.TechContact.Address#}
+phone:        {WhoisServer.TechContact.PhoneNumber}
+fax-no:       {WhoisServer.TechContact.FaxNumber}
+e-mail:       {WhoisServer.TechContact.Email}
+
+nserver:      {WhoisServer.NameServers$#}
+nserver:      {WhoisServer.NameServers$#}
+
+whois:        {WhoisServer.Url}
+
+status:       ACTIVE
+remarks:      {WhoisServer.Remarks}
+
+created:      {WhoisServer.Created}
+changed:      {WhoisServer.Changed}
+source:       IANA
+

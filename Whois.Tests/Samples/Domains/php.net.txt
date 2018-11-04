@@ -2,65 +2,64 @@ Domain Name: PHP.NET
 Registry Domain ID: 4701744_DOMAIN_NET-VRSN
 Registrar WHOIS Server: whois.tucows.com
 Registrar URL: http://tucowsdomains.com
-Updated Date: 2013-11-12 23:13:21
-Creation Date: 1997-11-18 05:00:00
-Registrar Registration Expiration Date: 2014-11-17 05:00:00
+Updated Date: 2015-08-09T05:50:14
+Creation Date: 1997-11-18T05:00:00
+Registrar Registration Expiration Date: 2023-11-17T05:00:00
 Registrar: TUCOWS, INC.
 Registrar IANA ID: 69
+Reseller: easyDNS Technologies Inc.
+Domain Status: clientTransferProhibited https://icann.org/epp#clientTransferProhibited
+Domain Status: clientUpdateProhibited https://icann.org/epp#clientUpdateProhibited
+Registry Registrant ID: 
+Registrant Name: REDACTED FOR PRIVACY
+Registrant Organization: REDACTED FOR PRIVACY
+Registrant Street: REDACTED FOR PRIVACY 
+Registrant City: REDACTED FOR PRIVACY
+Registrant State/Province: REDACTED FOR PRIVACY
+Registrant Postal Code: REDACTED FOR PRIVACY
+Registrant Country: REDACTED FOR PRIVACY
+Registrant Phone: REDACTED FOR PRIVACY
+Registrant Phone Ext: 
+Registrant Fax: REDACTED FOR PRIVACY
+Registrant Fax Ext: 
+Registrant Email: REDACTED FOR PRIVACY
+Registry Admin ID: 
+Admin Name: REDACTED FOR PRIVACY
+Admin Organization: REDACTED FOR PRIVACY
+Admin Street: REDACTED FOR PRIVACY 
+Admin City: REDACTED FOR PRIVACY
+Admin State/Province: REDACTED FOR PRIVACY
+Admin Postal Code: REDACTED FOR PRIVACY
+Admin Country: REDACTED FOR PRIVACY
+Admin Phone: REDACTED FOR PRIVACY
+Admin Phone Ext: 
+Admin Fax: REDACTED FOR PRIVACY
+Admin Fax Ext: 
+Admin Email: REDACTED FOR PRIVACY
+Registry Tech ID: 
+Tech Name: REDACTED FOR PRIVACY
+Tech Organization: REDACTED FOR PRIVACY
+Tech Street: REDACTED FOR PRIVACY 
+Tech City: REDACTED FOR PRIVACY
+Tech State/Province: REDACTED FOR PRIVACY
+Tech Postal Code: REDACTED FOR PRIVACY
+Tech Country: REDACTED FOR PRIVACY
+Tech Phone: REDACTED FOR PRIVACY
+Tech Phone Ext: 
+Tech Fax: REDACTED FOR PRIVACY
+Tech Fax Ext: 
+Tech Email: REDACTED FOR PRIVACY
+Name Server: dns3.easydns.org
+Name Server: dns1.easydns.com
+Name Server: dns2.easydns.net
+Name Server: dns4.easydns.info
+
 Registrar Abuse Contact Email: domainabuse@tucows.com
 Registrar Abuse Contact Phone: +1.4165350123
-Reseller: easyDNS Technologies Inc.
-Reseller: easydns@myprivacy.ca
-Reseller: +1.416.535.8672
-Reseller: http://www.easydns.com
-Domain Status: clientTransferProhibited
-Domain Status: clientUpdateProhibited
-Registry Registrant ID: 
-Registrant Name: PHP Development Team
-Registrant Organization: PHP Development Team
-Registrant Street: 104 Shaftsberry Ct
-Registrant City: Cary
-Registrant State/Province: NC
-Registrant Postal Code: 27513
-Registrant Country: US
-Registrant Phone: +1.9192548916
-Registrant Phone Ext: 
-Registrant Fax: 
-Registrant Fax Ext: 
-Registrant Email: rasmus@lerdorf.on.ca
-Registry Admin ID: 
-Admin Name: PHP Development Team
-Admin Organization: PHP Development Team
-Admin Street: 104 Shaftsberry Ct
-Admin City: Cary
-Admin State/Province: NC
-Admin Postal Code: 27513
-Admin Country: US
-Admin Phone: +1.9192548916
-Admin Phone Ext: 
-Admin Fax: 
-Admin Fax Ext: 
-Admin Email: rasmus@lerdorf.on.ca
-Registry Tech ID: 
-Tech Name: easyDNS Hostmaster
-Tech Organization: easyDNS Technologies Inc.
-Tech Street: 67 Mowat Ave. ste 331
-Tech City: Toronto
-Tech State/Province: Ontario
-Tech Postal Code: M6K 3E3
-Tech Country: CA
-Tech Phone: +1.4165358672
-Tech Phone Ext: 
-Tech Fax: +1.4165350237
-Tech Fax Ext: 
-Tech Email: hostmaster@easydns.com
-Name Server: DNS1.EASYDNS.COM
-Name Server: DNS4.EASYDNS.INFO
-Name Server: DNS2.EASYDNS.NET
-Name Server: DNS3.EASYDNS.ORG
-DNSSEC: Unsigned
 URL of the ICANN WHOIS Data Problem Reporting System: http://wdprs.internic.net/
->>> Last update of WHOIS database: 2013-11-12 23:13:21 <<<
+>>> Last update of WHOIS database: 2015-08-09T05:50:14 <<<
+
+"For more information on Whois status codes, please visit https://icann.org/epp"
 
 Registration Service Provider:
     easyDNS Technologies Inc., easydns@myprivacy.ca

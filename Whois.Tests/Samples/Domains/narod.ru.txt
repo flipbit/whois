@@ -6,14 +6,15 @@
 domain:        NAROD.RU
 nserver:       ns1.ucoz.net.
 nserver:       ns2.ucoz.net.
+nserver:       ns3.ucoz.net.
 state:         REGISTERED, DELEGATED, VERIFIED
 org:           LLC "Ucoz Media"
 registrar:     RU-CENTER-RU
 admin-contact: https://www.nic.ru/whois
-created:       1999.12.09
-paid-till:     2015.01.01
-free-date:     2015.02.01
+created:       1999-12-09T15:47:03Z
+paid-till:     2018-12-31T21:00:00Z
+free-date:     2019-02-01
 source:        TCI
 
-Last updated on 2014.10.22 14:26:34 MSK
+Last updated on 2018-11-01T08:56:34Z
 

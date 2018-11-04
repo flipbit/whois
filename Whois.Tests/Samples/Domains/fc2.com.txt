@@ -2,19 +2,17 @@ Domain Name: FC2.COM
 Registry Domain ID: 6642269_DOMAIN_COM-VRSN
 Registrar WHOIS Server: whois.tucows.com
 Registrar URL: http://tucowsdomains.com
-Updated Date: 2014-10-03 18:13:14
-Creation Date: 1999-05-20 03:06:00
-Registrar Registration Expiration Date: 2019-05-20 03:06:36
+Updated Date: 2018-09-28T19:01:17
+Creation Date: 1999-05-20T03:06:00
+Registrar Registration Expiration Date: 2019-05-20T03:06:36
 Registrar: TUCOWS, INC.
 Registrar IANA ID: 69
-Registrar Abuse Contact Email: domainabuse@tucows.com
-Registrar Abuse Contact Phone: +1.4165350123
-Domain Status: clientTransferProhibited
-Domain Status: clientUpdateProhibited
+Domain Status: clientTransferProhibited https://icann.org/epp#clientTransferProhibited
+Domain Status: clientUpdateProhibited https://icann.org/epp#clientUpdateProhibited
 Registry Registrant ID: 
 Registrant Name: Contact Privacy Inc. Customer 014173950
 Registrant Organization: Contact Privacy Inc. Customer 014173950
-Registrant Street: 96 Mowat Ave
+Registrant Street: 96 Mowat Ave 
 Registrant City: Toronto
 Registrant State/Province: ON
 Registrant Postal Code: M6K 3M1
@@ -27,7 +25,7 @@ Registrant Email: fc2.com@contactprivacy.com
 Registry Admin ID: 
 Admin Name: Contact Privacy Inc. Customer 014173950
 Admin Organization: Contact Privacy Inc. Customer 014173950
-Admin Street: 96 Mowat Ave
+Admin Street: 96 Mowat Ave 
 Admin City: Toronto
 Admin State/Province: ON
 Admin Postal Code: M6K 3M1
@@ -40,7 +38,7 @@ Admin Email: fc2.com@contactprivacy.com
 Registry Tech ID: 
 Tech Name: Contact Privacy Inc. Customer 014173950
 Tech Organization: Contact Privacy Inc. Customer 014173950
-Tech Street: 96 Mowat Ave
+Tech Street: 96 Mowat Ave 
 Tech City: Toronto
 Tech State/Province: ON
 Tech Postal Code: M6K 3M1
@@ -50,16 +48,17 @@ Tech Phone Ext:
 Tech Fax: 
 Tech Fax Ext: 
 Tech Email: fc2.com@contactprivacy.com
-Name Server: NS-1489.AWSDNS-58.ORG
-Name Server: NS-1834.AWSDNS-37.CO.UK
-Name Server: NS-214.AWSDNS-26.COM
-Name Server: NS-616.AWSDNS-13.NET
-DNSSEC: Unsigned
-URL of the ICANN WHOIS Data Problem Reporting System: http://wdprs.internic.net/
->>> Last update of WHOIS database: 2014-10-03 18:13:14 <<<
+Name Server: ns-214.awsdns-26.com
+Name Server: ns-616.awsdns-13.net
+Name Server: ns-1834.awsdns-37.co.uk
+Name Server: ns-1489.awsdns-58.org
 
-This domain's privacy is protected by contactprivacy.com. To reach the domain contacts,
-please go to http://www.contactprivacy.com and follow the instructions.
+Registrar Abuse Contact Email: domainabuse@tucows.com
+Registrar Abuse Contact Phone: +1.4165350123
+URL of the ICANN WHOIS Data Problem Reporting System: http://wdprs.internic.net/
+>>> Last update of WHOIS database: 2018-09-28T19:01:17 <<<
+
+"For more information on Whois status codes, please visit https://icann.org/epp"
 
 The Data in the Tucows Registrar WHOIS database is provided to you by Tucows
 for information purposes only, and may be used to assist you in obtaining

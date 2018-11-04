@@ -2,61 +2,42 @@ Domain Name: vimeo.com
 Registry Domain ID: 137446492_DOMAIN_COM-VRSN
 Registrar WHOIS Server: whois.markmonitor.com
 Registrar URL: http://www.markmonitor.com
-Updated Date: 2014-10-02T04:00:16-0700
+Updated Date: 2018-07-25T04:00:19-0700
 Creation Date: 2004-12-15T00:38:55-0800
-Registrar Registration Expiration Date: 2014-12-15T00:38:55-0800
+Registrar Registration Expiration Date: 2018-12-15T00:00:00-0800
 Registrar: MarkMonitor, Inc.
 Registrar IANA ID: 292
 Registrar Abuse Contact Email: abusecomplaints@markmonitor.com
 Registrar Abuse Contact Phone: +1.2083895740
-Domain Status: clientUpdateProhibited
-Domain Status: clientTransferProhibited
-Domain Status: clientDeleteProhibited
-Registry Registrant ID: 
-Registrant Name: Domain Administrator
-Registrant Organization: Vimeo, LLC
-Registrant Street: 555 West 18th Street, 4th Floor
-Registrant City: New York
+Domain Status: clientUpdateProhibited (https://www.icann.org/epp#clientUpdateProhibited)
+Domain Status: clientTransferProhibited (https://www.icann.org/epp#clientTransferProhibited)
+Domain Status: clientDeleteProhibited (https://www.icann.org/epp#clientDeleteProhibited)
+Registrant Organization: Vimeo, Inc.
 Registrant State/Province: NY
-Registrant Postal Code: 10011
 Registrant Country: US
-Registrant Phone: +1.2123147300
-Registrant Phone Ext: 
-Registrant Fax: +1.2123147300
-Registrant Fax Ext: 
-Registrant Email: support@vimeo.com
-Registry Admin ID: 
-Admin Name: Domain Administrator
-Admin Organization: Vimeo, LLC
-Admin Street: 555 West 18th Street, 4th Floor
-Admin City: New York
+Admin Organization: Vimeo, Inc.
 Admin State/Province: NY
-Admin Postal Code: 10011
 Admin Country: US
-Admin Phone: +1.2123147300
-Admin Phone Ext: 
-Admin Fax: +1.2123147300
-Admin Fax Ext: 
-Admin Email: support@vimeo.com
-Registry Tech ID: 
-Tech Name: Domain Administrator
-Tech Organization: Vimeo, LLC
-Tech Street: 555 West 18th Street, 4th Floor
-Tech City: New York
+Tech Organization: Vimeo, Inc.
 Tech State/Province: NY
-Tech Postal Code: 10011
 Tech Country: US
-Tech Phone: +1.2123147300
-Tech Phone Ext: 
-Tech Fax: +1.2123147300
-Tech Fax Ext: 
-Tech Email: support@vimeo.com
-Name Server: ns-70.awsdns-08.com
+Name Server: ns-1463.awsdns-54.org
 Name Server: ns-1886.awsdns-43.co.uk
 Name Server: ns-682.awsdns-21.net
-Name Server: ns-1463.awsdns-54.org
+Name Server: ns-70.awsdns-08.com
+DNSSEC: unsigned
 URL of the ICANN WHOIS Data Problem Reporting System: http://wdprs.internic.net/
->>> Last update of WHOIS database: 2014-10-22T02:18:38-0700 <<<
+>>> Last update of WHOIS database: 2018-10-31T13:23:36-0700 <<<
+
+If certain contact information is not shown for a Registrant, Administrative,
+or Technical contact, and you wish to send a message to these contacts, please
+send your message to whoisrelay@markmonitor.com and specify the domain name in
+the subject line. We will forward that message to the underlying contact.
+
+If you have a legitimate interest in viewing the non-public WHOIS details, send
+your request and the reasons for your request to abusecomplaints@markmonitor.com
+and specify the domain name in the subject line. We will review that request and
+may ask for supporting documentation and explanation.
 
 The Data in MarkMonitor.com's WHOIS database is provided by MarkMonitor.com for
 information purposes, and to assist persons in obtaining information about or
@@ -81,4 +62,7 @@ Professional and Managed Services
 Visit MarkMonitor at http://www.markmonitor.com
 Contact us at +1.8007459229
 In Europe, at +44.02032062220
+
+For more information on Whois status codes, please visit
+ https://www.icann.org/resources/pages/epp-status-codes-2014-06-16-en
 --

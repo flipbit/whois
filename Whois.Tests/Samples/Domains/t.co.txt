@@ -1,109 +1,12 @@
-Domain Name:                                 T.CO
-Domain ID:                                   D740225-CO
-Sponsoring Registrar:                        CSC CORPORATE DOMAINS
-Sponsoring Registrar IANA ID:                299
-Registrar URL (registration services):       whois.corporatedomains.com
-Domain Status:                               clientTransferProhibited
-Domain Status:                               serverDeleteProhibited
-Domain Status:                               serverTransferProhibited
-Domain Status:                               serverUpdateProhibited
-Variant:                                     T.CO
-Registrant ID:                               365684910586C791
-Registrant Name:                             Twitter, Inc.
-Registrant Organization:                     Twitter, Inc.
-Registrant Address1:                         1355 Market Street
-Registrant Address2:                         Suite 900
-Registrant City:                             San Francisco
-Registrant State/Province:                   CA
-Registrant Postal Code:                      94103
-Registrant Country:                          United States
-Registrant Country Code:                     US
-Registrant Phone Number:                     +1.4152229670
-Registrant Facsimile Number:                 +1.4152220922
-Registrant Email:                            domains@twitter.com
-Administrative Contact ID:                   868543810568A633
-Administrative Contact Name:                 Domain Admin
-Administrative Contact Organization:         Twitter, Inc.
-Administrative Contact Address1:             1355 Market Street
-Administrative Contact Address2:             Suite 900
-Administrative Contact City:                 San Francisco
-Administrative Contact State/Province:       California
-Administrative Contact Postal Code:          94103
-Administrative Contact Country:              United States
-Administrative Contact Country Code:         US
-Administrative Contact Phone Number:         +1.4152229670
-Administrative Contact Facsimile Number:     +1.4152220922
-Administrative Contact Email:                domains@twitter.com
-Billing Contact ID:                          341112710590A136
-Billing Contact Name:                        ccTLD Billing
-Billing Contact Organization:                CSC Corporate Domains, Inc.
-Billing Contact Address1:                    2711 Centerville Rd.
-Billing Contact City:                        Wilmington
-Billing Contact State/Province:              DE
-Billing Contact Postal Code:                 19808
-Billing Contact Country:                     United States
-Billing Contact Country Code:                US
-Billing Contact Phone Number:                +1.3026365400
-Billing Contact Facsimile Number:            +1.3026365454
-Billing Contact Email:                       ccTLD-billing@cscinfo.com
-Technical Contact ID:                        42101611057C7478
-Technical Contact Name:                      Tech Admin
-Technical Contact Organization:              Twitter, Inc.
-Technical Contact Address1:                  1355 Market Street
-Technical Contact Address2:                  Suite 900
-Technical Contact City:                      San Francisco
-Technical Contact State/Province:            California
-Technical Contact Postal Code:               94103
-Technical Contact Country:                   United States
-Technical Contact Country Code:              US
-Technical Contact Phone Number:              +1.4152229670
-Technical Contact Facsimile Number:          +1.4152220922
-Technical Contact Email:                     domains-tech@twitter.com
-Name Server:                                 NS1.P34.DYNECT.NET
-Name Server:                                 NS2.P34.DYNECT.NET
-Name Server:                                 NS3.P34.DYNECT.NET
-Name Server:                                 NS4.P34.DYNECT.NET
-Created by Registrar:                        INJECTCSR
-Last Updated by Registrar:                   NMUTONYI
-Last Transferred Date:                       Sun Oct 13 16:51:10 GMT 2013
-Domain Registration Date:                    Mon Apr 26 07:50:40 GMT 2010
-Domain Expiration Date:                      Mon Apr 25 23:59:59 GMT 2016
-Domain Last Updated Date:                    Wed Jul 23 11:30:13 GMT 2014
-DNSSEC:                                      false
 
->>>> Whois database was last updated on: Wed Oct 22 09:43:25 GMT 2014 <<<<
-.CO Internet, S.A.S., the Administrator for .CO, has collected this
-information for the WHOIS database through Accredited Registrars.  
-This information is provided to you for informational purposes only 
-and is designed to assist persons in determining contents of a domain 
-name registration record in the .CO Internet registry database. .CO 
-Internet makes this information available to you "as is" and does not 
-guarantee its accuracy.
- 
-By submitting a WHOIS query, you agree that you will use this data 
-only for lawful purposes and that, under no circumstances will you 
-use this data:  (1) to allow, enable, or otherwise support the transmission 
-of mass unsolicited, commercial advertising or solicitations via direct 
-mail, electronic mail, or by telephone; (2) in contravention of any 
-applicable data and privacy protection laws; or (3) to enable high volume, 
-automated,  electronic processes that apply to the registry (or its systems). 
-Compilation, repackaging, dissemination, or other use of the WHOIS 
-database in its entirety, or of a substantial portion thereof, is not allowed 
-without .CO Internet's prior written permission. .CO Internet reserves the 
-right to modify or change these conditions at any time without prior or 
-subsequent notification of any kind. By executing this query, in any manner 
-whatsoever, you agree to abide by these terms.  In some limited cases, 
-domains that might appear as available in whois might not actually be 
-available as they could be already registered and the whois not yet updated 
-and/or they could be part of the Restricted list. In this cases, performing a 
-check through your Registrar's (EPP check) will give you the actual status 
-of the domain. Additionally, domains currently or previously used as 
-extensions in 3rd level domains will not be available for registration in the 
-2nd level. For example, org.co,mil.co,edu.co,com.co,net.co,nom.co,arts.co,
-firm.co,info.co,int.co,web.co,rec.co,co.co. 
- 
-NOTE: FAILURE TO LOCATE A RECORD IN THE WHOIS DATABASE IS NOT 
-INDICATIVE OF THE AVAILABILITY OF A DOMAIN NAME.   
- 
-All domain names are subject to certain additional domain name registration 
-rules. For details, please visit our site at www.cointernet.co <http://www.cointernet.co>.
+No match for t.co.
+
+For more information on Whois status codes, please visit https://icann.org/epp
+
+Corporation Service Company(c) (CSC)  The Trusted Partner of More than 50% of the 100 Best Global Brands.
+
+Contact us to learn more about our enterprise solutions for Global Domain Name Registration and Management, Trademark Research and Watching, Brand, Logo and Auction Monitoring, as well SSL Certificate Services and DNS Hosting.
+
+NOTICE: You are not authorized to access or query our WHOIS database through the use of high-volume, automated, electronic processes or for the purpose or purposes of using the data in any manner that violates these terms of use. The Data in the CSC WHOIS database is provided by CSC for information purposes only, and to assist persons in obtaining information about or related to a domain name registration record. CSC does not guarantee its accuracy. By submitting a WHOIS query, you agree to abide by the following terms of use: you agree that you may use this Data only for lawful purposes and that under no circumstances will you use this Data to: (1) allow, enable, or otherwise support the transmission of mass unsolicited, commercial advertising or solicitations via direct mail, e-mail, telephone, or facsimile; or (2) enable high volume, automated, electronic processes that apply to CSC (or its computer systems). CSC reserves the right to terminate your access to the WHOIS database in its sole discretion for any violations by you of these terms of use. CSC reserves the right to modify these terms at any time.
+
+Register your domain name at http://www.cscglobal.com

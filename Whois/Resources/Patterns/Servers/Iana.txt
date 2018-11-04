@@ -1,0 +1,37 @@
+% IANA WHOIS server
+% for more information on IANA, visit http://www.iana.org
+% This query returned 1 object
+
+domain:       {Tld:ToLower}
+
+organisation: {Organization.Name?}
+address:      {Organization.Address#}
+
+contact:      administrative
+name:         {AdminContact.Name?}
+organisation: {AdminContact.Organization?}
+address:      {AdminContact.Address#}
+phone:        {AdminContact.TelephoneNumber?}
+fax-no:       {AdminContact.FaxNumber?}
+e-mail:       {AdminContact.Email?}
+
+contact:      technical
+name:         {TechContact.Name?}
+organisation: {TechContact.Organization?}
+address:      {TechContact.Address#}
+phone:        {TechContact.TelephoneNumber?}
+fax-no:       {TechContact.FaxNumber?}
+e-mail:       {TechContact.Email?}
+
+nserver:      {NameServers$#}
+nserver:      {NameServers$#}
+
+whois:        {Url$?}
+
+status:       ACTIVE
+remarks:      {Remarks?}
+
+created:      {Created$?}
+changed:      {Changed$?}
+source:       IANA
+

@@ -1,82 +1,82 @@
-Domain Name: facebook.com
-Registry Domain ID: 
-Registrar WHOIS Server: whois.markmonitor.com
-Registrar URL: http://www.markmonitor.com
-Updated Date: 2014-08-16T04:00:38-0700
-Creation Date: 1997-03-28T21:00:00-0800
-Registrar Registration Expiration Date: 2020-03-29T21:00:00-0700
-Registrar: MarkMonitor, Inc.
-Registrar IANA ID: 292
-Registrar Abuse Contact Email: abusecomplaints@markmonitor.com
-Registrar Abuse Contact Phone: +1.2083895740
-Domain Status: clientUpdateProhibited
-Domain Status: clientTransferProhibited
-Domain Status: clientDeleteProhibited
+Domain Name: FACEBOOK.COM
+Registry Domain ID: 2320948_DOMAIN_COM-VRSN
+Registrar WHOIS Server: whois.registrarsafe.com
+Registrar URL: https://www.registrarsafe.com
+Updated Date: 2018-07-23T18:17:13Z
+Creation Date: 1997-03-29T05:00:00Z
+Registrar Registration Expiration Date: 2028-03-30T04:00:00Z
+Registrar: RegistrarSafe, LLC
+Registrar IANA ID: 3237
+Registrar Abuse Contact Email: abusecomplaints@registrarsafe.com
+Registrar Abuse Contact Phone: +1.6503087004
+Domain Status: clientDeleteProhibited https://www.icann.org/epp#clientDeleteProhibited
+Domain Status: clientTransferProhibited https://www.icann.org/epp#clientTransferProhibited
+Domain Status: clientUpdateProhibited https://www.icann.org/epp#clientUpdateProhibited
+Domain Status: serverDeleteProhibited https://www.icann.org/epp#serverDeleteProhibited
+Domain Status: serverTransferProhibited https://www.icann.org/epp#serverTransferProhibited
+Domain Status: serverUpdateProhibited https://www.icann.org/epp#serverUpdateProhibited
 Registry Registrant ID: 
-Registrant Name: Domain Administrator
+Registrant Name: Domain Admin
 Registrant Organization: Facebook, Inc.
-Registrant Street: 1601 Willow Road, 
+Registrant Street: 1601 Willow Rd 
 Registrant City: Menlo Park
 Registrant State/Province: CA
 Registrant Postal Code: 94025
 Registrant Country: US
 Registrant Phone: +1.6505434800
-Registrant Phone Ext: 
+Registrant Phone Ext:
 Registrant Fax: +1.6505434800
-Registrant Fax Ext: 
+Registrant Fax Ext:
 Registrant Email: domain@fb.com
 Registry Admin ID: 
-Admin Name: Domain Administrator
+Admin Name: Domain Admin
 Admin Organization: Facebook, Inc.
-Admin Street: 1601 Willow Road, 
+Admin Street: 1601 Willow Rd 
 Admin City: Menlo Park
 Admin State/Province: CA
 Admin Postal Code: 94025
 Admin Country: US
 Admin Phone: +1.6505434800
-Admin Phone Ext: 
+Admin Phone Ext:
 Admin Fax: +1.6505434800
-Admin Fax Ext: 
+Admin Fax Ext:
 Admin Email: domain@fb.com
 Registry Tech ID: 
-Tech Name: Domain Administrator
+Tech Name: Domain Admin
 Tech Organization: Facebook, Inc.
-Tech Street: 1601 Willow Road, 
+Tech Street: 1601 Willow Rd 
 Tech City: Menlo Park
 Tech State/Province: CA
 Tech Postal Code: 94025
 Tech Country: US
 Tech Phone: +1.6505434800
-Tech Phone Ext: 
+Tech Phone Ext:
 Tech Fax: +1.6505434800
-Tech Fax Ext: 
+Tech Fax Ext:
 Tech Email: domain@fb.com
-Name Server: b.ns.facebook.com
-Name Server: a.ns.facebook.com
+Name Server: A.NS.FACEBOOK.COM
+Name Server: B.NS.FACEBOOK.COM
+DNSSEC: unsigned
 URL of the ICANN WHOIS Data Problem Reporting System: http://wdprs.internic.net/
->>> Last update of WHOIS database: 2014-10-22T01:59:02-0700 <<<
+>>> Last update of WHOIS database: 2018-10-31T19:15:41Z <<<
 
-The Data in MarkMonitor.com's WHOIS database is provided by MarkMonitor.com for
-information purposes, and to assist persons in obtaining information about or
-related to a domain name registration record.  MarkMonitor.com does not guarantee
-its accuracy.  By submitting a WHOIS query, you agree that you will use this Data
-only for lawful purposes and that, under no circumstances will you use this Data to:
- (1) allow, enable, or otherwise support the transmission of mass unsolicited,
-     commercial advertising or solicitations via e-mail (spam); or
- (2) enable high volume, automated, electronic processes that apply to
-     MarkMonitor.com (or its systems).
-MarkMonitor.com reserves the right to modify these terms at any time.
-By submitting this query, you agree to abide by this policy.
+Search results obtained from the RegistrarSafe, LLC WHOIS database are
+provided by RegistrarSafe, LLC for information purposes only, to assist
+users in obtaining information concerning a domain name registration record.
+The information contained therein is provided on an "as is" and "as available"
+basis and RegistrarSafe, LLC does not guarantee the accuracy or completeness
+of any information provided through the WHOIS database.  By submitting a WHOIS query,
+you agree to the following: (1) that you will use any information provided through
+the WHOIS only for lawful purposes; (2) that you will comply with all ICANN rules
+and regulations governing use of the WHOIS; (3)  that you will not use any information
+provided through the WHOIS to  enable, or otherwise cause the transmission of mass
+unsolicited, commercial advertising or solicitations via e-mail (i.e., spam); or
+(4) that you will not use the WHOIS to enable or otherwise utilize high volume,
+automated, electronic processes that apply to or attach to RegistrarSafe, LLC or
+its systems. RegistrarSafe, LLC reserves the right to modify these terms
+at any time and to take any other appropriate actions, including but not limited to
+restricting any access that violates these terms and conditions. By submitting this
+query, you acknowledge and agree to abide by the foregoing terms, conditions and policies.
 
-MarkMonitor is the Global Leader in Online Brand Protection.
-
-MarkMonitor Domain Management(TM)
-MarkMonitor Brand Protection(TM)
-MarkMonitor AntiPiracy(TM)
-MarkMonitor AntiFraud(TM)
-Professional and Managed Services
-
-Visit MarkMonitor at http://www.markmonitor.com
-Contact us at +1.8007459229
-In Europe, at +44.02032062220
---
+For more information on Whois status codes, please visit
+    https://www.icann.org/resources/pages/epp-status-codes-2014-06-16-en.

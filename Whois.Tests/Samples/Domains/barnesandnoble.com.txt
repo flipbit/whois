@@ -3,24 +3,24 @@ Domain Name: barnesandnoble.com
 Registry Domain ID: 1785387_DOMAIN_COM-VRSN
 Registrar WHOIS Server: whois.corporatedomains.com
 Registrar URL: www.cscprotectsbrands.com
-Updated Date: 2014-08-05 01:32:59 -0400
-Creation Date: 1995-08-10 00:00:00 -0400
-Registrar Registration Expiration Date: 2015-08-09 00:00:00 -0400
+Updated Date: 2018-08-05T05:37:09Z
+Creation Date: 1995-08-10T04:00:00Z
+Registrar Registration Expiration Date: 2019-08-09T04:00:00Z
 Registrar: CSC CORPORATE DOMAINS, INC.
 Registrar IANA ID: 299
-Registrar Abuse Contact Email: admin@internationaladmin.com
+Registrar Abuse Contact Email: domainabuse@cscglobal.com
 Registrar Abuse Contact Phone: +1.8887802723
-Domain Status: serverTransferProhibited
-Domain Status: serverDeleteProhibited
-Domain Status: clientTransferProhibited
-Domain Status: serverUpdateProhibited
+Domain Status: clientTransferProhibited http://www.icann.org/epp#clientTransferProhibited
+Domain Status: serverDeleteProhibited http://www.icann.org/epp#serverDeleteProhibited
+Domain Status: serverTransferProhibited http://www.icann.org/epp#serverTransferProhibited
+Domain Status: serverUpdateProhibited http://www.icann.org/epp#serverUpdateProhibited
 Registry Registrant ID: 
-Registrant Name: Barnesandnoble.com llc
+Registrant Name: Domain Administrator
 Registrant Organization: barnesandnoble.com llc
-Registrant Street: 76 Ninth Avenue
-Registrant City: New York
+Registrant Street: 1166 6th ave, 18th floor
+Registrant City: new york
 Registrant State/Province: NY
-Registrant Postal Code: 10011
+Registrant Postal Code: 10036
 Registrant Country: US
 Registrant Phone: +1.2124146000
 Registrant Phone Ext: 
@@ -30,12 +30,12 @@ Registrant Email: domainadmin@BOOK.COM
 Registry Admin ID: 
 Admin Name: Bharat Desai
 Admin Organization: barnesandnoble.com llc
-Admin Street: 76 Ninth Avenue, 9th Floor
-Admin City: New York
+Admin Street: 1166 6th ave, 18th floor
+Admin City: new york
 Admin State/Province: NY
-Admin Postal Code: 10011
+Admin Postal Code: 10036
 Admin Country: US
-Admin Phone: +1.2124146541
+Admin Phone: +1.2124146000
 Admin Phone Ext: 
 Admin Fax: +1.2124146150
 Admin Fax Ext: 
@@ -43,24 +43,27 @@ Admin Email: domainadmin@BOOK.COM
 Registry Tech ID: 
 Tech Name: Bharat Desai
 Tech Organization: barnesandnoble.com llc
-Tech Street: 76 Ninth Avenue, 9th Floor
-Tech City: New York
+Tech Street: 1166 6th ave, 18th floor
+Tech City: new york
 Tech State/Province: NY
-Tech Postal Code: 10011
+Tech Postal Code: 10036
 Tech Country: US
-Tech Phone: +1.2124146541
+Tech Phone: +1.2124146000
 Tech Phone Ext: 
 Tech Fax: +1.2124146150
 Tech Fax Ext: 
 Tech Email: domainadmin@BOOK.COM
-Name Server: ns4.barnesandnoble.com
-Name Server: mail9th1.barnesandnoble.com
-Name Server: ns3.barnesandnoble.com
-Name Server: ns2.barnesandnoble.com
-DNSSEC: 
+Name Server: a13-64.akam.net
+Name Server: a3-64.akam.net
+Name Server: a18-65.akam.net
+Name Server: a20-66.akam.net
+Name Server: a1-225.akam.net
+Name Server: a22-67.akam.net
+DNSSEC: unsigned
 URL of the ICANN WHOIS Data Problem Reporting System: http://wdprs.internic.net/
->>> Last update of WHOIS database: 2014-08-05 01:32:59 -0400 <<<
+>>> Last update of WHOIS database: 2018-08-05T05:37:09Z <<<
 
+For more information on Whois status codes, please visit https://icann.org/epp
 
 Corporation Service Company(c) (CSC)  The Trusted Partner of More than 50% of the 100 Best Global Brands.
 
@@ -69,6 +72,3 @@ Contact us to learn more about our enterprise solutions for Global Domain Name R
 NOTICE: You are not authorized to access or query our WHOIS database through the use of high-volume, automated, electronic processes or for the purpose or purposes of using the data in any manner that violates these terms of use. The Data in the CSC WHOIS database is provided by CSC for information purposes only, and to assist persons in obtaining information about or related to a domain name registration record. CSC does not guarantee its accuracy. By submitting a WHOIS query, you agree to abide by the following terms of use: you agree that you may use this Data only for lawful purposes and that under no circumstances will you use this Data to: (1) allow, enable, or otherwise support the transmission of mass unsolicited, commercial advertising or solicitations via direct mail, e-mail, telephone, or facsimile; or (2) enable high volume, automated, electronic processes that apply to CSC (or its computer systems). CSC reserves the right to terminate your access to the WHOIS database in its sole discretion for any violations by you of these terms of use. CSC reserves the right to modify these terms at any time.
 
 Register your domain name at http://www.cscglobal.com
-
-For more information on Whois status codes, please visit https://www.icann.org/resources/pages/epp-status-codes-2014-06-16-en
-

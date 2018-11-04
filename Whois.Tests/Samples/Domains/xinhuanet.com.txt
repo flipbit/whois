@@ -1,76 +1,118 @@
+Domain Name: xinhuanet.com
 
+Registry Domain ID: 25855709_DOMAIN_COM-VRSN
 
-Domain Name: XINHUANET.COM
-Registry Domain ID:  
-Registrar WHOIS Server: whois.networksolutions.com
-Registrar URL: http://networksolutions.com
-Updated Date: 2013-12-11T00:00:00Z
-Creation Date: 2000-04-28T00:00:00Z
-Registrar Registration Expiration Date: 2017-04-28T00:00:00Z
-Registrar: NETWORK SOLUTIONS, LLC.
-Registrar IANA ID: 2
-Registrar Abuse Contact Email: abuse@web.com
-Registrar Abuse Contact Phone: +1.8003337680
+Registrar WHOIS Server: whois.sfn.cn
+
+Registrar URL: www.sfn.cn
+
+Updated Date: 
+
+Creation Date: 2000-04-28 08:10:03.0
+
+Registrar Registration Expiration Date: 2019-04-28 08:10:03.0
+
+Registrar: BEIJING SANFRONT INFORMATION TECHNOLOGY CO., LTD
+
+Registrar IANA ID: 
+
+Registrar Abuse Contact Email: kefu@sfn.cn
+
+Registrar Abuse Contact Phone: +86.1083026123
+
 Reseller: 
-Domain Status: clientTransferProhibited
-Registry Registrant ID: 
-Registrant Name: xinhuanet
-Registrant Organization: xinhuanet
-Registrant Street: no.2 beixinglu dong duan
-Registrant City: beijing
-Registrant State/Province: beijing
-Registrant Postal Code: 100162
-Registrant Country: CN
-Registrant Phone: 010 88050893
-Registrant Phone Ext: 
-Registrant Fax: 010 88050893
-Registrant Fax Ext: 
-Registrant Email: pantong211@163.com
-Registry Admin ID: 
-Admin Name: xinhuanet
-Admin Organization: xinhuanet
-Admin Street: no.2 beixinglu dong duan
-Admin City: beijing
-Admin State/Province: beijing
-Admin Postal Code: 100162
-Admin Country: CN
-Admin Phone: 010 88050893
-Admin Phone Ext: 
-Admin Fax: 010 88050893
-Admin Fax Ext: 
-Admin Email: pantong211@163.com
-Registry Tech ID: 
-Tech Name: xinhuanet
-Tech Organization: xinhuanet
-Tech Street: no.2 beixinglu dong duan
-Tech City: beijing
-Tech State/Province: beijing
-Tech Postal Code: 100162
-Tech Country: CN
-Tech Phone: 010 88050893
-Tech Phone Ext: 
-Tech Fax: 010 88050893
-Tech Fax Ext: 
-Tech Email: pantong211@163.com
-Name Server: NS3.XINHUANET.COM
-Name Server: NS1.XINHUANET.COM
-DNSSEC: not signed
-URL of the ICANN WHOIS Data Problem Reporting System: http://wdprs.internic.net/
->>> Last update of whois database: Wed, 22 Oct 2014 11:17:42 GMT <<<
 
-The data in Networksolutions.com's WHOIS database is provided to you by
-Networksolutions.com for information purposes only, that is, to assist you in
-obtaining information about or related to a domain name registration
-record. Networksolutions.com makes this information available "as is," and
-does not guarantee its accuracy. By submitting a WHOIS query, you
-agree that you will use this data only for lawful purposes and that,
-under no circumstances will you use this data to: (1) allow, enable,
-or otherwise support the transmission of mass unsolicited, commercial
-advertising or solicitations via direct mail, electronic mail, or by
-telephone; or (2) enable high volume, automated, electronic processes
-that apply to Networksolutions.com  (or its systems). The compilation,
-repackaging, dissemination or other use of this data is expressly
-prohibited without the prior written consent of Networksolutions.com.
-Networksolutions.com reserves the right to modify these terms at any time.
-By submitting this query, you agree to abide by these terms.
+Domain Status: ok
+
+Registry Registrant ID: sfn0639966098645
+
+Registrant Name: LIJING
+
+Registrant Organization: XINHUANET CO., LTD  
+
+Registrant Street: Beijing xuanwu gate jinyu building, 129 west street
+
+Registrant City: BeiJingShi
+
+Registrant State/Province: BeiJingShi
+
+Registrant Postal Code: 100031
+
+Registrant Country: CN
+
+Registrant Phone: +86.1088050659
+
+Registrant Phone Ext: 
+
+Registrant Fax: +86.1088050615
+
+Registrant Fax Ext: 
+
+Registrant Email: wangzhanyunying@news.cn
+
+Registry Admin ID: 
+
+Admin Name: LIJING
+
+Admin Organization: LIJING
+
+Admin Street: Beijing xuanwu gate jinyu building, 129 west street
+
+Admin City: BeiJingShi
+
+Admin State/Province: BeiJingShi
+
+Admin Postal Code: 100031
+
+Admin Country: CN
+
+Admin Phone: +86.1088050659
+
+Admin Phone Ext: 
+
+Admin Fax: +86.1088050615
+
+Admin Fax Ext: 
+
+Admin Email: wangzhanyunying@news.cn
+
+Registry Tech ID: 
+
+Tech Name: LIJING
+
+Tech Organization: LIJING
+
+Tech Street: Beijing xuanwu gate jinyu building, 129 west street
+
+Tech City: BeiJingShi
+
+Tech State/Province: BeiJingShi
+
+Tech Postal Code: 100031
+
+Tech Country: CN
+
+Tech Phone: +86.1088050659
+
+Tech Phone Ext: 
+
+Tech Fax: +86.1088050615
+
+Tech Fax Ext: 
+
+Tech Email: wangzhanyunying@news.cn
+
+Name Server: ns1.cdns.cn
+
+Name Server: ns2.cdns.cn
+
+Name Server: ns3.cdns.cn
+
+Name Server: ns3.news.cn
+
+Name Server: ns1.news.cn
+
+DNSSEC: 
+
+URL of the ICANN WHOIS Data Problem Reporting System: http://wdprs.internic.net/
 

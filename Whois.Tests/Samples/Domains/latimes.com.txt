@@ -1,81 +1,71 @@
-Domain Name: LATIMES.COM
+Domain Name: latimes.com
 Registry Domain ID: 510925_DOMAIN_COM-VRSN
-Registrar WHOIS Server: whois.godaddy.com
-Registrar URL: http://www.godaddy.com
-Update Date: 2013-12-02 10:38:01
-Creation Date: 1990-12-12 00:00:00
-Registrar Registration Expiration Date: 2015-12-11 00:00:00
-Registrar: GoDaddy.com, LLC
-Registrar IANA ID: 146
-Registrar Abuse Contact Email: abuse@godaddy.com
-Registrar Abuse Contact Phone: +1.480-624-2505
-Domain Status: clientTransferProhibited
-Domain Status: clientUpdateProhibited
-Domain Status: clientRenewProhibited
-Domain Status: clientDeleteProhibited
-Registry Registrant ID: 
-Registrant Name: TRIBUNE COMPANY
-Registrant Organization: Tribune Technology LLC
-Registrant Street: 435 N. Michigan Ave
-Registrant City: Chicago
-Registrant State/Province: Illinois
-Registrant Postal Code: 60611
-Registrant Country: United States
-Registrant Phone: +1.3122229100
-Registrant Phone Ext: 
-Registrant Fax: 
-Registrant Fax Ext: 
-Registrant Email: tis-dnsadmin@tribune.com
-Registry Admin ID: 
-Admin Name: TRIBUNE COMPANY
-Admin Organization: Tribune Technology LLC
-Admin Street: 435 N. Michigan Ave
-Admin City: Chicago
-Admin State/Province: Illinois
-Admin Postal Code: 60611
-Admin Country: United States
-Admin Phone: +1.3122229100
-Admin Phone Ext: 
-Admin Fax: 
-Admin Fax Ext: 
-Admin Email: tis-dnsadmin@tribune.com
-Registry Tech ID: 
-Tech Name: TRIBUNE COMPANY
-Tech Organization: Tribune Technology LLC
-Tech Street: 435 N. Michigan Ave
-Tech City: Chicago
-Tech State/Province: Illinois
-Tech Postal Code: 60611
-Tech Country: United States
-Tech Phone: +1.3122229100
-Tech Phone Ext: 
-Tech Fax: 
-Tech Fax Ext: 
-Tech Email: tis-dnsadmin@tribune.com
-Name Server: DNS1.TRIBUNE.COM
-Name Server: DNS2.TRIBUNE.COM
-Name Server: DNS3.TRIBUNE.COM
-Name Server: DNS4.TRIBUNE.COM
+Registrar WHOIS Server: whois.markmonitor.com
+Registrar URL: http://www.markmonitor.com
+Updated Date: 2017-11-09T02:09:46-0800
+Creation Date: 1990-12-11T21:00:00-0800
+Registrar Registration Expiration Date: 2019-12-10T00:00:00-0800
+Registrar: MarkMonitor, Inc.
+Registrar IANA ID: 292
+Registrar Abuse Contact Email: abusecomplaints@markmonitor.com
+Registrar Abuse Contact Phone: +1.2083895740
+Domain Status: clientUpdateProhibited (https://www.icann.org/epp#clientUpdateProhibited)
+Domain Status: clientTransferProhibited (https://www.icann.org/epp#clientTransferProhibited)
+Domain Status: clientDeleteProhibited (https://www.icann.org/epp#clientDeleteProhibited)
+Domain Status: serverUpdateProhibited (https://www.icann.org/epp#serverUpdateProhibited)
+Domain Status: serverTransferProhibited (https://www.icann.org/epp#serverTransferProhibited)
+Domain Status: serverDeleteProhibited (https://www.icann.org/epp#serverDeleteProhibited)
+Registrant Organization: Tribune Publishing Company, LLC
+Registrant State/Province: IL
+Registrant Country: US
+Admin Organization: Tribune Publishing Company, LLC
+Admin State/Province: IL
+Admin Country: US
+Tech Organization: Tribune Publishing Company, LLC
+Tech State/Province: IL
+Tech Country: US
+Name Server: dns2.tribpub.com
+Name Server: dns4.tribpub.com
+Name Server: dns1.tribpub.com
+Name Server: dns3.tribpub.com
 DNSSEC: unsigned
 URL of the ICANN WHOIS Data Problem Reporting System: http://wdprs.internic.net/
-Last update of WHOIS database: 2014-10-22T10:00:00Z
+>>> Last update of WHOIS database: 2018-11-01T01:49:40-0700 <<<
 
-The data contained in GoDaddy.com, LLC's WhoIs database,
-while believed by the company to be reliable, is provided "as is"
-with no guarantee or warranties regarding its accuracy.  This
-information is provided for the sole purpose of assisting you
-in obtaining information about domain name registration records.
-Any use of this data for any other purpose is expressly forbidden without the prior written
-permission of GoDaddy.com, LLC.  By submitting an inquiry,
-you agree to these terms of usage and limitations of warranty.  In particular,
-you agree not to use this data to allow, enable, or otherwise make possible,
-dissemination or collection of this data, in part or in its entirety, for any
-purpose, such as the transmission of unsolicited advertising and
-and solicitations of any kind, including spam.  You further agree
-not to use this data to enable high volume, automated or robotic electronic
-processes designed to collect or compile this data for any purpose,
-including mining this data for your own personal or commercial purposes. 
+If certain contact information is not shown for a Registrant, Administrative,
+or Technical contact, and you wish to send a message to these contacts, please
+send your message to whoisrelay@markmonitor.com and specify the domain name in
+the subject line. We will forward that message to the underlying contact.
 
-Please note: the registrant of the domain name is specified
-in the "registrant" section.  In most cases, GoDaddy.com, LLC 
-is not the registrant of domain names listed in this database.
+If you have a legitimate interest in viewing the non-public WHOIS details, send
+your request and the reasons for your request to abusecomplaints@markmonitor.com
+and specify the domain name in the subject line. We will review that request and
+may ask for supporting documentation and explanation.
+
+The Data in MarkMonitor.com's WHOIS database is provided by MarkMonitor.com for
+information purposes, and to assist persons in obtaining information about or
+related to a domain name registration record.  MarkMonitor.com does not guarantee
+its accuracy.  By submitting a WHOIS query, you agree that you will use this Data
+only for lawful purposes and that, under no circumstances will you use this Data to:
+ (1) allow, enable, or otherwise support the transmission of mass unsolicited,
+     commercial advertising or solicitations via e-mail (spam); or
+ (2) enable high volume, automated, electronic processes that apply to
+     MarkMonitor.com (or its systems).
+MarkMonitor.com reserves the right to modify these terms at any time.
+By submitting this query, you agree to abide by this policy.
+
+MarkMonitor is the Global Leader in Online Brand Protection.
+
+MarkMonitor Domain Management(TM)
+MarkMonitor Brand Protection(TM)
+MarkMonitor AntiPiracy(TM)
+MarkMonitor AntiFraud(TM)
+Professional and Managed Services
+
+Visit MarkMonitor at http://www.markmonitor.com
+Contact us at +1.8007459229
+In Europe, at +44.02032062220
+
+For more information on Whois status codes, please visit
+ https://www.icann.org/resources/pages/epp-status-codes-2014-06-16-en
+

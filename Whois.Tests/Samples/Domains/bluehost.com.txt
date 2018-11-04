@@ -2,15 +2,15 @@ Domain Name: BLUEHOST.COM
 Registry Domain ID: 92239113_DOMAIN_COM-VRSN
 Registrar WHOIS Server: whois.fastdomain.com
 Registrar URL: http://www.fastdomain.com/
-Updated Date: 2013-09-11T19:26:07Z
+Updated Date: 2016-12-02T03:12:17Z
 Creation Date: 2002-11-15T10:33:55Z
 Registrar Registration Expiration Date: 2022-11-15T10:33:55Z
 Registrar: FastDomain Inc.
 Registrar IANA ID: 1154
-Registrar Abuse Contact Email: support@fastdomain.com
-Registrar Abuse Contact Phone: +1 801 765 9400
+Registrar Abuse Contact Email: abuse@fastdomain.com
+Registrar Abuse Contact Phone: +1.8017659400
 Reseller: FastDomain Inc.
-Domain Status: clientTransferProhibited
+Domain Status: clientTransferProhibited https://icann.org/epp#clientTransferProhibited
 Registry Registrant ID: 
 Registrant Name: BLUEHOST INC
 Registrant Organization: BLUEHOST, INC
@@ -18,7 +18,7 @@ Registrant Street: 560 E TIMPANOGOS PKWY
 Registrant City: OREM
 Registrant State/Province: UTAH
 Registrant Postal Code: 84097
-Registrant Country: UNITED STATES
+Registrant Country: US
 Registrant Phone: +1.8017659400
 Registrant Phone Ext: 
 Registrant Fax: 
@@ -31,7 +31,7 @@ Admin Street: 560 E TIMPANOGOS PKWY
 Admin City: OREM
 Admin State/Province: UTAH
 Admin Postal Code: 84097
-Admin Country: UNITED STATES
+Admin Country: US
 Admin Phone: +1.8017659400
 Admin Phone Ext: 
 Admin Fax: 
@@ -44,17 +44,21 @@ Tech Street: 560 E TIMPANOGOS PKWY
 Tech City: OREM
 Tech State/Province: UTAH
 Tech Postal Code: 84097
-Tech Country: UNITED STATES
+Tech Country: US
 Tech Phone: +1.8017659400
 Tech Phone Ext: 
 Tech Fax: 
 Tech Fax Ext: 
 Tech Email: SUPPORT-DOMAIN@BLUEHOST.COM
-Name Server: NS1.BLUEHOST.COM
-Name Server: NS2.BLUEHOST.COM
+Name Server: NS3.P13.DYNECT.NET
+Name Server: NS4.P13.DYNECT.NET
+Name Server: NS1.P13.DYNECT.NET
+Name Server: NS2.P13.DYNECT.NET
 DNSSEC: unsigned
 URL of the ICANN WHOIS Data Problem Reporting System: http://wdprs.internic.net/
-Last update of WHOIS database: 2013-09-11T19:26:07Z
+>>> Last update of WHOIS database: 2016-12-02T03:12:17Z <<<
+
+For more information on Whois status codes, please visit https://icann.org/epp
 
 The data in the FastDomain Inc. WHOIS database is provided
 to you by FastDomain Inc. for information purposes only,

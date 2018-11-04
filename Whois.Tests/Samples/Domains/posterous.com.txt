@@ -2,63 +2,39 @@ Domain Name: POSTEROUS.COM
 Registry Domain ID: 1362392038_DOMAIN_COM-VRSN
 Registrar WHOIS Server: whois.godaddy.com
 Registrar URL: http://www.godaddy.com
-Update Date: 2013-06-27 14:43:47
-Creation Date: 2007-12-23 21:35:08
-Registrar Registration Expiration Date: 2018-12-23 21:35:08
+Updated Date: 2013-06-27T19:43:47Z
+Creation Date: 2007-12-24T02:35:08Z
+Registrar Registration Expiration Date: 2018-12-24T02:35:08Z
 Registrar: GoDaddy.com, LLC
 Registrar IANA ID: 146
 Registrar Abuse Contact Email: abuse@godaddy.com
-Registrar Abuse Contact Phone: +1.480-624-2505
-Domain Status: clientTransferProhibited
-Domain Status: clientUpdateProhibited
-Domain Status: clientRenewProhibited
-Domain Status: clientDeleteProhibited
-Registry Registrant ID: 
-Registrant Name: Sachin Agarwal
+Registrar Abuse Contact Phone: +1.4806242505
+Domain Status: clientTransferProhibited http://www.icann.org/epp#clientTransferProhibited
+Domain Status: clientUpdateProhibited http://www.icann.org/epp#clientUpdateProhibited
+Domain Status: clientRenewProhibited http://www.icann.org/epp#clientRenewProhibited
+Domain Status: clientDeleteProhibited http://www.icann.org/epp#clientDeleteProhibited
 Registrant Organization: Posterous
-Registrant Street: 2973 16th St. 4th Floor
-Registrant City: San Francisco
 Registrant State/Province: California
-Registrant Postal Code: 94110
-Registrant Country: United States
-Registrant Phone: +1.4159928039
-Registrant Phone Ext: 
-Registrant Fax: 
-Registrant Fax Ext: 
-Registrant Email: admin@posterous-inc.com
-Registry Admin ID: 
-Admin Name: Sachin Agarwal
-Admin Organization: Posterous
-Admin Street: 2973 16th St. 4th Floor
-Admin City: San Francisco
-Admin State/Province: California
-Admin Postal Code: 94110
-Admin Country: United States
-Admin Phone: +1.4159928039
-Admin Phone Ext: 
-Admin Fax: 
-Admin Fax Ext: 
-Admin Email: admin@posterous-inc.com
-Registry Tech ID: 
-Tech Name: Sachin Agarwal
-Tech Organization: Posterous
-Tech Street: 2973 16th St. 4th Floor
-Tech City: San Francisco
-Tech State/Province: California
-Tech Postal Code: 94110
-Tech Country: United States
-Tech Phone: +1.4159928039
-Tech Phone Ext: 
-Tech Fax: 
-Tech Fax Ext: 
-Tech Email: admin@posterous-inc.com
+Registrant Country: US
+Registrant Email: Select Contact Domain Holder link at https://www.godaddy.com/whois/results.aspx?domain=POSTEROUS.COM
+Admin Email: Select Contact Domain Holder link at https://www.godaddy.com/whois/results.aspx?domain=POSTEROUS.COM
+Tech Email: Select Contact Domain Holder link at https://www.godaddy.com/whois/results.aspx?domain=POSTEROUS.COM
 Name Server: NS2.P34.DYNECT.NET
 Name Server: NS1.P34.DYNECT.NET
 Name Server: NS3.P34.DYNECT.NET
 Name Server: NS4.P34.DYNECT.NET
 DNSSEC: unsigned
 URL of the ICANN WHOIS Data Problem Reporting System: http://wdprs.internic.net/
-Last update of WHOIS database: 2014-10-22T10:00:00Z
+>>> Last update of WHOIS database: 2018-11-01T08:00:00Z <<<
+
+For more information on Whois status codes, please visit https://www.icann.org/resources/pages/epp-status-codes-2014-06-16-en
+
+Notes: 
+
+IMPORTANT: Port43 will provide the ICANN-required minimum data set per 
+ICANN Temporary Specification, adopted 17 May 2018. 
+Visit https://whois.godaddy.com to look up contact data for domains 
+not covered by GDPR policy.
 
 The data contained in GoDaddy.com, LLC's WhoIs database,
 while believed by the company to be reliable, is provided "as is"

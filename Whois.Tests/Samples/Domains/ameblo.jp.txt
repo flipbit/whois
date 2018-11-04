@@ -2,47 +2,38 @@
 [ restricted to network administration purposes. For further information,     ]
 [ use 'whois -h whois.jprs.jp help'. To suppress Japanese output, add'/e'     ]
 [ at the end of command, e.g. 'whois -h whois.jprs.jp xxx/e'.                 ]
-[                                                                             ]
-[ Notice -------------------------------------------------------------------- ]
-[ JPRS will change JPRS WHOIS (web-based and port 43 Whois service) about the ]
-[ following two points on January 18, 2015.                                   ]
-[                                                                             ]
-[  1) Change of the format of response about gTLD domain name                 ]
-[  2) Change of the character encoding                                        ]
-[                                                                             ]
-[ For further information, please see the following webpage.                  ]
-[ http://jprs.jp/whatsnew/notice/2014/20140319-whois.html (only in Japanese)  ]
-[ --------------------------------------------------------------------------- ]
 
-Domain Information: [$B%I%a%$%s>pJs(B]
+Domain Information: [ドメイン情報]
 [Domain Name]                   AMEBLO.JP
 
-[$BEPO?<TL>(B]                      $B3t<02q<R!!%5%$%P!<%(!<%8%'%s%H(B
+[登録者名]                      株式会社サイバーエージェント
 [Registrant]                    CyberAgent, Inc.
 
-[Name Server]                   ns-1218.awsdns-24.org
-[Name Server]                   ns-124.awsdns-15.com
-[Name Server]                   ns-2038.awsdns-62.co.uk
-[Name Server]                   ns-863.awsdns-43.net
+[Name Server]                   a1-5.akam.net
+[Name Server]                   a11-66.akam.net
+[Name Server]                   a20-67.akam.net
+[Name Server]                   a4-64.akam.net
+[Name Server]                   a6-65.akam.net
+[Name Server]                   a7-66.akam.net
 [Signing Key]                   
 
-[$BEPO?G/7nF|(B]                    2004/07/30
-[$BM-8z4|8B(B]                      2015/07/31
-[$B>uBV(B]                          Active
-[$B:G=*99?7(B]                      2014/08/01 01:05:11 (JST)
+[登録年月日]                    2004/07/30
+[有効期限]                      2019/07/31
+[状態]                          Active
+[最終更新]                      2018/08/01 01:05:09 (JST)
 
-Contact Information: [$B8x3+O"MmAk8}(B]
-[$BL>A0(B]                          $B3t<02q<R!!%5%$%P!<%(!<%8%'%s%H(B
+Contact Information: [公開連絡窓口]
+[名前]                          株式会社サイバーエージェント
 [Name]                          CyberAgent, Inc.
-[Email]                         support@ameba.jp
+[Email]                         dns-ssl-info@cyberagent.co.jp
 [Web Page]                       
-[$BM9JXHV9f(B]                      150-0043
-[$B=;=j(B]                          $BEl5~ET=BC+6h(B
-                                $BF;8<:d(B2-11-1
-                                $B%5%$%P!<%(!<%8%'%s%H%S%k(B8$B3,(B
+[郵便番号]                      150-0044
+[住所]                          東京都渋谷区
+                                円山町 19-1
+                                渋谷プライムプラザ2F
 [Postal Address]                Shibuya-ku
-                                2-11-1 Dogenzaka
-                                Cyberagent Building 8F
-[$BEEOCHV9f(B]                      03-5459-0239
-[FAX$BHV9f(B]                       03-5459-1880
+                                19-1 Maruyamacho
+                                Shibuya Prime Plaza 2F
+[電話番号]                      03-5459-6150
+[FAX番号]                       03-5784-7070
 

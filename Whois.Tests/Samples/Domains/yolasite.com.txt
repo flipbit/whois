@@ -1,28 +1,34 @@
 Domain Name: YOLASITE.COM
+Registry Domain ID: 1444529147_DOMAIN_COM-VRSN
 Registrar WHOIS Server: whois.safenames.net
 Registrar URL: http://www.safenames.net
-Updated Date: 10-Aug-2014
-Created Date: 06-Apr-2008
-Registrar Registration Expiration Date: 06-Apr-2021
+Updated Date: 2014-12-18T12:48:05Z
+Creation Date: 2008-04-06T20:38:50Z
+Registrar Registration Expiration Date: 2021-04-06T20:38:50Z
 Registrar: Safenames Ltd
 Registrar IANA ID: 447
 Registrar Abuse Contact Email: abuse@safenames.net
 Registrar Abuse Contact Phone: +44.1908200022
-Registrant Name: Domain Admin
+Domain Status: clientTransferProhibited https://icann.org/epp#clientTransferProhibited
+Domain Status: clientUpdateProhibited https://icann.org/epp#clientUpdateProhibited
+Domain Status: clientDeleteProhibited https://icann.org/epp#clientDeleteProhibited
+Registry Registrant ID: Not Available From Registry
+Registrant Name: Data protected, not disclosed
 Registrant Organisation: Yola, Inc
-Registrant Address Line 1: 545 Sansome St
-Registrant Address Line 2: #900
+Registrant Street: 548 Market St #38798
+Registrant Street: 
 Registrant City: San Francisco
 Registrant State/Province: CA
-Registrant Postal Code: 94133
+Registrant Postal Code: 94104-5401
 Registrant Country: US
-Registrant Phone: +1.4152270250
-Registrant Fax: +1.4152490927
+Registrant Phone: Data protected, not disclosed
+Registrant Fax: Data protected, not disclosed
 Registrant Email: domain-admin@yola.com
+Registry Admin ID: Not Available From Registry
 Admin Name: International Domain Administrator
 Admin Organisation: Safenames Ltd
-Admin Address Line 1: Safenames House, Sunrise Parkway
-Admin Address Line 2: 
+Admin Street: Safenames House, Sunrise Parkway
+Admin Street: Linford Wood
 Admin City: Milton Keynes
 Admin State/Province: Bucks
 Admin Postal Code: MK14 6LS
@@ -30,20 +36,25 @@ Admin Country: UK
 Admin Phone: +44.1908200022
 Admin Fax: +44.1908325192
 Admin Email: hostmaster@safenames.net
+Registry Tech ID: Not Available From Registry
 Tech Name: International Domain Tech
-Tech Organisation: International Domain Tech
-Tech Address Line 1: Safenames House, Sunrise Parkway
-Tech Address Line 2: 
+Tech Organisation: Safenames Ltd
+Tech Street: Safenames House, Sunrise Parkway
+Tech Street: Linford Wood
 Tech City: Milton Keynes
 Tech State/Province: Bucks
 Tech Postal Code: MK14 6LS
 Tech Country: UK
 Tech Phone: +44.1908200022
 Tech Fax: +44.1908325192
-Tech Email: tec@safenames.net
-Name Server: dns1.idp365.net
-Name Server: dns2.idp365.net
+Tech Email: hostmaster@safenames.net
+Name Server: COBY.NS.CLOUDFLARE.COM
+Name Server: NOLA.NS.CLOUDFLARE.COM
+DNSSEC: unsigned
 URL of the ICANN WHOIS Data Problem Reporting System: http://wdprs.internic.net/
+>>> Last update of WHOIS database: 2014-12-18T12:48:05Z <<<
+
+"For more information on Whois status codes, please visit https://icann.org/epp"
 
 Safenames - Experts in Global Domain Management and Online Brand Protection
 

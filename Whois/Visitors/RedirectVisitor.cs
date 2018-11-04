@@ -1,6 +1,9 @@
-﻿using System.Text;
+﻿using System.Threading.Tasks;
 using Whois.Net;
 using Tokens;
+using Whois.Logging;
+using Whois.Models;
+using Whois.Resources;
 
 namespace Whois.Visitors
 {
@@ -9,89 +12,56 @@ namespace Whois.Visitors
     /// </summary>
     public class RedirectVisitor : IWhoisVisitor
     {
-        /// <summary>
-        /// Gets or sets the TCP reader factory.
-        /// </summary>
-        /// <value>The TCP reader factory.</value>
-        public ITcpReaderFactory TcpReaderFactory { get; set; }
+        private static readonly ILog Log = LogProvider.GetCurrentClassLogger();
 
-        /// <summary>
-        /// Gets the current character encoding that the current WhoisVisitor
-        /// object is using.
-        /// </summary>
-        /// <returns>The current character encoding used by the current visitor.</returns>
-        public Encoding Encoding { get; private set; }
-
-        /// <summary>
-        /// Initializes a new instance of the <see cref="RedirectVisitor"/> class.
-        /// </summary>
-        public RedirectVisitor() : this(Encoding.UTF8)
+        public async Task<LookupState> Visit(LookupState state)
         {
-        }
-
-        /// <summary>
-        /// Initializes a new instance of the <see cref="RedirectVisitor"/> class.
-        /// </summary>
-        /// <param name="encoding">The encoding used to read and write strings.</param>
-        public RedirectVisitor(Encoding encoding)
-        {
-            TcpReaderFactory = new TcpReaderFactory();
-
-            Encoding = encoding;
-        }
-
-        /// <summary>
-        /// Visits the specified record.
-        /// </summary>
-        /// <param name="record">The record.</param>
-        /// <returns></returns>
-        public WhoisRecord Visit(WhoisRecord record)
-        {
-            WhoisRedirect redirect;
-
-            if (IsARedirectRecord(record, out redirect))
+            if (IsARedirectRecord(state.Response, out var redirect))
             {
-                record.Redirect = redirect;
-
-                using (var tcpReader = TcpReaderFactory.Create(Encoding))
+                using (var tcpReader = TcpReaderFactory.Create())
                 {
-                    record.Text = tcpReader.Read(redirect.Url, 43, record.Domain);
+                    var response = await tcpReader.Read(redirect.Url, 43, state.Domain, state.Options.DefaultEncoding);
+
+                    Log.Debug("Lookup {0}: Downloaded {1:###,###,##0} byte(s) from {2}.", state.Domain, response.Length, redirect.Url);
+
+                    state.Response = new WhoisResponse
+                    {
+                        Domain = state.Domain,
+                        Content = response
+                    };
                 }
             }
 
-            return record;
+            return state;
         }
 
         /// <summary>
-        /// Determines whether a WHOIS record is a redirect record to another WHOIS server.
+        /// Determines whether a WHOIS response is a redirect response to another WHOIS server.
         /// </summary>
-        /// <param name="record">The record.</param>
-        /// <param name="redirect">The redirect.</param>
-        /// <returns></returns>
-        public bool IsARedirectRecord(WhoisRecord record, out WhoisRedirect redirect)
+        public bool IsARedirectRecord(WhoisResponse response, out WhoisRedirect redirect)
         {
-            var isARedirectRecord = false;
-
             redirect = null;
 
-            if (record.Text.Contains("many different competing registrars"))
+            var pattern = Embedded.Patterns.Redirects.VerisignGrs; 
+
+            var tokenizer = new TokenMatcher();
+            tokenizer.AddPattern(pattern, "verisign-grs.com");
+
+            if (tokenizer.TryMatch<WhoisRedirect>(response.Content, out var match))
             {
-                var reader = new EmbeddedPatternReader();
-                var pattern = reader.Read(GetType().Assembly, "Whois.Patterns.Redirects.Iana.txt");
+                Log.Debug("Found redirect for {0} to {1}", response.Domain, match.Result.Url);
 
-                var tokenizer = new Tokenizer();
+                redirect = match.Result;
 
-                var text = record.Text;
-
-                var tokenResult = tokenizer.Parse<WhoisRedirect>(pattern, text);
-
-                redirect = tokenResult.Value;
-
-                isARedirectRecord = true;
+                if (string.IsNullOrEmpty(redirect.Url) == false)
+                {
+                    return true;
+                }
             }
 
+            Log.Warn("No WHOIS redirect found for: {0}", response.Domain);
 
-            return isARedirectRecord;
+            return false;
         }
     }
 }

@@ -1,17 +1,18 @@
-﻿using System.Text;
+﻿using System.Threading.Tasks;
+using Whois.Models;
 
 namespace Whois.Servers
 {
     /// <summary>
-    /// Interface to lookup the appropriate WHOIS server for a given domain
+    /// Interface to lookup the appropriate WHOIS server for a given TLD
     /// </summary>
     public interface IWhoisServerLookup
     {
         /// <summary>
-        /// Lookups the WHOIS server for the specified domain.
+        /// Lookups the WHOIS server for the specified TLD.
         /// </summary>
-        /// <param name="domain">The domain.</param>
-        /// <returns></returns>
-        IWhoisServer Lookup(string domain);
+        WhoisServer Lookup(string tld);
+
+        Task<WhoisServer> LookupAsync(string tld);
     }
 }

@@ -1,65 +1,76 @@
 Domain Name: foxnews.com
-Registry Domain ID: 
+Registry Domain ID: 4924287_DOMAIN_COM-VRSN
 Registrar WHOIS Server: whois.markmonitor.com
 Registrar URL: http://www.markmonitor.com
-Updated Date: 2014-10-02T12:41:15-0700
+Updated Date: 2018-10-31T12:17:02-0700
 Creation Date: 1995-06-21T00:00:00-0700
 Registrar Registration Expiration Date: 2020-06-19T21:00:00-0700
 Registrar: MarkMonitor, Inc.
 Registrar IANA ID: 292
 Registrar Abuse Contact Email: abusecomplaints@markmonitor.com
 Registrar Abuse Contact Phone: +1.2083895740
-Domain Status: clientUpdateProhibited
-Domain Status: clientTransferProhibited
-Domain Status: clientDeleteProhibited
+Domain Status: clientUpdateProhibited (https://www.icann.org/epp#clientUpdateProhibited)
+Domain Status: clientTransferProhibited (https://www.icann.org/epp#clientTransferProhibited)
+Domain Status: clientDeleteProhibited (https://www.icann.org/epp#clientDeleteProhibited)
+Domain Status: serverUpdateProhibited (https://www.icann.org/epp#serverUpdateProhibited)
+Domain Status: serverTransferProhibited (https://www.icann.org/epp#serverTransferProhibited)
+Domain Status: serverDeleteProhibited (https://www.icann.org/epp#serverDeleteProhibited)
 Registry Registrant ID: 
-Registrant Name: Intellectual Property Department (Fox News)
+Registrant Name: Intellectual Property Department
 Registrant Organization: Fox News Network, LLC
-Registrant Street: c/o Twentieth Century Fox Film Corporation, 10201 W. Pico Boulevard
-Registrant City: Los Angeles
-Registrant State/Province: CA
-Registrant Postal Code: 90213
+Registrant Street: 1211 Avenue of the Americas, 
+Registrant City: New York
+Registrant State/Province: NY
+Registrant Postal Code: 10036
 Registrant Country: US
 Registrant Phone: +1.3103691000
 Registrant Phone Ext: 
-Registrant Fax: -
+Registrant Fax: 
 Registrant Fax Ext: 
-Registrant Email: wmf@fox.com
+Registrant Email: domains@fox.com
 Registry Admin ID: 
-Admin Name: Fox Webmaster
-Admin Organization: Twentieth Century Fox Film Corporation
-Admin Street: Intellectual Property Department, P.O. Box 900
-Admin City: Beverly Hills
-Admin State/Province: CA
-Admin Postal Code: 90213
+Admin Name: Intellectual Property Department
+Admin Organization: Fox News Network, LLC
+Admin Street: 1211 Avenue of the Americas, 
+Admin City: New York
+Admin State/Province: NY
+Admin Postal Code: 10036
 Admin Country: US
 Admin Phone: +1.3103691000
 Admin Phone Ext: 
-Admin Fax: -
+Admin Fax: 
 Admin Fax Ext: 
-Admin Email: wmf@fox.com
+Admin Email: domains@fox.com
 Registry Tech ID: 
-Tech Name: Network Data Communications
-Tech Organization: Twentieth Century Fox Film Corporation
-Tech Street: P.O. Box 900, 
-Tech City: Beverly Hills
-Tech State/Province: CA
-Tech Postal Code: 90213
+Tech Name: Intellectual Property Department
+Tech Organization: Fox News Network, LLC
+Tech Street: 1211 Avenue of the Americas, 
+Tech City: New York
+Tech State/Province: NY
+Tech Postal Code: 10036
 Tech Country: US
 Tech Phone: +1.3103691000
 Tech Phone Ext: 
-Tech Fax: +1.3103691000
+Tech Fax: 
 Tech Fax Ext: 
 Tech Email: domains@fox.com
-Name Server: usw1.akam.net
-Name Server: usc2.akam.net
-Name Server: ns1-157.akam.net
-Name Server: asia3.akam.net
-Name Server: usw3.akam.net
-Name Server: usc4.akam.net
-Name Server: ns1-253.akam.net
+Name Server: dns2.p06.nsone.net
+Name Server: dns1.p06.nsone.net
+Name Server: dns4.p06.nsone.net
+Name Server: dns3.p06.nsone.net
+DNSSEC: unsigned
 URL of the ICANN WHOIS Data Problem Reporting System: http://wdprs.internic.net/
->>> Last update of WHOIS database: 2014-10-22T03:54:31-0700 <<<
+>>> Last update of WHOIS database: 2018-11-01T02:07:02-0700 <<<
+
+If certain contact information is not shown for a Registrant, Administrative,
+or Technical contact, and you wish to send a message to these contacts, please
+send your message to whoisrelay@markmonitor.com and specify the domain name in
+the subject line. We will forward that message to the underlying contact.
+
+If you have a legitimate interest in viewing the non-public WHOIS details, send
+your request and the reasons for your request to abusecomplaints@markmonitor.com
+and specify the domain name in the subject line. We will review that request and
+may ask for supporting documentation and explanation.
 
 The Data in MarkMonitor.com's WHOIS database is provided by MarkMonitor.com for
 information purposes, and to assist persons in obtaining information about or
@@ -84,4 +95,7 @@ Professional and Managed Services
 Visit MarkMonitor at http://www.markmonitor.com
 Contact us at +1.8007459229
 In Europe, at +44.02032062220
+
+For more information on Whois status codes, please visit
+ https://www.icann.org/resources/pages/epp-status-codes-2014-06-16-en
 

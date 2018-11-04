@@ -2,61 +2,63 @@ Domain Name: SOURCEFORGE.NET
 Registry Domain ID: 8919427_DOMAIN_NET-VRSN
 Registrar WHOIS Server: whois.tucows.com
 Registrar URL: http://tucowsdomains.com
-Updated Date: 2013-07-11 09:27:07
-Creation Date: 1999-08-08 04:48:02
-Registrar Registration Expiration Date: 2015-08-08 04:47:54
+Updated Date: 2018-07-18T03:47:14
+Creation Date: 1999-08-08T04:48:02
+Registrar Registration Expiration Date: 2019-08-08T04:47:54
 Registrar: TUCOWS, INC.
 Registrar IANA ID: 69
+Domain Status: clientTransferProhibited https://icann.org/epp#clientTransferProhibited
+Domain Status: clientUpdateProhibited https://icann.org/epp#clientUpdateProhibited
+Registry Registrant ID: 
+Registrant Name: REDACTED FOR PRIVACY
+Registrant Organization: REDACTED FOR PRIVACY
+Registrant Street: REDACTED FOR PRIVACY 
+Registrant City: REDACTED FOR PRIVACY
+Registrant State/Province: REDACTED FOR PRIVACY
+Registrant Postal Code: REDACTED FOR PRIVACY
+Registrant Country: REDACTED FOR PRIVACY
+Registrant Phone: REDACTED FOR PRIVACY
+Registrant Phone Ext: 
+Registrant Fax: REDACTED FOR PRIVACY
+Registrant Fax Ext: 
+Registrant Email: REDACTED FOR PRIVACY
+Registry Admin ID: 
+Admin Name: REDACTED FOR PRIVACY
+Admin Organization: REDACTED FOR PRIVACY
+Admin Street: REDACTED FOR PRIVACY 
+Admin City: REDACTED FOR PRIVACY
+Admin State/Province: REDACTED FOR PRIVACY
+Admin Postal Code: REDACTED FOR PRIVACY
+Admin Country: REDACTED FOR PRIVACY
+Admin Phone: REDACTED FOR PRIVACY
+Admin Phone Ext: 
+Admin Fax: REDACTED FOR PRIVACY
+Admin Fax Ext: 
+Admin Email: REDACTED FOR PRIVACY
+Registry Tech ID: 
+Tech Name: REDACTED FOR PRIVACY
+Tech Organization: REDACTED FOR PRIVACY
+Tech Street: REDACTED FOR PRIVACY 
+Tech City: REDACTED FOR PRIVACY
+Tech State/Province: REDACTED FOR PRIVACY
+Tech Postal Code: REDACTED FOR PRIVACY
+Tech Country: REDACTED FOR PRIVACY
+Tech Phone: REDACTED FOR PRIVACY
+Tech Phone Ext: 
+Tech Fax: REDACTED FOR PRIVACY
+Tech Fax Ext: 
+Tech Email: REDACTED FOR PRIVACY
+Name Server: ns1.dnsmadeeasy.com
+Name Server: ns4.dnsmadeeasy.com
+Name Server: ns3.dnsmadeeasy.com
+Name Server: ns2.dnsmadeeasy.com
+
 Registrar Abuse Contact Email: domainabuse@tucows.com
 Registrar Abuse Contact Phone: +1.4165350123
-Domain Status: clientTransferProhibited
-Domain Status: clientUpdateProhibited
-Registry Registrant ID: 
-Registrant Name: Host Master
-Registrant Organization: Dice Holdings, Inc.
-Registrant Street: ATTN Slashdot Media 1040 Avenue of the Americas 16th Floor
-Registrant City: New York
-Registrant State/Province: NY
-Registrant Postal Code: 10018
-Registrant Country: US
-Registrant Phone: +1.8557527436
-Registrant Phone Ext: 
-Registrant Fax: 
-Registrant Fax Ext: 
-Registrant Email: hostmaster@slashdotmedia.com
-Registry Admin ID: 
-Admin Name: DNS Admin
-Admin Organization: Dice Holdings, Inc.
-Admin Street: ATTN Slashdot Media 1040 Avenue of the Americas 16th Floor
-Admin City: New York
-Admin State/Province: NY
-Admin Postal Code: 10018
-Admin Country: US
-Admin Phone: +1.8557527436
-Admin Phone Ext: 
-Admin Fax: 
-Admin Fax Ext: 
-Admin Email: dns-admin@slashdotmedia.com
-Registry Tech ID: 
-Tech Name: DNS Technical
-Tech Organization: Dice Holdings, Inc.
-Tech Street: ATTN Slashdot Media 1040 Avenue of the Americas 16th Floor
-Tech City: New York
-Tech State/Province: NY
-Tech Postal Code: 10018
-Tech Country: US
-Tech Phone: +1.8557527436
-Tech Phone Ext: 
-Tech Fax: 
-Tech Fax Ext: 
-Tech Email: dns-tech@slashdotmedia.com
-Name Server: NS1.P03.DYNECT.NET
-Name Server: NS2.P03.DYNECT.NET
-Name Server: NS4.P03.DYNECT.NET
-Name Server: NS3.P03.DYNECT.NET
-DNSSEC: Unsigned
 URL of the ICANN WHOIS Data Problem Reporting System: http://wdprs.internic.net/
->>> Last update of WHOIS database: 2013-07-11 09:27:07 <<<
+>>> Last update of WHOIS database: 2018-07-18T03:47:14 <<<
+
+"For more information on Whois status codes, please visit https://icann.org/epp"
 
 The Data in the Tucows Registrar WHOIS database is provided to you by Tucows
 for information purposes only, and may be used to assist you in obtaining

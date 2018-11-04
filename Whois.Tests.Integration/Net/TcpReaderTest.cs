@@ -17,7 +17,9 @@ namespace Whois.Net
 
             using (var reader = new TcpReader())
             {
-                result = reader.Read("whois.nic.uk", 43, "cogworks.co.uk");
+                //result = reader.Read("whois.nic.uk", 43, "cogworks.co.uk", Encoding.UTF8);
+                result = reader.Read("whois.registrarsafe.com", 43, "facebook.com", Encoding.UTF8);
+
             }
 
             // Just check the domain name is in the response
@@ -25,15 +27,14 @@ namespace Whois.Net
         }
 
         [Test]
-        [Ignore]
+        [Ignore("Not working")]
         public void TestReadWhoisForSapoPt()
         {
             string result;
-            var encoding = Encoding.GetEncoding("ISO-8859-1");
 
-            using (var reader = new TcpReader(encoding))
+            using (var reader = new TcpReader())
             {
-                result = reader.Read("whois.dns.pt", 43, "sapo.pt");
+                result = reader.Read("whois.dns.pt", 43, "sapo.pt", Encoding.GetEncoding("ISO-8859-1"));
             }
 
             // Just check the domain name is in the response
@@ -44,11 +45,10 @@ namespace Whois.Net
         public void TestReadWhoisForUolComBr()
         {
             string result;
-            var encoding = Encoding.GetEncoding("ISO-8859-1");
 
-            using (var reader = new TcpReader(encoding))
+            using (var reader = new TcpReader())
             {
-                result = reader.Read("registro.br", 43, "uol.com.br");
+                result = reader.Read("registro.br", 43, "uol.com.br", Encoding.GetEncoding("ISO-8859-1"));
             }
 
             // Just check the domain name is in the response
@@ -62,7 +62,7 @@ namespace Whois.Net
 
             using (var reader = new TcpReader())
             {
-                result = reader.Read("whois.nic.uk", 43, "invalid domain");
+                result = reader.Read("whois.nic.uk", 43, "invalid domain", Encoding.UTF8);
             }
 
             // SHould never be registered (as invalid)
@@ -76,7 +76,7 @@ namespace Whois.Net
             {
                 using (var reader = new TcpReader())
                 {
-                    reader.Read("invalid domain", 43, "invalid domain");
+                    reader.Read("invalid domain", 43, "invalid domain", Encoding.UTF8);
                 }
 
                 Assert.Fail("Should of thrown an exception!");

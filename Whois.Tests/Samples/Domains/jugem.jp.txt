@@ -2,43 +2,32 @@
 [ restricted to network administration purposes. For further information,     ]
 [ use 'whois -h whois.jprs.jp help'. To suppress Japanese output, add'/e'     ]
 [ at the end of command, e.g. 'whois -h whois.jprs.jp xxx/e'.                 ]
-[                                                                             ]
-[ Notice -------------------------------------------------------------------- ]
-[ JPRS will change JPRS WHOIS (web-based and port 43 Whois service) about the ]
-[ following two points on January 18, 2015.                                   ]
-[                                                                             ]
-[  1) Change of the format of response about gTLD domain name                 ]
-[  2) Change of the character encoding                                        ]
-[                                                                             ]
-[ For further information, please see the following webpage.                  ]
-[ http://jprs.jp/whatsnew/notice/2014/20140319-whois.html (only in Japanese)  ]
-[ --------------------------------------------------------------------------- ]
 
-Domain Information: [$B%I%a%$%s>pJs(B]
+Domain Information: [ドメイン情報]
 [Domain Name]                   JUGEM.JP
 
-[$BEPO?<TL>(B]                      GMO$B%Z%Q%\3t<02q<R(B
+[登録者名]                      GMOペパボ株式会社
 [Registrant]                    GMO Pepabo, Inc.
 
 [Name Server]                   dns0.jugem.jp
 [Name Server]                   dns1.jugem.jp
 [Signing Key]                   
 
-[$BEPO?G/7nF|(B]                    2004/06/28
-[$BM-8z4|8B(B]                      2015/06/30
-[$B>uBV(B]                          Active
-[$B:G=*99?7(B]                      2014/07/01 01:05:11 (JST)
+[登録年月日]                    2004/06/28
+[有効期限]                      2019/06/30
+[状態]                          Active
+[最終更新]                      2018/07/01 01:05:10 (JST)
 
-Contact Information: [$B8x3+O"MmAk8}(B]
-[$BL>A0(B]                          $B:4F#!!7rB@O:(B
+Contact Information: [公開連絡窓口]
+[名前]                          佐藤　健太郎
 [Name]                          Kentaro Sato
 [Email]                         admin@muumuu-domain.com
 [Web Page]                       
-[$BM9JXHV9f(B]                      150-8512
-[$B=;=j(B]                          $BEl5~ET=BC+6h(B $B:y5VD.(B26$BHV(B1$B9f(B
-                                $B%;%k%j%"%s%?%o!<(B
+[郵便番号]                      150-8512
+[住所]                          東京都渋谷区 桜丘町26番1号
+                                セルリアンタワー
 [Postal Address]                Cerulean Tower
                                 26-1 Sakuragaoka-cho Shibuya-ku
-[$BEEOCHV9f(B]                      03-5456-2622
-[FAX$BHV9f(B]                       03-5456-2633
+[電話番号]                      03-5456-2622
+[FAX番号]                       03-5456-2633
 

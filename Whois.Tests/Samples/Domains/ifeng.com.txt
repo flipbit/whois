@@ -1,79 +1,78 @@
-Domain Name: ifeng.com
-Registry Domain ID: 133720176_DOMAIN_COM-VRSN
-Registrar WHOIS Server: whois.register.com
-Registrar URL: http://www.register.com
-Updated Date: 2007-07-25T00:00:00-0400
-Creation Date: 2004-10-26T14:21:59-0400
-Registrar Registration Expiration Date: 2017-10-26T00:00:00-0400
-Registrar: Register.com, LLC.
-Registrar IANA ID: 9
-Registrar Abuse Contact Email: abuse@web.com
-Registrar Abuse Contact Phone: +1.8773812449
-Reseller: 
-Domain Status: clientTransferProhibited
-Domain Status: clientRenewProhibited
-Domain Status: clientDeleteProhibited
-Domain Status: clientUpdateProhibited
+Domain Name:ifeng.com
+Registry Domain ID:
+Registrar WHOIS Server:whois.paycenter.com.cn
+Registrar URL:http://www.xinnet.com
+Updated Date:2018-07-29T04:40:59.00Z
+Creation Date:2004-10-26T10:21:59.00Z
+Registrar Registration Expiration Date:2022-10-26T10:21:59.00Z
+Registrar:XINNET TECHNOLOGY CORPORATION
+Registrar IANA ID:120
+Registrar Abuse Contact Email:supervision@xinnet.com
+Registrar Abuse Contact Phone:+86.1087128064
+Reseller:
+Domain Status:clientTransferProhibited https://www.icann.org/epp#clientTransferProhibited
+Domain Status:clientUpdateProhibited https://www.icann.org/epp#clientUpdateProhibited
 Registry Registrant ID:
-Registrant Name: DNS Admin
-Registrant Organization: Beijing Tian Ying Jiu Zhou Network Technology Co., Ltd.
-Registrant Street: 16/F FuSheng Building, HuiXin East Street ChaoYang district
-Registrant City: Beijing
-Registrant State/Province:  
-Registrant Postal Code: 100029
-Registrant Country: CN
-Registrant Phone: +1.1084458000
-Registrant Phone Ext.:
-Registrant Fax: 
-Registrant Fax Ext.:
-Registrant Email: dnsadmin@ifeng.com
+Registrant Name:
+Registrant Organization:
+Registrant Street:
+Registrant City:
+Registrant State/Province:
+Registrant Postal Code:
+Registrant Country:
+Registrant Phone:
+Registrant Phone Ext:
+Registrant Fax:
+Registrant Fax Ext:
+Registrant Email:
 Registry Admin ID:
-Admin Name: DNS Admin
-Admin Organization: Beijing Tian Ying Jiu Zhou Network Technology Co., Ltd.
-Admin Street: 16/F FuSheng Building, HuiXin East Street ChaoYang district
-Admin City: Beijing
-Admin State/Province: beijing
-Admin Postal Code: 100029
-Admin Country: CN
-Admin Phone: +86.1084458000
-Admin Phone Ext.:
-Admin Fax: 
-Admin Fax Ext.:
-Admin Email: dnsadmin@ifeng.com
+Admin Name:
+Admin Organization:
+Admin Street:
+Admin City:
+Admin State/Province:
+Admin PostalCode:
+Admin Country:
+Admin Phone:
+Admin Phone Ext:
+Admin Fax:
+Admin Fax Ext:
+Admin Email:
 Registry Tech ID:
-Tech Name: DNS Admin
-Tech Organization: Beijing Tian Ying Jiu Zhou Network Technology Co., Ltd.
-Tech Street: 16/F FuSheng Building, HuiXin East Street ChaoYang district
-Tech City: Beijing
-Tech State/Province:  
-Tech Postal Code: 100029
-Tech Country: CN
-Tech Phone: +86.1084458000
-Tech Phone Ext.:
-Tech Fax: 
-Tech Fax Ext.:
-Tech Email: dnsadmin@ifeng.com
-Name Server: lns2.zdnscloud.biz
-Name Server: gns1.zdnscloud.net
-Name Server: gns2.zdnscloud.net.cn
-Name Server: lns1.zdnscloud.info
-DNSSEC: Unsigned
-URL of the ICANN WHOIS Data Problem Reporting System: http://wdprs.internic.net/ 
->>> Last update of WHOIS database: 2007-07-25T00:00:00-0400 <<<
+Tech Name:
+Tech Organization:
+Tech Street:
+Tech City:
+Tech State/Province:
+Tech PostalCode:
+Tech Country:
+Tech Phone:
+Tech Phone Ext:
+Tech Fax:
+Tech Fax Ext:
+Tech Email:
+Name Server:cns1.zdnscloud.net
+Name Server:ins1.zdnscloud.com
+Name Server:dns1.zdnscloud.info
+Name Server:vns1.zdnscloud.biz
+DNSSEC:unsigned
+URL of the ICANN WHOIS Data Problem Reporting System: http://wdprs.internic.net/
+>>> Last update of WHOIS database: 2018-11-01T13:18:13.00Z <<<: 
 
-The data in Register.com's WHOIS database is provided to you by
-Register.com for information purposes only, that is, to assist you in
-obtaining information about or related to a domain name registration
-record.  Register.com makes this information available "as is," and
-does not guarantee its accuracy.  By submitting a WHOIS query, you
-agree that you will use this data only for lawful purposes and that,
-under no circumstances will you use this data to: (1) allow, enable,
-or otherwise support the transmission of mass unsolicited, commercial
-advertising or solicitations via direct mail, electronic mail, or by
-telephone; or (2) enable high volume, automated, electronic processes
-that apply to Register.com (or its systems).  The compilation,
-repackaging, dissemination or other use of this data is expressly
-prohibited without the prior written consent of Register.com.
-Register.com reserves the right to modify these terms at any time.
-By submitting this query, you agree to abide by these terms.
+For more information on Whois status codes, please visit https://icann.org/epp
+
+The Data in Paycenter's WHOIS database is provided by Paycenter
+for information purposes, and to assist persons in obtaining
+information about or related to a domain name registration record.
+Paycenter does not guarantee its accuracy.  By submitting
+a WHOIS query, you agree that you will use this Data only
+for lawful purposes and that, 
+under no circumstances will you use this Data to:
+(1) allow, enable, or otherwise support the transmission
+of mass unsolicited, commercial advertising or solicitations
+via e-mail (spam); or
+(2) enable high volume, automated, electronic processes that
+apply to Paycenter or its systems.
+Paycenter reserves the right to modify these terms at any time.
+By submitting this query, you agree to abide by this policy.!!
 

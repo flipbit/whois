@@ -1,64 +1,61 @@
 
 
-Domain Name: PHPBB.COM
+Domain Name: phpbb.com
 Registry Domain ID: 32924689_DOMAIN_COM-VRSN
-Registrar WHOIS Server: whois.enom.com
-Registrar URL: www.enom.com
-Updated Date: 2014-07-16 01:00:08Z
-Creation Date: 2000-08-14 10:45:42Z
-Registrar Registration Expiration Date: 2015-08-14 10:45:00Z
+Registrar WHOIS Server: WHOIS.ENOM.COM
+Registrar URL: WWW.ENOM.COM
+Updated Date: 2018-07-16T00:56:14.00Z
+Creation Date: 2000-08-14T10:45:42.00Z
+Registrar Registration Expiration Date: 2019-08-14T10:45:00.00Z
 Registrar: ENOM, INC.
 Registrar IANA ID: 48
-Registrar Abuse Contact Email: abuse@enom.com
-Registrar Abuse Contact Phone: +1.4252982646
-Domain Status: clientTransferProhibited
-Registry Registrant ID: 
-Registrant Name: YURIY RUSKO
-Registrant Organization: PHPBB LTD.
-Registrant Street: MERCURY HOUSE
-Registrant Street: 19-21 CHAPEL STREET
-Registrant City: MARLOW
-Registrant State/Province: BUCKINGHAMSHIRE
-Registrant Postal Code: SL7 3HN
-Registrant Country: GB
-Registrant Phone: +1.10000000
+Domain Status: registrar-lock* https://www.icann.org/epp#registrar-lock*
+Registrant Name: REDACTED FOR PRIVACY
+Registrant Organization: REDACTED FOR PRIVACY
+Registrant Street: REDACTED FOR PRIVACY
+Registrant Street: 
+Registrant City: REDACTED FOR PRIVACY
+Registrant State/Province: REDACTED FOR PRIVACY
+Registrant Postal Code: REDACTED FOR PRIVACY
+Registrant Country: REDACTED FOR PRIVACY
+Registrant Phone: REDACTED FOR PRIVACY
 Registrant Phone Ext: 
-Registrant Fax: 
-Registrant Fax Ext:
-Registrant Email: HOSTMASTER@PHPBB.COM
-Registry Admin ID: 
-Admin Name: YURIY RUSKO
-Admin Organization: PHPBB LTD.
-Admin Street: MERCURY HOUSE
-Admin Street: 19-21 CHAPEL STREET
-Admin City: MARLOW
-Admin State/Province: BUCKINGHAMSHIRE
-Admin Postal Code: SL7 3HN
-Admin Country: GB
-Admin Phone: +1.10000000
+Registrant Fax: REDACTED FOR PRIVACY
+Registrant Email: REDACTED FOR PRIVACY
+Admin Name: REDACTED FOR PRIVACY
+Admin Organization: REDACTED FOR PRIVACY
+Admin Street: REDACTED FOR PRIVACY
+Admin Street: 
+Admin City: REDACTED FOR PRIVACY
+Admin State/Province: REDACTED FOR PRIVACY
+Admin Postal Code: REDACTED FOR PRIVACY
+Admin Country: REDACTED FOR PRIVACY
+Admin Phone: REDACTED FOR PRIVACY
 Admin Phone Ext: 
-Admin Fax: 
-Admin Fax Ext:
-Admin Email: HOSTMASTER@PHPBB.COM
-Registry Tech ID: 
-Tech Name: YURIY RUSKO
-Tech Organization: PHPBB LTD.
-Tech Street: MERCURY HOUSE
-Tech Street: 19-21 CHAPEL STREET
-Tech City: MARLOW
-Tech State/Province: BUCKINGHAMSHIRE
-Tech Postal Code: SL7 3HN
-Tech Country: GB
-Tech Phone: +1.10000000
+Admin Fax: REDACTED FOR PRIVACY
+Admin Email: REDACTED FOR PRIVACY
+Tech Name: REDACTED FOR PRIVACY
+Tech Organization: REDACTED FOR PRIVACY
+Tech Street: REDACTED FOR PRIVACY
+Tech Street: 
+Tech City: REDACTED FOR PRIVACY
+Tech State/Province: REDACTED FOR PRIVACY
+Tech Postal Code: REDACTED FOR PRIVACY
+Tech Country: REDACTED FOR PRIVACY
+Tech Phone: REDACTED FOR PRIVACY
 Tech Phone Ext: 
-Tech Fax: 
-Tech Fax Ext: 
-Tech Email: HOSTMASTER@PHPBB.COM
+Tech Fax: REDACTED FOR PRIVACY
+Tech Email: REDACTED FOR PRIVACY
 Name Server: ERIC.NS.CLOUDFLARE.COM
 Name Server: ERIN.NS.CLOUDFLARE.COM
-DNSSEC: unSigned
-URL of the ICANN WHOIS Data Problem Reporting System: http://wdprs.internic.net/
-Last update of WHOIS database: 2014-07-16 01:00:08Z
+DNSSEC: UNSIGNED
+Registrar Abuse Contact Email: ABUSE@ENOM.COM
+Registrar Abuse Contact Phone: +1.4259744689
+URL of the ICANN WHOIS Data Problem Reporting System: HTTP://WDPRS.INTERNIC.NET/
+>>> Last update of WHOIS database: 2018-07-16T00:56:14.00Z <<<
+
+For more information on Whois status codes, please visit https://icann.org/epp
+
 
 The data in this whois database is provided to you for information
 purposes only, that is, to assist you in obtaining information about or
@@ -77,5 +74,3 @@ consent from us.
 We reserve the right to modify these terms at any time. By submitting 
 this query, you agree to abide by these terms.
 Version 6.3 4/3/2002
-
-Get Noticed on the Internet!  Increase visibility for this domain name by listing it at www.whoisbusinesslistings.com

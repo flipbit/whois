@@ -1,7 +1,9 @@
-﻿using System.Collections.Generic;
-using System.Linq;
-using System.Text;
+﻿using System;
+using System.Threading.Tasks;
 using Tokens;
+using Whois.Logging;
+using Whois.Models;
+using Whois.Resources;
 
 namespace Whois.Visitors
 {
@@ -10,75 +12,39 @@ namespace Whois.Visitors
     /// </summary>
     public class PatternExtractorVisitor : IWhoisVisitor
     {
-        /// <summary>
-        /// Gets the current character encoding that the current WhoisVisitor
-        /// object is using.
-        /// </summary>
-        /// <returns>The current character encoding used by the current visitor.</returns>
-        public Encoding Encoding { get; private set; }
+        private static readonly ILog Log = LogProvider.GetCurrentClassLogger();
 
-        /// <summary>
-        /// Initializes a new instance of the <see cref="PatternExtractorVisitor" /> class.
-        /// </summary>
-        public PatternExtractorVisitor() : this(Encoding.UTF8)
+        private readonly TokenMatcher matcher;
+
+        public PatternExtractorVisitor()
         {
-        }
+            matcher = new TokenMatcher();
 
-        /// <summary>
-        /// Initializes a new instance of the <see cref="PatternExtractorVisitor" /> class.
-        /// </summary>
-        /// <param name="encoding">The encoding used to read and write strings.</param>
-        public PatternExtractorVisitor(Encoding encoding)
-        {
-            Encoding = encoding;
-        }
-
-        /// <summary>
-        /// Gets all the embdedded patterns in the assembly.
-        /// </summary>
-        /// <returns></returns>
-        public IList<string> GetEmbeddedPatterns()
-        {
-            var reader = new EmbeddedPatternReader();
-
-            return reader.ReadNamespace(GetType().Assembly, "Whois.Patterns.Domains");
-        } 
-
-        /// <summary>
-        /// Visits the specified record.
-        /// </summary>
-        /// <param name="record">The record.</param>
-        /// <returns></returns>
-        public WhoisRecord Visit(WhoisRecord record)
-        {
-            var results = MatchPatterns(record);
-
-            if (results.Any())
+            Embedded.Patterns.Domains.ForEach((name, pattern) =>
             {
-                record = results.First().Value;
+                matcher.AddPattern(pattern, name);
+            });
+        }
+
+        public Task<LookupState> Visit(LookupState state)
+        {
+            if (state.ParseResponse == false)
+            {
+                return Task.FromResult(state);
             }
 
-            return record;
-        }
-
-        public IList<TokenResult<WhoisRecord>> MatchPatterns(WhoisRecord record)
-        {
-            var results = new List<TokenResult<WhoisRecord>>();
-
-            var patterns = GetEmbeddedPatterns();
-
-            foreach (var pattern in patterns)
+            if (matcher.TryMatch<ParsedWhoisResponse>(state.Response.Content, out var match))
             {
-                var tokenizer = new Tokenizer();
+                Log.Debug("Parsed WHOIS data using pattern {0} - {1} replacement(s) made.", match.Template.Name, match.Matches);
 
-                var clone = record.Clone() as WhoisRecord;
-
-                var result = tokenizer.Parse(clone, pattern, record.Text);
-
-                results.Add(result);
+                state.Response.ParsedResponse = match.Result;
+            }
+            else
+            {
+                Log.Debug("Unable to parse WHOIS data.");
             }
 
-            return results.OrderBy(r => r.Replacements.Count).ToList();
+            return Task.FromResult(state);
         }
     }
 }

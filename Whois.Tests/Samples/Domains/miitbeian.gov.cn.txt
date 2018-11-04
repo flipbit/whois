@@ -3,12 +3,12 @@ ROID: 20100601s10061s01928452-cn
 Domain Status: serverDeleteProhibited
 Domain Status: serverUpdateProhibited
 Domain Status: serverTransferProhibited
-Registrant ID: s1275354235503
-Registrant: 工业和信息化部电信管理局
-Registrant Contact Email: Beian@miit.gov.cn
+Registrant ID: sfn9685635215753
+Registrant: 工业和信息化部信息通信管理局
+Registrant Contact Email: beian@miit.gov.cn
 Sponsoring Registrar: 北京中科三方网络技术有限公司
 Name Server: dns1.miibeian.gov.cn
 Name Server: dns2.miibeian.gov.cn
-Registration Date: 2010-06-01 11:23:25
-Expiration Date: 2015-06-01 11:23:25
+Registration Time: 2010-06-01 11:23:25
+Expiration Time: 2028-06-01 11:23:25
 DNSSEC: unsigned

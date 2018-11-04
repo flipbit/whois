@@ -1,62 +1,68 @@
 Domain Name: nationalgeographic.com
-Registry Domain ID:
+Registry Domain ID: 31998_DOMAIN_COM-VRSN
 Registrar WHOIS Server: whois.ascio.com
 Registrar URL: http://www.ascio.com 
-Updated Date: 2014-09-12T22:28:28Z
-Creation Date: 2011-02-14T02:26:40Z
-Registrar Registration Expiration Date: 2015-10-09T04:00:00Z
+Updated Date: 2018-10-09T06:28:34Z
+Creation Date: 1995-10-10T00:00:00Z
+Registrar Registration Expiration Date: 2019-10-09T04:00:00Z
 Registrar: Ascio Technologies, Inc
 Registrar IANA ID: 106
 Registrar Abuse Contact Email: abuse@ascio.com
 Registrar Abuse Contact Phone: +44.2070159370
-Reseller:
-Domain Status: UPDATE_LOCK
-Registry Registrant ID:
-Registrant Name: National Geographic Society
+Domain Status: clientTransferProhibited https://icann.org/epp#clientTransferProhibited
+Domain Status: clientUpdateProhibited https://icann.org/epp#clientUpdateProhibited
+Domain Status: clientDeleteProhibited https://icann.org/epp#clientDeleteProhibited
+Registry Registrant ID: 
+Registrant Name: Domain Administrator
 Registrant Organization: National Geographic Society
 Registrant Street: 1145 17th Street, NW
-Registrant City: Washington 
-Registrant State/Province: DC
+Registrant Street: Washington
+Registrant City: DC 
+Registrant State/Province: Washington
 Registrant Postal Code: 20036
 Registrant Country: US
-Registrant Phone:
+Registrant Phone: +1.2028577000
 Registrant Phone Ext:
-Registrant Fax:
+Registrant Fax: +1.2024578486
 Registrant Fax Ext:
-Registrant Email:
+Registrant Email: domains@ngs.org
 Registry Admin ID:
-Admin Name: National Geographic
+Admin Name: Domain Administrator
 Admin Organization: National Geographic Society
-Admin Street: 1145 17th St. NW
-Admin City:  Washington
-Admin State/Province: DC
+Admin Street: 1145 17th Street, NW
+Admin Street: Washington
+Admin City: DC
+Admin State/Province: Washington
 Admin Postal Code: 20036
 Admin Country: US
 Admin Phone: +1.2028577000
 Admin Phone Ext:
-Admin Fax: +1.1231231234
+Admin Fax: +1.2024578486
 Admin Fax Ext:
-Admin Email: hostmaster@nationalgeographic.com
+Admin Email: domains@ngs.org
 Registry Tech ID:
-Tech Name: Admin Team
+Tech Name: Domain Administrator
 Tech Organization: National Geographic Society
-Tech Street: 1145 19th Street, NW
-Tech City: Washington 
-Tech State/Province: Wasinghton DC
+Tech Street: 1145 17th Street, NW
+Tech Street: Washington
+Tech City: DC 
+Tech State/Province: Washington
 Tech Postal Code: 20036
 Tech Country: US
 Tech Phone: +1.2028577000
 Tech Phone Ext:
-Tech Fax:   
+Tech Fax: +1.2024578486  
 Tech Fax Ext: 
 Tech Email: domains@ngs.org
 Name Server: ns1.p48.dynect.net
 Name Server: ns2.p48.dynect.net
 Name Server: ns3.p48.dynect.net
 Name Server: ns4.p48.dynect.net
-DNSSEC:
+DNSSEC: unsigned
 URL of the ICANN WHOIS Data Problem Reporting System: http://wdprs.internic.net/
->>> Last update of WHOIS database: 2014-10-22T10:57:58 UTC <<<
+>>> Last update of WHOIS database: 2018-11-01T09:11:29Z <<<
+
+For more information on Whois status codes, please visit https://icann.org/epp
 
 The data in Ascio Technologies' WHOIS database is provided 
 by Ascio Technologies for information purposes only. By submitting 
@@ -67,7 +73,7 @@ activities, regardless of the medium used. Such media include but are
 not limited to e-mail, telephone, facsimile, postal mail, SMS, and
 wireless alerts; or
 (b) use the data to enable high volume, automated, electronic processes
-that sendqueries or data to the systems of any Registry Operator or 
+that send queries or data to the systems of any Registry Operator or 
 ICANN-Accredited registrar, except as reasonably necessary to register 
 domain names or modify existing registrations.
 (c) sell or redistribute the data except insofar as it has been 

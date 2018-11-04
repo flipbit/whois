@@ -1,7 +1,7 @@
-﻿using System;
-using System.Text;
-using System.Net;
+﻿using System.Net;
 using System.Net.Sockets;
+using System.Threading.Tasks;
+using Whois.Models;
 
 namespace Whois.Servers
 {
@@ -11,81 +11,35 @@ namespace Whois.Servers
     public class InternicServerLookup : IWhoisServerLookup
     {
         /// <summary>
-        /// Gets the current character encoding that the current WhoisServerLookup
-        /// object is using.
+        /// Lookups the WHOIS server for the specified TLD.
         /// </summary>
-        /// <returns>The current character encoding used by the current WhoisServerLookup.</returns>
-        public Encoding CurrentEncoding { get; private set; }
-
-        /// <summary>
-        /// Initializes a new instance of the <see cref="InternicServerLookup"/> class.
-        /// </summary>
-        public InternicServerLookup(): this(Encoding.UTF8)
+        public WhoisServer Lookup(string tld)
         {
+            return AsyncHelper.RunSync(() => LookupAsync(tld));
         }
 
-        /// <summary>
-        /// Initializes a new instance of the <see cref="InternicServerLookup"/> class.
-        /// </summary>
-        /// <param name="encoding">The encoding used to read and write strings.</param>
-        public InternicServerLookup(Encoding encoding)
-        {
-            CurrentEncoding = encoding;
-        }
-
-        /// <summary>
-        /// Gets the TLD for a given domain.
-        /// </summary>
-        /// <param name="domain">The domain.</param>
-        /// <returns></returns>
-        public string GetTld(string domain)
-        {
-            var tld = string.Empty;
-
-            if (!string.IsNullOrEmpty(domain))
-            {
-                var parts = domain.Split('.');
-
-                if (parts.Length > 1) tld = parts[parts.Length - 1];
-            }
-
-            return tld;
-        }
-
-        /// <summary>
-        /// Lookups the WHOIS server for the specified domain.
-        /// </summary>
-        /// <param name="domain">The domain.</param>
-        /// <returns></returns>
-        public IWhoisServer Lookup(string domain)
+        public async Task<WhoisServer> LookupAsync(string tld)
         {
             // This is the default WHOIS server
             var server = "whois.internic.net";
 
-            var tld = GetTld(domain);
-
             // Hack for TK domains
             if (tld == "tk")
             {
-                server = "whois.dot.tk";
+                return new WhoisServer(tld, "whois.dot.tk");
             }
 
-            else if (!string.IsNullOrEmpty(tld))
+            var whoisServerName = tld + '.' + "whois-servers.net";
+
+            try
             {
-                var whoisServerName = tld + '.' + "whois-servers.net";
+                var hostEntry = await Dns.GetHostEntryAsync(whoisServerName);
 
-                try
-                {
-                    var hostEntry = Dns.GetHostEntry(whoisServerName);
-
-                    server = hostEntry.HostName == whoisServerName ? "whois.internic.net" : hostEntry.HostName;
-                }
-                catch (SocketException ex)
-                {
-                    // You should throw an application exception really.
-                    throw new ApplicationException("WHOIS server lookup failed for " + domain + ": " + ex.Message);
-                }
-
+                server = hostEntry.HostName == whoisServerName ? "whois.internic.net" : hostEntry.HostName;
+            }
+            catch (SocketException ex)
+            {
+                throw new WhoisException("WHOIS server lookup fail for TLD: " + tld, ex);
             }
 
             return new WhoisServer(tld, server);

@@ -2,15 +2,15 @@ Domain Name: over-blog.com
 Registry Domain ID: 112622266_DOMAIN_COM-VRSN
 Registrar WHOIS Server: whois.gandi.net
 Registrar URL: http://www.gandi.net
-Updated Date: 2014-10-13T09:44:30Z
+Updated Date: 2018-01-25T19:07:45Z
 Creation Date: 2004-02-25T19:51:07Z
-Registrar Registration Expiration Date: 2015-02-25T19:51:07Z
+Registrar Registration Expiration Date: 2019-02-25T19:51:07Z
 Registrar: GANDI SAS
 Registrar IANA ID: 81
 Registrar Abuse Contact Email: abuse@support.gandi.net
 Registrar Abuse Contact Phone: +33.170377661
 Reseller: 
-Domain Status: clientTransferProhibited
+Domain Status: clientTransferProhibited http://www.icann.org/epp#clientTransferProhibited
 Domain Status: 
 Domain Status: 
 Domain Status: 
@@ -18,42 +18,45 @@ Domain Status:
 Registry Registrant ID: 
 Registrant Name: Cédric SIRE
 Registrant Organization: JFG NETWORKS
-Registrant Street: 1 avenue Jean Rieux
+Registrant Street: 1 place Occitane 
+ Immeuble Le Sully
 Registrant City: TOULOUSE
 Registrant State/Province: 
-Registrant Postal Code: 31500
+Registrant Postal Code: 31000
 Registrant Country: FR
-Registrant Phone: +33.170945404
+Registrant Phone: +33.562483390
 Registrant Phone Ext:
 Registrant Fax: 
 Registrant Fax Ext:
-Registrant Email: 1dd0b94c2deb25410eaf9cdcc481cae3-1090592@contact.gandi.net
+Registrant Email: cace3e644ad2014748345fa9b30e8757-1090592@contact.gandi.net
 Registry Admin ID: 
 Admin Name: Cédric SIRE
 Admin Organization: JFG NETWORKS
-Admin Street: 1 avenue Jean Rieux
+Admin Street: 1 place Occitane 
+ Immeuble Le Sully
 Admin City: TOULOUSE
 Admin State/Province: 
-Admin Postal Code: 31500
+Admin Postal Code: 31000
 Admin Country: FR
-Admin Phone: +33.170945404
+Admin Phone: +33.562483390
 Admin Phone Ext:
 Admin Fax: 
 Admin Fax Ext:
-Admin Email: 1dd0b94c2deb25410eaf9cdcc481cae3-1090592@contact.gandi.net
+Admin Email: cace3e644ad2014748345fa9b30e8757-1090592@contact.gandi.net
 Registry Tech ID: 
 Tech Name: Cédric SIRE
 Tech Organization: JFG NETWORKS
-Tech Street: 1 avenue Jean Rieux
+Tech Street: 1 place Occitane 
+ Immeuble Le Sully
 Tech City: TOULOUSE
 Tech State/Province: 
-Tech Postal Code: 31500
+Tech Postal Code: 31000
 Tech Country: FR
-Tech Phone: +33.170945404
+Tech Phone: +33.562483390
 Tech Phone Ext:
 Tech Fax: 
 Tech Fax Ext:
-Tech Email: 1dd0b94c2deb25410eaf9cdcc481cae3-1090592@contact.gandi.net
+Tech Email: cace3e644ad2014748345fa9b30e8757-1090592@contact.gandi.net
 Name Server: NS0.PROCEAU.NET
 Name Server: NS1.PROCEAU.NET
 Name Server: 
@@ -66,18 +69,15 @@ Name Server:
 Name Server: 
 DNSSEC: Unsigned
 URL of the ICANN WHOIS Data Problem Reporting System: http://wdprs.internic.net/
->>> Last update of WHOIS database: 2014-10-22T10:32:49Z <<<
+>>> Last update of WHOIS database: 2018-11-01T09:02:15Z <<<
+
+For more information on Whois status codes, please visit
+https://www.icann.org/epp
 
 Reseller Email: 
 Reseller URL: 
 
-Personal data access and use are governed by French law, any use for
-the purpose of unsolicited mass commercial advertising as well as any
-mass or automated inquiries (for any intent other than the
-registration or modification of a domain name) are strictly forbidden.
-Copy of whole or part of our database without Gandi's endorsement is
-strictly forbidden.
-The owner of a domain is the person specified as "Registrant Name" for
-a natural person and "Registrant Organization" for a legal person.
-Domain ownership disputes should be settled using ICANN's Uniform
-Dispute Resolution Policy: http://www.icann.org/en/help/dndr#udrp
+Personal data access and use are governed by French law, any use for the purpose of unsolicited mass commercial advertising as well as any mass or automated inquiries (for any intent other than the registration or modification of a domain name) are strictly forbidden. Copy of whole or part of our database without Gandi's endorsement is strictly forbidden. <br />
+A dispute over the ownership of a domain name may be subject to the alternate procedure established by the Registry in question or brought before the courts. <br />
+For additional information, please contact us via the following form:<br />
+ https://www.gandi.net/support/contacter/mail/

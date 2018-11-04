@@ -1,83 +1,71 @@
 Domain Name: reddit.com
 Registry Domain ID: 153584275_DOMAIN_COM-VRSN
-Registrar WHOIS Server: whois.gandi.net
-Registrar URL: http://www.gandi.net
-Updated Date: 2014-10-22T02:18:29Z
-Creation Date: 2005-04-29T17:59:19Z
-Registrar Registration Expiration Date: 2017-04-29T17:59:19Z
-Registrar: GANDI SAS
-Registrar IANA ID: 81
-Registrar Abuse Contact Email: abuse@support.gandi.net
-Registrar Abuse Contact Phone: +33.170377661
-Reseller: 
-Domain Status: clientTransferProhibited
-Domain Status: 
-Domain Status: 
-Domain Status: 
-Domain Status: 
-Registry Registrant ID: 
-Registrant Name: Domain Administrator
-Registrant Organization: Reddit Inc
-Registrant Street: 520 3rd St
-Registrant City: San Francisco
-Registrant State/Province: California
-Registrant Postal Code: 94107
+Registrar WHOIS Server: whois.markmonitor.com
+Registrar URL: http://www.markmonitor.com
+Updated Date: 2017-07-12T14:02:38-0700
+Creation Date: 2005-04-29T10:59:19-0700
+Registrar Registration Expiration Date: 2020-04-29T10:59:19-0700
+Registrar: MarkMonitor, Inc.
+Registrar IANA ID: 292
+Registrar Abuse Contact Email: abusecomplaints@markmonitor.com
+Registrar Abuse Contact Phone: +1.2083895740
+Domain Status: clientUpdateProhibited (https://www.icann.org/epp#clientUpdateProhibited)
+Domain Status: clientTransferProhibited (https://www.icann.org/epp#clientTransferProhibited)
+Domain Status: clientDeleteProhibited (https://www.icann.org/epp#clientDeleteProhibited)
+Domain Status: serverUpdateProhibited (https://www.icann.org/epp#serverUpdateProhibited)
+Domain Status: serverTransferProhibited (https://www.icann.org/epp#serverTransferProhibited)
+Domain Status: serverDeleteProhibited (https://www.icann.org/epp#serverDeleteProhibited)
+Registrant Organization: Reddit Inc.
+Registrant State/Province: CA
 Registrant Country: US
-Registrant Phone: +1.4156662330
-Registrant Phone Ext:
-Registrant Fax: 
-Registrant Fax Ext:
-Registrant Email: domainadmin@reddit.com
-Registry Admin ID: 
-Admin Name: Domain Administrator
-Admin Organization: Reddit Inc
-Admin Street: 520 3rd St
-Admin City: San Francisco
-Admin State/Province: California
-Admin Postal Code: 94107
+Admin Organization: Reddit Inc.
+Admin State/Province: CA
 Admin Country: US
-Admin Phone: +1.4156662330
-Admin Phone Ext:
-Admin Fax: 
-Admin Fax Ext:
-Admin Email: domainadmin@reddit.com
-Registry Tech ID: 
-Tech Name: Domain Administrator
-Tech Organization: Reddit Inc
-Tech Street: 520 3rd St
-Tech City: San Francisco
-Tech State/Province: California
-Tech Postal Code: 94107
+Tech Organization: Reddit Inc.
+Tech State/Province: CA
 Tech Country: US
-Tech Phone: +1.4156662330
-Tech Phone Ext:
-Tech Fax: 
-Tech Fax Ext:
-Tech Email: domainadmin@reddit.com
-Name Server: CNS1.REDDIT.COM
-Name Server: CNS2.REDDIT.COM
-Name Server: CNS3.REDDIT.COM
-Name Server: 
-Name Server: 
-Name Server: 
-Name Server: 
-Name Server: 
-Name Server: 
-Name Server: 
-DNSSEC: Unsigned
+Name Server: ns-1887.awsdns-43.co.uk
+Name Server: ns-1029.awsdns-00.org
+Name Server: ns-557.awsdns-05.net
+Name Server: ns-378.awsdns-47.com
+DNSSEC: unsigned
 URL of the ICANN WHOIS Data Problem Reporting System: http://wdprs.internic.net/
->>> Last update of WHOIS database: 2014-10-22T09:33:55Z <<<
+>>> Last update of WHOIS database: 2018-10-31T13:28:38-0700 <<<
 
-Reseller Email: 
-Reseller URL: 
+If certain contact information is not shown for a Registrant, Administrative,
+or Technical contact, and you wish to send a message to these contacts, please
+send your message to whoisrelay@markmonitor.com and specify the domain name in
+the subject line. We will forward that message to the underlying contact.
 
-Personal data access and use are governed by French law, any use for
-the purpose of unsolicited mass commercial advertising as well as any
-mass or automated inquiries (for any intent other than the
-registration or modification of a domain name) are strictly forbidden.
-Copy of whole or part of our database without Gandi's endorsement is
-strictly forbidden.
-The owner of a domain is the person specified as "Registrant Name" for
-a natural person and "Registrant Organization" for a legal person.
-Domain ownership disputes should be settled using ICANN's Uniform
-Dispute Resolution Policy: http://www.icann.org/en/help/dndr#udrp
+If you have a legitimate interest in viewing the non-public WHOIS details, send
+your request and the reasons for your request to abusecomplaints@markmonitor.com
+and specify the domain name in the subject line. We will review that request and
+may ask for supporting documentation and explanation.
+
+The Data in MarkMonitor.com's WHOIS database is provided by MarkMonitor.com for
+information purposes, and to assist persons in obtaining information about or
+related to a domain name registration record.  MarkMonitor.com does not guarantee
+its accuracy.  By submitting a WHOIS query, you agree that you will use this Data
+only for lawful purposes and that, under no circumstances will you use this Data to:
+ (1) allow, enable, or otherwise support the transmission of mass unsolicited,
+     commercial advertising or solicitations via e-mail (spam); or
+ (2) enable high volume, automated, electronic processes that apply to
+     MarkMonitor.com (or its systems).
+MarkMonitor.com reserves the right to modify these terms at any time.
+By submitting this query, you agree to abide by this policy.
+
+MarkMonitor is the Global Leader in Online Brand Protection.
+
+MarkMonitor Domain Management(TM)
+MarkMonitor Brand Protection(TM)
+MarkMonitor AntiPiracy(TM)
+MarkMonitor AntiFraud(TM)
+Professional and Managed Services
+
+Visit MarkMonitor at http://www.markmonitor.com
+Contact us at +1.8007459229
+In Europe, at +44.02032062220
+
+For more information on Whois status codes, please visit
+ https://www.icann.org/resources/pages/epp-status-codes-2014-06-16-en
+--

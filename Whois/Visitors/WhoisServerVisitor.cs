@@ -1,4 +1,7 @@
 ﻿using System.Text;
+using System.Threading.Tasks;
+using Whois.Logging;
+using Whois.Models;
 using Whois.Servers;
 
 namespace Whois.Visitors
@@ -8,51 +11,45 @@ namespace Whois.Visitors
     /// </summary>
     public class WhoisServerVisitor : IWhoisVisitor
     {
-        /// <summary>
-        /// Gets or sets the whois server lookup.
-        /// </summary>
-        /// <value>The whois server lookup.</value>
+        private static readonly ILog Log = LogProvider.GetCurrentClassLogger();
+
+        public WhoisServerCache Cache { get; set; }
+
         public IWhoisServerLookup WhoisServerLookup { get; set; }
 
-        /// <summary>
-        /// Gets the current character encoding that the current TcpReader
-        /// object is using.
-        /// </summary>
-        /// <returns>The current character encoding used by the current reader.</returns>
-        public Encoding Encoding { get; private set; }
-
-        /// <summary>
-        /// Initializes a new instance of the <see cref="WhoisServerVisitor"/> class.
-        /// </summary>
-        public WhoisServerVisitor() : this(Encoding.UTF8)
+        public WhoisServerVisitor()
         {
-        }
-
-        /// <summary>
-        /// Initializes a new instance of the <see cref="WhoisServerVisitor"/> class.
-        /// </summary>
-        /// <param name="encoding">The encoding used to read and write strings.</param>
-        public WhoisServerVisitor(Encoding encoding)
-        {
+            Cache = new WhoisServerCache();
             WhoisServerLookup = new IanaServerLookup();
-
-            Encoding = encoding;
         }
 
-        /// <summary>
-        /// Visits the specified record.
-        /// </summary>
-        /// <param name="record">The record.</param>
-        /// <returns></returns>
-        public WhoisRecord Visit(WhoisRecord record)
+        public async Task<LookupState> Visit(LookupState state)
         {
-            var server = WhoisServerLookup.Lookup(record.Domain);
+            var server = Cache.Get(state.Tld);
 
-            // TODO: Validation on server
+            if (server == null)
+            {
+                server = await WhoisServerLookup.LookupAsync(state.Tld);
 
-            record.Server = server;
+                if (server != null)
+                {
+                    Cache.Set(server);
+                }
+            }
+            else
+            {
+                Log.Debug("Retreived Root WHOIS server for TLD {0} from cache.", state.Tld);
+            }
 
-            return record;
+            if (server == null || string.IsNullOrEmpty(server.Url))
+            {
+                Log.Error("Unable to locate Root WHOIS server for TLD: {0}", state.Tld);
+                throw new WhoisException($"Unable to locate Root WHOIS server for TLD: {state.Tld}");
+            }
+
+            state.WhoisServer = server;
+
+            return state;
         }
     }
 }

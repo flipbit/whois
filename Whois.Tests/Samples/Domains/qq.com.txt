@@ -1,80 +1,71 @@
-Domain Name:qq.com
-Registry Domain ID:
-Registrar WHOIS Server: whois.hichina.com
-Registrar URL: http://www.net.cn/
-Updated Date:2014-09-23T06:46:43Z
-Creation Date:1995-05-04T04:00:00Z
-Registrar Registration Expiration Date:2018-05-05T04:00:00Z
-Registrar: HICHINA ZHICHENG TECHNOLOGY LTD.
-Registrar IANA ID: 420
-Registrar Abuse Contact Email: abuse@list.alibaba-inc.com
-Registrar Abuse Contact Phone: +86.4006008500
-Reseller:
-Domain Status:clientDeleteProhibited
-Domain Status:clientTransferProhibited
-Domain Status:clientUpdateProhibited
-Registry Registrant ID:hc041720747-cn
-Registrant Name:liguo zhou
-Registrant Organization:Shenzhen Tencent Computer Systems Company Limited
-Registrant Street:35 F, Tencent Building, kejinanyi Avenue, Southern District,,
-Registrant City:Shenzhen
-Registrant State/Province:Guangdong
-Registrant Postal Code:518057
-Registrant Country:CN
-Registrant Phone:+86.075586013388
-Registrant Phone Ext:
-Registrant Fax:+86.075586013090
-Registrant Fax Ext:
-Registrant Email:dns@tencent.com
-Registry Admin ID:hc323557876-cn
-Admin Name:liguo zhou
-Admin Organization:Shenzhen Tencent Computer Systems Company Limited
-Admin Street:35 F, Tencent Building, kejinanyi Avenue, Southern District,,
-Admin City:Shenzhen
-Admin State/Province:Guangdong
-Admin Postal Code:518057
-Admin Country:CN
-Admin Phone:+86.075586013388
-Admin Phone Ext:
-Admin Fax:+86.075586013090
-Admin Fax Ext:
-Admin Email:dns@tencent.com
-Registry Tech ID:hc336438485-cn
-Tech Name:lili
-Tech Organization:Shenzhen Tencent Computer Systems Company Limited
-Tech Street:35 F, Tencent Building, kejinanyi Avenue, Southern District,,
-Tech City:Shenzhen
-Tech State/Province:Guangdong
-Tech Postal Code:518057
-Tech Country:CN
-Tech Phone:+86.075586013388
-Tech Phone Ext:
-Tech Fax:+86.075586013090
-Tech Fax Ext:
-Tech Email:jjjzhou@tencent.com
-Name Server:ns1.qq.com
-Name Server:ns2.qq.com
-Name Server:ns3.qq.com
-Name Server:ns4.qq.com
-DNSSEC:unsigned
+Domain Name: qq.com
+Registry Domain ID: 2895300_DOMAIN_COM-VRSN
+Registrar WHOIS Server: whois.markmonitor.com
+Registrar URL: http://www.markmonitor.com
+Updated Date: 2018-10-30T19:34:05-0700
+Creation Date: 1995-05-03T21:00:00-0700
+Registrar Registration Expiration Date: 2027-07-26T19:09:19-0700
+Registrar: MarkMonitor, Inc.
+Registrar IANA ID: 292
+Registrar Abuse Contact Email: abusecomplaints@markmonitor.com
+Registrar Abuse Contact Phone: +1.2083895740
+Domain Status: clientUpdateProhibited (https://www.icann.org/epp#clientUpdateProhibited)
+Domain Status: clientTransferProhibited (https://www.icann.org/epp#clientTransferProhibited)
+Domain Status: clientDeleteProhibited (https://www.icann.org/epp#clientDeleteProhibited)
+Domain Status: serverUpdateProhibited (https://www.icann.org/epp#serverUpdateProhibited)
+Domain Status: serverTransferProhibited (https://www.icann.org/epp#serverTransferProhibited)
+Domain Status: serverDeleteProhibited (https://www.icann.org/epp#serverDeleteProhibited)
+Registrant Organization: Shenzhen Tencent Computer Systems CO.,Ltd
+Registrant State/Province: Guang Dong
+Registrant Country: CN
+Admin Organization: Shenzhen Tencent Computer Systems CO.,Ltd
+Admin State/Province: Guang Dong
+Admin Country: CN
+Tech Organization: Shenzhen Tencent Computer Systems CO.,Ltd
+Tech State/Province: Guang Dong
+Tech Country: CN
+Name Server: ns4.qq.com
+Name Server: ns2.qq.com
+Name Server: ns1.qq.com
+Name Server: ns3.qq.com
+DNSSEC: unsigned
 URL of the ICANN WHOIS Data Problem Reporting System: http://wdprs.internic.net/
->>> Last update of WHOIS database:2014-09-23T06:46:43Z<<<
+>>> Last update of WHOIS database: 2018-10-31T13:32:23-0700 <<<
 
-Registry Billing ID:hc316926121-cn
-Billing Name:liguo zhou
-Billing Organization:Shenzhen Tencent Computer Systems Company Limited
-Billing Street:10 F, Fiyta Building, kejinanyi Avenue, Southern District,,
-Billing City:Shenzhen
-Billing State/Province:Guangdong
-Billing Postal Code:518057
-Billing Country:CN
-Billing Phone:+86.075586013388
-Billing Phone Ext:
-Billing Fax:+86.075586013090
-Billing Fax Ext:
-Billing Email:dns@tencent.com
+If certain contact information is not shown for a Registrant, Administrative,
+or Technical contact, and you wish to send a message to these contacts, please
+send your message to whoisrelay@markmonitor.com and specify the domain name in
+the subject line. We will forward that message to the underlying contact.
 
-Important Reminder: Per ICANN 2013RAA`s request, Hichina has modified domain names`whois format of dot com/net/cc/tv, you could refer to section 1.4 posted by ICANN on http://www.icann.org/en/resources/registrars/raa/approved-with-specs-27jun13-en.htm#whois The data in this whois database is provided to you for information purposes only, that is, to assist you in obtaining information about or related to a domain name registration record. We make this information available "as is," and do not guarantee its accuracy. By submitting a whois query, you agree that you will use this data only for lawful purposes and that, under no circumstances will you use this data to: (1)enable high volume, automated, electronic processes that stress or load this whois database system providing you this information; or (2) allow, enable, or otherwise support the transmission of mass unsolicited, commercial advertising or solicitations via direct mail, electronic mail, or by telephone.  The compilation, repackaging, dissemination or other use of this data is expressly prohibited without prior written consent from us. We reserve the right to modify these terms at any time. By submitting this query, you agree to abide by these terms.<a href='http://www.net.cn/?utm_campaign=Corn&utm_medium=banner&utm_source=whois' target='_blank'><img src='http://whois.hichina.com/images/whois-banner.gif' border='0'></a>
- 
-For complete domain details go to:http://whois.www.net.cn/whois/domain/qq.com
+If you have a legitimate interest in viewing the non-public WHOIS details, send
+your request and the reasons for your request to abusecomplaints@markmonitor.com
+and specify the domain name in the subject line. We will review that request and
+may ask for supporting documentation and explanation.
 
+The Data in MarkMonitor.com's WHOIS database is provided by MarkMonitor.com for
+information purposes, and to assist persons in obtaining information about or
+related to a domain name registration record.  MarkMonitor.com does not guarantee
+its accuracy.  By submitting a WHOIS query, you agree that you will use this Data
+only for lawful purposes and that, under no circumstances will you use this Data to:
+ (1) allow, enable, or otherwise support the transmission of mass unsolicited,
+     commercial advertising or solicitations via e-mail (spam); or
+ (2) enable high volume, automated, electronic processes that apply to
+     MarkMonitor.com (or its systems).
+MarkMonitor.com reserves the right to modify these terms at any time.
+By submitting this query, you agree to abide by this policy.
+
+MarkMonitor is the Global Leader in Online Brand Protection.
+
+MarkMonitor Domain Management(TM)
+MarkMonitor Brand Protection(TM)
+MarkMonitor AntiPiracy(TM)
+MarkMonitor AntiFraud(TM)
+Professional and Managed Services
+
+Visit MarkMonitor at http://www.markmonitor.com
+Contact us at +1.8007459229
+In Europe, at +44.02032062220
+
+For more information on Whois status codes, please visit
+ https://www.icann.org/resources/pages/epp-status-codes-2014-06-16-en
+--

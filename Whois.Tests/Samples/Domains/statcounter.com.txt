@@ -1,54 +1,51 @@
     Domain Name: statcounter.com
     Registry Domain ID: 16624771_DOMAIN_COM-VRSN
-    Registrar WHOIS Server: whois.pairnic.com
-    Registrar URL: https://www.pairnic.com
-    Updated Date:  2014-09-09T09:33:25+0000Z
+    Registrar WHOIS Server: whois.pairDomains.com
+    Registrar URL: https://www.pairDomains.com
+    Updated Date:  2018-01-06T10:50:08+0000Z
     Creation Date: 2000-01-05T19:19:20+0000Z
-    Registrar Registration Expiration Date: 2016-01-05T19:19:20+0000Z
-    Registrar: pairNIC INC
+    Registrar Registration Expiration Date: 2019-01-05T19:19:20+0000Z
+    Registrar: pair Domains INC
     Registrar IANA ID: 99
-    Registrar Abuse Contact Email: abuse@pairnic.com
+    Registrar Abuse Contact Email: abuse@pairdomains.com
     Registrar Abuse Contact Phone: +1.8887247642
-    Registry Registrant ID: 1609109
-    Registrant Name: Aodhan Cullen
+    Domain Status: ok https://icann.org/epp#ok
+    Registrant Name: GDPR Redacted
     Registrant Organization: StatCounter
-    Registrant Street: Guinness Enterprise Centre 
-    Registrant City: Taylor's Lane
+    Registrant Street: GDPR Redacted
+    Registrant City:  GDPR Redacted
     Registrant State/Province: Dublin
-    Registrant Postal Code: 8
+    Registrant Postal Code: GDPR Redacted
     Registrant Country: IE
-    Registry Admin ID: 466407
-    Admin Name: Aodhan Cullen
-    Admin Organization: 
-    Admin Street: 16 Chapelizod Moorings 
-    Admin City: Chapelizod
-    Admin State/Province: Dublin
-    Admin Postal Code: 20
-    Admin Country: IE
-    Admin Phone: +353.14361868
-    Admin Phone Ext: 
-    Admin Fax: 
-    Admin Fax Ext: 
-    Admin Email: dns-admin@statcounter.com
-    Registry Tech ID: 466406
-    Tech Name: Aodhan Cullen
-    Tech Organization: 
-    Tech Street: 16 Chapelizod Moorings 
-    Tech City: Chapelizod
-    Tech State/Province: Dublin
-    Tech Postal Code: 20
-    Tech Country: IE
-    Tech Phone: +353.14361868
-    Tech Phone Ext: 
-    Tech Fax: 
-    Tech Fax Ext: 
-    Tech Email: dns-admin@statcounter.com
+    Registrant Phone: GDPR Redacted
+    Registrant Fax: GDPR Redacted
+    Registrant Email: https://whois.pairdomains.com/contact?domain=statcounter.com&type=registrant
+    Admin Name: GDPR Redacted
+    Admin Organization: GDPR Redacted
+    Admin Street: GDPR Redacted
+    Admin City:  GDPR Redacted
+    Admin State/Province: GDPR Redacted
+    Admin Postal Code: GDPR Redacted
+    Admin Country: GDPR Redacted
+    Admin Phone: GDPR Redacted
+    Admin Fax: GDPR Redacted
+    Admin Email: https://whois.pairdomains.com/contact?domain=statcounter.com&type=admin
+    Tech Name: GDPR Redacted
+    Tech Organization: GDPR Redacted
+    Tech Street: GDPR Redacted
+    Tech City:  GDPR Redacted
+    Tech State/Province: GDPR Redacted
+    Tech Postal Code: GDPR Redacted
+    Tech Country: GDPR Redacted
+    Tech Phone: GDPR Redacted
+    Tech Fax: GDPR Redacted
+    Tech Email: https://whois.pairdomains.com/contact?domain=statcounter.com&type=tech
     Name Server: MAY.NS.CLOUDFLARE.COM
     Name Server: TIM.NS.CLOUDFLARE.COM
     DNSSEC: unsigned
     URL of the ICANN WHOIS Data Problem Reporting System:
     http://wdprs.internic.net/
-    >>> Last update of WHOIS database: 2014-10-22T08:35:49+0000Z <<<
+    >>> Last update of WHOIS database: 2018-10-31T20:34:01+0000Z <<<
 
 NOTICE AND TERMS OF USE: By submitting a WHOIS query, you agree to abide by the
 following terms of use: You agree that you may use this Data only for lawful

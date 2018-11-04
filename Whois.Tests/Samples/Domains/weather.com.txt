@@ -3,63 +3,67 @@ Domain Name: weather.com
 Registry Domain ID: 595872_DOMAIN_COM-VRSN
 Registrar WHOIS Server: whois.corporatedomains.com
 Registrar URL: www.cscprotectsbrands.com
-Updated Date: 2014-01-14 11:16:42 -0500
-Creation Date: 1994-08-09 00:00:00 -0400
-Registrar Registration Expiration Date: 2021-01-25 10:56:59 -0500
+Updated Date: 2016-12-04T17:29:08Z
+Creation Date: 1994-08-09T04:00:00Z
+Registrar Registration Expiration Date: 2021-01-25T15:56:59Z
 Registrar: CSC CORPORATE DOMAINS, INC.
 Registrar IANA ID: 299
-Registrar Abuse Contact Email: admin@internationaladmin.com
+Registrar Abuse Contact Email: domainabuse@cscglobal.com
 Registrar Abuse Contact Phone: +1.8887802723
-Domain Status: serverTransferProhibited
-Domain Status: serverDeleteProhibited
-Domain Status: clientTransferProhibited
-Domain Status: serverUpdateProhibited
+Domain Status: clientTransferProhibited http://www.icann.org/epp#clientTransferProhibited
+Domain Status: serverDeleteProhibited http://www.icann.org/epp#serverDeleteProhibited
+Domain Status: serverTransferProhibited http://www.icann.org/epp#serverTransferProhibited
+Domain Status: serverUpdateProhibited http://www.icann.org/epp#serverUpdateProhibited
 Registry Registrant ID: 
-Registrant Name: The Weather Channel, LLC
-Registrant Organization: The Weather Channel, LLC
+Registrant Name: TWC Product and Technology, LLC
+Registrant Organization: TWC Product and Technology, LLC
 Registrant Street: 300 Interstate North Parkway
 Registrant City: Atlanta
 Registrant State/Province: GA
 Registrant Postal Code: 30339
 Registrant Country: US
-Registrant Phone: +1.7702262222
+Registrant Phone: +1.7702226222
 Registrant Phone Ext: 
 Registrant Fax: +1.7702262945
 Registrant Fax Ext: 
-Registrant Email: ops@weather.com
+Registrant Email: dnsmanager@weather.com
 Registry Admin ID: 
-Admin Name: Ops Manager
-Admin Organization: The Weather Channel, LLC
-Admin Street: 300 Interstate North Parkway
-Admin City: Atlanta
-Admin State/Province: GA
-Admin Postal Code: 30339
+Admin Name: Domain Administrator
+Admin Organization: International Business Machines (IBM)
+Admin Street: New Orchard Road
+Admin City: Armonk
+Admin State/Province: NY
+Admin Postal Code: 10504
 Admin Country: US
-Admin Phone: +1.7702262222
+Admin Phone: +1.9147654227
 Admin Phone Ext: 
-Admin Fax: +1.7702262945
+Admin Fax: +1.9147654227
 Admin Fax Ext: 
-Admin Email: ops@weather.com
+Admin Email: dnsadm@us.ibm.com
 Registry Tech ID: 
-Tech Name: DNS Manager
-Tech Organization: The Weather Channel, LLC
+Tech Name: TWC Product and Technology, LLC
+Tech Organization: TWC Product and Technology, LLC
 Tech Street: 300 Interstate North Parkway
 Tech City: Atlanta
 Tech State/Province: GA
 Tech Postal Code: 30339
 Tech Country: US
-Tech Phone: +1.7702262222
+Tech Phone: +1.7702226222
 Tech Phone Ext: 
 Tech Fax: +1.7702262945
 Tech Fax Ext: 
 Tech Email: dnsmanager@weather.com
-Name Server: dns3.weather.com
-Name Server: dns1.weather.com
-Name Server: dns2.weather.com
-DNSSEC: 
+Name Server: a10-65.akam.net
+Name Server: a1-70.akam.net
+Name Server: a24-65.akam.net
+Name Server: a14-64.akam.net
+Name Server: a13-67.akam.net
+Name Server: a11-66.akam.net
+DNSSEC: unsigned
 URL of the ICANN WHOIS Data Problem Reporting System: http://wdprs.internic.net/
->>> Last update of WHOIS database: 2014-01-14 11:16:42 -0500 <<<
+>>> Last update of WHOIS database: 2016-12-04T17:29:08Z <<<
 
+For more information on Whois status codes, please visit https://icann.org/epp
 
 Corporation Service Company(c) (CSC)  The Trusted Partner of More than 50% of the 100 Best Global Brands.
 
@@ -68,6 +72,3 @@ Contact us to learn more about our enterprise solutions for Global Domain Name R
 NOTICE: You are not authorized to access or query our WHOIS database through the use of high-volume, automated, electronic processes or for the purpose or purposes of using the data in any manner that violates these terms of use. The Data in the CSC WHOIS database is provided by CSC for information purposes only, and to assist persons in obtaining information about or related to a domain name registration record. CSC does not guarantee its accuracy. By submitting a WHOIS query, you agree to abide by the following terms of use: you agree that you may use this Data only for lawful purposes and that under no circumstances will you use this Data to: (1) allow, enable, or otherwise support the transmission of mass unsolicited, commercial advertising or solicitations via direct mail, e-mail, telephone, or facsimile; or (2) enable high volume, automated, electronic processes that apply to CSC (or its computer systems). CSC reserves the right to terminate your access to the WHOIS database in its sole discretion for any violations by you of these terms of use. CSC reserves the right to modify these terms at any time.
 
 Register your domain name at http://www.cscglobal.com
-
-For more information on Whois status codes, please visit https://www.icann.org/resources/pages/epp-status-codes-2014-06-16-en
-

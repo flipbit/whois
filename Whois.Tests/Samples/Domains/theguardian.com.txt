@@ -1,103 +1,61 @@
-Domain Name: THEGUARDIAN.COM
+Domain Name: theguardian.com
 Registry Domain ID: 79632_DOMAIN_COM-VRSN
-Registrar WHOIS Server: whois.tucows.com
-Registrar URL: http://tucowsdomains.com
-Updated Date: 2014-05-19 07:10:30
-Creation Date: 1994-07-06 04:00:00
-Registrar Registration Expiration Date: 2023-07-05 04:00:00
-Registrar: TUCOWS, INC.
-Registrar IANA ID: 69
-Registrar Abuse Contact Email: domainabuse@tucows.com
-Registrar Abuse Contact Phone: +1.4165350123
-Reseller: Serverstream Managed Cloud Hosting
-Reseller: support@Serverstream.com
-Reseller: +44 20 7517 0606
-Reseller: http://Serverstream.com
-Domain Status: ok
-Registry Registrant ID: 
-Registrant Name: Technology Administrator
+Registrar WHOIS Server: whois.godaddy.com
+Registrar URL: http://www.godaddy.com
+Updated Date: 2015-11-09T20:10:17Z
+Creation Date: 1994-07-06T04:00:00Z
+Registrar Registration Expiration Date: 2024-07-05T04:00:00Z
+Registrar: GoDaddy.com, LLC
+Registrar IANA ID: 146
+Registrar Abuse Contact Email: abuse@godaddy.com
+Registrar Abuse Contact Phone: +1.4806242505
+Domain Status: clientTransferProhibited http://www.icann.org/epp#clientTransferProhibited
+Domain Status: clientUpdateProhibited http://www.icann.org/epp#clientUpdateProhibited
+Domain Status: clientRenewProhibited http://www.icann.org/epp#clientRenewProhibited
+Domain Status: clientDeleteProhibited http://www.icann.org/epp#clientDeleteProhibited
 Registrant Organization: Guardian News & Media Limited
-Registrant Street: Kings Place 90 York Way
-Registrant City: London
 Registrant State/Province: 
-Registrant Postal Code: N1 9GU
-Registrant Country: GB
-Registrant Phone: +44.2033532000
-Registrant Phone Ext: 
-Registrant Fax: 
-Registrant Fax Ext: 
-Registrant Email: dnsmaster@guardian.co.uk
-Registry Admin ID: 
-Admin Name: Technology Administrator
-Admin Organization: Guardian News & Media Limited
-Admin Street: Kings Place 90 York Way
-Admin City: London
-Admin State/Province: 
-Admin Postal Code: N1 9GU
-Admin Country: GB
-Admin Phone: +44.2033532000
-Admin Phone Ext: 
-Admin Fax: 
-Admin Fax Ext: 
-Admin Email: dnsmaster@guardian.co.uk
-Registry Tech ID: 
-Tech Name: Domain Admin
-Tech Organization: Serverstream
-Tech Street: 9th Floor 6 & 7 Harbour Exchange Square
-Tech City: London
-Tech State/Province: England
-Tech Postal Code: E14 9GE
-Tech Country: UK
-Tech Phone: +44.2075170606
-Tech Phone Ext: 
-Tech Fax: +44.2087282867
-Tech Fax Ext: 
-Tech Email: support@serverstream.net
-Name Server: NS1.P05.DYNECT.NET
-Name Server: NS2.P05.DYNECT.NET
-Name Server: NS4.P05.DYNECT.NET
-Name Server: NS3.P05.DYNECT.NET
-DNSSEC: Unsigned
+Registrant Country: UK
+Registrant Email: Select Contact Domain Holder link at https://www.godaddy.com/whois/results.aspx?domain=theguardian.com
+Admin Email: Select Contact Domain Holder link at https://www.godaddy.com/whois/results.aspx?domain=theguardian.com
+Tech Email: Select Contact Domain Holder link at https://www.godaddy.com/whois/results.aspx?domain=theguardian.com
+Name Server: DNS1.P04.NSONE.NET
+Name Server: DNS2.P04.NSONE.NET
+Name Server: DNS3.P04.NSONE.NET
+Name Server: DNS4.P04.NSONE.NET
+Name Server: NS01.THEGUARDIANDNS.COM
+Name Server: NS02.THEGUARDIANDNS.COM
+Name Server: NS03.THEGUARDIANDNS.COM
+Name Server: NS04.THEGUARDIANDNS.COM
+DNSSEC: unsigned
 URL of the ICANN WHOIS Data Problem Reporting System: http://wdprs.internic.net/
->>> Last update of WHOIS database: 2014-05-19 07:10:30 <<<
+>>> Last update of WHOIS database: 2018-10-31T20:00:00Z <<<
 
-Registration Service Provider:
-    Serverstream Managed Cloud Hosting, support@Serverstream.com
-    +44 20 7517 0606
-    +44 20 8728 2867 (fax)
-    http://Serverstream.com
-    support@Register1.net
-    http://Register1.net
+For more information on Whois status codes, please visit https://www.icann.org/resources/pages/epp-status-codes-2014-06-16-en
 
-The Data in the Tucows Registrar WHOIS database is provided to you by Tucows
-for information purposes only, and may be used to assist you in obtaining
-information about or related to a domain name's registration record.
+Notes: 
 
-Tucows makes this information available "as is," and does not guarantee its
-accuracy.
+IMPORTANT: Port43 will provide the ICANN-required minimum data set per 
+ICANN Temporary Specification, adopted 17 May 2018. 
+Visit https://whois.godaddy.com to look up contact data for domains 
+not covered by GDPR policy.
 
-By submitting a WHOIS query, you agree that you will use this data only for
-lawful purposes and that, under no circumstances will you use this data to:
-a) allow, enable, or otherwise support the transmission by e-mail,
-telephone, or facsimile of mass, unsolicited, commercial advertising or
-solicitations to entities other than the data recipient's own existing
-customers; or (b) enable high volume, automated, electronic processes that
-send queries or data to the systems of any Registry Operator or
-ICANN-Accredited registrar, except as reasonably necessary to register
-domain names or modify existing registrations.
+The data contained in GoDaddy.com, LLC's WhoIs database,
+while believed by the company to be reliable, is provided "as is"
+with no guarantee or warranties regarding its accuracy.  This
+information is provided for the sole purpose of assisting you
+in obtaining information about domain name registration records.
+Any use of this data for any other purpose is expressly forbidden without the prior written
+permission of GoDaddy.com, LLC.  By submitting an inquiry,
+you agree to these terms of usage and limitations of warranty.  In particular,
+you agree not to use this data to allow, enable, or otherwise make possible,
+dissemination or collection of this data, in part or in its entirety, for any
+purpose, such as the transmission of unsolicited advertising and
+and solicitations of any kind, including spam.  You further agree
+not to use this data to enable high volume, automated or robotic electronic
+processes designed to collect or compile this data for any purpose,
+including mining this data for your own personal or commercial purposes. 
 
-The compilation, repackaging, dissemination or other use of this Data is
-expressly prohibited without the prior written consent of Tucows.
-
-Tucows reserves the right to terminate your access to the Tucows WHOIS
-database in its sole discretion, including without limitation, for excessive
-querying of the WHOIS database or for failure to otherwise abide by this
-policy.
-
-Tucows reserves the right to modify these terms at any time.
-
-By submitting this query, you agree to abide by these terms.
-
-NOTE: THE WHOIS DATABASE IS A CONTACT DATABASE ONLY.  LACK OF A DOMAIN
-RECORD DOES NOT SIGNIFY DOMAIN AVAILABILITY.
-
+Please note: the registrant of the domain name is specified
+in the "registrant" section.  In most cases, GoDaddy.com, LLC 
+is not the registrant of domain names listed in this database.

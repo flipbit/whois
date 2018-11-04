@@ -1,44 +1,44 @@
 Domain name:           cbc.ca
 Domain status:         registered
 Creation date:         2000/10/16
-Expiry date:           2014/11/24
-Updated date:          2014/09/15
+Expiry date:           2019/11/24
+Updated date:          2018/10/25
 DNSSEC:                Unsigned
 
 Registrar:
-    Name:              MarkMonitor International Canada Ltd.
-    Number:            5000040
+    Name:              Authentic Web Inc.
+    Number:            5000-107
 
 Registrant:
     Name:              Canadian Broadcasting Corporation
 
 Administrative contact:
-    Name:              Daniel Fricker
-    Postal address:    P.O. Box 500 Station A Room 2C300-S
-                       Toronto ON M5W1E6 Canada
-    Phone:             +1.4162052477
+    Name:              Karen Stephen
+    Postal address:    250 Front St W
+                       Toronto ON M5V3G5 Canada
+    Phone:             +1.4162053482
     Fax:               +1.4162057750
     Email:             domain-name@cbc.ca
 
 Technical contact:
-    Name:              Daniel Fricker
-    Postal address:    P.O. Box 500 Station A Room 2C300-S
-                       Toronto ON M5W1E6 Canada
-    Phone:             +1.4162052477
+    Name:              Karen Stephen
+    Postal address:    250 Front St W
+                       Toronto ON M5V3G5 Canada
+    Phone:             +1.4162053482
     Fax:               +1.4162057750
     Email:             domain-name@cbc.ca
 
 Name servers:
-    ns.cbc.ca          159.33.1.51
-    ns2.radio-canada.ca 159.33.128.115
-    secondary-ns1.allstream.com
-    secondary-ns2.allstream.com
-    toroon63nszp02.srvr.bell.ca
-    toroondcnszs02.srvr.bell.ca
+    a5-65.akam.net
+    a9-66.akam.net
+    a26-67.akam.net
+    a1-29.akam.net
+    a4-64.akam.net
+    a14-66.akam.net
 
-% WHOIS look-up made at 2014-10-22 11:40:27 (GMT)
+% WHOIS look-up made at 2018-11-01 13:16:54 (GMT)
 %
 % Use of CIRA's WHOIS service is governed by the Terms of Use in its Legal
 % Notice, available at http://www.cira.ca/legal-notice/?lang=en 
 %
-% (c) 2014 Canadian Internet Registration Authority, (http://www.cira.ca/) 
+% (c) 2018 Canadian Internet Registration Authority, (http://www.cira.ca/) 

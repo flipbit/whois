@@ -1,45 +1,24 @@
 ﻿using System;
-using System.Text;
-using Whois.Cache;
 
 namespace Whois.Net
 {
-    /// <summary>
-    /// Factory class to create <see cref="TcpReader"/> objects.
-    /// </summary>
-    public class TcpReaderFactory : ITcpReaderFactory 
+    public static class TcpReaderFactory
     {
-        /// <summary>
-        /// Creates a <see cref="TcpReader"/> object.
-        /// </summary>
-        /// <returns></returns>
-        public ITcpReader Create()
+        private static Func<ITcpReader> factoryFunc;
+
+        static TcpReaderFactory()
         {
-            // Uses UTF8 by default
-            return Create(Encoding.UTF8);
+            factoryFunc = () => new TcpReader();
         }
 
-        /// <summary>
-        /// Creates an <see cref="ITcpReader"/> object.
-        /// </summary>
-        /// <param name="encoding">The encoding used to read and write strings.</param>
-        /// <returns></returns>
-        public ITcpReader Create(Encoding encoding)
+        public static ITcpReader Create()
         {
-            ITcpReader reader;
+            return factoryFunc.Invoke();
+        }
 
-            var cachePath = Environment.GetEnvironmentVariable("WHOIS_CACHE_PATH");
-
-            if (string.IsNullOrEmpty(cachePath))
-            {
-                reader = new TcpReader(encoding);
-            }
-            else
-            {
-                reader = new TcpReaderFileCache();
-            }
-
-            return reader;
+        public static void Bind(Func<ITcpReader> factory)
+        {
+            factoryFunc = factory;
         }
     }
 }

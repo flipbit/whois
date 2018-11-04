@@ -14,35 +14,45 @@ namespace Whois.Servers
         }
 
         [Test]
-        public void TestGetTldForNullInput()
+        public void TestLookupCom()
         {
-            var tld = lookup.GetTld(null);
+            var server = lookup.Lookup("com");
 
-            Assert.AreEqual(string.Empty, tld);
+            Assert.AreEqual("com", server.Tld);
+            Assert.AreEqual("whois.verisign-grs.com", server.Url);
         }
 
         [Test]
-        public void TestGetTldForInvalidInput()
+        public void TestLookupUk()
         {
-            var tld = lookup.GetTld("invalid domain name");
+            var server = lookup.Lookup("uk");
 
-            Assert.AreEqual(string.Empty, tld);
+            Assert.AreEqual("uk", server.Tld);
+            Assert.AreEqual("whois.nic.uk", server.Url);
         }
 
         [Test]
-        public void TestGetTldCountrySpecificDomain()
+        public void TestLookupTk()
         {
-            var tld = lookup.GetTld("example.co.uk");
+            var server = lookup.Lookup("tk");
 
-            Assert.AreEqual("uk", tld);
+            Assert.AreEqual("tk", server.Tld);
+            Assert.AreEqual("whois.dot.tk", server.Url);
         }
 
         [Test]
-        public void TestGetTldInternationalDomain()
+        public void TestLookupUnknown()
         {
-            var tld = lookup.GetTld("example.com");
+            var server = lookup.Lookup("unknown-tld");
 
-            Assert.AreEqual("com", tld);
+            Assert.AreEqual("unknown-tld", server.Tld);
+            Assert.AreEqual("whois.internic.net", server.Url);
+        }
+
+        [Test]
+        public void TestLookupInvalid()
+        {
+            Assert.Throws<WhoisException>(() => lookup.Lookup("invalid tld"));
         }
     }
 }

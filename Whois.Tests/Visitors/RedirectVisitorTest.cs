@@ -1,6 +1,9 @@
 ﻿using System;
 using System.IO;
+using System.Threading.Tasks;
 using NUnit.Framework;
+using Whois.Models;
+using Whois.Net;
 
 namespace Whois.Visitors
 {
@@ -16,25 +19,40 @@ namespace Whois.Visitors
         }
 
         [Test]
-        public void TestIsARedirectWhenTrue()
+        public async Task TestRedirectedWhoisData()
         {
-            var record = new WhoisRecord(File.ReadAllText(@"..\..\Samples\Domains\sphinn.com.txt"));
-            WhoisRedirect redirect;
+            TcpReaderFactory.Bind(() => new FakeTcpReader("Redirected WHOIS Data"));
 
-            var result = visitor.IsARedirectRecord(record, out redirect);
+            var record = new WhoisResponse(File.ReadAllText(@"..\..\..\Samples\Redirects\MarkMonitor.txt"));
+            var state = new LookupState
+            {
+                Response = record,
+                Options = WhoisOptions.Defaults,
+                Domain = "example.com" 
+            };
 
-            Assert.IsTrue(result);
-            Assert.IsNotNull(redirect);
-            Assert.AreEqual(new DateTime(2007, 4, 25), redirect.CreatedDate);
-            Assert.AreEqual("sphinn.com", redirect.Domain);
-            Assert.AreEqual(new DateTime(2015, 4, 25), redirect.ExpirationDate);
-            Assert.AreEqual(new DateTime(2014, 4, 25), redirect.ModifiedDate);
-            Assert.AreEqual("NS1.TIGERTECH.NET", redirect.Nameservers[0]);
-            Assert.AreEqual("NS2.TIGERTECH.BIZ", redirect.Nameservers[1]);
-            Assert.AreEqual("NS3.TIGERTECH.ORG", redirect.Nameservers[2]);
-            Assert.AreEqual("http://www.tigertech.net", redirect.ReferralUrl);
-            Assert.AreEqual("TIGER TECHNOLOGIES LLC", redirect.Registrar);
-            Assert.AreEqual("whois.tigertech.net", redirect.Url);
+            var result = await visitor.Visit(state);
+
+            Assert.AreEqual("Redirected WHOIS Data", result.Response.Content);
+        }
+
+        [Test]
+        public async Task TestNonRedirectedWhoisData()
+        {
+            TcpReaderFactory.Bind(() => new FakeTcpReader("Redirected WHOIS Data"));
+
+            var response = File.ReadAllText(@"..\..\..\Samples\Domains\google.co.uk.txt");
+            var record = new WhoisResponse(response);
+            var state = new LookupState
+            {
+                Response = record,
+                Options = WhoisOptions.Defaults,
+                Domain = "example.com" 
+            };
+
+            var result = await visitor.Visit(state);
+
+            Assert.AreEqual(response, result.Response.Content);
         }
     }
 }

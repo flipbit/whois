@@ -1,102 +1,75 @@
-Domain Name:                                 ICIO.US
-Domain ID:                                   D2285553-US
-Sponsoring Registrar:                        MARKMONITOR, INC.
-Sponsoring Registrar IANA ID:                292
-Registrar URL (registration services):       whois.markmonitor.com
-Domain Status:                               ok
-Variant:                                     ICIO.US
-Registrant ID:                               MMR-136090
-Registrant Name:                             AVOS Systems Inc
-Registrant Organization:                     AVOS Systems, Inc.
-Registrant Address1:                         PO Box 1791
-Registrant City:                             San Mateo
-Registrant State/Province:                   CA
-Registrant Postal Code:                      94401
-Registrant Country:                          United States
-Registrant Country Code:                     US
-Registrant Phone Number:                     +1.6503443292
-Registrant Facsimile Number:                 +1.6503443065
-Registrant Email:                            dnsadmin@avos.com
-Registrant Application Purpose:              P1
-Registrant Nexus Category:                   C21
-Administrative Contact ID:                   MMR-136091
-Administrative Contact Name:                 Doug Hicks
-Administrative Contact Organization:         AVOS Systems, Inc.
-Administrative Contact Address1:             PO Box 1791
-Administrative Contact City:                 San Mateo
-Administrative Contact State/Province:       CA
-Administrative Contact Postal Code:          94401
-Administrative Contact Country:              United States
-Administrative Contact Country Code:         US
-Administrative Contact Phone Number:         +1.6503443292
-Administrative Contact Facsimile Number:     +1.6503443065
-Administrative Contact Email:                dnsadmin@avos.com
-Administrative Application Purpose:          P1
-Administrative Nexus Category:               C21
-Billing Contact ID:                          MMR-136091
-Billing Contact Name:                        Doug Hicks
-Billing Contact Organization:                AVOS Systems, Inc.
-Billing Contact Address1:                    PO Box 1791
-Billing Contact City:                        San Mateo
-Billing Contact State/Province:              CA
-Billing Contact Postal Code:                 94401
-Billing Contact Country:                     United States
-Billing Contact Country Code:                US
-Billing Contact Phone Number:                +1.6503443292
-Billing Contact Facsimile Number:            +1.6503443065
-Billing Contact Email:                       dnsadmin@avos.com
-Billing Application Purpose:                 P1
-Billing Nexus Category:                      C21
-Technical Contact ID:                        MMR-136091
-Technical Contact Name:                      Doug Hicks
-Technical Contact Organization:              AVOS Systems, Inc.
-Technical Contact Address1:                  PO Box 1791
-Technical Contact City:                      San Mateo
-Technical Contact State/Province:            CA
-Technical Contact Postal Code:               94401
-Technical Contact Country:                   United States
-Technical Contact Country Code:              US
-Technical Contact Phone Number:              +1.6503443292
-Technical Contact Facsimile Number:          +1.6503443065
-Technical Contact Email:                     dnsadmin@avos.com
-Technical Application Purpose:               P1
-Technical Nexus Category:                    C21
-Name Server:                                 NS-1663.AWSDNS-15.CO.UK
-Name Server:                                 NS-702.AWSDNS-23.NET
-Name Server:                                 NS-457.AWSDNS-57.COM
-Name Server:                                 NS-1385.AWSDNS-45.ORG
-Created by Registrar:                        DOTSTER
-Last Updated by Registrar:                   MARKMONITOR, INC.
-Last Transferred Date:                       Sun Feb 12 16:06:26 GMT 2006
-Domain Registration Date:                    Fri May 03 20:19:45 GMT 2002
-Domain Expiration Date:                      Sat May 02 23:59:59 GMT 2015
-Domain Last Updated Date:                    Fri May 02 02:16:16 GMT 2014
-DNSSEC:                                      false
+Domain Name: icio.us
+Registry Domain ID: D2285553-US
+Registrar WHOIS Server:
+Registrar URL: whois.gandi.net
+Updated Date: 2018-06-04T17:12:59Z
+Creation Date: 2002-05-03T20:19:45Z
+Registry Expiry Date: 2020-05-02T23:59:59Z
+Registrar: Gandi SAS
+Registrar IANA ID: 81
+Registrar Abuse Contact Email: abuse@support.gandi.net
+Registrar Abuse Contact Phone: +33.170377661
+Domain Status: clientTransferProhibited https://icann.org/epp#clientTransferProhibited
+Registry Registrant ID: C59961468-US
+Registrant Name: Ceglowski Maciej
+Registrant Organization:
+Registrant Street: 21 Town Landing
+Registrant Street:
+Registrant Street:
+Registrant City: Friendship
+Registrant State/Province: ME
+Registrant Postal Code: 04547
+Registrant Country: US
+Registrant Phone: +1.4156100231
+Registrant Phone Ext:
+Registrant Fax:
+Registrant Fax Ext:
+Registrant Email: 810665169767af30f229925bb9c8bfb2-1238845@contact.gandi.net
+Registrant Application Purpose: P3
+Registrant Nexus Category: C12
+Registry Admin ID: C59961468-US
+Admin Name: Ceglowski Maciej
+Admin Organization:
+Admin Street: 21 Town Landing
+Admin Street:
+Admin Street:
+Admin City: Friendship
+Admin State/Province: ME
+Admin Postal Code: 04547
+Admin Country: US
+Admin Phone: +1.4156100231
+Admin Phone Ext:
+Admin Fax:
+Admin Fax Ext:
+Admin Email: 810665169767af30f229925bb9c8bfb2-1238845@contact.gandi.net
+Admin Application Purpose: P3
+Admin Nexus Category: C12
+Registry Tech ID: C59961468-US
+Tech Name: Ceglowski Maciej
+Tech Organization:
+Tech Street: 21 Town Landing
+Tech Street:
+Tech Street:
+Tech City: Friendship
+Tech State/Province: ME
+Tech Postal Code: 04547
+Tech Country: US
+Tech Phone: +1.4156100231
+Tech Phone Ext:
+Tech Fax:
+Tech Fax Ext:
+Tech Email: 810665169767af30f229925bb9c8bfb2-1238845@contact.gandi.net
+Tech Application Purpose: P3
+Tech Nexus Category: C12
+Name Server: ns14.dnsmadeeasy.com
+Name Server: ns12.dnsmadeeasy.com
+Name Server: ns10.dnsmadeeasy.com
+Name Server: ns13.dnsmadeeasy.com
+Name Server: ns11.dnsmadeeasy.com
+DNSSEC: unsigned
+URL of the ICANN Whois Inaccuracy Complaint Form: https://www.icann.org/wicf/
+>>> Last update of WHOIS database: 2018-10-31T20:41:47Z <<<
 
->>>> Whois database was last updated on: Wed Oct 22 09:39:24 GMT 2014 <<<<
+For more information on Whois status codes, please visit https://icann.org/epp
 
-NeuStar, Inc., the Registry Administrator for .US, has collected this
-information for the WHOIS database through a .US-Accredited Registrar.
-This information is provided to you for informational purposes only and is
-designed to assist persons in determining contents of a domain name
-registration record in the NeuStar registry database. NeuStar makes this
-information available to you "as is" and does not guarantee its accuracy.
-By submitting a WHOIS query, you agree that you will use this data only for
-lawful purposes and that, under no circumstances will you use this data:
-(1) to allow, enable, or otherwise support the transmission of mass
-unsolicited, commercial advertising or solicitations via direct mail,
-electronic mail, or by telephone; (2) in contravention of any applicable
-data and privacy protection laws; or (3) to enable high volume, automated,
-electronic processes that apply to the registry (or its systems). Compilation,
-repackaging, dissemination, or other use of the WHOIS database in its
-entirety, or of a substantial portion thereof, is not allowed without
-NeuStar's prior written permission. NeuStar reserves the right to modify or
-change these conditions at any time without prior or subsequent notification
-of any kind. By executing this query, in any manner whatsoever, you agree to
-abide by these terms.
-
-NOTE: FAILURE TO LOCATE A RECORD IN THE WHOIS DATABASE IS NOT INDICATIVE
-OF THE AVAILABILITY OF A DOMAIN NAME.
-
-All domain names are subject to certain additional domain name registration
-rules.  For details, please visit our site at www.whois.us.
+NeuStar, Inc., the Registry Administrator for .US, has collected this information for the WHOIS database through a .US-Accredited Registrar. This information is provided to you for informational purposes only and is designed to assist persons in determining contents of a domain name registration record in the NeuStar registry database. NeuStar makes this information available to you "as is" and does not guarantee its accuracy. By submitting a WHOIS query, you agree that you will use this data only for lawful purposes and that, under no circumstances will you use this data: (1) to allow, enable, or otherwise support the transmission of mass unsolicited, commercial advertising or solicitations via direct mail, electronic mail, or by telephone; (2) in contravention of any applicable data and privacy protection laws; or (3) to enable high volume, automated, electronic processes that apply to the registry (or its systems). Compilation, repackaging, dissemination, or other use of the WHOIS database in its entirety, or of a substantial portion thereof, is not allowed without NeuStar's prior written permission. NeuStar reserves the right to modify or change these conditions at any time without prior or subsequent notification of any kind. By executing this query, in any manner whatsoever, you agree to abide by these terms. NOTE: FAILURE TO LOCATE A RECORD IN THE WHOIS DATABASE IS NOT INDICATIVE OF THE AVAILABILITY OF A DOMAIN NAME. All domain names are subject to certain additional domain name registration rules. For details, please visit our site at www.whois.us.

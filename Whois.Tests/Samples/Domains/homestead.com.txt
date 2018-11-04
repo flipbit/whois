@@ -1,65 +1,68 @@
 Domain Name: HOMESTEAD.COM
-Registry Domain ID: 
+Registry Domain ID: 1838797_DOMAIN_COM-VRSN
 Registrar WHOIS Server: whois.domain.com
 Registrar URL: www.domain.com
-Updated Date: 2014-10-07 12:25:32
-Creation Date: 1997-06-21 04:00:00
-Registrar Registration Expiration Date: 2015-06-20 04:00:00
+Updated Date: 2017-06-14T13:48:38
+Creation Date: 1997-06-21T04:00:00
+Registrar Registration Expiration Date: 2026-06-20T04:00:00
 Registrar: Domain.com, LLC
 Registrar IANA ID: 886
+Reseller: Domain Name Holding Company, Inc
+Domain Status: clientDeleteProhibited https://icann.org/epp#clientDeleteProhibited
+Domain Status: clientTransferProhibited https://icann.org/epp#clientTransferProhibited
+Registry Registrant ID: 
+Registrant Name: REDACTED FOR PRIVACY
+Registrant Organization: REDACTED FOR PRIVACY
+Registrant Street: REDACTED FOR PRIVACY 
+Registrant City: REDACTED FOR PRIVACY
+Registrant State/Province: REDACTED FOR PRIVACY
+Registrant Postal Code: REDACTED FOR PRIVACY
+Registrant Country: REDACTED FOR PRIVACY
+Registrant Phone: REDACTED FOR PRIVACY
+Registrant Phone Ext: 
+Registrant Fax: REDACTED FOR PRIVACY
+Registrant Fax Ext: 
+Registrant Email: REDACTED FOR PRIVACY
+Registry Admin ID: 
+Admin Name: REDACTED FOR PRIVACY
+Admin Organization: REDACTED FOR PRIVACY
+Admin Street: REDACTED FOR PRIVACY 
+Admin City: REDACTED FOR PRIVACY
+Admin State/Province: REDACTED FOR PRIVACY
+Admin Postal Code: REDACTED FOR PRIVACY
+Admin Country: REDACTED FOR PRIVACY
+Admin Phone: REDACTED FOR PRIVACY
+Admin Phone Ext: 
+Admin Fax: REDACTED FOR PRIVACY
+Admin Fax Ext: 
+Admin Email: REDACTED FOR PRIVACY
+Registry Tech ID: 
+Tech Name: REDACTED FOR PRIVACY
+Tech Organization: REDACTED FOR PRIVACY
+Tech Street: REDACTED FOR PRIVACY 
+Tech City: REDACTED FOR PRIVACY
+Tech State/Province: REDACTED FOR PRIVACY
+Tech Postal Code: REDACTED FOR PRIVACY
+Tech Country: REDACTED FOR PRIVACY
+Tech Phone: REDACTED FOR PRIVACY
+Tech Phone Ext: 
+Tech Fax: REDACTED FOR PRIVACY
+Tech Fax Ext: 
+Tech Email: REDACTED FOR PRIVACY
+Name Server: ns-32.awsdns-04.com
+Name Server: ns-598.awsdns-10.net
+Name Server: ns-1981.awsdns-55.co.uk
+Name Server: ns-1428.awsdns-50.org
+
 Registrar Abuse Contact Email: compliance@domain-inc.net
 Registrar Abuse Contact Phone: +1.6027165396
-Reseller: Domain Name Holding Company, Inc
-Reseller: dsouthwell@dotster.com
-Reseller: +1.8007972958
-Domain Status: ok
-Registry Registrant ID: 
-Registrant Name: Domain Admin
-Registrant Organization: Homestead Technologies, Inc.
-Registrant Street: 10 Corporate Drive Suite 300
-Registrant City: Burlington
-Registrant State/Province: MA
-Registrant Postal Code: 01803
-Registrant Country: US
-Registrant Phone: +1.3604495900
-Registrant Phone Ext: 
-Registrant Fax: 
-Registrant Fax Ext: 
-Registrant Email: corpdomains@endurance.com
-Registry Admin ID: 
-Admin Name: Domain Admin
-Admin Organization: Homestead Technologies, Inc.
-Admin Street: 10 Corporate Drive Suite 300
-Admin City: Burlington
-Admin State/Province: MA
-Admin Postal Code: 01803
-Admin Country: US
-Admin Phone: +1.3604495900
-Admin Phone Ext: 
-Admin Fax: 
-Admin Fax Ext: 
-Admin Email: corpdomains@endurance.com
-Registry Tech ID: 
-Tech Name: Domain Admin
-Tech Organization: Homestead Technologies, Inc.
-Tech Street: 10 Corporate Drive Suite 300
-Tech City: Burlington
-Tech State/Province: MA
-Tech Postal Code: 01803
-Tech Country: US
-Tech Phone: +1.3604495900
-Tech Phone Ext: 
-Tech Fax: 
-Tech Fax Ext: 
-Tech Email: corpdomains@endurance.com
-Name Server: EENEY.HOMESTEAD.COM
-Name Server: MEENEY.HOMESTEAD.COM
-DNSSEC: Unsigned
 URL of the ICANN WHOIS Data Problem Reporting System: http://wdprs.internic.net/
->>> Last update of WHOIS database: 2014-10-07 12:25:32 <<<
+>>> Last update of WHOIS database: 2017-06-14T13:48:38 <<<
+
+"For more information on Whois status codes, please visit https://icann.org/epp"
 
 Registration Service Provider:
-    Domain Name Holding Company, Inc, dsouthwell@dotster.com
+    Domain Name Holding Company, Inc, corpdomains@endurance.com
     +1.8007972958
     This company may be contacted for domain login/passwords,
     DNS/Nameserver changes, and general domain support questions.

@@ -1,0 +1,24 @@
+﻿    Domain name:
+        {DomainName$}
+
+    Registrant:
+        {Registrant.Organization?$}
+
+    Registrant type:
+        {Registrant.Type?$}
+
+    Registrant's address:
+        {Registrant.Address#$}
+
+    Registrar:
+        {Registrar.Name?$}
+        URL: {Registrar.Url?$}
+
+    Relevant dates:
+        Registered on: {Created?$}
+        Expiry date:  {Expiration$:ToDateTime(dd-MMM-yyyy)}
+        Last updated:  {Updated$:ToDateTime(dd-MMM-yyyy)}
+
+    Name servers:
+        {WhoisRecord.NameServers$}
+        {WhoisRecord.NameServers#$}

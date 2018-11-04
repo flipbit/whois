@@ -3,20 +3,20 @@ Domain Name: washingtonpost.com
 Registry Domain ID: 1707992_DOMAIN_COM-VRSN
 Registrar WHOIS Server: whois.corporatedomains.com
 Registrar URL: www.cscprotectsbrands.com
-Updated Date: 2014-04-30 21:56:51 -0400
-Creation Date: 1995-11-13 00:00:00 -0500
-Registrar Registration Expiration Date: 2014-11-12 00:00:00 -0500
+Updated Date: 2018-06-04T20:02:16Z
+Creation Date: 1995-11-13T05:00:00Z
+Registrar Registration Expiration Date: 2018-11-12T05:00:00Z
 Registrar: CSC CORPORATE DOMAINS, INC.
 Registrar IANA ID: 299
-Registrar Abuse Contact Email: admin@internationaladmin.com
+Registrar Abuse Contact Email: domainabuse@cscglobal.com
 Registrar Abuse Contact Phone: +1.8887802723
-Domain Status: serverTransferProhibited
-Domain Status: serverDeleteProhibited
-Domain Status: clientTransferProhibited
+Domain Status: clientTransferProhibited http://www.icann.org/epp#clientTransferProhibited
+Domain Status: serverDeleteProhibited http://www.icann.org/epp#serverDeleteProhibited
+Domain Status: serverTransferProhibited http://www.icann.org/epp#serverTransferProhibited
 Registry Registrant ID: 
 Registrant Name: Domain Administrator
 Registrant Organization: WP Company LLC
-Registrant Street: 1150 15th St NW
+Registrant Street: 1301 K Street, NW
 Registrant City: Washington
 Registrant State/Province: DC
 Registrant Postal Code: 20071
@@ -29,7 +29,7 @@ Registrant Email: admin.contact@digitalink.com
 Registry Admin ID: 
 Admin Name: Domain Administrator
 Admin Organization: WP Company LLC
-Admin Street: 1150 15th St NW
+Admin Street: 1301 K Street, NW
 Admin City: Washington
 Admin State/Province: DC
 Admin Postal Code: 20071
@@ -40,33 +40,31 @@ Admin Fax: +1.2023345075
 Admin Fax Ext: 
 Admin Email: admin.contact@digitalink.com
 Registry Tech ID: 
-Tech Name: Domain Administrator
+Tech Name: Administrative Technical Contact
 Tech Organization: WP Company LLC
-Tech Street: 1150 15th St NW
+Tech Street: 1301 K Street, NW
 Tech City: Washington
 Tech State/Province: DC
 Tech Postal Code: 20071
 Tech Country: US
-Tech Phone: +1.2023347868
+Tech Phone: +1.2023344530
 Tech Phone Ext: 
 Tech Fax: +1.2023345075
 Tech Fax Ext: 
-Tech Email: admin.contact@digitalink.com
-Name Server: ns-1027.awsdns-00.org
-Name Server: pdns6.ultradns.co.uk
-Name Server: pdns2.ultradns.net
-Name Server: pdns1.ultradns.net
-Name Server: ns-666.awsdns-19.net
-Name Server: pdns5.ultradns.info
-Name Server: ns-404.awsdns-50.com
+Tech Email: tech.contact@digitalink.com
 Name Server: ns-1840.awsdns-38.co.uk
-Name Server: pdns3.ultradns.org
-Name Server: pdns115.ultradns.net
-Name Server: pdns4.ultradns.org
-DNSSEC: 
+Name Server: sdns34.ultradns.biz
+Name Server: sdns34.ultradns.net
+Name Server: ns-666.awsdns-19.net
+Name Server: sdns34.ultradns.org
+Name Server: ns-1027.awsdns-00.org
+Name Server: ns-404.awsdns-50.com
+Name Server: sdns34.ultradns.com
+DNSSEC: unsigned
 URL of the ICANN WHOIS Data Problem Reporting System: http://wdprs.internic.net/
->>> Last update of WHOIS database: 2014-04-30 21:56:51 -0400 <<<
+>>> Last update of WHOIS database: 2018-06-04T20:02:16Z <<<
 
+For more information on Whois status codes, please visit https://icann.org/epp
 
 Corporation Service Company(c) (CSC)  The Trusted Partner of More than 50% of the 100 Best Global Brands.
 
@@ -75,6 +73,3 @@ Contact us to learn more about our enterprise solutions for Global Domain Name R
 NOTICE: You are not authorized to access or query our WHOIS database through the use of high-volume, automated, electronic processes or for the purpose or purposes of using the data in any manner that violates these terms of use. The Data in the CSC WHOIS database is provided by CSC for information purposes only, and to assist persons in obtaining information about or related to a domain name registration record. CSC does not guarantee its accuracy. By submitting a WHOIS query, you agree to abide by the following terms of use: you agree that you may use this Data only for lawful purposes and that under no circumstances will you use this Data to: (1) allow, enable, or otherwise support the transmission of mass unsolicited, commercial advertising or solicitations via direct mail, e-mail, telephone, or facsimile; or (2) enable high volume, automated, electronic processes that apply to CSC (or its computer systems). CSC reserves the right to terminate your access to the WHOIS database in its sole discretion for any violations by you of these terms of use. CSC reserves the right to modify these terms at any time.
 
 Register your domain name at http://www.cscglobal.com
-
-For more information on Whois status codes, please visit https://www.icann.org/resources/pages/epp-status-codes-2014-06-16-en
-

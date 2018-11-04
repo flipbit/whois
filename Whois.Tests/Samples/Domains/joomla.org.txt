@@ -1,68 +1,97 @@
-Domain Name:JOOMLA.ORG
-Domain ID: D107234346-LROR
+Domain Name: joomla.org
+Registry Domain ID: D107234346-LROR
+Registrar WHOIS Server: whois.godaddy.com
+Registrar URL: http://www.godaddy.com
+Updated Date: 2017-05-24T22:12:43Z
 Creation Date: 2005-08-21T09:09:46Z
-Updated Date: 2014-07-21T20:47:22Z
-Registry Expiry Date: 2015-08-21T09:09:46Z
-Sponsoring Registrar:TPP Wholesale Pty Ltd (R1378-LROR)
-Sponsoring Registrar IANA ID: 900
-WHOIS Server: 
-Referral URL: 
-Domain Status: clientTransferProhibited
-Domain Status: clientUpdateProhibited
-Registrant ID:NR-15927
-Registrant Name:James Vasile
-Registrant Organization:Open Source Matters
-Registrant Street: PO Box 4668 #88354
-Registrant City:New York
-Registrant State/Province:New York
-Registrant Postal Code:10163-4668
-Registrant Country:US
-Registrant Phone:+12.125800800
+Registrar Registration Expiration Date: 2019-08-21T09:09:46Z
+Registrar: GoDaddy.com, LLC
+Registrar IANA ID: 146
+Registrar Abuse Contact Email: abuse@godaddy.com
+Registrar Abuse Contact Phone: +1.4806242505
+Domain Status: clientTransferProhibited http://www.icann.org/epp#clientTransferProhibited
+Domain Status: clientUpdateProhibited http://www.icann.org/epp#clientUpdateProhibited
+Domain Status: clientRenewProhibited http://www.icann.org/epp#clientRenewProhibited
+Domain Status: clientDeleteProhibited http://www.icann.org/epp#clientDeleteProhibited
+Registry Registrant ID: CR275598888
+Registrant Name: Registration Private
+Registrant Organization: Domains By Proxy, LLC
+Registrant Street: DomainsByProxy.com
+Registrant Street: 14455 N. Hayden Road
+Registrant City: Scottsdale
+Registrant State/Province: Arizona
+Registrant Postal Code: 85260
+Registrant Country: US
+Registrant Phone: +1.4806242599
 Registrant Phone Ext: 
-Registrant Fax: 
+Registrant Fax: +1.4806242598
 Registrant Fax Ext: 
-Registrant Email:admin@opensourcematters.org
-Admin ID:NR-15926
-Admin Name:Brad Baker
-Admin Organization:Bradleebaker
-Admin Street: PO Box 5300
-Admin City:Greystanes
-Admin State/Province:NSW
-Admin Postal Code:2145
-Admin Country:AU
-Admin Phone:+61.411065584
+Registrant Email: joomla.org@domainsbyproxy.com
+Registry Admin ID: CR275598906
+Admin Name: Registration Private
+Admin Organization: Domains By Proxy, LLC
+Admin Street: DomainsByProxy.com
+Admin Street: 14455 N. Hayden Road
+Admin City: Scottsdale
+Admin State/Province: Arizona
+Admin Postal Code: 85260
+Admin Country: US
+Admin Phone: +1.4806242599
 Admin Phone Ext: 
-Admin Fax: 
+Admin Fax: +1.4806242598
 Admin Fax Ext: 
-Admin Email:brad.baker@joomla.org
-Tech ID:NR-15928
-Tech Name:Brad Baker
-Tech Organization:Bradleebaker
-Tech Street: PO Box 5300
-Tech City:Greystanes
-Tech State/Province:NSW
-Tech Postal Code:2145
-Tech Country:AU
-Tech Phone:+61.411065584
+Admin Email: joomla.org@domainsbyproxy.com
+Registry Tech ID: CR275598900
+Tech Name: Registration Private
+Tech Organization: Domains By Proxy, LLC
+Tech Street: DomainsByProxy.com
+Tech Street: 14455 N. Hayden Road
+Tech City: Scottsdale
+Tech State/Province: Arizona
+Tech Postal Code: 85260
+Tech Country: US
+Tech Phone: +1.4806242599
 Tech Phone Ext: 
-Tech Fax: 
+Tech Fax: +1.4806242598
 Tech Fax Ext: 
-Tech Email:brad.baker@joomla.org
-Name Server:DNS1.DIRECTROUTER.NET
-Name Server:DNS2.DIRECTROUTER.NET
-Name Server:DNS3.DIRECTROUTER.NET
-Name Server: 
-Name Server: 
-Name Server: 
-Name Server: 
-Name Server: 
-Name Server: 
-Name Server: 
-Name Server: 
-Name Server: 
-Name Server: 
-DNSSEC:Unsigned
+Tech Email: joomla.org@domainsbyproxy.com
+Name Server: DNS4.DIRECTROUTER.NET
+Name Server: DNS5.DIRECTROUTER.NET
+DNSSEC: unsigned
+URL of the ICANN WHOIS Data Problem Reporting System: http://wdprs.internic.net/
+>>> Last update of WHOIS database: 2018-10-31T20:00:00Z <<<
 
-Access to Public Interest Registry WHOIS information is provided to assist persons in determining the contents of a domain name registration record in the Public Interest Registry registry database. The data in this record is provided by Public Interest Registry for informational purposes only, and Public Interest Registry does not guarantee its accuracy. This service is intended only for query-based access. You agree that you will use this data only for lawful purposes and that, under no circumstances will you use this data to(a) allow, enable, or otherwise support the transmission by e-mail, telephone, or facsimile of mass unsolicited, commercial advertising or solicitations to entities other than the data recipient's own existing customers; or (b) enable high volume, automated, electronic processes that send queries or data to the systems of Registry Operator, a Registrar, or Afilias except as reasonably necessary to register domain names or modify existing registrations. All rights reserved. Public Interest Registry reserves the right to modify these terms at any time. By submitting this query, you agree to abide by this policy.
+For more information on Whois status codes, please visit https://www.icann.org/resources/pages/epp-status-codes-2014-06-16-en
 
+****************************************************
+See Business Registration Listing
+****************************************************
+Copy and paste the link below to view additional details:
+http://who.godaddy.com/whoischeck.aspx?domain=joomla.org
 
+Notes: 
+
+IMPORTANT: Port43 will provide the ICANN-required minimum data set per 
+ICANN Temporary Specification, adopted 17 May 2018. 
+Visit https://whois.godaddy.com to look up contact data for domains 
+not covered by GDPR policy.
+
+The data contained in GoDaddy.com, LLC's WhoIs database,
+while believed by the company to be reliable, is provided "as is"
+with no guarantee or warranties regarding its accuracy.  This
+information is provided for the sole purpose of assisting you
+in obtaining information about domain name registration records.
+Any use of this data for any other purpose is expressly forbidden without the prior written
+permission of GoDaddy.com, LLC.  By submitting an inquiry,
+you agree to these terms of usage and limitations of warranty.  In particular,
+you agree not to use this data to allow, enable, or otherwise make possible,
+dissemination or collection of this data, in part or in its entirety, for any
+purpose, such as the transmission of unsolicited advertising and
+and solicitations of any kind, including spam.  You further agree
+not to use this data to enable high volume, automated or robotic electronic
+processes designed to collect or compile this data for any purpose,
+including mining this data for your own personal or commercial purposes. 
+
+Please note: the registrant of the domain name is specified
+in the "registrant" section.  In most cases, GoDaddy.com, LLC 
+is not the registrant of domain names listed in this database.

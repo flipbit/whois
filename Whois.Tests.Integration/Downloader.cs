@@ -3,6 +3,7 @@ using System.IO;
 using System.Linq;
 using System.Threading;
 using NUnit.Framework;
+using Whois.Models;
 using Whois.Net;
 using Whois.Servers;
 using Whois.Visitors;
@@ -21,14 +22,14 @@ namespace Whois
         }
 
         [Test]
-        [Ignore]
+        //[Ignore("Not working")]
         public void DownloadTop500DomainAsSamples()
         {
-            var lines = File.ReadAllLines(@"..\..\Data\top-500.txt");
+            var lines = File.ReadAllLines(@"..\..\..\Data\top-500.txt");
 
             foreach (var line in lines)
             {
-                var fileName = string.Format(@"..\..\..\Whois.Tests\Samples\Domains\{0}.txt", line);
+                var fileName = Path.Combine(".", $@"..\..\..\..\Whois.Tests\Samples\Domains\{line}.txt");
 
                 if (File.Exists(fileName)) continue;
 
@@ -36,19 +37,18 @@ namespace Whois
 
                 Console.WriteLine("Writing: {0}, {1:###,##0} byte(s)", line, whois.ToString().Length);
 
-                File.WriteAllText(fileName, whois.ToString());
+                File.WriteAllText(fileName, whois.Content);
 
                 Thread.Sleep(60000);
             }
         }
 
         [Test]
-        [Ignore]
+        [Ignore("Not working")]
         public void DownloadTldsAsSamples()
         {
             var lines = File.ReadAllLines(@"..\..\Data\tlds.txt");
             var serverLookup = new IanaServerLookup();
-            serverLookup.TcpReaderFactory = new TcpReaderFactory();
 
             foreach (var line in lines)
             {
@@ -59,17 +59,17 @@ namespace Whois
 
                 if (File.Exists(fileName)) continue;
  
-                var tld = serverLookup.Lookup(line.ToLower()) as WhoisServerRecord;
+                var tld = serverLookup.Lookup(line.ToLower()) as ParsedWhoisServer;
 
-                File.WriteAllText(fileName, tld.RawResponse);
-                Console.WriteLine("{0}: {1:####,##0} byte(s)", line.ToLower(), tld.RawResponse.Length);
+                File.WriteAllText(fileName, tld.Response);
+                Console.WriteLine("{0}: {1:####,##0} byte(s)", line.ToLower(), tld.Response.Length);
 
                 Thread.Sleep(60000);
             }
         }
 
         [Test]
-        [Ignore]
+        [Ignore("not working")]
         public void ShowSampleStatistics()
         {
             var files = Directory.GetFiles(@"..\..\..\Whois.Tests\Samples\Domains", "*.txt");
@@ -79,9 +79,9 @@ namespace Whois
             {
                 var text = File.ReadAllText(file);
 
-                var record = new WhoisRecord(text);
+                var record = new WhoisResponse(text);
 
-                var matches = visitor.MatchPatterns(record);
+                /*var matches = visitor.MatchPatterns(response);
 
                 if (matches.Any())
                 {
@@ -92,7 +92,7 @@ namespace Whois
                 else
                 {
                     Console.WriteLine("No matches: {0}", file);
-                }
+                }*/
             }
         }
     }

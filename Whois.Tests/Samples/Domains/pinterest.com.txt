@@ -1,81 +1,75 @@
 Domain Name: pinterest.com
-Registry Domain ID:
-Registrar WHOIS Server: whois.ascio.com
-Registrar URL: http://www.ascio.com 
-Updated Date: 2013-09-03T19:40:09Z
-Creation Date: 2013-02-12T09:52:38Z
-Registrar Registration Expiration Date: 2014-11-26T00:00:00Z
-Registrar: Ascio Technologies, Inc
-Registrar IANA ID: 106
-Registrar Abuse Contact Email: abuse@ascio.com
-Registrar Abuse Contact Phone: +44.2070159370
-Reseller:
-Domain Status: TRANSFER_LOCK
-Domain Status: UPDATE_LOCK
-Domain Status: DELETE_LOCK
-Registry Registrant ID:
-Registrant Name: Aren Sandersen
-Registrant Organization: Pinterest, Inc.
-Registrant Street: 808 Brannan Street
-Registrant City: San Francisco 
+Registry Domain ID: 1577084852_DOMAIN_COM-VRSN
+Registrar WHOIS Server: whois.markmonitor.com
+Registrar URL: http://www.markmonitor.com
+Updated Date: 2018-07-26T15:08:34-0700
+Creation Date: 2009-11-26T11:21:23-0800
+Registrar Registration Expiration Date: 2020-11-26T11:21:23-0800
+Registrar: MarkMonitor, Inc.
+Registrar IANA ID: 292
+Registrar Abuse Contact Email: abusecomplaints@markmonitor.com
+Registrar Abuse Contact Phone: +1.2083895740
+Domain Status: clientUpdateProhibited (https://www.icann.org/epp#clientUpdateProhibited)
+Domain Status: clientTransferProhibited (https://www.icann.org/epp#clientTransferProhibited)
+Domain Status: clientDeleteProhibited (https://www.icann.org/epp#clientDeleteProhibited)
+Domain Status: serverUpdateProhibited (https://www.icann.org/epp#serverUpdateProhibited)
+Domain Status: serverTransferProhibited (https://www.icann.org/epp#serverTransferProhibited)
+Domain Status: serverDeleteProhibited (https://www.icann.org/epp#serverDeleteProhibited)
+Registrant Organization: DNStination Inc.
 Registrant State/Province: CA
-Registrant Postal Code: 94103
 Registrant Country: US
-Registrant Phone:
-Registrant Phone Ext:
-Registrant Fax:
-Registrant Fax Ext:
-Registrant Email:
-Registry Admin ID:
-Admin Name: Aren Sandersen
-Admin Organization: Pinterest, Inc.
-Admin Street: 808 Brannan Street
-Admin City:  San Francisco
+Admin Organization: DNStination Inc.
 Admin State/Province: CA
-Admin Postal Code: 94103
 Admin Country: US
-Admin Phone: +1.4157627100
-Admin Phone Ext:
-Admin Fax: +1.4157627101
-Admin Fax Ext:
-Admin Email: domain@pinterest.com
-Registry Tech ID:
-Tech Name: Pinterest Hostmaster
-Tech Organization: Pinterest, Inc.
-Tech Street: 808 Brannan Street
-Tech City: San Francisco 
+Tech Organization: DNStination Inc.
 Tech State/Province: CA
-Tech Postal Code: 94103
 Tech Country: US
-Tech Phone: +1.4157627100
-Tech Phone Ext:
-Tech Fax: +1.4157627101  
-Tech Fax Ext: 
-Tech Email: domains@pinterest.com
-Name Server: ns-465.awsdns-58.com
-Name Server: ns-577.awsdns-08.net
-Name Server: ns-1826.awsdns-36.co.uk
-Name Server: ns-1226.awsdns-25.org
-DNSSEC:
+Name Server: ns7.pinterest.com
+Name Server: ns4.pinterest.com
+Name Server: ns1.pinterest.com
+Name Server: ns3.pinterest.com
+Name Server: ns5.pinterest.com
+Name Server: ns6.pinterest.com
+Name Server: ns8.pinterest.com
+Name Server: ns2.pinterest.com
+DNSSEC: unsigned
 URL of the ICANN WHOIS Data Problem Reporting System: http://wdprs.internic.net/
->>> Last update of WHOIS database: 2014-10-22T09:15:14 UTC <<<
+>>> Last update of WHOIS database: 2018-10-31T13:21:39-0700 <<<
 
-The data in Ascio Technologies' WHOIS database is provided 
-by Ascio Technologies for information purposes only. By submitting 
-a WHOIS query, you agree that you will use this data only for lawful 
-purpose. In addition, you agree not to:
-(a) use the data to allow, enable, or otherwise support any marketing
-activities, regardless of the medium used. Such media include but are 
-not limited to e-mail, telephone, facsimile, postal mail, SMS, and
-wireless alerts; or
-(b) use the data to enable high volume, automated, electronic processes
-that sendqueries or data to the systems of any Registry Operator or 
-ICANN-Accredited registrar, except as reasonably necessary to register 
-domain names or modify existing registrations.
-(c) sell or redistribute the data except insofar as it has been 
-incorporated into a value-added product or service that does not permit
-the extraction of a substantial portion of the bulk data from the value-added
-product or service for use by other parties.
-Ascio Technologies reserves the right to modify these terms at any time.
-Ascio Technologies cannot guarantee the accuracy of the data provided.
-By accessing and using Ascio Technologies WHOIS service, you agree to these terms.
+If certain contact information is not shown for a Registrant, Administrative,
+or Technical contact, and you wish to send a message to these contacts, please
+send your message to whoisrelay@markmonitor.com and specify the domain name in
+the subject line. We will forward that message to the underlying contact.
+
+If you have a legitimate interest in viewing the non-public WHOIS details, send
+your request and the reasons for your request to abusecomplaints@markmonitor.com
+and specify the domain name in the subject line. We will review that request and
+may ask for supporting documentation and explanation.
+
+The Data in MarkMonitor.com's WHOIS database is provided by MarkMonitor.com for
+information purposes, and to assist persons in obtaining information about or
+related to a domain name registration record.  MarkMonitor.com does not guarantee
+its accuracy.  By submitting a WHOIS query, you agree that you will use this Data
+only for lawful purposes and that, under no circumstances will you use this Data to:
+ (1) allow, enable, or otherwise support the transmission of mass unsolicited,
+     commercial advertising or solicitations via e-mail (spam); or
+ (2) enable high volume, automated, electronic processes that apply to
+     MarkMonitor.com (or its systems).
+MarkMonitor.com reserves the right to modify these terms at any time.
+By submitting this query, you agree to abide by this policy.
+
+MarkMonitor is the Global Leader in Online Brand Protection.
+
+MarkMonitor Domain Management(TM)
+MarkMonitor Brand Protection(TM)
+MarkMonitor AntiPiracy(TM)
+MarkMonitor AntiFraud(TM)
+Professional and Managed Services
+
+Visit MarkMonitor at http://www.markmonitor.com
+Contact us at +1.8007459229
+In Europe, at +44.02032062220
+
+For more information on Whois status codes, please visit
+ https://www.icann.org/resources/pages/epp-status-codes-2014-06-16-en
+--

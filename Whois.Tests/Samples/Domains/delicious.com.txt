@@ -2,66 +2,75 @@ Domain Name: DELICIOUS.COM
 Registry Domain ID: 5068183_DOMAIN_COM-VRSN
 Registrar WHOIS Server: whois.godaddy.com
 Registrar URL: http://www.godaddy.com
-Update Date: 2014-05-04 21:16:59
-Creation Date: 1995-11-20 00:00:00
-Registrar Registration Expiration Date: 2023-11-19 00:00:00
+Updated Date: 2018-10-09T20:02:17Z
+Creation Date: 1995-11-20T05:00:00Z
+Registrar Registration Expiration Date: 2023-11-19T05:00:00Z
 Registrar: GoDaddy.com, LLC
 Registrar IANA ID: 146
 Registrar Abuse Contact Email: abuse@godaddy.com
-Registrar Abuse Contact Phone: +1.480-624-2505
-Domain Status: clientTransferProhibited
-Domain Status: clientUpdateProhibited
-Domain Status: clientRenewProhibited
-Domain Status: clientDeleteProhibited
-Registry Registrant ID: 
+Registrar Abuse Contact Phone: +1.4806242505
+Domain Status: clientTransferProhibited http://www.icann.org/epp#clientTransferProhibited
+Domain Status: clientUpdateProhibited http://www.icann.org/epp#clientUpdateProhibited
+Domain Status: clientRenewProhibited http://www.icann.org/epp#clientRenewProhibited
+Domain Status: clientDeleteProhibited http://www.icann.org/epp#clientDeleteProhibited
+Registry Registrant ID: Not Available From Registry
 Registrant Name: Registration Private
 Registrant Organization: Domains By Proxy, LLC
 Registrant Street: DomainsByProxy.com
-Registrant Street: 14747 N Northsight Blvd Suite 111, PMB 309
+Registrant Street: 14455 N. Hayden Road
 Registrant City: Scottsdale
 Registrant State/Province: Arizona
 Registrant Postal Code: 85260
-Registrant Country: United States
+Registrant Country: US
 Registrant Phone: +1.4806242599
 Registrant Phone Ext: 
 Registrant Fax: +1.4806242598
 Registrant Fax Ext: 
 Registrant Email: DELICIOUS.COM@domainsbyproxy.com
-Registry Admin ID: 
+Registry Admin ID: Not Available From Registry
 Admin Name: Registration Private
 Admin Organization: Domains By Proxy, LLC
 Admin Street: DomainsByProxy.com
-Admin Street: 14747 N Northsight Blvd Suite 111, PMB 309
+Admin Street: 14455 N. Hayden Road
 Admin City: Scottsdale
 Admin State/Province: Arizona
 Admin Postal Code: 85260
-Admin Country: United States
+Admin Country: US
 Admin Phone: +1.4806242599
 Admin Phone Ext: 
 Admin Fax: +1.4806242598
 Admin Fax Ext: 
 Admin Email: DELICIOUS.COM@domainsbyproxy.com
-Registry Tech ID: 
+Registry Tech ID: Not Available From Registry
 Tech Name: Registration Private
 Tech Organization: Domains By Proxy, LLC
 Tech Street: DomainsByProxy.com
-Tech Street: 14747 N Northsight Blvd Suite 111, PMB 309
+Tech Street: 14455 N. Hayden Road
 Tech City: Scottsdale
 Tech State/Province: Arizona
 Tech Postal Code: 85260
-Tech Country: United States
+Tech Country: US
 Tech Phone: +1.4806242599
 Tech Phone Ext: 
 Tech Fax: +1.4806242598
 Tech Fax Ext: 
 Tech Email: DELICIOUS.COM@domainsbyproxy.com
-Name Server: NS-1116.AWSDNS-11.ORG
-Name Server: NS-1686.AWSDNS-18.CO.UK
-Name Server: NS-358.AWSDNS-44.COM
-Name Server: NS-933.AWSDNS-52.NET
+Name Server: NS-175.AWSDNS-21.COM
+Name Server: NS-1328.AWSDNS-38.ORG
+Name Server: NS-1777.AWSDNS-30.CO.UK
+Name Server: NS-829.AWSDNS-39.NET
 DNSSEC: unsigned
 URL of the ICANN WHOIS Data Problem Reporting System: http://wdprs.internic.net/
-Last update of WHOIS database: 2014-10-22T09:00:00Z
+>>> Last update of WHOIS database: 2018-10-31T20:00:00Z <<<
+
+For more information on Whois status codes, please visit https://www.icann.org/resources/pages/epp-status-codes-2014-06-16-en
+
+Notes: 
+
+IMPORTANT: Port43 will provide the ICANN-required minimum data set per 
+ICANN Temporary Specification, adopted 17 May 2018. 
+Visit https://whois.godaddy.com to look up contact data for domains 
+not covered by GDPR policy.
 
 The data contained in GoDaddy.com, LLC's WhoIs database,
 while believed by the company to be reliable, is provided "as is"

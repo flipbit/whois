@@ -1,63 +1,33 @@
-﻿using System;
-using System.Text;
+﻿using System.Threading.Tasks;
+using Whois.Logging;
+using Whois.Models;
 using Whois.Net;
 
 namespace Whois.Visitors
 {
     /// <summary>
-    /// Downloads WHOIS information from the specified WHOIS server
+    /// Downloads WHOIS information from the root WHOIS server
     /// </summary>
     public class DownloadVisitor : IWhoisVisitor
     {
-        /// <summary>
-        /// Gets the current character encoding that the current WhoisVisitor
-        /// object is using.
-        /// </summary>
-        /// <returns>The current character encoding used by the current visitor.</returns>
-        public Encoding Encoding { get; private set; }
+        private static readonly ILog Log = LogProvider.GetCurrentClassLogger();
 
-        /// <summary>
-        /// Gets or sets the TCP reader factory.
-        /// </summary>
-        /// <value>The TCP reader factory.</value>
-        public ITcpReaderFactory TcpReaderFactory { get; set; }
-
-        /// <summary>
-        /// Initializes a new instance of the <see cref="DownloadVisitor"/> class.
-        /// </summary>
-        public DownloadVisitor() : this(Encoding.UTF8)
+        public async Task<LookupState> Visit(LookupState state)
         {
-        }
-
-        /// <summary>
-        /// Initializes a new instance of the <see cref="DownloadVisitor"/> class.
-        /// </summary>
-        /// <param name="encoding">The encoding used to read and write strings.</param>
-        public DownloadVisitor(Encoding encoding)
-        {
-            TcpReaderFactory = new TcpReaderFactory();
-
-            Encoding = encoding;
-        }
-
-        /// <summary>
-        /// Visits the specified record.
-        /// </summary>
-        /// <param name="record">The record.</param>
-        /// <returns></returns>
-        public WhoisRecord Visit(WhoisRecord record)
-        {
-            if (record.Server == null)
+            using (var tcpReader = TcpReaderFactory.Create())
             {
-                throw new ArgumentException("Given WhoisRecord does not have the Server property set");
+                var response = await tcpReader.Read(state.WhoisServer.Url, 43, state.Domain, state.Options.DefaultEncoding);
+
+                state.Response = new WhoisResponse
+                {
+                    Domain = state.Domain,
+                    Content = response 
+                };
             }
 
-            using (var tcpReader = TcpReaderFactory.Create(Encoding))
-            {
-                record.Text = tcpReader.Read(record.Server.Url, 43, record.Domain);
-            }
+            Log.Debug("Lookup {0}: Downloaded {1:###,###,##0} byte(s) from {2}.", state.Domain, state.Response.Content.Length, state.WhoisServer.Url);
 
-            return record;
+            return state;
         }
     }
 }

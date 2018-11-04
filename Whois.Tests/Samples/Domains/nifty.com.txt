@@ -1,17 +1,16 @@
-
 Domain Name: NIFTY.COM
 Registry Domain ID: 5586877_DOMAIN_COM-VRSN
-Registrar WHOIS Server: whois2013.jprs.jp
-Registrar URL: http://jprs.jp/registrar/
-Updated Date: 2014-10-05T17:00:39Z
+Registrar WHOIS Server: whois.jprs.jp
+Registrar URL: https://jprs.jp/registrar/
+Updated Date: 2018-10-05T17:02:30Z
 Creation Date: 1998-10-08T04:00:00Z
-Registrar Registration Expiration Date: 2015-10-07T04:00:00Z
+Registrar Registration Expiration Date: 2019-10-07T04:00:00Z
 Registrar: Japan Registry Services Co.,Ltd.(JPRS)
 Registrar IANA ID: 1485
 Registrar Abuse Contact Email: gtld-abuse@jprs.jp
-Registrar Abuse Contact Phone: +81.352158451
-Domain Status: ok
-Registry Registrant ID: REG-00-0215-3191
+Registrar Abuse Contact Phone: +81.352158457
+Domain Status: ok  https://icann.org/epp#ok
+Registry Registrant ID: Not Available From Registry
 Registrant Name: NIFTY Corporation
 Registrant Street: Shinjuku Front Tower, 21-1,Kita-shinjuku 2-chome
 Registrant City: Shinjuku-ku
@@ -19,77 +18,44 @@ Registrant State/Province: Tokyo-to
 Registrant Postal Code: 169-8333
 Registrant Country: JP
 Registrant Phone: +81.368074500
-Registrant Phone Ext:
-Registrant Fax: 
-Registrant Fax Ext:
 Registrant Email: tech-contact@nifty.ad.jp
-Registry Admin ID: AGOP-0137-9988
-Admin Name: Domain Administrator
+Registry Admin ID: Not Available From Registry
+Admin Name: NIFTY Corporation
 Admin Street: Shinjuku Front Tower, 21-1,Kita-shinjuku 2-chome
 Admin City: Shinjuku-ku
 Admin State/Province: Tokyo-to
 Admin Postal Code: 169-8333
 Admin Country: JP
 Admin Phone: +81.368074500
-Admin Phone Ext:
-Admin Fax: 
-Admin Fax Ext:
-Admin Email: tech-contact@nifty.ad.jp
-Registry Tech ID: AGOP-0137-9984
-Tech Name: NIFTY Corp TechContact
+Admin Email: nifty-admin@list.nifty.co.jp
+Registry Tech ID: Not Available From Registry
+Tech Name: NIFTY Corporation
 Tech Street: Shinjuku Front Tower, 21-1,Kita-shinjuku 2-chome
 Tech City: Shinjuku-ku
 Tech State/Province: Tokyo-to
 Tech Postal Code: 169-8333
 Tech Country: JP
 Tech Phone: +81.368074500
-Tech Phone Ext:
-Tech Fax: 
-Tech Fax Ext:
-Tech Email: sys00624@nifty.com
+Tech Email: nifty-tec@list.nifty.co.jp
 Name Server: ONS1.NIFTY.AD.JP
 Name Server: ONS0.NIFTY.AD.JP
 DNSSEC: unsigned
 URL of the ICANN WHOIS Data Problem Reporting System: http://wdprs.internic.net/
->>> Last update of WHOIS database: 2014-10-22T10:31:45Z <<<
+>>> Last update of WHOIS database: 2018-11-01T09:01:14Z <<<
 
-[ JPRS WHOIS LEGAL DISCLAIMER:                                                 ]
-[                                                                              ]
-[ The WHOIS service (the "Service") offered by Japan Registry Services Co.,    ]
-[ Ltd. (JPRS) and the access to the records in the JPRS WHOIS database (the    ]
-[ "Database") are provided for information purposes and  query-based public    ]
-[ access.                                                                      ]
-[                                                                              ]
-[ Neither JPRS nor any of its officers, directors, employees or agents         ]
-[ makes any warranty as to the results to be obtained from use of the          ]
-[ Service.  JPRS specifically disclaims all warranties of any kind,            ]
-[ whether express, implied or statutory, including, but not limited to,        ]
-[ any warranties of title, non-infringement, merchantability or fitness        ]
-[ for a particular purpose.                                                    ]
-[ In no event shall JPRS nor anyone else involved in creating, supporting,     ]
-[ producing or delivering the Service be liable to you for any lost            ]
-[ profits or costs, even if JPRS or such person has been advised of the        ]
-[ possibility of such damages.                                                 ]
-[                                                                              ]
-[ JPRS allows you to use the Service only for lawful purposes and that,        ]
-[ under no circumstances shall you use the Service to: (a) allow, enable       ]
-[ or otherwise support the transmission by e-mail, telephone, postal mail,     ]
-[ facsimile or other means of mass unsolicited, commercial advertising or      ]
-[ solicitations to entities other than the data recipient's own existing       ]
-[ customers; or (b) enable high volume, automated, electronic processes        ]
-[ that send queries or data to the systems of any registry operator or         ]
-[ ICANN-accredited registrar, except as reasonably necessary to register       ]
-[ domain names or modify existing registrations.                               ]
-[                                                                              ]
-[ By submitting the query you agree to abide by these terms and further        ]
-[ agree that JPRS may take measures to limit the use of the Service in         ]
-[ order to protect the privacy of its registrants or the integrity of          ]
-[ the Database.                                                                ]
-[                                                                              ]
-[ JPRS reserves the right to modify or change these terms at any time          ]
-[ without prior or subsequent notification of any kind.                        ]
-[                                                                              ]
-[ For further information, use 'whois -h whois2013.jprs.jp help'.              ]
-[ To express Japanese output, add '/j' at the end of command,                  ]
-[ e.g. 'whois -h whois2013.jprs.jp xxx/j'.                                     ]
+For more information on Whois status codes, please visit https://icann.org/epp
 
+JPRS WHOIS LEGAL DISCLAIMER:
+
+The WHOIS service (the "Service") offered by Japan Registry Services Co.,Ltd. (JPRS) and the access to the records in the JPRS WHOIS database (the "Database") are provided for information purposes and query-based public access.
+
+Neither JPRS nor any of its officers, directors, employees or agents makes any warranty as to the results to be obtained from use of the Service. JPRS specifically disclaims all warranties of any kind, whether express, implied or statutory, including, but not limited to, any warranties of title, non-infringement, merchantability or fitness for a particular purpose.
+In no event shall JPRS nor anyone else involved in creating, supporting, producing or delivering the Service be liable to you for any lost profits or costs, even if JPRS or such person has been advised of the possibility of such damages.
+
+JPRS allows you to use the Service only for lawful purposes and that, under no circumstances shall you use the Service to: (a) allow, enable or otherwise support the transmission by e-mail, telephone, postal mail, facsimile or other means of mass unsolicited, commercial advertising or solicitations to entities other than the data recipient's own existing customers; or (b) enable high volume, automated, electronic processes that send queries or data to the systems of any registry operator or ICANN-accredited registrar, except as reasonably necessary to register domain names or modify existing registrations.
+
+By submitting the query you agree to abide by these terms and further agree that JPRS may take measures to limit the use of the Service in order to protect the privacy of its registrants or the integrity of the Database.
+
+JPRS reserves the right to modify or change these terms at any time without prior or subsequent notification of any kind.
+
+For further information, use 'whois -h whois.jprs.jp help'. To express Japanese output, add '/j' at the end of command, e.g. 'whois -h whois.jprs.jp xxx/j'.

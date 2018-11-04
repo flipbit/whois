@@ -2,70 +2,39 @@ Domain Name: REVERBNATION.COM
 Registry Domain ID: 482936085_DOMAIN_COM-VRSN
 Registrar WHOIS Server: whois.godaddy.com
 Registrar URL: http://www.godaddy.com
-Update Date: 2014-04-18 15:30:28
-Creation Date: 2006-06-12 08:32:27
-Registrar Registration Expiration Date: 2019-06-12 08:32:27
+Updated Date: 2014-04-18T20:30:28Z
+Creation Date: 2006-06-12T13:32:27Z
+Registrar Registration Expiration Date: 2019-06-12T13:32:27Z
 Registrar: GoDaddy.com, LLC
 Registrar IANA ID: 146
 Registrar Abuse Contact Email: abuse@godaddy.com
-Registrar Abuse Contact Phone: +1.480-624-2505
-Domain Status: clientTransferProhibited
-Domain Status: clientUpdateProhibited
-Domain Status: clientRenewProhibited
-Domain Status: clientDeleteProhibited
-Registry Registrant ID: 
-Registrant Name: Edward Carlson
-Registrant Organization: eMinor Inc
-Registrant Street: 501 Washington St
-Registrant Street: Suite J
-Registrant City: Durham
+Registrar Abuse Contact Phone: +1.4806242505
+Domain Status: clientTransferProhibited http://www.icann.org/epp#clientTransferProhibited
+Domain Status: clientUpdateProhibited http://www.icann.org/epp#clientUpdateProhibited
+Domain Status: clientRenewProhibited http://www.icann.org/epp#clientRenewProhibited
+Domain Status: clientDeleteProhibited http://www.icann.org/epp#clientDeleteProhibited
+Registrant Organization: eMinor
 Registrant State/Province: North Carolina
-Registrant Postal Code: 27701
-Registrant Country: United States
-Registrant Phone: 9193212268
-Registrant Phone Ext: 
-Registrant Fax: 
-Registrant Fax Ext: 
-Registrant Email: jedcarlson@eminorinc.com
-Registry Admin ID: 
-Admin Name: Edward Carlson
-Admin Organization: eMinor Inc
-Admin Street: 501 Washington St
-Admin Street: Suite J
-Admin City: Durham
-Admin State/Province: North Carolina
-Admin Postal Code: 27701
-Admin Country: United States
-Admin Phone: 9193212268
-Admin Phone Ext: 
-Admin Fax: 
-Admin Fax Ext: 
-Admin Email: jedcarlson@eminorinc.com
-Registry Tech ID: 
-Tech Name: Edward Carlson
-Tech Organization: eMinor Inc
-Tech Street: 501 Washington St
-Tech Street: Suite J
-Tech City: Durham
-Tech State/Province: North Carolina
-Tech Postal Code: 27701
-Tech Country: United States
-Tech Phone: 9193212268
-Tech Phone Ext: 
-Tech Fax: 
-Tech Fax Ext: 
-Tech Email: jedcarlson@eminorinc.com
-Name Server: PDNS01.DOMAINCONTROL.COM
-Name Server: PDNS02.DOMAINCONTROL.COM
-Name Server: NS12.DNSMADEEASY.COM
-Name Server: NS13.DNSMADEEASY.COM
-Name Server: NS10.DNSMADEEASY.COM
-Name Server: NS11.DNSMADEEASY.COM
-Name Server: NS14.DNSMADEEASY.COM
-Name Server: NS15.DNSMADEEASY.COM
+Registrant Country: US
+Registrant Email: Select Contact Domain Holder link at https://www.godaddy.com/whois/results.aspx?domain=REVERBNATION.COM
+Admin Email: Select Contact Domain Holder link at https://www.godaddy.com/whois/results.aspx?domain=REVERBNATION.COM
+Tech Email: Select Contact Domain Holder link at https://www.godaddy.com/whois/results.aspx?domain=REVERBNATION.COM
+Name Server: NS-1972.AWSDNS-54.CO.UK
+Name Server: NS-800.AWSDNS-36.NET
+Name Server: NS-117.AWSDNS-14.COM
+Name Server: NS-1132.AWSDNS-13.ORG
 DNSSEC: unsigned
 URL of the ICANN WHOIS Data Problem Reporting System: http://wdprs.internic.net/
-Last update of WHOIS database: 2014-10-22T11:00:00Z
+>>> Last update of WHOIS database: 2018-11-01T09:00:00Z <<<
+
+For more information on Whois status codes, please visit https://www.icann.org/resources/pages/epp-status-codes-2014-06-16-en
+
+Notes: 
+
+IMPORTANT: Port43 will provide the ICANN-required minimum data set per 
+ICANN Temporary Specification, adopted 17 May 2018. 
+Visit https://whois.godaddy.com to look up contact data for domains 
+not covered by GDPR policy.
 
 The data contained in GoDaddy.com, LLC's WhoIs database,
 while believed by the company to be reliable, is provided "as is"

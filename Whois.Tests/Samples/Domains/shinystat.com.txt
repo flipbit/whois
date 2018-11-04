@@ -2,19 +2,17 @@ Domain Name: SHINYSTAT.COM
 Registry Domain ID: 20259018_DOMAIN_COM-VRSN
 Registrar WHOIS Server: whois.tucows.com
 Registrar URL: http://tucowsdomains.com
-Updated Date: 2014-06-13 05:37:57
-Creation Date: 2000-02-20 16:00:20
-Registrar Registration Expiration Date: 2016-02-20 16:00:20
+Updated Date: 2018-10-15T09:42:48
+Creation Date: 2000-02-20T16:00:20
+Registrar Registration Expiration Date: 2019-02-20T16:00:20
 Registrar: TUCOWS, INC.
 Registrar IANA ID: 69
-Registrar Abuse Contact Email: domainabuse@tucows.com
-Registrar Abuse Contact Phone: +1.4165350123
-Domain Status: clientTransferProhibited
-Domain Status: clientUpdateProhibited
+Domain Status: clientTransferProhibited https://icann.org/epp#clientTransferProhibited
+Domain Status: clientUpdateProhibited https://icann.org/epp#clientUpdateProhibited
 Registry Registrant ID: 
 Registrant Name: Contact Privacy Inc. Customer 0129563
 Registrant Organization: Contact Privacy Inc. Customer 0129563
-Registrant Street: 96 Mowat Ave
+Registrant Street: 96 Mowat Ave 
 Registrant City: Toronto
 Registrant State/Province: ON
 Registrant Postal Code: M6K 3M1
@@ -27,7 +25,7 @@ Registrant Email: shinystat.com@contactprivacy.com
 Registry Admin ID: 
 Admin Name: Contact Privacy Inc. Customer 0129563
 Admin Organization: Contact Privacy Inc. Customer 0129563
-Admin Street: 96 Mowat Ave
+Admin Street: 96 Mowat Ave 
 Admin City: Toronto
 Admin State/Province: ON
 Admin Postal Code: M6K 3M1
@@ -40,7 +38,7 @@ Admin Email: shinystat.com@contactprivacy.com
 Registry Tech ID: 
 Tech Name: Contact Privacy Inc. Customer 0129563
 Tech Organization: Contact Privacy Inc. Customer 0129563
-Tech Street: 96 Mowat Ave
+Tech Street: 96 Mowat Ave 
 Tech City: Toronto
 Tech State/Province: ON
 Tech Postal Code: M6K 3M1
@@ -50,15 +48,16 @@ Tech Phone Ext:
 Tech Fax: 
 Tech Fax Ext: 
 Tech Email: shinystat.com@contactprivacy.com
-Name Server: DENISE.SHINY.IT
-Name Server: NS3.SHINYSTAT.COM
-Name Server: MIMAS.SHINY.IT
-DNSSEC: Unsigned
-URL of the ICANN WHOIS Data Problem Reporting System: http://wdprs.internic.net/
->>> Last update of WHOIS database: 2014-06-13 05:37:57 <<<
+Name Server: denise.shiny.it
+Name Server: mimas.shiny.it
+Name Server: ns3.shinystat.com
 
-This domain's privacy is protected by contactprivacy.com. To reach the domain contacts,
-please go to http://www.contactprivacy.com and follow the instructions.
+Registrar Abuse Contact Email: domainabuse@tucows.com
+Registrar Abuse Contact Phone: +1.4165350123
+URL of the ICANN WHOIS Data Problem Reporting System: http://wdprs.internic.net/
+>>> Last update of WHOIS database: 2018-10-15T09:42:48 <<<
+
+"For more information on Whois status codes, please visit https://icann.org/epp"
 
 The Data in the Tucows Registrar WHOIS database is provided to you by Tucows
 for information purposes only, and may be used to assist you in obtaining

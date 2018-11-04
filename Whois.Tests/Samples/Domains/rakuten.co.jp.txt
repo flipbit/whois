@@ -2,34 +2,23 @@
 [ restricted to network administration purposes. For further information,     ]
 [ use 'whois -h whois.jprs.jp help'. To suppress Japanese output, add'/e'     ]
 [ at the end of command, e.g. 'whois -h whois.jprs.jp xxx/e'.                 ]
-[                                                                             ]
-[ Notice -------------------------------------------------------------------- ]
-[ JPRS will change JPRS WHOIS (web-based and port 43 Whois service) about the ]
-[ following two points on January 18, 2015.                                   ]
-[                                                                             ]
-[  1) Change of the format of response about gTLD domain name                 ]
-[  2) Change of the character encoding                                        ]
-[                                                                             ]
-[ For further information, please see the following webpage.                  ]
-[ http://jprs.jp/whatsnew/notice/2014/20140319-whois.html (only in Japanese)  ]
-[ --------------------------------------------------------------------------- ]
 
-Domain Information: [$B%I%a%$%s>pJs(B]
-a. [$B%I%a%$%sL>(B]                 RAKUTEN.CO.JP
-e. [$B$=$7$-$a$$(B]                 $B$i$/$F$s$+$V$7$-$,$$$7$c(B
-f. [$BAH?%L>(B]                     $B3ZE73t<02q<R(B
+Domain Information: [ドメイン情報]
+a. [ドメイン名]                 RAKUTEN.CO.JP
+e. [そしきめい]                 らくてんかぶしきがいしゃ
+f. [組織名]                     楽天株式会社
 g. [Organization]               Rakuten, Inc.
-k. [$BAH?%<oJL(B]                   $B3t<02q<R(B
+k. [組織種別]                   株式会社
 l. [Organization Type]          joint stock corporation
-m. [$BEPO?C4Ev<T(B]                 TK29460JP
-n. [$B5;=QO"MmC4Ev<T(B]             TK29460JP
-p. [$B%M!<%`%5!<%P(B]               ns01c.rakuten.co.jp
-p. [$B%M!<%`%5!<%P(B]               ns03.rakuten.co.jp
-p. [$B%M!<%`%5!<%P(B]               ns04.rakuten.co.jp
-p. [$B%M!<%`%5!<%P(B]               ns05c.rakuten.co.jp
-s. [$B=pL>80(B]                     
-[$B>uBV(B]                          Connected (2015/02/28)
-[$BEPO?G/7nF|(B]                    1997/02/07
-[$B@\B3G/7nF|(B]                    1997/02/19
-[$B:G=*99?7(B]                      2014/05/27 11:47:37 (JST)
+m. [登録担当者]                 MW16026JP
+n. [技術連絡担当者]             SN26755JP
+p. [ネームサーバ]               ns01.rakuten.co.jp
+p. [ネームサーバ]               ns02.rakuten.co.jp
+p. [ネームサーバ]               ns03.rakuten.co.jp
+p. [ネームサーバ]               ns04.rakuten.co.jp
+s. [署名鍵]                     
+[状態]                          Connected (2019/02/28)
+[登録年月日]                    1997/02/07
+[接続年月日]                    1997/02/19
+[最終更新]                      2018/10/30 16:10:03 (JST)
 

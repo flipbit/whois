@@ -1,84 +1,83 @@
-Domain Name: OPERA.COM
-Registry Domain ID: 5280394_DOMAIN_COM-VRSN
-Registrar WHOIS Server: whois.godaddy.com
-Registrar URL: http://www.godaddy.com
-Update Date: 2011-11-21 12:25:25
-Creation Date: 1999-04-13 23:00:00
-Registrar Registration Expiration Date: 2017-04-13 23:00:00
-Registrar: GoDaddy.com, LLC
-Registrar IANA ID: 146
-Registrar Abuse Contact Email: abuse@godaddy.com
-Registrar Abuse Contact Phone: +1.480-624-2505
-Domain Status: clientTransferProhibited
-Domain Status: clientUpdateProhibited
-Domain Status: clientRenewProhibited
-Domain Status: clientDeleteProhibited
+
+Domain Name: opera.com
+Registry Domain ID: 
+Registrar WHOIS Server: whois.NameWeb.biz
+Registrar URL: http://www.NameWeb.biz
+Update Date: 2017-06-12 06:33:37
+Creation Date: 2017-06-06 00:00:00.0
+Registrar Registration Expiration Date: 2020-04-14 00:00:00.0
+Registrar: NameWeb BVBA
+Registrar IANA ID: 1464
+Registrar Abuse Contact Email: law-enforcement-only@NameWeb.biz
+Registrar Abuse Contact Phone: +32.33699772
+Reseller: bNamed.net (info@bNamed.net)
+Domain Status: clientTransferProhibited http:://icann.org/epp#clientTransferProhibited
 Registry Registrant ID: 
-Registrant Name: Opera Hostmaster
-Registrant Organization: Opera Software ASA
-Registrant Street: P.O. Box 4214 Nydalen
-Registrant Street: Gjerdrums vei 19
-Registrant City: Oslo
-Registrant State/Province: 
-Registrant Postal Code: 0484
-Registrant Country: Norway
-Registrant Phone: +47.23692400
-Registrant Phone Ext: 
-Registrant Fax: +47.23692401
-Registrant Fax Ext: 
-Registrant Email: hostmaster@opera.com
+Registrant Name: REDACTED FOR PRIVACY
+Registrant Organization: Opera Software AS
+Registrant Street: REDACTED FOR PRIVACY
+Registrant City: REDACTED FOR PRIVACY
+Registrant State/Province: Oslo
+Registrant Postal Code: REDACTED FOR PRIVACY
+Registrant Country: NO
+Registrant Phone: REDACTED FOR PRIVACY
+Registrant Phone Ext: REDACTED FOR PRIVACY
+Registrant Fax: REDACTED FOR PRIVACY
+Registrant Fax Ext: REDACTED FOR PRIVACY
+Registrant Email: https://www.nameweb.biz/gdpr-whois/9LGDIR33CF4DEEE9CFC06522C7041F2666F8849F127F20
 Registry Admin ID: 
-Admin Name: Opera Hostmaster
-Admin Organization: Opera Software ASA
-Admin Street: P.O. Box 4214 Nydalen
-Admin Street: Gjerdrums vei 19
-Admin City: Oslo
-Admin State/Province: 
-Admin Postal Code: 0484
-Admin Country: Norway
-Admin Phone: +47.23692400
-Admin Phone Ext: 
-Admin Fax: +47.23692401
-Admin Fax Ext: 
-Admin Email: hostmaster@opera.com
+Admin Name: REDACTED FOR PRIVACY
+Admin Organization: REDACTED FOR PRIVACY
+Admin Street: REDACTED FOR PRIVACY
+Admin City: REDACTED FOR PRIVACY
+Admin State/Province: Oslo
+Admin Postal Code: REDACTED FOR PRIVACY
+Admin Country: NO
+Admin Phone: REDACTED FOR PRIVACY
+Admin Phone Ext: REDACTED FOR PRIVACY
+Admin Fax: REDACTED FOR PRIVACY
+Admin Fax Ext: REDACTED FOR PRIVACY
+Admin Email: https://www.nameweb.biz/gdpr-whois/9LGDIA33CF4DEEE9CFC06522C7041F2666F8849F127F20
 Registry Tech ID: 
-Tech Name: Opera Hostmaster
-Tech Organization: Opera Software ASA
-Tech Street: P.O. Box 4214 Nydalen
-Tech Street: Gjerdrums vei 19
-Tech City: Oslo
-Tech State/Province: 
-Tech Postal Code: 0484
-Tech Country: Norway
-Tech Phone: +47.23692400
-Tech Phone Ext: 
-Tech Fax: +47.23692401
-Tech Fax Ext: 
-Tech Email: hostmaster@opera.com
+Tech Name: REDACTED FOR PRIVACY
+Tech Organization: REDACTED FOR PRIVACY
+Tech Street: REDACTED FOR PRIVACY
+Tech City: REDACTED FOR PRIVACY
+Tech State/Province: Oslo
+Tech Postal Code: REDACTED FOR PRIVACY
+Tech Country: NO
+Tech Phone: REDACTED FOR PRIVACY
+Tech Phone Ext: REDACTED FOR PRIVACY
+Tech Fax: REDACTED FOR PRIVACY
+Tech Fax Ext: REDACTED FOR PRIVACY
+Tech Email: https://www.nameweb.biz/gdpr-whois/9LGDIT33CF4DEEE9CFC06522C7041F2666F8849F127F20
 Name Server: NIC1.OPERA.COM
 Name Server: NIC2.OPERA.NO
 Name Server: NIC3.OPERA.COM
 Name Server: NIC4.OPERA.COM
 DNSSEC: unsigned
 URL of the ICANN WHOIS Data Problem Reporting System: http://wdprs.internic.net/
-Last update of WHOIS database: 2014-10-22T10:00:00Z
 
-The data contained in GoDaddy.com, LLC's WhoIs database,
-while believed by the company to be reliable, is provided "as is"
-with no guarantee or warranties regarding its accuracy.  This
-information is provided for the sole purpose of assisting you
-in obtaining information about domain name registration records.
-Any use of this data for any other purpose is expressly forbidden without the prior written
-permission of GoDaddy.com, LLC.  By submitting an inquiry,
-you agree to these terms of usage and limitations of warranty.  In particular,
-you agree not to use this data to allow, enable, or otherwise make possible,
-dissemination or collection of this data, in part or in its entirety, for any
-purpose, such as the transmission of unsolicited advertising and
-and solicitations of any kind, including spam.  You further agree
-not to use this data to enable high volume, automated or robotic electronic
-processes designed to collect or compile this data for any purpose,
-including mining this data for your own personal or commercial purposes. 
+Whois 1.0
+     
 
-Please note: the registrant of the domain name is specified
-in the "registrant" section.  In most cases, GoDaddy.com, LLC 
-is not the registrant of domain names listed in this database.
+This data is provided for information purposes only. That is: to 
+asist you in obtaining information about or related to 
+domain name registration records. The information is made available 
+"as is", there is no guarantee of accuracy.
+By submitting a whois query, you agree that you will use this data 
+only for lawful purposes and that, under no circumstances, you will 
+use this data to either:
+1) allow, enable or support the transmission of mass unsolicited, 
+commercial advertising or solicitations via direct mail, electronic 
+mail, or by telephone. The compilation, repackaging, dissemination 
+or other use of this data is expressly prohibited without prior 
+written consent from us.
+or
+2) enable high volume, automated electronic processes that stress 
+or load the whois database system providing you this information
+
+We reserve the right to amend these terms at any time. By 
+submitting this query, you agree to abide by this policy.
+
+For more information on Whois status codes, please visit https://www.icann.org/resources/pages/epp-status-codes-2014-06-16-en.

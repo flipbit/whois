@@ -1,6 +1,6 @@
 ﻿using System;
-using System.Collections;
 using System.Text;
+using System.Threading.Tasks;
 
 namespace Whois.Net
 {
@@ -10,19 +10,12 @@ namespace Whois.Net
     public interface ITcpReader : IDisposable
     {
         /// <summary>
-        /// Gets the current character encoding that the current TcpReader
-        /// object is using.
-        /// </summary>
-        /// <returns>The current character encoding used by the current reader.</returns>
-        Encoding CurrentEncoding { get; }
-
-        /// <summary>
         /// Reads data from the specified URL and port.
         /// </summary>
         /// <param name="url">The URL.</param>
         /// <param name="port">The port.</param>
         /// <param name="command">The command.</param>
-        /// <returns></returns>
-        string Read(string url, int port, string command);
+        /// <param name="encoding">The encoding to use whilst reading the server response.</param>
+        Task<string> Read(string url, int port, string command, Encoding encoding);
     }
 }

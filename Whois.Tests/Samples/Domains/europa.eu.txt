@@ -53,24 +53,23 @@ Onsite(s):
         Visit www.eurid.eu for webbased whois.
 
 Technical:
-        Name: Belgacom DNS Masters
-        Organisation: Belgacom sa/nv
+        Organisation: Proximus sa/nv
         Language: en
-        Phone: +32.80023452
-        Fax: +32.22403632
-        Email: dnsmaster@belgacom.be
+        Email: dnsmaster@proximus.com
 
 Registrar:
-        Name: Belgacom SA
+        Name: Proximus nv/sa
         Website: https://www.proximus.be
 
 Name servers:
-        ns2lux.europa.eu (158.169.9.30)
-        ns2bru.europa.eu (158.169.131.32)
-        ns1bru.europa.eu (158.169.131.22)
+        ns1bru.europa.eu (147.67.250.2)
+        ns2eu.bt.net
+        ns3bru.europa.eu (2a01:7080:14:101::2)
+        ns2lux.europa.eu (147.67.12.3)
+        ns1lux.europa.eu (147.67.12.2)
+        ns2bru.europa.eu (147.67.250.3)
         ns1.be.colt.net
         ns1.bt.net
-        ns2eu.bt.net
-        ns1lux.europa.eu (158.169.9.11)
+        ns3lux.europa.eu (2a01:7080:24:101::2)
 
 Please visit www.eurid.eu for more info.

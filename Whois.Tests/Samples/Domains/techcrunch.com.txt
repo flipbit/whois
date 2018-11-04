@@ -3,20 +3,20 @@ Domain Name: techcrunch.com
 Registry Domain ID: 168251304_DOMAIN_COM-VRSN
 Registrar WHOIS Server: whois.corporatedomains.com
 Registrar URL: www.cscprotectsbrands.com
-Updated Date: 2014-06-07 01:19:46 -0400
-Creation Date: 2005-06-10 18:56:20 -0400
-Registrar Registration Expiration Date: 2015-06-10 18:56:20 -0400
+Updated Date: 2018-06-06T05:25:47Z
+Creation Date: 2005-06-10T22:56:20Z
+Registrar Registration Expiration Date: 2019-06-10T22:56:20Z
 Registrar: CSC CORPORATE DOMAINS, INC.
 Registrar IANA ID: 299
-Registrar Abuse Contact Email: admin@internationaladmin.com
+Registrar Abuse Contact Email: domainabuse@cscglobal.com
 Registrar Abuse Contact Phone: +1.8887802723
-Domain Status: serverTransferProhibited
-Domain Status: serverDeleteProhibited
-Domain Status: clientTransferProhibited
-Domain Status: serverUpdateProhibited
+Domain Status: clientTransferProhibited http://www.icann.org/epp#clientTransferProhibited
+Domain Status: serverDeleteProhibited http://www.icann.org/epp#serverDeleteProhibited
+Domain Status: serverTransferProhibited http://www.icann.org/epp#serverTransferProhibited
+Domain Status: serverUpdateProhibited http://www.icann.org/epp#serverUpdateProhibited
 Registry Registrant ID: 
 Registrant Name: Domain Manager
-Registrant Organization: TechCrunch
+Registrant Organization: TechCrunch, Inc.
 Registrant Street: 410 Townsend St., Suite 100
 Registrant City: San Francisco
 Registrant State/Province: CA
@@ -24,7 +24,7 @@ Registrant Postal Code: 94107
 Registrant Country: US
 Registrant Phone: +1.7032654670
 Registrant Phone Ext: 
-Registrant Fax: 
+Registrant Fax: +1.7032654670
 Registrant Fax Ext: 
 Registrant Email: domain-adm@corp.aol.com
 Registry Admin ID: 
@@ -53,13 +53,14 @@ Tech Phone Ext:
 Tech Fax: 
 Tech Fax Ext: 
 Tech Email: domain-adm@corp.aol.com
+Name Server: ns1.wordpress.com
 Name Server: ns3.wordpress.com
 Name Server: ns2.wordpress.com
-Name Server: ns1.wordpress.com
-DNSSEC: 
+DNSSEC: unsigned
 URL of the ICANN WHOIS Data Problem Reporting System: http://wdprs.internic.net/
->>> Last update of WHOIS database: 2014-06-07 01:19:46 -0400 <<<
+>>> Last update of WHOIS database: 2018-06-06T05:25:47Z <<<
 
+For more information on Whois status codes, please visit https://icann.org/epp
 
 Corporation Service Company(c) (CSC)  The Trusted Partner of More than 50% of the 100 Best Global Brands.
 
@@ -68,6 +69,3 @@ Contact us to learn more about our enterprise solutions for Global Domain Name R
 NOTICE: You are not authorized to access or query our WHOIS database through the use of high-volume, automated, electronic processes or for the purpose or purposes of using the data in any manner that violates these terms of use. The Data in the CSC WHOIS database is provided by CSC for information purposes only, and to assist persons in obtaining information about or related to a domain name registration record. CSC does not guarantee its accuracy. By submitting a WHOIS query, you agree to abide by the following terms of use: you agree that you may use this Data only for lawful purposes and that under no circumstances will you use this Data to: (1) allow, enable, or otherwise support the transmission of mass unsolicited, commercial advertising or solicitations via direct mail, e-mail, telephone, or facsimile; or (2) enable high volume, automated, electronic processes that apply to CSC (or its computer systems). CSC reserves the right to terminate your access to the WHOIS database in its sole discretion for any violations by you of these terms of use. CSC reserves the right to modify these terms at any time.
 
 Register your domain name at http://www.cscglobal.com
-
-For more information on Whois status codes, please visit https://www.icann.org/resources/pages/epp-status-codes-2014-06-16-en
-

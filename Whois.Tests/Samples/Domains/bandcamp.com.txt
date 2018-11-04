@@ -2,15 +2,15 @@ Domain Name: BANDCAMP.COM
 Registry Domain ID: 
 Registrar WHOIS Server: whois.domaindiscover.com
 Registrar URL: https://www.tierra.net
-Updated Date: 2014-10-17T17:26:36Z
+Updated Date: 2017-12-25T21:46:24Z
 Creation Date: 2003-06-11T14:36:45Z
-Registrar Registration Expiration Date: 2018-01-01T14:26:17Z
+Registrar Registration Expiration Date: 2023-01-01T20:59:59Z
 Registrar: TIERRANET INC. DBA DOMAINDISCOVER
 Registrar IANA ID: 86
 Registrar Abuse Contact Email: icann-abuse-reports@tierra.net
 Registrar Abuse Contact Phone: +1.6193932105
 Reseller: 
-Domain Status: clientTransferProhibited
+Domain Status: clientTransferProhibited https://icann.org/epp#clientTransferProhibited
 Registry Registrant ID:
 Registrant Name: Domain Admin
 Registrant Organization: Bandcamp, Inc.
@@ -56,7 +56,8 @@ Name Server: NS-321.AWSDNS-40.COM
 Name Server: NS-958.AWSDNS-55.NET
 DNSSEC: 
 URL of the ICANN WHOIS Data Problem Reporting System: http://wdprs.internic.net/
->>> Last update of WHOIS database: 2014-10-22T03:35:14Z <<<
+For more information on Whois status codes, please visit https://icann.org/epp
+>>> Last update of WHOIS database: 2018-11-01T02:04:57Z <<<
 
 This WHOIS database is provided for information purposes only. We do
 not guarantee the accuracy of this data. The following uses of this 

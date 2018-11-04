@@ -1,6 +1,7 @@
 ﻿using System;
 using System.IO;
 using NUnit.Framework;
+using Whois.Models;
 using Whois.Net;
 
 namespace Whois.Servers
@@ -19,13 +20,10 @@ namespace Whois.Servers
         [Test]
         public void TestLookupCom()
         {
-            var com = File.ReadAllText("../../Samples/Tlds/com.txt");
+            var response = File.ReadAllText("../../../Samples/Tlds/com.txt");
+            TcpReaderFactory.Bind(() => new FakeTcpReader(response));
 
-            var reader = new FakeTcpReader(com);
-
-            lookup.TcpReaderFactory = new FakeTcpReaderFactory(reader);
-
-            var result = lookup.Lookup("test.com") as WhoisServerRecord;
+            var result = lookup.Lookup("test.com").ParsedWhoisServer;
 
             Assert.IsNotNull(result);
             Assert.AreEqual(3, result.AdminContact.Address.Count);
@@ -59,7 +57,7 @@ namespace Whois.Servers
             Assert.AreEqual("United States", result.Organization.Address[2]);
             Assert.AreEqual("VeriSign Global Registry Services", result.Organization.Name);
             Assert.AreEqual("Registration information: http://www.verisign-grs.com", result.Remarks);
-            Assert.AreEqual("com", result.TLD);
+            Assert.AreEqual("com", result.Tld);
             Assert.AreEqual(3, result.TechContact.Address.Count);
             Assert.AreEqual("12061 Bluemont Way", result.TechContact.Address[0]);
             Assert.AreEqual("Reston Virginia 20190", result.TechContact.Address[1]);
@@ -75,13 +73,10 @@ namespace Whois.Servers
         [Test]
         public void TestLookupBe()
         {
-            var com = File.ReadAllText("../../Samples/Tlds/be.txt");
+            var response = File.ReadAllText("../../../Samples/Tlds/be.txt");
+            TcpReaderFactory.Bind(() => new FakeTcpReader(response));
 
-            var reader = new FakeTcpReader(com);
-
-            lookup.TcpReaderFactory = new FakeTcpReaderFactory(reader);
-
-            var result = lookup.Lookup("test.be") as WhoisServerRecord;
+            var result = lookup.Lookup("test.be").ParsedWhoisServer;
 
             Assert.IsNotNull(result);
             Assert.AreEqual(3, result.AdminContact.Address.Count);
@@ -108,7 +103,7 @@ namespace Whois.Servers
             Assert.AreEqual("Belgium", result.Organization.Address[2]);
             Assert.AreEqual("DNS Belgium vzw/asbl", result.Organization.Name);
             Assert.AreEqual("Registration information: http://www.dns.be", result.Remarks);
-            Assert.AreEqual("be", result.TLD);
+            Assert.AreEqual("be", result.Tld);
             Assert.AreEqual(3, result.TechContact.Address.Count);
             Assert.AreEqual("Ubicenter, Philipssite 5, bus 13", result.TechContact.Address[0]);
             Assert.AreEqual("Leuven  3001", result.TechContact.Address[1]);

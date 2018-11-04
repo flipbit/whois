@@ -1,56 +1,61 @@
-Domain Name:CREATIVECOMMONS.ORG
-Domain ID: D51996382-LROR
+Domain Name: creativecommons.org
+Registry Domain ID: D51996382-LROR
+Registrar WHOIS Server: whois.gandi.net
+Registrar URL: http://www.gandi.net
+Updated Date: 2017-06-16T10:29:38Z
 Creation Date: 2001-01-15T16:51:44Z
-Updated Date: 2013-11-06T23:56:40Z
-Registry Expiry Date: 2021-01-15T16:51:44Z
-Sponsoring Registrar:Gandi SAS (R42-LROR)
-Sponsoring Registrar IANA ID: 81
-WHOIS Server: 
-Referral URL: 
-Domain Status: clientTransferProhibited
-Registrant ID:NK554-GANDI
-Registrant Name:Matt Lee
-Registrant Organization:Creative Commons
-Registrant Street: PO Box 1866
-Registrant City:Mountain View
-Registrant State/Province:CA
-Registrant Postal Code:94042
-Registrant Country:US
-Registrant Phone:+1.4154295471
-Registrant Phone Ext: 
-Registrant Fax: +1.6509651605
-Registrant Fax Ext: 
-Registrant Email:183137095f86398691b5d9824f46c239-983951@contact.gandi.net
-Admin ID:NK554-GANDI
-Admin Name:Matt Lee
-Admin Organization:Creative Commons
-Admin Street: PO Box 1866
-Admin City:Mountain View
-Admin State/Province:CA
-Admin Postal Code:94042
-Admin Country:US
-Admin Phone:+1.4154295471
-Admin Phone Ext: 
-Admin Fax: +1.6509651605
-Admin Fax Ext: 
-Admin Email:183137095f86398691b5d9824f46c239-983951@contact.gandi.net
-Tech ID:NK554-GANDI
-Tech Name:Matt Lee
-Tech Organization:Creative Commons
-Tech Street: PO Box 1866
-Tech City:Mountain View
-Tech State/Province:CA
-Tech Postal Code:94042
-Tech Country:US
-Tech Phone:+1.4154295471
-Tech Phone Ext: 
-Tech Fax: +1.6509651605
-Tech Fax Ext: 
-Tech Email:183137095f86398691b5d9824f46c239-983951@contact.gandi.net
-Name Server:NS-1088.AWSDNS-08.ORG
-Name Server:NS-1742.AWSDNS-25.CO.UK
-Name Server:NS-819.AWSDNS-38.NET
-Name Server:NS-455.AWSDNS-56.COM
+Registrar Registration Expiration Date: 2021-01-15T16:51:44Z
+Registrar: GANDI SAS
+Registrar IANA ID: 81
+Registrar Abuse Contact Email: abuse@support.gandi.net
+Registrar Abuse Contact Phone: +33.170377661
+Reseller: 
+Domain Status: clientTransferProhibited http://www.icann.org/epp#clientTransferProhibited
+Domain Status: 
+Domain Status: 
+Domain Status: 
+Domain Status: 
+Registry Registrant ID: ML9609-GANDI
+Registrant Name: Rob Myers
+Registrant Organization: Creative Commons Corporation
+Registrant Street: 3063 56th Ave E.
+Registrant City: Vancouver
+Registrant State/Province: 
+Registrant Postal Code: V5S 2A2
+Registrant Country: CA
+Registrant Phone: +1.7787122216
+Registrant Phone Ext:
+Registrant Fax: 
+Registrant Fax Ext:
+Registrant Email: 5483cf4f125030fff82e7b03ed72e387-2596784@contact.gandi.net
+Registry Admin ID: ML9609-GANDI
+Admin Name: Rob Myers
+Admin Organization: Creative Commons Corporation
+Admin Street: 3063 56th Ave E.
+Admin City: Vancouver
+Admin State/Province: 
+Admin Postal Code: V5S 2A2
+Admin Country: CA
+Admin Phone: +1.7787122216
+Admin Phone Ext:
+Admin Fax: 
+Admin Fax Ext:
+Admin Email: 5483cf4f125030fff82e7b03ed72e387-2596784@contact.gandi.net
+Registry Tech ID: ML9609-GANDI
+Tech Name: Rob Myers
+Tech Organization: Creative Commons Corporation
+Tech Street: 3063 56th Ave E.
+Tech City: Vancouver
+Tech State/Province: 
+Tech Postal Code: V5S 2A2
+Tech Country: CA
+Tech Phone: +1.7787122216
+Tech Phone Ext:
+Tech Fax: 
+Tech Fax Ext:
+Tech Email: 5483cf4f125030fff82e7b03ed72e387-2596784@contact.gandi.net
+Name Server: FIONA.NS.CLOUDFLARE.COM
+Name Server: ISAAC.NS.CLOUDFLARE.COM
 Name Server: 
 Name Server: 
 Name Server: 
@@ -59,9 +64,17 @@ Name Server:
 Name Server: 
 Name Server: 
 Name Server: 
-Name Server: 
-DNSSEC:Unsigned
+DNSSEC: Unsigned
+URL of the ICANN WHOIS Data Problem Reporting System: http://wdprs.internic.net/
+>>> Last update of WHOIS database: 2018-10-31T20:46:28Z <<<
 
-Access to Public Interest Registry WHOIS information is provided to assist persons in determining the contents of a domain name registration record in the Public Interest Registry registry database. The data in this record is provided by Public Interest Registry for informational purposes only, and Public Interest Registry does not guarantee its accuracy. This service is intended only for query-based access. You agree that you will use this data only for lawful purposes and that, under no circumstances will you use this data to(a) allow, enable, or otherwise support the transmission by e-mail, telephone, or facsimile of mass unsolicited, commercial advertising or solicitations to entities other than the data recipient's own existing customers; or (b) enable high volume, automated, electronic processes that send queries or data to the systems of Registry Operator, a Registrar, or Afilias except as reasonably necessary to register domain names or modify existing registrations. All rights reserved. Public Interest Registry reserves the right to modify these terms at any time. By submitting this query, you agree to abide by this policy.
+For more information on Whois status codes, please visit
+https://www.icann.org/epp
 
+Reseller Email: 
+Reseller URL: 
 
+Personal data access and use are governed by French law, any use for the purpose of unsolicited mass commercial advertising as well as any mass or automated inquiries (for any intent other than the registration or modification of a domain name) are strictly forbidden. Copy of whole or part of our database without Gandi's endorsement is strictly forbidden. <br />
+A dispute over the ownership of a domain name may be subject to the alternate procedure established by the Registry in question or brought before the courts. <br />
+For additional information, please contact us via the following form:<br />
+ https://www.gandi.net/support/contacter/mail/

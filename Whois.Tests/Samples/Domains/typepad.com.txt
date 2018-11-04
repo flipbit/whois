@@ -1,60 +1,61 @@
 Domain Name: typepad.com
-Registry Domain ID:
+Registry Domain ID: 96340346_DOMAIN_COM-VRSN
 Registrar WHOIS Server: whois.ascio.com
 Registrar URL: http://www.ascio.com 
-Updated Date: 2014-04-18T14:33:27Z
-Creation Date: 2012-02-15T11:50:37Z
-Registrar Registration Expiration Date: 2015-03-31T00:00:00Z
+Updated Date: 2018-03-05T21:17:04Z
+Creation Date: 2003-03-31T17:27:18Z
+Registrar Registration Expiration Date: 2019-03-31T21:27:18Z
 Registrar: Ascio Technologies, Inc
 Registrar IANA ID: 106
 Registrar Abuse Contact Email: abuse@ascio.com
 Registrar Abuse Contact Phone: +44.2070159370
-Reseller:
-Domain Status: ACTIVE
-Registry Registrant ID:
-Registrant Name: Operations Team
-Registrant Organization: SAY Media, Inc
-Registrant Street: 180 Townsend St
-Registrant City: San Francisco 
-Registrant State/Province: CA
-Registrant Postal Code: 94107
+Domain Status: OK https://icann.org/epp#ok
+Registry Registrant ID: 
+Registrant Name: Domain Admin
+Registrant Organization: Typepad
+Registrant Street: 10 Corporate Dr
+Registrant City: Burlington 
+Registrant State/Province: MA
+Registrant Postal Code: 01803
 Registrant Country: US
-Registrant Phone:
+Registrant Phone: +1.7818523480
 Registrant Phone Ext:
-Registrant Fax:
+Registrant Fax: 
 Registrant Fax Ext:
-Registrant Email:
+Registrant Email: support@typepad.com
 Registry Admin ID:
-Admin Name: Operations Team
-Admin Organization: SAY Media, Inc
-Admin Street: 180 Townsend St
-Admin City:  San Francisco
-Admin State/Province: CA
-Admin Postal Code: 94107
+Admin Name: Domain Admin
+Admin Organization: Typepad
+Admin Street: 10 Corporate Dr
+Admin City: Burlington
+Admin State/Province: MA
+Admin Postal Code: 01803
 Admin Country: US
-Admin Phone: +1.4157385100
+Admin Phone: +1.7818523480
 Admin Phone Ext:
-Admin Fax: +1.4159791586
+Admin Fax: 
 Admin Fax Ext:
-Admin Email: vendorcontactops@lists.saymedia.com
+Admin Email: support@typepad.com
 Registry Tech ID:
 Tech Name: Domain Admin
 Tech Organization: Typepad
-Tech Street: 180 Townsend St
-Tech City: San Francisco 
-Tech State/Province: CA
-Tech Postal Code: 94107
+Tech Street: 10 Corporate Dr
+Tech City: Burlington 
+Tech State/Province: MA
+Tech Postal Code: 01803
 Tech Country: US
-Tech Phone: +1.7818523200
+Tech Phone: +1.7818523480
 Tech Phone Ext:
 Tech Fax:   
 Tech Fax Ext: 
 Tech Email: support@typepad.com
 Name Server: noah.ns.cloudflare.com
 Name Server: roxy.ns.cloudflare.com
-DNSSEC:
+DNSSEC: unsigned
 URL of the ICANN WHOIS Data Problem Reporting System: http://wdprs.internic.net/
->>> Last update of WHOIS database: 2014-10-22T10:02:31 UTC <<<
+>>> Last update of WHOIS database: 2018-10-31T20:47:21Z <<<
+
+For more information on Whois status codes, please visit https://icann.org/epp
 
 The data in Ascio Technologies' WHOIS database is provided 
 by Ascio Technologies for information purposes only. By submitting 
@@ -65,7 +66,7 @@ activities, regardless of the medium used. Such media include but are
 not limited to e-mail, telephone, facsimile, postal mail, SMS, and
 wireless alerts; or
 (b) use the data to enable high volume, automated, electronic processes
-that sendqueries or data to the systems of any Registry Operator or 
+that send queries or data to the systems of any Registry Operator or 
 ICANN-Accredited registrar, except as reasonably necessary to register 
 domain names or modify existing registrations.
 (c) sell or redistribute the data except insofar as it has been 

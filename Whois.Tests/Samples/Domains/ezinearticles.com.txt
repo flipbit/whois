@@ -2,60 +2,62 @@ Domain Name: EZINEARTICLES.COM
 Registry Domain ID: 13527840_DOMAIN_COM-VRSN
 Registrar WHOIS Server: whois.tucows.com
 Registrar URL: http://tucowsdomains.com
-Updated Date: 2014-01-10 17:03:23
-Creation Date: 1999-11-19 18:55:47
-Registrar Registration Expiration Date: 2016-11-19 18:55:47
+Updated Date: 2018-03-29T03:25:31
+Creation Date: 1999-11-19T18:55:47
+Registrar Registration Expiration Date: 2019-11-19T18:55:47
 Registrar: TUCOWS, INC.
 Registrar IANA ID: 69
+Domain Status: clientDeleteProhibited https://icann.org/epp#clientDeleteProhibited
+Domain Status: clientTransferProhibited https://icann.org/epp#clientTransferProhibited
+Domain Status: clientUpdateProhibited https://icann.org/epp#clientUpdateProhibited
+Registry Registrant ID: 
+Registrant Name: REDACTED FOR PRIVACY
+Registrant Organization: REDACTED FOR PRIVACY
+Registrant Street: REDACTED FOR PRIVACY 
+Registrant City: REDACTED FOR PRIVACY
+Registrant State/Province: REDACTED FOR PRIVACY
+Registrant Postal Code: REDACTED FOR PRIVACY
+Registrant Country: REDACTED FOR PRIVACY
+Registrant Phone: REDACTED FOR PRIVACY
+Registrant Phone Ext: 
+Registrant Fax: REDACTED FOR PRIVACY
+Registrant Fax Ext: 
+Registrant Email: REDACTED FOR PRIVACY
+Registry Admin ID: 
+Admin Name: REDACTED FOR PRIVACY
+Admin Organization: REDACTED FOR PRIVACY
+Admin Street: REDACTED FOR PRIVACY 
+Admin City: REDACTED FOR PRIVACY
+Admin State/Province: REDACTED FOR PRIVACY
+Admin Postal Code: REDACTED FOR PRIVACY
+Admin Country: REDACTED FOR PRIVACY
+Admin Phone: REDACTED FOR PRIVACY
+Admin Phone Ext: 
+Admin Fax: REDACTED FOR PRIVACY
+Admin Fax Ext: 
+Admin Email: REDACTED FOR PRIVACY
+Registry Tech ID: 
+Tech Name: REDACTED FOR PRIVACY
+Tech Organization: REDACTED FOR PRIVACY
+Tech Street: REDACTED FOR PRIVACY 
+Tech City: REDACTED FOR PRIVACY
+Tech State/Province: REDACTED FOR PRIVACY
+Tech Postal Code: REDACTED FOR PRIVACY
+Tech Country: REDACTED FOR PRIVACY
+Tech Phone: REDACTED FOR PRIVACY
+Tech Phone Ext: 
+Tech Fax: REDACTED FOR PRIVACY
+Tech Fax Ext: 
+Tech Email: REDACTED FOR PRIVACY
+Name Server: ns2.sparknet.net
+Name Server: ns1.sparknet.net
+
 Registrar Abuse Contact Email: domainabuse@tucows.com
 Registrar Abuse Contact Phone: +1.4165350123
-Domain Status: clientDeleteProhibited
-Domain Status: clientTransferProhibited
-Domain Status: clientUpdateProhibited
-Registry Registrant ID: 
-Registrant Name: C Knight
-Registrant Organization: SparkNET Corporation
-Registrant Street: PO Box 12740
-Registrant City: Green Bay
-Registrant State/Province: WI
-Registrant Postal Code: 54307
-Registrant Country: US
-Registrant Phone: +1.9204905901
-Registrant Phone Ext: 
-Registrant Fax: 
-Registrant Fax Ext: 
-Registrant Email: opensrs@sparknet.net
-Registry Admin ID: 
-Admin Name: C Knight
-Admin Organization: SparkNET Corporation
-Admin Street: PO Box 12740
-Admin City: Green Bay
-Admin State/Province: WI
-Admin Postal Code: 54307
-Admin Country: US
-Admin Phone: +1.9204905901
-Admin Phone Ext: 
-Admin Fax: 
-Admin Fax Ext: 
-Admin Email: opensrs@sparknet.net
-Registry Tech ID: 
-Tech Name: C Knight
-Tech Organization: SparkNET Corporation
-Tech Street: PO Box 12740
-Tech City: Green Bay
-Tech State/Province: WI
-Tech Postal Code: 54307
-Tech Country: US
-Tech Phone: +1.9204905901
-Tech Phone Ext: 
-Tech Fax: 
-Tech Fax Ext: 
-Tech Email: opensrs@sparknet.net
-Name Server: NS1.SPARKNET.NET
-Name Server: NS2.SPARKNET.NET
-DNSSEC: Unsigned
 URL of the ICANN WHOIS Data Problem Reporting System: http://wdprs.internic.net/
->>> Last update of WHOIS database: 2014-01-10 17:03:23 <<<
+>>> Last update of WHOIS database: 2018-03-29T03:25:31 <<<
+
+"For more information on Whois status codes, please visit https://icann.org/epp"
 
 The Data in the Tucows Registrar WHOIS database is provided to you by Tucows
 for information purposes only, and may be used to assist you in obtaining

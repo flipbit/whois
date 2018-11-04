@@ -1,59 +1,62 @@
-Domain Name:W3.ORG
-Domain ID: D1266030-LROR
-Creation Date: 1994-07-06T04:00:00Z
-Updated Date: 2010-01-27T12:13:03Z
-Registry Expiry Date: 2019-07-05T04:00:00Z
-Sponsoring Registrar:Gandi SAS (R42-LROR)
-Sponsoring Registrar IANA ID: 81
-WHOIS Server: 
-Referral URL: 
-Domain Status: clientDeleteProhibited
-Domain Status: clientTransferProhibited
-Registrant ID:TBL1-GANDI
-Registrant Name:Tim Berners-Lee
-Registrant Organization:W3C
-Registrant Street: W3C
-Registrant Street: MIT Room 32-G524
-Registrant Street: 32 Vassar St
-Registrant City:Cambridge
-Registrant State/Province:MA
-Registrant Postal Code:02139
-Registrant Country:US
-Registrant Phone:+1.6172535702
-Registrant Phone Ext: 
-Registrant Fax: +1.6172585999
-Registrant Fax Ext: 
-Registrant Email:7f539cd059e166c69c613639d55f3c24-135433@contact.gandi.net
-Admin ID:RA1687-GANDI
-Admin Name:Registrar Administration
-Admin Organization:W3C
-Admin Street: 32 Vassar St G504
-Admin Street: MIT CSAIL
-Admin City:Cambridge
-Admin State/Province:MA
-Admin Postal Code:02139
-Admin Country:US
-Admin Phone:+1.6172585967
-Admin Phone Ext: 
-Admin Fax: 
-Admin Fax Ext: 
-Admin Email:d903baab93ef7020c0f1bab9d05f5a96-1062668@contact.gandi.net
-Tech ID:ST285-GANDI
-Tech Name:W3C Systeam
-Tech Organization:W3C
-Tech Street: W3C MIT CSAIL 32 Vassar St G515
-Tech City:Cambridge
-Tech State/Province:MA
-Tech Postal Code:02139
-Tech Country:US
-Tech Phone:+1.6172532613
-Tech Phone Ext: 
-Tech Fax: +1.6172585999
-Tech Fax Ext: 
-Tech Email:4f00717a527a369a16daff7988adfbcd-135431@contact.gandi.net
-Name Server:NS1.W3.ORG
-Name Server:NS2.W3.ORG
-Name Server:NS3.W3.ORG
+Domain Name: w3.org
+Registry Domain ID: D1266030-LROR
+Registrar WHOIS Server: whois.gandi.net
+Registrar URL: http://www.gandi.net
+Updated Date: 2015-02-16T17:48:03Z
+Creation Date: 1994-07-06T00:00:00Z
+Registrar Registration Expiration Date: 2022-07-05T04:00:00Z
+Registrar: GANDI SAS
+Registrar IANA ID: 81
+Registrar Abuse Contact Email: abuse@support.gandi.net
+Registrar Abuse Contact Phone: +33.170377661
+Reseller: 
+Domain Status: clientTransferProhibited http://www.icann.org/epp#clientTransferProhibited
+Domain Status: 
+Domain Status: 
+Domain Status: 
+Domain Status: 
+Registry Registrant ID: REDACTED FOR PRIVACY
+Registrant Name: REDACTED FOR PRIVACY
+Registrant Organization: 
+Registrant Street: REDACTED FOR PRIVACY
+Registrant City: REDACTED FOR PRIVACY
+Registrant State/Province: Massachusetts
+Registrant Postal Code: REDACTED FOR PRIVACY
+Registrant Country: US
+Registrant Phone: REDACTED FOR PRIVACY
+Registrant Phone Ext:
+Registrant Fax: REDACTED FOR PRIVACY
+Registrant Fax Ext:
+Registrant Email: 7f539cd059e166c69c613639d55f3c24-135433@contact.gandi.net
+Registry Admin ID: REDACTED FOR PRIVACY
+Admin Name: REDACTED FOR PRIVACY
+Admin Organization: REDACTED FOR PRIVACY
+Admin Street: REDACTED FOR PRIVACY
+Admin City: REDACTED FOR PRIVACY
+Admin State/Province: REDACTED FOR PRIVACY
+Admin Postal Code: REDACTED FOR PRIVACY
+Admin Country: REDACTED FOR PRIVACY
+Admin Phone: REDACTED FOR PRIVACY
+Admin Phone Ext:
+Admin Fax: REDACTED FOR PRIVACY
+Admin Fax Ext:
+Admin Email: 7b23e41f95ab19e8985953649b569c30-1062668@contact.gandi.net
+Registry Tech ID: REDACTED FOR PRIVACY
+Tech Name: REDACTED FOR PRIVACY
+Tech Organization: REDACTED FOR PRIVACY
+Tech Street: REDACTED FOR PRIVACY
+Tech City: REDACTED FOR PRIVACY
+Tech State/Province: REDACTED FOR PRIVACY
+Tech Postal Code: REDACTED FOR PRIVACY
+Tech Country: REDACTED FOR PRIVACY
+Tech Phone: REDACTED FOR PRIVACY
+Tech Phone Ext:
+Tech Fax: REDACTED FOR PRIVACY
+Tech Fax Ext:
+Tech Email: 71e29cd1b5840bbc0f33fa9e046ced59-135431@contact.gandi.net
+Name Server: NS1.W3.ORG
+Name Server: NS2.W3.ORG
+Name Server: NS3.W3.ORG
 Name Server: 
 Name Server: 
 Name Server: 
@@ -61,11 +64,17 @@ Name Server:
 Name Server: 
 Name Server: 
 Name Server: 
-Name Server: 
-Name Server: 
-Name Server: 
-DNSSEC:Unsigned
+DNSSEC: Unsigned
+URL of the ICANN WHOIS Data Problem Reporting System: http://wdprs.internic.net/
+>>> Last update of WHOIS database: 2018-10-31T20:31:08Z <<<
 
-Access to Public Interest Registry WHOIS information is provided to assist persons in determining the contents of a domain name registration record in the Public Interest Registry registry database. The data in this record is provided by Public Interest Registry for informational purposes only, and Public Interest Registry does not guarantee its accuracy. This service is intended only for query-based access. You agree that you will use this data only for lawful purposes and that, under no circumstances will you use this data to(a) allow, enable, or otherwise support the transmission by e-mail, telephone, or facsimile of mass unsolicited, commercial advertising or solicitations to entities other than the data recipient's own existing customers; or (b) enable high volume, automated, electronic processes that send queries or data to the systems of Registry Operator, a Registrar, or Afilias except as reasonably necessary to register domain names or modify existing registrations. All rights reserved. Public Interest Registry reserves the right to modify these terms at any time. By submitting this query, you agree to abide by this policy.
+For more information on Whois status codes, please visit
+https://www.icann.org/epp
 
+Reseller Email: 
+Reseller URL: 
 
+Personal data access and use are governed by French law, any use for the purpose of unsolicited mass commercial advertising as well as any mass or automated inquiries (for any intent other than the registration or modification of a domain name) are strictly forbidden. Copy of whole or part of our database without Gandi's endorsement is strictly forbidden. <br />
+A dispute over the ownership of a domain name may be subject to the alternate procedure established by the Registry in question or brought before the courts. <br />
+For additional information, please contact us via the following form:<br />
+ https://www.gandi.net/support/contacter/mail/

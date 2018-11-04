@@ -3,16 +3,17 @@ Domain Name: eventbrite.com
 Registry Domain ID: 327024191_DOMAIN_COM-VRSN
 Registrar WHOIS Server: whois.corporatedomains.com
 Registrar URL: www.cscprotectsbrands.com
-Updated Date: 2014-08-07 17:53:57 -0400
-Creation Date: 2006-01-25 00:00:00 -0500
-Registrar Registration Expiration Date: 2015-01-25 17:38:04 -0500
+Updated Date: 2018-01-21T06:04:30Z
+Creation Date: 2006-01-25T05:00:00Z
+Registrar Registration Expiration Date: 2019-01-25T22:38:04Z
 Registrar: CSC CORPORATE DOMAINS, INC.
 Registrar IANA ID: 299
-Registrar Abuse Contact Email: admin@internationaladmin.com
+Registrar Abuse Contact Email: domainabuse@cscglobal.com
 Registrar Abuse Contact Phone: +1.8887802723
-Domain Status: serverTransferProhibited
-Domain Status: serverDeleteProhibited
-Domain Status: clientTransferProhibited
+Domain Status: clientTransferProhibited http://www.icann.org/epp#clientTransferProhibited
+Domain Status: serverDeleteProhibited http://www.icann.org/epp#serverDeleteProhibited
+Domain Status: serverTransferProhibited http://www.icann.org/epp#serverTransferProhibited
+Domain Status: serverUpdateProhibited http://www.icann.org/epp#serverUpdateProhibited
 Registry Registrant ID: 
 Registrant Name: Eventbrite Hostmaster
 Registrant Organization: Eventbrite, Inc.
@@ -52,14 +53,19 @@ Tech Phone Ext:
 Tech Fax: +1.4159634055
 Tech Fax Ext: 
 Tech Email: domains@eventbrite.com
-Name Server: ns2.p14.dynect.net
-Name Server: ns1.p14.dynect.net
+Name Server: dns2.p05.nsone.net
 Name Server: ns4.p14.dynect.net
+Name Server: dns1.p05.nsone.net
+Name Server: dns3.p05.nsone.net
 Name Server: ns3.p14.dynect.net
-DNSSEC: 
+Name Server: ns2.p14.dynect.net
+Name Server: dns4.p05.nsone.net
+Name Server: ns1.p14.dynect.net
+DNSSEC: unsigned
 URL of the ICANN WHOIS Data Problem Reporting System: http://wdprs.internic.net/
->>> Last update of WHOIS database: 2014-08-07 17:53:57 -0400 <<<
+>>> Last update of WHOIS database: 2018-01-21T06:04:30Z <<<
 
+For more information on Whois status codes, please visit https://icann.org/epp
 
 Corporation Service Company(c) (CSC)  The Trusted Partner of More than 50% of the 100 Best Global Brands.
 
@@ -68,6 +74,3 @@ Contact us to learn more about our enterprise solutions for Global Domain Name R
 NOTICE: You are not authorized to access or query our WHOIS database through the use of high-volume, automated, electronic processes or for the purpose or purposes of using the data in any manner that violates these terms of use. The Data in the CSC WHOIS database is provided by CSC for information purposes only, and to assist persons in obtaining information about or related to a domain name registration record. CSC does not guarantee its accuracy. By submitting a WHOIS query, you agree to abide by the following terms of use: you agree that you may use this Data only for lawful purposes and that under no circumstances will you use this Data to: (1) allow, enable, or otherwise support the transmission of mass unsolicited, commercial advertising or solicitations via direct mail, e-mail, telephone, or facsimile; or (2) enable high volume, automated, electronic processes that apply to CSC (or its computer systems). CSC reserves the right to terminate your access to the WHOIS database in its sole discretion for any violations by you of these terms of use. CSC reserves the right to modify these terms at any time.
 
 Register your domain name at http://www.cscglobal.com
-
-For more information on Whois status codes, please visit https://www.icann.org/resources/pages/epp-status-codes-2014-06-16-en
-

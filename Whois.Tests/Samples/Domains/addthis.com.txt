@@ -1,84 +1,102 @@
 Domain Name: ADDTHIS.COM
 Registry Domain ID: 1325883_DOMAIN_COM-VRSN
-Registrar WHOIS Server: whois.godaddy.com
-Registrar URL: http://www.godaddy.com
-Update Date: 2013-01-02 12:51:45
-Creation Date: 1998-05-25 23:00:00
-Registrar Registration Expiration Date: 2015-05-24 23:00:00
-Registrar: GoDaddy.com, LLC
-Registrar IANA ID: 146
-Registrar Abuse Contact Email: abuse@godaddy.com
-Registrar Abuse Contact Phone: +1.480-624-2505
-Domain Status: clientTransferProhibited
-Domain Status: clientUpdateProhibited
-Domain Status: clientRenewProhibited
-Domain Status: clientDeleteProhibited
+Registrar WHOIS Server: whois.tucows.com
+Registrar URL: http://tucowsdomains.com
+Updated Date: 2018-06-26T08:49:55
+Creation Date: 1998-05-26T04:00:00
+Registrar Registration Expiration Date: 2019-05-25T04:00:00
+Registrar: TUCOWS, INC.
+Registrar IANA ID: 69
+Reseller: Oracle Corporation
+Domain Status: clientTransferProhibited https://icann.org/epp#clientTransferProhibited
+Domain Status: clientUpdateProhibited https://icann.org/epp#clientUpdateProhibited
 Registry Registrant ID: 
-Registrant Name: Server Operations
-Registrant Organization: AddThis, Inc.
-Registrant Street: 1595 Spring Hill Road
-Registrant Street: Suite 300
-Registrant City: Vienna
-Registrant State/Province: Virginia
-Registrant Postal Code: 22182
-Registrant Country: United States
-Registrant Phone: +1.7036773999
+Registrant Name: REDACTED FOR PRIVACY
+Registrant Organization: REDACTED FOR PRIVACY
+Registrant Street: REDACTED FOR PRIVACY 
+Registrant City: REDACTED FOR PRIVACY
+Registrant State/Province: REDACTED FOR PRIVACY
+Registrant Postal Code: REDACTED FOR PRIVACY
+Registrant Country: REDACTED FOR PRIVACY
+Registrant Phone: REDACTED FOR PRIVACY
 Registrant Phone Ext: 
-Registrant Fax: 
+Registrant Fax: REDACTED FOR PRIVACY
 Registrant Fax Ext: 
-Registrant Email: domains@addthis.com
+Registrant Email: REDACTED FOR PRIVACY
 Registry Admin ID: 
-Admin Name: Server Operations
-Admin Organization: AddThis, Inc.
-Admin Street: 1595 Spring Hill Road
-Admin Street: Suite 300
-Admin City: Vienna
-Admin State/Province: Virginia
-Admin Postal Code: 22182
-Admin Country: United States
-Admin Phone: +1.7036773999
+Admin Name: REDACTED FOR PRIVACY
+Admin Organization: REDACTED FOR PRIVACY
+Admin Street: REDACTED FOR PRIVACY 
+Admin City: REDACTED FOR PRIVACY
+Admin State/Province: REDACTED FOR PRIVACY
+Admin Postal Code: REDACTED FOR PRIVACY
+Admin Country: REDACTED FOR PRIVACY
+Admin Phone: REDACTED FOR PRIVACY
 Admin Phone Ext: 
-Admin Fax: 
+Admin Fax: REDACTED FOR PRIVACY
 Admin Fax Ext: 
-Admin Email: domains@addthis.com
+Admin Email: REDACTED FOR PRIVACY
 Registry Tech ID: 
-Tech Name: Server Operations
-Tech Organization: AddThis, Inc.
-Tech Street: 1595 Spring Hill Road
-Tech Street: Suite 300
-Tech City: Vienna
-Tech State/Province: Virginia
-Tech Postal Code: 22182
-Tech Country: United States
-Tech Phone: +1.7036773999
+Tech Name: REDACTED FOR PRIVACY
+Tech Organization: REDACTED FOR PRIVACY
+Tech Street: REDACTED FOR PRIVACY 
+Tech City: REDACTED FOR PRIVACY
+Tech State/Province: REDACTED FOR PRIVACY
+Tech Postal Code: REDACTED FOR PRIVACY
+Tech Country: REDACTED FOR PRIVACY
+Tech Phone: REDACTED FOR PRIVACY
 Tech Phone Ext: 
-Tech Fax: 
+Tech Fax: REDACTED FOR PRIVACY
 Tech Fax Ext: 
-Tech Email: domains@addthis.com
-Name Server: NS1.P27.DYNECT.NET
-Name Server: NS2.P27.DYNECT.NET
-Name Server: NS3.P27.DYNECT.NET
-Name Server: NS4.P27.DYNECT.NET
-DNSSEC: unsigned
+Tech Email: REDACTED FOR PRIVACY
+Name Server: ns1.p27.dynect.net
+Name Server: ns3.p27.dynect.net
+Name Server: ns2.p27.dynect.net
+Name Server: ns4.p27.dynect.net
+
+Registrar Abuse Contact Email: domainabuse@tucows.com
+Registrar Abuse Contact Phone: +1.4165350123
 URL of the ICANN WHOIS Data Problem Reporting System: http://wdprs.internic.net/
-Last update of WHOIS database: 2014-10-22T09:00:00Z
+>>> Last update of WHOIS database: 2018-06-26T08:49:55 <<<
 
-The data contained in GoDaddy.com, LLC's WhoIs database,
-while believed by the company to be reliable, is provided "as is"
-with no guarantee or warranties regarding its accuracy.  This
-information is provided for the sole purpose of assisting you
-in obtaining information about domain name registration records.
-Any use of this data for any other purpose is expressly forbidden without the prior written
-permission of GoDaddy.com, LLC.  By submitting an inquiry,
-you agree to these terms of usage and limitations of warranty.  In particular,
-you agree not to use this data to allow, enable, or otherwise make possible,
-dissemination or collection of this data, in part or in its entirety, for any
-purpose, such as the transmission of unsolicited advertising and
-and solicitations of any kind, including spam.  You further agree
-not to use this data to enable high volume, automated or robotic electronic
-processes designed to collect or compile this data for any purpose,
-including mining this data for your own personal or commercial purposes. 
+"For more information on Whois status codes, please visit https://icann.org/epp"
 
-Please note: the registrant of the domain name is specified
-in the "registrant" section.  In most cases, GoDaddy.com, LLC 
-is not the registrant of domain names listed in this database.
+Registration Service Provider:
+    Oracle Corporation, domain-contact_ww_grp@oracle.com
+    +1.6505062220
+    +1.6505062220 (fax)
+    http://www.oracle.com
+
+
+The Data in the Tucows Registrar WHOIS database is provided to you by Tucows
+for information purposes only, and may be used to assist you in obtaining
+information about or related to a domain name's registration record.
+
+Tucows makes this information available "as is," and does not guarantee its
+accuracy.
+
+By submitting a WHOIS query, you agree that you will use this data only for
+lawful purposes and that, under no circumstances will you use this data to:
+a) allow, enable, or otherwise support the transmission by e-mail,
+telephone, or facsimile of mass, unsolicited, commercial advertising or
+solicitations to entities other than the data recipient's own existing
+customers; or (b) enable high volume, automated, electronic processes that
+send queries or data to the systems of any Registry Operator or
+ICANN-Accredited registrar, except as reasonably necessary to register
+domain names or modify existing registrations.
+
+The compilation, repackaging, dissemination or other use of this Data is
+expressly prohibited without the prior written consent of Tucows.
+
+Tucows reserves the right to terminate your access to the Tucows WHOIS
+database in its sole discretion, including without limitation, for excessive
+querying of the WHOIS database or for failure to otherwise abide by this
+policy.
+
+Tucows reserves the right to modify these terms at any time.
+
+By submitting this query, you agree to abide by these terms.
+
+NOTE: THE WHOIS DATABASE IS A CONTACT DATABASE ONLY.  LACK OF A DOMAIN
+RECORD DOES NOT SIGNIFY DOMAIN AVAILABILITY.
+

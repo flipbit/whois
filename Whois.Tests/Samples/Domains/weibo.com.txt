@@ -1,54 +1,20 @@
-Domain Name: weibo.com
-Registry Domain ID:
+Domain Name: weibo.com                                                                                          
+Registry Domain ID: 4512414_DOMAIN_COM-VRSN
 Registrar WHOIS Server: whois.35.com
 Registrar URL: http://www.35.com
-Updated Date: 2014-03-20 14:55:43
-Creation Date: 1999-03-20
-Registrar Registration Expiration Date: 03/20/2111
+Updated Date: 2016-03-20T14:56:29Z
+Creation Date: 1999-03-20T04:00:00Z
+Registrar Registration Expiration Date: 03/20/2111T04:00:00Z
 Registrar: 35 Technology Co., Ltd.
 Registrar IANA ID: 1316
 Registrar Abuse Contact Email: abuse@35.cn
 Registrar Abuse Contact Phone: +86.5925391800
-Domain Status: clientTransferProhibited
-Registry Registrant ID:
-Registrant Name:Beijing Weibo Internet Technology Co.,Ltd
-Registrant Organization:Beijing Weibo Internet Technology Co., Ltd.
-Registrant Street:Ideal Int'l Plaza, No. 58, West Of North Forth Ring Rd
-Registrant City:Bei jing
-Registrant State/Province:Bei jing
-Registrant Postal Code:100080
-Registrant Country:CN
-Registrant Phone:+86.1058983038
-Registrant Phone Ext:
-Registrant Fax:+86.1082607527
-Registrant Fax Ext:
-Registrant Email:domainname@staff.sina.com.cn
-Registry Admin ID:
-Admin Name:Beijing Weibo Internet Technology Co.,Ltd
-Admin Organization:Beijing Weibo Internet Technology Co., Ltd.
-Admin Street:Ideal Int'l Plaza, No. 58, West Of North Forth Ring Rd
-Admin City:Bei jing
-Admin State/Province:Bei jing
-Admin Postal Code:100080
-Admin Country:CN
-Admin Phone:+86.1058983038
-Admin Phone Ext:
-Admin Fax:+86.1082607527
-Admin Fax Ext:
-Admin Email:domainname@staff.sina.com.cn
-Registry Tech ID:
-Tech Name:Beijing Weibo Internet Technology Co.,Ltd
-Tech Organization:Beijing Weibo Internet Technology Co., Ltd.
-Tech Street:Ideal Int'l Plaza, No. 58, West Of North Forth Ring Rd
-Tech City:Bei jing
-Tech State/Province:Bei jing
-Tech Postal Code:100080
-Tech Country:CN
-Tech Phone:+86.1058983038
-Tech Phone Ext:
-Tech Fax:+86.1082607527
-Tech Fax Ext:
-Tech Email:domainname@staff.sina.com.cn
+Domain Status: clientDeleteProhibited https://icann.org/epp#clientDeleteProhibited
+Domain Status: clientTransferProhibited https://icann.org/epp#clientTransferProhibited
+Domain Status: clientUpdateProhibited https://icann.org/epp#clientUpdateProhibited
+Domain Status: serverDeleteProhibited https://icann.org/epp#serverDeleteProhibited
+Domain Status: serverTransferProhibited https://icann.org/epp#serverTransferProhibited
+Domain Status: serverUpdateProhibited https://icann.org/epp#serverUpdateProhibited
 Name Server: ns1.sina.com.cn
 Name Server: ns2.sina.com.cn
 Name Server: ns3.sina.com.cn
@@ -56,5 +22,23 @@ Name Server: ns4.sina.com.cn
 Name Server: ns3.sina.com
 Name Server: ns4.sina.com
 DNSSEC: unsigned
-URL of the ICANN WHOIS Data Problem Reporting System:http://wdprs.internic.net/
->>> Last update of WHOIS database: 2014-03-20 14:55:43 <<<
+URL of the ICANN Whois Inaccuracy Complaint Form:
+https://www.icann.org/wicf/
+>>> Last update of WHOIS database: 2016-03-20T14:56:29Z <<<
+
+For more information on Whois status codes, please visit https://icann.org/epp
+
+This data is provided by 35 Technology Co., Ltd.
+for information purposes, and to assist persons obtaining information
+about or related to domain name registration records.
+35 Technology Co., Ltd. does not guarantee its accuracy.
+By submitting a WHOIS query, you agree that you will use this data
+only for lawful purposes and that, under no circumstances, you will
+use this data to
+1) allow, enable, or otherwise support the transmission of mass
+unsolicited, commercial advertising or solicitations via E-mail
+ (spam); or
+2) enable high volume, automated, electronic processes that apply
+to this WHOIS server.
+These terms may be changed without prior notice.
+By submitting this query, you agree to abide by this policy.

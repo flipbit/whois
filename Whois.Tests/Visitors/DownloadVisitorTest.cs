@@ -1,6 +1,6 @@
 ﻿using NUnit.Framework;
+using Whois.Models;
 using Whois.Net;
-using Whois.Servers;
 
 namespace Whois.Visitors
 {
@@ -8,26 +8,30 @@ namespace Whois.Visitors
     public class DownloadVisitorTest
     {
         private DownloadVisitor visitor;
-        private FakeTcpReaderFactory factory;
 
         [SetUp]
         public void SetUp()
         {
-            // Initialize visitor with the Fake TcpReader Factory so we get canned responses
-            factory = new FakeTcpReaderFactory();
-            visitor = new DownloadVisitor { TcpReaderFactory = factory };
+            visitor = new DownloadVisitor();
         }
 
         [Test]
         public void TestDownloadWhoisResults()
         {
-            var record = new WhoisRecord { Domain = "flipbit.co.uk", Server = new WhoisServer("uk", "whois.com") };
+            TcpReaderFactory.Bind(() => new FakeTcpReader("WHOIS Data"));
 
-            factory.Reader = new FakeTcpReader("WHOIS Data");
+            var server =  new WhoisServer("uk", "whois.com"); 
 
-            visitor.Visit(record);
+            var lookup = new LookupState
+            {
+                WhoisServer = server,
+                Domain = "flipbit.co.uk",
+                Options = WhoisOptions.Defaults
+            };
 
-            Assert.AreEqual("WHOIS Data", record.Text);
+            visitor.Visit(lookup);
+
+            Assert.AreEqual("WHOIS Data", lookup.Response.Content);
         }
     }
 }

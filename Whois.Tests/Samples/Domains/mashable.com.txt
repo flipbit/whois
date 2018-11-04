@@ -1,84 +1,78 @@
-Domain Name: MASHABLE.COM
+
+
+Domain Name: mashable.com
 Registry Domain ID: 185747780_DOMAIN_COM-VRSN
-Registrar WHOIS Server: whois.godaddy.com
-Registrar URL: http://www.godaddy.com
-Update Date: 2013-06-16 00:46:53
-Creation Date: 2005-07-19 09:50:34
-Registrar Registration Expiration Date: 2019-07-19 09:50:34
-Registrar: GoDaddy.com, LLC
-Registrar IANA ID: 146
-Registrar Abuse Contact Email: abuse@godaddy.com
-Registrar Abuse Contact Phone: +1.480-624-2505
-Domain Status: clientTransferProhibited
-Domain Status: clientUpdateProhibited
-Domain Status: clientRenewProhibited
-Domain Status: clientDeleteProhibited
-Registry Registrant ID: 
-Registrant Name: Registration Private
-Registrant Organization: Domains By Proxy, LLC
-Registrant Street: DomainsByProxy.com
-Registrant Street: 14747 N Northsight Blvd Suite 111, PMB 309
-Registrant City: Scottsdale
-Registrant State/Province: Arizona
-Registrant Postal Code: 85260
-Registrant Country: United States
-Registrant Phone: +1.4806242599
+Registrar WHOIS Server: WHOIS.ENOM.COM
+Registrar URL: WWW.ENOM.COM
+Updated Date: 2018-03-18T12:33:20.00Z
+Creation Date: 2005-07-19T14:50:00.00Z
+Registrar Registration Expiration Date: 2025-07-19T14:50:00.00Z
+Registrar: ENOM, INC.
+Registrar IANA ID: 48
+Domain Status: registrar-lock* https://www.icann.org/epp#registrar-lock*
+Registrant Name: REDACTED FOR PRIVACY
+Registrant Organization: REDACTED FOR PRIVACY
+Registrant Street: REDACTED FOR PRIVACY
+Registrant Street: 
+Registrant City: REDACTED FOR PRIVACY
+Registrant State/Province: REDACTED FOR PRIVACY
+Registrant Postal Code: REDACTED FOR PRIVACY
+Registrant Country: REDACTED FOR PRIVACY
+Registrant Phone: REDACTED FOR PRIVACY
 Registrant Phone Ext: 
-Registrant Fax: +1.4806242598
-Registrant Fax Ext: 
-Registrant Email: MASHABLE.COM@domainsbyproxy.com
-Registry Admin ID: 
-Admin Name: Registration Private
-Admin Organization: Domains By Proxy, LLC
-Admin Street: DomainsByProxy.com
-Admin Street: 14747 N Northsight Blvd Suite 111, PMB 309
-Admin City: Scottsdale
-Admin State/Province: Arizona
-Admin Postal Code: 85260
-Admin Country: United States
-Admin Phone: +1.4806242599
+Registrant Fax: REDACTED FOR PRIVACY
+Registrant Email: REDACTED FOR PRIVACY
+Admin Name: REDACTED FOR PRIVACY
+Admin Organization: REDACTED FOR PRIVACY
+Admin Street: REDACTED FOR PRIVACY
+Admin Street: 
+Admin City: REDACTED FOR PRIVACY
+Admin State/Province: REDACTED FOR PRIVACY
+Admin Postal Code: REDACTED FOR PRIVACY
+Admin Country: REDACTED FOR PRIVACY
+Admin Phone: REDACTED FOR PRIVACY
 Admin Phone Ext: 
-Admin Fax: +1.4806242598
-Admin Fax Ext: 
-Admin Email: MASHABLE.COM@domainsbyproxy.com
-Registry Tech ID: 
-Tech Name: Registration Private
-Tech Organization: Domains By Proxy, LLC
-Tech Street: DomainsByProxy.com
-Tech Street: 14747 N Northsight Blvd Suite 111, PMB 309
-Tech City: Scottsdale
-Tech State/Province: Arizona
-Tech Postal Code: 85260
-Tech Country: United States
-Tech Phone: +1.4806242599
+Admin Fax: REDACTED FOR PRIVACY
+Admin Email: REDACTED FOR PRIVACY
+Tech Name: REDACTED FOR PRIVACY
+Tech Organization: REDACTED FOR PRIVACY
+Tech Street: REDACTED FOR PRIVACY
+Tech Street: 
+Tech City: REDACTED FOR PRIVACY
+Tech State/Province: REDACTED FOR PRIVACY
+Tech Postal Code: REDACTED FOR PRIVACY
+Tech Country: REDACTED FOR PRIVACY
+Tech Phone: REDACTED FOR PRIVACY
 Tech Phone Ext: 
-Tech Fax: +1.4806242598
-Tech Fax Ext: 
-Tech Email: MASHABLE.COM@domainsbyproxy.com
+Tech Fax: REDACTED FOR PRIVACY
+Tech Email: REDACTED FOR PRIVACY
+Name Server: NS1-139.AKAM.NET
+Name Server: USC2.AKAM.NET
 Name Server: USE1.AKAM.NET
 Name Server: USW1.AKAM.NET
-Name Server: USC2.AKAM.NET
-Name Server: NS1-139.AKAM.NET
-DNSSEC: unsigned
-URL of the ICANN WHOIS Data Problem Reporting System: http://wdprs.internic.net/
-Last update of WHOIS database: 2014-10-22T10:00:00Z
+DNSSEC: UNSIGNED
+Registrar Abuse Contact Email: ABUSE@ENOM.COM
+Registrar Abuse Contact Phone: +1.4259744689
+URL of the ICANN WHOIS Data Problem Reporting System: HTTP://WDPRS.INTERNIC.NET/
+>>> Last update of WHOIS database: 2018-03-18T12:33:20.00Z <<<
 
-The data contained in GoDaddy.com, LLC's WhoIs database,
-while believed by the company to be reliable, is provided "as is"
-with no guarantee or warranties regarding its accuracy.  This
-information is provided for the sole purpose of assisting you
-in obtaining information about domain name registration records.
-Any use of this data for any other purpose is expressly forbidden without the prior written
-permission of GoDaddy.com, LLC.  By submitting an inquiry,
-you agree to these terms of usage and limitations of warranty.  In particular,
-you agree not to use this data to allow, enable, or otherwise make possible,
-dissemination or collection of this data, in part or in its entirety, for any
-purpose, such as the transmission of unsolicited advertising and
-and solicitations of any kind, including spam.  You further agree
-not to use this data to enable high volume, automated or robotic electronic
-processes designed to collect or compile this data for any purpose,
-including mining this data for your own personal or commercial purposes. 
+For more information on Whois status codes, please visit https://icann.org/epp
 
-Please note: the registrant of the domain name is specified
-in the "registrant" section.  In most cases, GoDaddy.com, LLC 
-is not the registrant of domain names listed in this database.
+
+The data in this whois database is provided to you for information
+purposes only, that is, to assist you in obtaining information about or
+related to a domain name registration record. We make this information
+available "as is," and do not guarantee its accuracy. By submitting a
+whois query, you agree that you will use this data only for lawful
+purposes and that, under no circumstances will you use this data to: (1)
+enable high volume, automated, electronic processes that stress or load
+this whois database system providing you this information; or (2) allow,
+enable, or otherwise support the transmission of mass unsolicited,
+commercial advertising or solicitations via direct mail, electronic
+mail, or by telephone. The compilation, repackaging, dissemination or
+other use of this data is expressly prohibited without prior written
+consent from us.  
+
+We reserve the right to modify these terms at any time. By submitting 
+this query, you agree to abide by these terms.
+Version 6.3 4/3/2002

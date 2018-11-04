@@ -2,22 +2,11 @@
 [ restricted to network administration purposes. For further information,     ]
 [ use 'whois -h whois.jprs.jp help'. To suppress Japanese output, add'/e'     ]
 [ at the end of command, e.g. 'whois -h whois.jprs.jp xxx/e'.                 ]
-[                                                                             ]
-[ Notice -------------------------------------------------------------------- ]
-[ JPRS will change JPRS WHOIS (web-based and port 43 Whois service) about the ]
-[ following two points on January 18, 2015.                                   ]
-[                                                                             ]
-[  1) Change of the format of response about gTLD domain name                 ]
-[  2) Change of the character encoding                                        ]
-[                                                                             ]
-[ For further information, please see the following webpage.                  ]
-[ http://jprs.jp/whatsnew/notice/2014/20140319-whois.html (only in Japanese)  ]
-[ --------------------------------------------------------------------------- ]
 
-Domain Information: [$B%I%a%$%s>pJs(B]
+Domain Information: [ドメイン情報]
 [Domain Name]                   GEOCITIES.JP
 
-[$BEPO?<TL>(B]                      $B%d%U!<3t<02q<R(B
+[登録者名]                      ヤフー株式会社
 [Registrant]                    Yahoo Japan Corporation
 
 [Name Server]                   ns01.yahoo.co.jp
@@ -26,22 +15,20 @@ Domain Information: [$B%I%a%$%s>pJs(B]
 [Name Server]                   ns12.yahoo.co.jp
 [Signing Key]                   
 
-[$BEPO?G/7nF|(B]                    2001/05/07
-[$BM-8z4|8B(B]                      2015/05/31
-[$B>uBV(B]                          Active
-[$B:G=*99?7(B]                      2014/06/01 01:05:11 (JST)
+[登録年月日]                    2001/05/07
+[有効期限]                      2019/05/31
+[状態]                          Active
+[最終更新]                      2018/06/01 01:05:08 (JST)
 
-Contact Information: [$B8x3+O"MmAk8}(B]
-[$BL>A0(B]                          $B:#;R(B $B$5$f$j(B
-[Name]                          Imako Sayuri
-[Email]                         jpnic-contact@mail.yahoo.co.jp
+Contact Information: [公開連絡窓口]
+[名前]                          ヤフー株式会社
+[Name]                          Yahoo Japan Corporation
+[Email]                         nic-admin@mail.yahoo.co.jp
 [Web Page]                       
-[$BM9JXHV9f(B]                      106-6182
-[$B=;=j(B]                          $BEl5~ET9A6hO;K\LZ(B6-10-1
-                                $BO;K\LZ%R%k%:?9%?%o!<(B
-[Postal Address]                Roppongi Hills Mori Tower
-                                10-1, Roppongi 6-chome
-                                Minato-ku,
-[$BEEOCHV9f(B]                      03-6440-6000
-[FAX$BHV9f(B]                       
+[郵便番号]                      102-8282
+[住所]                          東京都千代田区紀尾井町1番3号
+[Postal Address]                1-3 Kioicho, Chiyoda-ku
+                                Tokyo 102-8282 Japan
+[電話番号]                      03-6898-8200
+[FAX番号]                       
 

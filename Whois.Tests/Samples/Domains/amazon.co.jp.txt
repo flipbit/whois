@@ -2,34 +2,23 @@
 [ restricted to network administration purposes. For further information,     ]
 [ use 'whois -h whois.jprs.jp help'. To suppress Japanese output, add'/e'     ]
 [ at the end of command, e.g. 'whois -h whois.jprs.jp xxx/e'.                 ]
-[                                                                             ]
-[ Notice -------------------------------------------------------------------- ]
-[ JPRS will change JPRS WHOIS (web-based and port 43 Whois service) about the ]
-[ following two points on January 18, 2015.                                   ]
-[                                                                             ]
-[  1) Change of the format of response about gTLD domain name                 ]
-[  2) Change of the character encoding                                        ]
-[                                                                             ]
-[ For further information, please see the following webpage.                  ]
-[ http://jprs.jp/whatsnew/notice/2014/20140319-whois.html (only in Japanese)  ]
-[ --------------------------------------------------------------------------- ]
 
-Domain Information: [$B%I%a%$%s>pJs(B]
-a. [$B%I%a%$%sL>(B]                 AMAZON.CO.JP
-e. [$B$=$7$-$a$$(B]                 $B$"$^$>$s!&$$$s$/(B
-f. [$BAH?%L>(B]                     $B%"%^%>%s!&%$%s%/(B
+Domain Information: [ドメイン情報]
+a. [ドメイン名]                 AMAZON.CO.JP
+e. [そしきめい]                 あまぞん・いんく
+f. [組織名]                     アマゾン・インク
 g. [Organization]               Amazon, Inc.
-k. [$BAH?%<oJL(B]                   $B309q2q<R(B
+k. [組織種別]                   外国会社
 l. [Organization Type]          Foreign Company
-m. [$BEPO?C4Ev<T(B]                 JC076JP
-n. [$B5;=QO"MmC4Ev<T(B]             IK4644JP
-p. [$B%M!<%`%5!<%P(B]               ns1.p31.dynect.net
-p. [$B%M!<%`%5!<%P(B]               ns2.p31.dynect.net
-p. [$B%M!<%`%5!<%P(B]               pdns1.ultradns.net
-p. [$B%M!<%`%5!<%P(B]               pdns6.ultradns.co.uk
-s. [$B=pL>80(B]                     
-[$B>uBV(B]                          Connected (2014/11/30)
-[$BEPO?G/7nF|(B]                    2002/11/21
-[$B@\B3G/7nF|(B]                    2002/11/21
-[$B:G=*99?7(B]                      2013/12/01 01:05:39 (JST)
+m. [登録担当者]                 JC076JP
+n. [技術連絡担当者]             IK4644JP
+p. [ネームサーバ]               ns1.p31.dynect.net
+p. [ネームサーバ]               ns2.p31.dynect.net
+p. [ネームサーバ]               pdns1.ultradns.net
+p. [ネームサーバ]               pdns6.ultradns.co.uk
+s. [署名鍵]                     
+[状態]                          Connected (2018/11/30)
+[登録年月日]                    2002/11/21
+[接続年月日]                    2002/11/21
+[最終更新]                      2017/12/01 01:02:51 (JST)
 

@@ -1,67 +1,60 @@
+This Registry database contains ONLY .EDU domains.
+The data in the EDUCAUSE Whois database is provided
+by EDUCAUSE for information purposes in order to
+assist in the process of obtaining information about
+or related to .edu domain registration records.
 
-This Registry database contains ONLY .EDU domains. 
-The data in the EDUCAUSE Whois database is provided 
-by EDUCAUSE for information purposes in order to 
-assist in the process of obtaining information about 
-or related to .edu domain registration records. 
+The EDUCAUSE Whois database is authoritative for the
+.EDU domain.
 
-The EDUCAUSE Whois database is authoritative for the 
-.EDU domain.         
+A Web interface for the .EDU EDUCAUSE Whois Server is
+available at: http://whois.educause.edu
 
-A Web interface for the .EDU EDUCAUSE Whois Server is 
-available at: http://whois.educause.net 
-
-By submitting a Whois query, you agree that this information 
-will not be used to allow, enable, or otherwise support 
-the transmission of unsolicited commercial advertising or 
-solicitations via e-mail.  The use of electronic processes to 
-harvest information from this server is generally prohibited 
-except as reasonably necessary to register or modify .edu 
+By submitting a Whois query, you agree that this information
+will not be used to allow, enable, or otherwise support
+the transmission of unsolicited commercial advertising or
+solicitations via e-mail.  The use of electronic processes to
+harvest information from this server is generally prohibited
+except as reasonably necessary to register or modify .edu
 domain names.
 
-You may use "%" as a wildcard in your search. For further 
-information regarding the use of this WHOIS server, please 
-type: help 
-
---------------------------
+-------------------------------------------------------------
 
 Domain Name: STANFORD.EDU
 
 Registrant:
-   Stanford University
-   The Board of Trustees of the Leland Stanford Junior University
-   241 Panama Street, Pine Hall, Room 115
-   Stanford, CA 94305-4122
-   UNITED STATES
+	Stanford University
+	The Board of Trustees of the Leland Stanford Junior University
+	241 Panama Street, Pine Hall, Room 115
+	Stanford, CA 94305-4122
+	United States of America
 
 Administrative Contact:
-
-   Domain Admin
-   Stanford University
-   241 Panama Street Pine Hall, Room 115
-   Stanford, CA 94305-4122
-   UNITED STATES
-   (650) 723-4328
-   sunet-admin@stanford.edu
+	Domain Admin
+	Stanford University
+	241 Panama Street Pine Hall, Room 115
+	Stanford, CA 94305-4122
+	United States of America
+	+1.6507234328
+	sunet-admin@stanford.edu
 
 Technical Contact:
+	 
+	Stanford University
+	241 Panama Street Pine Hall, Room 115
+	Stanford, CA 94305-4122
+	United States of America
+	+1.6507234328
+	sunet-admin@stanford.edu
 
-   Domain Admin
-   Stanford University
-   241 Panama Street Pine Hall, Room 115
-   Stanford, CA 94305-4122
-   UNITED STATES
-   (650) 723-4328
-   sunet-admin@stanford.edu
-
-Name Servers: 
-   ARGUS.STANFORD.EDU         171.64.7.115, 2607:f6d0:0:9113::ab40:773
-   AVALLONE.STANFORD.EDU      171.64.7.88, 2607:f6d0:0:9116::ab40:758
-   ATALANTE.STANFORD.EDU      171.64.7.61, 2607:f6d0:0:d32::ab40:73d
-   AERATHEA.STANFORD.EDU      152.3.104.250
+Name Servers:
+	NS6.DNSMADEEASY.COM
+	ATALANTE.STANFORD.EDU
+	NS5.DNSMADEEASY.COM
+	AVALLONE.STANFORD.EDU
+	ARGUS.STANFORD.EDU
+	NS7.DNSMADEEASY.COM
 
 Domain record activated:    04-Oct-1985
-Domain record last updated: 24-Apr-2014
-Domain expires:             31-Jul-2015
-
-
+Domain record last updated: 26-Sep-2018
+Domain expires:             31-Jul-2019

@@ -1,64 +1,63 @@
 Domain Name: issuu.com
-Registry Domain ID:
+Registry Domain ID: 934132683_DOMAIN_COM-VRSN
 Registrar WHOIS Server: whois.ascio.com
 Registrar URL: http://www.ascio.com 
-Updated Date: 2014-08-28T11:51:21Z
-Creation Date: 2012-06-04T07:45:14Z
-Registrar Registration Expiration Date: 2015-04-19T00:00:00Z
+Updated Date: 2018-10-08T23:49:38Z
+Creation Date: 2007-04-19T11:39:49Z
+Registrar Registration Expiration Date: 2019-04-19T00:00:00Z
 Registrar: Ascio Technologies, Inc
 Registrar IANA ID: 106
 Registrar Abuse Contact Email: abuse@ascio.com
 Registrar Abuse Contact Phone: +44.2070159370
-Reseller:
-Domain Status: ACTIVE
-Registry Registrant ID:
-Registrant Name:  
-Registrant Organization: Issuu ApS
-Registrant Street: Gasværksvej 16, 3. sal
-Registrant City: Koebenhavn V 
+Domain Status: clientTransferProhibited https://icann.org/epp#clientTransferProhibited
+Registry Registrant ID: Not Disclosed
+Registrant Name: Not Disclosed
+Registrant Organization: Not Disclosed
+Registrant Street: Not Disclosed
+Registrant City: Not Disclosed 
 Registrant State/Province: 
-Registrant Postal Code: 1656
+Registrant Postal Code: Not Disclosed
 Registrant Country: DK
-Registrant Phone:
-Registrant Phone Ext:
-Registrant Fax:
-Registrant Fax Ext:
-Registrant Email:
-Registry Admin ID:
-Admin Name: Kim B. Nielsen
-Admin Organization: 
-Admin Street: Sydvestvej 100
-Admin Street: Att. Webhotel.Net Division
-Admin City:  Glostrup
-Admin State/Province: DK
-Admin Postal Code: 2600
-Admin Country: DK
-Admin Phone: +45.70232470
-Admin Phone Ext:
-Admin Fax: +45.70232480
-Admin Fax Ext:
-Admin Email: dns@cohaesio.net
-Registry Tech ID:
-Tech Name: Kim B. Nielsen
-Tech Organization: 
-Tech Street: Sydvestvej 100
-Tech Street: Att. Webhotel.Net Division
-Tech City: Glostrup 
-Tech State/Province: DK
-Tech Postal Code: 2600
-Tech Country: DK
-Tech Phone: +45.70232490
-Tech Phone Ext:
-Tech Fax: +45.70232480  
-Tech Fax Ext: 
-Tech Email: dns@cohaesio.net
+Registrant Phone: Not Disclosed
+Registrant Phone Ext: Not Disclosed
+Registrant Fax: Not Disclosed
+Registrant Fax Ext: Not Disclosed
+Registrant Email: https://whoiscontact.ascio.com?domainname=issuu.com
+Registry Admin ID: Not Disclosed
+Admin Name: Not Disclosed
+Admin Organization: Not Disclosed
+Admin Street: Not Disclosed
+Admin City: Not Disclosed
+Admin State/Province: Not Disclosed
+Admin Postal Code: Not Disclosed
+Admin Country: Not Disclosed
+Admin Phone: Not Disclosed
+Admin Phone Ext: Not Disclosed
+Admin Fax: Not Disclosed
+Admin Fax Ext: Not Disclosed
+Admin Email: Not Disclosed
+Registry Tech ID: Not Disclosed
+Tech Name: Not Disclosed
+Tech Organization: Not Disclosed
+Tech Street: Not Disclosed
+Tech City: Not Disclosed 
+Tech State/Province: Not Disclosed
+Tech Postal Code: Not Disclosed
+Tech Country: Not Disclosed
+Tech Phone: Not Disclosed
+Tech Phone Ext: Not Disclosed
+Tech Fax: Not Disclosed  
+Tech Fax Ext: Not Disclosed
+Tech Email: Not Disclosed
 Name Server: NS-426.AWSDNS-53.COM
 Name Server: NS-1582.AWSDNS-05.CO.UK
 Name Server: NS-1343.AWSDNS-39.ORG
 Name Server: NS-757.AWSDNS-30.NET
-DNSSEC:
+DNSSEC: unsigned
 URL of the ICANN WHOIS Data Problem Reporting System: http://wdprs.internic.net/
->>> Last update of WHOIS database: 2014-10-22T10:12:31 UTC <<<
+>>> Last update of WHOIS database: 2018-10-31T20:53:44Z <<<
+
+For more information on Whois status codes, please visit https://icann.org/epp
 
 The data in Ascio Technologies' WHOIS database is provided 
 by Ascio Technologies for information purposes only. By submitting 
@@ -69,7 +68,7 @@ activities, regardless of the medium used. Such media include but are
 not limited to e-mail, telephone, facsimile, postal mail, SMS, and
 wireless alerts; or
 (b) use the data to enable high volume, automated, electronic processes
-that sendqueries or data to the systems of any Registry Operator or 
+that send queries or data to the systems of any Registry Operator or 
 ICANN-Accredited registrar, except as reasonably necessary to register 
 domain names or modify existing registrations.
 (c) sell or redistribute the data except insofar as it has been 

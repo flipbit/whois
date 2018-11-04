@@ -3,17 +3,17 @@ Domain Name: bloomberg.com
 Registry Domain ID: 254579_DOMAIN_COM-VRSN
 Registrar WHOIS Server: whois.corporatedomains.com
 Registrar URL: www.cscprotectsbrands.com
-Updated Date: 2014-09-24 01:50:40 -0400
-Creation Date: 1993-09-29 00:00:00 -0400
-Registrar Registration Expiration Date: 2015-09-28 00:00:00 -0400
+Updated Date: 2018-09-24T05:57:11Z
+Creation Date: 1993-09-29T04:00:00Z
+Registrar Registration Expiration Date: 2019-09-28T04:00:00Z
 Registrar: CSC CORPORATE DOMAINS, INC.
-Sponsoring Registrar IANA ID: 299
-Registrar Abuse Contact Email: admin@internationaladmin.com
+Registrar IANA ID: 299
+Registrar Abuse Contact Email: domainabuse@cscglobal.com
 Registrar Abuse Contact Phone: +1.8887802723
-Domain Status: serverTransferProhibited
-Domain Status: serverDeleteProhibited
-Domain Status: clientTransferProhibited
-Domain Status: serverUpdateProhibited
+Domain Status: clientTransferProhibited http://www.icann.org/epp#clientTransferProhibited
+Domain Status: serverDeleteProhibited http://www.icann.org/epp#serverDeleteProhibited
+Domain Status: serverTransferProhibited http://www.icann.org/epp#serverTransferProhibited
+Domain Status: serverUpdateProhibited http://www.icann.org/epp#serverUpdateProhibited
 Registry Registrant ID: 
 Registrant Name: Internic Admin
 Registrant Organization: Bloomberg Finance L.P.
@@ -53,16 +53,17 @@ Tech Phone Ext:
 Tech Fax: +1.2128935000
 Tech Fax Ext: 
 Tech Email: internic-admin@bloomberg.com
-Name Server: pdns5.ultradns.info
+Name Server: pdns1.ultradns.net
+Name Server: pdns3.ultradns.org
 Name Server: a1.verisigndns.com
 Name Server: a3.verisigndns.com
-Name Server: pdns3.ultradns.org
+Name Server: pdns5.ultradns.info
 Name Server: a2.verisigndns.com
-Name Server: pdns1.ultradns.net
-DNSSEC: 
+DNSSEC: unsigned
 URL of the ICANN WHOIS Data Problem Reporting System: http://wdprs.internic.net/
->>> Last update of WHOIS database: 2014-09-24 01:50:40 -0400 <<<
+>>> Last update of WHOIS database: 2018-09-24T05:57:11Z <<<
 
+For more information on Whois status codes, please visit https://icann.org/epp
 
 Corporation Service Company(c) (CSC)  The Trusted Partner of More than 50% of the 100 Best Global Brands.
 
@@ -71,6 +72,3 @@ Contact us to learn more about our enterprise solutions for Global Domain Name R
 NOTICE: You are not authorized to access or query our WHOIS database through the use of high-volume, automated, electronic processes or for the purpose or purposes of using the data in any manner that violates these terms of use. The Data in the CSC WHOIS database is provided by CSC for information purposes only, and to assist persons in obtaining information about or related to a domain name registration record. CSC does not guarantee its accuracy. By submitting a WHOIS query, you agree to abide by the following terms of use: you agree that you may use this Data only for lawful purposes and that under no circumstances will you use this Data to: (1) allow, enable, or otherwise support the transmission of mass unsolicited, commercial advertising or solicitations via direct mail, e-mail, telephone, or facsimile; or (2) enable high volume, automated, electronic processes that apply to CSC (or its computer systems). CSC reserves the right to terminate your access to the WHOIS database in its sole discretion for any violations by you of these terms of use. CSC reserves the right to modify these terms at any time.
 
 Register your domain name at http://www.cscglobal.com
-
-For more information on Whois status codes, please visit https://www.icann.org/resources/pages/epp-status-codes-2014-06-16-en
-

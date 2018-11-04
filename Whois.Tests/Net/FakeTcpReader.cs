@@ -1,5 +1,6 @@
 ﻿using System.Collections;
 using System.Text;
+using System.Threading.Tasks;
 
 namespace Whois.Net
 {
@@ -17,9 +18,9 @@ namespace Whois.Net
             this.response = response;
         }
         
-        public string Read(string url, int port, string command)
+        public Task<string> Read(string url, int port, string command, Encoding encoding)
         {
-            return response;
+            return Task.FromResult(response);
         }
 
         private string EncodeResponse(string fakeResponse, Encoding srcEncoding, Encoding dstEncoding)

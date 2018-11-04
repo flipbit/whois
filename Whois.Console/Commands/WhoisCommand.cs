@@ -1,5 +1,6 @@
 ﻿using System;
 using Contastic;
+using Newtonsoft.Json;
 
 namespace Whois.Commands
 {
@@ -12,6 +13,9 @@ namespace Whois.Commands
         {
             [Parameter(Name = "whois", Required = true)]
             public string DomainName { get; set; }
+
+            [Flag("json")]
+            public bool Json { get; set; } 
         }
 
         /// <summary>
@@ -30,17 +34,27 @@ namespace Whois.Commands
             WhoisLookup = new WhoisLookup();
         }
 
-        /// <summary>
-        /// Executes the specified parameters.
-        /// </summary>
-        /// <param name="parameters">The parameters.</param>
-        /// <returns></returns>
-        /// <exception cref="System.NotImplementedException"></exception>
         public override int Execute(Options parameters)
         {
             var record = WhoisLookup.Lookup(parameters.DomainName);
 
-            Console.WriteLine(record.ToString());
+            if (parameters.Json)
+            {
+                if (record.ParsedResponse != null)
+                {
+                    var json = JsonConvert.SerializeObject(record.ParsedResponse, Formatting.Indented);
+                    Console.WriteLine(json);
+                }
+                else
+                {
+                    Console.WriteLine("Unable to parse WHOIS response:");
+                    Console.WriteLine(record.Content);
+                }
+            }
+            else
+            {
+                Console.WriteLine(record.Content);
+            }
 
             return 0;
         }

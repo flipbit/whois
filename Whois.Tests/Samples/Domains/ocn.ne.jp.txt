@@ -2,33 +2,22 @@
 [ restricted to network administration purposes. For further information,     ]
 [ use 'whois -h whois.jprs.jp help'. To suppress Japanese output, add'/e'     ]
 [ at the end of command, e.g. 'whois -h whois.jprs.jp xxx/e'.                 ]
-[                                                                             ]
-[ Notice -------------------------------------------------------------------- ]
-[ JPRS will change JPRS WHOIS (web-based and port 43 Whois service) about the ]
-[ following two points on January 18, 2015.                                   ]
-[                                                                             ]
-[  1) Change of the format of response about gTLD domain name                 ]
-[  2) Change of the character encoding                                        ]
-[                                                                             ]
-[ For further information, please see the following webpage.                  ]
-[ http://jprs.jp/whatsnew/notice/2014/20140319-whois.html (only in Japanese)  ]
-[ --------------------------------------------------------------------------- ]
 
-Domain Information: [$B%I%a%$%s>pJs(B]
-a. [$B%I%a%$%sL>(B]                 OCN.NE.JP
-b. [$B$M$C$H$o!<$/$5!<$S$9$a$$(B]   $B$*!<$W$s$3$s$T$e!<$?$M$C$H$o!<$/(B
-c. [$B%M%C%H%o!<%/%5!<%S%9L>(B]     $B%*!<%W%s%3%s%T%e!<%?%M%C%H%o!<%/(B
+Domain Information: [ドメイン情報]
+a. [ドメイン名]                 OCN.NE.JP
+b. [ねっとわーくさーびすめい]   おーぷんこんぴゅーたねっとわーく
+c. [ネットワークサービス名]     オープンコンピュータネットワーク
 d. [Network Service Name]       Open Computer Network
-k. [$BAH?%<oJL(B]                   $B%M%C%H%o!<%/%5!<%S%9(B
+k. [組織種別]                   ネットワークサービス
 l. [Organization Type]          Network Service
-m. [$BEPO?C4Ev<T(B]                 MO081JP
-n. [$B5;=QO"MmC4Ev<T(B]             KK551JP
-n. [$B5;=QO"MmC4Ev<T(B]             MO081JP
-p. [$B%M!<%`%5!<%P(B]               ns1.ocn.ad.jp
-p. [$B%M!<%`%5!<%P(B]               ns2.ocn.ad.jp
-s. [$B=pL>80(B]                     
-[$B>uBV(B]                          Connected (2014/11/30)
-[$BEPO?G/7nF|(B]                    1996/11/19
-[$B@\B3G/7nF|(B]                    1996/12/02
-[$B:G=*99?7(B]                      2013/12/01 01:22:42 (JST)
+m. [登録担当者]                 MO081JP
+n. [技術連絡担当者]             KK551JP
+n. [技術連絡担当者]             MO081JP
+p. [ネームサーバ]               ns1.ocn.ad.jp
+p. [ネームサーバ]               ns2.ocn.ad.jp
+s. [署名鍵]                     
+[状態]                          Connected (2018/11/30)
+[登録年月日]                    1996/11/19
+[接続年月日]                    1996/12/02
+[最終更新]                      2017/12/01 01:07:24 (JST)
 

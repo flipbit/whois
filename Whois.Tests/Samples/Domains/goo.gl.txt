@@ -2,35 +2,54 @@ Domain Name: goo.gl
 Domain ID: Imp619-GL
 WHOIS Server: 
 Referral URL: 
-Updated Date: 2013-12-02T19:11:52.689Z
-Creation Date: 2005-06-22T02:00:00.000Z
-Registry Expiry Date: 2015-01-01T03:00:00.000Z
+Updated Date: 2018-01-30T19:30:32.240Z
+Creation Date: 2005-06-22T02:00:00.0Z
+Registry Expiry Date: 2019-01-01T03:00:00.0Z
 Sponsoring Registrar: MarkMonitor
-Sponsoring Registrar IANA ID: 
 Domain Status: clientDeleteProhibited
 Domain Status: clientTransferProhibited
 Domain Status: clientRenewProhibited
 Domain Status: clientUpdateProhibited
-Domain Status: ok
-Registrant Name: Google Inc.
+Registrant ID: 63339-GL
+Registrant Name: Domain Administrator
+Registrant Organization: Google LLC
 Registrant Street: 1600 Amphitheatre Parkway
 Registrant City: Mountain View
 Registrant State/Province: CA
 Registrant Postal Code: 94043
 Registrant Country: US
-Registrant Phone: +1.6303300100
+Registrant Phone: +1.6502530000
 Registrant Phone Ext: 
 Registrant Email: dns-admin@google.com
+Admin ID: 63339-GL
+Admin Name: Domain Administrator
+Admin Organization: Google LLC
+Admin Street: 1600 Amphitheatre Parkway
+Admin City: Mountain View
+Admin State/Province: CA
+Admin Postal Code: 94043
+Admin Country: US
+Admin Phone: +1.6502530000
+Admin Phone Ext: 
+Admin Email: dns-admin@google.com
+Tech ID: 63339-GL
+Tech Name: Domain Administrator
+Tech Organization: Google LLC
+Tech Street: 1600 Amphitheatre Parkway
+Tech City: Mountain View
+Tech State/Province: CA
+Tech Postal Code: 94043
+Tech Country: US
+Tech Phone: +1.6502530000
+Tech Phone Ext: 
+Tech Email: dns-admin@google.com
 Name Server: ns1.google.com
 Name Server: ns2.google.com
 Name Server: ns3.google.com
 Name Server: ns4.google.com
 DNSSEC: unsigned
 Additional Section
-Sponsoring Registrar URL: http://www.markmonitor.com
-Sponsoring Registrar Address: 391 N Ancestor Place  Boise, ID 83704 US
-Sponsoring Registrar Country: US
-Sponsoring Registrar Customer Service Contact: Domain Administrator
-Sponsoring Registrar Customer Service Email: ccops@markmonitor.com
+Redemption Expiry Date:
+>>> Last update of WHOIS database: 2018-10-31T20:30:04.862Z <<<
 
->>> Last update of WHOIS database: 2014-10-22T09:18:49.697Z <<<
+

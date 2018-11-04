@@ -3,17 +3,17 @@ Domain Name: discovery.com
 Registry Domain ID: 1153037_DOMAIN_COM-VRSN
 Registrar WHOIS Server: whois.corporatedomains.com
 Registrar URL: www.cscprotectsbrands.com
-Updated Date: 2014-04-17 01:20:05 -0400
-Creation Date: 1993-04-20 00:00:00 -0400
-Registrar Registration Expiration Date: 2015-04-21 00:00:00 -0400
+Updated Date: 2018-04-17T05:36:05Z
+Creation Date: 1993-04-20T04:00:00Z
+Registrar Registration Expiration Date: 2019-04-21T04:00:00Z
 Registrar: CSC CORPORATE DOMAINS, INC.
 Registrar IANA ID: 299
-Registrar Abuse Contact Email: admin@internationaladmin.com
+Registrar Abuse Contact Email: domainabuse@cscglobal.com
 Registrar Abuse Contact Phone: +1.8887802723
-Domain Status: serverTransferProhibited
-Domain Status: serverDeleteProhibited
-Domain Status: clientTransferProhibited
-Domain Status: serverUpdateProhibited
+Domain Status: clientTransferProhibited http://www.icann.org/epp#clientTransferProhibited
+Domain Status: serverDeleteProhibited http://www.icann.org/epp#serverDeleteProhibited
+Domain Status: serverTransferProhibited http://www.icann.org/epp#serverTransferProhibited
+Domain Status: serverUpdateProhibited http://www.icann.org/epp#serverUpdateProhibited
 Registry Registrant ID: 
 Registrant Name: Discovery Communications, LLC
 Registrant Organization: Discovery Communications, LLC
@@ -53,14 +53,15 @@ Tech Phone Ext:
 Tech Fax: +1.2406620001
 Tech Fax Ext: 
 Tech Email: DNS_ADMIN@discovery.com
+Name Server: ns-487.awsdns-60.com
 Name Server: ns-887.awsdns-46.net
 Name Server: ns-1701.awsdns-20.co.uk
-Name Server: ns-487.awsdns-60.com
 Name Server: ns-1029.awsdns-00.org
-DNSSEC: 
+DNSSEC: unsigned
 URL of the ICANN WHOIS Data Problem Reporting System: http://wdprs.internic.net/
->>> Last update of WHOIS database: 2014-04-17 01:20:05 -0400 <<<
+>>> Last update of WHOIS database: 2018-04-17T05:36:05Z <<<
 
+For more information on Whois status codes, please visit https://icann.org/epp
 
 Corporation Service Company(c) (CSC)  The Trusted Partner of More than 50% of the 100 Best Global Brands.
 
@@ -69,6 +70,3 @@ Contact us to learn more about our enterprise solutions for Global Domain Name R
 NOTICE: You are not authorized to access or query our WHOIS database through the use of high-volume, automated, electronic processes or for the purpose or purposes of using the data in any manner that violates these terms of use. The Data in the CSC WHOIS database is provided by CSC for information purposes only, and to assist persons in obtaining information about or related to a domain name registration record. CSC does not guarantee its accuracy. By submitting a WHOIS query, you agree to abide by the following terms of use: you agree that you may use this Data only for lawful purposes and that under no circumstances will you use this Data to: (1) allow, enable, or otherwise support the transmission of mass unsolicited, commercial advertising or solicitations via direct mail, e-mail, telephone, or facsimile; or (2) enable high volume, automated, electronic processes that apply to CSC (or its computer systems). CSC reserves the right to terminate your access to the WHOIS database in its sole discretion for any violations by you of these terms of use. CSC reserves the right to modify these terms at any time.
 
 Register your domain name at http://www.cscglobal.com
-
-For more information on Whois status codes, please visit https://www.icann.org/resources/pages/epp-status-codes-2014-06-16-en
-

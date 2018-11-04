@@ -2,61 +2,45 @@ Domain Name: alexa.com
 Registry Domain ID: 5324166_DOMAIN_COM-VRSN
 Registrar WHOIS Server: whois.markmonitor.com
 Registrar URL: http://www.markmonitor.com
-Updated Date: 2013-12-21T04:00:02-0800
+Updated Date: 2018-04-30T13:00:45-0700
 Creation Date: 1996-07-16T21:00:00-0700
-Registrar Registration Expiration Date: 2018-07-15T21:00:00-0700
+Registrar Registration Expiration Date: 2019-07-15T00:00:00-0700
 Registrar: MarkMonitor, Inc.
 Registrar IANA ID: 292
 Registrar Abuse Contact Email: abusecomplaints@markmonitor.com
 Registrar Abuse Contact Phone: +1.2083895740
-Domain Status: clientUpdateProhibited
-Domain Status: clientTransferProhibited
-Domain Status: clientDeleteProhibited
-Registry Registrant ID: 
-Registrant Name: Alexa Hostmaster
+Domain Status: clientUpdateProhibited (https://www.icann.org/epp#clientUpdateProhibited)
+Domain Status: clientTransferProhibited (https://www.icann.org/epp#clientTransferProhibited)
+Domain Status: clientDeleteProhibited (https://www.icann.org/epp#clientDeleteProhibited)
+Domain Status: serverUpdateProhibited (https://www.icann.org/epp#serverUpdateProhibited)
+Domain Status: serverTransferProhibited (https://www.icann.org/epp#serverTransferProhibited)
+Domain Status: serverDeleteProhibited (https://www.icann.org/epp#serverDeleteProhibited)
 Registrant Organization: Alexa Internet
-Registrant Street: 37 Graham St, PO Box 29141
-Registrant City: San Francisco
 Registrant State/Province: CA
-Registrant Postal Code: 94129-0141
 Registrant Country: US
-Registrant Phone: +1.4155616900
-Registrant Phone Ext: 
-Registrant Fax: +1.4155616795
-Registrant Fax Ext: 
-Registrant Email: hostmaster@alexa.com
-Registry Admin ID: 
-Admin Name: Alexa Hostmaster
 Admin Organization: Alexa Internet
-Admin Street: 37 Graham St, PO Box 29141
-Admin City: San Francisco
 Admin State/Province: CA
-Admin Postal Code: 94129-0141
 Admin Country: US
-Admin Phone: +1.4155616900
-Admin Phone Ext: 
-Admin Fax: +1.4155616795
-Admin Fax Ext: 
-Admin Email: hostmaster@alexa.com
-Registry Tech ID: 
-Tech Name: Alexa Hostmaster
 Tech Organization: Alexa Internet
-Tech Street: 37 Graham St, PO Box 29141
-Tech City: San Francisco
 Tech State/Province: CA
-Tech Postal Code: 94129-0141
 Tech Country: US
-Tech Phone: +1.4155616900
-Tech Phone Ext: 
-Tech Fax: +1.4155616795
-Tech Fax Ext: 
-Tech Email: hostmaster@alexa.com
 Name Server: ns-1357.awsdns-41.org
-Name Server: ns-440.awsdns-55.com
-Name Server: ns-1756.awsdns-27.co.uk
 Name Server: ns-576.awsdns-08.net
+Name Server: ns-1756.awsdns-27.co.uk
+Name Server: ns-440.awsdns-55.com
+DNSSEC: unsigned
 URL of the ICANN WHOIS Data Problem Reporting System: http://wdprs.internic.net/
->>> Last update of WHOIS database: 2014-10-22T04:08:30-0700 <<<
+>>> Last update of WHOIS database: 2018-11-01T02:14:58-0700 <<<
+
+If certain contact information is not shown for a Registrant, Administrative,
+or Technical contact, and you wish to send a message to these contacts, please
+send your message to whoisrelay@markmonitor.com and specify the domain name in
+the subject line. We will forward that message to the underlying contact.
+
+If you have a legitimate interest in viewing the non-public WHOIS details, send
+your request and the reasons for your request to abusecomplaints@markmonitor.com
+and specify the domain name in the subject line. We will review that request and
+may ask for supporting documentation and explanation.
 
 The Data in MarkMonitor.com's WHOIS database is provided by MarkMonitor.com for
 information purposes, and to assist persons in obtaining information about or
@@ -81,4 +65,7 @@ Professional and Managed Services
 Visit MarkMonitor at http://www.markmonitor.com
 Contact us at +1.8007459229
 In Europe, at +44.02032062220
---
+
+For more information on Whois status codes, please visit
+ https://www.icann.org/resources/pages/epp-status-codes-2014-06-16-en
+

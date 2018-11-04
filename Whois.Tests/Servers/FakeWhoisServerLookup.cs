@@ -1,4 +1,5 @@
-﻿using System.Text;
+﻿using System.Threading.Tasks;
+using Whois.Models;
 
 namespace Whois.Servers
 {
@@ -7,11 +8,14 @@ namespace Whois.Servers
     /// </summary>
     internal class FakeWhoisServerLookup : IWhoisServerLookup
     {
-        public Encoding CurrentEncoding { get; private set; }
-
-        public IWhoisServer Lookup(string domain)
+        public WhoisServer Lookup(string domain)
         {
             return new WhoisServer("com", "test.whois.com");
+        }
+
+        public Task<WhoisServer> LookupAsync(string tld)
+        {
+            return Task.FromResult(Lookup(tld));
         }
     }
 }

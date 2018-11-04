@@ -1,79 +1,70 @@
-
-
-Domain Name: SQUIDOO.COM
+Domain Name: squidoo.com
 Registry Domain ID: 164563557_DOMAIN_COM-VRSN
-Registrar WHOIS Server: whois.enom.com
-Registrar URL: www.enom.com
-Updated Date: 2014-09-29 06:27:50Z
-Creation Date: 2005-06-01 19:47:00Z
-Registrar Registration Expiration Date: 2018-06-01 19:47:00Z
-Registrar: ENOM, INC.
-Registrar IANA ID: 48
-Registrar Abuse Contact Email: abuse@enom.com
-Registrar Abuse Contact Phone: +1.4252982646
-Reseller: NAMECHEAP.COM
-Domain Status: clientTransferProhibited
-Registry Registrant ID: 
-Registrant Name: WHOISGUARD PROTECTED
-Registrant Organization: WHOISGUARD, INC.
-Registrant Street: P.O. BOX 0823-03411
-Registrant City: PANAMA
-Registrant State/Province: PANAMA
-Registrant Postal Code: 00000
-Registrant Country: PA
-Registrant Phone: +507.8365503
-Registrant Phone Ext: 
-Registrant Fax: +51.17057182
+Registrar WHOIS Server: whois.registrar.amazon.com
+Registrar URL: https://registrar.amazon.com
+Updated Date: 2017-06-13T21:47:33.112Z
+Creation Date: 2005-06-01T19:47:32Z
+Registrar Registration Expiration Date: 2019-06-01T19:47:32Z
+Registrar: Amazon Registrar, Inc.
+Registrar IANA ID: 468
+Registrar Abuse Contact Email: registrar-abuse@amazon.com
+Registrar Abuse Contact Phone: +1.2067406200
+Reseller:
+Domain Status: clientTransferProhibited https://icann.org/epp#clientTransferProhibited
+Domain Status: ok https://icann.org/epp#ok
+Registry Registrant ID:
+Registrant Name: On behalf of squidoo.com owner
+Registrant Organization: Whois Privacy Service
+Registrant Street: P.O. Box 81226
+Registrant City: Seattle
+Registrant State/Province: WA
+Registrant Postal Code: 98108-1226
+Registrant Country: US
+Registrant Phone: +1.2065771368
+Registrant Phone Ext:
+Registrant Fax:
 Registrant Fax Ext:
-Registrant Email: 69848A40B0B247D3A199579C096B2734.PROTECT@WHOISGUARD.COM
-Registry Admin ID: 
-Admin Name: WHOISGUARD PROTECTED
-Admin Organization: WHOISGUARD, INC.
-Admin Street: P.O. BOX 0823-03411
-Admin City: PANAMA
-Admin State/Province: PANAMA
-Admin Postal Code: 00000
-Admin Country: PA
-Admin Phone: +507.8365503
-Admin Phone Ext: 
-Admin Fax: +51.17057182
+Registrant Email: owner-9005748@squidoo.com.whoisprivacyservice.org
+Registry Admin ID:
+Admin Name: On behalf of squidoo.com administrative contact
+Admin Organization: Whois Privacy Service
+Admin Street: P.O. Box 81226
+Admin City: Seattle
+Admin State/Province: WA
+Admin Postal Code: 98108-1226
+Admin Country: US
+Admin Phone: +1.2065771368
+Admin Phone Ext:
+Admin Fax:
 Admin Fax Ext:
-Admin Email: 69848A40B0B247D3A199579C096B2734.PROTECT@WHOISGUARD.COM
-Registry Tech ID: 
-Tech Name: WHOISGUARD PROTECTED
-Tech Organization: WHOISGUARD, INC.
-Tech Street: P.O. BOX 0823-03411
-Tech City: PANAMA
-Tech State/Province: PANAMA
-Tech Postal Code: 00000
-Tech Country: PA
-Tech Phone: +507.8365503
-Tech Phone Ext: 
-Tech Fax: +51.17057182
-Tech Fax Ext: 
-Tech Email: 69848A40B0B247D3A199579C096B2734.PROTECT@WHOISGUARD.COM
-Name Server: NS-1254.AWSDNS-28.ORG
-Name Server: NS-1973.AWSDNS-54.CO.UK
-Name Server: NS-382.AWSDNS-47.COM
-Name Server: NS-611.AWSDNS-12.NET
-DNSSEC: unSigned
+Admin Email: admin-9005748@squidoo.com.whoisprivacyservice.org
+Registry Tech ID:
+Tech Name: On behalf of squidoo.com technical contact
+Tech Organization: Whois Privacy Service
+Tech Street: P.O. Box 81226
+Tech City: Seattle
+Tech State/Province: WA
+Tech Postal Code: 98108-1226
+Tech Country: US
+Tech Phone: +1.2065771368
+Tech Phone Ext:
+Tech Fax:
+Tech Fax Ext:
+Tech Email: tech-9005748@squidoo.com.whoisprivacyservice.org
+Name Server: ns-1254.awsdns-28.org
+Name Server: ns-1973.awsdns-54.co.uk
+Name Server: ns-382.awsdns-47.com
+Name Server: ns-611.awsdns-12.net
+DNSSEC: unsigned
 URL of the ICANN WHOIS Data Problem Reporting System: http://wdprs.internic.net/
-Last update of WHOIS database: 2014-09-29 06:27:50Z
+>>> Last update of WHOIS database: 2017-06-13T21:47:33.716Z <<<
 
-The data in this whois database is provided to you for information
-purposes only, that is, to assist you in obtaining information about or
-related to a domain name registration record. We make this information
-available "as is," and do not guarantee its accuracy. By submitting a
-whois query, you agree that you will use this data only for lawful
-purposes and that, under no circumstances will you use this data to: (1)
-enable high volume, automated, electronic processes that stress or load
-this whois database system providing you this information; or (2) allow,
-enable, or otherwise support the transmission of mass unsolicited,
-commercial advertising or solicitations via direct mail, electronic
-mail, or by telephone. The compilation, repackaging, dissemination or
-other use of this data is expressly prohibited without prior written
-consent from us.  
+For more information on Whois status codes, please visit https://www.icann.org/resources/pages/epp
 
-We reserve the right to modify these terms at any time. By submitting 
-this query, you agree to abide by these terms.
-Version 6.3 4/3/2002
+By submitting a query to the Amazon Registrar, Inc. WHOIS database, you agree to abide by the following terms. The data in Amazon Registrar, Inc.'s WHOIS database is provided by Amazon Registrar, Inc. for the sole purpose of assisting you in obtaining information about domain name accuracy. You agree to use this data only for lawful purposes and further agree not to use this data for any unlawful purpose or to: (1) enable, allow, or otherwise support the transmission by email, telephone, or facsimile of commercial advertising or unsolicited bulk email, or (2) enable high volume, automated, electronic processes to collect or compile this data for any purpose, including mining this data for your own personal or commercial purposes. Amazon Registrar, Inc. reserves the right to restrict or terminate your access to the data if you fail to abide by these terms of use. Amazon Registrar, Inc. reserves the right to modify these terms at any time.
+
+Visit Amazon Registrar, Inc. at https://registrar.amazon.com
+Contact us at registrar@amazon.com or +1.2062661000
+
+© 2018, Amazon.com, Inc., or its affiliates
+

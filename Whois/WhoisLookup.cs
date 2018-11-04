@@ -1,76 +1,91 @@
 ﻿using System.Collections.Generic;
 using System.Text;
+using System.Threading.Tasks;
+using Whois.Logging;
+using Whois.Models;
 using Whois.Visitors;
 
 namespace Whois
 {
     /// <summary>
-    /// Looks up WHOIS information for a given domain.
+    /// Looks up WHOIS information
     /// </summary>
     public class WhoisLookup : IWhoisLookup
     {
-        /// <summary>
-        /// Gets the current character encoding that the current WhoisLookup
-        /// object is using.
-        /// </summary>
-        /// <returns>The current character encoding used by the current WhoisLookup.</returns>
-        public Encoding CurrentEncoding { get; private set; }
+        private static readonly ILog Log = LogProvider.GetCurrentClassLogger();
+
+        public WhoisOptions Options { get; set; }
 
         /// <summary>
         /// Gets or sets the visitors.
         /// </summary>
         /// <value>The visitors.</value>
-        public IList<IWhoisVisitor> Visitors { get; set; }
+        public IList<IWhoisVisitor> Visitors { get; }
 
-        /// <summary>
-        /// Initializes a new instance of the <see cref="WhoisLookup"/> class.
-        /// </summary>
-        public WhoisLookup() : this(Encoding.UTF8)
+        public WhoisLookup() : this(WhoisOptions.Defaults)
         {
         }
 
         /// <summary>
         /// Initializes a new instance of the <see cref="WhoisLookup"/> class.
         /// </summary>
-        /// <param name="encoding">The encoding used to read and write strings.</param>
-        public WhoisLookup(Encoding encoding)
+        public WhoisLookup(WhoisOptions options) 
         {
-            CurrentEncoding = encoding;
+            Options = options;
 
             Visitors = new List<IWhoisVisitor>
-                {
-                    // Get initial WHOIS server URL
-                    new WhoisServerVisitor(encoding),
+            {
+                // Validate input
+                new ValidateVisitor(),
 
-                    // Download from initial server
-                    new DownloadVisitor(encoding),
+                // Get initial WHOIS server URL
+                new WhoisServerVisitor(),
 
-                    // Check to see if the results need to be expanded
-                    new ExpandResultsVisitor(encoding),
+                // Download from initial server
+                new DownloadVisitor(),
 
-                    // Check to see if a secondard WHOIS server needs to be queried
-                    new RedirectVisitor(encoding),
+                // Check to see if a secondard WHOIS server needs to be queried
+                new RedirectVisitor(),
 
-                    // Populate Structured WHOIS object
-                    new PatternExtractorVisitor(encoding)
-                };
+                // Populate Structured WHOIS object
+                new PatternExtractorVisitor()
+            };
         }
 
-        /// <summary>
-        /// Lookups the WHOIS information for the specified <see cref="domain"/>.
-        /// </summary>
-        /// <param name="domain">The domain.</param>
-        /// <returns></returns>
-        public WhoisRecord Lookup(string domain)
+        public WhoisResponse Lookup(string domain)
         {
-            var record = new WhoisRecord { Domain = domain };
+            return AsyncHelper.RunSync(() => LookupAsync(domain));
+        }
+
+        public WhoisResponse Lookup(string domain, Encoding encoding)
+        {
+            return AsyncHelper.RunSync(() => LookupAsync(domain, encoding));
+        }
+
+        public async Task<WhoisResponse> LookupAsync(string domain)
+        {
+            return await LookupAsync(domain, Options.DefaultEncoding);
+        }
+
+        public async Task<WhoisResponse> LookupAsync(string domain, Encoding encoding)
+        {
+            Log.Debug("Looking up WHOIS response for: {0}", domain);
+
+            var state = new LookupState
+            {
+                Options = Options.Clone(),
+                Domain = domain,
+                ParseResponse = true
+            };
+
+            state.Options.DefaultEncoding = encoding;
 
             foreach (var visitor in Visitors)
             {
-                record = visitor.Visit(record);
+                state = await visitor.Visit(state);
             }
 
-            return record;
+            return state.Response;
         }
     }
 }

@@ -2,33 +2,22 @@
 [ restricted to network administration purposes. For further information,     ]
 [ use 'whois -h whois.jprs.jp help'. To suppress Japanese output, add'/e'     ]
 [ at the end of command, e.g. 'whois -h whois.jprs.jp xxx/e'.                 ]
-[                                                                             ]
-[ Notice -------------------------------------------------------------------- ]
-[ JPRS will change JPRS WHOIS (web-based and port 43 Whois service) about the ]
-[ following two points on January 18, 2015.                                   ]
-[                                                                             ]
-[  1) Change of the format of response about gTLD domain name                 ]
-[  2) Change of the character encoding                                        ]
-[                                                                             ]
-[ For further information, please see the following webpage.                  ]
-[ http://jprs.jp/whatsnew/notice/2014/20140319-whois.html (only in Japanese)  ]
-[ --------------------------------------------------------------------------- ]
 
-Domain Information: [$B%I%a%$%s>pJs(B]
-a. [$B%I%a%$%sL>(B]                 SAKURA.NE.JP
-b. [$B$M$C$H$o!<$/$5!<$S$9$a$$(B]    
-c. [$B%M%C%H%o!<%/%5!<%S%9L>(B]     $B$5$/$i%$%s%?!<%M%C%H(B
+Domain Information: [ドメイン情報]
+a. [ドメイン名]                 SAKURA.NE.JP
+b. [ねっとわーくさーびすめい]   さくらいんたーねっと
+c. [ネットワークサービス名]     さくらインターネット
 d. [Network Service Name]       SAKURA Internet
-k. [$BAH?%<oJL(B]                   $B%M%C%H%o!<%/%5!<%S%9(B
+k. [組織種別]                   ネットワークサービス
 l. [Organization Type]          Network Service
-m. [$BEPO?C4Ev<T(B]                 TU053JP
-n. [$B5;=QO"MmC4Ev<T(B]             TS22695JP
-n. [$B5;=QO"MmC4Ev<T(B]             KW419JP
-p. [$B%M!<%`%5!<%P(B]               ns1.dns.ne.jp
-p. [$B%M!<%`%5!<%P(B]               ns2.dns.ne.jp
-s. [$B=pL>80(B]                     
-[$B>uBV(B]                          Connected (2015/01/31)
-[$BEPO?G/7nF|(B]                    1997/01/13
-[$B@\B3G/7nF|(B]                    1997/02/10
-[$B:G=*99?7(B]                      2014/02/01 01:09:56 (JST)
+m. [登録担当者]                 KT48024JP
+n. [技術連絡担当者]             TS22695JP
+n. [技術連絡担当者]             KW419JP
+p. [ネームサーバ]               ns1.dns.ne.jp
+p. [ネームサーバ]               ns2.dns.ne.jp
+s. [署名鍵]                     
+[状態]                          Connected (2019/07/31)
+[登録年月日]                    2017/07/21
+[接続年月日]                    2017/07/21
+[最終更新]                      2018/08/01 01:03:45 (JST)
 

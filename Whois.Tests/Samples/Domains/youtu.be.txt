@@ -39,7 +39,7 @@ Status:	NOT AVAILABLE
 Registered:	Mon Dec 24 2007
 
 Registrant:
-	Not shown, please visit www.dns.be for webbased whois.
+	Not shown, please visit www.dnsbelgium.be for webbased whois.
 
 Registrar Technical Contacts:
 
@@ -49,13 +49,13 @@ Registrar:
 
 Nameservers:
 	ns4.google.com
+	ns3.google.com
 	ns1.google.com
 	ns2.google.com
-	ns3.google.com
 
 Keys:
 
 Flags:
 	clientTransferProhibited
 
-Please visit www.dns.be for more info.
+Please visit www.dnsbelgium.be for more info.

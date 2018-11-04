@@ -2,63 +2,37 @@ Domain Name: MEDIAFIRE.COM
 Registry Domain ID: 89237004_DOMAIN_COM-VRSN
 Registrar WHOIS Server: whois.godaddy.com
 Registrar URL: http://www.godaddy.com
-Update Date: 2013-01-04 14:52:22
-Creation Date: 2002-08-11 10:31:16
-Registrar Registration Expiration Date: 2016-08-11 10:31:16
+Updated Date: 2018-08-30T18:04:15Z
+Creation Date: 2002-08-11T15:31:16Z
+Registrar Registration Expiration Date: 2021-08-11T15:31:16Z
 Registrar: GoDaddy.com, LLC
 Registrar IANA ID: 146
 Registrar Abuse Contact Email: abuse@godaddy.com
-Registrar Abuse Contact Phone: +1.480-624-2505
-Domain Status: clientTransferProhibited
-Domain Status: clientUpdateProhibited
-Domain Status: clientRenewProhibited
-Domain Status: clientDeleteProhibited
-Registry Registrant ID: 
-Registrant Name: Domain Administrator
+Registrar Abuse Contact Phone: +1.4806242505
+Domain Status: clientTransferProhibited http://www.icann.org/epp#clientTransferProhibited
+Domain Status: clientUpdateProhibited http://www.icann.org/epp#clientUpdateProhibited
+Domain Status: clientRenewProhibited http://www.icann.org/epp#clientRenewProhibited
+Domain Status: clientDeleteProhibited http://www.icann.org/epp#clientDeleteProhibited
 Registrant Organization: MediaFire, LLC
-Registrant Street: 19241 David Memorial Drive #170
-Registrant City: Shenandoah
 Registrant State/Province: Texas
-Registrant Postal Code: 77385
-Registrant Country: United States
-Registrant Phone: +1.8776880068
-Registrant Phone Ext: 
-Registrant Fax: 
-Registrant Fax Ext: 
-Registrant Email: godaddy@mediafire.com
-Registry Admin ID: 
-Admin Name: Domain Administrator
-Admin Organization: MediaFire, LLC
-Admin Street: 19241 David Memorial Drive #170
-Admin City: Shenandoah
-Admin State/Province: Texas
-Admin Postal Code: 77385
-Admin Country: United States
-Admin Phone: +1.8776880068
-Admin Phone Ext: 
-Admin Fax: 
-Admin Fax Ext: 
-Admin Email: godaddy@mediafire.com
-Registry Tech ID: 
-Tech Name: Domain Administrator
-Tech Organization: MediaFire, LLC
-Tech Street: 19241 David Memorial Drive #170
-Tech City: Shenandoah
-Tech State/Province: Texas
-Tech Postal Code: 77385
-Tech Country: United States
-Tech Phone: +1.8776880068
-Tech Phone Ext: 
-Tech Fax: 
-Tech Fax Ext: 
-Tech Email: godaddy@mediafire.com
-Name Server: NS-324.AWSDNS-40.COM
-Name Server: NS-921.AWSDNS-51.NET
-Name Server: NS-1179.AWSDNS-19.ORG
-Name Server: NS-1613.AWSDNS-09.CO.UK
-DNSSEC: unsigned
+Registrant Country: US
+Registrant Email: Select Contact Domain Holder link at https://www.godaddy.com/whois/results.aspx?domain=MEDIAFIRE.COM
+Admin Email: Select Contact Domain Holder link at https://www.godaddy.com/whois/results.aspx?domain=MEDIAFIRE.COM
+Tech Email: Select Contact Domain Holder link at https://www.godaddy.com/whois/results.aspx?domain=MEDIAFIRE.COM
+Name Server: KEN.NS.CLOUDFLARE.COM
+Name Server: LISA.NS.CLOUDFLARE.COM
+DNSSEC: signedDelegation
 URL of the ICANN WHOIS Data Problem Reporting System: http://wdprs.internic.net/
-Last update of WHOIS database: 2014-10-22T11:00:00Z
+>>> Last update of WHOIS database: 2018-11-01T09:00:00Z <<<
+
+For more information on Whois status codes, please visit https://www.icann.org/resources/pages/epp-status-codes-2014-06-16-en
+
+Notes: 
+
+IMPORTANT: Port43 will provide the ICANN-required minimum data set per 
+ICANN Temporary Specification, adopted 17 May 2018. 
+Visit https://whois.godaddy.com to look up contact data for domains 
+not covered by GDPR policy.
 
 The data contained in GoDaddy.com, LLC's WhoIs database,
 while believed by the company to be reliable, is provided "as is"
