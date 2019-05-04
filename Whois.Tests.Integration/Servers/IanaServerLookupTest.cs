@@ -21,5 +21,13 @@ namespace Whois
 
             Assert.AreEqual("whois.verisign-grs.com", result.ParsedWhoisServer.Url);
         }
+ 
+        [Test]
+        public void TestLookupComBr()
+        {
+            var result = lookup.Lookup("br");
+
+            Assert.AreEqual("whois.registro.br", result.ParsedWhoisServer.Url);
+        }
     }
 }
