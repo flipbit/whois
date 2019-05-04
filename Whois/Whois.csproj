@@ -13,6 +13,7 @@
    <RootNamespace>Whois</RootNamespace>
    </PropertyGroup>
   <ItemGroup>
+    <None Remove="Resources\Patterns\Domains\Cira.txt" />
     <None Remove="Resources\Patterns\Domains\Csc.txt" />
     <None Remove="Resources\Patterns\Domains\NicBr.txt" />
     <None Remove="Resources\Patterns\Domains\Nominet.txt" />
@@ -22,6 +23,7 @@
     <None Remove="Resources\Patterns\Servers\Iana.txt" />
   </ItemGroup>
   <ItemGroup>
+    <EmbeddedResource Include="Resources\Patterns\Domains\Cira.txt" />
     <EmbeddedResource Include="Resources\Patterns\Domains\NicBr.txt" />
     <EmbeddedResource Include="Resources\Patterns\Domains\Nominet.txt" />
     <EmbeddedResource Include="Resources\Patterns\Domains\RegistrarSafe.txt" />
