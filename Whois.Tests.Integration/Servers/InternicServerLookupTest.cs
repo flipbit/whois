@@ -57,9 +57,9 @@ namespace Whois.Servers
         [Test]
         public void TestGetNameServerForBrDomain()
         {
-            var server = lookup.Lookup("com.br");
+            var server = lookup.Lookup("br");
 
-            Assert.AreEqual("whois.internic.net", server.Url);
+            Assert.AreEqual("registro.br", server.Url);
         }
 
         [Test]

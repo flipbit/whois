@@ -22,6 +22,9 @@ namespace Whois.Visitors
         {
             matcher = new TokenMatcher();
 
+            // Support UTC DateTimes
+            matcher.RegisterTransformer<ToDateTimeUtcTransformer>();
+
             Embedded.Patterns.Domains.ForEach((name, pattern) =>
             {
                 matcher.AddPattern(pattern, name);

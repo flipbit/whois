@@ -43,10 +43,7 @@ namespace Whois.Servers
         [Test]
         public void TestLookupUnknown()
         {
-            var server = lookup.Lookup("unknown-tld");
-
-            Assert.AreEqual("unknown-tld", server.Tld);
-            Assert.AreEqual("whois.internic.net", server.Url);
+            Assert.Throws<WhoisException>(() => { lookup.Lookup("unknown-tld"); });
         }
 
         [Test]

@@ -2,19 +2,20 @@
   <PropertyGroup>
    <TargetFrameworks>netstandard2.0;net452</TargetFrameworks>
    <GeneratePackageOnBuild>true</GeneratePackageOnBuild>
-   <Version>2.0.0.0</Version>
+   <Version>2.0.1.0</Version>
    <Authors>Chris Wood</Authors>
    <Company>flipbit.co.uk</Company>
    <PackageProjectUrl>http://github.com/flipbit/whois</PackageProjectUrl>
    <PackageLicenseUrl>https://raw.github.com/flipbit/whois/master/LICENSE.md</PackageLicenseUrl>
    <PackageTags>whois</PackageTags>
    <Description>An Extensible WHOIS Library</Description>
-   <Copyright>Chris Wood 2018</Copyright>
+   <Copyright>Chris Wood 2019</Copyright>
    <RootNamespace>Whois</RootNamespace>
    </PropertyGroup>
   <ItemGroup>
     <None Remove="Resources\Patterns\Domains\Cira.txt" />
     <None Remove="Resources\Patterns\Domains\Csc.txt" />
+    <None Remove="Resources\Patterns\Domains\NicBr.txt" />
     <None Remove="Resources\Patterns\Domains\Nominet.txt" />
     <None Remove="Resources\Patterns\Domains\RegistrarSafe.txt" />
     <None Remove="Resources\Patterns\Redirects\Iana.txt" />
@@ -23,6 +24,7 @@
   </ItemGroup>
   <ItemGroup>
     <EmbeddedResource Include="Resources\Patterns\Domains\Cira.txt" />
+    <EmbeddedResource Include="Resources\Patterns\Domains\NicBr.txt" />
     <EmbeddedResource Include="Resources\Patterns\Domains\Nominet.txt" />
     <EmbeddedResource Include="Resources\Patterns\Domains\RegistrarSafe.txt" />
     <EmbeddedResource Include="Resources\Patterns\Redirects\VerisignGrs.txt" />
@@ -34,11 +36,11 @@
     <Folder Include="Properties\" />
   </ItemGroup>
   <ItemGroup>
-    <PackageReference Include="LibLog" Version="5.0.2">
+    <PackageReference Include="LibLog" Version="5.0.6">
       <PrivateAssets>all</PrivateAssets>
       <IncludeAssets>runtime; build; native; contentfiles; analyzers</IncludeAssets>
     </PackageReference>
     <PackageReference Include="Microsoft.CSharp" Version="4.5.0" />
-    <PackageReference Include="Tokenizer" Version="2.0.3" />
+    <PackageReference Include="Tokenizer" Version="2.0.6" />
   </ItemGroup>
 </Project>

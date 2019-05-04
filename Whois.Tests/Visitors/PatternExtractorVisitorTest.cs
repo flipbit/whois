@@ -13,6 +13,8 @@ namespace Whois.Visitors
         [SetUp]
         public void SetUp()
         {
+            SerilogConfig.Init();
+
             visitor = new PatternExtractorVisitor();
         }
 
@@ -40,10 +42,10 @@ namespace Whois.Visitors
             Assert.AreEqual(new DateTime(2019, 05, 17, 00, 0, 00), record.Expiration.Value.ToUniversalTime());
             Assert.AreEqual("NOM-IQ Ltd dba Com Laude", record.Registrar.Name);
             Assert.AreEqual("470", record.Registrar.IanaId);
-            Assert.AreEqual("clientUpdateProhibited https://www.icann.org/epp#clientUpdateProhibited", record.DomainStatus[0]);
-            Assert.AreEqual("serverDeleteProhibited https://www.icann.org/epp#serverDeleteProhibited", record.DomainStatus[1]);
-            Assert.AreEqual("serverTransferProhibited https://www.icann.org/epp#serverTransferProhibited", record.DomainStatus[2]);
-            Assert.AreEqual("serverUpdateProhibited https://www.icann.org/epp#serverUpdateProhibited", record.DomainStatus[3]);
+            Assert.AreEqual("clientUpdateProhibited", record.DomainStatus[0]);
+            Assert.AreEqual("serverDeleteProhibited", record.DomainStatus[1]);
+            Assert.AreEqual("serverTransferProhibited", record.DomainStatus[2]);
+            Assert.AreEqual("serverUpdateProhibited", record.DomainStatus[3]);
             Assert.AreEqual("Domain Administrator", record.Registrant.Name);
             Assert.AreEqual("Adobe Inc.", record.Registrant.Organization);
             Assert.AreEqual("345 Park Avenue", record.Registrant.Address[0]);
@@ -93,6 +95,37 @@ namespace Whois.Visitors
             Assert.AreEqual("Unsigned Delegation", record.DnsSecStatus);
             Assert.AreEqual("abuse@comlaude.com", record.Registrar.AbuseEmail);
             Assert.AreEqual("+44.2074218250", record.Registrar.AbuseTelephoneNumber);
+        }
+        
+        [Test]
+        public void TestParseBrRecord()
+        {
+            var sample = File.ReadAllText("..\\..\\..\\Samples\\Domains\\001hosting.com.br.txt");
+
+            var state = new LookupState
+            {
+                Response = new WhoisResponse(sample),
+                Options = new WhoisOptions {  ParseWhoisResponse = true }
+            };
+            
+            visitor.Visit(state);
+
+            var record = state.Response.ParsedResponse;
+
+            Assert.AreEqual("001hosting.com.br", record.DomainName);
+            Assert.AreEqual("350.562.738-05", record.RegistryDomainId);
+            Assert.AreEqual("Ultra Provedor", record.Registrar.Name);
+            Assert.AreEqual(new DateTime(2019, 4, 6, 0, 0, 0), record.Updated.Value.ToUniversalTime());
+            Assert.AreEqual(new DateTime(2001, 9, 19, 0, 0, 0), record.Registered.Value.ToUniversalTime());
+            Assert.AreEqual(new DateTime(2020, 9, 19, 0, 0, 0), record.Expiration.Value.ToUniversalTime());
+            Assert.AreEqual("ULPRO5", record.Registrant.Name);
+            Assert.AreEqual("ULPRO5", record.AdminContact.Name);
+            Assert.AreEqual("ULPRO5", record.TechnicalContact.Name);
+
+            Assert.AreEqual(3, record.NameServers.Count);
+            Assert.AreEqual("ns1.ultraprovedor.com.br", record.NameServers[0]);
+            Assert.AreEqual("ns2.ultraprovedor.com.br", record.NameServers[1]);
+            Assert.AreEqual("ns3.ultraprovedor.com.br", record.NameServers[2]);
         }
     }
 }
