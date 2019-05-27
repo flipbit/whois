@@ -3,22 +3,19 @@
 [ use 'whois -h whois.jprs.jp help'. To suppress Japanese output, add'/e'     ]
 [ at the end of command, e.g. 'whois -h whois.jprs.jp xxx/e'.                 ]
 
-Domain Information: [ドメイン情報]
-a. [ドメイン名]                 HATENA.NE.JP
-b. [ねっとわーくさーびすめい]   はてな
-c. [ネットワークサービス名]     はてな
+Domain Information:
+a. [Domain Name]                HATENA.NE.JP
 d. [Network Service Name]       hatena
-k. [組織種別]                   ネットワークサービス
 l. [Organization Type]          Network Service
-m. [登録担当者]                 YK52331JP
-n. [技術連絡担当者]             DT033JP
-p. [ネームサーバ]               ns-1239.awsdns-26.org
-p. [ネームサーバ]               ns-1574.awsdns-04.co.uk
-p. [ネームサーバ]               ns-451.awsdns-56.com
-p. [ネームサーバ]               ns-947.awsdns-54.net
-s. [署名鍵]                     
-[状態]                          Connected (2019/03/31)
-[登録年月日]                    2014/03/18
-[接続年月日]                    2014/03/18
-[最終更新]                      2018/06/25 11:55:26 (JST)
+m. [Administrative Contact]     YK52331JP
+n. [Technical Contact]          DT033JP
+p. [Name Server]                ns-1239.awsdns-26.org
+p. [Name Server]                ns-1574.awsdns-04.co.uk
+p. [Name Server]                ns-451.awsdns-56.com
+p. [Name Server]                ns-947.awsdns-54.net
+s. [Signing Key]
+[State]                         Connected (2020/03/31)
+[Registered Date]               2014/03/18
+[Connected Date]                2014/03/18
+[Last Update]                   2019/04/01 01:07:14 (JST)
 

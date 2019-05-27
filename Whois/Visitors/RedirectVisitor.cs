@@ -45,13 +45,16 @@ namespace Whois.Visitors
             var pattern = Embedded.Patterns.Redirects.VerisignGrs; 
 
             var tokenizer = new TokenMatcher();
-            tokenizer.AddPattern(pattern, "verisign-grs.com");
+            tokenizer.RegisterTemplate(pattern, "verisign-grs.com");
 
-            if (tokenizer.TryMatch<WhoisRedirect>(response.Content, out var match))
+            var matchResult = tokenizer.Match<WhoisRedirect>(response.Content);
+            var match = matchResult.BestMatch;
+
+            if (match != null && match.Success)
             {
-                Log.Debug("Found redirect for {0} to {1}", response.Domain, match.Result.Url);
+                Log.Debug("Found redirect for {0} to {1}", response.Domain, match.Value.Url);
 
-                redirect = match.Result;
+                redirect = match.Value;
 
                 if (string.IsNullOrEmpty(redirect.Url) == false)
                 {

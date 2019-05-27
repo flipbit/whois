@@ -3,21 +3,18 @@
 [ use 'whois -h whois.jprs.jp help'. To suppress Japanese output, add'/e'     ]
 [ at the end of command, e.g. 'whois -h whois.jprs.jp xxx/e'.                 ]
 
-Domain Information: [ドメイン情報]
-a. [ドメイン名]                 OCN.NE.JP
-b. [ねっとわーくさーびすめい]   おーぷんこんぴゅーたねっとわーく
-c. [ネットワークサービス名]     オープンコンピュータネットワーク
+Domain Information:
+a. [Domain Name]                OCN.NE.JP
 d. [Network Service Name]       Open Computer Network
-k. [組織種別]                   ネットワークサービス
 l. [Organization Type]          Network Service
-m. [登録担当者]                 MO081JP
-n. [技術連絡担当者]             KK551JP
-n. [技術連絡担当者]             MO081JP
-p. [ネームサーバ]               ns1.ocn.ad.jp
-p. [ネームサーバ]               ns2.ocn.ad.jp
-s. [署名鍵]                     
-[状態]                          Connected (2018/11/30)
-[登録年月日]                    1996/11/19
-[接続年月日]                    1996/12/02
-[最終更新]                      2017/12/01 01:07:24 (JST)
+m. [Administrative Contact]     MO081JP
+n. [Technical Contact]          KK551JP
+n. [Technical Contact]          MO081JP
+p. [Name Server]                ns1.ocn.ad.jp
+p. [Name Server]                ns2.ocn.ad.jp
+s. [Signing Key]
+[State]                         Connected (2019/11/30)
+[Registered Date]               1996/11/19
+[Connected Date]                1996/12/02
+[Last Update]                   2018/12/01 01:05:33 (JST)
 

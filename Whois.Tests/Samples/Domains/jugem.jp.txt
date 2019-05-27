@@ -3,31 +3,27 @@
 [ use 'whois -h whois.jprs.jp help'. To suppress Japanese output, add'/e'     ]
 [ at the end of command, e.g. 'whois -h whois.jprs.jp xxx/e'.                 ]
 
-Domain Information: [ドメイン情報]
+Domain Information:
 [Domain Name]                   JUGEM.JP
 
-[登録者名]                      GMOペパボ株式会社
 [Registrant]                    GMO Pepabo, Inc.
 
 [Name Server]                   dns0.jugem.jp
 [Name Server]                   dns1.jugem.jp
-[Signing Key]                   
+[Signing Key]
 
-[登録年月日]                    2004/06/28
-[有効期限]                      2019/06/30
-[状態]                          Active
-[最終更新]                      2018/07/01 01:05:10 (JST)
+[Created on]                    2004/06/28
+[Expires on]                    2019/06/30
+[Status]                        Active
+[Last Updated]                  2018/07/01 01:05:10 (JST)
 
-Contact Information: [公開連絡窓口]
-[名前]                          佐藤　健太郎
+Contact Information:
 [Name]                          Kentaro Sato
 [Email]                         admin@muumuu-domain.com
-[Web Page]                       
-[郵便番号]                      150-8512
-[住所]                          東京都渋谷区 桜丘町26番1号
-                                セルリアンタワー
+[Web Page]
+[Postal code]                   150-8512
 [Postal Address]                Cerulean Tower
                                 26-1 Sakuragaoka-cho Shibuya-ku
-[電話番号]                      03-5456-2622
-[FAX番号]                       03-5456-2633
+[Phone]                         03-5456-2622
+[Fax]                           03-5456-2633
 

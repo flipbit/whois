@@ -27,7 +27,7 @@ namespace Whois.Visitors
 
             Embedded.Patterns.Domains.ForEach((name, pattern) =>
             {
-                matcher.AddPattern(pattern, name);
+                matcher.RegisterTemplate(pattern, name);
             });
         }
 
@@ -40,11 +40,14 @@ namespace Whois.Visitors
 
             try
             {
-                if (matcher.TryMatch<ParsedWhoisResponse>(state.Response.Content, out var match))
-                {
-                    Log.Debug("Parsed WHOIS data using pattern {0} - {1} replacement(s) made.", match.Template.Name, match.Matches);
+                var matchResult = Parse(state.Response.Content);
+                var match = matchResult.BestMatch;
 
-                    state.Response.ParsedResponse = match.Result;
+                if (match != null && match.Success)
+                {
+                    Log.Debug("Parsed WHOIS data using pattern {0} - {1} replacement(s) made.", match.Template.Name, match.Tokens.Matches.Count);
+
+                    state.Response.ParsedResponse = match.Value;
                 }
                 else
                 {
@@ -61,14 +64,19 @@ namespace Whois.Visitors
             return Task.FromResult(state);
         }
 
+        public TokenMatcherResult<ParsedWhoisResponse> Parse(string whoisContent)
+        {
+            return matcher.Match<ParsedWhoisResponse>(whoisContent);
+        }
+
         public void AddPattern(string content, string name)
         {
-            matcher.AddPattern(content, name);
+            matcher.RegisterTemplate(content, name);
         }
 
         public void ClearPatterns()
         {
-            matcher.ClearPatterns();
+            matcher.Templates.Clear();
         }
 
         public void RegisterPatternValidator<T>() where T : ITokenValidator

@@ -14,9 +14,12 @@ namespace Whois.Visitors
 
         public async Task<LookupState> Visit(LookupState state)
         {
+            var domainName = state.Domain;
+            if (domainName.EndsWith("jp")) domainName += "/e";
+
             using (var tcpReader = TcpReaderFactory.Create())
             {
-                var response = await tcpReader.Read(state.WhoisServer.Url, 43, state.Domain, state.Options.DefaultEncoding);
+                var response = await tcpReader.Read(state.WhoisServer.Url, 43, domainName, state.Options.DefaultEncoding);
 
                 state.Response = new WhoisResponse
                 {

@@ -3,10 +3,9 @@
 [ use 'whois -h whois.jprs.jp help'. To suppress Japanese output, add'/e'     ]
 [ at the end of command, e.g. 'whois -h whois.jprs.jp xxx/e'.                 ]
 
-Domain Information: [ドメイン情報]
+Domain Information:
 [Domain Name]                   AMEBLO.JP
 
-[登録者名]                      株式会社サイバーエージェント
 [Registrant]                    CyberAgent, Inc.
 
 [Name Server]                   a1-5.akam.net
@@ -15,25 +14,20 @@ Domain Information: [ドメイン情報]
 [Name Server]                   a4-64.akam.net
 [Name Server]                   a6-65.akam.net
 [Name Server]                   a7-66.akam.net
-[Signing Key]                   
+[Signing Key]
 
-[登録年月日]                    2004/07/30
-[有効期限]                      2019/07/31
-[状態]                          Active
-[最終更新]                      2018/08/01 01:05:09 (JST)
+[Created on]                    2004/07/30
+[Expires on]                    2019/07/31
+[Status]                        Active
+[Last Updated]                  2018/08/01 01:05:09 (JST)
 
-Contact Information: [公開連絡窓口]
-[名前]                          株式会社サイバーエージェント
+Contact Information:
 [Name]                          CyberAgent, Inc.
 [Email]                         dns-ssl-info@cyberagent.co.jp
-[Web Page]                       
-[郵便番号]                      150-0044
-[住所]                          東京都渋谷区
-                                円山町 19-1
-                                渋谷プライムプラザ2F
+[Web Page]
+[Postal code]                   150-0044
 [Postal Address]                Shibuya-ku
                                 19-1 Maruyamacho
                                 Shibuya Prime Plaza 2F
-[電話番号]                      03-5459-6150
-[FAX番号]                       03-5784-7070
-
+[Phone]                         03-5459-6150
+[Fax]                           03-5784-7070

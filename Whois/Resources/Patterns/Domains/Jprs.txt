@@ -1,0 +1,25 @@
+﻿---
+#
+# JPRS Template for .jp domains
+#
+name: JPRS
+
+hint: JPRS database provides information on network administration.
+
+outOfOrder: true
+---
+[ JPRS database provides information on network administration. Its use is    ]
+[ restricted to network administration purposes. For further information,     ]
+[ use 'whois -h whois.jprs.jp help'. To suppress Japanese output, add'/e'     ]
+[ at the end of command, e.g. 'whois -h whois.jprs.jp xxx/e'.                 ]
+
+Domain Information:
+a. [Domain Name]                {DomainName!$:IsDomainName, ToLower()}
+g. [Organization]               {Registrant.Name?$}
+m. [Administrative Contact]     {AdminContact.Name?$}
+n. [Technical Contact]          {TechnicalContact.Name?$}
+p. [Name Server]                {NameServers$*}
+[Registered Date]               {Registered?$:ToDateTime("yyyy/MM/dd")}
+[Connected Date]                {Registered?$:ToDateTime("yyyy/MM/dd")}
+[Last Update]                   {Updated?$:SubstringBefore(' '), ToDateTime("yyyy/MM/dd")}
+

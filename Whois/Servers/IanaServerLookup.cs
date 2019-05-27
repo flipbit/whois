@@ -28,7 +28,8 @@ namespace Whois.Servers
 
             // Reflect the raw response onto a ParsedWhoisServer object
             var parsed = new Tokenizer()
-                .Parse<ParsedWhoisServer>(Embedded.Patterns.Servers.Iana, content);
+                .Tokenize<ParsedWhoisServer>(Embedded.Patterns.Servers.Iana, content)
+                .Value;
 
             var response = new WhoisServer(tld, parsed.Url);
 

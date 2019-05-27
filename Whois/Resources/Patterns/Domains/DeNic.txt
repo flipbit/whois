@@ -1,0 +1,7 @@
+﻿---
+#
+# DeNIC eG Template for .de domains
+#
+name: DeNIC 
+---
+Domain: {DomainName!$:IsDomainName, ToLower}

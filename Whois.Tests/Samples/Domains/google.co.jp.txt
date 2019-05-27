@@ -3,22 +3,19 @@
 [ use 'whois -h whois.jprs.jp help'. To suppress Japanese output, add'/e'     ]
 [ at the end of command, e.g. 'whois -h whois.jprs.jp xxx/e'.                 ]
 
-Domain Information: [ドメイン情報]
-a. [ドメイン名]                 GOOGLE.CO.JP
-e. [そしきめい]                 ぐーぐるかぶしきかいしゃ
-f. [組織名]                     グーグル株式会社
+Domain Information:
+a. [Domain Name]                GOOGLE.CO.JP
 g. [Organization]               Google Japan
-k. [組織種別]                   株式会社
 l. [Organization Type]          corporation
-m. [登録担当者]                 DL152JP
-n. [技術連絡担当者]             TW124137JP
-p. [ネームサーバ]               ns1.google.com
-p. [ネームサーバ]               ns2.google.com
-p. [ネームサーバ]               ns3.google.com
-p. [ネームサーバ]               ns4.google.com
-s. [署名鍵]                     
-[状態]                          Connected (2019/03/31)
-[登録年月日]                    2001/03/22
-[接続年月日]                    2001/03/22
-[最終更新]                      2018/04/01 01:06:23 (JST)
+m. [Administrative Contact]     DL152JP
+n. [Technical Contact]          TW124137JP
+p. [Name Server]                ns1.google.com
+p. [Name Server]                ns2.google.com
+p. [Name Server]                ns3.google.com
+p. [Name Server]                ns4.google.com
+s. [Signing Key]
+[State]                         Connected (2020/03/31)
+[Registered Date]               2001/03/22
+[Connected Date]                2001/03/22
+[Last Update]                   2019/04/01 01:05:59 (JST)
 

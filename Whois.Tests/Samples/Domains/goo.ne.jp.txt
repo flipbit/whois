@@ -3,25 +3,19 @@
 [ use 'whois -h whois.jprs.jp help'. To suppress Japanese output, add'/e'     ]
 [ at the end of command, e.g. 'whois -h whois.jprs.jp xxx/e'.                 ]
 
-Domain Information: [ドメイン情報]
-a. [ドメイン名]                 GOO.NE.JP
-b. [ねっとわーくさーびすめい]   つうしんによりあくせすされるでんしめでぃあ
-                                じょうでのあらゆるじょうほうげんのいんでっくすさくせいおよびけんさく
-                                ・こうこくさーびす
-c. [ネットワークサービス名]     通信によりアクセスされる電子メディア上での
-                                あらゆる情報源のインデックス作成及び検索・広告サービス
+Domain Information:
+a. [Domain Name]                GOO.NE.JP
 d. [Network Service Name]       GOO
-k. [組織種別]                   ネットワークサービス
 l. [Organization Type]          Network Service
-m. [登録担当者]                 HS8389JP
-n. [技術連絡担当者]             SH820JP
-p. [ネームサーバ]               ns1.goo.ne.jp
-p. [ネームサーバ]               ns2.goo.ne.jp
-p. [ネームサーバ]               ns.intervia.ad.jp
-p. [ネームサーバ]               ns.via.or.jp
-s. [署名鍵]                     
-[状態]                          Connected (2019/06/30)
-[登録年月日]                    2004/06/15
-[接続年月日]                    2004/06/15
-[最終更新]                      2018/07/01 01:05:35 (JST)
+m. [Administrative Contact]     HS8389JP
+n. [Technical Contact]          SH820JP
+p. [Name Server]                ns1.goo.ne.jp
+p. [Name Server]                ns2.goo.ne.jp
+p. [Name Server]                ns.intervia.ad.jp
+p. [Name Server]                ns.via.or.jp
+s. [Signing Key]
+[State]                         Connected (2019/06/30)
+[Registered Date]               2004/06/15
+[Connected Date]                2004/06/15
+[Last Update]                   2018/07/01 01:05:35 (JST)
 

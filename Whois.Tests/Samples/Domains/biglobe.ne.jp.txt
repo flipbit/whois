@@ -3,20 +3,17 @@
 [ use 'whois -h whois.jprs.jp help'. To suppress Japanese output, add'/e'     ]
 [ at the end of command, e.g. 'whois -h whois.jprs.jp xxx/e'.                 ]
 
-Domain Information: [ドメイン情報]
-a. [ドメイン名]                 BIGLOBE.NE.JP
-b. [ねっとわーくさーびすめい]   びっぐろーぶさーびす
-c. [ネットワークサービス名]     BIGLOBEサービス
+Domain Information:
+a. [Domain Name]                BIGLOBE.NE.JP
 d. [Network Service Name]       BIGLOBE Services
-k. [組織種別]                   ネットワークサービス
 l. [Organization Type]          Network Service
-m. [登録担当者]                 HT40618JP
-n. [技術連絡担当者]             HT40618JP
-p. [ネームサーバ]               ns02.mesh.ad.jp
-p. [ネームサーバ]               ns03.mesh.ad.jp
-s. [署名鍵]                     
-[状態]                          Connected (2018/12/31)
-[登録年月日]                    1996/12/17
-[接続年月日]                    1997/01/07
-[最終更新]                      2018/06/06 10:56:24 (JST)
+m. [Administrative Contact]     HT40618JP
+n. [Technical Contact]          HT40618JP
+p. [Name Server]                ns02.mesh.ad.jp
+p. [Name Server]                ns03.mesh.ad.jp
+s. [Signing Key]
+[State]                         Connected (2019/12/31)
+[Registered Date]               1996/12/17
+[Connected Date]                1997/01/07
+[Last Update]                   2019/01/01 01:02:11 (JST)
 

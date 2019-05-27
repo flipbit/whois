@@ -3,21 +3,18 @@
 [ use 'whois -h whois.jprs.jp help'. To suppress Japanese output, add'/e'     ]
 [ at the end of command, e.g. 'whois -h whois.jprs.jp xxx/e'.                 ]
 
-Domain Information: [ドメイン情報]
-a. [ドメイン名]                 SAKURA.NE.JP
-b. [ねっとわーくさーびすめい]   さくらいんたーねっと
-c. [ネットワークサービス名]     さくらインターネット
+Domain Information:
+a. [Domain Name]                SAKURA.NE.JP
 d. [Network Service Name]       SAKURA Internet
-k. [組織種別]                   ネットワークサービス
 l. [Organization Type]          Network Service
-m. [登録担当者]                 KT48024JP
-n. [技術連絡担当者]             TS22695JP
-n. [技術連絡担当者]             KW419JP
-p. [ネームサーバ]               ns1.dns.ne.jp
-p. [ネームサーバ]               ns2.dns.ne.jp
-s. [署名鍵]                     
-[状態]                          Connected (2019/07/31)
-[登録年月日]                    2017/07/21
-[接続年月日]                    2017/07/21
-[最終更新]                      2018/08/01 01:03:45 (JST)
+m. [Administrative Contact]     KT48024JP
+n. [Technical Contact]          TS22695JP
+n. [Technical Contact]          KW419JP
+p. [Name Server]                ns1.dns.ne.jp
+p. [Name Server]                ns2.dns.ne.jp
+s. [Signing Key]
+[State]                         Connected (2019/07/31)
+[Registered Date]               2017/07/21
+[Connected Date]                2017/07/21
+[Last Update]                   2018/08/01 01:03:45 (JST)
 

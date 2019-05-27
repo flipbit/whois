@@ -3,32 +3,29 @@
 [ use 'whois -h whois.jprs.jp help'. To suppress Japanese output, add'/e'     ]
 [ at the end of command, e.g. 'whois -h whois.jprs.jp xxx/e'.                 ]
 
-Domain Information: [ドメイン情報]
+Domain Information:
 [Domain Name]                   GEOCITIES.JP
 
-[登録者名]                      ヤフー株式会社
 [Registrant]                    Yahoo Japan Corporation
 
 [Name Server]                   ns01.yahoo.co.jp
 [Name Server]                   ns02.yahoo.co.jp
 [Name Server]                   ns11.yahoo.co.jp
 [Name Server]                   ns12.yahoo.co.jp
-[Signing Key]                   
+[Signing Key]
 
-[登録年月日]                    2001/05/07
-[有効期限]                      2019/05/31
-[状態]                          Active
-[最終更新]                      2018/06/01 01:05:08 (JST)
+[Created on]                    2001/05/07
+[Expires on]                    2019/05/31
+[Status]                        Active
+[Last Updated]                  2018/06/01 01:05:08 (JST)
 
-Contact Information: [公開連絡窓口]
-[名前]                          ヤフー株式会社
+Contact Information:
 [Name]                          Yahoo Japan Corporation
 [Email]                         nic-admin@mail.yahoo.co.jp
-[Web Page]                       
-[郵便番号]                      102-8282
-[住所]                          東京都千代田区紀尾井町1番3号
+[Web Page]
+[Postal code]                   102-8282
 [Postal Address]                1-3 Kioicho, Chiyoda-ku
                                 Tokyo 102-8282 Japan
-[電話番号]                      03-6898-8200
-[FAX番号]                       
+[Phone]                         03-6898-8200
+[Fax]
 

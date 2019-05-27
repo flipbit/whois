@@ -3,22 +3,19 @@
 [ use 'whois -h whois.jprs.jp help'. To suppress Japanese output, add'/e'     ]
 [ at the end of command, e.g. 'whois -h whois.jprs.jp xxx/e'.                 ]
 
-Domain Information: [ドメイン情報]
-a. [ドメイン名]                 YAHOO.CO.JP
-e. [そしきめい]                 やふーかぶしきがいしゃ
-f. [組織名]                     ヤフー株式会社
+Domain Information:
+a. [Domain Name]                YAHOO.CO.JP
 g. [Organization]               Yahoo Japan Corporation
-k. [組織種別]                   株式会社
 l. [Organization Type]          Corporation
-m. [登録担当者]                 HA14103JP
-n. [技術連絡担当者]             KM43416JP
-p. [ネームサーバ]               ns01.yahoo.co.jp
-p. [ネームサーバ]               ns02.yahoo.co.jp
-p. [ネームサーバ]               ns11.yahoo.co.jp
-p. [ネームサーバ]               ns12.yahoo.co.jp
-s. [署名鍵]                     
-[状態]                          Connected (2018/11/30)
-[登録年月日]                    2000/11/17
-[接続年月日]                    2000/11/17
-[最終更新]                      2017/12/01 01:02:55 (JST)
+m. [Administrative Contact]     HA14103JP
+n. [Technical Contact]          KM43416JP
+p. [Name Server]                ns01.yahoo.co.jp
+p. [Name Server]                ns02.yahoo.co.jp
+p. [Name Server]                ns11.yahoo.co.jp
+p. [Name Server]                ns12.yahoo.co.jp
+s. [Signing Key]
+[State]                         Connected (2019/11/30)
+[Registered Date]               2000/11/17
+[Connected Date]                2000/11/17
+[Last Update]                   2018/12/01 01:02:00 (JST)
 

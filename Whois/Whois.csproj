@@ -2,19 +2,26 @@
   <PropertyGroup>
    <TargetFrameworks>netstandard2.0;net452</TargetFrameworks>
    <GeneratePackageOnBuild>true</GeneratePackageOnBuild>
-   <Version>2.0.1.0</Version>
+   <Version>2.0.2.0</Version>
    <Authors>Chris Wood</Authors>
    <Company>flipbit.co.uk</Company>
    <PackageProjectUrl>http://github.com/flipbit/whois</PackageProjectUrl>
-   <PackageLicenseUrl>https://raw.github.com/flipbit/whois/master/LICENSE.md</PackageLicenseUrl>
-   <PackageTags>whois</PackageTags>
-   <Description>An Extensible WHOIS Library</Description>
+   <PackageTags>whois lookup parsing</PackageTags>
+   <Description>A .NET Framework 4.5.2 and Standard 2.0 WHOIS Lookup and Parsing Library</Description>
    <Copyright>Chris Wood 2019</Copyright>
    <RootNamespace>Whois</RootNamespace>
-   </PropertyGroup>
+  </PropertyGroup>
+  
   <ItemGroup>
     <None Remove="Resources\Patterns\Domains\Cira.txt" />
     <None Remove="Resources\Patterns\Domains\Csc.txt" />
+    <None Remove="Resources\Patterns\Domains\CzNic.txt" />
+    <None Remove="Resources\Patterns\Domains\DeNic.txt" />
+    <None Remove="Resources\Patterns\Domains\DnsBe.txt" />
+    <None Remove="Resources\Patterns\Domains\DnsPl.txt" />
+    <None Remove="Resources\Patterns\Domains\HiChina.txt" />
+    <None Remove="Resources\Patterns\Domains\Jprs.txt" />
+    <None Remove="Resources\Patterns\Domains\JprsAlt.txt" />
     <None Remove="Resources\Patterns\Domains\NicBr.txt" />
     <None Remove="Resources\Patterns\Domains\Nominet.txt" />
     <None Remove="Resources\Patterns\Domains\RegistrarSafe.txt" />
@@ -22,8 +29,16 @@
     <None Remove="Resources\Patterns\Redirects\VerisignGrs.txt" />
     <None Remove="Resources\Patterns\Servers\Iana.txt" />
   </ItemGroup>
+
   <ItemGroup>
     <EmbeddedResource Include="Resources\Patterns\Domains\Cira.txt" />
+    <EmbeddedResource Include="Resources\Patterns\Domains\DnsBe.txt" />
+    <EmbeddedResource Include="Resources\Patterns\Domains\DeNic.txt" />
+    <EmbeddedResource Include="Resources\Patterns\Domains\CzNic.txt" />
+    <EmbeddedResource Include="Resources\Patterns\Domains\JprsAlt.txt" />
+    <EmbeddedResource Include="Resources\Patterns\Domains\Jprs.txt" />
+    <EmbeddedResource Include="Resources\Patterns\Domains\HiChina.txt" />
+    <EmbeddedResource Include="Resources\Patterns\Domains\DnsPl.txt" />
     <EmbeddedResource Include="Resources\Patterns\Domains\NicBr.txt" />
     <EmbeddedResource Include="Resources\Patterns\Domains\Nominet.txt" />
     <EmbeddedResource Include="Resources\Patterns\Domains\RegistrarSafe.txt" />
@@ -35,12 +50,21 @@
   <ItemGroup>
     <Folder Include="Properties\" />
   </ItemGroup>
+
   <ItemGroup>
     <PackageReference Include="LibLog" Version="5.0.6">
       <PrivateAssets>all</PrivateAssets>
       <IncludeAssets>runtime; build; native; contentfiles; analyzers</IncludeAssets>
     </PackageReference>
     <PackageReference Include="Microsoft.CSharp" Version="4.5.0" />
-    <PackageReference Include="Tokenizer" Version="2.0.6" />
+    <PackageReference Include="Tokenizer" Version="2.1.2" />
+  </ItemGroup>
+
+  <PropertyGroup>
+    <PackageLicenseFile>LICENSE.txt</PackageLicenseFile>
+  </PropertyGroup>
+
+  <ItemGroup>
+    <None Include="LICENSE.txt" Pack="true" PackagePath="$(PackageLicenseFile)" />
   </ItemGroup>
 </Project>

@@ -1,0 +1,38 @@
+﻿DOMAIN NAME:           08.pl 
+
+registrant type:       organization 
+
+nameservers:           dns111.ovh.net.  
+
+                       ns111.ovh.net.  
+
+created:               2004.02.07 06:45:12 
+
+last modified:         2019.02.01 18:05:52 
+
+renewal date:          2020.02.06 13:00:00 
+
+option created:        2017.01.20 04:34:55 
+
+option expiration date:       2020.01.20 04:34:55 
+
+dnssec:                Signed 
+
+DS:                    46726 8 2 
+F2A6D8AE119F40330E2C562813320D1AC008A14B65A9D8D1DB40D4AE214977FF 
+
+REGISTRAR: 
+
+OVH SAS
+
+2 Rue Kellermann
+
+59100 Roubaix
+
+Francja/France
+
++48.717500200
+
+https://www.ovh.pl/abuse/ 
+
+WHOIS database responses and Registrant data available at: https://dns.pl/en/whois 

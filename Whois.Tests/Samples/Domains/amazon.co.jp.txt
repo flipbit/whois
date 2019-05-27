@@ -3,22 +3,19 @@
 [ use 'whois -h whois.jprs.jp help'. To suppress Japanese output, add'/e'     ]
 [ at the end of command, e.g. 'whois -h whois.jprs.jp xxx/e'.                 ]
 
-Domain Information: [ドメイン情報]
-a. [ドメイン名]                 AMAZON.CO.JP
-e. [そしきめい]                 あまぞん・いんく
-f. [組織名]                     アマゾン・インク
+Domain Information:
+a. [Domain Name]                AMAZON.CO.JP
 g. [Organization]               Amazon, Inc.
-k. [組織種別]                   外国会社
 l. [Organization Type]          Foreign Company
-m. [登録担当者]                 JC076JP
-n. [技術連絡担当者]             IK4644JP
-p. [ネームサーバ]               ns1.p31.dynect.net
-p. [ネームサーバ]               ns2.p31.dynect.net
-p. [ネームサーバ]               pdns1.ultradns.net
-p. [ネームサーバ]               pdns6.ultradns.co.uk
-s. [署名鍵]                     
-[状態]                          Connected (2018/11/30)
-[登録年月日]                    2002/11/21
-[接続年月日]                    2002/11/21
-[最終更新]                      2017/12/01 01:02:51 (JST)
+m. [Administrative Contact]     JC076JP
+n. [Technical Contact]          IK4644JP
+p. [Name Server]                ns1.p31.dynect.net
+p. [Name Server]                ns2.p31.dynect.net
+p. [Name Server]                pdns1.ultradns.net
+p. [Name Server]                pdns6.ultradns.co.uk
+s. [Signing Key]
+[State]                         Connected (2019/11/30)
+[Registered Date]               2002/11/21
+[Connected Date]                2002/11/21
+[Last Update]                   2018/12/01 01:01:57 (JST)
 
