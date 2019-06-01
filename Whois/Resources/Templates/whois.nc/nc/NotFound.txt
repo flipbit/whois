@@ -1,0 +1,13 @@
+---
+#
+# .nc Parsing Template
+#
+
+# Use this template for queries to whois.nc:
+tag: whois.nc
+tag: nc
+
+# Set query response type:
+token: Response = NotFound
+---
+

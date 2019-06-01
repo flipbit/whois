@@ -1,0 +1,13 @@
+---
+#
+# .hn Parsing Template
+#
+
+# Use this template for queries to whois.nic.hn:
+tag: whois.nic.hn
+tag: hn
+
+# Set query response type:
+token: Response = Found
+---
+

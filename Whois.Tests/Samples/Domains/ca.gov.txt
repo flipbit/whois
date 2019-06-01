@@ -1,9 +1,0 @@
-% DOTGOV WHOIS Server ready
-   Domain Name: CA.GOV
-   Status: ACTIVE
-
->>> Last update of whois database: 2018-11-01T08:57:41Z <<<
-
-Please be advised that this whois server only contains information pertaining
-to the .GOV domain. For information for other domains please use the whois
-server at RS.INTERNIC.NET. 

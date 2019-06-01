@@ -1,0 +1,13 @@
+---
+#
+# .de Parsing Template
+#
+
+# Use this template for queries to whois.denic.de:
+tag: whois.denic.de
+tag: de
+
+# Set query response type:
+token: Response = Found
+---
+

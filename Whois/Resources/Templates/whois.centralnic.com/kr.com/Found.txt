@@ -1,0 +1,13 @@
+---
+#
+# .kr.com Parsing Template
+#
+
+# Use this template for queries to whois.centralnic.com:
+tag: whois.centralnic.com
+tag: kr.com
+
+# Set query response type:
+token: Response = Found
+---
+

@@ -1,0 +1,13 @@
+---
+#
+# .hr Parsing Template
+#
+
+# Use this template for queries to whois.dns.hr:
+tag: whois.dns.hr
+tag: hr
+
+# Set query response type:
+token: Response = Found
+---
+

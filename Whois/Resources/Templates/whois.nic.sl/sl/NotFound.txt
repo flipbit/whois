@@ -1,0 +1,13 @@
+---
+#
+# .sl Parsing Template
+#
+
+# Use this template for queries to whois.nic.sl:
+tag: whois.nic.sl
+tag: sl
+
+# Set query response type:
+token: Response = NotFound
+---
+

@@ -1,0 +1,13 @@
+---
+#
+# .eu.org Parsing Template
+#
+
+# Use this template for queries to whois.eu.org:
+tag: whois.eu.org
+tag: eu.org
+
+# Set query response type:
+token: Response = Found
+---
+

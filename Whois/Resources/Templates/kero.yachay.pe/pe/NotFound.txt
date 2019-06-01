@@ -1,0 +1,13 @@
+---
+#
+# .pe Parsing Template
+#
+
+# Use this template for queries to kero.yachay.pe:
+tag: kero.yachay.pe
+tag: pe
+
+# Set query response type:
+token: Response = NotFound
+---
+

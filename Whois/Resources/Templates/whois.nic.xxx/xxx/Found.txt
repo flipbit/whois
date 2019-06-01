@@ -1,0 +1,13 @@
+---
+#
+# .xxx Parsing Template
+#
+
+# Use this template for queries to whois.nic.xxx:
+tag: whois.nic.xxx
+tag: xxx
+
+# Set query response type:
+token: Response = Found
+---
+

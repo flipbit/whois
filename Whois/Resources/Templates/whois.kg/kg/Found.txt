@@ -1,0 +1,13 @@
+---
+#
+# .kg Parsing Template
+#
+
+# Use this template for queries to whois.kg:
+tag: whois.kg
+tag: kg
+
+# Set query response type:
+token: Response = Found
+---
+

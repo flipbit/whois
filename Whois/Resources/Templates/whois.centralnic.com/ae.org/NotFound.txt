@@ -1,0 +1,13 @@
+---
+#
+# .ae.org Parsing Template
+#
+
+# Use this template for queries to whois.centralnic.com:
+tag: whois.centralnic.com
+tag: ae.org
+
+# Set query response type:
+token: Response = NotFound
+---
+

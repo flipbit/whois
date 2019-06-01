@@ -1,0 +1,13 @@
+---
+#
+# .co.za Parsing Template
+#
+
+# Use this template for queries to coza-whois.registry.net.za:
+tag: coza-whois.registry.net.za
+tag: co.za
+
+# Set query response type:
+token: Response = Throttled
+---
+

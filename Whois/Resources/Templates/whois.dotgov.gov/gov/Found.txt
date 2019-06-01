@@ -1,0 +1,13 @@
+---
+#
+# .gov Parsing Template
+#
+
+# Use this template for queries to whois.dotgov.gov:
+tag: whois.dotgov.gov
+tag: gov
+
+# Set query response type:
+token: Response = Found
+---
+

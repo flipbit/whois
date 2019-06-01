@@ -1,0 +1,13 @@
+---
+#
+# .bj Parsing Template
+#
+
+# Use this template for queries to whois.nic.bj:
+tag: whois.nic.bj
+tag: bj
+
+# Set query response type:
+token: Response = Found
+---
+

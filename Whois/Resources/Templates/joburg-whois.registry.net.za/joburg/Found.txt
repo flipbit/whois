@@ -1,0 +1,13 @@
+---
+#
+# .joburg Parsing Template
+#
+
+# Use this template for queries to joburg-whois.registry.net.za:
+tag: joburg-whois.registry.net.za
+tag: joburg
+
+# Set query response type:
+token: Response = Found
+---
+

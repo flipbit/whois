@@ -1,0 +1,13 @@
+---
+#
+# .gb.net Parsing Template
+#
+
+# Use this template for queries to whois.centralnic.com:
+tag: whois.centralnic.com
+tag: gb.net
+
+# Set query response type:
+token: Response = Found
+---
+

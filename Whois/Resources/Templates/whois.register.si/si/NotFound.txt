@@ -1,0 +1,13 @@
+---
+#
+# .si Parsing Template
+#
+
+# Use this template for queries to whois.register.si:
+tag: whois.register.si
+tag: si
+
+# Set query response type:
+token: Response = NotFound
+---
+

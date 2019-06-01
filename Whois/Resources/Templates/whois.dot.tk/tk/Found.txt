@@ -1,0 +1,13 @@
+---
+#
+# .tk Parsing Template
+#
+
+# Use this template for queries to whois.dot.tk:
+tag: whois.dot.tk
+tag: tk
+
+# Set query response type:
+token: Response = Found
+---
+

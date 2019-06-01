@@ -1,0 +1,13 @@
+---
+#
+# .am Parsing Template
+#
+
+# Use this template for queries to whois.amnic.net:
+tag: whois.amnic.net
+tag: am
+
+# Set query response type:
+token: Response = NotFound
+---
+

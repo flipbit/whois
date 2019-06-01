@@ -1,2 +1,0 @@
-Domain: amazon.de
-Status: connect

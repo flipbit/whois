@@ -1,0 +1,13 @@
+---
+#
+# .by Parsing Template
+#
+
+# Use this template for queries to whois.cctld.by:
+tag: whois.cctld.by
+tag: by
+
+# Set query response type:
+token: Response = NotFound
+---
+

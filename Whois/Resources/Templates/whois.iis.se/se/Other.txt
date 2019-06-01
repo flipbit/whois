@@ -1,0 +1,13 @@
+---
+#
+# .se Parsing Template
+#
+
+# Use this template for queries to whois.iis.se:
+tag: whois.iis.se
+tag: se
+
+# Set query response type:
+token: Response = Other
+---
+

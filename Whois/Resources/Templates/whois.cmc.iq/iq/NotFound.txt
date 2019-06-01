@@ -1,0 +1,13 @@
+---
+#
+# .iq Parsing Template
+#
+
+# Use this template for queries to whois.cmc.iq:
+tag: whois.cmc.iq
+tag: iq
+
+# Set query response type:
+token: Response = NotFound
+---
+

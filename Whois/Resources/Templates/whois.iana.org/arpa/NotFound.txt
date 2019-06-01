@@ -1,0 +1,13 @@
+---
+#
+# .arpa Parsing Template
+#
+
+# Use this template for queries to whois.iana.org:
+tag: whois.iana.org
+tag: arpa
+
+# Set query response type:
+token: Response = NotFound
+---
+

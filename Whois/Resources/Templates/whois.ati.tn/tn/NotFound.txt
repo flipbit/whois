@@ -1,0 +1,13 @@
+---
+#
+# .tn Parsing Template
+#
+
+# Use this template for queries to whois.ati.tn:
+tag: whois.ati.tn
+tag: tn
+
+# Set query response type:
+token: Response = NotFound
+---
+

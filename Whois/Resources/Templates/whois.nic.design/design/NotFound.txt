@@ -1,0 +1,13 @@
+---
+#
+# .design Parsing Template
+#
+
+# Use this template for queries to whois.nic.design:
+tag: whois.nic.design
+tag: design
+
+# Set query response type:
+token: Response = NotFound
+---
+

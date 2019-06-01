@@ -1,0 +1,13 @@
+---
+#
+# .org.za Parsing Template
+#
+
+# Use this template for queries to org-whois.registry.net.za:
+tag: org-whois.registry.net.za
+tag: org.za
+
+# Set query response type:
+token: Response = NotFound
+---
+

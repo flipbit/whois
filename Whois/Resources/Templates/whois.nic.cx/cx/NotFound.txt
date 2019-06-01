@@ -1,0 +1,13 @@
+---
+#
+# .cx Parsing Template
+#
+
+# Use this template for queries to whois.nic.cx:
+tag: whois.nic.cx
+tag: cx
+
+# Set query response type:
+token: Response = NotFound
+---
+

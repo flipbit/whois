@@ -1,0 +1,13 @@
+---
+#
+# .uk.com Parsing Template
+#
+
+# Use this template for queries to whois.centralnic.com:
+tag: whois.centralnic.com
+tag: uk.com
+
+# Set query response type:
+token: Response = NotFound
+---
+

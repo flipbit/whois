@@ -1,0 +1,13 @@
+---
+#
+# .tm Parsing Template
+#
+
+# Use this template for queries to whois.nic.tm:
+tag: whois.nic.tm
+tag: tm
+
+# Set query response type:
+token: Response = NotFound
+---
+

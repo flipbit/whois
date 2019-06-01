@@ -1,0 +1,13 @@
+---
+#
+# .je Parsing Template
+#
+
+# Use this template for queries to whois.je:
+tag: whois.je
+tag: je
+
+# Set query response type:
+token: Response = Found
+---
+

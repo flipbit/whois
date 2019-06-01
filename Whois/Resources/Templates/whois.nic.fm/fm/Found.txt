@@ -1,0 +1,13 @@
+---
+#
+# .fm Parsing Template
+#
+
+# Use this template for queries to whois.nic.fm:
+tag: whois.nic.fm
+tag: fm
+
+# Set query response type:
+token: Response = Found
+---
+

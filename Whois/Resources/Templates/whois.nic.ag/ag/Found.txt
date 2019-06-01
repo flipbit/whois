@@ -1,0 +1,13 @@
+---
+#
+# .ag Parsing Template
+#
+
+# Use this template for queries to whois.nic.ag:
+tag: whois.nic.ag
+tag: ag
+
+# Set query response type:
+token: Response = Found
+---
+

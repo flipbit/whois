@@ -1,0 +1,13 @@
+---
+#
+# .fo Parsing Template
+#
+
+# Use this template for queries to whois.nic.fo:
+tag: whois.nic.fo
+tag: fo
+
+# Set query response type:
+token: Response = NotFound
+---
+

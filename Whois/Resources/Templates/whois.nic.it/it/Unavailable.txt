@@ -1,0 +1,13 @@
+---
+#
+# .it Parsing Template
+#
+
+# Use this template for queries to whois.nic.it:
+tag: whois.nic.it
+tag: it
+
+# Set query response type:
+token: Response = Unavailable
+---
+

@@ -1,0 +1,13 @@
+---
+#
+# .sg Parsing Template
+#
+
+# Use this template for queries to whois.sgnic.sg:
+tag: whois.sgnic.sg
+tag: sg
+
+# Set query response type:
+token: Response = Found
+---
+

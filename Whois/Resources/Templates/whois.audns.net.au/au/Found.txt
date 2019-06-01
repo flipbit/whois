@@ -1,0 +1,13 @@
+---
+#
+# .au Parsing Template
+#
+
+# Use this template for queries to whois.audns.net.au:
+tag: whois.audns.net.au
+tag: au
+
+# Set query response type:
+token: Response = Found
+---
+

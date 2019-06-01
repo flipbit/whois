@@ -1,0 +1,13 @@
+---
+#
+# .il Parsing Template
+#
+
+# Use this template for queries to whois.isoc.org.il:
+tag: whois.isoc.org.il
+tag: il
+
+# Set query response type:
+token: Response = Locked
+---
+

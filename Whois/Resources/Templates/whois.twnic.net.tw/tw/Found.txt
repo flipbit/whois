@@ -1,0 +1,13 @@
+---
+#
+# .tw Parsing Template
+#
+
+# Use this template for queries to whois.twnic.net.tw:
+tag: whois.twnic.net.tw
+tag: tw
+
+# Set query response type:
+token: Response = Found
+---
+

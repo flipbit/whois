@@ -1,0 +1,13 @@
+---
+#
+# .id Parsing Template
+#
+
+# Use this template for queries to whois.pandi.or.id:
+tag: whois.pandi.or.id
+tag: id
+
+# Set query response type:
+token: Response = NotFound
+---
+

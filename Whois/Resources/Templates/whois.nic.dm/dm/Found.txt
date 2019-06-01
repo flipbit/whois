@@ -1,0 +1,13 @@
+---
+#
+# .dm Parsing Template
+#
+
+# Use this template for queries to whois.nic.dm:
+tag: whois.nic.dm
+tag: dm
+
+# Set query response type:
+token: Response = Found
+---
+

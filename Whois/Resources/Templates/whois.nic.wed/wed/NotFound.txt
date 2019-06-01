@@ -1,0 +1,13 @@
+---
+#
+# .wed Parsing Template
+#
+
+# Use this template for queries to whois.nic.wed:
+tag: whois.nic.wed
+tag: wed
+
+# Set query response type:
+token: Response = NotFound
+---
+

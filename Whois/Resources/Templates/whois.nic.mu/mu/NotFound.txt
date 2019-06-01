@@ -1,0 +1,13 @@
+---
+#
+# .mu Parsing Template
+#
+
+# Use this template for queries to whois.nic.mu:
+tag: whois.nic.mu
+tag: mu
+
+# Set query response type:
+token: Response = NotFound
+---
+

@@ -1,2 +1,0 @@
-Domain: google.de
-Status: connect

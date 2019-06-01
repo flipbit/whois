@@ -1,0 +1,13 @@
+---
+#
+# .kr Parsing Template
+#
+
+# Use this template for queries to whois.kr:
+tag: whois.kr
+tag: kr
+
+# Set query response type:
+token: Response = NotFound
+---
+
