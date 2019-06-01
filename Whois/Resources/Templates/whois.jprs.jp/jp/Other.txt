@@ -1,0 +1,13 @@
+---
+#
+# .jp Parsing Template
+#
+
+# Use this template for queries to whois.jprs.jp:
+tag: whois.jprs.jp
+tag: jp
+
+# Set query response type:
+token: Response = Other
+---
+

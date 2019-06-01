@@ -1,0 +1,13 @@
+---
+#
+# .sa Parsing Template
+#
+
+# Use this template for queries to whois.nic.net.sa:
+tag: whois.nic.net.sa
+tag: sa
+
+# Set query response type:
+token: Response = NotFound
+---
+

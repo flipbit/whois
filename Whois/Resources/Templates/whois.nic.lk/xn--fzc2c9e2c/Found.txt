@@ -1,0 +1,13 @@
+---
+#
+# .xn--fzc2c9e2c Parsing Template
+#
+
+# Use this template for queries to whois.nic.lk:
+tag: whois.nic.lk
+tag: xn--fzc2c9e2c
+
+# Set query response type:
+token: Response = Found
+---
+

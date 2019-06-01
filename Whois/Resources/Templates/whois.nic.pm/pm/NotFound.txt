@@ -1,0 +1,13 @@
+---
+#
+# .pm Parsing Template
+#
+
+# Use this template for queries to whois.nic.pm:
+tag: whois.nic.pm
+tag: pm
+
+# Set query response type:
+token: Response = NotFound
+---
+

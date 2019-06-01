@@ -1,0 +1,13 @@
+---
+#
+# .ve Parsing Template
+#
+
+# Use this template for queries to whois.nic.ve:
+tag: whois.nic.ve
+tag: ve
+
+# Set query response type:
+token: Response = Suspended
+---
+

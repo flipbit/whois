@@ -1,0 +1,13 @@
+---
+#
+# .uy.com Parsing Template
+#
+
+# Use this template for queries to whois.centralnic.com:
+tag: whois.centralnic.com
+tag: uy.com
+
+# Set query response type:
+token: Response = NotFound
+---
+

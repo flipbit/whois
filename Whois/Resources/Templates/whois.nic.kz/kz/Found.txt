@@ -1,0 +1,13 @@
+---
+#
+# .kz Parsing Template
+#
+
+# Use this template for queries to whois.nic.kz:
+tag: whois.nic.kz
+tag: kz
+
+# Set query response type:
+token: Response = Found
+---
+

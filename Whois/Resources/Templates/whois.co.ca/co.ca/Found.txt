@@ -1,0 +1,13 @@
+---
+#
+# .co.ca Parsing Template
+#
+
+# Use this template for queries to whois.co.ca:
+tag: whois.co.ca
+tag: co.ca
+
+# Set query response type:
+token: Response = Found
+---
+

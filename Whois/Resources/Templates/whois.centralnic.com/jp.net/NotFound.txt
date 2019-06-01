@@ -1,0 +1,13 @@
+---
+#
+# .jp.net Parsing Template
+#
+
+# Use this template for queries to whois.centralnic.com:
+tag: whois.centralnic.com
+tag: jp.net
+
+# Set query response type:
+token: Response = NotFound
+---
+

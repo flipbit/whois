@@ -1,0 +1,13 @@
+---
+#
+# .lk Parsing Template
+#
+
+# Use this template for queries to whois.nic.lk:
+tag: whois.nic.lk
+tag: lk
+
+# Set query response type:
+token: Response = NotFound
+---
+

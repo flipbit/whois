@@ -1,0 +1,13 @@
+---
+#
+# .nz Parsing Template
+#
+
+# Use this template for queries to whois.srs.net.nz:
+tag: whois.srs.net.nz
+tag: nz
+
+# Set query response type:
+token: Response = Throttled
+---
+

@@ -1,0 +1,13 @@
+---
+#
+# .gd Parsing Template
+#
+
+# Use this template for queries to whois.nic.gd:
+tag: whois.nic.gd
+tag: gd
+
+# Set query response type:
+token: Response = Found
+---
+

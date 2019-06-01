@@ -1,0 +1,13 @@
+---
+#
+# .cl Parsing Template
+#
+
+# Use this template for queries to whois.nic.cl:
+tag: whois.nic.cl
+tag: cl
+
+# Set query response type:
+token: Response = Found
+---
+

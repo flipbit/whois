@@ -1,0 +1,13 @@
+---
+#
+# .sk Parsing Template
+#
+
+# Use this template for queries to whois.sk-nic.sk:
+tag: whois.sk-nic.sk
+tag: sk
+
+# Set query response type:
+token: Response = Found
+---
+

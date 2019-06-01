@@ -1,0 +1,13 @@
+---
+#
+# .to Parsing Template
+#
+
+# Use this template for queries to whois.tonic.to:
+tag: whois.tonic.to
+tag: to
+
+# Set query response type:
+token: Response = NotFound
+---
+

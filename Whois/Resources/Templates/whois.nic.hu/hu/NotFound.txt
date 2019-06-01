@@ -1,0 +1,13 @@
+---
+#
+# .hu Parsing Template
+#
+
+# Use this template for queries to whois.nic.hu:
+tag: whois.nic.hu
+tag: hu
+
+# Set query response type:
+token: Response = NotFound
+---
+

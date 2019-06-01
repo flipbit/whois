@@ -1,0 +1,13 @@
+---
+#
+# .za.net Parsing Template
+#
+
+# Use this template for queries to whois.za.net:
+tag: whois.za.net
+tag: za.net
+
+# Set query response type:
+token: Response = Found
+---
+

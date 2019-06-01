@@ -1,0 +1,13 @@
+---
+#
+# .ca Parsing Template
+#
+
+# Use this template for queries to whois.cira.ca:
+tag: whois.cira.ca
+tag: ca
+
+# Set query response type:
+token: Response = NotAssigned
+---
+

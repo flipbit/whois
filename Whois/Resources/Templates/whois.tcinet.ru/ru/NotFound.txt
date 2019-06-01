@@ -1,0 +1,13 @@
+---
+#
+# .ru Parsing Template
+#
+
+# Use this template for queries to whois.tcinet.ru:
+tag: whois.tcinet.ru
+tag: ru
+
+# Set query response type:
+token: Response = NotFound
+---
+

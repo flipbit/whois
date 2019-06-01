@@ -1,0 +1,13 @@
+---
+#
+# .gov.uk Parsing Template
+#
+
+# Use this template for queries to whois.ja.net:
+tag: whois.ja.net
+tag: gov.uk
+
+# Set query response type:
+token: Response = NotFound
+---
+

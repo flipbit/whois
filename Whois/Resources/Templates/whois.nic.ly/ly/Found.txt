@@ -1,0 +1,13 @@
+---
+#
+# .ly Parsing Template
+#
+
+# Use this template for queries to whois.nic.ly:
+tag: whois.nic.ly
+tag: ly
+
+# Set query response type:
+token: Response = Found
+---
+

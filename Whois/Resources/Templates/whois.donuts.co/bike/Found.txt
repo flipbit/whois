@@ -1,0 +1,13 @@
+---
+#
+# .bike Parsing Template
+#
+
+# Use this template for queries to whois.donuts.co:
+tag: whois.donuts.co
+tag: bike
+
+# Set query response type:
+token: Response = Found
+---
+

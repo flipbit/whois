@@ -1,0 +1,13 @@
+---
+#
+# .gov.za Parsing Template
+#
+
+# Use this template for queries to whois.gov.za:
+tag: whois.gov.za
+tag: gov.za
+
+# Set query response type:
+token: Response = Found
+---
+

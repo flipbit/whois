@@ -1,0 +1,13 @@
+---
+#
+# .ps Parsing Template
+#
+
+# Use this template for queries to whois.pnina.ps:
+tag: whois.pnina.ps
+tag: ps
+
+# Set query response type:
+token: Response = Found
+---
+

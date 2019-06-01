@@ -1,0 +1,13 @@
+---
+#
+# .com Parsing Template
+#
+
+# Use this template for queries to whois.verisign-grs.com:
+tag: whois.verisign-grs.com
+tag: com
+
+# Set query response type:
+token: Response = NotFound
+---
+

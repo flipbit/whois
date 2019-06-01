@@ -1,0 +1,13 @@
+---
+#
+# .dk Parsing Template
+#
+
+# Use this template for queries to whois.dk-hostmaster.dk:
+tag: whois.dk-hostmaster.dk
+tag: dk
+
+# Set query response type:
+token: Response = NotFound
+---
+

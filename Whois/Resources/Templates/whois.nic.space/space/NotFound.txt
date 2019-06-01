@@ -1,0 +1,13 @@
+---
+#
+# .space Parsing Template
+#
+
+# Use this template for queries to whois.nic.space:
+tag: whois.nic.space
+tag: space
+
+# Set query response type:
+token: Response = NotFound
+---
+

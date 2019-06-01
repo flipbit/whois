@@ -1,0 +1,13 @@
+---
+#
+# .ai Parsing Template
+#
+
+# Use this template for queries to whois.nic.ai:
+tag: whois.nic.ai
+tag: ai
+
+# Set query response type:
+token: Response = NotFound
+---
+

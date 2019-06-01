@@ -1,0 +1,13 @@
+---
+#
+# .ws Parsing Template
+#
+
+# Use this template for queries to whois.website.ws:
+tag: whois.website.ws
+tag: ws
+
+# Set query response type:
+token: Response = NotFound
+---
+

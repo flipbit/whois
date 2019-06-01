@@ -1,0 +1,13 @@
+---
+#
+# .li Parsing Template
+#
+
+# Use this template for queries to whois.nic.li:
+tag: whois.nic.li
+tag: li
+
+# Set query response type:
+token: Response = NotFound
+---
+

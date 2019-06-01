@@ -1,0 +1,13 @@
+---
+#
+# .capetown Parsing Template
+#
+
+# Use this template for queries to capetown-whois.registry.net.za:
+tag: capetown-whois.registry.net.za
+tag: capetown
+
+# Set query response type:
+token: Response = NotFound
+---
+

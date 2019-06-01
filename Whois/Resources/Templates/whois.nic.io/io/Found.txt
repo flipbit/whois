@@ -1,0 +1,13 @@
+---
+#
+# .io Parsing Template
+#
+
+# Use this template for queries to whois.nic.io:
+tag: whois.nic.io
+tag: io
+
+# Set query response type:
+token: Response = Found
+---
+

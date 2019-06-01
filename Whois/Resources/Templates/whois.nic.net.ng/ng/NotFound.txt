@@ -1,0 +1,13 @@
+---
+#
+# .ng Parsing Template
+#
+
+# Use this template for queries to whois.nic.net.ng:
+tag: whois.nic.net.ng
+tag: ng
+
+# Set query response type:
+token: Response = NotFound
+---
+

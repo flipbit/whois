@@ -1,0 +1,13 @@
+---
+#
+# .ms Parsing Template
+#
+
+# Use this template for queries to whois.nic.ms:
+tag: whois.nic.ms
+tag: ms
+
+# Set query response type:
+token: Response = NotFound
+---
+

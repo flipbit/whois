@@ -1,0 +1,13 @@
+---
+#
+# .sh Parsing Template
+#
+
+# Use this template for queries to whois.nic.sh:
+tag: whois.nic.sh
+tag: sh
+
+# Set query response type:
+token: Response = Found
+---
+

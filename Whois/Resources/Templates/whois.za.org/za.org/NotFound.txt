@@ -1,0 +1,13 @@
+---
+#
+# .za.org Parsing Template
+#
+
+# Use this template for queries to whois.za.org:
+tag: whois.za.org
+tag: za.org
+
+# Set query response type:
+token: Response = NotFound
+---
+

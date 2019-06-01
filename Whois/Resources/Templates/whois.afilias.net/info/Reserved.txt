@@ -1,0 +1,13 @@
+---
+#
+# .info Parsing Template
+#
+
+# Use this template for queries to whois.afilias.net:
+tag: whois.afilias.net
+tag: info
+
+# Set query response type:
+token: Response = Reserved
+---
+

@@ -1,0 +1,13 @@
+---
+#
+# .co Parsing Template
+#
+
+# Use this template for queries to whois.nic.co:
+tag: whois.nic.co
+tag: co
+
+# Set query response type:
+token: Response = Found
+---
+

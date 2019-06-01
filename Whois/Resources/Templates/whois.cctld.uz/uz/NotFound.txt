@@ -1,0 +1,13 @@
+---
+#
+# .uz Parsing Template
+#
+
+# Use this template for queries to whois.cctld.uz:
+tag: whois.cctld.uz
+tag: uz
+
+# Set query response type:
+token: Response = NotFound
+---
+

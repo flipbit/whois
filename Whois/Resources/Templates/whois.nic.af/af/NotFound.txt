@@ -1,0 +1,13 @@
+---
+#
+# .af Parsing Template
+#
+
+# Use this template for queries to whois.nic.af:
+tag: whois.nic.af
+tag: af
+
+# Set query response type:
+token: Response = NotFound
+---
+

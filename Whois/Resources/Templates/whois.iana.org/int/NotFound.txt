@@ -1,0 +1,13 @@
+---
+#
+# .int Parsing Template
+#
+
+# Use this template for queries to whois.iana.org:
+tag: whois.iana.org
+tag: int
+
+# Set query response type:
+token: Response = NotFound
+---
+

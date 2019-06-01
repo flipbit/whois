@@ -1,0 +1,13 @@
+---
+#
+# .mx Parsing Template
+#
+
+# Use this template for queries to whois.nic.mx:
+tag: whois.nic.mx
+tag: mx
+
+# Set query response type:
+token: Response = NotFound
+---
+

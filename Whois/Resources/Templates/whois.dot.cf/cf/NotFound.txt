@@ -1,0 +1,13 @@
+---
+#
+# .cf Parsing Template
+#
+
+# Use this template for queries to whois.dot.cf:
+tag: whois.dot.cf
+tag: cf
+
+# Set query response type:
+token: Response = NotFound
+---
+

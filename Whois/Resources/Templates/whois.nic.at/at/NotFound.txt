@@ -1,0 +1,13 @@
+---
+#
+# .at Parsing Template
+#
+
+# Use this template for queries to whois.nic.at:
+tag: whois.nic.at
+tag: at
+
+# Set query response type:
+token: Response = NotFound
+---
+

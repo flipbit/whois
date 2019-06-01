@@ -1,0 +1,13 @@
+---
+#
+# .hk Parsing Template
+#
+
+# Use this template for queries to whois.hkirc.hk:
+tag: whois.hkirc.hk
+tag: hk
+
+# Set query response type:
+token: Response = NotFound
+---
+

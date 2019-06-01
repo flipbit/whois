@@ -1,0 +1,13 @@
+---
+#
+# .cat Parsing Template
+#
+
+# Use this template for queries to whois.cat:
+tag: whois.cat
+tag: cat
+
+# Set query response type:
+token: Response = Found
+---
+

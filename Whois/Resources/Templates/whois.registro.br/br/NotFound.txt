@@ -1,0 +1,13 @@
+---
+#
+# .br Parsing Template
+#
+
+# Use this template for queries to whois.registro.br:
+tag: whois.registro.br
+tag: br
+
+# Set query response type:
+token: Response = NotFound
+---
+

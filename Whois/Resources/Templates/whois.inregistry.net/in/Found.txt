@@ -1,0 +1,13 @@
+---
+#
+# .in Parsing Template
+#
+
+# Use this template for queries to whois.inregistry.net:
+tag: whois.inregistry.net
+tag: in
+
+# Set query response type:
+token: Response = Found
+---
+

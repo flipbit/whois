@@ -1,0 +1,13 @@
+---
+#
+# .me Parsing Template
+#
+
+# Use this template for queries to whois.nic.me:
+tag: whois.nic.me
+tag: me
+
+# Set query response type:
+token: Response = NotFound
+---
+

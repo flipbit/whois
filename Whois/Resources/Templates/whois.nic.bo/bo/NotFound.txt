@@ -1,0 +1,13 @@
+---
+#
+# .bo Parsing Template
+#
+
+# Use this template for queries to whois.nic.bo:
+tag: whois.nic.bo
+tag: bo
+
+# Set query response type:
+token: Response = NotFound
+---
+
