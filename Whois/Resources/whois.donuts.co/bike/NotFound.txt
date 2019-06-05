@@ -1,0 +1,14 @@
+---
+#
+# .bike Parsing Template
+#
+name: whois.donuts.co/bike/NotFound
+
+# Use this template for queries to whois.donuts.co:
+tag: whois.donuts.co
+tag: bike
+
+# Set query response type:
+set: Status = NotFound
+---
+

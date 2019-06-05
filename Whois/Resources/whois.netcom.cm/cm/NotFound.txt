@@ -1,0 +1,14 @@
+---
+#
+# .cm Parsing Template
+#
+name: whois.netcom.cm/cm/NotFound
+
+# Use this template for queries to whois.netcom.cm:
+tag: whois.netcom.cm
+tag: cm
+
+# Set query response type:
+set: Status = NotFound
+---
+

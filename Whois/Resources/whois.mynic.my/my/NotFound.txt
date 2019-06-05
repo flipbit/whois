@@ -1,0 +1,14 @@
+---
+#
+# .my Parsing Template
+#
+name: whois.mynic.my/my/NotFound
+
+# Use this template for queries to whois.mynic.my:
+tag: whois.mynic.my
+tag: my
+
+# Set query response type:
+set: Status = NotFound
+---
+

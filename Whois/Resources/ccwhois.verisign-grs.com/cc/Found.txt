@@ -1,0 +1,14 @@
+---
+#
+# .cc Parsing Template
+#
+name: ccwhois.verisign-grs.com/cc/Found
+
+# Use this template for queries to ccwhois.verisign-grs.com:
+tag: ccwhois.verisign-grs.com
+tag: cc
+
+# Set query response type:
+set: Status = Found
+---
+

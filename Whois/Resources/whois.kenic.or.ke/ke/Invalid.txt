@@ -1,0 +1,14 @@
+---
+#
+# .ke Parsing Template
+#
+name: whois.kenic.or.ke/ke/Invalid
+
+# Use this template for queries to whois.kenic.or.ke:
+tag: whois.kenic.or.ke
+tag: ke
+
+# Set query response type:
+set: Status = Invalid
+---
+

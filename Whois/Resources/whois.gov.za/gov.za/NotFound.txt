@@ -1,0 +1,14 @@
+---
+#
+# .gov.za Parsing Template
+#
+name: whois.gov.za/gov.za/NotFound
+
+# Use this template for queries to whois.gov.za:
+tag: whois.gov.za
+tag: gov.za
+
+# Set query response type:
+set: Status = NotFound
+---
+

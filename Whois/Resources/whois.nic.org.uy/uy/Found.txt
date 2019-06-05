@@ -1,0 +1,14 @@
+---
+#
+# .uy Parsing Template
+#
+name: whois.nic.org.uy/uy/Found
+
+# Use this template for queries to whois.nic.org.uy:
+tag: whois.nic.org.uy
+tag: uy
+
+# Set query response type:
+set: Status = Found
+---
+

@@ -1,0 +1,14 @@
+---
+#
+# .gr.com Parsing Template
+#
+name: whois.centralnic.com/gr.com/Found
+
+# Use this template for queries to whois.centralnic.com:
+tag: whois.centralnic.com
+tag: gr.com
+
+# Set query response type:
+set: Status = Found
+---
+

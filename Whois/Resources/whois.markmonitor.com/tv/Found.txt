@@ -1,0 +1,14 @@
+---
+#
+# .tv Parsing Template
+#
+name: whois.markmonitor.com/tv/Found
+
+# Use this template for queries to whois.markmonitor.com:
+tag: whois.markmonitor.com
+tag: tv
+
+# Set query response type:
+set: Status = Found
+---
+

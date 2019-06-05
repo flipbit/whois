@@ -17,6 +17,8 @@ namespace Whois.Models
             DomainStatus = new List<string>();
         }
 
+        public WhoisResponseStatus Status { get; set; }
+
         public string DomainName { get; set; }
 
         public string RegistryDomainId { get; set; }

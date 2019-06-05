@@ -1,0 +1,14 @@
+---
+#
+# .ir Parsing Template
+#
+name: whois.nic.ir/ir/Found
+
+# Use this template for queries to whois.nic.ir:
+tag: whois.nic.ir
+tag: ir
+
+# Set query response type:
+set: Status = Found
+---
+

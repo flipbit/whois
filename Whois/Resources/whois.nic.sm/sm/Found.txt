@@ -1,0 +1,14 @@
+---
+#
+# .sm Parsing Template
+#
+name: whois.nic.sm/sm/Found
+
+# Use this template for queries to whois.nic.sm:
+tag: whois.nic.sm
+tag: sm
+
+# Set query response type:
+set: Status = Found
+---
+

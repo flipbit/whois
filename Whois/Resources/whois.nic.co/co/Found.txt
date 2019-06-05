@@ -1,0 +1,14 @@
+---
+#
+# .co Parsing Template
+#
+name: whois.nic.co/co/Found
+
+# Use this template for queries to whois.nic.co:
+tag: whois.nic.co
+tag: co
+
+# Set query response type:
+set: Status = Found
+---
+

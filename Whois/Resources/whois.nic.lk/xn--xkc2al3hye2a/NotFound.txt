@@ -1,0 +1,14 @@
+---
+#
+# .xn--xkc2al3hye2a Parsing Template
+#
+name: whois.nic.lk/xn--xkc2al3hye2a/NotFound
+
+# Use this template for queries to whois.nic.lk:
+tag: whois.nic.lk
+tag: xn--xkc2al3hye2a
+
+# Set query response type:
+set: Status = NotFound
+---
+

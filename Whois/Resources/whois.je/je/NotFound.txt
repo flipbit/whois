@@ -1,0 +1,14 @@
+---
+#
+# .je Parsing Template
+#
+name: whois.je/je/NotFound
+
+# Use this template for queries to whois.je:
+tag: whois.je
+tag: je
+
+# Set query response type:
+set: Status = NotFound
+---
+

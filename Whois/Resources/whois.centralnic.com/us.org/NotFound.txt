@@ -1,0 +1,14 @@
+---
+#
+# .us.org Parsing Template
+#
+name: whois.centralnic.com/us.org/NotFound
+
+# Use this template for queries to whois.centralnic.com:
+tag: whois.centralnic.com
+tag: us.org
+
+# Set query response type:
+set: Status = NotFound
+---
+

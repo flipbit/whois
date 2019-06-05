@@ -1,0 +1,14 @@
+---
+#
+# .mo Parsing Template
+#
+name: whois.monic.mo/mo/NotFound
+
+# Use this template for queries to whois.monic.mo:
+tag: whois.monic.mo
+tag: mo
+
+# Set query response type:
+set: Status = NotFound
+---
+

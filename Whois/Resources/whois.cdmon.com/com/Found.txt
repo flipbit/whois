@@ -1,0 +1,14 @@
+---
+#
+# .com Parsing Template
+#
+name: whois.cdmon.com/com/Found
+
+# Use this template for queries to whois.cdmon.com:
+tag: whois.cdmon.com
+tag: com
+
+# Set query response type:
+set: Status = Found
+---
+

@@ -1,0 +1,14 @@
+---
+#
+# .cx Parsing Template
+#
+name: whois.nic.cx/cx/NotFound
+
+# Use this template for queries to whois.nic.cx:
+tag: whois.nic.cx
+tag: cx
+
+# Set query response type:
+set: Status = NotFound
+---
+

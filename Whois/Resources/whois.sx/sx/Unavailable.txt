@@ -1,0 +1,14 @@
+---
+#
+# .sx Parsing Template
+#
+name: whois.sx/sx/Unavailable
+
+# Use this template for queries to whois.sx:
+tag: whois.sx
+tag: sx
+
+# Set query response type:
+set: Status = Unavailable
+---
+

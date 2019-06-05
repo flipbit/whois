@@ -1,0 +1,14 @@
+---
+#
+# .by Parsing Template
+#
+name: whois.cctld.by/by/Found
+
+# Use this template for queries to whois.cctld.by:
+tag: whois.cctld.by
+tag: by
+
+# Set query response type:
+set: Status = Found
+---
+

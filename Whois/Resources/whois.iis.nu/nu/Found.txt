@@ -1,0 +1,14 @@
+---
+#
+# .nu Parsing Template
+#
+name: whois.iis.nu/nu/Found
+
+# Use this template for queries to whois.iis.nu:
+tag: whois.iis.nu
+tag: nu
+
+# Set query response type:
+set: Status = Found
+---
+

@@ -1,0 +1,14 @@
+---
+#
+# .ae.org Parsing Template
+#
+name: whois.centralnic.com/ae.org/Found
+
+# Use this template for queries to whois.centralnic.com:
+tag: whois.centralnic.com
+tag: ae.org
+
+# Set query response type:
+set: Status = Found
+---
+

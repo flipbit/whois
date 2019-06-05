@@ -1,0 +1,14 @@
+---
+#
+# .coop Parsing Template
+#
+name: whois.nic.coop/coop/NotFound
+
+# Use this template for queries to whois.nic.coop:
+tag: whois.nic.coop
+tag: coop
+
+# Set query response type:
+set: Status = NotFound
+---
+

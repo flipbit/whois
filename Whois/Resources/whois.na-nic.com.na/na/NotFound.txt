@@ -1,0 +1,14 @@
+---
+#
+# .na Parsing Template
+#
+name: whois.na-nic.com.na/na/NotFound
+
+# Use this template for queries to whois.na-nic.com.na:
+tag: whois.na-nic.com.na
+tag: na
+
+# Set query response type:
+set: Status = NotFound
+---
+

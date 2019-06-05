@@ -1,0 +1,14 @@
+---
+#
+# .nf Parsing Template
+#
+name: whois.nic.nf/nf/NotFound
+
+# Use this template for queries to whois.nic.nf:
+tag: whois.nic.nf
+tag: nf
+
+# Set query response type:
+set: Status = NotFound
+---
+

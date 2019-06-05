@@ -1,0 +1,14 @@
+---
+#
+# .joburg Parsing Template
+#
+name: joburg-whois.registry.net.za/joburg/Found
+
+# Use this template for queries to joburg-whois.registry.net.za:
+tag: joburg-whois.registry.net.za
+tag: joburg
+
+# Set query response type:
+set: Status = Found
+---
+

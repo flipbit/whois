@@ -1,0 +1,14 @@
+---
+#
+# .tk Parsing Template
+#
+name: whois.dot.tk/tk/Found
+
+# Use this template for queries to whois.dot.tk:
+tag: whois.dot.tk
+tag: tk
+
+# Set query response type:
+set: Status = Found
+---
+

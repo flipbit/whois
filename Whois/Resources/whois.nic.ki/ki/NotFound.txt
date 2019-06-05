@@ -1,0 +1,14 @@
+---
+#
+# .ki Parsing Template
+#
+name: whois.nic.ki/ki/NotFound
+
+# Use this template for queries to whois.nic.ki:
+tag: whois.nic.ki
+tag: ki
+
+# Set query response type:
+set: Status = NotFound
+---
+

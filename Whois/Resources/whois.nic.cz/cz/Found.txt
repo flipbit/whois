@@ -1,0 +1,14 @@
+---
+#
+# .cz Parsing Template
+#
+name: whois.nic.cz/cz/Found
+
+# Use this template for queries to whois.nic.cz:
+tag: whois.nic.cz
+tag: cz
+
+# Set query response type:
+set: Status = Found
+---
+

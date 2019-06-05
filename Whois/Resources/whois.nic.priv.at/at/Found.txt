@@ -1,0 +1,14 @@
+---
+#
+# .at Parsing Template
+#
+name: whois.nic.priv.at/at/Found
+
+# Use this template for queries to whois.nic.priv.at:
+tag: whois.nic.priv.at
+tag: at
+
+# Set query response type:
+set: Status = Found
+---
+

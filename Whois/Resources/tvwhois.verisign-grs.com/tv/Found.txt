@@ -1,0 +1,14 @@
+---
+#
+# .tv Parsing Template
+#
+name: tvwhois.verisign-grs.com/tv/Found
+
+# Use this template for queries to tvwhois.verisign-grs.com:
+tag: tvwhois.verisign-grs.com
+tag: tv
+
+# Set query response type:
+set: Status = Found
+---
+

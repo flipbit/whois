@@ -1,0 +1,14 @@
+---
+#
+# .mn Parsing Template
+#
+name: whois.afilias-grs.info/mn/NotFound
+
+# Use this template for queries to whois.afilias-grs.info:
+tag: whois.afilias-grs.info
+tag: mn
+
+# Set query response type:
+set: Status = NotFound
+---
+

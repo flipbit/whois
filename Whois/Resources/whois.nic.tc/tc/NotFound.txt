@@ -1,0 +1,14 @@
+---
+#
+# .tc Parsing Template
+#
+name: whois.nic.tc/tc/NotFound
+
+# Use this template for queries to whois.nic.tc:
+tag: whois.nic.tc
+tag: tc
+
+# Set query response type:
+set: Status = NotFound
+---
+

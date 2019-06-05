@@ -1,0 +1,14 @@
+---
+#
+# .tw Parsing Template
+#
+name: whois.twnic.net.tw/tw/Found
+
+# Use this template for queries to whois.twnic.net.tw:
+tag: whois.twnic.net.tw
+tag: tw
+
+# Set query response type:
+set: Status = Found
+---
+

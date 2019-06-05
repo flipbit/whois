@@ -1,0 +1,14 @@
+---
+#
+# .tn Parsing Template
+#
+name: whois.ati.tn/tn/Found
+
+# Use this template for queries to whois.ati.tn:
+tag: whois.ati.tn
+tag: tn
+
+# Set query response type:
+set: Status = Found
+---
+

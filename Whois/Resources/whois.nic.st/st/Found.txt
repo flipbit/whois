@@ -1,0 +1,14 @@
+---
+#
+# .st Parsing Template
+#
+name: whois.nic.st/st/Found
+
+# Use this template for queries to whois.nic.st:
+tag: whois.nic.st
+tag: st
+
+# Set query response type:
+set: Status = Found
+---
+

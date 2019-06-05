@@ -1,0 +1,14 @@
+---
+#
+# .sc Parsing Template
+#
+name: whois.afilias-grs.info/sc/Found
+
+# Use this template for queries to whois.afilias-grs.info:
+tag: whois.afilias-grs.info
+tag: sc
+
+# Set query response type:
+set: Status = Found
+---
+

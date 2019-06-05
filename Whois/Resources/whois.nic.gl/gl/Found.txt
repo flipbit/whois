@@ -1,0 +1,14 @@
+---
+#
+# .gl Parsing Template
+#
+name: whois.nic.gl/gl/Found
+
+# Use this template for queries to whois.nic.gl:
+tag: whois.nic.gl
+tag: gl
+
+# Set query response type:
+set: Status = Found
+---
+

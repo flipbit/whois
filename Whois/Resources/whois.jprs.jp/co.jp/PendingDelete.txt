@@ -1,0 +1,14 @@
+---
+#
+# .co.jp Parsing Template
+#
+name: whois.jprs.jp/co.jp/PendingDelete
+
+# Use this template for queries to whois.jprs.jp:
+tag: whois.jprs.jp
+tag: co.jp
+
+# Set query response type:
+set: Status = PendingDelete
+---
+

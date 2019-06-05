@@ -1,0 +1,14 @@
+---
+#
+# .net Parsing Template
+#
+name: whois.verisign-grs.com/net/NotFound
+
+# Use this template for queries to whois.verisign-grs.com:
+tag: whois.verisign-grs.com
+tag: net
+
+# Set query response type:
+set: Status = NotFound
+---
+

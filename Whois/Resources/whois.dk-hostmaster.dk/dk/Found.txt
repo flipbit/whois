@@ -1,0 +1,14 @@
+---
+#
+# .dk Parsing Template
+#
+name: whois.dk-hostmaster.dk/dk/Found
+
+# Use this template for queries to whois.dk-hostmaster.dk:
+tag: whois.dk-hostmaster.dk
+tag: dk
+
+# Set query response type:
+set: Status = Found
+---
+

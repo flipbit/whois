@@ -1,0 +1,14 @@
+---
+#
+# .vc Parsing Template
+#
+name: whois.afilias-grs.info/vc/NotFound
+
+# Use this template for queries to whois.afilias-grs.info:
+tag: whois.afilias-grs.info
+tag: vc
+
+# Set query response type:
+set: Status = NotFound
+---
+

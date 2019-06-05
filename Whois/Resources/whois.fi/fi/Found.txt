@@ -1,0 +1,14 @@
+---
+#
+# .fi Parsing Template
+#
+name: whois.fi/fi/Found
+
+# Use this template for queries to whois.fi:
+tag: whois.fi
+tag: fi
+
+# Set query response type:
+set: Status = Found
+---
+

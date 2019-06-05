@@ -1,0 +1,14 @@
+---
+#
+# .biz Parsing Template
+#
+name: whois.biz/biz/NotFound
+
+# Use this template for queries to whois.biz:
+tag: whois.biz
+tag: biz
+
+# Set query response type:
+set: Status = NotFound
+---
+

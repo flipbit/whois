@@ -1,0 +1,14 @@
+---
+#
+# .sb Parsing Template
+#
+name: whois.nic.net.sb/sb/Found
+
+# Use this template for queries to whois.nic.net.sb:
+tag: whois.nic.net.sb
+tag: sb
+
+# Set query response type:
+set: Status = Found
+---
+

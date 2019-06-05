@@ -1,0 +1,14 @@
+---
+#
+# .iq Parsing Template
+#
+name: whois.cmc.iq/iq/Found
+
+# Use this template for queries to whois.cmc.iq:
+tag: whois.cmc.iq
+tag: iq
+
+# Set query response type:
+set: Status = Found
+---
+

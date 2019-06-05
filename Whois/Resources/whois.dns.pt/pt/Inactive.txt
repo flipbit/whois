@@ -1,0 +1,14 @@
+---
+#
+# .pt Parsing Template
+#
+name: whois.dns.pt/pt/Inactive
+
+# Use this template for queries to whois.dns.pt:
+tag: whois.dns.pt
+tag: pt
+
+# Set query response type:
+set: Status = Inactive
+---
+

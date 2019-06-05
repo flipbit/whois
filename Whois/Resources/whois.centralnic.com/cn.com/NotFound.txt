@@ -1,0 +1,14 @@
+---
+#
+# .cn.com Parsing Template
+#
+name: whois.centralnic.com/cn.com/NotFound
+
+# Use this template for queries to whois.centralnic.com:
+tag: whois.centralnic.com
+tag: cn.com
+
+# Set query response type:
+set: Status = NotFound
+---
+

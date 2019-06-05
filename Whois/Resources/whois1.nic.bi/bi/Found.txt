@@ -1,0 +1,14 @@
+---
+#
+# .bi Parsing Template
+#
+name: whois1.nic.bi/bi/Found
+
+# Use this template for queries to whois1.nic.bi:
+tag: whois1.nic.bi
+tag: bi
+
+# Set query response type:
+set: Status = Found
+---
+

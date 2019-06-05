@@ -1,0 +1,14 @@
+---
+#
+# .arpa Parsing Template
+#
+name: whois.iana.org/arpa/Found
+
+# Use this template for queries to whois.iana.org:
+tag: whois.iana.org
+tag: arpa
+
+# Set query response type:
+set: Status = Found
+---
+

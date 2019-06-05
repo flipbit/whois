@@ -1,0 +1,14 @@
+---
+#
+# .ug Parsing Template
+#
+name: whois.co.ug/ug/Unconfirmed
+
+# Use this template for queries to whois.co.ug:
+tag: whois.co.ug
+tag: ug
+
+# Set query response type:
+set: Status = Unconfirmed
+---
+

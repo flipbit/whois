@@ -1,0 +1,14 @@
+---
+#
+# .eu Parsing Template
+#
+name: whois.eu/eu/Throttled
+
+# Use this template for queries to whois.eu:
+tag: whois.eu
+tag: eu
+
+# Set query response type:
+set: Status = Throttled
+---
+

@@ -1,0 +1,14 @@
+---
+#
+# .ru.com Parsing Template
+#
+name: whois.centralnic.com/ru.com/Found
+
+# Use this template for queries to whois.centralnic.com:
+tag: whois.centralnic.com
+tag: ru.com
+
+# Set query response type:
+set: Status = Found
+---
+

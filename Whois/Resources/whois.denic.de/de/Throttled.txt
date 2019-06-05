@@ -1,0 +1,14 @@
+---
+#
+# .de Parsing Template
+#
+name: whois.denic.de/de/Throttled
+
+# Use this template for queries to whois.denic.de:
+tag: whois.denic.de
+tag: de
+
+# Set query response type:
+set: Status = Throttled
+---
+

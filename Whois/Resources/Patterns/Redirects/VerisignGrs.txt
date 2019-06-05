@@ -1,8 +1,0 @@
-﻿   Domain Name: {WhoisRedirect.Domain$:ToLower()} 
-   Registrar WHOIS Server: {WhoisRedirect.Url$} 
-   Registrar URL: {WhoisRedirect.ReferralUrl$?}
-   Updated Date: {WhoisRedirect.ModifiedDate$?:ToDateTime('yyyy-MM-ddTHH:mm:ssZ')}
-   Creation Date: {WhoisRedirect.CreatedDate$?:ToDateTime('yyyy-MM-ddTHH:mm:ssZ')}
-   Registry Expiry Date: {WhoisRedirect.ExpirationDate$?:ToDateTime('yyyy-MM-ddTHH:mm:ssZ')}
-   Registrar: {WhoisRedirect.Registrar$?} 
-   Name Server: {WhoisRedirect.NameServers*$?} 

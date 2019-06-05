@@ -1,0 +1,14 @@
+---
+#
+# .im Parsing Template
+#
+name: whois.nic.im/im/NotFound
+
+# Use this template for queries to whois.nic.im:
+tag: whois.nic.im
+tag: im
+
+# Set query response type:
+set: Status = NotFound
+---
+

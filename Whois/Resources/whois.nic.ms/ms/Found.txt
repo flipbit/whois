@@ -1,0 +1,14 @@
+---
+#
+# .ms Parsing Template
+#
+name: whois.nic.ms/ms/Found
+
+# Use this template for queries to whois.nic.ms:
+tag: whois.nic.ms
+tag: ms
+
+# Set query response type:
+set: Status = Found
+---
+

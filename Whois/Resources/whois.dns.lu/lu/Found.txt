@@ -1,0 +1,14 @@
+---
+#
+# .lu Parsing Template
+#
+name: whois.dns.lu/lu/Found
+
+# Use this template for queries to whois.dns.lu:
+tag: whois.dns.lu
+tag: lu
+
+# Set query response type:
+set: Status = Found
+---
+

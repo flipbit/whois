@@ -1,0 +1,14 @@
+---
+#
+# .hm Parsing Template
+#
+name: whois.registry.hm/hm/NotFound
+
+# Use this template for queries to whois.registry.hm:
+tag: whois.registry.hm
+tag: hm
+
+# Set query response type:
+set: Status = NotFound
+---
+

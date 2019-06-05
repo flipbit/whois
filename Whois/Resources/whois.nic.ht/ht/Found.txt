@@ -1,0 +1,14 @@
+---
+#
+# .ht Parsing Template
+#
+name: whois.nic.ht/ht/Found
+
+# Use this template for queries to whois.nic.ht:
+tag: whois.nic.ht
+tag: ht
+
+# Set query response type:
+set: Status = Found
+---
+

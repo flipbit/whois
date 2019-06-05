@@ -1,0 +1,14 @@
+---
+#
+# .lk Parsing Template
+#
+name: whois.nic.lk/lk/Found
+
+# Use this template for queries to whois.nic.lk:
+tag: whois.nic.lk
+tag: lk
+
+# Set query response type:
+set: Status = Found
+---
+

@@ -1,0 +1,14 @@
+---
+#
+# .is Parsing Template
+#
+name: whois.isnic.is/is/Found
+
+# Use this template for queries to whois.isnic.is:
+tag: whois.isnic.is
+tag: is
+
+# Set query response type:
+set: Status = Found
+---
+

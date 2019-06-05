@@ -1,0 +1,14 @@
+---
+#
+# .sl Parsing Template
+#
+name: whois.nic.sl/sl/Found
+
+# Use this template for queries to whois.nic.sl:
+tag: whois.nic.sl
+tag: sl
+
+# Set query response type:
+set: Status = Found
+---
+

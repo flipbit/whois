@@ -1,0 +1,14 @@
+---
+#
+# .vg Parsing Template
+#
+name: ccwhois.ksregistry.net/vg/NotFound
+
+# Use this template for queries to ccwhois.ksregistry.net:
+tag: ccwhois.ksregistry.net
+tag: vg
+
+# Set query response type:
+set: Status = NotFound
+---
+

@@ -1,0 +1,14 @@
+---
+#
+# .ex Parsing Template
+#
+name: whois.nic.ec/ex/Found
+
+# Use this template for queries to whois.nic.ec:
+tag: whois.nic.ec
+tag: ex
+
+# Set query response type:
+set: Status = Found
+---
+

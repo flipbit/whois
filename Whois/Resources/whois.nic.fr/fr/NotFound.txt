@@ -1,0 +1,14 @@
+---
+#
+# .fr Parsing Template
+#
+name: whois.nic.fr/fr/NotFound
+
+# Use this template for queries to whois.nic.fr:
+tag: whois.nic.fr
+tag: fr
+
+# Set query response type:
+set: Status = NotFound
+---
+

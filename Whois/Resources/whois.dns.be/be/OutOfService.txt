@@ -1,0 +1,14 @@
+---
+#
+# .be Parsing Template
+#
+name: whois.dns.be/be/OutOfService
+
+# Use this template for queries to whois.dns.be:
+tag: whois.dns.be
+tag: be
+
+# Set query response type:
+set: Status = OutOfService
+---
+

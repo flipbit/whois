@@ -1,0 +1,14 @@
+---
+#
+# .ci Parsing Template
+#
+name: whois.nic.ci/ci/NotFound
+
+# Use this template for queries to whois.nic.ci:
+tag: whois.nic.ci
+tag: ci
+
+# Set query response type:
+set: Status = NotFound
+---
+

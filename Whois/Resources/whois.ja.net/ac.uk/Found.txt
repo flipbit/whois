@@ -1,0 +1,14 @@
+---
+#
+# .ac.uk Parsing Template
+#
+name: whois.ja.net/ac.uk/Found
+
+# Use this template for queries to whois.ja.net:
+tag: whois.ja.net
+tag: ac.uk
+
+# Set query response type:
+set: Status = Found
+---
+

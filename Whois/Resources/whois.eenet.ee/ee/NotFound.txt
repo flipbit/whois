@@ -1,0 +1,14 @@
+---
+#
+# .ee Parsing Template
+#
+name: whois.eenet.ee/ee/NotFound
+
+# Use this template for queries to whois.eenet.ee:
+tag: whois.eenet.ee
+tag: ee
+
+# Set query response type:
+set: Status = NotFound
+---
+

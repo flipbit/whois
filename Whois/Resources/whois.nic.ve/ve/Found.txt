@@ -1,0 +1,14 @@
+---
+#
+# .ve Parsing Template
+#
+name: whois.nic.ve/ve/Found
+
+# Use this template for queries to whois.nic.ve:
+tag: whois.nic.ve
+tag: ve
+
+# Set query response type:
+set: Status = Found
+---
+

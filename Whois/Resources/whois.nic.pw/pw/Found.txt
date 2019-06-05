@@ -1,0 +1,14 @@
+---
+#
+# .pw Parsing Template
+#
+name: whois.nic.pw/pw/Found
+
+# Use this template for queries to whois.nic.pw:
+tag: whois.nic.pw
+tag: pw
+
+# Set query response type:
+set: Status = Found
+---
+

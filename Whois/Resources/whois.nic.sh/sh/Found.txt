@@ -1,0 +1,14 @@
+---
+#
+# .sh Parsing Template
+#
+name: whois.nic.sh/sh/Found
+
+# Use this template for queries to whois.nic.sh:
+tag: whois.nic.sh
+tag: sh
+
+# Set query response type:
+set: Status = Found
+---
+

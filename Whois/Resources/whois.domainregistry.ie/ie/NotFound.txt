@@ -1,0 +1,14 @@
+---
+#
+# .ie Parsing Template
+#
+name: whois.domainregistry.ie/ie/NotFound
+
+# Use this template for queries to whois.domainregistry.ie:
+tag: whois.domainregistry.ie
+tag: ie
+
+# Set query response type:
+set: Status = NotFound
+---
+

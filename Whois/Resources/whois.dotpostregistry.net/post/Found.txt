@@ -1,0 +1,14 @@
+---
+#
+# .post Parsing Template
+#
+name: whois.dotpostregistry.net/post/Found
+
+# Use this template for queries to whois.dotpostregistry.net:
+tag: whois.dotpostregistry.net
+tag: post
+
+# Set query response type:
+set: Status = Found
+---
+

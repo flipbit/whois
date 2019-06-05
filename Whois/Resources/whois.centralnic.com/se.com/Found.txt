@@ -1,0 +1,14 @@
+---
+#
+# .se.com Parsing Template
+#
+name: whois.centralnic.com/se.com/Found
+
+# Use this template for queries to whois.centralnic.com:
+tag: whois.centralnic.com
+tag: se.com
+
+# Set query response type:
+set: Status = Found
+---
+

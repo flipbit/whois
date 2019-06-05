@@ -1,0 +1,14 @@
+---
+#
+# .ps Parsing Template
+#
+name: whois.pnina.ps/ps/NotFound
+
+# Use this template for queries to whois.pnina.ps:
+tag: whois.pnina.ps
+tag: ps
+
+# Set query response type:
+set: Status = NotFound
+---
+
