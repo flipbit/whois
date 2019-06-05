@@ -1,0 +1,14 @@
+---
+#
+# .br.com Parsing Template
+#
+name: whois.centralnic.com/br.com/NotFound
+
+# Use this template for queries to whois.centralnic.com:
+tag: whois.centralnic.com
+tag: br.com
+
+# Set query response type:
+set: Status = NotFound
+---
+

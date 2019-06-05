@@ -1,0 +1,14 @@
+---
+#
+# .gov Parsing Template
+#
+name: whois.dotgov.gov/gov/NotFound
+
+# Use this template for queries to whois.dotgov.gov:
+tag: whois.dotgov.gov
+tag: gov
+
+# Set query response type:
+set: Status = NotFound
+---
+

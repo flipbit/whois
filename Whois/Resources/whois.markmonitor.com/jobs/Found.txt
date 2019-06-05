@@ -1,0 +1,14 @@
+---
+#
+# .jobs Parsing Template
+#
+name: whois.markmonitor.com/jobs/Found
+
+# Use this template for queries to whois.markmonitor.com:
+tag: whois.markmonitor.com
+tag: jobs
+
+# Set query response type:
+set: Status = Found
+---
+

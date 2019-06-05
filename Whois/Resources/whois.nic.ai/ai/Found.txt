@@ -1,0 +1,14 @@
+---
+#
+# .ai Parsing Template
+#
+name: whois.nic.ai/ai/Found
+
+# Use this template for queries to whois.nic.ai:
+tag: whois.nic.ai
+tag: ai
+
+# Set query response type:
+set: Status = Found
+---
+

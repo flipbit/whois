@@ -1,0 +1,14 @@
+---
+#
+# .om Parsing Template
+#
+name: whois.registry.om/om/Found
+
+# Use this template for queries to whois.registry.om:
+tag: whois.registry.om
+tag: om
+
+# Set query response type:
+set: Status = Found
+---
+

@@ -1,0 +1,14 @@
+---
+#
+# .lt Parsing Template
+#
+name: whois.domreg.lt/lt/NotFound
+
+# Use this template for queries to whois.domreg.lt:
+tag: whois.domreg.lt
+tag: lt
+
+# Set query response type:
+set: Status = NotFound
+---
+

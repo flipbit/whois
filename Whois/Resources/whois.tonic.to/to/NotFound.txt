@@ -1,0 +1,14 @@
+---
+#
+# .to Parsing Template
+#
+name: whois.tonic.to/to/NotFound
+
+# Use this template for queries to whois.tonic.to:
+tag: whois.tonic.to
+tag: to
+
+# Set query response type:
+set: Status = NotFound
+---
+

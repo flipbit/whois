@@ -1,0 +1,14 @@
+---
+#
+# .li Parsing Template
+#
+name: whois.nic.li/li/NotFound
+
+# Use this template for queries to whois.nic.li:
+tag: whois.nic.li
+tag: li
+
+# Set query response type:
+set: Status = NotFound
+---
+

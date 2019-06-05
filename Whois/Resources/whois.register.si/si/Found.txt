@@ -1,0 +1,14 @@
+---
+#
+# .si Parsing Template
+#
+name: whois.register.si/si/Found
+
+# Use this template for queries to whois.register.si:
+tag: whois.register.si
+tag: si
+
+# Set query response type:
+set: Status = Found
+---
+

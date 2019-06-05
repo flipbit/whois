@@ -1,0 +1,14 @@
+---
+#
+# .th Parsing Template
+#
+name: whois.thnic.co.th/th/Found
+
+# Use this template for queries to whois.thnic.co.th:
+tag: whois.thnic.co.th
+tag: th
+
+# Set query response type:
+set: Status = Found
+---
+

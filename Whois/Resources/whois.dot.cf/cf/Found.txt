@@ -1,0 +1,14 @@
+---
+#
+# .cf Parsing Template
+#
+name: whois.dot.cf/cf/Found
+
+# Use this template for queries to whois.dot.cf:
+tag: whois.dot.cf
+tag: cf
+
+# Set query response type:
+set: Status = Found
+---
+

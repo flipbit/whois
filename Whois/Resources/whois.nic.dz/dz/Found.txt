@@ -1,0 +1,14 @@
+---
+#
+# .dz Parsing Template
+#
+name: whois.nic.dz/dz/Found
+
+# Use this template for queries to whois.nic.dz:
+tag: whois.nic.dz
+tag: dz
+
+# Set query response type:
+set: Status = Found
+---
+

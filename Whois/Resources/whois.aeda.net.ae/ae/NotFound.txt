@@ -1,0 +1,14 @@
+---
+#
+# .ae Parsing Template
+#
+name: whois.aeda.net.ae/ae/NotFound
+
+# Use this template for queries to whois.aeda.net.ae:
+tag: whois.aeda.net.ae
+tag: ae
+
+# Set query response type:
+set: Status = NotFound
+---
+

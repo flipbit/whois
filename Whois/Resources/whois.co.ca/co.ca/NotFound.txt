@@ -1,0 +1,14 @@
+---
+#
+# .co.ca Parsing Template
+#
+name: whois.co.ca/co.ca/NotFound
+
+# Use this template for queries to whois.co.ca:
+tag: whois.co.ca
+tag: co.ca
+
+# Set query response type:
+set: Status = NotFound
+---
+

@@ -1,0 +1,14 @@
+---
+#
+# .xn--p1ai Parsing Template
+#
+name: whois.tcinet.ru/xn--p1ai/NotFound
+
+# Use this template for queries to whois.tcinet.ru:
+tag: whois.tcinet.ru
+tag: xn--p1ai
+
+# Set query response type:
+set: Status = NotFound
+---
+

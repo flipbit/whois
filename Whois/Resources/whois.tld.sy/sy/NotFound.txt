@@ -1,0 +1,14 @@
+---
+#
+# .sy Parsing Template
+#
+name: whois.tld.sy/sy/NotFound
+
+# Use this template for queries to whois.tld.sy:
+tag: whois.tld.sy
+tag: sy
+
+# Set query response type:
+set: Status = NotFound
+---
+

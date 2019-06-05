@@ -1,0 +1,14 @@
+---
+#
+# .uk.net Parsing Template
+#
+name: whois.centralnic.com/uk.net/NotFound
+
+# Use this template for queries to whois.centralnic.com:
+tag: whois.centralnic.com
+tag: uk.net
+
+# Set query response type:
+set: Status = NotFound
+---
+

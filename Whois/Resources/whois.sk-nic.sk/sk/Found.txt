@@ -1,0 +1,14 @@
+---
+#
+# .sk Parsing Template
+#
+name: whois.sk-nic.sk/sk/Found
+
+# Use this template for queries to whois.sk-nic.sk:
+tag: whois.sk-nic.sk
+tag: sk
+
+# Set query response type:
+set: Status = Found
+---
+

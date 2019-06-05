@@ -1,0 +1,14 @@
+---
+#
+# .jpn.com Parsing Template
+#
+name: whois.centralnic.com/jpn.com/Found
+
+# Use this template for queries to whois.centralnic.com:
+tag: whois.centralnic.com
+tag: jpn.com
+
+# Set query response type:
+set: Status = Found
+---
+

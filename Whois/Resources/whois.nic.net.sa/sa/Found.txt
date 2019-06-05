@@ -1,0 +1,14 @@
+---
+#
+# .sa Parsing Template
+#
+name: whois.nic.net.sa/sa/Found
+
+# Use this template for queries to whois.nic.net.sa:
+tag: whois.nic.net.sa
+tag: sa
+
+# Set query response type:
+set: Status = Found
+---
+

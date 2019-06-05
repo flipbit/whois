@@ -1,0 +1,14 @@
+---
+#
+# .ch Parsing Template
+#
+name: whois.nic.ch/ch/Found
+
+# Use this template for queries to whois.nic.ch:
+tag: whois.nic.ch
+tag: ch
+
+# Set query response type:
+set: Status = Found
+---
+

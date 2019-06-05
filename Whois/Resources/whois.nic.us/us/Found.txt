@@ -1,0 +1,14 @@
+---
+#
+# .us Parsing Template
+#
+name: whois.nic.us/us/Found
+
+# Use this template for queries to whois.nic.us:
+tag: whois.nic.us
+tag: us
+
+# Set query response type:
+set: Status = Found
+---
+

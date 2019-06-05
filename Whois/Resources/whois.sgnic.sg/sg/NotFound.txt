@@ -1,0 +1,14 @@
+---
+#
+# .sg Parsing Template
+#
+name: whois.sgnic.sg/sg/NotFound
+
+# Use this template for queries to whois.sgnic.sg:
+tag: whois.sgnic.sg
+tag: sg
+
+# Set query response type:
+set: Status = NotFound
+---
+

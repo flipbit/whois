@@ -1,0 +1,14 @@
+---
+#
+# .ee Parsing Template
+#
+name: whois.tld.ee/ee/NotFound
+
+# Use this template for queries to whois.tld.ee:
+tag: whois.tld.ee
+tag: ee
+
+# Set query response type:
+set: Status = NotFound
+---
+

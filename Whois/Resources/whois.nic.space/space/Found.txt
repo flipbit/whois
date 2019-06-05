@@ -1,0 +1,14 @@
+---
+#
+# .space Parsing Template
+#
+name: whois.nic.space/space/Found
+
+# Use this template for queries to whois.nic.space:
+tag: whois.nic.space
+tag: space
+
+# Set query response type:
+set: Status = Found
+---
+

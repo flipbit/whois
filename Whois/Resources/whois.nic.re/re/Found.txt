@@ -1,0 +1,14 @@
+---
+#
+# .re Parsing Template
+#
+name: whois.nic.re/re/Found
+
+# Use this template for queries to whois.nic.re:
+tag: whois.nic.re
+tag: re
+
+# Set query response type:
+set: Status = Found
+---
+

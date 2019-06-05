@@ -1,0 +1,14 @@
+---
+#
+# .ru Parsing Template
+#
+name: whois.tcinet.ru/ru/Found
+
+# Use this template for queries to whois.tcinet.ru:
+tag: whois.tcinet.ru
+tag: ru
+
+# Set query response type:
+set: Status = Found
+---
+

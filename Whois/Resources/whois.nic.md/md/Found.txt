@@ -1,0 +1,14 @@
+---
+#
+# .md Parsing Template
+#
+name: whois.nic.md/md/Found
+
+# Use this template for queries to whois.nic.md:
+tag: whois.nic.md
+tag: md
+
+# Set query response type:
+set: Status = Found
+---
+

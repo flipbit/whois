@@ -1,0 +1,14 @@
+---
+#
+# .no Parsing Template
+#
+name: whois.norid.no/no/Found
+
+# Use this template for queries to whois.norid.no:
+tag: whois.norid.no
+tag: no
+
+# Set query response type:
+set: Status = Found
+---
+

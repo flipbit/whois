@@ -1,0 +1,14 @@
+---
+#
+# .pl Parsing Template
+#
+name: whois.dns.pl/pl/NotFound
+
+# Use this template for queries to whois.dns.pl:
+tag: whois.dns.pl
+tag: pl
+
+# Set query response type:
+set: Status = NotFound
+---
+

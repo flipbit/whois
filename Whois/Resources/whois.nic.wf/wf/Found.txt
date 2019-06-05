@@ -1,0 +1,14 @@
+---
+#
+# .wf Parsing Template
+#
+name: whois.nic.wf/wf/Found
+
+# Use this template for queries to whois.nic.wf:
+tag: whois.nic.wf
+tag: wf
+
+# Set query response type:
+set: Status = Found
+---
+

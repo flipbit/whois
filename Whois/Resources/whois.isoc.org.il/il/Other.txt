@@ -1,0 +1,14 @@
+---
+#
+# .il Parsing Template
+#
+name: whois.isoc.org.il/il/Other
+
+# Use this template for queries to whois.isoc.org.il:
+tag: whois.isoc.org.il
+tag: il
+
+# Set query response type:
+set: Status = Other
+---
+

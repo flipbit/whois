@@ -1,0 +1,14 @@
+---
+#
+# .gg Parsing Template
+#
+name: whois.gg/gg/NotFound
+
+# Use this template for queries to whois.gg:
+tag: whois.gg
+tag: gg
+
+# Set query response type:
+set: Status = NotFound
+---
+

@@ -1,0 +1,14 @@
+---
+#
+# .gov.uk Parsing Template
+#
+name: whois.ja.net/gov.uk/Found
+
+# Use this template for queries to whois.ja.net:
+tag: whois.ja.net
+tag: gov.uk
+
+# Set query response type:
+set: Status = Found
+---
+

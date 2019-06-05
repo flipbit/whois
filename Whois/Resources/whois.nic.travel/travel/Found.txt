@@ -1,0 +1,14 @@
+---
+#
+# .travel Parsing Template
+#
+name: whois.nic.travel/travel/Found
+
+# Use this template for queries to whois.nic.travel:
+tag: whois.nic.travel
+tag: travel
+
+# Set query response type:
+set: Status = Found
+---
+

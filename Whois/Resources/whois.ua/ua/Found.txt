@@ -1,0 +1,14 @@
+---
+#
+# .ua Parsing Template
+#
+name: whois.ua/ua/Found
+
+# Use this template for queries to whois.ua:
+tag: whois.ua
+tag: ua
+
+# Set query response type:
+set: Status = Found
+---
+

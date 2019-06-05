@@ -1,0 +1,14 @@
+---
+#
+# .hn Parsing Template
+#
+name: whois.nic.hn/hn/NotFound
+
+# Use this template for queries to whois.nic.hn:
+tag: whois.nic.hn
+tag: hn
+
+# Set query response type:
+set: Status = NotFound
+---
+

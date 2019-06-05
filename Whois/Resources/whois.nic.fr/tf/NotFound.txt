@@ -1,0 +1,14 @@
+---
+#
+# .tf Parsing Template
+#
+name: whois.nic.fr/tf/NotFound
+
+# Use this template for queries to whois.nic.fr:
+tag: whois.nic.fr
+tag: tf
+
+# Set query response type:
+set: Status = NotFound
+---
+

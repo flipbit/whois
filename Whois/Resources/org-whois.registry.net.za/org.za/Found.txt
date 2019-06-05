@@ -1,0 +1,14 @@
+---
+#
+# .org.za Parsing Template
+#
+name: org-whois.registry.net.za/org.za/Found
+
+# Use this template for queries to org-whois.registry.net.za:
+tag: org-whois.registry.net.za
+tag: org.za
+
+# Set query response type:
+set: Status = Found
+---
+

@@ -1,0 +1,14 @@
+---
+#
+# .pro Parsing Template
+#
+name: whois.afilias.net/pro/Reserved
+
+# Use this template for queries to whois.afilias.net:
+tag: whois.afilias.net
+tag: pro
+
+# Set query response type:
+set: Status = Reserved
+---
+

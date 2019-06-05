@@ -1,0 +1,14 @@
+---
+#
+# .af Parsing Template
+#
+name: whois.nic.af/af/Found
+
+# Use this template for queries to whois.nic.af:
+tag: whois.nic.af
+tag: af
+
+# Set query response type:
+set: Status = Found
+---
+

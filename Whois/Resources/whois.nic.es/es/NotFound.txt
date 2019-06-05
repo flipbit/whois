@@ -1,0 +1,14 @@
+---
+#
+# .es Parsing Template
+#
+name: whois.nic.es/es/NotFound
+
+# Use this template for queries to whois.nic.es:
+tag: whois.nic.es
+tag: es
+
+# Set query response type:
+set: Status = NotFound
+---
+

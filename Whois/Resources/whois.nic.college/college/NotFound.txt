@@ -1,0 +1,14 @@
+---
+#
+# .college Parsing Template
+#
+name: whois.nic.college/college/NotFound
+
+# Use this template for queries to whois.nic.college:
+tag: whois.nic.college
+tag: college
+
+# Set query response type:
+set: Status = NotFound
+---
+

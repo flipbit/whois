@@ -1,0 +1,14 @@
+---
+#
+# .yt Parsing Template
+#
+name: whois.nic.fr/yt/Found
+
+# Use this template for queries to whois.nic.fr:
+tag: whois.nic.fr
+tag: yt
+
+# Set query response type:
+set: Status = Found
+---
+

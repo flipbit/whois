@@ -1,0 +1,14 @@
+---
+#
+# .co.pl Parsing Template
+#
+name: whois.co.pl/co.pl/Found
+
+# Use this template for queries to whois.co.pl:
+tag: whois.co.pl
+tag: co.pl
+
+# Set query response type:
+set: Status = Found
+---
+

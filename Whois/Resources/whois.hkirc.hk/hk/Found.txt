@@ -1,0 +1,14 @@
+---
+#
+# .hk Parsing Template
+#
+name: whois.hkirc.hk/hk/Found
+
+# Use this template for queries to whois.hkirc.hk:
+tag: whois.hkirc.hk
+tag: hk
+
+# Set query response type:
+set: Status = Found
+---
+

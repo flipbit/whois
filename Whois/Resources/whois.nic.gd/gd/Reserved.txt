@@ -1,0 +1,14 @@
+---
+#
+# .gd Parsing Template
+#
+name: whois.nic.gd/gd/Reserved
+
+# Use this template for queries to whois.nic.gd:
+tag: whois.nic.gd
+tag: gd
+
+# Set query response type:
+set: Status = Reserved
+---
+

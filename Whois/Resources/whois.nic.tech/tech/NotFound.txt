@@ -1,0 +1,14 @@
+---
+#
+# .tech Parsing Template
+#
+name: whois.nic.tech/tech/NotFound
+
+# Use this template for queries to whois.nic.tech:
+tag: whois.nic.tech
+tag: tech
+
+# Set query response type:
+set: Status = NotFound
+---
+

@@ -1,0 +1,14 @@
+---
+#
+# .design Parsing Template
+#
+name: whois.nic.design/design/Found
+
+# Use this template for queries to whois.nic.design:
+tag: whois.nic.design
+tag: design
+
+# Set query response type:
+set: Status = Found
+---
+

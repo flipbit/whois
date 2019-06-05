@@ -1,0 +1,14 @@
+---
+#
+# .asia Parsing Template
+#
+name: whois.nic.asia/asia/Found
+
+# Use this template for queries to whois.nic.asia:
+tag: whois.nic.asia
+tag: asia
+
+# Set query response type:
+set: Status = Found
+---
+

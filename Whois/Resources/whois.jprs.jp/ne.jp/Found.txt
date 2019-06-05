@@ -1,0 +1,14 @@
+---
+#
+# .ne.jp Parsing Template
+#
+name: whois.jprs.jp/ne.jp/Found
+
+# Use this template for queries to whois.jprs.jp:
+tag: whois.jprs.jp
+tag: ne.jp
+
+# Set query response type:
+set: Status = Found
+---
+

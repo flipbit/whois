@@ -1,0 +1,14 @@
+---
+#
+# .ca Parsing Template
+#
+name: whois.cira.ca/ca/Invalid
+
+# Use this template for queries to whois.cira.ca:
+tag: whois.cira.ca
+tag: ca
+
+# Set query response type:
+set: Status = Invalid
+---
+

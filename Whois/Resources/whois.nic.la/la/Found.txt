@@ -1,0 +1,14 @@
+---
+#
+# .la Parsing Template
+#
+name: whois.nic.la/la/Found
+
+# Use this template for queries to whois.nic.la:
+tag: whois.nic.la
+tag: la
+
+# Set query response type:
+set: Status = Found
+---
+

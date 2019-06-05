@@ -1,0 +1,14 @@
+---
+#
+# .bg Parsing Template
+#
+name: whois.register.bg/bg/NotFound
+
+# Use this template for queries to whois.register.bg:
+tag: whois.register.bg
+tag: bg
+
+# Set query response type:
+set: Status = NotFound
+---
+

@@ -1,0 +1,14 @@
+---
+#
+# .lv Parsing Template
+#
+name: whois.nic.lv/lv/Found
+
+# Use this template for queries to whois.nic.lv:
+tag: whois.nic.lv
+tag: lv
+
+# Set query response type:
+set: Status = Found
+---
+

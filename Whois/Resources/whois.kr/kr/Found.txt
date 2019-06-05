@@ -1,0 +1,14 @@
+---
+#
+# .kr Parsing Template
+#
+name: whois.kr/kr/Found
+
+# Use this template for queries to whois.kr:
+tag: whois.kr
+tag: kr
+
+# Set query response type:
+set: Status = Found
+---
+
