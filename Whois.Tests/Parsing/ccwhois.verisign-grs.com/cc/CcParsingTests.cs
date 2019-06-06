@@ -1,3 +1,4 @@
+using System;
 using NUnit.Framework;
 using Whois.Models;
 using Whois.Parsers;
@@ -25,6 +26,20 @@ namespace Whois.Parsing.Ccwhois.Verisign.Grs.Com.Cc
 
             Assert.Greater(sample.Length, 0);
             Assert.AreEqual(WhoisResponseStatus.Found, response.Status);
+
+            Assert.AreEqual("m4r0c-s3curity.cc", response.DomainName);
+
+            Assert.AreEqual("TUCOWS INC.", response.Registrar.Name);
+            Assert.AreEqual("http://domainhelp.opensrs.net", response.Registrar.Url);
+            Assert.AreEqual("whois.tucows.com", response.Registrar.WhoisServerUrl);
+
+            Assert.AreEqual(new DateTime(2010, 5, 7, 0, 0, 0), response.Updated);
+            Assert.AreEqual(new DateTime(2009, 3, 26, 0, 0, 0), response.Registered);
+            Assert.AreEqual(new DateTime(2011, 3, 26, 0, 0, 0), response.Expiration);
+
+            Assert.AreEqual(2, response.DomainStatus.Count);
+            Assert.AreEqual("CLIENT-XFER-PROHIBITED", response.DomainStatus[0]);
+            Assert.AreEqual("CLIENT-UPDATE-PROHIBITED", response.DomainStatus[1]);
         }
 
         [Test]
@@ -35,6 +50,7 @@ namespace Whois.Parsing.Ccwhois.Verisign.Grs.Com.Cc
 
             Assert.Greater(sample.Length, 0);
             Assert.AreEqual(WhoisResponseStatus.NotFound, response.Status);
+            Assert.AreEqual("u34jedzcq.cc", response.DomainName);
         }
 
         [Test]
@@ -45,6 +61,31 @@ namespace Whois.Parsing.Ccwhois.Verisign.Grs.Com.Cc
 
             Assert.Greater(sample.Length, 0);
             Assert.AreEqual(WhoisResponseStatus.Found, response.Status);
-        }
+
+            Assert.AreEqual("google.cc", response.DomainName);
+            Assert.AreEqual("86420657_DOMAIN_CC-VRSN", response.RegistryDomainId);
+
+            Assert.AreEqual("MARKMONITOR INC.", response.Registrar.Name);
+            Assert.AreEqual("http://www.markmonitor.com", response.Registrar.Url);
+            Assert.AreEqual("whois.markmonitor.com", response.Registrar.WhoisServerUrl);
+            Assert.AreEqual("abusecomplaints@markmonitor.com", response.Registrar.AbuseEmail);
+            Assert.AreEqual("+1.2083895740", response.Registrar.AbuseTelephoneNumber);
+
+            Assert.AreEqual(new DateTime(2017, 5, 6, 10, 28, 40), response.Updated);
+            Assert.AreEqual(new DateTime(1999, 6, 7, 5, 0, 0), response.Registered);
+            Assert.AreEqual(new DateTime(2018, 6, 7, 5, 0, 0), response.Expiration);
+
+            Assert.AreEqual(1, response.NameServers.Count);
+            Assert.AreEqual("ns4.google.com", response.NameServers[0]);
+
+            Assert.AreEqual(6, response.DomainStatus.Count);
+            Assert.AreEqual("clientDeleteProhibited", response.DomainStatus[0]);
+            Assert.AreEqual("clientTransferProhibited", response.DomainStatus[1]);
+            Assert.AreEqual("clientUpdateProhibited", response.DomainStatus[2]);
+            Assert.AreEqual("serverDeleteProhibited", response.DomainStatus[3]);
+            Assert.AreEqual("serverTransferProhibited", response.DomainStatus[4]);
+            Assert.AreEqual("serverUpdateProhibited", response.DomainStatus[5]);
+
+            Assert.AreEqual("unsigned", response.DnsSecStatus);        }
     }
 }

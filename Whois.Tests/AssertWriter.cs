@@ -16,7 +16,11 @@ namespace Whois
 
             Console.WriteLine();
 
+            Write(nameof(response.Registrar) + "." + nameof(response.Registrar.Name), response.Registrar?.Name);
+            Write(nameof(response.Registrar) + "." + nameof(response.Registrar.Url), response.Registrar?.Url);
             Write(nameof(response.Registrar) + "." + nameof(response.Registrar.WhoisServerUrl), response.Registrar?.WhoisServerUrl);
+            Write(nameof(response.Registrar) + "." + nameof(response.Registrar.AbuseEmail), response.Registrar?.AbuseEmail);
+            Write(nameof(response.Registrar) + "." + nameof(response.Registrar.AbuseTelephoneNumber), response.Registrar?.AbuseTelephoneNumber);
 
             Console.WriteLine();
 
@@ -29,10 +33,10 @@ namespace Whois
             Write(nameof(response.BillingContact), response.BillingContact);
             Write(nameof(response.TechnicalContact), response.TechnicalContact);
 
+            Console.WriteLine();
+
             if (response.NameServers.Any())
             {
-                Console.WriteLine();
-
                 Write($"{nameof(response.NameServers)}.Count", response.NameServers.Count);
 
                 for (var i = 0; i < response.NameServers.Count; i++)
@@ -40,6 +44,19 @@ namespace Whois
                     var nameServer = response.NameServers[i];
 
                     Write($"{nameof(response.NameServers)}[{i}]", nameServer);
+                }
+                Console.WriteLine();
+            }
+
+            if (response.DomainStatus.Any())
+            {
+                Write($"{nameof(response.DomainStatus)}.Count", response.DomainStatus.Count);
+
+                for (var i = 0; i < response.DomainStatus.Count; i++)
+                {
+                    var status = response.DomainStatus[i];
+
+                    Write($"{nameof(response.DomainStatus)}[{i}]", status);
                 }
                 Console.WriteLine();
             }

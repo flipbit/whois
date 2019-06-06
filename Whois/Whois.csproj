@@ -17,6 +17,7 @@
     <None Remove="Resources\ccwhois.ksregistry.net\vg\Found.txt" />
     <None Remove="Resources\ccwhois.ksregistry.net\vg\NotFound.txt" />
     <None Remove="Resources\ccwhois.verisign-grs.com\cc\Found.txt" />
+    <None Remove="Resources\ccwhois.verisign-grs.com\cc\FoundRegistered.txt" />
     <None Remove="Resources\ccwhois.verisign-grs.com\cc\NotFound.txt" />
     <None Remove="Resources\coza-whois.registry.net.za\co.za\Found.txt" />
     <None Remove="Resources\coza-whois.registry.net.za\co.za\NotFound.txt" />
@@ -581,6 +582,7 @@
     <EmbeddedResource Include="Resources\capetown-whois.registry.net.za\capetown\NotFound.txt" />
     <EmbeddedResource Include="Resources\ccwhois.ksregistry.net\vg\Found.txt" />
     <EmbeddedResource Include="Resources\ccwhois.ksregistry.net\vg\NotFound.txt" />
+    <EmbeddedResource Include="Resources\ccwhois.verisign-grs.com\cc\FoundRegistered.txt" />
     <EmbeddedResource Include="Resources\ccwhois.verisign-grs.com\cc\Found.txt" />
     <EmbeddedResource Include="Resources\ccwhois.verisign-grs.com\cc\NotFound.txt" />
     <EmbeddedResource Include="Resources\coza-whois.registry.net.za\co.za\Found.txt" />
