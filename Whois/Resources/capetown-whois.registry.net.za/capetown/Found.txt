@@ -82,6 +82,6 @@ Tech Fax Ext: { TechnicalContact.FaxNumberExt ? : IsNumeric, EOL }
 Tech Email: { TechnicalContact.Email ? : IsEmail, EOL }
 
 
-Name Server: {  NameServers : Repeating, EOL }
+Name Server: { NameServers : Repeating, EOL }
 DNSSEC: { DnsSecStatus ? : EOL }
 >>> Last update of WHOIS database
