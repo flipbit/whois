@@ -10,5 +10,11 @@ tag: capetown
 
 # Set query response type:
 set: Status = NotFound
----
 
+# Response must contain:
+hint: Available
+---
+Available
+Domain: { DomainName : IsDomainName, ToLower, EOL }
+
+>>> Last update of WHOIS database:
