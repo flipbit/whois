@@ -11,4 +11,4 @@ tag: org
 # Set query response type:
 set: Status = NotFound
 ---
-
+NOT FOUND

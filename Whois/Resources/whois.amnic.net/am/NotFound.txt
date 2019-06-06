@@ -11,4 +11,9 @@ tag: am
 # Set query response type:
 set: Status = NotFound
 ---
+%
+%AM TLD whois server #1
+%
+
+No match
 

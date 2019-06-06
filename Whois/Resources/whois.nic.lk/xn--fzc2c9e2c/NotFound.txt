@@ -11,4 +11,3 @@ tag: xn--fzc2c9e2c
 # Set query response type:
 set: Status = NotFound
 ---
-

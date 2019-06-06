@@ -11,4 +11,6 @@ tag: hu
 # Set query response type:
 set: Status = NotFound
 ---
+% Whois server 2.08d serving the hu ccTLD
 
+Nincs találat / No match

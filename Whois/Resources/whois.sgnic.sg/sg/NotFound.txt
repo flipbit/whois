@@ -11,4 +11,4 @@ tag: sg
 # Set query response type:
 set: Status = NotFound
 ---
-
+Domain Not Found

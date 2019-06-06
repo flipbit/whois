@@ -12,3 +12,12 @@ tag: tm
 set: Status = Found
 ---
 
+Domain : google.tm
+Status : Client Updt Lock
+Owner  : DNS Admin
+Owner  : Google Inc.
+Owner  : 1600 Amphitheatre Parkway
+Owner  : Mountain View
+Owner  : CA
+Owner  : US
+

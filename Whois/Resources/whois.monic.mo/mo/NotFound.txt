@@ -12,3 +12,8 @@ tag: mo
 set: Status = NotFound
 ---
 
+Whois Server Version 1.0
+
+This whois server contains domain data from the MO zone.
+
+No match for "U34JEDZCQ.MO".

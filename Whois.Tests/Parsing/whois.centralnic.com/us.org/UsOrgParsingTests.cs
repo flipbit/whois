@@ -1,27 +1,30 @@
-using Whois.Visitors;
 using NUnit.Framework;
+using Whois.Models;
+using Whois.Parsers;
 
 namespace Whois.Parsing.Whois.Centralnic.Com.UsOrg
 {
     [TestFixture]
     public class UsOrgParsingTests : ParsingTests
     {
-        private PatternExtractorVisitor visitor;
+        private WhoisParser parser;
 
         [SetUp]
         public void SetUp()
         {
-            visitor = new PatternExtractorVisitor();
+            SerilogConfig.Init();
+
+            parser = new WhoisParser();
         }
 
         [Test]
         public void Test_not_found()
         {
             var sample = SampleReader.Read("whois.centralnic.com", "us.org", "not_found.txt");
-            var match = visitor.Parse(sample);
+            var response = parser.Parse("whois.centralnic.com", "us.org", sample);
 
-            Assert.IsTrue(match.Success);
-            Assert.IsTrue(sample.Length > 0);
+            Assert.Greater(sample.Length, 0);
+            Assert.AreEqual(WhoisResponseStatus.NotFound, response.Status);
         }
     }
 }

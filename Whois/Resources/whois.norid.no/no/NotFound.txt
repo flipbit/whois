@@ -11,4 +11,8 @@ tag: no
 # Set query response type:
 set: Status = NotFound
 ---
+% Kopibeskyttet, se http://www.norid.no/domenenavnbaser/whois/kopirett.html
+% Rights restricted by copyright. See http://www.norid.no/domenenavnbaser/whois/kopirett.en.html
+
+% No match
 

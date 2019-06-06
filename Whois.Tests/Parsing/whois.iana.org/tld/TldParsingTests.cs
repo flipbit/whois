@@ -1,27 +1,30 @@
-using Whois.Visitors;
 using NUnit.Framework;
+using Whois.Models;
+using Whois.Parsers;
 
 namespace Whois.Parsing.Whois.Iana.Org.Tld
 {
     [TestFixture]
     public class TldParsingTests : ParsingTests
     {
-        private PatternExtractorVisitor visitor;
+        private WhoisParser parser;
 
         [SetUp]
         public void SetUp()
         {
-            visitor = new PatternExtractorVisitor();
+            SerilogConfig.Init();
+
+            parser = new WhoisParser();
         }
 
         [Test]
         public void Test_not_assigned()
         {
             var sample = SampleReader.Read("whois.iana.org", "tld", "not_assigned.txt");
-            var match = visitor.Parse(sample);
+            var response = parser.Parse("whois.iana.org", "tld", sample);
 
-            Assert.IsTrue(match.Success);
-            Assert.IsTrue(sample.Length > 0);
+            Assert.Greater(sample.Length, 0);
+            Assert.AreEqual(WhoisResponseStatus.NotAssigned, response.Status);
         }
     }
 }

@@ -11,4 +11,4 @@ tag: lk
 # Set query response type:
 set: Status = NotFound
 ---
-
+This Domain is not available in our whois database

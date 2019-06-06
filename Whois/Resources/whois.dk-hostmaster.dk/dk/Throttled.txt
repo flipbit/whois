@@ -11,4 +11,5 @@ tag: dk
 # Set query response type:
 set: Status = Throttled
 ---
-
+#response_throttled?
+  %s == true

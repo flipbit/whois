@@ -11,4 +11,5 @@ tag: it
 # Set query response type:
 set: Status = NotFound
 ---
-
+Domain:             google.it
+Status:             AVAILABLE

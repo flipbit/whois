@@ -11,4 +11,4 @@ tag: org
 # Set query response type:
 set: Status = Throttled
 ---
-
+WHOIS LIMIT EXCEEDED - SEE WWW.PIR.ORG/WHOIS FOR DETAILS

@@ -12,3 +12,6 @@ tag: th
 set: Status = NotFound
 ---
 
+Whois Server Version 2.1.0
+
+% No match for "U34JEDZCQ.CO.TH".

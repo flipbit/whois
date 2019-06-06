@@ -11,4 +11,4 @@ tag: cn
 # Set query response type:
 set: Status = Reserved
 ---
-
+Sorry, The domain you requested is in the reserved list.

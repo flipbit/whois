@@ -11,4 +11,4 @@ tag: bz
 # Set query response type:
 set: Status = NotFound
 ---
-
+NOT FOUND

@@ -11,4 +11,4 @@ tag: us.com
 # Set query response type:
 set: Status = NotFound
 ---
-
+DOMAIN NOT FOUND

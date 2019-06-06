@@ -11,4 +11,4 @@ tag: pl
 # Set query response type:
 set: Status = Throttled
 ---
-
+request limit exceeded for 127.0.0.1
