@@ -11,4 +11,4 @@ tag: nl
 # Set query response type:
 set: Status = Unavailable
 ---
-
+whois.domain-registry.nl: Server too busy, try again later

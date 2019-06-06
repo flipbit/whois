@@ -11,4 +11,4 @@ tag: cz
 # Set query response type:
 set: Status = Throttled
 ---
-
+Your connection limit exceeded. Please slow down and try again later.

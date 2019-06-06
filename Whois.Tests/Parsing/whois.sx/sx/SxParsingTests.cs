@@ -1,57 +1,60 @@
-using Whois.Visitors;
 using NUnit.Framework;
+using Whois.Models;
+using Whois.Parsers;
 
 namespace Whois.Parsing.Whois.Sx.Sx
 {
     [TestFixture]
     public class SxParsingTests : ParsingTests
     {
-        private PatternExtractorVisitor visitor;
+        private WhoisParser parser;
 
         [SetUp]
         public void SetUp()
         {
-            visitor = new PatternExtractorVisitor();
+            SerilogConfig.Init();
+
+            parser = new WhoisParser();
         }
 
         [Test]
         public void Test_other_status_premium_name()
         {
             var sample = SampleReader.Read("whois.sx", "sx", "other_status_premium_name.txt");
-            var match = visitor.Parse(sample);
+            var response = parser.Parse("whois.sx", "sx", sample);
 
-            Assert.IsTrue(match.Success);
-            Assert.IsTrue(sample.Length > 0);
+            Assert.Greater(sample.Length, 0);
+            Assert.AreEqual(WhoisResponseStatus.Other, response.Status);
         }
 
         [Test]
         public void Test_not_found()
         {
             var sample = SampleReader.Read("whois.sx", "sx", "not_found.txt");
-            var match = visitor.Parse(sample);
+            var response = parser.Parse("whois.sx", "sx", sample);
 
-            Assert.IsTrue(match.Success);
-            Assert.IsTrue(sample.Length > 0);
+            Assert.Greater(sample.Length, 0);
+            Assert.AreEqual(WhoisResponseStatus.NotFound, response.Status);
         }
 
         [Test]
         public void Test_found()
         {
             var sample = SampleReader.Read("whois.sx", "sx", "found.txt");
-            var match = visitor.Parse(sample);
+            var response = parser.Parse("whois.sx", "sx", sample);
 
-            Assert.IsTrue(match.Success);
-            Assert.IsTrue(sample.Length > 0);
+            Assert.Greater(sample.Length, 0);
+            Assert.AreEqual(WhoisResponseStatus.Found, response.Status);
         }
 
         [Test]
         public void Test_unavailable()
         {
             var sample = SampleReader.Read("whois.sx", "sx", "unavailable.txt");
-            var match = visitor.Parse(sample);
+            var response = parser.Parse("whois.sx", "sx", sample);
 
-            Assert.IsTrue(match.Success);
-            Assert.IsTrue(sample.Length > 0);
+            Assert.Greater(sample.Length, 0);
+            Assert.AreEqual(WhoisResponseStatus.Unavailable, response.Status);
         }
     }
 }

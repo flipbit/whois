@@ -12,3 +12,5 @@ tag: sn
 set: Status = NotFound
 ---
 
+
+Domain u34jedzcq.sn not found

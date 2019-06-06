@@ -12,3 +12,5 @@ tag: bo
 set: Status = NotFound
 ---
 
+
+whois.nic.bo solo acepta consultas con dominios .bo

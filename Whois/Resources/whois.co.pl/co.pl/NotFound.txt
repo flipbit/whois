@@ -12,3 +12,10 @@ tag: co.pl
 set: Status = NotFound
 ---
 
+**************************************************
+*  Welcome to the .CO.PL Mainseek Whois Server   *
+**************************************************
+
+
+% Unfortunately, No Results Were Found
+

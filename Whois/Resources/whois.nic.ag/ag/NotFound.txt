@@ -11,4 +11,4 @@ tag: ag
 # Set query response type:
 set: Status = NotFound
 ---
-
+NOT FOUND

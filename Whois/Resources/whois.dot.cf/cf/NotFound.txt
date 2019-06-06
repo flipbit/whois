@@ -11,4 +11,4 @@ tag: cf
 # Set query response type:
 set: Status = NotFound
 ---
-
+Invalid query or domain name not known in Dot CF Domain Registry

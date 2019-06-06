@@ -1,37 +1,40 @@
-using Whois.Visitors;
 using NUnit.Framework;
+using Whois.Models;
+using Whois.Parsers;
 
 namespace Whois.Parsing.Durban.Whois.Registry.Net.Za.Durban
 {
     [TestFixture]
     public class DurbanParsingTests : ParsingTests
     {
-        private PatternExtractorVisitor visitor;
+        private WhoisParser parser;
 
         [SetUp]
         public void SetUp()
         {
-            visitor = new PatternExtractorVisitor();
+            SerilogConfig.Init();
+
+            parser = new WhoisParser();
         }
 
         [Test]
         public void Test_not_found()
         {
             var sample = SampleReader.Read("durban-whois.registry.net.za", "durban", "not_found.txt");
-            var match = visitor.Parse(sample);
+            var response = parser.Parse("durban-whois.registry.net.za", "durban", sample);
 
-            Assert.IsTrue(match.Success);
-            Assert.IsTrue(sample.Length > 0);
+            Assert.Greater(sample.Length, 0);
+            Assert.AreEqual(WhoisResponseStatus.NotFound, response.Status);
         }
 
         [Test]
         public void Test_found()
         {
             var sample = SampleReader.Read("durban-whois.registry.net.za", "durban", "found.txt");
-            var match = visitor.Parse(sample);
+            var response = parser.Parse("durban-whois.registry.net.za", "durban", sample);
 
-            Assert.IsTrue(match.Success);
-            Assert.IsTrue(sample.Length > 0);
+            Assert.Greater(sample.Length, 0);
+            Assert.AreEqual(WhoisResponseStatus.Found, response.Status);
         }
     }
 }

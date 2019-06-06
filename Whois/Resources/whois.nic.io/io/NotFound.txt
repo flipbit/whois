@@ -12,3 +12,6 @@ tag: io
 set: Status = NotFound
 ---
 
+Domain u34jedzcq.io is available for purchase
+Please visit http://www.nic.io/ for more information
+

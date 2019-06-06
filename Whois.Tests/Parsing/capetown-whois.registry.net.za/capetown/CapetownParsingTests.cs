@@ -37,7 +37,7 @@ namespace Whois.Parsing.Capetown.Whois.Registry.Net.Za.Capetown
 
             Assert.Greater(sample.Length, 0);
             Assert.AreEqual(WhoisResponseStatus.Found, response.Status);
-
+           
             Assert.AreEqual("registry.capetown", response.DomainName);
             Assert.AreEqual("dom_3K3-9999", response.RegistryDomainId);
 
@@ -80,17 +80,18 @@ namespace Whois.Parsing.Capetown.Whois.Registry.Net.Za.Capetown
             Assert.AreEqual("Domain Name Department", response.BillingContact.Name);
             Assert.AreEqual("Lexsynergy Limited", response.BillingContact.Organization);
 
-            Assert.AreEqual(5, response.BillingContact.Address.Count);
+            Assert.AreEqual(4, response.BillingContact.Address.Count);
             Assert.AreEqual("130 Hampstead House 176 Finchley Road", response.BillingContact.Address[0]);
             Assert.AreEqual("London", response.BillingContact.Address[1]);
-            Assert.AreEqual("NW3 6BT", response.BillingContact.Address[3]);
-            Assert.AreEqual("GB", response.BillingContact.Address[4]);
+            Assert.AreEqual("NW3 6BT", response.BillingContact.Address[2]);
+            Assert.AreEqual("GB", response.BillingContact.Address[3]);
 
             Assert.AreEqual("+44.2081331319", response.BillingContact.TelephoneNumber);
             Assert.AreEqual("+44.2081331319", response.BillingContact.FaxNumber);
             Assert.AreEqual("domains@lexsynergy.com", response.BillingContact.Email);
 
-            Assert.AreEqual("Lucky Mokgabudi Masilela", response.TechnicalContact.RegistryId);
+            Assert.AreEqual("LEX-7IC-235J", response.TechnicalContact.RegistryId);
+            Assert.AreEqual("Lucky Mokgabudi Masilela", response.TechnicalContact.Name);
             Assert.AreEqual("ZA Central Registry", response.TechnicalContact.Organization);
 
             Assert.AreEqual(5, response.TechnicalContact.Address.Count);
@@ -107,7 +108,6 @@ namespace Whois.Parsing.Capetown.Whois.Registry.Net.Za.Capetown
 
             Assert.AreEqual(2, response.NameServers.Count);
             Assert.AreEqual("ns1.nic.capetown", response.NameServers[0]);
-            Assert.AreEqual("ns1.dnservices.co.za", response.NameServers[1]);
-        }
+            Assert.AreEqual("ns1.dnservices.co.za", response.NameServers[1]);        }
     }
 }

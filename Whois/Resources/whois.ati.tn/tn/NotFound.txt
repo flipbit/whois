@@ -11,4 +11,7 @@ tag: tn
 # Set query response type:
 set: Status = NotFound
 ---
+All rights reserved.
+Copyright "Tunisian Internet Agency - http://whois.tn"
 
+Domain u34jedzcq.tn not found

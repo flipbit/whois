@@ -1,37 +1,40 @@
-using Whois.Visitors;
 using NUnit.Framework;
+using Whois.Models;
+using Whois.Parsers;
 
 namespace Whois.Parsing.Whois.Jprs.Jp.CoJp
 {
     [TestFixture]
     public class CoJpParsingTests : ParsingTests
     {
-        private PatternExtractorVisitor visitor;
+        private WhoisParser parser;
 
         [SetUp]
         public void SetUp()
         {
-            visitor = new PatternExtractorVisitor();
+            SerilogConfig.Init();
+
+            parser = new WhoisParser();
         }
 
         [Test]
         public void Test_pending_delete()
         {
             var sample = SampleReader.Read("whois.jprs.jp", "co.jp", "pending_delete.txt");
-            var match = visitor.Parse(sample);
+            var response = parser.Parse("whois.jprs.jp", "co.jp", sample);
 
-            Assert.IsTrue(match.Success);
-            Assert.IsTrue(sample.Length > 0);
+            Assert.Greater(sample.Length, 0);
+            Assert.AreEqual(WhoisResponseStatus.PendingDelete, response.Status);
         }
 
         [Test]
         public void Test_found()
         {
             var sample = SampleReader.Read("whois.jprs.jp", "co.jp", "found.txt");
-            var match = visitor.Parse(sample);
+            var response = parser.Parse("whois.jprs.jp", "co.jp", sample);
 
-            Assert.IsTrue(match.Success);
-            Assert.IsTrue(sample.Length > 0);
+            Assert.Greater(sample.Length, 0);
+            Assert.AreEqual(WhoisResponseStatus.Found, response.Status);
         }
     }
 }

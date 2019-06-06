@@ -11,4 +11,4 @@ tag: tk
 # Set query response type:
 set: Status = NotFound
 ---
-
+Invalid query or domain name not known in Dot TK Domain Registry

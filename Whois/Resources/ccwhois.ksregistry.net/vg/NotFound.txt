@@ -10,5 +10,8 @@ tag: vg
 
 # Set query response type:
 set: Status = NotFound
----
 
+# Must contain:
+hint: not found
+---
+not found{ Null }

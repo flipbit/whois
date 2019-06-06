@@ -11,4 +11,6 @@ tag: de
 # Set query response type:
 set: Status = Throttled
 ---
+% Error: 55000000002 Connection refused; access control limit reached.
+
 

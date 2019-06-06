@@ -11,4 +11,4 @@ tag: de
 # Set query response type:
 set: Status = Error
 ---
-
+% Error: 55000000010 Non bijective ace-idn convertible domain

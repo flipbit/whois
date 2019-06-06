@@ -12,3 +12,9 @@ tag: at
 set: Status = NotFound
 ---
 
+% Rights restricted by copyright and data protection act.
+% See http://www.nic.priv.at/ for details.
+
+% No entries found for the selected source(s).
+
+

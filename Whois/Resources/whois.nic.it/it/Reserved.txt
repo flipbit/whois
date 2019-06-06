@@ -11,4 +11,5 @@ tag: it
 # Set query response type:
 set: Status = Reserved
 ---
-
+Domain:             comunediroccaromana.it
+Status:             RESERVED

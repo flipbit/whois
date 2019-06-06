@@ -1,47 +1,50 @@
-using Whois.Visitors;
 using NUnit.Framework;
+using Whois.Models;
+using Whois.Parsers;
 
 namespace Whois.Parsing.Whois.Tznic.Or.Tz.Tz
 {
     [TestFixture]
     public class TzParsingTests : ParsingTests
     {
-        private PatternExtractorVisitor visitor;
+        private WhoisParser parser;
 
         [SetUp]
         public void SetUp()
         {
-            visitor = new PatternExtractorVisitor();
+            SerilogConfig.Init();
+
+            parser = new WhoisParser();
         }
 
         [Test]
         public void Test_expired()
         {
             var sample = SampleReader.Read("whois.tznic.or.tz", "tz", "expired.txt");
-            var match = visitor.Parse(sample);
+            var response = parser.Parse("whois.tznic.or.tz", "tz", sample);
 
-            Assert.IsTrue(match.Success);
-            Assert.IsTrue(sample.Length > 0);
+            Assert.Greater(sample.Length, 0);
+            Assert.AreEqual(WhoisResponseStatus.Expired, response.Status);
         }
 
         [Test]
         public void Test_not_found()
         {
             var sample = SampleReader.Read("whois.tznic.or.tz", "tz", "not_found.txt");
-            var match = visitor.Parse(sample);
+            var response = parser.Parse("whois.tznic.or.tz", "tz", sample);
 
-            Assert.IsTrue(match.Success);
-            Assert.IsTrue(sample.Length > 0);
+            Assert.Greater(sample.Length, 0);
+            Assert.AreEqual(WhoisResponseStatus.NotFound, response.Status);
         }
 
         [Test]
         public void Test_found()
         {
             var sample = SampleReader.Read("whois.tznic.or.tz", "tz", "found.txt");
-            var match = visitor.Parse(sample);
+            var response = parser.Parse("whois.tznic.or.tz", "tz", sample);
 
-            Assert.IsTrue(match.Success);
-            Assert.IsTrue(sample.Length > 0);
+            Assert.Greater(sample.Length, 0);
+            Assert.AreEqual(WhoisResponseStatus.Found, response.Status);
         }
     }
 }

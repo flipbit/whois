@@ -11,4 +11,4 @@ tag: by
 # Set query response type:
 set: Status = NotFound
 ---
-
+Object does not exist
