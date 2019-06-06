@@ -50,6 +50,11 @@ namespace Whois.Models
         public Contact AdminContact { get; set; }
 
         /// <summary>
+        /// Gets or sets the billing contact
+        /// </summary>
+        public Contact BillingContact { get; set; }
+
+        /// <summary>
         /// Gets the domain name servcers
         /// </summary>
         public IList<string> NameServers { get; }
