@@ -11,6 +11,11 @@ namespace Whois
     {
         public static void Write(ParsedWhoisResponse response)
         {
+            Write(nameof(response.FieldsParsed), response.FieldsParsed);
+            Write(nameof(response.ParsingErrors), response.ParsingErrors);
+
+            Console.WriteLine();
+
             Write(nameof(response.DomainName), response.DomainName);
             Write(nameof(response.RegistryDomainId), response.RegistryDomainId);
 
@@ -104,8 +109,6 @@ namespace Whois
 
         private static void Write(string fieldName, int expectedValue)
         {
-            if (expectedValue == 0) return;
-
             Console.WriteLine($@"            Assert.AreEqual({expectedValue}, response.{fieldName});");
         }
 
