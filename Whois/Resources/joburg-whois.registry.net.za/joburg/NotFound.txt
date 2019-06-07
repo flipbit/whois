@@ -10,5 +10,10 @@ tag: joburg
 
 # Set query response type:
 set: Status = NotFound
+
+# Must contain:
+hint: Available
 ---
+Available
+Domain: { DomainName : IsDomainName, ToLower, EOL }
 
