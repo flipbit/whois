@@ -10,85 +10,75 @@ tag: co.za
 
 # Set query response type:
 set: Status = Found
+
+# Must contain:
+hint: Domain Name
 ---
-Domain Name: fnb.co.za
-Domain ID: dom_1ZW3S--1
-WHOIS Server: coza-whois12.dns.net.za
+Domain Name: { DomainName : IsDomainName, ToLower, EOL }
+Domain ID: { RegistryDomainId : EOL }
+WHOIS Server: { Registrar.WhoisServerUrl : IsDomainName, ToLower, EOL }
 
-Updated Date: 2016-12-01T23:41:21Z
-Creation Date: 1994-12-31T22:00:00Z
-Registry Expiry Date: 2017-12-31T22:00:00Z
-Sponsoring Registrar: Lexsynergy Limited
-Domain Status: ok https://icann.org/epp#ok
+Updated Date: { Updated ? : ToDateTime("yyyy-MM-ddTHH:mm:ssZ"), EOL }
+Creation Date: { Registered ? : ToDateTime("yyyy-MM-ddTHH:mm:ssZ"), EOL }
+Registry Expiry Date: { Expiration ? : ToDateTime("yyyy-MM-ddTHH:mm:ssZ"), EOL }
+Sponsoring Registrar: { Registrar.Name ? : EOL }
+Domain Status: { DomainStatus ? : Repeating, SubstringBefore(' '), EOL } ok https://icann.org/epp#ok
 
-Registrant ID: LEX-1EU-1Y58
-Registrant Name: FirstRand Bank Limited
-Registrant Organization: FirstRand Bank Limited
-Registrant Street: 2nd floor 4 Merchant Place Cnr Rivonia and Sandton Drive 
-Registrant City: Sandton
-Registrant State/Province: Gauteng
-Registrant Postal Code: 2196
-Registrant Country: ZA
-Registrant Phone: +27.112828000
-Registrant Phone Ext: 
-Registrant Fax: 
-Registrant Fax Ext: 
-Registrant Email: domreg.admins@firstrand.co.za
+Registrant ID: { Registrant.RegistryId ? : EOL }
+Registrant Name: { Registrant.Name ? : EOL }
+Registrant Organization: { Registrant.Organization ? : EOL }
+Registrant Street: { Registrant.Address ? : IsNotEmpty, EOL }
+Registrant City: { Registrant.Address ? : IsNotEmpty, EOL }
+Registrant State/Province: { Registrant.Address ? : IsNotEmpty, EOL }
+Registrant Postal Code: { Registrant.Address ? : IsNotEmpty, EOL }
+Registrant Country: { Registrant.Address ? : IsNotEmpty, EOL }
+Registrant Phone: { Registrant.TelephoneNumber ? : IsPhoneNumber, EOL }
+Registrant Phone Ext: { Registrant.TelephoneNumberExt ? : IsNumeric, EOL }
+Registrant Fax: { Registrant.FaxNumber ? : IsPhoneNumber, EOL }
+Registrant Fax Ext: { Registrant.FaxNumberExt ? : IsNumeric, EOL }
+Registrant Email: { Registrant.Email ? : IsEmail, EOL }
 
-Admin ID: LEX-1EU-1Y58
-Admin Name: FirstRand Bank Limited
-Admin Organization: FirstRand Bank Limited
-Admin Street: 2nd floor 4 Merchant Place Cnr Rivonia and Sandton Drive 
-Admin City: Sandton
-Admin State/Province: Gauteng
-Admin Postal Code: 2196
-Admin Country: ZA
-Admin Phone: +27.112828000
-Admin Phone Ext: 
-Admin Fax: 
-Admin Fax Ext: 
-Admin Email: domreg.admins@firstrand.co.za
+Admin ID: { AdminContact.RegistryId ? : EOL }
+Admin Name: { AdminContact.Name ? : EOL }
+Admin Organization: { AdminContact.Organization ? : EOL }
+Admin Street: { AdminContact.Address ? : IsNotEmpty, EOL }
+Admin City: { AdminContact.Address ? : IsNotEmpty, EOL }
+Admin State/Province: { AdminContact.Address ? : IsNotEmpty, EOL }
+Admin Postal Code: { AdminContact.Address ? : IsNotEmpty, EOL }
+Admin Country: { AdminContact.Address ? : IsNotEmpty, EOL }
+Admin Phone: { AdminContact.TelephoneNumber ? : IsPhoneNumber, EOL }
+Admin Phone Ext: { AdminContact.TelephoneNumberExt  ? : IsNumeric, EOL } 
+Admin Fax: { AdminContact.FaxNumber ? : IsPhoneNumber, EOL } 
+Admin Fax Ext: { AdminContact.FaxNumberExt ? : IsNumeric, EOL } 
+Admin Email: { AdminContact.Email ? : IsEmail, EOL }
 
-Billing ID: LEX-1EU-1Y58
-Billing Name: FirstRand Bank Limited
-Billing Organization: FirstRand Bank Limited
-Billing Street: 2nd floor 4 Merchant Place Cnr Rivonia and Sandton Drive 
-Billing City: Sandton
-Billing State/Province: Gauteng
-Billing Postal Code: 2196
-Billing Country: ZA
-Billing Phone: +27.112828000
-Billing Phone Ext: 
-Billing Fax: 
-Billing Fax Ext: 
-Billing Email: domreg.admins@firstrand.co.za
+Billing ID: { BillingContact.RegistryId  ? : EOL }
+Billing Name: { BillingContact.Name ? : EOL }
+Billing Organization: { BillingContact.Organization ? : EOL }
+Billing Street: { BillingContact.Address ? : IsNotEmpty, EOL }
+Billing City: { BillingContact.Address ? : IsNotEmpty, EOL }
+Billing State/Province: { BillingContact.Address ? : IsNotEmpty, EOL }
+Billing Postal Code: { BillingContact.Address ? : IsNotEmpty, EOL }
+Billing Country: { BillingContact.Address ? : IsNotEmpty, EOL }
+Billing Phone: { BillingContact.TelephoneNumber ? : IsPhoneNumber, EOL }
+Billing Phone Ext: { BillingContact.TelephoneNumberExt ? : IsNumeric, EOL }
+Billing Fax: { BillingContact.FaxNumber ? : IsPhoneNumber, EOL } 
+Billing Fax Ext: { BillingContact.FaxNumberExt ? : IsNumeric, EOL } 
+Billing Email: { BillingContact.Email ? : IsEmail, EOL }
 
-Tech ID: LEX-1EU-1Y58
-Tech Name: FirstRand Bank Limited
-Tech Organization: FirstRand Bank Limited
-Tech Street: 2nd floor 4 Merchant Place Cnr Rivonia and Sandton Drive 
-Tech City: Sandton
-Tech State/Province: Gauteng
-Tech Postal Code: 2196
-Tech Country: ZA
-Tech Phone: +27.112828000
-Tech Phone Ext: 
-Tech Fax: 
-Tech Fax Ext: 
-Tech Email: domreg.admins@firstrand.co.za
-
-
-Name Server: ns01.fnbconnect.co.za
-Name Server: ns02.fnbconnect.co.za
-Name Server: ns03.fnbconnect.co.za
-Name Server: ns04.fnbconnect.co.za
-DNSSEC: unsigned
->>> Last update of WHOIS database: 2016-12-07T08:18:02Z <<<
-
-#    WHOIS lookup made at 2016-12-07T08:18:02Z
-# --
-# For more information on Whois status codes, please visit https://icann.org/epp
-#
-# The use of this Whois facility is subject to the following terms and
-# conditions. https://registry.net.za/whois_terms
-# Copyright (c) ZACR 1995-2016
+Tech ID: { TechnicalContact.RegistryId  ? : EOL }
+Tech Name: { TechnicalContact.Name ? : EOL }
+Tech Organization: { TechnicalContact.Organization ? : EOL }
+Tech Street: { TechnicalContact.Address ? : IsNotEmpty, EOL }
+Tech City: { TechnicalContact.Address ? : IsNotEmpty, EOL }
+Tech State/Province: { TechnicalContact.Address ? : IsNotEmpty, EOL }
+Tech Postal Code: { TechnicalContact.Address ? : IsNotEmpty, EOL }
+Tech Country: { TechnicalContact.Address ? : IsNotEmpty, EOL }
+Tech Phone: { TechnicalContact.TelephoneNumber ? : IsPhoneNumber, EOL }
+Tech Phone Ext: { TechnicalContact.TelephoneNumberExt ? : IsNumeric, EOL } 
+Tech Fax: { TechnicalContact.FaxNumber ? : IsPhoneNumber, EOL } 
+Tech Fax Ext: { TechnicalContact.FaxNumberExt ? : IsNumeric, EOL }
+Tech Email: { TechnicalContact.Email ? : IsEmail, EOL }
+Name Server: { NameServers : Repeating, EOL }
+DNSSEC: { DnsSecStatus ? : EOL }
+>>> Last update of WHOIS database:

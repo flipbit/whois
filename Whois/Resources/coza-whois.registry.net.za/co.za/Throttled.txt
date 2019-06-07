@@ -10,5 +10,8 @@ tag: co.za
 
 # Set query response type:
 set: Status = Throttled
----
 
+# Must contain
+hint: Please go away
+---
+Please go away for { Null }

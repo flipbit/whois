@@ -62,5 +62,9 @@ namespace Whois.Models
         public IList<string> DomainStatus { get; }
 
         public string DnsSecStatus { get; set; }
+
+        public int FieldsParsed { get; set; }
+
+        public int ParsingErrors { get; set; }
     }
 }
