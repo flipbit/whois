@@ -75,8 +75,11 @@ namespace Whois.Parsing.Ccwhois.Verisign.Grs.Com.Cc
             Assert.AreEqual(new DateTime(1999, 6, 7, 5, 0, 0), response.Registered);
             Assert.AreEqual(new DateTime(2018, 6, 7, 5, 0, 0), response.Expiration);
 
-            Assert.AreEqual(1, response.NameServers.Count);
-            Assert.AreEqual("ns4.google.com", response.NameServers[0]);
+            Assert.AreEqual(4, response.NameServers.Count);
+            Assert.AreEqual("ns1.google.com", response.NameServers[0]);
+            Assert.AreEqual("ns2.google.com", response.NameServers[1]);
+            Assert.AreEqual("ns3.google.com", response.NameServers[2]);
+            Assert.AreEqual("ns4.google.com", response.NameServers[3]);
 
             Assert.AreEqual(6, response.DomainStatus.Count);
             Assert.AreEqual("clientDeleteProhibited", response.DomainStatus[0]);
@@ -86,6 +89,7 @@ namespace Whois.Parsing.Ccwhois.Verisign.Grs.Com.Cc
             Assert.AreEqual("serverTransferProhibited", response.DomainStatus[4]);
             Assert.AreEqual("serverUpdateProhibited", response.DomainStatus[5]);
 
-            Assert.AreEqual("unsigned", response.DnsSecStatus);        }
+            Assert.AreEqual("unsigned", response.DnsSecStatus);
+        }
     }
 }
