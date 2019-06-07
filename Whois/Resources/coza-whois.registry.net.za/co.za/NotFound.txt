@@ -10,5 +10,11 @@ tag: co.za
 
 # Set query response type:
 set: Status = NotFound
----
 
+# Must contain
+hint: Available
+---
+Available
+Domain: { DomainName : IsDomainName, ToLower, EOL }
+
+>>> Last update of WHOIS database:

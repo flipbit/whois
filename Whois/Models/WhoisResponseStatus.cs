@@ -6,6 +6,7 @@ namespace Whois.Models
 {
     public enum WhoisResponseStatus
     {
+        Unknown,
         Found, 
         NotFound, 
         Error, 

@@ -35,7 +35,19 @@ namespace Whois.Parsers
 
             var result = matcher.Match<ParsedWhoisResponse>(content, new []{ whoisServer, tld });
 
-            return result.BestMatch?.Value;
+            var match = result.BestMatch;
+
+            if (match != null)
+            {
+                var value = match.Value;
+
+                value.FieldsParsed = match.Tokens.Matches.Count;
+                value.ParsingErrors = match.Exceptions.Count;
+
+                return value;
+            }
+
+            return null;
         }
 
         private void LoadServerTemplates(string whoisServer, string tld)
