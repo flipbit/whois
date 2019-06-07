@@ -22,7 +22,7 @@ Updated Date: { Updated ? : ToDateTime("yyyy-MM-ddTHH:mm:ssZ"), EOL }
 Creation Date: { Registered ? : ToDateTime("yyyy-MM-ddTHH:mm:ssZ"), EOL }
 Registry Expiry Date: { Expiration ? : ToDateTime("yyyy-MM-ddTHH:mm:ssZ"), EOL }
 Sponsoring Registrar: { Registrar.Name ? : EOL }
-Domain Status: { DomainStatus ? : Repeating, SubstringBefore(' '), EOL } ok https://icann.org/epp#ok
+Domain Status: { DomainStatus ? : Repeating, SubstringBefore(' '), EOL }
 
 Registrant ID: { Registrant.RegistryId ? : EOL }
 Registrant Name: { Registrant.Name ? : EOL }
