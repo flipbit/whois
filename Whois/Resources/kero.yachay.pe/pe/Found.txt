@@ -10,39 +10,22 @@ tag: pe
 
 # Set query response type:
 set: Status = Found
+
+# Must contain:
+hint: Status: Active 
 ---
-TERMS OF USE: You are not authorized to access or query our Whois
-database through the use of electronic processes that are high-volume and
-automated.  Whois database is provided as a service to the internet
-community.
-
-The data is for information purposes only. Red Cientifica Peruana does not
-guarantee its accuracy. By submitting a Whois query, you agree to abide
-by the following terms of use: You agree that you may use this Data only
-for lawful purposes and that under no circumstances will you use this Data
-to: (1) allow, enable, or otherwise support the transmission of mass
-unsolicited, commercial advertising or solicitations via e-mail, telephone,
-or facsimile; or (2) enable high volume, automated, electronic processes.
-
-The compilation, repackaging, dissemination or other use of this Data is
-expressly prohibited.
-
-
 Domain Information
-Query: google.pe
-Status: Active
-Registrar: MarkMonitor Inc.
+Query: { DomainName : IsDomainName, ToLower, EOL }
+Status: { DomainStatus ? : Repeating, Trim, SubstringBefore(' '), EOL }
+Registrar: { Registrar.Name ? : EOL }
 Name Servers:
-    ns1.google.com
-    ns2.google.com
-    ns3.google.com
-    ns4.google.com
+    { NameServers : IsDomainName, ToLower, Repeating, EOL }
 
 Registrant:
-    google inc.
+    { Registrant.Name ? : EOL }
 
 Administrative Contact:
-    MarkMonitor
-    ccops@markmonitor.com
+    { AdminContact.Name ? : EOL }
+    { AdminContact.Email ? : IsEmail, EOL }
 
 
