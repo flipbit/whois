@@ -10,5 +10,8 @@ tag: bz
 
 # Set query response type:
 set: Status = NotFound
+
+# Must contain:
+hint: NOT FOUND
 ---
-NOT FOUND
+NOT FOUND{ Null }
