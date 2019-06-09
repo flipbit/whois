@@ -11,25 +11,20 @@ tag: au
 # Set query response type:
 set: Status = Found
 ---
-Domain Name:                     pinewood.com.au
-Last Modified:                   11-Oct-2010 00:00:33 UTC
-Registrar ID:                    Melbourne IT
-Registrar Name:                  Melbourne IT
-Status:                          serverHold (Expired)
-Status:                          serverUpdateProhibited (Expired)
+Domain Name:                     { DomainName : IsDomainName, ToLower, EOL }
+Last Modified:                   { Updated ? : SubstringBefore(" UTC"), ToDateTime("dd-MMM-yyyy HH:mm:ss"), EOL }
+Registrar Name:                  { Registrar.Name ? : EOL }
+Status:                          { DomainStatus ? : Repeating, EOL }
 
-Registrant:                      PINEWOOD PROLAB PTY LTD
-Registrant ID:                   ACN 120 562 905
-Eligibility Type:                Company
+Registrant:                      { Registrant.Name ? : EOL }
+Registrant ID:                   { Registrant.RegistryId ? : EOL }
 
-Registrant Contact ID:           Z116060879386417
-Registrant Contact Name:         PETER TONOLI
-Registrant Contact Email:        Visit whois.ausregistry.com.au for Web based WhoIs
+Registrant Contact ID:           { AdminContact.RegistryId ? : EOL }
+Registrant Contact Name:         { AdminContact.Name ? : EOL }
+Registrant Contact Email:        { AdminContact.Email ? : IsEmail, EOL }
 
-Tech Contact ID:                 Z116060879386417
-Tech Contact Name:               PETER TONOLI
-Tech Contact Email:              Visit whois.ausregistry.com.au for Web based WhoIs
+Tech Contact ID:                 { TechnicalContact.RegistryId  ? : EOL }
+Tech Contact Name:               { TechnicalContact.Name ? : EOL }
+Tech Contact Email:              { TechnicalContact.Email ? : IsEmail, EOL }
 
-Name Server:                     ns1.dreamhost.com
-Name Server:                     ns2.dreamhost.com
-Name Server:                     ns3.dreamhost.com
+Name Server:                     { NameServers ? : IsDomainName, ToLower, Repeating, EOL }
