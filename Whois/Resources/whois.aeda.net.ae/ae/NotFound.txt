@@ -10,5 +10,8 @@ tag: ae
 
 # Set query response type:
 set: Status = NotFound
+
+# Must contain:
+hint: No Data Found
 ---
-No Data Found
+No Data Found{ Null }

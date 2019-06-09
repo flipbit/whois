@@ -10,19 +10,21 @@ tag: ae
 
 # Set query response type:
 set: Status = Found
+
+# Must contain:
+hint: Domain Name
 ---
-Domain Name:                     google.ae
-Registrar ID:                    markmonitor
-Registrar Name:                  MarkMonitor
-Status:                          ok
+Domain Name:                     { DomainName : IsDomainName, ToLower, EOL }
+Registrar ID:                    { Registrar.Name ? : EOL }
+Registrar Name:                  { Registrar.Name ? : EOL }
+Status:                          { DomainStatus ? : Repeating, SubstringBefore(' '), EOL }
 
-Registrant Contact ID:           GOOGLE
-Registrant Contact Name:         Google Inc.
-Registrant Contact Email:        Visit whois.aeda.ae for Web based WhoIs
+Registrant Contact ID:           { Registrant.RegistryId ? : EOL }
+Registrant Contact Name:         { Registrant.Name ? : EOL }
+Registrant Contact Email:        { Registrant.Email ? : IsEmail, EOL }
 
-Tech Contact ID:                 GOOGLE
-Tech Contact Name:               Google Inc.
-Tech Contact Email:              Visit whois.aeda.ae for Web based WhoIs
+Tech Contact ID:                 { TechnicalContact.RegistryId  ? : EOL }
+Tech Contact Name:               { TechnicalContact.Name ? : EOL }
+Tech Contact Email:              { TechnicalContact.Email ? : IsEmail, EOL }
 
-Name Server:                     ns1.google.com
-Name Server:                     ns2.google.com
+Name Server:                     { NameServers : Repeating, EOL }

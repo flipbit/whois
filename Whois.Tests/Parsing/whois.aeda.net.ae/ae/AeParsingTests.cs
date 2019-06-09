@@ -35,6 +35,27 @@ namespace Whois.Parsing.Whois.Aeda.Net.Ae.Ae
 
             Assert.Greater(sample.Length, 0);
             Assert.AreEqual(WhoisResponseStatus.Found, response.Status);
+
+            Assert.AreEqual(11, response.FieldsParsed);
+            Assert.AreEqual(0, response.ParsingErrors);
+
+            Assert.AreEqual("google.ae", response.DomainName);
+
+            Assert.AreEqual("MarkMonitor", response.Registrar.Name);
+
+            Assert.AreEqual("GOOGLE", response.Registrant.RegistryId);
+            Assert.AreEqual("Google Inc.", response.Registrant.Name);
+
+            Assert.AreEqual("GOOGLE", response.TechnicalContact.RegistryId);
+            Assert.AreEqual("Google Inc.", response.TechnicalContact.Name);
+
+
+            Assert.AreEqual(2, response.NameServers.Count);
+            Assert.AreEqual("ns1.google.com", response.NameServers[0]);
+            Assert.AreEqual("ns2.google.com", response.NameServers[1]);
+
+            Assert.AreEqual(1, response.DomainStatus.Count);
+            Assert.AreEqual("ok", response.DomainStatus[0]);
         }
     }
 }
