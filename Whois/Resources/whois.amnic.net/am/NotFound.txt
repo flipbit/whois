@@ -10,10 +10,13 @@ tag: am
 
 # Set query response type:
 set: Status = NotFound
+
+# Must contain:
+hint: No match
 ---
 %
 %AM TLD whois server #1
 %
 
-No match
+No match { Null }
 
