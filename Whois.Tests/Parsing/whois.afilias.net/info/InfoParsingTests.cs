@@ -37,16 +37,17 @@ namespace Whois.Parsing.Whois.Afilias.Net.Info
             Assert.Greater(sample.Length, 0);
             Assert.AreEqual(WhoisResponseStatus.Found, response.Status);
 
-            Assert.AreEqual(61, response.FieldsParsed);
+            Assert.AreEqual(63, response.FieldsParsed);
             Assert.AreEqual(0, response.ParsingErrors);
+            Assert.AreEqual("generic/tld/Found001", response.TemplateName);
 
             Assert.AreEqual("google.info", response.DomainName);
             Assert.AreEqual("D37288-LRMS", response.RegistryDomainId);
 
             Assert.AreEqual("MarkMonitor Inc. (R151-LRMS)", response.Registrar.Name);
 
-            Assert.AreEqual(new DateTime(2001, 8, 1, 0, 57, 50), response.Updated);
-            Assert.AreEqual(new DateTime(2013, 6, 29, 10, 26, 18), response.Registered);
+            Assert.AreEqual(new DateTime(2013, 6, 29, 10, 26, 18), response.Updated);
+            Assert.AreEqual(new DateTime(2001, 8, 1, 0, 57, 50), response.Registered);
             Assert.AreEqual(new DateTime(2014, 8, 1, 0, 57, 50), response.Expiration);
             Assert.AreEqual("mmr-32097", response.Registrant.RegistryId);
             Assert.AreEqual("DNS Admin", response.Registrant.Name);
@@ -74,6 +75,7 @@ namespace Whois.Parsing.Whois.Afilias.Net.Info
             Assert.AreEqual("94043", response.AdminContact.Address[3]);
             Assert.AreEqual("US", response.AdminContact.Address[4]);
 
+            Assert.AreEqual("+1.6506234000", response.AdminContact.TelephoneNumber);
             Assert.AreEqual("+1.6506188571", response.AdminContact.FaxNumber);
             Assert.AreEqual("dns-admin@google.com", response.AdminContact.Email);
 
@@ -117,6 +119,8 @@ namespace Whois.Parsing.Whois.Afilias.Net.Info
             Assert.AreEqual("clientDeleteProhibited", response.DomainStatus[0]);
             Assert.AreEqual("clientTransferProhibited", response.DomainStatus[1]);
             Assert.AreEqual("clientUpdateProhibited", response.DomainStatus[2]);
+
+            Assert.AreEqual("Unsigned", response.DnsSecStatus);
         }
 
         [Test]
