@@ -16,6 +16,7 @@ tag: pro
 tag: gi
 tag: lc
 tag: mn
+tag: sc
 
 # Use this template for catch-all parsing:
 tag: catch-all
