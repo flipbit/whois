@@ -10,5 +10,8 @@ tag: au
 
 # Set query response type:
 set: Status = NotFound
+
+# Must contain:
+hint: No Data
 ---
-No Data Found
+No Data Found { Null }
