@@ -13,6 +13,7 @@ tag: gi
 tag: lc
 tag: mn
 tag: sc
+tag: vc
 
 # Use this template for catch-all parsing:
 tag: catch-all
