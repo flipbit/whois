@@ -37,7 +37,7 @@ namespace Whois.Parsing.Whois.Afilias.Net.Info
             Assert.Greater(sample.Length, 0);
             Assert.AreEqual(WhoisResponseStatus.Found, response.Status);
 
-            Assert.AreEqual(60, response.FieldsParsed);
+            Assert.AreEqual(61, response.FieldsParsed);
             Assert.AreEqual(0, response.ParsingErrors);
 
             Assert.AreEqual("google.info", response.DomainName);

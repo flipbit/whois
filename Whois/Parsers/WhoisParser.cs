@@ -1,4 +1,6 @@
-﻿using Tokens;
+﻿using System.Collections.Generic;
+using System.Linq;
+using Tokens;
 using Whois.Models;
 
 namespace Whois.Parsers
@@ -32,6 +34,7 @@ namespace Whois.Parsers
         public ParsedWhoisResponse Parse(string whoisServer, string tld, string content)
         {
             LoadServerTemplates(whoisServer, tld);
+            LoadServerGenericTemplates();
 
             var result = matcher.Match<ParsedWhoisResponse>(content, new []{ whoisServer, tld });
 
@@ -43,6 +46,7 @@ namespace Whois.Parsers
 
                 value.FieldsParsed = match.Tokens.Matches.Count;
                 value.ParsingErrors = match.Exceptions.Count;
+                value.TemplateName = match.Template.Name;
 
                 return value;
             }
@@ -53,9 +57,27 @@ namespace Whois.Parsers
         private void LoadServerTemplates(string whoisServer, string tld)
         {
             // Check templates for this server/tld not already loaded
-            if (Templates.ContainsAllTags(whoisServer, tld)) return;
+            var loaded = Templates
+                .Where(t => t.Name.Contains("generic") == false)
+                .Any(t => t.HasAllTags(new [] {whoisServer, tld}));
+
+            if (loaded) return;
 
             var templateNames = reader.GetNames(whoisServer, tld);
+
+            foreach (var templateName in templateNames)
+            {
+                var content = reader.GetContent(templateName);
+
+                matcher.RegisterTemplate(content);
+            }
+        }
+
+        private void LoadServerGenericTemplates()
+        {
+            if (Templates.Select(t => t.Name).Any(n => n.Contains("generic"))) return;
+
+            var templateNames = reader.GetNames("generic", "tld");
 
             foreach (var templateName in templateNames)
             {

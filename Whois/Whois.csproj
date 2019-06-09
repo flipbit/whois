@@ -24,6 +24,7 @@
     <None Remove="Resources\coza-whois.registry.net.za\co.za\Throttled.txt" />
     <None Remove="Resources\durban-whois.registry.net.za\durban\Found.txt" />
     <None Remove="Resources\durban-whois.registry.net.za\durban\NotFound.txt" />
+    <None Remove="Resources\generic\tld\Found001.txt" />
     <None Remove="Resources\joburg-whois.registry.net.za\joburg\Found.txt" />
     <None Remove="Resources\joburg-whois.registry.net.za\joburg\NotFound.txt" />
     <None Remove="Resources\kero.yachay.pe\pe\Found.txt" />
@@ -40,8 +41,6 @@
     <None Remove="Resources\whois.aeda.net.ae\ae\NotFound.txt" />
     <None Remove="Resources\whois.afilias-grs.info\bz\Found.txt" />
     <None Remove="Resources\whois.afilias-grs.info\bz\NotFound.txt" />
-    <None Remove="Resources\whois.afilias-grs.info\gi\Found.txt" />
-    <None Remove="Resources\whois.afilias-grs.info\gi\NotFound.txt" />
     <None Remove="Resources\whois.afilias-grs.info\lc\Found.txt" />
     <None Remove="Resources\whois.afilias-grs.info\lc\NotFound.txt" />
     <None Remove="Resources\whois.afilias-grs.info\mn\Found.txt" />
@@ -50,10 +49,8 @@
     <None Remove="Resources\whois.afilias-grs.info\sc\NotFound.txt" />
     <None Remove="Resources\whois.afilias-grs.info\vc\Found.txt" />
     <None Remove="Resources\whois.afilias-grs.info\vc\NotFound.txt" />
-    <None Remove="Resources\whois.afilias.net\info\Found.txt" />
     <None Remove="Resources\whois.afilias.net\info\NotFound.txt" />
     <None Remove="Resources\whois.afilias.net\info\Reserved.txt" />
-    <None Remove="Resources\whois.afilias.net\pro\Found.txt" />
     <None Remove="Resources\whois.afilias.net\pro\NotFound.txt" />
     <None Remove="Resources\whois.afilias.net\pro\Reserved.txt" />
     <None Remove="Resources\whois.amnic.net\am\Found.txt" />
@@ -591,6 +588,7 @@
     <EmbeddedResource Include="Resources\coza-whois.registry.net.za\co.za\Throttled.txt" />
     <EmbeddedResource Include="Resources\durban-whois.registry.net.za\durban\Found.txt" />
     <EmbeddedResource Include="Resources\durban-whois.registry.net.za\durban\NotFound.txt" />
+    <EmbeddedResource Include="Resources\generic\tld\Found001.txt" />
     <EmbeddedResource Include="Resources\joburg-whois.registry.net.za\joburg\Found.txt" />
     <EmbeddedResource Include="Resources\joburg-whois.registry.net.za\joburg\NotFound.txt" />
     <EmbeddedResource Include="Resources\kero.yachay.pe\pe\Found.txt" />
@@ -606,9 +604,7 @@
     <EmbeddedResource Include="Resources\whois.aeda.net.ae\ae\Found.txt" />
     <EmbeddedResource Include="Resources\whois.aeda.net.ae\ae\NotFound.txt" />
     <EmbeddedResource Include="Resources\whois.afilias-grs.info\bz\Found.txt" />
-    <EmbeddedResource Include="Resources\whois.afilias-grs.info\bz\NotFound.txt" />
-    <EmbeddedResource Include="Resources\whois.afilias-grs.info\gi\Found.txt" />
-    <EmbeddedResource Include="Resources\whois.afilias-grs.info\gi\NotFound.txt" />
+    <EmbeddedResource Include="Resources\generic\tld\NotFound001.txt" />
     <EmbeddedResource Include="Resources\whois.afilias-grs.info\lc\Found.txt" />
     <EmbeddedResource Include="Resources\whois.afilias-grs.info\lc\NotFound.txt" />
     <EmbeddedResource Include="Resources\whois.afilias-grs.info\mn\Found.txt" />
@@ -617,10 +613,8 @@
     <EmbeddedResource Include="Resources\whois.afilias-grs.info\sc\NotFound.txt" />
     <EmbeddedResource Include="Resources\whois.afilias-grs.info\vc\Found.txt" />
     <EmbeddedResource Include="Resources\whois.afilias-grs.info\vc\NotFound.txt" />
-    <EmbeddedResource Include="Resources\whois.afilias.net\info\Found.txt" />
     <EmbeddedResource Include="Resources\whois.afilias.net\info\NotFound.txt" />
     <EmbeddedResource Include="Resources\whois.afilias.net\info\Reserved.txt" />
-    <EmbeddedResource Include="Resources\whois.afilias.net\pro\Found.txt" />
     <EmbeddedResource Include="Resources\whois.afilias.net\pro\NotFound.txt" />
     <EmbeddedResource Include="Resources\whois.afilias.net\pro\Reserved.txt" />
     <EmbeddedResource Include="Resources\whois.amnic.net\am\Found.txt" />
