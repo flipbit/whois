@@ -40,8 +40,6 @@
     <None Remove="Resources\whois.aeda.net.ae\ae\NotFound.txt" />
     <None Remove="Resources\whois.afilias-grs.info\bz\Found.txt" />
     <None Remove="Resources\whois.afilias-grs.info\bz\NotFound.txt" />
-    <None Remove="Resources\whois.afilias-grs.info\vc\Found.txt" />
-    <None Remove="Resources\whois.afilias-grs.info\vc\NotFound.txt" />
     <None Remove="Resources\whois.afilias.net\info\NotFound.txt" />
     <None Remove="Resources\whois.afilias.net\info\Reserved.txt" />
     <None Remove="Resources\whois.afilias.net\pro\NotFound.txt" />
@@ -597,8 +595,6 @@
     <EmbeddedResource Include="Resources\whois.aeda.net.ae\ae\NotFound.txt" />
     <EmbeddedResource Include="Resources\whois.afilias-grs.info\bz\Found.txt" />
     <EmbeddedResource Include="Resources\generic\tld\NotFound001.txt" />
-    <EmbeddedResource Include="Resources\whois.afilias-grs.info\vc\Found.txt" />
-    <EmbeddedResource Include="Resources\whois.afilias-grs.info\vc\NotFound.txt" />
     <EmbeddedResource Include="Resources\whois.afilias.net\info\NotFound.txt" />
     <EmbeddedResource Include="Resources\whois.afilias.net\info\Reserved.txt" />
     <EmbeddedResource Include="Resources\whois.afilias.net\pro\NotFound.txt" />
