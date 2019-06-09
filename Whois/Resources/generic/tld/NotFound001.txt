@@ -10,6 +10,7 @@ tag: whois.afilias-grs.info
 # Use this template for queries to TLDs:
 tag: bz
 tag: gi
+tag: lc
 
 # Use this template for catch-all parsing:
 tag: catch-all

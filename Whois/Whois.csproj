@@ -19,7 +19,6 @@
     <None Remove="Resources\ccwhois.verisign-grs.com\cc\Found.txt" />
     <None Remove="Resources\ccwhois.verisign-grs.com\cc\FoundRegistered.txt" />
     <None Remove="Resources\ccwhois.verisign-grs.com\cc\NotFound.txt" />
-    <None Remove="Resources\coza-whois.registry.net.za\co.za\Found.txt" />
     <None Remove="Resources\coza-whois.registry.net.za\co.za\NotFound.txt" />
     <None Remove="Resources\coza-whois.registry.net.za\co.za\Throttled.txt" />
     <None Remove="Resources\durban-whois.registry.net.za\durban\Found.txt" />
@@ -41,8 +40,6 @@
     <None Remove="Resources\whois.aeda.net.ae\ae\NotFound.txt" />
     <None Remove="Resources\whois.afilias-grs.info\bz\Found.txt" />
     <None Remove="Resources\whois.afilias-grs.info\bz\NotFound.txt" />
-    <None Remove="Resources\whois.afilias-grs.info\lc\Found.txt" />
-    <None Remove="Resources\whois.afilias-grs.info\lc\NotFound.txt" />
     <None Remove="Resources\whois.afilias-grs.info\mn\Found.txt" />
     <None Remove="Resources\whois.afilias-grs.info\mn\NotFound.txt" />
     <None Remove="Resources\whois.afilias-grs.info\sc\Found.txt" />
@@ -583,7 +580,6 @@
     <EmbeddedResource Include="Resources\ccwhois.verisign-grs.com\cc\FoundRegistered.txt" />
     <EmbeddedResource Include="Resources\ccwhois.verisign-grs.com\cc\Found.txt" />
     <EmbeddedResource Include="Resources\ccwhois.verisign-grs.com\cc\NotFound.txt" />
-    <EmbeddedResource Include="Resources\coza-whois.registry.net.za\co.za\Found.txt" />
     <EmbeddedResource Include="Resources\coza-whois.registry.net.za\co.za\NotFound.txt" />
     <EmbeddedResource Include="Resources\coza-whois.registry.net.za\co.za\Throttled.txt" />
     <EmbeddedResource Include="Resources\durban-whois.registry.net.za\durban\Found.txt" />
@@ -605,8 +601,6 @@
     <EmbeddedResource Include="Resources\whois.aeda.net.ae\ae\NotFound.txt" />
     <EmbeddedResource Include="Resources\whois.afilias-grs.info\bz\Found.txt" />
     <EmbeddedResource Include="Resources\generic\tld\NotFound001.txt" />
-    <EmbeddedResource Include="Resources\whois.afilias-grs.info\lc\Found.txt" />
-    <EmbeddedResource Include="Resources\whois.afilias-grs.info\lc\NotFound.txt" />
     <EmbeddedResource Include="Resources\whois.afilias-grs.info\mn\Found.txt" />
     <EmbeddedResource Include="Resources\whois.afilias-grs.info\mn\NotFound.txt" />
     <EmbeddedResource Include="Resources\whois.afilias-grs.info\sc\Found.txt" />

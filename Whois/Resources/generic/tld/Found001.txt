@@ -12,6 +12,7 @@ tag: whois.afilias-grs.info
 tag: info
 tag: pro
 tag: gi
+tag: lc
 
 # Use this template for catch-all parsing:
 tag: catch-all
