@@ -12,8 +12,8 @@ tag: org.za
 set: Status = Found
 ---
 Domain Name: { DomainName : IsDomainName, ToLower, EOL }
-Domain ID: { RegistryDomainId : EOL }
-WHOIS Server: { Registrar.WhoisServerUrl : IsDomainName, ToLower, EOL }
+Domain ID: { RegistryDomainId ? : EOL }
+WHOIS Server: { Registrar.WhoisServerUrl ? : IsDomainName, ToLower, EOL }
 
 Updated Date: { Updated ? : ToDateTime("yyyy-MM-ddTHH:mm:ssZ"), EOL }
 Creation Date: { Registered ? : ToDateTime("yyyy-MM-ddTHH:mm:ssZ"), EOL }
