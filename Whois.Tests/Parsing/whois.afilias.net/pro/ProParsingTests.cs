@@ -1,3 +1,4 @@
+using System;
 using NUnit.Framework;
 using Whois.Models;
 using Whois.Parsers;
@@ -36,14 +37,19 @@ namespace Whois.Parsing.Whois.Afilias.Net.Pro
             Assert.Greater(sample.Length, 0);
             Assert.AreEqual(WhoisResponseStatus.Found, response.Status);
 
-            Assert.AreEqual(52, response.FieldsParsed);
+            Assert.AreEqual(59, response.FieldsParsed);
             Assert.AreEqual(0, response.ParsingErrors);
+            Assert.AreEqual("generic/tld/Found001", response.TemplateName);
 
             Assert.AreEqual("google.pro", response.DomainName);
             Assert.AreEqual("D107300000000011545-LRMS", response.RegistryDomainId);
 
-            Assert.AreEqual(" http://www.markmonitor.com", response.Registrar.Url);
+            Assert.AreEqual("MarkMonitor Inc.", response.Registrar.Name);
+            Assert.AreEqual("http://www.markmonitor.com", response.Registrar.Url);
 
+            Assert.AreEqual(new DateTime(2016, 2, 1, 15, 44, 3), response.Updated);
+            Assert.AreEqual(new DateTime(2008, 7, 22, 1, 0, 0), response.Registered);
+            Assert.AreEqual(new DateTime(2016, 9, 8, 1, 0, 0), response.Expiration);
             Assert.AreEqual("mmr-2383", response.Registrant.RegistryId);
             Assert.AreEqual("DNS Admin", response.Registrant.Name);
             Assert.AreEqual("Google Inc.", response.Registrant.Organization);
@@ -70,6 +76,7 @@ namespace Whois.Parsing.Whois.Afilias.Net.Pro
             Assert.AreEqual("94043", response.AdminContact.Address[3]);
             Assert.AreEqual("US", response.AdminContact.Address[4]);
 
+            Assert.AreEqual("+1.6502530000", response.AdminContact.TelephoneNumber);
             Assert.AreEqual("+1.6506188571", response.AdminContact.FaxNumber);
             Assert.AreEqual("dns-admin@google.com", response.AdminContact.Email);
 
@@ -112,6 +119,8 @@ namespace Whois.Parsing.Whois.Afilias.Net.Pro
             Assert.AreEqual("clientDeleteProhibited", response.DomainStatus[0]);
             Assert.AreEqual("clientTransferProhibited", response.DomainStatus[1]);
             Assert.AreEqual("clientUpdateProhibited", response.DomainStatus[2]);
+
+            Assert.AreEqual("unsigned", response.DnsSecStatus);
         }
 
         [Test]

@@ -1,3 +1,4 @@
+using System;
 using NUnit.Framework;
 using Whois.Models;
 using Whois.Parsers;
@@ -25,6 +26,12 @@ namespace Whois.Parsing.Whois.Ax.Ax
 
             Assert.Greater(sample.Length, 0);
             Assert.AreEqual(WhoisResponseStatus.NotFound, response.Status);
+
+            Assert.AreEqual(2, response.FieldsParsed);
+            Assert.AreEqual(0, response.ParsingErrors);
+            Assert.AreEqual("whois.ax/ax/NotFound", response.TemplateName);
+
+            Assert.AreEqual("u34jedzcq.ax", response.DomainName);
         }
 
         [Test]
@@ -35,6 +42,33 @@ namespace Whois.Parsing.Whois.Ax.Ax
 
             Assert.Greater(sample.Length, 0);
             Assert.AreEqual(WhoisResponseStatus.Found, response.Status);
+
+            Assert.AreEqual(11, response.FieldsParsed);
+            Assert.AreEqual(0, response.ParsingErrors);
+            Assert.AreEqual("whois.ax/ax/Found", response.TemplateName);
+
+            Assert.AreEqual("regeringen.ax", response.DomainName);
+
+
+            Assert.AreEqual(new DateTime(2006, 8, 3, 0, 0, 0), response.Registered);
+            Assert.AreEqual("Ålands landskapsregering", response.Registrant.Name);
+            Assert.AreEqual("0145076-7", response.Registrant.Organization);
+
+            Assert.AreEqual(1, response.Registrant.Address.Count);
+            Assert.AreEqual("AX", response.Registrant.Address[0]);
+
+
+            Assert.AreEqual("IT-enheten", response.AdminContact.Name);
+
+            Assert.AreEqual(2, response.AdminContact.Address.Count);
+            Assert.AreEqual("PB 1060", response.AdminContact.Address[0]);
+            Assert.AreEqual("22111  MARIEHAMN", response.AdminContact.Address[1]);
+
+            Assert.AreEqual("itsupport@regeringen.ax", response.AdminContact.Email);
+
+
+            Assert.AreEqual(1, response.NameServers.Count);
+            Assert.AreEqual("ns.regeringen.ax", response.NameServers[0]);
         }
     }
 }
