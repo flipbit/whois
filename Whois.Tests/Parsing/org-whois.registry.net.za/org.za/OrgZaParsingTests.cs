@@ -42,7 +42,7 @@ namespace Whois.Parsing.Org.Whois.Registry.Net.Za.OrgZa
             Assert.Greater(sample.Length, 0);
             Assert.AreEqual(WhoisResponseStatus.Found, response.Status);
 
-            Assert.AreEqual(46, response.FieldsParsed);
+            Assert.AreEqual(47, response.FieldsParsed);
             Assert.AreEqual(0, response.ParsingErrors);
 
             Assert.AreEqual("joburg.org.za", response.DomainName);

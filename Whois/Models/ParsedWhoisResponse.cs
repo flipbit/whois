@@ -68,5 +68,7 @@ namespace Whois.Models
         public int FieldsParsed { get; set; }
 
         public int ParsingErrors { get; set; }
+
+        public string TemplateName { get; set; }
     }
 }

@@ -13,6 +13,7 @@ namespace Whois
         {
             Write(nameof(response.FieldsParsed), response.FieldsParsed);
             Write(nameof(response.ParsingErrors), response.ParsingErrors);
+            Write(nameof(response.TemplateName), response.TemplateName);
 
             Console.WriteLine();
 
