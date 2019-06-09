@@ -40,7 +40,7 @@ namespace Whois.Parsing.Whois.Afilias.Grs.Info.Lc
             Assert.Greater(sample.Length, 0);
             Assert.AreEqual(WhoisResponseStatus.Found, response.Status);
 
-            Assert.AreEqual(35, response.FieldsParsed);
+            Assert.AreEqual(36, response.FieldsParsed);
             Assert.AreEqual(0, response.ParsingErrors);
             Assert.AreEqual("generic/tld/Found001", response.TemplateName);
 
@@ -75,6 +75,7 @@ namespace Whois.Parsing.Whois.Afilias.Grs.Info.Lc
             Assert.AreEqual("Not Provided", response.AdminContact.Address[2]);
             Assert.AreEqual("LC", response.AdminContact.Address[3]);
 
+            Assert.AreEqual("+758.4520220", response.AdminContact.TelephoneNumber);
             Assert.AreEqual("hostmaster@nic.lc", response.AdminContact.Email);
 
             Assert.AreEqual("LC-53407", response.TechnicalContact.RegistryId);
@@ -96,6 +97,7 @@ namespace Whois.Parsing.Whois.Afilias.Grs.Info.Lc
 
             Assert.AreEqual(1, response.DomainStatus.Count);
             Assert.AreEqual("OK", response.DomainStatus[0]);
+
         }
     }
 }
