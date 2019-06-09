@@ -63,6 +63,8 @@ namespace Whois.Models
 
         public string DnsSecStatus { get; set; }
 
+        public Trademark Trademark { get; set; }
+
         public int FieldsParsed { get; set; }
 
         public int ParsingErrors { get; set; }
