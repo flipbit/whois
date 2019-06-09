@@ -37,7 +37,7 @@ namespace Whois.Parsing.Whois.Afilias.Grs.Info.Gi
             Assert.Greater(sample.Length, 0);
             Assert.AreEqual(WhoisResponseStatus.Found, response.Status);
 
-            Assert.AreEqual(41, response.FieldsParsed);
+            Assert.AreEqual(42, response.FieldsParsed);
             Assert.AreEqual(0, response.ParsingErrors);
             Assert.AreEqual("generic/tld/Found001", response.TemplateName);
 
@@ -70,6 +70,7 @@ namespace Whois.Parsing.Whois.Afilias.Grs.Info.Gi
             Assert.AreEqual("NA", response.AdminContact.Address[1]);
             Assert.AreEqual("GI", response.AdminContact.Address[2]);
 
+            Assert.AreEqual("+350.47200", response.AdminContact.TelephoneNumber);
             Assert.AreEqual("jimossi@sapphire.gi", response.AdminContact.Email);
 
             Assert.AreEqual("FR-1103549674779", response.BillingContact.RegistryId);
@@ -102,6 +103,7 @@ namespace Whois.Parsing.Whois.Afilias.Grs.Info.Gi
             Assert.AreEqual("ns2-a.sapphire.gi", response.NameServers[1]);
 
             Assert.AreEqual(1, response.DomainStatus.Count);
-            Assert.AreEqual("OK", response.DomainStatus[0]);        }
+            Assert.AreEqual("OK", response.DomainStatus[0]);
+        }
     }
 }

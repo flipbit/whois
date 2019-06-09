@@ -7,12 +7,15 @@ name: generic/tld/Found001
 # Use this template for queries to servers:
 tag: whois.afilias.net
 tag: whois.afilias-grs.info
+tag: coza-whois.registry.net.za
 
 # Use this template for queries to TLDs:
+tag: co.za
 tag: info
 tag: pro
 tag: gi
 tag: lc
+tag: mn
 
 # Use this template for catch-all parsing:
 tag: catch-all
@@ -24,8 +27,8 @@ set: Status = Found
 ---
 Domain Name:{ DomainName : Trim, IsDomainName, ToLower, EOL }
 Domain ID:{ RegistryDomainId ? : Trim, EOL }
-Creation Date:{ Updated ? : Trim, SubstringBefore("UTC"), ToDateTime("yyyy-MM-ddTHH:mm:ssZ", "dd-MMM-yyyy hh:MM:ss"), EOL }
-Updated Date:{ Registered ? : Trim, SubstringBefore("UTC"), ToDateTime("yyyy-MM-ddTHH:mm:ssZ", "dd-MMM-yyyy hh:MM:ss"), EOL }
+Creation Date:{ Registered? : Trim, SubstringBefore("UTC"), ToDateTime("yyyy-MM-ddTHH:mm:ssZ", "dd-MMM-yyyy hh:MM:ss"), EOL }
+Updated Date:{ Updated ? : Trim, SubstringBefore("UTC"), ToDateTime("yyyy-MM-ddTHH:mm:ssZ", "dd-MMM-yyyy hh:MM:ss"), EOL }
 Registry Expiry Date:{ Expiration ? : Trim, SubstringBefore("UTC"), ToDateTime("yyyy-MM-ddTHH:mm:ssZ", "dd-MMM-yyyy hh:MM:ss"), EOL }
 Last Updated On:{ Updated ? : Trim, SubstringBefore("UTC"), ToDateTime("yyyy-MM-ddTHH:mm:ssZ", "dd-MMM-yyyy hh:MM:ss"), EOL }
 Created On:{ Registered ? : Trim, SubstringBefore("UTC"), ToDateTime("yyyy-MM-ddTHH:mm:ssZ", "dd-MMM-yyyy hh:MM:ss"), EOL }
@@ -36,10 +39,10 @@ Trademark Country:{ Trademark.Country ? : Trim, EOL }
 Trademark Number:{ Trademark.Number ? : Trim, EOL }
 Sponsoring Registrar:{ Registrar.Name ? : Trim, EOL }
 Sponsoring Registrar IANA ID:{ Registrar.IanaId ? : Trim, IsNumeric, EOL }
-WHOIS Server:{ Registrar.WhoisServerUrl ? : IsDomainName, ToLower, EOL } 
-Referral URL:{ Registrar.Url ? : IsUrl, ToLower, EOL } 
+WHOIS Server:{ Registrar.WhoisServerUrl ? : Trim, IsDomainName, ToLower, EOL } 
+Referral URL:{ Registrar.Url ? : Trim, IsUrl, ToLower, EOL } 
 Domain Status:{ DomainStatus ? : Trim, Repeating, SubstringBefore(' '), EOL }
-Status:{ DomainStatus ? : Trim, Repeating, SubstringBefore(' '), EOL }
+Status:{ DomainStatus ? : Trim, Repeating, EOL }
 Registrant ID:{ Registrant.RegistryId ? : Trim, EOL }
 Registrant Name:{ Registrant.Name ? : Trim, EOL }
 Registrant Organization:{ Registrant.Organization ? : Trim, EOL }
@@ -61,7 +64,7 @@ Admin City:{ AdminContact.Address ? : Trim, IsNotEmpty, EOL }
 Admin State/Province:{ AdminContact.Address ? : Trim, IsNotEmpty, EOL }
 Admin Postal Code:{ AdminContact.Address ? : Trim, IsNotEmpty, EOL }
 Admin Country:{ AdminContact.Address ? : Trim, IsNotEmpty, EOL }
-Admin Phone { AdminContact.TelephoneNumber ? : Trim, IsPhoneNumber, EOL }
+Admin Phone:{ AdminContact.TelephoneNumber ? : Trim, IsPhoneNumber, EOL }
 Admin Phone Ext:{ AdminContact.TelephoneNumberExt  ? : Trim, IsNumeric, EOL } 
 Admin Fax:{ AdminContact.FaxNumber ? : Trim, IsPhoneNumber, EOL } 
 Admin Fax Ext:{ AdminContact.FaxNumberExt ? : Trim, IsNumeric, EOL } 
