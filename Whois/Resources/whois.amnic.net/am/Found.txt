@@ -15,43 +15,40 @@ set: Status = Found
 %AM TLD whois server #1
 %
 
-   Domain name: google.am
-   Registrar:   abcdomain
-   Status:      active
+   Domain name: { DomainName : Required, IsDomainName, ToLower, EOL }
+   Registrar:   { Registrar.Name ? : EOL }
+   Status:      { DomainStatus ? : Repeating, EOL }
 
    Registrant:
-      Google, Inc.
-      1600 Amphitheatre Parkway
-      Mountain View, CA,  94043
-      US
+      { Registrant.Name ? : EOL }
+      { Registrant.Address ? : IsNotEmpty, EOL }
+      { Registrant.Address ? : IsNotEmpty, EOL }
+      { Registrant.Address ? : IsNotEmpty, EOL }
 
    Administrative contact:
-      Google, Inc.
-      Google, Inc.
-      1600 Amphitheatre Parkway
-      Mountain View, CA, 94043
-      US
-      ccops@markmonitor.com
-      1 6502530000
-      1 6506188571
+      { AdminContact.Name ? : EOL }
+      { AdminContact.Organization ? : EOL }
+      { AdminContact.Address ? : IsNotEmpty, EOL }
+      { AdminContact.Address ? : IsNotEmpty, EOL }
+      { AdminContact.Address ? : IsNotEmpty, EOL }
+      { AdminContact.Email ? : IsEmail, EOL }
+      { AdminContact.TelephoneNumber ? : IsPhoneNumber, EOL }
+      { AdminContact.FaxNumber ? : IsPhoneNumber, EOL }
 
    Technical contact:
-      DNS Admin
-      Google, Inc.
-      1600 Amphitheatre Parkway
-      Mountain View, CA, 94043
-      US
-      ccops@markmonitor.com
-      1 6502530000
-      1 6506188571
+      { TechnicalContact.Name ? : EOL }
+      { TechnicalContact.Organization ? : EOL }
+      { TechnicalContact.Address ? : IsNotEmpty, EOL }
+      { TechnicalContact.Address ? : IsNotEmpty, EOL }
+      { TechnicalContact.Address ? : IsNotEmpty, EOL }
+      { TechnicalContact.Email ? : IsEmail, EOL }
+      { TechnicalContact.TelephoneNumber ? : IsPhoneNumber, EOL }
+      { TechnicalContact.FaxNumber ? : IsPhoneNumber, EOL }
 
    DNS servers:
-      ns1.google.com
-      ns2.google.com
-      ns3.google.com
-      ns4.google.com
+      { NameServers ? : IsDomainName, ToLower, Repeating, EOL }
 
-   Registered:    1999-06-05
-   Last modified: 2014-02-13
-   Expires:       2014-04-15
+   Registered:    { Registered ? : ToDateTime("yyyy-MM-dd"), EOL }
+   Last modified: { Updated ? : ToDateTime("yyyy-MM-dd"), EOL }
+   Expires:       { Expiration ? : ToDateTime("yyyy-MM-dd"), EOL }
 
