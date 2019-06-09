@@ -34,6 +34,7 @@
     <None Remove="Resources\org-whois.registry.net.za\org.za\Found.txt" />
     <None Remove="Resources\org-whois.registry.net.za\org.za\NotFound.txt" />
     <None Remove="Resources\tvwhois.verisign-grs.com\tv\Found.txt" />
+    <None Remove="Resources\tvwhois.verisign-grs.com\tv\FoundV1.txt" />
     <None Remove="Resources\tvwhois.verisign-grs.com\tv\NotFound.txt" />
     <None Remove="Resources\whois.aeda.net.ae\ae\Found.txt" />
     <None Remove="Resources\whois.aeda.net.ae\ae\NotFound.txt" />
@@ -599,6 +600,7 @@
     <EmbeddedResource Include="Resources\kero.yachay.pe\pe\Throttled.txt" />
     <EmbeddedResource Include="Resources\org-whois.registry.net.za\org.za\Found.txt" />
     <EmbeddedResource Include="Resources\org-whois.registry.net.za\org.za\NotFound.txt" />
+    <EmbeddedResource Include="Resources\tvwhois.verisign-grs.com\tv\FoundV1.txt" />
     <EmbeddedResource Include="Resources\tvwhois.verisign-grs.com\tv\Found.txt" />
     <EmbeddedResource Include="Resources\tvwhois.verisign-grs.com\tv\NotFound.txt" />
     <EmbeddedResource Include="Resources\whois.aeda.net.ae\ae\Found.txt" />
