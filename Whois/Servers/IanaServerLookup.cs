@@ -5,7 +5,6 @@ using Whois.Net;
 using Tokens;
 using Whois.Logging;
 using Whois.Models;
-using Whois.Resources;
 
 namespace Whois.Servers
 {
@@ -15,7 +14,21 @@ namespace Whois.Servers
     public class IanaServerLookup : IWhoisServerLookup
     {
         private const string IanaUrl = "whois.iana.org";
+        
         private static readonly ILog Log = LogProvider.GetCurrentClassLogger();
+
+        private Lazy<TokenMatcher> ianaTemplate;
+        private ResourceReader resourceReader;
+
+        /// <summary>
+        /// Creates a new instance of the IANA Server Lookup
+        /// </summary>
+        public IanaServerLookup()
+        {
+            ianaTemplate = new Lazy<TokenMatcher>(CreateIanaTemplate);
+            resourceReader = new ResourceReader();
+        }
+        
 
         public WhoisServer Lookup(string tld)
         {
@@ -27,16 +40,15 @@ namespace Whois.Servers
             var content = await GetWhoisServerResponse(tld);
 
             // Reflect the raw response onto a ParsedWhoisServer object
-            var parsed = new Tokenizer()
-                .Tokenize<ParsedWhoisServer>(Embedded.Patterns.Servers.Iana, content)
-                .Value;
+            var matcher = ianaTemplate.Value;
+            var result = matcher.Match<WhoisServer>(content);
 
-            var response = new WhoisServer(tld, parsed.Url);
+            if (result.Success)
+            {
+                return result.BestMatch.Value;
+            }
 
-            response.Content = content;
-            response.ParsedWhoisServer = parsed;
-
-            return response;
+            return new WhoisServer { Tld = tld, Status = WhoisServerStatus.Unknown };
         }
 
         private async Task<string> GetWhoisServerResponse(string tld)
@@ -53,6 +65,22 @@ namespace Whois.Servers
             Log.Debug("Received {0:###,###,##0} byte(s).", response.Length);
 
             return response;
+        }
+
+        private TokenMatcher CreateIanaTemplate()
+        {
+            var matcher = new TokenMatcher();
+
+            var resourceNames = resourceReader.GetNames("whois.iana.org", "tld");
+
+            foreach (var resourceName in resourceNames)
+            {
+                var content = resourceReader.GetContent(resourceName);
+            
+                matcher.RegisterTemplate(content);
+            }
+            
+            return matcher;
         }
     }
 }

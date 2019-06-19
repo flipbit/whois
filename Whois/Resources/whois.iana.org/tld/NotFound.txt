@@ -1,0 +1,17 @@
+---
+#
+# .tld Parsing Template
+#
+name: whois.iana.org/tld/NotAssigned
+
+# Use this template for queries to whois.iana.org:
+tag: whois.iana.org
+tag: tld
+
+# Set query response type:
+set: Status = NotFound
+
+# Must contain:
+hint: Not assigned
+---
+domain:       { Tld : ToLower, EOL }

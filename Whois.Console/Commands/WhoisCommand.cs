@@ -37,15 +37,13 @@ namespace Whois.Commands
 
         public override int Execute(Options parameters)
         {
-            WhoisLookup.AddPattern("hello", "test");
-
             var record = WhoisLookup.Lookup(parameters.DomainName);
 
             if (parameters.Json)
             {
-                if (record.ParsedResponse != null)
+                if (record != null)
                 {
-                    var json = JsonConvert.SerializeObject(new WhoisResponse(record.ParsedResponse), Formatting.Indented);
+                    var json = JsonConvert.SerializeObject(new WhoisResponse(record), Formatting.Indented);
                     Console.WriteLine(json);
                 }
                 else

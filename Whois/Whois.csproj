@@ -1,4 +1,4 @@
-<Project Sdk="Microsoft.NET.Sdk">
+﻿<Project Sdk="Microsoft.NET.Sdk">
   <PropertyGroup>
    <TargetFrameworks>netstandard2.0;net452</TargetFrameworks>
    <GeneratePackageOnBuild>true</GeneratePackageOnBuild>
@@ -10,6 +10,7 @@
    <Description>A .NET Framework 4.5.2 and Standard 2.0 WHOIS Lookup and Parsing Library</Description>
    <Copyright>Chris Wood 2019</Copyright>
    <RootNamespace>Whois</RootNamespace>
+    
   </PropertyGroup>
   <ItemGroup>
     <None Remove="Resources\capetown-whois.registry.net.za\capetown\Found.txt" />
@@ -24,6 +25,7 @@
     <None Remove="Resources\durban-whois.registry.net.za\durban\Found.txt" />
     <None Remove="Resources\durban-whois.registry.net.za\durban\NotFound.txt" />
     <None Remove="Resources\generic\tld\Found001.txt" />
+    <None Remove="Resources\generic\tld\NotFound002.txt" />
     <None Remove="Resources\joburg-whois.registry.net.za\joburg\Found.txt" />
     <None Remove="Resources\joburg-whois.registry.net.za\joburg\NotFound.txt" />
     <None Remove="Resources\kero.yachay.pe\pe\Found.txt" />
@@ -52,7 +54,6 @@
     <None Remove="Resources\whois.audns.net.au\au\NotFound.txt" />
     <None Remove="Resources\whois.ax\ax\Found.txt" />
     <None Remove="Resources\whois.ax\ax\NotFound.txt" />
-    <None Remove="Resources\whois.biz\biz\Found.txt" />
     <None Remove="Resources\whois.biz\biz\NotFound.txt" />
     <None Remove="Resources\whois.bnnic.bn\bn\Found.txt" />
     <None Remove="Resources\whois.bnnic.bn\bn\NotFound.txt" />
@@ -210,7 +211,8 @@
     <None Remove="Resources\whois.iana.org\arpa\NotFound.txt" />
     <None Remove="Resources\whois.iana.org\int\Found.txt" />
     <None Remove="Resources\whois.iana.org\int\NotFound.txt" />
-    <None Remove="Resources\whois.iana.org\tld\NotAssigned.txt" />
+    <None Remove="Resources\whois.iana.org\tld\Found.txt" />
+    <None Remove="Resources\whois.iana.org\tld\NotFound.txt" />
     <None Remove="Resources\whois.iis.nu\nu\Found.txt" />
     <None Remove="Resources\whois.iis.nu\nu\NotFound.txt" />
     <None Remove="Resources\whois.iis.se\se\Found.txt" />
@@ -555,6 +557,7 @@
     <None Remove="Resources\whois.verisign-grs.com\com\Found.txt" />
     <None Remove="Resources\whois.verisign-grs.com\com\NotFound.txt" />
     <None Remove="Resources\whois.verisign-grs.com\com\PendingDelete.txt" />
+    <None Remove="Resources\whois.verisign-grs.com\com\Redirect.txt" />
     <None Remove="Resources\whois.verisign-grs.com\net\Found.txt" />
     <None Remove="Resources\whois.verisign-grs.com\net\NotFound.txt" />
     <None Remove="Resources\whois.website.ws\ws\Found.txt" />
@@ -579,6 +582,7 @@
     <EmbeddedResource Include="Resources\durban-whois.registry.net.za\durban\Found.txt" />
     <EmbeddedResource Include="Resources\durban-whois.registry.net.za\durban\NotFound.txt" />
     <EmbeddedResource Include="Resources\generic\tld\Found001.txt" />
+    <EmbeddedResource Include="Resources\generic\tld\NotFound002.txt" />
     <EmbeddedResource Include="Resources\joburg-whois.registry.net.za\joburg\Found.txt" />
     <EmbeddedResource Include="Resources\joburg-whois.registry.net.za\joburg\NotFound.txt" />
     <EmbeddedResource Include="Resources\kero.yachay.pe\pe\Found.txt" />
@@ -607,7 +611,6 @@
     <EmbeddedResource Include="Resources\whois.audns.net.au\au\NotFound.txt" />
     <EmbeddedResource Include="Resources\whois.ax\ax\Found.txt" />
     <EmbeddedResource Include="Resources\whois.ax\ax\NotFound.txt" />
-    <EmbeddedResource Include="Resources\whois.biz\biz\Found.txt" />
     <EmbeddedResource Include="Resources\whois.biz\biz\NotFound.txt" />
     <EmbeddedResource Include="Resources\whois.bnnic.bn\bn\Found.txt" />
     <EmbeddedResource Include="Resources\whois.bnnic.bn\bn\NotFound.txt" />
@@ -765,7 +768,8 @@
     <EmbeddedResource Include="Resources\whois.iana.org\arpa\NotFound.txt" />
     <EmbeddedResource Include="Resources\whois.iana.org\int\Found.txt" />
     <EmbeddedResource Include="Resources\whois.iana.org\int\NotFound.txt" />
-    <EmbeddedResource Include="Resources\whois.iana.org\tld\NotAssigned.txt" />
+    <EmbeddedResource Include="Resources\whois.iana.org\tld\Found.txt" />
+    <EmbeddedResource Include="Resources\whois.iana.org\tld\NotFound.txt" />
     <EmbeddedResource Include="Resources\whois.iis.nu\nu\Found.txt" />
     <EmbeddedResource Include="Resources\whois.iis.nu\nu\NotFound.txt" />
     <EmbeddedResource Include="Resources\whois.iis.se\se\Found.txt" />
@@ -1107,6 +1111,7 @@
     <EmbeddedResource Include="Resources\whois.uniregistry.net\tattoo\Unavailable.txt" />
     <EmbeddedResource Include="Resources\whois.usp.ac.fj\fj\Found.txt" />
     <EmbeddedResource Include="Resources\whois.usp.ac.fj\fj\NotFound.txt" />
+    <EmbeddedResource Include="Resources\whois.verisign-grs.com\com\Redirect.txt" />
     <EmbeddedResource Include="Resources\whois.verisign-grs.com\com\Found.txt" />
     <EmbeddedResource Include="Resources\whois.verisign-grs.com\com\NotFound.txt" />
     <EmbeddedResource Include="Resources\whois.verisign-grs.com\com\PendingDelete.txt" />
@@ -1131,7 +1136,7 @@
       <IncludeAssets>runtime; build; native; contentfiles; analyzers</IncludeAssets>
     </PackageReference>
     <PackageReference Include="Microsoft.CSharp" Version="4.5.0" />
-    <PackageReference Include="Tokenizer" Version="2.1.3-beta6" />
+    <PackageReference Include="Tokenizer" Version="2.1.3-beta8" />
   </ItemGroup>
 
   <PropertyGroup>

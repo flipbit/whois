@@ -1,11 +1,15 @@
-﻿using System.Collections.Generic;
+﻿using System;
+using System.Collections.Generic;
 using System.Text;
+using System.Text.RegularExpressions;
 using System.Threading.Tasks;
 using Tokens.Transformers;
 using Tokens.Validators;
 using Whois.Logging;
 using Whois.Models;
-using Whois.Visitors;
+using Whois.Net;
+using Whois.Parsers;
+using Whois.Servers;
 
 namespace Whois
 {
@@ -15,15 +19,11 @@ namespace Whois
     public class WhoisLookup : IWhoisLookup
     {
         private static readonly ILog Log = LogProvider.GetCurrentClassLogger();
-        private PatternExtractorVisitor patternExtractorVisitor;
+        private WhoisParser whoisParser;
 
         public WhoisOptions Options { get; set; }
 
-        /// <summary>
-        /// Gets or sets the visitors.
-        /// </summary>
-        /// <value>The visitors.</value>
-        public IList<IWhoisVisitor> Visitors { get; }
+        public IWhoisServerLookup ServerLookup { get; set; }
 
         public WhoisLookup() : this(WhoisOptions.Defaults)
         {
@@ -34,27 +34,9 @@ namespace Whois
         /// </summary>
         public WhoisLookup(WhoisOptions options) 
         {
-            patternExtractorVisitor = new PatternExtractorVisitor();
-
             Options = options;
-
-            Visitors = new List<IWhoisVisitor>
-            {
-                // Validate input
-                new ValidateVisitor(),
-
-                // Get initial WHOIS server URL
-                new WhoisServerVisitor(),
-
-                // Download from initial server
-                new DownloadVisitor(),
-
-                // Check to see if a secondard WHOIS server needs to be queried
-                new RedirectVisitor(),
-
-                // Populate Structured WHOIS object
-                patternExtractorVisitor 
-            };
+            whoisParser = new WhoisParser();
+            ServerLookup = new IanaServerLookup();
         }
 
         public WhoisResponse Lookup(string domain)
@@ -74,42 +56,103 @@ namespace Whois
 
         public async Task<WhoisResponse> LookupAsync(string domain, Encoding encoding)
         {
-            Log.Debug("Looking up WHOIS response for: {0}", domain);
-
-            var state = new LookupState
+            if (string.IsNullOrEmpty(domain))
             {
-                Options = Options.Clone(),
-                Domain = domain
-            };
-
-            state.Options.DefaultEncoding = encoding;
-
-            foreach (var visitor in Visitors)
-            {
-                state = await visitor.Visit(state);
+                throw new ArgumentNullException("domain");
             }
 
-            return state.Response;
+            if (IsValidDomainName(domain) == false)
+            {
+                throw new WhoisException($"Domain Name is invalid: {domain}");
+            }
+
+            Log.Debug("Looking up WHOIS response for: {0}", domain);
+
+            var tld = GetTld(domain);
+
+            var whoisServer = await ServerLookup.LookupAsync(tld);
+
+            var response = new WhoisResponse();
+            var whoisServerUrl = whoisServer.Url;
+
+            while (string.IsNullOrEmpty(whoisServerUrl) == false)
+            {
+                var content = await Download(whoisServerUrl, domain, encoding);
+
+                response = whoisParser.Parse(whoisServerUrl, tld, content);
+
+                response.Content = content;
+
+                if (response.Registrar?.WhoisServerUrl == whoisServerUrl) break;
+            
+                whoisServerUrl = response.Registrar?.WhoisServerUrl;
+            }
+
+            return response;
         }
 
-        public void AddPattern(string content, string name)
+        public void AddTemplate(string content, string name)
         {
-            patternExtractorVisitor.AddPattern(content, name);
+            whoisParser.AddTemplate(content, name);
         }
 
-        public void ClearPatterns()
+        public void ClearTemplates()
         {
-            patternExtractorVisitor.ClearPatterns();
+            whoisParser.ClearTemplates();
         }
 
-        public void RegisterPatternTransformer<T>() where T : ITokenTransformer
+        public void RegisterTransformer<T>() where T : ITokenTransformer
         {
-            patternExtractorVisitor.RegisterPatternTransformer<T>();
+            whoisParser.RegisterTransformer<T>();
         }
 
-        public void RegisterPatternValidator<T>() where T : ITokenValidator
+        public void RegisterValidator<T>() where T : ITokenValidator
         {
-            patternExtractorVisitor.RegisterPatternValidator<T>();
+            whoisParser.RegisterValidator<T>();
+        }
+
+        public bool IsValidDomainName(string domain)
+        {
+            var valid = false;
+
+            if (!string.IsNullOrEmpty(domain))
+            {
+                var regex = new Regex(@"^([a-zA-Z0-9]([a-zA-Z0-9\-]{0,61}[a-zA-Z0-9])?\.)+[a-zA-Z]{2,6}$");
+
+                valid = regex.Match(domain).Success;
+            }
+
+            return valid;
+        }
+
+        private async Task<string> Download(string url, string domainName, Encoding encoding)
+        {
+            string content;
+
+            if (domainName.EndsWith("jp")) domainName += "/e";
+
+            using (var tcpReader = TcpReaderFactory.Create())
+            {
+                content = await tcpReader.Read(url, 43, domainName, encoding);
+            }
+
+            Log.Debug("Lookup {0}: Downloaded {1:###,###,##0} byte(s) from {2}.", domainName, content.Length, url);
+
+            return content;
+        }
+
+        private string GetTld(string domain)
+        {
+            var tld = domain;
+
+            if (!string.IsNullOrEmpty(domain))
+            {
+                var parts = domain.Split('.');
+
+                if (parts.Length > 1) tld = parts[parts.Length - 1];
+            }
+
+            return tld;
         }
     }
 }

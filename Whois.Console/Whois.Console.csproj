@@ -1,10 +1,18 @@
-<Project Sdk="Microsoft.NET.Sdk">
+﻿<Project Sdk="Microsoft.NET.Sdk">
 
   <PropertyGroup>
     <OutputType>Exe</OutputType>
-    <TargetFramework>netcoreapp2.0</TargetFramework>
+    <TargetFramework>netcoreapp2.1</TargetFramework>
     <AssemblyName>Whois.Console</AssemblyName>
     <RootNamespace>Whois</RootNamespace>
+    <PackAsTool>true</PackAsTool>
+    <ToolCommandName>dotnet-whois</ToolCommandName>
+    <GeneratePackageOnBuild>true</GeneratePackageOnBuild>
+    <Version>0.0.1-alpha1</Version>
+    <PackageId>dotnet-whois</PackageId>
+    <Authors>Chris Wood</Authors>
+    <Company>flipbit.co.uk</Company>
+    <Product>.NET WHOIS Lookup</Product>
   </PropertyGroup>
 
   <ItemGroup>

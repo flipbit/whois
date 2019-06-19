@@ -1,0 +1,50 @@
+﻿% IANA WHOIS server
+% for more information on IANA, visit http://www.iana.org
+% This query returned 1 object
+
+domain:       BE
+
+organisation: DNS Belgium vzw/asbl
+address:      Ubicenter, Philipssite 5, bus 13
+address:      Leuven  3001
+address:      Belgium
+
+contact:      administrative
+name:         Philip Du Bois
+organisation: DNS Belgium vzw/asbl
+address:      Ubicenter, Philipssite 5, bus 13
+address:      Leuven  3001
+address:      Belgium
+phone:        +32 16 28 49 70
+fax-no:       +32 16 28 49 71
+e-mail:       legal@dnsbelgium.be
+
+contact:      technical
+name:         David Goelen
+organisation: DNS Belgium vzw/asbl
+address:      Ubicenter, Philipssite 5, bus 13
+address:      Leuven  3001
+address:      Belgium
+phone:        +32 16 28 49 70
+fax-no:       +32 16 28 49 71
+e-mail:       tech@dnsbelgium.be
+
+nserver:      A.NS.DNS.BE 194.0.6.1 2001:678:9:0:0:0:0:1
+nserver:      B.NS.DNS.BE 194.0.37.1 2001:678:64:0:0:0:0:1
+nserver:      C.NS.DNS.BE 194.0.43.1 2001:678:68:0:0:0:0:1
+nserver:      D.NS.DNS.BE 194.0.44.1 2001:678:6c:0:0:0:0:1
+nserver:      X.NS.DNS.BE 194.0.1.10 2001:678:4:0:0:0:0:a
+nserver:      Y.NS.DNS.BE 120.29.253.8 2001:dcd:7:0:0:0:0:8
+ds-rdata:     12664 8 1 59462E9CB5520A36DD248D9DDC4EAA44672A5ED1
+ds-rdata:     12664 8 2 75141E9B1188A95A7A855BF47E278A742A5E3F2DDEED8E995D749D48F2F0E72D
+ds-rdata:     16684 8 1 8bd0806315e077b56d3d0e235727f31d8cb9bf3c
+ds-rdata:     16684 8 2 7ef0a483a7a96fcecf3d9067828baf7f3df22c3276671c2e88aa4636fd259f34
+
+whois:        whois.dns.be
+
+status:       ACTIVE
+remarks:      Registration information: http://www.dns.be
+
+created:      1988-08-05
+changed:      2014-07-30
+source:       IANA

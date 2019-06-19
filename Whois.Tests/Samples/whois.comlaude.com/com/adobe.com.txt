@@ -1,0 +1,103 @@
+﻿Domain Name: adobe.com
+Registry Domain ID: 4364022_DOMAIN_COM-VRSN
+Registrar WHOIS Server: whois.comlaude.com
+Registrar URL: http://www.comlaude.com
+Updated Date: 2018-10-18T17:09:58Z
+Creation Date: 1986-11-17T05:00:00Z
+Registrar Registration Expiration Date: 2019-05-17T00:00:00Z
+Registrar: NOM-IQ Ltd dba Com Laude
+Registrar IANA ID: 470
+Domain Status: clientUpdateProhibited https://www.icann.org/epp#clientUpdateProhibited
+Domain Status: serverDeleteProhibited https://www.icann.org/epp#serverDeleteProhibited
+Domain Status: serverTransferProhibited https://www.icann.org/epp#serverTransferProhibited
+Domain Status: serverUpdateProhibited https://www.icann.org/epp#serverUpdateProhibited
+Registry Registrant ID: 
+Registrant Name: Domain Administrator
+Registrant Organization: Adobe Inc.
+Registrant Street: 345 Park Avenue
+Registrant City: San Jose
+Registrant State/Province: California
+Registrant Postal Code: 95110
+Registrant Country: US
+Registrant Phone: +1.4085366000
+Registrant Phone Ext: 
+Registrant Fax: 
+Registrant Fax Ext: 
+Registrant Email: dns-admin@adobe.com
+Registry Admin ID: 
+Admin Name: Domain Administrator
+Admin Organization: Adobe Inc.
+Admin Street: 345 Park Avenue
+Admin City: San Jose
+Admin State/Province: California
+Admin Postal Code: 95110
+Admin Country: US
+Admin Phone: +1.4085366000
+Admin Phone Ext: 
+Admin Fax: 
+Admin Fax Ext: 
+Admin Email: dns-admin@adobe.com
+Registry Tech ID: REDACTED FOR PRIVACY
+Tech Name: REDACTED FOR PRIVACY
+Tech Organization: REDACTED FOR PRIVACY
+Tech Street: REDACTED FOR PRIVACY
+Tech City: REDACTED FOR PRIVACY
+Tech State/Province: REDACTED FOR PRIVACY
+Tech Postal Code: REDACTED FOR PRIVACY
+Tech Country: REDACTED FOR PRIVACY
+Tech Phone: REDACTED FOR PRIVACY
+Tech Phone Ext: REDACTED FOR PRIVACY
+Tech Fax: REDACTED FOR PRIVACY
+Tech Fax Ext: REDACTED FOR PRIVACY
+Tech Email: adobe.com-Tech@anonymised.email
+Name Server: a1-217.akam.net
+Name Server: a10-64.akam.net
+Name Server: a13-65.akam.net
+Name Server: a26-66.akam.net
+Name Server: a28-67.akam.net
+Name Server: a7-64.akam.net
+Name Server: adobe-dns-01.adobe.com
+DNSSEC: Unsigned Delegation
+Registrar Abuse Contact Email: abuse@comlaude.com
+Registrar Abuse Contact Phone: +44.2074218250
+URL of the ICANN WHOIS Data Problem Reporting System: http://wdprs.internic.net/
+>>> Last update of WHOIS database: 2018-10-31T19:50:23Z <<<
+
+For more information on Whois status codes, please visit https://www.icann.org/resources/pages/epp-status-codes-2014-06-16-en
+
+Please query the RDDS service of the Registrar of Record identified in this
+output for information on how to contact the Registrant, Admin, or Tech contact
+of the queried domain name.
+
+-------------------------------------------------------------------------------
+Com Laude registers, maintains and renews domain names around the world for 
+leading intellectual property owners and the law firms that support them.   
+If you have queries about this domain, you may contact us via our website   
+at www.comlaude.com.                                                        
+-------------------------------------------------------------------------------
+
+The data in the Com Laude Whois database is provided to assist you in obtaining
+information about a domain name registration record.  Com Laude makes this
+information available "as is," and does not guarantee its accuracy.
+By submitting a WHOIS query, you agree that you will use this data only for
+lawful purposes and that, under no circumstances will you use this data to:
+
+(1) allow, enable, or otherwise support the transmission of mass unsolicited,
+commercial advertising or solicitations via e-mail (spam), telephone or fax; or
+(2) enable high volume, automated, electronic processes that that send queries
+or data to Com Laude or the systems of any Registry Operator or ICANN-Accredited
+registrar.  The compilation, repackaging, dissemination or other use of this 
+data is expressly prohibited without the prior written consent of Com Laude.
+
+Com Laude reserves the right to modify these terms at any time. By submitting
+this query, you agree to abide by these terms. If you fail to abide by this
+policy, we may terminate your access to this WHOIS database.
+
+-------------------------------------------------------------------------------
+Com Laude protects intellectual property in the domain name system. Com Laude
+only registers domain names for legitimate rights owners. Should you have any 
+queries about the legitimacy of this name or our work as a UK based, ICANN 
+Accredited Registrar, contact us at:
+Com Laude, 28-30 Little Russell Street, London WC1A 2HN, UK.
+Com Laude is a business name of Nom IQ Ltd.
+-------------------------------------------------------------------------------
