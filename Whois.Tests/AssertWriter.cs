@@ -9,7 +9,7 @@ namespace Whois
     /// </summary>
     public class AssertWriter
     {
-        public static void Write(ParsedWhoisResponse response)
+        public static void Write(WhoisResponse response)
         {
             Write(nameof(response.FieldsParsed), response.FieldsParsed);
             Write(nameof(response.ParsingErrors), response.ParsingErrors);
@@ -20,13 +20,17 @@ namespace Whois
             Write(nameof(response.DomainName), response.DomainName);
             Write(nameof(response.RegistryDomainId), response.RegistryDomainId);
 
-            Console.WriteLine();
+            if (response.Registrar != null)
+            {
+                Console.WriteLine();
+                Console.WriteLine("            // Registrar Details");
 
-            Write(nameof(response.Registrar) + "." + nameof(response.Registrar.Name), response.Registrar?.Name);
-            Write(nameof(response.Registrar) + "." + nameof(response.Registrar.Url), response.Registrar?.Url);
-            Write(nameof(response.Registrar) + "." + nameof(response.Registrar.WhoisServerUrl), response.Registrar?.WhoisServerUrl);
-            Write(nameof(response.Registrar) + "." + nameof(response.Registrar.AbuseEmail), response.Registrar?.AbuseEmail);
-            Write(nameof(response.Registrar) + "." + nameof(response.Registrar.AbuseTelephoneNumber), response.Registrar?.AbuseTelephoneNumber);
+                Write(nameof(response.Registrar) + "." + nameof(response.Registrar.Name), response.Registrar?.Name);
+                Write(nameof(response.Registrar) + "." + nameof(response.Registrar.Url), response.Registrar?.Url);
+                Write(nameof(response.Registrar) + "." + nameof(response.Registrar.WhoisServerUrl), response.Registrar?.WhoisServerUrl);
+                Write(nameof(response.Registrar) + "." + nameof(response.Registrar.AbuseEmail), response.Registrar?.AbuseEmail);
+                Write(nameof(response.Registrar) + "." + nameof(response.Registrar.AbuseTelephoneNumber), response.Registrar?.AbuseTelephoneNumber);
+            }
 
             Console.WriteLine();
 
@@ -43,6 +47,7 @@ namespace Whois
 
             if (response.NameServers.Any())
             {
+                Console.WriteLine("            // Nameservers");
                 Write($"{nameof(response.NameServers)}.Count", response.NameServers.Count);
 
                 for (var i = 0; i < response.NameServers.Count; i++)
@@ -56,6 +61,7 @@ namespace Whois
 
             if (response.DomainStatus.Any())
             {
+                Console.WriteLine("            // Domain Status");
                 Write($"{nameof(response.DomainStatus)}.Count", response.DomainStatus.Count);
 
                 for (var i = 0; i < response.DomainStatus.Count; i++)
@@ -74,6 +80,8 @@ namespace Whois
         {
             if (contact == null) return;
 
+            Console.WriteLine();
+            Console.WriteLine($"         // {prefix} Details");
             Write($"{prefix}.{nameof(Contact.RegistryId)}", contact.RegistryId);
             Write($"{prefix}.{nameof(Contact.Name)}", contact.Name);
             Write($"{prefix}.{nameof(Contact.Organization)}", contact.Organization);
@@ -81,6 +89,7 @@ namespace Whois
             if (contact.Address.Any())
             {
                 Console.WriteLine();
+                Console.WriteLine($"         // {prefix} Address");
                 Write($"{prefix}.{nameof(Contact.Address)}.Count", contact.Address.Count);
 
                 for (var i = 0; i < contact.Address.Count; i++)

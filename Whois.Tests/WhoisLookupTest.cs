@@ -1,5 +1,4 @@
 ﻿using NUnit.Framework;
-using Whois.Visitors;
 
 namespace Whois
 {
@@ -16,29 +15,6 @@ namespace Whois
         public void SetUp()
         {
             lookup = new WhoisLookup();
-
-            lookup.Visitors.Clear();
-        }
-
-        [Test]
-        public void TestLookupWithOneVisitor()
-        {
-            lookup.Visitors.Add(new FakeWhoisVisitor("first"));
-
-            var result = lookup.Lookup("example.com");
-
-            Assert.AreEqual("first", result.Content);
-        }
-
-        [Test]
-        public void TestLookupWithTwoVisitors()
-        {
-            lookup.Visitors.Add(new FakeWhoisVisitor("first"));
-            lookup.Visitors.Add(new FakeWhoisVisitor("second"));
-
-            var result = lookup.Lookup("example.com");
-
-            Assert.AreEqual("second", result.Content);
         }
     }
 }

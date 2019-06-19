@@ -1,6 +1,7 @@
-﻿using System.Collections.Generic;
-using System.Linq;
+﻿using System.Linq;
 using Tokens;
+using Tokens.Transformers;
+using Tokens.Validators;
 using Whois.Models;
 
 namespace Whois.Parsers
@@ -31,14 +32,21 @@ namespace Whois.Parsers
         /// <summary>
         /// Parses the WHOIS server response for the given server and TLD.
         /// </summary>
-        public ParsedWhoisResponse Parse(string whoisServer, string tld, string content)
+        public WhoisResponse Parse(string whoisServer, string tld, string content)
         {
             LoadServerTemplates(whoisServer, tld);
             LoadServerGenericTemplates();
 
-            var result = matcher.Match<ParsedWhoisResponse>(content, new []{ whoisServer, tld });
+            var result = matcher.Match<WhoisResponse>(content, new []{ whoisServer, tld });
 
             var match = result.BestMatch;
+
+            if (match == null)
+            {
+                match = matcher
+                    .Match<WhoisResponse>(content, new [] { "catch-all" })
+                    .BestMatch;
+            }
 
             if (match != null)
             {
@@ -54,12 +62,32 @@ namespace Whois.Parsers
             return null;
         }
 
+        public void AddTemplate(string content, string name)
+        {
+            matcher.RegisterTemplate(content, name);
+        }
+
+        public void ClearTemplates()
+        {
+            matcher.Templates.Clear();
+        }
+
+        public void RegisterValidator<T>() where T : ITokenValidator
+        {
+            matcher.RegisterValidator<T>();
+        }
+
+        public void RegisterTransformer<T>() where T : ITokenTransformer
+        {
+            matcher.RegisterTransformer<T>();
+        }
+
         private void LoadServerTemplates(string whoisServer, string tld)
         {
             // Check templates for this server/tld not already loaded
             var loaded = Templates
                 .Where(t => t.Name.Contains("generic") == false)
-                .Any(t => t.HasAllTags(new [] {whoisServer, tld}));
+                .Any(t => t.HasTags(new [] {whoisServer, tld}));
 
             if (loaded) return;
 

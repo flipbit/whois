@@ -10,20 +10,24 @@ namespace Whois.Servers
     public class IanaServerLookupTest
     {
         private IanaServerLookup lookup;
+        private SampleReader reader;
 
         [SetUp]
         public void SetUp()
         {
+            SerilogConfig.Init();
+
             lookup = new IanaServerLookup();
+            reader = new SampleReader();
         }
 
         [Test]
         public void TestLookupCom()
         {
-            var response = File.ReadAllText("../../../Samples/Tlds/com.txt");
+            var response = reader.Read("whois.iana.org", "tld", "com.txt");
             TcpReaderFactory.Bind(() => new FakeTcpReader(response));
 
-            var result = lookup.Lookup("test.com").ParsedWhoisServer;
+            var result = lookup.Lookup("test.com");
 
             Assert.IsNotNull(result);
             Assert.AreEqual(3, result.AdminContact.Address.Count);
@@ -73,10 +77,10 @@ namespace Whois.Servers
         [Test]
         public void TestLookupBe()
         {
-            var response = File.ReadAllText("../../../Samples/Tlds/be.txt");
+            var response = reader.Read("whois.iana.org", "tld", "be.txt");
             TcpReaderFactory.Bind(() => new FakeTcpReader(response));
 
-            var result = lookup.Lookup("test.be").ParsedWhoisServer;
+            var result = lookup.Lookup("test.be");
 
             Assert.IsNotNull(result);
             Assert.AreEqual(3, result.AdminContact.Address.Count);
@@ -114,6 +118,19 @@ namespace Whois.Servers
             Assert.AreEqual("DNS Belgium vzw/asbl", result.TechContact.Organization);
             Assert.AreEqual("+32 16 28 49 70", result.TechContact.TelephoneNumber);
             Assert.AreEqual("whois.dns.be", result.Url);
+        }
+
+        [Test]
+        public void TestLookupNotFound()
+        {
+            var response = reader.Read("whois.iana.org", "tld", "not_assigned.txt");
+            TcpReaderFactory.Bind(() => new FakeTcpReader(response));
+
+            var result = lookup.Lookup("test.be");
+
+            Assert.IsNotNull(result);
+            Assert.AreEqual("eh", result.Tld);
+            Assert.AreEqual(WhoisServerStatus.NotFound, result.Status);
         }
     }
 }

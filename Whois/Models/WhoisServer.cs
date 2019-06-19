@@ -1,4 +1,7 @@
-﻿namespace Whois.Models
+﻿using System;
+using System.Collections.Generic;
+
+namespace Whois.Models
 {
     /// <summary>
     /// Represents a WHOIS server for a domain
@@ -10,31 +13,31 @@
         /// </summary>
         public WhoisServer()
         {
+            NameServers = new List<string>();
         }
 
         /// <summary>
         /// Initializes a new instance of the <see cref="WhoisServer"/> class.
         /// </summary>
-        public WhoisServer(string tld, string url)
+        public WhoisServer(string tld, string url) : this()
         {
             Tld = tld;
             Url = url;
         }
 
         /// <summary>
+        /// The status of the WHOIS server lookup
+        /// </summary>
+        public WhoisServerStatus Status { get; set; }
+
+        /// <summary>
         /// Gets or sets the TLD for this server.
         /// </summary>
-        /// <value>
-        /// The TLD.
-        /// </value>
         public string Tld { get; set;  }
 
         /// <summary>
         /// Gets the URL of the WHOIS server.
         /// </summary>
-        /// <value>
-        /// The URL.
-        /// </value>
         public string Url { get; set; }
 
         /// <summary>
@@ -43,8 +46,38 @@
         public string Content { get; set; }
 
         /// <summary>
-        /// Contains parsed WHOIS server details
+        /// Gets or sets the organization.
         /// </summary>
-        public ParsedWhoisServer ParsedWhoisServer { get; set; }
+        public Organization Organization { get; set; }
+
+        /// <summary>
+        /// Gets or sets the admin contact.
+        /// </summary>
+        public Contact AdminContact { get; set; }
+
+        /// <summary>
+        /// Gets or sets the tech contact.
+        /// </summary>
+        public Contact TechContact { get; set; }
+
+        /// <summary>
+        /// Gets the name servers.
+        /// </summary>
+        public IList<string> NameServers { get; }
+
+        /// <summary>
+        /// Gets or sets any remarks about this TLD.
+        /// </summary>
+        public string Remarks { get; set; }
+
+        /// <summary>
+        /// Gets or sets the TLD creation date.
+        /// </summary>
+        public DateTime? Created { get; set; }
+
+        /// <summary>
+        /// Gets or sets the date the TLD was last changed.
+        /// </summary>
+        public DateTime? Changed { get; set; }
     }
 }

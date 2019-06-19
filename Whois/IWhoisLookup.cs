@@ -32,23 +32,23 @@ namespace Whois
         Task<WhoisResponse> LookupAsync(string domain, Encoding encoding);
 
         /// <summary>
-        /// Add a Tokenizer pattern to parse the WHOIS response with.
+        /// Add a Tokenizer template to parse the WHOIS response with.
         /// </summary>
-        void AddPattern(string content, string name);
+        void AddTemplate(string content, string name);
 
         /// <summary>
-        /// Clears all the registered Tokenizer WHOIS parsing patterns.
+        /// Clears all the registered Tokenizer WHOIS parsing templates.
         /// </summary>
-        void ClearPatterns();
+        void ClearTemplates();
 
         /// <summary>
-        /// Registers a WHOIS pattern transformer.
+        /// Registers a WHOIS transformer.
         /// </summary>
-        void RegisterPatternTransformer<T>() where T : ITokenTransformer;
+        void RegisterTransformer<T>() where T : ITokenTransformer;
 
         /// <summary>
-        /// Registers a WHOIS pattern validator.
+        /// Registers a WHOIS validator.
         /// </summary>
-        void RegisterPatternValidator<T>()  where T : ITokenValidator;
+        void RegisterValidator<T>()  where T : ITokenValidator;
     }
 }
