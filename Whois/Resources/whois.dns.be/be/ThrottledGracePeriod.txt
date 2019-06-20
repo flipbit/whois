@@ -2,7 +2,7 @@
 #
 # .be Parsing Template
 #
-name: whois.dns.be/be/Throttled
+name: whois.dns.be/be/ThrottledGracePeriod
 
 # Use this template for queries to whois.dns.be:
 tag: whois.dns.be
@@ -11,7 +11,7 @@ tag: be
 # Set query response type:
 set: Status = Throttled
 
-hint: Maximum queries per hour reached 
+hint:Excessive querying 
 ---
-Maximum queries per hour reached{ Null }
+Excessive querying{ Null }
 

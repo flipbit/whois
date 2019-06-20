@@ -227,16 +227,6 @@ namespace Whois.Parsers
         }   
 
         [Test]
-        public void TestParseBeRecord()
-        {
-            var sample = sampleReader.Read("whois.dns.be", "be", "youtu.be.txt");
-            
-            var record = parser.Parse("whois.dns.be", "be", sample);
-
-            Assert.AreEqual("youtu.be", record.DomainName);
-        }
-
-        [Test]
         public void TestParseCzRecord()
         {
             var sample = sampleReader.Read("whois.nic.cz", "cz", "phoca.cz.txt");

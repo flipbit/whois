@@ -11,7 +11,6 @@ namespace Whois
     {
         public static void Write(WhoisResponse response)
         {
-            Write(nameof(response.FieldsParsed), response.FieldsParsed);
             Write(nameof(response.ParsingErrors), response.ParsingErrors);
             Write(nameof(response.TemplateName), response.TemplateName);
 
@@ -74,6 +73,8 @@ namespace Whois
             }
 
             Write(nameof(response.DnsSecStatus), response.DnsSecStatus);
+            
+            Write(nameof(response.FieldsParsed), response.FieldsParsed);
         }
 
         private static void Write(string prefix, Contact contact)
@@ -81,7 +82,7 @@ namespace Whois
             if (contact == null) return;
 
             Console.WriteLine();
-            Console.WriteLine($"         // {prefix} Details");
+            Console.WriteLine($"             // {prefix} Details");
             Write($"{prefix}.{nameof(Contact.RegistryId)}", contact.RegistryId);
             Write($"{prefix}.{nameof(Contact.Name)}", contact.Name);
             Write($"{prefix}.{nameof(Contact.Organization)}", contact.Organization);
@@ -89,7 +90,7 @@ namespace Whois
             if (contact.Address.Any())
             {
                 Console.WriteLine();
-                Console.WriteLine($"         // {prefix} Address");
+                Console.WriteLine($"             // {prefix} Address");
                 Write($"{prefix}.{nameof(Contact.Address)}.Count", contact.Address.Count);
 
                 for (var i = 0; i < contact.Address.Count; i++)

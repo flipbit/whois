@@ -148,12 +148,11 @@
     <None Remove="Resources\whois.dns.be\be\Blocked.txt" />
     <None Remove="Resources\whois.dns.be\be\Error.txt" />
     <None Remove="Resources\whois.dns.be\be\Found.txt" />
-    <None Remove="Resources\whois.dns.be\be\Invalid.txt" />
-    <None Remove="Resources\whois.dns.be\be\NotAvailable.txt" />
     <None Remove="Resources\whois.dns.be\be\NotFound.txt" />
     <None Remove="Resources\whois.dns.be\be\OutOfService.txt" />
     <None Remove="Resources\whois.dns.be\be\Quarantined.txt" />
     <None Remove="Resources\whois.dns.be\be\Throttled.txt" />
+    <None Remove="Resources\whois.dns.be\be\ThrottledGracePeriod.txt" />
     <None Remove="Resources\whois.dns.hr\hr\Found.txt" />
     <None Remove="Resources\whois.dns.hr\hr\NotFound.txt" />
     <None Remove="Resources\whois.dns.lu\lu\Found.txt" />
@@ -704,11 +703,10 @@
     <EmbeddedResource Include="Resources\whois.dns.be\be\Blocked.txt" />
     <EmbeddedResource Include="Resources\whois.dns.be\be\Error.txt" />
     <EmbeddedResource Include="Resources\whois.dns.be\be\Found.txt" />
-    <EmbeddedResource Include="Resources\whois.dns.be\be\Invalid.txt" />
-    <EmbeddedResource Include="Resources\whois.dns.be\be\NotAvailable.txt" />
     <EmbeddedResource Include="Resources\whois.dns.be\be\NotFound.txt" />
     <EmbeddedResource Include="Resources\whois.dns.be\be\OutOfService.txt" />
     <EmbeddedResource Include="Resources\whois.dns.be\be\Quarantined.txt" />
+    <EmbeddedResource Include="Resources\whois.dns.be\be\ThrottledGracePeriod.txt" />
     <EmbeddedResource Include="Resources\whois.dns.be\be\Throttled.txt" />
     <EmbeddedResource Include="Resources\whois.dns.hr\hr\Found.txt" />
     <EmbeddedResource Include="Resources\whois.dns.hr\hr\NotFound.txt" />
