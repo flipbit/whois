@@ -2,15 +2,16 @@
 #
 # .br Parsing Template
 #
-name: whois.registro.br/br/NotFound
+name: whois.registro.br/br/NotFoundThrottled
 
 # Use this template for queries to whois.registro.br:
 tag: whois.registro.br
 tag: br
 
 # Set query response type:
-set: Status = NotFound
+set: Status = Throttled
 
 hint: No match for
+hint: Query rate limit exceeded
 ---
-% No match for { DomainName : IsDomainName, ToLower, EOL }
+% No match for domain "{ DomainName : IsDomainName, ToLower, EOL }"

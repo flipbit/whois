@@ -491,7 +491,9 @@
     <None Remove="Resources\whois.registre.ma\ma\Found.txt" />
     <None Remove="Resources\whois.registre.ma\ma\NotFound.txt" />
     <None Remove="Resources\whois.registro.br\br\Found.txt" />
+    <None Remove="Resources\whois.registro.br\br\FoundThrottled.txt" />
     <None Remove="Resources\whois.registro.br\br\NotFound.txt" />
+    <None Remove="Resources\whois.registro.br\br\NotFoundThrottled.txt" />
     <None Remove="Resources\whois.registry.gy\gy\Found.txt" />
     <None Remove="Resources\whois.registry.gy\gy\NotFound.txt" />
     <None Remove="Resources\whois.registry.hm\hm\Found.txt" />
@@ -1046,6 +1048,8 @@
     <EmbeddedResource Include="Resources\whois.registre.ma\ma\Found.txt" />
     <EmbeddedResource Include="Resources\whois.registre.ma\ma\NotFound.txt" />
     <EmbeddedResource Include="Resources\whois.registro.br\br\Found.txt" />
+    <EmbeddedResource Include="Resources\whois.registro.br\br\FoundThrottled.txt" />
+    <EmbeddedResource Include="Resources\whois.registro.br\br\NotFoundThrottled.txt" />
     <EmbeddedResource Include="Resources\whois.registro.br\br\NotFound.txt" />
     <EmbeddedResource Include="Resources\whois.registry.gy\gy\Found.txt" />
     <EmbeddedResource Include="Resources\whois.registry.gy\gy\NotFound.txt" />
