@@ -125,6 +125,7 @@
     <None Remove="Resources\whois.cmc.iq\iq\NotFound.txt" />
     <None Remove="Resources\whois.cnnic.cn\cn\Found.txt" />
     <None Remove="Resources\whois.cnnic.cn\cn\NotFound.txt" />
+    <None Remove="Resources\whois.cnnic.cn\cn\Prohibited.txt" />
     <None Remove="Resources\whois.cnnic.cn\cn\Reserved.txt" />
     <None Remove="Resources\whois.co.ca\co.ca\Found.txt" />
     <None Remove="Resources\whois.co.ca\co.ca\NotFound.txt" />
@@ -682,6 +683,7 @@
     <EmbeddedResource Include="Resources\whois.cmc.iq\iq\NotFound.txt" />
     <EmbeddedResource Include="Resources\whois.cnnic.cn\cn\Found.txt" />
     <EmbeddedResource Include="Resources\whois.cnnic.cn\cn\NotFound.txt" />
+    <EmbeddedResource Include="Resources\whois.cnnic.cn\cn\Prohibited.txt" />
     <EmbeddedResource Include="Resources\whois.cnnic.cn\cn\Reserved.txt" />
     <EmbeddedResource Include="Resources\whois.co.ca\co.ca\Found.txt" />
     <EmbeddedResource Include="Resources\whois.co.ca\co.ca\NotFound.txt" />

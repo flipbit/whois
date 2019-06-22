@@ -44,26 +44,6 @@ namespace Whois.Parsers
         }
 
         [Test]
-        public void TestParseHiChinaRecord()
-        {
-            var sample = sampleReader.Read("whois.cnnic.cn", "cn", "025bbs.cn.txt");
-
-            var record = parser.Parse("whois.cnnic.cn", "cn", sample);
-
-            Assert.AreEqual("20180313s10001s99456578-cn", record.RegistryDomainId);
-            Assert.AreEqual("阿里云计算有限公司（万网）", record.Registrar.Name);
-            Assert.AreEqual(new DateTime(2018, 3, 13, 21, 45, 16), record.Registered.Value.ToUniversalTime());
-            Assert.AreEqual(new DateTime(2021, 3, 13, 21, 45, 16), record.Expiration.Value.ToUniversalTime());
-            Assert.AreEqual("南京越之彬网络科技有限公司", record.Registrant.Name);
-            Assert.AreEqual("hc1250473063700", record.Registrant.RegistryId);
-            Assert.AreEqual("email@qq.com", record.Registrant.Email);
-
-            Assert.AreEqual(2, record.NameServers.Count);
-            Assert.AreEqual("dns27.hichina.com", record.NameServers[0]);
-            Assert.AreEqual("dns28.hichina.com", record.NameServers[1]);
-        }
-
-        [Test]
         public void TestParsePlRecord()
         {
             var sample = sampleReader.Read("whois.dns.pl", "pl", "08.pl.txt");

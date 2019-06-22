@@ -10,5 +10,7 @@ tag: cn
 
 # Set query response type:
 set: Status = NotFound
+
+hint: no matching record
 ---
-no matching record.
+no matching record.{ Null }
