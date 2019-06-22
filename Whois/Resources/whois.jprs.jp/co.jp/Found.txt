@@ -11,22 +11,13 @@ tag: co.jp
 # Set query response type:
 set: Status = Found
 ---
-IP: UNABLE TO RESOLVE
-[ JPRS database provides information on network administration. Its use is    ]
-[ restricted to network administration purposes. For further information,     ]
-[ use 'whois -h whois.jprs.jp help'. To suppress Japanese output, add'/e'     ]
-[ at the end of command, e.g. 'whois -h whois.jprs.jp xxx/e'.                 ]
-
-Domain Information:
-a. [Domain Name]                AHOO.CO.JP
-g. [Organization]               yamazakipan corp.
-l. [Organization Type]          Corporation
-m. [Administrative Contact]     TY20986JP
-n. [Technical Contact]          TY20986JP
-p. [Name Server]                
+a. [Domain Name]                { DomainName : Trim, IsDomainName, ToLower, EOL }
+g. [Organization]               { Registrant.Name ? : Trim, EOL }
+m. [Administrative Contact]     { AdminContact.Name ? : Trim, EOL }
+n. [Technical Contact]          { TechnicalContact.Name ? : Trim, EOL }
+p. [Name Server]                { NameServers ? : Trim, IsDomainName, ToLower, Repeating, EOL } 
 s. [Signing Key]                
-[State]                         Registered (2014/03/31)
-[Registered Date]               2013/03/20
-[Connected Date]                 
-[Last Update]                   2013/07/08 16:50:07 (JST)
+[State]                         { DomainStatus ? : Trim, Repeating, EOL }
+[Registered Date]               { Registered ? : Trim, SubstringBefore(" ("), ToDateTime("yyyy/MM/dd", "yyyy/MM/dd hh:MM:ss"), EOL }
+[Last Update]                   { Updated ? : Trim, SubstringBefore(" ("), ToDateTime("yyyy/MM/dd", "yyyy/MM/dd hh:MM:ss"), EOL }
 

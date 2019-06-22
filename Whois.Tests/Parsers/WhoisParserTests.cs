@@ -42,26 +42,6 @@ namespace Whois.Parsers
 
             Assert.AreEqual(5, parser.Templates.Count);
         }
-
-        [Test]
-        public void TestParseJpRecord()
-        {
-            var sample = sampleReader.Read("whois.jprs.jp", "jp", "amazon.co.jp.txt");
-
-            var record = parser.Parse("whois.jprs.jp", "jp", sample);
-
-            Assert.AreEqual("amazon.co.jp", record.DomainName);
-            Assert.AreEqual("Amazon, Inc.", record.Registrant.Name);
-            Assert.AreEqual("JC076JP", record.AdminContact.Name);
-            Assert.AreEqual("IK4644JP", record.TechnicalContact.Name);
-            Assert.AreEqual(4, record.NameServers.Count);
-            Assert.AreEqual("ns1.p31.dynect.net", record.NameServers[0]);
-            Assert.AreEqual("ns2.p31.dynect.net", record.NameServers[1]);
-            Assert.AreEqual("pdns1.ultradns.net", record.NameServers[2]);
-            Assert.AreEqual("pdns6.ultradns.co.uk", record.NameServers[3]);
-            Assert.AreEqual(new DateTime(2002, 11, 21), record.Registered);
-            Assert.AreEqual(new DateTime(2018, 12, 01), record.Updated);
-        }
         
         [Test]
         public void TestParseDeRecord()
