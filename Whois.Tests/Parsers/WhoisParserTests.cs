@@ -42,23 +42,5 @@ namespace Whois.Parsers
 
             Assert.AreEqual(5, parser.Templates.Count);
         }
-
-        [Test]
-        public void TestParseCzRecord()
-        {
-            var sample = sampleReader.Read("whois.nic.cz", "cz", "phoca.cz.txt");
-            
-            var record = parser.Parse("whois.nic.cz", "cz", sample);
-
-            Assert.AreEqual("CZ.NIC", record.TemplateName);
-
-            Assert.AreEqual("phoca.cz", record.DomainName);
-
-            Assert.AreEqual("REG-ZONER", record.Registrar.Name);
-
-            Assert.AreEqual(new DateTime(2007, 8, 8, 7, 15, 0), record.Registered);
-            Assert.AreEqual(new DateTime(2012, 4, 4, 4, 37, 56), record.Updated);
-            Assert.AreEqual(new DateTime(2019, 8, 8), record.Expiration);
-        }
     }
 }

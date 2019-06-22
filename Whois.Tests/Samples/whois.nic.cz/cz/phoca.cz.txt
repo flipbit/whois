@@ -1,0 +1,77 @@
+%  (c) 2006-2019 CZ.NIC, z.s.p.o.
+%
+% Intended use of supplied data and information
+%
+% Data contained in the domain name register, as well as information
+% supplied through public information services of CZ.NIC association,
+% are appointed only for purposes connected with Internet network
+% administration and operation, or for the purpose of legal or other
+% similar proceedings, in process as regards a matter connected
+% particularly with holding and using a concrete domain name.
+%
+% Full text available at:
+% http://www.nic.cz/page/306/intended-use-of-supplied-data-and-information/
+%
+% See also a search service at http://www.nic.cz/whois/
+%
+%
+% Whoisd Server Version: 3.12.0
+% Timestamp: Sat Jun 22 10:22:55 2019
+
+domain:       phoca.cz
+registrant:   SB:SUB000029824-ZONER
+admin-c:      PER000029824-ZONER
+nsset:        NSS:SUB100000001-ZONER:553
+registrar:    REG-ZONER
+registered:   08.08.2007 07:15:00
+changed:      04.04.2012 04:37:56
+expire:       08.08.2019
+
+contact:      SB:SUB000029824-ZONER
+name:         Lenka Medunová
+address:      Bratrstva 38
+address:      Znojmo
+address:      66902
+address:      CZ
+registrar:    REG-ZONER
+created:      08.08.2007 06:55:00
+changed:      15.05.2018 21:32:00
+
+contact:      PER000029824-ZONER
+name:         Lenka Medunová
+address:      Bratrstva 38
+address:      Znojmo
+address:      66902
+address:      CZ
+registrar:    REG-ZONER
+created:      08.08.2007 06:15:00
+changed:      15.05.2018 21:32:00
+
+nsset:        NSS:SUB100000001-ZONER:553
+nserver:      ns2.videon-znojmo.cz
+nserver:      ns1.videon-znojmo.cz
+tech-c:       SB:SUB100000001-ZONER
+tech-c:       PER000000001-ZONER
+registrar:    REG-ZONER
+created:      01.10.2007 02:00:00
+
+contact:      SB:SUB100000001-ZONER
+org:          ZONER software a.s.
+name:         ZONER software a.s.
+address:      Nové sady 18
+address:      Brno
+address:      60200
+address:      CZ
+registrar:    REG-ZONER
+created:      10.08.2001 22:13:00
+changed:      15.05.2018 21:32:00
+
+contact:      PER000000001-ZONER
+name:         Petr Horinek
+address:      Nové sady 18
+address:      Brno
+address:      60200
+address:      CZ
+registrar:    REG-ZONER
+created:      10.08.2001 22:13:00
+changed:      15.05.2018 21:32:00
