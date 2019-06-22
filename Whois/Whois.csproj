@@ -57,7 +57,6 @@
     <None Remove="Resources\whois.ax\ax\NotFound.txt" />
     <None Remove="Resources\whois.biz\biz\NotFound.txt" />
     <None Remove="Resources\whois.bnnic.bn\bn\Found.txt" />
-    <None Remove="Resources\whois.cat\cat\Found.txt" />
     <None Remove="Resources\whois.cat\cat\NotFound.txt" />
     <None Remove="Resources\whois.cctld.by\by\Found.txt" />
     <None Remove="Resources\whois.cctld.by\by\NotFound.txt" />
@@ -615,7 +614,6 @@
     <EmbeddedResource Include="Resources\whois.ax\ax\NotFound.txt" />
     <EmbeddedResource Include="Resources\whois.biz\biz\NotFound.txt" />
     <EmbeddedResource Include="Resources\whois.bnnic.bn\bn\Found.txt" />
-    <EmbeddedResource Include="Resources\whois.cat\cat\Found.txt" />
     <EmbeddedResource Include="Resources\whois.cat\cat\NotFound.txt" />
     <EmbeddedResource Include="Resources\whois.cctld.by\by\Found.txt" />
     <EmbeddedResource Include="Resources\whois.cctld.by\by\NotFound.txt" />
