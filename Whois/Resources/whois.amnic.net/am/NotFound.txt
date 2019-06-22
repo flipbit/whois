@@ -14,9 +14,5 @@ set: Status = NotFound
 # Must contain:
 hint: No match
 ---
-%
-%AM TLD whois server #1
-%
-
-No match { Null }
+No match{ Null }
 

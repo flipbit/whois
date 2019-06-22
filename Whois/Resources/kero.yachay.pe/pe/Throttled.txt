@@ -12,6 +12,6 @@ tag: pe
 set: Status = Throttled
 
 # Must contain:
-hint: Looup quota exceeded.
+hint: quota exceeded.
 ---
-Looup quota exceeded. { Null }
+quota exceeded.{ Null }
