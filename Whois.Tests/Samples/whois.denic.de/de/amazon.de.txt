@@ -1,0 +1,9 @@
+Domain: amazon.de
+Nserver: ns1.p31.dynect.net
+Nserver: ns2.p31.dynect.net
+Nserver: ns3.p31.dynect.net
+Nserver: ns4.p31.dynect.net
+Nserver: pdns1.ultradns.net
+Nserver: pdns6.ultradns.co.uk
+Status: connect
+Changed: 2018-08-10T10:41:26+02:00

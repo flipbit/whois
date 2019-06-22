@@ -42,16 +42,6 @@ namespace Whois.Parsers
 
             Assert.AreEqual(5, parser.Templates.Count);
         }
-        
-        [Test]
-        public void TestParseDeRecord()
-        {
-            var sample = sampleReader.Read("whois.denic.de", "de", "amazon.de.txt");
-            
-            var record = parser.Parse("whois.denic.de", "de", sample);
-
-            Assert.AreEqual("amazon.de", record.DomainName);
-        }
 
         [Test]
         public void TestParseJpAltRecord()

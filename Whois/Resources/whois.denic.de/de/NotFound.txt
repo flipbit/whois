@@ -10,6 +10,8 @@ tag: de
 
 # Set query response type:
 set: Status = NotFound
+
+hint: Status: free
 ---
-Domain: u34jedzcq.de
+Domain: { DomainName : IsDomainName, ToLower, EOL }
 Status: free

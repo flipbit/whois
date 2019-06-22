@@ -10,7 +10,10 @@ tag: de
 
 # Set query response type:
 set: Status = Throttled
+
+hint: % Error
+hint: access control limit reached
 ---
-% Error: 55000000002 Connection refused; access control limit reached.
+% Error: 55000000002 Connection refused; access control limit reached.{ Null }
 
 
