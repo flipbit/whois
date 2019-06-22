@@ -44,16 +44,6 @@ namespace Whois.Parsers
         }
 
         [Test]
-        public void TestParsePlRecord()
-        {
-            var sample = sampleReader.Read("whois.dns.pl", "pl", "08.pl.txt");
-
-            var record = parser.Parse("whois.dns.pl", "pl", sample);
-
-            Assert.AreEqual("08.pl", record.DomainName);
-        }
-
-        [Test]
         public void TestParseJpRecord()
         {
             var sample = sampleReader.Read("whois.jprs.jp", "jp", "amazon.co.jp.txt");

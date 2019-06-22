@@ -10,9 +10,11 @@ tag: pl
 
 # Set query response type:
 set: Status = NotFound
+
+hint: No information available about domain name
 ---
 
-No information available about domain name u34jedzcq.pl in the Registry NASK database.
+No information available about domain name { DomainName : IsDomainName, ToLower, EOL } in the Registry NASK database.
 
 
 

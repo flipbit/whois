@@ -100,7 +100,7 @@ Billing Phone Ext:{ BillingContact.TelephoneNumberExt ? : Trim, IsNumeric, EOL }
 Billing Fax:{ BillingContact.FaxNumber ? : Trim, IsPhoneNumber, EOL } 
 Billing Fax Ext:{ BillingContact.FaxNumberExt ? : Trim, IsNumeric, EOL } 
 Billing Email:{ BillingContact.Email ? : Trim, IsEmail, EOL }
-Name Server:{ NameServers : Trim, IsDomainName, ToLower, Repeating, EOL }
+Name Server:{ NameServers ? : Trim, IsDomainName, ToLower, Repeating, EOL }
 DNSSEC:{ DnsSecStatus ? : Trim, EOL }
 Registrar Abuse Contact Email:{ Registrar.AbuseEmail ? : Trim, IsEmail, EOL }
 Registrar Abuse Contact Phone:{ Registrar.AbuseTelephoneNumber ? : Trim, IsPhoneNumber, EOL }
