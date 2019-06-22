@@ -39,10 +39,13 @@ Trademark Name:{ Trademark.Name ? : Trim, EOL }
 Trademark Date:{ Trademark.Date ? : Trim, ToDateTime("yyyy-MM-dd"), EOL }
 Trademark Country:{ Trademark.Country ? : Trim, EOL }
 Trademark Number:{ Trademark.Number ? : Trim, EOL }
+Registrar:{ Registrar.Name ? : Trim, EOL }
+Registrar IANA ID:{ Registrar.IanaId ? : Trim, IsNumeric, EOL }
 Sponsoring Registrar:{ Registrar.Name ? : Trim, EOL }
 Sponsoring Registrar IANA ID:{ Registrar.IanaId ? : Trim, IsNumeric, EOL }
 WHOIS Server:{ Registrar.WhoisServerUrl ? : Trim, IsDomainName, ToLower, EOL } 
 Referral URL:{ Registrar.Url ? : Trim, IsUrl, ToLower, EOL } 
+Registrar URL:{ Registrar.Url ? : Trim, IsUrl, ToLower, EOL } 
 Domain Status:{ DomainStatus ? : Trim, Repeating, SubstringBefore(' '), EOL }
 Status:{ DomainStatus ? : Trim, Repeating, EOL }
 Registrant ID:{ Registrant.RegistryId ? : Trim, EOL }
@@ -99,4 +102,6 @@ Billing Fax Ext:{ BillingContact.FaxNumberExt ? : Trim, IsNumeric, EOL }
 Billing Email:{ BillingContact.Email ? : Trim, IsEmail, EOL }
 Name Server:{ NameServers : Trim, IsDomainName, ToLower, Repeating, EOL }
 DNSSEC:{ DnsSecStatus ? : Trim, EOL }
+Registrar Abuse Contact Email:{ Registrar.AbuseEmail ? : Trim, IsEmail, EOL }
+Registrar Abuse Contact Phone:{ Registrar.AbuseTelephoneNumber ? : Trim, IsPhoneNumber, EOL }
 >>> Last update of WHOIS database:
