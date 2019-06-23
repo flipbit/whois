@@ -10,16 +10,8 @@ tag: uz
 
 # Set query response type:
 set: Status = NotFound
+
+hint: Sorry, but domain
 ---
-
-% UzWhois Server Version 1.0
-
-% Domain names in the .uz domain can now be registered
-% with many different competing registrars. Go to http://www.cctld.uz/
-% for detailed information.
-
-Sorry, but domain: "u34jedzcq.uz", not found in database
-
-%  The Whois Server (ver. 1.0) of ccTLD.UZ
-%  (c) 2005, Center UZINFOCOM
+Sorry, but domain: "{ DomainName : Trim, IsDomainName, ToLower, EOL }", not found in database
 
