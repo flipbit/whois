@@ -11,6 +11,7 @@ tag: whois.centralnic.com
 tag: ae.org
 tag: ar.com
 tag: br.com
+tag: cn.com
 
 # Lines can appear out of order
 outOfOrder: true
