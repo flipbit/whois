@@ -40,6 +40,27 @@ namespace Whois
             return results;
         }
 
+        public List<string> GetNames(string whoisServer)
+        {
+            var results = new List<string>();
+
+            if (string.IsNullOrEmpty(whoisServer)) return results;
+
+            var names = typeof(ResourceReader).Assembly.GetManifestResourceNames();
+            var prefix = GetResourcePrefix(whoisServer);
+
+            foreach (var name in names)
+            {
+                if (!name.StartsWith(prefix)) continue;
+
+                if (!name.EndsWith(".txt", StringComparison.InvariantCultureIgnoreCase)) continue;
+
+                results.Add(name);
+            }
+
+            return results;
+        }
+
         public string GetContent(string name)
         {
             return GetString(name);
@@ -51,6 +72,13 @@ namespace Whois
             var escapedTld = tld.Replace("-", "_").ToLowerInvariant();
 
             return $"Whois.Resources.{escapedWhoisServer}.{escapedTld}.";
+        }
+
+        private string GetResourcePrefix(string whoisServer)
+        {
+            var escapedWhoisServer = whoisServer.Replace("-", "_").ToLowerInvariant();
+
+            return $"Whois.Resources.{escapedWhoisServer}";
         }
 
         private static Stream GetStream(string name)

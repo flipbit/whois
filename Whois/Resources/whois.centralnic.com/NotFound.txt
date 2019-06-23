@@ -2,7 +2,7 @@
 #
 # .ae.org Parsing Template
 #
-name: whois.centralnic.com/ae.org/NotFound
+name: whois.centralnic.com/NotFound
 
 # Use this template for queries to whois.centralnic.com:
 tag: whois.centralnic.com
@@ -10,5 +10,7 @@ tag: ae.org
 
 # Set query response type:
 set: Status = NotFound
+
+hint: DOMAIN NOT FOUND
 ---
-DOMAIN NOT FOUND
+DOMAIN NOT FOUND{ Null }

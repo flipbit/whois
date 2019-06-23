@@ -35,6 +35,7 @@ namespace Whois.Parsers
         public WhoisResponse Parse(string whoisServer, string tld, string content)
         {
             LoadServerTemplates(whoisServer, tld);
+            LoadServerTemplates(whoisServer);
             LoadServerGenericTemplates();
 
             var result = matcher.Match<WhoisResponse>(content, new []{ whoisServer, tld });
@@ -92,6 +93,25 @@ namespace Whois.Parsers
             if (loaded) return;
 
             var templateNames = reader.GetNames(whoisServer, tld);
+
+            foreach (var templateName in templateNames)
+            {
+                var content = reader.GetContent(templateName);
+
+                matcher.RegisterTemplate(content);
+            }
+        }
+
+        private void LoadServerTemplates(string whoisServer)
+        {
+            // Check templates for this server/tld not already loaded
+            var loaded = Templates
+                .Where(t => t.Name.Contains("generic") == false)
+                .Any(t => t.HasTags(new [] {whoisServer}));
+
+            if (loaded) return;
+
+            var templateNames = reader.GetNames(whoisServer);
 
             foreach (var templateName in templateNames)
             {
