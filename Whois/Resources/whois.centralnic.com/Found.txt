@@ -12,6 +12,7 @@ tag: ae.org
 tag: ar.com
 tag: br.com
 tag: cn.com
+tag: de.com
 
 # Lines can appear out of order
 outOfOrder: true

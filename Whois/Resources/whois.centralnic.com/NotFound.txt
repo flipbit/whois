@@ -12,6 +12,7 @@ tag: ae.org
 tag: ar.com
 tag: br.com
 tag: cn.com
+tag: de.com
 
 # Set query response type:
 set: Status = NotFound
