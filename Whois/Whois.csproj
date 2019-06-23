@@ -25,6 +25,7 @@
     <None Remove="Resources\durban-whois.registry.net.za\durban\Found.txt" />
     <None Remove="Resources\durban-whois.registry.net.za\durban\NotFound.txt" />
     <None Remove="Resources\generic\tld\Found001.txt" />
+    <None Remove="Resources\generic\tld\Found02.txt" />
     <None Remove="Resources\generic\tld\NotFound001.txt" />
     <None Remove="Resources\generic\tld\NotFound002.txt" />
     <None Remove="Resources\joburg-whois.registry.net.za\joburg\Found.txt" />
@@ -63,7 +64,6 @@
     <None Remove="Resources\whois.cctld.uz\uz\Found.txt" />
     <None Remove="Resources\whois.cctld.uz\uz\NotFound.txt" />
     <None Remove="Resources\whois.cctld.uz\uz\Reserved.txt" />
-    <None Remove="Resources\whois.cdmon.com\com\Found.txt" />
     <None Remove="Resources\whois.centralnic.com\ae.org\Found.txt" />
     <None Remove="Resources\whois.centralnic.com\ae.org\NotFound.txt" />
     <None Remove="Resources\whois.centralnic.com\ar.com\Found.txt" />
@@ -582,6 +582,7 @@
     <EmbeddedResource Include="Resources\coza-whois.registry.net.za\co.za\Throttled.txt" />
     <EmbeddedResource Include="Resources\durban-whois.registry.net.za\durban\Found.txt" />
     <EmbeddedResource Include="Resources\durban-whois.registry.net.za\durban\NotFound.txt" />
+    <EmbeddedResource Include="Resources\generic\tld\Found02.txt" />
     <EmbeddedResource Include="Resources\generic\tld\Found001.txt" />
     <EmbeddedResource Include="Resources\generic\tld\NotFound001.txt" />
     <EmbeddedResource Include="Resources\generic\tld\NotFound002.txt" />
@@ -620,7 +621,6 @@
     <EmbeddedResource Include="Resources\whois.cctld.uz\uz\Found.txt" />
     <EmbeddedResource Include="Resources\whois.cctld.uz\uz\NotFound.txt" />
     <EmbeddedResource Include="Resources\whois.cctld.uz\uz\Reserved.txt" />
-    <EmbeddedResource Include="Resources\whois.cdmon.com\com\Found.txt" />
     <EmbeddedResource Include="Resources\whois.centralnic.com\ae.org\Found.txt" />
     <EmbeddedResource Include="Resources\whois.centralnic.com\ae.org\NotFound.txt" />
     <EmbeddedResource Include="Resources\whois.centralnic.com\ar.com\Found.txt" />

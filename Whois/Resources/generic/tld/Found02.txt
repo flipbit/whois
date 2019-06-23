@@ -1,0 +1,145 @@
+---
+#
+# Generic TLD Pattern 
+#
+name: generic/tld/Found02
+
+# Use this template for catch-all parsing:
+tag: catch-all
+
+# Lines can appear out of order
+outOfOrder: true
+
+# Use token preamble on current line only
+trimPreambleBeforeNewLine: true
+
+# Set query response type:
+set: Status = Found
+---
+
+#
+# Domain
+#
+Domain Name: { DomainName : IsDomainName, ToLower, EOL }
+Domain ID: { RegistryDomainId ? : EOL }
+
+#
+# Registration, Updated and Expiration Dates
+#
+Creation Date: { Registered? : SubstringBefore("UTC"), ToDateTime("yyyy-MM-ddTHH:mm:ssZ", "dd-MMM-yyyy hh:MM:ss"), EOL }
+Created On: { Registered ? : SubstringBefore("UTC"), ToDateTime("yyyy-MM-ddTHH:mm:ssZ", "dd-MMM-yyyy hh:MM:ss"), EOL }
+
+Updated Date: { Updated ? : SubstringBefore("UTC"), ToDateTime("yyyy-MM-ddTHH:mm:ssZ", "dd-MMM-yyyy hh:MM:ss"), EOL }
+Last Updated On: { Updated ? : SubstringBefore("UTC"), ToDateTime("yyyy-MM-ddTHH:mm:ssZ", "dd-MMM-yyyy hh:MM:ss"), EOL }
+
+Registry Expiry Date: { Expiration ? : SubstringBefore("UTC"), ToDateTime("yyyy-MM-ddTHH:mm:ssZ", "dd-MMM-yyyy hh:MM:ss"), EOL }
+Expiration Date: { Expiration ? : SubstringBefore("UTC"), ToDateTime("yyyy-MM-ddTHH:mm:ssZ", "dd-MMM-yyyy hh:MM:ss"), EOL }
+Registrar Registration Expiration Date: { Expiration ? : ToDateTime("yyyy-MM-ddTHH:mm:ssZ"), EOL }
+
+#
+# Trademark Info
+#
+Trademark Name: { Trademark.Name ? : EOL }
+Trademark Date: { Trademark.Date ? : ToDateTime("yyyy-MM-dd"), EOL }
+Trademark Country: { Trademark.Country ? : EOL }
+Trademark Number: { Trademark.Number ? : EOL }
+
+#
+# Registrar Info
+#
+Registrar: { Registrar.Name ? : EOL }
+Registrar IANA ID: { Registrar.IanaId ? : IsNumeric, EOL }
+Registrar Abuse Contact Email: { Registrar.AbuseEmail ? : IsEmail, EOL }
+Registrar Abuse Contact Phone: { Registrar.AbuseTelephoneNumber ? : IsPhoneNumber, EOL }
+Registrar URL: { Registrar.Url ? : IsUrl, ToLower, EOL } 
+Registrar WHOIS Server: { Registrar.WhoisServerUrl ? : IsDomainName, ToLower, EOL }
+
+# Alternate form
+Sponsoring Registrar: { Registrar.Name ? : EOL }
+Sponsoring Registrar IANA ID: { Registrar.IanaId ? : IsNumeric, EOL }
+WHOIS Server: { Registrar.WhoisServerUrl ? : IsDomainName, ToLower, EOL } 
+Referral URL: { Registrar.Url ? : IsUrl, ToLower, EOL } 
+
+#
+# Domain Status
+#
+Domain Status: { DomainStatus ? : Repeating, SubstringBefore(' '), EOL }
+Status: { DomainStatus ? : Repeating, EOL }
+DNSSEC: { DnsSecStatus ? : EOL }
+
+#
+# Name Servers
+#
+Name Server: { NameServers ? : IsDomainName, ToLower, Repeating, EOL }
+
+#
+# Registrant Info
+#
+Registry Registrant ID: { Registrant.RegistryId ? : EOL }
+Registrant ID: { Registrant.RegistryId ? : EOL }
+Registrant Name: { Registrant.Name ? : EOL }
+Registrant Organization: { Registrant.Organization ? : EOL }
+Registrant Street: { Registrant.Address ? : IsNotEmpty, EOL }
+Registrant City: { Registrant.Address ? : IsNotEmpty, EOL }
+Registrant State/Province: { Registrant.Address ? : IsNotEmpty, EOL }
+Registrant Postal Code: { Registrant.Address ? : IsNotEmpty, EOL }
+Registrant Country: { Registrant.Address ? : IsNotEmpty, EOL }
+Registrant Phone: { Registrant.TelephoneNumber ? : IsPhoneNumber, EOL }
+Registrant Phone Ext: { Registrant.TelephoneNumberExt ? : IsNumeric, EOL }
+Registrant Fax: { Registrant.FaxNumber ? : IsPhoneNumber, EOL }
+Registrant Fax Ext: { Registrant.FaxNumberExt ? : IsNotEmpty, IsNumeric, EOL }
+Registrant Email: { Registrant.Email ? : IsEmail, EOL }
+
+#
+# Admin Contact Info
+#
+Registry Admin ID: { AdminContact.RegistryId ? : EOL }
+Admin ID: { AdminContact.RegistryId ? : EOL }
+Admin Name: { AdminContact.Name ? : EOL }
+Admin Organization: { AdminContact.Organization ? : EOL }
+Admin Street: { AdminContact.Address ? : IsNotEmpty, EOL }
+Admin City: { AdminContact.Address ? : IsNotEmpty, EOL }
+Admin State/Province: { AdminContact.Address ? : IsNotEmpty, EOL }
+Admin Postal Code: { AdminContact.Address ? : IsNotEmpty, EOL }
+Admin Country: { AdminContact.Address ? : IsNotEmpty, EOL }
+Admin Phone: { AdminContact.TelephoneNumber ? : IsPhoneNumber, EOL }
+Admin Phone Ext: { AdminContact.TelephoneNumberExt  ? : IsNumeric, EOL } 
+Admin Fax: { AdminContact.FaxNumber ? : IsPhoneNumber, EOL } 
+Admin Fax Ext: { AdminContact.FaxNumberExt ? : IsNumeric, EOL } 
+Admin Email: { AdminContact.Email ? : IsEmail, EOL }
+
+#
+# Tech Contact Info
+#
+Registry Tech ID: { TechnicalContact.RegistryId  ? : EOL }
+Tech ID: { TechnicalContact.RegistryId  ? : EOL }
+Tech Name: { TechnicalContact.Name ? : EOL }
+Tech Organization: { TechnicalContact.Organization ? : EOL }
+Tech Street: { TechnicalContact.Address ? : IsNotEmpty, EOL }
+Tech City: { TechnicalContact.Address ? : IsNotEmpty, EOL }
+Tech State/Province: { TechnicalContact.Address ? : IsNotEmpty, EOL }
+Tech Postal Code: { TechnicalContact.Address ? : IsNotEmpty, EOL }
+Tech Country: { TechnicalContact.Address ? : IsNotEmpty, EOL }
+Tech Phone: { TechnicalContact.TelephoneNumber ? : IsPhoneNumber, EOL }
+Tech Phone Ext: { TechnicalContact.TelephoneNumberExt ? : IsNumeric, EOL } 
+Tech Fax: { TechnicalContact.FaxNumber ? : IsPhoneNumber, EOL } 
+Tech Fax Ext: { TechnicalContact.FaxNumberExt ? : IsNumeric, EOL }
+Tech Email: { TechnicalContact.Email ? : IsEmail, EOL }
+
+#
+# Billing Contact Info
+#
+Registry Billing ID: { BillingContact.RegistryId  ? : EOL }
+Billing ID: { BillingContact.RegistryId  ? : EOL }
+Billing Name: { BillingContact.Name ? : EOL }
+Billing Organization: { BillingContact.Organization ? : EOL }
+Billing Street: { BillingContact.Address ? : IsNotEmpty, EOL }
+Billing City: { BillingContact.Address ? : IsNotEmpty, EOL }
+Billing State/Province: { BillingContact.Address ? : IsNotEmpty, EOL }
+Billing Postal Code: { BillingContact.Address ? : IsNotEmpty, EOL }
+Billing Country: { BillingContact.Address ? : IsNotEmpty, EOL }
+Billing Phone: { BillingContact.TelephoneNumber ? : IsPhoneNumber, EOL }
+Billing Phone Ext: { BillingContact.TelephoneNumberExt ? : IsNumeric, EOL }
+Billing Fax: { BillingContact.FaxNumber ? : IsPhoneNumber, EOL } 
+Billing Fax Ext: { BillingContact.FaxNumberExt ? : IsNumeric, EOL } 
+Billing Email: { BillingContact.Email ? : IsEmail, EOL }
