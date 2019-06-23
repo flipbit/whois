@@ -10,5 +10,7 @@ tag: by
 
 # Set query response type:
 set: Status = NotFound
+
+hint: Object does not exist
 ---
-Object does not exist
+Object does not exist{ Null }

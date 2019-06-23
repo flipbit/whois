@@ -1,3 +1,4 @@
+using System;
 using NUnit.Framework;
 using Whois.Models;
 using Whois.Parsers;
@@ -25,6 +26,11 @@ namespace Whois.Parsing.Whois.Cctld.By.By
 
             Assert.Greater(sample.Length, 0);
             Assert.AreEqual(WhoisResponseStatus.NotFound, response.Status);
+
+            Assert.AreEqual(0, response.ParsingErrors);
+            Assert.AreEqual("whois.cctld.by/by/NotFound", response.TemplateName);
+
+            Assert.AreEqual(1, response.FieldsParsed);
         }
 
         [Test]
@@ -35,6 +41,24 @@ namespace Whois.Parsing.Whois.Cctld.By.By
 
             Assert.Greater(sample.Length, 0);
             Assert.AreEqual(WhoisResponseStatus.Found, response.Status);
+
+            Assert.AreEqual(0, response.ParsingErrors);
+            Assert.AreEqual("whois.cctld.by/by/Found", response.TemplateName);
+
+            Assert.AreEqual("active.by", response.DomainName);
+
+            // Registrar Details
+            Assert.AreEqual("Active Technologies LLC", response.Registrar.Name);
+
+            Assert.AreEqual(new DateTime(2013, 12, 16, 0, 0, 0), response.Updated);
+            Assert.AreEqual(new DateTime(2003, 2, 2, 0, 0, 0), response.Registered);
+
+            // Nameservers
+            Assert.AreEqual(2, response.NameServers.Count);
+            Assert.AreEqual("ns1.activeby.net", response.NameServers[0]);
+            Assert.AreEqual("ns2.activeby.net", response.NameServers[1]);
+
+            Assert.AreEqual(7, response.FieldsParsed);
         }
     }
 }
