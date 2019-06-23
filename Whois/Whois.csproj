@@ -64,8 +64,6 @@
     <None Remove="Resources\whois.cctld.uz\uz\Found.txt" />
     <None Remove="Resources\whois.cctld.uz\uz\NotFound.txt" />
     <None Remove="Resources\whois.cctld.uz\uz\Reserved.txt" />
-    <None Remove="Resources\whois.centralnic.com\br.com\Found.txt" />
-    <None Remove="Resources\whois.centralnic.com\br.com\NotFound.txt" />
     <None Remove="Resources\whois.centralnic.com\cn.com\Found.txt" />
     <None Remove="Resources\whois.centralnic.com\cn.com\NotFound.txt" />
     <None Remove="Resources\whois.centralnic.com\de.com\Found.txt" />
@@ -619,8 +617,6 @@
     <EmbeddedResource Include="Resources\whois.cctld.uz\uz\Reserved.txt" />
     <EmbeddedResource Include="Resources\whois.centralnic.com\Found.txt" />
     <EmbeddedResource Include="Resources\whois.centralnic.com\NotFound.txt" />
-    <EmbeddedResource Include="Resources\whois.centralnic.com\br.com\Found.txt" />
-    <EmbeddedResource Include="Resources\whois.centralnic.com\br.com\NotFound.txt" />
     <EmbeddedResource Include="Resources\whois.centralnic.com\cn.com\Found.txt" />
     <EmbeddedResource Include="Resources\whois.centralnic.com\cn.com\NotFound.txt" />
     <EmbeddedResource Include="Resources\whois.centralnic.com\de.com\Found.txt" />

@@ -10,6 +10,7 @@ tag: whois.centralnic.com
 # Supported TLDs
 tag: ae.org
 tag: ar.com
+tag: br.com
 
 # Lines can appear out of order
 outOfOrder: true
