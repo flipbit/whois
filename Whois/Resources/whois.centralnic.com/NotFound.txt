@@ -6,7 +6,10 @@ name: whois.centralnic.com/NotFound
 
 # Use this template for queries to whois.centralnic.com:
 tag: whois.centralnic.com
+
+# Supported TLDs
 tag: ae.org
+tag: ar.com
 
 # Set query response type:
 set: Status = NotFound
