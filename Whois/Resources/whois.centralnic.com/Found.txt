@@ -14,6 +14,7 @@ tag: br.com
 tag: cn.com
 tag: de.com
 tag: eu.com
+tag: gb.com
 
 # Lines can appear out of order
 outOfOrder: true
