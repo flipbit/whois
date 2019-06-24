@@ -1,3 +1,4 @@
+using System;
 using NUnit.Framework;
 using Whois.Models;
 using Whois.Parsers;
@@ -25,6 +26,11 @@ namespace Whois.Parsing.Whois.Centralnic.Com.GrCom
 
             Assert.Greater(sample.Length, 0);
             Assert.AreEqual(WhoisResponseStatus.NotFound, response.Status);
+
+            Assert.AreEqual(0, response.ParsingErrors);
+            Assert.AreEqual("whois.centralnic.com/NotFound", response.TemplateName);
+
+            Assert.AreEqual(1, response.FieldsParsed);
         }
 
         [Test]
@@ -35,6 +41,40 @@ namespace Whois.Parsing.Whois.Centralnic.Com.GrCom
 
             Assert.Greater(sample.Length, 0);
             Assert.AreEqual(WhoisResponseStatus.Found, response.Status);
+
+            Assert.AreEqual(0, response.ParsingErrors);
+            Assert.AreEqual("whois.centralnic.com/Found", response.TemplateName);
+
+            Assert.AreEqual("google.gr.com", response.DomainName);
+            Assert.AreEqual("CNIC-DO735168", response.RegistryDomainId);
+
+            Assert.AreEqual(new DateTime(2012, 6, 23, 11, 38, 2), response.Updated);
+            Assert.AreEqual(new DateTime(2011, 2, 7, 13, 10, 14), response.Registered);
+            Assert.AreEqual(new DateTime(2015, 2, 7, 23, 59, 59), response.Expiration);
+
+             // Registrant Details
+            Assert.AreEqual("H1346485", response.Registrant.RegistryId);
+
+
+             // BillingContact Details
+            Assert.AreEqual("H1346485", response.BillingContact.RegistryId);
+
+
+             // TechnicalContact Details
+            Assert.AreEqual("H1346485", response.TechnicalContact.RegistryId);
+
+
+            // Nameservers
+            Assert.AreEqual(2, response.NameServers.Count);
+            Assert.AreEqual("f1g1ns1.dnspod.net", response.NameServers[0]);
+            Assert.AreEqual("f1g1ns2.dnspod.net", response.NameServers[1]);
+
+            // Domain Status
+            Assert.AreEqual(1, response.DomainStatus.Count);
+            Assert.AreEqual("ok", response.DomainStatus[0]);
+
+            Assert.AreEqual("Unsigned", response.DnsSecStatus);
+            Assert.AreEqual(13, response.FieldsParsed);
         }
     }
 }
