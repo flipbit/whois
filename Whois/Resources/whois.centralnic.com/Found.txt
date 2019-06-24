@@ -29,6 +29,7 @@ tag: se.com
 tag: se.net
 tag: uk.com
 tag: uk.net
+tag: us.com
 
 # Lines can appear out of order
 outOfOrder: true
