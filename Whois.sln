@@ -1,13 +1,20 @@
 ﻿
 Microsoft Visual Studio Solution File, Format Version 12.00
-# Visual Studio 2012
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Whois.Console", "Whois.Console\Whois.Console.csproj", "{611C1679-3605-49A6-902F-DEBFBBC9E0A4}"
+# Visual Studio Version 16
+VisualStudioVersion = 16.0.29009.5
+MinimumVisualStudioVersion = 10.0.40219.1
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Whois.Console", "Whois.Console\Whois.Console.csproj", "{611C1679-3605-49A6-902F-DEBFBBC9E0A4}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Whois.Tests", "Whois.Tests\Whois.Tests.csproj", "{4A7B8356-8CF9-44A7-A1C1-F8A71E566AA7}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Whois.Tests", "Whois.Tests\Whois.Tests.csproj", "{4A7B8356-8CF9-44A7-A1C1-F8A71E566AA7}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Whois", "Whois\Whois.csproj", "{EC562E36-605B-46D5-92D2-BAD0C6C6E863}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Whois", "Whois\Whois.csproj", "{EC562E36-605B-46D5-92D2-BAD0C6C6E863}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Whois.Tests.Integration", "Whois.Tests.Integration\Whois.Tests.Integration.csproj", "{F5785B93-CBA2-45AD-A635-3C7A7E956369}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Whois.Tests.Integration", "Whois.Tests.Integration\Whois.Tests.Integration.csproj", "{F5785B93-CBA2-45AD-A635-3C7A7E956369}"
+EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Solution Items", "Solution Items", "{2C0D742E-EB77-4FFB-85C5-EFEE3A50DDEE}"
+	ProjectSection(SolutionItems) = preProject
+		appveyor.yml = appveyor.yml
+	EndProjectSection
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
@@ -34,5 +41,8 @@ Global
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
+	EndGlobalSection
+	GlobalSection(ExtensibilityGlobals) = postSolution
+		SolutionGuid = {BC321754-E388-4858-BC43-6F390F4BE54E}
 	EndGlobalSection
 EndGlobal
