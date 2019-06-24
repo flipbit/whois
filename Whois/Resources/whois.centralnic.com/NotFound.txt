@@ -25,6 +25,7 @@ tag: no.com
 tag: qc.com
 tag: ru.com
 tag: sa.com
+tag: se.com
 
 # Set query response type:
 set: Status = NotFound
