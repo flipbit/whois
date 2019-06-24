@@ -22,6 +22,7 @@ tag: jp.net
 tag: jpn.com
 tag: kr.com
 tag: no.com
+tag: qc.com
 
 # Lines can appear out of order
 outOfOrder: true
