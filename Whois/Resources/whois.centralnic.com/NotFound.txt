@@ -23,6 +23,7 @@ tag: jpn.com
 tag: kr.com
 tag: no.com
 tag: qc.com
+tag: ru.com
 
 # Set query response type:
 set: Status = NotFound
