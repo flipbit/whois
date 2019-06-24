@@ -18,6 +18,7 @@ tag: gb.com
 tag: gb.net
 tag: gr.com
 tag: hu.com
+tag: jp.net
 
 # Set query response type:
 set: Status = NotFound

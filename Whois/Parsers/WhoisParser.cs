@@ -36,7 +36,6 @@ namespace Whois.Parsers
         {
             LoadServerTemplates(whoisServer, tld);
             LoadServerTemplates(whoisServer);
-            LoadServerGenericTemplates();
 
             var result = matcher.Match<WhoisResponse>(content, new []{ whoisServer, tld });
 
@@ -44,6 +43,8 @@ namespace Whois.Parsers
 
             if (match == null)
             {
+                LoadServerGenericTemplates();
+
                 match = matcher
                     .Match<WhoisResponse>(content, new [] { "catch-all" })
                     .BestMatch;
