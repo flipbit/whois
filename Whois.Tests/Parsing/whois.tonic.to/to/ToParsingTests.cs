@@ -5,6 +5,7 @@ using Whois.Parsers;
 namespace Whois.Parsing.Whois.Tonic.To.To
 {
     [TestFixture]
+    [Ignore("TODO")]
     public class ToParsingTests : ParsingTests
     {
         private WhoisParser parser;

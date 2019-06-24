@@ -5,6 +5,7 @@ using Whois.Parsers;
 namespace Whois.Parsing.Whois.Iana.Org.Int
 {
     [TestFixture]
+    [Ignore("TODO")]
     public class IntParsingTests : ParsingTests
     {
         private WhoisParser parser;

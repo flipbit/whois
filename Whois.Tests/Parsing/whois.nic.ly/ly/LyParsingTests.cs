@@ -5,6 +5,7 @@ using Whois.Parsers;
 namespace Whois.Parsing.Whois.Nic.Ly.Ly
 {
     [TestFixture]
+    [Ignore("TODO")]
     public class LyParsingTests : ParsingTests
     {
         private WhoisParser parser;

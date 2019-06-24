@@ -5,6 +5,7 @@ using Whois.Parsers;
 namespace Whois.Parsing.Whois.Gov.Za.GovZa
 {
     [TestFixture]
+    [Ignore("TODO")]
     public class GovZaParsingTests : ParsingTests
     {
         private WhoisParser parser;

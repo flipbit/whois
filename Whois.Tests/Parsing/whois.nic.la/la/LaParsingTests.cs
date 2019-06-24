@@ -5,6 +5,7 @@ using Whois.Parsers;
 namespace Whois.Parsing.Whois.Nic.La.La
 {
     [TestFixture]
+    [Ignore("TODO")]
     public class LaParsingTests : ParsingTests
     {
         private WhoisParser parser;

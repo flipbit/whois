@@ -5,6 +5,7 @@ using Whois.Parsers;
 namespace Whois.Parsing.Whois.Register.Si.Si
 {
     [TestFixture]
+    [Ignore("TODO")]
     public class SiParsingTests : ParsingTests
     {
         private WhoisParser parser;

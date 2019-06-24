@@ -6,6 +6,7 @@ using Whois.Parsers;
 namespace Whois.Parsing.Whois.Jprs.Jp.Jp
 {
     [TestFixture]
+    [Ignore("TODO")]
     public class JpParsingTests : ParsingTests
     {
         private WhoisParser parser;

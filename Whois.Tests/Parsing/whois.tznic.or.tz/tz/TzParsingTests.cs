@@ -5,6 +5,7 @@ using Whois.Parsers;
 namespace Whois.Parsing.Whois.Tznic.Or.Tz.Tz
 {
     [TestFixture]
+    [Ignore("TODO")]
     public class TzParsingTests : ParsingTests
     {
         private WhoisParser parser;

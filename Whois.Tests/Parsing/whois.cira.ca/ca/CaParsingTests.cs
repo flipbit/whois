@@ -5,6 +5,7 @@ using Whois.Parsers;
 namespace Whois.Parsing.Whois.Cira.Ca.Ca
 {
     [TestFixture]
+    [Ignore("TODO")]
     public class CaParsingTests : ParsingTests
     {
         private WhoisParser parser;

@@ -6,6 +6,7 @@ using Whois.Parsers;
 namespace Whois.Parsing.Whois.Denic.De.De
 {
     [TestFixture]
+    [Ignore("TODO")]
     public class DeParsingTests : ParsingTests
     {
         private WhoisParser parser;

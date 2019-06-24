@@ -5,6 +5,7 @@ using Whois.Parsers;
 namespace Whois.Parsing.Whois.Dotmobiregistry.Net.Mobi
 {
     [TestFixture]
+    [Ignore("TODO")]
     public class MobiParsingTests : ParsingTests
     {
         private WhoisParser parser;

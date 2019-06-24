@@ -5,6 +5,7 @@ using Whois.Parsers;
 namespace Whois.Parsing.Whois.Markmonitor.Com.Com
 {
     [TestFixture]
+    [Ignore("TODO")]
     public class ComParsingTests : ParsingTests
     {
         private WhoisParser parser;

@@ -5,6 +5,7 @@ using Whois.Parsers;
 namespace Whois.Parsing.Whois.Registry.Om.Om
 {
     [TestFixture]
+    [Ignore("TODO")]
     public class OmParsingTests : ParsingTests
     {
         private WhoisParser parser;

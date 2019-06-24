@@ -5,6 +5,7 @@ using Whois.Parsers;
 namespace Whois.Parsing.Whois.Nic.Net.Sb.Sb
 {
     [TestFixture]
+    [Ignore("TODO")]
     public class SbParsingTests : ParsingTests
     {
         private WhoisParser parser;

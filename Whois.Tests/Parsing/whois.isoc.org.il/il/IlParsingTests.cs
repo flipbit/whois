@@ -5,6 +5,7 @@ using Whois.Parsers;
 namespace Whois.Parsing.Whois.Isoc.Org.Il.Il
 {
     [TestFixture]
+    [Ignore("TODO")]
     public class IlParsingTests : ParsingTests
     {
         private WhoisParser parser;

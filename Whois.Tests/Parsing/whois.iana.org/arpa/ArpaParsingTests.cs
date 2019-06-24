@@ -5,6 +5,7 @@ using Whois.Parsers;
 namespace Whois.Parsing.Whois.Iana.Org.Arpa
 {
     [TestFixture]
+    [Ignore("TODO")]
     public class ArpaParsingTests : ParsingTests
     {
         private WhoisParser parser;

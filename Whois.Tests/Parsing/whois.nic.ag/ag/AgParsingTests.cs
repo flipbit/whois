@@ -5,6 +5,7 @@ using Whois.Parsers;
 namespace Whois.Parsing.Whois.Nic.Ag.Ag
 {
     [TestFixture]
+    [Ignore("TODO")]
     public class AgParsingTests : ParsingTests
     {
         private WhoisParser parser;

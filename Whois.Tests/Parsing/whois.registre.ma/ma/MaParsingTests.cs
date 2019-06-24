@@ -5,6 +5,7 @@ using Whois.Parsers;
 namespace Whois.Parsing.Whois.Registre.Ma.Ma
 {
     [TestFixture]
+    [Ignore("TODO")]
     public class MaParsingTests : ParsingTests
     {
         private WhoisParser parser;
