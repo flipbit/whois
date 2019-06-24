@@ -31,6 +31,7 @@ tag: uk.com
 tag: uk.net
 tag: us.com
 tag: us.org
+tag: uy.com
 
 # Set query response type:
 set: Status = NotFound
