@@ -53,9 +53,9 @@ namespace Whois.Parsing.Whois.Centralnic.Com.GbNet
             Assert.AreEqual("http://www.gandi.net/", response.Registrar.Url);
             Assert.AreEqual("+33 1 7039 3740", response.Registrar.AbuseTelephoneNumber);
 
-            Assert.AreEqual(new DateTime(2013, 8, 30, 13, 42, 9), response.Updated);
-            Assert.AreEqual(new DateTime(2013, 8, 25, 13, 36, 24), response.Registered);
-            Assert.AreEqual(new DateTime(2014, 8, 26, 0, 59, 59), response.Expiration);
+            Assert.AreEqual(new DateTime(2013, 8, 30, 12, 42, 9, DateTimeKind.Utc), response.Updated);
+            Assert.AreEqual(new DateTime(2013, 8, 25, 12, 36, 24, DateTimeKind.Utc), response.Registered);
+            Assert.AreEqual(new DateTime(2014, 8, 25, 23, 59, 59, DateTimeKind.Utc), response.Expiration);
 
              // Registrant Details
             Assert.AreEqual("R1149-GANDI-PRYP", response.Registrant.RegistryId);

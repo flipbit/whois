@@ -53,9 +53,9 @@ namespace Whois.Parsing.Whois.Centralnic.Com.ZaCom
             Assert.AreEqual("http://www.megaweb.co.za/", response.Registrar.Url);
             Assert.AreEqual("02711 485 1984", response.Registrar.AbuseTelephoneNumber);
 
-            Assert.AreEqual(new DateTime(2013, 12, 3, 12, 33, 13), response.Updated);
-            Assert.AreEqual(new DateTime(2004, 11, 17, 11, 47, 29), response.Registered);
-            Assert.AreEqual(new DateTime(2014, 11, 17, 23, 59, 59), response.Expiration);
+            Assert.AreEqual(new DateTime(2013, 12, 3, 12, 33, 13, DateTimeKind.Utc), response.Updated);
+            Assert.AreEqual(new DateTime(2004, 11, 17, 11, 47, 29, DateTimeKind.Utc), response.Registered);
+            Assert.AreEqual(new DateTime(2014, 11, 17, 23, 59, 59, DateTimeKind.Utc), response.Expiration);
 
              // Registrant Details
             Assert.AreEqual("H1063006", response.Registrant.RegistryId);

@@ -39,9 +39,9 @@ namespace Whois.Parsing.Whois.Cdmon.Com.Com
             Assert.AreEqual("abuse@cdmon.com", response.Registrar.AbuseEmail);
             Assert.AreEqual("+34.935677577", response.Registrar.AbuseTelephoneNumber);
 
-            Assert.AreEqual(new DateTime(2009, 12, 16, 11, 40, 44), response.Updated);
-            Assert.AreEqual(new DateTime(2001, 8, 12, 16, 2, 57), response.Registered);
-            Assert.AreEqual(new DateTime(2024, 8, 12, 16, 2, 53), response.Expiration);
+            Assert.AreEqual(new DateTime(2009, 12, 16, 11, 40, 44, DateTimeKind.Utc), response.Updated);
+            Assert.AreEqual(new DateTime(2001, 8, 12, 15, 2, 57, DateTimeKind.Utc), response.Registered);
+            Assert.AreEqual(new DateTime(2024, 8, 12, 15, 2, 53, DateTimeKind.Utc), response.Expiration);
 
              // Registrant Details
             Assert.AreEqual("10dencehispahard,s.l.", response.Registrant.Name);

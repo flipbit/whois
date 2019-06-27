@@ -52,9 +52,9 @@ namespace Whois.Parsing.Whois.Centralnic.Com.ArCom
             Assert.AreEqual("CentralNic Ltd", response.Registrar.Name);
             Assert.AreEqual("+44.8700170900", response.Registrar.AbuseTelephoneNumber);
 
-            Assert.AreEqual(new DateTime(2013, 4, 26, 1, 15, 40), response.Updated);
-            Assert.AreEqual(new DateTime(2008, 4, 25, 17, 22, 13), response.Registered);
-            Assert.AreEqual(new DateTime(2014, 4, 26, 0, 59, 59), response.Expiration);
+            Assert.AreEqual(new DateTime(2013, 4, 26, 0, 15, 40, DateTimeKind.Utc), response.Updated.Value.ToUniversalTime());
+            Assert.AreEqual(new DateTime(2008, 4, 25, 16, 22, 13, DateTimeKind.Utc), response.Registered);
+            Assert.AreEqual(new DateTime(2014, 4, 25, 23, 59, 59, DateTimeKind.Utc), response.Expiration);
 
              // Registrant Details
             Assert.AreEqual("H1323241", response.Registrant.RegistryId);

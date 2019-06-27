@@ -48,9 +48,9 @@ namespace Whois.Parsing.Whois.Centralnic.Com.UsCom
             Assert.AreEqual("college.us.com", response.DomainName);
             Assert.AreEqual("CNIC-DO275307", response.RegistryDomainId);
 
-            Assert.AreEqual(new DateTime(2012, 1, 16, 16, 27, 26), response.Updated);
-            Assert.AreEqual(new DateTime(2003, 10, 20, 11, 3, 28), response.Registered);
-            Assert.AreEqual(new DateTime(2014, 10, 21, 0, 59, 59), response.Expiration);
+            Assert.AreEqual(new DateTime(2012, 1, 16, 16, 27, 26, DateTimeKind.Utc), response.Updated);
+            Assert.AreEqual(new DateTime(2003, 10, 20, 10, 3, 28, DateTimeKind.Utc), response.Registered);
+            Assert.AreEqual(new DateTime(2014, 10, 20, 23, 59, 59, DateTimeKind.Utc), response.Expiration);
 
              // Registrant Details
             Assert.AreEqual("H1044037", response.Registrant.RegistryId);

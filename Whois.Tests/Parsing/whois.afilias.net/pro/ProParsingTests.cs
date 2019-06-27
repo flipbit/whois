@@ -47,9 +47,9 @@ namespace Whois.Parsing.Whois.Afilias.Net.Pro
             Assert.AreEqual("MarkMonitor Inc.", response.Registrar.Name);
             Assert.AreEqual("http://www.markmonitor.com", response.Registrar.Url);
 
-            Assert.AreEqual(new DateTime(2016, 2, 1, 15, 44, 3), response.Updated);
-            Assert.AreEqual(new DateTime(2008, 7, 22, 1, 0, 0), response.Registered);
-            Assert.AreEqual(new DateTime(2016, 9, 8, 1, 0, 0), response.Expiration);
+            Assert.AreEqual(new DateTime(2016, 2, 1, 15, 44, 3, DateTimeKind.Utc), response.Updated);
+            Assert.AreEqual(new DateTime(2008, 7, 22, 0, 0, 0, DateTimeKind.Utc), response.Registered);
+            Assert.AreEqual(new DateTime(2016, 9, 8, 0, 0, 0, DateTimeKind.Utc), response.Expiration);
             Assert.AreEqual("mmr-2383", response.Registrant.RegistryId);
             Assert.AreEqual("DNS Admin", response.Registrant.Name);
             Assert.AreEqual("Google Inc.", response.Registrant.Organization);

@@ -53,9 +53,9 @@ namespace Whois.Parsing.Whois.Centralnic.Com.BrCom
             Assert.AreEqual("http://www.networksolutions.com/", response.Registrar.Url);
             Assert.AreEqual("+1.9046806600", response.Registrar.AbuseTelephoneNumber);
 
-            Assert.AreEqual(new DateTime(2012, 1, 16, 16, 23, 18), response.Updated);
-            Assert.AreEqual(new DateTime(2009, 4, 17, 13, 22, 49), response.Registered);
-            Assert.AreEqual(new DateTime(2017, 4, 18, 0, 59, 59), response.Expiration);
+            Assert.AreEqual(new DateTime(2012, 1, 16, 16, 23, 18, DateTimeKind.Utc), response.Updated);
+            Assert.AreEqual(new DateTime(2009, 4, 17, 12, 22, 49, DateTimeKind.Utc), response.Registered);
+            Assert.AreEqual(new DateTime(2017, 4, 17, 23, 59, 59, DateTimeKind.Utc), response.Expiration);
 
              // Registrant Details
             Assert.AreEqual("36542943", response.Registrant.RegistryId);

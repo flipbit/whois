@@ -54,9 +54,9 @@ namespace Whois.Parsing.Whois.Centralnic.Com.UkNet
             Assert.AreEqual("http://www.123-reg.co.uk/domain-names/", response.Registrar.Url);
             Assert.AreEqual("0845 859 0018", response.Registrar.AbuseTelephoneNumber);
 
-            Assert.AreEqual(new DateTime(2013, 4, 3, 13, 59, 45), response.Updated);
-            Assert.AreEqual(new DateTime(2006, 2, 28, 12, 17, 1), response.Registered);
-            Assert.AreEqual(new DateTime(2014, 2, 28, 23, 59, 59), response.Expiration);
+            Assert.AreEqual(new DateTime(2013, 4, 3, 12, 59, 45, DateTimeKind.Utc), response.Updated);
+            Assert.AreEqual(new DateTime(2006, 2, 28, 12, 17, 1, DateTimeKind.Utc), response.Registered);
+            Assert.AreEqual(new DateTime(2014, 2, 28, 23, 59, 59, DateTimeKind.Utc), response.Expiration);
 
              // Registrant Details
             Assert.AreEqual("MNT60424953041", response.Registrant.RegistryId);

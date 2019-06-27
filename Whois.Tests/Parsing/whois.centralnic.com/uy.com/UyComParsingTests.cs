@@ -102,9 +102,9 @@ namespace Whois.Parsing.Whois.Centralnic.Com.UyCom
             Assert.AreEqual("http://www.123-reg.co.uk/domain-names/", response.Registrar.Url);
             Assert.AreEqual("0845 859 0018", response.Registrar.AbuseTelephoneNumber);
 
-            Assert.AreEqual(new DateTime(2013, 7, 10, 1, 27, 20), response.Updated);
-            Assert.AreEqual(new DateTime(2007, 7, 12, 14, 49, 25), response.Registered);
-            Assert.AreEqual(new DateTime(2015, 7, 13, 0, 59, 59), response.Expiration);
+            Assert.AreEqual(new DateTime(2013, 7, 10, 0, 27, 20, DateTimeKind.Utc), response.Updated);
+            Assert.AreEqual(new DateTime(2007, 7, 12, 13, 49, 25, DateTimeKind.Utc), response.Registered);
+            Assert.AreEqual(new DateTime(2015, 7, 12, 23, 59, 59, DateTimeKind.Utc), response.Expiration);
 
              // Registrant Details
             Assert.AreEqual("MNT32524959440", response.Registrant.RegistryId);

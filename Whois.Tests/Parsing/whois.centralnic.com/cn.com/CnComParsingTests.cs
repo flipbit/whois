@@ -53,9 +53,9 @@ namespace Whois.Parsing.Whois.Centralnic.Com.CnCom
             Assert.AreEqual("http://www.united-domains.de", response.Registrar.Url);
             Assert.AreEqual("+498151368670", response.Registrar.AbuseTelephoneNumber);
 
-            Assert.AreEqual(new DateTime(2013, 11, 26, 12, 16, 45), response.Updated);
-            Assert.AreEqual(new DateTime(2005, 11, 23, 15, 44, 3), response.Registered);
-            Assert.AreEqual(new DateTime(2014, 11, 23, 23, 59, 59), response.Expiration);
+            Assert.AreEqual(new DateTime(2013, 11, 26, 12, 16, 45, DateTimeKind.Utc), response.Updated);
+            Assert.AreEqual(new DateTime(2005, 11, 23, 15, 44, 3, DateTimeKind.Utc), response.Registered);
+            Assert.AreEqual(new DateTime(2014, 11, 23, 23, 59, 59, DateTimeKind.Utc), response.Expiration);
 
              // Registrant Details
             Assert.AreEqual("H1062079", response.Registrant.RegistryId);

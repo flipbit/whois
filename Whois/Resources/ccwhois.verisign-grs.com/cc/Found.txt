@@ -20,6 +20,6 @@ hint: Domain Name
    Referral URL: { Registrar.Url : ToLower, EOL }
    Name Server: { NameServers ? : IsDomainName, Repeating, EOL }
    Status: { DomainStatus ? : Repeating, EOL }
-   Updated Date: { Updated ? : ToDateTime("dd-MMM-yyyy"), EOL }
-   Creation Date: { Registered ? : ToDateTime("dd-MMM-yyyy"), EOL }
-   Expiration Date: { Expiration ? : ToDateTime("dd-MMM-yyyy"), EOL }
+   Updated Date: { Updated ? : ToDateTimeUtc("dd-MMM-yyyy"), EOL }
+   Creation Date: { Registered ? : ToDateTimeUtc("dd-MMM-yyyy"), EOL }
+   Expiration Date: { Expiration ? : ToDateTimeUtc("dd-MMM-yyyy"), EOL }

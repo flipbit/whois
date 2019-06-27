@@ -53,9 +53,9 @@ namespace Whois.Parsing.Whois.Centralnic.Com.UkCom
             Assert.AreEqual("http://www.e-velocity.co.uk/", response.Registrar.Url);
             Assert.AreEqual("01273 684969", response.Registrar.AbuseTelephoneNumber);
 
-            Assert.AreEqual(new DateTime(2013, 9, 3, 11, 36, 47), response.Updated);
-            Assert.AreEqual(new DateTime(2001, 8, 31, 12, 50, 57), response.Registered);
-            Assert.AreEqual(new DateTime(2015, 9, 1, 0, 59, 59), response.Expiration);
+            Assert.AreEqual(new DateTime(2013, 9, 3, 10, 36, 47, DateTimeKind.Utc), response.Updated);
+            Assert.AreEqual(new DateTime(2001, 8, 31, 11, 50, 57, DateTimeKind.Utc), response.Registered);
+            Assert.AreEqual(new DateTime(2015, 8, 31, 23, 59, 59, DateTimeKind.Utc), response.Expiration);
 
              // Registrant Details
             Assert.AreEqual("H1045821", response.Registrant.RegistryId);

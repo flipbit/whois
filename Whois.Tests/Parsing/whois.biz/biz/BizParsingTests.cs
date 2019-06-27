@@ -52,9 +52,9 @@ namespace Whois.Parsing.Whois.Biz.Biz
             Assert.AreEqual("abusecomplaints@markmonitor.com", response.Registrar.AbuseEmail);
             Assert.AreEqual("+1.2083895740", response.Registrar.AbuseTelephoneNumber);
 
-            Assert.AreEqual(new DateTime(2017, 2, 22, 10, 27, 42), response.Updated);
-            Assert.AreEqual(new DateTime(2002, 3, 27, 16, 3, 44), response.Registered);
-            Assert.AreEqual(new DateTime(2018, 3, 27, 0, 59, 59), response.Expiration);
+            Assert.AreEqual(new DateTime(2017, 2, 22, 10, 27, 42, DateTimeKind.Utc), response.Updated);
+            Assert.AreEqual(new DateTime(2002, 3, 27, 16, 3, 44, DateTimeKind.Utc), response.Registered);
+            Assert.AreEqual(new DateTime(2018, 3, 26, 23, 59, 59, DateTimeKind.Utc), response.Expiration);
 
              // Registrant Details
             Assert.AreEqual("C42709140-BIZ", response.Registrant.RegistryId);

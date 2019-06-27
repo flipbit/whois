@@ -48,9 +48,9 @@ namespace Whois.Parsing.Whois.Centralnic.Com.RuCom
             Assert.AreEqual("srk.ru.com", response.DomainName);
             Assert.AreEqual("CNIC-DO450826", response.RegistryDomainId);
 
-            Assert.AreEqual(new DateTime(2012, 7, 10, 9, 16, 19), response.Updated);
-            Assert.AreEqual(new DateTime(2006, 7, 31, 11, 6, 4), response.Registered);
-            Assert.AreEqual(new DateTime(2014, 8, 1, 0, 59, 59), response.Expiration);
+            Assert.AreEqual(new DateTime(2012, 7, 10, 8, 16, 19, DateTimeKind.Utc), response.Updated);
+            Assert.AreEqual(new DateTime(2006, 7, 31, 10, 6, 4, DateTimeKind.Utc), response.Registered);
+            Assert.AreEqual(new DateTime(2014, 7, 31, 23, 59, 59, DateTimeKind.Utc), response.Expiration);
 
              // Registrant Details
             Assert.AreEqual("H1037013", response.Registrant.RegistryId);

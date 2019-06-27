@@ -71,9 +71,9 @@ namespace Whois.Parsing.Ccwhois.Verisign.Grs.Com.Cc
             Assert.AreEqual("abusecomplaints@markmonitor.com", response.Registrar.AbuseEmail);
             Assert.AreEqual("+1.2083895740", response.Registrar.AbuseTelephoneNumber);
 
-            Assert.AreEqual(new DateTime(2017, 5, 6, 10, 28, 40), response.Updated);
-            Assert.AreEqual(new DateTime(1999, 6, 7, 5, 0, 0), response.Registered);
-            Assert.AreEqual(new DateTime(2018, 6, 7, 5, 0, 0), response.Expiration);
+            Assert.AreEqual(new DateTime(2017, 5, 6, 9, 28, 40, DateTimeKind.Utc), response.Updated);
+            Assert.AreEqual(new DateTime(1999, 6, 7, 4, 0, 0, DateTimeKind.Utc), response.Registered);
+            Assert.AreEqual(new DateTime(2018, 6, 7, 4, 0, 0, DateTimeKind.Utc), response.Expiration);
 
             Assert.AreEqual(4, response.NameServers.Count);
             Assert.AreEqual("ns1.google.com", response.NameServers[0]);

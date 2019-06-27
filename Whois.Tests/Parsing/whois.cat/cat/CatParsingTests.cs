@@ -45,14 +45,14 @@ namespace Whois.Parsing.Whois.Cat.Cat
             Assert.AreEqual(WhoisResponseStatus.Found, response.Status);
 
             Assert.AreEqual(0, response.ParsingErrors);
-            Assert.AreEqual("generic/tld/Found001", response.TemplateName);
+            Assert.AreEqual("whois.cat/cat/Found", response.TemplateName);
 
             Assert.AreEqual("abril.cat", response.DomainName);
             Assert.AreEqual("REG-D42136", response.RegistryDomainId);
 
-            Assert.AreEqual(new DateTime(2011, 1, 12, 16, 50, 9), response.Updated);
-            Assert.AreEqual(new DateTime(2006, 4, 22, 10, 48, 30), response.Registered);
-            Assert.AreEqual(new DateTime(2011, 4, 22, 10, 48, 30), response.Expiration);
+            Assert.AreEqual(new DateTime(2011, 1, 12, 16, 50, 9, DateTimeKind.Utc), response.Updated);
+            Assert.AreEqual(new DateTime(2006, 4, 22, 09, 48, 30, DateTimeKind.Utc), response.Registered);
+            Assert.AreEqual(new DateTime(2011, 4, 22, 09, 48, 30, DateTimeKind.Utc), response.Expiration);
 
              // Registrant Details
             Assert.AreEqual("edig-001455", response.Registrant.RegistryId);
@@ -138,14 +138,14 @@ namespace Whois.Parsing.Whois.Cat.Cat
             Assert.AreEqual(WhoisResponseStatus.Found, response.Status);
 
             Assert.AreEqual(0, response.ParsingErrors);
-            Assert.AreEqual("generic/tld/Found001", response.TemplateName);
+            Assert.AreEqual("whois.cat/cat/Found", response.TemplateName);
 
             Assert.AreEqual("gencat.cat", response.DomainName);
             Assert.AreEqual("REG-D3862", response.RegistryDomainId);
 
-            Assert.AreEqual(new DateTime(2009, 3, 31, 17, 22, 42), response.Updated);
-            Assert.AreEqual(new DateTime(2006, 2, 14, 9, 12, 37), response.Registered);
-            Assert.AreEqual(new DateTime(2010, 2, 14, 9, 12, 37), response.Expiration);
+            Assert.AreEqual(new DateTime(2009, 3, 31, 16, 22, 42, DateTimeKind.Utc), response.Updated);
+            Assert.AreEqual(new DateTime(2006, 2, 14, 9, 12, 37, DateTimeKind.Utc), response.Registered);
+            Assert.AreEqual(new DateTime(2010, 2, 14, 9, 12, 37, DateTimeKind.Utc), response.Expiration);
 
              // Registrant Details
             Assert.AreEqual("NOM_P_15605701", response.Registrant.RegistryId);
@@ -251,14 +251,14 @@ namespace Whois.Parsing.Whois.Cat.Cat
             Assert.AreEqual(WhoisResponseStatus.Found, response.Status);
 
             Assert.AreEqual(0, response.ParsingErrors);
-            Assert.AreEqual("generic/tld/Found001", response.TemplateName);
+            Assert.AreEqual("whois.cat/cat/Found", response.TemplateName);
 
             Assert.AreEqual("gencat.cat", response.DomainName);
             Assert.AreEqual("REG-D3862", response.RegistryDomainId);
 
-            Assert.AreEqual(new DateTime(2013, 11, 27, 17, 30, 59), response.Updated);
-            Assert.AreEqual(new DateTime(2006, 2, 14, 9, 12, 37), response.Registered);
-            Assert.AreEqual(new DateTime(2020, 2, 14, 9, 12, 37), response.Expiration);
+            Assert.AreEqual(new DateTime(2013, 11, 27, 17, 30, 59, DateTimeKind.Utc), response.Updated);
+            Assert.AreEqual(new DateTime(2006, 2, 14, 9, 12, 37, DateTimeKind.Utc), response.Registered);
+            Assert.AreEqual(new DateTime(2020, 2, 14, 9, 12, 37, DateTimeKind.Utc), response.Expiration);
 
              // Registrant Details
             Assert.AreEqual("CD126562321349", response.Registrant.RegistryId);

@@ -96,9 +96,9 @@ namespace Whois.Parsing.Whois.Centralnic.Com.HuCom
             Assert.AreEqual("http://www.101domain.com", response.Registrar.Url);
             Assert.AreEqual("+1.7604448674", response.Registrar.AbuseTelephoneNumber);
 
-            Assert.AreEqual(new DateTime(2014, 2, 11, 0, 16, 13), response.Updated);
-            Assert.AreEqual(new DateTime(2012, 11, 28, 17, 46, 3), response.Registered);
-            Assert.AreEqual(new DateTime(2013, 11, 28, 23, 59, 59), response.Expiration);
+            Assert.AreEqual(new DateTime(2014, 2, 11, 0, 16, 13, DateTimeKind.Utc), response.Updated);
+            Assert.AreEqual(new DateTime(2012, 11, 28, 17, 46, 3, DateTimeKind.Utc), response.Registered);
+            Assert.AreEqual(new DateTime(2013, 11, 28, 23, 59, 59, DateTimeKind.Utc), response.Expiration);
 
              // Registrant Details
             Assert.AreEqual("RWG000000004273D", response.Registrant.RegistryId);

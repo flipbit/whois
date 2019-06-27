@@ -51,9 +51,9 @@ namespace Whois.Parsing.Whois.Centralnic.Com.GbCom
             Assert.AreEqual("Wind Internethaus GMBH", response.Registrar.Name);
             Assert.AreEqual("+49.77214070740", response.Registrar.AbuseTelephoneNumber);
 
-            Assert.AreEqual(new DateTime(2014, 2, 12, 9, 45, 17), response.Updated);
-            Assert.AreEqual(new DateTime(2006, 4, 23, 7, 26, 11), response.Registered);
-            Assert.AreEqual(new DateTime(2016, 4, 24, 0, 59, 59), response.Expiration);
+            Assert.AreEqual(new DateTime(2014, 2, 12, 9, 45, 17, DateTimeKind.Utc), response.Updated);
+            Assert.AreEqual(new DateTime(2006, 4, 23, 6, 26, 11, DateTimeKind.Utc), response.Registered);
+            Assert.AreEqual(new DateTime(2016, 4, 23, 23, 59, 59, DateTimeKind.Utc), response.Expiration);
 
              // Registrant Details
             Assert.AreEqual("H1049605", response.Registrant.RegistryId);

@@ -52,9 +52,9 @@ namespace Whois.Parsing.Whois.Centralnic.Com.EuCom
             Assert.AreEqual("iTransact Ltd", response.Registrar.Name);
             Assert.AreEqual("01223 700322", response.Registrar.AbuseTelephoneNumber);
 
-            Assert.AreEqual(new DateTime(2013, 8, 15, 12, 25, 43), response.Updated);
-            Assert.AreEqual(new DateTime(2001, 8, 14, 11, 14, 41), response.Registered);
-            Assert.AreEqual(new DateTime(2015, 8, 15, 0, 59, 59), response.Expiration);
+            Assert.AreEqual(new DateTime(2013, 8, 15, 11, 25, 43, DateTimeKind.Utc), response.Updated);
+            Assert.AreEqual(new DateTime(2001, 8, 14, 10, 14, 41, DateTimeKind.Utc), response.Registered);
+            Assert.AreEqual(new DateTime(2015, 8, 14, 23, 59, 59, DateTimeKind.Utc), response.Expiration);
 
              // Registrant Details
             Assert.AreEqual("H1045382", response.Registrant.RegistryId);

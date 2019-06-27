@@ -53,9 +53,9 @@ namespace Whois.Parsing.Whois.Centralnic.Com.SeCom
             Assert.AreEqual("http://www.internetx.de/", response.Registrar.Url);
             Assert.AreEqual("+49-941-595590", response.Registrar.AbuseTelephoneNumber);
 
-            Assert.AreEqual(new DateTime(2013, 6, 3, 11, 33, 46), response.Updated);
-            Assert.AreEqual(new DateTime(2008, 5, 10, 6, 17, 32), response.Registered);
-            Assert.AreEqual(new DateTime(2014, 5, 11, 0, 59, 59), response.Expiration);
+            Assert.AreEqual(new DateTime(2013, 6, 3, 10, 33, 46, DateTimeKind.Utc), response.Updated);
+            Assert.AreEqual(new DateTime(2008, 5, 10, 5, 17, 32, DateTimeKind.Utc), response.Registered);
+            Assert.AreEqual(new DateTime(2014, 5, 10, 23, 59, 59, DateTimeKind.Utc), response.Expiration);
 
              // Registrant Details
             Assert.AreEqual("INX-10599082com", response.Registrant.RegistryId);

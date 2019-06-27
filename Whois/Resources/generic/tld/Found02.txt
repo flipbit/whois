@@ -26,15 +26,15 @@ Domain ID: { RegistryDomainId ? : EOL }
 #
 # Registration, Updated and Expiration Dates
 #
-Creation Date: { Registered? : SubstringBefore("UTC"), ToDateTime("yyyy-MM-ddTHH:mm:ssZ", "dd-MMM-yyyy hh:MM:ss"), EOL }
-Created On: { Registered ? : SubstringBefore("UTC"), ToDateTime("yyyy-MM-ddTHH:mm:ssZ", "dd-MMM-yyyy hh:MM:ss"), EOL }
+Creation Date: { Registered? : SubstringBefore("UTC"), ToDateTimeUtc("yyyy-MM-ddTHH:mm:ssZ", "dd-MMM-yyyy hh:MM:ss"), EOL }
+Created On: { Registered ? : SubstringBefore("UTC"), ToDateTimeUtc("yyyy-MM-ddTHH:mm:ssZ", "dd-MMM-yyyy hh:MM:ss"), EOL }
 
-Updated Date: { Updated ? : SubstringBefore("UTC"), ToDateTime("yyyy-MM-ddTHH:mm:ssZ", "dd-MMM-yyyy hh:MM:ss"), EOL }
-Last Updated On: { Updated ? : SubstringBefore("UTC"), ToDateTime("yyyy-MM-ddTHH:mm:ssZ", "dd-MMM-yyyy hh:MM:ss"), EOL }
+Updated Date: { Updated ? : SubstringBefore("UTC"), ToDateTimeUtc("yyyy-MM-ddTHH:mm:ssZ", "dd-MMM-yyyy hh:MM:ss"), EOL }
+Last Updated On: { Updated ? : SubstringBefore("UTC"), ToDateTimeUtc("yyyy-MM-ddTHH:mm:ssZ", "dd-MMM-yyyy hh:MM:ss"), EOL }
 
-Registry Expiry Date: { Expiration ? : SubstringBefore("UTC"), ToDateTime("yyyy-MM-ddTHH:mm:ssZ", "dd-MMM-yyyy hh:MM:ss"), EOL }
-Expiration Date: { Expiration ? : SubstringBefore("UTC"), ToDateTime("yyyy-MM-ddTHH:mm:ssZ", "dd-MMM-yyyy hh:MM:ss"), EOL }
-Registrar Registration Expiration Date: { Expiration ? : ToDateTime("yyyy-MM-ddTHH:mm:ssZ"), EOL }
+Registry Expiry Date: { Expiration ? : SubstringBefore("UTC"), ToDateTimeUtc("yyyy-MM-ddTHH:mm:ssZ", "dd-MMM-yyyy hh:MM:ss"), EOL }
+Expiration Date: { Expiration ? : SubstringBefore("UTC"), ToDateTimeUtc("yyyy-MM-ddTHH:mm:ssZ", "dd-MMM-yyyy hh:MM:ss"), EOL }
+Registrar Registration Expiration Date: { Expiration ? : ToDateTimeUtc("yyyy-MM-ddTHH:mm:ssZ"), EOL }
 
 #
 # Trademark Info

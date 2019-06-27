@@ -33,9 +33,9 @@ namespace Whois.Parsing.Coza.Whois.Registry.Net.Za.CoZa
             Assert.AreEqual("Lexsynergy Limited", response.Registrar.Name);
             Assert.AreEqual("coza-whois12.dns.net.za", response.Registrar.WhoisServerUrl);
 
-            Assert.AreEqual(new DateTime(2016, 12, 1, 23, 41, 21), response.Updated);
-            Assert.AreEqual(new DateTime(1994, 12, 31, 22, 0, 0), response.Registered);
-            Assert.AreEqual(new DateTime(2017, 12, 31, 22, 0, 0), response.Expiration);
+            Assert.AreEqual(new DateTime(2016, 12, 1, 23, 41, 21, DateTimeKind.Utc), response.Updated);
+            Assert.AreEqual(new DateTime(1994, 12, 31, 22, 0, 0, DateTimeKind.Utc), response.Registered);
+            Assert.AreEqual(new DateTime(2017, 12, 31, 22, 0, 0, DateTimeKind.Utc), response.Expiration);
             Assert.AreEqual("FirstRand Bank Limited", response.Registrant.Name);
             Assert.AreEqual("FirstRand Bank Limited", response.Registrant.Organization);
 
@@ -139,9 +139,9 @@ namespace Whois.Parsing.Coza.Whois.Registry.Net.Za.CoZa
             Assert.AreEqual("MarkMonitor", response.Registrar.Name);
             Assert.AreEqual("coza-whois12.dns.net.za", response.Registrar.WhoisServerUrl);
 
-            Assert.AreEqual(new DateTime(2016, 9, 24, 17, 20, 9), response.Updated);
-            Assert.AreEqual(new DateTime(2001, 6, 25, 21, 37, 59), response.Registered);
-            Assert.AreEqual(new DateTime(2017, 6, 25, 21, 37, 59), response.Expiration);
+            Assert.AreEqual(new DateTime(2016, 9, 24, 16, 20, 9, DateTimeKind.Utc), response.Updated);
+            Assert.AreEqual(new DateTime(2001, 6, 25, 20, 37, 59, DateTimeKind.Utc), response.Registered);
+            Assert.AreEqual(new DateTime(2017, 6, 25, 20, 37, 59, DateTimeKind.Utc), response.Expiration);
             Assert.AreEqual("Google Inc.", response.Registrant.Name);
 
             Assert.AreEqual(5, response.Registrant.Address.Count);

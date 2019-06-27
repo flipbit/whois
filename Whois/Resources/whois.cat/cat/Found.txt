@@ -1,44 +1,26 @@
 ---
 #
-# Generic TLD Pattern 
+# .cat TLD Pattern 
 #
-name: generic/tld/Found001
+name: whois.cat/cat/Found
 
-# Use this template for queries to servers:
-tag: whois.afilias.net
-tag: whois.afilias-grs.info
-tag: coza-whois.registry.net.za
-
-# Use this template for queries to TLDs:
-tag: co.za
-tag: info
-tag: pro
-tag: gi
-tag: lc
-tag: mn
-tag: sc
-tag: vc
-
-# Use this template for catch-all parsing:
-tag: catch-all
+# Use this template for queries to whois.cat:
+tag: whois.cat
+tag: cat
 
 outOfOrder: true
 
 # Set query response type:
 set: Status = Found
 ---
+
 Domain Name:{ DomainName : Trim, IsDomainName, ToLower, EOL }
 Domain ID:{ RegistryDomainId ? : Trim, EOL }
-Creation Date:{ Registered? : Trim, SubstringBefore("UTC"), ToDateTimeUtc("yyyy-MM-ddTHH:mm:ssZ", "dd-MMM-yyyy hh:MM:ss"), EOL }
-Updated Date:{ Updated ? : Trim, SubstringBefore("UTC"), ToDateTimeUtc("yyyy-MM-ddTHH:mm:ssZ", "dd-MMM-yyyy hh:MM:ss"), EOL }
-Registry Expiry Date:{ Expiration ? : Trim, SubstringBefore("UTC"), ToDateTimeUtc("yyyy-MM-ddTHH:mm:ssZ", "dd-MMM-yyyy hh:MM:ss"), EOL }
-Last Updated On:{ Updated ? : Trim, SubstringBefore("UTC"), SubstringBefore("GMT"), ToDateTimeUtc("yyyy-MM-ddTHH:mm:ssZ", "dd-MMM-yyyy hh:MM:ss"), EOL }
-Created On:{ Registered ? : Trim, SubstringBefore("UTC"), ToDateTimeUtc("yyyy-MM-ddTHH:mm:ssZ", "dd-MMM-yyyy hh:MM:ss"), EOL }
-Expiration Date:{ Expiration ? : Trim, SubstringBefore("UTC"), ToDateTimeUtc("yyyy-MM-ddTHH:mm:ssZ", "dd-MMM-yyyy hh:MM:ss"), EOL }
-Trademark Name:{ Trademark.Name ? : Trim, EOL }
-Trademark Date:{ Trademark.Date ? : Trim, ToDateTime("yyyy-MM-dd"), EOL }
-Trademark Country:{ Trademark.Country ? : Trim, EOL }
-Trademark Number:{ Trademark.Number ? : Trim, EOL }
+
+Last Updated On: { Updated ? : SubstringBefore("GMT"), ToDateTimeUtc("dd-MMM-yyyy HH:mm:ss"), EOL }
+Created On: { Registered ? : SubstringBefore("GMT"), ToDateTimeUtc("dd-MMM-yyyy HH:mm:ss"), EOL }
+Expiration Date: { Expiration ? : SubstringBefore("GMT"), ToDateTimeUtc("dd-MMM-yyyy HH:mm:ss"), EOL }
+
 Registrar:{ Registrar.Name ? : Trim, EOL }
 Registrar IANA ID:{ Registrar.IanaId ? : Trim, IsNumeric, EOL }
 Sponsoring Registrar:{ Registrar.Name ? : Trim, EOL }

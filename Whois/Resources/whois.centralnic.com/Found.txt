@@ -53,9 +53,9 @@ Domain Name:{ DomainName : IsDomainName, ToLower, EOL }
 #
 # Registration, Updated and Expiration Dates
 #
-Created On:{ Registered ? : ToDateTime("yyyy-MM-ddTHH:mm:ssZ"), EOL }
-Last Updated On:{ Updated ? : ToDateTime("yyyy-MM-ddTHH:mm:ssZ"), EOL }
-Expiration Date:{ Expiration ? : ToDateTime("yyyy-MM-ddTHH:mm:ssZ"), EOL }
+Created On:{ Registered ? : ToDateTimeUtc("yyyy-MM-ddTHH:mm:ss.fZ"), EOL }
+Last Updated On:{ Updated ? : ToDateTimeUtc("yyyy-MM-ddTHH:mm:ss.fZ"), EOL }
+Expiration Date:{ Expiration ? : ToDateTimeUtc("yyyy-MM-ddTHH:mm:ss.fZ"), EOL }
 
 #
 # Domain Info

@@ -53,9 +53,9 @@ namespace Whois.Parsing.Whois.Centralnic.Com.SaCom
             Assert.AreEqual("http://www.paragon.net.uk", response.Registrar.Url);
             Assert.AreEqual("020 3137 7651", response.Registrar.AbuseTelephoneNumber);
 
-            Assert.AreEqual(new DateTime(2013, 11, 2, 13, 42, 11), response.Updated);
-            Assert.AreEqual(new DateTime(2007, 9, 27, 19, 14, 53), response.Registered);
-            Assert.AreEqual(new DateTime(2014, 9, 28, 0, 59, 59), response.Expiration);
+            Assert.AreEqual(new DateTime(2013, 11, 2, 13, 42, 11, DateTimeKind.Utc), response.Updated);
+            Assert.AreEqual(new DateTime(2007, 9, 27, 18, 14, 53, DateTimeKind.Utc), response.Registered);
+            Assert.AreEqual(new DateTime(2014, 9, 27, 23, 59, 59, DateTimeKind.Utc), response.Expiration);
 
              // Registrant Details
             Assert.AreEqual("H323273", response.Registrant.RegistryId);

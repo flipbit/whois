@@ -15,9 +15,9 @@ set: Status = Found
    Registry Domain ID: { RegistryDomainId ? : IsNumeric, EOL }
    Registrar WHOIS Server: { Registrar.WhoisServerUrl ? : IsDomainName, ToLower, EOL }
    Registrar URL: { Registrar.Url ? : IsUrl, ToLower, EOL }
-   Updated Date: { Updated ? : ToDateTime("yyyy-MM-ddTHH:mm:ssZ"), EOL }
-   Creation Date: { Registered ? : ToDateTime("yyyy-MM-ddTHH:mm:ssZ"), EOL }
-   Registry Expiry Date: { Expiration ? : ToDateTime("yyyy-MM-ddTHH:mm:ssZ"), EOL }
+   Updated Date: { Updated ? : ToDateTimeUtc("yyyy-MM-ddTHH:mm:ssZ"), EOL }
+   Creation Date: { Registered ? : ToDateTimeUtc("yyyy-MM-ddTHH:mm:ssZ"), EOL }
+   Registry Expiry Date: { Expiration ? : ToDateTimeUtc("yyyy-MM-ddTHH:mm:ssZ"), EOL }
    Registrar: { Registrar.Name ? : EOL }
    Registrar IANA ID: { Registrar.IanaId ? : IsNumeric, EOL }
    Registrar Abuse Contact Email: { Registrar.AbuseEmail ? : IsEmail, EOL }

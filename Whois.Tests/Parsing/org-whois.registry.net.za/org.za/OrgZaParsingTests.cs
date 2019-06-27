@@ -52,9 +52,9 @@ namespace Whois.Parsing.Org.Whois.Registry.Net.Za.OrgZa
             Assert.AreEqual("ZA Central Registry", response.Registrar.Name);
             Assert.AreEqual("org-whois2.registry.net.za", response.Registrar.WhoisServerUrl);
 
-            Assert.AreEqual(new DateTime(2015, 2, 5, 8, 45, 51), response.Updated);
-            Assert.AreEqual(new DateTime(1997, 10, 3, 10, 46, 34), response.Registered);
-            Assert.AreEqual(new DateTime(2999, 12, 31, 21, 59, 59), response.Expiration);
+            Assert.AreEqual(new DateTime(2015, 2, 5, 8, 45, 51, DateTimeKind.Utc), response.Updated);
+            Assert.AreEqual(new DateTime(1997, 10, 3, 9, 46, 34, DateTimeKind.Utc), response.Registered);
+            Assert.AreEqual(new DateTime(2999, 12, 31, 21, 59, 59, DateTimeKind.Utc), response.Expiration);
 
              // Registrant Details
             Assert.AreEqual("jobuRant", response.Registrant.RegistryId);

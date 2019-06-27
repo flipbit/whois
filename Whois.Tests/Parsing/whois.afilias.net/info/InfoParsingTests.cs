@@ -46,9 +46,9 @@ namespace Whois.Parsing.Whois.Afilias.Net.Info
 
             Assert.AreEqual("MarkMonitor Inc. (R151-LRMS)", response.Registrar.Name);
 
-            Assert.AreEqual(new DateTime(2013, 6, 29, 10, 26, 18), response.Updated);
-            Assert.AreEqual(new DateTime(2001, 8, 1, 0, 57, 50), response.Registered);
-            Assert.AreEqual(new DateTime(2014, 8, 1, 0, 57, 50), response.Expiration);
+            Assert.AreEqual(new DateTime(2013, 6, 29, 09, 26, 18, DateTimeKind.Utc), response.Updated);
+            Assert.AreEqual(new DateTime(2001, 7, 31, 23, 57, 50, DateTimeKind.Utc), response.Registered);
+            Assert.AreEqual(new DateTime(2014, 7, 31, 23, 57, 50, DateTimeKind.Utc), response.Expiration);
             Assert.AreEqual("mmr-32097", response.Registrant.RegistryId);
             Assert.AreEqual("DNS Admin", response.Registrant.Name);
             Assert.AreEqual("Google Inc.", response.Registrant.Organization);

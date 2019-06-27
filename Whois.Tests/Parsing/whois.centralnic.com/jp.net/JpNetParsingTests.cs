@@ -53,9 +53,9 @@ namespace Whois.Parsing.Whois.Centralnic.Com.JpNet
             Assert.AreEqual("http://www.onamae.com", response.Registrar.Url);
             Assert.AreEqual("+81 3 5456 1120", response.Registrar.AbuseTelephoneNumber);
 
-            Assert.AreEqual(new DateTime(2013, 1, 24, 16, 57, 19), response.Updated);
-            Assert.AreEqual(new DateTime(2012, 3, 16, 11, 47, 23), response.Registered);
-            Assert.AreEqual(new DateTime(2018, 3, 16, 23, 59, 59), response.Expiration);
+            Assert.AreEqual(new DateTime(2013, 1, 24, 16, 57, 19, DateTimeKind.Utc), response.Updated);
+            Assert.AreEqual(new DateTime(2012, 3, 16, 11, 47, 23, DateTimeKind.Utc), response.Registered);
+            Assert.AreEqual(new DateTime(2018, 3, 16, 23, 59, 59, DateTimeKind.Utc), response.Expiration);
 
              // Registrant Details
             Assert.AreEqual("136151BCEFE", response.Registrant.RegistryId);

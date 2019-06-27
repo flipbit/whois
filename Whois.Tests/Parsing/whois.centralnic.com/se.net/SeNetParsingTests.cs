@@ -53,9 +53,9 @@ namespace Whois.Parsing.Whois.Centralnic.Com.SeNet
             Assert.AreEqual("1383", response.Registrar.IanaId);
             Assert.AreEqual("+34.871986600", response.Registrar.AbuseTelephoneNumber);
 
-            Assert.AreEqual(new DateTime(2013, 11, 28, 11, 49, 39), response.Updated);
-            Assert.AreEqual(new DateTime(2013, 11, 13, 10, 35, 3), response.Registered);
-            Assert.AreEqual(new DateTime(2014, 11, 13, 23, 59, 59), response.Expiration);
+            Assert.AreEqual(new DateTime(2013, 11, 28, 11, 49, 39, DateTimeKind.Utc), response.Updated);
+            Assert.AreEqual(new DateTime(2013, 11, 13, 10, 35, 3, DateTimeKind.Utc), response.Registered);
+            Assert.AreEqual(new DateTime(2014, 11, 13, 23, 59, 59, DateTimeKind.Utc), response.Expiration);
 
              // Registrant Details
             Assert.AreEqual("scipr000323588", response.Registrant.RegistryId);

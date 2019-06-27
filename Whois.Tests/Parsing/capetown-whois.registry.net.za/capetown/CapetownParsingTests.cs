@@ -45,9 +45,9 @@ namespace Whois.Parsing.Capetown.Whois.Registry.Net.Za.Capetown
 
             Assert.AreEqual("capetown-whois2.registry.net.za", response.Registrar.WhoisServerUrl);
 
-            Assert.AreEqual(new DateTime(2015, 5, 30, 10, 21, 0), response.Updated);
-            Assert.AreEqual(new DateTime(2015, 4, 1, 8, 41, 59), response.Registered);
-            Assert.AreEqual(new DateTime(2016, 4, 1, 8, 41, 59), response.Expiration);
+            Assert.AreEqual(new DateTime(2015, 5, 30, 9, 21, 0, DateTimeKind.Utc), response.Updated);
+            Assert.AreEqual(new DateTime(2015, 4, 1, 7, 41, 59, DateTimeKind.Utc), response.Registered);
+            Assert.AreEqual(new DateTime(2016, 4, 1, 7, 41, 59, DateTimeKind.Utc), response.Expiration);
             Assert.AreEqual("LEX-7IC-235J", response.Registrant.RegistryId);
             Assert.AreEqual("Lucky Mokgabudi Masilela", response.Registrant.Name);
             Assert.AreEqual("ZA Central Registry", response.Registrant.Organization);
@@ -110,6 +110,7 @@ namespace Whois.Parsing.Capetown.Whois.Registry.Net.Za.Capetown
 
             Assert.AreEqual(2, response.NameServers.Count);
             Assert.AreEqual("ns1.nic.capetown", response.NameServers[0]);
-            Assert.AreEqual("ns1.dnservices.co.za", response.NameServers[1]);        }
+            Assert.AreEqual("ns1.dnservices.co.za", response.NameServers[1]);
+        }
     }
 }

@@ -53,9 +53,9 @@ namespace Whois.Parsing.Whois.Centralnic.Com.AeOrg
             Assert.AreEqual("http://www.101domain.com", response.Registrar.Url);
             Assert.AreEqual("+1.7604448674", response.Registrar.AbuseTelephoneNumber);
 
-            Assert.AreEqual(new DateTime(2013, 6, 9, 1, 12, 37), response.Updated);
-            Assert.AreEqual(new DateTime(2012, 8, 3, 16, 37, 33), response.Registered);
-            Assert.AreEqual(new DateTime(2014, 8, 4, 0, 59, 59), response.Expiration);
+            Assert.AreEqual(new DateTime(2013, 6, 9, 0, 12, 37, DateTimeKind.Utc), response.Updated);
+            Assert.AreEqual(new DateTime(2012, 8, 3, 15, 37, 33, DateTimeKind.Utc), response.Registered);
+            Assert.AreEqual(new DateTime(2014, 8, 3, 23, 59, 59, DateTimeKind.Utc), response.Expiration);
 
              // Registrant Details
             Assert.AreEqual("RWG000000003DA24", response.Registrant.RegistryId);

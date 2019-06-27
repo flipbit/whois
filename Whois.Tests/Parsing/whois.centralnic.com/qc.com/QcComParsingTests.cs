@@ -53,9 +53,9 @@ namespace Whois.Parsing.Whois.Centralnic.Com.QcCom
             Assert.AreEqual("http://www.enom.com/", response.Registrar.Url);
             Assert.AreEqual("425-274-4500", response.Registrar.AbuseTelephoneNumber);
 
-            Assert.AreEqual(new DateTime(2012, 11, 23, 18, 3, 55), response.Updated);
-            Assert.AreEqual(new DateTime(2004, 10, 8, 3, 12, 49), response.Registered);
-            Assert.AreEqual(new DateTime(2014, 10, 9, 0, 59, 59), response.Expiration);
+            Assert.AreEqual(new DateTime(2012, 11, 23, 18, 3, 55, DateTimeKind.Utc), response.Updated);
+            Assert.AreEqual(new DateTime(2004, 10, 8, 2, 12, 49, DateTimeKind.Utc), response.Registered);
+            Assert.AreEqual(new DateTime(2014, 10, 8, 23, 59, 59, DateTimeKind.Utc), response.Expiration);
 
              // Registrant Details
             Assert.AreEqual("H1062277", response.Registrant.RegistryId);
