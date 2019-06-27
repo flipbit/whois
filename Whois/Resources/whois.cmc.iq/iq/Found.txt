@@ -11,40 +11,31 @@ tag: iq
 # Set query response type:
 set: Status = Found
 ---
-Domain Name: google.iq
-Domain ID: 895-CoCCA
-WHOIS Server: whois.cmc.iq
-Referral URL: 
-Updated Date: 2013-09-29T05:19:04.997Z
-Creation Date: 2010-10-03T21:00:00.000Z
-Registry Expiry Date: 2014-10-02T21:00:00.000Z
-Sponsoring Registrar: CMC Registrar
-Sponsoring Registrar IANA ID: 
-Domain Status: ok
+Domain Name: { DomainName : IsDomainName, ToLower, EOL }
+Domain ID: { RegistryDomainId ? : EOL }
+WHOIS Server: { Registrar.WhoisServerUrl ? : IsDomainName, ToLower, EOL }
+Referral URL: { Registrar.Url ? : IsUrl, ToLower, EOL }
+Updated Date: { Updated ? : ToDateTimeUtc("yyyy-MM-ddTHH:mm:ss.fffZ"), EOL }
+Creation Date: { Registered? : ToDateTimeUtc("yyyy-MM-ddTHH:mm:ss.fffZ"), EOL }
+Registry Expiry Date: { Expiration ? : ToDateTimeUtc("yyyy-MM-ddTHH:mm:ss.fffZ"), EOL }
+Sponsoring Registrar: { Registrar.Name ? : EOL }
+Sponsoring Registrar IANA ID: { Registrar.IanaId ? : IsNumeric, EOL }
+Domain Status: { DomainStatus ? : Repeating, SubstringBefore(' '), EOL }
 
-Registrant ID: 1443-cmc
-Registrant Name: Dr.akraym al-hak baker
-Registrant Organization: 
-Registrant Street: al-yarmuk
-Registrant City: baghdad
-Registrant State/Province: 
-Registrant Postal Code: 
-Registrant Country: IQ
-Registrant Phone: +964.7901790160
-Registrant Phone Ext: 
-Registrant Email: bl-yoban@yahoo.com
+Registrant ID: { Registrant.RegistryId ? : EOL }
+Registrant Name: { Registrant.Name ? : EOL }
+Registrant Organization:{ Registrant.Organization ? : EOL }
+Registrant Street: { Registrant.Address ? : IsNotEmpty, EOL }
+Registrant City: { Registrant.Address ? : IsNotEmpty, EOL }
+Registrant State/Province:{ Registrant.Address ? : IsNotEmpty, EOL }
+Registrant Postal Code:{ Registrant.Address ? : IsNotEmpty, EOL }
+Registrant Country: { Registrant.Address ? : IsNotEmpty, EOL }
+Registrant Phone: { Registrant.TelephoneNumber ? : IsPhoneNumber, EOL }
+Registrant Phone Ext:{ Registrant.TelephoneNumberExt ? : IsNumeric, EOL }
+Registrant Email: { Registrant.Email ? : IsEmail, EOL }
 
-Admin ID: 2640-cmc
+Admin ID: { AdminContact.RegistryId ? : EOL }
 
-Name Server: ns1.google.com
-Name Server: ns2.google.com
-Name Server: ns3.google.com
-Name Server: ns4.google.com
+Name Server: { NameServers ? : IsDomainName, ToLower, Repeating, EOL }
 
-DNSSEC: unsigned
-
-TERMS OF USE: You are not authorized to access or query our WHOIS database through the use of electronic processes that are high-volume and automated.  THis WHOIS database is provided by as a service to the internet community.
-
-The data is for information purposes only. We do not guarantee its accuracy. By submitting a WHOIS query, you agree to abide by the following terms of use: You agree that you may use this Data only for lawful purposes and that under no circumstances will you use this Data to: (1) allow, enable, or otherwise support the transmission of mass unsolicited, commercial advertising or solicitations via e-mail, telephone, or facsimile; or (2) enable high volume, automated, electronic processes that apply to CMC it's members (or CMC or member computer systems). The compilation, repackaging, dissemination or other use of this Data is expressly prohibited.
-
->>> Last update of WHOIS database: 2014-07-13T09:26:29.459Z <<<
+DNSSEC: { DnsSecStatus ? : EOL }
