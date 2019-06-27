@@ -66,11 +66,7 @@
     <None Remove="Resources\whois.cctld.uz\uz\NotFound.txt" />
     <None Remove="Resources\whois.cctld.uz\uz\Reserved.txt" />
     <None Remove="Resources\whois.cira.ca\ca\Found.txt" />
-    <None Remove="Resources\whois.cira.ca\ca\Invalid.txt" />
-    <None Remove="Resources\whois.cira.ca\ca\NotAssigned.txt" />
     <None Remove="Resources\whois.cira.ca\ca\NotFound.txt" />
-    <None Remove="Resources\whois.cira.ca\ca\PendingDelete.txt" />
-    <None Remove="Resources\whois.cira.ca\ca\Redemption.txt" />
     <None Remove="Resources\whois.cira.ca\ca\ToBeReleased.txt" />
     <None Remove="Resources\whois.cira.ca\ca\Unavailable.txt" />
     <None Remove="Resources\whois.cmc.iq\iq\Found.txt" />
@@ -578,11 +574,7 @@
     <EmbeddedResource Include="Resources\whois.centralnic.com\Found.txt" />
     <EmbeddedResource Include="Resources\whois.centralnic.com\NotFound.txt" />
     <EmbeddedResource Include="Resources\whois.cira.ca\ca\Found.txt" />
-    <EmbeddedResource Include="Resources\whois.cira.ca\ca\Invalid.txt" />
-    <EmbeddedResource Include="Resources\whois.cira.ca\ca\NotAssigned.txt" />
     <EmbeddedResource Include="Resources\whois.cira.ca\ca\NotFound.txt" />
-    <EmbeddedResource Include="Resources\whois.cira.ca\ca\PendingDelete.txt" />
-    <EmbeddedResource Include="Resources\whois.cira.ca\ca\Redemption.txt" />
     <EmbeddedResource Include="Resources\whois.cira.ca\ca\ToBeReleased.txt" />
     <EmbeddedResource Include="Resources\whois.cira.ca\ca\Unavailable.txt" />
     <EmbeddedResource Include="Resources\whois.cmc.iq\iq\Found.txt" />

@@ -1,5 +1,5 @@
 Domain name:           glu.ca
-Domain status:         redemption
+Domain status:         registered
 Creation date:         2004/10/30
 Expiry date:           2010/10/29
 Updated date:          2010/12/04
