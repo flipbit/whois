@@ -6,7 +6,6 @@ using Whois.Parsers;
 namespace Whois.Parsing.Whois.Cnnic.Cn.Cn
 {
     [TestFixture]
-    [Ignore("TODO")]
     public class CnParsingTests : ParsingTests
     {
         private WhoisParser parser;

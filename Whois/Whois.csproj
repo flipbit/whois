@@ -1037,7 +1037,7 @@
       <IncludeAssets>runtime; build; native; contentfiles; analyzers</IncludeAssets>
     </PackageReference>
     <PackageReference Include="Microsoft.CSharp" Version="4.5.0" />
-    <PackageReference Include="Tokenizer" Version="2.1.5" />
+    <PackageReference Include="Tokenizer" Version="2.1.6" />
   </ItemGroup>
 
   <PropertyGroup>
