@@ -1,3 +1,4 @@
+using System;
 using NUnit.Framework;
 using Whois.Models;
 using Whois.Parsers;
@@ -5,7 +6,6 @@ using Whois.Parsers;
 namespace Whois.Parsing.Whois.Co.Pl.CoPl
 {
     [TestFixture]
-    [Ignore("TODO")]
     public class CoPlParsingTests : ParsingTests
     {
         private WhoisParser parser;
@@ -26,6 +26,10 @@ namespace Whois.Parsing.Whois.Co.Pl.CoPl
 
             Assert.Greater(sample.Length, 0);
             Assert.AreEqual(WhoisResponseStatus.NotFound, response.Status);
+            Assert.AreEqual(0, response.ParsingErrors);
+            Assert.AreEqual("whois.co.pl/co.pl/NotFound", response.TemplateName);
+
+            Assert.AreEqual(1, response.FieldsParsed);
         }
 
         [Test]
@@ -36,6 +40,20 @@ namespace Whois.Parsing.Whois.Co.Pl.CoPl
 
             Assert.Greater(sample.Length, 0);
             Assert.AreEqual(WhoisResponseStatus.Found, response.Status);
+
+            Assert.AreEqual(0, response.ParsingErrors);
+            Assert.AreEqual("whois.co.pl/co.pl/Found", response.TemplateName);
+
+            Assert.AreEqual("coco.co.pl", response.DomainName);
+
+            Assert.AreEqual(new DateTime(2010, 06, 23, 09, 41, 50, DateTimeKind.Utc), response.Updated);
+
+            // Nameservers
+            Assert.AreEqual(2, response.NameServers.Count);
+            Assert.AreEqual("ns1.co.pl", response.NameServers[0]);
+            Assert.AreEqual("ns2.co.pl", response.NameServers[1]);
+
+            Assert.AreEqual(5, response.FieldsParsed);
         }
     }
 }
