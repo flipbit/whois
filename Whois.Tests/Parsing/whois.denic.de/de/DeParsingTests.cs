@@ -193,7 +193,7 @@ namespace Whois.Parsing.Whois.Denic.De.De
             Assert.AreEqual(WhoisResponseStatus.Failed, response.Status);
 
             Assert.AreEqual(0, response.ParsingErrors);
-            Assert.AreEqual("whois.denic.de/de/Failed", response.TemplateName);
+            Assert.AreEqual("whois.denic.de/de/Found", response.TemplateName);
 
             Assert.AreEqual("msens.de", response.DomainName);
 
@@ -251,7 +251,7 @@ namespace Whois.Parsing.Whois.Denic.De.De
             Assert.AreEqual(WhoisResponseStatus.Failed, response.Status);
 
             Assert.AreEqual(0, response.ParsingErrors);
-            Assert.AreEqual("whois.denic.de/de/Failed", response.TemplateName);
+            Assert.AreEqual("whois.denic.de/de/Found", response.TemplateName);
 
             Assert.AreEqual("tästdomain-failed-nserver.de", response.DomainName);
 

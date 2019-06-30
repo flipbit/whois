@@ -45,6 +45,10 @@ namespace Whois.Parsers
                 return WhoisResponseStatus.Reserved;
             }
 
+            if (status == "failed")
+            {
+                return WhoisResponseStatus.Failed;
+            }
 
 
             return existing;

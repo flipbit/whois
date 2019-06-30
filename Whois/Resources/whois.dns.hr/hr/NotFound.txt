@@ -10,5 +10,7 @@ tag: hr
 
 # Set query response type:
 set: Status = NotFound
+
+hint: no entries found
 ---
-%ERROR: no entries found
+%ERROR: no entries found{ Null }
