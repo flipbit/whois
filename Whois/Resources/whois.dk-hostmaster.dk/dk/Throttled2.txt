@@ -2,7 +2,7 @@
 #
 # .dk Parsing Template
 #
-name: whois.dk-hostmaster.dk/dk/Throttled
+name: whois.dk-hostmaster.dk/dk/Throttled2
 
 # Use this template for queries to whois.dk-hostmaster.dk:
 tag: whois.dk-hostmaster.dk
@@ -10,6 +10,7 @@ tag: dk
 
 # Set query response type:
 set: Status = Throttled
+
+hint:Too many connections.
 ---
-#response_throttled?
-  %s == true
+# Too many connections.{ Null }

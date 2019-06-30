@@ -35,6 +35,18 @@ namespace Whois.Parsers
                 }
             }
 
+            if (status == "Deactivated")
+            {
+                return WhoisResponseStatus.Deactivated;
+            }
+
+            if (status == "Reserved")
+            {
+                return WhoisResponseStatus.Reserved;
+            }
+
+
+
             return existing;
         }
     }

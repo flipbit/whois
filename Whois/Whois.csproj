@@ -88,11 +88,10 @@
     <None Remove="Resources\whois.denic.de\de\Invalid.txt" />
     <None Remove="Resources\whois.denic.de\de\NotFound.txt" />
     <None Remove="Resources\whois.denic.de\de\Throttled.txt" />
-    <None Remove="Resources\whois.dk-hostmaster.dk\dk\Deactivated.txt" />
     <None Remove="Resources\whois.dk-hostmaster.dk\dk\Found.txt" />
     <None Remove="Resources\whois.dk-hostmaster.dk\dk\NotFound.txt" />
-    <None Remove="Resources\whois.dk-hostmaster.dk\dk\Reserved.txt" />
-    <None Remove="Resources\whois.dk-hostmaster.dk\dk\Throttled.txt" />
+    <None Remove="Resources\whois.dk-hostmaster.dk\dk\Throttled1.txt" />
+    <None Remove="Resources\whois.dk-hostmaster.dk\dk\Throttled2.txt" />
     <None Remove="Resources\whois.dns.be\be\Blocked.txt" />
     <None Remove="Resources\whois.dns.be\be\Error.txt" />
     <None Remove="Resources\whois.dns.be\be\Found.txt" />
@@ -595,11 +594,10 @@
     <EmbeddedResource Include="Resources\whois.denic.de\de\Invalid.txt" />
     <EmbeddedResource Include="Resources\whois.denic.de\de\NotFound.txt" />
     <EmbeddedResource Include="Resources\whois.denic.de\de\Throttled.txt" />
-    <EmbeddedResource Include="Resources\whois.dk-hostmaster.dk\dk\Deactivated.txt" />
     <EmbeddedResource Include="Resources\whois.dk-hostmaster.dk\dk\Found.txt" />
     <EmbeddedResource Include="Resources\whois.dk-hostmaster.dk\dk\NotFound.txt" />
-    <EmbeddedResource Include="Resources\whois.dk-hostmaster.dk\dk\Reserved.txt" />
-    <EmbeddedResource Include="Resources\whois.dk-hostmaster.dk\dk\Throttled.txt" />
+    <EmbeddedResource Include="Resources\whois.dk-hostmaster.dk\dk\Throttled2.txt" />
+    <EmbeddedResource Include="Resources\whois.dk-hostmaster.dk\dk\Throttled1.txt" />
     <EmbeddedResource Include="Resources\whois.dns.be\be\Blocked.txt" />
     <EmbeddedResource Include="Resources\whois.dns.be\be\Error.txt" />
     <EmbeddedResource Include="Resources\whois.dns.be\be\Found.txt" />

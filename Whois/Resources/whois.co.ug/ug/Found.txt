@@ -8,6 +8,7 @@ name: whois.co.ug/ug/Found
 tag: whois.co.ug
 tag: ug
 
+# End tokens on new lines
 terminateOnNewLine: true
 
 # Set query response type:

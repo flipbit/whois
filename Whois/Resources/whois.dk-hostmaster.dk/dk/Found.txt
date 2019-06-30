@@ -8,53 +8,34 @@ name: whois.dk-hostmaster.dk/dk/Found
 tag: whois.dk-hostmaster.dk
 tag: dk
 
+# End tokens on new lines
+terminateOnNewLine: true
+
 # Set query response type:
 set: Status = Found
 ---
-# Hello 79.3.208.223. Your session has been logged.
-#
-# Copyright (c) 2002 - 2010 by DK Hostmaster A/S
-# 
-# The data in the DK Whois database is provided by DK Hostmaster A/S
-# for information purposes only, and to assist persons in obtaining
-# information about or related to a domain name registration record.
-# We do not guarantee its accuracy. We will reserve the right to remove
-# access for entities abusing the data, without notice.
-# 
-# Any use of this material to target advertising or similar activities
-# are explicitly forbidden and will be prosecuted. DK Hostmaster A/S
-# requests to be notified of any such activities or suspicions thereof.
-
-Domain:               google.dk
-DNS:                  google.dk
-Registered:           1999-01-10
-Expires:              2010-03-31
-Registration period:  1 year
-VID:                  no
-Status:               Active
+Domain:               { DomainName : IsDomainName, ToLower }
+Registered:           { Registered ? : ToDateTimeUtc("yyyy-MM-dd") }
+Expires:              { Expiration ? : ToDateTimeUtc("yyyy-MM-dd") }
+Status:               { DomainStatus ? : Repeating, SubstringBefore(' ') }
 
 Registrant
-Handle:               GI656-DK
-Name:                 Google, Inc
-Address:              1600 Amphitheatre Parkway
-Postalcode:           94043
-City:                 Mountain View, CA
-Country:              US
-Phone:                +16502530000
+Handle:               { Registrant.RegistryId }
+Name:                 { Registrant.Name ? }
+Address:              { Registrant.Address ? : IsNotEmpty }
+Postalcode:           { Registrant.Address ? : IsNotEmpty }
+City:                 { Registrant.Address ? : IsNotEmpty }
+Country:              { Registrant.Address ? : IsNotEmpty }
+Phone:                { Registrant.TelephoneNumber ? : IsPhoneNumber }
 
 Administrator
-Handle:               GI657-DK
-Name:                 Google, Inc
-Attention:            Domain Administrator
-Address:              1600 Amphitheatre Parkway
-Postalcode:           94043
-City:                 Mountain View, CA
-Country:              US
-Phone:                +16502530000
+Handle:               { AdminContact.RegistryId }
+Name:                 { AdminContact.Name ? }
+Address:              { AdminContact.Address ? : IsNotEmpty }
+Postalcode:           { AdminContact.Address ? : IsNotEmpty }
+City:                 { AdminContact.Address ? : IsNotEmpty }
+Country:              { AdminContact.Address ? : IsNotEmpty }
+Phone:                { AdminContact.TelephoneNumber ? : IsPhoneNumber }
 
-Nameservers
-Hostname:             ns1.google.com
-Handle:               GI644-DK
-Hostname:             ns2.google.com
-Handle:               GI644-DK
+Hostname:             { NameServers ? : IsDomainName, ToLower, Repeating }
 
