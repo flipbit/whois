@@ -14,7 +14,7 @@ set: Status = Found
 Domain: { DomainName : IsDomainName, ToLower, EOL }
 Nserver: { NameServers ? : IsDomainName, ToLower, Repeating, EOL }
 Status: { DomainStatus ? : Trim, Repeating, EOL }
-Changed: { Updated ? : ToDateTimeUtc("yyyy-MM-ddTHH:mm:ssZ"), EOL }
+Changed: { Updated ? : ToDateTimeUtc("yyyy-MM-ddTHH:mm:sszzz"), EOL }
 
 Name: { TechnicalContact.Name : EOL }
 Organisation: { TechnicalContact.Organization ? : EOL }

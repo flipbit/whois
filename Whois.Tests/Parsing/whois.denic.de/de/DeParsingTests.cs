@@ -32,7 +32,7 @@ namespace Whois.Parsing.Whois.Denic.De.De
 
             Assert.AreEqual("prodns.de", response.DomainName);
 
-            Assert.AreEqual(new DateTime(2013, 12, 4, 13, 42, 43), response.Updated);
+            Assert.AreEqual(new DateTime(2013, 12, 4, 13, 42, 43, DateTimeKind.Utc), response.Updated);
 
              // AdminContact Details
             Assert.AreEqual("Prohost Role", response.AdminContact.Name);
@@ -90,7 +90,7 @@ namespace Whois.Parsing.Whois.Denic.De.De
 
             Assert.AreEqual("google.de", response.DomainName);
 
-            Assert.AreEqual(new DateTime(2010, 9, 8, 21, 40, 48), response.Updated);
+            Assert.AreEqual(new DateTime(2010, 9, 8, 20, 40, 48, DateTimeKind.Utc), response.Updated);
 
              // AdminContact Details
             Assert.AreEqual("Domain Admin", response.AdminContact.Name);
@@ -197,7 +197,7 @@ namespace Whois.Parsing.Whois.Denic.De.De
 
             Assert.AreEqual("msens.de", response.DomainName);
 
-            Assert.AreEqual(new DateTime(2011, 2, 23, 4, 36, 15), response.Updated);
+            Assert.AreEqual(new DateTime(2011, 2, 23, 4, 36, 15, DateTimeKind.Utc), response.Updated);
 
              // AdminContact Details
             Assert.AreEqual("Daniel Andersson", response.AdminContact.Name);
@@ -255,7 +255,7 @@ namespace Whois.Parsing.Whois.Denic.De.De
 
             Assert.AreEqual("tästdomain-failed-nserver.de", response.DomainName);
 
-            Assert.AreEqual(new DateTime(2010, 6, 1, 9, 29, 38), response.Updated);
+            Assert.AreEqual(new DateTime(2010, 6, 1, 8, 29, 38, DateTimeKind.Utc), response.Updated);
 
              // AdminContact Details
             Assert.AreEqual("Business Services", response.AdminContact.Name);
@@ -338,7 +338,7 @@ namespace Whois.Parsing.Whois.Denic.De.De
 
             Assert.AreEqual("google.de", response.DomainName);
 
-            Assert.AreEqual(new DateTime(2011, 3, 30, 18, 36, 27), response.Updated);
+            Assert.AreEqual(new DateTime(2011, 3, 30, 17, 36, 27, DateTimeKind.Utc), response.Updated);
 
              // AdminContact Details
             Assert.AreEqual("Domain Admin", response.AdminContact.Name);
@@ -396,7 +396,7 @@ namespace Whois.Parsing.Whois.Denic.De.De
 
             Assert.AreEqual("amazon.de", response.DomainName);
 
-            Assert.AreEqual(new DateTime(2018, 8, 10, 9, 41, 26), response.Updated);
+            Assert.AreEqual(new DateTime(2018, 8, 10, 8, 41, 26, DateTimeKind.Utc), response.Updated);
 
             // Nameservers
             Assert.AreEqual(6, response.NameServers.Count);
