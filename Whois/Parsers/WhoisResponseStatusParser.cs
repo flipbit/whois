@@ -27,6 +27,14 @@ namespace Whois.Parsers
                 }
             }
 
+            if (whoisServerUrl == "whois.co.ug")
+            {
+                if (status == "UNCONFIRMED")
+                {
+                    return WhoisResponseStatus.Unconfirmed;
+                }
+            }
+
             return existing;
         }
     }

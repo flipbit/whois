@@ -82,7 +82,6 @@
     <None Remove="Resources\whois.co.pl\co.pl\NotFound.txt" />
     <None Remove="Resources\whois.co.ug\ug\Found.txt" />
     <None Remove="Resources\whois.co.ug\ug\NotFound.txt" />
-    <None Remove="Resources\whois.co.ug\ug\Unconfirmed.txt" />
     <None Remove="Resources\whois.denic.de\de\Error.txt" />
     <None Remove="Resources\whois.denic.de\de\Failed.txt" />
     <None Remove="Resources\whois.denic.de\de\Found.txt" />
@@ -590,7 +589,6 @@
     <EmbeddedResource Include="Resources\whois.co.pl\co.pl\NotFound.txt" />
     <EmbeddedResource Include="Resources\whois.co.ug\ug\Found.txt" />
     <EmbeddedResource Include="Resources\whois.co.ug\ug\NotFound.txt" />
-    <EmbeddedResource Include="Resources\whois.co.ug\ug\Unconfirmed.txt" />
     <EmbeddedResource Include="Resources\whois.denic.de\de\Error.txt" />
     <EmbeddedResource Include="Resources\whois.denic.de\de\Failed.txt" />
     <EmbeddedResource Include="Resources\whois.denic.de\de\Found.txt" />
@@ -1037,7 +1035,7 @@
       <IncludeAssets>runtime; build; native; contentfiles; analyzers</IncludeAssets>
     </PackageReference>
     <PackageReference Include="Microsoft.CSharp" Version="4.5.0" />
-    <PackageReference Include="Tokenizer" Version="2.1.6" />
+    <PackageReference Include="Tokenizer" Version="2.1.7" />
   </ItemGroup>
 
   <PropertyGroup>
