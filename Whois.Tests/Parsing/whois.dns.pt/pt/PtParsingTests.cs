@@ -1,3 +1,4 @@
+using System;
 using NUnit.Framework;
 using Whois.Models;
 using Whois.Parsers;
@@ -5,7 +6,6 @@ using Whois.Parsers;
 namespace Whois.Parsing.Whois.Dns.Pt.Pt
 {
     [TestFixture]
-    [Ignore("TODO")]
     public class PtParsingTests : ParsingTests
     {
         private WhoisParser parser;
@@ -26,6 +26,40 @@ namespace Whois.Parsing.Whois.Dns.Pt.Pt
 
             Assert.Greater(sample.Length, 0);
             Assert.AreEqual(WhoisResponseStatus.Found, response.Status);
+
+            Assert.AreEqual(0, response.ParsingErrors);
+            Assert.AreEqual("whois.dns.pt/pt/Found", response.TemplateName);
+
+            Assert.AreEqual("google.pt", response.DomainName);
+
+            Assert.AreEqual(new DateTime(2003, 09, 01, 00, 00, 00, DateTimeKind.Utc), response.Registered);
+
+             // Registrant Details
+            Assert.AreEqual("Google, Inc.", response.Registrant.Name);
+            Assert.AreEqual("dns-admin@google.com", response.Registrant.Email);
+
+             // Registrant Address
+            Assert.AreEqual(3, response.Registrant.Address.Count);
+            Assert.AreEqual("1600 Amphitheatre Parkway", response.Registrant.Address[0]);
+            Assert.AreEqual("Mountain View, CA", response.Registrant.Address[1]);
+            Assert.AreEqual("94043 null", response.Registrant.Address[2]);
+
+
+             // BillingContact Details
+            Assert.AreEqual("Markmonitor - CCOPS", response.BillingContact.Name);
+            Assert.AreEqual("ccops@markmonitor.com", response.BillingContact.Email);
+
+
+             // TechnicalContact Details
+            Assert.AreEqual("Markmonitor - CCOPS", response.TechnicalContact.Name);
+            Assert.AreEqual("ccops@markmonitor.com", response.TechnicalContact.Email);
+
+
+            // Domain Status
+            Assert.AreEqual(1, response.DomainStatus.Count);
+            Assert.AreEqual("ACTIVE", response.DomainStatus[0]);
+
+            Assert.AreEqual(13, response.FieldsParsed);
         }
 
         [Test]
@@ -36,6 +70,40 @@ namespace Whois.Parsing.Whois.Dns.Pt.Pt
 
             Assert.Greater(sample.Length, 0);
             Assert.AreEqual(WhoisResponseStatus.Other, response.Status);
+
+            Assert.AreEqual(0, response.ParsingErrors);
+            Assert.AreEqual("whois.dns.pt/pt/Found", response.TemplateName);
+
+            Assert.AreEqual("wiki.pt", response.DomainName);
+
+            Assert.AreEqual(new DateTime(2009, 09, 02, 00, 00, 00, DateTimeKind.Utc), response.Registered);
+            Assert.AreEqual(new DateTime(2014, 01, 03, 00, 00, 00, DateTimeKind.Utc), response.Expiration);
+
+             // Registrant Details
+            Assert.AreEqual("Portugalmail - Comunicações S.A.", response.Registrant.Name);
+            Assert.AreEqual("registrars@ping.pt", response.Registrant.Email);
+
+             // Registrant Address
+            Assert.AreEqual(3, response.Registrant.Address.Count);
+            Assert.AreEqual("Rua Ricardo Severo, Nº 3 - 5º Dto.", response.Registrant.Address[0]);
+            Assert.AreEqual("Porto", response.Registrant.Address[1]);
+            Assert.AreEqual("4050-515 Porto", response.Registrant.Address[2]);
+
+
+             // BillingContact Details
+            Assert.AreEqual("Portugalmail - Comunicações S.A.", response.BillingContact.Name);
+            Assert.AreEqual("registrars@ping.pt", response.BillingContact.Email);
+
+
+             // TechnicalContact Details
+            Assert.AreEqual("Portugalmail - Comunicações S.A.", response.TechnicalContact.Name);
+
+
+            // Domain Status
+            Assert.AreEqual(1, response.DomainStatus.Count);
+            Assert.AreEqual("TECH-PRO", response.DomainStatus[0]);
+
+            Assert.AreEqual(13, response.FieldsParsed);
         }
 
         [Test]
@@ -46,6 +114,14 @@ namespace Whois.Parsing.Whois.Dns.Pt.Pt
 
             Assert.Greater(sample.Length, 0);
             Assert.AreEqual(WhoisResponseStatus.NotFound, response.Status);
+
+            Assert.AreEqual(0, response.ParsingErrors);
+            Assert.AreEqual("whois.dns.pt/pt/NotFound", response.TemplateName);
+
+            Assert.AreEqual("u34jedzcq.pt", response.DomainName);
+
+
+            Assert.AreEqual(2, response.FieldsParsed);
         }
 
         [Test]
@@ -55,7 +131,41 @@ namespace Whois.Parsing.Whois.Dns.Pt.Pt
             var response = parser.Parse("whois.dns.pt", "pt", sample);
 
             Assert.Greater(sample.Length, 0);
-            Assert.AreEqual(WhoisResponseStatus.Inactive, response.Status);
+            Assert.AreEqual(WhoisResponseStatus.Other, response.Status);
+
+            Assert.AreEqual(0, response.ParsingErrors);
+            Assert.AreEqual("whois.dns.pt/pt/Found", response.TemplateName);
+
+            Assert.AreEqual("wiki.pt", response.DomainName);
+
+            Assert.AreEqual(new DateTime(2009, 09, 02, 00, 00, 00, DateTimeKind.Utc), response.Registered);
+            Assert.AreEqual(new DateTime(2014, 01, 03, 00, 00, 00, DateTimeKind.Utc), response.Expiration);
+
+             // Registrant Details
+            Assert.AreEqual("Portugalmail - Comunicações S.A.", response.Registrant.Name);
+            Assert.AreEqual("registrars@ping.pt", response.Registrant.Email);
+
+             // Registrant Address
+            Assert.AreEqual(3, response.Registrant.Address.Count);
+            Assert.AreEqual("Rua Ricardo Severo, Nº 3 - 5º Dto.", response.Registrant.Address[0]);
+            Assert.AreEqual("Porto", response.Registrant.Address[1]);
+            Assert.AreEqual("4050-515 Porto", response.Registrant.Address[2]);
+
+
+             // BillingContact Details
+            Assert.AreEqual("Portugalmail - Comunicações S.A.", response.BillingContact.Name);
+            Assert.AreEqual("registrars@ping.pt", response.BillingContact.Email);
+
+
+             // TechnicalContact Details
+            Assert.AreEqual("Portugalmail - Comunicações S.A.", response.TechnicalContact.Name);
+
+
+            // Domain Status
+            Assert.AreEqual(1, response.DomainStatus.Count);
+            Assert.AreEqual("TECH-PRO", response.DomainStatus[0]);
+
+            Assert.AreEqual(13, response.FieldsParsed);
         }
 
         [Test]
@@ -66,6 +176,40 @@ namespace Whois.Parsing.Whois.Dns.Pt.Pt
 
             Assert.Greater(sample.Length, 0);
             Assert.AreEqual(WhoisResponseStatus.Found, response.Status);
+
+            Assert.AreEqual(0, response.ParsingErrors);
+            Assert.AreEqual("whois.dns.pt/pt/Found", response.TemplateName);
+
+            Assert.AreEqual("google.pt", response.DomainName);
+
+            Assert.AreEqual(new DateTime(2003, 09, 01, 00, 00, 00, DateTimeKind.Utc), response.Registered);
+
+             // Registrant Details
+            Assert.AreEqual("Google, Inc.", response.Registrant.Name);
+            Assert.AreEqual("dns-admin@google.com", response.Registrant.Email);
+
+             // Registrant Address
+            Assert.AreEqual(3, response.Registrant.Address.Count);
+            Assert.AreEqual("1600 Amphitheatre Parkway", response.Registrant.Address[0]);
+            Assert.AreEqual("Mountain View, CA", response.Registrant.Address[1]);
+            Assert.AreEqual("94043 null", response.Registrant.Address[2]);
+
+
+             // BillingContact Details
+            Assert.AreEqual("Markmonitor - CCOPS", response.BillingContact.Name);
+            Assert.AreEqual("ccops@markmonitor.com", response.BillingContact.Email);
+
+
+             // TechnicalContact Details
+            Assert.AreEqual("Markmonitor - CCOPS", response.TechnicalContact.Name);
+            Assert.AreEqual("ccops@markmonitor.com", response.TechnicalContact.Email);
+
+
+            // Domain Status
+            Assert.AreEqual(1, response.DomainStatus.Count);
+            Assert.AreEqual("ACTIVE", response.DomainStatus[0]);
+
+            Assert.AreEqual(13, response.FieldsParsed);
         }
 
         [Test]
@@ -76,6 +220,39 @@ namespace Whois.Parsing.Whois.Dns.Pt.Pt
 
             Assert.Greater(sample.Length, 0);
             Assert.AreEqual(WhoisResponseStatus.Reserved, response.Status);
+
+            Assert.AreEqual(0, response.ParsingErrors);
+            Assert.AreEqual("whois.dns.pt/pt/Found", response.TemplateName);
+
+            Assert.AreEqual("wiki.pt", response.DomainName);
+
+            Assert.AreEqual(new DateTime(2009, 09, 02, 00, 00, 00, DateTimeKind.Utc), response.Registered);
+
+             // Registrant Details
+            Assert.AreEqual("Portugalmail - Comunicações S.A.", response.Registrant.Name);
+            Assert.AreEqual("registos@portugalmail.pt", response.Registrant.Email);
+
+             // Registrant Address
+            Assert.AreEqual(3, response.Registrant.Address.Count);
+            Assert.AreEqual("Rua Ricardo Severo, Nº 3 - 5º Dto.", response.Registrant.Address[0]);
+            Assert.AreEqual("4050-515 Porto", response.Registrant.Address[1]);
+            Assert.AreEqual("PT", response.Registrant.Address[2]);
+
+
+             // BillingContact Details
+            Assert.AreEqual("Portugalmail - Comunicações S.A.", response.BillingContact.Name);
+            Assert.AreEqual("registos@portugalmail.pt", response.BillingContact.Email);
+
+
+             // TechnicalContact Details
+            Assert.AreEqual("Portugalmail - Comunicações S.A.", response.TechnicalContact.Name);
+
+
+            // Domain Status
+            Assert.AreEqual(1, response.DomainStatus.Count);
+            Assert.AreEqual("RESERVED", response.DomainStatus[0]);
+
+            Assert.AreEqual(12, response.FieldsParsed);
         }
     }
 }

@@ -107,10 +107,7 @@
     <None Remove="Resources\whois.dns.pl\pl\NotFound.txt" />
     <None Remove="Resources\whois.dns.pl\pl\Throttled.txt" />
     <None Remove="Resources\whois.dns.pt\pt\Found.txt" />
-    <None Remove="Resources\whois.dns.pt\pt\Inactive.txt" />
     <None Remove="Resources\whois.dns.pt\pt\NotFound.txt" />
-    <None Remove="Resources\whois.dns.pt\pt\Other.txt" />
-    <None Remove="Resources\whois.dns.pt\pt\Reserved.txt" />
     <None Remove="Resources\whois.domain-registry.nl\nl\Found.txt" />
     <None Remove="Resources\whois.domain-registry.nl\nl\NotAssigned.txt" />
     <None Remove="Resources\whois.domain-registry.nl\nl\NotFound.txt" />
@@ -612,10 +609,7 @@
     <EmbeddedResource Include="Resources\whois.dns.pl\pl\NotFound.txt" />
     <EmbeddedResource Include="Resources\whois.dns.pl\pl\Throttled.txt" />
     <EmbeddedResource Include="Resources\whois.dns.pt\pt\Found.txt" />
-    <EmbeddedResource Include="Resources\whois.dns.pt\pt\Inactive.txt" />
     <EmbeddedResource Include="Resources\whois.dns.pt\pt\NotFound.txt" />
-    <EmbeddedResource Include="Resources\whois.dns.pt\pt\Other.txt" />
-    <EmbeddedResource Include="Resources\whois.dns.pt\pt\Reserved.txt" />
     <EmbeddedResource Include="Resources\whois.domain-registry.nl\nl\Found.txt" />
     <EmbeddedResource Include="Resources\whois.domain-registry.nl\nl\NotAssigned.txt" />
     <EmbeddedResource Include="Resources\whois.domain-registry.nl\nl\NotFound.txt" />

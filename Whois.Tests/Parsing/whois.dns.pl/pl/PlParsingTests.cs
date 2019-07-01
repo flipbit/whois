@@ -6,7 +6,6 @@ using Whois.Parsers;
 namespace Whois.Parsing.Whois.Dns.Pl.Pl
 {
     [TestFixture]
-    [Ignore("TODO")]
     public class PlParsingTests : ParsingTests
     {
         private WhoisParser parser;

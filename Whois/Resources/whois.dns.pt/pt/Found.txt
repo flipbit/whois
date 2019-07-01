@@ -11,28 +11,25 @@ tag: pt
 # Set query response type:
 set: Status = Found
 ---
-Nome de domínio / Domain Name: google.pt
-Data de registo / Creation Date (dd/mm/yyyy): 09/01/2003
-Data de expiração / Expiration Date (dd/mm/yyyy): 29/02/2012
-Estado / Status: ACTIVE
+Nome de domínio / Domain Name: { DomainName : IsDomainName, ToLower }
+Data de registo / Creation Date (dd/mm/yyyy): { Registered ? : ToDateTimeUtc("dd/MMM/yyyy") }
+Data de expiração / Expiration Date (dd/mm/yyyy): { Expiration ? : ToDateTimeUtc("dd/MMM/yyyy") }
+Estado / Status: { DomainStatus ? : Repeating, SubstringBefore(' ') }
 
 Titular / Registrant
-   Google, Inc.
-   1600 Amphitheatre Parkway
-   Mountain View, CA
-   94043 null
-   Email: dns-admin@google.com
+   { Registrant.Name ? }
+   { Registrant.Address ? : IsNotEmpty }
+   { Registrant.Address ? : IsNotEmpty }
+   { Registrant.Address ? : IsNotEmpty }
+   Email: { Registrant.Email ? : IsEmail }
 
 Entidade Gestora / Billing Contact
-   Markmonitor - CCOPS
-   Email: ccops@markmonitor.com
+   { BillingContact.Name ? }
+   Email: { BillingContact.Email ? : IsEmail }
 
 Responsável Técnico / Tech Contact
-   Markmonitor - CCOPS
-   Email: ccops@markmonitor.com
+   { TechnicalContact.Name ? }
+   Email: { TechnicalContact.Email ? : IsEmail }
 
 Nameserver Information
-   Nameserver: google.pt	NS	ns4.google.com.
-   Nameserver: google.pt	NS	ns2.google.com.
-   Nameserver: google.pt	NS	ns1.google.com.
-   Nameserver: google.pt	NS	ns3.google.com.
+   Nameserver: { NameServers ? : SubstringBefore(' '), IsDomainName, ToLower, Repeating }

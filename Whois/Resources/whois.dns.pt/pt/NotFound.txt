@@ -10,5 +10,7 @@ tag: pt
 
 # Set query response type:
 set: Status = NotFound
+
+hint: no match
 ---
-u34jedzcq.pt no match
+{ DomainName : IsDomainName, ToLower } no match
