@@ -54,7 +54,7 @@ namespace Whois.Parsing.Kero.Yachay.Pe.Pe
             var response = parser.Parse("kero.yachay.pe", "pe", sample);
 
             Assert.Greater(sample.Length, 0);
-            Assert.AreEqual(WhoisResponseStatus.Inactive, response.Status);
+            Assert.AreEqual(WhoisResponseStatus.NotAssigned, response.Status);
 
             Assert.AreEqual(7, response.FieldsParsed);
             Assert.AreEqual(0, response.ParsingErrors);

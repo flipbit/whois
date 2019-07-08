@@ -8,7 +8,10 @@ name: whois.domain-registry.nl/nl/Unavailable
 tag: whois.domain-registry.nl
 tag: nl
 
-# Set query response type:
+# Set query response type
 set: Status = Unavailable
+
+hint: Server too busy
+hint: try again later
 ---
-whois.domain-registry.nl: Server too busy, try again later
+whois.domain-registry.nl: Server too busy, try again later{ Null }

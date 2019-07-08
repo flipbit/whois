@@ -11,7 +11,7 @@ tag: nl
 # Set query response type:
 set: Status = NotFound
 ---
-u34jedzcq.nl is free
+{ DomainName : IsDomainName, ToLower } is free
 
    Copyright notice
    No part of this publication may be reproduced, published, stored in a

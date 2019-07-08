@@ -17,6 +17,8 @@ namespace Whois.Parsers
             if (Equals(status, "Deactivated")) return WhoisResponseStatus.Deactivated;
             if (Equals(status, "failed")) return WhoisResponseStatus.Failed;
             if (Equals(status, "Reserved")) return WhoisResponseStatus.Reserved;
+            if (Equals(status, "inactive")) return WhoisResponseStatus.NotAssigned;
+            if (Equals(status, "in quarantine")) return WhoisResponseStatus.Quarantined;
 
             if (whoisServerUrl == "whois.dns.pt")
             {

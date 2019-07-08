@@ -2,7 +2,7 @@
 #
 # .nl Parsing Template
 #
-name: whois.domain-registry.nl/nl/Throttled
+name: whois.domain-registry.nl/nl/Throttled2
 
 # Use this template for queries to whois.domain-registry.nl:
 tag: whois.domain-registry.nl
@@ -10,5 +10,7 @@ tag: nl
 
 # Set query response type:
 set: Status = Throttled
+
+hint:daily whois-limit exceeded 
 ---
-whois.domain-registry.nl: only 1 request per second allowed, try again later
+whois.domain-registry.nl: daily whois-limit exceeded for client{ Null }
