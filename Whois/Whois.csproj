@@ -114,8 +114,10 @@
     <None Remove="Resources\whois.domain-registry.nl\nl\Throttled1.txt" />
     <None Remove="Resources\whois.domain-registry.nl\nl\Throttled2.txt" />
     <None Remove="Resources\whois.domain-registry.nl\nl\Unavailable.txt" />
-    <None Remove="Resources\whois.domainregistry.ie\ie\Found.txt" />
+    <None Remove="Resources\whois.domainregistry.ie\ie\Found01.txt" />
+    <None Remove="Resources\whois.domainregistry.ie\ie\Found02.txt" />
     <None Remove="Resources\whois.domainregistry.ie\ie\NotFound.txt" />
+    <None Remove="Resources\whois.domainregistry.ie\ie\Reserved.txt" />
     <None Remove="Resources\whois.domreg.lt\lt\Found.txt" />
     <None Remove="Resources\whois.domreg.lt\lt\NotFound.txt" />
     <None Remove="Resources\whois.donuts.co\bike\Found.txt" />
@@ -616,7 +618,9 @@
     <EmbeddedResource Include="Resources\whois.domain-registry.nl\nl\Throttled2.txt" />
     <EmbeddedResource Include="Resources\whois.domain-registry.nl\nl\Throttled1.txt" />
     <EmbeddedResource Include="Resources\whois.domain-registry.nl\nl\Unavailable.txt" />
-    <EmbeddedResource Include="Resources\whois.domainregistry.ie\ie\Found.txt" />
+    <EmbeddedResource Include="Resources\whois.domainregistry.ie\ie\Found02.txt" />
+    <EmbeddedResource Include="Resources\whois.domainregistry.ie\ie\Reserved.txt" />
+    <EmbeddedResource Include="Resources\whois.domainregistry.ie\ie\Found01.txt" />
     <EmbeddedResource Include="Resources\whois.domainregistry.ie\ie\NotFound.txt" />
     <EmbeddedResource Include="Resources\whois.domreg.lt\lt\Found.txt" />
     <EmbeddedResource Include="Resources\whois.domreg.lt\lt\NotFound.txt" />

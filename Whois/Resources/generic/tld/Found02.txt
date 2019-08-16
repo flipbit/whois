@@ -115,7 +115,7 @@ Admin Email: { AdminContact.Email ? : IsEmail }
 # Tech Contact Info
 #
 Registry Tech ID: { TechnicalContact.RegistryId  ? }
-Tech ID: { TechnicalContact.RegistryId  ? }
+Tech ID: { TechnicalContact.RegistryId ? }
 Tech Name: { TechnicalContact.Name ? }
 Tech Organization: { TechnicalContact.Organization ? }
 Tech Street: { TechnicalContact.Address ? : IsNotEmpty }
@@ -133,7 +133,7 @@ Tech Email: { TechnicalContact.Email ? : IsEmail }
 # Billing Contact Info
 #
 Registry Billing ID: { BillingContact.RegistryId  ? }
-Billing ID: { BillingContact.RegistryId  ? }
+Billing ID: { BillingContact.RegistryId ? }
 Billing Name: { BillingContact.Name ? }
 Billing Organization: { BillingContact.Organization ? }
 Billing Street: { BillingContact.Address ? : IsNotEmpty }
