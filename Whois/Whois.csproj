@@ -28,6 +28,7 @@
     <None Remove="Resources\generic\tld\Found02.txt" />
     <None Remove="Resources\generic\tld\NotFound001.txt" />
     <None Remove="Resources\generic\tld\NotFound002.txt" />
+    <None Remove="Resources\generic\tld\NotFound003.txt" />
     <None Remove="Resources\joburg-whois.registry.net.za\joburg\Found.txt" />
     <None Remove="Resources\joburg-whois.registry.net.za\joburg\NotFound.txt" />
     <None Remove="Resources\kero.yachay.pe\pe\Found.txt" />
@@ -120,8 +121,6 @@
     <None Remove="Resources\whois.domainregistry.ie\ie\Reserved.txt" />
     <None Remove="Resources\whois.domreg.lt\lt\Found.txt" />
     <None Remove="Resources\whois.domreg.lt\lt\NotFound.txt" />
-    <None Remove="Resources\whois.donuts.co\bike\Found.txt" />
-    <None Remove="Resources\whois.donuts.co\bike\NotFound.txt" />
     <None Remove="Resources\whois.dot.cf\cf\Found.txt" />
     <None Remove="Resources\whois.dot.cf\cf\NotFound.txt" />
     <None Remove="Resources\whois.dot.tk\tk\Found.txt" />
@@ -530,6 +529,7 @@
     <EmbeddedResource Include="Resources\generic\tld\Found02.txt" />
     <EmbeddedResource Include="Resources\generic\tld\Found001.txt" />
     <EmbeddedResource Include="Resources\generic\tld\NotFound001.txt" />
+    <EmbeddedResource Include="Resources\generic\tld\NotFound003.txt" />
     <EmbeddedResource Include="Resources\generic\tld\NotFound002.txt" />
     <EmbeddedResource Include="Resources\joburg-whois.registry.net.za\joburg\Found.txt" />
     <EmbeddedResource Include="Resources\joburg-whois.registry.net.za\joburg\NotFound.txt" />
@@ -624,8 +624,6 @@
     <EmbeddedResource Include="Resources\whois.domainregistry.ie\ie\NotFound.txt" />
     <EmbeddedResource Include="Resources\whois.domreg.lt\lt\Found.txt" />
     <EmbeddedResource Include="Resources\whois.domreg.lt\lt\NotFound.txt" />
-    <EmbeddedResource Include="Resources\whois.donuts.co\bike\Found.txt" />
-    <EmbeddedResource Include="Resources\whois.donuts.co\bike\NotFound.txt" />
     <EmbeddedResource Include="Resources\whois.dot.cf\cf\Found.txt" />
     <EmbeddedResource Include="Resources\whois.dot.cf\cf\NotFound.txt" />
     <EmbeddedResource Include="Resources\whois.dot.tk\tk\Found.txt" />
