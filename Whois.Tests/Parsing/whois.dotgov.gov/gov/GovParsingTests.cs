@@ -5,7 +5,6 @@ using Whois.Parsers;
 namespace Whois.Parsing.Whois.Dotgov.Gov.Gov
 {
     [TestFixture]
-    [Ignore("TODO")]
     public class GovParsingTests : ParsingTests
     {
         private WhoisParser parser;
@@ -26,6 +25,13 @@ namespace Whois.Parsing.Whois.Dotgov.Gov.Gov
 
             Assert.Greater(sample.Length, 0);
             Assert.AreEqual(WhoisResponseStatus.NotFound, response.Status);
+
+            Assert.AreEqual(0, response.ParsingErrors);
+            Assert.AreEqual("whois.dotgov.gov/gov/NotFound", response.TemplateName);
+
+            Assert.AreEqual("u34jedzcq.gov", response.DomainName);
+
+            Assert.AreEqual(2, response.FieldsParsed);
         }
 
         [Test]
@@ -36,6 +42,17 @@ namespace Whois.Parsing.Whois.Dotgov.Gov.Gov
 
             Assert.Greater(sample.Length, 0);
             Assert.AreEqual(WhoisResponseStatus.Found, response.Status);
+
+            Assert.AreEqual(0, response.ParsingErrors);
+            Assert.AreEqual("whois.dotgov.gov/gov/Found", response.TemplateName);
+
+            Assert.AreEqual("gsa.gov", response.DomainName);
+
+            // Domain Status
+            Assert.AreEqual(1, response.DomainStatus.Count);
+            Assert.AreEqual("ACTIVE", response.DomainStatus[0]);
+
+            Assert.AreEqual(3, response.FieldsParsed);
         }
     }
 }

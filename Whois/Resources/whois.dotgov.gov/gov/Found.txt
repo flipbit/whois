@@ -8,15 +8,12 @@ name: whois.dotgov.gov/gov/Found
 tag: whois.dotgov.gov
 tag: gov
 
+# End tokens on new lines
+terminateOnNewLine: true
+
 # Set query response type:
 set: Status = Found
 ---
-% DOTGOV WHOIS Server ready
-   Domain Name: GSA.GOV
-   Status: ACTIVE
+   Domain Name: { DomainName : IsDomainName, ToLower }
+   Status: { DomainStatus ? : }
 
-
->>> Last update of whois database: 2014-02-18T20:37:51Z <<<
-Please be advised that this whois server only contains information pertaining
-to the .GOV domain. For information for other domains please use the whois
-server at RS.INTERNIC.NET. 

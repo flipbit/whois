@@ -8,13 +8,11 @@ name: whois.dotgov.gov/gov/NotFound
 tag: whois.dotgov.gov
 tag: gov
 
+# End tokens on new lines
+terminateOnNewLine: true
+
 # Set query response type:
 set: Status = NotFound
 ---
-% DOTGOV WHOIS Server ready
-No match for "U34JEDZCQ.GOV".
+No match for "{ DomainName : IsDomainName, ToLower }".
 
->>> Last update of whois database: 2014-02-18T20:37:51Z <<<
-Please be advised that this whois server only contains information pertaining
-to the .GOV domain. For information for other domains please use the whois
-server at RS.INTERNIC.NET. 
