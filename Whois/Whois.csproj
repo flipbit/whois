@@ -127,8 +127,6 @@
     <None Remove="Resources\whois.dot.tk\tk\NotFound.txt" />
     <None Remove="Resources\whois.dotgov.gov\gov\Found.txt" />
     <None Remove="Resources\whois.dotgov.gov\gov\NotFound.txt" />
-    <None Remove="Resources\whois.dotmobiregistry.net\mobi\Found.txt" />
-    <None Remove="Resources\whois.dotmobiregistry.net\mobi\NotFound.txt" />
     <None Remove="Resources\whois.dotpostregistry.net\post\Found.txt" />
     <None Remove="Resources\whois.dotpostregistry.net\post\NotFound.txt" />
     <None Remove="Resources\whois.educause.edu\edu\Found.txt" />
@@ -630,8 +628,6 @@
     <EmbeddedResource Include="Resources\whois.dot.tk\tk\NotFound.txt" />
     <EmbeddedResource Include="Resources\whois.dotgov.gov\gov\Found.txt" />
     <EmbeddedResource Include="Resources\whois.dotgov.gov\gov\NotFound.txt" />
-    <EmbeddedResource Include="Resources\whois.dotmobiregistry.net\mobi\Found.txt" />
-    <EmbeddedResource Include="Resources\whois.dotmobiregistry.net\mobi\NotFound.txt" />
     <EmbeddedResource Include="Resources\whois.dotpostregistry.net\post\Found.txt" />
     <EmbeddedResource Include="Resources\whois.dotpostregistry.net\post\NotFound.txt" />
     <EmbeddedResource Include="Resources\whois.educause.edu\edu\Found.txt" />
