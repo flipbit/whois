@@ -59,7 +59,7 @@ namespace Whois.Parsing.Whois.Gg.Gg
             Assert.AreEqual("http://www.markmonitor.com", response.Registrar.Url);
             Assert.AreEqual("whois.gg", response.Registrar.WhoisServerUrl);
 
-            Assert.AreEqual(new DateTime(2003, 04, 30, 01, 00, 00, DateTimeKind.Utc), response.Registered);
+            Assert.AreEqual(new DateTime(2003, 04, 30, 00, 00, 00, DateTimeKind.Utc), response.Registered);
 
              // Registrant Details
             Assert.AreEqual("32764-CI", response.Registrant.RegistryId);

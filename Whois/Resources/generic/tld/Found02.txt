@@ -29,14 +29,14 @@ Domain ID: { RegistryDomainId ? }
 #
 # Registration, Updated and Expiration Dates
 #
-Creation Date: { Registered ? : SubstringBefore("UTC"), ToDateTimeUtc("yyyy-MM-ddTHH:mm:ssZ", "dd-MMM-yyyy hh:MM:ss") }
-Created On: { Registered ? : SubstringBefore("UTC"), ToDateTimeUtc("yyyy-MM-ddTHH:mm:ssZ", "dd-MMM-yyyy hh:MM:ss") }
+Creation Date: { Registered ? : SubstringBefore("UTC"), ToDateTimeUtc("yyyy-MM-ddTHH:mm:ssZ", "yyyy-MM-ddTHH:mm:ss.fffZ", "dd-MMM-yyyy hh:mm:ss") }
+Created On: { Registered ? : SubstringBefore("UTC"), ToDateTimeUtc("yyyy-MM-ddTHH:mm:ssZ", "yyyy-MM-ddTHH:mm:ss.fffZ", "dd-MMM-yyyy hh:mm:ss") }
 
-Updated Date: { Updated ? : SubstringBefore("UTC"), ToDateTimeUtc("yyyy-MM-ddTHH:mm:ssZ", "dd-MMM-yyyy hh:MM:ss") }
-Last Updated On: { Updated ? : SubstringBefore("UTC"), ToDateTimeUtc("yyyy-MM-ddTHH:mm:ssZ", "dd-MMM-yyyy hh:MM:ss") }
+Updated Date: { Updated ? : SubstringBefore("UTC"), ToDateTimeUtc("yyyy-MM-ddTHH:mm:ssZ", "yyyy-MM-ddTHH:mm:ss.fffZ", "dd-MMM-yyyy hh:mm:ss") }
+Last Updated On: { Updated ? : SubstringBefore("UTC"), ToDateTimeUtc("yyyy-MM-ddTHH:mm:ssZ", "yyyy-MM-ddTHH:mm:ss.fffZ", "dd-MMM-yyyy hh:mm:ss") }
 
-Registry Expiry Date: { Expiration ? : SubstringBefore("UTC"), ToDateTimeUtc("yyyy-MM-ddTHH:mm:ssZ", "dd-MMM-yyyy hh:MM:ss") }
-Expiration Date: { Expiration ? : SubstringBefore("UTC"), ToDateTimeUtc("yyyy-MM-ddTHH:mm:ssZ", "dd-MMM-yyyy hh:MM:ss") }
+Registry Expiry Date: { Expiration ? : SubstringBefore("UTC"), ToDateTimeUtc("yyyy-MM-ddTHH:mm:ssZ", "yyyy-MM-ddTHH:mm:ss.fffZ", "dd-MMM-yyyy hh:mm:ss") }
+Expiration Date: { Expiration ? : SubstringBefore("UTC"), ToDateTimeUtc("yyyy-MM-ddTHH:mm:ssZ", "yyyy-MM-ddTHH:mm:ss.fffZ", "dd-MMM-yyyy hh:mm:ss") }
 Registrar Registration Expiration Date: { Expiration ? : ToDateTimeUtc("yyyy-MM-ddTHH:mm:ssZ") }
 
 #
