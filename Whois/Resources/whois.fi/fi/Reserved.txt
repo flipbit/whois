@@ -10,10 +10,8 @@ tag: fi
 
 # Set query response type:
 set: Status = Reserved
+
+hint:Domain not available
 ---
-
-Domain not available
-
-More information is available at https://domain.fi/
-Copyright (c) Finnish Communications Regulatory Authority
+Domain not available{ Null }
 

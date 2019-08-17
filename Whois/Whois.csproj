@@ -137,8 +137,6 @@
     <None Remove="Resources\whois.eu.org\eu.org\Found.txt" />
     <None Remove="Resources\whois.eu.org\eu.org\NotFound.txt" />
     <None Remove="Resources\whois.fi\fi\Found.txt" />
-    <None Remove="Resources\whois.fi\fi\NotFound.txt" />
-    <None Remove="Resources\whois.fi\fi\Other.txt" />
     <None Remove="Resources\whois.fi\fi\Reserved.txt" />
     <None Remove="Resources\whois.gg\gg\Found.txt" />
     <None Remove="Resources\whois.gg\gg\NotFound.txt" />
@@ -636,8 +634,6 @@
     <EmbeddedResource Include="Resources\whois.eu.org\eu.org\Found.txt" />
     <EmbeddedResource Include="Resources\whois.eu.org\eu.org\NotFound.txt" />
     <EmbeddedResource Include="Resources\whois.fi\fi\Found.txt" />
-    <EmbeddedResource Include="Resources\whois.fi\fi\NotFound.txt" />
-    <EmbeddedResource Include="Resources\whois.fi\fi\Other.txt" />
     <EmbeddedResource Include="Resources\whois.fi\fi\Reserved.txt" />
     <EmbeddedResource Include="Resources\whois.gg\gg\Found.txt" />
     <EmbeddedResource Include="Resources\whois.gg\gg\NotFound.txt" />

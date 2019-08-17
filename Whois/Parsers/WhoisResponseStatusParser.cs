@@ -19,6 +19,7 @@ namespace Whois.Parsers
             if (Equals(status, "Reserved")) return WhoisResponseStatus.Reserved;
             if (Equals(status, "inactive")) return WhoisResponseStatus.NotAssigned;
             if (Equals(status, "in quarantine")) return WhoisResponseStatus.Quarantined;
+            if (Equals(status, "Grace Period")) return WhoisResponseStatus.Other;
 
             if (whoisServerUrl == "whois.dns.pt")
             {
