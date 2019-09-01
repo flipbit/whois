@@ -151,9 +151,7 @@
     <None Remove="Resources\whois.iis.nu\nu\Found.txt" />
     <None Remove="Resources\whois.iis.nu\nu\NotFound.txt" />
     <None Remove="Resources\whois.iis.se\se\Found.txt" />
-    <None Remove="Resources\whois.iis.se\se\NotAssigned.txt" />
     <None Remove="Resources\whois.iis.se\se\NotFound.txt" />
-    <None Remove="Resources\whois.iis.se\se\Other.txt" />
     <None Remove="Resources\whois.in.ua\in.ua\Found.txt" />
     <None Remove="Resources\whois.in.ua\in.ua\NotFound.txt" />
     <None Remove="Resources\whois.inregistry.net\in\Found.txt" />
@@ -646,9 +644,7 @@
     <EmbeddedResource Include="Resources\whois.iis.nu\nu\Found.txt" />
     <EmbeddedResource Include="Resources\whois.iis.nu\nu\NotFound.txt" />
     <EmbeddedResource Include="Resources\whois.iis.se\se\Found.txt" />
-    <EmbeddedResource Include="Resources\whois.iis.se\se\NotAssigned.txt" />
     <EmbeddedResource Include="Resources\whois.iis.se\se\NotFound.txt" />
-    <EmbeddedResource Include="Resources\whois.iis.se\se\Other.txt" />
     <EmbeddedResource Include="Resources\whois.in.ua\in.ua\Found.txt" />
     <EmbeddedResource Include="Resources\whois.in.ua\in.ua\NotFound.txt" />
     <EmbeddedResource Include="Resources\whois.inregistry.net\in\Found.txt" />
@@ -1011,7 +1007,7 @@
       <IncludeAssets>runtime; build; native; contentfiles; analyzers</IncludeAssets>
     </PackageReference>
     <PackageReference Include="Microsoft.CSharp" Version="4.5.0" />
-    <PackageReference Include="Tokenizer" Version="2.1.8-beta4" />
+    <PackageReference Include="Tokenizer" Version="2.1.8-beta5" />
   </ItemGroup>
 
   <PropertyGroup>

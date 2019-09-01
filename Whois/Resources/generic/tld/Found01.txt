@@ -52,8 +52,10 @@ Sponsoring Registrar IANA ID:{ Registrar.IanaId ? : Trim, IsNumeric }
 WHOIS Server:{ Registrar.WhoisServerUrl ? : Trim, IsDomainName, ToLower } 
 Referral URL:{ Registrar.Url ? : Trim, IsUrl, ToLower } 
 Registrar URL:{ Registrar.Url ? : Trim, IsUrl, ToLower } 
+
 Domain Status:{ DomainStatus ? : Trim, Repeating, SubstringBefore(' ') }
 Status:{ DomainStatus ? : Trim, Repeating }
+
 Registrant ID:{ Registrant.RegistryId ? : Trim }
 Registrant Name:{ Registrant.Name ? : Trim }
 Registrant Organization:{ Registrant.Organization ? : Trim }
@@ -67,6 +69,7 @@ Registrant Phone Ext:{ Registrant.TelephoneNumberExt ? : Trim, IsNumeric }
 Registrant Fax:{ Registrant.FaxNumber ? : Trim, IsPhoneNumber }
 Registrant Fax Ext:{ Registrant.FaxNumberExt ? : Trim, IsNotEmpty, IsNumeric }
 Registrant Email:{ Registrant.Email ? : Trim, IsEmail }
+
 Admin ID:{ AdminContact.RegistryId ? : Trim }
 Admin Name:{ AdminContact.Name ? : Trim }
 Admin Organization:{ AdminContact.Organization ? : Trim }
@@ -80,6 +83,7 @@ Admin Phone Ext:{ AdminContact.TelephoneNumberExt  ? : Trim, IsNumeric }
 Admin Fax:{ AdminContact.FaxNumber ? : Trim, IsPhoneNumber } 
 Admin Fax Ext:{ AdminContact.FaxNumberExt ? : Trim, IsNumeric } 
 Admin Email:{ AdminContact.Email ? : Trim, IsEmail }
+
 Tech ID:{ TechnicalContact.RegistryId  ? : Trim }
 Tech Name:{ TechnicalContact.Name ? : Trim }
 Tech Organization:{ TechnicalContact.Organization ? : Trim }
@@ -93,6 +97,7 @@ Tech Phone Ext:{ TechnicalContact.TelephoneNumberExt ? : Trim, IsNumeric }
 Tech Fax:{ TechnicalContact.FaxNumber ? : Trim, IsPhoneNumber } 
 Tech Fax Ext:{ TechnicalContact.FaxNumberExt ? : Trim, IsNumeric }
 Tech Email:{ TechnicalContact.Email ? : Trim, IsEmail }
+
 Billing ID:{ BillingContact.RegistryId  ? : Trim }
 Billing Name:{ BillingContact.Name ? : Trim }
 Billing Organization:{ BillingContact.Organization ? : Trim }
@@ -106,8 +111,9 @@ Billing Phone Ext:{ BillingContact.TelephoneNumberExt ? : Trim, IsNumeric }
 Billing Fax:{ BillingContact.FaxNumber ? : Trim, IsPhoneNumber } 
 Billing Fax Ext:{ BillingContact.FaxNumberExt ? : Trim, IsNumeric } 
 Billing Email:{ BillingContact.Email ? : Trim, IsEmail }
+
 Name Server:{ NameServers ? : Trim, IsDomainName, ToLower, Repeating }
 DNSSEC:{ DnsSecStatus ? : Trim }
+
 Registrar Abuse Contact Email:{ Registrar.AbuseEmail ? : Trim, IsEmail }
 Registrar Abuse Contact Phone:{ Registrar.AbuseTelephoneNumber ? : Trim, IsPhoneNumber }
->>> Last update of WHOIS database:

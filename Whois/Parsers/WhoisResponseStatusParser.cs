@@ -27,6 +27,11 @@ namespace Whois.Parsers
                 if (Equals(status, "TECH-PRO")) return WhoisResponseStatus.Other;
             }
 
+            if (whoisServerUrl == "whois.iis.se")
+            {
+                if (Equals(status, "system")) return WhoisResponseStatus.NotAssigned;
+            }
+
 
             return existing;
         }
