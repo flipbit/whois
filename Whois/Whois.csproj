@@ -29,6 +29,7 @@
     <None Remove="Resources\generic\tld\NotFound001.txt" />
     <None Remove="Resources\generic\tld\NotFound002.txt" />
     <None Remove="Resources\generic\tld\NotFound003.txt" />
+    <None Remove="Resources\generic\tld\NotFound004.txt" />
     <None Remove="Resources\joburg-whois.registry.net.za\joburg\Found.txt" />
     <None Remove="Resources\joburg-whois.registry.net.za\joburg\NotFound.txt" />
     <None Remove="Resources\kero.yachay.pe\pe\Found.txt" />
@@ -225,8 +226,6 @@
     <None Remove="Resources\whois.nic.coop\coop\Found.txt" />
     <None Remove="Resources\whois.nic.coop\coop\NotFound.txt" />
     <None Remove="Resources\whois.nic.coop\coop\Other.txt" />
-    <None Remove="Resources\whois.nic.cx\cx\Found.txt" />
-    <None Remove="Resources\whois.nic.cx\cx\NotFound.txt" />
     <None Remove="Resources\whois.nic.cz\cz\Found.txt" />
     <None Remove="Resources\whois.nic.cz\cz\NotFound.txt" />
     <None Remove="Resources\whois.nic.cz\cz\Throttled.txt" />
@@ -506,6 +505,7 @@
     <EmbeddedResource Include="Resources\generic\tld\Found02.txt" />
     <EmbeddedResource Include="Resources\generic\tld\Found01.txt" />
     <EmbeddedResource Include="Resources\generic\tld\NotFound001.txt" />
+    <EmbeddedResource Include="Resources\generic\tld\NotFound004.txt" />
     <EmbeddedResource Include="Resources\generic\tld\NotFound003.txt" />
     <EmbeddedResource Include="Resources\generic\tld\NotFound002.txt" />
     <EmbeddedResource Include="Resources\joburg-whois.registry.net.za\joburg\Found.txt" />
@@ -705,8 +705,6 @@
     <EmbeddedResource Include="Resources\whois.nic.coop\coop\Found.txt" />
     <EmbeddedResource Include="Resources\whois.nic.coop\coop\NotFound.txt" />
     <EmbeddedResource Include="Resources\whois.nic.coop\coop\Other.txt" />
-    <EmbeddedResource Include="Resources\whois.nic.cx\cx\Found.txt" />
-    <EmbeddedResource Include="Resources\whois.nic.cx\cx\NotFound.txt" />
     <EmbeddedResource Include="Resources\whois.nic.cz\cz\Found.txt" />
     <EmbeddedResource Include="Resources\whois.nic.cz\cz\NotFound.txt" />
     <EmbeddedResource Include="Resources\whois.nic.cz\cz\Throttled.txt" />
