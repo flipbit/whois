@@ -54,7 +54,7 @@ Registrar URL:{ Registrar.Url ? : Trim, IsUrl, ToLower }
 #
 # Supporting Registrar
 #
-Sponsoring Registrar:{ Registrar.Name ? }
+Sponsoring Registrar:{ Registrar.Name ? : Trim }
 Sponsoring Registrar IANA ID:{ Registrar.IanaId ? : IsNumeric }
 Sponsoring Registrar URL:{ Registrar.Url ? : IsUrl, ToLower }
 Sponsoring Registrar Phone:{ Registrar.AbuseTelephoneNumber ? : IsPhoneNumber }

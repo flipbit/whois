@@ -57,9 +57,9 @@ namespace Whois.Parsing.Whois.Nic.Af.Af
             Assert.AreEqual("ccops@markmonitor.com", response.Registrar.AbuseEmail);
             Assert.AreEqual("+1.2083895740", response.Registrar.AbuseTelephoneNumber);
 
-            Assert.AreEqual(new DateTime(2014, 01, 16, 06, 50, 48, DateTimeKind.Utc), response.Updated);
-            Assert.AreEqual(new DateTime(2009, 10, 05, 03, 51, 17, DateTimeKind.Utc), response.Registered);
-            Assert.AreEqual(new DateTime(2014, 05, 05, 03, 51, 17, DateTimeKind.Utc), response.Expiration);
+            Assert.AreEqual(new DateTime(2014, 01, 16, 06, 50, 48, 226, DateTimeKind.Utc), response.Updated);
+            Assert.AreEqual(new DateTime(2009, 10, 05, 03, 51, 17, 979, DateTimeKind.Utc), response.Registered);
+            Assert.AreEqual(new DateTime(2014, 05, 05, 03, 51, 17, 974, DateTimeKind.Utc), response.Expiration);
 
              // Registrant Details
             Assert.AreEqual("969675-CoCCA", response.Registrant.RegistryId);
