@@ -14,4 +14,4 @@ set: Status = NotFound
 # Must contain:
 hint: NOT FOUND
 ---
-NOT FOUND{ Null }
+NOT FOUND

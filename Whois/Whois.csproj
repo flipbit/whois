@@ -24,7 +24,7 @@
     <None Remove="Resources\coza-whois.registry.net.za\co.za\Throttled.txt" />
     <None Remove="Resources\durban-whois.registry.net.za\durban\Found.txt" />
     <None Remove="Resources\durban-whois.registry.net.za\durban\NotFound.txt" />
-    <None Remove="Resources\generic\tld\Found001.txt" />
+    <None Remove="Resources\generic\tld\Found01.txt" />
     <None Remove="Resources\generic\tld\Found02.txt" />
     <None Remove="Resources\generic\tld\NotFound001.txt" />
     <None Remove="Resources\generic\tld\NotFound002.txt" />
@@ -519,7 +519,7 @@
     <EmbeddedResource Include="Resources\durban-whois.registry.net.za\durban\Found.txt" />
     <EmbeddedResource Include="Resources\durban-whois.registry.net.za\durban\NotFound.txt" />
     <EmbeddedResource Include="Resources\generic\tld\Found02.txt" />
-    <EmbeddedResource Include="Resources\generic\tld\Found001.txt" />
+    <EmbeddedResource Include="Resources\generic\tld\Found01.txt" />
     <EmbeddedResource Include="Resources\generic\tld\NotFound001.txt" />
     <EmbeddedResource Include="Resources\generic\tld\NotFound003.txt" />
     <EmbeddedResource Include="Resources\generic\tld\NotFound002.txt" />
@@ -1011,7 +1011,7 @@
       <IncludeAssets>runtime; build; native; contentfiles; analyzers</IncludeAssets>
     </PackageReference>
     <PackageReference Include="Microsoft.CSharp" Version="4.5.0" />
-    <PackageReference Include="Tokenizer" Version="2.1.7" />
+    <PackageReference Include="Tokenizer" Version="2.1.8-beta4" />
   </ItemGroup>
 
   <PropertyGroup>

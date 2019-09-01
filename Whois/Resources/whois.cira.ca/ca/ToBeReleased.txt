@@ -15,4 +15,4 @@ hint: TBR Release date:
 ---
 Domain name:           { DomainName : IsDomainName, ToLower, EOL }
 Domain status:         { DomainStatus ? : Repeating, EOL }
-TBR Release date:      { Null }
+TBR Release date:      

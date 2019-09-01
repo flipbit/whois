@@ -14,4 +14,4 @@ set: Status = Throttled
 hint:request per second allowed
 hint:try again later
 ---
-whois.domain-registry.nl: only 1 request per second allowed, try again later{ Null }
+whois.domain-registry.nl: only 1 request per second allowed, try again later

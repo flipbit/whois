@@ -12,8 +12,8 @@ tag: co.ca
 set: Status = Found
 ---
 domain: { DomainName : IsDomainName, ToLower, EOL }
-date_approved: { Registered ? : ToDateTimeUtc("dd-MMM-yyyy hh:MM:ss"), EOL }
-date_renewal: { Expiration ? : ToDateTimeUtc("dd-MMM-yyyy hh:MM:ss"), EOL }
+date_approved: { Registered ? : ToDateTimeUtc("yyyy-MM-dd HH:mm:ss"), EOL }
+date_renewal: { Expiration ? : ToDateTimeUtc("yyyy-MM-dd"), EOL }
 ns1_hostname: { NameServers ? : IsDomainName, ToLower, EOL }
 ns2_hostname: { NameServers ? : IsDomainName, ToLower, EOL }
 ns3_hostname: { NameServers ? : IsDomainName, ToLower, EOL }

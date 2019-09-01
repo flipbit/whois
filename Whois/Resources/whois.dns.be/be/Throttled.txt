@@ -13,5 +13,5 @@ set: Status = Throttled
 
 hint: Maximum queries per hour reached 
 ---
-Maximum queries per hour reached{ Null }
+Maximum queries per hour reached
 

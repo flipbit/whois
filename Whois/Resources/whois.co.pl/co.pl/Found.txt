@@ -13,5 +13,5 @@ set: Status = Found
 ---
 domain:           { DomainName : IsDomainName, ToLower, EOL }
 nserver:          { NameServers ? : IsDomainName, ToLower, Repeating, EOL }
-changed:          { Updated ? :ToDateTimeUtc("yyyy-MM-dd hh:MM:ss"), EOL }
+changed:          { Updated ? :ToDateTimeUtc("yyyy-MM-dd HH:mm:ss"), EOL }
 

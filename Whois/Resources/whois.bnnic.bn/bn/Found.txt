@@ -21,9 +21,9 @@ The following data is provided for information purposes only.
 Registrar:   { Registrar.Name ? : Trim, EOL }
 
     Domain Name:		{ DomainName : Trim, IsDomainName, ToLower, EOL }
-    Creation Date:		{ Registered? : Trim, ToDateTime("dd-MMM-yyyy hh:MM:ss"), EOL }
-    Modified Date:		{ Updated ? : Trim, ToDateTime("dd-MMM-yyyy hh:MM:ss"), EOL }
-    Expiration Date:		{ Expiration ? : Trim, ToDateTime("dd-MMM-yyyy hh:MM:ss"), EOL }
+    Creation Date:		{ Registered? : Trim, ToDateTime("dd-MMM-yyyy HH:mm:ss"), EOL }
+    Modified Date:		{ Updated ? : Trim, ToDateTime("dd-MMM-yyyy HH:mm:ss"), EOL }
+    Expiration Date:		{ Expiration ? : Trim, ToDateTime("dd-MMM-yyyy HH:mm:ss"), EOL }
     Domain Status:		{ DomainStatus ? : Trim, Repeating, EOL }
 
 

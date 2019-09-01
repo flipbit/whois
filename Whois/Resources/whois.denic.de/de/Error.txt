@@ -13,4 +13,4 @@ set: Status = Error
 
 hint: % Error
 ---
-% Error: { Null }
+% Error: 

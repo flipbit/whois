@@ -13,4 +13,4 @@ set: Status = NotFound
 
 hint: no entries found
 ---
-%ERROR: no entries found{ Null }
+%ERROR: no entries found

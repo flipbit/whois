@@ -13,4 +13,4 @@ set: Status = NotFound
 
 hint: is available
 ---
-{ DomainName ? : IsDomainName, ToLower } is available.{ Null }
+{ DomainName ? : IsDomainName, ToLower } is available.

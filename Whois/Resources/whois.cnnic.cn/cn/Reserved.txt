@@ -13,4 +13,4 @@ set: Status = Reserved
 
 hint: Sorry, The domain you requested is in the reserved list
 ---
-Sorry, The domain you requested is in the reserved list.{ Null }
+Sorry, The domain you requested is in the reserved list.

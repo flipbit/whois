@@ -17,9 +17,9 @@ set: Status = Found
 Domain Name:{ DomainName : Trim, IsDomainName, ToLower, EOL }
 Domain ID:{ RegistryDomainId ? : Trim, EOL }
 
-Last Updated On: { Updated ? : SubstringBefore("GMT"), ToDateTimeUtc("dd-MMM-yyyy HH:mm:ss"), EOL }
-Created On: { Registered ? : SubstringBefore("GMT"), ToDateTimeUtc("dd-MMM-yyyy HH:mm:ss"), EOL }
-Expiration Date: { Expiration ? : SubstringBefore("GMT"), ToDateTimeUtc("dd-MMM-yyyy HH:mm:ss"), EOL }
+Last Updated On: { Updated ? : SubstringBefore("GMT"), ToDateTimeUtc("yyyy-MM-dd HH:mm:ss"), EOL }
+Created On: { Registered ? : SubstringBefore("GMT"), ToDateTimeUtc("yyyy-MM-dd HH:mm:ss"), EOL }
+Expiration Date: { Expiration ? : SubstringBefore("GMT"), ToDateTimeUtc("yyyy-MM-dd HH:mm:ss"), EOL }
 
 Registrar:{ Registrar.Name ? : Trim, EOL }
 Registrar IANA ID:{ Registrar.IanaId ? : Trim, IsNumeric, EOL }

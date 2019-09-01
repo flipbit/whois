@@ -15,4 +15,4 @@ hint:response_throttled
 hint:true
 ---
 #response_throttled?
-  %s == true{ Null }
+  %s == true

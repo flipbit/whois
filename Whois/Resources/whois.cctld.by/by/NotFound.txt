@@ -13,4 +13,4 @@ set: Status = NotFound
 
 hint: Object does not exist
 ---
-Object does not exist{ Null }
+Object does not exist

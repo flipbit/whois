@@ -13,5 +13,5 @@ set: Status = NotFound
 
 hint: No Results Were Found
 ---
-% Unfortunately, No Results Were Found{ Null }
+% Unfortunately, No Results Were Found
 

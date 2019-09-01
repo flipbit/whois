@@ -12,15 +12,15 @@ tag: pt
 set: Status = Found
 ---
 Nome de domínio / Domain Name: { DomainName : IsDomainName, ToLower }
-Data de registo / Creation Date (dd/mm/yyyy): { Registered ? : ToDateTimeUtc("dd/MMM/yyyy") }
-Data de expiração / Expiration Date (dd/mm/yyyy): { Expiration ? : ToDateTimeUtc("dd/MMM/yyyy") }
+Data de registo / Creation Date (dd/mm/yyyy): { Registered ? : ToDateTimeUtc("dd/MM/yyyy") }
+Data de expiração / Expiration Date (dd/mm/yyyy): { Expiration ? : ToDateTimeUtc("dd/MM/yyyy") }
 Estado / Status: { DomainStatus ? : Repeating, SubstringBefore(' ') }
 
 Titular / Registrant
    { Registrant.Name ? }
-   { Registrant.Address ? : IsNotEmpty }
-   { Registrant.Address ? : IsNotEmpty }
-   { Registrant.Address ? : IsNotEmpty }
+   { Registrant.Address ? : IsNotEmpty, EOL }
+   { Registrant.Address ? : IsNotEmpty, EOL }
+   { Registrant.Address ? : IsNotEmpty, EOL }
    Email: { Registrant.Email ? : IsEmail }
 
 Entidade Gestora / Billing Contact
@@ -32,4 +32,4 @@ Responsável Técnico / Tech Contact
    Email: { TechnicalContact.Email ? : IsEmail }
 
 Nameserver Information
-   Nameserver: { NameServers ? : SubstringBefore(' '), IsDomainName, ToLower, Repeating }
+   Nameserver: { NameServers ? : SubstringBefore('NS '), IsDomainName, ToLower, Repeating }

@@ -13,5 +13,5 @@ set: Status = NotFound
 
 hint: No entries found for the selected source
 ---
-% No entries found for the selected source(s).{ Null }
+% No entries found for the selected source(s).
 

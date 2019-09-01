@@ -14,4 +14,4 @@ set: Status = Throttled
 # Must contain:
 hint: quota exceeded.
 ---
-quota exceeded.{ Null }
+quota exceeded.

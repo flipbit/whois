@@ -13,4 +13,4 @@ set: Status = Throttled
 
 hint:daily whois-limit exceeded 
 ---
-whois.domain-registry.nl: daily whois-limit exceeded for client{ Null }
+whois.domain-registry.nl: daily whois-limit exceeded for client

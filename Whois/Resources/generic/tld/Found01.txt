@@ -1,0 +1,113 @@
+---
+#
+# Generic TLD Pattern 
+#
+name: generic/tld/Found001
+
+# Use this template for catch-all parsing:
+tag: catch-all
+
+# End tokens on new lines
+outOfOrder: true
+
+# End tokens on new lines
+terminateOnNewLine: true
+
+# Use token preamble on current line only
+trimPreambleBeforeNewLine: true
+
+# Set query response type:
+set: Status = Found
+---
+
+#
+# Domain
+#
+Domain Name:{ DomainName : Trim, IsDomainName, ToLower }
+Domain ID:{ RegistryDomainId ? : Trim }
+
+#
+# Creation Date
+#
+Creation Date:{ Registered ? : ToDateTimeUtc("yyyy-MM-ddTHH:mm:ssZ", "dd-MMM-yyyy HH:mm:ss") }
+Created On:{ Registered ? : ToDateTimeUtc("yyyy-MM-ddTHH:mm:ssZ", "dd-MMM-yyyy HH:mm:ss") }
+
+Updated Date:{ Updated ? : Trim, SubstringBefore("UTC"), ToDateTimeUtc("yyyy-MM-ddTHH:mm:ssZ", "dd-MMM-yyyy HH:mm:ss") }
+Last Updated On:{ Updated ? : Trim, SubstringBefore("UTC"), SubstringBefore("GMT"), ToDateTimeUtc("yyyy-MM-ddTHH:mm:ssZ", "dd-MMM-yyyy HH:mm:ss") }
+
+Registry Expiry Date:{ Expiration ? : Trim, SubstringBefore("UTC"), ToDateTimeUtc("yyyy-MM-ddTHH:mm:ssZ", "dd-MMM-yyyy HH:mm:ss") }
+Expiration Date:{ Expiration ? : Trim, SubstringBefore("UTC"), ToDateTimeUtc("yyyy-MM-ddTHH:mm:ssZ", "dd-MMM-yyyy HH:mm:ss") }
+
+#
+# Trademark Info
+#
+Trademark Name:{ Trademark.Name ? : Trim }
+Trademark Date:{ Trademark.Date ? : Trim, ToDateTime("yyyy-MM-dd") }
+Trademark Country:{ Trademark.Country ? : Trim }
+Trademark Number:{ Trademark.Number ? : Trim }
+Registrar:{ Registrar.Name ? : Trim }
+Registrar IANA ID:{ Registrar.IanaId ? : Trim, IsNumeric }
+Sponsoring Registrar:{ Registrar.Name ? : Trim }
+Sponsoring Registrar IANA ID:{ Registrar.IanaId ? : Trim, IsNumeric }
+WHOIS Server:{ Registrar.WhoisServerUrl ? : Trim, IsDomainName, ToLower } 
+Referral URL:{ Registrar.Url ? : Trim, IsUrl, ToLower } 
+Registrar URL:{ Registrar.Url ? : Trim, IsUrl, ToLower } 
+Domain Status:{ DomainStatus ? : Trim, Repeating, SubstringBefore(' ') }
+Status:{ DomainStatus ? : Trim, Repeating }
+Registrant ID:{ Registrant.RegistryId ? : Trim }
+Registrant Name:{ Registrant.Name ? : Trim }
+Registrant Organization:{ Registrant.Organization ? : Trim }
+Registrant Street:{ Registrant.Address ? : Trim, IsNotEmpty }
+Registrant City:{ Registrant.Address ? : Trim, IsNotEmpty }
+Registrant State/Province:{ Registrant.Address ? : Trim, IsNotEmpty }
+Registrant Postal Code:{ Registrant.Address ? : Trim, IsNotEmpty }
+Registrant Country:{ Registrant.Address ? : Trim, IsNotEmpty }
+Registrant Phone:{ Registrant.TelephoneNumber ? : Trim, IsPhoneNumber }
+Registrant Phone Ext:{ Registrant.TelephoneNumberExt ? : Trim, IsNumeric }
+Registrant Fax:{ Registrant.FaxNumber ? : Trim, IsPhoneNumber }
+Registrant Fax Ext:{ Registrant.FaxNumberExt ? : Trim, IsNotEmpty, IsNumeric }
+Registrant Email:{ Registrant.Email ? : Trim, IsEmail }
+Admin ID:{ AdminContact.RegistryId ? : Trim }
+Admin Name:{ AdminContact.Name ? : Trim }
+Admin Organization:{ AdminContact.Organization ? : Trim }
+Admin Street:{ AdminContact.Address ? : Trim, IsNotEmpty }
+Admin City:{ AdminContact.Address ? : Trim, IsNotEmpty }
+Admin State/Province:{ AdminContact.Address ? : Trim, IsNotEmpty }
+Admin Postal Code:{ AdminContact.Address ? : Trim, IsNotEmpty }
+Admin Country:{ AdminContact.Address ? : Trim, IsNotEmpty }
+Admin Phone:{ AdminContact.TelephoneNumber ? : Trim, IsPhoneNumber }
+Admin Phone Ext:{ AdminContact.TelephoneNumberExt  ? : Trim, IsNumeric } 
+Admin Fax:{ AdminContact.FaxNumber ? : Trim, IsPhoneNumber } 
+Admin Fax Ext:{ AdminContact.FaxNumberExt ? : Trim, IsNumeric } 
+Admin Email:{ AdminContact.Email ? : Trim, IsEmail }
+Tech ID:{ TechnicalContact.RegistryId  ? : Trim }
+Tech Name:{ TechnicalContact.Name ? : Trim }
+Tech Organization:{ TechnicalContact.Organization ? : Trim }
+Tech Street:{ TechnicalContact.Address ? : Trim, IsNotEmpty }
+Tech City:{ TechnicalContact.Address ? : Trim, IsNotEmpty }
+Tech State/Province: { TechnicalContact.Address ? : Trim, IsNotEmpty }
+Tech Postal Code:{ TechnicalContact.Address ? : Trim, IsNotEmpty }
+Tech Country:{ TechnicalContact.Address ? : Trim, IsNotEmpty }
+Tech Phone:{ TechnicalContact.TelephoneNumber ? : Trim, IsPhoneNumber }
+Tech Phone Ext:{ TechnicalContact.TelephoneNumberExt ? : Trim, IsNumeric } 
+Tech Fax:{ TechnicalContact.FaxNumber ? : Trim, IsPhoneNumber } 
+Tech Fax Ext:{ TechnicalContact.FaxNumberExt ? : Trim, IsNumeric }
+Tech Email:{ TechnicalContact.Email ? : Trim, IsEmail }
+Billing ID:{ BillingContact.RegistryId  ? : Trim }
+Billing Name:{ BillingContact.Name ? : Trim }
+Billing Organization:{ BillingContact.Organization ? : Trim }
+Billing Street:{ BillingContact.Address ? : Trim, IsNotEmpty }
+Billing City:{ BillingContact.Address ? : Trim, IsNotEmpty }
+Billing State/Province:{ BillingContact.Address ? : Trim, IsNotEmpty }
+Billing Postal Code:{ BillingContact.Address ? : Trim, IsNotEmpty }
+Billing Country:{ BillingContact.Address ? : Trim, IsNotEmpty }
+Billing Phone:{ BillingContact.TelephoneNumber ? : Trim, IsPhoneNumber }
+Billing Phone Ext:{ BillingContact.TelephoneNumberExt ? : Trim, IsNumeric }
+Billing Fax:{ BillingContact.FaxNumber ? : Trim, IsPhoneNumber } 
+Billing Fax Ext:{ BillingContact.FaxNumberExt ? : Trim, IsNumeric } 
+Billing Email:{ BillingContact.Email ? : Trim, IsEmail }
+Name Server:{ NameServers ? : Trim, IsDomainName, ToLower, Repeating }
+DNSSEC:{ DnsSecStatus ? : Trim }
+Registrar Abuse Contact Email:{ Registrar.AbuseEmail ? : Trim, IsEmail }
+Registrar Abuse Contact Phone:{ Registrar.AbuseTelephoneNumber ? : Trim, IsPhoneNumber }
+>>> Last update of WHOIS database:

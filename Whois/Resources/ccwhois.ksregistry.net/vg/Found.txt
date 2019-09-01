@@ -18,9 +18,9 @@ domain name: { DomainName : IsDomainName, ToLower, EOL }
 registrar: { Registrar.Name ? : EOL }
 url: { Registrar.Url ? : IsDomainName, ToLower, EOL }
 status: { DomainStatus ? : Repeating, EOL }
-created date: { Registered ? : ToDateTime("yyyy-MM-ddTHH:mm:ssZ"), EOL }
-updated date: { Updated ? : ToDateTime("yyyy-MM-ddTHH:mm:ssZ"), EOL }
-expiration date: { Expiration ? : ToDateTime("yyyy-MM-ddTHH:mm:ssZ"), EOL }
+created date: { Registered ? : ToDateTimeUtc("yyyy-MM-dd HH:mm:ss"), EOL }
+updated date: { Updated ? : ToDateTimeUtc("yyyy-MM-dd HH:mm:ss"), EOL }
+expiration date: { Expiration ? : ToDateTimeUtc("yyyy-MM-dd HH:mm:ss"), EOL }
 
 owner-contact: { Registrant.RegistryId ? : EOL }
 owner-organization: { Registrant.Organization ? : EOL }

@@ -13,4 +13,4 @@ set: Status = NotFound
 # Must contain:
 hint:  Domain not found
 ---
-Domain not found{ Null }
+Domain not found

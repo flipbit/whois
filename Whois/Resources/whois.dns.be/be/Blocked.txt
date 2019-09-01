@@ -13,4 +13,4 @@ set: Status = Blocked
 
 hint: IP address blocked
 ---
-IP address blocked{ Null }
+IP address blocked

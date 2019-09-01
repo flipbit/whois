@@ -13,5 +13,5 @@ set: Status = Reserved
 
 hint:Domain not available
 ---
-Domain not available{ Null }
+Domain not available
 

@@ -32,7 +32,7 @@ namespace Whois.Parsing.Whois.Dns.Pt.Pt
 
             Assert.AreEqual("google.pt", response.DomainName);
 
-            Assert.AreEqual(new DateTime(2003, 09, 01, 00, 00, 00, DateTimeKind.Utc), response.Registered);
+            Assert.AreEqual(new DateTime(2003, 01, 09, 00, 00, 00, DateTimeKind.Utc), response.Registered);
 
              // Registrant Details
             Assert.AreEqual("Google, Inc.", response.Registrant.Name);
@@ -59,7 +59,7 @@ namespace Whois.Parsing.Whois.Dns.Pt.Pt
             Assert.AreEqual(1, response.DomainStatus.Count);
             Assert.AreEqual("ACTIVE", response.DomainStatus[0]);
 
-            Assert.AreEqual(13, response.FieldsParsed);
+            Assert.AreEqual(14, response.FieldsParsed);
         }
 
         [Test]
@@ -76,8 +76,8 @@ namespace Whois.Parsing.Whois.Dns.Pt.Pt
 
             Assert.AreEqual("wiki.pt", response.DomainName);
 
-            Assert.AreEqual(new DateTime(2009, 09, 02, 00, 00, 00, DateTimeKind.Utc), response.Registered);
-            Assert.AreEqual(new DateTime(2014, 01, 03, 00, 00, 00, DateTimeKind.Utc), response.Expiration);
+            Assert.AreEqual(new DateTime(2009, 02, 09, 00, 00, 00, DateTimeKind.Utc), response.Registered);
+            Assert.AreEqual(new DateTime(2014, 03, 01, 00, 00, 00, DateTimeKind.Utc), response.Expiration);
 
              // Registrant Details
             Assert.AreEqual("Portugalmail - Comunicações S.A.", response.Registrant.Name);
@@ -138,8 +138,8 @@ namespace Whois.Parsing.Whois.Dns.Pt.Pt
 
             Assert.AreEqual("wiki.pt", response.DomainName);
 
-            Assert.AreEqual(new DateTime(2009, 09, 02, 00, 00, 00, DateTimeKind.Utc), response.Registered);
-            Assert.AreEqual(new DateTime(2014, 01, 03, 00, 00, 00, DateTimeKind.Utc), response.Expiration);
+            Assert.AreEqual(new DateTime(2009, 02, 09, 00, 00, 00, DateTimeKind.Utc), response.Registered);
+            Assert.AreEqual(new DateTime(2014, 03, 01, 00, 00, 00, DateTimeKind.Utc), response.Expiration);
 
              // Registrant Details
             Assert.AreEqual("Portugalmail - Comunicações S.A.", response.Registrant.Name);
@@ -182,7 +182,7 @@ namespace Whois.Parsing.Whois.Dns.Pt.Pt
 
             Assert.AreEqual("google.pt", response.DomainName);
 
-            Assert.AreEqual(new DateTime(2003, 09, 01, 00, 00, 00, DateTimeKind.Utc), response.Registered);
+            Assert.AreEqual(new DateTime(2003, 01, 09, 00, 00, 00, DateTimeKind.Utc), response.Registered);
 
              // Registrant Details
             Assert.AreEqual("Google, Inc.", response.Registrant.Name);
@@ -209,7 +209,7 @@ namespace Whois.Parsing.Whois.Dns.Pt.Pt
             Assert.AreEqual(1, response.DomainStatus.Count);
             Assert.AreEqual("ACTIVE", response.DomainStatus[0]);
 
-            Assert.AreEqual(13, response.FieldsParsed);
+            Assert.AreEqual(14, response.FieldsParsed);
         }
 
         [Test]
@@ -226,7 +226,7 @@ namespace Whois.Parsing.Whois.Dns.Pt.Pt
 
             Assert.AreEqual("wiki.pt", response.DomainName);
 
-            Assert.AreEqual(new DateTime(2009, 09, 02, 00, 00, 00, DateTimeKind.Utc), response.Registered);
+            Assert.AreEqual(new DateTime(2009, 02, 09, 00, 00, 00, DateTimeKind.Utc), response.Registered);
 
              // Registrant Details
             Assert.AreEqual("Portugalmail - Comunicações S.A.", response.Registrant.Name);

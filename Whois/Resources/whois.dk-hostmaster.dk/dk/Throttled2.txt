@@ -13,4 +13,4 @@ set: Status = Throttled
 
 hint:Too many connections.
 ---
-# Too many connections.{ Null }
+# Too many connections.

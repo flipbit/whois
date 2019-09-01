@@ -14,4 +14,4 @@ set: Status = Unavailable
 hint: Server too busy
 hint: try again later
 ---
-whois.domain-registry.nl: Server too busy, try again later{ Null }
+whois.domain-registry.nl: Server too busy, try again later

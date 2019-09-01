@@ -13,4 +13,4 @@ set: Status = Throttled
 
 hint: Your connection limit exceeded
 ---
-Your connection limit exceeded. Please slow down and try again later.{ Null }
+Your connection limit exceeded. Please slow down and try again later.

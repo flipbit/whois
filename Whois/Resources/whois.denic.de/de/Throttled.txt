@@ -14,6 +14,6 @@ set: Status = Throttled
 hint: % Error
 hint: access control limit reached
 ---
-% Error: 55000000002 Connection refused; access control limit reached.{ Null }
+% Error: 55000000002 Connection refused; access control limit reached.
 
 
