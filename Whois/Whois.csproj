@@ -185,7 +185,6 @@
     <None Remove="Resources\whois.kr\kr\NotFound.txt" />
     <None Remove="Resources\whois.monic.mo\mo\Found.txt" />
     <None Remove="Resources\whois.monic.mo\mo\NotFound.txt" />
-    <None Remove="Resources\whois.museum\museum\Found.txt" />
     <None Remove="Resources\whois.museum\museum\NotFound.txt" />
     <None Remove="Resources\whois.mynic.my\my\Found.txt" />
     <None Remove="Resources\whois.mynic.my\my\NotFound.txt" />
@@ -671,7 +670,6 @@
     <EmbeddedResource Include="Resources\whois.kr\kr\NotFound.txt" />
     <EmbeddedResource Include="Resources\whois.monic.mo\mo\Found.txt" />
     <EmbeddedResource Include="Resources\whois.monic.mo\mo\NotFound.txt" />
-    <EmbeddedResource Include="Resources\whois.museum\museum\Found.txt" />
     <EmbeddedResource Include="Resources\whois.museum\museum\NotFound.txt" />
     <EmbeddedResource Include="Resources\whois.mynic.my\my\Found.txt" />
     <EmbeddedResource Include="Resources\whois.mynic.my\my\NotFound.txt" />
