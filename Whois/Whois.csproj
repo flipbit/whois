@@ -183,11 +183,6 @@
     <None Remove="Resources\whois.kg\kg\NotFound.txt" />
     <None Remove="Resources\whois.kr\kr\Found.txt" />
     <None Remove="Resources\whois.kr\kr\NotFound.txt" />
-    <None Remove="Resources\whois.markmonitor.com\cc\Found.txt" />
-    <None Remove="Resources\whois.markmonitor.com\com\Found.txt" />
-    <None Remove="Resources\whois.markmonitor.com\jobs\Found.txt" />
-    <None Remove="Resources\whois.markmonitor.com\net\Found.txt" />
-    <None Remove="Resources\whois.markmonitor.com\tv\Found.txt" />
     <None Remove="Resources\whois.monic.mo\mo\Found.txt" />
     <None Remove="Resources\whois.monic.mo\mo\NotFound.txt" />
     <None Remove="Resources\whois.museum\museum\Found.txt" />
@@ -674,11 +669,6 @@
     <EmbeddedResource Include="Resources\whois.kg\kg\NotFound.txt" />
     <EmbeddedResource Include="Resources\whois.kr\kr\Found.txt" />
     <EmbeddedResource Include="Resources\whois.kr\kr\NotFound.txt" />
-    <EmbeddedResource Include="Resources\whois.markmonitor.com\cc\Found.txt" />
-    <EmbeddedResource Include="Resources\whois.markmonitor.com\com\Found.txt" />
-    <EmbeddedResource Include="Resources\whois.markmonitor.com\jobs\Found.txt" />
-    <EmbeddedResource Include="Resources\whois.markmonitor.com\net\Found.txt" />
-    <EmbeddedResource Include="Resources\whois.markmonitor.com\tv\Found.txt" />
     <EmbeddedResource Include="Resources\whois.monic.mo\mo\Found.txt" />
     <EmbeddedResource Include="Resources\whois.monic.mo\mo\NotFound.txt" />
     <EmbeddedResource Include="Resources\whois.museum\museum\Found.txt" />
