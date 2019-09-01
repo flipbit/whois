@@ -47,11 +47,19 @@ Trademark Country:{ Trademark.Country ? : Trim }
 Trademark Number:{ Trademark.Number ? : Trim }
 Registrar:{ Registrar.Name ? : Trim }
 Registrar IANA ID:{ Registrar.IanaId ? : Trim, IsNumeric }
-Sponsoring Registrar:{ Registrar.Name ? : Trim }
-Sponsoring Registrar IANA ID:{ Registrar.IanaId ? : Trim, IsNumeric }
 WHOIS Server:{ Registrar.WhoisServerUrl ? : Trim, IsDomainName, ToLower } 
 Referral URL:{ Registrar.Url ? : Trim, IsUrl, ToLower } 
 Registrar URL:{ Registrar.Url ? : Trim, IsUrl, ToLower } 
+
+#
+# Supporting Registrar
+#
+Sponsoring Registrar:{ Registrar.Name ? }
+Sponsoring Registrar IANA ID:{ Registrar.IanaId ? : IsNumeric }
+Sponsoring Registrar URL:{ Registrar.Url ? : IsUrl, ToLower }
+Sponsoring Registrar Phone:{ Registrar.AbuseTelephoneNumber ? : IsPhoneNumber }
+Sponsoring Registrar Customer Service Contact:{ Registrar.AbuseTelephoneNumber ? : IsPhoneNumber }
+Sponsoring Registrar Customer Service Email:{ Registrar.AbuseEmail ? : IsEmail }
 
 Domain Status:{ DomainStatus ? : Trim, Repeating, SubstringBefore(' ') }
 Status:{ DomainStatus ? : Trim, Repeating }

@@ -57,9 +57,17 @@ Registrar Abuse Contact Phone: { Registrar.AbuseTelephoneNumber ? : IsPhoneNumbe
 Registrar URL: { Registrar.Url ? : IsUrl, ToLower } 
 Registrar WHOIS Server: { Registrar.WhoisServerUrl ? : IsDomainName, ToLower }
 
-# Alternate form
+#
+# Supporting Registrar
+#
 Sponsoring Registrar: { Registrar.Name ? }
 Sponsoring Registrar IANA ID: { Registrar.IanaId ? : IsNumeric }
+Sponsoring Registrar URL: { Registrar.Url ? : IsUrl, ToLower }
+Sponsoring Registrar Phone: { Registrar.AbuseTelephoneNumber ? : IsPhoneNumber }
+Sponsoring Registrar Customer Service Contact: { Registrar.AbuseTelephoneNumber ? : IsPhoneNumber }
+Sponsoring Registrar Customer Service Email: { Registrar.AbuseEmail ? : IsEmail }
+
+# Alternate form
 WHOIS Server: { Registrar.WhoisServerUrl ? : IsDomainName, ToLower } 
 Referral URL: { Registrar.Url ? : IsUrl, ToLower } 
 
