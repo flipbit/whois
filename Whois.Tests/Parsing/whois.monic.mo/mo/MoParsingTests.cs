@@ -5,7 +5,6 @@ using Whois.Parsers;
 namespace Whois.Parsing.Whois.Monic.Mo.Mo
 {
     [TestFixture]
-    [Ignore("TODO")]
     public class MoParsingTests : ParsingTests
     {
         private WhoisParser parser;
@@ -26,6 +25,13 @@ namespace Whois.Parsing.Whois.Monic.Mo.Mo
 
             Assert.Greater(sample.Length, 0);
             Assert.AreEqual(WhoisResponseStatus.NotFound, response.Status);
+
+            Assert.AreEqual(0, response.ParsingErrors);
+            Assert.AreEqual("whois.monic.mo/mo/NotFound", response.TemplateName);
+
+            Assert.AreEqual("u34jedzcq.mo", response.DomainName);
+
+            Assert.AreEqual(2, response.FieldsParsed);
         }
 
         [Test]
@@ -36,6 +42,22 @@ namespace Whois.Parsing.Whois.Monic.Mo.Mo
 
             Assert.Greater(sample.Length, 0);
             Assert.AreEqual(WhoisResponseStatus.Found, response.Status);
+
+            Assert.AreEqual(0, response.ParsingErrors);
+            Assert.AreEqual("whois.monic.mo/mo/Found", response.TemplateName);
+
+            Assert.AreEqual("umac.mo", response.DomainName);
+
+            // Registrar Details
+            Assert.AreEqual("MONIC", response.Registrar.Name);
+            Assert.AreEqual("whois.monic.mo", response.Registrar.WhoisServerUrl);
+
+            // Nameservers
+            Assert.AreEqual(2, response.NameServers.Count);
+            Assert.AreEqual("umacsn1.umac.mo", response.NameServers[0]);
+            Assert.AreEqual("umacsn2.umac.mo", response.NameServers[1]);
+
+            Assert.AreEqual(6, response.FieldsParsed);
         }
     }
 }

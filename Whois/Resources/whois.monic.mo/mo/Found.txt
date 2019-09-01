@@ -8,17 +8,14 @@ name: whois.monic.mo/mo/Found
 tag: whois.monic.mo
 tag: mo
 
+# End tokens on new lines
+terminateOnNewLine: true
+
 # Set query response type:
 set: Status = Found
 ---
-
-Whois Server Version 1.0
-
-This whois server contains domain data from the MO zone.
-
-   Domain Name: UMAC.MO
-   Registrar: MONIC
-   Whois Server: whois.monic.mo
-   Referral URL: http;//www.monic.mo/
-   Name Server: UMACSN1.UMAC.MO
-   Name Server: UMACSN2.UMAC.MO
+   Domain Name: { DomainName : IsDomainName, ToLower }
+   Registrar: { Registrar.Name ? }
+   Whois Server: { Registrar.WhoisServerUrl ? : IsDomainName, ToLower }
+   Referral URL: { Registrar.Url ? : IsUrl, ToLower }
+   Name Server: { NameServers ? : IsDomainName, ToLower, Repeating }

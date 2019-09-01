@@ -10,10 +10,7 @@ tag: mo
 
 # Set query response type:
 set: Status = NotFound
+
+hint: No match
 ---
-
-Whois Server Version 1.0
-
-This whois server contains domain data from the MO zone.
-
-No match for "U34JEDZCQ.MO".
+No match for "{ DomainName : IsDomainName, ToLower }".
