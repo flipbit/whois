@@ -154,8 +154,6 @@
     <None Remove="Resources\whois.iis.se\se\NotFound.txt" />
     <None Remove="Resources\whois.in.ua\in.ua\Found.txt" />
     <None Remove="Resources\whois.in.ua\in.ua\NotFound.txt" />
-    <None Remove="Resources\whois.inregistry.net\in\Found.txt" />
-    <None Remove="Resources\whois.inregistry.net\in\NotFound.txt" />
     <None Remove="Resources\whois.isnic.is\is\Found.txt" />
     <None Remove="Resources\whois.isnic.is\is\NotFound.txt" />
     <None Remove="Resources\whois.isoc.org.il\il\Found.txt" />
@@ -647,8 +645,6 @@
     <EmbeddedResource Include="Resources\whois.iis.se\se\NotFound.txt" />
     <EmbeddedResource Include="Resources\whois.in.ua\in.ua\Found.txt" />
     <EmbeddedResource Include="Resources\whois.in.ua\in.ua\NotFound.txt" />
-    <EmbeddedResource Include="Resources\whois.inregistry.net\in\Found.txt" />
-    <EmbeddedResource Include="Resources\whois.inregistry.net\in\NotFound.txt" />
     <EmbeddedResource Include="Resources\whois.isnic.is\is\Found.txt" />
     <EmbeddedResource Include="Resources\whois.isnic.is\is\NotFound.txt" />
     <EmbeddedResource Include="Resources\whois.isoc.org.il\il\Found.txt" />
