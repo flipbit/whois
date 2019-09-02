@@ -51,9 +51,9 @@ namespace Whois.Parsing.Whois.Dotpostregistry.Net.Post
             // Registrar Details
             Assert.AreEqual("Universal Postal Union (R4947-POST)", response.Registrar.Name);
 
-            Assert.AreEqual(new DateTime(2012, 09, 21, 12, 07, 40, DateTimeKind.Utc), response.Updated);
-            Assert.AreEqual(new DateTime(2012, 09, 21, 12, 03, 07, DateTimeKind.Utc), response.Registered);
-            Assert.AreEqual(new DateTime(2014, 09, 21, 12, 03, 07, DateTimeKind.Utc), response.Expiration);
+            Assert.AreEqual(new DateTime(2012, 09, 21, 12, 07, 40, 000, DateTimeKind.Utc), response.Updated);
+            Assert.AreEqual(new DateTime(2012, 09, 21, 12, 03, 07, 000, DateTimeKind.Utc), response.Registered);
+            Assert.AreEqual(new DateTime(2014, 09, 21, 12, 03, 07, 000, DateTimeKind.Utc), response.Expiration);
 
              // Registrant Details
             Assert.AreEqual("ITPI30001", response.Registrant.RegistryId);
@@ -63,10 +63,11 @@ namespace Whois.Parsing.Whois.Dotpostregistry.Net.Post
             Assert.AreEqual("info@poste.it", response.Registrant.Email);
 
              // Registrant Address
-            Assert.AreEqual(3, response.Registrant.Address.Count);
-            Assert.AreEqual("Rome", response.Registrant.Address[0]);
-            Assert.AreEqual("00144", response.Registrant.Address[1]);
-            Assert.AreEqual("IT", response.Registrant.Address[2]);
+            Assert.AreEqual(4, response.Registrant.Address.Count);
+            Assert.AreEqual("Viale Europa 190", response.Registrant.Address[0]);
+            Assert.AreEqual("Rome", response.Registrant.Address[1]);
+            Assert.AreEqual("00144", response.Registrant.Address[2]);
+            Assert.AreEqual("IT", response.Registrant.Address[3]);
 
 
              // AdminContact Details
@@ -77,10 +78,11 @@ namespace Whois.Parsing.Whois.Dotpostregistry.Net.Post
             Assert.AreEqual("Giovanni.Brardinoni@Postecom.it", response.AdminContact.Email);
 
              // AdminContact Address
-            Assert.AreEqual(3, response.AdminContact.Address.Count);
-            Assert.AreEqual("Rome", response.AdminContact.Address[0]);
-            Assert.AreEqual("00144", response.AdminContact.Address[1]);
-            Assert.AreEqual("IT", response.AdminContact.Address[2]);
+            Assert.AreEqual(4, response.AdminContact.Address.Count);
+            Assert.AreEqual("Viale Europa 175", response.AdminContact.Address[0]);
+            Assert.AreEqual("Rome", response.AdminContact.Address[1]);
+            Assert.AreEqual("00144", response.AdminContact.Address[2]);
+            Assert.AreEqual("IT", response.AdminContact.Address[3]);
 
 
              // BillingContact Details
@@ -91,10 +93,11 @@ namespace Whois.Parsing.Whois.Dotpostregistry.Net.Post
             Assert.AreEqual("loretip@posteitaliane.it", response.BillingContact.Email);
 
              // BillingContact Address
-            Assert.AreEqual(3, response.BillingContact.Address.Count);
-            Assert.AreEqual("Rome", response.BillingContact.Address[0]);
-            Assert.AreEqual("00144", response.BillingContact.Address[1]);
-            Assert.AreEqual("IT", response.BillingContact.Address[2]);
+            Assert.AreEqual(4, response.BillingContact.Address.Count);
+            Assert.AreEqual("Viale Europa 175", response.BillingContact.Address[0]);
+            Assert.AreEqual("Rome", response.BillingContact.Address[1]);
+            Assert.AreEqual("00144", response.BillingContact.Address[2]);
+            Assert.AreEqual("IT", response.BillingContact.Address[3]);
 
 
              // TechnicalContact Details
@@ -105,10 +108,11 @@ namespace Whois.Parsing.Whois.Dotpostregistry.Net.Post
             Assert.AreEqual("netsecurity@postecom.it", response.TechnicalContact.Email);
 
              // TechnicalContact Address
-            Assert.AreEqual(3, response.TechnicalContact.Address.Count);
-            Assert.AreEqual("Rome", response.TechnicalContact.Address[0]);
-            Assert.AreEqual("00144", response.TechnicalContact.Address[1]);
-            Assert.AreEqual("IT", response.TechnicalContact.Address[2]);
+            Assert.AreEqual(4, response.TechnicalContact.Address.Count);
+            Assert.AreEqual("Viale Europa 175", response.TechnicalContact.Address[0]);
+            Assert.AreEqual("Rome", response.TechnicalContact.Address[1]);
+            Assert.AreEqual("00144", response.TechnicalContact.Address[2]);
+            Assert.AreEqual("IT", response.TechnicalContact.Address[3]);
 
 
             // Nameservers
@@ -121,7 +125,7 @@ namespace Whois.Parsing.Whois.Dotpostregistry.Net.Post
             Assert.AreEqual("TRANSFER PROHIBITED", response.DomainStatus[0]);
 
             Assert.AreEqual("Signed", response.DnsSecStatus);
-            Assert.AreEqual(43, response.FieldsParsed);
+            Assert.AreEqual(47, response.FieldsParsed);
         }
     }
 }

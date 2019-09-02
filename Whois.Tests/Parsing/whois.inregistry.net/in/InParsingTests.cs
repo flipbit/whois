@@ -51,9 +51,9 @@ namespace Whois.Parsing.Whois.Inregistry.Net.In
             // Registrar Details
             Assert.AreEqual("GoDaddy.com Inc. (R101-AFIN)", response.Registrar.Name);
 
-            Assert.AreEqual(new DateTime(2010, 07, 01, 12, 55, 17, DateTimeKind.Utc), response.Updated);
-            Assert.AreEqual(new DateTime(2009, 01, 27, 05, 01, 05, DateTimeKind.Utc), response.Registered);
-            Assert.AreEqual(new DateTime(2011, 01, 27, 05, 01, 05, DateTimeKind.Utc), response.Expiration);
+            Assert.AreEqual(new DateTime(2010, 07, 01, 12, 55, 17, 000, DateTimeKind.Utc), response.Updated);
+            Assert.AreEqual(new DateTime(2009, 01, 27, 05, 01, 05, 000, DateTimeKind.Utc), response.Registered);
+            Assert.AreEqual(new DateTime(2011, 01, 27, 05, 01, 05, 000, DateTimeKind.Utc), response.Expiration);
 
              // Registrant Details
             Assert.AreEqual("CR51214064", response.Registrant.RegistryId);
@@ -63,11 +63,12 @@ namespace Whois.Parsing.Whois.Inregistry.Net.In
             Assert.AreEqual("domini@siris.com", response.Registrant.Email);
 
              // Registrant Address
-            Assert.AreEqual(4, response.Registrant.Address.Count);
-            Assert.AreEqual("milano", response.Registrant.Address[0]);
-            Assert.AreEqual("italy", response.Registrant.Address[1]);
-            Assert.AreEqual("20121", response.Registrant.Address[2]);
-            Assert.AreEqual("AX", response.Registrant.Address[3]);
+            Assert.AreEqual(5, response.Registrant.Address.Count);
+            Assert.AreEqual("foro buonaparte 69", response.Registrant.Address[0]);
+            Assert.AreEqual("milano", response.Registrant.Address[1]);
+            Assert.AreEqual("italy", response.Registrant.Address[2]);
+            Assert.AreEqual("20121", response.Registrant.Address[3]);
+            Assert.AreEqual("AX", response.Registrant.Address[4]);
 
 
              // AdminContact Details
@@ -78,11 +79,12 @@ namespace Whois.Parsing.Whois.Inregistry.Net.In
             Assert.AreEqual("domini@siris.com", response.AdminContact.Email);
 
              // AdminContact Address
-            Assert.AreEqual(4, response.AdminContact.Address.Count);
-            Assert.AreEqual("milano", response.AdminContact.Address[0]);
-            Assert.AreEqual("italy", response.AdminContact.Address[1]);
-            Assert.AreEqual("20121", response.AdminContact.Address[2]);
-            Assert.AreEqual("AX", response.AdminContact.Address[3]);
+            Assert.AreEqual(5, response.AdminContact.Address.Count);
+            Assert.AreEqual("foro buonaparte 69", response.AdminContact.Address[0]);
+            Assert.AreEqual("milano", response.AdminContact.Address[1]);
+            Assert.AreEqual("italy", response.AdminContact.Address[2]);
+            Assert.AreEqual("20121", response.AdminContact.Address[3]);
+            Assert.AreEqual("AX", response.AdminContact.Address[4]);
 
 
              // TechnicalContact Details
@@ -93,10 +95,12 @@ namespace Whois.Parsing.Whois.Inregistry.Net.In
             Assert.AreEqual("domini@siris.com", response.TechnicalContact.Email);
 
              // TechnicalContact Address
-            Assert.AreEqual(3, response.TechnicalContact.Address.Count);
-            Assert.AreEqual("milano", response.TechnicalContact.Address[0]);
-            Assert.AreEqual("20121", response.TechnicalContact.Address[1]);
-            Assert.AreEqual("AX", response.TechnicalContact.Address[2]);
+            Assert.AreEqual(5, response.TechnicalContact.Address.Count);
+            Assert.AreEqual("foro buonaparte 69", response.TechnicalContact.Address[0]);
+            Assert.AreEqual("milano", response.TechnicalContact.Address[1]);
+            Assert.AreEqual("italy", response.TechnicalContact.Address[2]);
+            Assert.AreEqual("20121", response.TechnicalContact.Address[3]);
+            Assert.AreEqual("AX", response.TechnicalContact.Address[4]);
 
 
             // Nameservers
@@ -112,7 +116,7 @@ namespace Whois.Parsing.Whois.Inregistry.Net.In
             Assert.AreEqual("CLIENT TRANSFER PROHIBITED", response.DomainStatus[2]);
             Assert.AreEqual("CLIENT UPDATE PROHIBITED", response.DomainStatus[3]);
 
-            Assert.AreEqual(40, response.FieldsParsed);
+            Assert.AreEqual(44, response.FieldsParsed);
         }
 
         [Test]
@@ -133,9 +137,9 @@ namespace Whois.Parsing.Whois.Inregistry.Net.In
             // Registrar Details
             Assert.AreEqual("Mark Monitor (R84-AFIN)", response.Registrar.Name);
 
-            Assert.AreEqual(new DateTime(2009, 04, 06, 18, 20, 09, DateTimeKind.Utc), response.Updated);
-            Assert.AreEqual(new DateTime(2005, 02, 14, 20, 35, 14, DateTimeKind.Utc), response.Registered);
-            Assert.AreEqual(new DateTime(2011, 02, 14, 20, 35, 14, DateTimeKind.Utc), response.Expiration);
+            Assert.AreEqual(new DateTime(2009, 04, 06, 18, 20, 09, 000, DateTimeKind.Utc), response.Updated);
+            Assert.AreEqual(new DateTime(2005, 02, 14, 20, 35, 14, 000, DateTimeKind.Utc), response.Registered);
+            Assert.AreEqual(new DateTime(2011, 02, 14, 20, 35, 14, 000, DateTimeKind.Utc), response.Expiration);
 
              // Registrant Details
             Assert.AreEqual("EPPIPM-143349", response.Registrant.RegistryId);
@@ -145,10 +149,11 @@ namespace Whois.Parsing.Whois.Inregistry.Net.In
             Assert.AreEqual("dns-admin@google.com", response.Registrant.Email);
 
              // Registrant Address
-            Assert.AreEqual(3, response.Registrant.Address.Count);
-            Assert.AreEqual("Mountain View, CA", response.Registrant.Address[0]);
-            Assert.AreEqual("94043", response.Registrant.Address[1]);
-            Assert.AreEqual("US", response.Registrant.Address[2]);
+            Assert.AreEqual(4, response.Registrant.Address.Count);
+            Assert.AreEqual("1600 Amphitheatre Parkway", response.Registrant.Address[0]);
+            Assert.AreEqual("Mountain View, CA", response.Registrant.Address[1]);
+            Assert.AreEqual("94043", response.Registrant.Address[2]);
+            Assert.AreEqual("US", response.Registrant.Address[3]);
 
 
              // AdminContact Details
@@ -159,10 +164,11 @@ namespace Whois.Parsing.Whois.Inregistry.Net.In
             Assert.AreEqual("dns-admin@google.com", response.AdminContact.Email);
 
              // AdminContact Address
-            Assert.AreEqual(3, response.AdminContact.Address.Count);
-            Assert.AreEqual("Mountain View, CA", response.AdminContact.Address[0]);
-            Assert.AreEqual("94043", response.AdminContact.Address[1]);
-            Assert.AreEqual("US", response.AdminContact.Address[2]);
+            Assert.AreEqual(4, response.AdminContact.Address.Count);
+            Assert.AreEqual("1600 Amphitheatre Parkway", response.AdminContact.Address[0]);
+            Assert.AreEqual("Mountain View, CA", response.AdminContact.Address[1]);
+            Assert.AreEqual("94043", response.AdminContact.Address[2]);
+            Assert.AreEqual("US", response.AdminContact.Address[3]);
 
 
              // TechnicalContact Details
@@ -173,10 +179,11 @@ namespace Whois.Parsing.Whois.Inregistry.Net.In
             Assert.AreEqual("dns-admin@google.com", response.TechnicalContact.Email);
 
              // TechnicalContact Address
-            Assert.AreEqual(3, response.TechnicalContact.Address.Count);
-            Assert.AreEqual("Mountain View, CA", response.TechnicalContact.Address[0]);
-            Assert.AreEqual("94043", response.TechnicalContact.Address[1]);
-            Assert.AreEqual("US", response.TechnicalContact.Address[2]);
+            Assert.AreEqual(4, response.TechnicalContact.Address.Count);
+            Assert.AreEqual("1600 Amphitheatre Parkway", response.TechnicalContact.Address[0]);
+            Assert.AreEqual("Mountain View, CA", response.TechnicalContact.Address[1]);
+            Assert.AreEqual("94043", response.TechnicalContact.Address[2]);
+            Assert.AreEqual("US", response.TechnicalContact.Address[3]);
 
 
             // Nameservers
@@ -190,7 +197,7 @@ namespace Whois.Parsing.Whois.Inregistry.Net.In
             Assert.AreEqual(1, response.DomainStatus.Count);
             Assert.AreEqual("OK", response.DomainStatus[0]);
 
-            Assert.AreEqual(36, response.FieldsParsed);
+            Assert.AreEqual(39, response.FieldsParsed);
         }
 
         [Test]
@@ -227,9 +234,9 @@ namespace Whois.Parsing.Whois.Inregistry.Net.In
             // Registrar Details
             Assert.AreEqual("Mark Monitor (R84-AFIN)", response.Registrar.Name);
 
-            Assert.AreEqual(new DateTime(2015, 01, 13, 10, 22, 36, DateTimeKind.Utc), response.Updated);
-            Assert.AreEqual(new DateTime(2005, 02, 14, 20, 35, 14, DateTimeKind.Utc), response.Registered);
-            Assert.AreEqual(new DateTime(2016, 02, 14, 20, 35, 14, DateTimeKind.Utc), response.Expiration);
+            Assert.AreEqual(new DateTime(2015, 01, 13, 10, 22, 36, 000, DateTimeKind.Utc), response.Updated);
+            Assert.AreEqual(new DateTime(2005, 02, 14, 20, 35, 14, 000, DateTimeKind.Utc), response.Registered);
+            Assert.AreEqual(new DateTime(2016, 02, 14, 20, 35, 14, 000, DateTimeKind.Utc), response.Expiration);
 
              // Registrant Details
             Assert.AreEqual("mmr-108695", response.Registrant.RegistryId);
@@ -239,11 +246,12 @@ namespace Whois.Parsing.Whois.Inregistry.Net.In
             Assert.AreEqual("dns-admin@google.com", response.Registrant.Email);
 
              // Registrant Address
-            Assert.AreEqual(4, response.Registrant.Address.Count);
-            Assert.AreEqual("Mountain View", response.Registrant.Address[0]);
-            Assert.AreEqual("CA", response.Registrant.Address[1]);
-            Assert.AreEqual("94043", response.Registrant.Address[2]);
-            Assert.AreEqual("US", response.Registrant.Address[3]);
+            Assert.AreEqual(5, response.Registrant.Address.Count);
+            Assert.AreEqual("1600 Amphitheatre Parkway", response.Registrant.Address[0]);
+            Assert.AreEqual("Mountain View", response.Registrant.Address[1]);
+            Assert.AreEqual("CA", response.Registrant.Address[2]);
+            Assert.AreEqual("94043", response.Registrant.Address[3]);
+            Assert.AreEqual("US", response.Registrant.Address[4]);
 
 
              // AdminContact Details
@@ -254,11 +262,12 @@ namespace Whois.Parsing.Whois.Inregistry.Net.In
             Assert.AreEqual("dns-admin@google.com", response.AdminContact.Email);
 
              // AdminContact Address
-            Assert.AreEqual(4, response.AdminContact.Address.Count);
-            Assert.AreEqual("Mountain View", response.AdminContact.Address[0]);
-            Assert.AreEqual("CA", response.AdminContact.Address[1]);
-            Assert.AreEqual("94043", response.AdminContact.Address[2]);
-            Assert.AreEqual("US", response.AdminContact.Address[3]);
+            Assert.AreEqual(5, response.AdminContact.Address.Count);
+            Assert.AreEqual("1600 Amphitheatre Parkway", response.AdminContact.Address[0]);
+            Assert.AreEqual("Mountain View", response.AdminContact.Address[1]);
+            Assert.AreEqual("CA", response.AdminContact.Address[2]);
+            Assert.AreEqual("94043", response.AdminContact.Address[3]);
+            Assert.AreEqual("US", response.AdminContact.Address[4]);
 
 
              // TechnicalContact Details
@@ -269,10 +278,12 @@ namespace Whois.Parsing.Whois.Inregistry.Net.In
             Assert.AreEqual("dns-admin@google.com", response.TechnicalContact.Email);
 
              // TechnicalContact Address
-            Assert.AreEqual(3, response.TechnicalContact.Address.Count);
-            Assert.AreEqual("Mountain View", response.TechnicalContact.Address[0]);
-            Assert.AreEqual("94043", response.TechnicalContact.Address[1]);
-            Assert.AreEqual("US", response.TechnicalContact.Address[2]);
+            Assert.AreEqual(5, response.TechnicalContact.Address.Count);
+            Assert.AreEqual("1600 Amphitheatre Parkway", response.TechnicalContact.Address[0]);
+            Assert.AreEqual("Mountain View", response.TechnicalContact.Address[1]);
+            Assert.AreEqual("CA", response.TechnicalContact.Address[2]);
+            Assert.AreEqual("94043", response.TechnicalContact.Address[3]);
+            Assert.AreEqual("US", response.TechnicalContact.Address[4]);
 
 
             // Nameservers
@@ -289,7 +300,7 @@ namespace Whois.Parsing.Whois.Inregistry.Net.In
             Assert.AreEqual("CLIENT UPDATE PROHIBITED", response.DomainStatus[2]);
 
             Assert.AreEqual("Unsigned", response.DnsSecStatus);
-            Assert.AreEqual(41, response.FieldsParsed);
+            Assert.AreEqual(45, response.FieldsParsed);
         }
     }
 }

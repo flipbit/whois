@@ -23,7 +23,7 @@ set: Status = Found
 #
 # Domain
 #
-Domain Name:{ DomainName : Trim, IsDomainName, ToLower }
+Domain Name:{ DomainName : IsDomainName, ToLower }
 Domain ID:{ RegistryDomainId ? : Trim }
 
 #
@@ -61,6 +61,10 @@ Registry Expiry Date:{ Expiration ? : ToDateTimeUtc("yyyy-MM-ddTHH:mm:ssZ") }
 Registry Expiry Date:{ Expiration ? : ToDateTimeUtc("yyyy-MM-ddTHH:mm:ss.fZ") }
 Registry Expiry Date:{ Expiration ? : ToDateTimeUtc("yyyy-MM-ddTHH:mm:ss.fffZ") }
 Registry Expiry Date:{ Expiration ? : ToDateTimeUtc("dd-MMM-yyyy HH:mm:ss") }
+Registrar Registration Expiration Date:{ Expiration ? : ToDateTimeUtc("yyyy-MM-ddTHH:mm:ssZ") }
+Registrar Registration Expiration Date:{ Expiration ? : ToDateTimeUtc("yyyy-MM-ddTHH:mm:ss.fZ") }
+Registrar Registration Expiration Date:{ Expiration ? : ToDateTimeUtc("yyyy-MM-ddTHH:mm:ss.fffZ") }
+Registrar Registration Expiration Date:{ Expiration ? : ToDateTimeUtc("dd-MMM-yyyy HH:mm:ss") }
 
 #
 # Trademark Info
@@ -73,9 +77,9 @@ Trademark Number:{ Trademark.Number ? : Trim }
 #
 # Technical
 #
-Name Server:{ NameServers ? : Trim, IsDomainName, ToLower, Repeating }
-WHOIS Server:{ Registrar.WhoisServerUrl ? : Trim, IsDomainName, ToLower } 
-DNSSEC:{ DnsSecStatus ? : Trim }
+Name Server:{ NameServers ? : IsDomainName, ToLower, Repeating }
+WHOIS Server:{ Registrar.WhoisServerUrl ? : IsDomainName, ToLower } 
+DNSSEC:{ DnsSecStatus ? }
 
 #
 # Registrar
@@ -84,8 +88,8 @@ Registrar:{ Registrar.Name ? : Trim }
 Registrar IANA ID:{ Registrar.IanaId ? : Trim, IsNumeric }
 Registrar Abuse Contact Email:{ Registrar.AbuseEmail ? : Trim, IsEmail }
 Registrar Abuse Contact Phone:{ Registrar.AbuseTelephoneNumber ? : Trim, IsPhoneNumber }
-Referral URL:{ Registrar.Url ? : Trim, IsUrl, ToLower } 
 Registrar URL:{ Registrar.Url ? : Trim, IsUrl, ToLower } 
+Registrar WHOIS Server:{ Registrar.WhoisServerUrl ? : IsDomainName, ToLower }
 
 #
 # Sponsoring Registrar
@@ -96,6 +100,9 @@ Sponsoring Registrar URL:{ Registrar.Url ? : IsUrl, ToLower }
 Sponsoring Registrar Phone:{ Registrar.AbuseTelephoneNumber ? : IsPhoneNumber }
 Sponsoring Registrar Customer Service Contact:{ Registrar.AbuseTelephoneNumber ? : IsPhoneNumber }
 Sponsoring Registrar Customer Service Email:{ Registrar.AbuseEmail ? : IsEmail }
+
+# Alternate form
+Referral URL:{ Registrar.Url ? : Trim, IsUrl, ToLower } 
 
 #
 # Domain Status

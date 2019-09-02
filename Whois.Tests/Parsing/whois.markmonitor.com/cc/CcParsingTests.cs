@@ -27,7 +27,7 @@ namespace Whois.Parsing.Whois.Markmonitor.Com.Cc
             Assert.AreEqual(WhoisResponseStatus.Found, response.Status);
 
             Assert.AreEqual(0, response.ParsingErrors);
-            Assert.AreEqual("generic/tld/Found001", response.TemplateName);
+            Assert.AreEqual("generic/tld/Found02", response.TemplateName);
 
             Assert.AreEqual("google.cc", response.DomainName);
             Assert.AreEqual("86420657_DOMAIN_CC-VRSN", response.RegistryDomainId);
@@ -106,7 +106,7 @@ namespace Whois.Parsing.Whois.Markmonitor.Com.Cc
             Assert.AreEqual("serverDeleteProhibited", response.DomainStatus[5]);
 
             Assert.AreEqual("unsigned", response.DnsSecStatus);
-            Assert.AreEqual(53, response.FieldsParsed);
+            Assert.AreEqual(50, response.FieldsParsed);
         }
     }
 }

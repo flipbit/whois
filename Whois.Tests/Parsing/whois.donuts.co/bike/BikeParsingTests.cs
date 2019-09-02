@@ -43,7 +43,7 @@ namespace Whois.Parsing.Whois.Donuts.Co.Bike
             Assert.AreEqual(WhoisResponseStatus.Found, response.Status);
 
             Assert.AreEqual(0, response.ParsingErrors);
-            Assert.AreEqual("generic/tld/Found001", response.TemplateName);
+            Assert.AreEqual("generic/tld/Found02", response.TemplateName);
 
             Assert.AreEqual("whereismy.bike", response.DomainName);
             Assert.AreEqual("e25432d5c94440c4a8ca0e5ecbc13904-DONUTS", response.RegistryDomainId);
@@ -55,9 +55,9 @@ namespace Whois.Parsing.Whois.Donuts.Co.Bike
             Assert.AreEqual("abuse@godaddy.com", response.Registrar.AbuseEmail);
             Assert.AreEqual("+1.4806242505", response.Registrar.AbuseTelephoneNumber);
 
-            Assert.AreEqual(new DateTime(2017, 04, 12, 16, 49, 41, DateTimeKind.Utc), response.Updated);
-            Assert.AreEqual(new DateTime(2016, 02, 26, 16, 49, 10, DateTimeKind.Utc), response.Registered);
-            Assert.AreEqual(new DateTime(2018, 02, 26, 16, 49, 10, DateTimeKind.Utc), response.Expiration);
+            Assert.AreEqual(new DateTime(2017, 04, 12, 16, 49, 41, 000, DateTimeKind.Utc), response.Updated);
+            Assert.AreEqual(new DateTime(2016, 02, 26, 16, 49, 10, 000, DateTimeKind.Utc), response.Registered);
+            Assert.AreEqual(new DateTime(2018, 02, 26, 16, 49, 10, 000, DateTimeKind.Utc), response.Expiration);
 
              // Registrant Details
             Assert.AreEqual("2a94fd50b2ca42c685828dfa8c07e23d-DONUTS", response.Registrant.RegistryId);
@@ -73,6 +73,7 @@ namespace Whois.Parsing.Whois.Donuts.Co.Bike
             Assert.AreEqual("43000", response.Registrant.Address[3]);
             Assert.AreEqual("HR", response.Registrant.Address[4]);
 
+
              // AdminContact Details
             Assert.AreEqual("a627ad7dc57343858c4397b9e3f9a530-DONUTS", response.AdminContact.RegistryId);
             Assert.AreEqual("Marko Matenda", response.AdminContact.Name);
@@ -86,6 +87,7 @@ namespace Whois.Parsing.Whois.Donuts.Co.Bike
             Assert.AreEqual("Croatia", response.AdminContact.Address[2]);
             Assert.AreEqual("43000", response.AdminContact.Address[3]);
             Assert.AreEqual("HR", response.AdminContact.Address[4]);
+
 
              // TechnicalContact Details
             Assert.AreEqual("08094e7dd78143d6b83338c5c59a8160-DONUTS", response.TechnicalContact.RegistryId);
@@ -101,6 +103,7 @@ namespace Whois.Parsing.Whois.Donuts.Co.Bike
             Assert.AreEqual("43000", response.TechnicalContact.Address[3]);
             Assert.AreEqual("HR", response.TechnicalContact.Address[4]);
 
+
             // Nameservers
             Assert.AreEqual(2, response.NameServers.Count);
             Assert.AreEqual("ns68.domaincontrol.com", response.NameServers[0]);
@@ -114,7 +117,7 @@ namespace Whois.Parsing.Whois.Donuts.Co.Bike
             Assert.AreEqual("clientUpdateProhibited", response.DomainStatus[3]);
 
             Assert.AreEqual("unsigned", response.DnsSecStatus);
-            Assert.AreEqual(48, response.FieldsParsed);
+            Assert.AreEqual(45, response.FieldsParsed);
         }
     }
 }
