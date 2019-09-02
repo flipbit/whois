@@ -134,7 +134,7 @@ namespace Whois
         {
             if (expectedValue.HasValue == false) return;
 
-            sb.AppendLine($@"            Assert.AreEqual(new DateTime({expectedValue.Value.Year}, {expectedValue.Value.Month:00}, {expectedValue.Value.Day:00}, {expectedValue.Value.Hour:00}, {expectedValue.Value.Minute:00}, {expectedValue.Value.Second:00}, DateTimeKind.Utc), response.{fieldName});");
+            sb.AppendLine($@"            Assert.AreEqual(new DateTime({expectedValue.Value.Year}, {expectedValue.Value.Month:00}, {expectedValue.Value.Day:00}, {expectedValue.Value.Hour:00}, {expectedValue.Value.Minute:00}, {expectedValue.Value.Second:00}, {expectedValue.Value.Millisecond:000}, DateTimeKind.Utc), response.{fieldName});");
         }
     }
 }
