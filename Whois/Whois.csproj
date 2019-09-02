@@ -237,8 +237,6 @@
     <None Remove="Resources\whois.nic.ec\ex\NotFound.txt" />
     <None Remove="Resources\whois.nic.es\es\Found.txt" />
     <None Remove="Resources\whois.nic.es\es\NotFound.txt" />
-    <None Remove="Resources\whois.nic.fm\fm\Found.txt" />
-    <None Remove="Resources\whois.nic.fm\fm\NotFound.txt" />
     <None Remove="Resources\whois.nic.fo\fo\Found.txt" />
     <None Remove="Resources\whois.nic.fo\fo\NotFound.txt" />
     <None Remove="Resources\whois.nic.fr\fr\Blocked.txt" />
@@ -714,8 +712,6 @@
     <EmbeddedResource Include="Resources\whois.nic.ec\ex\NotFound.txt" />
     <EmbeddedResource Include="Resources\whois.nic.es\es\Found.txt" />
     <EmbeddedResource Include="Resources\whois.nic.es\es\NotFound.txt" />
-    <EmbeddedResource Include="Resources\whois.nic.fm\fm\Found.txt" />
-    <EmbeddedResource Include="Resources\whois.nic.fm\fm\NotFound.txt" />
     <EmbeddedResource Include="Resources\whois.nic.fo\fo\Found.txt" />
     <EmbeddedResource Include="Resources\whois.nic.fo\fo\NotFound.txt" />
     <EmbeddedResource Include="Resources\whois.nic.fr\fr\Blocked.txt" />
