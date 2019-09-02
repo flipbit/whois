@@ -258,8 +258,6 @@
     <None Remove="Resources\whois.nic.gl\gl\Found.txt" />
     <None Remove="Resources\whois.nic.gl\gl\NotFound.txt" />
     <None Remove="Resources\whois.nic.gs\gs\NotFound.txt" />
-    <None Remove="Resources\whois.nic.ht\ht\Found.txt" />
-    <None Remove="Resources\whois.nic.ht\ht\NotFound.txt" />
     <None Remove="Resources\whois.nic.hu\hu\Found.txt" />
     <None Remove="Resources\whois.nic.hu\hu\NotFound.txt" />
     <None Remove="Resources\whois.nic.im\im\Found.txt" />
@@ -730,8 +728,6 @@
     <EmbeddedResource Include="Resources\whois.nic.gl\gl\Found.txt" />
     <EmbeddedResource Include="Resources\whois.nic.gl\gl\NotFound.txt" />
     <EmbeddedResource Include="Resources\whois.nic.gs\gs\NotFound.txt" />
-    <EmbeddedResource Include="Resources\whois.nic.ht\ht\Found.txt" />
-    <EmbeddedResource Include="Resources\whois.nic.ht\ht\NotFound.txt" />
     <EmbeddedResource Include="Resources\whois.nic.hu\hu\Found.txt" />
     <EmbeddedResource Include="Resources\whois.nic.hu\hu\NotFound.txt" />
     <EmbeddedResource Include="Resources\whois.nic.im\im\Found.txt" />
