@@ -229,8 +229,6 @@
     <None Remove="Resources\whois.nic.cz\cz\Found.txt" />
     <None Remove="Resources\whois.nic.cz\cz\NotFound.txt" />
     <None Remove="Resources\whois.nic.cz\cz\Throttled.txt" />
-    <None Remove="Resources\whois.nic.design\design\Found.txt" />
-    <None Remove="Resources\whois.nic.design\design\NotFound.txt" />
     <None Remove="Resources\whois.nic.dm\dm\Found.txt" />
     <None Remove="Resources\whois.nic.dm\dm\NotFound.txt" />
     <None Remove="Resources\whois.nic.dz\dz\Found.txt" />
@@ -708,8 +706,6 @@
     <EmbeddedResource Include="Resources\whois.nic.cz\cz\Found.txt" />
     <EmbeddedResource Include="Resources\whois.nic.cz\cz\NotFound.txt" />
     <EmbeddedResource Include="Resources\whois.nic.cz\cz\Throttled.txt" />
-    <EmbeddedResource Include="Resources\whois.nic.design\design\Found.txt" />
-    <EmbeddedResource Include="Resources\whois.nic.design\design\NotFound.txt" />
     <EmbeddedResource Include="Resources\whois.nic.dm\dm\Found.txt" />
     <EmbeddedResource Include="Resources\whois.nic.dm\dm\NotFound.txt" />
     <EmbeddedResource Include="Resources\whois.nic.dz\dz\Found.txt" />
