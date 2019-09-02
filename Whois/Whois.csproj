@@ -276,9 +276,6 @@
     <None Remove="Resources\whois.nic.jobs\jobs\NotFound.txt" />
     <None Remove="Resources\whois.nic.kz\kz\Found.txt" />
     <None Remove="Resources\whois.nic.kz\kz\NotFound.txt" />
-    <None Remove="Resources\whois.nic.la\la\Found.txt" />
-    <None Remove="Resources\whois.nic.la\la\NotFound.txt" />
-    <None Remove="Resources\whois.nic.la\la\Other.txt" />
     <None Remove="Resources\whois.nic.li\li\Found.txt" />
     <None Remove="Resources\whois.nic.li\li\NotFound.txt" />
     <None Remove="Resources\whois.nic.lk\lk\Found.txt" />
@@ -744,9 +741,6 @@
     <EmbeddedResource Include="Resources\whois.nic.jobs\jobs\NotFound.txt" />
     <EmbeddedResource Include="Resources\whois.nic.kz\kz\Found.txt" />
     <EmbeddedResource Include="Resources\whois.nic.kz\kz\NotFound.txt" />
-    <EmbeddedResource Include="Resources\whois.nic.la\la\Found.txt" />
-    <EmbeddedResource Include="Resources\whois.nic.la\la\NotFound.txt" />
-    <EmbeddedResource Include="Resources\whois.nic.la\la\Other.txt" />
     <EmbeddedResource Include="Resources\whois.nic.li\li\Found.txt" />
     <EmbeddedResource Include="Resources\whois.nic.li\li\NotFound.txt" />
     <EmbeddedResource Include="Resources\whois.nic.lk\lk\Found.txt" />
