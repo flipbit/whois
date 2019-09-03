@@ -28,15 +28,11 @@ namespace Whois.Parsing.Whois.Gg.Gg
             Assert.AreEqual(WhoisResponseStatus.NotFound, response.Status);
 
             Assert.AreEqual(0, response.ParsingErrors);
-            Assert.AreEqual("generic/tld/Found02", response.TemplateName);
+            Assert.AreEqual("generic/tld/NotFound005", response.TemplateName);
 
             Assert.AreEqual("u34jedzcq.gg", response.DomainName);
 
-            // Domain Status
-            Assert.AreEqual(1, response.DomainStatus.Count);
-            Assert.AreEqual("Available", response.DomainStatus[0]);
-
-            Assert.AreEqual(3, response.FieldsParsed);
+            Assert.AreEqual(2, response.FieldsParsed);
         }
 
         [Test]

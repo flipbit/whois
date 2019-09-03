@@ -30,6 +30,7 @@
     <None Remove="Resources\generic\tld\NotFound002.txt" />
     <None Remove="Resources\generic\tld\NotFound003.txt" />
     <None Remove="Resources\generic\tld\NotFound004.txt" />
+    <None Remove="Resources\generic\tld\NotFound005.txt" />
     <None Remove="Resources\joburg-whois.registry.net.za\joburg\Found.txt" />
     <None Remove="Resources\joburg-whois.registry.net.za\joburg\NotFound.txt" />
     <None Remove="Resources\kero.yachay.pe\pe\Found.txt" />
@@ -290,8 +291,6 @@
     <None Remove="Resources\whois.nic.ly\ly\NotFound.txt" />
     <None Remove="Resources\whois.nic.md\md\Found.txt" />
     <None Remove="Resources\whois.nic.md\md\NotFound.txt" />
-    <None Remove="Resources\whois.nic.mg\mg\Found.txt" />
-    <None Remove="Resources\whois.nic.mg\mg\NotFound.txt" />
     <None Remove="Resources\whois.nic.ms\ms\Found.txt" />
     <None Remove="Resources\whois.nic.ms\ms\NotFound.txt" />
     <None Remove="Resources\whois.nic.mu\mu\Found.txt" />
@@ -489,6 +488,7 @@
     <EmbeddedResource Include="Resources\generic\tld\Found02.txt" />
     <EmbeddedResource Include="Resources\generic\tld\Found01.txt" />
     <EmbeddedResource Include="Resources\generic\tld\NotFound001.txt" />
+    <EmbeddedResource Include="Resources\generic\tld\NotFound005.txt" />
     <EmbeddedResource Include="Resources\generic\tld\NotFound004.txt" />
     <EmbeddedResource Include="Resources\generic\tld\NotFound003.txt" />
     <EmbeddedResource Include="Resources\generic\tld\NotFound002.txt" />
@@ -753,8 +753,6 @@
     <EmbeddedResource Include="Resources\whois.nic.ly\ly\NotFound.txt" />
     <EmbeddedResource Include="Resources\whois.nic.md\md\Found.txt" />
     <EmbeddedResource Include="Resources\whois.nic.md\md\NotFound.txt" />
-    <EmbeddedResource Include="Resources\whois.nic.mg\mg\Found.txt" />
-    <EmbeddedResource Include="Resources\whois.nic.mg\mg\NotFound.txt" />
     <EmbeddedResource Include="Resources\whois.nic.ms\ms\Found.txt" />
     <EmbeddedResource Include="Resources\whois.nic.ms\ms\NotFound.txt" />
     <EmbeddedResource Include="Resources\whois.nic.mu\mu\Found.txt" />
