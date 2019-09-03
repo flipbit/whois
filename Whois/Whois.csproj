@@ -356,9 +356,6 @@
     <None Remove="Resources\whois.nic.xxx\xxx\Reserved.txt" />
     <None Remove="Resources\whois.norid.no\no\Found.txt" />
     <None Remove="Resources\whois.norid.no\no\NotFound.txt" />
-    <None Remove="Resources\whois.pir.org\org\Found.txt" />
-    <None Remove="Resources\whois.pir.org\org\NotFound.txt" />
-    <None Remove="Resources\whois.pir.org\org\Throttled.txt" />
     <None Remove="Resources\whois.pnina.ps\ps\Found.txt" />
     <None Remove="Resources\whois.pnina.ps\ps\NotFound.txt" />
     <None Remove="Resources\whois.register.bg\bg\Found.txt" />
@@ -792,9 +789,7 @@
     <EmbeddedResource Include="Resources\whois.nic.xxx\xxx\Reserved.txt" />
     <EmbeddedResource Include="Resources\whois.norid.no\no\Found.txt" />
     <EmbeddedResource Include="Resources\whois.norid.no\no\NotFound.txt" />
-    <EmbeddedResource Include="Resources\whois.pir.org\org\Found.txt" />
-    <EmbeddedResource Include="Resources\whois.pir.org\org\NotFound.txt" />
-    <EmbeddedResource Include="Resources\whois.pir.org\org\Throttled.txt" />
+    <EmbeddedResource Include="Resources\generic\tld\Throttled01.txt" />
     <EmbeddedResource Include="Resources\whois.pnina.ps\ps\Found.txt" />
     <EmbeddedResource Include="Resources\whois.pnina.ps\ps\NotFound.txt" />
     <EmbeddedResource Include="Resources\whois.register.bg\bg\Found.txt" />
