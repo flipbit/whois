@@ -298,8 +298,6 @@
     <None Remove="Resources\whois.nic.name\name\Reserved.txt" />
     <None Remove="Resources\whois.nic.net.sa\sa\Found.txt" />
     <None Remove="Resources\whois.nic.net.sa\sa\NotFound.txt" />
-    <None Remove="Resources\whois.nic.nf\nf\Found.txt" />
-    <None Remove="Resources\whois.nic.nf\nf\NotFound.txt" />
     <None Remove="Resources\whois.nic.org.uy\uy\Error.txt" />
     <None Remove="Resources\whois.nic.org.uy\uy\Found.txt" />
     <None Remove="Resources\whois.nic.org.uy\uy\NotFound.txt" />
@@ -752,8 +750,6 @@
     <EmbeddedResource Include="Resources\whois.nic.name\name\Reserved.txt" />
     <EmbeddedResource Include="Resources\whois.nic.net.sa\sa\Found.txt" />
     <EmbeddedResource Include="Resources\whois.nic.net.sa\sa\NotFound.txt" />
-    <EmbeddedResource Include="Resources\whois.nic.nf\nf\Found.txt" />
-    <EmbeddedResource Include="Resources\whois.nic.nf\nf\NotFound.txt" />
     <EmbeddedResource Include="Resources\whois.nic.org.uy\uy\Error.txt" />
     <EmbeddedResource Include="Resources\whois.nic.org.uy\uy\Found.txt" />
     <EmbeddedResource Include="Resources\whois.nic.org.uy\uy\NotFound.txt" />
