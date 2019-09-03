@@ -354,8 +354,6 @@
     <None Remove="Resources\whois.nic.wf\wf\NotFound.txt" />
     <None Remove="Resources\whois.nic.wf\wf\Throttled.txt" />
     <None Remove="Resources\whois.nic.xxx\xxx\Reserved.txt" />
-    <None Remove="Resources\whois.nic.xyz\xyz\Found.txt" />
-    <None Remove="Resources\whois.nic.xyz\xyz\NotFound.txt" />
     <None Remove="Resources\whois.norid.no\no\Found.txt" />
     <None Remove="Resources\whois.norid.no\no\NotFound.txt" />
     <None Remove="Resources\whois.pandi.or.id\id\Found.txt" />
@@ -794,8 +792,6 @@
     <EmbeddedResource Include="Resources\whois.nic.wf\wf\NotFound.txt" />
     <EmbeddedResource Include="Resources\whois.nic.wf\wf\Throttled.txt" />
     <EmbeddedResource Include="Resources\whois.nic.xxx\xxx\Reserved.txt" />
-    <EmbeddedResource Include="Resources\whois.nic.xyz\xyz\Found.txt" />
-    <EmbeddedResource Include="Resources\whois.nic.xyz\xyz\NotFound.txt" />
     <EmbeddedResource Include="Resources\whois.norid.no\no\Found.txt" />
     <EmbeddedResource Include="Resources\whois.norid.no\no\NotFound.txt" />
     <EmbeddedResource Include="Resources\whois.pandi.or.id\id\Found.txt" />
