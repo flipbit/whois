@@ -10,5 +10,7 @@ tag: xxx
 
 # Set query response type:
 set: Status = Reserved
+
+hint: Reserved by ICM Registry
 ---
 Reserved by ICM Registry

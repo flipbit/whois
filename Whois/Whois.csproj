@@ -353,8 +353,6 @@
     <None Remove="Resources\whois.nic.wf\wf\Found.txt" />
     <None Remove="Resources\whois.nic.wf\wf\NotFound.txt" />
     <None Remove="Resources\whois.nic.wf\wf\Throttled.txt" />
-    <None Remove="Resources\whois.nic.xxx\xxx\Found.txt" />
-    <None Remove="Resources\whois.nic.xxx\xxx\NotFound.txt" />
     <None Remove="Resources\whois.nic.xxx\xxx\Reserved.txt" />
     <None Remove="Resources\whois.nic.xyz\xyz\Found.txt" />
     <None Remove="Resources\whois.nic.xyz\xyz\NotFound.txt" />
@@ -795,8 +793,6 @@
     <EmbeddedResource Include="Resources\whois.nic.wf\wf\Found.txt" />
     <EmbeddedResource Include="Resources\whois.nic.wf\wf\NotFound.txt" />
     <EmbeddedResource Include="Resources\whois.nic.wf\wf\Throttled.txt" />
-    <EmbeddedResource Include="Resources\whois.nic.xxx\xxx\Found.txt" />
-    <EmbeddedResource Include="Resources\whois.nic.xxx\xxx\NotFound.txt" />
     <EmbeddedResource Include="Resources\whois.nic.xxx\xxx\Reserved.txt" />
     <EmbeddedResource Include="Resources\whois.nic.xyz\xyz\Found.txt" />
     <EmbeddedResource Include="Resources\whois.nic.xyz\xyz\NotFound.txt" />
