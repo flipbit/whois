@@ -324,8 +324,6 @@
     <None Remove="Resources\whois.nic.so\so\NotFound.txt" />
     <None Remove="Resources\whois.nic.st\st\Found.txt" />
     <None Remove="Resources\whois.nic.st\st\NotFound.txt" />
-    <None Remove="Resources\whois.nic.tc\tc\Found.txt" />
-    <None Remove="Resources\whois.nic.tc\tc\NotFound.txt" />
     <None Remove="Resources\whois.nic.tech\tech\Found.txt" />
     <None Remove="Resources\whois.nic.tech\tech\NotFound.txt" />
     <None Remove="Resources\whois.nic.tel\tel\Found.txt" />
@@ -772,8 +770,6 @@
     <EmbeddedResource Include="Resources\whois.nic.so\so\NotFound.txt" />
     <EmbeddedResource Include="Resources\whois.nic.st\st\Found.txt" />
     <EmbeddedResource Include="Resources\whois.nic.st\st\NotFound.txt" />
-    <EmbeddedResource Include="Resources\whois.nic.tc\tc\Found.txt" />
-    <EmbeddedResource Include="Resources\whois.nic.tc\tc\NotFound.txt" />
     <EmbeddedResource Include="Resources\whois.nic.tech\tech\Found.txt" />
     <EmbeddedResource Include="Resources\whois.nic.tech\tech\NotFound.txt" />
     <EmbeddedResource Include="Resources\whois.nic.tel\tel\Found.txt" />
