@@ -437,8 +437,6 @@
     <None Remove="Resources\whois.za.net\za.net\NotFound.txt" />
     <None Remove="Resources\whois.za.org\za.org\Found.txt" />
     <None Remove="Resources\whois.za.org\za.org\NotFound.txt" />
-    <None Remove="Resources\whois1.nic.bi\bi\Found.txt" />
-    <None Remove="Resources\whois1.nic.bi\bi\NotFound.txt" />
   </ItemGroup>
   <ItemGroup>
     <EmbeddedResource Include="Resources\capetown-whois.registry.net.za\capetown\Found.txt" />
@@ -867,8 +865,6 @@
     <EmbeddedResource Include="Resources\whois.za.net\za.net\NotFound.txt" />
     <EmbeddedResource Include="Resources\whois.za.org\za.org\Found.txt" />
     <EmbeddedResource Include="Resources\whois.za.org\za.org\NotFound.txt" />
-    <EmbeddedResource Include="Resources\whois1.nic.bi\bi\Found.txt" />
-    <EmbeddedResource Include="Resources\whois1.nic.bi\bi\NotFound.txt" />
   </ItemGroup>
   <ItemGroup>
     <Folder Include="Properties\" />
