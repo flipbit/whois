@@ -45,6 +45,7 @@ namespace Whois.Parsing.Whois.Nic.La.La
             Assert.AreEqual("Jay Granzow", response.Registrant.Name);
             Assert.AreEqual("Jay Granzow", response.Registrant.Organization);
             Assert.AreEqual("+1.3105304200", response.Registrant.TelephoneNumber);
+            Assert.AreEqual("+1.3105301652", response.Registrant.FaxNumber);
             Assert.AreEqual("jwgranzow@gmail.com", response.Registrant.Email);
 
              // Registrant Address
@@ -61,6 +62,7 @@ namespace Whois.Parsing.Whois.Nic.La.La
             Assert.AreEqual("Jay Granzow", response.AdminContact.Name);
             Assert.AreEqual("Jay Granzow", response.AdminContact.Organization);
             Assert.AreEqual("+1.3105304200", response.AdminContact.TelephoneNumber);
+            Assert.AreEqual("+1.3105301652", response.AdminContact.FaxNumber);
             Assert.AreEqual("jwgranzow@gmail.com", response.AdminContact.Email);
 
              // AdminContact Address
@@ -77,6 +79,7 @@ namespace Whois.Parsing.Whois.Nic.La.La
             Assert.AreEqual("Jay Granzow", response.BillingContact.Name);
             Assert.AreEqual("Jay Granzow", response.BillingContact.Organization);
             Assert.AreEqual("+1.3105304200", response.BillingContact.TelephoneNumber);
+            Assert.AreEqual("+1.3105301652", response.BillingContact.FaxNumber);
             Assert.AreEqual("jwgranzow@gmail.com", response.BillingContact.Email);
 
              // BillingContact Address
@@ -93,6 +96,7 @@ namespace Whois.Parsing.Whois.Nic.La.La
             Assert.AreEqual("Jay Granzow", response.TechnicalContact.Name);
             Assert.AreEqual("Jay Granzow", response.TechnicalContact.Organization);
             Assert.AreEqual("+1.3105304200", response.TechnicalContact.TelephoneNumber);
+            Assert.AreEqual("+1.3105301652", response.TechnicalContact.FaxNumber);
             Assert.AreEqual("jwgranzow@yahoo.com", response.TechnicalContact.Email);
 
              // TechnicalContact Address
@@ -115,7 +119,7 @@ namespace Whois.Parsing.Whois.Nic.La.La
             Assert.AreEqual("RENEW PERIOD", response.DomainStatus[1]);
 
             Assert.AreEqual("Unsigned", response.DnsSecStatus);
-            Assert.AreEqual(52, response.FieldsParsed);
+            Assert.AreEqual(56, response.FieldsParsed);
         }
 
         [Test]
@@ -145,6 +149,7 @@ namespace Whois.Parsing.Whois.Nic.La.La
             Assert.AreEqual("Google Inc", response.Registrant.Name);
             Assert.AreEqual("Google Inc", response.Registrant.Organization);
             Assert.AreEqual("+1.6502530000", response.Registrant.TelephoneNumber);
+            Assert.AreEqual("+1.65067188571", response.Registrant.FaxNumber);
             Assert.AreEqual("dns-admin@google.com", response.Registrant.Email);
 
              // Registrant Address
@@ -161,6 +166,7 @@ namespace Whois.Parsing.Whois.Nic.La.La
             Assert.AreEqual("Google Inc", response.AdminContact.Name);
             Assert.AreEqual("Google Inc", response.AdminContact.Organization);
             Assert.AreEqual("+1.6502530000", response.AdminContact.TelephoneNumber);
+            Assert.AreEqual("+1.65067188571", response.AdminContact.FaxNumber);
             Assert.AreEqual("dns-admin@google.com", response.AdminContact.Email);
 
              // AdminContact Address
@@ -193,6 +199,7 @@ namespace Whois.Parsing.Whois.Nic.La.La
             Assert.AreEqual("Google Inc", response.TechnicalContact.Name);
             Assert.AreEqual("Google Inc", response.TechnicalContact.Organization);
             Assert.AreEqual("+1.6502530000", response.TechnicalContact.TelephoneNumber);
+            Assert.AreEqual("+1.65067188571", response.TechnicalContact.FaxNumber);
             Assert.AreEqual("dns-admin@google.com", response.TechnicalContact.Email);
 
              // TechnicalContact Address
@@ -215,7 +222,7 @@ namespace Whois.Parsing.Whois.Nic.La.La
             Assert.AreEqual(1, response.DomainStatus.Count);
             Assert.AreEqual("OK", response.DomainStatus[0]);
 
-            Assert.AreEqual(52, response.FieldsParsed);
+            Assert.AreEqual(55, response.FieldsParsed);
         }
 
         [Test]
@@ -227,7 +234,10 @@ namespace Whois.Parsing.Whois.Nic.La.La
             Assert.Greater(sample.Length, 0);
             Assert.AreEqual(WhoisResponseStatus.NotFound, response.Status);
 
-            AssertWriter.Write(response);
+            Assert.AreEqual(0, response.ParsingErrors);
+            Assert.AreEqual("generic/tld/NotFound001", response.TemplateName);
+
+            Assert.AreEqual(1, response.FieldsParsed);
         }
 
         [Test]
@@ -258,6 +268,7 @@ namespace Whois.Parsing.Whois.Nic.La.La
             Assert.AreEqual("Google Inc", response.Registrant.Name);
             Assert.AreEqual("Google Inc", response.Registrant.Organization);
             Assert.AreEqual("+1.6502530000", response.Registrant.TelephoneNumber);
+            Assert.AreEqual("+1.65067188571", response.Registrant.FaxNumber);
             Assert.AreEqual("dns-admin@google.com", response.Registrant.Email);
 
              // Registrant Address
@@ -274,6 +285,7 @@ namespace Whois.Parsing.Whois.Nic.La.La
             Assert.AreEqual("Google Inc", response.AdminContact.Name);
             Assert.AreEqual("Google Inc", response.AdminContact.Organization);
             Assert.AreEqual("+1.6502530000", response.AdminContact.TelephoneNumber);
+            Assert.AreEqual("+1.65067188571", response.AdminContact.FaxNumber);
             Assert.AreEqual("dns-admin@google.com", response.AdminContact.Email);
 
              // AdminContact Address
@@ -290,6 +302,7 @@ namespace Whois.Parsing.Whois.Nic.La.La
             Assert.AreEqual("MarkMonitor, Inc.", response.BillingContact.Name);
             Assert.AreEqual("MarkMonitor, Inc.", response.BillingContact.Organization);
             Assert.AreEqual("+1.2083895740", response.BillingContact.TelephoneNumber);
+            Assert.AreEqual("+1.2083895771", response.BillingContact.FaxNumber);
             Assert.AreEqual("ccopsbilling@markmonitor.com", response.BillingContact.Email);
 
              // BillingContact Address
@@ -306,6 +319,7 @@ namespace Whois.Parsing.Whois.Nic.La.La
             Assert.AreEqual("Google Inc", response.TechnicalContact.Name);
             Assert.AreEqual("Google Inc", response.TechnicalContact.Organization);
             Assert.AreEqual("+1.6502530000", response.TechnicalContact.TelephoneNumber);
+            Assert.AreEqual("+1.65067188571", response.TechnicalContact.FaxNumber);
             Assert.AreEqual("dns-admin@google.com", response.TechnicalContact.Email);
 
              // TechnicalContact Address
@@ -330,7 +344,7 @@ namespace Whois.Parsing.Whois.Nic.La.La
             Assert.AreEqual("serverTransferProhibited", response.DomainStatus[1]);
 
             Assert.AreEqual("Unsigned", response.DnsSecStatus);
-            Assert.AreEqual(55, response.FieldsParsed);
+            Assert.AreEqual(59, response.FieldsParsed);
         }
     }
 }

@@ -57,6 +57,7 @@ namespace Whois.Parsing.Whois.Afilias.Grs.Info.Mn
             Assert.AreEqual("DNS Admin", response.Registrant.Name);
             Assert.AreEqual("Google Inc.", response.Registrant.Organization);
             Assert.AreEqual("+165.03300100", response.Registrant.TelephoneNumber);
+            Assert.AreEqual("+165.06188571", response.Registrant.FaxNumber);
             Assert.AreEqual("dns-admin@google.com", response.Registrant.Email);
 
              // Registrant Address
@@ -73,6 +74,7 @@ namespace Whois.Parsing.Whois.Afilias.Grs.Info.Mn
             Assert.AreEqual("DNS Admin", response.AdminContact.Name);
             Assert.AreEqual("Google Inc.", response.AdminContact.Organization);
             Assert.AreEqual("+165.03300100", response.AdminContact.TelephoneNumber);
+            Assert.AreEqual("+165.06188571", response.AdminContact.FaxNumber);
             Assert.AreEqual("dns-admin@google.com", response.AdminContact.Email);
 
              // AdminContact Address
@@ -89,6 +91,7 @@ namespace Whois.Parsing.Whois.Afilias.Grs.Info.Mn
             Assert.AreEqual("Domain Admin", response.TechnicalContact.Name);
             Assert.AreEqual("MarkMonitor", response.TechnicalContact.Organization);
             Assert.AreEqual("+1.2083895740", response.TechnicalContact.TelephoneNumber);
+            Assert.AreEqual("+1.2083895771", response.TechnicalContact.FaxNumber);
             Assert.AreEqual("ccops@markmonitor.com", response.TechnicalContact.Email);
 
              // TechnicalContact Address
@@ -114,7 +117,7 @@ namespace Whois.Parsing.Whois.Afilias.Grs.Info.Mn
             Assert.AreEqual("CLIENT TRANSFER PROHIBITED", response.DomainStatus[1]);
             Assert.AreEqual("CLIENT UPDATE PROHIBITED", response.DomainStatus[2]);
 
-            Assert.AreEqual(45, response.FieldsParsed);
+            Assert.AreEqual(48, response.FieldsParsed);
         }
     }
 }

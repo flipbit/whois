@@ -60,6 +60,7 @@ namespace Whois.Parsing.Whois.Dotpostregistry.Net.Post
             Assert.AreEqual("Poste Italiane", response.Registrant.Name);
             Assert.AreEqual("Poste Italiane", response.Registrant.Organization);
             Assert.AreEqual("+39.0659581", response.Registrant.TelephoneNumber);
+            Assert.AreEqual("+39.065942298", response.Registrant.FaxNumber);
             Assert.AreEqual("info@poste.it", response.Registrant.Email);
 
              // Registrant Address
@@ -75,6 +76,7 @@ namespace Whois.Parsing.Whois.Dotpostregistry.Net.Post
             Assert.AreEqual("Giovanni Brardinoni", response.AdminContact.Name);
             Assert.AreEqual("Poste Italiane", response.AdminContact.Organization);
             Assert.AreEqual("+39.0659583671", response.AdminContact.TelephoneNumber);
+            Assert.AreEqual("+39.0698688651", response.AdminContact.FaxNumber);
             Assert.AreEqual("Giovanni.Brardinoni@Postecom.it", response.AdminContact.Email);
 
              // AdminContact Address
@@ -90,6 +92,7 @@ namespace Whois.Parsing.Whois.Dotpostregistry.Net.Post
             Assert.AreEqual("Plautina Loreti", response.BillingContact.Name);
             Assert.AreEqual("Poste Italiane", response.BillingContact.Organization);
             Assert.AreEqual("+39.0659585699", response.BillingContact.TelephoneNumber);
+            Assert.AreEqual("+39.0659589591", response.BillingContact.FaxNumber);
             Assert.AreEqual("loretip@posteitaliane.it", response.BillingContact.Email);
 
              // BillingContact Address
@@ -105,6 +108,7 @@ namespace Whois.Parsing.Whois.Dotpostregistry.Net.Post
             Assert.AreEqual("Andrea Speranza", response.TechnicalContact.Name);
             Assert.AreEqual("Poste Italiane", response.TechnicalContact.Organization);
             Assert.AreEqual("+39.0659583086", response.TechnicalContact.TelephoneNumber);
+            Assert.AreEqual("+39.0659582032", response.TechnicalContact.FaxNumber);
             Assert.AreEqual("netsecurity@postecom.it", response.TechnicalContact.Email);
 
              // TechnicalContact Address
@@ -125,7 +129,7 @@ namespace Whois.Parsing.Whois.Dotpostregistry.Net.Post
             Assert.AreEqual("TRANSFER PROHIBITED", response.DomainStatus[0]);
 
             Assert.AreEqual("Signed", response.DnsSecStatus);
-            Assert.AreEqual(47, response.FieldsParsed);
+            Assert.AreEqual(51, response.FieldsParsed);
         }
     }
 }

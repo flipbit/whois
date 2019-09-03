@@ -60,6 +60,7 @@ namespace Whois.Parsing.Whois.Dotmobiregistry.Net.Mobi
             Assert.AreEqual("DNS Admin", response.Registrant.Name);
             Assert.AreEqual("Google Inc.", response.Registrant.Organization);
             Assert.AreEqual("+1.6506234000", response.Registrant.TelephoneNumber);
+            Assert.AreEqual("+1.6506188571", response.Registrant.FaxNumber);
             Assert.AreEqual("dns-admin@google.com", response.Registrant.Email);
 
              // Registrant Address
@@ -76,6 +77,7 @@ namespace Whois.Parsing.Whois.Dotmobiregistry.Net.Mobi
             Assert.AreEqual("DNS Admin", response.AdminContact.Name);
             Assert.AreEqual("Google Inc.", response.AdminContact.Organization);
             Assert.AreEqual("+1.6506234000", response.AdminContact.TelephoneNumber);
+            Assert.AreEqual("+1.6506188571", response.AdminContact.FaxNumber);
             Assert.AreEqual("dns-admin@google.com", response.AdminContact.Email);
 
              // AdminContact Address
@@ -92,6 +94,7 @@ namespace Whois.Parsing.Whois.Dotmobiregistry.Net.Mobi
             Assert.AreEqual("DNS Admin", response.TechnicalContact.Name);
             Assert.AreEqual("Google Inc.", response.TechnicalContact.Organization);
             Assert.AreEqual("+1.6506234000", response.TechnicalContact.TelephoneNumber);
+            Assert.AreEqual("+1.6506188571", response.TechnicalContact.FaxNumber);
             Assert.AreEqual("dns-admin@google.com", response.TechnicalContact.Email);
 
              // TechnicalContact Address
@@ -116,7 +119,7 @@ namespace Whois.Parsing.Whois.Dotmobiregistry.Net.Mobi
             Assert.AreEqual("CLIENT TRANSFER PROHIBITED", response.DomainStatus[1]);
             Assert.AreEqual("CLIENT UPDATE PROHIBITED", response.DomainStatus[2]);
 
-            Assert.AreEqual(48, response.FieldsParsed);
+            Assert.AreEqual(51, response.FieldsParsed);
          }
     }
 }

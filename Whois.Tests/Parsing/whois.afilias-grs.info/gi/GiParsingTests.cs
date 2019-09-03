@@ -55,6 +55,7 @@ namespace Whois.Parsing.Whois.Afilias.Grs.Info.Gi
             Assert.AreEqual("Jimmy Imossi", response.Registrant.Name);
             Assert.AreEqual("Broadband Gibraltar Limited", response.Registrant.Organization);
             Assert.AreEqual("+350.47200", response.Registrant.TelephoneNumber);
+            Assert.AreEqual("+350.47272", response.Registrant.FaxNumber);
             Assert.AreEqual("jimossi@sapphire.gi", response.Registrant.Email);
 
              // Registrant Address
@@ -71,6 +72,7 @@ namespace Whois.Parsing.Whois.Afilias.Grs.Info.Gi
             Assert.AreEqual("Jimmy Imossi", response.AdminContact.Name);
             Assert.AreEqual("Broadband Gibraltar Limited", response.AdminContact.Organization);
             Assert.AreEqual("+350.47200", response.AdminContact.TelephoneNumber);
+            Assert.AreEqual("+350.47272", response.AdminContact.FaxNumber);
             Assert.AreEqual("jimossi@sapphire.gi", response.AdminContact.Email);
 
              // AdminContact Address
@@ -87,6 +89,7 @@ namespace Whois.Parsing.Whois.Afilias.Grs.Info.Gi
             Assert.AreEqual("Jimmy Imossi", response.BillingContact.Name);
             Assert.AreEqual("Broadband Gibraltar Limited", response.BillingContact.Organization);
             Assert.AreEqual("+350.47200", response.BillingContact.TelephoneNumber);
+            Assert.AreEqual("+350.47272", response.BillingContact.FaxNumber);
             Assert.AreEqual("jimossi@sapphire.gi", response.BillingContact.Email);
 
              // BillingContact Address
@@ -103,6 +106,7 @@ namespace Whois.Parsing.Whois.Afilias.Grs.Info.Gi
             Assert.AreEqual("Tech Dept", response.TechnicalContact.Name);
             Assert.AreEqual("Broadband Gibraltar Ltd", response.TechnicalContact.Organization);
             Assert.AreEqual("+350.47200", response.TechnicalContact.TelephoneNumber);
+            Assert.AreEqual("+350.47271", response.TechnicalContact.FaxNumber);
             Assert.AreEqual("tech@sapphire.gi", response.TechnicalContact.Email);
 
              // TechnicalContact Address
@@ -123,7 +127,7 @@ namespace Whois.Parsing.Whois.Afilias.Grs.Info.Gi
             Assert.AreEqual(1, response.DomainStatus.Count);
             Assert.AreEqual("OK", response.DomainStatus[0]);
 
-            Assert.AreEqual(50, response.FieldsParsed);
+            Assert.AreEqual(54, response.FieldsParsed);
         }
     }
 }

@@ -24,6 +24,8 @@ namespace Whois.Parsers
             matcher = new TokenMatcher();
             reader = new ResourceReader();
             statusParser = new WhoisResponseStatusParser();
+
+            matcher.RegisterTransformer<CleanDomainStatusTransformer>();
         }
 
         /// <summary>

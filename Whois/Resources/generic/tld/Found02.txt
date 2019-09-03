@@ -37,6 +37,10 @@ Created On: { Registered ? : ToDateTimeUtc("yyyy-MM-ddTHH:mm:ssZ") }
 Created On: { Registered ? : ToDateTimeUtc("yyyy-MM-ddTHH:mm:ss.fZ") }
 Created On: { Registered ? : ToDateTimeUtc("yyyy-MM-ddTHH:mm:ss.fffZ") }
 Created On: { Registered ? : ToDateTimeUtc("dd-MMM-yyyy HH:mm:ss") }
+Domain Create Date: { Registered ? : ToDateTimeUtc("yyyy-MM-ddTHH:mm:ssZ") }
+Domain Create Date: { Registered ? : ToDateTimeUtc("yyyy-MM-ddTHH:mm:ss.fZ") }
+Domain Create Date: { Registered ? : ToDateTimeUtc("yyyy-MM-ddTHH:mm:ss.fffZ") }
+Domain Create Date: { Registered ? : ToDateTimeUtc("dd-MMM-yyyy HH:mm:ss") }
 
 #
 # Updated Date
@@ -49,6 +53,10 @@ Last Updated On: { Updated ? : ToDateTimeUtc("yyyy-MM-ddTHH:mm:ssZ") }
 Last Updated On: { Updated ? : ToDateTimeUtc("yyyy-MM-ddTHH:mm:ss.fZ") }
 Last Updated On: { Updated ? : ToDateTimeUtc("yyyy-MM-ddTHH:mm:ss.fffZ") }
 Last Updated On: { Updated ? : ToDateTimeUtc("dd-MMM-yyyy HH:mm:ss") }
+Domain Last Updated Date: { Updated ? : ToDateTimeUtc("yyyy-MM-ddTHH:mm:ssZ") }
+Domain Last Updated Date: { Updated ? : ToDateTimeUtc("yyyy-MM-ddTHH:mm:ss.fZ") }
+Domain Last Updated Date: { Updated ? : ToDateTimeUtc("yyyy-MM-ddTHH:mm:ss.fffZ") }
+Domain Last Updated Date: { Updated ? : ToDateTimeUtc("dd-MMM-yyyy HH:mm:ss") }
 
 #
 # Expiration Date
@@ -65,6 +73,10 @@ Registrar Registration Expiration Date: { Expiration ? : ToDateTimeUtc("yyyy-MM-
 Registrar Registration Expiration Date: { Expiration ? : ToDateTimeUtc("yyyy-MM-ddTHH:mm:ss.fZ") }
 Registrar Registration Expiration Date: { Expiration ? : ToDateTimeUtc("yyyy-MM-ddTHH:mm:ss.fffZ") }
 Registrar Registration Expiration Date: { Expiration ? : ToDateTimeUtc("dd-MMM-yyyy HH:mm:ss") }
+Domain Expiration Date: { Expiration ? : ToDateTimeUtc("yyyy-MM-ddTHH:mm:ssZ") }
+Domain Expiration Date: { Expiration ? : ToDateTimeUtc("yyyy-MM-ddTHH:mm:ss.fZ") }
+Domain Expiration Date: { Expiration ? : ToDateTimeUtc("yyyy-MM-ddTHH:mm:ss.fffZ") }
+Domain Expiration Date: { Expiration ? : ToDateTimeUtc("dd-MMM-yyyy HH:mm:ss") }
 
 #
 # Trademark Info
@@ -107,8 +119,8 @@ Referral URL: { Registrar.Url ? : IsUrl, ToLower }
 #
 # Domain Status
 #
-Domain Status: { DomainStatus ? : Repeating, SubstringBefore(' ') }
-Status: { DomainStatus ? : Repeating }
+Domain Status: { DomainStatus ? : Repeating, CleanDomainStatus }
+Status: { DomainStatus ? : Repeating, CleanDomainStatus }
 
 #
 # Registrant
@@ -120,6 +132,10 @@ Registrant Organization: { Registrant.Organization ? }
 Registrant Street: { Registrant.Address ? : IsNotEmpty }
 Registrant Street1: { Registrant.Address ? : IsNotEmpty }
 Registrant Street2: { Registrant.Address ? : IsNotEmpty }
+Registrant Address: { Registrant.Address ? : IsNotEmpty }
+Registrant Address1: { Registrant.Address ? : IsNotEmpty }
+Registrant Address2: { Registrant.Address ? : IsNotEmpty }
+Registrant Address3: { Registrant.Address ? : IsNotEmpty }
 Registrant City: { Registrant.Address ? : IsNotEmpty }
 Registrant State/Province: { Registrant.Address ? : IsNotEmpty }
 Registrant Postal Code: { Registrant.Address ? : IsNotEmpty }
@@ -128,7 +144,10 @@ Registrant Phone: { Registrant.TelephoneNumber ? : IsPhoneNumber }
 Registrant Phone Ext: { Registrant.TelephoneNumberExt ? : IsNumeric }
 Registrant Fax: { Registrant.FaxNumber ? : IsPhoneNumber }
 Registrant Fax Ext: { Registrant.FaxNumberExt ? : IsNotEmpty, IsNumeric }
+Registrant FAX: { Registrant.FaxNumber ? : IsPhoneNumber }
+Registrant FAX Ext.: { Registrant.FaxNumberExt ? : IsNotEmpty, IsNumeric }
 Registrant Email: { Registrant.Email ? : IsEmail }
+Registrant E-mail: { Registrant.Email ? : IsEmail }
 
 #
 # Admin Contact
@@ -140,6 +159,10 @@ Admin Organization: { AdminContact.Organization ? }
 Admin Street: { AdminContact.Address ? : IsNotEmpty }
 Admin Street1: { AdminContact.Address ? : IsNotEmpty }
 Admin Street2: { AdminContact.Address ? : IsNotEmpty }
+Admin Address: { AdminContact.Address ? : IsNotEmpty }
+Admin Address1: { AdminContact.Address ? : IsNotEmpty }
+Admin Address2: { AdminContact.Address ? : IsNotEmpty }
+Admin Address3: { AdminContact.Address ? : IsNotEmpty }
 Admin City: { AdminContact.Address ? : IsNotEmpty }
 Admin State/Province: { AdminContact.Address ? : IsNotEmpty }
 Admin Postal Code: { AdminContact.Address ? : IsNotEmpty }
@@ -148,7 +171,10 @@ Admin Phone: { AdminContact.TelephoneNumber ? : IsPhoneNumber }
 Admin Phone Ext: { AdminContact.TelephoneNumberExt  ? : IsNumeric } 
 Admin Fax: { AdminContact.FaxNumber ? : IsPhoneNumber } 
 Admin Fax Ext: { AdminContact.FaxNumberExt ? : IsNumeric } 
+Admin FAX: { AdminContact.FaxNumber ? : IsPhoneNumber } 
+Admin FAX Ext.: { AdminContact.FaxNumberExt ? : IsNumeric } 
 Admin Email: { AdminContact.Email ? : IsEmail }
+Admin E-mail: { AdminContact.Email ? : IsEmail }
 
 #
 # Tech Contact
@@ -160,6 +186,10 @@ Tech Organization: { TechnicalContact.Organization ? }
 Tech Street: { TechnicalContact.Address ? : IsNotEmpty }
 Tech Street1: { TechnicalContact.Address ? : IsNotEmpty }
 Tech Street2: { TechnicalContact.Address ? : IsNotEmpty }
+Tech Address: { TechnicalContact.Address ? : IsNotEmpty }
+Tech Address1: { TechnicalContact.Address ? : IsNotEmpty }
+Tech Address2: { TechnicalContact.Address ? : IsNotEmpty }
+Tech Address3: { TechnicalContact.Address ? : IsNotEmpty }
 Tech City: { TechnicalContact.Address ? : IsNotEmpty }
 Tech State/Province: { TechnicalContact.Address ? : IsNotEmpty }
 Tech Postal Code: { TechnicalContact.Address ? : IsNotEmpty }
@@ -168,7 +198,10 @@ Tech Phone: { TechnicalContact.TelephoneNumber ? : IsPhoneNumber }
 Tech Phone Ext: { TechnicalContact.TelephoneNumberExt ? : IsNumeric } 
 Tech Fax: { TechnicalContact.FaxNumber ? : IsPhoneNumber } 
 Tech Fax Ext: { TechnicalContact.FaxNumberExt ? : IsNumeric }
+Tech FAX: { TechnicalContact.FaxNumber ? : IsPhoneNumber } 
+Tech FAX Ext.: { TechnicalContact.FaxNumberExt ? : IsNumeric }
 Tech Email: { TechnicalContact.Email ? : IsEmail }
+Tech E-mail: { TechnicalContact.Email ? : IsEmail }
 
 #
 # Billing Contact
@@ -180,6 +213,10 @@ Billing Organization: { BillingContact.Organization ? }
 Billing Street: { BillingContact.Address ? : IsNotEmpty }
 Billing Street1: { BillingContact.Address ? : IsNotEmpty }
 Billing Street2: { BillingContact.Address ? : IsNotEmpty }
+Billing Address: { BillingContact.Address ? : IsNotEmpty }
+Billing Address1: { BillingContact.Address ? : IsNotEmpty }
+Billing Address2: { BillingContact.Address ? : IsNotEmpty }
+Billing Address3: { BillingContact.Address ? : IsNotEmpty }
 Billing City: { BillingContact.Address ? : IsNotEmpty }
 Billing State/Province: { BillingContact.Address ? : IsNotEmpty }
 Billing Postal Code: { BillingContact.Address ? : IsNotEmpty }
@@ -187,5 +224,8 @@ Billing Country: { BillingContact.Address ? : IsNotEmpty }
 Billing Phone: { BillingContact.TelephoneNumber ? : IsPhoneNumber }
 Billing Phone Ext: { BillingContact.TelephoneNumberExt ? : IsNumeric }
 Billing Fax: { BillingContact.FaxNumber ? : IsPhoneNumber } 
+Billing FAX: { BillingContact.FaxNumber ? : IsPhoneNumber } 
 Billing Fax Ext: { BillingContact.FaxNumberExt ? : IsNumeric } 
+Billing FAX Ext.: { BillingContact.FaxNumberExt ? : IsNumeric } 
 Billing Email: { BillingContact.Email ? : IsEmail }
+Billing E-mail: { BillingContact.Email ? : IsEmail }
