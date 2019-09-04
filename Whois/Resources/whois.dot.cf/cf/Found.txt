@@ -8,70 +8,69 @@ name: whois.dot.cf/cf/Found
 tag: whois.dot.cf
 tag: cf
 
+# End tokens on new lines
+terminateOnNewLine: true
+
 # Set query response type:
 set: Status = Found
 ---
 
    Domain name:
-      DOT.CF Active
+      { DomainName : SubstringBefore(' '), IsDomainName, ToLower }
 
    Owner contact:
-      Organization: Centrafrique TLD B.V.
-      Name:         Mr Joost  Zuurbier 
-      Address:      Keizersgracht 213
-      Zipcode:      1016DT  
-      City:         Amsterdam 
-      State:        Noord-Holland
-      Country:      Netherlands
-      Phone:        20-5315726
-      Fax:          20-5315721
-      E-mail:       info@centrafriquetld.com
+      Organization: { Registrant.Organization ? }
+      Name:         { Registrant.Name ? }
+      Address:      { Registrant.Address ? : IsNotEmpty }
+      Zipcode:      { Registrant.Address ? : IsNotEmpty }
+      City:         { Registrant.Address ? : IsNotEmpty }
+      State:        { Registrant.Address ? : IsNotEmpty }
+      Country:      { Registrant.Address ? : IsNotEmpty }
+      Phone:        { Registrant.TelephoneNumber ? : IsPhoneNumber }
+      Fax:          { Registrant.FaxNumber ? : IsPhoneNumber }
+      E-mail:       { Registrant.Email ? : IsEmail }
 
    Admin contact:
-      Organization: Centrafrique TLD B.V.
-      Name:         Mr Joost  Zuurbier 
-      Address:      Keizersgracht 213
-      Zipcode:      1016DT  
-      City:         Amsterdam 
-      State:        Noord-Holland
-      Country:      Netherlands
-      Phone:        20-5315726
-      Fax:          20-5315721
-      E-mail:       info@centrafriquetld.com
+      Organization: { AdminContact.Organization ? }
+      Name:         { AdminContact.Name ? }
+      Address:      { AdminContact.Address ? : IsNotEmpty }
+      Zipcode:      { AdminContact.Address ? : IsNotEmpty }
+      City:         { AdminContact.Address ? : IsNotEmpty }
+      State:        { AdminContact.Address ? : IsNotEmpty }
+      Country:      { AdminContact.Address ? : IsNotEmpty }
+      Phone:        { AdminContact.TelephoneNumber ? : IsPhoneNumber }
+      Fax:          { AdminContact.FaxNumber ? : IsPhoneNumber }
+      E-mail:       { AdminContact.Email ? : IsEmail }
 
    Billing contact:
-      Organization: Centrafrique TLD B.V.
-      Name:         Mr Joost  Zuurbier 
-      Address:      Keizersgracht 213
-      Zipcode:      1016DT  
-      City:         Amsterdam 
-      State:        Noord-Holland
-      Country:      Netherlands
-      Phone:        20-5315726
-      Fax:          20-5315721
-      E-mail:       info@centrafriquetld.com
+      Organization: { BillingContact.Organization ? }
+      Name:         { BillingContact.Name ? }
+      Address:      { BillingContact.Address ? : IsNotEmpty }
+      Zipcode:      { BillingContact.Address ? : IsNotEmpty }
+      City:         { BillingContact.Address ? : IsNotEmpty }
+      State:        { BillingContact.Address ? : IsNotEmpty }
+      Country:      { BillingContact.Address ? : IsNotEmpty }
+      Phone:        { BillingContact.TelephoneNumber ? : IsPhoneNumber }
+      Fax:          { BillingContact.FaxNumber ? : IsPhoneNumber }
+      E-mail:       { BillingContact.Email ? : IsEmail }
 
    Tech contact:
-      Organization: Centrafrique TLD B.V.
-      Name:         Mr Joost  Zuurbier 
-      Address:      Keizersgracht 213
-      Zipcode:      1016DT  
-      City:         Amsterdam 
-      State:        Noord-Holland
-      Country:      Netherlands
-      Phone:        20-5315726
-      Fax:          20-5315721
-      E-mail:       info@centrafriquetld.com
+      Organization: { TechnicalContact.Organization ? }
+      Name:         { TechnicalContact.Name ? }
+      Address:      { TechnicalContact.Address ? : IsNotEmpty }
+      Zipcode:      { TechnicalContact.Address ? : IsNotEmpty }
+      City:         { TechnicalContact.Address ? : IsNotEmpty }
+      State:        { TechnicalContact.Address ? : IsNotEmpty }
+      Country:      { TechnicalContact.Address ? : IsNotEmpty }
+      Phone:        { TechnicalContact.TelephoneNumber ? : IsPhoneNumber }
+      Fax:          { TechnicalContact.FaxNumber ? : IsPhoneNumber }
+      E-mail:       { TechnicalContact.Email ? : IsEmail }
 
    Domain Nameservers:
-      DNS5.NETTICA.COM
-      DNS1.NETTICA.COM
-      DNS2.NETTICA.COM
-      DNS3.NETTICA.COM
-      DNS4.NETTICA.COM
+      { NameServers ? : IsDomainName, ToLower, Repeating }
 
 
-   Domain registered: 03/28/2013
-   Record will expire on: 
+   Domain registered: { Registered ? : ToDateTimeUtc("MM/dd/yyyy") }
+   Record will expire on: { Expiration ? : ToDateTimeUtc("MM/dd/yyyy") }
    Record maintained by: Dot CF Domain Registry
 
