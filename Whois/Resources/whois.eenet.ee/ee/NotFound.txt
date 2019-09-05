@@ -10,10 +10,7 @@ tag: ee
 
 # Set query response type:
 set: Status = NotFound
+
+hint: NOT FOUND
 ---
-
-The registry database contains only .EE, .COM.EE, .PRI.EE, .FIE.EE,
-.ORG.EE and .MED.EE domains.
-
-NOT FOUND: u34jedzcq.ee
-
+NOT FOUND: { DomainName : IsDomainName, ToLower }

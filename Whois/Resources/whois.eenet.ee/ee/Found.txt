@@ -11,30 +11,21 @@ tag: ee
 # Set query response type:
 set: Status = Found
 ---
-
-The registry database contains only .EE, .COM.EE, .PRI.EE, .FIE.EE,
-.ORG.EE and .MED.EE domains.
-
 Registrant:
-   ADVOKAADIBÜROO SORAINEN AS
-   PÄRNU MNT, 15, HARJUMAA TALLINN KESKLINN 10141
-   TEL 5274536
-   FAX +372 6400 901
+   { Registrant.Name ? : EOL }
+   { Registrant.Address ? : IsNotEmpty, EOL }
+   TEL { Registrant.TelephoneNumber ? : IsPhoneNumber, EOL }
+   FAX { Registrant.FaxNumber ? : IsPhoneNumber, EOL }
 
-   Domain Name: google.ee
+   Domain Name: { DomainName : IsDomainName, ToLower, EOL }
 
    Contacts:
-      Mart Meier      mart.meier@sorainen.ee
-      Joshua Hopping      ccops@markmonitor.com
+      { AdminContact.Name ? }      { AdminContact.Email ? : IsEmail, EOL }
+      { TechnicalContact.Name ? }      { TechnicalContact.Email ? : IsEmail, EOL }
 
-   Record created on 22-Apr-2003
-   Record changed on 28-May-2010
+   Record created on { Registered ? : ToDateTimeUtc("dd-MMM-yyyy"), EOL }
+   Record changed on { Updated ? : ToDateTimeUtc("dd-MMM-yyyy"), EOL }
 
    Domain servers:
-      ns1.google.com.
-      ns2.google.com.
-
-Registrar: EENET
-URL: http://www.eenet.ee/EENet/dom_reeglid.html (in estonian)
-URL: http://www.eenet.ee/EENet/ee-tldomreg.html
+      { NameServers ? : SubstringBeforeLast('.'), IsDomainName, ToLower, Repeating, EOL }
 
