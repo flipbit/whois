@@ -5,7 +5,6 @@ using Whois.Parsers;
 namespace Whois.Parsing.Whois.Eu.Eu
 {
     [TestFixture]
-    [Ignore("TODO")]
     public class EuParsingTests : ParsingTests
     {
         private WhoisParser parser;
@@ -26,6 +25,25 @@ namespace Whois.Parsing.Whois.Eu.Eu
 
             Assert.Greater(sample.Length, 0);
             Assert.AreEqual(WhoisResponseStatus.Found, response.Status);
+
+            AssertWriter.Write(response);
+            Assert.AreEqual(0, response.ParsingErrors);
+            Assert.AreEqual("whois.eu/eu/Found", response.TemplateName);
+
+            Assert.AreEqual("eurid.eu", response.DomainName);
+
+            // Registrar Details
+            Assert.AreEqual("EURid vzw/asbl", response.Registrar.Name);
+
+            // Nameservers
+            Assert.AreEqual(5, response.NameServers.Count);
+            Assert.AreEqual("a.nic.eu", response.NameServers[0]);
+            Assert.AreEqual("l.nic.eu", response.NameServers[1]);
+            Assert.AreEqual("p.nic.eu", response.NameServers[2]);
+            Assert.AreEqual("ns1.eurid.eu", response.NameServers[3]);
+            Assert.AreEqual("ns2.eurid.eu", response.NameServers[4]);
+
+            Assert.AreEqual(8, response.FieldsParsed);
         }
 
         [Test]
@@ -36,6 +54,11 @@ namespace Whois.Parsing.Whois.Eu.Eu
 
             Assert.Greater(sample.Length, 0);
             Assert.AreEqual(WhoisResponseStatus.Throttled, response.Status);
+
+            Assert.AreEqual(0, response.ParsingErrors);
+            Assert.AreEqual("whois.eu/eu/Throttled", response.TemplateName);
+
+            Assert.AreEqual(1, response.FieldsParsed);
         }
 
         [Test]
@@ -46,6 +69,13 @@ namespace Whois.Parsing.Whois.Eu.Eu
 
             Assert.Greater(sample.Length, 0);
             Assert.AreEqual(WhoisResponseStatus.NotFound, response.Status);
+
+            Assert.AreEqual(0, response.ParsingErrors);
+            Assert.AreEqual("whois.eu/eu/NotFound", response.TemplateName);
+
+            Assert.AreEqual("u34jedzcq.eu", response.DomainName);
+
+            Assert.AreEqual(2, response.FieldsParsed);
         }
 
         [Test]
@@ -56,6 +86,16 @@ namespace Whois.Parsing.Whois.Eu.Eu
 
             Assert.Greater(sample.Length, 0);
             Assert.AreEqual(WhoisResponseStatus.Found, response.Status);
+
+            Assert.AreEqual(0, response.ParsingErrors);
+            Assert.AreEqual("whois.eu/eu/Found", response.TemplateName);
+
+            Assert.AreEqual("google.eu", response.DomainName);
+
+            // Registrar Details
+            Assert.AreEqual("https://www.markmonitor.com/", response.Registrar.Url);
+
+            Assert.AreEqual(3, response.FieldsParsed);
         }
     }
 }

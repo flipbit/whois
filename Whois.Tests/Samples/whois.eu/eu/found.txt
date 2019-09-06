@@ -42,7 +42,7 @@
 % webbased whois service available from the EURid website www.eurid.eu
 %
 % WHOIS eurid
-Domain:	eurid
+Domain: eurid.eu
 
 Registrant:
 	NOT DISCLOSED!
