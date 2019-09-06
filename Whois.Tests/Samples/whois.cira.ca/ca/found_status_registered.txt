@@ -23,7 +23,7 @@ Technical contact:
     Name:              Matt Serlin
     Postal address:    Domain Provisioning,10400 Overland Rd. PMB 155
                        Boise ID 83709 United States
-    Phone:             +1.2083895740x
+    Phone:             +1.2083895740
     Fax:               +1.2083895771
     Email:             ccops@markmonitor.com
 

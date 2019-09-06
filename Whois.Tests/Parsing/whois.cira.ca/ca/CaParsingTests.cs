@@ -443,7 +443,7 @@ namespace Whois.Parsing.Whois.Cira.Ca.Ca
 
              // TechnicalContact Details
             Assert.AreEqual("Matt Serlin", response.TechnicalContact.Name);
-            Assert.AreEqual("+1.2083895740x", response.TechnicalContact.TelephoneNumber);
+            Assert.AreEqual("+1.2083895740", response.TechnicalContact.TelephoneNumber);
             Assert.AreEqual("+1.2083895771", response.TechnicalContact.FaxNumber);
             Assert.AreEqual("ccops@markmonitor.com", response.TechnicalContact.Email);
 
