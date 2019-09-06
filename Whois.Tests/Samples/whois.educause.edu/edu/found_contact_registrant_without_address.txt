@@ -41,7 +41,7 @@ Administrative Contact:
    mark@mit.edu
 
 Technical Contact:
- MIT Network Operations
+   MIT Network Operations
    Massachusetts Institute of Technology
    MIT Room W92-167, 77 Massachusetts Avenue
    Cambridge, MA 02139-4307

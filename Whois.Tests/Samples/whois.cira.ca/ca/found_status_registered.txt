@@ -15,7 +15,7 @@ Administrative contact:
     Name:              Christina Chiou
     Postal address:    130 King St. W., Suite 1800,
                        Toronto ON M5X1E3 Canada
-    Phone:             +1.4168653361x
+    Phone:             +1.4168653361
     Fax:               +1.4169456616
     Email:             dns-admin@google.com
 

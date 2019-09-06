@@ -431,7 +431,7 @@ namespace Whois.Parsing.Whois.Cira.Ca.Ca
 
              // AdminContact Details
             Assert.AreEqual("Christina Chiou", response.AdminContact.Name);
-            Assert.AreEqual("+1.4168653361x", response.AdminContact.TelephoneNumber);
+            Assert.AreEqual("+1.4168653361", response.AdminContact.TelephoneNumber);
             Assert.AreEqual("+1.4169456616", response.AdminContact.FaxNumber);
             Assert.AreEqual("dns-admin@google.com", response.AdminContact.Email);
 
