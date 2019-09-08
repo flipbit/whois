@@ -28,7 +28,7 @@ namespace Whois.Parsing.Whois.Iana.Org.Int
             Assert.AreEqual(WhoisResponseStatus.NotFound, response.Status);
 
             Assert.AreEqual(0, response.ParsingErrors);
-            Assert.AreEqual("whois.iana.org/int/NotFound", response.TemplateName);
+            Assert.AreEqual("whois.iana.org/NotFound", response.TemplateName);
 
             Assert.AreEqual("u34jedzcq.int", response.DomainName);
 
@@ -45,7 +45,7 @@ namespace Whois.Parsing.Whois.Iana.Org.Int
             Assert.AreEqual(WhoisResponseStatus.Found, response.Status);
 
             Assert.AreEqual(0, response.ParsingErrors);
-            Assert.AreEqual("whois.iana.org/int/Found", response.TemplateName);
+            Assert.AreEqual("whois.iana.org/Found01", response.TemplateName);
 
             Assert.AreEqual("nato.int", response.DomainName);
 

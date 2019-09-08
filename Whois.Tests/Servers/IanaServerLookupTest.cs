@@ -42,19 +42,19 @@ namespace Whois.Servers
             Assert.AreEqual(new DateTime(2012, 2, 15), result.Changed);
             Assert.AreEqual(new DateTime(1985, 1, 1), result.Created);
             Assert.AreEqual(13, result.NameServers.Count);
-            Assert.AreEqual("A.GTLD-SERVERS.NET 192.5.6.30 2001:503:a83e:0:0:0:2:30", result.NameServers[0]);
-            Assert.AreEqual("B.GTLD-SERVERS.NET 192.33.14.30 2001:503:231d:0:0:0:2:30", result.NameServers[1]);
-            Assert.AreEqual("C.GTLD-SERVERS.NET 192.26.92.30", result.NameServers[2]);
-            Assert.AreEqual("D.GTLD-SERVERS.NET 192.31.80.30", result.NameServers[3]);
-            Assert.AreEqual("E.GTLD-SERVERS.NET 192.12.94.30", result.NameServers[4]);
-            Assert.AreEqual("F.GTLD-SERVERS.NET 192.35.51.30", result.NameServers[5]);
-            Assert.AreEqual("G.GTLD-SERVERS.NET 192.42.93.30", result.NameServers[6]);
-            Assert.AreEqual("H.GTLD-SERVERS.NET 192.54.112.30", result.NameServers[7]);
-            Assert.AreEqual("I.GTLD-SERVERS.NET 192.43.172.30", result.NameServers[8]);
-            Assert.AreEqual("J.GTLD-SERVERS.NET 192.48.79.30", result.NameServers[9]);
-            Assert.AreEqual("K.GTLD-SERVERS.NET 192.52.178.30", result.NameServers[10]);
-            Assert.AreEqual("L.GTLD-SERVERS.NET 192.41.162.30", result.NameServers[11]);
-            Assert.AreEqual("M.GTLD-SERVERS.NET 192.55.83.30", result.NameServers[12]);
+            Assert.AreEqual("a.gtld-servers.net", result.NameServers[0]);
+            Assert.AreEqual("b.gtld-servers.net", result.NameServers[1]);
+            Assert.AreEqual("c.gtld-servers.net", result.NameServers[2]);
+            Assert.AreEqual("d.gtld-servers.net", result.NameServers[3]);
+            Assert.AreEqual("e.gtld-servers.net", result.NameServers[4]);
+            Assert.AreEqual("f.gtld-servers.net", result.NameServers[5]);
+            Assert.AreEqual("g.gtld-servers.net", result.NameServers[6]);
+            Assert.AreEqual("h.gtld-servers.net", result.NameServers[7]);
+            Assert.AreEqual("i.gtld-servers.net", result.NameServers[8]);
+            Assert.AreEqual("j.gtld-servers.net", result.NameServers[9]);
+            Assert.AreEqual("k.gtld-servers.net", result.NameServers[10]);
+            Assert.AreEqual("l.gtld-servers.net", result.NameServers[11]);
+            Assert.AreEqual("m.gtld-servers.net", result.NameServers[12]);
             Assert.AreEqual(3, result.Organization.Address.Count);
             Assert.AreEqual("12061 Bluemont Way", result.Organization.Address[0]);
             Assert.AreEqual("Reston Virginia 20190", result.Organization.Address[1]);
@@ -95,12 +95,12 @@ namespace Whois.Servers
             Assert.AreEqual(new DateTime(2014, 7, 30), result.Changed);
             Assert.AreEqual(new DateTime(1988, 8, 5), result.Created);
             Assert.AreEqual(6, result.NameServers.Count);
-            Assert.AreEqual("A.NS.DNS.BE 194.0.6.1 2001:678:9:0:0:0:0:1", result.NameServers[0]);
-            Assert.AreEqual("B.NS.DNS.BE 194.0.37.1 2001:678:64:0:0:0:0:1", result.NameServers[1]);
-            Assert.AreEqual("C.NS.DNS.BE 194.0.43.1 2001:678:68:0:0:0:0:1", result.NameServers[2]);
-            Assert.AreEqual("D.NS.DNS.BE 194.0.44.1 2001:678:6c:0:0:0:0:1", result.NameServers[3]);
-            Assert.AreEqual("X.NS.DNS.BE 194.0.1.10 2001:678:4:0:0:0:0:a", result.NameServers[4]);
-            Assert.AreEqual("Y.NS.DNS.BE 120.29.253.8 2001:dcd:7:0:0:0:0:8", result.NameServers[5]);
+            Assert.AreEqual("a.ns.dns.be", result.NameServers[0]);
+            Assert.AreEqual("b.ns.dns.be", result.NameServers[1]);
+            Assert.AreEqual("c.ns.dns.be", result.NameServers[2]);
+            Assert.AreEqual("d.ns.dns.be", result.NameServers[3]);
+            Assert.AreEqual("x.ns.dns.be", result.NameServers[4]);
+            Assert.AreEqual("y.ns.dns.be", result.NameServers[5]);
             Assert.AreEqual(3, result.Organization.Address.Count);
             Assert.AreEqual("Ubicenter, Philipssite 5, bus 13", result.Organization.Address[0]);
             Assert.AreEqual("Leuven  3001", result.Organization.Address[1]);
@@ -130,7 +130,7 @@ namespace Whois.Servers
 
             Assert.IsNotNull(result);
             Assert.AreEqual("eh", result.Tld);
-            Assert.AreEqual(WhoisServerStatus.NotFound, result.Status);
+            Assert.AreEqual(WhoisResponseStatus.NotAssigned, result.Status);
         }
     }
 }

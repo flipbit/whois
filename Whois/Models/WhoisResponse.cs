@@ -73,6 +73,8 @@ namespace Whois.Models
 
         public string TemplateName { get; set; }
 
+        public string Remarks { get; set; }
+
         public WhoisServer RootServer { get; set; }
 
         public WhoisResponse Referrer { get; set; }

@@ -28,7 +28,7 @@ namespace Whois.Models
         /// <summary>
         /// The status of the WHOIS server lookup
         /// </summary>
-        public WhoisServerStatus Status { get; set; }
+        public WhoisResponseStatus Status { get; set; }
 
         /// <summary>
         /// Gets or sets the TLD for this server.
@@ -63,7 +63,7 @@ namespace Whois.Models
         /// <summary>
         /// Gets the name servers.
         /// </summary>
-        public IList<string> NameServers { get; }
+        public IList<string> NameServers { get; internal set; }
 
         /// <summary>
         /// Gets or sets any remarks about this TLD.

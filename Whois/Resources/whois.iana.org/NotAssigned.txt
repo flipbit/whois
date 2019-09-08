@@ -7,11 +7,13 @@ name: whois.iana.org/tld/NotAssigned
 # Use this template for queries to whois.iana.org:
 tag: whois.iana.org
 tag: tld
+tag: arpa
+tag: int
 
 # Set query response type:
-set: Status = NotFound
+set: Status = NotAssigned
 
-# Must contain:
+# Must contain
 hint: Not assigned
 ---
-domain:       { Tld : ToLower, EOL }
+domain:       { DomainName : ToLower, EOL }

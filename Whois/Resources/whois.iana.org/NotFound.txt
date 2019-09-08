@@ -2,11 +2,12 @@
 #
 # .int Parsing Template
 #
-name: whois.iana.org/int/NotFound
+name: whois.iana.org/NotFound
 
 # Use this template for queries to whois.iana.org:
 tag: whois.iana.org
 tag: int
+tag: arpa
 
 # Set query response type:
 set: Status = NotFound

@@ -5,6 +5,7 @@ using Whois.Net;
 using Tokens;
 using Whois.Logging;
 using Whois.Models;
+using Whois.Parsers;
 
 namespace Whois.Servers
 {
@@ -41,14 +42,33 @@ namespace Whois.Servers
 
             // Reflect the raw response onto a ParsedWhoisServer object
             var matcher = ianaTemplate.Value;
-            var result = matcher.Match<WhoisServer>(content);
+            var result = matcher.Match<WhoisResponse>(content);
 
             if (result.Success)
             {
-                return result.BestMatch.Value;
+                var match = result.BestMatch.Value;
+
+                return new WhoisServer
+                {
+                    AdminContact = match.AdminContact,
+                    Changed = match.Updated,
+                    Content = content,
+                    Created = match.Registered,
+                    NameServers = match.NameServers,
+                    Status = match.Status,
+                    TechContact = match.TechnicalContact,
+                    Tld = match.DomainName,
+                    Url = match.Registrar?.WhoisServerUrl,
+                    Remarks = match.Remarks,
+                    Organization = new Organization
+                    {
+                        Name = match.Registrant?.Organization,
+                        Address = match.Registrant?.Address
+                    }
+                };
             }
 
-            return new WhoisServer { Tld = tld, Status = WhoisServerStatus.Unknown };
+            return new WhoisServer { Tld = tld, Status = WhoisResponseStatus.Unknown };
         }
 
         private async Task<string> GetWhoisServerResponse(string tld)
@@ -70,8 +90,9 @@ namespace Whois.Servers
         private TokenMatcher CreateIanaTemplate()
         {
             var matcher = new TokenMatcher();
+            matcher.RegisterTransformer<CleanDomainStatusTransformer>();
 
-            var resourceNames = resourceReader.GetNames("whois.iana.org", "tld");
+            var resourceNames = resourceReader.GetNames("whois.iana.org");
 
             foreach (var resourceName in resourceNames)
             {
