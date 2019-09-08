@@ -8,50 +8,33 @@ name: whois.iana.org/int/Found
 tag: whois.iana.org
 tag: int
 
+# End tokens on new lines
+terminateOnNewLine: true
+
 # Set query response type:
 set: Status = Found
 ---
-% IANA WHOIS server
-% for more information on IANA, visit http://www.iana.org
-% This query returned 1 object
+domain:       { DomainName : IsDomainName, ToLower }
 
-domain:       NATO.INT
-
-organisation: North Atlantic Treaty Organization
-address:      Blvd Leopold III
-address:      1110 Brussels
-address:      Brussels
-address:      Belgium
+organisation: { Registrant.Organization ? }
+address:      { Registrant.Address ? : IsNotEmpty, Repeating }
 
 contact:      administrative
-name:         Aidan Murdock
-address:      SHAPE
-address:      NCIA SP SDD SAS NAR
-address:      Mons Hainaut 7010
-address:      Belgium
-phone:        +32 65 44 9168
-fax-no:       +32 65 44 9480
-e-mail:       aidan.murdock@ncia.nato.int
+name:         { AdminContact.Name }
+address:      { AdminContact.Address ? : IsNotEmpty, Repeating }
+phone:        { AdminContact.TelephoneNumber ? : IsPhoneNumber }
+fax-no:       { AdminContact.FaxNumber ? : IsPhoneNumber }
+e-mail:       { AdminContact.Email ? : IsEmail }
 
 contact:      technical
-name:         Francesco Conserva
-address:      SHAPE
-address:      NCIA SP SMD ENT EMA
-address:      Mons Hainaut 7010
-address:      Belgium
-phone:        +32 65 44 7534
-fax-no:       +32 65 44 7556
-e-mail:       francesco.conserva@ncia.nato.int
+name:         { TechnicalContact.Name }
+address:      { TechnicalContact.Address ? : IsNotEmpty, Repeating }
+phone:        { TechnicalContact.TelephoneNumber ? : IsPhoneNumber }
+fax-no:       { TechnicalContact.FaxNumber ? : IsPhoneNumber }
+e-mail:       { TechnicalContact.Email ? : IsEmail }
 
-nserver:      GLOBE.NC3A.NATO.INT 192.41.140.178
-nserver:      MAX.NRA.NATO.INT 192.101.252.69
-nserver:      MAXIMA.NRA.NATO.INT 193.110.130.68
-nserver:      NS.NAMSA.NATO.INT 193.168.11.15 193.168.15.15
-nserver:      NS.SACLANTC.NATO.INT 192.106.197.1
-nserver:      NS1.CS.UCL.AC.UK 128.16.5.32
-nserver:      NS1.DRENET.DND.CA 131.136.242.3
+nserver:      { NameServers ? : SubstringBefore(' '), IsDomainName, ToLower, Repeating }
 
-created:      1997-08-26
-changed:      2012-08-07
-source:       IANA
+created:      { Registered ? : ToDateTimeUtc("yyyy-MM-dd") }
+changed:      { Updated ? : ToDateTimeUtc("yyyy-MM-dd") }
 
