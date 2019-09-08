@@ -10,5 +10,7 @@ tag: hk
 
 # Set query response type:
 set: Status = NotFound
+
+hint: The domain has not been registered
 ---
 The domain has not been registered.
