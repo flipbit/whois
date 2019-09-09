@@ -2,15 +2,21 @@
 #
 # .ac.uk Parsing Template
 #
-name: whois.ja.net/ac.uk/NotFound
+name: whois.ja.net/NotFound
 
 # Use this template for queries to whois.ja.net:
 tag: whois.ja.net
 tag: ac.uk
+tag: gov.uk
+
+# End tokens on new lines
+terminateOnNewLine: true
 
 # Set query response type:
 set: Status = NotFound
+
+hint: No such domain
 ---
 
-No such domain u34jedzcq.ac.uk
+No such domain { DomainName : IsDomainName, ToLower }
 
