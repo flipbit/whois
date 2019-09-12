@@ -56,6 +56,8 @@ namespace Whois.Models
         /// </summary>
         public Contact BillingContact { get; set; }
 
+        public Contact ZoneContact { get; set; }
+
         /// <summary>
         /// Gets the domain name servcers
         /// </summary>

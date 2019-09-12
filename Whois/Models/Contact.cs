@@ -1,4 +1,5 @@
-﻿using System.Collections.Generic;
+﻿using System;
+using System.Collections.Generic;
 
 namespace Whois.Models
 {
@@ -68,5 +69,7 @@ namespace Whois.Models
         /// The email.
         /// </value>
         public string Email { get; set; }
+
+        public DateTime? Created { get; set; }
     }
 }

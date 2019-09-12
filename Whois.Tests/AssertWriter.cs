@@ -47,6 +47,7 @@ namespace Whois
             Write(nameof(response.AdminContact), response.AdminContact);
             Write(nameof(response.BillingContact), response.BillingContact);
             Write(nameof(response.TechnicalContact), response.TechnicalContact);
+            Write(nameof(response.ZoneContact), response.ZoneContact);
 
             sb.AppendLine();
 
@@ -100,6 +101,7 @@ namespace Whois
             Write($"{prefix}.{nameof(Contact.FaxNumber)}", contact.FaxNumber);
             Write($"{prefix}.{nameof(Contact.FaxNumberExt)}", contact.FaxNumberExt);
             Write($"{prefix}.{nameof(Contact.Email)}", contact.Email);
+            Write($"{prefix}.{nameof(Contact.Created)}", contact.Created);
 
             if (contact.Address.Any())
             {

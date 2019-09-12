@@ -1,0 +1,41 @@
+---
+#
+# .eu.org Parsing Template
+#
+name: generic/tld/Found04
+
+# Use this template for catch-all parsing::
+tag: catch-all
+
+# Lines can appear out of order
+outOfOrder: true
+
+# End tokens on new lines
+terminateOnNewLine: true
+
+# Use token preamble on current line only
+trimPreambleBeforeNewLine: true
+
+IgnoreMissingProperties: true
+
+# Set query response type:
+set: Status = Found
+---
+domain:       { DomainName : IsDomainName, ToLower }
+descr:        { Address : IsNotEmpty, Repeating }
+admin-c:      { AdminContact.RegistryId ? }
+tech-c:       { TechnicalContact.RegistryId ? }
+zone-c:       { ZoneContact.RegistryId ? }
+billing-c:    { BillingContact.RegistryId ? }
+nserver:      { NameServers ? : IsDomainName, ToLower, Repeating }
+created:      { Created ? : ToDateTimeUtc("MMMM d yyyy"), Repeating }
+created:      { Created ? : ToDateTimeUtc("MMMM  d yyyy"), Repeating }
+expires:      { Expiration ? : ToDateTimeUtc("MMMM d yyyy") }
+
+person:       { Contact.Name : Repeating }
+role:         { Contact.Organization : Repeating }
+address:      { Address : IsNotEmpty, Repeating }
+nic-hdl:      { Contact.Id : Repeating }
+phone:        { Phone : IsPhoneNumber, Repeating }
+fax-no:       { Fax : IsPhoneNumber, Repeating }
+e-mail:       { Email : IsEmail, Repeating }

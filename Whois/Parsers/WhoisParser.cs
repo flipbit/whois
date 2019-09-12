@@ -1,8 +1,10 @@
-﻿using System.Linq;
+﻿using System.Collections.Generic;
+using System.Linq;
 using Tokens;
 using Tokens.Transformers;
 using Tokens.Validators;
 using Whois.Models;
+using Whois.Parsers.Fixups;
 
 namespace Whois.Parsers
 {
@@ -24,14 +26,24 @@ namespace Whois.Parsers
             matcher = new TokenMatcher();
             reader = new ResourceReader();
             statusParser = new WhoisResponseStatusParser();
+            FixUps = new List<IFixup>();
 
+            // Register default transformers
             matcher.RegisterTransformer<CleanDomainStatusTransformer>();
+
+            // Register default FixUps
+            FixUps.Add(new MultipleContactFixup());
         }
 
         /// <summary>
         /// Contains the registered templates
         /// </summary>
         public TemplateCollection Templates => matcher.Templates;
+
+        /// <summary>
+        /// Template Fixups
+        /// </summary>
+        public IList<IFixup> FixUps { get; }
 
         /// <summary>
         /// Parses the WHOIS server response for the given server and TLD.
@@ -56,6 +68,16 @@ namespace Whois.Parsers
 
             if (match != null)
             {
+                // Perform extended processing on parsed data
+                // via FixUps.
+                foreach (var fixup in FixUps)
+                {
+                    if (fixup.CanFixup(match))
+                    {
+                        fixup.Fixup(match);
+                    }
+                }
+
                 var value = match.Value;
 
                 value.FieldsParsed = match.Tokens.Matches.Count;

@@ -26,6 +26,7 @@
     <None Remove="Resources\durban-whois.registry.net.za\durban\NotFound.txt" />
     <None Remove="Resources\generic\tld\Found01.txt" />
     <None Remove="Resources\generic\tld\Found02.txt" />
+    <None Remove="Resources\generic\tld\Found04.txt" />
     <None Remove="Resources\generic\tld\NotFound001.txt" />
     <None Remove="Resources\generic\tld\NotFound002.txt" />
     <None Remove="Resources\generic\tld\NotFound003.txt" />
@@ -153,7 +154,6 @@
     <None Remove="Resources\whois.iis.se\se\NotFound.txt" />
     <None Remove="Resources\whois.in.ua\in.ua\Found.txt" />
     <None Remove="Resources\whois.in.ua\in.ua\NotFound.txt" />
-    <None Remove="Resources\whois.isnic.is\is\Found.txt" />
     <None Remove="Resources\whois.isnic.is\is\NotFound.txt" />
     <None Remove="Resources\whois.isoc.org.il\il\Found.txt" />
     <None Remove="Resources\whois.isoc.org.il\il\Locked.txt" />
@@ -442,6 +442,7 @@
     <EmbeddedResource Include="Resources\durban-whois.registry.net.za\durban\NotFound.txt" />
     <EmbeddedResource Include="Resources\generic\tld\Found02.txt" />
     <EmbeddedResource Include="Resources\generic\tld\Found01.txt" />
+    <EmbeddedResource Include="Resources\generic\tld\Found04.txt" />
     <EmbeddedResource Include="Resources\generic\tld\NotFound001.txt" />
     <EmbeddedResource Include="Resources\generic\tld\NotFound005.txt" />
     <EmbeddedResource Include="Resources\generic\tld\NotFound004.txt" />
@@ -573,7 +574,6 @@
     <EmbeddedResource Include="Resources\whois.iis.se\se\NotFound.txt" />
     <EmbeddedResource Include="Resources\whois.in.ua\in.ua\Found.txt" />
     <EmbeddedResource Include="Resources\whois.in.ua\in.ua\NotFound.txt" />
-    <EmbeddedResource Include="Resources\whois.isnic.is\is\Found.txt" />
     <EmbeddedResource Include="Resources\whois.isnic.is\is\NotFound.txt" />
     <EmbeddedResource Include="Resources\whois.isoc.org.il\il\Found.txt" />
     <EmbeddedResource Include="Resources\whois.isoc.org.il\il\Locked.txt" />
