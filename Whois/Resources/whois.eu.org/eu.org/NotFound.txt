@@ -10,5 +10,7 @@ tag: eu.org
 
 # Set query response type:
 set: Status = NotFound
+
+hint: Key not found
 ---
 Key not found

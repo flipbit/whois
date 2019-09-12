@@ -555,7 +555,7 @@
     <EmbeddedResource Include="Resources\whois.eu\eu\Found.txt" />
     <EmbeddedResource Include="Resources\whois.eu\eu\NotFound.txt" />
     <EmbeddedResource Include="Resources\whois.eu\eu\Throttled.txt" />
-    <EmbeddedResource Include="Resources\whois.eu.org\eu.org\Found.txt" />
+    <EmbeddedResource Include="Resources\generic\tld\Found03.txt" />
     <EmbeddedResource Include="Resources\whois.eu.org\eu.org\NotFound.txt" />
     <EmbeddedResource Include="Resources\whois.fi\fi\Found.txt" />
     <EmbeddedResource Include="Resources\whois.fi\fi\Reserved.txt" />
@@ -861,7 +861,7 @@
       <IncludeAssets>runtime; build; native; contentfiles; analyzers</IncludeAssets>
     </PackageReference>
     <PackageReference Include="Microsoft.CSharp" Version="4.5.0" />
-    <PackageReference Include="Tokenizer" Version="2.1.10" />
+    <PackageReference Include="Tokenizer" Version="2.2.0-beta3" />
   </ItemGroup>
 
   <PropertyGroup>
