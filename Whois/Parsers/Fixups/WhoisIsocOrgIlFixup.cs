@@ -9,60 +9,27 @@ namespace Whois.Parsers.Fixups
     /// <summary>
     /// Extracts referential contact details from WHOIS responses
     /// </summary>
-    public class MultipleContactFixup : IFixup
+    public class WhoisIsocOrgIlFixup : MultipleContactFixup
     {
-        public virtual bool CanFixup(TokenizeResult<WhoisResponse> result)
+        public override bool CanFixup(TokenizeResult<WhoisResponse> result)
         {
             // Templates that this Fixup can work on
-            return result.Template.Name == "generic/tld/Found03" || 
-                   result.Template.Name == "generic/tld/Found04";
+            return result.Template.Name == "whois.isoc.org.il/il/Found";
         }
 
-        public void Fixup(TokenizeResult<WhoisResponse> result)
-        {
-            var response = result.Value;
-
-            if (TryGetContact(response.AdminContact, result.Tokens.Matches, out var adminContact))
-            {
-                response.AdminContact = adminContact;
-            }
-
-            if (TryGetContact(response.TechnicalContact, result.Tokens.Matches, out var technicalContact))
-            {
-                response.TechnicalContact = technicalContact;
-            }
-
-            if (TryGetContact(response.ZoneContact, result.Tokens.Matches, out var zoneContact))
-            {
-                response.ZoneContact = zoneContact;
-            }
-
-            if (TryGetContact(response.BillingContact, result.Tokens.Matches, out var billingContact))
-            {
-                response.BillingContact = billingContact;
-            }
-
-            if (TryGetRegistrant(result.Tokens.Matches, response, out var registrant))
-            {
-                response.Registrant = registrant;
-            }
-        }
-
-        protected virtual int? GetRegistrantParagraph(IList<Match> matches)
-        {
-            var contactIdMatch = matches
-                .FirstOrDefault(m => m.Token.Name == "DomainName");
-
-            return contactIdMatch?.Location.Paragraph;
-        }
-
-        protected virtual bool TryGetRegistrant(IList<Match> matches, WhoisResponse response, out Contact contact)
+        protected override bool TryGetRegistrant(IList<Match> matches, WhoisResponse response, out Contact contact)
         {
             contact = null;
 
-            var paragraph = GetRegistrantParagraph(matches);
+            var contactIdMatch = matches
+                .FirstOrDefault(m => m.Token.Name == "Address");
 
-            if (paragraph.HasValue == false) return false;
+            if (contactIdMatch == null)
+            {
+                return false;
+            }
+
+            var paragraph = contactIdMatch.Location.Paragraph;
 
             contact = new Contact();
             var count = 0;
@@ -100,12 +67,8 @@ namespace Whois.Parsers.Fixups
 
                     case "Changed":
                         var dateTime = (DateTime) match.Value;
-                        if (dateTime > response.Updated || 
-                            !response.Updated.HasValue) response.Updated = dateTime;
-                        break;
-
-                    case "Created":
-                        response.Registered = (DateTime) match.Value;
+                        if (dateTime > response.Updated || !response.Updated.HasValue) response.Updated = dateTime;
+                        if (dateTime < response.Registered || !response.Registered.HasValue) response.Registered = dateTime;
                         break;
                 }
             }
@@ -113,7 +76,7 @@ namespace Whois.Parsers.Fixups
             return count > 0;
         }
 
-        protected virtual bool TryGetContact(Contact input, IList<Match> matches, out Contact contact)
+        protected override bool TryGetContact(Contact input, IList<Match> matches, out Contact contact)
         {
             contact = null;
 
@@ -166,8 +129,9 @@ namespace Whois.Parsers.Fixups
                         contact.Email = match.Value.ToString();
                         break;
                         
-                    case "Created":
-                        contact.Created = (DateTime) match.Value;
+                    case "Changed":
+                        var changedDateTime = (DateTime) match.Value;
+                        if (changedDateTime > contact.Created || !contact.Created.HasValue) match.Value = changedDateTime;
                         break;
                 }
             }

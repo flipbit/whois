@@ -33,6 +33,7 @@ namespace Whois.Parsers
 
             // Register default FixUps
             FixUps.Add(new MultipleContactFixup());
+            FixUps.Add(new WhoisIsocOrgIlFixup());
         }
 
         /// <summary>

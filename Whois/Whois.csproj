@@ -156,9 +156,7 @@
     <None Remove="Resources\whois.in.ua\in.ua\NotFound.txt" />
     <None Remove="Resources\whois.isnic.is\is\NotFound.txt" />
     <None Remove="Resources\whois.isoc.org.il\il\Found.txt" />
-    <None Remove="Resources\whois.isoc.org.il\il\Locked.txt" />
     <None Remove="Resources\whois.isoc.org.il\il\NotFound.txt" />
-    <None Remove="Resources\whois.isoc.org.il\il\Other.txt" />
     <None Remove="Resources\whois.je\je\Found.txt" />
     <None Remove="Resources\whois.je\je\NotFound.txt" />
     <None Remove="Resources\whois.jprs.jp\co.jp\Found.txt" />
@@ -576,9 +574,7 @@
     <EmbeddedResource Include="Resources\whois.in.ua\in.ua\NotFound.txt" />
     <EmbeddedResource Include="Resources\whois.isnic.is\is\NotFound.txt" />
     <EmbeddedResource Include="Resources\whois.isoc.org.il\il\Found.txt" />
-    <EmbeddedResource Include="Resources\whois.isoc.org.il\il\Locked.txt" />
     <EmbeddedResource Include="Resources\whois.isoc.org.il\il\NotFound.txt" />
-    <EmbeddedResource Include="Resources\whois.isoc.org.il\il\Other.txt" />
     <EmbeddedResource Include="Resources\whois.ja.net\Found.txt" />
     <EmbeddedResource Include="Resources\whois.ja.net\NotFound.txt" />
     <EmbeddedResource Include="Resources\whois.je\je\Found.txt" />

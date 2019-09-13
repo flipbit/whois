@@ -21,6 +21,7 @@ namespace Whois.Parsers
             if (Equals(status, "in quarantine")) return WhoisResponseStatus.Quarantined;
             if (Equals(status, "Grace Period")) return WhoisResponseStatus.Other;
             if (Equals(status, "Available")) return WhoisResponseStatus.NotFound;
+            if (Equals(status, "Transfer Locked")) return WhoisResponseStatus.Locked;
 
             if (whoisServerUrl == "whois.dns.pt")
             {

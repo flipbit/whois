@@ -1,6 +1,6 @@
 ---
 #
-# .eu.org Parsing Template
+# Generic TLD Parsing Template
 #
 name: generic/tld/Found03
 
@@ -16,6 +16,7 @@ terminateOnNewLine: true
 # Use token preamble on current line only
 trimPreambleBeforeNewLine: true
 
+# Use a FixUp to assign fields
 IgnoreMissingProperties: true
 
 # Set query response type:
