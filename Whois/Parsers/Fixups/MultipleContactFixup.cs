@@ -15,7 +15,8 @@ namespace Whois.Parsers.Fixups
         {
             // Templates that this Fixup can work on
             return result.Template.Name == "generic/tld/Found03" || 
-                   result.Template.Name == "generic/tld/Found04";
+                   result.Template.Name == "generic/tld/Found04" || 
+                   result.Template.Name == "whois.nic.at/at/Found";
         }
 
         public void Fixup(TokenizeResult<WhoisResponse> result)
