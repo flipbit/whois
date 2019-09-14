@@ -227,10 +227,6 @@
     <None Remove="Resources\whois.nic.fr\fr\Other.txt" />
     <None Remove="Resources\whois.nic.fr\fr\Redemption.txt" />
     <None Remove="Resources\whois.nic.fr\fr\Throttled.txt" />
-    <None Remove="Resources\whois.nic.fr\tf\Found.txt" />
-    <None Remove="Resources\whois.nic.fr\tf\NotFound.txt" />
-    <None Remove="Resources\whois.nic.fr\tf\Other.txt" />
-    <None Remove="Resources\whois.nic.fr\tf\Throttled.txt" />
     <None Remove="Resources\whois.nic.gd\gd\Found.txt" />
     <None Remove="Resources\whois.nic.gd\gd\NotFound.txt" />
     <None Remove="Resources\whois.nic.gd\gd\Reserved.txt" />
@@ -626,10 +622,6 @@
     <EmbeddedResource Include="Resources\whois.nic.fr\fr\Other.txt" />
     <EmbeddedResource Include="Resources\whois.nic.fr\fr\Redemption.txt" />
     <EmbeddedResource Include="Resources\whois.nic.fr\fr\Throttled.txt" />
-    <EmbeddedResource Include="Resources\whois.nic.fr\tf\Found.txt" />
-    <EmbeddedResource Include="Resources\whois.nic.fr\tf\NotFound.txt" />
-    <EmbeddedResource Include="Resources\whois.nic.fr\tf\Other.txt" />
-    <EmbeddedResource Include="Resources\whois.nic.fr\tf\Throttled.txt" />
     <EmbeddedResource Include="Resources\whois.nic.gd\gd\Found.txt" />
     <EmbeddedResource Include="Resources\whois.nic.gd\gd\NotFound.txt" />
     <EmbeddedResource Include="Resources\whois.nic.gd\gd\Reserved.txt" />
