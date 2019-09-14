@@ -22,6 +22,9 @@ namespace Whois.Parsers
             if (Equals(status, "Grace Period")) return WhoisResponseStatus.Other;
             if (Equals(status, "Available")) return WhoisResponseStatus.NotFound;
             if (Equals(status, "Transfer Locked")) return WhoisResponseStatus.Locked;
+            if (Equals(status, "Deleted")) return WhoisResponseStatus.PendingDelete;
+            if (Equals(status, "To be suspended")) return WhoisResponseStatus.Suspended;
+            if (Equals(status, "Suspended")) return WhoisResponseStatus.Suspended;
 
             if (whoisServerUrl == "whois.dns.pt")
             {

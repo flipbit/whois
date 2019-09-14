@@ -6,7 +6,6 @@ using Whois.Parsers;
 namespace Whois.Parsing.Whois.Jprs.Jp.Jp
 {
     [TestFixture]
-    [Ignore("TODO")]
     public class JpParsingTests : ParsingTests
     {
         private WhoisParser parser;
@@ -29,19 +28,19 @@ namespace Whois.Parsing.Whois.Jprs.Jp.Jp
             Assert.AreEqual(WhoisResponseStatus.Suspended, response.Status);
 
             Assert.AreEqual(0, response.ParsingErrors);
-            Assert.AreEqual("whois.jprs.jp/jp/Suspended", response.TemplateName);
+            Assert.AreEqual("whois.jprs.jp/Found02", response.TemplateName);
 
             Assert.AreEqual("veganwiz.jp", response.DomainName);
 
-            Assert.AreEqual(new DateTime(2012, 8, 1, 0, 29, 53), response.Updated);
-            Assert.AreEqual(new DateTime(2010, 7, 7, 0, 0, 0), response.Registered);
-            Assert.AreEqual(new DateTime(2012, 8, 31, 0, 0, 0), response.Expiration);
+            Assert.AreEqual(new DateTime(2012, 08, 01, 00, 29, 53, 000, DateTimeKind.Utc), response.Updated);
+            Assert.AreEqual(new DateTime(2010, 07, 07, 00, 00, 00, 000, DateTimeKind.Utc), response.Registered);
+            Assert.AreEqual(new DateTime(2012, 08, 31, 00, 00, 00, 000, DateTimeKind.Utc), response.Expiration);
 
             // Domain Status
             Assert.AreEqual(1, response.DomainStatus.Count);
             Assert.AreEqual("Suspended", response.DomainStatus[0]);
 
-            Assert.AreEqual(6, response.FieldsParsed);
+            Assert.AreEqual(8, response.FieldsParsed);
         }
 
         [Test]
@@ -51,16 +50,16 @@ namespace Whois.Parsing.Whois.Jprs.Jp.Jp
             var response = parser.Parse("whois.jprs.jp", "jp", sample);
 
             Assert.Greater(sample.Length, 0);
-            Assert.AreEqual(WhoisResponseStatus.Other, response.Status);
+            Assert.AreEqual(WhoisResponseStatus.Suspended, response.Status);
 
             Assert.AreEqual(0, response.ParsingErrors);
-            Assert.AreEqual("whois.jprs.jp/jp/Other", response.TemplateName);
+            Assert.AreEqual("whois.jprs.jp/Found02", response.TemplateName);
 
             Assert.AreEqual("flirtbox.jp", response.DomainName);
 
-            Assert.AreEqual(new DateTime(2011, 12, 21, 18, 30, 48), response.Updated);
-            Assert.AreEqual(new DateTime(2003, 12, 9, 0, 0, 0), response.Registered);
-            Assert.AreEqual(new DateTime(2011, 12, 31, 0, 0, 0), response.Expiration);
+            Assert.AreEqual(new DateTime(2011, 12, 21, 18, 30, 48, 000, DateTimeKind.Utc), response.Updated);
+            Assert.AreEqual(new DateTime(2003, 12, 09, 00, 00, 00, 000, DateTimeKind.Utc), response.Registered);
+            Assert.AreEqual(new DateTime(2011, 12, 31, 00, 00, 00, 000, DateTimeKind.Utc), response.Expiration);
 
              // Registrant Details
             Assert.AreEqual("Tobias Marx", response.Registrant.Name);
@@ -68,14 +67,13 @@ namespace Whois.Parsing.Whois.Jprs.Jp.Jp
 
              // AdminContact Details
             Assert.AreEqual("Tobias Marx", response.AdminContact.Name);
+            Assert.AreEqual("+4915122947636", response.AdminContact.TelephoneNumber);
+            Assert.AreEqual("superoverdrive@gmx.de", response.AdminContact.Email);
 
              // AdminContact Address
             Assert.AreEqual(2, response.AdminContact.Address.Count);
             Assert.AreEqual("166-0002", response.AdminContact.Address[0]);
             Assert.AreEqual("3-43-13 Kouenji-kita Suginami-ku", response.AdminContact.Address[1]);
-
-            Assert.AreEqual("+4915122947636", response.AdminContact.TelephoneNumber);
-            Assert.AreEqual("superoverdrive@gmx.de", response.AdminContact.Email);
 
 
             // Nameservers
@@ -100,13 +98,13 @@ namespace Whois.Parsing.Whois.Jprs.Jp.Jp
             Assert.AreEqual(WhoisResponseStatus.Found, response.Status);
 
             Assert.AreEqual(0, response.ParsingErrors);
-            Assert.AreEqual("whois.jprs.jp/jp/Found", response.TemplateName);
+            Assert.AreEqual("whois.jprs.jp/Found02", response.TemplateName);
 
             Assert.AreEqual("fashionwatch.jp", response.DomainName);
 
-            Assert.AreEqual(new DateTime(2010, 10, 18, 11, 30, 47), response.Updated);
-            Assert.AreEqual(new DateTime(2009, 5, 11, 0, 0, 0), response.Registered);
-            Assert.AreEqual(new DateTime(2011, 5, 31, 0, 0, 0), response.Expiration);
+            Assert.AreEqual(new DateTime(2010, 10, 18, 11, 30, 47, 000, DateTimeKind.Utc), response.Updated);
+            Assert.AreEqual(new DateTime(2009, 05, 11, 00, 00, 00, 000, DateTimeKind.Utc), response.Registered);
+            Assert.AreEqual(new DateTime(2011, 05, 31, 00, 00, 00, 000, DateTimeKind.Utc), response.Expiration);
 
              // Registrant Details
             Assert.AreEqual("coco coco", response.Registrant.Name);
@@ -114,6 +112,8 @@ namespace Whois.Parsing.Whois.Jprs.Jp.Jp
 
              // AdminContact Details
             Assert.AreEqual("coco coco", response.AdminContact.Name);
+            Assert.AreEqual("1312748435", response.AdminContact.TelephoneNumber);
+            Assert.AreEqual("wld19800720@163.com", response.AdminContact.Email);
 
              // AdminContact Address
             Assert.AreEqual(4, response.AdminContact.Address.Count);
@@ -121,9 +121,6 @@ namespace Whois.Parsing.Whois.Jprs.Jp.Jp
             Assert.AreEqual("3-43-13 Koenji-kita", response.AdminContact.Address[1]);
             Assert.AreEqual("Suginami-ku", response.AdminContact.Address[2]);
             Assert.AreEqual("Tokyo", response.AdminContact.Address[3]);
-
-            Assert.AreEqual("1312748435", response.AdminContact.TelephoneNumber);
-            Assert.AreEqual("wld19800720@163.com", response.AdminContact.Email);
 
 
             // Nameservers
@@ -148,7 +145,7 @@ namespace Whois.Parsing.Whois.Jprs.Jp.Jp
             Assert.AreEqual(WhoisResponseStatus.NotFound, response.Status);
 
             Assert.AreEqual(0, response.ParsingErrors);
-            Assert.AreEqual("whois.jprs.jp/jp/NotFound", response.TemplateName);
+            Assert.AreEqual("whois.jprs.jp/NotFound", response.TemplateName);
 
             Assert.AreEqual(1, response.FieldsParsed);
         }
@@ -163,19 +160,23 @@ namespace Whois.Parsing.Whois.Jprs.Jp.Jp
             Assert.AreEqual(WhoisResponseStatus.Found, response.Status);
 
             Assert.AreEqual(0, response.ParsingErrors);
-            Assert.AreEqual("whois.jprs.jp/jp/Found", response.TemplateName);
+            Assert.AreEqual("whois.jprs.jp/Found02", response.TemplateName);
 
             Assert.AreEqual("google.jp", response.DomainName);
 
-            Assert.AreEqual(new DateTime(2013, 6, 1, 1, 5, 7), response.Updated);
-            Assert.AreEqual(new DateTime(2005, 5, 30, 0, 0, 0), response.Registered);
-            Assert.AreEqual(new DateTime(2014, 5, 31, 0, 0, 0), response.Expiration);
+            Assert.AreEqual(new DateTime(2013, 06, 01, 01, 05, 07, 000, DateTimeKind.Utc), response.Updated);
+            Assert.AreEqual(new DateTime(2005, 05, 30, 00, 00, 00, 000, DateTimeKind.Utc), response.Registered);
+            Assert.AreEqual(new DateTime(2014, 05, 31, 00, 00, 00, 000, DateTimeKind.Utc), response.Expiration);
 
              // Registrant Details
             Assert.AreEqual("Google Inc.", response.Registrant.Name);
 
+
              // AdminContact Details
             Assert.AreEqual("Google Inc.", response.AdminContact.Name);
+            Assert.AreEqual("16502530000", response.AdminContact.TelephoneNumber);
+            Assert.AreEqual("16502530001", response.AdminContact.FaxNumber);
+            Assert.AreEqual("dns-admin@google.com", response.AdminContact.Email);
 
              // AdminContact Address
             Assert.AreEqual(4, response.AdminContact.Address.Count);
@@ -184,9 +185,6 @@ namespace Whois.Parsing.Whois.Jprs.Jp.Jp
             Assert.AreEqual("1600 Amphitheatre Parkway", response.AdminContact.Address[2]);
             Assert.AreEqual("US", response.AdminContact.Address[3]);
 
-            Assert.AreEqual("16502530000", response.AdminContact.TelephoneNumber);
-            Assert.AreEqual("16502530001", response.AdminContact.FaxNumber);
-            Assert.AreEqual("dns-admin@google.com", response.AdminContact.Email);
 
             // Nameservers
             Assert.AreEqual(4, response.NameServers.Count);
@@ -212,16 +210,17 @@ namespace Whois.Parsing.Whois.Jprs.Jp.Jp
             Assert.AreEqual(WhoisResponseStatus.Reserved, response.Status);
 
             Assert.AreEqual(0, response.ParsingErrors);
-            Assert.AreEqual("whois.jprs.jp/jp/Reserved", response.TemplateName);
+            Assert.AreEqual("whois.jprs.jp/Found02", response.TemplateName);
 
             Assert.AreEqual("example.jp", response.DomainName);
 
+            Assert.AreEqual(new DateTime(2001, 02, 21, 00, 00, 00, 000, DateTimeKind.Utc), response.Updated);
 
             // Domain Status
             Assert.AreEqual(1, response.DomainStatus.Count);
             Assert.AreEqual("Reserved", response.DomainStatus[0]);
 
-            Assert.AreEqual(3, response.FieldsParsed);
+            Assert.AreEqual(6, response.FieldsParsed);
         }
 
         [Test]
@@ -231,20 +230,27 @@ namespace Whois.Parsing.Whois.Jprs.Jp.Jp
             
             var response = parser.Parse("whois.jprs.jp", "jp", sample);
 
+            Assert.Greater(sample.Length, 0);
+            Assert.AreEqual(WhoisResponseStatus.Found, response.Status);
+
             Assert.AreEqual(0, response.ParsingErrors);
-            Assert.AreEqual("whois.jprs.jp/jp/Found", response.TemplateName);
+            Assert.AreEqual("whois.jprs.jp/Found02", response.TemplateName);
 
             Assert.AreEqual("ameblo.jp", response.DomainName);
 
-            Assert.AreEqual(new DateTime(2018, 8, 1, 1, 5, 9), response.Updated);
-            Assert.AreEqual(new DateTime(2004, 7, 30, 0, 0, 0), response.Registered);
-            Assert.AreEqual(new DateTime(2019, 7, 31, 0, 0, 0), response.Expiration);
+            Assert.AreEqual(new DateTime(2018, 08, 01, 01, 05, 09, 000, DateTimeKind.Utc), response.Updated);
+            Assert.AreEqual(new DateTime(2004, 07, 30, 00, 00, 00, 000, DateTimeKind.Utc), response.Registered);
+            Assert.AreEqual(new DateTime(2019, 07, 31, 00, 00, 00, 000, DateTimeKind.Utc), response.Expiration);
 
              // Registrant Details
             Assert.AreEqual("CyberAgent, Inc.", response.Registrant.Name);
 
+
              // AdminContact Details
             Assert.AreEqual("CyberAgent, Inc.", response.AdminContact.Name);
+            Assert.AreEqual("03-5459-6150", response.AdminContact.TelephoneNumber);
+            Assert.AreEqual("03-5784-7070", response.AdminContact.FaxNumber);
+            Assert.AreEqual("dns-ssl-info@cyberagent.co.jp", response.AdminContact.Email);
 
              // AdminContact Address
             Assert.AreEqual(4, response.AdminContact.Address.Count);
@@ -253,9 +259,6 @@ namespace Whois.Parsing.Whois.Jprs.Jp.Jp
             Assert.AreEqual("19-1 Maruyamacho", response.AdminContact.Address[2]);
             Assert.AreEqual("Shibuya Prime Plaza 2F", response.AdminContact.Address[3]);
 
-            Assert.AreEqual("03-5459-6150", response.AdminContact.TelephoneNumber);
-            Assert.AreEqual("03-5784-7070", response.AdminContact.FaxNumber);
-            Assert.AreEqual("dns-ssl-info@cyberagent.co.jp", response.AdminContact.Email);
 
             // Nameservers
             Assert.AreEqual(6, response.NameServers.Count);

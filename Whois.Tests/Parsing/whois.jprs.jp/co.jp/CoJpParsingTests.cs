@@ -6,7 +6,6 @@ using Whois.Parsers;
 namespace Whois.Parsing.Whois.Jprs.Jp.CoJp
 {
     [TestFixture]
-    [Ignore("TODO")]
     public class CoJpParsingTests : ParsingTests
     {
         private WhoisParser parser;
@@ -29,17 +28,20 @@ namespace Whois.Parsing.Whois.Jprs.Jp.CoJp
             Assert.AreEqual(WhoisResponseStatus.PendingDelete, response.Status);
 
             Assert.AreEqual(0, response.ParsingErrors);
-            Assert.AreEqual("whois.jprs.jp/co.jp/PendingDelete", response.TemplateName);
+            Assert.AreEqual("whois.jprs.jp/Found01", response.TemplateName);
 
             Assert.AreEqual("gaylife.co.jp", response.DomainName);
 
-            Assert.AreEqual(new DateTime(2012, 8, 8, 12, 0, 43), response.Updated);
+            Assert.AreEqual(new DateTime(2012, 08, 08, 12, 00, 43, 000, DateTimeKind.Utc), response.Updated);
+
+             // Registrant Details
+            Assert.AreEqual("Suspended Domain Name", response.Registrant.Name);
 
             // Domain Status
             Assert.AreEqual(1, response.DomainStatus.Count);
-            Assert.AreEqual("Deleted (2013/01/31)", response.DomainStatus[0]);
+            Assert.AreEqual("Deleted", response.DomainStatus[0]);
 
-            Assert.AreEqual(4, response.FieldsParsed);
+            Assert.AreEqual(6, response.FieldsParsed);
         }
 
         [Test]
@@ -52,25 +54,25 @@ namespace Whois.Parsing.Whois.Jprs.Jp.CoJp
             Assert.AreEqual(WhoisResponseStatus.Found, response.Status);
 
             Assert.AreEqual(0, response.ParsingErrors);
-            Assert.AreEqual("whois.jprs.jp/co.jp/Found", response.TemplateName);
+            Assert.AreEqual("whois.jprs.jp/Found01", response.TemplateName);
 
             Assert.AreEqual("ahoo.co.jp", response.DomainName);
 
-            Assert.AreEqual(new DateTime(2013, 7, 8, 16, 50, 7), response.Updated);
-            Assert.AreEqual(new DateTime(2013, 3, 20, 0, 0, 0), response.Registered);
+            Assert.AreEqual(new DateTime(2013, 07, 08, 16, 50, 07, 000, DateTimeKind.Utc), response.Updated);
+            Assert.AreEqual(new DateTime(2013, 03, 20, 00, 00, 00, 000, DateTimeKind.Utc), response.Registered);
 
              // Registrant Details
             Assert.AreEqual("yamazakipan corp.", response.Registrant.Name);
 
              // AdminContact Details
-            Assert.AreEqual("TY20986JP", response.AdminContact.Name);
+            Assert.AreEqual("TY20986JP", response.AdminContact.RegistryId);
 
              // TechnicalContact Details
-            Assert.AreEqual("TY20986JP", response.TechnicalContact.Name);
+            Assert.AreEqual("TY20986JP", response.TechnicalContact.RegistryId);
 
             // Domain Status
             Assert.AreEqual(1, response.DomainStatus.Count);
-            Assert.AreEqual("Registered (2014/03/31)", response.DomainStatus[0]);
+            Assert.AreEqual("Registered", response.DomainStatus[0]);
 
             Assert.AreEqual(8, response.FieldsParsed);
         }
@@ -82,19 +84,38 @@ namespace Whois.Parsing.Whois.Jprs.Jp.CoJp
 
             var response = parser.Parse("whois.jprs.jp", "co.jp", sample);
 
-            AssertWriter.Write(response);
+            Assert.Greater(sample.Length, 0);
+            Assert.AreEqual(WhoisResponseStatus.Found, response.Status);
+
+            Assert.AreEqual(0, response.ParsingErrors);
+            Assert.AreEqual("whois.jprs.jp/Found01", response.TemplateName);
 
             Assert.AreEqual("amazon.co.jp", response.DomainName);
+
+            Assert.AreEqual(new DateTime(2018, 12, 01, 01, 01, 57, 000, DateTimeKind.Utc), response.Updated);
+            Assert.AreEqual(new DateTime(2002, 11, 21, 00, 00, 00, 000, DateTimeKind.Utc), response.Registered);
+
+             // Registrant Details
             Assert.AreEqual("Amazon, Inc.", response.Registrant.Name);
-            Assert.AreEqual("JC076JP", response.AdminContact.Name);
-            Assert.AreEqual("IK4644JP", response.TechnicalContact.Name);
+
+             // AdminContact Details
+            Assert.AreEqual("JC076JP", response.AdminContact.RegistryId);
+
+             // TechnicalContact Details
+            Assert.AreEqual("IK4644JP", response.TechnicalContact.RegistryId);
+
+            // Nameservers
             Assert.AreEqual(4, response.NameServers.Count);
             Assert.AreEqual("ns1.p31.dynect.net", response.NameServers[0]);
             Assert.AreEqual("ns2.p31.dynect.net", response.NameServers[1]);
             Assert.AreEqual("pdns1.ultradns.net", response.NameServers[2]);
             Assert.AreEqual("pdns6.ultradns.co.uk", response.NameServers[3]);
-            Assert.AreEqual(new DateTime(2002, 11, 21), response.Registered);
-            Assert.AreEqual(new DateTime(2018, 12, 01, 01, 01, 57), response.Updated);
+
+            // Domain Status
+            Assert.AreEqual(1, response.DomainStatus.Count);
+            Assert.AreEqual("Connected", response.DomainStatus[0]);
+
+            Assert.AreEqual(12, response.FieldsParsed);
         }
     }
 }

@@ -2,11 +2,12 @@
 #
 # .jp Parsing Template
 #
-name: whois.jprs.jp/jp/NotFound
+name: whois.jprs.jp/NotFound
 
 # Use this template for queries to whois.jprs.jp:
 tag: whois.jprs.jp
 tag: jp
+tag: ne.jp
 
 # Set query response type:
 set: Status = NotFound
