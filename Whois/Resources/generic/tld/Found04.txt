@@ -7,6 +7,9 @@ name: generic/tld/Found04
 # Use this template for catch-all parsing::
 tag: catch-all
 
+# Extract contact information
+tag: fixup-contact
+
 # Lines can appear out of order
 outOfOrder: true
 
