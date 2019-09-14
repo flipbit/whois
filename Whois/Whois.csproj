@@ -395,10 +395,9 @@
     <None Remove="Resources\whois.tznic.or.tz\tz\Expired.txt" />
     <None Remove="Resources\whois.tznic.or.tz\tz\Found.txt" />
     <None Remove="Resources\whois.tznic.or.tz\tz\NotFound.txt" />
-    <None Remove="Resources\whois.ua\ua\Found.txt" />
+    <None Remove="Resources\whois.ua\ua\Found01.txt" />
+    <None Remove="Resources\whois.ua\ua\Found02.txt" />
     <None Remove="Resources\whois.ua\ua\NotFound.txt" />
-    <None Remove="Resources\whois.ua\ua\Other.txt" />
-    <None Remove="Resources\whois.ua\ua\PendingDelete.txt" />
     <None Remove="Resources\whois.uniregistry.net\tattoo\NotFound.txt" />
     <None Remove="Resources\whois.uniregistry.net\tattoo\Unavailable.txt" />
     <None Remove="Resources\whois.usp.ac.fj\fj\Found.txt" />
@@ -809,10 +808,9 @@
     <EmbeddedResource Include="Resources\whois.tznic.or.tz\tz\Expired.txt" />
     <EmbeddedResource Include="Resources\whois.tznic.or.tz\tz\Found.txt" />
     <EmbeddedResource Include="Resources\whois.tznic.or.tz\tz\NotFound.txt" />
-    <EmbeddedResource Include="Resources\whois.ua\ua\Found.txt" />
+    <EmbeddedResource Include="Resources\whois.ua\ua\Found02.txt" />
+    <EmbeddedResource Include="Resources\whois.ua\ua\Found01.txt" />
     <EmbeddedResource Include="Resources\whois.ua\ua\NotFound.txt" />
-    <EmbeddedResource Include="Resources\whois.ua\ua\Other.txt" />
-    <EmbeddedResource Include="Resources\whois.ua\ua\PendingDelete.txt" />
     <EmbeddedResource Include="Resources\whois.uniregistry.net\tattoo\NotFound.txt" />
     <EmbeddedResource Include="Resources\whois.uniregistry.net\tattoo\Unavailable.txt" />
     <EmbeddedResource Include="Resources\whois.usp.ac.fj\fj\Found.txt" />

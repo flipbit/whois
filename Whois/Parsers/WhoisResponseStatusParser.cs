@@ -12,6 +12,7 @@ namespace Whois.Parsers
         {
             if (Equals(status, "auto-renew grace")) return WhoisResponseStatus.NotAssigned;
             if (Equals(status, "pending delete")) return WhoisResponseStatus.PendingDelete;
+            if (Equals(status, "pendingdelete")) return WhoisResponseStatus.PendingDelete;
             if (Equals(status, "redemption")) return WhoisResponseStatus.Redemption;
             if (Equals(status, "UNCONFIRMED")) return WhoisResponseStatus.Unconfirmed;
             if (Equals(status, "Deactivated")) return WhoisResponseStatus.Deactivated;
@@ -25,6 +26,8 @@ namespace Whois.Parsers
             if (Equals(status, "Deleted")) return WhoisResponseStatus.PendingDelete;
             if (Equals(status, "To be suspended")) return WhoisResponseStatus.Suspended;
             if (Equals(status, "Suspended")) return WhoisResponseStatus.Suspended;
+            if (Equals(status, "RedemptionPeriod")) return WhoisResponseStatus.Redemption;
+            if (Equals(status, "AutoRenewGracePeriod")) return WhoisResponseStatus.Other;
 
             if (whoisServerUrl == "whois.dns.pt")
             {

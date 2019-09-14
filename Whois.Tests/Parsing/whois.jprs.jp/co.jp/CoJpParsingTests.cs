@@ -41,7 +41,7 @@ namespace Whois.Parsing.Whois.Jprs.Jp.CoJp
             Assert.AreEqual(1, response.DomainStatus.Count);
             Assert.AreEqual("Deleted", response.DomainStatus[0]);
 
-            Assert.AreEqual(6, response.FieldsParsed);
+            Assert.AreEqual(5, response.FieldsParsed);
         }
 
         [Test]

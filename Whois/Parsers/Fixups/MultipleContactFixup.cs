@@ -13,6 +13,11 @@ namespace Whois.Parsers.Fixups
     {
         public virtual bool CanFixup(TokenizeResult<WhoisResponse> result)
         {
+            if (result.Template.HasTag("fixup-contact"))
+            {
+                return true;
+            }
+
             // Templates that this Fixup can work on
             return result.Template.Name == "generic/tld/Found03" || 
                    result.Template.Name == "generic/tld/Found04" || 
@@ -22,6 +27,11 @@ namespace Whois.Parsers.Fixups
         public void Fixup(TokenizeResult<WhoisResponse> result)
         {
             var response = result.Value;
+
+            if (TryGetRegistrant(result.Tokens.Matches, response, out var registrant))
+            {
+                response.Registrant = registrant;
+            }
 
             if (TryGetContact(response.AdminContact, result.Tokens.Matches, out var adminContact))
             {
@@ -43,9 +53,9 @@ namespace Whois.Parsers.Fixups
                 response.BillingContact = billingContact;
             }
 
-            if (TryGetRegistrant(result.Tokens.Matches, response, out var registrant))
+            if (TryGetContact(response.Registrant, result.Tokens.Matches, out var registrantContact))
             {
-                response.Registrant = registrant;
+                response.Registrant = registrantContact;
             }
         }
 

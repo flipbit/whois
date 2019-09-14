@@ -40,7 +40,7 @@ namespace Whois.Parsing.Whois.Jprs.Jp.Jp
             Assert.AreEqual(1, response.DomainStatus.Count);
             Assert.AreEqual("Suspended", response.DomainStatus[0]);
 
-            Assert.AreEqual(8, response.FieldsParsed);
+            Assert.AreEqual(6, response.FieldsParsed);
         }
 
         [Test]
@@ -220,7 +220,7 @@ namespace Whois.Parsing.Whois.Jprs.Jp.Jp
             Assert.AreEqual(1, response.DomainStatus.Count);
             Assert.AreEqual("Reserved", response.DomainStatus[0]);
 
-            Assert.AreEqual(6, response.FieldsParsed);
+            Assert.AreEqual(4, response.FieldsParsed);
         }
 
         [Test]

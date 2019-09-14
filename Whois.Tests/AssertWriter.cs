@@ -1,5 +1,6 @@
 ﻿using System;
 using System.Linq;
+using System.Security.Cryptography;
 using System.Text;
 using Whois.Models;
 
@@ -124,7 +125,15 @@ namespace Whois
         {
             if (string.IsNullOrEmpty(expectedValue)) return;
 
-            sb.AppendLine($@"            Assert.AreEqual(""{expectedValue}"", response.{fieldName});");
+            if (expectedValue.Contains("\""))
+            {
+                sb.AppendLine($@"            Assert.AreEqual(@""{expectedValue.Replace("\"", "\"\"")}"", response.{fieldName});");
+            }
+            else
+            {
+                sb.AppendLine($@"            Assert.AreEqual(""{expectedValue}"", response.{fieldName});");
+            }
+
         }
 
         private static void Write(string fieldName, int expectedValue)

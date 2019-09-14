@@ -83,7 +83,7 @@ namespace Whois.Parsing.Whois.Centralnic.Com.HuCom
             var response = parser.Parse("whois.centralnic.com", "hu.com", sample);
 
             Assert.Greater(sample.Length, 0);
-            Assert.AreEqual(WhoisResponseStatus.Found, response.Status);
+            Assert.AreEqual(WhoisResponseStatus.PendingDelete, response.Status);
 
             Assert.AreEqual(0, response.ParsingErrors);
             Assert.AreEqual("whois.centralnic.com/Found", response.TemplateName);
