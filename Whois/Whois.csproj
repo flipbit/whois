@@ -282,9 +282,6 @@
     <None Remove="Resources\whois.nic.org.uy\uy\Error.txt" />
     <None Remove="Resources\whois.nic.org.uy\uy\Found.txt" />
     <None Remove="Resources\whois.nic.org.uy\uy\NotFound.txt" />
-    <None Remove="Resources\whois.nic.pm\pm\Found.txt" />
-    <None Remove="Resources\whois.nic.pm\pm\NotFound.txt" />
-    <None Remove="Resources\whois.nic.pm\pm\Throttled.txt" />
     <None Remove="Resources\whois.nic.pr\pr\Error.txt" />
     <None Remove="Resources\whois.nic.pr\pr\Found.txt" />
     <None Remove="Resources\whois.nic.pr\pr\NotFound.txt" />
@@ -687,9 +684,6 @@
     <EmbeddedResource Include="Resources\whois.nic.org.uy\uy\Error.txt" />
     <EmbeddedResource Include="Resources\whois.nic.org.uy\uy\Found.txt" />
     <EmbeddedResource Include="Resources\whois.nic.org.uy\uy\NotFound.txt" />
-    <EmbeddedResource Include="Resources\whois.nic.pm\pm\Found.txt" />
-    <EmbeddedResource Include="Resources\whois.nic.pm\pm\NotFound.txt" />
-    <EmbeddedResource Include="Resources\whois.nic.pm\pm\Throttled.txt" />
     <EmbeddedResource Include="Resources\whois.nic.pr\pr\Error.txt" />
     <EmbeddedResource Include="Resources\whois.nic.pr\pr\Found.txt" />
     <EmbeddedResource Include="Resources\whois.nic.pr\pr\NotFound.txt" />
