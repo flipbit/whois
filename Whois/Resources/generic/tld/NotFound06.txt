@@ -2,14 +2,15 @@
 #
 # Generic TLD Parsing Template
 #
-name: generic/tld/throttled-01
+name: generic/tld/NotFound06
 
 # Use this template for catch-all parsing:
 tag: catch-all
 
 # Set query response type:
-set: Status = Throttled
+set: Status = NotFound
 
-hint: LIMIT EXCEEDED
+hint: No entries found 
 ---
-WHOIS LIMIT EXCEEDED
+%% No entries found 
+

@@ -1,12 +1,11 @@
 ---
 #
-# .wf Parsing Template
+# Generic TLD Parsing Template
 #
-name: whois.nic.wf/wf/Found
+name: generic/tld/Found05
 
-# Use this template for queries to whois.nic.wf:
-tag: whois.nic.wf
-tag: wf
+# Use this template for catch-all parsing:
+tag: catch-all
 
 # Extract contact information
 tag: fixup-contact

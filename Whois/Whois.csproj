@@ -290,9 +290,6 @@
     <None Remove="Resources\whois.nic.pr\pr\NotFound.txt" />
     <None Remove="Resources\whois.nic.priv.at\at\Found.txt" />
     <None Remove="Resources\whois.nic.priv.at\at\NotFound.txt" />
-    <None Remove="Resources\whois.nic.re\re\Found.txt" />
-    <None Remove="Resources\whois.nic.re\re\NotFound.txt" />
-    <None Remove="Resources\whois.nic.re\re\Throttled.txt" />
     <None Remove="Resources\whois.nic.sh\sh\Found.txt" />
     <None Remove="Resources\whois.nic.sh\sh\NotFound.txt" />
     <None Remove="Resources\whois.nic.sl\sl\Found.txt" />
@@ -331,9 +328,6 @@
     <None Remove="Resources\whois.nic.ve\ve\Suspended.txt" />
     <None Remove="Resources\whois.nic.wed\wed\Found.txt" />
     <None Remove="Resources\whois.nic.wed\wed\NotFound.txt" />
-    <None Remove="Resources\whois.nic.wf\wf\Found.txt" />
-    <None Remove="Resources\whois.nic.wf\wf\NotFound.txt" />
-    <None Remove="Resources\whois.nic.wf\wf\Throttled.txt" />
     <None Remove="Resources\whois.nic.xxx\xxx\Reserved.txt" />
     <None Remove="Resources\whois.norid.no\no\Found.txt" />
     <None Remove="Resources\whois.norid.no\no\NotFound.txt" />
@@ -701,9 +695,6 @@
     <EmbeddedResource Include="Resources\whois.nic.pr\pr\NotFound.txt" />
     <EmbeddedResource Include="Resources\whois.nic.priv.at\at\Found.txt" />
     <EmbeddedResource Include="Resources\whois.nic.priv.at\at\NotFound.txt" />
-    <EmbeddedResource Include="Resources\whois.nic.re\re\Found.txt" />
-    <EmbeddedResource Include="Resources\whois.nic.re\re\NotFound.txt" />
-    <EmbeddedResource Include="Resources\whois.nic.re\re\Throttled.txt" />
     <EmbeddedResource Include="Resources\whois.nic.sh\sh\Found.txt" />
     <EmbeddedResource Include="Resources\whois.nic.sh\sh\NotFound.txt" />
     <EmbeddedResource Include="Resources\whois.nic.sl\sl\Found.txt" />
@@ -742,9 +733,9 @@
     <EmbeddedResource Include="Resources\whois.nic.ve\ve\Suspended.txt" />
     <EmbeddedResource Include="Resources\whois.nic.wed\wed\Found.txt" />
     <EmbeddedResource Include="Resources\whois.nic.wed\wed\NotFound.txt" />
-    <EmbeddedResource Include="Resources\whois.nic.wf\wf\Found.txt" />
-    <EmbeddedResource Include="Resources\whois.nic.wf\wf\NotFound.txt" />
-    <EmbeddedResource Include="Resources\whois.nic.wf\wf\Throttled.txt" />
+    <EmbeddedResource Include="Resources\generic\tld\Found05.txt" />
+    <EmbeddedResource Include="Resources\generic\tld\NotFound06.txt" />
+    <EmbeddedResource Include="Resources\generic\tld\Throttled02.txt" />
     <EmbeddedResource Include="Resources\whois.nic.xxx\xxx\Reserved.txt" />
     <EmbeddedResource Include="Resources\whois.norid.no\no\Found.txt" />
     <EmbeddedResource Include="Resources\whois.norid.no\no\NotFound.txt" />

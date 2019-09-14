@@ -27,7 +27,10 @@ namespace Whois.Parsing.Whois.Nic.Wf.Wf
             Assert.Greater(sample.Length, 0);
             Assert.AreEqual(WhoisResponseStatus.Throttled, response.Status);
 
-            AssertWriter.Write(response);
+            Assert.AreEqual(0, response.ParsingErrors);
+            Assert.AreEqual("generic/tld/Throttled02", response.TemplateName);
+
+            Assert.AreEqual(1, response.FieldsParsed);
         }
 
         [Test]
@@ -40,7 +43,7 @@ namespace Whois.Parsing.Whois.Nic.Wf.Wf
             Assert.AreEqual(WhoisResponseStatus.NotFound, response.Status);
 
             Assert.AreEqual(0, response.ParsingErrors);
-            Assert.AreEqual("whois.nic.wf/wf/NotFound", response.TemplateName);
+            Assert.AreEqual("generic/tld/NotFound06", response.TemplateName);
 
             Assert.AreEqual(1, response.FieldsParsed);
         }
@@ -55,7 +58,7 @@ namespace Whois.Parsing.Whois.Nic.Wf.Wf
             Assert.AreEqual(WhoisResponseStatus.Found, response.Status);
 
             Assert.AreEqual(0, response.ParsingErrors);
-            Assert.AreEqual("whois.nic.wf/wf/Found", response.TemplateName);
+            Assert.AreEqual("generic/tld/Found05", response.TemplateName);
 
             Assert.AreEqual("nic.wf", response.DomainName);
 
