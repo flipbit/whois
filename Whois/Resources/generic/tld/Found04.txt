@@ -24,6 +24,7 @@ set: Status = Found
 ---
 domain:       { DomainName : IsDomainName, ToLower }
 descr:        { Address : IsNotEmpty, Repeating }
+registrant:   { Registrant.RegistryId ? }
 admin-c:      { AdminContact.RegistryId ? }
 tech-c:       { TechnicalContact.RegistryId ? }
 zone-c:       { ZoneContact.RegistryId ? }
@@ -32,6 +33,7 @@ nserver:      { NameServers ? : IsDomainName, ToLower, Repeating }
 created:      { Created ? : ToDateTimeUtc("MMMM d yyyy"), Repeating }
 created:      { Created ? : ToDateTimeUtc("MMMM  d yyyy"), Repeating }
 expires:      { Expiration ? : ToDateTimeUtc("MMMM d yyyy") }
+status:       { DomainStatus ? }
 
 person:       { Contact.Name : Repeating }
 role:         { Contact.Organization : Repeating }

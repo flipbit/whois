@@ -28,6 +28,7 @@ namespace Whois.Parsers
             if (Equals(status, "Suspended")) return WhoisResponseStatus.Suspended;
             if (Equals(status, "RedemptionPeriod")) return WhoisResponseStatus.Redemption;
             if (Equals(status, "AutoRenewGracePeriod")) return WhoisResponseStatus.Other;
+            if (Equals(status, "Expired")) return WhoisResponseStatus.Expired;
 
             if (whoisServerUrl == "whois.dns.pt")
             {

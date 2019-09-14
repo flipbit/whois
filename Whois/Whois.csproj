@@ -392,7 +392,6 @@
     <None Remove="Resources\whois.tonic.to\to\NotFound.txt" />
     <None Remove="Resources\whois.twnic.net.tw\tw\Found.txt" />
     <None Remove="Resources\whois.twnic.net.tw\tw\NotFound.txt" />
-    <None Remove="Resources\whois.tznic.or.tz\tz\Expired.txt" />
     <None Remove="Resources\whois.tznic.or.tz\tz\Found.txt" />
     <None Remove="Resources\whois.tznic.or.tz\tz\NotFound.txt" />
     <None Remove="Resources\whois.ua\ua\Found01.txt" />
@@ -805,7 +804,6 @@
     <EmbeddedResource Include="Resources\whois.tonic.to\to\NotFound.txt" />
     <EmbeddedResource Include="Resources\whois.twnic.net.tw\tw\Found.txt" />
     <EmbeddedResource Include="Resources\whois.twnic.net.tw\tw\NotFound.txt" />
-    <EmbeddedResource Include="Resources\whois.tznic.or.tz\tz\Expired.txt" />
     <EmbeddedResource Include="Resources\whois.tznic.or.tz\tz\Found.txt" />
     <EmbeddedResource Include="Resources\whois.tznic.or.tz\tz\NotFound.txt" />
     <EmbeddedResource Include="Resources\whois.ua\ua\Found02.txt" />

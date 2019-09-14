@@ -8,59 +8,39 @@ name: whois.tznic.or.tz/tz/Found
 tag: whois.tznic.or.tz
 tag: tz
 
+# Extract contact information
+tag: fixup-contact
+
+# Lines can appear out of order
+outOfOrder: true
+
+# End tokens on new lines
+terminateOnNewLine: true
+
+# Use token preamble on current line only
+trimPreambleBeforeNewLine: true
+
+# Use a FixUp to assign fields
+IgnoreMissingProperties: true
+
 # Set query response type:
 set: Status = Found
 ---
-%  
-%  TZNIC WHOIS data and services are subject to the Terms of Use
-%  available at: http://www.tznic.or.tz/docs/whois_tou.pdf
-% 
-%  You may also use our WHOIS Web service available at:
-%  http://whois.tznic.or.tz/whois
-%  
-% 
-% Whoisd Server Version: 3.1.1
-% Timestamp: Tue Jul 03 15:55:21 2012
+domain:       { DomainName : IsDomainName, ToLower }
+registrant:   { Registrant.RegistryId ? }
+admin-c:      { AdminContact.RegistryId ? }
+tech-c:       { TechnicalContact.RegistryId ? }
+status:       { DomainStatus ? }
+registered:   { Registered ? : ToDateTimeUtc("dd.MM.yyyy HH:mm:ss") }
+changed:      { Updated ? : ToDateTimeUtc("dd.MM.yyyy HH:mm:ss") }
+expire:       { Expiration ? : ToDateTimeUtc("dd.MM.yyyy") }
 
-domain:       dailynews.co.tz
-registrant:   CM7-TZNIC
-admin-c:      CM7-TZNIC
-nsset:        NS-DAILYNEWS.CO.TZ
-registrar:    REG-TZNIC
-status:       paid and in zone
-registered:   27.07.2009 11:01:10
-changed:      30.08.2010 15:47:56
-expire:       27.07.2012
+contact:      { Contact.Id : Repeating }
+org:          { Contact.Organization : Repeating }
+name:         { Contact.Name : Repeating }
+address:      { Address : IsNotEmpty, Repeating }
+phone:        { Phone : IsPhoneNumber, Repeating }
+e-mail:       { Email : IsEmail, Repeating }
 
-contact:      CM7-TZNIC
-org:          TSN
-name:         Collins Mtita
-address:      Dar_es_salaam
-address:      Dar_es_salaam
-address:      P.O.BOX 9033
-address:      TZ
-e-mail:       mcollins@dailynews.co.tz
-registrar:    REG-PT
-created:      30.08.2010 15:46:35
-
-nsset:        NS-DAILYNEWS.CO.TZ
-nserver:      ns1.twigaservers.com 
-nserver:      ns2.twigaservers.com 
-tech-c:       JN1-TZNIC
-registrar:    REG-TZNIC
-created:      27.07.2009 09:12:12
-changed:      02.02.2012 11:47:58
-
-contact:      JN1-TZNIC
-org:          Twiga Hosting
-name:         Jacob Noel
-address:      Dar es Salaam
-address:      Dar es Salaam
-address:      P.O.Box
-address:      TZ
-phone:        +255.755763951
-e-mail:       jacobn@twigaonline.com
-registrar:    REG-TZNIC
-created:      24.08.2009 06:21:51
-
-
+nserver:      { NameServers ? : IsDomainName, ToLower, Repeating }
+registrar:    { Registrar.Name ? }
