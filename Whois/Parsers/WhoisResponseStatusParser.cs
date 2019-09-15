@@ -38,6 +38,8 @@ namespace Whois.Parsers
             if (Equals(status, "pendingTransfer")) return WhoisResponseStatus.Other;
             if (Equals(status, "PENDING-DELETE")) return WhoisResponseStatus.PendingDelete;
             if (Equals(status, "NO-PROVIDER")) return WhoisResponseStatus.Other;
+            if (Equals(status, "This WHOIS server does not have any records for that zone.")) return WhoisResponseStatus.Invalid;
+            if (Equals(status, "Not Registered")) return WhoisResponseStatus.NotFound;
 
             if (whoisServerUrl == "whois.dns.pt")
             {

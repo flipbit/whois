@@ -25,12 +25,12 @@ set: Status = Found
    Registry Domain ID: { RegistryDomainId ? : Trim }
    Registrar WHOIS Server: { Registrar.WhoisServerUrl ? : IsNotEmpty, Trim, IsDomainName, ToLower }
    Registrar URL: { Registrar.Url ? : Trim, IsUrl, ToLower }
-   Updated Date: { Updated ? : Trim, ToDateTime("yyyy-MM-ddTHH:mm:ssZ") }
-   Updated Date: { Updated ? : Trim, ToDateTime("dd-MMM-yyyy") }
-   Creation Date: { Registered ? : Trim, ToDateTime("yyyy-MM-ddTHH:mm:ssZ") }
-   Creation Date: { Registered ? : Trim, ToDateTime("dd-MMM-yyyy") }
-   Registry Expiry Date: { Expiration ? : Trim, ToDateTime("yyyy-MM-ddTHH:mm:ssZ") }
-   Expiration Date: { Expiration ? : Trim, ToDateTime("dd-MMM-yyyy") }
+   Updated Date: { Updated ? : Trim, ToDateTimeUtc("yyyy-MM-ddTHH:mm:ssZ") }
+   Updated Date: { Updated ? : Trim, ToDateTimeUtc("dd-MMM-yyyy") }
+   Creation Date: { Registered ? : Trim, ToDateTimeUtc("yyyy-MM-ddTHH:mm:ssZ") }
+   Creation Date: { Registered ? : Trim, ToDateTimeUtc("dd-MMM-yyyy") }
+   Registry Expiry Date: { Expiration ? : Trim, ToDateTimeUtc("yyyy-MM-ddTHH:mm:ssZ") }
+   Expiration Date: { Expiration ? : Trim, ToDateTimeUtc("dd-MMM-yyyy") }
    Registrar: { Registrar.Name ? : Trim }
    Registrar IANA ID: { Registrar.IanaId ? : Trim, IsNumeric }
    Registrar Abuse Contact Email: { Registrar.AbuseEmail ? : Trim, IsEmail }

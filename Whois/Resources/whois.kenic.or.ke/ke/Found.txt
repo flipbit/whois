@@ -8,83 +8,60 @@ name: whois.kenic.or.ke/ke/Found
 tag: whois.kenic.or.ke
 tag: ke
 
+# end tokens on new lines
+terminateonnewline: true
+
 # Set query response type:
 set: Status = Found
 ---
-% Copyright KENIC
-
-%  The data below is provided for information purposes
-%  and to assist persons in obtaining information about or
-%  related to domain name registrations.
-%  By submitting a whois query, you agree to use this data
-%  only for lawful purposes.
-
-
-% remarks:     Security issues should also be addressed to noc@kenic.or.ke
-% remarks:     Mail abuse issues should also be addressed to abuse@kenic.or.ke
- 
-% whois.kenic.or.ke accepts only direct match queries.
-% Types of queries are: domains (.KE) and POCs.
-
-
 Domain Information
-Query: google.co.ke
-Status: Active
-Created: 18 Apr 2003 00:00 EAT
-Modified: 16 Dec 2013 12:48 EAT
-Expires: 01 Jan 2015 00:00 EAT
+Query: { DomainName : IsDomainName, ToLower }
+Status: { DomainStatus ? : Repeating, CleanDomainStatus }
+Created: { Registered ? : Replace(' EAT', '+03:00'), ToDateTimeUtc("dd MMM yyyy HH:mmzzz") }
+Modified: { Updated ? : Replace(' EAT', '+03:00'), ToDateTimeUtc("dd MMM yyyy HH:mmzzz") }
+Expires: { Expiration ? : Replace(' EAT', '+03:00'), ToDateTimeUtc("dd MMM yyyy HH:mmzzz") }
 Name Servers:
-    ns1.google.com
-    ns2.google.com
-    ns3.google.com
-    ns4.google.com
+    { NameServers ? : IsDomainName, ToLower, Repeating }
 
 Registrar Information
-Registrar Name: Afriregister Limited
-
-
-
+Registrar Name: { Registrar.Name ? }
 
 Registrant:
-Name: DNS Admin
-Organisation: Google Inc.
+Name: { Registrant.Name }
+Organisation: { Registrant.Organization ? }
 Address:
-	1600 Amphitheatre Parkway
-	Mountain View, CA 94043
-	US
-Phone Number: +1.6502530000
+	{ Registrant.Address ? : Repeating, IsNotEmpty }
+Email Address: { Registrant.Email ? : IsEmail }
+Phone Number: { Registrant.TelephoneNumber ? : IsPhoneNumber }
+Fax Number: { Registrant.FaxNumber ? : IsPhoneNumber }
 
 
 Admin Contact:
-Name: DNS Admin
-Organisation: Google Inc.
+Name: { AdminContact.Name }
+Organisation: { AdminContact.Organization ? }
 Address:
-	1600 Amphitheatre Parkway
-	Mountain View, CA 94043
-	US
-Email Address: dns-admin@google.com
-Phone Number: +1.6502530000
+	{ AdminContact.Address ? : IsNotEmpty }
+Email Address: { AdminContact.Email ? : IsEmail }
+Phone Number: { AdminContact.TelephoneNumber ? : IsPhoneNumber }
+Fax Number: { AdminContact.FaxNumber ? : IsPhoneNumber }
 
 
 Technical Contact:
-Name: DNS Admin
-Organisation: Google Inc.
+Name: { TechnicalContact.Name }
+Organisation: { TechnicalContact.Organization ? }
 Address:
-	1600 Amphitheatre Parkway
-	Mountain View, CA 94043
-	US
-Email Address: dns-admin@google.com
-Phone Number: +1.6502530000
+	{ TechnicalContact.Address ? : Repeating, IsNotEmpty }
+Email Address: { TechnicalContact.Email ? : IsEmail }
+Phone Number: { TechnicalContact.TelephoneNumber ? : IsPhoneNumber }
+Fax Number: { TechnicalContact.FaxNumber ? : IsPhoneNumber }
 
 
 Billing Contact:
-Name: Domain Administrator
-Organisation: MarkMonitor Inc.
+Name: { BillingContact.Name }
+Organisation: { BillingContact.Organization ? }
 Address:
-	391 N. Ancestor Place
-	Boise, ID 83704
-	US
-Email Address: ccopsbilling@markmonitor.com
-Phone Number: +1.2083895740
-Fax Number: +1.2083895771
+	{ BillingContact.Address ? : Repeating, IsNotEmpty }
+Email Address: { BillingContact.Email ? : IsEmail }
+Phone Number: { BillingContact.TelephoneNumber ? : IsPhoneNumber }
+Fax Number: { BillingContact.FaxNumber ? : IsPhoneNumber }
 

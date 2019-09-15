@@ -160,8 +160,6 @@
     <None Remove="Resources\whois.je\je\Found.txt" />
     <None Remove="Resources\whois.je\je\NotFound.txt" />
     <None Remove="Resources\whois.kenic.or.ke\ke\Found.txt" />
-    <None Remove="Resources\whois.kenic.or.ke\ke\Invalid.txt" />
-    <None Remove="Resources\whois.kenic.or.ke\ke\NotFound.txt" />
     <None Remove="Resources\whois.kg\kg\Found.txt" />
     <None Remove="Resources\whois.kg\kg\NotFound.txt" />
     <None Remove="Resources\whois.kr\kr\Found.txt" />
@@ -540,8 +538,6 @@
     <EmbeddedResource Include="Resources\whois.jprs.jp\Found02.txt" />
     <EmbeddedResource Include="Resources\whois.jprs.jp\NotFound.txt" />
     <EmbeddedResource Include="Resources\whois.kenic.or.ke\ke\Found.txt" />
-    <EmbeddedResource Include="Resources\whois.kenic.or.ke\ke\Invalid.txt" />
-    <EmbeddedResource Include="Resources\whois.kenic.or.ke\ke\NotFound.txt" />
     <EmbeddedResource Include="Resources\whois.kg\kg\Found.txt" />
     <EmbeddedResource Include="Resources\whois.kg\kg\NotFound.txt" />
     <EmbeddedResource Include="Resources\whois.kr\kr\Found.txt" />
