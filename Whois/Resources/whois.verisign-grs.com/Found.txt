@@ -1,0 +1,41 @@
+---
+#
+# .com Parsing Template
+#
+name: whois.verisign-grs.com/Found
+
+# Use this template for queries to whois.verisign-grs.com:
+tag: whois.verisign-grs.com
+tag: com
+tag: net
+
+# Lines can appear out of order
+outOfOrder: true
+
+# End tokens on new lines
+terminateOnNewLine: true
+
+# Use token preamble on current line only
+trimPreambleBeforeNewLine: true
+
+# Set query response type:
+set: Status = Found
+---
+   Domain Name: { DomainName : Trim, IsDomainName, ToLower }
+   Registry Domain ID: { RegistryDomainId ? : Trim }
+   Registrar WHOIS Server: { Registrar.WhoisServerUrl ? : IsNotEmpty, Trim, IsDomainName, ToLower }
+   Registrar URL: { Registrar.Url ? : Trim, IsUrl, ToLower }
+   Updated Date: { Updated ? : Trim, ToDateTime("yyyy-MM-ddTHH:mm:ssZ") }
+   Updated Date: { Updated ? : Trim, ToDateTime("dd-MMM-yyyy") }
+   Creation Date: { Registered ? : Trim, ToDateTime("yyyy-MM-ddTHH:mm:ssZ") }
+   Creation Date: { Registered ? : Trim, ToDateTime("dd-MMM-yyyy") }
+   Registry Expiry Date: { Expiration ? : Trim, ToDateTime("yyyy-MM-ddTHH:mm:ssZ") }
+   Expiration Date: { Expiration ? : Trim, ToDateTime("dd-MMM-yyyy") }
+   Registrar: { Registrar.Name ? : Trim }
+   Registrar IANA ID: { Registrar.IanaId ? : Trim, IsNumeric }
+   Registrar Abuse Contact Email: { Registrar.AbuseEmail ? : Trim, IsEmail }
+   Registrar Abuse Contact Phone: { Registrar.AbuseTelephoneNumber ? : Trim, IsPhoneNumber }
+   Domain Status: { DomainStatus ? : Trim, Repeating, SubstringBefore(' ') }
+   Status: { DomainStatus ? : Trim, Repeating, SubstringBefore(' ') }
+   Name Server: { NameServers : Trim, IsDomainName, ToLower, Repeating }
+   DNSSEC: { DnsSecStatus ? : Trim }

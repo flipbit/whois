@@ -376,12 +376,6 @@
     <None Remove="Resources\whois.uniregistry.net\tattoo\Unavailable.txt" />
     <None Remove="Resources\whois.usp.ac.fj\fj\Found.txt" />
     <None Remove="Resources\whois.usp.ac.fj\fj\NotFound.txt" />
-    <None Remove="Resources\whois.verisign-grs.com\com\Found.txt" />
-    <None Remove="Resources\whois.verisign-grs.com\com\NotFound.txt" />
-    <None Remove="Resources\whois.verisign-grs.com\com\PendingDelete.txt" />
-    <None Remove="Resources\whois.verisign-grs.com\com\Redirect.txt" />
-    <None Remove="Resources\whois.verisign-grs.com\net\Found.txt" />
-    <None Remove="Resources\whois.verisign-grs.com\net\NotFound.txt" />
     <None Remove="Resources\whois.website.ws\ws\Found.txt" />
     <None Remove="Resources\whois.website.ws\ws\NotFound.txt" />
     <None Remove="Resources\whois.za.net\za.net\Found.txt" />
@@ -766,12 +760,8 @@
     <EmbeddedResource Include="Resources\whois.uniregistry.net\tattoo\Unavailable.txt" />
     <EmbeddedResource Include="Resources\whois.usp.ac.fj\fj\Found.txt" />
     <EmbeddedResource Include="Resources\whois.usp.ac.fj\fj\NotFound.txt" />
-    <EmbeddedResource Include="Resources\whois.verisign-grs.com\com\Redirect.txt" />
-    <EmbeddedResource Include="Resources\whois.verisign-grs.com\com\Found.txt" />
-    <EmbeddedResource Include="Resources\whois.verisign-grs.com\com\NotFound.txt" />
-    <EmbeddedResource Include="Resources\whois.verisign-grs.com\com\PendingDelete.txt" />
-    <EmbeddedResource Include="Resources\whois.verisign-grs.com\net\Found.txt" />
-    <EmbeddedResource Include="Resources\whois.verisign-grs.com\net\NotFound.txt" />
+    <EmbeddedResource Include="Resources\whois.verisign-grs.com\Found.txt" />
+    <EmbeddedResource Include="Resources\whois.verisign-grs.com\NotFound.txt" />
     <EmbeddedResource Include="Resources\whois.website.ws\ws\Found.txt" />
     <EmbeddedResource Include="Resources\whois.website.ws\ws\NotFound.txt" />
     <EmbeddedResource Include="Resources\whois.za.net\za.net\Found.txt" />

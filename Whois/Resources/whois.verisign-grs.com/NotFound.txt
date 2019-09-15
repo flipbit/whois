@@ -2,14 +2,15 @@
 #
 # .com Parsing Template
 #
-name: whois.verisign-grs.com/com/PendingDelete
+name: whois.verisign-grs.com/com/NotFound
 
 # Use this template for queries to whois.verisign-grs.com:
 tag: whois.verisign-grs.com
 tag: com
+tag: net
 
 # Set query response type:
-set: Status = PendingDelete
+set: Status = NotFound
 ---
 
 Whois Server Version 2.0
@@ -18,18 +19,8 @@ Domain names in the .com and .net domains can now be registered
 with many different competing registrars. Go to http://www.internic.net
 for detailed information.
 
-   Domain Name: KILLIANESTATES.COM
-   Registrar: GODADDY.COM, LLC
-   Whois Server: whois.godaddy.com
-   Referral URL: http://registrar.godaddy.com
-   Name Server: NS75.DOMAINCONTROL.COM
-   Name Server: NS76.DOMAINCONTROL.COM
-   Status: pendingDelete
-   Updated Date: 05-may-2013
-   Creation Date: 26-may-2010
-   Expiration Date: 26-may-2013
-
->>> Last update of whois database: Tue, 07 May 2013 14:08:58 UTC <<<
+No match for "U34JEDZCQ.COM".
+>>> Last update of whois database: Wed, 22 Jan 2014 22:08:21 UTC <<<
 
 NOTICE: The expiration date displayed in this record is the date the 
 registrar's sponsorship of the domain name registration in the registry is 

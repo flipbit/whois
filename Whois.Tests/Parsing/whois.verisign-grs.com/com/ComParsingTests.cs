@@ -6,7 +6,6 @@ using Whois.Parsers;
 namespace Whois.Parsing.Whois.Verisign.Grs.Com.Com
 {
     [TestFixture]
-    [Ignore("TODO")]
     public class ComParsingTests : ParsingTests
     {
         private WhoisParser parser;
@@ -28,7 +27,25 @@ namespace Whois.Parsing.Whois.Verisign.Grs.Com.Com
             Assert.Greater(sample.Length, 0);
             Assert.AreEqual(WhoisResponseStatus.Found, response.Status);
 
-            AssertWriter.Write(response);
+            Assert.AreEqual(0, response.ParsingErrors);
+            Assert.AreEqual("whois.verisign-grs.com/Found", response.TemplateName);
+
+            Assert.AreEqual("y.com", response.DomainName);
+
+            // Registrar Details
+            Assert.AreEqual("RESERVED-INTERNET ASSIGNED NUMBERS AUTHORITY", response.Registrar.Name);
+
+            Assert.AreEqual(new DateTime(2009, 12, 09, 00, 00, 00, 000, DateTimeKind.Utc), response.Updated);
+            Assert.AreEqual(new DateTime(1993, 12, 01, 00, 00, 00, 000, DateTimeKind.Utc), response.Registered);
+            Assert.AreEqual(new DateTime(2010, 12, 08, 00, 00, 00, 000, DateTimeKind.Utc), response.Expiration);
+
+            // Domain Status
+            Assert.AreEqual(3, response.DomainStatus.Count);
+            Assert.AreEqual("serverDeleteProhibited", response.DomainStatus[0]);
+            Assert.AreEqual("serverTransferProhibited", response.DomainStatus[1]);
+            Assert.AreEqual("serverUpdateProhibited", response.DomainStatus[2]);
+
+            Assert.AreEqual(9, response.FieldsParsed);
         }
 
         [Test]
@@ -40,7 +57,28 @@ namespace Whois.Parsing.Whois.Verisign.Grs.Com.Com
             Assert.Greater(sample.Length, 0);
             Assert.AreEqual(WhoisResponseStatus.PendingDelete, response.Status);
 
-            AssertWriter.Write(response);
+            Assert.AreEqual(0, response.ParsingErrors);
+            Assert.AreEqual("whois.verisign-grs.com/Found", response.TemplateName);
+
+            Assert.AreEqual("killianestates.com", response.DomainName);
+
+            // Registrar Details
+            Assert.AreEqual("GODADDY.COM, LLC", response.Registrar.Name);
+
+            Assert.AreEqual(new DateTime(2013, 05, 05, 00, 00, 00, 000, DateTimeKind.Utc), response.Updated);
+            Assert.AreEqual(new DateTime(2010, 05, 26, 00, 00, 00, 000, DateTimeKind.Utc), response.Registered);
+            Assert.AreEqual(new DateTime(2013, 05, 26, 00, 00, 00, 000, DateTimeKind.Utc), response.Expiration);
+
+            // Nameservers
+            Assert.AreEqual(2, response.NameServers.Count);
+            Assert.AreEqual("ns75.domaincontrol.com", response.NameServers[0]);
+            Assert.AreEqual("ns76.domaincontrol.com", response.NameServers[1]);
+
+            // Domain Status
+            Assert.AreEqual(1, response.DomainStatus.Count);
+            Assert.AreEqual("pendingDelete", response.DomainStatus[0]);
+
+            Assert.AreEqual(9, response.FieldsParsed);
         }
 
         [Test]
@@ -52,7 +90,10 @@ namespace Whois.Parsing.Whois.Verisign.Grs.Com.Com
             Assert.Greater(sample.Length, 0);
             Assert.AreEqual(WhoisResponseStatus.NotFound, response.Status);
 
-            AssertWriter.Write(response);
+            Assert.AreEqual(0, response.ParsingErrors);
+            Assert.AreEqual("whois.verisign-grs.com/com/NotFound", response.TemplateName);
+
+            Assert.AreEqual(1, response.FieldsParsed);
         }
 
         [Test]
@@ -64,9 +105,9 @@ namespace Whois.Parsing.Whois.Verisign.Grs.Com.Com
             Assert.Greater(sample.Length, 0);
             Assert.AreEqual(WhoisResponseStatus.Found, response.Status);
 
-            Assert.AreEqual(22, response.FieldsParsed);
+            Assert.AreEqual(23, response.FieldsParsed);
             Assert.AreEqual(0, response.ParsingErrors);
-            Assert.AreEqual("whois.verisign-grs.com/com/Redirect", response.TemplateName);
+            Assert.AreEqual("whois.verisign-grs.com/Found", response.TemplateName);
 
             Assert.AreEqual("google.com", response.DomainName);
             Assert.AreEqual("2138514_DOMAIN_COM-VRSN", response.RegistryDomainId);
