@@ -119,9 +119,9 @@ namespace Whois.Parsing.Whois.Verisign.Grs.Com.Com
             Assert.AreEqual("abusecomplaints@markmonitor.com", response.Registrar.AbuseEmail);
             Assert.AreEqual("+1.2083895740", response.Registrar.AbuseTelephoneNumber);
 
-            Assert.AreEqual(new DateTime(2011, 7, 20, 17, 55, 31), response.Updated);
-            Assert.AreEqual(new DateTime(1997, 9, 15, 5, 0, 0), response.Registered);
-            Assert.AreEqual(new DateTime(2020, 9, 14, 5, 0, 0), response.Expiration);
+            Assert.AreEqual(new DateTime(2011, 7, 20, 16, 55, 31), response.Updated);
+            Assert.AreEqual(new DateTime(1997, 9, 15, 4, 0, 0), response.Registered);
+            Assert.AreEqual(new DateTime(2020, 9, 14, 4, 0, 0), response.Expiration);
 
             // Nameservers
             Assert.AreEqual(4, response.NameServers.Count);

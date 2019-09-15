@@ -8,12 +8,12 @@ name: whois.kg/kg/NotFound
 tag: whois.kg
 tag: kg
 
+# End tokens on new lines
+terminateOnNewLine: true
+
 # Set query response type:
 set: Status = NotFound
+
+hint: Data not found
 ---
-% This is the .kg ccTLD Whois server
-% Register your own domain at http://www.domain.kg
-
-Domain U34JEDZCQ.KG
-
-Data not found. This domain is available for registration.
+Domain { DomainName : IsDomainName, ToLower }

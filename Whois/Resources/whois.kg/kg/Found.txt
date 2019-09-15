@@ -8,48 +8,43 @@ name: whois.kg/kg/Found
 tag: whois.kg
 tag: kg
 
+# End tokens on new lines
+terminateOnNewLine: true
+
 # Set query response type:
 set: Status = Found
 ---
-% This is the .kg ccTLD Whois server
-% Register your own domain at http://www.domain.kg
-
-Domain GOOGLE.KG
+Domain { DomainName : IsDomainName, ToLower }
 
 Administrative Contact:
-   PID: 8386-KG
-   Name: Google Inc.
-   Email: ccops@markmonitor.com
-   Address: 1600 Amphitheatre Parkway
-   phone: +1.6502530000
-   fax: +1.6506188571
+   PID: { AdminContact.RegistryId ? }
+   Name: { AdminContact.Name ? }
+   Email: { AdminContact.Email ? : IsEmail }
+   Address: { AdminContact.Address ? : IsNotEmpty }
+   phone: { AdminContact.TelephoneNumber ? : IsPhoneNumber }
+   fax: { AdminContact.FaxNumber ? : IsPhoneNumber }
 
 Technical Contact:
-   PID: 5935-KG
-   Name: Markmonitor
-   Email: ccopsbilling@markmonitor.com
-   Address: 391 N Ancestor Place Boise, ID 83704
-   phone: +12083895740
-   fax: +12083895771
+   PID: { TechnicalContact.RegistryId  ? }
+   Name: { TechnicalContact.Name ? }
+   Email: { TechnicalContact.Email ? : IsEmail }
+   Address: { TechnicalContact.Address ? : IsNotEmpty }
+   phone: { TechnicalContact.TelephoneNumber ? : IsPhoneNumber }
+   fax: { TechnicalContact.FaxNumber ? : IsPhoneNumber }
 
 Billing Contact:
-   PID: 5935-KG
-   Name: Markmonitor
-   Email: ccopsbilling@markmonitor.com
-   Address: 391 N Ancestor Place Boise, ID 83704
-   phone: +12083895740
-   fax: +12083895771
+   PID: { BillingContact.RegistryId ? }
+   Name: { BillingContact.Name ? }
+   Email: { BillingContact.Email ? : IsEmail }
+   Address: { BillingContact.Address ? : IsNotEmpty }
+   phone: { BillingContact.TelephoneNumber ? : IsPhoneNumber }
+   fax: { BillingContact.FaxNumber ? : IsPhoneNumber }
 
-Domain support:  ISP AsiaInfo (+996 312 964488)
-
-Record created: Tue Feb 10 09:42:42 2004
-Record last updated on Mon Apr 19 21:47:14 2010
-Record expires on Sun Mar 30 23:59:00 2014
+Record created: { Registered ? : ToDateTimeUtc("ddd MMM d HH:mm:ss yyyy") }
+Record last updated on { Updated ? : ToDateTimeUtc("ddd MMM d HH:mm:ss yyyy") }
+Record expires on { Expiration ? : ToDateTimeUtc("ddd MMM d HH:mm:ss yyyy") }
 
 Name servers in the listed order:
 
-NS1.GOOGLE.COM
-NS2.GOOGLE.COM
-NS4.GOOGLE.COM
-
+{ NameServers ? : IsDomainName, ToLower, Repeating }
 
