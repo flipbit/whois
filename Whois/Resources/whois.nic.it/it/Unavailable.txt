@@ -10,5 +10,7 @@ tag: it
 
 # Set query response type:
 set: Status = Unavailable
+
+hint: Service temporarily unavailable 
 ---
 Service temporarily unavailable.

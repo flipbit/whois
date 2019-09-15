@@ -8,64 +8,49 @@ name: whois.nic.it/it/Found
 tag: whois.nic.it
 tag: it
 
+# End tokens on new lines
+terminateOnNewLine: true
+
 # Set query response type:
 set: Status = Found
 ---
-
-
-*********************************************************************
-* Please note that the following result could be a subgroup of      *
-* the data contained in the database.                               *
-*                                                                   *
-* Additional information can be visualized at:                      *
-* http://www.nic.it/cgi-bin/Whois/whois.cgi                         *
-*********************************************************************
-
-Domain:             html.it
-Status:             ACTIVE
-Created:            1998-08-05 00:00:00
-Last Update:        2009-07-01 00:02:38
-Expire Date:        2010-06-15
+Domain:             { DomainName : IsDomainName, ToLower }
+Status:             { DomainStatus ? : Repeating, SubstringBefore(' /'), CleanDomainStatus }
+Created:            { Registered ? : ToDateTimeUtc("yyyy-MM-dd HH:mm:ss") }
+Last Update:        { Updated ? : ToDateTimeUtc("yyyy-MM-dd HH:mm:ss") }
+Expire Date:        { Expiration ? : ToDateTimeUtc("yyyy-MM-dd") }
 
 Registrant
-  Name:             HTML.it srl
-  Organization:     HTML.it srl
-  ContactID:        HTML1-ITNIC
-  Address:          Viale Alessandrino, 595
-                    Roma
-                    00172
-                    RM
-                    IT
-  Created:          2007-03-01 10:28:08
-  Last Update:      2007-03-01 10:28:08
+  Name:             { Registrant.Name }
+  Organization:     { Registrant.Organization ? }
+  ContactID:        { Registrant.RegistryId ? }
+  Address:          { Registrant.Address ? : IsNotEmpty }
+                    { Registrant.Address ? : IsNotEmpty, Repeating }
+  Created:          { Registrant.Created ? : ToDateTimeUtc("yyyy-MM-dd HH:mm:ss") }
+  Last Update:      { Registrant.Updated ? : ToDateTimeUtc("yyyy-MM-dd HH:mm:ss") }
 
 Admin Contact
-  Name:             Massimiliano Valente
-  ContactID:        MV943-ITNIC
-  Address:          Viale Alessandrino, 595
-                    Roma
-                    00172
-                    RM
-                    IT
-  Created:          2006-09-01 00:00:00
-  Last Update:      2007-03-01 07:37:14
+  Name:             { AdminContact.Name }
+  Organization:     { AdminContact.Organization ? }
+  ContactID:        { AdminContact.RegistryId ? }
+  Address:          { AdminContact.Address ? : IsNotEmpty }
+                    { AdminContact.Address ? : IsNotEmpty, Repeating }
+  Created:          { AdminContact.Created ? : ToDateTimeUtc("yyyy-MM-dd HH:mm:ss") }
+  Last Update:      { AdminContact.Updated ? : ToDateTimeUtc("yyyy-MM-dd HH:mm:ss") }
 
 Technical Contacts
-  Name:             Massimiliano Valente
-  ContactID:        MV943-ITNIC
-  Address:          Viale Alessandrino, 595
-                    Roma
-                    00172
-                    RM
-                    IT
-  Created:          2006-09-01 00:00:00
-  Last Update:      2007-03-01 07:37:14
+  Name:             { TechnicalContact.Name }
+  Organization:     { TechnicalContact.Organization ? }
+  ContactID:        { TechnicalContact.RegistryId  ? }
+  Address:          { TechnicalContact.Address ? : IsNotEmpty }
+                    { TechnicalContact.Address ? : IsNotEmpty, Repeating }
+  Created:          { TechnicalContact.Created ? : ToDateTimeUtc("yyyy-MM-dd HH:mm:ss") }
+  Last Update:      { TechnicalContact.Updated ? : ToDateTimeUtc("yyyy-MM-dd HH:mm:ss") }
 
 Registrar
-  Organization:     ITnet s.r.l.
-  Name:             ITNET-MNT
+  Name:             { Registrar.Name ? }
+  Organization:     { Registrar.Name ? }
 
 Nameservers
-  dns.it.net
-  dns2.it.net
+  { NameServers ? : IsDomainName, ToLower, Repeating }
 

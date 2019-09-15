@@ -103,6 +103,7 @@ namespace Whois
             Write($"{prefix}.{nameof(Contact.FaxNumberExt)}", contact.FaxNumberExt);
             Write($"{prefix}.{nameof(Contact.Email)}", contact.Email);
             Write($"{prefix}.{nameof(Contact.Created)}", contact.Created);
+            Write($"{prefix}.{nameof(Contact.Updated)}", contact.Updated);
 
             if (contact.Address.Any())
             {

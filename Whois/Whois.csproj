@@ -237,9 +237,6 @@
     <None Remove="Resources\whois.nic.ir\ir\Found.txt" />
     <None Remove="Resources\whois.nic.ir\ir\NotFound.txt" />
     <None Remove="Resources\whois.nic.it\it\Found.txt" />
-    <None Remove="Resources\whois.nic.it\it\NotFound.txt" />
-    <None Remove="Resources\whois.nic.it\it\Other.txt" />
-    <None Remove="Resources\whois.nic.it\it\Reserved.txt" />
     <None Remove="Resources\whois.nic.it\it\Unavailable.txt" />
     <None Remove="Resources\whois.nic.jobs\jobs\Found.txt" />
     <None Remove="Resources\whois.nic.jobs\jobs\NotFound.txt" />
@@ -626,9 +623,6 @@
     <EmbeddedResource Include="Resources\whois.nic.ir\ir\Found.txt" />
     <EmbeddedResource Include="Resources\whois.nic.ir\ir\NotFound.txt" />
     <EmbeddedResource Include="Resources\whois.nic.it\it\Found.txt" />
-    <EmbeddedResource Include="Resources\whois.nic.it\it\NotFound.txt" />
-    <EmbeddedResource Include="Resources\whois.nic.it\it\Other.txt" />
-    <EmbeddedResource Include="Resources\whois.nic.it\it\Reserved.txt" />
     <EmbeddedResource Include="Resources\whois.nic.it\it\Unavailable.txt" />
     <EmbeddedResource Include="Resources\whois.nic.jobs\jobs\Found.txt" />
     <EmbeddedResource Include="Resources\whois.nic.jobs\jobs\NotFound.txt" />

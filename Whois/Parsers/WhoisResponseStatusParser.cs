@@ -21,6 +21,7 @@ namespace Whois.Parsers
             if (Equals(status, "inactive")) return WhoisResponseStatus.NotAssigned;
             if (Equals(status, "in quarantine")) return WhoisResponseStatus.Quarantined;
             if (Equals(status, "Grace Period")) return WhoisResponseStatus.Other;
+            if (Equals(status, "Grace-Period")) return WhoisResponseStatus.Other;
             if (Equals(status, "Available")) return WhoisResponseStatus.NotFound;
             if (Equals(status, "Transfer Locked")) return WhoisResponseStatus.Locked;
             if (Equals(status, "Deleted")) return WhoisResponseStatus.PendingDelete;
@@ -31,6 +32,12 @@ namespace Whois.Parsers
             if (Equals(status, "Expired")) return WhoisResponseStatus.Expired;
             if (Equals(status, "NOT_OPEN")) return WhoisResponseStatus.Other;
             if (Equals(status, "BLOCKED")) return WhoisResponseStatus.Blocked;
+            if (Equals(status, "UNASSIGNABLE")) return WhoisResponseStatus.Unavailable;
+            if (Equals(status, "REDEMPTION-NO-PROVIDER")) return WhoisResponseStatus.Redemption;
+            if (Equals(status, "pendingUpdate")) return WhoisResponseStatus.Other;
+            if (Equals(status, "pendingTransfer")) return WhoisResponseStatus.Other;
+            if (Equals(status, "PENDING-DELETE")) return WhoisResponseStatus.PendingDelete;
+            if (Equals(status, "NO-PROVIDER")) return WhoisResponseStatus.Other;
 
             if (whoisServerUrl == "whois.dns.pt")
             {
