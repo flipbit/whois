@@ -8,23 +8,26 @@ name: whois.nic.ac/ac/Found
 tag: whois.nic.ac
 tag: ac
 
+# End tokens on new lines
+terminateOnNewLine: true
+
 # Set query response type:
 set: Status = Found
 ---
 
-Domain : google.ac
-Status : Live
-Expiry : 2014-04-03
+Domain : { DomainName : IsDomainName, ToLower }
+Status : { DomainStatus ? : Repeating, CleanDomainStatus }
+Expiry : { Expiration ? : ToDateTimeUtc("yyyy-MM-dd") }
 
-NS 1   : ns1.google.com
-NS 2   : ns2.google.com
-NS 3   : ns3.google.com
-NS 4   : ns4.google.com
+NS 1   : { NameServers ? : IsDomainName, ToLower }
+NS 2   : { NameServers ? : IsDomainName, ToLower }
+NS 3   : { NameServers ? : IsDomainName, ToLower }
+NS 4   : { NameServers ? : IsDomainName, ToLower }
 
-Owner  : DNS Admin
-Owner  : Google Inc.
-Owner  : 1600 Amphitheatre Parkway
-Owner  : Mountain View
-Owner  : CA
-Owner  : US
+Owner  : { Registrant.Name ? }
+Owner  : { Registrant.Organization ? }
+Owner  : { Registrant.Address ? : IsNotEmpty }
+Owner  : { Registrant.Address ? : IsNotEmpty }
+Owner  : { Registrant.Address ? : IsNotEmpty }
+Owner  : { Registrant.Address ? : IsNotEmpty }
 
