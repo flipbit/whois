@@ -170,7 +170,6 @@
     <None Remove="Resources\whois.mynic.my\my\Found.txt" />
     <None Remove="Resources\whois.mynic.my\my\NotFound.txt" />
     <None Remove="Resources\whois.nc\nc\Found.txt" />
-    <None Remove="Resources\whois.nc\nc\NotFound.txt" />
     <None Remove="Resources\whois.netcom.cm\cm\Found.txt" />
     <None Remove="Resources\whois.netcom.cm\cm\NotFound.txt" />
     <None Remove="Resources\whois.netcom.cm\cm\Suspended.txt" />
@@ -546,7 +545,6 @@
     <EmbeddedResource Include="Resources\whois.mynic.my\my\Found.txt" />
     <EmbeddedResource Include="Resources\whois.mynic.my\my\NotFound.txt" />
     <EmbeddedResource Include="Resources\whois.nc\nc\Found.txt" />
-    <EmbeddedResource Include="Resources\whois.nc\nc\NotFound.txt" />
     <EmbeddedResource Include="Resources\whois.netcom.cm\cm\Found.txt" />
     <EmbeddedResource Include="Resources\whois.netcom.cm\cm\NotFound.txt" />
     <EmbeddedResource Include="Resources\whois.netcom.cm\cm\Suspended.txt" />

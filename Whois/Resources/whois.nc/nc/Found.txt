@@ -8,28 +8,26 @@ name: whois.nc/nc/Found
 tag: whois.nc
 tag: nc
 
+# End tokens on new lines
+terminateOnNewLine: true
+
 # Set query response type:
 set: Status = Found
 ---
+Domain : { DomainName : IsDomainName, ToLower }
+Created on : { Registered ? : ToDateTimeUtc("yyyy-MM-dd") }
+Expires on : { Expiration ? : ToDateTimeUtc("yyyy-MM-dd") }
+Last updated on : { Updated ? : ToDateTimeUtc("yyyy-MM-dd") }
 
-Whois .NC
+Domain server 1 : { NameServers ? : IsDomainName, ToLower }
+Domain server 2 : { NameServers ? : IsDomainName, ToLower }
+Domain server 3 : { NameServers ? : IsDomainName, ToLower }
+Domain server 4 : { NameServers ? : IsDomainName, ToLower }
+Domain server 5 : { NameServers ? : IsDomainName, ToLower }
 
-Domain : rya.nc
-Created on : 2013-03-15
-Expires on : 2014-03-15
-Last updated on : 2013-03-19
-
-Domain server 1 : ns1.linode.com
-Domain server 2 : ns2.linode.com
-Domain server 3 : ns3.linode.com
-
-Registrant name : PLAY NEW CALEDONIA
-Registrant type : Societe (SARL)
-Registrant address 1 : 12 BOULEVARD VAUBAN
-Registrant address 2 : BP 2839
-Registrant address 3 : 98846 NOUMEA CEDEX
-
-Contact firstname : Charly
-Contact lastname : Montes
-
-more details on http://www.whois.nc
+Registrant name : { Registrant.Name ? }
+Registrant address 1 : { Registrant.Address ? : IsNotEmpty }
+Registrant address 2 : { Registrant.Address ? : IsNotEmpty }
+Registrant address 3 : { Registrant.Address ? : IsNotEmpty }
+Registrant address 4 : { Registrant.Address ? : IsNotEmpty }
+Registrant address 5 : { Registrant.Address ? : IsNotEmpty }
