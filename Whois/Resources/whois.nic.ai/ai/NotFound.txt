@@ -10,6 +10,8 @@ tag: ai
 
 # Set query response type:
 set: Status = NotFound
+
+hint: If you would like to register this
 ---
-Domain u34jedzcq.ai not registred.
+Domain { DomainName : IsDomainName, ToLower } not registred.
 If you would like to register this, or any .ai domain, go to http://whois.ai
