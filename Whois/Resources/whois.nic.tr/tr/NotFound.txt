@@ -10,5 +10,7 @@ tag: tr
 
 # Set query response type:
 set: Status = NotFound
+
+hint: No match found	
 ---
-No match found for "u34jedzcq.com.tr"
+No match found for "{ DomainName : IsDomainName, ToLower }"

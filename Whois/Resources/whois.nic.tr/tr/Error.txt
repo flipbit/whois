@@ -10,5 +10,7 @@ tag: tr
 
 # Set query response type:
 set: Status = Error
+
+hint: Invalid input
 ---
 Invalid input

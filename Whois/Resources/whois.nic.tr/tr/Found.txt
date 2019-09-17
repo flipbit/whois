@@ -8,56 +8,54 @@ name: whois.nic.tr/tr/Found
 tag: whois.nic.tr
 tag: tr
 
+# end tokens on new lines
+terminateonnewline: true
+
 # Set query response type:
 set: Status = Found
 ---
 ** Registrant:
-   Google Inc.
-   1600 Amphitheatre Parkway
-   Mountain View CA
-   Out of Turkey,
-     United States of America
-   dns-admin@google.com
-   + 1-650-2530000-
-   + 1-650-2530001-
+   { Registrant.Name ? }
+   { Registrant.Address ? : IsNotEmpty }
+   { Registrant.Address ? : IsNotEmpty }
+   { Registrant.Address ? : Replace('Out of Turkey,', ''), IsNotEmpty, Trim }
+     { Registrant.Address ? : IsNotEmpty, Trim }
+   { Registrant.Email ? : IsEmail }
+   { Registrant.TelephoneNumber ? : IsPhoneNumber }
+   { Registrant.FaxNumber ? : IsPhoneNumber }
 
 
 ** Administrative Contact:
-NIC Handle		: mi154-metu
-Organization Name	: MarkMonitor, Inc
-Address			: Hidden upon user request
-Phone			: Hidden upon user request
-Fax			: Hidden upon user request
+NIC Handle		: { AdminContact.RegistryId }
+Organization Name	: { AdminContact.Organization ? }
+Address			: { AdminContact.Address ? : Replace('Hidden upon user request', ''), IsNotEmpty }
+			  { AdminContact.Address ? : Repeating, IsNotEmpty }
+Phone			: { AdminContact.TelephoneNumber ? : IsPhoneNumber }
+Fax			: { AdminContact.FaxNumber ? : IsPhoneNumber }
 
 
 ** Technical Contact:
-NIC Handle		: btl1-metu
-Organization Name	: BERÝL TEKNOLOJÝ LTD. ÞTÝ.
-Address			: Ceyhun Atuf Kansu Cad. Bayraktar Ýþ Merkezi
-			  No:114 G-4 Balgat
-			  Ankara,06520
-			  Türkiye
-Phone			: + 90-312-4733035-
-Fax			: + 90-312-4733039-
+NIC Handle		: { TechnicalContact.RegistryId }
+Organization Name	: { TechnicalContact.Organization ? }
+Address			: { TechnicalContact.Address ? : Replace('Hidden upon user request', ''), IsNotEmpty }
+			  { TechnicalContact.Address ? : Repeating, IsNotEmpty }
+Phone			: { TechnicalContact.TelephoneNumber ? : IsPhoneNumber }
+Fax			: { TechnicalContact.FaxNumber ? : IsPhoneNumber }
 
 
 ** Billing Contact:
-NIC Handle		: btl1-metu
-Organization Name	: BERÝL TEKNOLOJÝ LTD. ÞTÝ.
-Address			: Ceyhun Atuf Kansu Cad. Bayraktar Ýþ Merkezi
-			  No:114 G-4 Balgat
-			  Ankara,06520
-			  Türkiye
-Phone			: + 90-312-4733035-
-Fax			: + 90-312-4733039-
+NIC Handle		: { BillingContact.RegistryId }
+Organization Name	: { BillingContact.Organization ? }
+Address			: { BillingContact.Address ? : Replace('Hidden upon user request', ''), IsNotEmpty }
+			  { BillingContact.Address ? : Repeating, IsNotEmpty }
+Phone			: { BillingContact.TelephoneNumber ? : IsPhoneNumber }
+Fax			: { BillingContact.FaxNumber ? : IsPhoneNumber }
 
 
 ** Domain Servers:
-ns1.google.com
-ns2.google.com
-ns3.google.com
-ns4.google.com
+{ NameServers ? : Trim, SubstringBefore(' '), IsDomainName, ToLower, Repeating }
 
 ** Additional Info:
-Created on..............: 2001-Aug-23.
-Expires on..............: 2013-Aug-22.
+Created on..............: { Registered ? : ToDateTimeUtc("yyyy-MMM-dd.") }
+Expires on..............: { Expiration ? : ToDateTimeUtc("yyyy-MMM-dd.") }
+
