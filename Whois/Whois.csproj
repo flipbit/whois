@@ -288,9 +288,6 @@
     <None Remove="Resources\whois.nic.uk\uk\Found.txt" />
     <None Remove="Resources\whois.nic.uk\uk\Invalid.txt" />
     <None Remove="Resources\whois.nic.uk\uk\NotFound.txt" />
-    <None Remove="Resources\whois.nic.uk\uk\Other.txt" />
-    <None Remove="Resources\whois.nic.uk\uk\Reserved.txt" />
-    <None Remove="Resources\whois.nic.uk\uk\Suspended.txt" />
     <None Remove="Resources\whois.nic.uk\uk\Throttled.txt" />
     <None Remove="Resources\whois.nic.us\us\Found.txt" />
     <None Remove="Resources\whois.nic.us\us\NotFound.txt" />
@@ -659,9 +656,6 @@
     <EmbeddedResource Include="Resources\whois.nic.uk\uk\Found.txt" />
     <EmbeddedResource Include="Resources\whois.nic.uk\uk\Invalid.txt" />
     <EmbeddedResource Include="Resources\whois.nic.uk\uk\NotFound.txt" />
-    <EmbeddedResource Include="Resources\whois.nic.uk\uk\Other.txt" />
-    <EmbeddedResource Include="Resources\whois.nic.uk\uk\Reserved.txt" />
-    <EmbeddedResource Include="Resources\whois.nic.uk\uk\Suspended.txt" />
     <EmbeddedResource Include="Resources\whois.nic.uk\uk\Throttled.txt" />
     <EmbeddedResource Include="Resources\whois.nic.us\us\Found.txt" />
     <EmbeddedResource Include="Resources\whois.nic.us\us\NotFound.txt" />
@@ -761,7 +755,7 @@
       <IncludeAssets>runtime; build; native; contentfiles; analyzers</IncludeAssets>
     </PackageReference>
     <PackageReference Include="Microsoft.CSharp" Version="4.5.0" />
-    <PackageReference Include="Tokenizer" Version="2.2.0-beta4" />
+    <PackageReference Include="Tokenizer" Version="2.2.0-beta5" />
   </ItemGroup>
 
   <PropertyGroup>

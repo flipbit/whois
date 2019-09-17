@@ -40,6 +40,11 @@ namespace Whois.Parsers
             if (Equals(status, "NO-PROVIDER")) return WhoisResponseStatus.Other;
             if (Equals(status, "This WHOIS server does not have any records for that zone.")) return WhoisResponseStatus.Invalid;
             if (Equals(status, "Not Registered")) return WhoisResponseStatus.NotFound;
+            if (Equals(status, "Renewal required.")) return WhoisResponseStatus.Suspended;
+            if (Equals(status, "No registration status listed.")) return WhoisResponseStatus.Reserved;
+            if (Equals(status, "Renewal request being processed.")) return WhoisResponseStatus.Other;
+            if (Equals(status, "Registration request being processed.")) return WhoisResponseStatus.Other;
+            if (Equals(status, "No longer required")) return WhoisResponseStatus.Other;
 
             if (whoisServerUrl == "whois.dns.pt")
             {

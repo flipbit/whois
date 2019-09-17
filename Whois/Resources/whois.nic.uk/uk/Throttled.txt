@@ -10,13 +10,8 @@ tag: uk
 
 # Set query response type:
 set: Status = Throttled
+
+hint: Error for
+hint: The WHOIS query quota for
 ---
-    Error for "google.co.uk".
-
-    The WHOIS query quota for 127.0.0.1 has been exceeded
-    and will be replenished in 50 seconds.
-
-    WHOIS lookup made at 20:30:08 08-Jan-2010
-
---
-<copyright text>
+    Error for "{ DomainName : IsDomainName, ToLower }".

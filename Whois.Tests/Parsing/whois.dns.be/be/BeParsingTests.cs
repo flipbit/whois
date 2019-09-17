@@ -282,18 +282,17 @@ namespace Whois.Parsing.Whois.Dns.Be.Be
             Assert.AreEqual(new DateTime(2007, 12, 24, 0, 0, 0), response.Registered);
 
             // Nameservers
-            Assert.AreEqual(5, response.NameServers.Count);
+            Assert.AreEqual(4, response.NameServers.Count);
             Assert.AreEqual("ns4.google.com", response.NameServers[0]);
             Assert.AreEqual("ns3.google.com", response.NameServers[1]);
             Assert.AreEqual("ns1.google.com", response.NameServers[2]);
             Assert.AreEqual("ns2.google.com", response.NameServers[3]);
-            Assert.AreEqual("clienttransferprohibited", response.NameServers[4]);
 
             // Domain Status
             Assert.AreEqual(1, response.DomainStatus.Count);
             Assert.AreEqual("NOT AVAILABLE", response.DomainStatus[0]);
 
-            Assert.AreEqual(11, response.FieldsParsed);        
+            Assert.AreEqual(10, response.FieldsParsed);        
         }
     }
 }
