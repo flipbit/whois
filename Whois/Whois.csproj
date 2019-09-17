@@ -177,7 +177,6 @@
     <None Remove="Resources\whois.nic.ai\ai\Found.txt" />
     <None Remove="Resources\whois.nic.ai\ai\NotFound.txt" />
     <None Remove="Resources\whois.nic.as\as\Found.txt" />
-    <None Remove="Resources\whois.nic.as\as\NotFound.txt" />
     <None Remove="Resources\whois.nic.asia\asia\Found.txt" />
     <None Remove="Resources\whois.nic.asia\asia\NotFound.txt" />
     <None Remove="Resources\whois.nic.asia\asia\Other.txt" />
@@ -550,7 +549,6 @@
     <EmbeddedResource Include="Resources\whois.nic.ai\ai\Found.txt" />
     <EmbeddedResource Include="Resources\whois.nic.ai\ai\NotFound.txt" />
     <EmbeddedResource Include="Resources\whois.nic.as\as\Found.txt" />
-    <EmbeddedResource Include="Resources\whois.nic.as\as\NotFound.txt" />
     <EmbeddedResource Include="Resources\whois.nic.asia\asia\Found.txt" />
     <EmbeddedResource Include="Resources\whois.nic.asia\asia\NotFound.txt" />
     <EmbeddedResource Include="Resources\whois.nic.asia\asia\Other.txt" />
@@ -765,7 +763,7 @@
       <IncludeAssets>runtime; build; native; contentfiles; analyzers</IncludeAssets>
     </PackageReference>
     <PackageReference Include="Microsoft.CSharp" Version="4.5.0" />
-    <PackageReference Include="Tokenizer" Version="2.2.0-beta3" />
+    <PackageReference Include="Tokenizer" Version="2.2.0-beta4" />
   </ItemGroup>
 
   <PropertyGroup>
