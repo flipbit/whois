@@ -10,7 +10,7 @@ tag: bo
 
 # Set query response type:
 set: Status = NotFound
+
+hint: solo acepta consultas con dominios 
 ---
-
-
 whois.nic.bo solo acepta consultas con dominios .bo

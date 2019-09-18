@@ -8,53 +8,55 @@ name: whois.nic.bo/bo/Found
 tag: whois.nic.bo
 tag: bo
 
+# End tokens on new lines
+terminateOnNewLine: true
+
 # Set query response type:
 set: Status = Found
+
+hint: solo acepta consultas con dominios
+hint: Dominio
 ---
-Dominio: google.bo
+Dominio: { DomainName : IsDomainName, ToLower }
 
 TITULAR:
-Organizacion: Google Inc.
-Nombre: Google Inc
-Email: mail en nameaction.com
-Pais: Estados Unidos de America
-Ciudad: Mountain View
-Direccion: 1600 Amphitheatre Parkway Mountain View
-Telefono: 16502530000
+Organizacion: { Registrant.Organization ? }
+Nombre: { Registrant.Name ? }
+Email: { Registrant.Email ? : Replace(' en ', '@'), IsEmail }
+Pais: { Registrant.Address ? : IsNotEmpty }
+Ciudad: { Registrant.Address ? : IsNotEmpty }
+Direccion: { Registrant.Address ? : IsNotEmpty }
+Telefono: { Registrant.TelephoneNumber ? : IsPhoneNumber }
 
 
 CONTACTO ADMINISTRATIVO:
-Organizacion: MarkMonitor Inc. 
-Nombre: Domain Administrator 
-Email: ccops en markmonitor.com
-Pais: Estados Unidos de America
-Ciudad: Boise 
-Direccion: 391 N. Ancestor pl. 
-Telefono: 12083895740
+Organizacion: { AdminContact.Organization ? }
+Nombre: { AdminContact.Name ? }
+Email: { AdminContact.Email ? : Replace(' en ', '@'), IsEmail }
+Pais: { AdminContact.Address ? : IsNotEmpty }
+Ciudad: { AdminContact.Address ? : IsNotEmpty }
+Direccion: { AdminContact.Address ? : IsNotEmpty }
+Telefono: { AdminContact.TelephoneNumber ? : IsPhoneNumber }
 
 
 CONTACTO TECNICO:
-Organizacion: MarkMonitor
-Nombre: MarkMonitor
-Email: mail en nameaction.com
-Pais: USA
-Ciudad: Boise, Idaho  83704
-Direccion: 391 N. Ancestor Place
-Telefono: +1208389 5783
+Organizacion: { TechnicalContact.Organization ? }
+Nombre: { TechnicalContact.Name ? }
+Email: { TechnicalContact.Email ? : Replace(' en ', '@'), IsEmail }
+Pais: { TechnicalContact.Address ? : IsNotEmpty }
+Ciudad: { TechnicalContact.Address ? : IsNotEmpty }
+Direccion: { TechnicalContact.Address ? : IsNotEmpty }
+Telefono: { TechnicalContact.TelephoneNumber ? : IsPhoneNumber }
 
 
 CONTACTO FINANCIERO:
-Organizacion: MarkMonitor Inc. 
-Nombre: Domain Administrator 
-Email: ccops en markmonitor.com
-Pais: Estados Unidos de America
-Ciudad: Boise 
-Direccion: 391 N. Ancestor pl. 
-Telefono: 12083895740
+Organizacion: { BillingContact.Organization ? }
+Nombre: { BillingContact.Name ? }
+Email: { BillingContact.Email ? : Replace(' en ', '@'), IsEmail }
+Pais: { BillingContact.Address ? : IsNotEmpty }
+Ciudad: { BillingContact.Address ? : IsNotEmpty }
+Direccion: { BillingContact.Address ? : IsNotEmpty }
+Telefono: { BillingContact.TelephoneNumber ? : IsPhoneNumber }
 
-
-Fecha de registro: 2006-08-22
-Fecha de vencimiento: 2014-08-22
-
-
-whois.nic.bo solo acepta consultas con dominios .bo
+Fecha de registro: { Registered ? : ToDateTimeUtc("yyyy-MM-dd") }
+Fecha de vencimiento: { Expiration ? : ToDateTimeUtc("yyyy-MM-dd") }
