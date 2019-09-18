@@ -45,6 +45,7 @@ namespace Whois.Parsers
             if (Equals(status, "Renewal request being processed.")) return WhoisResponseStatus.Other;
             if (Equals(status, "Registration request being processed.")) return WhoisResponseStatus.Other;
             if (Equals(status, "No longer required")) return WhoisResponseStatus.Other;
+            if (Equals(status, "SUSPENDIDO")) return WhoisResponseStatus.Suspended;
 
             if (whoisServerUrl == "whois.dns.pt")
             {

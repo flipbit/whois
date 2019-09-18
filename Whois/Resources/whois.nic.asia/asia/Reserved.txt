@@ -10,5 +10,7 @@ tag: asia
 
 # Set query response type:
 set: Status = Reserved
+
+hint: Reserved by 
 ---
 Reserved by DotAsia

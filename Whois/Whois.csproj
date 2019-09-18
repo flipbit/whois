@@ -178,8 +178,6 @@
     <None Remove="Resources\whois.nic.ai\ai\NotFound.txt" />
     <None Remove="Resources\whois.nic.as\as\Found.txt" />
     <None Remove="Resources\whois.nic.asia\asia\Found.txt" />
-    <None Remove="Resources\whois.nic.asia\asia\NotFound.txt" />
-    <None Remove="Resources\whois.nic.asia\asia\Other.txt" />
     <None Remove="Resources\whois.nic.asia\asia\Reserved.txt" />
     <None Remove="Resources\whois.nic.at\at\Found.txt" />
     <None Remove="Resources\whois.nic.at\at\NotFound.txt" />
@@ -546,8 +544,6 @@
     <EmbeddedResource Include="Resources\whois.nic.ai\ai\NotFound.txt" />
     <EmbeddedResource Include="Resources\whois.nic.as\as\Found.txt" />
     <EmbeddedResource Include="Resources\whois.nic.asia\asia\Found.txt" />
-    <EmbeddedResource Include="Resources\whois.nic.asia\asia\NotFound.txt" />
-    <EmbeddedResource Include="Resources\whois.nic.asia\asia\Other.txt" />
     <EmbeddedResource Include="Resources\whois.nic.asia\asia\Reserved.txt" />
     <EmbeddedResource Include="Resources\whois.nic.at\at\Found.txt" />
     <EmbeddedResource Include="Resources\whois.nic.at\at\NotFound.txt" />
