@@ -5,7 +5,6 @@ using Whois.Parsers;
 namespace Whois.Parsing.Whois.Nic.Cd.Cd
 {
     [TestFixture]
-    [Ignore("TODO")]
     public class CdParsingTests : ParsingTests
     {
         private WhoisParser parser;
@@ -26,6 +25,17 @@ namespace Whois.Parsing.Whois.Nic.Cd.Cd
 
             Assert.Greater(sample.Length, 0);
             Assert.AreEqual(WhoisResponseStatus.NotFound, response.Status);
+
+            Assert.AreEqual(0, response.ParsingErrors);
+            Assert.AreEqual("whois.nic.cd/cd/NotFound", response.TemplateName);
+
+            Assert.AreEqual("u34jedzcq.cd", response.DomainName);
+
+            // Domain Status
+            Assert.AreEqual(1, response.DomainStatus.Count);
+            Assert.AreEqual("Available", response.DomainStatus[0]);
+
+            Assert.AreEqual(3, response.FieldsParsed);
         }
 
         [Test]
@@ -36,6 +46,19 @@ namespace Whois.Parsing.Whois.Nic.Cd.Cd
 
             Assert.Greater(sample.Length, 0);
             Assert.AreEqual(WhoisResponseStatus.Found, response.Status);
+
+            Assert.AreEqual(0, response.ParsingErrors);
+            Assert.AreEqual("whois.nic.cd/cd/Found", response.TemplateName);
+
+            Assert.AreEqual("google.cd", response.DomainName);
+            Assert.AreEqual("5758-CD", response.RegistryDomainId);
+
+            // Registrar Details
+            Assert.AreEqual("MARKMONITOR", response.Registrar.Name);
+
+
+            Assert.AreEqual("unsigned", response.DnsSecStatus);
+            Assert.AreEqual(5, response.FieldsParsed);
         }
     }
 }
