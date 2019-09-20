@@ -8,34 +8,26 @@ name: whois.nic.cl/cl/Found
 tag: whois.nic.cl
 tag: cl
 
+# End tokens on new lines
+terminateOnNewLine: true
+
 # Set query response type:
 set: Status = Found
 ---
-google.cl:
+ACE: { DomainName : SubstringBefore(' ('), IsDomainName, ToLower }
 
-ACE: google.cl (RFC-3490, RFC-3491, RFC-3492)
-
-Google Inc. Representada por NameAction Chile S.A. (ASESORIAS NAMEACTION CHILE LIMITADA)
+{ Registrant.Name ? : IsNotEmpty }
 
 Contacto Administrativo (Administrative Contact):
-    Nombre      : Markmonitor Tech
-    Organización: Markmonitor
+    Nombre      : { AdminContact.Name ? }
+    Organización: { AdminContact.Organization ? }
 
 Contacto Técnico (Technical Contact):
-    Nombre      : Markmonitor Tech
-    Organización: MarkMonitor
+    Nombre      : { TechnicalContact.Name ? }
+    Organización: { TechnicalContact.Organization ? }
 
 Servidores de nombre (Domain servers):
-    ns3.google.com (216.239.36.10)
-    ns4.google.com (216.239.38.10)
-    ns1.google.com (216.239.32.10)
-    ns2.google.com (216.239.34.10)
+    { NameServers ? : SubstringBefore(' ('), IsDomainName, ToLower, Repeating }
 
 Última modificación al formulario
-    (Database last updated on): 23 de agosto de 2012 (10:10:08 GMT)
-
-Más información (More information):
-    http://www.nic.cl/registry/Whois.do?d=google.cl
-
-Este mensajes está impreso en ISO-8859-1
-(This message is printed in ISO-8859-1)
+    (Database last updated on): { Updated ? : ToDateTimeUtc("d MMMM yyyy (HH:mm:ss \G\M\T)") }

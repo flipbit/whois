@@ -10,5 +10,7 @@ tag: cl
 
 # Set query response type:
 set: Status = NotFound
+
+hint: no existe
 ---
-u34jedzcq.cl: no existe
+{ DomainName : IsDomainName, ToLower }: no existe

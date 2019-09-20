@@ -5,7 +5,6 @@ using Whois.Parsers;
 namespace Whois.Parsing.Whois.Nic.Cl.Cl
 {
     [TestFixture]
-    [Ignore("TODO")]
     public class ClParsingTests : ParsingTests
     {
         private WhoisParser parser;
@@ -26,6 +25,13 @@ namespace Whois.Parsing.Whois.Nic.Cl.Cl
 
             Assert.Greater(sample.Length, 0);
             Assert.AreEqual(WhoisResponseStatus.NotFound, response.Status);
+
+            Assert.AreEqual(0, response.ParsingErrors);
+            Assert.AreEqual("whois.nic.cl/cl/NotFound", response.TemplateName);
+
+            Assert.AreEqual("u34jedzcq.cl", response.DomainName);
+
+            Assert.AreEqual(2, response.FieldsParsed);
         }
 
         [Test]
@@ -36,6 +42,32 @@ namespace Whois.Parsing.Whois.Nic.Cl.Cl
 
             Assert.Greater(sample.Length, 0);
             Assert.AreEqual(WhoisResponseStatus.Found, response.Status);
+
+            Assert.AreEqual(0, response.ParsingErrors);
+            Assert.AreEqual("whois.nic.cl/cl/Found", response.TemplateName);
+
+            Assert.AreEqual("google.cl", response.DomainName);
+
+             // Registrant Details
+            Assert.AreEqual("Google Inc. Representada por NameAction Chile S.A. (ASESORIAS NAMEACTION CHILE LIMITADA)", response.Registrant.Name);
+
+             // AdminContact Details
+            Assert.AreEqual("Markmonitor Tech", response.AdminContact.Name);
+            Assert.AreEqual("Markmonitor", response.AdminContact.Organization);
+
+
+             // TechnicalContact Details
+            Assert.AreEqual("Markmonitor Tech", response.TechnicalContact.Name);
+            Assert.AreEqual("MarkMonitor", response.TechnicalContact.Organization);
+
+            // Nameservers
+            Assert.AreEqual(4, response.NameServers.Count);
+            Assert.AreEqual("ns3.google.com", response.NameServers[0]);
+            Assert.AreEqual("ns4.google.com", response.NameServers[1]);
+            Assert.AreEqual("ns1.google.com", response.NameServers[2]);
+            Assert.AreEqual("ns2.google.com", response.NameServers[3]);
+
+            Assert.AreEqual(11, response.FieldsParsed);
         }
     }
 }
