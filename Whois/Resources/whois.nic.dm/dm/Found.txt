@@ -8,72 +8,49 @@ name: whois.nic.dm/dm/Found
 tag: whois.nic.dm
 tag: dm
 
+# End tokens on new lines
+terminateOnNewLine: true
+
 # Set query response type:
 set: Status = Found
 ---
-; This data is provided by DM REGISTRY for information purposes only in
-; accordance with the DM REGISTRY TLD Privacy Policy. It is intended to
-; assist persons to obtain information about or related to domain name
-; registration records. DM REGISTRY does not guarantee its accuracy.
-; By submitting this query, you agree to abide as follows:
-;
-; You agree to use this data only for lawful purposes and that under no
-; circumstances will you permit this data to
-; 1) allow, enable, or otherwise support the transmission of mass
-;    unsolicited, commercial advertising or solicitations via e-mail,
-;    telephone or fax (spam); nor
-; 2) enable high volume, automated, electronic processes to the systems
-;    of DM REGISTRY or Registrars, except as reasonably required to
-;    register new domain names or modify existing registrations; nor
-; 3) will you generate a database of registered domain names and
-;    registrant data.
-;
-; These terms may be changed without prior notice.
-; By submitting this query, you agree to abide by this policy.
+domain name: { DomainName : IsDomainName, ToLower }
+registrar: { Registrar.Name ? }
+url: { Registrar.Url ? : IsUrl, ToLower }
+status: { DomainStatus ? : Repeating, CleanDomainStatus }
+created date: { Registered ? : ToDateTimeUtc("yyyy-MM-dd HH:mm:ss") }
+updated date: { Updated ? : ToDateTimeUtc("yyyy-MM-dd HH:mm:ss") }
+expiration date: { Expiration ? : ToDateTimeUtc("yyyy-MM-dd HH:mm:ss") }
 
-domain name: GOOGLE.DM
-registrar: MarkMonitor Inc.
-url: www.markmonitor.com
-status: ACTIVE
-created date: 2004-08-23 23:00:00
-updated date: 2013-07-23 17:50:34
-expiration date: 2014-08-23 23:00:00
+owner-contact: { Registrant.RegistryId ? }
+owner-name: { Registrant.Name ? }
+owner-street: { Registrant.Address ? : IsNotEmpty }
+owner-city: { Registrant.Address ? : IsNotEmpty }
+owner-zip: { Registrant.Address ? : IsNotEmpty }
+owner-country: { Registrant.Address ? : IsNotEmpty }
 
-owner-contact: P-CQG21
-owner-name: Company Google Inc.
-owner-street: 1600 Amphitheatre Parkway
-owner-city: Mountain View
-owner-zip: 94043
-owner-country: US
+admin-contact: { AdminContact.RegistryId ? }
+admin-organization: { AdminContact.Organization ? }
+admin-name: { AdminContact.Name ? }
+admin-street: { AdminContact.Address ? : IsNotEmpty }
+admin-city: { AdminContact.Address ? : IsNotEmpty }
+admin-zip: { AdminContact.Address ? : IsNotEmpty }
+admin-country: { AdminContact.Address ? : IsNotEmpty }
 
-admin-contact: P-DNA22
-admin-organization: Google Inc.
-admin-name: DNS Admin
-admin-street: 1600 Amphitheatre
-admin-city: Mountain View
-admin-zip: 94043
-admin-country: US
+tech-contact: { TechnicalContact.RegistryId ? }
+tech-organization: { TechnicalContact.Organization ? }
+tech-name: { TechnicalContact.Name ? }
+tech-street: { TechnicalContact.Address ? : IsNotEmpty }
+tech-city: { TechnicalContact.Address ? : IsNotEmpty }
+tech-zip: { TechnicalContact.Address ? : IsNotEmpty }
+tech-country: { TechnicalContact.Address ? : IsNotEmpty }
 
-tech-contact: P-DXA21
-tech-organization: Google Inc.
-tech-name: DNS Admin
-tech-street: 1600 Amphitheatre
-tech-city: Mountain View
-tech-zip: 94043
-tech-country: US
+billing-contact: { BillingContact.RegistryId  ? }
+billing-organization: { BillingContact.Organization ? }
+billing-name: { BillingContact.Name ? }
+billing-street: { BillingContact.Address ? : IsNotEmpty }
+billing-city: { BillingContact.Address ? : IsNotEmpty }
+billing-zip: { BillingContact.Address ? : IsNotEmpty }
+billing-country: { BillingContact.Address ? : IsNotEmpty }
 
-billing-contact: P-DXA21
-billing-organization: Google Inc.
-billing-name: DNS Admin
-billing-street: 1600 Amphitheatre
-billing-city: Mountain View
-billing-zip: 94043
-billing-country: US
-
-nameserver: ns1.google.com
-nameserver: ns2.google.com
-nameserver: ns3.google.com
-nameserver: ns4.google.com
-
-; Please register your domains at; www.markmonitor.com
-
+nameserver: { NameServers ? : IsDomainName, ToLower, Repeating }

@@ -10,5 +10,7 @@ tag: dm
 
 # Set query response type:
 set: Status = NotFound
+
+hint: not found...
 ---
 not found...
