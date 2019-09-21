@@ -332,12 +332,6 @@
     <None Remove="Resources\whois.srs.net.nz\nz\Throttled.txt" />
     <None Remove="Resources\whois.sx\sx\NotFound.txt" />
     <None Remove="Resources\whois.sx\sx\Unavailable.txt" />
-    <None Remove="Resources\whois.tcinet.ru\ru\Found.txt" />
-    <None Remove="Resources\whois.tcinet.ru\ru\NotFound.txt" />
-    <None Remove="Resources\whois.tcinet.ru\su\Found.txt" />
-    <None Remove="Resources\whois.tcinet.ru\su\NotFound.txt" />
-    <None Remove="Resources\whois.tcinet.ru\xn--p1ai\Found.txt" />
-    <None Remove="Resources\whois.tcinet.ru\xn--p1ai\NotFound.txt" />
     <None Remove="Resources\whois.thnic.co.th\th\Found.txt" />
     <None Remove="Resources\whois.thnic.co.th\th\NotFound.txt" />
     <None Remove="Resources\whois.tld.ee\ee\Expired.txt" />
@@ -699,12 +693,8 @@
     <EmbeddedResource Include="Resources\whois.srs.net.nz\nz\Throttled.txt" />
     <EmbeddedResource Include="Resources\whois.sx\sx\NotFound.txt" />
     <EmbeddedResource Include="Resources\whois.sx\sx\Unavailable.txt" />
-    <EmbeddedResource Include="Resources\whois.tcinet.ru\ru\Found.txt" />
-    <EmbeddedResource Include="Resources\whois.tcinet.ru\ru\NotFound.txt" />
-    <EmbeddedResource Include="Resources\whois.tcinet.ru\su\Found.txt" />
-    <EmbeddedResource Include="Resources\whois.tcinet.ru\su\NotFound.txt" />
-    <EmbeddedResource Include="Resources\whois.tcinet.ru\xn--p1ai\Found.txt" />
-    <EmbeddedResource Include="Resources\whois.tcinet.ru\xn--p1ai\NotFound.txt" />
+    <EmbeddedResource Include="Resources\whois.tcinet.ru\Found.txt" />
+    <EmbeddedResource Include="Resources\whois.tcinet.ru\NotFound.txt" />
     <EmbeddedResource Include="Resources\whois.thnic.co.th\th\Found.txt" />
     <EmbeddedResource Include="Resources\whois.thnic.co.th\th\NotFound.txt" />
     <EmbeddedResource Include="Resources\whois.tld.ee\ee\Expired.txt" />
