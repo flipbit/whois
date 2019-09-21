@@ -325,7 +325,6 @@
     <None Remove="Resources\whois.sgnic.sg\sg\NotFound.txt" />
     <None Remove="Resources\whois.sk-nic.sk\sk\Found.txt" />
     <None Remove="Resources\whois.sk-nic.sk\sk\NotFound.txt" />
-    <None Remove="Resources\whois.sk-nic.sk\sk\Other.txt" />
     <None Remove="Resources\whois.srs.net.nz\nz\Found.txt" />
     <None Remove="Resources\whois.srs.net.nz\nz\Invalid.txt" />
     <None Remove="Resources\whois.srs.net.nz\nz\NotFound.txt" />
@@ -693,7 +692,6 @@
     <EmbeddedResource Include="Resources\whois.sgnic.sg\sg\NotFound.txt" />
     <EmbeddedResource Include="Resources\whois.sk-nic.sk\sk\Found.txt" />
     <EmbeddedResource Include="Resources\whois.sk-nic.sk\sk\NotFound.txt" />
-    <EmbeddedResource Include="Resources\whois.sk-nic.sk\sk\Other.txt" />
     <EmbeddedResource Include="Resources\whois.srs.net.nz\nz\Found.txt" />
     <EmbeddedResource Include="Resources\whois.srs.net.nz\nz\Invalid.txt" />
     <EmbeddedResource Include="Resources\whois.srs.net.nz\nz\NotFound.txt" />

@@ -46,6 +46,13 @@ namespace Whois.Parsers
             if (Equals(status, "Registration request being processed.")) return WhoisResponseStatus.Other;
             if (Equals(status, "No longer required")) return WhoisResponseStatus.Other;
             if (Equals(status, "SUSPENDIDO")) return WhoisResponseStatus.Suspended;
+            if (Equals(status, "Suspended")) return WhoisResponseStatus.Other;
+            if (Equals(status, "DOM_WARN")) return WhoisResponseStatus.Other;
+            if (Equals(status, "DOM_TA")) return WhoisResponseStatus.Other;
+            if (Equals(status, "DOM_LNOT")) return WhoisResponseStatus.Other;
+            if (Equals(status, "DOM_HELD")) return WhoisResponseStatus.Other;
+            if (Equals(status, "DOM_EXP")) return WhoisResponseStatus.Expired;
+            if (Equals(status, "DOM_DAKT")) return WhoisResponseStatus.Other;
 
             if (whoisServerUrl == "whois.dns.pt")
             {

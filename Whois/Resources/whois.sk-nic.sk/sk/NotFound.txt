@@ -10,11 +10,8 @@ tag: sk
 
 # Set query response type:
 set: Status = NotFound
+
+hint: Not found.
 ---
-%
-% whois.sk-nic.sk - whois server for TLD .sk
-%
-
-
 Not found.
 
