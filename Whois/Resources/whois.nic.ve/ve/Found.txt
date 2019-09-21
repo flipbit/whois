@@ -11,51 +11,42 @@ tag: ve
 # Set query response type:
 set: Status = Found
 ---
-
-Servidor Whois de NIC-Venezuela (.VE)
-
-Este servidor contiene informacion autoritativa exclusivamente de dominios .VE
-Cualquier consulta sobre este servicio, puede hacerla al correo electronico whois@nic.ve
-
 Titular: 
-Universidad de los Andes  (ula.ve-dom)		fobispo@nic.ve
-   ULA 
-   Merida
-   Merida, Merida  VE
-   +582127718584 (FAX) +582127718599
+{ Registrant.Name }  ({ Registrant.RegistryId })		{ Registrant.Email : IsEmail, EOL }
+   { Registrant.Address ? : IsNotEmpty, EOL }
+   { Registrant.Address ? : IsNotEmpty, EOL }
+   { Registrant.Address ? : IsNotEmpty, EOL }
+   { Registrant.TelephoneNumber ? : IsPhoneNumber, Once } (FAX) { Registrant.FaxNumber ? : IsPhoneNumber, EOL }
 
-   Nombre de Dominio: ula.ve
+   Nombre de Dominio: { DomainName : IsDomainName, ToLower, EOL }
 
    Contacto Administrativo: 
-      Universidad de los Andes  (ula.ve-adm)		fobispo@nic.ve
-      ULA 
-      Merida
-      Merida, Merida  VE
-      +582127718584 (FAX) +582127718599
+      { AdminContact.Name }  ({ AdminContact.RegistryId })		{ AdminContact.Email ? : IsEmail, EOL }
+      { AdminContact.Address ? : IsNotEmpty, EOL }
+      { AdminContact.Address ? : IsNotEmpty, EOL }
+      { AdminContact.Address ? : IsNotEmpty, EOL }
+      { AdminContact.TelephoneNumber ? : SubstringBefore(' x'), IsPhoneNumber } (FAX) { AdminContact.FaxNumber ? : IsPhoneNumber, EOL }
    
    Contacto Tecnico: 
-      Universidad de los Andes  (ula.ve-tec)		fobispo@nic.ve
-      ULA 
-      Merida
-      Merida, Merida  VE
-      +582127718584 (FAX) +582127718599
+      { TechnicalContact.Name }  ({ TechnicalContact.RegistryId })		{ TechnicalContact.Email ? : IsEmail, EOL }
+      { TechnicalContact.Address ? : IsNotEmpty, EOL }
+      { TechnicalContact.Address ? : IsNotEmpty, EOL }
+      { TechnicalContact.Address ? : IsNotEmpty, EOL }
+      { TechnicalContact.TelephoneNumber ? : SubstringBefore(' x'), IsPhoneNumber } (FAX) { TechnicalContact.FaxNumber ? : IsPhoneNumber, EOL }
    
    Contacto de Cobranza: 
-      Universidad de los Andes  (ula.ve-bil)		fobispo@nic.ve
-      ULA 
-      Merida
-      Merida, Merida  VE
-      +582127718584 (FAX) +582127718599
+      { BillingContact.Name }  ({ BillingContact.RegistryId })		{ BillingContact.Email ? : IsEmail, EOL }
+      { BillingContact.Address ? : IsNotEmpty, EOL }
+      { BillingContact.Address ? : IsNotEmpty, EOL }
+      { BillingContact.Address ? : IsNotEmpty, EOL }
+      { BillingContact.TelephoneNumber ? : SubstringBefore(' x'), IsPhoneNumber } (FAX) { BillingContact.FaxNumber ? : IsPhoneNumber, EOL }
 
-   Ultima Actualizacion: 2005-11-17 21:16:31
-   Fecha de Creacion: 2005-11-15 14:40:48
+   Fecha de Vencimiento: { Expiration ? : ToDateTimeUtc("yyyy-MM-dd HH:mm:ss"), EOL }
+   Ultima Actualizacion: { Updated ? : ToDateTimeUtc("yyyy-MM-dd HH:mm:ss"), EOL }
+   Fecha de Creacion: { Registered ? : ToDateTimeUtc("yyyy-MM-dd HH:mm:ss"), EOL }
 
-   Estatus del dominio: ACTIVO
+   Estatus del dominio: { DomainStatus ? : Repeating, CleanDomainStatus, EOL }
 
    Servidor(es) de Nombres de Dominio:
 
-   - avalon.ula.ve
-   - azmodan.ula.ve
-
-NIC-Venezuela - CONATEL
-http://www.nic.ve
+   { NameServers ? : Remove('- '), IsDomainName, ToLower, Repeating, EOL }

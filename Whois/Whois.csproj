@@ -290,9 +290,7 @@
     <None Remove="Resources\whois.nic.us\us\Found.txt" />
     <None Remove="Resources\whois.nic.us\us\NotFound.txt" />
     <None Remove="Resources\whois.nic.ve\ve\Found.txt" />
-    <None Remove="Resources\whois.nic.ve\ve\Inactive.txt" />
     <None Remove="Resources\whois.nic.ve\ve\NotFound.txt" />
-    <None Remove="Resources\whois.nic.ve\ve\Suspended.txt" />
     <None Remove="Resources\whois.nic.wed\wed\Found.txt" />
     <None Remove="Resources\whois.nic.wed\wed\NotFound.txt" />
     <None Remove="Resources\whois.nic.xxx\xxx\Reserved.txt" />
@@ -656,9 +654,7 @@
     <EmbeddedResource Include="Resources\whois.nic.us\us\Found.txt" />
     <EmbeddedResource Include="Resources\whois.nic.us\us\NotFound.txt" />
     <EmbeddedResource Include="Resources\whois.nic.ve\ve\Found.txt" />
-    <EmbeddedResource Include="Resources\whois.nic.ve\ve\Inactive.txt" />
     <EmbeddedResource Include="Resources\whois.nic.ve\ve\NotFound.txt" />
-    <EmbeddedResource Include="Resources\whois.nic.ve\ve\Suspended.txt" />
     <EmbeddedResource Include="Resources\whois.nic.wed\wed\Found.txt" />
     <EmbeddedResource Include="Resources\whois.nic.wed\wed\NotFound.txt" />
     <EmbeddedResource Include="Resources\generic\tld\Found05.txt" />
@@ -751,7 +747,7 @@
       <IncludeAssets>runtime; build; native; contentfiles; analyzers</IncludeAssets>
     </PackageReference>
     <PackageReference Include="Microsoft.CSharp" Version="4.5.0" />
-    <PackageReference Include="Tokenizer" Version="2.2.0-beta5" />
+    <PackageReference Include="Tokenizer" Version="2.2.0-beta6" />
   </ItemGroup>
 
   <PropertyGroup>
