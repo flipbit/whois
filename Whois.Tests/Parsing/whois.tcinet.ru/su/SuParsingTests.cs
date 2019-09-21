@@ -1,3 +1,4 @@
+using System;
 using NUnit.Framework;
 using Whois.Models;
 using Whois.Parsers;
@@ -5,7 +6,6 @@ using Whois.Parsers;
 namespace Whois.Parsing.Whois.Tcinet.Ru.Su
 {
     [TestFixture]
-    [Ignore("TODO")]
     public class SuParsingTests : ParsingTests
     {
         private WhoisParser parser;
@@ -26,6 +26,11 @@ namespace Whois.Parsing.Whois.Tcinet.Ru.Su
 
             Assert.Greater(sample.Length, 0);
             Assert.AreEqual(WhoisResponseStatus.NotFound, response.Status);
+
+            Assert.AreEqual(0, response.ParsingErrors);
+            Assert.AreEqual("whois.tcinet.ru/NotFound", response.TemplateName);
+
+            Assert.AreEqual(1, response.FieldsParsed);
         }
 
         [Test]
@@ -36,6 +41,34 @@ namespace Whois.Parsing.Whois.Tcinet.Ru.Su
 
             Assert.Greater(sample.Length, 0);
             Assert.AreEqual(WhoisResponseStatus.Found, response.Status);
+
+            Assert.AreEqual(0, response.ParsingErrors);
+            Assert.AreEqual("whois.tcinet.ru/Found", response.TemplateName);
+
+            Assert.AreEqual("google.su", response.DomainName);
+
+            // Registrar Details
+            Assert.AreEqual("RUCENTER-REG-FID", response.Registrar.Name);
+
+            Assert.AreEqual(new DateTime(2005, 10, 16, 00, 00, 00, 000, DateTimeKind.Utc), response.Registered);
+            Assert.AreEqual(new DateTime(2010, 10, 16, 00, 00, 00, 000, DateTimeKind.Utc), response.Expiration);
+
+             // Registrant Details
+            Assert.AreEqual("+7 495 9681807", response.Registrant.TelephoneNumber);
+            Assert.AreEqual("+7 495 9681807", response.Registrant.FaxNumber);
+            Assert.AreEqual("cis@cis.su", response.Registrant.Email);
+
+
+            // Nameservers
+            Assert.AreEqual(2, response.NameServers.Count);
+            Assert.AreEqual("ns1073.hostgator.com.", response.NameServers[0]);
+            Assert.AreEqual("ns1074.hostgator.com.", response.NameServers[1]);
+
+            // Domain Status
+            Assert.AreEqual(1, response.DomainStatus.Count);
+            Assert.AreEqual("REGISTERED, DELEGATED, UNVERIFIED", response.DomainStatus[0]);
+
+            Assert.AreEqual(11, response.FieldsParsed);
         }
     }
 }
