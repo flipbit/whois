@@ -10,8 +10,7 @@ tag: kz
 
 # Set query response type:
 set: Status = NotFound
----
-Whois Server for the KZ top level domain name.
-This server is maintained by KazNIC Organization, a ccTLD manager for Kazakhstan Republic.
 
+hint: Nothing found for this query.
+---
 *** Nothing found for this query.
