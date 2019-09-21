@@ -8,63 +8,41 @@ name: whois.nic.ec/ex/Found
 tag: whois.nic.ec
 tag: ex
 
+# End tokens on new lines
+terminateOnNewLine: true
+
 # Set query response type:
 set: Status = Found
 ---
-
-
-Los datos detallados a continuación por NIC.EC es informacion publica cuyo proposito es
-unicamente informativo que sirve para la obtencion de la informacion acerca de o
-relacionado con los registros de un Nombre de Dominio. Los datos se muestran de acuerdo
-a los datos de NIC.EC en la ultima actualizacion de su base de datos. Al realizar una
-busqueda de WHOIS de un dominio, usted declara y acepta que los datos seran utilizados
-solo para fines legales y que no utilizara los datos para envios masivos no solicitados
-de correo electronico o para publicidad o fines comerciales no solicitados.
-
-
-
 Domain Information
-Query: google.ec
-Created: 16 Oct 2003
-Modified: 17 Sep 2013
-Expires: 16 Oct 2014
+Query: { DomainName : IsDomainName, ToLower }
+Created: { Registered ? : ToDateTimeUtc("dd MMM yyyy") }
+Modified: { Updated ? : ToDateTimeUtc("dd MMM yyyy") }
+Expires: { Expiration ? : ToDateTimeUtc("dd MMM yyyy") }
 Name Servers:
-    ns1.google.com
-    ns2.google.com
-    ns3.google.com
-    ns4.google.com
+    { NameServers ? : IsDomainName, ToLower, Repeating }
 
 Registrar Information
-Registrar Name: MarkMonitor Inc.
-Registration URL: www.markmonitor.com
-Address: 391 N. Ancestor Place
-Boise, ID 83704
-Country: US
-
-
-
+Registrar Name: { Registrar.Name ? }
+Registration URL: { Registrar.Url ? : IsUrl, ToLower }
 
 Registrant:
-Name: Rose Hagan
-Organisation: Google Inc.
+Name: { Registrant.Name ? }
+Organisation: { Registrant.Organization ? }
 Address:
-	2400 E. Bayshore Pkwy
-	Mountain View, CA 94043
-	US
-Email Address: dns-admin@google.com
-Phone Number: 1-6503300100
-Fax Number: 1-6503300100
+	{ Registrant.Address ? : IsNotEmpty, Repeating }
+Email Address: { Registrant.Email ? : IsEmail }
+Phone Number: { Registrant.TelephoneNumber ? : IsPhoneNumber }
+Fax Number: { Registrant.FaxNumber ? : IsPhoneNumber }
 
 
 Admin Contact:
-Name: Domain Provisioning
-Organisation: MarkMonitor
+Name: { AdminContact.Name ? }
+Organisation: { AdminContact.Organization ? }
 Address:
-	10400 Overland Rd.,PMB 155
-	Boise, Idaho 83709
-	US
-Email Address: ccops@markmonitor.com
-Phone Number: 1208-3895740
-Fax Number: 1208-3895799
+	{ AdminContact.Address ? : IsNotEmpty, Repeating }
+Email Address: { AdminContact.Email ? : IsEmail }
+Phone Number: { AdminContact.TelephoneNumber ? : IsPhoneNumber }
+Fax Number: { AdminContact.TelephoneNumber ? : IsPhoneNumber }
 
 

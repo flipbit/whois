@@ -8,23 +8,16 @@ name: whois.nic.ec/ex/NotFound
 tag: whois.nic.ec
 tag: ex
 
+# End tokens on new lines
+terminateOnNewLine: true
+
 # Set query response type:
 set: Status = NotFound
+
+hint: Not Registered
 ---
-
-
-Los datos detallados a continuación por NIC.EC es informacion publica cuyo proposito es
-unicamente informativo que sirve para la obtencion de la informacion acerca de o
-relacionado con los registros de un Nombre de Dominio. Los datos se muestran de acuerdo
-a los datos de NIC.EC en la ultima actualizacion de su base de datos. Al realizar una
-busqueda de WHOIS de un dominio, usted declara y acepta que los datos seran utilizados
-solo para fines legales y que no utilizara los datos para envios masivos no solicitados
-de correo electronico o para publicidad o fines comerciales no solicitados.
-
-
-
 Domain Information
-Query: u34jedzcq.ec
+Query: { DomainName : IsDomainName, ToLower }
 Status: Not Registered
 
 
