@@ -26,6 +26,8 @@ namespace Whois.Parsing.Whois.Nic.Im.Im
 
             Assert.Greater(sample.Length, 0);
             Assert.AreEqual(WhoisResponseStatus.NotFound, response.Status);
+
+            AssertWriter.Write(response);
         }
 
         [Test]
@@ -36,6 +38,8 @@ namespace Whois.Parsing.Whois.Nic.Im.Im
 
             Assert.Greater(sample.Length, 0);
             Assert.AreEqual(WhoisResponseStatus.Found, response.Status);
+
+            AssertWriter.Write(response);
         }
     }
 }

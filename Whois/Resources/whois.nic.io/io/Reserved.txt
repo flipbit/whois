@@ -10,7 +10,8 @@ tag: io
 
 # Set query response type:
 set: Status = Reserved
----
 
+hint: Domain reserved
+---
 Domain reserved
 

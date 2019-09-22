@@ -10,8 +10,8 @@ tag: io
 
 # Set query response type:
 set: Status = NotFound
+
+hint: is available for purchase
 ---
-
-Domain u34jedzcq.io is available for purchase
+Domain { DomainName : IsDomainName, ToLower } is available for purchase
 Please visit http://www.nic.io/ for more information
-

@@ -11,47 +11,25 @@ tag: im
 # Set query response type:
 set: Status = Found
 ---
-Domain Name:	google.im
+Domain Name:	{ DomainName : IsDomainName, ToLower }
 Domain Managers
-Name: Reseller - Mark Monitor
-Address
-391 N. Ancestor Pl.
-Boise, ID
-83704
-United States
+Name: { Registrar.Name }
 Domain Owners / Registrant
-Name: Google Inc.
+Name: { Registrant.Name }
 Address
-1600 Amphitheatre Parkway
-Mountain View, CA
-94043
-United States
+{ Registrant.Address ? : !StartsWith('Administrative Contact'), IsNotEmpty, Repeating }
 Administrative Contact
-Name:  Google Inc. Domain Admin
+Name:  { AdminContact.Name }
 Address
-1600 Amphitheatre Parkway
-Mountain View, CA
-94043
-United States
+{ AdminContact.Address ? : !StartsWith('Billing Contact'), IsNotEmpty, Repeating }
 Billing Contact
-Name: Mr Domain Administrator
+Name: { BillingContact.Name }
 Address
-Emerald Tech Center
-391 N. Ancestor Pl
-Boise, ID
-83704
-United States
+{ BillingContact.Address ? : !StartsWith('Technical Contact'), IsNotEmpty, Repeating }
 Technical Contact
-Name: Mr Domain Administrator
+Name: { TechnicalContact.Name }
 Address
-Emerald Tech Center
-391 N. Ancestor Pl
-Boise, ID
-83704
-United States
+{ TechnicalContact.Address ? : !StartsWith('Domain Details'), IsNotEmpty, Repeating }
 Domain Details
-Expiry Date: 03/08/2014 23:59:52
-Name Server: ns1.google.com.
-Name Server: ns2.google.com.
-Name Server: ns3.google.com.
-Name Server: ns4.google.com.
+Expiry Date: { Expiration ? : ToDateTimeUtc("dd/MM/yyyy HH:mm:ss") }
+Name Server: { NameServers ? : IsDomainName, ToLower, Repeating }

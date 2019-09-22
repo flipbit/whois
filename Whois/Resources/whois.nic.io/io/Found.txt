@@ -8,22 +8,31 @@ name: whois.nic.io/io/Found
 tag: whois.nic.io
 tag: io
 
+# End tokens on new lines
+terminateOnNewLine: true
+
 # Set query response type:
 set: Status = Found
 ---
+Domain : { DomainName : IsDomainName, ToLower }
+Status : { DomainStatus ? : Repeating, CleanDomainStatus }
+Expiry : { Expiration ? : ToDateTimeUtc("yyyy-MM-dd") }
 
-Domain : google.io
-Status : Live
-Expiry : 2013-09-30
+NS 1   : { NameServers ? : IsDomainName, ToLower, Repeating }
+NS 2   : { NameServers ? : IsDomainName, ToLower, Repeating }
+NS 3   : { NameServers ? : IsDomainName, ToLower, Repeating }
+NS 4   : { NameServers ? : IsDomainName, ToLower, Repeating }
 
-NS 1   : ns1.google.com
-NS 2   : ns2.google.com
-NS 3   : ns3.google.com
-NS 4   : ns4.google.com
+       : { Registrant.Name ? }
+       : { Registrant.Address ? : IsNotEmpty, IsNot('.') }
+       : { Registrant.Address ? : IsNotEmpty, IsNot('.') }
+       : { Registrant.Address ? : IsNotEmpty, IsNot('.') }
+       : { Registrant.Address ? : IsNotEmpty, IsNot('.') }
+       : { Registrant.Address ? : IsNotEmpty, IsNot('.') }
 
-       : GOOGLE INC.
-       : 2400 E. Bayshore Pkwy
-       : Mountain View
-       : CA
-       : US
-
+Owner  : { Registrant.Name ? }
+Owner  : { Registrant.Address ? : IsNotEmpty, IsNot('.') }
+Owner  : { Registrant.Address ? : IsNotEmpty, IsNot('.') }
+Owner  : { Registrant.Address ? : IsNotEmpty, IsNot('.') }
+Owner  : { Registrant.Address ? : IsNotEmpty, IsNot('.') }
+Owner  : { Registrant.Address ? : IsNotEmpty, IsNot('.') }

@@ -8,8 +8,12 @@ name: whois.nic.im/im/NotFound
 tag: whois.nic.im
 tag: im
 
+# End tokens on new lines
+terminateOnNewLine: true
+
 # Set query response type:
 set: Status = NotFound
+
+hint: was not found
 ---
-Domain Name:	u34jedzcq.im
-The domain u34jedzcq.im was not found.
+Domain Name:	{ DomainName : IsDomainName, ToLower }
