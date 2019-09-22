@@ -8,79 +8,66 @@ name: whois.nic.gd/gd/Found
 tag: whois.nic.gd
 tag: gd
 
+# Lines can appear out of order
+outOfOrder: true
+
+# End tokens on new lines
+terminateOnNewLine: true
+
 # Set query response type:
 set: Status = Found
 ---
-; The data in the WHOIS database of KSregistry GmbH is provided by
-; KSregistry GmbH for information purposes, and to assist persons in
-; obtaining information about or related to domain name registration
-; records. KSregistry GmbH does not guarantee its accuracy.
-; By submitting a WHOIS query, you agree that you will use this data
-; only for lawful purposes and that, under no circumstances, you will
-; use this data to
-; 1) allow, enable, or otherwise support the transmission of mass
-;    unsolicited, commercial advertising or solicitations via E-mail
-;    (spam); or
-; 2) enable high volume, automated, electronic processes that apply
-;    to KSregistry GmbH or its systems.
-; KSregistry GmbH reserves the right to modify these terms.
-; By submitting this query, you agree to abide by this policy.
+domain name: { DomainName : IsDomainName, ToLower }
+registrar: { Registrar.Name ? }
+url: { Registrar.Url ? : IsUrl, ToLower }
+status: { DomainStatus ? : Repeating, CleanDomainStatus }
+status: { DomainStatus ? : Repeating, CleanDomainStatus }
+created date: { Registered ? : ToDateTimeUtc("yyyy-MM-dd HH:mm:ss") }
+updated date: { Updated ? : ToDateTimeUtc("yyyy-MM-dd HH:mm:ss") }
+expiration date: { Expiration ? : ToDateTimeUtc("yyyy-MM-dd HH:mm:ss") }
 
-domain name: GOOGLE.GD
-registrar: MarkMonitor Inc.
-url: www.markmonitor.com
-status: clientupdateprohibited
-status: clienttransferprohibited
-created date: 2006-12-11 00:00:00
-updated date: 2013-11-12 16:07:05
-expiration date: 2014-12-11 00:00:00
+owner-contact: { Registrant.RegistryId ? }
+owner-organization: { Registrant.Organization ? }
+owner-name: { Registrant.Name ? }
+owner-street: { Registrant.Address ? : IsNotEmpty }
+owner-city: { Registrant.Address ? : IsNotEmpty }
+owner-zip: { Registrant.Address ? : IsNotEmpty }
+owner-country: { Registrant.Address ? : IsNotEmpty }
+owner-phone: { Registrant.TelephoneNumber ? : IsPhoneNumber }
+owner-fax: { Registrant.FaxNumber ? : IsPhoneNumber }
+owner-email: { Registrant.Email ? : IsEmail }
 
-owner-contact: P-GXI35
-owner-organization: Google, Inc.
-owner-name: Google, Inc.
-owner-street: 1600 Amphitheatre Parkway
-owner-city: Mountain View
-owner-zip: 94043
-owner-country: US
-owner-phone: +1.6503300100
-owner-fax: +1.6506181499
-owner-email: dns-admin@google.com
+admin-contact: { AdminContact.RegistryId ? }
+admin-organization: { AdminContact.Organization ? }
+admin-name: { AdminContact.Name ? }
+admin-street: { AdminContact.Address ? : IsNotEmpty }
+admin-city: { AdminContact.Address ? : IsNotEmpty }
+admin-zip: { AdminContact.Address ? : IsNotEmpty }
+admin-country: { AdminContact.Address ? : IsNotEmpty }
+admin-phone: { AdminContact.TelephoneNumber ? : IsPhoneNumber }
+admin-fax: { AdminContact.TelephoneNumber ? : IsPhoneNumber }
+admin-email: { AdminContact.Email ? : IsEmail }
 
-admin-contact: P-GXI35
-admin-organization: Google, Inc.
-admin-name: Google, Inc.
-admin-street: 1600 Amphitheatre Parkway
-admin-city: Mountain View
-admin-zip: 94043
-admin-country: US
-admin-phone: +1.6503300100
-admin-fax: +1.6506181499
-admin-email: dns-admin@google.com
+tech-contact: { TechnicalContact.RegistryId  ? }
+tech-organization: { TechnicalContact.Organization ? }
+tech-name: { TechnicalContact.Name ? }
+tech-street: { TechnicalContact.Address ? : IsNotEmpty }
+tech-city: { TechnicalContact.Address ? : IsNotEmpty }
+tech-zip: { TechnicalContact.Address ? : IsNotEmpty }
+tech-country: { TechnicalContact.Address ? : IsNotEmpty }
+tech-phone: { TechnicalContact.TelephoneNumber ? : IsPhoneNumber }
+tech-fax: { TechnicalContact.TelephoneNumber ? : IsPhoneNumber }
+tech-email: { TechnicalContact.Email ? : IsEmail }
 
-tech-contact: P-GXI35
-tech-organization: Google, Inc.
-tech-name: Google, Inc.
-tech-street: 1600 Amphitheatre Parkway
-tech-city: Mountain View
-tech-zip: 94043
-tech-country: US
-tech-phone: +1.6503300100
-tech-fax: +1.6506181499
-tech-email: dns-admin@google.com
+billing-organization: { BillingContact.Organization ? }
+billing-name: { BillingContact.Name ? }
+billing-street: { BillingContact.Address ? : IsNotEmpty }
+billing-city: { BillingContact.Address ? : IsNotEmpty }
+billing-zip: { BillingContact.Address ? : IsNotEmpty }
+billing-country: { BillingContact.Address ? : IsNotEmpty }
+billing-phone: { BillingContact.TelephoneNumber ? : IsPhoneNumber }
+billing-fax: { BillingContact.FaxNumber ? : IsPhoneNumber }
+billing-email: { BillingContact.Email ? : IsEmail }
 
-billing-contact: P-UMM26
-billing-organization: MarkMonitor
-billing-name: UNKNOWN MarkMonitor
-billing-street: 10400 Overland Road
-billing-city: Idaho
-billing-zip: 83709
-billing-country: US
-billing-phone: +1.2083895740
-billing-fax: +1.2083895771
-billing-email: ccops@markmonitor.com
-
-nameserver: ns1.google.com
-nameserver: ns2.google.com
-
-; Please register your domains at; www.markmonitor.com
+nameserver: { NameServers ? : IsDomainName, ToLower, Repeating }
 

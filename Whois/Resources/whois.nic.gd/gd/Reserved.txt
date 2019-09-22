@@ -10,5 +10,7 @@ tag: gd
 
 # Set query response type:
 set: Status = Reserved
+
+hint: RESTRICTED - Restricted domain name
 ---
 RESTRICTED - Restricted domain name
