@@ -1,3 +1,4 @@
+using System;
 using NUnit.Framework;
 using Whois.Models;
 using Whois.Parsers;
@@ -5,7 +6,6 @@ using Whois.Parsers;
 namespace Whois.Parsing.Whois.Nic.Hu.Hu
 {
     [TestFixture]
-    [Ignore("TODO")]
     public class HuParsingTests : ParsingTests
     {
         private WhoisParser parser;
@@ -26,6 +26,11 @@ namespace Whois.Parsing.Whois.Nic.Hu.Hu
 
             Assert.Greater(sample.Length, 0);
             Assert.AreEqual(WhoisResponseStatus.NotFound, response.Status);
+
+            Assert.AreEqual(0, response.ParsingErrors);
+            Assert.AreEqual("whois.nic.hu/hu/NotFound", response.TemplateName);
+
+            Assert.AreEqual(1, response.FieldsParsed);
         }
 
         [Test]
@@ -36,6 +41,15 @@ namespace Whois.Parsing.Whois.Nic.Hu.Hu
 
             Assert.Greater(sample.Length, 0);
             Assert.AreEqual(WhoisResponseStatus.Found, response.Status);
+
+            Assert.AreEqual(0, response.ParsingErrors);
+            Assert.AreEqual("whois.nic.hu/hu/Found", response.TemplateName);
+
+            Assert.AreEqual("google.hu", response.DomainName);
+
+            Assert.AreEqual(new DateTime(2000, 03, 25, 23, 20, 39, 000, DateTimeKind.Utc), response.Registered);
+
+            Assert.AreEqual(3, response.FieldsParsed);
         }
     }
 }

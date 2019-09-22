@@ -11,12 +11,6 @@ tag: hu
 # Set query response type:
 set: Status = Found
 ---
-% Whois server 2.08d serving the hu ccTLD
-
-domain:         google.hu
-record created: 2000.03.25 23:20:39
-További adatokért ld.:
-http://www.domain.hu/domain/domainsearch/
-For further data see:
-http://www.domain.hu/domain/English/domainsearch/
+domain:         { DomainName : IsDomainName, ToLower }
+record created: { Registered ? : ToDateTimeUtc("yyyy.MM.dd HH:mm:ss") }
 
