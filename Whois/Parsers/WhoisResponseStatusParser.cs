@@ -53,6 +53,7 @@ namespace Whois.Parsers
             if (Equals(status, "DOM_HELD")) return WhoisResponseStatus.Other;
             if (Equals(status, "DOM_EXP")) return WhoisResponseStatus.Expired;
             if (Equals(status, "DOM_DAKT")) return WhoisResponseStatus.Other;
+            if (Equals(status, "free")) return WhoisResponseStatus.NotFound;
 
             if (whoisServerUrl == "whois.dns.pt")
             {
