@@ -1,3 +1,4 @@
+using System;
 using NUnit.Framework;
 using Whois.Models;
 using Whois.Parsers;
@@ -5,7 +6,6 @@ using Whois.Parsers;
 namespace Whois.Parsing.Whois.Nic.Md.Md
 {
     [TestFixture]
-    [Ignore("TODO")]
     public class MdParsingTests : ParsingTests
     {
         private WhoisParser parser;
@@ -26,6 +26,24 @@ namespace Whois.Parsing.Whois.Nic.Md.Md
 
             Assert.Greater(sample.Length, 0);
             Assert.AreEqual(WhoisResponseStatus.Found, response.Status);
+
+            Assert.AreEqual(0, response.ParsingErrors);
+            Assert.AreEqual("whois.nic.md/md/Found", response.TemplateName);
+
+            Assert.AreEqual("hotel.md", response.DomainName);
+
+            Assert.AreEqual(new DateTime(2002, 03, 25, 00, 00, 00, 000, DateTimeKind.Utc), response.Registered);
+            Assert.AreEqual(new DateTime(2011, 03, 25, 00, 00, 00, 000, DateTimeKind.Utc), response.Expiration);
+
+             // Registrant Details
+            Assert.AreEqual("Diginet S.R.L.", response.Registrant.Name);
+
+            // Nameservers
+            Assert.AreEqual(2, response.NameServers.Count);
+            Assert.AreEqual("ns0.starnet.md", response.NameServers[0]);
+            Assert.AreEqual("ns1.starnet.md", response.NameServers[1]);
+
+            Assert.AreEqual(7, response.FieldsParsed);
         }
 
         [Test]
@@ -36,6 +54,11 @@ namespace Whois.Parsing.Whois.Nic.Md.Md
 
             Assert.Greater(sample.Length, 0);
             Assert.AreEqual(WhoisResponseStatus.NotFound, response.Status);
+
+            Assert.AreEqual(0, response.ParsingErrors);
+            Assert.AreEqual("whois.nic.md/md/NotFound", response.TemplateName);
+
+            Assert.AreEqual(1, response.FieldsParsed);
         }
 
         [Test]
@@ -46,6 +69,25 @@ namespace Whois.Parsing.Whois.Nic.Md.Md
 
             Assert.Greater(sample.Length, 0);
             Assert.AreEqual(WhoisResponseStatus.Found, response.Status);
+
+            Assert.AreEqual(0, response.ParsingErrors);
+            Assert.AreEqual("whois.nic.md/md/Found", response.TemplateName);
+
+            Assert.AreEqual("google.md", response.DomainName);
+
+            Assert.AreEqual(new DateTime(2006, 05, 02, 00, 00, 00, 000, DateTimeKind.Utc), response.Registered);
+            Assert.AreEqual(new DateTime(2014, 05, 02, 00, 00, 00, 000, DateTimeKind.Utc), response.Expiration);
+
+             // Registrant Details
+            Assert.AreEqual("Google Inc.", response.Registrant.Name);
+
+
+            // Nameservers
+            Assert.AreEqual(2, response.NameServers.Count);
+            Assert.AreEqual("ns1.google.com", response.NameServers[0]);
+            Assert.AreEqual("ns2.google.com", response.NameServers[1]);
+
+            Assert.AreEqual(7, response.FieldsParsed);
         }
     }
 }

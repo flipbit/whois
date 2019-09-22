@@ -8,13 +8,14 @@ name: whois.nic.md/md/Found
 tag: whois.nic.md
 tag: md
 
+# End tokens on new lines
+terminateOnNewLine: true
+
 # Set query response type:
 set: Status = Found
 ---
-Domain name: hotel.md
-Registrant: Diginet S.R.L.
-Created: 2002-03-25
-Expiration date: 2011-03-25
-Name server: ns0.starnet.md  87.248.160.5
-Name server: ns1.starnet.md  87.248.160.5
-DNS update: 2010-10-16 15:04
+Domain name: { DomainName : IsDomainName, ToLower }
+Registrant: { Registrant.Name ? }
+Created: { Registered ? : ToDateTimeUtc("yyyy-MM-dd") }
+Expiration date: { Expiration ? : ToDateTimeUtc("yyyy-MM-dd") }
+Name server: { NameServers ? : SubstringBefore(' '), IsDomainName, ToLower, Repeating }
