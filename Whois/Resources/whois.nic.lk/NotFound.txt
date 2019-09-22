@@ -1,13 +1,16 @@
 ---
 #
-# .xn--xkc2al3hye2a Parsing Template
+# .lk Parsing Template
 #
-name: whois.nic.lk/xn--xkc2al3hye2a/NotFound
+name: whois.nic.lk/NotFound
 
 # Use this template for queries to whois.nic.lk:
 tag: whois.nic.lk
+tag: lk
+tag: xn--fzc2c9e2c
 tag: xn--xkc2al3hye2a
 
 # Set query response type:
 set: Status = NotFound
 ---
+This Domain is not available in our whois database

@@ -232,12 +232,6 @@
     <None Remove="Resources\whois.nic.kz\kz\NotFound.txt" />
     <None Remove="Resources\whois.nic.li\li\Found.txt" />
     <None Remove="Resources\whois.nic.li\li\NotFound.txt" />
-    <None Remove="Resources\whois.nic.lk\lk\Found.txt" />
-    <None Remove="Resources\whois.nic.lk\lk\NotFound.txt" />
-    <None Remove="Resources\whois.nic.lk\xn--fzc2c9e2c\Found.txt" />
-    <None Remove="Resources\whois.nic.lk\xn--fzc2c9e2c\NotFound.txt" />
-    <None Remove="Resources\whois.nic.lk\xn--xkc2al3hye2a\Found.txt" />
-    <None Remove="Resources\whois.nic.lk\xn--xkc2al3hye2a\NotFound.txt" />
     <None Remove="Resources\whois.nic.lv\lv\Found.txt" />
     <None Remove="Resources\whois.nic.lv\lv\NotFound.txt" />
     <None Remove="Resources\whois.nic.ly\ly\Found.txt" />
@@ -587,12 +581,8 @@
     <EmbeddedResource Include="Resources\whois.nic.kz\kz\NotFound.txt" />
     <EmbeddedResource Include="Resources\whois.nic.li\li\Found.txt" />
     <EmbeddedResource Include="Resources\whois.nic.li\li\NotFound.txt" />
-    <EmbeddedResource Include="Resources\whois.nic.lk\lk\Found.txt" />
-    <EmbeddedResource Include="Resources\whois.nic.lk\lk\NotFound.txt" />
-    <EmbeddedResource Include="Resources\whois.nic.lk\xn--fzc2c9e2c\Found.txt" />
-    <EmbeddedResource Include="Resources\whois.nic.lk\xn--fzc2c9e2c\NotFound.txt" />
-    <EmbeddedResource Include="Resources\whois.nic.lk\xn--xkc2al3hye2a\Found.txt" />
-    <EmbeddedResource Include="Resources\whois.nic.lk\xn--xkc2al3hye2a\NotFound.txt" />
+    <EmbeddedResource Include="Resources\whois.nic.lk\Found.txt" />
+    <EmbeddedResource Include="Resources\whois.nic.lk\NotFound.txt" />
     <EmbeddedResource Include="Resources\whois.nic.lv\lv\Found.txt" />
     <EmbeddedResource Include="Resources\whois.nic.lv\lv\NotFound.txt" />
     <EmbeddedResource Include="Resources\whois.nic.ly\ly\Found.txt" />

@@ -1,3 +1,4 @@
+using System;
 using NUnit.Framework;
 using Whois.Models;
 using Whois.Parsers;
@@ -5,7 +6,6 @@ using Whois.Parsers;
 namespace Whois.Parsing.Whois.Nic.Lk.Lk
 {
     [TestFixture]
-    [Ignore("TODO")]
     public class LkParsingTests : ParsingTests
     {
         private WhoisParser parser;
@@ -26,6 +26,25 @@ namespace Whois.Parsing.Whois.Nic.Lk.Lk
 
             Assert.Greater(sample.Length, 0);
             Assert.AreEqual(WhoisResponseStatus.Found, response.Status);
+
+            Assert.AreEqual(0, response.ParsingErrors);
+            Assert.AreEqual("whois.nic.lk/Found", response.TemplateName);
+
+            Assert.AreEqual("nestle.lk", response.DomainName);
+
+            Assert.AreEqual(new DateTime(2013, 03, 14, 00, 00, 00, 000, DateTimeKind.Utc), response.Updated);
+            Assert.AreEqual(new DateTime(2019, 01, 01, 00, 00, 00, 000, DateTimeKind.Utc), response.Expiration);
+
+             // Registrant Details
+            Assert.AreEqual("Nestle Lanka Ltd.", response.Registrant.Name);
+
+            // Nameservers
+            Assert.AreEqual(3, response.NameServers.Count);
+            Assert.AreEqual("aoadns1.nestle.com.", response.NameServers[0]);
+            Assert.AreEqual("ctrdns1.nestle.com.", response.NameServers[1]);
+            Assert.AreEqual("ctrdns1.nestle.com.", response.NameServers[2]);
+
+            Assert.AreEqual(8, response.FieldsParsed);
         }
 
         [Test]
@@ -36,6 +55,19 @@ namespace Whois.Parsing.Whois.Nic.Lk.Lk
 
             Assert.Greater(sample.Length, 0);
             Assert.AreEqual(WhoisResponseStatus.Found, response.Status);
+
+            Assert.AreEqual(0, response.ParsingErrors);
+            Assert.AreEqual("whois.nic.lk/Found", response.TemplateName);
+
+            Assert.AreEqual("clear.lk", response.DomainName);
+
+            Assert.AreEqual(new DateTime(2012, 11, 01, 00, 00, 00, 000, DateTimeKind.Utc), response.Registered);
+            Assert.AreEqual(new DateTime(2013, 11, 01, 00, 00, 00, 000, DateTimeKind.Utc), response.Expiration);
+
+             // Registrant Details
+            Assert.AreEqual("WELIGAMA HOTEL PROPERTIES LIMITED", response.Registrant.Name);
+
+            Assert.AreEqual(5, response.FieldsParsed);
         }
 
         [Test]
@@ -46,6 +78,11 @@ namespace Whois.Parsing.Whois.Nic.Lk.Lk
 
             Assert.Greater(sample.Length, 0);
             Assert.AreEqual(WhoisResponseStatus.NotFound, response.Status);
+
+            Assert.AreEqual(0, response.ParsingErrors);
+            Assert.AreEqual("whois.nic.lk/NotFound", response.TemplateName);
+
+            Assert.AreEqual(1, response.FieldsParsed);
         }
 
         [Test]
@@ -56,6 +93,26 @@ namespace Whois.Parsing.Whois.Nic.Lk.Lk
 
             Assert.Greater(sample.Length, 0);
             Assert.AreEqual(WhoisResponseStatus.Found, response.Status);
+
+            Assert.AreEqual(0, response.ParsingErrors);
+            Assert.AreEqual("whois.nic.lk/Found", response.TemplateName);
+
+            Assert.AreEqual("google.lk", response.DomainName);
+
+            Assert.AreEqual(new DateTime(2013, 03, 09, 00, 00, 00, 000, DateTimeKind.Utc), response.Updated);
+            Assert.AreEqual(new DateTime(2003, 04, 01, 00, 00, 00, 000, DateTimeKind.Utc), response.Registered);
+            Assert.AreEqual(new DateTime(2014, 04, 01, 00, 00, 00, 000, DateTimeKind.Utc), response.Expiration);
+
+             // Registrant Details
+            Assert.AreEqual("Google Inc.", response.Registrant.Name);
+
+
+            // Nameservers
+            Assert.AreEqual(2, response.NameServers.Count);
+            Assert.AreEqual("ns1.google.com.", response.NameServers[0]);
+            Assert.AreEqual("ns2.google.com.", response.NameServers[1]);
+
+            Assert.AreEqual(8, response.FieldsParsed);
         }
     }
 }
