@@ -28,7 +28,7 @@ namespace Whois.Parsing.Whois.Nic.Lk.Lk
             Assert.AreEqual(WhoisResponseStatus.Found, response.Status);
 
             Assert.AreEqual(0, response.ParsingErrors);
-            Assert.AreEqual("whois.nic.lk/Found", response.TemplateName);
+            Assert.AreEqual("whois.nic.lk/Found01", response.TemplateName);
 
             Assert.AreEqual("nestle.lk", response.DomainName);
 
@@ -57,7 +57,7 @@ namespace Whois.Parsing.Whois.Nic.Lk.Lk
             Assert.AreEqual(WhoisResponseStatus.Found, response.Status);
 
             Assert.AreEqual(0, response.ParsingErrors);
-            Assert.AreEqual("whois.nic.lk/Found", response.TemplateName);
+            Assert.AreEqual("whois.nic.lk/Found01", response.TemplateName);
 
             Assert.AreEqual("clear.lk", response.DomainName);
 
@@ -95,7 +95,7 @@ namespace Whois.Parsing.Whois.Nic.Lk.Lk
             Assert.AreEqual(WhoisResponseStatus.Found, response.Status);
 
             Assert.AreEqual(0, response.ParsingErrors);
-            Assert.AreEqual("whois.nic.lk/Found", response.TemplateName);
+            Assert.AreEqual("whois.nic.lk/Found01", response.TemplateName);
 
             Assert.AreEqual("google.lk", response.DomainName);
 

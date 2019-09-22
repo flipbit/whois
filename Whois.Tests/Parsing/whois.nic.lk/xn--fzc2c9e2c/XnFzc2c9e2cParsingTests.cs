@@ -1,3 +1,4 @@
+using System;
 using NUnit.Framework;
 using Whois.Models;
 using Whois.Parsers;
@@ -5,7 +6,6 @@ using Whois.Parsers;
 namespace Whois.Parsing.Whois.Nic.Lk.XnFzc2c9e2c
 {
     [TestFixture]
-    [Ignore("TODO")]
     public class XnFzc2c9e2cParsingTests : ParsingTests
     {
         private WhoisParser parser;
@@ -24,8 +24,7 @@ namespace Whois.Parsing.Whois.Nic.Lk.XnFzc2c9e2c
             var sample = SampleReader.Read("whois.nic.lk", "xn--fzc2c9e2c", "not_found.txt");
             var response = parser.Parse("whois.nic.lk", "xn--fzc2c9e2c", sample);
 
-            Assert.Greater(sample.Length, 0);
-            Assert.AreEqual(WhoisResponseStatus.NotFound, response.Status);
+            Assert.IsNull(response);
         }
 
         [Test]
@@ -36,6 +35,8 @@ namespace Whois.Parsing.Whois.Nic.Lk.XnFzc2c9e2c
 
             Assert.Greater(sample.Length, 0);
             Assert.AreEqual(WhoisResponseStatus.Found, response.Status);
+
+            AssertWriter.Write(response);
         }
     }
 }

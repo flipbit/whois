@@ -2,7 +2,7 @@
 #
 # .lk Parsing Template
 #
-name: whois.nic.lk/Found
+name: whois.nic.lk/Found01
 
 # Use this template for queries to whois.nic.lk:
 tag: whois.nic.lk
@@ -19,7 +19,7 @@ set: Status = Found
 Registrant:
 	{ Registrant.Name ? }
 Domain Name:
-	{ DomainName : IsDomainName, ToLower }
+	{ DomainName ? : IsDomainName, ToLower }
 
 Created on...............:{ Registered ? : ToDateTimeUtc("yyyy-MM-dd") }
 Expires on...............:{ Expiration ? : ToDateTimeUtc("yyyy-MM-dd") }
