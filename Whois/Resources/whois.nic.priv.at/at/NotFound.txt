@@ -10,11 +10,9 @@ tag: at
 
 # Set query response type:
 set: Status = NotFound
+
+hint: No entries found for the selected source(s).
 ---
-
-% Rights restricted by copyright and data protection act.
-% See http://www.nic.priv.at/ for details.
-
 % No entries found for the selected source(s).
 
 

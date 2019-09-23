@@ -8,41 +8,34 @@ name: whois.nic.priv.at/at/Found
 tag: whois.nic.priv.at
 tag: at
 
+# Extract contact information
+tag: fixup-contact
+
+# End tokens on new lines
+terminateOnNewLine: true
+
+# Use a FixUp to assign fields
+IgnoreMissingProperties: true
+
 # Set query response type:
 set: Status = Found
 ---
+domain:      { DomainName : IsDomainName, ToLower }
+descr:       { Registrar.Name ? }
+admin-c:     { AdminContact.RegistryId ? }
+tech-c:      { TechnicalContact.RegistryId ? }
+zone-c:      { ZoneContact.RegistryId ? }
+notify:      { Registrar.AbuseEmail ? : IsEmail }
+changed:     { Updated ? : SubstringAfter(' '), ToDateTimeUtc("yyyyMMdd") }
 
-% Rights restricted by copyright and data protection act.
-% See http://www.nic.priv.at/ for details.
-
-domain:      nic.priv.at
-descr:       Network Information Center for priv.at
-admin-c:     HM-PRIVAT
-tech-c:      HM-PRIVAT
-zone-c:      HM-PRIVAT
-notify:      hostmaster@nic.priv.at
-mnt-by:      PRIVAT-MNT
-changed:     cm@nic.priv.at 20021013
-source:      PRIVAT
-
-role:        Hostmaster priv.at
-address:     Verein fuer Internet-Benutzer Oesterreichs (VIBE!AT)
-address:     c/o Gerald Pfeifer
-address:     Mondweg 64
-address:     A-1140
-address:     Wien
-address:     Austria
-e-mail:      hostmaster@nic.priv.at
-admin-c:     CM125
-tech-c:      GP362-PRIVAT
-tech-c:      TM318-PRIVAT
-tech-c:      RW1
-tech-c:      CM125
-tech-c:      OL122
-nic-hdl:     HM-PRIVAT
-notify:      hostmaster@nic.priv.at
-mnt-by:      PRIVAT-MNT
-changed:     cm@nic.priv.at 20021013
-source:      PRIVAT
+role:        { Contact.Name }
+address:     { Address : IsNotEmpty }
+address:     { Address : IsNotEmpty }
+address:     { Address : IsNotEmpty }
+address:     { Address : IsNotEmpty }
+address:     { Address : IsNotEmpty }
+address:     { Address : IsNotEmpty }
+e-mail:      { Email : IsEmail }
+nic-hdl:     { Contact.Id }
 
 
