@@ -8,83 +8,71 @@ name: whois.nic.us/us/Found
 tag: whois.nic.us
 tag: us
 
+# End tokens on new lines
+terminateOnNewLine: true
+
 # Set query response type:
 set: Status = Found
 ---
-Domain Name:                                 GOOGLE.US
-Domain ID:                                   D775573-US
-Sponsoring Registrar:                        MARKMONITOR, INC.
-Sponsoring Registrar IANA ID:                292
-Registrar URL (registration services):       whois.markmonitor.com
-Domain Status:                               clientDeleteProhibited
-Domain Status:                               clientTransferProhibited
-Domain Status:                               clientUpdateProhibited
-Registrant ID:                               MMR-135878
-Registrant Name:                             Google Inc
-Registrant Organization:                     Google Inc.
-Registrant Address1:                         1600 Amphitheatre Parkway
-Registrant City:                             Mountain View
-Registrant State/Province:                   CA
-Registrant Postal Code:                      94043
-Registrant Country:                          United States
-Registrant Country Code:                     US
-Registrant Phone Number:                     +1.6502530000
-Registrant Facsimile Number:                 +1.6502530001
-Registrant Email:                            dns-admin@google.com
-Registrant Application Purpose:              P1
-Registrant Nexus Category:                   C21
-Administrative Contact ID:                   MMR-136042
-Administrative Contact Name:                 Christina Chiou
-Administrative Contact Organization:         Google Inc.
-Administrative Contact Address1:             1600 Amphitheatre Parkway
-Administrative Contact City:                 Mountain View
-Administrative Contact State/Province:       CA
-Administrative Contact Postal Code:          94043
-Administrative Contact Country:              United States
-Administrative Contact Country Code:         US
-Administrative Contact Phone Number:         +1.6502530000
-Administrative Contact Facsimile Number:     +1.6502530001
-Administrative Contact Email:                dns-admin@google.com
-Administrative Application Purpose:          P1
-Administrative Nexus Category:               C21
-Billing Contact ID:                          MMR-136042
-Billing Contact Name:                        Christina Chiou
-Billing Contact Organization:                Google Inc.
-Billing Contact Address1:                    1600 Amphitheatre Parkway
-Billing Contact City:                        Mountain View
-Billing Contact State/Province:              CA
-Billing Contact Postal Code:                 94043
-Billing Contact Country:                     United States
-Billing Contact Country Code:                US
-Billing Contact Phone Number:                +1.6502530000
-Billing Contact Facsimile Number:            +1.6502530001
-Billing Contact Email:                       dns-admin@google.com
-Billing Application Purpose:                 P1
-Billing Nexus Category:                      C21
-Technical Contact ID:                        MMR-136042
-Technical Contact Name:                      Christina Chiou
-Technical Contact Organization:              Google Inc.
-Technical Contact Address1:                  1600 Amphitheatre Parkway
-Technical Contact City:                      Mountain View
-Technical Contact State/Province:            CA
-Technical Contact Postal Code:               94043
-Technical Contact Country:                   United States
-Technical Contact Country Code:              US
-Technical Contact Phone Number:              +1.6502530000
-Technical Contact Facsimile Number:          +1.6502530001
-Technical Contact Email:                     dns-admin@google.com
-Technical Application Purpose:               P1
-Technical Nexus Category:                    C21
-Name Server:                                 NS1.GOOGLE.COM
-Name Server:                                 NS2.GOOGLE.COM
-Name Server:                                 NS3.GOOGLE.COM
-Name Server:                                 NS4.GOOGLE.COM
-Created by Registrar:                        BULKREGISTER.COM, INC.
-Last Updated by Registrar:                   MARKMONITOR, INC.
-Last Transferred Date:                       Fri Jul 22 18:37:41 GMT 2005
-Domain Registration Date:                    Fri Apr 19 23:15:57 GMT 2002
-Domain Expiration Date:                      Fri Apr 18 23:59:59 GMT 2014
-Domain Last Updated Date:                    Sun Mar 17 09:44:30 GMT 2013
+Domain Name:                                 { DomainName : IsDomainName, ToLower }
+Domain ID:                                   { RegistryDomainId ? }
+dponsoring Registrar:                        { Registrar.Name ? }
+Sponsoring Registrar IANA ID:                { Registrar.IanaId ? : IsNumeric }
+Registrar URL (registration services):       { Registrar.Url ? : IsUrl, ToLower }
+Domain Status:                               { DomainStatus ? : Repeating, CleanDomainStatus }
+Registrant ID:                               { Registrant.RegistryId ? }
+Registrant Name:                             { Registrant.Name ? }
+Registrant Organization:                     { Registrant.Organization ? }
+Registrant Address1:                         { Registrant.Address ? : IsNotEmpty }
+Registrant City:                             { Registrant.Address ? : IsNotEmpty }
+Registrant State/Province:                   { Registrant.Address ? : IsNotEmpty }
+Registrant Postal Code:                      { Registrant.Address ? : IsNotEmpty }
+Registrant Country:                          { Registrant.Address ? : IsNotEmpty }
+Registrant Country Code:                     { Registrant.Address ? : IsNotEmpty }
+Registrant Phone Number:                     { Registrant.TelephoneNumber ? : IsPhoneNumber }
+Registrant Facsimile Number:                 { Registrant.FaxNumber ? : IsPhoneNumber }
+Registrant Email:                            { Registrant.Email ? : IsEmail }
+Administrative Contact ID:                   { AdminContact.RegistryId ? }
+Administrative Contact Name:                 { AdminContact.Name ? }
+Administrative Contact Organization:         { AdminContact.Organization ? }
+Administrative Contact Address1:             { AdminContact.Address ? : IsNotEmpty }
+Administrative Contact City:                 { AdminContact.Address ? : IsNotEmpty }
+Administrative Contact State/Province:       { AdminContact.Address ? : IsNotEmpty }
+Administrative Contact Postal Code:          { AdminContact.Address ? : IsNotEmpty }
+Administrative Contact Country:              { AdminContact.Address ? : IsNotEmpty }
+Administrative Contact Country Code:         { AdminContact.Address ? : IsNotEmpty }
+Administrative Contact Phone Number:         { AdminContact.TelephoneNumber ? : IsPhoneNumber }
+Administrative Contact Facsimile Number:     { AdminContact.FaxNumber ? : IsPhoneNumber }
+Administrative Contact Email:                { AdminContact.Email ? : IsEmail }
+Billing Contact ID:                          { BillingContact.RegistryId  ? }
+Billing Contact Name:                        { BillingContact.Name ? }
+Billing Contact Organization:                { BillingContact.Organization ? }
+Billing Contact Address1:                    { BillingContact.Address ? : IsNotEmpty }
+Billing Contact Address2:                    { BillingContact.Address ? : IsNotEmpty }
+Billing Contact City:                        { BillingContact.Address ? : IsNotEmpty }
+Billing Contact State/Province:              { BillingContact.Address ? : IsNotEmpty }
+Billing Contact Postal Code:                 { BillingContact.Address ? : IsNotEmpty }
+Billing Contact Country:                     { BillingContact.Address ? : IsNotEmpty }
+Billing Contact Country Code:                { BillingContact.Address ? : IsNotEmpty }
+Billing Contact Phone Number:                { BillingContact.TelephoneNumber ? : IsPhoneNumber }
+Billing Contact Facsimile Number:            { BillingContact.FaxNumber ? : IsPhoneNumber }
+Billing Contact Email:                       { BillingContact.Email ? : IsEmail }
+Technical Contact ID:                        { TechnicalContact.RegistryId  ? }
+Technical Contact Name:                      { TechnicalContact.Name ? }
+Technical Contact Organization:              { TechnicalContact.Organization ? }
+Technical Contact Address1:                  { TechnicalContact.Address ? : IsNotEmpty }
+Technical Contact City:                      { TechnicalContact.Address ? : IsNotEmpty }
+Technical Contact State/Province:            { TechnicalContact.Address ? : IsNotEmpty }
+Technical Contact Postal Code:               { TechnicalContact.Address ? : IsNotEmpty }
+Technical Contact Country:                   { TechnicalContact.Address ? : IsNotEmpty }
+Technical Contact Country Code:              { TechnicalContact.Address ? : IsNotEmpty }
+Technical Contact Phone Number:              { TechnicalContact.TelephoneNumber ? : IsPhoneNumber }
+Technical Contact Facsimile Number:          { TechnicalContact.FaxNumber ? : IsPhoneNumber }
+Technical Contact Email:                     { TechnicalContact.Email ? : IsEmail }
+Name Server:                                 { NameServers ? : IsDomainName, ToLower, Repeating }
+Domain Registration Date:                    { Registered ? : ToDateTimeUtc("ddd MMM d HH:mm:ss \G\M\T yyyy") }
+Domain Expiration Date:                      { Updated    ? : ToDateTimeUtc("ddd MMM d HH:mm:ss \G\M\T yyyy") }
+Domain Last Updated Date:                    { Expiration ? : ToDateTimeUtc("ddd MMM d HH:mm:ss \G\M\T yyyy") }
 
 >>>> Whois database was last updated on: Tue Feb 18 20:39:32 GMT 2014 <<<<
 
