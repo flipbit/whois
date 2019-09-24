@@ -274,7 +274,6 @@
     <None Remove="Resources\whois.nic.tr\tr\NotFound.txt" />
     <None Remove="Resources\whois.nic.travel\travel\Found.txt" />
     <None Remove="Resources\whois.nic.travel\travel\NotFound.txt" />
-    <None Remove="Resources\whois.nic.travel\travel\Other.txt" />
     <None Remove="Resources\whois.nic.uk\uk\Found.txt" />
     <None Remove="Resources\whois.nic.uk\uk\Invalid.txt" />
     <None Remove="Resources\whois.nic.uk\uk\NotFound.txt" />
@@ -625,7 +624,6 @@
     <EmbeddedResource Include="Resources\whois.nic.tr\tr\NotFound.txt" />
     <EmbeddedResource Include="Resources\whois.nic.travel\travel\Found.txt" />
     <EmbeddedResource Include="Resources\whois.nic.travel\travel\NotFound.txt" />
-    <EmbeddedResource Include="Resources\whois.nic.travel\travel\Other.txt" />
     <EmbeddedResource Include="Resources\whois.nic.uk\uk\Found.txt" />
     <EmbeddedResource Include="Resources\whois.nic.uk\uk\Invalid.txt" />
     <EmbeddedResource Include="Resources\whois.nic.uk\uk\NotFound.txt" />
