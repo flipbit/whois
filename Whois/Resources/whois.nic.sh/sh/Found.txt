@@ -8,21 +8,19 @@ name: whois.nic.sh/sh/Found
 tag: whois.nic.sh
 tag: sh
 
+# End tokens on new lines
+terminateOnNewLine: true
+
 # Set query response type:
 set: Status = Found
 ---
+Domain : { DomainName : IsDomainName, ToLower }
+Status : { DomainStatus ? : Repeating, CleanDomainStatus }
+Expiry : { Expiration ? : ToDateTimeUtc("yyyy-MM-dd") }
 
-Domain : google.sh
-Status : Live
-Expiry : 2014-06-06
+NS 1   : { NameServers ? : IsDomainName, ToLower }
+NS 2   : { NameServers ? : IsDomainName, ToLower }
 
-NS 1   : ns1.google.com
-NS 2   : ns2.google.com
-
-Owner  : DNS Admin
-Owner  : Google Inc.
-Owner  : 1600 Amphitheatre Parkway
-Owner  : Mountain View
-Owner  : CA
-Owner  : US
+Owner  : { Registrant.Name ? }
+Owner  : { Registrant.Address ? : IsNotEmpty, Repeating }
 
