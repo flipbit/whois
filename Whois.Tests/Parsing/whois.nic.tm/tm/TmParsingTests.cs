@@ -5,7 +5,6 @@ using Whois.Parsers;
 namespace Whois.Parsing.Whois.Nic.Tm.Tm
 {
     [TestFixture]
-    [Ignore("TODO")]
     public class TmParsingTests : ParsingTests
     {
         private WhoisParser parser;
@@ -26,6 +25,13 @@ namespace Whois.Parsing.Whois.Nic.Tm.Tm
 
             Assert.Greater(sample.Length, 0);
             Assert.AreEqual(WhoisResponseStatus.NotFound, response.Status);
+
+            Assert.AreEqual(0, response.ParsingErrors);
+            Assert.AreEqual("whois.nic.tm/tm/NotFound", response.TemplateName);
+
+            Assert.AreEqual("u34jedzcq.tm", response.DomainName);
+
+            Assert.AreEqual(2, response.FieldsParsed);
         }
 
         [Test]
@@ -36,6 +42,29 @@ namespace Whois.Parsing.Whois.Nic.Tm.Tm
 
             Assert.Greater(sample.Length, 0);
             Assert.AreEqual(WhoisResponseStatus.Found, response.Status);
+
+            Assert.AreEqual(0, response.ParsingErrors);
+            Assert.AreEqual("whois.nic.tm/tm/Found", response.TemplateName);
+
+            Assert.AreEqual("google.tm", response.DomainName);
+
+             // Registrant Details
+            Assert.AreEqual("DNS Admin", response.Registrant.Name);
+
+             // Registrant Address
+            Assert.AreEqual(5, response.Registrant.Address.Count);
+            Assert.AreEqual("Google Inc.", response.Registrant.Address[0]);
+            Assert.AreEqual("1600 Amphitheatre Parkway", response.Registrant.Address[1]);
+            Assert.AreEqual("Mountain View", response.Registrant.Address[2]);
+            Assert.AreEqual("CA", response.Registrant.Address[3]);
+            Assert.AreEqual("US", response.Registrant.Address[4]);
+
+
+            // Domain Status
+            Assert.AreEqual(1, response.DomainStatus.Count);
+            Assert.AreEqual("Client Updt Lock", response.DomainStatus[0]);
+
+            Assert.AreEqual(9, response.FieldsParsed);
         }
     }
 }
