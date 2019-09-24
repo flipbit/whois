@@ -10,5 +10,7 @@ tag: so
 
 # Set query response type:
 set: Status = NotFound
+
+hint: Not found
 ---
-Not found: u34jedzcq.so
+Not found: { DomainName : IsDomainName, ToLower }
