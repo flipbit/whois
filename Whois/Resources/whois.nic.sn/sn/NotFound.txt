@@ -10,7 +10,7 @@ tag: sn
 
 # Set query response type:
 set: Status = NotFound
+
+hint: not found
 ---
-
-
-Domain u34jedzcq.sn not found
+Domain { DomainName : IsDomainName, ToLower } not found
