@@ -54,6 +54,7 @@ namespace Whois.Parsers
             if (Equals(status, "DOM_EXP")) return WhoisResponseStatus.Expired;
             if (Equals(status, "DOM_DAKT")) return WhoisResponseStatus.Other;
             if (Equals(status, "free")) return WhoisResponseStatus.NotFound;
+            if (Equals(status, "Prohibited String - Object Cannot Be Registered")) return WhoisResponseStatus.NotAvailable;
 
             if (whoisServerUrl == "whois.dns.pt")
             {

@@ -13,6 +13,8 @@ terminateOnNewLine: true
 
 # Set query response type:
 set: Status = NotFound
+
+hint: Not found:
 ---
 Not found: { DomainName : IsDomainName, ToLower }
 
