@@ -302,11 +302,8 @@
     <None Remove="Resources\whois.registry.om\om\Reserved.txt" />
     <None Remove="Resources\whois.registry.qa\qa\Found.txt" />
     <None Remove="Resources\whois.registry.qa\qa\NotFound.txt" />
-    <None Remove="Resources\whois.rnids.rs\rs\Expired.txt" />
     <None Remove="Resources\whois.rnids.rs\rs\Found.txt" />
-    <None Remove="Resources\whois.rnids.rs\rs\Locked.txt" />
     <None Remove="Resources\whois.rnids.rs\rs\NotFound.txt" />
-    <None Remove="Resources\whois.rnids.rs\rs\Other.txt" />
     <None Remove="Resources\whois.rotld.ro\ro\Found.txt" />
     <None Remove="Resources\whois.rotld.ro\ro\NotFound.txt" />
     <None Remove="Resources\whois.rotld.ro\ro\Other.txt" />
@@ -654,11 +651,8 @@
     <EmbeddedResource Include="Resources\whois.registry.om\om\Reserved.txt" />
     <EmbeddedResource Include="Resources\whois.registry.qa\qa\Found.txt" />
     <EmbeddedResource Include="Resources\whois.registry.qa\qa\NotFound.txt" />
-    <EmbeddedResource Include="Resources\whois.rnids.rs\rs\Expired.txt" />
     <EmbeddedResource Include="Resources\whois.rnids.rs\rs\Found.txt" />
-    <EmbeddedResource Include="Resources\whois.rnids.rs\rs\Locked.txt" />
     <EmbeddedResource Include="Resources\whois.rnids.rs\rs\NotFound.txt" />
-    <EmbeddedResource Include="Resources\whois.rnids.rs\rs\Other.txt" />
     <EmbeddedResource Include="Resources\whois.rotld.ro\ro\Found.txt" />
     <EmbeddedResource Include="Resources\whois.rotld.ro\ro\NotFound.txt" />
     <EmbeddedResource Include="Resources\whois.rotld.ro\ro\Other.txt" />

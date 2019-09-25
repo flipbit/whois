@@ -10,5 +10,7 @@ tag: rs
 
 # Set query response type:
 set: Status = NotFound
+
+hint: ERROR:103: Domain is not registered
 ---
 %ERROR:103: Domain is not registered

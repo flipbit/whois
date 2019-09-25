@@ -8,41 +8,23 @@ name: whois.rnids.rs/rs/Found
 tag: whois.rnids.rs
 tag: rs
 
+# End tokens on new lines
+terminateOnNewLine: true
+
 # Set query response type:
 set: Status = Found
 ---
-%
-%This is the RNIDS Whois server.
-%
-% Date Format         : DD.MM.YYYY
-% Whois Server Version: 1.0.0
-%
-% Rights restricted by copyright.
-% See http://www.rnids.rs/whois_en
-%
-%
-%
-% Ovo je odgovor od RNIDS Whois servera.
-%
-% Format datuma     : DD.MM.YYYY
-% Verzija Whois Servera : 1.0.0
-%
-% Sva prava zadržana. Za više informacija.
-% pogledajte http://www.rnids.rs/whois_sr
+Domain name: { DomainName : SubstringBeforeLast('.'), IsDomainName, ToLower }
+Domain status: { DomainStatus ? : Repeating, CleanDomainStatus }
+Registration date: { Registered ? : ToDateTimeUtc("dd.MM.yyyy HH:mm:ss") }
+Modification date: { Updated ? : ToDateTimeUtc("dd.MM.yyyy HH:mm:ss") }
+Expiration date: { Expiration ? : ToDateTimeUtc("dd.MM.yyyy HH:mm:ss") }
+Registrar: { Registrar.Name ? }
 
-Domain name: eg.rs.
-Domain status: Active
-Registration date: 22.10.2010 10:20:31
-Modification date: 08.08.2011 11:13:00
-Expiration date: 22.10.2012 10:20:31
-Registrar: GAMA Electronics d.o.o.
+Owner: { Registrant.Name ? }
+Address: { Registrant.Address ? : IsNotEmpty }
 
-
-Whois privacy has been activated for domain.
-
-
-DNS: bits-hq.bitsyu.net. - 217.24.17.10
-DNS: largo.bitsyu.net. - 217.24.17.80
+DNS: { NameServers ? : SubstringBefore('. -'), IsDomainName, ToLower, Repeating }
 
 
 
