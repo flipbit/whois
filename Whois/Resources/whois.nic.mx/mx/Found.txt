@@ -8,62 +8,46 @@ name: whois.nic.mx/mx/Found
 tag: whois.nic.mx
 tag: mx
 
+# End tokens on new lines
+terminateOnNewLine: true
+
 # Set query response type:
 set: Status = Found
 ---
+Domain Name: { DomainName : Trim, IsDomainName, ToLower }
 
-Domain Name: mpsnet.net.mx
-
-Created On:      16-abr-1997
-Expiration Date: 15-abr-2011
-Last Updated On: 31-mar-2009
-Registrar: NIC Mexico
-URL: http://www.nic.mx
+Created On: { Registered ? : Trim, ToDateTimeUtc("dd-MMM-yyyy") }
+Expiration Date: { Expiration ? : Trim, ToDateTimeUtc("dd-MMM-yyyy") }
+Last Updated On: { Updated ? : Trim, ToDateTimeUtc("dd-MMM-yyyy") }
+Created On: { Registered ? : Trim, ToDateTimeUtc("yyyy-MM-dd") }
+Expiration Date: { Expiration ? : Trim, ToDateTimeUtc("yyyy-MM-dd") }
+Last Updated On: { Updated ? : Trim, ToDateTimeUtc("yyyy-MM-dd") }
+Registrar: { Registrar.Name ? : Trim }
+URL: { Registrar.Url ? : Trim, IsUrl, ToLower }
 
 Registrant:
-   Name:         MPSNet Dominios
-   City:         Mexico
-   State:        Distrito Federal
-   Country:      Mexico
+   Name: { Registrant.Name ? : Trim }
+   City: { Registrant.Address ? : Trim, IsNotEmpty }
+   State: { Registrant.Address ? : Trim, IsNotEmpty }
+   Country: { Registrant.Address ? : Trim, IsNotEmpty }
 
 Administrative Contact:
-   Name:         Internet Engine S.A de C.V
-   City:         D.F.
-   State:        Distrito Federal
-   Country:      Mexico
+   Name: { AdminContact.Name ? : Trim }
+   City: { AdminContact.Address ? : Trim, IsNotEmpty }
+   State: { AdminContact.Address ? : Trim, IsNotEmpty }
+   Country: { AdminContact.Address ? : Trim, IsNotEmpty }
 
 Technical Contact:
-   Name:         Internet Engine S.A de C.V
-   City:         D.F.
-   State:        Distrito Federal
-   Country:      Mexico
+   Name: { TechnicalContact.Name ? : Trim }
+   City: { TechnicalContact.Address ? : Trim, IsNotEmpty }
+   State: { TechnicalContact.Address ? : Trim, IsNotEmpty }
+   Country: { TechnicalContact.Address ? : Trim, IsNotEmpty }
 
 Billing Contact:
-   Name:         Internet Engine S.A de C.V
-   City:         D.F.
-   State:        Distrito Federal
-   Country:      Mexico
+   Name: { BillingContact.Name ? : Trim }
+   City: { BillingContact.Address ? : Trim, IsNotEmpty }
+   State: { BillingContact.Address ? : Trim, IsNotEmpty }
+   Country: { BillingContact.Address ? : Trim, IsNotEmpty }
 
 Name Servers:
-   DNS:          dns1.mpsnet.net.mx       200.4.48.15
-   DNS:          dns2.mpsnet.net.mx       200.4.48.16
-
-
-La informacion que ha solicitado se provee exclusivamente para fines
-relacionados con la delegacion de nombres de dominio y la operacion del DNS
-administrado por NIC Mexico.
-
-Queda absolutamente prohibido su uso para otros propositos, incluyendo el envio
-de Correos Electronicos no solicitados con fines publicitarios o de promocion
-de productos y servicios (SPAM) sin mediar la autorizacion de los afectados y
-de NIC Mexico.
-
-La base de datos generada a partir del sistema de delegacion, esta protegida
-por las leyes de Propiedad Intelectual y todos los tratados internacionales
-sobre la materia.
-
-Si necesita mayor informacion sobre los registros aqui mostrados, favor de
-comunicarse a ayuda@nic.mx.
-
-Si desea notificar sobre correo no solicitado o accesos no autorizados, favor
-de enviar su mensaje a abuse@nic.mx.
+   DNS:          { NameServers ? : SubstringBefore(' '), IsDomainName, ToLower, Repeating }

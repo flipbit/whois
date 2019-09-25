@@ -10,15 +10,7 @@ tag: mx
 
 # Set query response type:
 set: Status = NotFound
+
+hint: Object_Not_Found
 ---
-
 No_Se_Encontro_El_Objeto/Object_Not_Found
-
-&PARAMETROS VALIDOS:
-
- &NombreObjeto    Busca en la base de datos de NIC Mexico el objeto solicitado.
- &=NombreDominio  Verifica la disponibilidad de un nombre de dominio.
- &?               Muestra este mensaje.
-
-&NOTA:
- &Si se busca informacion sobre un dominio este debe pertenecer al ccTLD .mx
