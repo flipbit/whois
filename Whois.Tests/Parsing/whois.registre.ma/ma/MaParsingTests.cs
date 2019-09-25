@@ -1,3 +1,4 @@
+using System;
 using NUnit.Framework;
 using Whois.Models;
 using Whois.Parsers;
@@ -5,7 +6,6 @@ using Whois.Parsers;
 namespace Whois.Parsing.Whois.Registre.Ma.Ma
 {
     [TestFixture]
-    [Ignore("TODO")]
     public class MaParsingTests : ParsingTests
     {
         private WhoisParser parser;
@@ -26,6 +26,11 @@ namespace Whois.Parsing.Whois.Registre.Ma.Ma
 
             Assert.Greater(sample.Length, 0);
             Assert.AreEqual(WhoisResponseStatus.NotFound, response.Status);
+
+            Assert.AreEqual(0, response.ParsingErrors);
+            Assert.AreEqual("whois.registre.ma/ma/NotFound", response.TemplateName);
+
+            Assert.AreEqual(1, response.FieldsParsed);
         }
 
         [Test]
@@ -36,6 +41,33 @@ namespace Whois.Parsing.Whois.Registre.Ma.Ma
 
             Assert.Greater(sample.Length, 0);
             Assert.AreEqual(WhoisResponseStatus.Found, response.Status);
+
+            Assert.AreEqual(0, response.ParsingErrors);
+            Assert.AreEqual("whois.registre.ma/ma/Found", response.TemplateName);
+
+            Assert.AreEqual("google.ma", response.DomainName);
+            Assert.AreEqual("333.google.ma", response.RegistryDomainId);
+
+            Assert.AreEqual(new DateTime(2009, 03, 24, 00, 00, 00, 000, DateTimeKind.Utc), response.Updated);
+            Assert.AreEqual(new DateTime(2009, 03, 24, 00, 00, 00, 000, DateTimeKind.Utc), response.Registered);
+
+             // Registrant Details
+            Assert.AreEqual("221.google.ma", response.Registrant.RegistryId);
+
+
+             // AdminContact Details
+            Assert.AreEqual("222.google.ma", response.AdminContact.RegistryId);
+
+
+             // BillingContact Details
+            Assert.AreEqual("222.google.ma", response.BillingContact.RegistryId);
+
+
+             // TechnicalContact Details
+            Assert.AreEqual("223.google.ma", response.TechnicalContact.RegistryId);
+
+
+            Assert.AreEqual(9, response.FieldsParsed);
         }
     }
 }

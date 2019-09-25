@@ -10,6 +10,7 @@ tag: ma
 
 # Set query response type:
 set: Status = NotFound
+
+hint: No Objects Found
 ---
-%rwhois V-1.5:003fff:00 whois.iam.net.ma (by Network Solutions, Inc. V-1.5.9.5)
 %error 230 No Objects Found
