@@ -306,7 +306,6 @@
     <None Remove="Resources\whois.rnids.rs\rs\NotFound.txt" />
     <None Remove="Resources\whois.rotld.ro\ro\Found.txt" />
     <None Remove="Resources\whois.rotld.ro\ro\NotFound.txt" />
-    <None Remove="Resources\whois.rotld.ro\ro\Other.txt" />
     <None Remove="Resources\whois.sgnic.sg\sg\Found.txt" />
     <None Remove="Resources\whois.sgnic.sg\sg\NotFound.txt" />
     <None Remove="Resources\whois.sk-nic.sk\sk\Found.txt" />
@@ -655,7 +654,6 @@
     <EmbeddedResource Include="Resources\whois.rnids.rs\rs\NotFound.txt" />
     <EmbeddedResource Include="Resources\whois.rotld.ro\ro\Found.txt" />
     <EmbeddedResource Include="Resources\whois.rotld.ro\ro\NotFound.txt" />
-    <EmbeddedResource Include="Resources\whois.rotld.ro\ro\Other.txt" />
     <EmbeddedResource Include="Resources\whois.sgnic.sg\sg\Found.txt" />
     <EmbeddedResource Include="Resources\whois.sgnic.sg\sg\NotFound.txt" />
     <EmbeddedResource Include="Resources\whois.sk-nic.sk\sk\Found.txt" />
