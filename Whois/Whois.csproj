@@ -316,8 +316,6 @@
     <None Remove="Resources\whois.thnic.co.th\th\Found.txt" />
     <None Remove="Resources\whois.thnic.co.th\th\NotFound.txt" />
     <None Remove="Resources\whois.tld.ee\ee\Found.txt" />
-    <None Remove="Resources\whois.tld.sy\sy\Found.txt" />
-    <None Remove="Resources\whois.tld.sy\sy\NotFound.txt" />
     <None Remove="Resources\whois.tonic.to\to\Found.txt" />
     <None Remove="Resources\whois.tonic.to\to\NotFound.txt" />
     <None Remove="Resources\whois.twnic.net.tw\tw\Found.txt" />
@@ -659,8 +657,6 @@
     <EmbeddedResource Include="Resources\whois.thnic.co.th\th\Found.txt" />
     <EmbeddedResource Include="Resources\whois.thnic.co.th\th\NotFound.txt" />
     <EmbeddedResource Include="Resources\whois.tld.ee\ee\Found.txt" />
-    <EmbeddedResource Include="Resources\whois.tld.sy\sy\Found.txt" />
-    <EmbeddedResource Include="Resources\whois.tld.sy\sy\NotFound.txt" />
     <EmbeddedResource Include="Resources\whois.tonic.to\to\Found.txt" />
     <EmbeddedResource Include="Resources\whois.tonic.to\to\NotFound.txt" />
     <EmbeddedResource Include="Resources\whois.twnic.net.tw\tw\Found.txt" />
