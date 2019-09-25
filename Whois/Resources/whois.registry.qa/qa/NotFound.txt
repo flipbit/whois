@@ -10,5 +10,7 @@ tag: qa
 
 # Set query response type:
 set: Status = NotFound
+
+hint: No Data Found
 ---
 No Data Found
