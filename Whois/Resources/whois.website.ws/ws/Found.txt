@@ -8,40 +8,31 @@ name: whois.website.ws/ws/Found
 tag: whois.website.ws
 tag: ws
 
+# End tokens on new lines
+terminateOnNewLine: true
+
 # Set query response type:
 set: Status = Found
 ---
+  Domain Name: { DomainName : IsDomainName, ToLower }
 
+  Registrar Name: { Registrar.Name ? }
+  Registrar Email: { Registrar.AbuseEmail ? : IsEmail }
+  Registrar Telephone: { Registrar.AbuseTelephoneNumber ? : IsPhoneNumber }
+  Registrar Whois: { Registrar.WhoisServerUrl ? : IsDomainName, ToLower }
 
-Welcome to the .WS Whois Server
+  Registrant Name: { Registrant.Name ? }
+  Registrant Email: { Registrant.Email ? : IsEmail }
 
-Use of this service for any purpose other
-than determining the availability of a domain
-in the .WS TLD to be registered is strictly
-prohibited.
+  Administrative Contact Email: { AdminContact.Email ? : IsEmail }
+  Administrative Contact Telephone: { AdminContact.TelephoneNumber ? : IsPhoneNumber }
 
-  Domain Name: GOOGLE.WS
-
-  Registrar Name: .WS Registry
-  Registrar Email: support@website.ws
-  Registrar Telephone: ---
-  Registrar Whois: whois.website.ws
-
-  Registrant Name: Google, Inc.
-  Registrant Email: ---
-
-  Administrative Contact Email: kulpreet@google.com
-  Administrative Contact Telephone: 6503300100
-
-  Domain Created: 2002-03-03
-  Domain Last Updated: 2008-12-08
-  Domain Currently Expires: 2010-03-03
+  Domain Created: { Registered ? : ToDateTimeUtc("yyyy-MM-dd") }
+  Domain Last Updated: { Updated ? : ToDateTimeUtc("yyyy-MM-dd") }
+  Domain Currently Expires: { Expiration ? : ToDateTimeUtc("yyyy-MM-dd") }
 
   Current Nameservers:
 
-    ns1.google.com
-    ns2.google.com
-    ns3.google.com
-    ns4.google.com
+    { NameServers ? : IsDomainName, ToLower, Repeating }
 
 
