@@ -8,30 +8,22 @@ name: whois.thnic.co.th/th/Found
 tag: whois.thnic.co.th
 tag: th
 
+# End tokens on new lines
+terminateOnNewLine: true
+
 # Set query response type:
 set: Status = Found
 ---
+Domain: { DomainName : IsDomainName, ToLower }
+Registrar: { Registrar.Name ? }
+Name Server: { NameServers ? : IsDomainName, ToLower, Repeating }
+Status: { DomainStatus ? : Repeating, CleanDomainStatus }
+Updated date: { Updated ? : ToDateTimeUtc("d MMM yyyy") }
+Created date: { Registered ? : ToDateTimeUtc("d MMM yyyy") }
+Exp date: { Expiration ? : ToDateTimeUtc("d MMM yyyy") }
+Domain Holder: { Registrant.Name }
+{ Registrant.Address ? : IsNotEmpty, Repeating }
 
-Whois Server Version 2.1.0
-
-Domain: GOOGLE.CO.TH
-Registrar: T.H.NIC Co., Ltd.
-Name Server: NS1.GOOGLE.COM
-Name Server: NS2.GOOGLE.COM
-Name Server: NS3.GOOGLE.COM
-Name Server: NS4.GOOGLE.COM
-Status: ACTIVE
-Updated date: 7 Sep 2012
-Created date: 8 Oct 2004
-Renew date: 8 Oct 2012
-Exp date: 7 Oct 2013
-Domain Holder: Google Inc.
-2400 Bayshore Parkway, Mountain Veiw, CA
-94043
-US
-
-Tech Contact: 13244
-MarkMonitor Inc.
-391 N Ancestor Place, Boise, ID
-83704
-US
+Tech Contact: { TechnicalContact.RegistryId }
+{ TechnicalContact.Name ? }
+{ TechnicalContact.Address ? : IsNotEmpty, Repeating }
