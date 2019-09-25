@@ -6,7 +6,6 @@ using Whois.Parsers;
 namespace Whois.Parsing.Whois.Registro.Br.Br
 {
     [TestFixture]
-    [Ignore("TODO")]
     public class BrParsingTests : ParsingTests
     {
         private WhoisParser parser;
@@ -35,25 +34,36 @@ namespace Whois.Parsing.Whois.Registro.Br.Br
 
             // Registrar Details
             Assert.AreEqual("HOSTGATOR-BRASIL (43)", response.Registrar.Name);
-            Assert.AreEqual("rob@hostgator.com.br", response.Registrar.AbuseEmail);
 
-            Assert.AreEqual(new DateTime(2011, 5, 9, 0, 0, 0), response.Updated);
-            Assert.AreEqual(new DateTime(2005, 9, 12, 0, 0, 0), response.Registered);
-            Assert.AreEqual(new DateTime(2018, 9, 12, 0, 0, 0), response.Expiration);
+            Assert.AreEqual(new DateTime(2011, 05, 09, 00, 00, 00, 000, DateTimeKind.Utc), response.Updated);
+            Assert.AreEqual(new DateTime(2005, 09, 12, 00, 00, 00, 000, DateTimeKind.Utc), response.Registered);
+            Assert.AreEqual(new DateTime(2018, 09, 12, 00, 00, 00, 000, DateTimeKind.Utc), response.Expiration);
 
              // Registrant Details
             Assert.AreEqual("008.852.780/0001-00", response.Registrant.RegistryId);
             Assert.AreEqual("Robledo Ribeiro Aloisio", response.Registrant.Name);
-            Assert.AreEqual("Hostgator Brasil Hospedagem e suporte tecnico LTDA", response.Registrant.Organization);
+
 
              // AdminContact Details
-            Assert.AreEqual("HOBRA", response.AdminContact.Name);
+            Assert.AreEqual("HOBRA", response.AdminContact.RegistryId);
+            Assert.AreEqual("Hostgator Brasil", response.AdminContact.Name);
+            Assert.AreEqual("rob@hostgator.com.br", response.AdminContact.Email);
+            Assert.AreEqual(new DateTime(2007, 12, 07, 00, 00, 00, 000, DateTimeKind.Utc), response.AdminContact.Created);
+
 
              // BillingContact Details
-            Assert.AreEqual("HOBRA", response.BillingContact.Name);
+            Assert.AreEqual("HOBRA", response.BillingContact.RegistryId);
+            Assert.AreEqual("Hostgator Brasil", response.BillingContact.Name);
+            Assert.AreEqual("rob@hostgator.com.br", response.BillingContact.Email);
+            Assert.AreEqual(new DateTime(2007, 12, 07, 00, 00, 00, 000, DateTimeKind.Utc), response.BillingContact.Created);
+
 
              // TechnicalContact Details
-            Assert.AreEqual("HOBRA", response.TechnicalContact.Name);
+            Assert.AreEqual("HOBRA", response.TechnicalContact.RegistryId);
+            Assert.AreEqual("Hostgator Brasil", response.TechnicalContact.Name);
+            Assert.AreEqual("rob@hostgator.com.br", response.TechnicalContact.Email);
+            Assert.AreEqual(new DateTime(2007, 12, 07, 00, 00, 00, 000, DateTimeKind.Utc), response.TechnicalContact.Created);
+
 
             // Nameservers
             Assert.AreEqual(4, response.NameServers.Count);
@@ -66,7 +76,7 @@ namespace Whois.Parsing.Whois.Registro.Br.Br
             Assert.AreEqual(1, response.DomainStatus.Count);
             Assert.AreEqual("published", response.DomainStatus[0]);
 
-            Assert.AreEqual(18, response.FieldsParsed);
+            Assert.AreEqual(22, response.FieldsParsed);
         }
 
         [Test]
@@ -100,7 +110,7 @@ namespace Whois.Parsing.Whois.Registro.Br.Br
 
             Assert.AreEqual("u34jedzcq.br", response.DomainName);
 
-            Assert.AreEqual(2, response.FieldsParsed);        
+            Assert.AreEqual(2, response.FieldsParsed);
         }
 
         [Test]
@@ -117,26 +127,30 @@ namespace Whois.Parsing.Whois.Registro.Br.Br
 
             Assert.AreEqual("google.com.br", response.DomainName);
 
-            // Registrar Details
-            Assert.AreEqual("ccops@markmonitor.com", response.Registrar.AbuseEmail);
-
-            Assert.AreEqual(new DateTime(2017, 4, 27, 0, 0, 0), response.Updated);
-            Assert.AreEqual(new DateTime(1999, 5, 18, 0, 0, 0), response.Registered);
-            Assert.AreEqual(new DateTime(2018, 5, 18, 0, 0, 0), response.Expiration);
+            Assert.AreEqual(new DateTime(2017, 04, 27, 00, 00, 00, 000, DateTimeKind.Utc), response.Updated);
+            Assert.AreEqual(new DateTime(1999, 05, 18, 00, 00, 00, 000, DateTimeKind.Utc), response.Registered);
 
              // Registrant Details
             Assert.AreEqual("06.990.590/0001-23", response.Registrant.RegistryId);
             Assert.AreEqual("Domain Administrator", response.Registrant.Name);
-            Assert.AreEqual("Google Brasil Internet Ltda", response.Registrant.Organization);
 
              // AdminContact Details
-            Assert.AreEqual("DOADM17", response.AdminContact.Name);
+            Assert.AreEqual("DOADM17", response.AdminContact.RegistryId);
+            Assert.AreEqual("Domain Admin", response.AdminContact.Name);
+            Assert.AreEqual("ccops@markmonitor.com", response.AdminContact.Email);
+            Assert.AreEqual(new DateTime(2010, 05, 20, 00, 00, 00, 000, DateTimeKind.Utc), response.AdminContact.Created);
+
 
              // BillingContact Details
-            Assert.AreEqual("NAB51", response.BillingContact.Name);
+            Assert.AreEqual("NAB51", response.BillingContact.RegistryId);
+
 
              // TechnicalContact Details
-            Assert.AreEqual("DOADM17", response.TechnicalContact.Name);
+            Assert.AreEqual("DOADM17", response.TechnicalContact.RegistryId);
+            Assert.AreEqual("Domain Admin", response.TechnicalContact.Name);
+            Assert.AreEqual("ccops@markmonitor.com", response.TechnicalContact.Email);
+            Assert.AreEqual(new DateTime(2010, 05, 20, 00, 00, 00, 000, DateTimeKind.Utc), response.TechnicalContact.Created);
+
 
             // Nameservers
             Assert.AreEqual(4, response.NameServers.Count);
@@ -149,7 +163,7 @@ namespace Whois.Parsing.Whois.Registro.Br.Br
             Assert.AreEqual(1, response.DomainStatus.Count);
             Assert.AreEqual("published", response.DomainStatus[0]);
 
-            Assert.AreEqual(17, response.FieldsParsed);
+            Assert.AreEqual(20, response.FieldsParsed);
         }
 
         [Test]
@@ -167,7 +181,7 @@ namespace Whois.Parsing.Whois.Registro.Br.Br
             Assert.AreEqual("registro.br", response.DomainName);
 
              // Registrant Details
-            Assert.AreEqual("Núcleo de Informação e Coordenação do Ponto BR (662379)", response.Registrant.Organization);
+            Assert.AreEqual("Núcleo de Informação e Coordenação do Ponto BR (662379)", response.Registrant.Name);
 
             Assert.AreEqual(3, response.FieldsParsed);
         }
@@ -180,30 +194,40 @@ namespace Whois.Parsing.Whois.Registro.Br.Br
 
             Assert.AreEqual(WhoisResponseStatus.Found, response.Status);
 
+            AssertWriter.Write(response);
             Assert.AreEqual(0, response.ParsingErrors);
             Assert.AreEqual("whois.registro.br/br/Found", response.TemplateName);
 
             Assert.AreEqual("001hosting.com.br", response.DomainName);
 
-            // Registrar Details
-            Assert.AreEqual("registro@ultraprovedor.com.br", response.Registrar.AbuseEmail);
-
-            Assert.AreEqual(new DateTime(2019, 4, 6, 0, 0, 0), response.Updated);
-            Assert.AreEqual(new DateTime(2001, 9, 19, 0, 0, 0), response.Registered);
-            Assert.AreEqual(new DateTime(2020, 9, 19, 0, 0, 0), response.Expiration);
+            Assert.AreEqual(new DateTime(2019, 04, 06, 00, 00, 00, 000, DateTimeKind.Utc), response.Updated);
+            Assert.AreEqual(new DateTime(2001, 09, 19, 00, 00, 00, 000, DateTimeKind.Utc), response.Registered);
 
              // Registrant Details
             Assert.AreEqual("350.562.738-05", response.Registrant.RegistryId);
-            Assert.AreEqual("Ultra Provedor", response.Registrant.Organization);
+            Assert.AreEqual("Ultra Provedor", response.Registrant.Name);
+
 
              // AdminContact Details
-            Assert.AreEqual("ULPRO5", response.AdminContact.Name);
+            Assert.AreEqual("ULPRO5", response.AdminContact.RegistryId);
+            Assert.AreEqual("Ultra Provedor", response.AdminContact.Name);
+            Assert.AreEqual("registro@ultraprovedor.com.br", response.AdminContact.Email);
+            Assert.AreEqual(new DateTime(2018, 02, 26, 00, 00, 00, 000, DateTimeKind.Utc), response.AdminContact.Created);
+
 
              // BillingContact Details
-            Assert.AreEqual("ULPRO5", response.BillingContact.Name);
+            Assert.AreEqual("ULPRO5", response.BillingContact.RegistryId);
+            Assert.AreEqual("Ultra Provedor", response.BillingContact.Name);
+            Assert.AreEqual("registro@ultraprovedor.com.br", response.BillingContact.Email);
+            Assert.AreEqual(new DateTime(2018, 02, 26, 00, 00, 00, 000, DateTimeKind.Utc), response.BillingContact.Created);
+
 
              // TechnicalContact Details
-            Assert.AreEqual("ULPRO5", response.TechnicalContact.Name);
+            Assert.AreEqual("ULPRO5", response.TechnicalContact.RegistryId);
+            Assert.AreEqual("Ultra Provedor", response.TechnicalContact.Name);
+            Assert.AreEqual("registro@ultraprovedor.com.br", response.TechnicalContact.Email);
+            Assert.AreEqual(new DateTime(2018, 02, 26, 00, 00, 00, 000, DateTimeKind.Utc), response.TechnicalContact.Created);
+
 
             // Nameservers
             Assert.AreEqual(3, response.NameServers.Count);
@@ -215,7 +239,7 @@ namespace Whois.Parsing.Whois.Registro.Br.Br
             Assert.AreEqual(1, response.DomainStatus.Count);
             Assert.AreEqual("published", response.DomainStatus[0]);
 
-            Assert.AreEqual(15, response.FieldsParsed);        
+            Assert.AreEqual(18, response.FieldsParsed);
         }
     }
 }

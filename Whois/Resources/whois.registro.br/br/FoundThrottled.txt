@@ -15,4 +15,4 @@ hint: for domain availability
 hint: Query rate limit exceeded
 ---
 domain:      { DomainName : IsDomainName, ToLower, EOL }
-owner:       { Registrant.Organization ? : EOL }
+owner:       { Registrant.Name ? : EOL }

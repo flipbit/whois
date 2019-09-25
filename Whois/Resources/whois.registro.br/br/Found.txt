@@ -8,24 +8,36 @@ name: whois.registro.br/br/Found
 tag: whois.registro.br
 tag: br
 
-# Lines can appear in different order
-outOfOrder: true
+# Extract contact information
+tag: fixup-contact
+
+# End tokens on new lines
+terminateOnNewLine: true
+
+# Use a FixUp to assign fields
+IgnoreMissingProperties: true
 
 # Set query response type:
 set: Status = Found
 ---
-domain:      { DomainName : Trim, IsDomainName, ToLower, EOL }
-owner:       { Registrant.Organization ? : Trim, EOL }
-ownerid:     { Registrant.RegistryId ? : Trim, EOL }
-responsible: { Registrant.Name ? : Trim, EOL }
-admin-c:     { AdminContact.Name ? : Trim, EOL }
-tech-c:      { TechnicalContact.Name ? : Trim, EOL }
-billing-c:   { BillingContact.Name ? : Trim, EOL }
-nserver:     { NameServers ? : SubstringBefore(" "), IsDomainName, ToLower, Repeating, EOL }
-created:     { Registered ? : SubstringBefore(" "), ToDateTime("yyyyMMdd"), EOL }
-expires:     { Expiration ? : SubstringBefore(" "), ToDateTime("yyyyMMdd"), EOL }
-changed:     { Updated    ? : SubstringBefore(" "), ToDateTime("yyyyMMdd"), EOL }
-provider:    { Registrar.Name ? : Trim, EOL }
-status:      { DomainStatus ? : Trim, Repeating, EOL }
-e-mail:      { Registrar.AbuseEmail ? : IsEmail, EOL }
+domain:      { DomainName : Trim, IsDomainName, ToLower }
+owner:       { Registrant.Name ? : Trim }
+ownerid:     { Registrant.RegistryId ? : Trim }
+responsible: { Registrant.Name ? : Trim }
+admin-c:     { AdminContact.RegistryId ? : Trim }
+tech-c:      { TechnicalContact.RegistryId ? : Trim }
+billing-c:   { BillingContact.RegistryId ? : Trim }
+nserver:     { NameServers ? : SubstringBefore(" "), IsDomainName, ToLower, Repeating }
+created:     { Registered ? : SubstringBefore(" "), ToDateTimeUtc("yyyyMMdd") }
+expires:     { Expiration ? : SubstringBefore(" "), ToDateTimeUtc("yyyyMMdd") }
+changed:     { Updated    ? : SubstringBefore(" "), ToDateTimeUtc("yyyyMMdd") }
+provider:    { Registrar.Name ? : Trim }
+status:      { DomainStatus ? : Trim, Repeating }
+e-mail:      { Registrar.AbuseEmail ? : IsEmail }
+
+nic-hdl-br:  { Contact.Id }
+person:      { Contact.Name }
+e-mail:      { Email : IsEmail }
+created:     { Created ? : ToDateTimeUtc("yyyyMMdd") }
+changed:     { Changed ? : ToDateTimeUtc("yyyyMMdd") }
 
