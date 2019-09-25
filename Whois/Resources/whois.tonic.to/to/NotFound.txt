@@ -8,8 +8,14 @@ name: whois.tonic.to/to/NotFound
 tag: whois.tonic.to
 tag: to
 
+# End tokens on new lines
+terminateOnNewLine: true
+
 # Set query response type:
 set: Status = NotFound
+
+hint: Tonic whoisd
+hint: No match for
 ---
 Tonic whoisd V1.1
-No match for u34jedzcq
+No match for { DomainName : IsDomainName, ToLower }
