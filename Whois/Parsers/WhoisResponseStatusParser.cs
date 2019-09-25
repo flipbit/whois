@@ -57,6 +57,10 @@ namespace Whois.Parsers
             if (Equals(status, "Prohibited String - Object Cannot Be Registered")) return WhoisResponseStatus.NotAvailable;
             if (Equals(status, "Locked")) return WhoisResponseStatus.Locked;
             if (Equals(status, "In Transfer")) return WhoisResponseStatus.Other;
+            if (Equals(status, "500 Invalid characters in query string")) return WhoisResponseStatus.Invalid;
+            if (Equals(status, "220 Available")) return WhoisResponseStatus.NotFound;
+            if (Equals(status, "210 PendingRelease")) return WhoisResponseStatus.Other;
+            if (Equals(status, "440 Request Denied")) return WhoisResponseStatus.Throttled;
 
             if (whoisServerUrl == "whois.dns.pt")
             {

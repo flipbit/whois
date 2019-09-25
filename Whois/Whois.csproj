@@ -311,10 +311,6 @@
     <None Remove="Resources\whois.sk-nic.sk\sk\Found.txt" />
     <None Remove="Resources\whois.sk-nic.sk\sk\NotFound.txt" />
     <None Remove="Resources\whois.srs.net.nz\nz\Found.txt" />
-    <None Remove="Resources\whois.srs.net.nz\nz\Invalid.txt" />
-    <None Remove="Resources\whois.srs.net.nz\nz\NotFound.txt" />
-    <None Remove="Resources\whois.srs.net.nz\nz\Other.txt" />
-    <None Remove="Resources\whois.srs.net.nz\nz\Throttled.txt" />
     <None Remove="Resources\whois.sx\sx\NotFound.txt" />
     <None Remove="Resources\whois.sx\sx\Unavailable.txt" />
     <None Remove="Resources\whois.thnic.co.th\th\Found.txt" />
@@ -659,10 +655,6 @@
     <EmbeddedResource Include="Resources\whois.sk-nic.sk\sk\Found.txt" />
     <EmbeddedResource Include="Resources\whois.sk-nic.sk\sk\NotFound.txt" />
     <EmbeddedResource Include="Resources\whois.srs.net.nz\nz\Found.txt" />
-    <EmbeddedResource Include="Resources\whois.srs.net.nz\nz\Invalid.txt" />
-    <EmbeddedResource Include="Resources\whois.srs.net.nz\nz\NotFound.txt" />
-    <EmbeddedResource Include="Resources\whois.srs.net.nz\nz\Other.txt" />
-    <EmbeddedResource Include="Resources\whois.srs.net.nz\nz\Throttled.txt" />
     <EmbeddedResource Include="Resources\whois.sx\sx\NotFound.txt" />
     <EmbeddedResource Include="Resources\whois.sx\sx\Unavailable.txt" />
     <EmbeddedResource Include="Resources\whois.tcinet.ru\Found.txt" />
