@@ -179,7 +179,7 @@ Admin E-mail: { AdminContact.Email ? : IsEmail }
 #
 # Tech Contact
 #
-Registry Tech ID: { TechnicalContact.RegistryId  ? }
+Registry Tech ID: { TechnicalContact.RegistryId ? }
 Tech ID: { TechnicalContact.RegistryId ? }
 Tech Name: { TechnicalContact.Name ? }
 Tech Organization: { TechnicalContact.Organization ? }
@@ -206,7 +206,7 @@ Tech E-mail: { TechnicalContact.Email ? : IsEmail }
 #
 # Billing Contact
 #
-Registry Billing ID: { BillingContact.RegistryId  ? }
+Registry Billing ID: { BillingContact.RegistryId ? }
 Billing ID: { BillingContact.RegistryId ? }
 Billing Name: { BillingContact.Name ? }
 Billing Organization: { BillingContact.Organization ? }
