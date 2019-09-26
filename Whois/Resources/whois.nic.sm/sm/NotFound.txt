@@ -10,5 +10,7 @@ tag: sm
 
 # Set query response type:
 set: Status = NotFound
+
+hint: No entries found.
 ---
 No entries found.

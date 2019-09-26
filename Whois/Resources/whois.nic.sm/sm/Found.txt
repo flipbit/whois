@@ -8,36 +8,36 @@ name: whois.nic.sm/sm/Found
 tag: whois.nic.sm
 tag: sm
 
+# End tokens on new lines
+terminateOnNewLine: true
+
 # Set query response type:
 set: Status = Found
 ---
-Domain Name: google.sm
-Registration date: 03/04/2003
-Last Update: 01/08/2008
-Status: Active
+Domain Name: { DomainName : IsDomainName, ToLower }google.sm
+Registration date: { Registered ? : ToDateTimeUtc("dd/MM/yyyy") }
+Last Update: { Updated ? : ToDateTimeUtc("dd/MM/yyyy") }
+Status: { DomainStatus ? : Repeating, CleanDomainStatus }
 
 Owner:
-Rose Hagan
-Google, Inc.
-1600 Amphitheatre Parkway
-US 94043 Mountain View (CA)
-US
-Phone: +1 650 2530000
-Fax: +1 650 6188571
-Email: dns-admin@google.com
+{ Registrant.Name }
+{ Registrant.Organization ? }
+{ Registrant.Address ? : IsNotEmpty, !StartsWith('Phone'), !StartsWith('Fax'), !StartsWith('Email') }
+{ Registrant.Address ? : IsNotEmpty, !StartsWith('Phone'), !StartsWith('Fax'), !StartsWith('Email') }
+{ Registrant.Address ? : IsNotEmpty, !StartsWith('Phone'), !StartsWith('Fax'), !StartsWith('Email') }
+{ Registrant.TelephoneNumber ? : StartsWith('Phone'), SubstringAfter(': '), IsPhoneNumber }
+{ Registrant.FaxNumber ? : StartsWith('Fax'), SubstringAfter(': '), IsPhoneNumber }
+{ Registrant.Email ? : StartsWith('Email'), SubstringAfter(': '), IsEmail }
 
 Technical Contact:
-Domain Names Department
-Visiant Outsourcing S.r.l.
-Strada del Drosso 128/6
-I 10135 Torino (TO)
-IT
-Phone: +39 011 3473520
-Fax: +39 011 3473522
-Email: domains.outsourcing@visiant.it
+{ TechnicalContact.Name }
+{ TechnicalContact.Organization ? }
+{ TechnicalContact.Address ? : IsNotEmpty, !StartsWith('Phone'), !StartsWith('Fax'), !StartsWith('Email') }
+{ TechnicalContact.Address ? : IsNotEmpty, !StartsWith('Phone'), !StartsWith('Fax'), !StartsWith('Email') }
+{ TechnicalContact.Address ? : IsNotEmpty, !StartsWith('Phone'), !StartsWith('Fax'), !StartsWith('Email') }
+{ TechnicalContact.TelephoneNumber ? : StartsWith('Phone'), SubstringAfter(': '), IsPhoneNumber }
+{ TechnicalContact.FaxNumber ? : StartsWith('Fax'), SubstringAfter(': '), IsPhoneNumber }
+{ TechnicalContact.Email ? : StartsWith('Email'), SubstringAfter(': '), IsEmail }
 
 DNS Servers:
-ns1.google.com
-ns2.google.com
-ns3.google.com
-ns4.google.com
+{ NameServers ? : IsDomainName, ToLower, Repeating }
