@@ -89,7 +89,7 @@ namespace Whois.Parsing.Whois.Nic.Ly.Ly
 
              // BillingContact Address
             Assert.AreEqual(5, response.BillingContact.Address.Count);
-            Assert.AreEqual("10400 Overland Rd\r\nPMB 155", response.BillingContact.Address[0]);
+            Assert.AreEqual("10400 Overland Rd\\r\\nPMB 155", response.BillingContact.Address[0]);
             Assert.AreEqual("Boise", response.BillingContact.Address[1]);
             Assert.AreEqual("ID", response.BillingContact.Address[2]);
             Assert.AreEqual("US", response.BillingContact.Address[3]);
@@ -105,7 +105,7 @@ namespace Whois.Parsing.Whois.Nic.Ly.Ly
 
              // TechnicalContact Address
             Assert.AreEqual(5, response.TechnicalContact.Address.Count);
-            Assert.AreEqual("10400 Overland Rd\r\nPMB 155", response.TechnicalContact.Address[0]);
+            Assert.AreEqual("10400 Overland Rd\\r\\nPMB 155", response.TechnicalContact.Address[0]);
             Assert.AreEqual("Boise", response.TechnicalContact.Address[1]);
             Assert.AreEqual("ID", response.TechnicalContact.Address[2]);
             Assert.AreEqual("US", response.TechnicalContact.Address[3]);

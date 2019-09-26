@@ -10,5 +10,7 @@ tag: tw
 
 # Set query response type:
 set: Status = NotFound
+
+hint: No Found
 ---
 No Found

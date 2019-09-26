@@ -11,35 +11,30 @@ tag: tw
 # Set query response type:
 set: Status = Found
 ---
-Domain Name: google.com.tw
+Domain Name: { DomainName : IsDomainName, ToLower, EOL }
    Registrant:
-      Google Inc.
-      DNS Admin  dns-admin@google.com
-      +1.6502530000
-      +1.6506188571
-      1600 Amphitheatre Parkway  
-      Mountain View, CA
-      US
+      { Registrant.Organization : EOL }
+      { Registrant.Name ? }  { Registrant.Email ? : IsEmail, EOL }
+      { Registrant.TelephoneNumber ? : IsPhoneNumber, EOL }
+      { Registrant.FaxNumber ? : IsPhoneNumber, EOL }
+      { Registrant.Address ? : IsNotEmpty, Repeating, EOL }
 
    Administrative Contact:
-      DNS Admin  dns-admin@google.com
-      +1.6502530000
-      +1.6506188571
+      { AdminContact.Name }  { AdminContact.Email ? : IsEmail, EOL }
+      { AdminContact.TelephoneNumber ? : IsPhoneNumber, EOL }
+      { AdminContact.FaxNumber ? : IsPhoneNumber, EOL }
+      { AdminContact.Address ? : IsNotEmpty, Repeating, EOL }
 
    Technical Contact:
-      DNS Admin  dns-admin@google.com
-      +1.6502530000
-      +1.6506188571
+      { TechnicalContact.Name }  { Registrant.Email ? : IsEmail, EOL }
+      { TechnicalContact.TelephoneNumber ? : IsPhoneNumber, EOL }
+      { TechnicalContact.FaxNumber ? : IsPhoneNumber, EOL }
+      { TechnicalContact.Address ? : IsNotEmpty, Repeating, EOL }
 
-   Record expires on 2011-11-09 (YYYY-MM-DD)
-   Record created on 2000-08-29 (YYYY-MM-DD)
+   Record expires on { Registered ? : ToDateTimeUtc("yyyy-MM-dd") } (YYYY-MM-DD)
+   Record created on { Expiration ? : ToDateTimeUtc("yyyy-MM-dd") } (YYYY-MM-DD)
 
    Domain servers in listed order:
-      ns1.google.com      
-      ns2.google.com      
-      ns3.google.com      
-      ns4.google.com      
+      { NameServers ? : Trim, IsDomainName, ToLower, Repeating, EOL }
 
-Registration Service Provider: Markmonitor, Inc.
-
-[Provided by NeuStar Registry Gateway Services]
+Registration Service Provider: { Registrar.Name ? : EOL }
