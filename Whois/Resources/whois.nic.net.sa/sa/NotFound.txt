@@ -8,12 +8,13 @@ name: whois.nic.net.sa/sa/NotFound
 tag: whois.nic.net.sa
 tag: sa
 
+# End tokens on new lines
+terminateOnNewLine: true
+
 # Set query response type:
 set: Status = NotFound
----
-% SaudiNIC Whois server.
-% Rights restricted by copyright.
-% http://nic.sa/en/view/whois-cmd-copyright
 
-No Match for u34jedzcq.com.sa
+hint: No Match for
+---
+No Match for { DomainName : IsDomainName, ToLower }
 .

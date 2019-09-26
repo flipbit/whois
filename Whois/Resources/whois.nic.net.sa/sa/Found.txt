@@ -8,37 +8,35 @@ name: whois.nic.net.sa/sa/Found
 tag: whois.nic.net.sa
 tag: sa
 
+# End tokens on new lines
+terminateOnNewLine: true
+
 # Set query response type:
 set: Status = Found
 ---
-% SaudiNIC Whois server.
-% Rights restricted by copyright.
-% http://nic.sa/en/view/whois-cmd-copyright
-
-Domain Name: saudigazette.com.sa
+Domain Name: { DomainName : IsDomainName, ToLower }
 
  Registrant:
- Okaz for Press and Publication مؤسسة عكاظ للصحافة والنشر
- Address: ~noAddress  P.O.Box. 1508 ص.ب. 
- 21441 Jeddah جدة
- Saudi Arabia المملكة العربية السعودية
+ { Registrant.Name }
+ Address: { Registrant.Address : IsNotEmpty }
+ { Registrant.Address ? : IsNotEmpty }
+ { Registrant.Address ? : IsNotEmpty }
 
  Administrative Contact:
-  Abdullah Salmeem Ba-Doukhn عبد الله سالمين بادخن (ADM-837-AD59-SA)
-  Address: حي الرحاب  P.O.Box. 1508 ص.ب. 
-  21441 Jeddah جدة
-  Saudi Arabia المملكة العربية السعودية
+  { AdminContact.Name }
+  Address: { AdminContact.Address : IsNotEmpty }
+  { AdminContact.Address ? : IsNotEmpty }
+  { AdminContact.Address ? : IsNotEmpty }
 
  Technical Contact:
-  Salim Ba-wafi سالم باوافي (TEC-837-SW13-SA)
-  Address: حي الرحاب  P.O.Box. 1508 ص.ب. 
-  21441 Jeddah جدة
-  Saudi Arabia المملكة العربية السعودية
+  { TechnicalContact.Name }
+  Address: { TechnicalContact.Address : IsNotEmpty }
+  { TechnicalContact.Address ? : IsNotEmpty }
+  { TechnicalContact.Address ? : IsNotEmpty }
 
  Name Servers:
-  ns1.peer1.net
-  ns2.peer1.net
+  { NameServers ? : IsDomainName, ToLower, Repeating }
 
-Created on: 2000-09-11
-Last Updated on: 2000-09-11
+Created on: { Registered ? : ToDateTimeUtc("yyyy-MM-dd") }
+Last Updated on: { Updated ? : ToDateTimeUtc("yyyy-MM-dd") }
 
