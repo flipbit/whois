@@ -8,48 +8,49 @@ name: whois.register.bg/bg/Found
 tag: whois.register.bg
 tag: bg
 
+# End tokens on new lines
+terminateOnNewLine: true
+
 # Set query response type:
 set: Status = Found
 ---
 
-DOMAIN NAME: orbitel.bg
-requested on: 10/11/1997 00:00:00 EET
-processed from: 10/11/1997 00:00:00 EET
-activated on: 24/11/1997 00:00:00 EET
-expires at: 01/01/2011 00:00:00 EET
-registration status: Registered
+DOMAIN NAME: { DomainName : IsDomainName, ToLower }
+activated on: { Registered ? : Replace(' EET', '+02:00'), Replace(' EEST', '+03:00'), ToDateTimeUtc("dd/MM/yyyy HH:mm:sszzz") }
+expires at: { Expiration ? : Replace(' EET', '+02:00'), Replace(' EEST', '+03:00'), ToDateTimeUtc("dd/MM/yyyy HH:mm:sszzz") }
+registration status: { DomainStatus ? : Repeating, CleanDomainStatus }
 
 REGISTRANT:
-Orbitel S.A.
-  SOFIA, 1505
-  BULGARIA
+{ Registrant.Name }
+  { Registrant.Address ? : IsNotEmpty, IsNot('.') }
+  { Registrant.Address ? : IsNotEmpty, IsNot('.') }
+  { Registrant.Address ? : IsNotEmpty, IsNot('.') }
 
 ADMINISTRATIVE CONTACT:
-  Victor Francess
-  registry@orbitel.bg
-  Orbitel Ltd.
-  1, Macedonia sq., fl.18, BG-1040 Sofia
-  SOFIA, 1040
-  BULGARIA
-  tel: +359 2 9809077
-  fax: +359 2 9804258
-  NIC handle: VF15885
+  { AdminContact.Name }
+  { AdminContact.Email ? : IsEmail }
+  { AdminContact.Organization ? }
+  { AdminContact.Address ? : IsNotEmpty, IsNot('.'), !StartsWith('tel:'), !StartsWith('fax:'), !Contains('N/A') }
+  { AdminContact.Address ? : IsNotEmpty, IsNot('.'), !StartsWith('tel:'), !StartsWith('fax:'), !Contains('N/A') }
+  { AdminContact.Address ? : IsNotEmpty, IsNot('.'), !StartsWith('tel:'), !StartsWith('fax:'), !Contains('N/A') }
+  { AdminContact.TelephoneNumber ? : StartsWith('tel:'), SubstringAfter(': '), IsPhoneNumber }
+  { AdminContact.FaxNumber ? : StartsWith('fax:'), SubstringAfter(': '), IsPhoneNumber }
+  { AdminContact.RegistryId ? : StartsWith('NIC handle:'), SubstringAfter(': '), IsNotEmpty }
 		
 TECHNICAL CONTACT(S):
 
-  Andrejana P Shojkova
-  registry@orbitel.bg
-  Orbitel S.C.
-  1 Macedonia Sq., KNSB building, floor 18, room 10, 1000 Sofia
-  SOFIA, 
-  BULGARIA
-  tel: +359 2 4004731
-  fax: +359 2 4004744
-  NIC handle: AS50734
+  { TechnicalContact.Name }
+  { TechnicalContact.Email ? : IsEmail }
+  { TechnicalContact.Organization ? }
+  { TechnicalContact.Address ? : IsNotEmpty, IsNot('.'), !StartsWith('tel:'), !StartsWith('fax:'), !Contains('N/A') }
+  { TechnicalContact.Address ? : IsNotEmpty, IsNot('.'), !StartsWith('tel:'), !StartsWith('fax:'), !Contains('N/A') }
+  { TechnicalContact.Address ? : IsNotEmpty, IsNot('.'), !StartsWith('tel:'), !StartsWith('fax:'), !Contains('N/A') }
+  { TechnicalContact.TelephoneNumber ? : StartsWith('tel:'), SubstringAfter(': '), IsPhoneNumber }
+  { TechnicalContact.FaxNumber ? : StartsWith('fax:'), SubstringAfter(': '), IsPhoneNumber }
+  { TechnicalContact.RegistryId ? : StartsWith('NIC handle:'), SubstringAfter(': '), IsNotEmpty }
 			
 NAME SERVER INFORMATION:
-chicken.orbitel.bg (195.24.32.5)
-ns.orbitel.bg (195.24.32.2)
+{ NameServers ? : SubstringBefore(' ('), IsDomainName, ToLower, Repeating }
 	
-DNSSEC: Inactive
+DNSSEC: { DnsSecStatus ? }
 

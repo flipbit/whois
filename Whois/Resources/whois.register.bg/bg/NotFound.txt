@@ -10,5 +10,7 @@ tag: bg
 
 # Set query response type:
 set: Status = NotFound
+
+hint: does not exist
 ---
-Domain name u34jedzcq.bg does not exist in database!
+Domain name { DomainName : IsDomainName, ToLower } does not exist in database!
