@@ -24,6 +24,7 @@ Administrative Contact : { AdminContact.Name } <{ AdminContact.Email ? : IsEmail
                          { AdminContact.Address ? : IsNotEmpty, !IsPhoneNumber, EOL }
                          { AdminContact.Address ? : IsNotEmpty, !IsPhoneNumber, EOL }
                          { AdminContact.TelephoneNumber ? : IsPhoneNumber, EOL }
+                         { AdminContact.FaxNumber ? : IsPhoneNumber, EOL }
 
 Technical Contact      : { TechnicalContact.Name } <{ TechnicalContact.Email ? : IsEmail }>
                          { TechnicalContact.Address ? : IsNotEmpty, !IsPhoneNumber, EOL }
@@ -33,6 +34,7 @@ Technical Contact      : { TechnicalContact.Name } <{ TechnicalContact.Email ? :
                          { TechnicalContact.Address ? : IsNotEmpty, !IsPhoneNumber, EOL }
                          { TechnicalContact.Address ? : IsNotEmpty, !IsPhoneNumber, EOL }
                          { TechnicalContact.TelephoneNumber ? : IsPhoneNumber, EOL }
+                         { TechnicalContact.FaxNumber ? : IsPhoneNumber, EOL }
 
 Record Created         : { Registered ? : ToDateTimeUtc("ddd MMM d HH:mm:ss \G\M\T yyyy"), EOL }
 Record Last Updated    : { Updated    ? : ToDateTimeUtc("ddd MMM d HH:mm:ss \G\M\T yyyy"), EOL }
@@ -40,5 +42,5 @@ Database Last Updated  : { Expiration ? : ToDateTimeUtc("ddd MMM d HH:mm:ss \G\M
 
 Domain Name Servers listed in order:
 
-  { NameServers ? : IsDomainName, ToLower, Repeating, EOL }
+  { NameServers ? : Trim, IsDomainName, ToLower, Repeating, EOL }
 

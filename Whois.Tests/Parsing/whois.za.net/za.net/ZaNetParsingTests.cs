@@ -95,10 +95,11 @@ namespace Whois.Parsing.Whois.Za.Net.ZaNet
 
 
             // Nameservers
-            Assert.AreEqual(1, response.NameServers.Count);
+            Assert.AreEqual(2, response.NameServers.Count);
             Assert.AreEqual("ns3.zoneedit.com", response.NameServers[0]);
+            Assert.AreEqual("ns5.zoneedit.com", response.NameServers[1]);
 
-            Assert.AreEqual(29, response.FieldsParsed);
+            Assert.AreEqual(30, response.FieldsParsed);
         }
     }
 }
