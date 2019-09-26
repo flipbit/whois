@@ -8,14 +8,40 @@ name: whois.nic.cz/cz/Found
 tag: whois.nic.cz
 tag: cz
 
+# Extract contact information
+tag: fixup-contact
+
+# Lines can appear out of order
+outOfOrder: true
+
+# End tokens on new lines
+terminateOnNewLine: true
+
+# Use token preamble on current line only
+trimPreambleBeforeNewLine: true
+
+# Use a FixUp to assign fields
+IgnoreMissingProperties: true
+
 # Set query response type:
 set: Status = Found
 
 hint: domain
 ---
-domain:       { DomainName : IsDomainName, ToLower, EOL }
-status:       { DomainStatus ? : Repeating, EOL }
-registered:   { Registered? : ToDateTime("dd.MM.yyyy hh:mm:ss"), EOL }
-changed:      { Updated ? : ToDateTime("dd.MM.yyyy hh:mm:ss"), EOL }
-expire:       { Expiration ? : ToDateTime("dd.MM.yyyy"), EOL }
-nserver:      { NameServers ? : IsDomainName, ToLower, Repeating, EOL }
+domain:       { DomainName : IsDomainName, ToLower }
+registrant:   { Registrant.RegistryId ? }
+status:       { DomainStatus ? : Repeating, CleanDomainStatus }
+registered:   { Registered ? : ToDateTimeUtc("dd.MM.yyyy HH:mm:ss"), Repeating }
+changed:      { Updated    ? : ToDateTimeUtc("dd.MM.yyyy HH:mm:ss"), Repeating }
+expire:       { Expiration ? : ToDateTimeUtc("dd.MM.yyyy"), Repeating }
+
+contact:      { Contact.Id : Repeating }
+org:          { Contact.Organization : Repeating }
+name:         { Contact.Name : Repeating }
+address:      { Address : IsNotEmpty, Repeating }
+e-mail:       { Email : IsEmail, Repeating }
+created:      { Created ? : ToDateTimeUtc("dd.MM.yyyy HH:mm:ss"), Repeating }
+
+nserver:      { NameServers ? : SubstringBefore(' '), IsDomainName, ToLower, Repeating }
+tech-c:       { TechnicalContact.RegistryId ? }
+admin-c:      { AdminContact.RegistryId ? }
