@@ -8,32 +8,24 @@ name: whois.nic.ch/ch/Found
 tag: whois.nic.ch
 tag: ch
 
+# End tokens on new lines
+terminateOnNewLine: true
+
 # Set query response type:
 set: Status = Found
 ---
-whois: This information is subject to an Acceptable Use Policy.
-See http://www.nic.ch/terms/aup.html
-
-
 Domain name:
-ggoogle.ch
+{ DomainName : IsDomainName, ToLower }
 
 Holder of domain name:
-EISD John
-Room 208, Furong Road, Changsha City
-CN-41000 Changsha
-China
-Contractual Language: German
+{ Registrant.Name : IsNotEmpty }
+{ Registrant.Address ? : Repeating, IsNotEmpty, !StartsWith('Contractual Language:') }
 
 Technical contact:
-xie huijie
-xie huijie
-No95.Lane768.Ruili Road.Minhang District
-CN-200240 shanghai
-China
+{ TechnicalContact.Name }
+{ TechnicalContact.Address ? : Repeating, IsNotEmpty }
 
-DNSSEC:N
+DNSSEC:{ DnsSecStatus ? }
 
 Name servers:
-ns3.domainmanager.com
-ns4.domainmanager.com
+{ NameServers ? : SubstringBefore('	'), IsDomainName, ToLower, Repeating }
