@@ -197,7 +197,6 @@
     <None Remove="Resources\whois.nic.co\co\NotFound.txt" />
     <None Remove="Resources\whois.nic.coop\coop\Found.txt" />
     <None Remove="Resources\whois.nic.coop\coop\NotFound.txt" />
-    <None Remove="Resources\whois.nic.coop\coop\Other.txt" />
     <None Remove="Resources\whois.nic.cz\cz\Found.txt" />
     <None Remove="Resources\whois.nic.cz\cz\NotFound.txt" />
     <None Remove="Resources\whois.nic.cz\cz\Throttled.txt" />
@@ -530,7 +529,6 @@
     <EmbeddedResource Include="Resources\whois.nic.co\co\NotFound.txt" />
     <EmbeddedResource Include="Resources\whois.nic.coop\coop\Found.txt" />
     <EmbeddedResource Include="Resources\whois.nic.coop\coop\NotFound.txt" />
-    <EmbeddedResource Include="Resources\whois.nic.coop\coop\Other.txt" />
     <EmbeddedResource Include="Resources\whois.nic.cz\cz\Found.txt" />
     <EmbeddedResource Include="Resources\whois.nic.cz\cz\NotFound.txt" />
     <EmbeddedResource Include="Resources\whois.nic.cz\cz\Throttled.txt" />

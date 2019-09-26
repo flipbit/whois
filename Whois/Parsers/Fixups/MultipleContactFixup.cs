@@ -33,6 +33,27 @@ namespace Whois.Parsers.Fixups
                 response.Registrant = registrant;
             }
 
+            // Lookup Ids
+            if (TryGetContactId(response.AdminContact, result.Tokens.Matches, "admin", out var adminContactId))
+            {
+                response.AdminContact = new Contact { RegistryId = adminContactId };
+            }
+
+            if (TryGetContactId(response.Registrant, result.Tokens.Matches, "registrant", out var registrantId))
+            {
+                response.Registrant = new Contact { RegistryId = registrantId };
+            }
+
+            if (TryGetContactId(response.BillingContact, result.Tokens.Matches, "billing", out var billingContactId))
+            {
+                response.BillingContact = new Contact { RegistryId = billingContactId };
+            }
+
+            if (TryGetContactId(response.TechnicalContact, result.Tokens.Matches, "tech", out var techContactId))
+            {
+                response.TechnicalContact = new Contact { RegistryId = techContactId };
+            }
+
             if (TryGetContact(response.AdminContact, result.Tokens.Matches, out var adminContact))
             {
                 response.AdminContact = adminContact;
@@ -182,6 +203,31 @@ namespace Whois.Parsers.Fixups
                         break;
                 }
             }
+
+            return true;
+        }
+
+        protected virtual bool TryGetContactId(Contact input, IList<Match> matches, string name, out string contactId)
+        {
+            contactId = null;
+
+            if (input != null) return false;
+
+            var paragraph = matches
+                .Where(m => m.Token.Name == "Type")
+                .FirstOrDefault(m => string.CompareOrdinal(m.Value.ToString(), name) == 0)?
+                .Location.Paragraph;
+
+            if (paragraph == null) return false;
+
+            var match = matches
+                .Where(m => m.Token.Name == "Contact.Id")
+                .Where(m => m.Location.Paragraph == paragraph.Value)
+                .FirstOrDefault();
+
+            if (match == null) return false;
+
+            contactId = match.Value.ToString();
 
             return true;
         }
