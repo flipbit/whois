@@ -10,5 +10,7 @@ tag: ly
 
 # Set query response type:
 set: Status = NotFound
+
+hint: Not found
 ---
 Not found

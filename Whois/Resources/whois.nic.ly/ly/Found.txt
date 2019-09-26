@@ -8,71 +8,67 @@ name: whois.nic.ly/ly/Found
 tag: whois.nic.ly
 tag: ly
 
+# End tokens on new lines
+terminateOnNewLine: true
+
 # Set query response type:
 set: Status = Found
 ---
 Registrant:
-   Google Inc.
-   DNS Admin
-   1600 Amphitheatre Parkway
-   Mountain View
-   CA
-   United States of America
-   Zip/Postal code: 94043
-   Phone: +16503300100
-   dns-admin@google.com
+   { Registrant.Organization }
+   { Registrant.Name ? : IsNotEmpty, !StartsWith('Zip') }
+   { Registrant.Address ? : IsNotEmpty, !StartsWith('Zip') }
+   { Registrant.Address ? : IsNotEmpty, !StartsWith('Zip') }
+   { Registrant.Address ? : IsNotEmpty, !StartsWith('Zip') }
+   { Registrant.Address ? : IsNotEmpty, !StartsWith('Zip') }
+   { Registrant.Address ? : SubstringAfter('Zip/Postal code: '), IsNotEmpty }
+   { Registrant.TelephoneNumber ? : SubstringAfter('Phone: '), IsPhoneNumber }
+   { Registrant.FaxNumber ? : SubstringAfter('Fax: '), IsPhoneNumber }
+   { Registrant.Email ? : IsEmail }
 
 Domain Name:   google.ly
 
 Administrative Contact:
-   Google Inc.
-   DNS Admin
-   1600 Amphitheatre Parkway
-   Mountain View
-   CA
-   US
-   Zip/Postal code: 94043
-   Phone: +16503300100
-   dns-admin@google.com
+   { AdminContact.Organization }
+   { AdminContact.Name ? : IsNotEmpty, !StartsWith('Zip') }
+   { AdminContact.Address ? : IsNotEmpty, !StartsWith('Zip') }
+   { AdminContact.Address ? : IsNotEmpty, !StartsWith('Zip') }
+   { AdminContact.Address ? : IsNotEmpty, !StartsWith('Zip') }
+   { AdminContact.Address ? : IsNotEmpty, !StartsWith('Zip') }
+   { AdminContact.Address ? : SubstringAfter('Zip/Postal code: '), IsNotEmpty }
+   { AdminContact.TelephoneNumber ? : SubstringAfter('Phone: '), IsPhoneNumber }
+   { AdminContact.FaxNumber ? : SubstringAfter('Fax: '), IsPhoneNumber }
+   { AdminContact.Email ? : IsEmail }
 
 Technical Contact:
-   MarkMonitor
-   Domain Admin
-   10400 Overland Rd\r\nPMB 155
-   Boise
-   ID
-   US
-   Zip/Postal code: 83709
-   Phone: +1.2083895740
-   Fax: +1.2083895799
-   ccops@markmonitor.com
+   { TechnicalContact.Organization }
+   { TechnicalContact.Name ? : IsNotEmpty, !StartsWith('Zip') }
+   { TechnicalContact.Address ? : IsNotEmpty, !StartsWith('Zip') }
+   { TechnicalContact.Address ? : IsNotEmpty, !StartsWith('Zip') }
+   { TechnicalContact.Address ? : IsNotEmpty, !StartsWith('Zip') }
+   { TechnicalContact.Address ? : IsNotEmpty, !StartsWith('Zip') }
+   { TechnicalContact.Address ? : SubstringAfter('Zip/Postal code: '), IsNotEmpty }
+   { TechnicalContact.TelephoneNumber ? : SubstringAfter('Phone: '), IsPhoneNumber }
+   { TechnicalContact.FaxNumber ? : SubstringAfter('Fax: '), IsPhoneNumber }
+   { TechnicalContact.Email ? : IsEmail }
 
 Billing Contact:
-   MarkMonitor
-   Domain Administrator
-   10400 Overland Rd\r\nPMB 155
-   Boise 
-   ID
-   US
-   Zip/Postal code: 83709
-   Phone: +1.2083895740
-   Fax: +1.2083895799
-   ccops@markmonitor.com
+   { BillingContact.Organization }
+   { BillingContact.Name ? : IsNotEmpty, !StartsWith('Zip') }
+   { BillingContact.Address ? : IsNotEmpty, !StartsWith('Zip') }
+   { BillingContact.Address ? : IsNotEmpty, !StartsWith('Zip') }
+   { BillingContact.Address ? : IsNotEmpty, !StartsWith('Zip') }
+   { BillingContact.Address ? : IsNotEmpty, !StartsWith('Zip') }
+   { BillingContact.Address ? : SubstringAfter('Zip/Postal code: '), IsNotEmpty }
+   { BillingContact.TelephoneNumber ? : SubstringAfter('Phone: '), IsPhoneNumber }
+   { BillingContact.FaxNumber ? : SubstringAfter('Fax: '), IsPhoneNumber }
+   { BillingContact.Email ? : IsEmail }
 
-Created: 2007-10-03 13:36:48
-Updated: 2009-08-07 22:52:02
-Expired: 2010-10-03 13:36:48
+Created: { Registered ? : ToDateTimeUtc("yyyy-MM-dd HH:mm:ss") }
+Updated: { Updated    ? : ToDateTimeUtc("yyyy-MM-dd HH:mm:ss") }
+Expired: { Expiration ? : ToDateTimeUtc("yyyy-MM-dd HH:mm:ss") }
 
 Domain servers in listed order:
-   ns2.google.com
-   ns1.google.com
-   ns4.google.com
-   ns3.google.com
+   { NameServers ? : IsDomainName, ToLower, Repeating }
 
-Domain Status: ACTIVE
---
-Whois information provided by:
-LY Registry
-whois.nic.ly
--For Whois usage policy please check:
- http://whois.nic.ly/policy.php
+Domain Status: { DomainStatus ? : Repeating, CleanDomainStatus }
