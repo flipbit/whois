@@ -25,7 +25,7 @@ namespace Whois.Parsing.Whois.Jprs.Jp.Jp
             var response = parser.Parse("whois.jprs.jp", "jp", sample);
 
             Assert.Greater(sample.Length, 0);
-            Assert.AreEqual(WhoisResponseStatus.Suspended, response.Status);
+            Assert.AreEqual(WhoisStatus.Suspended, response.Status);
 
             Assert.AreEqual(0, response.ParsingErrors);
             Assert.AreEqual("whois.jprs.jp/Found02", response.TemplateName);
@@ -50,7 +50,7 @@ namespace Whois.Parsing.Whois.Jprs.Jp.Jp
             var response = parser.Parse("whois.jprs.jp", "jp", sample);
 
             Assert.Greater(sample.Length, 0);
-            Assert.AreEqual(WhoisResponseStatus.Suspended, response.Status);
+            Assert.AreEqual(WhoisStatus.Suspended, response.Status);
 
             Assert.AreEqual(0, response.ParsingErrors);
             Assert.AreEqual("whois.jprs.jp/Found02", response.TemplateName);
@@ -95,7 +95,7 @@ namespace Whois.Parsing.Whois.Jprs.Jp.Jp
             var response = parser.Parse("whois.jprs.jp", "jp", sample);
 
             Assert.Greater(sample.Length, 0);
-            Assert.AreEqual(WhoisResponseStatus.Found, response.Status);
+            Assert.AreEqual(WhoisStatus.Found, response.Status);
 
             Assert.AreEqual(0, response.ParsingErrors);
             Assert.AreEqual("whois.jprs.jp/Found02", response.TemplateName);
@@ -142,7 +142,7 @@ namespace Whois.Parsing.Whois.Jprs.Jp.Jp
             var response = parser.Parse("whois.jprs.jp", "jp", sample);
 
             Assert.Greater(sample.Length, 0);
-            Assert.AreEqual(WhoisResponseStatus.NotFound, response.Status);
+            Assert.AreEqual(WhoisStatus.NotFound, response.Status);
 
             Assert.AreEqual(0, response.ParsingErrors);
             Assert.AreEqual("whois.jprs.jp/NotFound", response.TemplateName);
@@ -157,7 +157,7 @@ namespace Whois.Parsing.Whois.Jprs.Jp.Jp
             var response = parser.Parse("whois.jprs.jp", "jp", sample);
 
             Assert.Greater(sample.Length, 0);
-            Assert.AreEqual(WhoisResponseStatus.Found, response.Status);
+            Assert.AreEqual(WhoisStatus.Found, response.Status);
 
             Assert.AreEqual(0, response.ParsingErrors);
             Assert.AreEqual("whois.jprs.jp/Found02", response.TemplateName);
@@ -207,7 +207,7 @@ namespace Whois.Parsing.Whois.Jprs.Jp.Jp
             var response = parser.Parse("whois.jprs.jp", "jp", sample);
 
             Assert.Greater(sample.Length, 0);
-            Assert.AreEqual(WhoisResponseStatus.Reserved, response.Status);
+            Assert.AreEqual(WhoisStatus.Reserved, response.Status);
 
             Assert.AreEqual(0, response.ParsingErrors);
             Assert.AreEqual("whois.jprs.jp/Found02", response.TemplateName);
@@ -231,7 +231,7 @@ namespace Whois.Parsing.Whois.Jprs.Jp.Jp
             var response = parser.Parse("whois.jprs.jp", "jp", sample);
 
             Assert.Greater(sample.Length, 0);
-            Assert.AreEqual(WhoisResponseStatus.Found, response.Status);
+            Assert.AreEqual(WhoisStatus.Found, response.Status);
 
             Assert.AreEqual(0, response.ParsingErrors);
             Assert.AreEqual("whois.jprs.jp/Found02", response.TemplateName);

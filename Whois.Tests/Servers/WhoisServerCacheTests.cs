@@ -1,8 +1,4 @@
-﻿using System;
-using System.Collections.Generic;
-using System.Text;
-using NUnit.Framework;
-using Whois.Models;
+﻿using NUnit.Framework;
 
 namespace Whois.Servers
 {
@@ -28,7 +24,7 @@ namespace Whois.Servers
         [Test]
         public void TestGetServerWhenCached()
         {
-            var existing = new WhoisServer("com", "server.com");
+            var existing = new WhoisResponse { DomainName = "com"};
             cache.Set(existing);
 
             var server = cache.Get("com");
@@ -39,9 +35,9 @@ namespace Whois.Servers
         [Test]
         public void TestCacheUpdate()
         {
-            var first = new WhoisServer("com", "second.com");
+            var first = new WhoisResponse { DomainName = "com"};
             cache.Set(first);
-            var second = new WhoisServer("com", "second.com");
+            var second = new WhoisResponse { DomainName = "com" };
             cache.Set(second);
 
             var server = cache.Get("com");

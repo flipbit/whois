@@ -25,7 +25,7 @@ namespace Whois.Parsing.Whois.Nic.Coop.Coop
             var response = parser.Parse("whois.nic.coop", "coop", sample);
 
             Assert.Greater(sample.Length, 0);
-            Assert.AreEqual(WhoisResponseStatus.Found, response.Status);
+            Assert.AreEqual(WhoisStatus.Found, response.Status);
 
             Assert.AreEqual(0, response.ParsingErrors);
             Assert.AreEqual("whois.nic.coop/coop/Found", response.TemplateName);
@@ -128,7 +128,7 @@ namespace Whois.Parsing.Whois.Nic.Coop.Coop
             var response = parser.Parse("whois.nic.coop", "coop", sample);
 
             Assert.Greater(sample.Length, 0);
-            Assert.AreEqual(WhoisResponseStatus.Found, response.Status);
+            Assert.AreEqual(WhoisStatus.Found, response.Status);
 
             Assert.AreEqual(0, response.ParsingErrors);
             Assert.AreEqual("whois.nic.coop/coop/Found", response.TemplateName);
@@ -230,7 +230,7 @@ namespace Whois.Parsing.Whois.Nic.Coop.Coop
             var response = parser.Parse("whois.nic.coop", "coop", sample);
 
             Assert.Greater(sample.Length, 0);
-            Assert.AreEqual(WhoisResponseStatus.NotFound, response.Status);
+            Assert.AreEqual(WhoisStatus.NotFound, response.Status);
 
             Assert.AreEqual(0, response.ParsingErrors);
             Assert.AreEqual("whois.nic.coop/coop/NotFound", response.TemplateName);
@@ -247,7 +247,7 @@ namespace Whois.Parsing.Whois.Nic.Coop.Coop
             var response = parser.Parse("whois.nic.coop", "coop", sample);
 
             Assert.Greater(sample.Length, 0);
-            Assert.AreEqual(WhoisResponseStatus.Found, response.Status);
+            Assert.AreEqual(WhoisStatus.Found, response.Status);
 
             AssertWriter.Write(response);
             Assert.AreEqual(0, response.ParsingErrors);

@@ -25,7 +25,7 @@ namespace Whois.Parsing.Whois.Cdmon.Com.Com
             var response = parser.Parse("whois.cdmon.com", "com", sample);
 
             Assert.Greater(sample.Length, 0);
-            Assert.AreEqual(WhoisResponseStatus.Found, response.Status);
+            Assert.AreEqual(WhoisStatus.Found, response.Status);
 
             Assert.AreEqual(0, response.ParsingErrors);
             Assert.AreEqual("generic/tld/Found02", response.TemplateName);

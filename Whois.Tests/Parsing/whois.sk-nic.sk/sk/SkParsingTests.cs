@@ -25,7 +25,7 @@ namespace Whois.Parsing.Whois.Sk.Nic.Sk.Sk
             var response = parser.Parse("whois.sk-nic.sk", "sk", sample);
 
             Assert.Greater(sample.Length, 0);
-            Assert.AreEqual(WhoisResponseStatus.Other, response.Status);
+            Assert.AreEqual(WhoisStatus.Other, response.Status);
 
             Assert.AreEqual(0, response.ParsingErrors);
             Assert.AreEqual("whois.sk-nic.sk/sk/Found", response.TemplateName);
@@ -76,7 +76,7 @@ namespace Whois.Parsing.Whois.Sk.Nic.Sk.Sk
             var response = parser.Parse("whois.sk-nic.sk", "sk", sample);
 
             Assert.Greater(sample.Length, 0);
-            Assert.AreEqual(WhoisResponseStatus.Expired, response.Status);
+            Assert.AreEqual(WhoisStatus.Expired, response.Status);
 
             Assert.AreEqual(0, response.ParsingErrors);
             Assert.AreEqual("whois.sk-nic.sk/sk/Found", response.TemplateName);
@@ -129,7 +129,7 @@ namespace Whois.Parsing.Whois.Sk.Nic.Sk.Sk
             var response = parser.Parse("whois.sk-nic.sk", "sk", sample);
 
             Assert.Greater(sample.Length, 0);
-            Assert.AreEqual(WhoisResponseStatus.Other, response.Status);
+            Assert.AreEqual(WhoisStatus.Other, response.Status);
 
             Assert.AreEqual(0, response.ParsingErrors);
             Assert.AreEqual("whois.sk-nic.sk/sk/Found", response.TemplateName);
@@ -164,7 +164,7 @@ namespace Whois.Parsing.Whois.Sk.Nic.Sk.Sk
             var response = parser.Parse("whois.sk-nic.sk", "sk", sample);
 
             Assert.Greater(sample.Length, 0);
-            Assert.AreEqual(WhoisResponseStatus.Other, response.Status);
+            Assert.AreEqual(WhoisStatus.Other, response.Status);
 
             Assert.AreEqual(0, response.ParsingErrors);
             Assert.AreEqual("whois.sk-nic.sk/sk/Found", response.TemplateName);
@@ -216,7 +216,7 @@ namespace Whois.Parsing.Whois.Sk.Nic.Sk.Sk
             var response = parser.Parse("whois.sk-nic.sk", "sk", sample);
 
             Assert.Greater(sample.Length, 0);
-            Assert.AreEqual(WhoisResponseStatus.Found, response.Status);
+            Assert.AreEqual(WhoisStatus.Found, response.Status);
 
             Assert.AreEqual(0, response.ParsingErrors);
             Assert.AreEqual("whois.sk-nic.sk/sk/Found", response.TemplateName);
@@ -269,7 +269,7 @@ namespace Whois.Parsing.Whois.Sk.Nic.Sk.Sk
             var response = parser.Parse("whois.sk-nic.sk", "sk", sample);
 
             Assert.Greater(sample.Length, 0);
-            Assert.AreEqual(WhoisResponseStatus.Other, response.Status);
+            Assert.AreEqual(WhoisStatus.Other, response.Status);
 
             Assert.AreEqual(0, response.ParsingErrors);
             Assert.AreEqual("whois.sk-nic.sk/sk/Found", response.TemplateName);
@@ -320,7 +320,7 @@ namespace Whois.Parsing.Whois.Sk.Nic.Sk.Sk
             var response = parser.Parse("whois.sk-nic.sk", "sk", sample);
 
             Assert.Greater(sample.Length, 0);
-            Assert.AreEqual(WhoisResponseStatus.Other, response.Status);
+            Assert.AreEqual(WhoisStatus.Other, response.Status);
 
             Assert.AreEqual(0, response.ParsingErrors);
             Assert.AreEqual("whois.sk-nic.sk/sk/Found", response.TemplateName);
@@ -370,7 +370,7 @@ namespace Whois.Parsing.Whois.Sk.Nic.Sk.Sk
             var response = parser.Parse("whois.sk-nic.sk", "sk", sample);
 
             Assert.Greater(sample.Length, 0);
-            Assert.AreEqual(WhoisResponseStatus.NotFound, response.Status);
+            Assert.AreEqual(WhoisStatus.NotFound, response.Status);
 
             Assert.AreEqual(0, response.ParsingErrors);
             Assert.AreEqual("whois.sk-nic.sk/sk/NotFound", response.TemplateName);
@@ -385,7 +385,7 @@ namespace Whois.Parsing.Whois.Sk.Nic.Sk.Sk
             var response = parser.Parse("whois.sk-nic.sk", "sk", sample);
 
             Assert.Greater(sample.Length, 0);
-            Assert.AreEqual(WhoisResponseStatus.Found, response.Status);
+            Assert.AreEqual(WhoisStatus.Found, response.Status);
 
             Assert.AreEqual(0, response.ParsingErrors);
             Assert.AreEqual("whois.sk-nic.sk/sk/Found", response.TemplateName);

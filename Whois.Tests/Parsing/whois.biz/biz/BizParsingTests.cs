@@ -25,7 +25,7 @@ namespace Whois.Parsing.Whois.Biz.Biz
             var response = parser.Parse("whois.biz", "biz", sample);
 
             Assert.Greater(sample.Length, 0);
-            Assert.AreEqual(WhoisResponseStatus.NotFound, response.Status);
+            Assert.AreEqual(WhoisStatus.NotFound, response.Status);
 
             Assert.AreEqual(1, response.FieldsParsed);
             Assert.AreEqual(0, response.ParsingErrors);
@@ -39,7 +39,7 @@ namespace Whois.Parsing.Whois.Biz.Biz
             var response = parser.Parse("whois.biz", "biz", sample);
 
             Assert.Greater(sample.Length, 0);
-            Assert.AreEqual(WhoisResponseStatus.Found, response.Status);
+            Assert.AreEqual(WhoisStatus.Found, response.Status);
 
             Assert.AreEqual(0, response.ParsingErrors);
             Assert.AreEqual("generic/tld/Found02", response.TemplateName);

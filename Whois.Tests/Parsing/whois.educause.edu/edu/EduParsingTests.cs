@@ -25,7 +25,7 @@ namespace Whois.Parsing.Whois.Educause.Edu.Edu
             var response = parser.Parse("whois.educause.edu", "edu", sample);
 
             Assert.Greater(sample.Length, 0);
-            Assert.AreEqual(WhoisResponseStatus.Found, response.Status);
+            Assert.AreEqual(WhoisStatus.Found, response.Status);
 
             Assert.AreEqual(0, response.ParsingErrors);
             Assert.AreEqual("whois.educause.edu/edu/Found01", response.TemplateName);
@@ -87,7 +87,7 @@ namespace Whois.Parsing.Whois.Educause.Edu.Edu
             var response = parser.Parse("whois.educause.edu", "edu", sample);
 
             Assert.Greater(sample.Length, 0);
-            Assert.AreEqual(WhoisResponseStatus.Found, response.Status);
+            Assert.AreEqual(WhoisStatus.Found, response.Status);
 
             Assert.AreEqual(0, response.ParsingErrors);
             Assert.AreEqual("whois.educause.edu/edu/Found01", response.TemplateName);
@@ -151,7 +151,7 @@ namespace Whois.Parsing.Whois.Educause.Edu.Edu
             var response = parser.Parse("whois.educause.edu", "edu", sample);
 
             Assert.Greater(sample.Length, 0);
-            Assert.AreEqual(WhoisResponseStatus.Found, response.Status);
+            Assert.AreEqual(WhoisStatus.Found, response.Status);
 
             Assert.AreEqual(0, response.ParsingErrors);
             Assert.AreEqual("whois.educause.edu/edu/Found02", response.TemplateName);
@@ -214,7 +214,7 @@ namespace Whois.Parsing.Whois.Educause.Edu.Edu
             var response = parser.Parse("whois.educause.edu", "edu", sample);
 
             Assert.Greater(sample.Length, 0);
-            Assert.AreEqual(WhoisResponseStatus.Found, response.Status);
+            Assert.AreEqual(WhoisStatus.Found, response.Status);
 
             Assert.AreEqual(0, response.ParsingErrors);
             Assert.AreEqual("whois.educause.edu/edu/Found02", response.TemplateName);
@@ -278,7 +278,7 @@ namespace Whois.Parsing.Whois.Educause.Edu.Edu
             var response = parser.Parse("whois.educause.edu", "edu", sample);
 
             Assert.Greater(sample.Length, 0);
-            Assert.AreEqual(WhoisResponseStatus.Found, response.Status);
+            Assert.AreEqual(WhoisStatus.Found, response.Status);
 
             Assert.AreEqual(0, response.ParsingErrors);
             Assert.AreEqual("whois.educause.edu/edu/Found01", response.TemplateName);
@@ -342,7 +342,7 @@ namespace Whois.Parsing.Whois.Educause.Edu.Edu
             var response = parser.Parse("whois.educause.edu", "edu", sample);
 
             Assert.Greater(sample.Length, 0);
-            Assert.AreEqual(WhoisResponseStatus.Found, response.Status);
+            Assert.AreEqual(WhoisStatus.Found, response.Status);
 
             AssertWriter.Write(response);
             Assert.AreEqual(0, response.ParsingErrors);
@@ -406,7 +406,7 @@ namespace Whois.Parsing.Whois.Educause.Edu.Edu
             var response = parser.Parse("whois.educause.edu", "edu", sample);
 
             Assert.Greater(sample.Length, 0);
-            Assert.AreEqual(WhoisResponseStatus.Found, response.Status);
+            Assert.AreEqual(WhoisStatus.Found, response.Status);
 
             Assert.AreEqual(0, response.ParsingErrors);
             Assert.AreEqual("whois.educause.edu/edu/Found01", response.TemplateName);
@@ -469,7 +469,7 @@ namespace Whois.Parsing.Whois.Educause.Edu.Edu
             var response = parser.Parse("whois.educause.edu", "edu", sample);
 
             Assert.Greater(sample.Length, 0);
-            Assert.AreEqual(WhoisResponseStatus.Found, response.Status);
+            Assert.AreEqual(WhoisStatus.Found, response.Status);
 
             Assert.AreEqual(0, response.ParsingErrors);
             Assert.AreEqual("whois.educause.edu/edu/Found01", response.TemplateName);
@@ -533,7 +533,7 @@ namespace Whois.Parsing.Whois.Educause.Edu.Edu
             var response = parser.Parse("whois.educause.edu", "edu", sample);
 
             Assert.Greater(sample.Length, 0);
-            Assert.AreEqual(WhoisResponseStatus.Found, response.Status);
+            Assert.AreEqual(WhoisStatus.Found, response.Status);
 
             Assert.AreEqual(0, response.ParsingErrors);
             Assert.AreEqual("whois.educause.edu/edu/Found02", response.TemplateName);
@@ -597,7 +597,7 @@ namespace Whois.Parsing.Whois.Educause.Edu.Edu
             var response = parser.Parse("whois.educause.edu", "edu", sample);
 
             Assert.Greater(sample.Length, 0);
-            Assert.AreEqual(WhoisResponseStatus.Found, response.Status);
+            Assert.AreEqual(WhoisStatus.Found, response.Status);
 
             Assert.AreEqual(0, response.ParsingErrors);
             Assert.AreEqual("whois.educause.edu/edu/Found01", response.TemplateName);
@@ -661,7 +661,7 @@ namespace Whois.Parsing.Whois.Educause.Edu.Edu
             var response = parser.Parse("whois.educause.edu", "edu", sample);
 
             Assert.Greater(sample.Length, 0);
-            Assert.AreEqual(WhoisResponseStatus.Found, response.Status);
+            Assert.AreEqual(WhoisStatus.Found, response.Status);
 
             Assert.AreEqual(0, response.ParsingErrors);
             Assert.AreEqual("whois.educause.edu/edu/Found02", response.TemplateName);
@@ -726,7 +726,7 @@ namespace Whois.Parsing.Whois.Educause.Edu.Edu
             var response = parser.Parse("whois.educause.edu", "edu", sample);
 
             Assert.Greater(sample.Length, 0);
-            Assert.AreEqual(WhoisResponseStatus.Found, response.Status);
+            Assert.AreEqual(WhoisStatus.Found, response.Status);
 
             Assert.AreEqual(0, response.ParsingErrors);
             Assert.AreEqual("whois.educause.edu/edu/Found01", response.TemplateName);
@@ -789,7 +789,7 @@ namespace Whois.Parsing.Whois.Educause.Edu.Edu
             var response = parser.Parse("whois.educause.edu", "edu", sample);
 
             Assert.Greater(sample.Length, 0);
-            Assert.AreEqual(WhoisResponseStatus.Found, response.Status);
+            Assert.AreEqual(WhoisStatus.Found, response.Status);
 
             Assert.AreEqual(0, response.ParsingErrors);
             Assert.AreEqual("whois.educause.edu/edu/Found01", response.TemplateName);
@@ -845,7 +845,7 @@ namespace Whois.Parsing.Whois.Educause.Edu.Edu
             var response = parser.Parse("whois.educause.edu", "edu", sample);
 
             Assert.Greater(sample.Length, 0);
-            Assert.AreEqual(WhoisResponseStatus.Found, response.Status);
+            Assert.AreEqual(WhoisStatus.Found, response.Status);
 
             Assert.AreEqual(0, response.ParsingErrors);
             Assert.AreEqual("whois.educause.edu/edu/Found01", response.TemplateName);
@@ -907,7 +907,7 @@ namespace Whois.Parsing.Whois.Educause.Edu.Edu
             var response = parser.Parse("whois.educause.edu", "edu", sample);
 
             Assert.Greater(sample.Length, 0);
-            Assert.AreEqual(WhoisResponseStatus.Found, response.Status);
+            Assert.AreEqual(WhoisStatus.Found, response.Status);
 
             Assert.AreEqual(0, response.ParsingErrors);
             Assert.AreEqual("whois.educause.edu/edu/Found01", response.TemplateName);
@@ -971,7 +971,7 @@ namespace Whois.Parsing.Whois.Educause.Edu.Edu
             var response = parser.Parse("whois.educause.edu", "edu", sample);
 
             Assert.Greater(sample.Length, 0);
-            Assert.AreEqual(WhoisResponseStatus.Found, response.Status);
+            Assert.AreEqual(WhoisStatus.Found, response.Status);
 
             AssertWriter.Write(response);
             Assert.AreEqual(0, response.ParsingErrors);
@@ -1034,7 +1034,7 @@ namespace Whois.Parsing.Whois.Educause.Edu.Edu
             var response = parser.Parse("whois.educause.edu", "edu", sample);
 
             Assert.Greater(sample.Length, 0);
-            Assert.AreEqual(WhoisResponseStatus.NotFound, response.Status);
+            Assert.AreEqual(WhoisStatus.NotFound, response.Status);
 
             Assert.AreEqual(0, response.ParsingErrors);
             Assert.AreEqual("whois.educause.edu/edu/NotFound", response.TemplateName);
@@ -1049,7 +1049,7 @@ namespace Whois.Parsing.Whois.Educause.Edu.Edu
             var response = parser.Parse("whois.educause.edu", "edu", sample);
 
             Assert.Greater(sample.Length, 0);
-            Assert.AreEqual(WhoisResponseStatus.Found, response.Status);
+            Assert.AreEqual(WhoisStatus.Found, response.Status);
 
             Assert.AreEqual(0, response.ParsingErrors);
             Assert.AreEqual("whois.educause.edu/edu/Found01", response.TemplateName);

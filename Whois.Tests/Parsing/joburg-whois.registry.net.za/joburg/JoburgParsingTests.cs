@@ -25,7 +25,7 @@ namespace Whois.Parsing.Joburg.Whois.Registry.Net.Za.Joburg
             var response = parser.Parse("joburg-whois.registry.net.za", "joburg", sample);
 
             Assert.Greater(sample.Length, 0);
-            Assert.AreEqual(WhoisResponseStatus.NotFound, response.Status);
+            Assert.AreEqual(WhoisStatus.NotFound, response.Status);
 
             Assert.AreEqual(2, response.FieldsParsed);
             Assert.AreEqual(0, response.ParsingErrors);
@@ -40,7 +40,7 @@ namespace Whois.Parsing.Joburg.Whois.Registry.Net.Za.Joburg
             var response = parser.Parse("joburg-whois.registry.net.za", "joburg", sample);
 
             Assert.Greater(sample.Length, 0);
-            Assert.AreEqual(WhoisResponseStatus.Found, response.Status);
+            Assert.AreEqual(WhoisStatus.Found, response.Status);
 
             Assert.AreEqual(54, response.FieldsParsed);
             Assert.AreEqual(0, response.ParsingErrors);

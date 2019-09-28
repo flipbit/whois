@@ -19,7 +19,7 @@ namespace Whois
         {
             var result = lookup.Lookup("com");
 
-            Assert.AreEqual("whois.verisign-grs.com", result.Url);
+            Assert.AreEqual("whois.verisign-grs.com", result.Registrar.WhoisServerUrl);
         }
  
         [Test]
@@ -27,7 +27,7 @@ namespace Whois
         {
             var result = lookup.Lookup("br");
 
-            Assert.AreEqual("whois.registro.br", result.Url);
+            Assert.AreEqual("whois.registro.br", result.Registrar.WhoisServerUrl);
         }
     }
 }

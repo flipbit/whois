@@ -25,7 +25,7 @@ namespace Whois.Parsing.Whois.Rnids.Rs.Rs
             var response = parser.Parse("whois.rnids.rs", "rs", sample);
 
             Assert.Greater(sample.Length, 0);
-            Assert.AreEqual(WhoisResponseStatus.Found, response.Status);
+            Assert.AreEqual(WhoisStatus.Found, response.Status);
 
             Assert.AreEqual(0, response.ParsingErrors);
             Assert.AreEqual("whois.rnids.rs/rs/Found", response.TemplateName);
@@ -58,7 +58,7 @@ namespace Whois.Parsing.Whois.Rnids.Rs.Rs
             var response = parser.Parse("whois.rnids.rs", "rs", sample);
 
             Assert.Greater(sample.Length, 0);
-            Assert.AreEqual(WhoisResponseStatus.Found, response.Status);
+            Assert.AreEqual(WhoisStatus.Found, response.Status);
 
             Assert.AreEqual(0, response.ParsingErrors);
             Assert.AreEqual("whois.rnids.rs/rs/Found", response.TemplateName);
@@ -91,7 +91,7 @@ namespace Whois.Parsing.Whois.Rnids.Rs.Rs
             var response = parser.Parse("whois.rnids.rs", "rs", sample);
 
             Assert.Greater(sample.Length, 0);
-            Assert.AreEqual(WhoisResponseStatus.Expired, response.Status);
+            Assert.AreEqual(WhoisStatus.Expired, response.Status);
 
             Assert.AreEqual(0, response.ParsingErrors);
             Assert.AreEqual("whois.rnids.rs/rs/Found", response.TemplateName);
@@ -128,7 +128,7 @@ namespace Whois.Parsing.Whois.Rnids.Rs.Rs
             var response = parser.Parse("whois.rnids.rs", "rs", sample);
 
             Assert.Greater(sample.Length, 0);
-            Assert.AreEqual(WhoisResponseStatus.Other, response.Status);
+            Assert.AreEqual(WhoisStatus.Other, response.Status);
 
             Assert.AreEqual(0, response.ParsingErrors);
             Assert.AreEqual("whois.rnids.rs/rs/Found", response.TemplateName);
@@ -165,7 +165,7 @@ namespace Whois.Parsing.Whois.Rnids.Rs.Rs
             var response = parser.Parse("whois.rnids.rs", "rs", sample);
 
             Assert.Greater(sample.Length, 0);
-            Assert.AreEqual(WhoisResponseStatus.Locked, response.Status);
+            Assert.AreEqual(WhoisStatus.Locked, response.Status);
 
             Assert.AreEqual(0, response.ParsingErrors);
             Assert.AreEqual("whois.rnids.rs/rs/Found", response.TemplateName);
@@ -204,7 +204,7 @@ namespace Whois.Parsing.Whois.Rnids.Rs.Rs
             var response = parser.Parse("whois.rnids.rs", "rs", sample);
 
             Assert.Greater(sample.Length, 0);
-            Assert.AreEqual(WhoisResponseStatus.NotFound, response.Status);
+            Assert.AreEqual(WhoisStatus.NotFound, response.Status);
 
             Assert.AreEqual(0, response.ParsingErrors);
             Assert.AreEqual("whois.rnids.rs/rs/NotFound", response.TemplateName);
@@ -219,7 +219,7 @@ namespace Whois.Parsing.Whois.Rnids.Rs.Rs
             var response = parser.Parse("whois.rnids.rs", "rs", sample);
 
             Assert.Greater(sample.Length, 0);
-            Assert.AreEqual(WhoisResponseStatus.Locked, response.Status);
+            Assert.AreEqual(WhoisStatus.Locked, response.Status);
 
             Assert.AreEqual(0, response.ParsingErrors);
             Assert.AreEqual("whois.rnids.rs/rs/Found", response.TemplateName);

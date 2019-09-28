@@ -15,7 +15,8 @@ namespace Whois
             {
                 DefaultEncoding = Encoding.UTF8,
                 ParseWhoisResponse = true,
-                ThrowOnParsingException = true
+                ThrowOnParsingException = true,
+                TimeoutSeconds = 10
             };
         }
 
@@ -30,6 +31,11 @@ namespace Whois
         public bool ParseWhoisResponse { get; set; }
 
         /// <summary>
+        /// Defines the network timeout to use when communicating with servers.
+        /// </summary>
+        public int TimeoutSeconds { get; set; }
+
+        /// <summary>
         /// Determines whether an exception is thrown is WHOIS parsing fails.
         /// </summary>
         public bool ThrowOnParsingException { get; set; }
@@ -40,7 +46,8 @@ namespace Whois
             {
                 DefaultEncoding = DefaultEncoding,
                 ParseWhoisResponse = ParseWhoisResponse,
-                ThrowOnParsingException = ThrowOnParsingException
+                ThrowOnParsingException = ThrowOnParsingException,
+                TimeoutSeconds = TimeoutSeconds
             };
         }
     }

@@ -43,7 +43,7 @@ namespace Whois.Commands
             {
                 if (record != null)
                 {
-                    var json = JsonConvert.SerializeObject(new WhoisResponse(record), Formatting.Indented);
+                    var json = JsonConvert.SerializeObject(new JsonModels.WhoisResponse(record), Formatting.Indented);
                     Console.WriteLine(json);
                 }
                 else

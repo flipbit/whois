@@ -28,7 +28,7 @@ namespace Whois.Parsers
 
             Assert.IsNotNull(result);
             Assert.AreEqual("registry.capetown", result.DomainName);
-            Assert.AreEqual(WhoisResponseStatus.Found, result.Status);
+            Assert.AreEqual(WhoisStatus.Found, result.Status);
             Assert.AreEqual(2, parser.Templates.Count);
         }
 

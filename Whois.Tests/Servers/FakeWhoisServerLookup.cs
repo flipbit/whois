@@ -8,12 +8,12 @@ namespace Whois.Servers
     /// </summary>
     internal class FakeWhoisServerLookup : IWhoisServerLookup
     {
-        public WhoisServer Lookup(string domain)
+        public WhoisResponse Lookup(string domain)
         {
-            return new WhoisServer("com", "test.whois.com");
+            return new WhoisResponse {DomainName = "com", Registrar = new Registrar {WhoisServerUrl = "test.whois.com"}};
         }
 
-        public Task<WhoisServer> LookupAsync(string tld)
+        public Task<WhoisResponse> LookupAsync(string tld)
         {
             return Task.FromResult(Lookup(tld));
         }

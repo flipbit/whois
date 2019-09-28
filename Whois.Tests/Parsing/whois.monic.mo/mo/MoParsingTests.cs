@@ -24,7 +24,7 @@ namespace Whois.Parsing.Whois.Monic.Mo.Mo
             var response = parser.Parse("whois.monic.mo", "mo", sample);
 
             Assert.Greater(sample.Length, 0);
-            Assert.AreEqual(WhoisResponseStatus.NotFound, response.Status);
+            Assert.AreEqual(WhoisStatus.NotFound, response.Status);
 
             Assert.AreEqual(0, response.ParsingErrors);
             Assert.AreEqual("whois.monic.mo/mo/NotFound", response.TemplateName);
@@ -41,7 +41,7 @@ namespace Whois.Parsing.Whois.Monic.Mo.Mo
             var response = parser.Parse("whois.monic.mo", "mo", sample);
 
             Assert.Greater(sample.Length, 0);
-            Assert.AreEqual(WhoisResponseStatus.Found, response.Status);
+            Assert.AreEqual(WhoisStatus.Found, response.Status);
 
             Assert.AreEqual(0, response.ParsingErrors);
             Assert.AreEqual("whois.monic.mo/mo/Found", response.TemplateName);

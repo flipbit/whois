@@ -25,7 +25,7 @@ namespace Whois.Parsing.Whois.Nic.Dm.Dm
             var response = parser.Parse("whois.nic.dm", "dm", sample);
 
             Assert.Greater(sample.Length, 0);
-            Assert.AreEqual(WhoisResponseStatus.NotFound, response.Status);
+            Assert.AreEqual(WhoisStatus.NotFound, response.Status);
 
             Assert.AreEqual(0, response.ParsingErrors);
             Assert.AreEqual("whois.nic.dm/dm/NotFound", response.TemplateName);
@@ -40,7 +40,7 @@ namespace Whois.Parsing.Whois.Nic.Dm.Dm
             var response = parser.Parse("whois.nic.dm", "dm", sample);
 
             Assert.Greater(sample.Length, 0);
-            Assert.AreEqual(WhoisResponseStatus.Found, response.Status);
+            Assert.AreEqual(WhoisStatus.Found, response.Status);
 
             Assert.AreEqual(0, response.ParsingErrors);
             Assert.AreEqual("whois.nic.dm/dm/Found", response.TemplateName);

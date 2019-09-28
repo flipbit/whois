@@ -25,7 +25,7 @@ namespace Whois.Parsing.Whois.Nic.Org.Uy.Uy
             var response = parser.Parse("whois.nic.org.uy", "uy", sample);
 
             Assert.Greater(sample.Length, 0);
-            Assert.AreEqual(WhoisResponseStatus.Found, response.Status);
+            Assert.AreEqual(WhoisStatus.Found, response.Status);
         }
 
         [Test]
@@ -35,7 +35,7 @@ namespace Whois.Parsing.Whois.Nic.Org.Uy.Uy
             var response = parser.Parse("whois.nic.org.uy", "uy", sample);
 
             Assert.Greater(sample.Length, 0);
-            Assert.AreEqual(WhoisResponseStatus.Error, response.Status);
+            Assert.AreEqual(WhoisStatus.Error, response.Status);
         }
 
         [Test]
@@ -45,7 +45,7 @@ namespace Whois.Parsing.Whois.Nic.Org.Uy.Uy
             var response = parser.Parse("whois.nic.org.uy", "uy", sample);
 
             Assert.Greater(sample.Length, 0);
-            Assert.AreEqual(WhoisResponseStatus.NotFound, response.Status);
+            Assert.AreEqual(WhoisStatus.NotFound, response.Status);
         }
 
         [Test]
@@ -55,7 +55,7 @@ namespace Whois.Parsing.Whois.Nic.Org.Uy.Uy
             var response = parser.Parse("whois.nic.org.uy", "uy", sample);
 
             Assert.Greater(sample.Length, 0);
-            Assert.AreEqual(WhoisResponseStatus.Found, response.Status);
+            Assert.AreEqual(WhoisStatus.Found, response.Status);
         }
     }
 }

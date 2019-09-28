@@ -25,7 +25,7 @@ namespace Whois.Parsing.Whois.Isnic.Is.Is
             var response = parser.Parse("whois.isnic.is", "is", sample);
 
             Assert.Greater(sample.Length, 0);
-            Assert.AreEqual(WhoisResponseStatus.NotFound, response.Status);
+            Assert.AreEqual(WhoisStatus.NotFound, response.Status);
 
             Assert.AreEqual(0, response.ParsingErrors);
             Assert.AreEqual("whois.isnic.is/is/NotFound", response.TemplateName);
@@ -42,7 +42,7 @@ namespace Whois.Parsing.Whois.Isnic.Is.Is
             var response = parser.Parse("whois.isnic.is", "is", sample);
 
             Assert.Greater(sample.Length, 0);
-            Assert.AreEqual(WhoisResponseStatus.Found, response.Status);
+            Assert.AreEqual(WhoisStatus.Found, response.Status);
 
             Assert.AreEqual(0, response.ParsingErrors);
             Assert.AreEqual("generic/tld/Found04", response.TemplateName);

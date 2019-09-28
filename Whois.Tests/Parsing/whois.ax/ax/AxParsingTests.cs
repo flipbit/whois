@@ -25,7 +25,7 @@ namespace Whois.Parsing.Whois.Ax.Ax
             var response = parser.Parse("whois.ax", "ax", sample);
 
             Assert.Greater(sample.Length, 0);
-            Assert.AreEqual(WhoisResponseStatus.NotFound, response.Status);
+            Assert.AreEqual(WhoisStatus.NotFound, response.Status);
 
             Assert.AreEqual(2, response.FieldsParsed);
             Assert.AreEqual(0, response.ParsingErrors);
@@ -41,7 +41,7 @@ namespace Whois.Parsing.Whois.Ax.Ax
             var response = parser.Parse("whois.ax", "ax", sample);
 
             Assert.Greater(sample.Length, 0);
-            Assert.AreEqual(WhoisResponseStatus.Found, response.Status);
+            Assert.AreEqual(WhoisStatus.Found, response.Status);
 
             Assert.AreEqual(11, response.FieldsParsed);
             Assert.AreEqual(0, response.ParsingErrors);

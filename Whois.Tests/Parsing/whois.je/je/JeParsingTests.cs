@@ -25,7 +25,7 @@ namespace Whois.Parsing.Whois.Je.Je
             var response = parser.Parse("whois.je", "je", sample);
 
             Assert.Greater(sample.Length, 0);
-            Assert.AreEqual(WhoisResponseStatus.NotFound, response.Status);
+            Assert.AreEqual(WhoisStatus.NotFound, response.Status);
 
             Assert.AreEqual(0, response.ParsingErrors);
             Assert.AreEqual("whois.je/je/NotFound", response.TemplateName);
@@ -46,7 +46,7 @@ namespace Whois.Parsing.Whois.Je.Je
             var response = parser.Parse("whois.je", "je", sample);
 
             Assert.Greater(sample.Length, 0);
-            Assert.AreEqual(WhoisResponseStatus.Found, response.Status);
+            Assert.AreEqual(WhoisStatus.Found, response.Status);
 
             Assert.AreEqual(0, response.ParsingErrors);
             Assert.AreEqual("whois.je/je/Found", response.TemplateName);

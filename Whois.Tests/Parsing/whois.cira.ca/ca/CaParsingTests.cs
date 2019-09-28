@@ -25,7 +25,7 @@ namespace Whois.Parsing.Whois.Cira.Ca.Ca
             var response = parser.Parse("whois.cira.ca", "ca", sample);
 
             Assert.Greater(sample.Length, 0);
-            Assert.AreEqual(WhoisResponseStatus.Found, response.Status);
+            Assert.AreEqual(WhoisStatus.Found, response.Status);
 
             Assert.AreEqual(0, response.ParsingErrors);
             Assert.AreEqual("whois.cira.ca/ca/Found", response.TemplateName);
@@ -86,7 +86,7 @@ namespace Whois.Parsing.Whois.Cira.Ca.Ca
             var response = parser.Parse("whois.cira.ca", "ca", sample);
 
             Assert.Greater(sample.Length, 0);
-            Assert.AreEqual(WhoisResponseStatus.NotAssigned, response.Status);
+            Assert.AreEqual(WhoisStatus.NotAssigned, response.Status);
 
             Assert.AreEqual(0, response.ParsingErrors);
             Assert.AreEqual("whois.cira.ca/ca/Found", response.TemplateName);
@@ -154,7 +154,7 @@ namespace Whois.Parsing.Whois.Cira.Ca.Ca
             var response = parser.Parse("whois.cira.ca", "ca", sample);
 
             Assert.Greater(sample.Length, 0);
-            Assert.AreEqual(WhoisResponseStatus.NotFound, response.Status);
+            Assert.AreEqual(WhoisStatus.NotFound, response.Status);
 
             Assert.AreEqual(0, response.ParsingErrors);
             Assert.AreEqual("whois.cira.ca/ca/NotFound", response.TemplateName);
@@ -175,7 +175,7 @@ namespace Whois.Parsing.Whois.Cira.Ca.Ca
             var response = parser.Parse("whois.cira.ca", "ca", sample);
 
             Assert.Greater(sample.Length, 0);
-            Assert.AreEqual(WhoisResponseStatus.PendingDelete, response.Status);
+            Assert.AreEqual(WhoisStatus.PendingDelete, response.Status);
 
             Assert.AreEqual(0, response.ParsingErrors);
             Assert.AreEqual("whois.cira.ca/ca/Found", response.TemplateName);
@@ -209,7 +209,7 @@ namespace Whois.Parsing.Whois.Cira.Ca.Ca
             var response = parser.Parse("whois.cira.ca", "ca", sample);
 
             Assert.Greater(sample.Length, 0);
-            Assert.AreEqual(WhoisResponseStatus.Redemption, response.Status);
+            Assert.AreEqual(WhoisStatus.Redemption, response.Status);
 
             Assert.AreEqual(0, response.ParsingErrors);
             Assert.AreEqual("whois.cira.ca/ca/Found", response.TemplateName);
@@ -270,7 +270,7 @@ namespace Whois.Parsing.Whois.Cira.Ca.Ca
             var response = parser.Parse("whois.cira.ca", "ca", sample);
 
             Assert.Greater(sample.Length, 0);
-            Assert.AreEqual(WhoisResponseStatus.Found, response.Status);
+            Assert.AreEqual(WhoisStatus.Found, response.Status);
 
             Assert.AreEqual(0, response.ParsingErrors);
             Assert.AreEqual("whois.cira.ca/ca/Found", response.TemplateName);
@@ -333,7 +333,7 @@ namespace Whois.Parsing.Whois.Cira.Ca.Ca
             var response = parser.Parse("whois.cira.ca", "ca", sample);
 
             Assert.Greater(sample.Length, 0);
-            Assert.AreEqual(WhoisResponseStatus.ToBeReleased, response.Status);
+            Assert.AreEqual(WhoisStatus.ToBeReleased, response.Status);
 
             Assert.AreEqual(0, response.ParsingErrors);
             Assert.AreEqual("whois.cira.ca/ca/ToBeReleased", response.TemplateName);
@@ -355,7 +355,7 @@ namespace Whois.Parsing.Whois.Cira.Ca.Ca
             var response = parser.Parse("whois.cira.ca", "ca", sample);
 
             Assert.Greater(sample.Length, 0);
-            Assert.AreEqual(WhoisResponseStatus.Unavailable, response.Status);
+            Assert.AreEqual(WhoisStatus.Unavailable, response.Status);
 
             Assert.AreEqual(0, response.ParsingErrors);
             Assert.AreEqual("whois.cira.ca/ca/Unavailable", response.TemplateName);
@@ -372,7 +372,7 @@ namespace Whois.Parsing.Whois.Cira.Ca.Ca
             var response = parser.Parse("whois.cira.ca", "ca", sample);
 
             Assert.Greater(sample.Length, 0);
-            Assert.AreEqual(WhoisResponseStatus.NotFound, response.Status);
+            Assert.AreEqual(WhoisStatus.NotFound, response.Status);
 
             Assert.AreEqual(0, response.ParsingErrors);
             Assert.AreEqual("whois.cira.ca/ca/NotFound", response.TemplateName);
@@ -393,7 +393,7 @@ namespace Whois.Parsing.Whois.Cira.Ca.Ca
             var response = parser.Parse("whois.cira.ca", "ca", sample);
 
             Assert.Greater(sample.Length, 0);
-            Assert.AreEqual(WhoisResponseStatus.Unavailable, response.Status);
+            Assert.AreEqual(WhoisStatus.Unavailable, response.Status);
 
             Assert.AreEqual(0, response.ParsingErrors);
             Assert.AreEqual("whois.cira.ca/ca/Unavailable", response.TemplateName);
@@ -410,7 +410,7 @@ namespace Whois.Parsing.Whois.Cira.Ca.Ca
             var response = parser.Parse("whois.cira.ca", "ca", sample);
 
             Assert.Greater(sample.Length, 0);
-            Assert.AreEqual(WhoisResponseStatus.Found, response.Status);
+            Assert.AreEqual(WhoisStatus.Found, response.Status);
 
             Assert.AreEqual(0, response.ParsingErrors);
             Assert.AreEqual("whois.cira.ca/ca/Found", response.TemplateName);

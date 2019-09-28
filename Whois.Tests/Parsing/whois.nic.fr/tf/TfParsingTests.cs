@@ -25,7 +25,7 @@ namespace Whois.Parsing.Whois.Nic.Fr.Tf
             var response = parser.Parse("whois.nic.fr", "tf", sample);
 
             Assert.Greater(sample.Length, 0);
-            Assert.AreEqual(WhoisResponseStatus.Found, response.Status);
+            Assert.AreEqual(WhoisStatus.Found, response.Status);
 
             Assert.AreEqual(0, response.ParsingErrors);
             Assert.AreEqual("generic/tld/Found05", response.TemplateName);
@@ -119,7 +119,7 @@ namespace Whois.Parsing.Whois.Nic.Fr.Tf
             var response = parser.Parse("whois.nic.fr", "tf", sample);
 
             Assert.Greater(sample.Length, 0);
-            Assert.AreEqual(WhoisResponseStatus.Throttled, response.Status);
+            Assert.AreEqual(WhoisStatus.Throttled, response.Status);
 
             AssertWriter.Write(response);
             Assert.AreEqual(0, response.ParsingErrors);
@@ -135,7 +135,7 @@ namespace Whois.Parsing.Whois.Nic.Fr.Tf
             var response = parser.Parse("whois.nic.fr", "tf", sample);
 
             Assert.Greater(sample.Length, 0);
-            Assert.AreEqual(WhoisResponseStatus.NotFound, response.Status);
+            Assert.AreEqual(WhoisStatus.NotFound, response.Status);
 
             Assert.AreEqual(0, response.ParsingErrors);
             Assert.AreEqual("generic/tld/NotFound06", response.TemplateName);
@@ -150,7 +150,7 @@ namespace Whois.Parsing.Whois.Nic.Fr.Tf
             var response = parser.Parse("whois.nic.fr", "tf", sample);
 
             Assert.Greater(sample.Length, 0);
-            Assert.AreEqual(WhoisResponseStatus.Found, response.Status);
+            Assert.AreEqual(WhoisStatus.Found, response.Status);
 
             Assert.AreEqual(0, response.ParsingErrors);
             Assert.AreEqual("generic/tld/Found05", response.TemplateName);

@@ -24,7 +24,7 @@ namespace Whois.Parsing.Whois.Dotgov.Gov.Gov
             var response = parser.Parse("whois.dotgov.gov", "gov", sample);
 
             Assert.Greater(sample.Length, 0);
-            Assert.AreEqual(WhoisResponseStatus.NotFound, response.Status);
+            Assert.AreEqual(WhoisStatus.NotFound, response.Status);
 
             Assert.AreEqual(0, response.ParsingErrors);
             Assert.AreEqual("whois.dotgov.gov/gov/NotFound", response.TemplateName);
@@ -41,7 +41,7 @@ namespace Whois.Parsing.Whois.Dotgov.Gov.Gov
             var response = parser.Parse("whois.dotgov.gov", "gov", sample);
 
             Assert.Greater(sample.Length, 0);
-            Assert.AreEqual(WhoisResponseStatus.Found, response.Status);
+            Assert.AreEqual(WhoisStatus.Found, response.Status);
 
             Assert.AreEqual(0, response.ParsingErrors);
             Assert.AreEqual("whois.dotgov.gov/gov/Found", response.TemplateName);

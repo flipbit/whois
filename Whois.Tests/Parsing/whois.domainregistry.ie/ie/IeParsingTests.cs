@@ -25,7 +25,7 @@ namespace Whois.Parsing.Whois.Domainregistry.Ie.Ie
             var response = parser.Parse("whois.domainregistry.ie", "ie", sample);
 
             Assert.Greater(sample.Length, 0);
-            Assert.AreEqual(WhoisResponseStatus.Reserved, response.Status);
+            Assert.AreEqual(WhoisStatus.Reserved, response.Status);
 
             Assert.AreEqual(0, response.ParsingErrors);
             Assert.AreEqual("whois.domainregistry.ie/ie/Reserved", response.TemplateName);
@@ -44,7 +44,7 @@ namespace Whois.Parsing.Whois.Domainregistry.Ie.Ie
             var response = parser.Parse("whois.domainregistry.ie", "ie", sample);
 
             Assert.Greater(sample.Length, 0);
-            Assert.AreEqual(WhoisResponseStatus.Found, response.Status);
+            Assert.AreEqual(WhoisStatus.Found, response.Status);
             
             Assert.AreEqual(0, response.ParsingErrors);
             Assert.AreEqual("whois.domainregistry.ie/ie/Found02", response.TemplateName);
@@ -77,7 +77,7 @@ namespace Whois.Parsing.Whois.Domainregistry.Ie.Ie
             var response = parser.Parse("whois.domainregistry.ie", "ie", sample);
 
             Assert.Greater(sample.Length, 0);
-            Assert.AreEqual(WhoisResponseStatus.Found, response.Status);
+            Assert.AreEqual(WhoisStatus.Found, response.Status);
 
             Assert.AreEqual(0, response.ParsingErrors);
             Assert.AreEqual("whois.domainregistry.ie/ie/Found", response.TemplateName);
@@ -115,7 +115,7 @@ namespace Whois.Parsing.Whois.Domainregistry.Ie.Ie
             var response = parser.Parse("whois.domainregistry.ie", "ie", sample);
 
             Assert.Greater(sample.Length, 0);
-            Assert.AreEqual(WhoisResponseStatus.Found, response.Status);
+            Assert.AreEqual(WhoisStatus.Found, response.Status);
 
             Assert.AreEqual(0, response.ParsingErrors);
             Assert.AreEqual("whois.domainregistry.ie/ie/Found02", response.TemplateName);
@@ -152,7 +152,7 @@ namespace Whois.Parsing.Whois.Domainregistry.Ie.Ie
             var response = parser.Parse("whois.domainregistry.ie", "ie", sample);
 
             Assert.Greater(sample.Length, 0);
-            Assert.AreEqual(WhoisResponseStatus.NotFound, response.Status);
+            Assert.AreEqual(WhoisStatus.NotFound, response.Status);
 
             Assert.AreEqual(0, response.ParsingErrors);
             Assert.AreEqual("whois.domainregistry.ie/ie/NotFound", response.TemplateName);
@@ -169,7 +169,7 @@ namespace Whois.Parsing.Whois.Domainregistry.Ie.Ie
             var response = parser.Parse("whois.domainregistry.ie", "ie", sample);
 
             Assert.Greater(sample.Length, 0);
-            Assert.AreEqual(WhoisResponseStatus.Found, response.Status);
+            Assert.AreEqual(WhoisStatus.Found, response.Status);
 
             Assert.AreEqual(0, response.ParsingErrors);
             Assert.AreEqual("whois.domainregistry.ie/ie/Found", response.TemplateName);

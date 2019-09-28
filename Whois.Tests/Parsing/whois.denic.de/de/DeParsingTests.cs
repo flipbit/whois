@@ -25,7 +25,7 @@ namespace Whois.Parsing.Whois.Denic.De.De
             var response = parser.Parse("whois.denic.de", "de", sample);
 
             Assert.Greater(sample.Length, 0);
-            Assert.AreEqual(WhoisResponseStatus.Found, response.Status);
+            Assert.AreEqual(WhoisStatus.Found, response.Status);
 
             Assert.AreEqual(0, response.ParsingErrors);
             Assert.AreEqual("whois.denic.de/de/Found", response.TemplateName);
@@ -83,7 +83,7 @@ namespace Whois.Parsing.Whois.Denic.De.De
             var response = parser.Parse("whois.denic.de", "de", sample);
 
             Assert.Greater(sample.Length, 0);
-            Assert.AreEqual(WhoisResponseStatus.Found, response.Status);
+            Assert.AreEqual(WhoisStatus.Found, response.Status);
 
             Assert.AreEqual(0, response.ParsingErrors);
             Assert.AreEqual("whois.denic.de/de/Found", response.TemplateName);
@@ -143,7 +143,7 @@ namespace Whois.Parsing.Whois.Denic.De.De
             var response = parser.Parse("whois.denic.de", "de", sample);
 
             Assert.Greater(sample.Length, 0);
-            Assert.AreEqual(WhoisResponseStatus.Error, response.Status);
+            Assert.AreEqual(WhoisStatus.Error, response.Status);
 
             Assert.AreEqual(0, response.ParsingErrors);
             Assert.AreEqual("whois.denic.de/de/Error", response.TemplateName);
@@ -158,7 +158,7 @@ namespace Whois.Parsing.Whois.Denic.De.De
             var response = parser.Parse("whois.denic.de", "de", sample);
 
             Assert.Greater(sample.Length, 0);
-            Assert.AreEqual(WhoisResponseStatus.Throttled, response.Status);
+            Assert.AreEqual(WhoisStatus.Throttled, response.Status);
 
             Assert.AreEqual(0, response.ParsingErrors);
             Assert.AreEqual("whois.denic.de/de/Throttled", response.TemplateName);
@@ -173,7 +173,7 @@ namespace Whois.Parsing.Whois.Denic.De.De
             var response = parser.Parse("whois.denic.de", "de", sample);
 
             Assert.Greater(sample.Length, 0);
-            Assert.AreEqual(WhoisResponseStatus.NotFound, response.Status);
+            Assert.AreEqual(WhoisStatus.NotFound, response.Status);
 
             Assert.AreEqual(0, response.ParsingErrors);
             Assert.AreEqual("whois.denic.de/de/NotFound", response.TemplateName);
@@ -190,7 +190,7 @@ namespace Whois.Parsing.Whois.Denic.De.De
             var response = parser.Parse("whois.denic.de", "de", sample);
 
             Assert.Greater(sample.Length, 0);
-            Assert.AreEqual(WhoisResponseStatus.Failed, response.Status);
+            Assert.AreEqual(WhoisStatus.Failed, response.Status);
 
             Assert.AreEqual(0, response.ParsingErrors);
             Assert.AreEqual("whois.denic.de/de/Found", response.TemplateName);
@@ -248,7 +248,7 @@ namespace Whois.Parsing.Whois.Denic.De.De
             var response = parser.Parse("whois.denic.de", "de", sample);
 
             Assert.Greater(sample.Length, 0);
-            Assert.AreEqual(WhoisResponseStatus.Failed, response.Status);
+            Assert.AreEqual(WhoisStatus.Failed, response.Status);
 
             Assert.AreEqual(0, response.ParsingErrors);
             Assert.AreEqual("whois.denic.de/de/Found", response.TemplateName);
@@ -310,7 +310,7 @@ namespace Whois.Parsing.Whois.Denic.De.De
             var response = parser.Parse("whois.denic.de", "de", sample);
 
             Assert.Greater(sample.Length, 0);
-            Assert.AreEqual(WhoisResponseStatus.Invalid, response.Status);
+            Assert.AreEqual(WhoisStatus.Invalid, response.Status);
 
             Assert.AreEqual(0, response.ParsingErrors);
             Assert.AreEqual("whois.denic.de/de/Invalid", response.TemplateName);
@@ -331,7 +331,7 @@ namespace Whois.Parsing.Whois.Denic.De.De
             var response = parser.Parse("whois.denic.de", "de", sample);
 
             Assert.Greater(sample.Length, 0);
-            Assert.AreEqual(WhoisResponseStatus.Found, response.Status);
+            Assert.AreEqual(WhoisStatus.Found, response.Status);
 
             Assert.AreEqual(0, response.ParsingErrors);
             Assert.AreEqual("whois.denic.de/de/Found", response.TemplateName);

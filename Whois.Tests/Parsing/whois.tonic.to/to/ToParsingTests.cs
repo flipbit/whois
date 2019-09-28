@@ -24,7 +24,7 @@ namespace Whois.Parsing.Whois.Tonic.To.To
             var response = parser.Parse("whois.tonic.to", "to", sample);
 
             Assert.Greater(sample.Length, 0);
-            Assert.AreEqual(WhoisResponseStatus.NotFound, response.Status);
+            Assert.AreEqual(WhoisStatus.NotFound, response.Status);
 
             Assert.AreEqual(0, response.ParsingErrors);
             Assert.AreEqual("whois.tonic.to/to/NotFound", response.TemplateName);
@@ -41,7 +41,7 @@ namespace Whois.Parsing.Whois.Tonic.To.To
             var response = parser.Parse("whois.tonic.to", "to", sample);
 
             Assert.Greater(sample.Length, 0);
-            Assert.AreEqual(WhoisResponseStatus.Found, response.Status);
+            Assert.AreEqual(WhoisStatus.Found, response.Status);
 
             Assert.AreEqual(0, response.ParsingErrors);
             Assert.AreEqual("whois.tonic.to/to/Found", response.TemplateName);

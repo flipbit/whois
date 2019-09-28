@@ -25,7 +25,7 @@ namespace Whois.Parsing.Whois.Nic.Asia.Asia
             var response = parser.Parse("whois.nic.asia", "asia", sample);
 
             Assert.Greater(sample.Length, 0);
-            Assert.AreEqual(WhoisResponseStatus.Found, response.Status);
+            Assert.AreEqual(WhoisStatus.Found, response.Status);
 
             Assert.AreEqual(0, response.ParsingErrors);
             Assert.AreEqual("whois.nic.asia/asia/Found", response.TemplateName);
@@ -123,7 +123,7 @@ namespace Whois.Parsing.Whois.Nic.Asia.Asia
             var response = parser.Parse("whois.nic.asia", "asia", sample);
 
             Assert.Greater(sample.Length, 0);
-            Assert.AreEqual(WhoisResponseStatus.Found, response.Status);
+            Assert.AreEqual(WhoisStatus.Found, response.Status);
 
             Assert.AreEqual(0, response.ParsingErrors);
             Assert.AreEqual("whois.nic.asia/asia/Found", response.TemplateName);
@@ -224,7 +224,7 @@ namespace Whois.Parsing.Whois.Nic.Asia.Asia
             var response = parser.Parse("whois.nic.asia", "asia", sample);
 
             Assert.Greater(sample.Length, 0);
-            Assert.AreEqual(WhoisResponseStatus.NotFound, response.Status);
+            Assert.AreEqual(WhoisStatus.NotFound, response.Status);
 
             Assert.AreEqual(0, response.ParsingErrors);
             Assert.AreEqual("generic/tld/NotFound001", response.TemplateName);
@@ -239,7 +239,7 @@ namespace Whois.Parsing.Whois.Nic.Asia.Asia
             var response = parser.Parse("whois.nic.asia", "asia", sample);
 
             Assert.Greater(sample.Length, 0);
-            Assert.AreEqual(WhoisResponseStatus.Found, response.Status);
+            Assert.AreEqual(WhoisStatus.Found, response.Status);
 
             Assert.AreEqual(0, response.ParsingErrors);
             Assert.AreEqual("whois.nic.asia/asia/Found", response.TemplateName);
@@ -342,7 +342,7 @@ namespace Whois.Parsing.Whois.Nic.Asia.Asia
             var response = parser.Parse("whois.nic.asia", "asia", sample);
 
             Assert.Greater(sample.Length, 0);
-            Assert.AreEqual(WhoisResponseStatus.Reserved, response.Status);
+            Assert.AreEqual(WhoisStatus.Reserved, response.Status);
 
             Assert.AreEqual(0, response.ParsingErrors);
             Assert.AreEqual("whois.nic.asia/asia/Reserved", response.TemplateName);

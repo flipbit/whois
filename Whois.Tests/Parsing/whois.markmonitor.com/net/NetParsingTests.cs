@@ -24,7 +24,7 @@ namespace Whois.Parsing.Whois.Markmonitor.Com.Net
             var response = parser.Parse("whois.markmonitor.com", "net", sample);
 
             Assert.Greater(sample.Length, 0);
-            Assert.AreEqual(WhoisResponseStatus.Found, response.Status);
+            Assert.AreEqual(WhoisStatus.Found, response.Status);
 
             Assert.AreEqual(0, response.ParsingErrors);
             Assert.AreEqual("generic/tld/Found02", response.TemplateName);

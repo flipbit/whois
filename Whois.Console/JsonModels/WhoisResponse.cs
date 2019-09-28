@@ -11,7 +11,7 @@ namespace Whois.JsonModels
         {
         }
 
-        public WhoisResponse(Models.WhoisResponse response)
+        public WhoisResponse(Whois.WhoisResponse response)
         {
             DomainName = response.DomainName;
             RegistryDomainId = response.RegistryDomainId;

@@ -25,7 +25,7 @@ namespace Whois.Parsing.Whois.Dk.Hostmaster.Dk.Dk
             var response = parser.Parse("whois.dk-hostmaster.dk", "dk", sample);
 
             Assert.Greater(sample.Length, 0);
-            Assert.AreEqual(WhoisResponseStatus.Deactivated, response.Status);
+            Assert.AreEqual(WhoisStatus.Deactivated, response.Status);
 
             Assert.AreEqual(0, response.ParsingErrors);
             Assert.AreEqual("whois.dk-hostmaster.dk/dk/Found", response.TemplateName);
@@ -83,7 +83,7 @@ namespace Whois.Parsing.Whois.Dk.Hostmaster.Dk.Dk
             var response = parser.Parse("whois.dk-hostmaster.dk", "dk", sample);
 
             Assert.Greater(sample.Length, 0);
-            Assert.AreEqual(WhoisResponseStatus.Reserved, response.Status);
+            Assert.AreEqual(WhoisStatus.Reserved, response.Status);
 
             Assert.AreEqual(0, response.ParsingErrors);
             Assert.AreEqual("whois.dk-hostmaster.dk/dk/Found", response.TemplateName);
@@ -107,7 +107,7 @@ namespace Whois.Parsing.Whois.Dk.Hostmaster.Dk.Dk
             var response = parser.Parse("whois.dk-hostmaster.dk", "dk", sample);
 
             Assert.Greater(sample.Length, 0);
-            Assert.AreEqual(WhoisResponseStatus.Throttled, response.Status);
+            Assert.AreEqual(WhoisStatus.Throttled, response.Status);
 
             Assert.AreEqual(0, response.ParsingErrors);
             Assert.AreEqual("whois.dk-hostmaster.dk/dk/Throttled1", response.TemplateName);
@@ -122,7 +122,7 @@ namespace Whois.Parsing.Whois.Dk.Hostmaster.Dk.Dk
             var response = parser.Parse("whois.dk-hostmaster.dk", "dk", sample);
 
             Assert.Greater(sample.Length, 0);
-            Assert.AreEqual(WhoisResponseStatus.Throttled, response.Status);
+            Assert.AreEqual(WhoisStatus.Throttled, response.Status);
 
             Assert.AreEqual(0, response.ParsingErrors);
             Assert.AreEqual("whois.dk-hostmaster.dk/dk/Throttled2", response.TemplateName);
@@ -137,7 +137,7 @@ namespace Whois.Parsing.Whois.Dk.Hostmaster.Dk.Dk
             var response = parser.Parse("whois.dk-hostmaster.dk", "dk", sample);
 
             Assert.Greater(sample.Length, 0);
-            Assert.AreEqual(WhoisResponseStatus.NotFound, response.Status);
+            Assert.AreEqual(WhoisStatus.NotFound, response.Status);
 
             Assert.AreEqual(0, response.ParsingErrors);
             Assert.AreEqual("whois.dk-hostmaster.dk/dk/NotFound", response.TemplateName);
@@ -152,7 +152,7 @@ namespace Whois.Parsing.Whois.Dk.Hostmaster.Dk.Dk
             var response = parser.Parse("whois.dk-hostmaster.dk", "dk", sample);
 
             Assert.Greater(sample.Length, 0);
-            Assert.AreEqual(WhoisResponseStatus.Found, response.Status);
+            Assert.AreEqual(WhoisStatus.Found, response.Status);
 
             Assert.AreEqual(0, response.ParsingErrors);
             Assert.AreEqual("whois.dk-hostmaster.dk/dk/Found", response.TemplateName);

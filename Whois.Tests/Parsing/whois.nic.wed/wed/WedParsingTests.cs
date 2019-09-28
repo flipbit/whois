@@ -25,7 +25,7 @@ namespace Whois.Parsing.Whois.Nic.Wed.Wed
             var response = parser.Parse("whois.nic.wed", "wed", sample);
 
             Assert.Greater(sample.Length, 0);
-            Assert.AreEqual(WhoisResponseStatus.NotAvailable, response.Status);
+            Assert.AreEqual(WhoisStatus.NotAvailable, response.Status);
 
             Assert.AreEqual(0, response.ParsingErrors);
             Assert.AreEqual("generic/tld/Found02", response.TemplateName);
@@ -46,7 +46,7 @@ namespace Whois.Parsing.Whois.Nic.Wed.Wed
             var response = parser.Parse("whois.nic.wed", "wed", sample);
 
             Assert.Greater(sample.Length, 0);
-            Assert.AreEqual(WhoisResponseStatus.Found, response.Status);
+            Assert.AreEqual(WhoisStatus.Found, response.Status);
 
             Assert.AreEqual(0, response.ParsingErrors);
             Assert.AreEqual("generic/tld/Found02", response.TemplateName);

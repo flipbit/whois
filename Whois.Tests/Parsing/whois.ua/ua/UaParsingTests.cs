@@ -25,7 +25,7 @@ namespace Whois.Parsing.Whois.Ua.Ua
             var response = parser.Parse("whois.ua", "ua", sample);
 
             Assert.Greater(sample.Length, 0);
-            Assert.AreEqual(WhoisResponseStatus.Found, response.Status);
+            Assert.AreEqual(WhoisStatus.Found, response.Status);
 
             Assert.AreEqual(0, response.ParsingErrors);
             Assert.AreEqual("whois.ua/ua/Found01", response.TemplateName);
@@ -108,7 +108,7 @@ namespace Whois.Parsing.Whois.Ua.Ua
             var response = parser.Parse("whois.ua", "ua", sample);
 
             Assert.Greater(sample.Length, 0);
-            Assert.AreEqual(WhoisResponseStatus.Found, response.Status);
+            Assert.AreEqual(WhoisStatus.Found, response.Status);
 
             Assert.AreEqual(0, response.ParsingErrors);
             Assert.AreEqual("whois.ua/ua/Found01", response.TemplateName);
@@ -190,7 +190,7 @@ namespace Whois.Parsing.Whois.Ua.Ua
             var response = parser.Parse("whois.ua", "ua", sample);
 
             Assert.Greater(sample.Length, 0);
-            Assert.AreEqual(WhoisResponseStatus.Other, response.Status);
+            Assert.AreEqual(WhoisStatus.Other, response.Status);
 
             Assert.AreEqual(0, response.ParsingErrors);
             Assert.AreEqual("whois.ua/ua/Found01", response.TemplateName);
@@ -273,7 +273,7 @@ namespace Whois.Parsing.Whois.Ua.Ua
             var response = parser.Parse("whois.ua", "ua", sample);
 
             Assert.Greater(sample.Length, 0);
-            Assert.AreEqual(WhoisResponseStatus.Found, response.Status);
+            Assert.AreEqual(WhoisStatus.Found, response.Status);
 
             Assert.AreEqual(0, response.ParsingErrors);
             Assert.AreEqual("whois.ua/ua/Found01", response.TemplateName);
@@ -357,7 +357,7 @@ namespace Whois.Parsing.Whois.Ua.Ua
             var response = parser.Parse("whois.ua", "ua", sample);
 
             Assert.Greater(sample.Length, 0);
-            Assert.AreEqual(WhoisResponseStatus.PendingDelete, response.Status);
+            Assert.AreEqual(WhoisStatus.PendingDelete, response.Status);
 
             Assert.AreEqual(0, response.ParsingErrors);
             Assert.AreEqual("whois.ua/ua/Found01", response.TemplateName);
@@ -440,7 +440,7 @@ namespace Whois.Parsing.Whois.Ua.Ua
             var response = parser.Parse("whois.ua", "ua", sample);
 
             Assert.Greater(sample.Length, 0);
-            Assert.AreEqual(WhoisResponseStatus.Redemption, response.Status);
+            Assert.AreEqual(WhoisStatus.Redemption, response.Status);
 
             Assert.AreEqual(0, response.ParsingErrors);
             Assert.AreEqual("whois.ua/ua/Found01", response.TemplateName);
@@ -504,7 +504,7 @@ namespace Whois.Parsing.Whois.Ua.Ua
             var response = parser.Parse("whois.ua", "ua", sample);
 
             Assert.Greater(sample.Length, 0);
-            Assert.AreEqual(WhoisResponseStatus.NotFound, response.Status);
+            Assert.AreEqual(WhoisStatus.NotFound, response.Status);
 
             Assert.AreEqual(0, response.ParsingErrors);
             Assert.AreEqual("whois.ua/ua/NotFound", response.TemplateName);
@@ -521,7 +521,7 @@ namespace Whois.Parsing.Whois.Ua.Ua
             var response = parser.Parse("whois.ua", "ua", sample);
 
             Assert.Greater(sample.Length, 0);
-            Assert.AreEqual(WhoisResponseStatus.Found, response.Status);
+            Assert.AreEqual(WhoisStatus.Found, response.Status);
 
             Assert.AreEqual(0, response.ParsingErrors);
             Assert.AreEqual("whois.ua/ua/Found02", response.TemplateName);
@@ -576,7 +576,7 @@ namespace Whois.Parsing.Whois.Ua.Ua
             var response = parser.Parse("whois.ua", "ua", sample);
 
             Assert.Greater(sample.Length, 0);
-            Assert.AreEqual(WhoisResponseStatus.Found, response.Status);
+            Assert.AreEqual(WhoisStatus.Found, response.Status);
 
             Assert.AreEqual(0, response.ParsingErrors);
             Assert.AreEqual("whois.ua/ua/Found02", response.TemplateName);

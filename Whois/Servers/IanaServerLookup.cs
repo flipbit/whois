@@ -31,12 +31,12 @@ namespace Whois.Servers
         }
         
 
-        public WhoisServer Lookup(string tld)
+        public WhoisResponse Lookup(string tld)
         {
             return LookupAsync(tld).Result;
         }
 
-        public async Task<WhoisServer> LookupAsync(string tld)
+        public async Task<WhoisResponse> LookupAsync(string tld)
         {            
             var content = await GetWhoisServerResponse(tld);
 
@@ -48,27 +48,10 @@ namespace Whois.Servers
             {
                 var match = result.BestMatch.Value;
 
-                return new WhoisServer
-                {
-                    AdminContact = match.AdminContact,
-                    Changed = match.Updated,
-                    Content = content,
-                    Created = match.Registered,
-                    NameServers = match.NameServers,
-                    Status = match.Status,
-                    TechContact = match.TechnicalContact,
-                    Tld = match.DomainName,
-                    Url = match.Registrar?.WhoisServerUrl,
-                    Remarks = match.Remarks,
-                    Organization = new Organization
-                    {
-                        Name = match.Registrant?.Organization,
-                        Address = match.Registrant?.Address
-                    }
-                };
+                return match;
             }
 
-            return new WhoisServer { Tld = tld, Status = WhoisResponseStatus.Unknown };
+            return new WhoisResponse { DomainName = tld, Status = WhoisStatus.Unknown };
         }
 
         private async Task<string> GetWhoisServerResponse(string tld)

@@ -25,7 +25,7 @@ namespace Whois.Parsing.Whois.Tcinet.Ru.XnP1ai
             var response = parser.Parse("whois.tcinet.ru", "xn--p1ai", sample);
 
             Assert.Greater(sample.Length, 0);
-            Assert.AreEqual(WhoisResponseStatus.NotFound, response.Status);
+            Assert.AreEqual(WhoisStatus.NotFound, response.Status);
 
             Assert.AreEqual(0, response.ParsingErrors);
             Assert.AreEqual("whois.tcinet.ru/NotFound", response.TemplateName);
@@ -40,7 +40,7 @@ namespace Whois.Parsing.Whois.Tcinet.Ru.XnP1ai
             var response = parser.Parse("whois.tcinet.ru", "xn--p1ai", sample);
 
             Assert.Greater(sample.Length, 0);
-            Assert.AreEqual(WhoisResponseStatus.Found, response.Status);
+            Assert.AreEqual(WhoisStatus.Found, response.Status);
 
             Assert.AreEqual(0, response.ParsingErrors);
             Assert.AreEqual("whois.tcinet.ru/Found", response.TemplateName);

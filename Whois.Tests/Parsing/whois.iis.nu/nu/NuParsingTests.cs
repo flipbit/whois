@@ -25,7 +25,7 @@ namespace Whois.Parsing.Whois.Iis.Nu.Nu
             var response = parser.Parse("whois.iis.nu", "nu", sample);
 
             Assert.Greater(sample.Length, 0);
-            Assert.AreEqual(WhoisResponseStatus.NotFound, response.Status);
+            Assert.AreEqual(WhoisStatus.NotFound, response.Status);
 
             Assert.AreEqual(0, response.ParsingErrors);
             Assert.AreEqual("whois.iis.nu/nu/NotFound", response.TemplateName);
@@ -42,7 +42,7 @@ namespace Whois.Parsing.Whois.Iis.Nu.Nu
             var response = parser.Parse("whois.iis.nu", "nu", sample);
 
             Assert.Greater(sample.Length, 0);
-            Assert.AreEqual(WhoisResponseStatus.Found, response.Status);
+            Assert.AreEqual(WhoisStatus.Found, response.Status);
 
             AssertWriter.Write(response);
             Assert.AreEqual(0, response.ParsingErrors);

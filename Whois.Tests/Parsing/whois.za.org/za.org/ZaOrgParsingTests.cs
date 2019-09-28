@@ -25,7 +25,7 @@ namespace Whois.Parsing.Whois.Za.Org.ZaOrg
             var response = parser.Parse("whois.za.org", "za.org", sample);
 
             Assert.Greater(sample.Length, 0);
-            Assert.AreEqual(WhoisResponseStatus.NotFound, response.Status);
+            Assert.AreEqual(WhoisStatus.NotFound, response.Status);
 
             Assert.AreEqual(0, response.ParsingErrors);
             Assert.AreEqual("whois.za.org/za.org/NotFound", response.TemplateName);
@@ -41,7 +41,7 @@ namespace Whois.Parsing.Whois.Za.Org.ZaOrg
             var response = parser.Parse("whois.za.org", "za.org", sample);
 
             Assert.Greater(sample.Length, 0);
-            Assert.AreEqual(WhoisResponseStatus.Found, response.Status);
+            Assert.AreEqual(WhoisStatus.Found, response.Status);
 
             Assert.AreEqual(0, response.ParsingErrors);
             Assert.AreEqual("whois.za.org/za.org/Found", response.TemplateName);

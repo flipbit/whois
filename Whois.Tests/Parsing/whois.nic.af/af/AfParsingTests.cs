@@ -25,7 +25,7 @@ namespace Whois.Parsing.Whois.Nic.Af.Af
             var response = parser.Parse("whois.nic.af", "af", sample);
 
             Assert.Greater(sample.Length, 0);
-            Assert.AreEqual(WhoisResponseStatus.NotFound, response.Status);
+            Assert.AreEqual(WhoisStatus.NotFound, response.Status);
 
             Assert.AreEqual(0, response.ParsingErrors);
             Assert.AreEqual("whois.nic.af/af/NotFound", response.TemplateName);
@@ -42,7 +42,7 @@ namespace Whois.Parsing.Whois.Nic.Af.Af
             var response = parser.Parse("whois.nic.af", "af", sample);
 
             Assert.Greater(sample.Length, 0);
-            Assert.AreEqual(WhoisResponseStatus.Found, response.Status);
+            Assert.AreEqual(WhoisStatus.Found, response.Status);
 
             Assert.AreEqual(0, response.ParsingErrors);
             Assert.AreEqual("generic/tld/Found02", response.TemplateName);

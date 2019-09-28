@@ -25,7 +25,7 @@ namespace Whois.Parsing.Whois.Gov.Za.GovZa
             var response = parser.Parse("whois.gov.za", "gov.za", sample);
 
             Assert.Greater(sample.Length, 0);
-            Assert.AreEqual(WhoisResponseStatus.NotFound, response.Status);
+            Assert.AreEqual(WhoisStatus.NotFound, response.Status);
 
             Assert.AreEqual(0, response.ParsingErrors);
             Assert.AreEqual("whois.gov.za/gov.za/NotFound", response.TemplateName);
@@ -42,7 +42,7 @@ namespace Whois.Parsing.Whois.Gov.Za.GovZa
             var response = parser.Parse("whois.gov.za", "gov.za", sample);
 
             Assert.Greater(sample.Length, 0);
-            Assert.AreEqual(WhoisResponseStatus.Found, response.Status);
+            Assert.AreEqual(WhoisStatus.Found, response.Status);
 
             Assert.AreEqual(0, response.ParsingErrors);
             Assert.AreEqual("whois.gov.za/gov.za/Found", response.TemplateName);

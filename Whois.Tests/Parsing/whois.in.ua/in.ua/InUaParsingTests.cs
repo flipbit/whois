@@ -25,7 +25,7 @@ namespace Whois.Parsing.Whois.In.Ua.InUa
             var response = parser.Parse("whois.in.ua", "in.ua", sample);
 
             Assert.Greater(sample.Length, 0);
-            Assert.AreEqual(WhoisResponseStatus.NotFound, response.Status);
+            Assert.AreEqual(WhoisStatus.NotFound, response.Status);
 
             Assert.AreEqual(0, response.ParsingErrors);
             Assert.AreEqual("whois.in.ua/in.ua/NotFound", response.TemplateName);
@@ -42,7 +42,7 @@ namespace Whois.Parsing.Whois.In.Ua.InUa
             var response = parser.Parse("whois.in.ua", "in.ua", sample);
 
             Assert.Greater(sample.Length, 0);
-            Assert.AreEqual(WhoisResponseStatus.Found, response.Status);
+            Assert.AreEqual(WhoisStatus.Found, response.Status);
 
             Assert.AreEqual(0, response.ParsingErrors);
             Assert.AreEqual("whois.in.ua/in.ua/Found", response.TemplateName);

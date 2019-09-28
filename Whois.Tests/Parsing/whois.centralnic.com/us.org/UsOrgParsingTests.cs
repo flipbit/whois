@@ -24,7 +24,7 @@ namespace Whois.Parsing.Whois.Centralnic.Com.UsOrg
             var response = parser.Parse("whois.centralnic.com", "us.org", sample);
 
             Assert.Greater(sample.Length, 0);
-            Assert.AreEqual(WhoisResponseStatus.NotFound, response.Status);
+            Assert.AreEqual(WhoisStatus.NotFound, response.Status);
 
             Assert.AreEqual(0, response.ParsingErrors);
             Assert.AreEqual("whois.centralnic.com/NotFound", response.TemplateName);

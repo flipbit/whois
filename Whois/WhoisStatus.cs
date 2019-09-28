@@ -1,10 +1,6 @@
-﻿using System;
-using System.Collections.Generic;
-using System.Text;
-
-namespace Whois.Models
+﻿namespace Whois
 {
-    public enum WhoisResponseStatus
+    public enum WhoisStatus
     {
         Unknown,
         Found, 

@@ -25,7 +25,7 @@ namespace Whois.Parsing.Whois.Registry.Hm.Hm
             var response = parser.Parse("whois.registry.hm", "hm", sample);
 
             Assert.Greater(sample.Length, 0);
-            Assert.AreEqual(WhoisResponseStatus.NotFound, response.Status);
+            Assert.AreEqual(WhoisStatus.NotFound, response.Status);
 
             AssertWriter.Write(response);
             Assert.AreEqual(0, response.ParsingErrors);
@@ -41,7 +41,7 @@ namespace Whois.Parsing.Whois.Registry.Hm.Hm
             var response = parser.Parse("whois.registry.hm", "hm", sample);
 
             Assert.Greater(sample.Length, 0);
-            Assert.AreEqual(WhoisResponseStatus.Found, response.Status);
+            Assert.AreEqual(WhoisStatus.Found, response.Status);
 
             AssertWriter.Write(response);
             Assert.AreEqual(0, response.ParsingErrors);

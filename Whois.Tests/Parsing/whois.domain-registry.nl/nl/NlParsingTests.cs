@@ -25,7 +25,7 @@ namespace Whois.Parsing.Whois.Domain.Registry.Nl.Nl
             var response = parser.Parse("whois.domain-registry.nl", "nl", sample);
 
             Assert.Greater(sample.Length, 0);
-            Assert.AreEqual(WhoisResponseStatus.Found, response.Status);
+            Assert.AreEqual(WhoisStatus.Found, response.Status);
 
             Assert.AreEqual(0, response.ParsingErrors);
             Assert.AreEqual("whois.domain-registry.nl/nl/Found2", response.TemplateName);
@@ -54,7 +54,7 @@ namespace Whois.Parsing.Whois.Domain.Registry.Nl.Nl
             var response = parser.Parse("whois.domain-registry.nl", "nl", sample);
 
             Assert.Greater(sample.Length, 0);
-            Assert.AreEqual(WhoisResponseStatus.NotAssigned, response.Status);
+            Assert.AreEqual(WhoisStatus.NotAssigned, response.Status);
 
             Assert.AreEqual(0, response.ParsingErrors);
             Assert.AreEqual("whois.domain-registry.nl/nl/Found2", response.TemplateName);
@@ -83,7 +83,7 @@ namespace Whois.Parsing.Whois.Domain.Registry.Nl.Nl
             var response = parser.Parse("whois.domain-registry.nl", "nl", sample);
 
             Assert.Greater(sample.Length, 0);
-            Assert.AreEqual(WhoisResponseStatus.Throttled, response.Status);
+            Assert.AreEqual(WhoisStatus.Throttled, response.Status);
 
             Assert.AreEqual(0, response.ParsingErrors);
             Assert.AreEqual("whois.domain-registry.nl/nl/Throttled1", response.TemplateName);
@@ -98,7 +98,7 @@ namespace Whois.Parsing.Whois.Domain.Registry.Nl.Nl
             var response = parser.Parse("whois.domain-registry.nl", "nl", sample);
 
             Assert.Greater(sample.Length, 0);
-            Assert.AreEqual(WhoisResponseStatus.Throttled, response.Status);
+            Assert.AreEqual(WhoisStatus.Throttled, response.Status);
 
             Assert.AreEqual(0, response.ParsingErrors);
             Assert.AreEqual("whois.domain-registry.nl/nl/Throttled2", response.TemplateName);
@@ -113,7 +113,7 @@ namespace Whois.Parsing.Whois.Domain.Registry.Nl.Nl
             var response = parser.Parse("whois.domain-registry.nl", "nl", sample);
 
             Assert.Greater(sample.Length, 0);
-            Assert.AreEqual(WhoisResponseStatus.Unavailable, response.Status);
+            Assert.AreEqual(WhoisStatus.Unavailable, response.Status);
 
             AssertWriter.Write(response);
         }
@@ -125,7 +125,7 @@ namespace Whois.Parsing.Whois.Domain.Registry.Nl.Nl
             var response = parser.Parse("whois.domain-registry.nl", "nl", sample);
 
             Assert.Greater(sample.Length, 0);
-            Assert.AreEqual(WhoisResponseStatus.NotFound, response.Status);
+            Assert.AreEqual(WhoisStatus.NotFound, response.Status);
 
             Assert.AreEqual(0, response.ParsingErrors);
             Assert.AreEqual("whois.domain-registry.nl/nl/NotFound", response.TemplateName);
@@ -142,7 +142,7 @@ namespace Whois.Parsing.Whois.Domain.Registry.Nl.Nl
             var response = parser.Parse("whois.domain-registry.nl", "nl", sample);
 
             Assert.Greater(sample.Length, 0);
-            Assert.AreEqual(WhoisResponseStatus.Quarantined, response.Status);
+            Assert.AreEqual(WhoisStatus.Quarantined, response.Status);
 
             Assert.AreEqual(0, response.ParsingErrors);
             Assert.AreEqual("whois.domain-registry.nl/nl/Found2", response.TemplateName);
@@ -164,7 +164,7 @@ namespace Whois.Parsing.Whois.Domain.Registry.Nl.Nl
             var response = parser.Parse("whois.domain-registry.nl", "nl", sample);
 
             Assert.Greater(sample.Length, 0);
-            Assert.AreEqual(WhoisResponseStatus.Found, response.Status);
+            Assert.AreEqual(WhoisStatus.Found, response.Status);
 
             Assert.AreEqual(0, response.ParsingErrors);
             Assert.AreEqual("whois.domain-registry.nl/nl/Found1", response.TemplateName);

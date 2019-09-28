@@ -25,7 +25,7 @@ namespace Whois.Parsing.Whois.Kenic.Or.Ke.Ke
             var response = parser.Parse("whois.kenic.or.ke", "ke", sample);
 
             Assert.Greater(sample.Length, 0);
-            Assert.AreEqual(WhoisResponseStatus.NotFound, response.Status);
+            Assert.AreEqual(WhoisStatus.NotFound, response.Status);
 
             Assert.AreEqual(0, response.ParsingErrors);
             Assert.AreEqual("whois.kenic.or.ke/ke/Found", response.TemplateName);
@@ -46,7 +46,7 @@ namespace Whois.Parsing.Whois.Kenic.Or.Ke.Ke
             var response = parser.Parse("whois.kenic.or.ke", "ke", sample);
 
             Assert.Greater(sample.Length, 0);
-            Assert.AreEqual(WhoisResponseStatus.Invalid, response.Status);
+            Assert.AreEqual(WhoisStatus.Invalid, response.Status);
 
             Assert.AreEqual(0, response.ParsingErrors);
             Assert.AreEqual("whois.kenic.or.ke/ke/Found", response.TemplateName);
@@ -67,7 +67,7 @@ namespace Whois.Parsing.Whois.Kenic.Or.Ke.Ke
             var response = parser.Parse("whois.kenic.or.ke", "ke", sample);
 
             Assert.Greater(sample.Length, 0);
-            Assert.AreEqual(WhoisResponseStatus.Found, response.Status);
+            Assert.AreEqual(WhoisStatus.Found, response.Status);
 
             Assert.AreEqual(0, response.ParsingErrors);
             Assert.AreEqual("whois.kenic.or.ke/ke/Found", response.TemplateName);

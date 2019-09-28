@@ -25,7 +25,7 @@ namespace Whois.Parsing.Whois.Iis.Se.Se
             var response = parser.Parse("whois.iis.se", "se", sample);
 
             Assert.Greater(sample.Length, 0);
-            Assert.AreEqual(WhoisResponseStatus.Found, response.Status);
+            Assert.AreEqual(WhoisStatus.Found, response.Status);
 
             Assert.AreEqual(0, response.ParsingErrors);
             Assert.AreEqual("whois.iis.se/se/Found", response.TemplateName);
@@ -74,7 +74,7 @@ namespace Whois.Parsing.Whois.Iis.Se.Se
             var response = parser.Parse("whois.iis.se", "se", sample);
 
             Assert.Greater(sample.Length, 0);
-            Assert.AreEqual(WhoisResponseStatus.Found, response.Status);
+            Assert.AreEqual(WhoisStatus.Found, response.Status);
 
             Assert.AreEqual(0, response.ParsingErrors);
             Assert.AreEqual("whois.iis.se/se/Found", response.TemplateName);
@@ -106,7 +106,7 @@ namespace Whois.Parsing.Whois.Iis.Se.Se
             var response = parser.Parse("whois.iis.se", "se", sample);
 
             Assert.Greater(sample.Length, 0);
-            Assert.AreEqual(WhoisResponseStatus.Found, response.Status);
+            Assert.AreEqual(WhoisStatus.Found, response.Status);
 
             Assert.AreEqual(0, response.ParsingErrors);
             Assert.AreEqual("whois.iis.se/se/Found", response.TemplateName);
@@ -145,7 +145,7 @@ namespace Whois.Parsing.Whois.Iis.Se.Se
             var response = parser.Parse("whois.iis.se", "se", sample);
 
             Assert.Greater(sample.Length, 0);
-            Assert.AreEqual(WhoisResponseStatus.NotAssigned, response.Status);
+            Assert.AreEqual(WhoisStatus.NotAssigned, response.Status);
 
             Assert.AreEqual(0, response.ParsingErrors);
             Assert.AreEqual("whois.iis.se/se/Found", response.TemplateName);
@@ -173,7 +173,7 @@ namespace Whois.Parsing.Whois.Iis.Se.Se
             var response = parser.Parse("whois.iis.se", "se", sample);
 
             Assert.Greater(sample.Length, 0);
-            Assert.AreEqual(WhoisResponseStatus.NotFound, response.Status);
+            Assert.AreEqual(WhoisStatus.NotFound, response.Status);
 
             Assert.AreEqual(0, response.ParsingErrors);
             Assert.AreEqual("whois.iis.se/se/NotFound", response.TemplateName);
@@ -191,7 +191,7 @@ namespace Whois.Parsing.Whois.Iis.Se.Se
             var response = parser.Parse("whois.iis.se", "se", sample);
 
             Assert.Greater(sample.Length, 0);
-            Assert.AreEqual(WhoisResponseStatus.Found, response.Status);
+            Assert.AreEqual(WhoisStatus.Found, response.Status);
 
             Assert.AreEqual(0, response.ParsingErrors);
             Assert.AreEqual("whois.iis.se/se/Found", response.TemplateName);
@@ -230,7 +230,7 @@ namespace Whois.Parsing.Whois.Iis.Se.Se
             var response = parser.Parse("whois.iis.se", "se", sample);
 
             Assert.Greater(sample.Length, 0);
-            Assert.AreEqual(WhoisResponseStatus.Deactivated, response.Status);
+            Assert.AreEqual(WhoisStatus.Deactivated, response.Status);
 
             Assert.AreEqual(0, response.ParsingErrors);
             Assert.AreEqual("whois.iis.se/se/Found", response.TemplateName);
@@ -267,7 +267,7 @@ namespace Whois.Parsing.Whois.Iis.Se.Se
             var response = parser.Parse("whois.iis.se", "se", sample);
 
             Assert.Greater(sample.Length, 0);
-            Assert.AreEqual(WhoisResponseStatus.NotFound, response.Status);
+            Assert.AreEqual(WhoisStatus.NotFound, response.Status);
 
             Assert.AreEqual(0, response.ParsingErrors);
             Assert.AreEqual("whois.iis.se/se/NotFound", response.TemplateName);
@@ -285,7 +285,7 @@ namespace Whois.Parsing.Whois.Iis.Se.Se
             var response = parser.Parse("whois.iis.se", "se", sample);
 
             Assert.Greater(sample.Length, 0);
-            Assert.AreEqual(WhoisResponseStatus.Found, response.Status);
+            Assert.AreEqual(WhoisStatus.Found, response.Status);
 
             Assert.AreEqual(0, response.ParsingErrors);
             Assert.AreEqual("whois.iis.se/se/Found", response.TemplateName);

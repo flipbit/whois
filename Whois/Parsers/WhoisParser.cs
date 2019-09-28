@@ -16,7 +16,7 @@ namespace Whois.Parsers
     {
         private readonly TokenMatcher matcher;
         private readonly ResourceReader reader;
-        private readonly WhoisResponseStatusParser statusParser;
+        private readonly WhoisStatusParser statusParser;
 
         /// <summary>
         /// Creates a new instance of the <see cref="WhoisParser"/> class.
@@ -25,7 +25,7 @@ namespace Whois.Parsers
         {
             matcher = new TokenMatcher();
             reader = new ResourceReader();
-            statusParser = new WhoisResponseStatusParser();
+            statusParser = new WhoisStatusParser();
             FixUps = new List<IFixup>();
 
             // Register default transformers
@@ -85,7 +85,7 @@ namespace Whois.Parsers
                 value.ParsingErrors = match.Exceptions.Count;
                 value.TemplateName = match.Template.Name;
 
-                var status = statusParser.Parse(whoisServer, tld, value.DomainStatus.FirstOrDefault(), value.Status);
+                var status = statusParser.Parse(whoisServer, value.DomainStatus.FirstOrDefault(), value.Status);
 
                 value.Status = status;
 

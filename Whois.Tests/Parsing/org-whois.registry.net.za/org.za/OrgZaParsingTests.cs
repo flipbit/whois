@@ -25,7 +25,7 @@ namespace Whois.Parsing.Org.Whois.Registry.Net.Za.OrgZa
             var response = parser.Parse("org-whois.registry.net.za", "org.za", sample);
 
             Assert.Greater(sample.Length, 0);
-            Assert.AreEqual(WhoisResponseStatus.NotFound, response.Status);
+            Assert.AreEqual(WhoisStatus.NotFound, response.Status);
             
             Assert.AreEqual(2, response.FieldsParsed);
             Assert.AreEqual(0, response.ParsingErrors);
@@ -40,7 +40,7 @@ namespace Whois.Parsing.Org.Whois.Registry.Net.Za.OrgZa
             var response = parser.Parse("org-whois.registry.net.za", "org.za", sample);
 
             Assert.Greater(sample.Length, 0);
-            Assert.AreEqual(WhoisResponseStatus.Found, response.Status);
+            Assert.AreEqual(WhoisStatus.Found, response.Status);
 
             Assert.AreEqual(0, response.ParsingErrors);
             Assert.AreEqual("org-whois.registry.net.za/org.za/Found", response.TemplateName);

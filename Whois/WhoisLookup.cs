@@ -19,13 +19,14 @@ namespace Whois
     public class WhoisLookup : IWhoisLookup
     {
         private static readonly ILog Log = LogProvider.GetCurrentClassLogger();
+        
         private WhoisParser whoisParser;
 
         public WhoisOptions Options { get; set; }
 
         public IWhoisServerLookup ServerLookup { get; set; }
 
-        public WhoisLookup() : this(WhoisOptions.Defaults)
+        public WhoisLookup() : this(WhoisOptions.Defaults.Clone())
         {
         }
 
@@ -73,7 +74,7 @@ namespace Whois
             var whoisServer = await ServerLookup.LookupAsync(tld);
 
             var response = new WhoisResponse();
-            var whoisServerUrl = whoisServer.Url;
+            var whoisServerUrl = whoisServer?.Registrar?.WhoisServerUrl;
 
             while (string.IsNullOrEmpty(whoisServerUrl) == false)
             {
@@ -89,26 +90,6 @@ namespace Whois
             }
 
             return response;
-        }
-
-        public void AddTemplate(string content, string name)
-        {
-            whoisParser.AddTemplate(content, name);
-        }
-
-        public void ClearTemplates()
-        {
-            whoisParser.ClearTemplates();
-        }
-
-        public void RegisterTransformer<T>() where T : ITokenTransformer
-        {
-            whoisParser.RegisterTransformer<T>();
-        }
-
-        public void RegisterValidator<T>() where T : ITokenValidator
-        {
-            whoisParser.RegisterValidator<T>();
         }
 
         public bool IsValidDomainName(string domain)

@@ -25,7 +25,7 @@ namespace Whois.Parsing.Whois.Norid.No.No
             var response = parser.Parse("whois.norid.no", "no", sample);
 
             Assert.Greater(sample.Length, 0);
-            Assert.AreEqual(WhoisResponseStatus.NotFound, response.Status);
+            Assert.AreEqual(WhoisStatus.NotFound, response.Status);
 
             Assert.AreEqual(0, response.ParsingErrors);
             Assert.AreEqual("whois.norid.no/no/NotFound", response.TemplateName);
@@ -40,7 +40,7 @@ namespace Whois.Parsing.Whois.Norid.No.No
             var response = parser.Parse("whois.norid.no", "no", sample);
 
             Assert.Greater(sample.Length, 0);
-            Assert.AreEqual(WhoisResponseStatus.Found, response.Status);
+            Assert.AreEqual(WhoisStatus.Found, response.Status);
 
             Assert.AreEqual(0, response.ParsingErrors);
             Assert.AreEqual("whois.norid.no/no/Found", response.TemplateName);

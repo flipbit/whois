@@ -25,7 +25,7 @@ namespace Whois.Parsing.Whois.Co.Ca.CoCa
             var response = parser.Parse("whois.co.ca", "co.ca", sample);
 
             Assert.Greater(sample.Length, 0);
-            Assert.AreEqual(WhoisResponseStatus.NotFound, response.Status);
+            Assert.AreEqual(WhoisStatus.NotFound, response.Status);
 
             Assert.AreEqual(0, response.ParsingErrors);
             Assert.AreEqual("whois.co.ca/co.ca/NotFound", response.TemplateName);
@@ -42,7 +42,7 @@ namespace Whois.Parsing.Whois.Co.Ca.CoCa
             var response = parser.Parse("whois.co.ca", "co.ca", sample);
 
             Assert.Greater(sample.Length, 0);
-            Assert.AreEqual(WhoisResponseStatus.Found, response.Status);
+            Assert.AreEqual(WhoisStatus.Found, response.Status);
 
             Assert.AreEqual(0, response.ParsingErrors);
             Assert.AreEqual("whois.co.ca/co.ca/Found", response.TemplateName);
@@ -70,7 +70,7 @@ namespace Whois.Parsing.Whois.Co.Ca.CoCa
             var response = parser.Parse("whois.co.ca", "co.ca", sample);
 
             Assert.Greater(sample.Length, 0);
-            Assert.AreEqual(WhoisResponseStatus.Reserved, response.Status);
+            Assert.AreEqual(WhoisStatus.Reserved, response.Status);
 
             Assert.AreEqual(0, response.ParsingErrors);
             Assert.AreEqual("whois.co.ca/co.ca/Reserved", response.TemplateName);

@@ -25,7 +25,7 @@ namespace Whois.Parsing.Whois.Nic.Name.Name
             var response = parser.Parse("whois.nic.name", "name", sample);
 
             Assert.Greater(sample.Length, 0);
-            Assert.AreEqual(WhoisResponseStatus.Reserved, response.Status);
+            Assert.AreEqual(WhoisStatus.Reserved, response.Status);
 
             Assert.AreEqual(0, response.ParsingErrors);
             Assert.AreEqual("whois.nic.name/name/Reserved", response.TemplateName);
@@ -40,7 +40,7 @@ namespace Whois.Parsing.Whois.Nic.Name.Name
             var response = parser.Parse("whois.nic.name", "name", sample);
 
             Assert.Greater(sample.Length, 0);
-            Assert.AreEqual(WhoisResponseStatus.NotFound, response.Status);
+            Assert.AreEqual(WhoisStatus.NotFound, response.Status);
 
             Assert.AreEqual(0, response.ParsingErrors);
             Assert.AreEqual("whois.nic.name/name/NotFound", response.TemplateName);
@@ -56,7 +56,7 @@ namespace Whois.Parsing.Whois.Nic.Name.Name
             var response = parser.Parse("whois.nic.name", "name", sample);
 
             Assert.Greater(sample.Length, 0);
-            Assert.AreEqual(WhoisResponseStatus.Found, response.Status);
+            Assert.AreEqual(WhoisStatus.Found, response.Status);
 
             Assert.AreEqual(0, response.ParsingErrors);
             Assert.AreEqual("whois.nic.name/name/Found", response.TemplateName);

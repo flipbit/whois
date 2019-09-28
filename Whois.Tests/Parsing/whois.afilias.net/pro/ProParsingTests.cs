@@ -25,7 +25,7 @@ namespace Whois.Parsing.Whois.Afilias.Net.Pro
             var response = parser.Parse("whois.afilias.net", "pro", sample);
 
             Assert.Greater(sample.Length, 0);
-            Assert.AreEqual(WhoisResponseStatus.NotFound, response.Status);
+            Assert.AreEqual(WhoisStatus.NotFound, response.Status);
         }
 
         [Test]
@@ -35,7 +35,7 @@ namespace Whois.Parsing.Whois.Afilias.Net.Pro
             var response = parser.Parse("whois.afilias.net", "pro", sample);
 
             Assert.Greater(sample.Length, 0);
-            Assert.AreEqual(WhoisResponseStatus.Found, response.Status);
+            Assert.AreEqual(WhoisStatus.Found, response.Status);
 
             Assert.AreEqual(59, response.FieldsParsed);
             Assert.AreEqual(0, response.ParsingErrors);
@@ -130,7 +130,7 @@ namespace Whois.Parsing.Whois.Afilias.Net.Pro
             var response = parser.Parse("whois.afilias.net", "pro", sample);
 
             Assert.Greater(sample.Length, 0);
-            Assert.AreEqual(WhoisResponseStatus.Reserved, response.Status);
+            Assert.AreEqual(WhoisStatus.Reserved, response.Status);
         }
     }
 }

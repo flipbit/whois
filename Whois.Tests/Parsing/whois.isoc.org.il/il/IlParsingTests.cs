@@ -25,7 +25,7 @@ namespace Whois.Parsing.Whois.Isoc.Org.Il.Il
             var response = parser.Parse("whois.isoc.org.il", "il", sample);
 
             Assert.Greater(sample.Length, 0);
-            Assert.AreEqual(WhoisResponseStatus.NotFound, response.Status);
+            Assert.AreEqual(WhoisStatus.NotFound, response.Status);
 
             AssertWriter.Write(response);
             Assert.AreEqual(0, response.ParsingErrors);
@@ -41,7 +41,7 @@ namespace Whois.Parsing.Whois.Isoc.Org.Il.Il
             var response = parser.Parse("whois.isoc.org.il", "il", sample);
 
             Assert.Greater(sample.Length, 0);
-            Assert.AreEqual(WhoisResponseStatus.Found, response.Status);
+            Assert.AreEqual(WhoisStatus.Found, response.Status);
 
             Assert.AreEqual(0, response.ParsingErrors);
             Assert.AreEqual("whois.isoc.org.il/il/Found", response.TemplateName);
@@ -130,7 +130,7 @@ namespace Whois.Parsing.Whois.Isoc.Org.Il.Il
             var response = parser.Parse("whois.isoc.org.il", "il", sample);
 
             Assert.Greater(sample.Length, 0);
-            Assert.AreEqual(WhoisResponseStatus.Locked, response.Status);
+            Assert.AreEqual(WhoisStatus.Locked, response.Status);
 
             Assert.AreEqual(0, response.ParsingErrors);
             Assert.AreEqual("whois.isoc.org.il/il/Found", response.TemplateName);
@@ -228,7 +228,7 @@ namespace Whois.Parsing.Whois.Isoc.Org.Il.Il
             var response = parser.Parse("whois.isoc.org.il", "il", sample);
 
             Assert.Greater(sample.Length, 0);
-            Assert.AreEqual(WhoisResponseStatus.NotFound, response.Status);
+            Assert.AreEqual(WhoisStatus.NotFound, response.Status);
 
             Assert.AreEqual(0, response.ParsingErrors);
             Assert.AreEqual("whois.isoc.org.il/il/NotFound", response.TemplateName);
@@ -243,7 +243,7 @@ namespace Whois.Parsing.Whois.Isoc.Org.Il.Il
             var response = parser.Parse("whois.isoc.org.il", "il", sample);
 
             Assert.Greater(sample.Length, 0);
-            Assert.AreEqual(WhoisResponseStatus.Locked, response.Status);
+            Assert.AreEqual(WhoisStatus.Locked, response.Status);
 
             Assert.AreEqual(0, response.ParsingErrors);
             Assert.AreEqual("whois.isoc.org.il/il/Found", response.TemplateName);

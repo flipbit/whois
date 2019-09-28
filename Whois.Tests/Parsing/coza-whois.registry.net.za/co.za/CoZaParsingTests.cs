@@ -25,7 +25,7 @@ namespace Whois.Parsing.Coza.Whois.Registry.Net.Za.CoZa
             var response = parser.Parse("coza-whois.registry.net.za", "co.za", sample);
 
             Assert.Greater(sample.Length, 0);
-            Assert.AreEqual(WhoisResponseStatus.Found, response.Status);
+            Assert.AreEqual(WhoisStatus.Found, response.Status);
 
             Assert.AreEqual("fnb.co.za", response.DomainName);
             Assert.AreEqual("dom_1ZW3S--1", response.RegistryDomainId);
@@ -109,7 +109,7 @@ namespace Whois.Parsing.Coza.Whois.Registry.Net.Za.CoZa
             var response = parser.Parse("coza-whois.registry.net.za", "co.za", sample);
 
             Assert.Greater(sample.Length, 0);
-            Assert.AreEqual(WhoisResponseStatus.Throttled, response.Status);
+            Assert.AreEqual(WhoisStatus.Throttled, response.Status);
         }
 
         [Test]
@@ -119,7 +119,7 @@ namespace Whois.Parsing.Coza.Whois.Registry.Net.Za.CoZa
             var response = parser.Parse("coza-whois.registry.net.za", "co.za", sample);
 
             Assert.Greater(sample.Length, 0);
-            Assert.AreEqual(WhoisResponseStatus.NotFound, response.Status);
+            Assert.AreEqual(WhoisStatus.NotFound, response.Status);
 
             Assert.AreEqual("nosuchdomainregistered.co.za", response.DomainName);
         }
@@ -131,7 +131,7 @@ namespace Whois.Parsing.Coza.Whois.Registry.Net.Za.CoZa
             var response = parser.Parse("coza-whois.registry.net.za", "co.za", sample);
 
             Assert.Greater(sample.Length, 0);
-            Assert.AreEqual(WhoisResponseStatus.Found, response.Status);
+            Assert.AreEqual(WhoisStatus.Found, response.Status);
 
             Assert.AreEqual("google.co.za", response.DomainName);
             Assert.AreEqual("dom_1SZMF--1", response.RegistryDomainId);

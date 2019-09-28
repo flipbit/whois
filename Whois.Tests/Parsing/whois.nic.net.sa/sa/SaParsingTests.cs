@@ -25,7 +25,7 @@ namespace Whois.Parsing.Whois.Nic.Net.Sa.Sa
             var response = parser.Parse("whois.nic.net.sa", "sa", sample);
 
             Assert.Greater(sample.Length, 0);
-            Assert.AreEqual(WhoisResponseStatus.NotFound, response.Status);
+            Assert.AreEqual(WhoisStatus.NotFound, response.Status);
 
             Assert.AreEqual(0, response.ParsingErrors);
             Assert.AreEqual("whois.nic.net.sa/sa/NotFound", response.TemplateName);
@@ -43,7 +43,7 @@ namespace Whois.Parsing.Whois.Nic.Net.Sa.Sa
             var response = parser.Parse("whois.nic.net.sa", "sa", sample);
 
             Assert.Greater(sample.Length, 0);
-            Assert.AreEqual(WhoisResponseStatus.Found, response.Status);
+            Assert.AreEqual(WhoisStatus.Found, response.Status);
 
             Assert.AreEqual(0, response.ParsingErrors);
             Assert.AreEqual("whois.nic.net.sa/sa/Found", response.TemplateName);

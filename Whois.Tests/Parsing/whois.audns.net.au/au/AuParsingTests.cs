@@ -25,7 +25,7 @@ namespace Whois.Parsing.Whois.Audns.Net.Au.Au
             var response = parser.Parse("whois.audns.net.au", "au", sample);
 
             Assert.Greater(sample.Length, 0);
-            Assert.AreEqual(WhoisResponseStatus.Found, response.Status);
+            Assert.AreEqual(WhoisStatus.Found, response.Status);
 
             Assert.AreEqual(15, response.FieldsParsed);
             Assert.AreEqual(0, response.ParsingErrors);
@@ -63,7 +63,7 @@ namespace Whois.Parsing.Whois.Audns.Net.Au.Au
             var response = parser.Parse("whois.audns.net.au", "au", sample);
 
             Assert.Greater(sample.Length, 0);
-            Assert.AreEqual(WhoisResponseStatus.NotFound, response.Status);
+            Assert.AreEqual(WhoisStatus.NotFound, response.Status);
 
             Assert.AreEqual(1, response.FieldsParsed);
             Assert.AreEqual(0, response.ParsingErrors);
@@ -77,7 +77,7 @@ namespace Whois.Parsing.Whois.Audns.Net.Au.Au
             var response = parser.Parse("whois.audns.net.au", "au", sample);
 
             Assert.Greater(sample.Length, 0);
-            Assert.AreEqual(WhoisResponseStatus.Found, response.Status);
+            Assert.AreEqual(WhoisStatus.Found, response.Status);
 
             Assert.AreEqual(16, response.FieldsParsed);
             Assert.AreEqual(0, response.ParsingErrors);

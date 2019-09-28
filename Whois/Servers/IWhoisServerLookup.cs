@@ -11,8 +11,8 @@ namespace Whois.Servers
         /// <summary>
         /// Lookups the WHOIS server for the specified TLD.
         /// </summary>
-        WhoisServer Lookup(string tld);
+        WhoisResponse Lookup(string tld);
 
-        Task<WhoisServer> LookupAsync(string tld);
+        Task<WhoisResponse> LookupAsync(string tld);
     }
 }

@@ -25,7 +25,7 @@ namespace Whois.Parsing.Whois.Afilias.Net.Info
             var response = parser.Parse("whois.afilias.net", "info", sample);
 
             Assert.Greater(sample.Length, 0);
-            Assert.AreEqual(WhoisResponseStatus.NotFound, response.Status);
+            Assert.AreEqual(WhoisStatus.NotFound, response.Status);
         }
 
         [Test]
@@ -35,7 +35,7 @@ namespace Whois.Parsing.Whois.Afilias.Net.Info
             var response = parser.Parse("whois.afilias.net", "info", sample);
 
             Assert.Greater(sample.Length, 0);
-            Assert.AreEqual(WhoisResponseStatus.Found, response.Status);
+            Assert.AreEqual(WhoisStatus.Found, response.Status);
 
             Assert.AreEqual(0, response.ParsingErrors);
             Assert.AreEqual("generic/tld/Found001", response.TemplateName);
@@ -143,7 +143,7 @@ namespace Whois.Parsing.Whois.Afilias.Net.Info
             var response = parser.Parse("whois.afilias.net", "info", sample);
 
             Assert.Greater(sample.Length, 0);
-            Assert.AreEqual(WhoisResponseStatus.Reserved, response.Status);
+            Assert.AreEqual(WhoisStatus.Reserved, response.Status);
         }
     }
 }

@@ -25,7 +25,7 @@ namespace Whois.Parsing.Whois.Dns.Pl.Pl
             var response = parser.Parse("whois.dns.pl", "pl", sample);
 
             Assert.Greater(sample.Length, 0);
-            Assert.AreEqual(WhoisResponseStatus.Found, response.Status);
+            Assert.AreEqual(WhoisStatus.Found, response.Status);
 
             Assert.AreEqual(0, response.ParsingErrors);
             Assert.AreEqual("whois.dns.pl/pl/Found", response.TemplateName);
@@ -61,7 +61,7 @@ namespace Whois.Parsing.Whois.Dns.Pl.Pl
             var response = parser.Parse("whois.dns.pl", "pl", sample);
 
             Assert.Greater(sample.Length, 0);
-            Assert.AreEqual(WhoisResponseStatus.Found, response.Status);
+            Assert.AreEqual(WhoisStatus.Found, response.Status);
 
             Assert.AreEqual(0, response.ParsingErrors);
             Assert.AreEqual("whois.dns.pl/pl/Found", response.TemplateName);
@@ -91,7 +91,7 @@ namespace Whois.Parsing.Whois.Dns.Pl.Pl
             var response = parser.Parse("whois.dns.pl", "pl", sample);
 
             Assert.Greater(sample.Length, 0);
-            Assert.AreEqual(WhoisResponseStatus.Throttled, response.Status);
+            Assert.AreEqual(WhoisStatus.Throttled, response.Status);
 
             Assert.AreEqual(0, response.ParsingErrors);
             Assert.AreEqual("whois.dns.pl/pl/Throttled", response.TemplateName);
@@ -106,7 +106,7 @@ namespace Whois.Parsing.Whois.Dns.Pl.Pl
             var response = parser.Parse("whois.dns.pl", "pl", sample);
 
             Assert.Greater(sample.Length, 0);
-            Assert.AreEqual(WhoisResponseStatus.NotFound, response.Status);
+            Assert.AreEqual(WhoisStatus.NotFound, response.Status);
 
             Assert.AreEqual(0, response.ParsingErrors);
             Assert.AreEqual("whois.dns.pl/pl/NotFound", response.TemplateName);
@@ -123,7 +123,7 @@ namespace Whois.Parsing.Whois.Dns.Pl.Pl
             var response = parser.Parse("whois.dns.pl", "pl", sample);
 
             Assert.Greater(sample.Length, 0);
-            Assert.AreEqual(WhoisResponseStatus.Found, response.Status);
+            Assert.AreEqual(WhoisStatus.Found, response.Status);
 
             Assert.AreEqual(0, response.ParsingErrors);
             Assert.AreEqual("whois.dns.pl/pl/Found", response.TemplateName);

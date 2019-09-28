@@ -25,7 +25,7 @@ namespace Whois.Parsing.Whois.Nic.At.At
             var response = parser.Parse("whois.nic.at", "at", sample);
 
             Assert.Greater(sample.Length, 0);
-            Assert.AreEqual(WhoisResponseStatus.NotFound, response.Status);
+            Assert.AreEqual(WhoisStatus.NotFound, response.Status);
 
             Assert.AreEqual(0, response.ParsingErrors);
             Assert.AreEqual("whois.nic.at/at/NotFound", response.TemplateName);
@@ -40,7 +40,7 @@ namespace Whois.Parsing.Whois.Nic.At.At
             var response = parser.Parse("whois.nic.at", "at", sample);
 
             Assert.Greater(sample.Length, 0);
-            Assert.AreEqual(WhoisResponseStatus.Found, response.Status);
+            Assert.AreEqual(WhoisStatus.Found, response.Status);
 
             Assert.AreEqual(0, response.ParsingErrors);
             Assert.AreEqual("whois.nic.at/at/Found", response.TemplateName);

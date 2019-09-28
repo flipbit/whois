@@ -25,7 +25,7 @@ namespace Whois.Parsing.Whois.Cnnic.Cn.Cn
             var response = parser.Parse("whois.cnnic.cn", "cn", sample);
 
             Assert.Greater(sample.Length, 0);
-            Assert.AreEqual(WhoisResponseStatus.Found, response.Status);
+            Assert.AreEqual(WhoisStatus.Found, response.Status);
 
             Assert.AreEqual(0, response.ParsingErrors);
             Assert.AreEqual("whois.cnnic.cn/cn/Found", response.TemplateName);
@@ -65,7 +65,7 @@ namespace Whois.Parsing.Whois.Cnnic.Cn.Cn
             var response = parser.Parse("whois.cnnic.cn", "cn", sample);
 
             Assert.Greater(sample.Length, 0);
-            Assert.AreEqual(WhoisResponseStatus.Reserved, response.Status);
+            Assert.AreEqual(WhoisStatus.Reserved, response.Status);
 
             Assert.AreEqual(0, response.ParsingErrors);
             Assert.AreEqual("whois.cnnic.cn/cn/Reserved", response.TemplateName);
@@ -80,7 +80,7 @@ namespace Whois.Parsing.Whois.Cnnic.Cn.Cn
             var response = parser.Parse("whois.cnnic.cn", "cn", sample);
 
             Assert.Greater(sample.Length, 0);
-            Assert.AreEqual(WhoisResponseStatus.NotFound, response.Status);
+            Assert.AreEqual(WhoisStatus.NotFound, response.Status);
 
             Assert.AreEqual(0, response.ParsingErrors);
             Assert.AreEqual("whois.cnnic.cn/cn/NotFound", response.TemplateName);
@@ -95,7 +95,7 @@ namespace Whois.Parsing.Whois.Cnnic.Cn.Cn
             var response = parser.Parse("whois.cnnic.cn", "cn", sample);
 
             Assert.Greater(sample.Length, 0);
-            Assert.AreEqual(WhoisResponseStatus.Found, response.Status);
+            Assert.AreEqual(WhoisStatus.Found, response.Status);
 
             Assert.AreEqual(0, response.ParsingErrors);
             Assert.AreEqual("whois.cnnic.cn/cn/Found", response.TemplateName);
@@ -140,7 +140,7 @@ namespace Whois.Parsing.Whois.Cnnic.Cn.Cn
             var response = parser.Parse("whois.cnnic.cn", "cn", sample);
 
             Assert.Greater(sample.Length, 0);
-            Assert.AreEqual(WhoisResponseStatus.Reserved, response.Status);
+            Assert.AreEqual(WhoisStatus.Reserved, response.Status);
 
             AssertWriter.Write(response);
         }

@@ -8,21 +8,21 @@ namespace Whois.Servers
     /// </summary>
     public class WhoisServerCache
     {
-        private readonly ConcurrentDictionary<string, WhoisServer> cache;
+        private readonly ConcurrentDictionary<string, WhoisResponse> cache;
 
         public WhoisServerCache()
         {
-            cache = new ConcurrentDictionary<string, WhoisServer>();
+            cache = new ConcurrentDictionary<string, WhoisResponse>();
         }
 
-        public WhoisServer Get(string tld)
+        public WhoisResponse Get(string tld)
         {
             return cache.TryGetValue(tld, out var server) ? server : null;
         }
 
-        public void Set(WhoisServer server)
+        public void Set(WhoisResponse server)
         {
-            cache.AddOrUpdate(server.Tld, server, (tld, existing) => server);
+            cache.AddOrUpdate(server.DomainName, server, (tld, existing) => server);
         }
     }
 }

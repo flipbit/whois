@@ -24,7 +24,7 @@ namespace Whois.Parsing.Whois.Centralnic.Com.NoCom
             var response = parser.Parse("whois.centralnic.com", "no.com", sample);
 
             Assert.Greater(sample.Length, 0);
-            Assert.AreEqual(WhoisResponseStatus.NotFound, response.Status);
+            Assert.AreEqual(WhoisStatus.NotFound, response.Status);
 
             Assert.AreEqual(0, response.ParsingErrors);
             Assert.AreEqual("whois.centralnic.com/NotFound", response.TemplateName);

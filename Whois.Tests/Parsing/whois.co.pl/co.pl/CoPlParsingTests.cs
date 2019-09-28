@@ -25,7 +25,7 @@ namespace Whois.Parsing.Whois.Co.Pl.CoPl
             var response = parser.Parse("whois.co.pl", "co.pl", sample);
 
             Assert.Greater(sample.Length, 0);
-            Assert.AreEqual(WhoisResponseStatus.NotFound, response.Status);
+            Assert.AreEqual(WhoisStatus.NotFound, response.Status);
             Assert.AreEqual(0, response.ParsingErrors);
             Assert.AreEqual("whois.co.pl/co.pl/NotFound", response.TemplateName);
 
@@ -39,7 +39,7 @@ namespace Whois.Parsing.Whois.Co.Pl.CoPl
             var response = parser.Parse("whois.co.pl", "co.pl", sample);
 
             Assert.Greater(sample.Length, 0);
-            Assert.AreEqual(WhoisResponseStatus.Found, response.Status);
+            Assert.AreEqual(WhoisStatus.Found, response.Status);
 
             Assert.AreEqual(0, response.ParsingErrors);
             Assert.AreEqual("whois.co.pl/co.pl/Found", response.TemplateName);

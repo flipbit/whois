@@ -34,7 +34,7 @@ namespace Whois.Parsing.Whois.Nic.Lk.XnFzc2c9e2c
             var response = parser.Parse("whois.nic.lk", "xn--fzc2c9e2c", sample);
 
             Assert.Greater(sample.Length, 0);
-            Assert.AreEqual(WhoisResponseStatus.Found, response.Status);
+            Assert.AreEqual(WhoisStatus.Found, response.Status);
 
             AssertWriter.Write(response);
         }

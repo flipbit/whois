@@ -25,7 +25,7 @@ namespace Whois.Parsing.Whois.Nic.Sn.Sn
             var response = parser.Parse("whois.nic.sn", "sn", sample);
 
             Assert.Greater(sample.Length, 0);
-            Assert.AreEqual(WhoisResponseStatus.NotFound, response.Status);
+            Assert.AreEqual(WhoisStatus.NotFound, response.Status);
 
             AssertWriter.Write(response);
         }
@@ -37,7 +37,7 @@ namespace Whois.Parsing.Whois.Nic.Sn.Sn
             var response = parser.Parse("whois.nic.sn", "sn", sample);
 
             Assert.Greater(sample.Length, 0);
-            Assert.AreEqual(WhoisResponseStatus.Found, response.Status);
+            Assert.AreEqual(WhoisStatus.Found, response.Status);
 
             Assert.AreEqual(0, response.ParsingErrors);
             Assert.AreEqual("whois.nic.sn/sn/Found", response.TemplateName);
