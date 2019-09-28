@@ -304,8 +304,8 @@
     <None Remove="Resources\whois.rnids.rs\rs\NotFound.txt" />
     <None Remove="Resources\whois.rotld.ro\ro\Found.txt" />
     <None Remove="Resources\whois.rotld.ro\ro\NotFound.txt" />
-    <None Remove="Resources\whois.sgnic.sg\sg\Found.txt" />
-    <None Remove="Resources\whois.sgnic.sg\sg\NotFound.txt" />
+    <None Remove="Resources\whois.sgnic.sg\sg\Found01.txt" />
+    <None Remove="Resources\whois.sgnic.sg\sg\Found02.txt" />
     <None Remove="Resources\whois.sk-nic.sk\sk\Found.txt" />
     <None Remove="Resources\whois.sk-nic.sk\sk\NotFound.txt" />
     <None Remove="Resources\whois.srs.net.nz\nz\Found.txt" />
@@ -641,8 +641,8 @@
     <EmbeddedResource Include="Resources\whois.rnids.rs\rs\NotFound.txt" />
     <EmbeddedResource Include="Resources\whois.rotld.ro\ro\Found.txt" />
     <EmbeddedResource Include="Resources\whois.rotld.ro\ro\NotFound.txt" />
-    <EmbeddedResource Include="Resources\whois.sgnic.sg\sg\Found.txt" />
-    <EmbeddedResource Include="Resources\whois.sgnic.sg\sg\NotFound.txt" />
+    <EmbeddedResource Include="Resources\whois.sgnic.sg\sg\Found02.txt" />
+    <EmbeddedResource Include="Resources\whois.sgnic.sg\sg\Found01.txt" />
     <EmbeddedResource Include="Resources\whois.sk-nic.sk\sk\Found.txt" />
     <EmbeddedResource Include="Resources\whois.sk-nic.sk\sk\NotFound.txt" />
     <EmbeddedResource Include="Resources\whois.srs.net.nz\nz\Found.txt" />
