@@ -683,7 +683,7 @@
     </PackageReference>
     <PackageReference Include="Microsoft.CSharp" Version="4.6.0" />
     <PackageReference Include="Newtonsoft.Json" Version="12.0.2" />
-    <PackageReference Include="Tokenizer" Version="2.2.0-beta9" />
+    <PackageReference Include="Tokenizer" Version="2.2.0" />
   </ItemGroup>
 
   <PropertyGroup>
