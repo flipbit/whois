@@ -133,7 +133,27 @@ namespace Whois
         /// </summary>
         public WhoisResponse Referrer { get; set; }
 
+        /// <summary>
+        /// Returns the URL of the WHOIS server
+        /// </summary>
         public string WhoisServerUrl => Registrar?.WhoisServerUrl;
+
+        /// <summary>
+        /// Returns a new <see cref="WhoisResponse"/> with the specified WHOIS server URL
+        /// </summary>
+        /// <param name="url"></param>
+        /// <returns></returns>
+        internal static WhoisResponse WithServerUrl(string url)
+        {
+            return new WhoisResponse
+            {
+                Status = WhoisStatus.Found,
+                Registrar = new Registrar
+                {
+                    WhoisServerUrl = url
+                }
+            };
+        }
 
         /// <summary>
         /// Sets the WHOIS referrer on this instance

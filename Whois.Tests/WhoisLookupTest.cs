@@ -25,10 +25,11 @@ namespace Whois
             tcpReader = new Mock<ITcpReader>();
             sampleReader = new SampleReader();
 
-            lookup = new WhoisLookup();
-
-            lookup.TcpReader = tcpReader.Object;
-            lookup.ServerLookup = whoisServerLookup.Object;
+            lookup = new WhoisLookup
+            {
+                TcpReader = tcpReader.Object, 
+                ServerLookup = whoisServerLookup.Object
+            };
         }
 
         [Test]
@@ -120,6 +121,27 @@ namespace Whois
             Assert.AreEqual(rootServer, result.Referrer);
         }
 
+        [Test]
+        public async Task TestLookupDomainSpecifyRootServer()
+        {
+            var request = new WhoisRequest { Query = "google.com", WhoisServerUrl = "whois.markmonitor.com" };
+            var authoritativeResult = sampleReader.Read("whois.markmonitor.com", "com", "found.txt");
+
+            tcpReader
+                .Setup(call => call.Read("whois.markmonitor.com", 43, "google.com", Encoding.UTF8, 10))
+                .Returns(Task.FromResult(authoritativeResult));
+
+            var result = await lookup.LookupAsync(request);
+
+            Assert.AreEqual("google.com", result.DomainName);
+            Assert.AreEqual(WhoisStatus.Found, result.Status);
+
+            Assert.AreEqual(authoritativeResult, result.Content);
+            Assert.AreEqual("whois.markmonitor.com", result.Referrer.WhoisServerUrl);
+
+            whoisServerLookup
+                .Verify(call => call.LookupAsync(request), Times.Never());
+        }
 
         [Test]
         public void TestLookupDomainWithEmptyQuery()

@@ -46,6 +46,10 @@ namespace Whois
         /// </summary>
         public bool FollowReferrer { get; set; }
 
-        //public string WhoisServerUrl { get; set; }
+        /// <summary>
+        /// If set, the given WHOIS server will be queried.  If blank, the WHOIS
+        /// server for the domain TLD will be attempted to be found automatically.
+        /// </summary>
+        public string WhoisServerUrl { get; set; }
     }
 }

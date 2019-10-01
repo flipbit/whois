@@ -3,6 +3,7 @@ using System.Text;
 using System.Text.RegularExpressions;
 using System.Threading.Tasks;
 using Whois.Logging;
+using Whois.Models;
 using Whois.Net;
 using Whois.Parsers;
 using Whois.Servers;
@@ -98,8 +99,18 @@ namespace Whois
 
             Log.Debug("Looking up WHOIS response for: {0}", request.Query);
 
-            // Lookup root WHOIS server for the TLD
-            var response = await ServerLookup.LookupAsync(request);
+            // Set our starting point
+            WhoisResponse response;
+            if (string.IsNullOrEmpty(request.WhoisServerUrl))
+            {
+                // Lookup root WHOIS server for the TLD
+                response = await ServerLookup.LookupAsync(request);
+            }
+            else
+            {
+                // Use the given WHOIS server
+                response = WhoisResponse.WithServerUrl(request.WhoisServerUrl);
+            }
 
             // Main loop: download & parse WHOIS data and follow the referrer chain
             var whoisServerUrl = response?.WhoisServerUrl;
