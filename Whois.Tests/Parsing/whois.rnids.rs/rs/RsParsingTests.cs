@@ -22,7 +22,7 @@ namespace Whois.Parsing.Whois.Rnids.Rs.Rs
         public void Test_found()
         {
             var sample = SampleReader.Read("whois.rnids.rs", "rs", "found.txt");
-            var response = parser.Parse("whois.rnids.rs", "rs", sample);
+            var response = parser.Parse("whois.rnids.rs", sample);
 
             Assert.Greater(sample.Length, 0);
             Assert.AreEqual(WhoisStatus.Found, response.Status);
@@ -55,7 +55,7 @@ namespace Whois.Parsing.Whois.Rnids.Rs.Rs
         public void Test_found_nameservers_hyphenated()
         {
             var sample = SampleReader.Read("whois.rnids.rs", "rs", "found_nameservers_hyphenated.txt");
-            var response = parser.Parse("whois.rnids.rs", "rs", sample);
+            var response = parser.Parse("whois.rnids.rs", sample);
 
             Assert.Greater(sample.Length, 0);
             Assert.AreEqual(WhoisStatus.Found, response.Status);
@@ -88,7 +88,7 @@ namespace Whois.Parsing.Whois.Rnids.Rs.Rs
         public void Test_expired()
         {
             var sample = SampleReader.Read("whois.rnids.rs", "rs", "expired.txt");
-            var response = parser.Parse("whois.rnids.rs", "rs", sample);
+            var response = parser.Parse("whois.rnids.rs", sample);
 
             Assert.Greater(sample.Length, 0);
             Assert.AreEqual(WhoisStatus.Expired, response.Status);
@@ -125,7 +125,7 @@ namespace Whois.Parsing.Whois.Rnids.Rs.Rs
         public void Test_other_status_in_transfer()
         {
             var sample = SampleReader.Read("whois.rnids.rs", "rs", "other_status_in_transfer.txt");
-            var response = parser.Parse("whois.rnids.rs", "rs", sample);
+            var response = parser.Parse("whois.rnids.rs", sample);
 
             Assert.Greater(sample.Length, 0);
             Assert.AreEqual(WhoisStatus.Other, response.Status);
@@ -162,7 +162,7 @@ namespace Whois.Parsing.Whois.Rnids.Rs.Rs
         public void Test_locked()
         {
             var sample = SampleReader.Read("whois.rnids.rs", "rs", "locked.txt");
-            var response = parser.Parse("whois.rnids.rs", "rs", sample);
+            var response = parser.Parse("whois.rnids.rs", sample);
 
             Assert.Greater(sample.Length, 0);
             Assert.AreEqual(WhoisStatus.Locked, response.Status);
@@ -201,7 +201,7 @@ namespace Whois.Parsing.Whois.Rnids.Rs.Rs
         public void Test_not_found()
         {
             var sample = SampleReader.Read("whois.rnids.rs", "rs", "not_found.txt");
-            var response = parser.Parse("whois.rnids.rs", "rs", sample);
+            var response = parser.Parse("whois.rnids.rs", sample);
 
             Assert.Greater(sample.Length, 0);
             Assert.AreEqual(WhoisStatus.NotFound, response.Status);
@@ -216,7 +216,7 @@ namespace Whois.Parsing.Whois.Rnids.Rs.Rs
         public void Test_found_status_registered()
         {
             var sample = SampleReader.Read("whois.rnids.rs", "rs", "found_status_registered.txt");
-            var response = parser.Parse("whois.rnids.rs", "rs", sample);
+            var response = parser.Parse("whois.rnids.rs", sample);
 
             Assert.Greater(sample.Length, 0);
             Assert.AreEqual(WhoisStatus.Locked, response.Status);

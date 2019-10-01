@@ -22,7 +22,7 @@ namespace Whois.Parsing.Whois.Tld.Ee.Ee
         public void Test_other_status_serverhold()
         {
             var sample = SampleReader.Read("whois.tld.ee", "ee", "other_status_serverhold.txt");
-            var response = parser.Parse("whois.tld.ee", "ee", sample);
+            var response = parser.Parse("whois.tld.ee", sample);
 
             Assert.Greater(sample.Length, 0);
             Assert.AreEqual(WhoisStatus.Expired, response.Status);
@@ -71,7 +71,7 @@ namespace Whois.Parsing.Whois.Tld.Ee.Ee
         public void Test_not_found()
         {
             var sample = SampleReader.Read("whois.tld.ee", "ee", "not_found.txt");
-            var response = parser.Parse("whois.tld.ee", "ee", sample);
+            var response = parser.Parse("whois.tld.ee", sample);
 
             Assert.Greater(sample.Length, 0);
             Assert.AreEqual(WhoisStatus.NotFound, response.Status);
@@ -86,7 +86,7 @@ namespace Whois.Parsing.Whois.Tld.Ee.Ee
         public void Test_expired()
         {
             var sample = SampleReader.Read("whois.tld.ee", "ee", "expired.txt");
-            var response = parser.Parse("whois.tld.ee", "ee", sample);
+            var response = parser.Parse("whois.tld.ee", sample);
 
             Assert.Greater(sample.Length, 0);
             Assert.AreEqual(WhoisStatus.Expired, response.Status);
@@ -135,7 +135,7 @@ namespace Whois.Parsing.Whois.Tld.Ee.Ee
         public void Test_found()
         {
             var sample = SampleReader.Read("whois.tld.ee", "ee", "found.txt");
-            var response = parser.Parse("whois.tld.ee", "ee", sample);
+            var response = parser.Parse("whois.tld.ee", sample);
 
             Assert.Greater(sample.Length, 0);
             Assert.AreEqual(WhoisStatus.Found, response.Status);

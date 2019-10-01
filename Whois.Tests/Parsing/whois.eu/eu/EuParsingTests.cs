@@ -21,7 +21,7 @@ namespace Whois.Parsing.Whois.Eu.Eu
         public void Test_found()
         {
             var sample = SampleReader.Read("whois.eu", "eu", "found.txt");
-            var response = parser.Parse("whois.eu", "eu", sample);
+            var response = parser.Parse("whois.eu", sample);
 
             Assert.Greater(sample.Length, 0);
             Assert.AreEqual(WhoisStatus.Found, response.Status);
@@ -50,7 +50,7 @@ namespace Whois.Parsing.Whois.Eu.Eu
         public void Test_throttled()
         {
             var sample = SampleReader.Read("whois.eu", "eu", "throttled.txt");
-            var response = parser.Parse("whois.eu", "eu", sample);
+            var response = parser.Parse("whois.eu", sample);
 
             Assert.Greater(sample.Length, 0);
             Assert.AreEqual(WhoisStatus.Throttled, response.Status);
@@ -65,7 +65,7 @@ namespace Whois.Parsing.Whois.Eu.Eu
         public void Test_not_found()
         {
             var sample = SampleReader.Read("whois.eu", "eu", "not_found.txt");
-            var response = parser.Parse("whois.eu", "eu", sample);
+            var response = parser.Parse("whois.eu", sample);
 
             Assert.Greater(sample.Length, 0);
             Assert.AreEqual(WhoisStatus.NotFound, response.Status);
@@ -82,7 +82,7 @@ namespace Whois.Parsing.Whois.Eu.Eu
         public void Test_found_status_registered()
         {
             var sample = SampleReader.Read("whois.eu", "eu", "found_status_registered.txt");
-            var response = parser.Parse("whois.eu", "eu", sample);
+            var response = parser.Parse("whois.eu", sample);
 
             Assert.Greater(sample.Length, 0);
             Assert.AreEqual(WhoisStatus.Found, response.Status);

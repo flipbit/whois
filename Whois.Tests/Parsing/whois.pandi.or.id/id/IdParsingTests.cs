@@ -22,7 +22,7 @@ namespace Whois.Parsing.Whois.Pandi.Or.Id.Id
         public void Test_not_found()
         {
             var sample = SampleReader.Read("whois.pandi.or.id", "id", "not_found.txt");
-            var response = parser.Parse("whois.pandi.or.id", "id", sample);
+            var response = parser.Parse("whois.pandi.or.id", sample);
 
             Assert.Greater(sample.Length, 0);
             Assert.AreEqual(WhoisStatus.NotFound, response.Status);
@@ -37,7 +37,7 @@ namespace Whois.Parsing.Whois.Pandi.Or.Id.Id
         public void Test_found()
         {
             var sample = SampleReader.Read("whois.pandi.or.id", "id", "found.txt");
-            var response = parser.Parse("whois.pandi.or.id", "id", sample);
+            var response = parser.Parse("whois.pandi.or.id", sample);
 
             Assert.Greater(sample.Length, 0);
             Assert.AreEqual(WhoisStatus.Found, response.Status);

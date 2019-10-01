@@ -22,7 +22,7 @@ namespace Whois.Parsing.Whois.Pir.Org.Org
         public void Test_throttled()
         {
             var sample = SampleReader.Read("whois.pir.org", "org", "throttled.txt");
-            var response = parser.Parse("whois.pir.org", "org", sample);
+            var response = parser.Parse("whois.pir.org", sample);
 
             Assert.Greater(sample.Length, 0);
             Assert.AreEqual(WhoisStatus.Throttled, response.Status);
@@ -37,7 +37,7 @@ namespace Whois.Parsing.Whois.Pir.Org.Org
         public void Test_not_found()
         {
             var sample = SampleReader.Read("whois.pir.org", "org", "not_found.txt");
-            var response = parser.Parse("whois.pir.org", "org", sample);
+            var response = parser.Parse("whois.pir.org", sample);
 
             Assert.Greater(sample.Length, 0);
             Assert.AreEqual(WhoisStatus.NotFound, response.Status);
@@ -52,7 +52,7 @@ namespace Whois.Parsing.Whois.Pir.Org.Org
         public void Test_found()
         {
             var sample = SampleReader.Read("whois.pir.org", "org", "found.txt");
-            var response = parser.Parse("whois.pir.org", "org", sample);
+            var response = parser.Parse("whois.pir.org", sample);
 
             Assert.Greater(sample.Length, 0);
             Assert.AreEqual(WhoisStatus.Found, response.Status);

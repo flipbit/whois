@@ -21,7 +21,7 @@ namespace Whois.Parsing.Kero.Yachay.Pe.Pe
         public void Test_throttled()
         {
             var sample = SampleReader.Read("kero.yachay.pe", "pe", "throttled.txt");
-            var response = parser.Parse("kero.yachay.pe", "pe", sample);
+            var response = parser.Parse("kero.yachay.pe", sample);
 
             Assert.Greater(sample.Length, 0);
             Assert.AreEqual(WhoisStatus.Throttled, response.Status);
@@ -33,7 +33,7 @@ namespace Whois.Parsing.Kero.Yachay.Pe.Pe
         public void Test_not_found()
         {
             var sample = SampleReader.Read("kero.yachay.pe", "pe", "not_found.txt");
-            var response = parser.Parse("kero.yachay.pe", "pe", sample);
+            var response = parser.Parse("kero.yachay.pe", sample);
 
             Assert.Greater(sample.Length, 0);
             Assert.AreEqual(WhoisStatus.NotFound, response.Status);
@@ -51,7 +51,7 @@ namespace Whois.Parsing.Kero.Yachay.Pe.Pe
         public void Test_inactive()
         {
             var sample = SampleReader.Read("kero.yachay.pe", "pe", "inactive.txt");
-            var response = parser.Parse("kero.yachay.pe", "pe", sample);
+            var response = parser.Parse("kero.yachay.pe", sample);
 
             Assert.Greater(sample.Length, 0);
             Assert.AreEqual(WhoisStatus.NotAssigned, response.Status);
@@ -77,7 +77,7 @@ namespace Whois.Parsing.Kero.Yachay.Pe.Pe
         public void Test_found()
         {
             var sample = SampleReader.Read("kero.yachay.pe", "pe", "found.txt");
-            var response = parser.Parse("kero.yachay.pe", "pe", sample);
+            var response = parser.Parse("kero.yachay.pe", sample);
 
             Assert.Greater(sample.Length, 0);
             Assert.AreEqual(WhoisStatus.Found, response.Status);
@@ -109,7 +109,7 @@ namespace Whois.Parsing.Kero.Yachay.Pe.Pe
         public void Test_suspended()
         {
             var sample = SampleReader.Read("kero.yachay.pe", "pe", "suspended.txt");
-            var response = parser.Parse("kero.yachay.pe", "pe", sample);
+            var response = parser.Parse("kero.yachay.pe", sample);
 
             Assert.Greater(sample.Length, 0);
             Assert.AreEqual(WhoisStatus.Suspended, response.Status);

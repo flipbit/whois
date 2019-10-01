@@ -22,7 +22,7 @@ namespace Whois.Parsing.Whois.Iana.Org.Tld
         public void Test_found_be()
         {
             var sample = SampleReader.Read("whois.iana.org", "tld", "be.txt");
-            var response = parser.Parse("whois.iana.org", "tld", sample);
+            var response = parser.Parse("whois.iana.org", sample);
 
             Assert.Greater(sample.Length, 0);
             Assert.AreEqual(WhoisStatus.Found, response.Status);
@@ -94,7 +94,7 @@ namespace Whois.Parsing.Whois.Iana.Org.Tld
         public void Test_found_com()
         {
             var sample = SampleReader.Read("whois.iana.org", "tld", "com.txt");
-            var response = parser.Parse("whois.iana.org", "tld", sample);
+            var response = parser.Parse("whois.iana.org", sample);
 
             Assert.Greater(sample.Length, 0);
             Assert.AreEqual(WhoisStatus.Found, response.Status);
@@ -173,7 +173,7 @@ namespace Whois.Parsing.Whois.Iana.Org.Tld
         public void Test_not_assigned()
         {
             var sample = SampleReader.Read("whois.iana.org", "tld", "not_assigned.txt");
-            var response = parser.Parse("whois.iana.org", "tld", sample);
+            var response = parser.Parse("whois.iana.org", sample);
 
             Assert.Greater(sample.Length, 0);
             Assert.AreEqual(WhoisStatus.NotAssigned, response.Status);

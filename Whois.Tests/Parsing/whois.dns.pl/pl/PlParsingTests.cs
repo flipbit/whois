@@ -22,7 +22,7 @@ namespace Whois.Parsing.Whois.Dns.Pl.Pl
         public void Test_found()
         {
             var sample = SampleReader.Read("whois.dns.pl", "pl", "found.txt");
-            var response = parser.Parse("whois.dns.pl", "pl", sample);
+            var response = parser.Parse("whois.dns.pl", sample);
 
             Assert.Greater(sample.Length, 0);
             Assert.AreEqual(WhoisStatus.Found, response.Status);
@@ -58,7 +58,7 @@ namespace Whois.Parsing.Whois.Dns.Pl.Pl
         public void Test_found_nameservers_with_ip()
         {
             var sample = SampleReader.Read("whois.dns.pl", "pl", "found_nameservers_with_ip.txt");
-            var response = parser.Parse("whois.dns.pl", "pl", sample);
+            var response = parser.Parse("whois.dns.pl", sample);
 
             Assert.Greater(sample.Length, 0);
             Assert.AreEqual(WhoisStatus.Found, response.Status);
@@ -88,7 +88,7 @@ namespace Whois.Parsing.Whois.Dns.Pl.Pl
         public void Test_throttled()
         {
             var sample = SampleReader.Read("whois.dns.pl", "pl", "throttled.txt");
-            var response = parser.Parse("whois.dns.pl", "pl", sample);
+            var response = parser.Parse("whois.dns.pl", sample);
 
             Assert.Greater(sample.Length, 0);
             Assert.AreEqual(WhoisStatus.Throttled, response.Status);
@@ -103,7 +103,7 @@ namespace Whois.Parsing.Whois.Dns.Pl.Pl
         public void Test_not_found()
         {
             var sample = SampleReader.Read("whois.dns.pl", "pl", "not_found.txt");
-            var response = parser.Parse("whois.dns.pl", "pl", sample);
+            var response = parser.Parse("whois.dns.pl", sample);
 
             Assert.Greater(sample.Length, 0);
             Assert.AreEqual(WhoisStatus.NotFound, response.Status);
@@ -120,7 +120,7 @@ namespace Whois.Parsing.Whois.Dns.Pl.Pl
         public void Test_found_status_registered()
         {
             var sample = SampleReader.Read("whois.dns.pl", "pl", "found_status_registered.txt");
-            var response = parser.Parse("whois.dns.pl", "pl", sample);
+            var response = parser.Parse("whois.dns.pl", sample);
 
             Assert.Greater(sample.Length, 0);
             Assert.AreEqual(WhoisStatus.Found, response.Status);
@@ -151,7 +151,7 @@ namespace Whois.Parsing.Whois.Dns.Pl.Pl
         {
             var sample = SampleReader.Read("whois.dns.pl", "pl", "08.pl.txt");
 
-            var response = parser.Parse("whois.dns.pl", "pl", sample);
+            var response = parser.Parse("whois.dns.pl", sample);
 
             Assert.AreEqual("08.pl", response.DomainName);
 

@@ -22,7 +22,7 @@ namespace Whois.Parsing.Whois.Netcom.Cm.Cm
         public void Test_not_found()
         {
             var sample = SampleReader.Read("whois.netcom.cm", "cm", "not_found.txt");
-            var response = parser.Parse("whois.netcom.cm", "cm", sample);
+            var response = parser.Parse("whois.netcom.cm", sample);
 
             Assert.Greater(sample.Length, 0);
             Assert.AreEqual(WhoisStatus.NotFound, response.Status);
@@ -43,7 +43,7 @@ namespace Whois.Parsing.Whois.Netcom.Cm.Cm
         public void Test_found()
         {
             var sample = SampleReader.Read("whois.netcom.cm", "cm", "found.txt");
-            var response = parser.Parse("whois.netcom.cm", "cm", sample);
+            var response = parser.Parse("whois.netcom.cm", sample);
 
             Assert.Greater(sample.Length, 0);
             Assert.AreEqual(WhoisStatus.Found, response.Status);
@@ -125,7 +125,7 @@ namespace Whois.Parsing.Whois.Netcom.Cm.Cm
         public void Test_suspended()
         {
             var sample = SampleReader.Read("whois.netcom.cm", "cm", "suspended.txt");
-            var response = parser.Parse("whois.netcom.cm", "cm", sample);
+            var response = parser.Parse("whois.netcom.cm", sample);
 
             Assert.Greater(sample.Length, 0);
             Assert.AreEqual(WhoisStatus.Suspended, response.Status);

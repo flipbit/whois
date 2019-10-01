@@ -18,7 +18,7 @@ namespace Whois.Net
             this.response = response;
         }
         
-        public Task<string> Read(string url, int port, string command, Encoding encoding)
+        public Task<string> Read(string url, int port, string command, Encoding encoding, int timeoutSeconds)
         {
             return Task.FromResult(response);
         }

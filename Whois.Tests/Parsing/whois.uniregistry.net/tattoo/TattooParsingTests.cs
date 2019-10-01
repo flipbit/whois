@@ -22,7 +22,7 @@ namespace Whois.Parsing.Whois.Uniregistry.Net.Tattoo
         public void Test_not_found()
         {
             var sample = SampleReader.Read("whois.uniregistry.net", "tattoo", "not_found.txt");
-            var response = parser.Parse("whois.uniregistry.net", "tattoo", sample);
+            var response = parser.Parse("whois.uniregistry.net", sample);
 
             Assert.Greater(sample.Length, 0);
             Assert.AreEqual(WhoisStatus.NotFound, response.Status);
@@ -39,7 +39,7 @@ namespace Whois.Parsing.Whois.Uniregistry.Net.Tattoo
         public void Test_found()
         {
             var sample = SampleReader.Read("whois.uniregistry.net", "tattoo", "found.txt");
-            var response = parser.Parse("whois.uniregistry.net", "tattoo", sample);
+            var response = parser.Parse("whois.uniregistry.net", sample);
 
             Assert.Greater(sample.Length, 0);
             Assert.AreEqual(WhoisStatus.Found, response.Status);
@@ -148,7 +148,7 @@ namespace Whois.Parsing.Whois.Uniregistry.Net.Tattoo
         public void Test_unavailable()
         {
             var sample = SampleReader.Read("whois.uniregistry.net", "tattoo", "unavailable.txt");
-            var response = parser.Parse("whois.uniregistry.net", "tattoo", sample);
+            var response = parser.Parse("whois.uniregistry.net", sample);
 
             Assert.Greater(sample.Length, 0);
             Assert.AreEqual(WhoisStatus.Unavailable, response.Status);

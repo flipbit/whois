@@ -17,7 +17,7 @@ namespace Whois
         [Test]
         public void TestLookupCom()
         {
-            var result = lookup.Lookup("com");
+            var result = lookup.Lookup(new WhoisRequest("com"));
 
             Assert.AreEqual("whois.verisign-grs.com", result.Registrar.WhoisServerUrl);
         }
@@ -25,7 +25,7 @@ namespace Whois
         [Test]
         public void TestLookupComBr()
         {
-            var result = lookup.Lookup("br");
+            var result = lookup.Lookup(new WhoisRequest("br"));
 
             Assert.AreEqual("whois.registro.br", result.Registrar.WhoisServerUrl);
         }

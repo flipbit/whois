@@ -22,7 +22,7 @@ namespace Whois.Parsing.Whois.Domreg.Lt.Lt
         public void Test_found()
         {
             var sample = SampleReader.Read("whois.domreg.lt", "lt", "found.txt");
-            var response = parser.Parse("whois.domreg.lt", "lt", sample);
+            var response = parser.Parse("whois.domreg.lt", sample);
 
             Assert.Greater(sample.Length, 0);
             Assert.AreEqual(WhoisStatus.Found, response.Status);
@@ -53,7 +53,7 @@ namespace Whois.Parsing.Whois.Domreg.Lt.Lt
         public void Test_not_found()
         {
             var sample = SampleReader.Read("whois.domreg.lt", "lt", "not_found.txt");
-            var response = parser.Parse("whois.domreg.lt", "lt", sample);
+            var response = parser.Parse("whois.domreg.lt", sample);
 
             Assert.Greater(sample.Length, 0);
             Assert.AreEqual(WhoisStatus.NotFound, response.Status);
@@ -70,7 +70,7 @@ namespace Whois.Parsing.Whois.Domreg.Lt.Lt
         public void Test_found_status_registered()
         {
             var sample = SampleReader.Read("whois.domreg.lt", "lt", "found_status_registered.txt");
-            var response = parser.Parse("whois.domreg.lt", "lt", sample);
+            var response = parser.Parse("whois.domreg.lt", sample);
 
             Assert.Greater(sample.Length, 0);
             Assert.AreEqual(WhoisStatus.Found, response.Status);

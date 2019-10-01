@@ -22,7 +22,7 @@ namespace Whois.Parsing.Whois.Centralnic.Com.CnCom
         public void Test_not_found()
         {
             var sample = SampleReader.Read("whois.centralnic.com", "cn.com", "not_found.txt");
-            var response = parser.Parse("whois.centralnic.com", "cn.com", sample);
+            var response = parser.Parse("whois.centralnic.com", sample);
 
             Assert.Greater(sample.Length, 0);
             Assert.AreEqual(WhoisStatus.NotFound, response.Status);
@@ -37,7 +37,7 @@ namespace Whois.Parsing.Whois.Centralnic.Com.CnCom
         public void Test_found()
         {
             var sample = SampleReader.Read("whois.centralnic.com", "cn.com", "found.txt");
-            var response = parser.Parse("whois.centralnic.com", "cn.com", sample);
+            var response = parser.Parse("whois.centralnic.com", sample);
 
             Assert.Greater(sample.Length, 0);
             Assert.AreEqual(WhoisStatus.Found, response.Status);

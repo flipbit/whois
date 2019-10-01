@@ -1,19 +1,23 @@
 ﻿using System.Collections.Generic;
+using System.IO;
 using System.Linq;
+using System.Threading;
+using Newtonsoft.Json;
 using Tokens;
 using Tokens.Transformers;
 using Tokens.Validators;
-using Whois.Models;
 using Whois.Parsers.Fixups;
 
 namespace Whois.Parsers
 {
     /// <summary>
-    /// Parser to turn WHOIS server responses into <see cref="ParsedWhoisResponse"/>
+    /// Parser to turn WHOIS server responses into <see cref="WhoisResponse"/>
     /// objects.
     /// </summary>
     public class WhoisParser
     {
+        private const string GenericTemplateTag = "catch-all";
+
         private readonly TokenMatcher matcher;
         private readonly ResourceReader reader;
         private readonly WhoisStatusParser statusParser;
@@ -49,12 +53,11 @@ namespace Whois.Parsers
         /// <summary>
         /// Parses the WHOIS server response for the given server and TLD.
         /// </summary>
-        public WhoisResponse Parse(string whoisServer, string tld, string content)
+        public WhoisResponse Parse(string whoisServer, string content)
         {
-            LoadServerTemplates(whoisServer, tld);
             LoadServerTemplates(whoisServer);
 
-            var result = matcher.Match<WhoisResponse>(content, new []{ whoisServer, tld });
+            var result = matcher.Match<WhoisResponse>(content, new []{ whoisServer });
 
             var match = result.BestMatch;
 
@@ -81,6 +84,7 @@ namespace Whois.Parsers
 
                 var value = match.Value;
 
+                value.Content = content;
                 value.FieldsParsed = match.Tokens.Matches.Count;
                 value.ParsingErrors = match.Exceptions.Count;
                 value.TemplateName = match.Template.Name;
@@ -89,10 +93,51 @@ namespace Whois.Parsers
 
                 value.Status = status;
 
+                if (status == WhoisStatus.Found) Write(value, whoisServer);
+
                 return value;
             }
 
-            return null;
+            return new WhoisResponse
+            {
+                Content = content,
+                Status = WhoisStatus.Unknown
+            };
+        }
+
+        private class Server
+        {
+            public string DomainName { get; set; }
+            public string WhoisServerUrl { get; set; }
+        }
+
+        private void Write(WhoisResponse value, string url)
+        {
+            const string fileName = "foo.json";
+            var contents = string.Empty;
+            var servers = new List<Server>();
+
+            if (File.Exists(fileName))
+            {
+                contents = File.ReadAllText(fileName);
+                servers = JsonConvert.DeserializeObject<List<Server>>(contents);
+            }
+
+            if (servers.Any(x => x.DomainName == value.DomainName)) return;
+
+            servers.Add(new Server
+            {
+                DomainName = value.DomainName,
+                WhoisServerUrl = url
+            });
+
+            servers = servers.OrderBy(s => s.DomainName).ToList();
+
+            var json = JsonConvert.SerializeObject(servers, Formatting.Indented);
+            
+            File.WriteAllText(fileName, json);
+
+            Thread.Sleep(50);
         }
 
         public void AddTemplate(string content, string name)
@@ -102,7 +147,7 @@ namespace Whois.Parsers
 
         public void ClearTemplates()
         {
-            matcher.Templates.Clear();
+            //matcher.Templates.Clear();
         }
 
         public void RegisterValidator<T>() where T : ITokenValidator
@@ -118,9 +163,7 @@ namespace Whois.Parsers
         private void LoadServerTemplates(string whoisServer, string tld)
         {
             // Check templates for this server/tld not already loaded
-            var loaded = Templates
-                .Where(t => t.Name.Contains("generic") == false)
-                .Any(t => t.HasTags(new [] {whoisServer, tld}));
+            var loaded = Templates.ContainsAllTags(whoisServer, tld);
 
             if (loaded) return;
 
@@ -137,9 +180,7 @@ namespace Whois.Parsers
         private void LoadServerTemplates(string whoisServer)
         {
             // Check templates for this server/tld not already loaded
-            var loaded = Templates
-                .Where(t => t.Name.Contains("generic") == false)
-                .Any(t => t.HasTags(new [] {whoisServer}));
+            var loaded = Templates.ContainsTag(whoisServer);
 
             if (loaded) return;
 
@@ -155,7 +196,7 @@ namespace Whois.Parsers
 
         private void LoadServerGenericTemplates()
         {
-            if (Templates.Select(t => t.Name).Any(n => n.Contains("generic"))) return;
+            if (Templates.ContainsTag(GenericTemplateTag)) return;
 
             var templateNames = reader.GetNames("generic", "tld");
 

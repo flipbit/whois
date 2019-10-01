@@ -22,7 +22,7 @@ namespace Whois.Parsing.Whois.Twnic.Net.Tw.Tw
         public void Test_not_found()
         {
             var sample = SampleReader.Read("whois.twnic.net.tw", "tw", "not_found.txt");
-            var response = parser.Parse("whois.twnic.net.tw", "tw", sample);
+            var response = parser.Parse("whois.twnic.net.tw", sample);
 
             Assert.Greater(sample.Length, 0);
             Assert.AreEqual(WhoisStatus.NotFound, response.Status);
@@ -37,7 +37,7 @@ namespace Whois.Parsing.Whois.Twnic.Net.Tw.Tw
         public void Test_found()
         {
             var sample = SampleReader.Read("whois.twnic.net.tw", "tw", "found.txt");
-            var response = parser.Parse("whois.twnic.net.tw", "tw", sample);
+            var response = parser.Parse("whois.twnic.net.tw", sample);
 
             Assert.Greater(sample.Length, 0);
             Assert.AreEqual(WhoisStatus.Found, response.Status);

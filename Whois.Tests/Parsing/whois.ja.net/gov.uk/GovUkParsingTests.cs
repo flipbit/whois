@@ -22,7 +22,7 @@ namespace Whois.Parsing.Whois.Ja.Net.GovUk
         public void Test_not_found()
         {
             var sample = SampleReader.Read("whois.ja.net", "gov.uk", "not_found.txt");
-            var response = parser.Parse("whois.ja.net", "gov.uk", sample);
+            var response = parser.Parse("whois.ja.net", sample);
 
             Assert.Greater(sample.Length, 0);
             Assert.AreEqual(WhoisStatus.NotFound, response.Status);
@@ -39,7 +39,7 @@ namespace Whois.Parsing.Whois.Ja.Net.GovUk
         public void Test_found()
         {
             var sample = SampleReader.Read("whois.ja.net", "gov.uk", "found.txt");
-            var response = parser.Parse("whois.ja.net", "gov.uk", sample);
+            var response = parser.Parse("whois.ja.net", sample);
 
             Assert.Greater(sample.Length, 0);
             Assert.AreEqual(WhoisStatus.Found, response.Status);

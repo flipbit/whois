@@ -22,7 +22,7 @@ namespace Whois.Parsing.Whois.Comlaude.Com.Com
         {
             var sample = SampleReader.Read("whois.comlaude.com", "com", "adobe.com.txt");
             
-            var response = parser.Parse("whoiscomlaude.com", "com", sample);
+            var response = parser.Parse("whoiscomlaude.com", sample);
 
             Assert.AreEqual("adobe.com", response.DomainName);
             Assert.AreEqual("4364022_DOMAIN_COM-VRSN", response.RegistryDomainId);

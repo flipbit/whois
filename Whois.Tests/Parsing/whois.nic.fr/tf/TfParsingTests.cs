@@ -22,7 +22,7 @@ namespace Whois.Parsing.Whois.Nic.Fr.Tf
         public void Test_other_status_frozen()
         {
             var sample = SampleReader.Read("whois.nic.fr", "tf", "other_status_frozen.txt");
-            var response = parser.Parse("whois.nic.fr", "tf", sample);
+            var response = parser.Parse("whois.nic.fr", sample);
 
             Assert.Greater(sample.Length, 0);
             Assert.AreEqual(WhoisStatus.Found, response.Status);
@@ -116,7 +116,7 @@ namespace Whois.Parsing.Whois.Nic.Fr.Tf
         public void Test_throttled()
         {
             var sample = SampleReader.Read("whois.nic.fr", "tf", "throttled.txt");
-            var response = parser.Parse("whois.nic.fr", "tf", sample);
+            var response = parser.Parse("whois.nic.fr", sample);
 
             Assert.Greater(sample.Length, 0);
             Assert.AreEqual(WhoisStatus.Throttled, response.Status);
@@ -132,7 +132,7 @@ namespace Whois.Parsing.Whois.Nic.Fr.Tf
         public void Test_not_found()
         {
             var sample = SampleReader.Read("whois.nic.fr", "tf", "not_found.txt");
-            var response = parser.Parse("whois.nic.fr", "tf", sample);
+            var response = parser.Parse("whois.nic.fr", sample);
 
             Assert.Greater(sample.Length, 0);
             Assert.AreEqual(WhoisStatus.NotFound, response.Status);
@@ -147,7 +147,7 @@ namespace Whois.Parsing.Whois.Nic.Fr.Tf
         public void Test_found()
         {
             var sample = SampleReader.Read("whois.nic.fr", "tf", "found.txt");
-            var response = parser.Parse("whois.nic.fr", "tf", sample);
+            var response = parser.Parse("whois.nic.fr", sample);
 
             Assert.Greater(sample.Length, 0);
             Assert.AreEqual(WhoisStatus.Found, response.Status);

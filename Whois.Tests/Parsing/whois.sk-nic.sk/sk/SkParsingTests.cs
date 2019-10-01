@@ -22,7 +22,7 @@ namespace Whois.Parsing.Whois.Sk.Nic.Sk.Sk
         public void Test_other_status_dom_dakt()
         {
             var sample = SampleReader.Read("whois.sk-nic.sk", "sk", "other_status_dom_dakt.txt");
-            var response = parser.Parse("whois.sk-nic.sk", "sk", sample);
+            var response = parser.Parse("whois.sk-nic.sk", sample);
 
             Assert.Greater(sample.Length, 0);
             Assert.AreEqual(WhoisStatus.Other, response.Status);
@@ -73,7 +73,7 @@ namespace Whois.Parsing.Whois.Sk.Nic.Sk.Sk
         public void Test_other_status_dom_exp()
         {
             var sample = SampleReader.Read("whois.sk-nic.sk", "sk", "other_status_dom_exp.txt");
-            var response = parser.Parse("whois.sk-nic.sk", "sk", sample);
+            var response = parser.Parse("whois.sk-nic.sk", sample);
 
             Assert.Greater(sample.Length, 0);
             Assert.AreEqual(WhoisStatus.Expired, response.Status);
@@ -126,7 +126,7 @@ namespace Whois.Parsing.Whois.Sk.Nic.Sk.Sk
         public void Test_other_status_dom_held()
         {
             var sample = SampleReader.Read("whois.sk-nic.sk", "sk", "other_status_dom_held.txt");
-            var response = parser.Parse("whois.sk-nic.sk", "sk", sample);
+            var response = parser.Parse("whois.sk-nic.sk", sample);
 
             Assert.Greater(sample.Length, 0);
             Assert.AreEqual(WhoisStatus.Other, response.Status);
@@ -161,7 +161,7 @@ namespace Whois.Parsing.Whois.Sk.Nic.Sk.Sk
         public void Test_other_status_dom_lnot()
         {
             var sample = SampleReader.Read("whois.sk-nic.sk", "sk", "other_status_dom_lnot.txt");
-            var response = parser.Parse("whois.sk-nic.sk", "sk", sample);
+            var response = parser.Parse("whois.sk-nic.sk", sample);
 
             Assert.Greater(sample.Length, 0);
             Assert.AreEqual(WhoisStatus.Other, response.Status);
@@ -213,7 +213,7 @@ namespace Whois.Parsing.Whois.Sk.Nic.Sk.Sk
         public void Test_other_status_dom_ok()
         {
             var sample = SampleReader.Read("whois.sk-nic.sk", "sk", "other_status_dom_ok.txt");
-            var response = parser.Parse("whois.sk-nic.sk", "sk", sample);
+            var response = parser.Parse("whois.sk-nic.sk", sample);
 
             Assert.Greater(sample.Length, 0);
             Assert.AreEqual(WhoisStatus.Found, response.Status);
@@ -266,7 +266,7 @@ namespace Whois.Parsing.Whois.Sk.Nic.Sk.Sk
         public void Test_other_status_dom_ta()
         {
             var sample = SampleReader.Read("whois.sk-nic.sk", "sk", "other_status_dom_ta.txt");
-            var response = parser.Parse("whois.sk-nic.sk", "sk", sample);
+            var response = parser.Parse("whois.sk-nic.sk", sample);
 
             Assert.Greater(sample.Length, 0);
             Assert.AreEqual(WhoisStatus.Other, response.Status);
@@ -317,7 +317,7 @@ namespace Whois.Parsing.Whois.Sk.Nic.Sk.Sk
         public void Test_other_status_dom_warn()
         {
             var sample = SampleReader.Read("whois.sk-nic.sk", "sk", "other_status_dom_warn.txt");
-            var response = parser.Parse("whois.sk-nic.sk", "sk", sample);
+            var response = parser.Parse("whois.sk-nic.sk", sample);
 
             Assert.Greater(sample.Length, 0);
             Assert.AreEqual(WhoisStatus.Other, response.Status);
@@ -367,7 +367,7 @@ namespace Whois.Parsing.Whois.Sk.Nic.Sk.Sk
         public void Test_not_found()
         {
             var sample = SampleReader.Read("whois.sk-nic.sk", "sk", "not_found.txt");
-            var response = parser.Parse("whois.sk-nic.sk", "sk", sample);
+            var response = parser.Parse("whois.sk-nic.sk", sample);
 
             Assert.Greater(sample.Length, 0);
             Assert.AreEqual(WhoisStatus.NotFound, response.Status);
@@ -382,7 +382,7 @@ namespace Whois.Parsing.Whois.Sk.Nic.Sk.Sk
         public void Test_found()
         {
             var sample = SampleReader.Read("whois.sk-nic.sk", "sk", "found.txt");
-            var response = parser.Parse("whois.sk-nic.sk", "sk", sample);
+            var response = parser.Parse("whois.sk-nic.sk", sample);
 
             Assert.Greater(sample.Length, 0);
             Assert.AreEqual(WhoisStatus.Found, response.Status);

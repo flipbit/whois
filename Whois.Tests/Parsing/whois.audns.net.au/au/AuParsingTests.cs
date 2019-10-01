@@ -22,7 +22,7 @@ namespace Whois.Parsing.Whois.Audns.Net.Au.Au
         public void Test_found()
         {
             var sample = SampleReader.Read("whois.audns.net.au", "au", "found.txt");
-            var response = parser.Parse("whois.audns.net.au", "au", sample);
+            var response = parser.Parse("whois.audns.net.au", sample);
 
             Assert.Greater(sample.Length, 0);
             Assert.AreEqual(WhoisStatus.Found, response.Status);
@@ -60,7 +60,7 @@ namespace Whois.Parsing.Whois.Audns.Net.Au.Au
         public void Test_not_found()
         {
             var sample = SampleReader.Read("whois.audns.net.au", "au", "not_found.txt");
-            var response = parser.Parse("whois.audns.net.au", "au", sample);
+            var response = parser.Parse("whois.audns.net.au", sample);
 
             Assert.Greater(sample.Length, 0);
             Assert.AreEqual(WhoisStatus.NotFound, response.Status);
@@ -74,7 +74,7 @@ namespace Whois.Parsing.Whois.Audns.Net.Au.Au
         public void Test_found_status_registered()
         {
             var sample = SampleReader.Read("whois.audns.net.au", "au", "found_status_registered.txt");
-            var response = parser.Parse("whois.audns.net.au", "au", sample);
+            var response = parser.Parse("whois.audns.net.au", sample);
 
             Assert.Greater(sample.Length, 0);
             Assert.AreEqual(WhoisStatus.Found, response.Status);

@@ -22,7 +22,7 @@ namespace Whois.Parsing.Whois.Tznic.Or.Tz.Tz
         public void Test_expired()
         {
             var sample = SampleReader.Read("whois.tznic.or.tz", "tz", "expired.txt");
-            var response = parser.Parse("whois.tznic.or.tz", "tz", sample);
+            var response = parser.Parse("whois.tznic.or.tz", sample);
 
             Assert.Greater(sample.Length, 0);
             Assert.AreEqual(WhoisStatus.Expired, response.Status);
@@ -103,7 +103,7 @@ namespace Whois.Parsing.Whois.Tznic.Or.Tz.Tz
         public void Test_not_found()
         {
             var sample = SampleReader.Read("whois.tznic.or.tz", "tz", "not_found.txt");
-            var response = parser.Parse("whois.tznic.or.tz", "tz", sample);
+            var response = parser.Parse("whois.tznic.or.tz", sample);
 
             Assert.Greater(sample.Length, 0);
             Assert.AreEqual(WhoisStatus.NotFound, response.Status);
@@ -118,7 +118,7 @@ namespace Whois.Parsing.Whois.Tznic.Or.Tz.Tz
         public void Test_found()
         {
             var sample = SampleReader.Read("whois.tznic.or.tz", "tz", "found.txt");
-            var response = parser.Parse("whois.tznic.or.tz", "tz", sample);
+            var response = parser.Parse("whois.tznic.or.tz", sample);
 
             Assert.Greater(sample.Length, 0);
             Assert.AreEqual(WhoisStatus.Found, response.Status);

@@ -22,7 +22,7 @@ namespace Whois.Parsing.Whois.Afilias.Grs.Info.Mn
         public void Test_not_found()
         {
             var sample = SampleReader.Read("whois.afilias-grs.info", "mn", "not_found.txt");
-            var response = parser.Parse("whois.afilias-grs.info", "mn", sample);
+            var response = parser.Parse("whois.afilias-grs.info", sample);
 
             Assert.Greater(sample.Length, 0);
             Assert.AreEqual(WhoisStatus.NotFound, response.Status);
@@ -34,7 +34,7 @@ namespace Whois.Parsing.Whois.Afilias.Grs.Info.Mn
         public void Test_found()
         {
             var sample = SampleReader.Read("whois.afilias-grs.info", "mn", "found.txt");
-            var response = parser.Parse("whois.afilias-grs.info", "mn", sample);
+            var response = parser.Parse("whois.afilias-grs.info", sample);
 
             Assert.Greater(sample.Length, 0);
             Assert.AreEqual(WhoisStatus.Found, response.Status);

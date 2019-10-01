@@ -22,7 +22,7 @@ namespace Whois.Parsing.Whois.Sx.Sx
         public void Test_other_status_premium_name()
         {
             var sample = SampleReader.Read("whois.sx", "sx", "other_status_premium_name.txt");
-            var response = parser.Parse("whois.sx", "sx", sample);
+            var response = parser.Parse("whois.sx", sample);
 
             Assert.Greater(sample.Length, 0);
             Assert.AreEqual(WhoisStatus.Unavailable, response.Status);
@@ -39,7 +39,7 @@ namespace Whois.Parsing.Whois.Sx.Sx
         public void Test_not_found()
         {
             var sample = SampleReader.Read("whois.sx", "sx", "not_found.txt");
-            var response = parser.Parse("whois.sx", "sx", sample);
+            var response = parser.Parse("whois.sx", sample);
 
             Assert.Greater(sample.Length, 0);
             Assert.AreEqual(WhoisStatus.NotFound, response.Status);
@@ -56,7 +56,7 @@ namespace Whois.Parsing.Whois.Sx.Sx
         public void Test_found()
         {
             var sample = SampleReader.Read("whois.sx", "sx", "found.txt");
-            var response = parser.Parse("whois.sx", "sx", sample);
+            var response = parser.Parse("whois.sx", sample);
 
             Assert.Greater(sample.Length, 0);
             Assert.AreEqual(WhoisStatus.Found, response.Status);
@@ -134,7 +134,7 @@ namespace Whois.Parsing.Whois.Sx.Sx
         public void Test_unavailable()
         {
             var sample = SampleReader.Read("whois.sx", "sx", "unavailable.txt");
-            var response = parser.Parse("whois.sx", "sx", sample);
+            var response = parser.Parse("whois.sx", sample);
 
             Assert.Greater(sample.Length, 0);
             Assert.AreEqual(WhoisStatus.Unavailable, response.Status);

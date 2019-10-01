@@ -22,7 +22,7 @@ namespace Whois.Parsing.Whois.Register.Bg.Bg
         public void Test_found()
         {
             var sample = SampleReader.Read("whois.register.bg", "bg", "found.txt");
-            var response = parser.Parse("whois.register.bg", "bg", sample);
+            var response = parser.Parse("whois.register.bg", sample);
 
             Assert.Greater(sample.Length, 0);
             Assert.AreEqual(WhoisStatus.Found, response.Status);
@@ -91,7 +91,7 @@ namespace Whois.Parsing.Whois.Register.Bg.Bg
         public void Test_not_found()
         {
             var sample = SampleReader.Read("whois.register.bg", "bg", "not_found.txt");
-            var response = parser.Parse("whois.register.bg", "bg", sample);
+            var response = parser.Parse("whois.register.bg", sample);
 
             Assert.Greater(sample.Length, 0);
             Assert.AreEqual(WhoisStatus.NotFound, response.Status);
@@ -108,7 +108,7 @@ namespace Whois.Parsing.Whois.Register.Bg.Bg
         public void Test_found_status_registered()
         {
             var sample = SampleReader.Read("whois.register.bg", "bg", "found_status_registered.txt");
-            var response = parser.Parse("whois.register.bg", "bg", sample);
+            var response = parser.Parse("whois.register.bg", sample);
 
             Assert.Greater(sample.Length, 0);
             Assert.AreEqual(WhoisStatus.Found, response.Status);

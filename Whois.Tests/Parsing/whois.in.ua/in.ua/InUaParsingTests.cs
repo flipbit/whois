@@ -22,7 +22,7 @@ namespace Whois.Parsing.Whois.In.Ua.InUa
         public void Test_not_found()
         {
             var sample = SampleReader.Read("whois.in.ua", "in.ua", "not_found.txt");
-            var response = parser.Parse("whois.in.ua", "in.ua", sample);
+            var response = parser.Parse("whois.in.ua", sample);
 
             Assert.Greater(sample.Length, 0);
             Assert.AreEqual(WhoisStatus.NotFound, response.Status);
@@ -39,7 +39,7 @@ namespace Whois.Parsing.Whois.In.Ua.InUa
         public void Test_found()
         {
             var sample = SampleReader.Read("whois.in.ua", "in.ua", "found.txt");
-            var response = parser.Parse("whois.in.ua", "in.ua", sample);
+            var response = parser.Parse("whois.in.ua", sample);
 
             Assert.Greater(sample.Length, 0);
             Assert.AreEqual(WhoisStatus.Found, response.Status);

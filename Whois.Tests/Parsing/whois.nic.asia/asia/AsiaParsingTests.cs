@@ -22,7 +22,7 @@ namespace Whois.Parsing.Whois.Nic.Asia.Asia
         public void Test_found()
         {
             var sample = SampleReader.Read("whois.nic.asia", "asia", "found.txt");
-            var response = parser.Parse("whois.nic.asia", "asia", sample);
+            var response = parser.Parse("whois.nic.asia", sample);
 
             Assert.Greater(sample.Length, 0);
             Assert.AreEqual(WhoisStatus.Found, response.Status);
@@ -120,7 +120,7 @@ namespace Whois.Parsing.Whois.Nic.Asia.Asia
         public void Test_other_status_single()
         {
             var sample = SampleReader.Read("whois.nic.asia", "asia", "other_status_single.txt");
-            var response = parser.Parse("whois.nic.asia", "asia", sample);
+            var response = parser.Parse("whois.nic.asia", sample);
 
             Assert.Greater(sample.Length, 0);
             Assert.AreEqual(WhoisStatus.Found, response.Status);
@@ -221,7 +221,7 @@ namespace Whois.Parsing.Whois.Nic.Asia.Asia
         public void Test_not_found()
         {
             var sample = SampleReader.Read("whois.nic.asia", "asia", "not_found.txt");
-            var response = parser.Parse("whois.nic.asia", "asia", sample);
+            var response = parser.Parse("whois.nic.asia", sample);
 
             Assert.Greater(sample.Length, 0);
             Assert.AreEqual(WhoisStatus.NotFound, response.Status);
@@ -236,7 +236,7 @@ namespace Whois.Parsing.Whois.Nic.Asia.Asia
         public void Test_found_status_registered()
         {
             var sample = SampleReader.Read("whois.nic.asia", "asia", "found_status_registered.txt");
-            var response = parser.Parse("whois.nic.asia", "asia", sample);
+            var response = parser.Parse("whois.nic.asia", sample);
 
             Assert.Greater(sample.Length, 0);
             Assert.AreEqual(WhoisStatus.Found, response.Status);
@@ -339,7 +339,7 @@ namespace Whois.Parsing.Whois.Nic.Asia.Asia
         public void Test_reserved()
         {
             var sample = SampleReader.Read("whois.nic.asia", "asia", "reserved.txt");
-            var response = parser.Parse("whois.nic.asia", "asia", sample);
+            var response = parser.Parse("whois.nic.asia", sample);
 
             Assert.Greater(sample.Length, 0);
             Assert.AreEqual(WhoisStatus.Reserved, response.Status);

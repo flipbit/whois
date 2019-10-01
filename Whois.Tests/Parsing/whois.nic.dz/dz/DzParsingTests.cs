@@ -22,7 +22,7 @@ namespace Whois.Parsing.Whois.Nic.Dz.Dz
         public void Test_not_found()
         {
             var sample = SampleReader.Read("whois.nic.dz", "dz", "not_found.txt");
-            var response = parser.Parse("whois.nic.dz", "dz", sample);
+            var response = parser.Parse("whois.nic.dz", sample);
 
             Assert.Greater(sample.Length, 0);
             Assert.AreEqual(WhoisStatus.NotFound, response.Status);
@@ -39,7 +39,7 @@ namespace Whois.Parsing.Whois.Nic.Dz.Dz
         public void Test_found()
         {
             var sample = SampleReader.Read("whois.nic.dz", "dz", "found.txt");
-            var response = parser.Parse("whois.nic.dz", "dz", sample);
+            var response = parser.Parse("whois.nic.dz", sample);
 
             Assert.Greater(sample.Length, 0);
             Assert.AreEqual(WhoisStatus.Found, response.Status);

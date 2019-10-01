@@ -22,7 +22,7 @@ namespace Whois.Parsing.Whois.Fi.Fi
         public void Test_other_status_graceperiod()
         {
             var sample = SampleReader.Read("whois.fi", "fi", "other_status_graceperiod.txt");
-            var response = parser.Parse("whois.fi", "fi", sample);
+            var response = parser.Parse("whois.fi", sample);
 
             Assert.Greater(sample.Length, 0);
             Assert.AreEqual(WhoisStatus.Other, response.Status);
@@ -66,7 +66,7 @@ namespace Whois.Parsing.Whois.Fi.Fi
         public void Test_not_found()
         {
             var sample = SampleReader.Read("whois.fi", "fi", "not_found.txt");
-            var response = parser.Parse("whois.fi", "fi", sample);
+            var response = parser.Parse("whois.fi", sample);
 
             Assert.Greater(sample.Length, 0);
             Assert.AreEqual(WhoisStatus.NotFound, response.Status);
@@ -81,7 +81,7 @@ namespace Whois.Parsing.Whois.Fi.Fi
         public void Test_found()
         {
             var sample = SampleReader.Read("whois.fi", "fi", "found.txt");
-            var response = parser.Parse("whois.fi", "fi", sample);
+            var response = parser.Parse("whois.fi", sample);
 
             Assert.Greater(sample.Length, 0);
             Assert.AreEqual(WhoisStatus.Found, response.Status);
@@ -127,7 +127,7 @@ namespace Whois.Parsing.Whois.Fi.Fi
         public void Test_reserved()
         {
             var sample = SampleReader.Read("whois.fi", "fi", "reserved.txt");
-            var response = parser.Parse("whois.fi", "fi", sample);
+            var response = parser.Parse("whois.fi", sample);
 
             Assert.Greater(sample.Length, 0);
             Assert.AreEqual(WhoisStatus.Reserved, response.Status);

@@ -22,7 +22,7 @@ namespace Whois.Parsing.Whois.Registro.Br.Br
         public void Test_found()
         {
             var sample = SampleReader.Read("whois.registro.br", "br", "found.txt");
-            var response = parser.Parse("whois.registro.br", "br", sample);
+            var response = parser.Parse("whois.registro.br", sample);
 
             Assert.Greater(sample.Length, 0);
             Assert.AreEqual(WhoisStatus.Found, response.Status);
@@ -83,7 +83,7 @@ namespace Whois.Parsing.Whois.Registro.Br.Br
         public void Test_not_found()
         {
             var sample = SampleReader.Read("whois.registro.br", "br", "not_found.txt");
-            var response = parser.Parse("whois.registro.br", "br", sample);
+            var response = parser.Parse("whois.registro.br", sample);
 
             Assert.Greater(sample.Length, 0);
             Assert.AreEqual(WhoisStatus.NotFound, response.Status);
@@ -100,7 +100,7 @@ namespace Whois.Parsing.Whois.Registro.Br.Br
         public void Test_not_found_status_available_limited()
         {
             var sample = SampleReader.Read("whois.registro.br", "br", "not_found_status_available_limited.txt");
-            var response = parser.Parse("whois.registro.br", "br", sample);
+            var response = parser.Parse("whois.registro.br", sample);
 
             Assert.Greater(sample.Length, 0);
             Assert.AreEqual(WhoisStatus.Throttled, response.Status);
@@ -117,7 +117,7 @@ namespace Whois.Parsing.Whois.Registro.Br.Br
         public void Test_found_status_registered()
         {
             var sample = SampleReader.Read("whois.registro.br", "br", "found_status_registered.txt");
-            var response = parser.Parse("whois.registro.br", "br", sample);
+            var response = parser.Parse("whois.registro.br", sample);
 
             Assert.Greater(sample.Length, 0);
             Assert.AreEqual(WhoisStatus.Found, response.Status);
@@ -170,7 +170,7 @@ namespace Whois.Parsing.Whois.Registro.Br.Br
         public void Test_found_status_registered_limited()
         {
             var sample = SampleReader.Read("whois.registro.br", "br", "found_status_registered_limited.txt");
-            var response = parser.Parse("whois.registro.br", "br", sample);
+            var response = parser.Parse("whois.registro.br", sample);
 
             Assert.Greater(sample.Length, 0);
             Assert.AreEqual(WhoisStatus.Throttled, response.Status);
@@ -190,7 +190,7 @@ namespace Whois.Parsing.Whois.Registro.Br.Br
         public void Test_found_001hosting()
         {
             var sample = SampleReader.Read("whois.registro.br", "br", "001hosting.com.br.txt");
-            var response = parser.Parse("whois.registro.br", "br", sample);
+            var response = parser.Parse("whois.registro.br", sample);
 
             Assert.AreEqual(WhoisStatus.Found, response.Status);
 

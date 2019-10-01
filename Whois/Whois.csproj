@@ -46,8 +46,6 @@
     <None Remove="Resources\tvwhois.verisign-grs.com\tv\NotFound.txt" />
     <None Remove="Resources\whois.aeda.net.ae\ae\Found.txt" />
     <None Remove="Resources\whois.aeda.net.ae\ae\NotFound.txt" />
-    <None Remove="Resources\whois.afilias-grs.info\bz\Found.txt" />
-    <None Remove="Resources\whois.afilias-grs.info\bz\NotFound.txt" />
     <None Remove="Resources\whois.afilias.net\info\NotFound.txt" />
     <None Remove="Resources\whois.afilias.net\info\Reserved.txt" />
     <None Remove="Resources\whois.afilias.net\pro\NotFound.txt" />
@@ -368,7 +366,6 @@
     <EmbeddedResource Include="Resources\tvwhois.verisign-grs.com\tv\NotFound.txt" />
     <EmbeddedResource Include="Resources\whois.aeda.net.ae\ae\Found.txt" />
     <EmbeddedResource Include="Resources\whois.aeda.net.ae\ae\NotFound.txt" />
-    <EmbeddedResource Include="Resources\whois.afilias-grs.info\bz\Found.txt" />
     <EmbeddedResource Include="Resources\whois.afilias.net\info\NotFound.txt" />
     <EmbeddedResource Include="Resources\whois.afilias.net\info\Reserved.txt" />
     <EmbeddedResource Include="Resources\whois.afilias.net\pro\NotFound.txt" />
@@ -685,7 +682,8 @@
       <IncludeAssets>runtime; build; native; contentfiles; analyzers</IncludeAssets>
     </PackageReference>
     <PackageReference Include="Microsoft.CSharp" Version="4.6.0" />
-    <PackageReference Include="Tokenizer" Version="2.2.0-beta8" />
+    <PackageReference Include="Newtonsoft.Json" Version="12.0.2" />
+    <PackageReference Include="Tokenizer" Version="2.2.0-beta9" />
   </ItemGroup>
 
   <PropertyGroup>

@@ -1,6 +1,5 @@
 using System;
 using NUnit.Framework;
-using Whois.Models;
 using Whois.Parsers;
 
 namespace Whois.Parsing.Whois.Nic.Lk.XnXkc2al3hye2a
@@ -22,16 +21,17 @@ namespace Whois.Parsing.Whois.Nic.Lk.XnXkc2al3hye2a
         public void Test_not_found()
         {
             var sample = SampleReader.Read("whois.nic.lk", "xn--xkc2al3hye2a", "not_found.txt");
-            var response = parser.Parse("whois.nic.lk", "xn--xkc2al3hye2a", sample);
+            var response = parser.Parse("whois.nic.lk", sample);
 
-            Assert.IsNull(response);
+            Assert.AreEqual(WhoisStatus.Unknown, response.Status);
+            Assert.AreEqual(0, response.ContentLength);
         }
 
         [Test]
         public void Test_found()
         {
             var sample = SampleReader.Read("whois.nic.lk", "xn--xkc2al3hye2a", "found.txt");
-            var response = parser.Parse("whois.nic.lk", "xn--xkc2al3hye2a", sample);
+            var response = parser.Parse("whois.nic.lk", sample);
 
             Assert.Greater(sample.Length, 0);
             Assert.AreEqual(WhoisStatus.Found, response.Status);

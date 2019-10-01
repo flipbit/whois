@@ -22,7 +22,7 @@ namespace Whois.Parsing.Whois.Jprs.Jp.Jp
         public void Test_suspended()
         {
             var sample = SampleReader.Read("whois.jprs.jp", "jp", "suspended.txt");
-            var response = parser.Parse("whois.jprs.jp", "jp", sample);
+            var response = parser.Parse("whois.jprs.jp", sample);
 
             Assert.Greater(sample.Length, 0);
             Assert.AreEqual(WhoisStatus.Suspended, response.Status);
@@ -47,7 +47,7 @@ namespace Whois.Parsing.Whois.Jprs.Jp.Jp
         public void Test_other_status_to_be_suspended()
         {
             var sample = SampleReader.Read("whois.jprs.jp", "jp", "other_status_to_be_suspended.txt");
-            var response = parser.Parse("whois.jprs.jp", "jp", sample);
+            var response = parser.Parse("whois.jprs.jp", sample);
 
             Assert.Greater(sample.Length, 0);
             Assert.AreEqual(WhoisStatus.Suspended, response.Status);
@@ -92,7 +92,7 @@ namespace Whois.Parsing.Whois.Jprs.Jp.Jp
         public void Test_found()
         {
             var sample = SampleReader.Read("whois.jprs.jp", "jp", "found.txt");
-            var response = parser.Parse("whois.jprs.jp", "jp", sample);
+            var response = parser.Parse("whois.jprs.jp", sample);
 
             Assert.Greater(sample.Length, 0);
             Assert.AreEqual(WhoisStatus.Found, response.Status);
@@ -139,7 +139,7 @@ namespace Whois.Parsing.Whois.Jprs.Jp.Jp
         public void Test_not_found()
         {
             var sample = SampleReader.Read("whois.jprs.jp", "jp", "not_found.txt");
-            var response = parser.Parse("whois.jprs.jp", "jp", sample);
+            var response = parser.Parse("whois.jprs.jp", sample);
 
             Assert.Greater(sample.Length, 0);
             Assert.AreEqual(WhoisStatus.NotFound, response.Status);
@@ -154,7 +154,7 @@ namespace Whois.Parsing.Whois.Jprs.Jp.Jp
         public void Test_found_status_registered()
         {
             var sample = SampleReader.Read("whois.jprs.jp", "jp", "found_status_registered.txt");
-            var response = parser.Parse("whois.jprs.jp", "jp", sample);
+            var response = parser.Parse("whois.jprs.jp", sample);
 
             Assert.Greater(sample.Length, 0);
             Assert.AreEqual(WhoisStatus.Found, response.Status);
@@ -204,7 +204,7 @@ namespace Whois.Parsing.Whois.Jprs.Jp.Jp
         public void Test_reserved()
         {
             var sample = SampleReader.Read("whois.jprs.jp", "jp", "reserved.txt");
-            var response = parser.Parse("whois.jprs.jp", "jp", sample);
+            var response = parser.Parse("whois.jprs.jp", sample);
 
             Assert.Greater(sample.Length, 0);
             Assert.AreEqual(WhoisStatus.Reserved, response.Status);
@@ -228,7 +228,7 @@ namespace Whois.Parsing.Whois.Jprs.Jp.Jp
         {
             var sample = SampleReader.Read("whois.jprs.jp", "jp", "ameblo.jp.txt");
             
-            var response = parser.Parse("whois.jprs.jp", "jp", sample);
+            var response = parser.Parse("whois.jprs.jp", sample);
 
             Assert.Greater(sample.Length, 0);
             Assert.AreEqual(WhoisStatus.Found, response.Status);

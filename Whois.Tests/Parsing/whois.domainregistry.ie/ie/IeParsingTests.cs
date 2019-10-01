@@ -22,7 +22,7 @@ namespace Whois.Parsing.Whois.Domainregistry.Ie.Ie
         public void Test_reserved()
         {
             var sample = SampleReader.Read("whois.domainregistry.ie", "ie", "reserved.txt");
-            var response = parser.Parse("whois.domainregistry.ie", "ie", sample);
+            var response = parser.Parse("whois.domainregistry.ie", sample);
 
             Assert.Greater(sample.Length, 0);
             Assert.AreEqual(WhoisStatus.Reserved, response.Status);
@@ -41,7 +41,7 @@ namespace Whois.Parsing.Whois.Domainregistry.Ie.Ie
         public void Test_found_contacts_multiple()
         {
             var sample = SampleReader.Read("whois.domainregistry.ie", "ie", "found_contacts_multiple.txt");
-            var response = parser.Parse("whois.domainregistry.ie", "ie", sample);
+            var response = parser.Parse("whois.domainregistry.ie", sample);
 
             Assert.Greater(sample.Length, 0);
             Assert.AreEqual(WhoisStatus.Found, response.Status);
@@ -74,7 +74,7 @@ namespace Whois.Parsing.Whois.Domainregistry.Ie.Ie
         public void Test_found_contacts_not_matching_id()
         {
             var sample = SampleReader.Read("whois.domainregistry.ie", "ie", "found_contacts_not_matching_id.txt");
-            var response = parser.Parse("whois.domainregistry.ie", "ie", sample);
+            var response = parser.Parse("whois.domainregistry.ie", sample);
 
             Assert.Greater(sample.Length, 0);
             Assert.AreEqual(WhoisStatus.Found, response.Status);
@@ -112,7 +112,7 @@ namespace Whois.Parsing.Whois.Domainregistry.Ie.Ie
         public void Test_found_nameservers_with_ip()
         {
             var sample = SampleReader.Read("whois.domainregistry.ie", "ie", "found_nameservers_with_ip.txt");
-            var response = parser.Parse("whois.domainregistry.ie", "ie", sample);
+            var response = parser.Parse("whois.domainregistry.ie", sample);
 
             Assert.Greater(sample.Length, 0);
             Assert.AreEqual(WhoisStatus.Found, response.Status);
@@ -149,7 +149,7 @@ namespace Whois.Parsing.Whois.Domainregistry.Ie.Ie
         public void Test_not_found()
         {
             var sample = SampleReader.Read("whois.domainregistry.ie", "ie", "not_found.txt");
-            var response = parser.Parse("whois.domainregistry.ie", "ie", sample);
+            var response = parser.Parse("whois.domainregistry.ie", sample);
 
             Assert.Greater(sample.Length, 0);
             Assert.AreEqual(WhoisStatus.NotFound, response.Status);
@@ -166,7 +166,7 @@ namespace Whois.Parsing.Whois.Domainregistry.Ie.Ie
         public void Test_found_status_registered()
         {
             var sample = SampleReader.Read("whois.domainregistry.ie", "ie", "found_status_registered.txt");
-            var response = parser.Parse("whois.domainregistry.ie", "ie", sample);
+            var response = parser.Parse("whois.domainregistry.ie", sample);
 
             Assert.Greater(sample.Length, 0);
             Assert.AreEqual(WhoisStatus.Found, response.Status);

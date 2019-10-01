@@ -21,7 +21,7 @@ namespace Whois.Parsing.Whois.Dotgov.Gov.Gov
         public void Test_not_found()
         {
             var sample = SampleReader.Read("whois.dotgov.gov", "gov", "not_found.txt");
-            var response = parser.Parse("whois.dotgov.gov", "gov", sample);
+            var response = parser.Parse("whois.dotgov.gov", sample);
 
             Assert.Greater(sample.Length, 0);
             Assert.AreEqual(WhoisStatus.NotFound, response.Status);
@@ -38,7 +38,7 @@ namespace Whois.Parsing.Whois.Dotgov.Gov.Gov
         public void Test_found()
         {
             var sample = SampleReader.Read("whois.dotgov.gov", "gov", "found.txt");
-            var response = parser.Parse("whois.dotgov.gov", "gov", sample);
+            var response = parser.Parse("whois.dotgov.gov", sample);
 
             Assert.Greater(sample.Length, 0);
             Assert.AreEqual(WhoisStatus.Found, response.Status);

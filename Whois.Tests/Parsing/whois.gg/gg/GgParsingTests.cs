@@ -22,7 +22,7 @@ namespace Whois.Parsing.Whois.Gg.Gg
         public void Test_not_found()
         {
             var sample = SampleReader.Read("whois.gg", "gg", "not_found.txt");
-            var response = parser.Parse("whois.gg", "gg", sample);
+            var response = parser.Parse("whois.gg", sample);
 
             Assert.Greater(sample.Length, 0);
             Assert.AreEqual(WhoisStatus.NotFound, response.Status);
@@ -39,7 +39,7 @@ namespace Whois.Parsing.Whois.Gg.Gg
         public void Test_found()
         {
             var sample = SampleReader.Read("whois.gg", "gg", "found.txt");
-            var response = parser.Parse("whois.gg", "gg", sample);
+            var response = parser.Parse("whois.gg", sample);
 
             Assert.Greater(sample.Length, 0);
             Assert.AreEqual(WhoisStatus.Found, response.Status);

@@ -22,7 +22,7 @@ namespace Whois.Parsing.Whois.Sgnic.Sg.Sg
         public void Test_found()
         {
             var sample = SampleReader.Read("whois.sgnic.sg", "sg", "found.txt");
-            var response = parser.Parse("whois.sgnic.sg", "sg", sample);
+            var response = parser.Parse("whois.sgnic.sg", sample);
 
             Assert.Greater(sample.Length, 0);
             Assert.AreEqual(WhoisStatus.Found, response.Status);
@@ -66,7 +66,7 @@ namespace Whois.Parsing.Whois.Sgnic.Sg.Sg
         public void Test_found_nameservers_schema_1_with_ip()
         {
             var sample = SampleReader.Read("whois.sgnic.sg", "sg", "found_nameservers_schema_1_with_ip.txt");
-            var response = parser.Parse("whois.sgnic.sg", "sg", sample);
+            var response = parser.Parse("whois.sgnic.sg", sample);
 
             Assert.Greater(sample.Length, 0);
             Assert.AreEqual(WhoisStatus.Found, response.Status);
@@ -107,7 +107,7 @@ namespace Whois.Parsing.Whois.Sgnic.Sg.Sg
         public void Test_found_nameservers_schema_2()
         {
             var sample = SampleReader.Read("whois.sgnic.sg", "sg", "found_nameservers_schema_2.txt");
-            var response = parser.Parse("whois.sgnic.sg", "sg", sample);
+            var response = parser.Parse("whois.sgnic.sg", sample);
 
             Assert.Greater(sample.Length, 0);
             Assert.AreEqual(WhoisStatus.Found, response.Status);
@@ -151,7 +151,7 @@ namespace Whois.Parsing.Whois.Sgnic.Sg.Sg
         public void Test_not_found()
         {
             var sample = SampleReader.Read("whois.sgnic.sg", "sg", "not_found.txt");
-            var response = parser.Parse("whois.sgnic.sg", "sg", sample);
+            var response = parser.Parse("whois.sgnic.sg", sample);
 
             Assert.Greater(sample.Length, 0);
             Assert.AreEqual(WhoisStatus.NotFound, response.Status);
@@ -166,7 +166,7 @@ namespace Whois.Parsing.Whois.Sgnic.Sg.Sg
         public void Test_found_status_registered()
         {
             var sample = SampleReader.Read("whois.sgnic.sg", "sg", "found_status_registered.txt");
-            var response = parser.Parse("whois.sgnic.sg", "sg", sample);
+            var response = parser.Parse("whois.sgnic.sg", sample);
 
             Assert.Greater(sample.Length, 0);
             Assert.AreEqual(WhoisStatus.Found, response.Status);

@@ -22,7 +22,7 @@ namespace Whois.Parsing.Whois.Jprs.Jp.CoJp
         public void Test_pending_delete()
         {
             var sample = SampleReader.Read("whois.jprs.jp", "co.jp", "pending_delete.txt");
-            var response = parser.Parse("whois.jprs.jp", "co.jp", sample);
+            var response = parser.Parse("whois.jprs.jp", sample);
 
             Assert.Greater(sample.Length, 0);
             Assert.AreEqual(WhoisStatus.PendingDelete, response.Status);
@@ -48,7 +48,7 @@ namespace Whois.Parsing.Whois.Jprs.Jp.CoJp
         public void Test_found()
         {
             var sample = SampleReader.Read("whois.jprs.jp", "co.jp", "found.txt");
-            var response = parser.Parse("whois.jprs.jp", "co.jp", sample);
+            var response = parser.Parse("whois.jprs.jp", sample);
 
             Assert.Greater(sample.Length, 0);
             Assert.AreEqual(WhoisStatus.Found, response.Status);
@@ -82,7 +82,7 @@ namespace Whois.Parsing.Whois.Jprs.Jp.CoJp
         {
             var sample = SampleReader.Read("whois.jprs.jp", "co.jp", "amazon.co.jp.txt");
 
-            var response = parser.Parse("whois.jprs.jp", "co.jp", sample);
+            var response = parser.Parse("whois.jprs.jp", sample);
 
             Assert.Greater(sample.Length, 0);
             Assert.AreEqual(WhoisStatus.Found, response.Status);

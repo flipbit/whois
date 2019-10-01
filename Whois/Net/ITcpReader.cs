@@ -16,6 +16,7 @@ namespace Whois.Net
         /// <param name="port">The port.</param>
         /// <param name="command">The command.</param>
         /// <param name="encoding">The encoding to use whilst reading the server response.</param>
-        Task<string> Read(string url, int port, string command, Encoding encoding);
+        /// <param name="timeoutSeconds">The network timeout in seconds</param>
+        Task<string> Read(string url, int port, string command, Encoding encoding, int timeoutSeconds);
     }
 }

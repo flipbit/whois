@@ -22,7 +22,7 @@ namespace Whois.Parsing.Whois.Website.Ws.Ws
         public void Test_not_found()
         {
             var sample = SampleReader.Read("whois.website.ws", "ws", "not_found.txt");
-            var response = parser.Parse("whois.website.ws", "ws", sample);
+            var response = parser.Parse("whois.website.ws", sample);
 
             Assert.Greater(sample.Length, 0);
             Assert.AreEqual(WhoisStatus.NotFound, response.Status);
@@ -39,7 +39,7 @@ namespace Whois.Parsing.Whois.Website.Ws.Ws
         public void Test_found()
         {
             var sample = SampleReader.Read("whois.website.ws", "ws", "found.txt");
-            var response = parser.Parse("whois.website.ws", "ws", sample);
+            var response = parser.Parse("whois.website.ws", sample);
 
             Assert.Greater(sample.Length, 0);
             Assert.AreEqual(WhoisStatus.Found, response.Status);

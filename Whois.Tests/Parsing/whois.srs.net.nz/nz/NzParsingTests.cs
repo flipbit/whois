@@ -21,7 +21,7 @@ namespace Whois.Parsing.Whois.Srs.Net.Nz.Nz
         public void Test_other_status_pendingrelease()
         {
             var sample = SampleReader.Read("whois.srs.net.nz", "nz", "other_status_pendingrelease.txt");
-            var response = parser.Parse("whois.srs.net.nz", "nz", sample);
+            var response = parser.Parse("whois.srs.net.nz", sample);
 
             Assert.Greater(sample.Length, 0);
             Assert.AreEqual(WhoisStatus.Other, response.Status);
@@ -94,7 +94,7 @@ namespace Whois.Parsing.Whois.Srs.Net.Nz.Nz
         public void Test_throttled()
         {
             var sample = SampleReader.Read("whois.srs.net.nz", "nz", "throttled.txt");
-            var response = parser.Parse("whois.srs.net.nz", "nz", sample);
+            var response = parser.Parse("whois.srs.net.nz", sample);
 
             Assert.Greater(sample.Length, 0);
             Assert.AreEqual(WhoisStatus.Throttled, response.Status);
@@ -115,7 +115,7 @@ namespace Whois.Parsing.Whois.Srs.Net.Nz.Nz
         public void Test_not_found()
         {
             var sample = SampleReader.Read("whois.srs.net.nz", "nz", "not_found.txt");
-            var response = parser.Parse("whois.srs.net.nz", "nz", sample);
+            var response = parser.Parse("whois.srs.net.nz", sample);
 
             Assert.Greater(sample.Length, 0);
             Assert.AreEqual(WhoisStatus.NotFound, response.Status);
@@ -136,7 +136,7 @@ namespace Whois.Parsing.Whois.Srs.Net.Nz.Nz
         public void Test_invalid()
         {
             var sample = SampleReader.Read("whois.srs.net.nz", "nz", "invalid.txt");
-            var response = parser.Parse("whois.srs.net.nz", "nz", sample);
+            var response = parser.Parse("whois.srs.net.nz", sample);
 
             Assert.Greater(sample.Length, 0);
             Assert.AreEqual(WhoisStatus.Invalid, response.Status);
@@ -157,7 +157,7 @@ namespace Whois.Parsing.Whois.Srs.Net.Nz.Nz
         public void Test_found()
         {
             var sample = SampleReader.Read("whois.srs.net.nz", "nz", "found.txt");
-            var response = parser.Parse("whois.srs.net.nz", "nz", sample);
+            var response = parser.Parse("whois.srs.net.nz", sample);
 
             Assert.Greater(sample.Length, 0);
             Assert.AreEqual(WhoisStatus.Found, response.Status);

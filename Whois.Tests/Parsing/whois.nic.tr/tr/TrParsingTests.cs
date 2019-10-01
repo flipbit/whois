@@ -22,7 +22,7 @@ namespace Whois.Parsing.Whois.Nic.Tr.Tr
         public void Test_found()
         {
             var sample = SampleReader.Read("whois.nic.tr", "tr", "found.txt");
-            var response = parser.Parse("whois.nic.tr", "tr", sample);
+            var response = parser.Parse("whois.nic.tr", sample);
 
             Assert.Greater(sample.Length, 0);
             Assert.AreEqual(WhoisStatus.Found, response.Status);
@@ -93,7 +93,7 @@ namespace Whois.Parsing.Whois.Nic.Tr.Tr
         public void Test_found_contact_person()
         {
             var sample = SampleReader.Read("whois.nic.tr", "tr", "found_contact_person.txt");
-            var response = parser.Parse("whois.nic.tr", "tr", sample);
+            var response = parser.Parse("whois.nic.tr", sample);
 
             Assert.Greater(sample.Length, 0);
             Assert.AreEqual(WhoisStatus.Found, response.Status);
@@ -141,7 +141,7 @@ namespace Whois.Parsing.Whois.Nic.Tr.Tr
         public void Test_found_nameservers_with_ip()
         {
             var sample = SampleReader.Read("whois.nic.tr", "tr", "found_nameservers_with_ip.txt");
-            var response = parser.Parse("whois.nic.tr", "tr", sample);
+            var response = parser.Parse("whois.nic.tr", sample);
 
             Assert.Greater(sample.Length, 0);
             Assert.AreEqual(WhoisStatus.Found, response.Status);
@@ -220,7 +220,7 @@ namespace Whois.Parsing.Whois.Nic.Tr.Tr
         public void Test_found_nameservers_with_trailing_space()
         {
             var sample = SampleReader.Read("whois.nic.tr", "tr", "found_nameservers_with_trailing_space.txt");
-            var response = parser.Parse("whois.nic.tr", "tr", sample);
+            var response = parser.Parse("whois.nic.tr", sample);
 
             Assert.Greater(sample.Length, 0);
             Assert.AreEqual(WhoisStatus.Found, response.Status);
@@ -267,7 +267,7 @@ namespace Whois.Parsing.Whois.Nic.Tr.Tr
         public void Test_found_registrant_contact_outside_cityinoneline()
         {
             var sample = SampleReader.Read("whois.nic.tr", "tr", "found_registrant_contact_outside_cityinoneline.txt");
-            var response = parser.Parse("whois.nic.tr", "tr", sample);
+            var response = parser.Parse("whois.nic.tr", sample);
 
             Assert.Greater(sample.Length, 0);
             Assert.AreEqual(WhoisStatus.Found, response.Status);
@@ -337,7 +337,7 @@ namespace Whois.Parsing.Whois.Nic.Tr.Tr
         public void Test_found_registrant_contact_outside_citynextline()
         {
             var sample = SampleReader.Read("whois.nic.tr", "tr", "found_registrant_contact_outside_citynextline.txt");
-            var response = parser.Parse("whois.nic.tr", "tr", sample);
+            var response = parser.Parse("whois.nic.tr", sample);
 
             Assert.Greater(sample.Length, 0);
             Assert.AreEqual(WhoisStatus.Found, response.Status);
@@ -409,7 +409,7 @@ namespace Whois.Parsing.Whois.Nic.Tr.Tr
         public void Test_found_registrant_contact_turkey()
         {
             var sample = SampleReader.Read("whois.nic.tr", "tr", "found_registrant_contact_turkey.txt");
-            var response = parser.Parse("whois.nic.tr", "tr", sample);
+            var response = parser.Parse("whois.nic.tr", sample);
 
             Assert.Greater(sample.Length, 0);
             Assert.AreEqual(WhoisStatus.Found, response.Status);
@@ -484,7 +484,7 @@ namespace Whois.Parsing.Whois.Nic.Tr.Tr
         public void Test_error()
         {
             var sample = SampleReader.Read("whois.nic.tr", "tr", "error.txt");
-            var response = parser.Parse("whois.nic.tr", "tr", sample);
+            var response = parser.Parse("whois.nic.tr", sample);
 
             Assert.Greater(sample.Length, 0);
             Assert.AreEqual(WhoisStatus.Error, response.Status);
@@ -499,7 +499,7 @@ namespace Whois.Parsing.Whois.Nic.Tr.Tr
         public void Test_not_found()
         {
             var sample = SampleReader.Read("whois.nic.tr", "tr", "not_found.txt");
-            var response = parser.Parse("whois.nic.tr", "tr", sample);
+            var response = parser.Parse("whois.nic.tr", sample);
 
             Assert.Greater(sample.Length, 0);
             Assert.AreEqual(WhoisStatus.NotFound, response.Status);
@@ -516,7 +516,7 @@ namespace Whois.Parsing.Whois.Nic.Tr.Tr
         public void Test_invalid()
         {
             var sample = SampleReader.Read("whois.nic.tr", "tr", "invalid.txt");
-            var response = parser.Parse("whois.nic.tr", "tr", sample);
+            var response = parser.Parse("whois.nic.tr", sample);
 
             Assert.Greater(sample.Length, 0);
             Assert.AreEqual(WhoisStatus.Error, response.Status);
@@ -531,7 +531,7 @@ namespace Whois.Parsing.Whois.Nic.Tr.Tr
         public void Test_found_status_registered()
         {
             var sample = SampleReader.Read("whois.nic.tr", "tr", "found_status_registered.txt");
-            var response = parser.Parse("whois.nic.tr", "tr", sample);
+            var response = parser.Parse("whois.nic.tr", sample);
 
             Assert.Greater(sample.Length, 0);
             Assert.AreEqual(WhoisStatus.Found, response.Status);

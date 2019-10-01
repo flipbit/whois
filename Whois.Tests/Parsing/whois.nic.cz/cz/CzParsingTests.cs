@@ -22,7 +22,7 @@ namespace Whois.Parsing.Whois.Nic.Cz.Cz
         public void Test_found()
         {
             var sample = SampleReader.Read("whois.nic.cz", "cz", "found.txt");
-            var response = parser.Parse("whois.nic.cz", "cz", sample);
+            var response = parser.Parse("whois.nic.cz", sample);
 
             Assert.Greater(sample.Length, 0);
             Assert.AreEqual(WhoisStatus.Found, response.Status);
@@ -80,7 +80,7 @@ namespace Whois.Parsing.Whois.Nic.Cz.Cz
         public void Test_throttled()
         {
             var sample = SampleReader.Read("whois.nic.cz", "cz", "throttled.txt");
-            var response = parser.Parse("whois.nic.cz", "cz", sample);
+            var response = parser.Parse("whois.nic.cz", sample);
 
             Assert.Greater(sample.Length, 0);
             Assert.AreEqual(WhoisStatus.Throttled, response.Status);
@@ -95,7 +95,7 @@ namespace Whois.Parsing.Whois.Nic.Cz.Cz
         public void Test_found_response_with_keyset()
         {
             var sample = SampleReader.Read("whois.nic.cz", "cz", "found_response_with_keyset.txt");
-            var response = parser.Parse("whois.nic.cz", "cz", sample);
+            var response = parser.Parse("whois.nic.cz", sample);
 
             Assert.Greater(sample.Length, 0);
             Assert.AreEqual(WhoisStatus.Found, response.Status);
@@ -169,7 +169,7 @@ namespace Whois.Parsing.Whois.Nic.Cz.Cz
         public void Test_not_found()
         {
             var sample = SampleReader.Read("whois.nic.cz", "cz", "not_found.txt");
-            var response = parser.Parse("whois.nic.cz", "cz", sample);
+            var response = parser.Parse("whois.nic.cz", sample);
 
             Assert.Greater(sample.Length, 0);
             Assert.AreEqual(WhoisStatus.NotFound, response.Status);
@@ -184,7 +184,7 @@ namespace Whois.Parsing.Whois.Nic.Cz.Cz
         public void Test_found_status_registered()
         {
             var sample = SampleReader.Read("whois.nic.cz", "cz", "found_status_registered.txt");
-            var response = parser.Parse("whois.nic.cz", "cz", sample);
+            var response = parser.Parse("whois.nic.cz", sample);
 
             Assert.Greater(sample.Length, 0);
             Assert.AreEqual(WhoisStatus.Found, response.Status);
@@ -261,7 +261,7 @@ namespace Whois.Parsing.Whois.Nic.Cz.Cz
         {
             var sample = SampleReader.Read("whois.nic.cz", "cz", "phoca.cz.txt");
             
-            var response = parser.Parse("whois.nic.cz", "cz", sample);
+            var response = parser.Parse("whois.nic.cz", sample);
 
             Assert.Greater(sample.Length, 0);
             Assert.AreEqual(WhoisStatus.Found, response.Status);

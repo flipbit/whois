@@ -22,7 +22,7 @@ namespace Whois.Parsing.Whois.Nc.Nc
         public void Test_found()
         {
             var sample = SampleReader.Read("whois.nc", "nc", "found.txt");
-            var response = parser.Parse("whois.nc", "nc", sample);
+            var response = parser.Parse("whois.nc", sample);
 
             Assert.Greater(sample.Length, 0);
             Assert.AreEqual(WhoisStatus.Found, response.Status);
@@ -58,7 +58,7 @@ namespace Whois.Parsing.Whois.Nc.Nc
         public void Test_found_contact_without_state_and_address()
         {
             var sample = SampleReader.Read("whois.nc", "nc", "found_contact_without_state_and_address.txt");
-            var response = parser.Parse("whois.nc", "nc", sample);
+            var response = parser.Parse("whois.nc", sample);
 
             Assert.Greater(sample.Length, 0);
             Assert.AreEqual(WhoisStatus.Found, response.Status);
@@ -93,7 +93,7 @@ namespace Whois.Parsing.Whois.Nc.Nc
         public void Test_not_found()
         {
             var sample = SampleReader.Read("whois.nc", "nc", "not_found.txt");
-            var response = parser.Parse("whois.nc", "nc", sample);
+            var response = parser.Parse("whois.nc", sample);
 
             Assert.Greater(sample.Length, 0);
             Assert.AreEqual(WhoisStatus.NotFound, response.Status);
@@ -108,7 +108,7 @@ namespace Whois.Parsing.Whois.Nc.Nc
         public void Test_found_status_registered()
         {
             var sample = SampleReader.Read("whois.nc", "nc", "found_status_registered.txt");
-            var response = parser.Parse("whois.nc", "nc", sample);
+            var response = parser.Parse("whois.nc", sample);
 
             Assert.Greater(sample.Length, 0);
             Assert.AreEqual(WhoisStatus.Found, response.Status);

@@ -22,7 +22,7 @@ namespace Whois.Parsing.Whois.Iana.Org.Int
         public void Test_not_found()
         {
             var sample = SampleReader.Read("whois.iana.org", "int", "not_found.txt");
-            var response = parser.Parse("whois.iana.org", "int", sample);
+            var response = parser.Parse("whois.iana.org", sample);
 
             Assert.Greater(sample.Length, 0);
             Assert.AreEqual(WhoisStatus.NotFound, response.Status);
@@ -39,7 +39,7 @@ namespace Whois.Parsing.Whois.Iana.Org.Int
         public void Test_found()
         {
             var sample = SampleReader.Read("whois.iana.org", "int", "found.txt");
-            var response = parser.Parse("whois.iana.org", "int", sample);
+            var response = parser.Parse("whois.iana.org", sample);
 
             Assert.Greater(sample.Length, 0);
             Assert.AreEqual(WhoisStatus.Found, response.Status);

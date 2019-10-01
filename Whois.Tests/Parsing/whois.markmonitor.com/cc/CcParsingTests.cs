@@ -21,7 +21,7 @@ namespace Whois.Parsing.Whois.Markmonitor.Com.Cc
         public void Test_found()
         {
             var sample = SampleReader.Read("whois.markmonitor.com", "cc", "found.txt");
-            var response = parser.Parse("whois.markmonitor.com", "cc", sample);
+            var response = parser.Parse("whois.markmonitor.com", sample);
 
             Assert.Greater(sample.Length, 0);
             Assert.AreEqual(WhoisStatus.Found, response.Status);

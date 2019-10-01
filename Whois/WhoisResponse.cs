@@ -24,6 +24,11 @@ namespace Whois
         public string Content { get; set; }
 
         /// <summary>
+        /// Returns the length of the content from the WHOIS server
+        /// </summary>
+        public int ContentLength => string.IsNullOrEmpty(Content) ? 0 : Content.Length;
+
+        /// <summary>
         /// Returns the status of this WHOIS lookup
         /// </summary>
         public WhoisStatus Status { get; set; }
@@ -128,10 +133,12 @@ namespace Whois
         /// </summary>
         public WhoisResponse Referrer { get; set; }
 
+        public string WhoisServerUrl => Registrar?.WhoisServerUrl;
+
         /// <summary>
         /// Sets the WHOIS referrer on this instance
         /// </summary>
-        internal WhoisResponse ChainReferrer(WhoisResponse response)
+        internal WhoisResponse Chain(WhoisResponse response)
         {
             response.Referrer = this;
 
@@ -143,14 +150,26 @@ namespace Whois
         /// </summary>
         internal bool SeenServer(string whoisServerUrl)
         {
-            if (Registrar != null && string.Compare(Registrar.WhoisServerUrl, whoisServerUrl, StringComparison.InvariantCultureIgnoreCase) == 0)
+            return SeenServer(whoisServerUrl, 0);
+        }
+
+        private bool SeenServer(string whoisServerUrl, int depth)
+        {
+            // Referral limit
+            if (depth > 255) return true;
+
+            // Ignore top level request
+            if (depth == 0) return Referrer?.SeenServer(whoisServerUrl, 1) ?? false;
+
+
+            if (string.Compare(WhoisServerUrl, whoisServerUrl, StringComparison.InvariantCultureIgnoreCase) == 0)
             {
                 return true;
             }
 
             if (Referrer == null) return false;
 
-            return Referrer.SeenServer(whoisServerUrl);
+            return Referrer.SeenServer(whoisServerUrl, depth + 1);
         }
     }
 }

@@ -22,7 +22,7 @@ namespace Whois.Parsing.Whois.Nic.Gd.Gd
         public void Test_not_found()
         {
             var sample = SampleReader.Read("whois.nic.gd", "gd", "not_found.txt");
-            var response = parser.Parse("whois.nic.gd", "gd", sample);
+            var response = parser.Parse("whois.nic.gd", sample);
 
             Assert.Greater(sample.Length, 0);
             Assert.AreEqual(WhoisStatus.NotFound, response.Status);
@@ -37,7 +37,7 @@ namespace Whois.Parsing.Whois.Nic.Gd.Gd
         public void Test_found()
         {
             var sample = SampleReader.Read("whois.nic.gd", "gd", "found.txt");
-            var response = parser.Parse("whois.nic.gd", "gd", sample);
+            var response = parser.Parse("whois.nic.gd", sample);
 
             Assert.Greater(sample.Length, 0);
             Assert.AreEqual(WhoisStatus.Found, response.Status);
@@ -132,7 +132,7 @@ namespace Whois.Parsing.Whois.Nic.Gd.Gd
         public void Test_reserved()
         {
             var sample = SampleReader.Read("whois.nic.gd", "gd", "reserved.txt");
-            var response = parser.Parse("whois.nic.gd", "gd", sample);
+            var response = parser.Parse("whois.nic.gd", sample);
 
             Assert.Greater(sample.Length, 0);
             Assert.AreEqual(WhoisStatus.Reserved, response.Status);

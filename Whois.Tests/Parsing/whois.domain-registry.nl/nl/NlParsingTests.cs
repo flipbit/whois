@@ -22,7 +22,7 @@ namespace Whois.Parsing.Whois.Domain.Registry.Nl.Nl
         public void Test_found()
         {
             var sample = SampleReader.Read("whois.domain-registry.nl", "nl", "found.txt");
-            var response = parser.Parse("whois.domain-registry.nl", "nl", sample);
+            var response = parser.Parse("whois.domain-registry.nl", sample);
 
             Assert.Greater(sample.Length, 0);
             Assert.AreEqual(WhoisStatus.Found, response.Status);
@@ -51,7 +51,7 @@ namespace Whois.Parsing.Whois.Domain.Registry.Nl.Nl
         public void Test_not_assigned()
         {
             var sample = SampleReader.Read("whois.domain-registry.nl", "nl", "not_assigned.txt");
-            var response = parser.Parse("whois.domain-registry.nl", "nl", sample);
+            var response = parser.Parse("whois.domain-registry.nl", sample);
 
             Assert.Greater(sample.Length, 0);
             Assert.AreEqual(WhoisStatus.NotAssigned, response.Status);
@@ -80,7 +80,7 @@ namespace Whois.Parsing.Whois.Domain.Registry.Nl.Nl
         public void Test_throttled()
         {
             var sample = SampleReader.Read("whois.domain-registry.nl", "nl", "throttled.txt");
-            var response = parser.Parse("whois.domain-registry.nl", "nl", sample);
+            var response = parser.Parse("whois.domain-registry.nl", sample);
 
             Assert.Greater(sample.Length, 0);
             Assert.AreEqual(WhoisStatus.Throttled, response.Status);
@@ -95,7 +95,7 @@ namespace Whois.Parsing.Whois.Domain.Registry.Nl.Nl
         public void Test_throttled_response_throttled_daily()
         {
             var sample = SampleReader.Read("whois.domain-registry.nl", "nl", "throttled_response_throttled_daily.txt");
-            var response = parser.Parse("whois.domain-registry.nl", "nl", sample);
+            var response = parser.Parse("whois.domain-registry.nl", sample);
 
             Assert.Greater(sample.Length, 0);
             Assert.AreEqual(WhoisStatus.Throttled, response.Status);
@@ -110,7 +110,7 @@ namespace Whois.Parsing.Whois.Domain.Registry.Nl.Nl
         public void Test_unavailable()
         {
             var sample = SampleReader.Read("whois.domain-registry.nl", "nl", "unavailable.txt");
-            var response = parser.Parse("whois.domain-registry.nl", "nl", sample);
+            var response = parser.Parse("whois.domain-registry.nl", sample);
 
             Assert.Greater(sample.Length, 0);
             Assert.AreEqual(WhoisStatus.Unavailable, response.Status);
@@ -122,7 +122,7 @@ namespace Whois.Parsing.Whois.Domain.Registry.Nl.Nl
         public void Test_not_found()
         {
             var sample = SampleReader.Read("whois.domain-registry.nl", "nl", "not_found.txt");
-            var response = parser.Parse("whois.domain-registry.nl", "nl", sample);
+            var response = parser.Parse("whois.domain-registry.nl", sample);
 
             Assert.Greater(sample.Length, 0);
             Assert.AreEqual(WhoisStatus.NotFound, response.Status);
@@ -139,7 +139,7 @@ namespace Whois.Parsing.Whois.Domain.Registry.Nl.Nl
         public void Test_quarantined()
         {
             var sample = SampleReader.Read("whois.domain-registry.nl", "nl", "redemption.txt");
-            var response = parser.Parse("whois.domain-registry.nl", "nl", sample);
+            var response = parser.Parse("whois.domain-registry.nl", sample);
 
             Assert.Greater(sample.Length, 0);
             Assert.AreEqual(WhoisStatus.Quarantined, response.Status);
@@ -161,7 +161,7 @@ namespace Whois.Parsing.Whois.Domain.Registry.Nl.Nl
         public void Test_found_status_registered()
         {
             var sample = SampleReader.Read("whois.domain-registry.nl", "nl", "found_status_registered.txt");
-            var response = parser.Parse("whois.domain-registry.nl", "nl", sample);
+            var response = parser.Parse("whois.domain-registry.nl", sample);
 
             Assert.Greater(sample.Length, 0);
             Assert.AreEqual(WhoisStatus.Found, response.Status);

@@ -22,7 +22,7 @@ namespace Whois.Parsing.Whois.Nic.Io.Io
         public void Test_found()
         {
             var sample = SampleReader.Read("whois.nic.io", "io", "found.txt");
-            var response = parser.Parse("whois.nic.io", "io", sample);
+            var response = parser.Parse("whois.nic.io", sample);
 
             Assert.Greater(sample.Length, 0);
             Assert.AreEqual(WhoisStatus.Found, response.Status);
@@ -62,7 +62,7 @@ namespace Whois.Parsing.Whois.Nic.Io.Io
         public void Test_reserved()
         {
             var sample = SampleReader.Read("whois.nic.io", "io", "reserved.txt");
-            var response = parser.Parse("whois.nic.io", "io", sample);
+            var response = parser.Parse("whois.nic.io", sample);
 
             Assert.Greater(sample.Length, 0);
             Assert.AreEqual(WhoisStatus.Reserved, response.Status);
@@ -77,7 +77,7 @@ namespace Whois.Parsing.Whois.Nic.Io.Io
         public void Test_not_found()
         {
             var sample = SampleReader.Read("whois.nic.io", "io", "not_found.txt");
-            var response = parser.Parse("whois.nic.io", "io", sample);
+            var response = parser.Parse("whois.nic.io", sample);
 
             Assert.Greater(sample.Length, 0);
             Assert.AreEqual(WhoisStatus.NotFound, response.Status);
@@ -94,7 +94,7 @@ namespace Whois.Parsing.Whois.Nic.Io.Io
         public void Test_found_status_registered()
         {
             var sample = SampleReader.Read("whois.nic.io", "io", "found_status_registered.txt");
-            var response = parser.Parse("whois.nic.io", "io", sample);
+            var response = parser.Parse("whois.nic.io", sample);
 
             Assert.Greater(sample.Length, 0);
             Assert.AreEqual(WhoisStatus.Found, response.Status);

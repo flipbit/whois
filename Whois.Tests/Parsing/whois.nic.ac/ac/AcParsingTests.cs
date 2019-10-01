@@ -22,7 +22,7 @@ namespace Whois.Parsing.Whois.Nic.Ac.Ac
         public void Test_not_found()
         {
             var sample = SampleReader.Read("whois.nic.ac", "ac", "not_found.txt");
-            var response = parser.Parse("whois.nic.ac", "ac", sample);
+            var response = parser.Parse("whois.nic.ac", sample);
 
             Assert.Greater(sample.Length, 0);
             Assert.AreEqual(WhoisStatus.NotFound, response.Status);
@@ -39,7 +39,7 @@ namespace Whois.Parsing.Whois.Nic.Ac.Ac
         public void Test_found()
         {
             var sample = SampleReader.Read("whois.nic.ac", "ac", "found.txt");
-            var response = parser.Parse("whois.nic.ac", "ac", sample);
+            var response = parser.Parse("whois.nic.ac", sample);
 
             Assert.Greater(sample.Length, 0);
             Assert.AreEqual(WhoisStatus.Found, response.Status);

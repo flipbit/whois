@@ -22,7 +22,7 @@ namespace Whois.Parsing.Whois.Kr.Kr
         public void Test_found()
         {
             var sample = SampleReader.Read("whois.kr", "kr", "found.txt");
-            var response = parser.Parse("whois.kr", "kr", sample);
+            var response = parser.Parse("whois.kr", sample);
 
             Assert.Greater(sample.Length, 0);
             Assert.AreEqual(WhoisStatus.Found, response.Status);
@@ -66,7 +66,7 @@ namespace Whois.Parsing.Whois.Kr.Kr
         public void Test_not_found()
         {
             var sample = SampleReader.Read("whois.kr", "kr", "not_found.txt");
-            var response = parser.Parse("whois.kr", "kr", sample);
+            var response = parser.Parse("whois.kr", sample);
 
             Assert.Greater(sample.Length, 0);
             Assert.AreEqual(WhoisStatus.NotFound, response.Status);
@@ -83,7 +83,7 @@ namespace Whois.Parsing.Whois.Kr.Kr
         public void Test_found_status_registered()
         {
             var sample = SampleReader.Read("whois.kr", "kr", "found_status_registered.txt");
-            var response = parser.Parse("whois.kr", "kr", sample);
+            var response = parser.Parse("whois.kr", sample);
 
             Assert.Greater(sample.Length, 0);
             Assert.AreEqual(WhoisStatus.Found, response.Status);

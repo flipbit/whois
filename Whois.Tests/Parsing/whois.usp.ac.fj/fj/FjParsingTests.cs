@@ -21,7 +21,7 @@ namespace Whois.Parsing.Whois.Usp.Ac.Fj.Fj
         public void Test_not_found()
         {
             var sample = SampleReader.Read("whois.usp.ac.fj", "fj", "not_found.txt");
-            var response = parser.Parse("whois.usp.ac.fj", "fj", sample);
+            var response = parser.Parse("whois.usp.ac.fj", sample);
 
             Assert.Greater(sample.Length, 0);
             Assert.AreEqual(WhoisStatus.NotFound, response.Status);
@@ -38,7 +38,7 @@ namespace Whois.Parsing.Whois.Usp.Ac.Fj.Fj
         public void Test_found()
         {
             var sample = SampleReader.Read("whois.usp.ac.fj", "fj", "found.txt");
-            var response = parser.Parse("whois.usp.ac.fj", "fj", sample);
+            var response = parser.Parse("whois.usp.ac.fj", sample);
 
             Assert.Greater(sample.Length, 0);
             Assert.AreEqual(WhoisStatus.Found, response.Status);

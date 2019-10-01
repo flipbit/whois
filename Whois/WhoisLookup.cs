@@ -1,12 +1,8 @@
 ﻿using System;
-using System.Collections.Generic;
 using System.Text;
 using System.Text.RegularExpressions;
 using System.Threading.Tasks;
-using Tokens.Transformers;
-using Tokens.Validators;
 using Whois.Logging;
-using Whois.Models;
 using Whois.Net;
 using Whois.Parsers;
 using Whois.Servers;
@@ -20,26 +16,44 @@ namespace Whois
     {
         private static readonly ILog Log = LogProvider.GetCurrentClassLogger();
         
-        private WhoisParser whoisParser;
+        private readonly WhoisParser whoisParser;
 
+        /// <summary>
+        /// The default <see cref="WhoisOptions"/> to use for this instance
+        /// </summary>
         public WhoisOptions Options { get; set; }
 
+        /// <summary>
+        /// The WHOIS Server Lookup that finds root TLD servers for queries
+        /// </summary>
         public IWhoisServerLookup ServerLookup { get; set; }
 
+        /// <summary>
+        /// The TCP reader that performs the network requests
+        /// </summary>
+        public ITcpReader TcpReader { get; set; }
+
+        /// <summary>
+        /// Initializes a new instance of the <see cref="WhoisLookup"/> class with the default options
+        /// </summary>
         public WhoisLookup() : this(WhoisOptions.Defaults.Clone())
         {
         }
 
         /// <summary>
-        /// Initializes a new instance of the <see cref="WhoisLookup"/> class.
+        /// Initializes a new instance of the <see cref="WhoisLookup"/> class with the given <see cref="WhoisOptions"/>.
         /// </summary>
         public WhoisLookup(WhoisOptions options) 
         {
             Options = options;
             whoisParser = new WhoisParser();
-            ServerLookup = new IanaServerLookup();
+            TcpReader = new TcpReader();
+            ServerLookup = new IanaServerLookup(TcpReader);
         }
 
+        /// <summary>
+        /// 
+        /// </summary>
         public WhoisResponse Lookup(string domain)
         {
             return AsyncHelper.RunSync(() => LookupAsync(domain));
@@ -50,43 +64,61 @@ namespace Whois
             return AsyncHelper.RunSync(() => LookupAsync(domain, encoding));
         }
 
-        public async Task<WhoisResponse> LookupAsync(string domain)
+        public WhoisResponse Lookup(WhoisRequest request)
         {
-            return await LookupAsync(domain, Options.DefaultEncoding);
+            return AsyncHelper.RunSync(() => LookupAsync(request));
         }
 
-        public async Task<WhoisResponse> LookupAsync(string domain, Encoding encoding)
+        public Task<WhoisResponse> LookupAsync(string domain)
         {
-            if (string.IsNullOrEmpty(domain))
+            return LookupAsync(domain, Options.DefaultEncoding);
+        }
+
+        public Task<WhoisResponse> LookupAsync(string domain, Encoding encoding)
+        {
+            return LookupAsync(new WhoisRequest
+            {
+                Query = domain,
+                Encoding = encoding,
+                TimeoutSeconds = Options.TimeoutSeconds
+            });
+        }
+
+        public async Task<WhoisResponse> LookupAsync(WhoisRequest request)
+        {
+            if (string.IsNullOrEmpty(request.Query))
             {
                 throw new ArgumentNullException("domain");
             }
 
-            if (IsValidDomainName(domain) == false)
+            if (IsValidDomainName(request.Query) == false)
             {
-                throw new WhoisException($"Domain Name is invalid: {domain}");
+                throw new WhoisException($"Domain Name is invalid: {request.Query}");
             }
 
-            Log.Debug("Looking up WHOIS response for: {0}", domain);
+            Log.Debug("Looking up WHOIS response for: {0}", request.Query);
 
-            var tld = GetTld(domain);
+            // Lookup root WHOIS server for the TLD
+            var response = await ServerLookup.LookupAsync(request);
 
-            var whoisServer = await ServerLookup.LookupAsync(tld);
-
-            var response = new WhoisResponse();
-            var whoisServerUrl = whoisServer?.Registrar?.WhoisServerUrl;
-
+            // Main loop: download & parse WHOIS data and follow the referrer chain
+            var whoisServerUrl = response?.WhoisServerUrl;
             while (string.IsNullOrEmpty(whoisServerUrl) == false)
             {
-                var content = await Download(whoisServerUrl, domain, encoding);
+                // Download
+                var content = await Download(whoisServerUrl, request);
 
-                response = whoisParser.Parse(whoisServerUrl, tld, content);
+                // Parse result
+                var parsed = whoisParser.Parse(whoisServerUrl, content);
 
-                response.Content = content;
+                // Build referrer chain
+                response = response.Chain(parsed);
 
-                if (response.Registrar?.WhoisServerUrl == whoisServerUrl) break;
-            
-                whoisServerUrl = response.Registrar?.WhoisServerUrl;
+                // Check for referral loop
+                if (response.SeenServer(response.WhoisServerUrl)) break;
+           
+                // Lookup result in referral server
+                whoisServerUrl = response.WhoisServerUrl;
             }
 
             return response;
@@ -106,34 +138,22 @@ namespace Whois
             return valid;
         }
 
-        private async Task<string> Download(string url, string domainName, Encoding encoding)
+        private async Task<string> Download(string url, WhoisRequest request)
         {
-            string content;
+            // TODO: Expose this & extend for other TLDs
+            var query = request.Query;
+            if (query.EndsWith("jp")) query += "/e";    // Return English .jp results
 
-            if (domainName.EndsWith("jp")) domainName += "/e";
+            var content = await TcpReader.Read(url, 43, query, request.Encoding, request.TimeoutSeconds);
 
-            using (var tcpReader = TcpReaderFactory.Create())
-            {
-                content = await tcpReader.Read(url, 43, domainName, encoding);
-            }
-
-            Log.Debug("Lookup {0}: Downloaded {1:###,###,##0} byte(s) from {2}.", domainName, content.Length, url);
+            Log.Debug("Lookup {0}: Downloaded {1:###,###,##0} byte(s) from {2}.", request.Query, content.Length, url);
 
             return content;
         }
 
-        private string GetTld(string domain)
+        public void Dispose()
         {
-            var tld = domain;
-
-            if (!string.IsNullOrEmpty(domain))
-            {
-                var parts = domain.Split('.');
-
-                if (parts.Length > 1) tld = parts[parts.Length - 1];
-            }
-
-            return tld;
+            TcpReader?.Dispose();
         }
     }
 }

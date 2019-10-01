@@ -22,7 +22,7 @@ namespace Whois.Parsing.Whois.Cdmon.Com.Com
         public void Test_found()
         {
             var sample = SampleReader.Read("whois.cdmon.com", "com", "found.txt");
-            var response = parser.Parse("whois.cdmon.com", "com", sample);
+            var response = parser.Parse("whois.cdmon.com", sample);
 
             Assert.Greater(sample.Length, 0);
             Assert.AreEqual(WhoisStatus.Found, response.Status);

@@ -22,7 +22,7 @@ namespace Whois.Parsing.Whois.Nic.Coop.Coop
         public void Test_found()
         {
             var sample = SampleReader.Read("whois.nic.coop", "coop", "found.txt");
-            var response = parser.Parse("whois.nic.coop", "coop", sample);
+            var response = parser.Parse("whois.nic.coop", sample);
 
             Assert.Greater(sample.Length, 0);
             Assert.AreEqual(WhoisStatus.Found, response.Status);
@@ -125,7 +125,7 @@ namespace Whois.Parsing.Whois.Nic.Coop.Coop
         public void Test_other_status_single()
         {
             var sample = SampleReader.Read("whois.nic.coop", "coop", "other_status_single.txt");
-            var response = parser.Parse("whois.nic.coop", "coop", sample);
+            var response = parser.Parse("whois.nic.coop", sample);
 
             Assert.Greater(sample.Length, 0);
             Assert.AreEqual(WhoisStatus.Found, response.Status);
@@ -227,7 +227,7 @@ namespace Whois.Parsing.Whois.Nic.Coop.Coop
         public void Test_not_found()
         {
             var sample = SampleReader.Read("whois.nic.coop", "coop", "not_found.txt");
-            var response = parser.Parse("whois.nic.coop", "coop", sample);
+            var response = parser.Parse("whois.nic.coop", sample);
 
             Assert.Greater(sample.Length, 0);
             Assert.AreEqual(WhoisStatus.NotFound, response.Status);
@@ -244,7 +244,7 @@ namespace Whois.Parsing.Whois.Nic.Coop.Coop
         public void Test_found_status_registered()
         {
             var sample = SampleReader.Read("whois.nic.coop", "coop", "found_status_registered.txt");
-            var response = parser.Parse("whois.nic.coop", "coop", sample);
+            var response = parser.Parse("whois.nic.coop", sample);
 
             Assert.Greater(sample.Length, 0);
             Assert.AreEqual(WhoisStatus.Found, response.Status);

@@ -1,5 +1,4 @@
 ﻿using System;
-using System.Collections;
 using System.Text;
 using System.IO;
 using System.Net.Sockets;
@@ -10,7 +9,7 @@ namespace Whois.Net
     /// <summary>
     /// Class to allow access to TCP services
     /// </summary>
-    public class TcpReader : ITcpReader, IDisposable
+    public class TcpReader : ITcpReader
     {
         private readonly TcpClient tcpClient;
 
@@ -75,6 +74,18 @@ namespace Whois.Net
         public TcpReader()
         {
             tcpClient = new TcpClient();
+        }
+
+        public async Task<string> Read(string url, int port, string command, Encoding encoding, int timeoutSeconds)
+        {
+            var task = Read(url, port, command, encoding);
+
+            if (task == await Task.WhenAny(task, Task.Delay(TimeSpan.FromSeconds(timeoutSeconds))))
+            {
+                return await task;
+            }
+
+            throw new TimeoutException();
         }
 
         public async Task<string> Read(string url, int port, string command, Encoding encoding)

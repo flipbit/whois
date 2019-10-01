@@ -21,7 +21,7 @@ namespace Whois.Parsing.Whois.Registry.Qa.Qa
         public void Test_found()
         {
             var sample = SampleReader.Read("whois.registry.qa", "qa", "found.txt");
-            var response = parser.Parse("whois.registry.qa", "qa", sample);
+            var response = parser.Parse("whois.registry.qa", sample);
 
             Assert.Greater(sample.Length, 0);
             Assert.AreEqual(WhoisStatus.Found, response.Status);
@@ -62,7 +62,7 @@ namespace Whois.Parsing.Whois.Registry.Qa.Qa
         public void Test_not_found()
         {
             var sample = SampleReader.Read("whois.registry.qa", "qa", "not_found.txt");
-            var response = parser.Parse("whois.registry.qa", "qa", sample);
+            var response = parser.Parse("whois.registry.qa", sample);
 
             Assert.Greater(sample.Length, 0);
             Assert.AreEqual(WhoisStatus.NotFound, response.Status);
@@ -77,7 +77,7 @@ namespace Whois.Parsing.Whois.Registry.Qa.Qa
         public void Test_found_status_registered()
         {
             var sample = SampleReader.Read("whois.registry.qa", "qa", "found_status_registered.txt");
-            var response = parser.Parse("whois.registry.qa", "qa", sample);
+            var response = parser.Parse("whois.registry.qa", sample);
 
             Assert.Greater(sample.Length, 0);
             Assert.AreEqual(WhoisStatus.Found, response.Status);

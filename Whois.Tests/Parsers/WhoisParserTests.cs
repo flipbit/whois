@@ -24,12 +24,12 @@ namespace Whois.Parsers
         {
             var sample = sampleReader.Read("capetown-whois.registry.net.za", "capetown", "found.txt");
 
-            var result = parser.Parse("capetown-whois.registry.net.za", "capetown", sample);
+            var result = parser.Parse("capetown-whois.registry.net.za", sample);
 
             Assert.IsNotNull(result);
             Assert.AreEqual("registry.capetown", result.DomainName);
             Assert.AreEqual(WhoisStatus.Found, result.Status);
-            Assert.AreEqual(2, parser.Templates.Count);
+            Assert.AreEqual(2, parser.Templates.Names.Count);
         }
 
         [Test]
@@ -37,10 +37,10 @@ namespace Whois.Parsers
         {
             var sample = sampleReader.Read("capetown-whois.registry.net.za", "capetown", "found.txt");
 
-            parser.Parse("capetown-whois.registry.net.za", "capetown", sample);
-            parser.Parse("capetown-whois.registry.net.za", "capetown", sample);
+            parser.Parse("capetown-whois.registry.net.za", sample);
+            parser.Parse("capetown-whois.registry.net.za", sample);
 
-            Assert.AreEqual(2, parser.Templates.Count);
+            Assert.AreEqual(2, parser.Templates.Names.Count);
         }
     }
 }

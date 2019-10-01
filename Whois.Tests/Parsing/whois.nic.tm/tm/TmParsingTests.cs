@@ -21,7 +21,7 @@ namespace Whois.Parsing.Whois.Nic.Tm.Tm
         public void Test_not_found()
         {
             var sample = SampleReader.Read("whois.nic.tm", "tm", "not_found.txt");
-            var response = parser.Parse("whois.nic.tm", "tm", sample);
+            var response = parser.Parse("whois.nic.tm", sample);
 
             Assert.Greater(sample.Length, 0);
             Assert.AreEqual(WhoisStatus.NotFound, response.Status);
@@ -38,7 +38,7 @@ namespace Whois.Parsing.Whois.Nic.Tm.Tm
         public void Test_found()
         {
             var sample = SampleReader.Read("whois.nic.tm", "tm", "found.txt");
-            var response = parser.Parse("whois.nic.tm", "tm", sample);
+            var response = parser.Parse("whois.nic.tm", sample);
 
             Assert.Greater(sample.Length, 0);
             Assert.AreEqual(WhoisStatus.Found, response.Status);

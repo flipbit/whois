@@ -22,7 +22,7 @@ namespace Whois.Parsing.Capetown.Whois.Registry.Net.Za.Capetown
         public void Test_not_found()
         {
             var sample = SampleReader.Read("capetown-whois.registry.net.za", "capetown", "not_found.txt");
-            var response = parser.Parse("capetown-whois.registry.net.za", "capetown", sample);
+            var response = parser.Parse("capetown-whois.registry.net.za", sample);
 
             Assert.Greater(sample.Length, 0);
             Assert.AreEqual(WhoisStatus.NotFound, response.Status);
@@ -35,7 +35,7 @@ namespace Whois.Parsing.Capetown.Whois.Registry.Net.Za.Capetown
         public void Test_found()
         {
             var sample = SampleReader.Read("capetown-whois.registry.net.za", "capetown", "found.txt");
-            var response = parser.Parse("capetown-whois.registry.net.za", "capetown", sample);
+            var response = parser.Parse("capetown-whois.registry.net.za", sample);
 
             Assert.Greater(sample.Length, 0);
             Assert.AreEqual(WhoisStatus.Found, response.Status);

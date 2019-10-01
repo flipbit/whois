@@ -22,7 +22,7 @@ namespace Whois.Parsing.Whois.Nic.Org.Uy.Uy
         public void Test_found()
         {
             var sample = SampleReader.Read("whois.nic.org.uy", "uy", "found.txt");
-            var response = parser.Parse("whois.nic.org.uy", "uy", sample);
+            var response = parser.Parse("whois.nic.org.uy", sample);
 
             Assert.Greater(sample.Length, 0);
             Assert.AreEqual(WhoisStatus.Found, response.Status);
@@ -32,7 +32,7 @@ namespace Whois.Parsing.Whois.Nic.Org.Uy.Uy
         public void Test_error()
         {
             var sample = SampleReader.Read("whois.nic.org.uy", "uy", "error.txt");
-            var response = parser.Parse("whois.nic.org.uy", "uy", sample);
+            var response = parser.Parse("whois.nic.org.uy", sample);
 
             Assert.Greater(sample.Length, 0);
             Assert.AreEqual(WhoisStatus.Error, response.Status);
@@ -42,7 +42,7 @@ namespace Whois.Parsing.Whois.Nic.Org.Uy.Uy
         public void Test_not_found()
         {
             var sample = SampleReader.Read("whois.nic.org.uy", "uy", "not_found.txt");
-            var response = parser.Parse("whois.nic.org.uy", "uy", sample);
+            var response = parser.Parse("whois.nic.org.uy", sample);
 
             Assert.Greater(sample.Length, 0);
             Assert.AreEqual(WhoisStatus.NotFound, response.Status);
@@ -52,7 +52,7 @@ namespace Whois.Parsing.Whois.Nic.Org.Uy.Uy
         public void Test_found_status_registered()
         {
             var sample = SampleReader.Read("whois.nic.org.uy", "uy", "found_status_registered.txt");
-            var response = parser.Parse("whois.nic.org.uy", "uy", sample);
+            var response = parser.Parse("whois.nic.org.uy", sample);
 
             Assert.Greater(sample.Length, 0);
             Assert.AreEqual(WhoisStatus.Found, response.Status);

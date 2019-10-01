@@ -22,7 +22,7 @@ namespace Whois.Parsing.Whois.Kenic.Or.Ke.Ke
         public void Test_not_found()
         {
             var sample = SampleReader.Read("whois.kenic.or.ke", "ke", "not_found.txt");
-            var response = parser.Parse("whois.kenic.or.ke", "ke", sample);
+            var response = parser.Parse("whois.kenic.or.ke", sample);
 
             Assert.Greater(sample.Length, 0);
             Assert.AreEqual(WhoisStatus.NotFound, response.Status);
@@ -43,7 +43,7 @@ namespace Whois.Parsing.Whois.Kenic.Or.Ke.Ke
         public void Test_invalid()
         {
             var sample = SampleReader.Read("whois.kenic.or.ke", "ke", "invalid.txt");
-            var response = parser.Parse("whois.kenic.or.ke", "ke", sample);
+            var response = parser.Parse("whois.kenic.or.ke", sample);
 
             Assert.Greater(sample.Length, 0);
             Assert.AreEqual(WhoisStatus.Invalid, response.Status);
@@ -64,7 +64,7 @@ namespace Whois.Parsing.Whois.Kenic.Or.Ke.Ke
         public void Test_found()
         {
             var sample = SampleReader.Read("whois.kenic.or.ke", "ke", "found.txt");
-            var response = parser.Parse("whois.kenic.or.ke", "ke", sample);
+            var response = parser.Parse("whois.kenic.or.ke", sample);
 
             Assert.Greater(sample.Length, 0);
             Assert.AreEqual(WhoisStatus.Found, response.Status);

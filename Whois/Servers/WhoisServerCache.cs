@@ -1,5 +1,4 @@
 ﻿using System.Collections.Concurrent;
-using Whois.Models;
 
 namespace Whois.Servers
 {

@@ -22,7 +22,7 @@ namespace Whois.Parsing.Whois.Isoc.Org.Il.Il
         public void Test_not_found()
         {
             var sample = SampleReader.Read("whois.isoc.org.il", "il", "not_found.txt");
-            var response = parser.Parse("whois.isoc.org.il", "il", sample);
+            var response = parser.Parse("whois.isoc.org.il", sample);
 
             Assert.Greater(sample.Length, 0);
             Assert.AreEqual(WhoisStatus.NotFound, response.Status);
@@ -38,7 +38,7 @@ namespace Whois.Parsing.Whois.Isoc.Org.Il.Il
         public void Test_other_status_transfer_allowed()
         {
             var sample = SampleReader.Read("whois.isoc.org.il", "il", "other_status_transfer_allowed.txt");
-            var response = parser.Parse("whois.isoc.org.il", "il", sample);
+            var response = parser.Parse("whois.isoc.org.il", sample);
 
             Assert.Greater(sample.Length, 0);
             Assert.AreEqual(WhoisStatus.Found, response.Status);
@@ -127,7 +127,7 @@ namespace Whois.Parsing.Whois.Isoc.Org.Il.Il
         public void Test_locked()
         {
             var sample = SampleReader.Read("whois.isoc.org.il", "il", "locked.txt");
-            var response = parser.Parse("whois.isoc.org.il", "il", sample);
+            var response = parser.Parse("whois.isoc.org.il", sample);
 
             Assert.Greater(sample.Length, 0);
             Assert.AreEqual(WhoisStatus.Locked, response.Status);
@@ -225,7 +225,7 @@ namespace Whois.Parsing.Whois.Isoc.Org.Il.Il
         public void Test_not_found_status_available()
         {
             var sample = SampleReader.Read("whois.isoc.org.il", "il", "not_found_status_available.txt");
-            var response = parser.Parse("whois.isoc.org.il", "il", sample);
+            var response = parser.Parse("whois.isoc.org.il", sample);
 
             Assert.Greater(sample.Length, 0);
             Assert.AreEqual(WhoisStatus.NotFound, response.Status);
@@ -240,7 +240,7 @@ namespace Whois.Parsing.Whois.Isoc.Org.Il.Il
         public void Test_found()
         {
             var sample = SampleReader.Read("whois.isoc.org.il", "il", "found.txt");
-            var response = parser.Parse("whois.isoc.org.il", "il", sample);
+            var response = parser.Parse("whois.isoc.org.il", sample);
 
             Assert.Greater(sample.Length, 0);
             Assert.AreEqual(WhoisStatus.Locked, response.Status);

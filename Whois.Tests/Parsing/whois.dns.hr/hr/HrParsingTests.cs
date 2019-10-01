@@ -22,7 +22,7 @@ namespace Whois.Parsing.Whois.Dns.Hr.Hr
         public void Test_not_found()
         {
             var sample = SampleReader.Read("whois.dns.hr", "hr", "not_found.txt");
-            var response = parser.Parse("whois.dns.hr", "hr", sample);
+            var response = parser.Parse("whois.dns.hr", sample);
 
             Assert.Greater(sample.Length, 0);
             Assert.AreEqual(WhoisStatus.NotFound, response.Status);
@@ -37,7 +37,7 @@ namespace Whois.Parsing.Whois.Dns.Hr.Hr
         public void Test_found()
         {
             var sample = SampleReader.Read("whois.dns.hr", "hr", "found.txt");
-            var response = parser.Parse("whois.dns.hr", "hr", sample);
+            var response = parser.Parse("whois.dns.hr", sample);
 
             Assert.Greater(sample.Length, 0);
             Assert.AreEqual(WhoisStatus.Found, response.Status);

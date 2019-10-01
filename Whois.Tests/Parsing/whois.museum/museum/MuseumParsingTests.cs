@@ -21,7 +21,7 @@ namespace Whois.Parsing.Whois.Museum.Museum
         public void Test_not_found()
         {
             var sample = SampleReader.Read("whois.museum", "museum", "not_found.txt");
-            var response = parser.Parse("whois.museum", "museum", sample);
+            var response = parser.Parse("whois.museum", sample);
 
             Assert.Greater(sample.Length, 0);
             Assert.AreEqual(WhoisStatus.NotFound, response.Status);
@@ -38,7 +38,7 @@ namespace Whois.Parsing.Whois.Museum.Museum
         public void Test_found()
         {
             var sample = SampleReader.Read("whois.museum", "museum", "found.txt");
-            var response = parser.Parse("whois.museum", "museum", sample);
+            var response = parser.Parse("whois.museum", sample);
 
             Assert.Greater(sample.Length, 0);
             Assert.AreEqual(WhoisStatus.Found, response.Status);

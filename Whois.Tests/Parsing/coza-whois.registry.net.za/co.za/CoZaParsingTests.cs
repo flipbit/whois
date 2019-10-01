@@ -22,7 +22,7 @@ namespace Whois.Parsing.Coza.Whois.Registry.Net.Za.CoZa
         public void Test_found()
         {
             var sample = SampleReader.Read("coza-whois.registry.net.za", "co.za", "found.txt");
-            var response = parser.Parse("coza-whois.registry.net.za", "co.za", sample);
+            var response = parser.Parse("coza-whois.registry.net.za", sample);
 
             Assert.Greater(sample.Length, 0);
             Assert.AreEqual(WhoisStatus.Found, response.Status);
@@ -106,7 +106,7 @@ namespace Whois.Parsing.Coza.Whois.Registry.Net.Za.CoZa
         public void Test_throttled()
         {
             var sample = SampleReader.Read("coza-whois.registry.net.za", "co.za", "throttled.txt");
-            var response = parser.Parse("coza-whois.registry.net.za", "co.za", sample);
+            var response = parser.Parse("coza-whois.registry.net.za", sample);
 
             Assert.Greater(sample.Length, 0);
             Assert.AreEqual(WhoisStatus.Throttled, response.Status);
@@ -116,7 +116,7 @@ namespace Whois.Parsing.Coza.Whois.Registry.Net.Za.CoZa
         public void Test_not_found()
         {
             var sample = SampleReader.Read("coza-whois.registry.net.za", "co.za", "not_found.txt");
-            var response = parser.Parse("coza-whois.registry.net.za", "co.za", sample);
+            var response = parser.Parse("coza-whois.registry.net.za", sample);
 
             Assert.Greater(sample.Length, 0);
             Assert.AreEqual(WhoisStatus.NotFound, response.Status);
@@ -128,7 +128,7 @@ namespace Whois.Parsing.Coza.Whois.Registry.Net.Za.CoZa
         public void Test_found_status_registered()
         {
             var sample = SampleReader.Read("coza-whois.registry.net.za", "co.za", "found_status_registered.txt");
-            var response = parser.Parse("coza-whois.registry.net.za", "co.za", sample);
+            var response = parser.Parse("coza-whois.registry.net.za", sample);
 
             Assert.Greater(sample.Length, 0);
             Assert.AreEqual(WhoisStatus.Found, response.Status);

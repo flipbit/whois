@@ -22,7 +22,7 @@ namespace Whois.Parsing.Ccwhois.Ksregistry.Net.Vg
         public void Test_not_found()
         {
             var sample = SampleReader.Read("ccwhois.ksregistry.net", "vg", "not_found.txt");
-            var response = parser.Parse("ccwhois.ksregistry.net", "vg", sample);
+            var response = parser.Parse("ccwhois.ksregistry.net", sample);
 
             Assert.Greater(sample.Length, 0);
             Assert.AreEqual(WhoisStatus.NotFound, response.Status);
@@ -32,7 +32,7 @@ namespace Whois.Parsing.Ccwhois.Ksregistry.Net.Vg
         public void Test_found()
         {
             var sample = SampleReader.Read("ccwhois.ksregistry.net", "vg", "found.txt");
-            var response = parser.Parse("ccwhois.ksregistry.net", "vg", sample);
+            var response = parser.Parse("ccwhois.ksregistry.net", sample);
 
             Assert.Greater(sample.Length, 0);
             Assert.AreEqual(WhoisStatus.Found, response.Status);

@@ -22,7 +22,7 @@ namespace Whois.Parsing.Whois.Registry.Gy.Gy
         public void Test_not_found()
         {
             var sample = SampleReader.Read("whois.registry.gy", "gy", "not_found.txt");
-            var response = parser.Parse("whois.registry.gy", "gy", sample);
+            var response = parser.Parse("whois.registry.gy", sample);
 
             Assert.Greater(sample.Length, 0);
             Assert.AreEqual(WhoisStatus.NotFound, response.Status);
@@ -40,7 +40,7 @@ namespace Whois.Parsing.Whois.Registry.Gy.Gy
         public void Test_found()
         {
             var sample = SampleReader.Read("whois.registry.gy", "gy", "found.txt");
-            var response = parser.Parse("whois.registry.gy", "gy", sample);
+            var response = parser.Parse("whois.registry.gy", sample);
 
             Assert.Greater(sample.Length, 0);
             Assert.AreEqual(WhoisStatus.Found, response.Status);

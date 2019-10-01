@@ -22,7 +22,7 @@ namespace Whois.Parsing.Whois.Eu.Org.EuOrg
         public void Test_not_found()
         {
             var sample = SampleReader.Read("whois.eu.org", "eu.org", "not_found.txt");
-            var response = parser.Parse("whois.eu.org", "eu.org", sample);
+            var response = parser.Parse("whois.eu.org", sample);
 
             Assert.Greater(sample.Length, 0);
             Assert.AreEqual(WhoisStatus.NotFound, response.Status);
@@ -37,7 +37,7 @@ namespace Whois.Parsing.Whois.Eu.Org.EuOrg
         public void Test_found()
         {
             var sample = SampleReader.Read("whois.eu.org", "eu.org", "found.txt");
-            var response = parser.Parse("whois.eu.org", "eu.org", sample);
+            var response = parser.Parse("whois.eu.org", sample);
 
             Assert.Greater(sample.Length, 0);
             Assert.AreEqual(WhoisStatus.Found, response.Status);

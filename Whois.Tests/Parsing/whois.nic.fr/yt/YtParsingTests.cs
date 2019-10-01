@@ -22,7 +22,7 @@ namespace Whois.Parsing.Whois.Nic.Fr.Yt
         public void Test_throttled()
         {
             var sample = SampleReader.Read("whois.nic.fr", "yt", "throttled.txt");
-            var response = parser.Parse("whois.nic.fr", "yt", sample);
+            var response = parser.Parse("whois.nic.fr", sample);
 
             Assert.Greater(sample.Length, 0);
             Assert.AreEqual(WhoisStatus.Throttled, response.Status);
@@ -37,7 +37,7 @@ namespace Whois.Parsing.Whois.Nic.Fr.Yt
         public void Test_not_found()
         {
             var sample = SampleReader.Read("whois.nic.fr", "yt", "not_found.txt");
-            var response = parser.Parse("whois.nic.fr", "yt", sample);
+            var response = parser.Parse("whois.nic.fr", sample);
 
             Assert.Greater(sample.Length, 0);
             Assert.AreEqual(WhoisStatus.NotFound, response.Status);
@@ -52,7 +52,7 @@ namespace Whois.Parsing.Whois.Nic.Fr.Yt
         public void Test_found()
         {
             var sample = SampleReader.Read("whois.nic.fr", "yt", "found.txt");
-            var response = parser.Parse("whois.nic.fr", "yt", sample);
+            var response = parser.Parse("whois.nic.fr", sample);
 
             Assert.Greater(sample.Length, 0);
             Assert.AreEqual(WhoisStatus.Found, response.Status);

@@ -22,7 +22,7 @@ namespace Whois.Parsing.Whois.Tcinet.Ru.XnP1ai
         public void Test_not_found()
         {
             var sample = SampleReader.Read("whois.tcinet.ru", "xn--p1ai", "not_found.txt");
-            var response = parser.Parse("whois.tcinet.ru", "xn--p1ai", sample);
+            var response = parser.Parse("whois.tcinet.ru", sample);
 
             Assert.Greater(sample.Length, 0);
             Assert.AreEqual(WhoisStatus.NotFound, response.Status);
@@ -37,7 +37,7 @@ namespace Whois.Parsing.Whois.Tcinet.Ru.XnP1ai
         public void Test_found()
         {
             var sample = SampleReader.Read("whois.tcinet.ru", "xn--p1ai", "found.txt");
-            var response = parser.Parse("whois.tcinet.ru", "xn--p1ai", sample);
+            var response = parser.Parse("whois.tcinet.ru", sample);
 
             Assert.Greater(sample.Length, 0);
             Assert.AreEqual(WhoisStatus.Found, response.Status);
