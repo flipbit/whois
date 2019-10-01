@@ -14,6 +14,7 @@ namespace Whois
         {
             Encoding = WhoisOptions.Defaults.DefaultEncoding;
             TimeoutSeconds = WhoisOptions.Defaults.TimeoutSeconds;
+            FollowReferrer = true;
         }
 
         /// <summary>
@@ -40,7 +41,10 @@ namespace Whois
         /// </summary>
         public int TimeoutSeconds { get; set; }
 
-        //public bool FollowReferrer { get; set; }
+        /// <summary>
+        /// Is true, then referral links within WHOIS responses will be followed.
+        /// </summary>
+        public bool FollowReferrer { get; set; }
 
         //public string WhoisServerUrl { get; set; }
     }

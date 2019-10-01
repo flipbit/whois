@@ -115,6 +115,7 @@ namespace Whois
                 response = response.Chain(parsed);
 
                 // Check for referral loop
+                if (request.FollowReferrer == false) break;
                 if (response.SeenServer(response.WhoisServerUrl)) break;
            
                 // Lookup result in referral server

@@ -92,6 +92,36 @@ namespace Whois
         }
 
         [Test]
+        public async Task TestLookupDomainDontFollowReferrer()
+        {
+            var request = new WhoisRequest { Query = "google.com", FollowReferrer = false };
+            var intermediateResult = sampleReader.Read("whois.verisign-grs.com", "com", "found_status_registered.txt");
+
+            var rootServer = new WhoisResponse
+            {
+                DomainName = "com",
+                Registrar = new Registrar { WhoisServerUrl = "whois.verisign-grs.com" }
+            };
+
+            whoisServerLookup
+                .Setup(call => call.LookupAsync(request))
+                .Returns(Task.FromResult(rootServer));
+
+            tcpReader
+                .Setup(call => call.Read("whois.verisign-grs.com", 43, "google.com", Encoding.UTF8, 10))
+                .Returns(Task.FromResult(intermediateResult));
+
+            var result = await lookup.LookupAsync(request);
+
+            Assert.AreEqual("google.com", result.DomainName);
+            Assert.AreEqual(WhoisStatus.Found, result.Status);
+
+            Assert.AreEqual(intermediateResult, result.Content);
+            Assert.AreEqual(rootServer, result.Referrer);
+        }
+
+
+        [Test]
         public void TestLookupDomainWithEmptyQuery()
         {
             Assert.Throws<ArgumentNullException>(() => lookup.Lookup(string.Empty));
