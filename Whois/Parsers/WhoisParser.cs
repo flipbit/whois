@@ -1,8 +1,5 @@
 ﻿using System.Collections.Generic;
-using System.IO;
 using System.Linq;
-using System.Threading;
-using Newtonsoft.Json;
 using Tokens;
 using Tokens.Transformers;
 using Tokens.Validators;
@@ -93,8 +90,6 @@ namespace Whois.Parsers
 
                 value.Status = status;
 
-                if (status == WhoisStatus.Found) Write(value, whoisServer);
-
                 return value;
             }
 
@@ -109,35 +104,6 @@ namespace Whois.Parsers
         {
             public string DomainName { get; set; }
             public string WhoisServerUrl { get; set; }
-        }
-
-        private void Write(WhoisResponse value, string url)
-        {
-            const string fileName = "foo.json";
-            var contents = string.Empty;
-            var servers = new List<Server>();
-
-            if (File.Exists(fileName))
-            {
-                contents = File.ReadAllText(fileName);
-                servers = JsonConvert.DeserializeObject<List<Server>>(contents);
-            }
-
-            if (servers.Any(x => x.DomainName == value.DomainName)) return;
-
-            servers.Add(new Server
-            {
-                DomainName = value.DomainName,
-                WhoisServerUrl = url
-            });
-
-            servers = servers.OrderBy(s => s.DomainName).ToList();
-
-            var json = JsonConvert.SerializeObject(servers, Formatting.Indented);
-            
-            File.WriteAllText(fileName, json);
-
-            Thread.Sleep(50);
         }
 
         public void AddTemplate(string content, string name)
@@ -158,23 +124,6 @@ namespace Whois.Parsers
         public void RegisterTransformer<T>() where T : ITokenTransformer
         {
             matcher.RegisterTransformer<T>();
-        }
-
-        private void LoadServerTemplates(string whoisServer, string tld)
-        {
-            // Check templates for this server/tld not already loaded
-            var loaded = Templates.ContainsAllTags(whoisServer, tld);
-
-            if (loaded) return;
-
-            var templateNames = reader.GetNames(whoisServer, tld);
-
-            foreach (var templateName in templateNames)
-            {
-                var content = reader.GetContent(templateName);
-
-                matcher.RegisterTemplate(content);
-            }
         }
 
         private void LoadServerTemplates(string whoisServer)
