@@ -43,7 +43,7 @@ namespace Whois.Parsing.Whois.Nic.Design.Design
             Assert.AreEqual(WhoisStatus.Found, response.Status);
 
             Assert.AreEqual(0, response.ParsingErrors);
-            Assert.AreEqual("generic/tld/Found02", response.TemplateName);
+            Assert.AreEqual("generic/tld/Found001", response.TemplateName);
 
             Assert.AreEqual("toplevel.design", response.DomainName);
             Assert.AreEqual("D7069819-CNIC", response.RegistryDomainId);
@@ -53,9 +53,9 @@ namespace Whois.Parsing.Whois.Nic.Design.Design
             Assert.AreEqual("9999", response.Registrar.IanaId);
             Assert.AreEqual("whois.nic.wiki", response.Registrar.WhoisServerUrl);
 
-            Assert.AreEqual(new DateTime(2015, 04, 21, 17, 48, 34, DateTimeKind.Utc), response.Updated);
-            Assert.AreEqual(new DateTime(2015, 02, 27, 16, 08, 32, DateTimeKind.Utc), response.Registered);
-            Assert.AreEqual(new DateTime(2016, 02, 27, 23, 59, 59, DateTimeKind.Utc), response.Expiration);
+            Assert.AreEqual(new DateTime(2015, 04, 21, 17, 48, 34, 000, DateTimeKind.Utc), response.Updated);
+            Assert.AreEqual(new DateTime(2015, 02, 27, 16, 08, 32, 000, DateTimeKind.Utc), response.Registered);
+            Assert.AreEqual(new DateTime(2016, 02, 27, 23, 59, 59, 000, DateTimeKind.Utc), response.Expiration);
 
              // Registrant Details
             Assert.AreEqual("H4596017", response.Registrant.RegistryId);

@@ -62,7 +62,7 @@ namespace Whois.Parsing.Whois.Sx.Sx
             Assert.AreEqual(WhoisStatus.Found, response.Status);
 
             Assert.AreEqual(0, response.ParsingErrors);
-            Assert.AreEqual("generic/tld/Found02", response.TemplateName);
+            Assert.AreEqual("generic/tld/Found001", response.TemplateName);
 
             Assert.AreEqual("whois.sx", response.DomainName);
             Assert.AreEqual("d5-sx", response.RegistryDomainId);

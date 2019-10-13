@@ -1,3 +1,4 @@
+using System;
 using NUnit.Framework;
 using Whois.Models;
 using Whois.Parsers;
@@ -27,7 +28,7 @@ namespace Whois.Parsing.Whois.Markmonitor.Com.Com
             Assert.AreEqual(WhoisStatus.Found, response.Status);
 
             Assert.AreEqual(0, response.ParsingErrors);
-            Assert.AreEqual("generic/tld/Found02", response.TemplateName);
+            Assert.AreEqual("generic/tld/Found001", response.TemplateName);
 
             Assert.AreEqual("google.com", response.DomainName);
             Assert.AreEqual("2138514_DOMAIN_COM-VRSN", response.RegistryDomainId);
@@ -40,6 +41,9 @@ namespace Whois.Parsing.Whois.Markmonitor.Com.Com
             Assert.AreEqual("abusecomplaints@markmonitor.com", response.Registrar.AbuseEmail);
             Assert.AreEqual("+1.2083895740", response.Registrar.AbuseTelephoneNumber);
 
+            Assert.AreEqual(new DateTime(2015, 06, 12, 17, 38, 52, 000, DateTimeKind.Utc), response.Updated);
+            Assert.AreEqual(new DateTime(1997, 09, 15, 07, 00, 00, 000, DateTimeKind.Utc), response.Registered);
+            Assert.AreEqual(new DateTime(2020, 09, 14, 04, 00, 00, 000, DateTimeKind.Utc), response.Expiration);
 
              // Registrant Details
             Assert.AreEqual("Dns Admin", response.Registrant.Name);
@@ -106,7 +110,7 @@ namespace Whois.Parsing.Whois.Markmonitor.Com.Com
             Assert.AreEqual("serverDeleteProhibited", response.DomainStatus[5]);
 
             Assert.AreEqual("unsigned", response.DnsSecStatus);
-            Assert.AreEqual(50, response.FieldsParsed);
+            Assert.AreEqual(56, response.FieldsParsed);
         }
     }
 }

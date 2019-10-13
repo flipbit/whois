@@ -45,7 +45,7 @@ namespace Whois.Parsing.Whois.Nic.Net.Ng.Ng
             Assert.AreEqual(WhoisStatus.Found, response.Status);
 
             Assert.AreEqual(0, response.ParsingErrors);
-            Assert.AreEqual("generic/tld/Found02", response.TemplateName);
+            Assert.AreEqual("generic/tld/Found001", response.TemplateName);
 
             Assert.AreEqual("nic.net.ng", response.DomainName);
             Assert.AreEqual("6808-NIRA", response.RegistryDomainId);
@@ -122,7 +122,7 @@ namespace Whois.Parsing.Whois.Nic.Net.Ng.Ng
             Assert.AreEqual(WhoisStatus.Found, response.Status);
 
             Assert.AreEqual(0, response.ParsingErrors);
-            Assert.AreEqual("generic/tld/Found02", response.TemplateName);
+            Assert.AreEqual("generic/tld/Found001", response.TemplateName);
 
             Assert.AreEqual("nic.net.ng", response.DomainName);
             Assert.AreEqual("6808-NIRA", response.RegistryDomainId);

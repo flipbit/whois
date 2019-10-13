@@ -45,7 +45,7 @@ namespace Whois.Parsing.Whois.Nic.Ki.Ki
             Assert.AreEqual(WhoisStatus.Found, response.Status);
 
             Assert.AreEqual(0, response.ParsingErrors);
-            Assert.AreEqual("generic/tld/Found02", response.TemplateName);
+            Assert.AreEqual("generic/tld/Found001", response.TemplateName);
 
             Assert.AreEqual("google.ki", response.DomainName);
             Assert.AreEqual("18030-CoCCA", response.RegistryDomainId);

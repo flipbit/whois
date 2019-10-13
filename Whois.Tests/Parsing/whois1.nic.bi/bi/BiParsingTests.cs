@@ -46,7 +46,7 @@ namespace Whois.Parsing.Whois1.Nic.Bi.Bi
             Assert.AreEqual(WhoisStatus.Found, response.Status);
 
             Assert.AreEqual(0, response.ParsingErrors);
-            Assert.AreEqual("generic/tld/Found02", response.TemplateName);
+            Assert.AreEqual("generic/tld/Found001", response.TemplateName);
 
             Assert.AreEqual("google.bi", response.DomainName);
             Assert.AreEqual("2633NIC-BI", response.RegistryDomainId);

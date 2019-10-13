@@ -25,7 +25,6 @@
     <None Remove="Resources\durban-whois.registry.net.za\durban\Found.txt" />
     <None Remove="Resources\durban-whois.registry.net.za\durban\NotFound.txt" />
     <None Remove="Resources\generic\tld\Found01.txt" />
-    <None Remove="Resources\generic\tld\Found02.txt" />
     <None Remove="Resources\generic\tld\Found04.txt" />
     <None Remove="Resources\generic\tld\NotFound001.txt" />
     <None Remove="Resources\generic\tld\NotFound002.txt" />
@@ -344,7 +343,6 @@
     <EmbeddedResource Include="Resources\coza-whois.registry.net.za\co.za\Throttled.txt" />
     <EmbeddedResource Include="Resources\durban-whois.registry.net.za\durban\Found.txt" />
     <EmbeddedResource Include="Resources\durban-whois.registry.net.za\durban\NotFound.txt" />
-    <EmbeddedResource Include="Resources\generic\tld\Found02.txt" />
     <EmbeddedResource Include="Resources\generic\tld\Found01.txt" />
     <EmbeddedResource Include="Resources\generic\tld\Found04.txt" />
     <EmbeddedResource Include="Resources\generic\tld\NotFound001.txt" />

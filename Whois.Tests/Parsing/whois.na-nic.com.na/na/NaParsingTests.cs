@@ -45,7 +45,7 @@ namespace Whois.Parsing.Whois.Na.Nic.Com.Na.Na
             Assert.AreEqual(WhoisStatus.Found, response.Status);
 
             Assert.AreEqual(0, response.ParsingErrors);
-            Assert.AreEqual("generic/tld/Found02", response.TemplateName);
+            Assert.AreEqual("generic/tld/Found001", response.TemplateName);
 
             Assert.AreEqual("google.na", response.DomainName);
             Assert.AreEqual("4100-CoCCA", response.RegistryDomainId);
@@ -116,7 +116,7 @@ namespace Whois.Parsing.Whois.Na.Nic.Com.Na.Na
             Assert.AreEqual("clientUpdateProhibited", response.DomainStatus[4]);
 
             Assert.AreEqual("unsigned", response.DnsSecStatus);
-            Assert.AreEqual(42, response.FieldsParsed);
+            Assert.AreEqual(43, response.FieldsParsed);
         }
     }
 }

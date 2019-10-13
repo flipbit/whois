@@ -43,7 +43,7 @@ namespace Whois.Parsing.Whois.Nic.Fm.Fm
             Assert.AreEqual(WhoisStatus.Found, response.Status);
 
             Assert.AreEqual(0, response.ParsingErrors);
-            Assert.AreEqual("generic/tld/Found02", response.TemplateName);
+            Assert.AreEqual("generic/tld/Found001", response.TemplateName);
 
             Assert.AreEqual("google.fm", response.DomainName);
             Assert.AreEqual("D34865469-CNIC", response.RegistryDomainId);
@@ -55,9 +55,9 @@ namespace Whois.Parsing.Whois.Nic.Fm.Fm
             Assert.AreEqual("ccops@markmonitor.com", response.Registrar.AbuseEmail);
             Assert.AreEqual("+1.2083895740", response.Registrar.AbuseTelephoneNumber);
 
-            Assert.AreEqual(new DateTime(2017, 10, 20, 17, 48, 39, DateTimeKind.Utc), response.Updated);
-            Assert.AreEqual(new DateTime(2000, 09, 05, 23, 59, 59, DateTimeKind.Utc), response.Registered);
-            Assert.AreEqual(new DateTime(2018, 09, 04, 23, 59, 59, DateTimeKind.Utc), response.Expiration);
+            Assert.AreEqual(new DateTime(2017, 10, 20, 17, 48, 39, 000, DateTimeKind.Utc), response.Updated);
+            Assert.AreEqual(new DateTime(2000, 09, 05, 23, 59, 59, 000, DateTimeKind.Utc), response.Registered);
+            Assert.AreEqual(new DateTime(2018, 09, 04, 23, 59, 59, 000, DateTimeKind.Utc), response.Expiration);
 
              // Registrant Details
             Assert.AreEqual("C78398194-CNIC", response.Registrant.RegistryId);

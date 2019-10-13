@@ -44,7 +44,7 @@ namespace Whois.Parsing.Whois.Museum.Museum
             Assert.AreEqual(WhoisStatus.Found, response.Status);
 
             Assert.AreEqual(0, response.ParsingErrors);
-            Assert.AreEqual("generic/tld/Found02", response.TemplateName);
+            Assert.AreEqual("generic/tld/Found001", response.TemplateName);
 
             Assert.AreEqual("musedoma.museum", response.DomainName);
             Assert.AreEqual("D778-MUSEUM", response.RegistryDomainId);

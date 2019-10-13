@@ -45,7 +45,7 @@ namespace Whois.Parsing.Whois.Nic.Af.Af
             Assert.AreEqual(WhoisStatus.Found, response.Status);
 
             Assert.AreEqual(0, response.ParsingErrors);
-            Assert.AreEqual("generic/tld/Found02", response.TemplateName);
+            Assert.AreEqual("generic/tld/Found001", response.TemplateName);
 
             Assert.AreEqual("google.af", response.DomainName);
             Assert.AreEqual("345679-CoCCA", response.RegistryDomainId);
@@ -135,7 +135,7 @@ namespace Whois.Parsing.Whois.Nic.Af.Af
             Assert.AreEqual("ok", response.DomainStatus[0]);
 
             Assert.AreEqual("unsigned", response.DnsSecStatus);
-            Assert.AreEqual(55, response.FieldsParsed);
+            Assert.AreEqual(59, response.FieldsParsed);
         }
     }
 }

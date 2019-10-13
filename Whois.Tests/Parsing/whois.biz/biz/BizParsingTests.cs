@@ -42,24 +42,28 @@ namespace Whois.Parsing.Whois.Biz.Biz
             Assert.AreEqual(WhoisStatus.Found, response.Status);
 
             Assert.AreEqual(0, response.ParsingErrors);
-            Assert.AreEqual("generic/tld/Found02", response.TemplateName);
+            Assert.AreEqual("generic/tld/Found001", response.TemplateName);
 
             Assert.AreEqual("google.biz", response.DomainName);
             Assert.AreEqual("D2835288-BIZ", response.RegistryDomainId);
 
             // Registrar Details
             Assert.AreEqual("MarkMonitor, Inc.", response.Registrar.Name);
+            Assert.AreEqual("292", response.Registrar.IanaId);
             Assert.AreEqual("abusecomplaints@markmonitor.com", response.Registrar.AbuseEmail);
             Assert.AreEqual("+1.2083895740", response.Registrar.AbuseTelephoneNumber);
 
-            Assert.AreEqual(new DateTime(2017, 2, 22, 10, 27, 42, DateTimeKind.Utc), response.Updated);
-            Assert.AreEqual(new DateTime(2002, 3, 27, 16, 3, 44, DateTimeKind.Utc), response.Registered);
-            Assert.AreEqual(new DateTime(2018, 3, 26, 23, 59, 59, DateTimeKind.Utc), response.Expiration);
+            Assert.AreEqual(new DateTime(2017, 02, 22, 10, 27, 42, 000, DateTimeKind.Utc), response.Updated);
+            Assert.AreEqual(new DateTime(2002, 03, 27, 16, 03, 44, 000, DateTimeKind.Utc), response.Registered);
+            Assert.AreEqual(new DateTime(2018, 03, 26, 23, 59, 59, 000, DateTimeKind.Utc), response.Expiration);
 
              // Registrant Details
             Assert.AreEqual("C42709140-BIZ", response.Registrant.RegistryId);
             Assert.AreEqual("DNS Admin", response.Registrant.Name);
             Assert.AreEqual("Google Inc.", response.Registrant.Organization);
+            Assert.AreEqual("+1.6502530000", response.Registrant.TelephoneNumber);
+            Assert.AreEqual("+1.6502530001", response.Registrant.FaxNumber);
+            Assert.AreEqual("dns-admin@google.com", response.Registrant.Email);
 
              // Registrant Address
             Assert.AreEqual(5, response.Registrant.Address.Count);
@@ -69,15 +73,14 @@ namespace Whois.Parsing.Whois.Biz.Biz
             Assert.AreEqual("94043", response.Registrant.Address[3]);
             Assert.AreEqual("US", response.Registrant.Address[4]);
 
-            Assert.AreEqual("+1.6502530000", response.Registrant.TelephoneNumber);
-            Assert.AreEqual("+1.6502530001", response.Registrant.FaxNumber);
-            Assert.AreEqual("dns-admin@google.com", response.Registrant.Email);
-
 
              // AdminContact Details
             Assert.AreEqual("C42709140-BIZ", response.AdminContact.RegistryId);
             Assert.AreEqual("DNS Admin", response.AdminContact.Name);
             Assert.AreEqual("Google Inc.", response.AdminContact.Organization);
+            Assert.AreEqual("+1.6502530000", response.AdminContact.TelephoneNumber);
+            Assert.AreEqual("+1.6502530001", response.AdminContact.FaxNumber);
+            Assert.AreEqual("dns-admin@google.com", response.AdminContact.Email);
 
              // AdminContact Address
             Assert.AreEqual(5, response.AdminContact.Address.Count);
@@ -87,15 +90,14 @@ namespace Whois.Parsing.Whois.Biz.Biz
             Assert.AreEqual("94043", response.AdminContact.Address[3]);
             Assert.AreEqual("US", response.AdminContact.Address[4]);
 
-            Assert.AreEqual("+1.6502530000", response.AdminContact.TelephoneNumber);
-            Assert.AreEqual("+1.6502530001", response.AdminContact.FaxNumber);
-            Assert.AreEqual("dns-admin@google.com", response.AdminContact.Email);
-
 
              // TechnicalContact Details
             Assert.AreEqual("C42709140-BIZ", response.TechnicalContact.RegistryId);
             Assert.AreEqual("DNS Admin", response.TechnicalContact.Name);
             Assert.AreEqual("Google Inc.", response.TechnicalContact.Organization);
+            Assert.AreEqual("+1.6502530000", response.TechnicalContact.TelephoneNumber);
+            Assert.AreEqual("+1.6502530001", response.TechnicalContact.FaxNumber);
+            Assert.AreEqual("dns-admin@google.com", response.TechnicalContact.Email);
 
              // TechnicalContact Address
             Assert.AreEqual(5, response.TechnicalContact.Address.Count);
@@ -105,9 +107,6 @@ namespace Whois.Parsing.Whois.Biz.Biz
             Assert.AreEqual("94043", response.TechnicalContact.Address[3]);
             Assert.AreEqual("US", response.TechnicalContact.Address[4]);
 
-            Assert.AreEqual("+1.6502530000", response.TechnicalContact.TelephoneNumber);
-            Assert.AreEqual("+1.6502530001", response.TechnicalContact.FaxNumber);
-            Assert.AreEqual("dns-admin@google.com", response.TechnicalContact.Email);
 
             // Nameservers
             Assert.AreEqual(4, response.NameServers.Count);

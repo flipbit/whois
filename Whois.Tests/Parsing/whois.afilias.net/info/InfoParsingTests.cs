@@ -45,7 +45,7 @@ namespace Whois.Parsing.Whois.Afilias.Net.Info
 
             // Registrar Details
             Assert.AreEqual("MarkMonitor Inc. (R151-LRMS)", response.Registrar.Name);
-            Assert.AreEqual(" 292", response.Registrar.IanaId);
+            Assert.AreEqual("292", response.Registrar.IanaId);
 
             Assert.AreEqual(new DateTime(2013, 06, 29, 09, 26, 18, 000, DateTimeKind.Utc), response.Updated);
             Assert.AreEqual(new DateTime(2001, 07, 31, 23, 57, 50, 000, DateTimeKind.Utc), response.Registered);

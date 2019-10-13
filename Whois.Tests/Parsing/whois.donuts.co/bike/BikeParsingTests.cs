@@ -43,7 +43,7 @@ namespace Whois.Parsing.Whois.Donuts.Co.Bike
             Assert.AreEqual(WhoisStatus.Found, response.Status);
 
             Assert.AreEqual(0, response.ParsingErrors);
-            Assert.AreEqual("generic/tld/Found02", response.TemplateName);
+            Assert.AreEqual("generic/tld/Found001", response.TemplateName);
 
             Assert.AreEqual("whereismy.bike", response.DomainName);
             Assert.AreEqual("e25432d5c94440c4a8ca0e5ecbc13904-DONUTS", response.RegistryDomainId);
@@ -52,6 +52,7 @@ namespace Whois.Parsing.Whois.Donuts.Co.Bike
             Assert.AreEqual("GoDaddy.com, LLC", response.Registrar.Name);
             Assert.AreEqual("146", response.Registrar.IanaId);
             Assert.AreEqual("http://www.godaddy.com/domains/search.aspx?ci=8990", response.Registrar.Url);
+            Assert.AreEqual("who.godaddy.com", response.Registrar.WhoisServerUrl);
             Assert.AreEqual("abuse@godaddy.com", response.Registrar.AbuseEmail);
             Assert.AreEqual("+1.4806242505", response.Registrar.AbuseTelephoneNumber);
 
@@ -117,7 +118,7 @@ namespace Whois.Parsing.Whois.Donuts.Co.Bike
             Assert.AreEqual("clientUpdateProhibited", response.DomainStatus[3]);
 
             Assert.AreEqual("unsigned", response.DnsSecStatus);
-            Assert.AreEqual(45, response.FieldsParsed);
+            Assert.AreEqual(49, response.FieldsParsed);
         }
     }
 }

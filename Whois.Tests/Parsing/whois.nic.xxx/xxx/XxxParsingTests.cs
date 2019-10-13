@@ -50,7 +50,7 @@ namespace Whois.Parsing.Whois.Nic.Xxx.Xxx
 
             // Registrar Details
             Assert.AreEqual("Mesh Digital Limited (R3228-XXX)", response.Registrar.Name);
-            Assert.AreEqual(" 1390", response.Registrar.IanaId);
+            Assert.AreEqual("1390", response.Registrar.IanaId);
 
             Assert.AreEqual(new DateTime(2013, 12, 02, 22, 20, 04, 000, DateTimeKind.Utc), response.Updated);
             Assert.AreEqual(new DateTime(2011, 12, 01, 01, 37, 55, 000, DateTimeKind.Utc), response.Registered);

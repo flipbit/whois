@@ -65,7 +65,7 @@ namespace Whois.Parsing.Whois.Pir.Org.Org
 
             // Registrar Details
             Assert.AreEqual("MarkMonitor Inc. (R37-LROR)", response.Registrar.Name);
-            Assert.AreEqual(" 292", response.Registrar.IanaId);
+            Assert.AreEqual("292", response.Registrar.IanaId);
 
             Assert.AreEqual(new DateTime(2013, 09, 18, 09, 17, 35, 000, DateTimeKind.Utc), response.Updated);
             Assert.AreEqual(new DateTime(1998, 10, 21, 04, 00, 00, 000, DateTimeKind.Utc), response.Registered);

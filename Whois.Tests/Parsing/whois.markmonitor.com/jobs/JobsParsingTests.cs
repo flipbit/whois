@@ -1,3 +1,4 @@
+using System;
 using NUnit.Framework;
 using Whois.Models;
 using Whois.Parsers;
@@ -27,7 +28,7 @@ namespace Whois.Parsing.Whois.Markmonitor.Com.Jobs
             Assert.AreEqual(WhoisStatus.Found, response.Status);
 
             Assert.AreEqual(0, response.ParsingErrors);
-            Assert.AreEqual("generic/tld/Found02", response.TemplateName);
+            Assert.AreEqual("generic/tld/Found001", response.TemplateName);
 
             Assert.AreEqual("google.jobs", response.DomainName);
             Assert.AreEqual("86932313_DOMAIN_JOBS-VRSN", response.RegistryDomainId);
@@ -40,6 +41,9 @@ namespace Whois.Parsing.Whois.Markmonitor.Com.Jobs
             Assert.AreEqual("abusecomplaints@markmonitor.com", response.Registrar.AbuseEmail);
             Assert.AreEqual("+1.2083895740", response.Registrar.AbuseTelephoneNumber);
 
+            Assert.AreEqual(new DateTime(2017, 07, 27, 20, 59, 01, 000, DateTimeKind.Utc), response.Updated);
+            Assert.AreEqual(new DateTime(2005, 09, 15, 07, 00, 00, 000, DateTimeKind.Utc), response.Registered);
+            Assert.AreEqual(new DateTime(2017, 09, 15, 04, 00, 00, 000, DateTimeKind.Utc), response.Expiration);
 
              // Registrant Details
             Assert.AreEqual("MMR-168840", response.Registrant.RegistryId);
@@ -104,7 +108,7 @@ namespace Whois.Parsing.Whois.Markmonitor.Com.Jobs
             Assert.AreEqual("clientDeleteProhibited", response.DomainStatus[2]);
 
             Assert.AreEqual("unsigned", response.DnsSecStatus);
-            Assert.AreEqual(48, response.FieldsParsed);
+            Assert.AreEqual(51, response.FieldsParsed);
         }
     }
 }

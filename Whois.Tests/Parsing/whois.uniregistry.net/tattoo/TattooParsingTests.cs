@@ -52,7 +52,7 @@ namespace Whois.Parsing.Whois.Uniregistry.Net.Tattoo
 
             // Registrar Details
             Assert.AreEqual("Uniregistry, Corp.", response.Registrar.Name);
-            Assert.AreEqual(" 9999", response.Registrar.IanaId);
+            Assert.AreEqual("9999", response.Registrar.IanaId);
             Assert.AreEqual("http://whois.uniregistry.net", response.Registrar.Url);
 
             Assert.AreEqual(new DateTime(2013, 11, 09, 02, 51, 24, 230, DateTimeKind.Utc), response.Updated);
@@ -140,8 +140,8 @@ namespace Whois.Parsing.Whois.Uniregistry.Net.Tattoo
             Assert.AreEqual("serverTransferProhibited", response.DomainStatus[1]);
             Assert.AreEqual("serverUpdateProhibited", response.DomainStatus[2]);
 
-            Assert.AreEqual(" signedDelegation", response.DnsSecStatus);
-            Assert.AreEqual(61, response.FieldsParsed);
+            Assert.AreEqual("signedDelegation", response.DnsSecStatus);
+            Assert.AreEqual(62, response.FieldsParsed);
         }
 
         [Test]

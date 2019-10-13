@@ -45,7 +45,7 @@ namespace Whois.Parsing.Whois.Gg.Gg
             Assert.AreEqual(WhoisStatus.Found, response.Status);
 
             Assert.AreEqual(0, response.ParsingErrors);
-            Assert.AreEqual("generic/tld/Found02", response.TemplateName);
+            Assert.AreEqual("generic/tld/Found001", response.TemplateName);
 
             Assert.AreEqual("google.gg", response.DomainName);
             Assert.AreEqual("24221-CI", response.RegistryDomainId);
@@ -55,7 +55,7 @@ namespace Whois.Parsing.Whois.Gg.Gg
             Assert.AreEqual("http://www.markmonitor.com", response.Registrar.Url);
             Assert.AreEqual("whois.gg", response.Registrar.WhoisServerUrl);
 
-            Assert.AreEqual(new DateTime(2003, 04, 30, 00, 00, 00, DateTimeKind.Utc), response.Registered);
+            Assert.AreEqual(new DateTime(2003, 04, 30, 00, 00, 00, 000, DateTimeKind.Utc), response.Registered);
 
              // Registrant Details
             Assert.AreEqual("32764-CI", response.Registrant.RegistryId);

@@ -45,7 +45,7 @@ namespace Whois.Parsing.Whois.Pnina.Ps.Ps
             Assert.AreEqual(WhoisStatus.Found, response.Status);
 
             Assert.AreEqual(0, response.ParsingErrors);
-            Assert.AreEqual("generic/tld/Found02", response.TemplateName);
+            Assert.AreEqual("generic/tld/Found001", response.TemplateName);
 
             Assert.AreEqual("google.ps", response.DomainName);
             Assert.AreEqual("21665-PS", response.RegistryDomainId);

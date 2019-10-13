@@ -45,7 +45,7 @@ namespace Whois.Parsing.Whois.Nic.Mg.Mg
             Assert.AreEqual(WhoisStatus.Found, response.Status);
 
             Assert.AreEqual(0, response.ParsingErrors);
-            Assert.AreEqual("generic/tld/Found02", response.TemplateName);
+            Assert.AreEqual("generic/tld/Found001", response.TemplateName);
 
             Assert.AreEqual("google.mg", response.DomainName);
             Assert.AreEqual("1915-nicmg", response.RegistryDomainId);

@@ -28,24 +28,27 @@ namespace Whois.Parsing.Whois.Cdmon.Com.Com
             Assert.AreEqual(WhoisStatus.Found, response.Status);
 
             Assert.AreEqual(0, response.ParsingErrors);
-            Assert.AreEqual("generic/tld/Found02", response.TemplateName);
+            Assert.AreEqual("generic/tld/Found001", response.TemplateName);
 
             Assert.AreEqual("cdmon.com", response.DomainName);
 
             // Registrar Details
             Assert.AreEqual("10DENCEHISPAHARD, S.L", response.Registrar.Name);
+            Assert.AreEqual("1403", response.Registrar.IanaId);
             Assert.AreEqual("https://www.cdmon.com", response.Registrar.Url);
             Assert.AreEqual("whois.cdmon.com", response.Registrar.WhoisServerUrl);
             Assert.AreEqual("abuse@cdmon.com", response.Registrar.AbuseEmail);
             Assert.AreEqual("+34.935677577", response.Registrar.AbuseTelephoneNumber);
 
-            Assert.AreEqual(new DateTime(2009, 12, 16, 11, 40, 44, DateTimeKind.Utc), response.Updated);
-            Assert.AreEqual(new DateTime(2001, 8, 12, 15, 2, 57, DateTimeKind.Utc), response.Registered);
-            Assert.AreEqual(new DateTime(2024, 8, 12, 15, 2, 53, DateTimeKind.Utc), response.Expiration);
+            Assert.AreEqual(new DateTime(2009, 12, 16, 11, 40, 44, 000, DateTimeKind.Utc), response.Updated);
+            Assert.AreEqual(new DateTime(2001, 08, 12, 15, 02, 57, 000, DateTimeKind.Utc), response.Registered);
+            Assert.AreEqual(new DateTime(2024, 08, 12, 15, 02, 53, 000, DateTimeKind.Utc), response.Expiration);
 
              // Registrant Details
             Assert.AreEqual("10dencehispahard,s.l.", response.Registrant.Name);
             Assert.AreEqual("10dencehispahard,s.l.", response.Registrant.Organization);
+            Assert.AreEqual("+34.902364138", response.Registrant.TelephoneNumber);
+            Assert.AreEqual("info@cdmon.com", response.Registrant.Email);
 
              // Registrant Address
             Assert.AreEqual(4, response.Registrant.Address.Count);
@@ -54,12 +57,12 @@ namespace Whois.Parsing.Whois.Cdmon.Com.Com
             Assert.AreEqual("08380", response.Registrant.Address[2]);
             Assert.AreEqual("ES", response.Registrant.Address[3]);
 
-            Assert.AreEqual("+34.902364138", response.Registrant.TelephoneNumber);
-            Assert.AreEqual("info@cdmon.com", response.Registrant.Email);
 
              // AdminContact Details
             Assert.AreEqual("10dencehispahard,s.l.", response.AdminContact.Name);
             Assert.AreEqual("10dencehispahard,s.l.", response.AdminContact.Organization);
+            Assert.AreEqual("+34.902364138", response.AdminContact.TelephoneNumber);
+            Assert.AreEqual("info@cdmon.com", response.AdminContact.Email);
 
              // AdminContact Address
             Assert.AreEqual(4, response.AdminContact.Address.Count);
@@ -68,12 +71,12 @@ namespace Whois.Parsing.Whois.Cdmon.Com.Com
             Assert.AreEqual("08380", response.AdminContact.Address[2]);
             Assert.AreEqual("ES", response.AdminContact.Address[3]);
 
-            Assert.AreEqual("+34.902364138", response.AdminContact.TelephoneNumber);
-            Assert.AreEqual("info@cdmon.com", response.AdminContact.Email);
 
              // TechnicalContact Details
             Assert.AreEqual("10dencehispahard,s.l.", response.TechnicalContact.Name);
             Assert.AreEqual("10dencehispahard,s.l.", response.TechnicalContact.Organization);
+            Assert.AreEqual("+34.902364138", response.TechnicalContact.TelephoneNumber);
+            Assert.AreEqual("info@cdmon.com", response.TechnicalContact.Email);
 
              // TechnicalContact Address
             Assert.AreEqual(4, response.TechnicalContact.Address.Count);
@@ -82,8 +85,6 @@ namespace Whois.Parsing.Whois.Cdmon.Com.Com
             Assert.AreEqual("08380", response.TechnicalContact.Address[2]);
             Assert.AreEqual("ES", response.TechnicalContact.Address[3]);
 
-            Assert.AreEqual("+34.902364138", response.TechnicalContact.TelephoneNumber);
-            Assert.AreEqual("info@cdmon.com", response.TechnicalContact.Email);
 
             // Nameservers
             Assert.AreEqual(3, response.NameServers.Count);
