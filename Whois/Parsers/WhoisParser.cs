@@ -147,7 +147,7 @@ namespace Whois.Parsers
 
         public void ClearTemplates()
         {
-            //matcher.Templates.Clear();
+            matcher.Templates.Clear();
         }
 
         public void RegisterValidator<T>() where T : ITokenValidator

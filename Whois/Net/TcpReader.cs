@@ -11,7 +11,7 @@ namespace Whois.Net
     /// </summary>
     public class TcpReader : ITcpReader
     {
-        private readonly TcpClient tcpClient;
+        private TcpClient tcpClient;
 
         private StreamReader reader;
         private StreamWriter writer;
@@ -68,14 +68,6 @@ namespace Whois.Net
             }
         } 
 
-        /// <summary>
-        /// Initializes a new instance of the <see cref="TcpReader"/> class.
-        /// </summary>
-        public TcpReader()
-        {
-            tcpClient = new TcpClient();
-        }
-
         public async Task<string> Read(string url, int port, string command, Encoding encoding, int timeoutSeconds)
         {
             var task = Read(url, port, command, encoding);
@@ -92,13 +84,27 @@ namespace Whois.Net
         {
             var sb = new StringBuilder();
 
-            var connected = await Connect(url, port, encoding);
-
-            if (connected)
+            try
             {
-                await Write(command);
+                tcpClient = new TcpClient();
+                
+                var connected = await Connect(url, port, encoding);
 
-                await Read(sb);
+                if (connected)
+                {
+                    await Write(command);
+
+                    await Read(sb);
+                }
+            }
+            finally
+            {
+                if (tcpClient?.Connected == true) tcpClient.Close();
+#if !NET452
+                tcpClient?.Dispose();
+#endif
+                reader?.Dispose();
+                writer?.Dispose();
             }
 
             return sb.ToString();
