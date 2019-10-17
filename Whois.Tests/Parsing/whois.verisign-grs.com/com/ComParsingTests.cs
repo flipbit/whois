@@ -28,7 +28,7 @@ namespace Whois.Parsing.Whois.Verisign.Grs.Com.Com
             Assert.AreEqual(WhoisStatus.Found, response.Status);
 
             Assert.AreEqual(0, response.ParsingErrors);
-            Assert.AreEqual("whois.verisign-grs.com/Found", response.TemplateName);
+            Assert.AreEqual("generic/tld/Found02", response.TemplateName);
 
             Assert.AreEqual("y.com", response.DomainName);
 
@@ -58,7 +58,7 @@ namespace Whois.Parsing.Whois.Verisign.Grs.Com.Com
             Assert.AreEqual(WhoisStatus.PendingDelete, response.Status);
 
             Assert.AreEqual(0, response.ParsingErrors);
-            Assert.AreEqual("whois.verisign-grs.com/Found", response.TemplateName);
+            Assert.AreEqual("generic/tld/Found02", response.TemplateName);
 
             Assert.AreEqual("killianestates.com", response.DomainName);
 
@@ -91,9 +91,11 @@ namespace Whois.Parsing.Whois.Verisign.Grs.Com.Com
             Assert.AreEqual(WhoisStatus.NotFound, response.Status);
 
             Assert.AreEqual(0, response.ParsingErrors);
-            Assert.AreEqual("whois.verisign-grs.com/com/NotFound", response.TemplateName);
+            Assert.AreEqual("generic/tld/NotFound07", response.TemplateName);
 
-            Assert.AreEqual(1, response.FieldsParsed);
+            Assert.AreEqual("u34jedzcq.com", response.DomainName);
+
+            Assert.AreEqual(2, response.FieldsParsed);
         }
 
         [Test]
@@ -107,7 +109,7 @@ namespace Whois.Parsing.Whois.Verisign.Grs.Com.Com
 
             Assert.AreEqual(23, response.FieldsParsed);
             Assert.AreEqual(0, response.ParsingErrors);
-            Assert.AreEqual("whois.verisign-grs.com/Found", response.TemplateName);
+            Assert.AreEqual("generic/tld/Found02", response.TemplateName);
 
             Assert.AreEqual("google.com", response.DomainName);
             Assert.AreEqual("2138514_DOMAIN_COM-VRSN", response.RegistryDomainId);

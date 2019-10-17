@@ -662,8 +662,8 @@
     <EmbeddedResource Include="Resources\whois.uniregistry.net\tattoo\Unavailable.txt" />
     <EmbeddedResource Include="Resources\whois.usp.ac.fj\fj\Found.txt" />
     <EmbeddedResource Include="Resources\whois.usp.ac.fj\fj\NotFound.txt" />
-    <EmbeddedResource Include="Resources\whois.verisign-grs.com\Found.txt" />
-    <EmbeddedResource Include="Resources\whois.verisign-grs.com\NotFound.txt" />
+    <EmbeddedResource Include="Resources\generic\tld\Found02.txt" />
+    <EmbeddedResource Include="Resources\generic\tld\NotFound07.txt" />
     <EmbeddedResource Include="Resources\whois.website.ws\ws\Found.txt" />
     <EmbeddedResource Include="Resources\whois.website.ws\ws\NotFound.txt" />
     <EmbeddedResource Include="Resources\whois.za.net\za.net\Found.txt" />

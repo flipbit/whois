@@ -1,0 +1,44 @@
+   Domain Name: GGEMTV.COM
+   Registry Domain ID: 2282446647_DOMAIN_COM-VRSN
+   Registrar WHOIS Server: whois.dotname.co.kr
+   Registrar URL: http://www.dotname.co.kr
+   Updated Date: 2019-07-05T03:28:02Z
+   Creation Date: 2018-07-05T01:48:01Z
+   Registry Expiry Date: 2020-07-05T01:48:01Z
+   Registrar: Dotname Korea Corp.
+   Registrar IANA ID: 1132
+   Registrar Abuse Contact Email: abuse@dotnamekorea.com
+   Registrar Abuse Contact Phone: +82.7070900820
+   Domain Status: ok https://icann.org/epp#ok
+   Name Server: NS11.DNSTOOL.NET
+   Name Server: NS12.DNSTOOL.NET
+   Name Server: NS13.DNSTOOL.NET
+   DNSSEC: unsigned
+   URL of the ICANN Whois Inaccuracy Complaint Form: https://www.icann.org/wicf/
+>>> Last update of whois database: 2019-07-30T15:29:14Z <<<
+
+
+URL of the ICANN WHOIS Data Problem Reporting System: http://wdprs.internic.net
+
+Registrant Contact: dotname.co.kr/domain/whois/domain_search?mode=doit&domain=GGEMTV.COM
+
+Administrative Contact: dotname.co.kr/domain/whois/domain_search?mode=doit&domain=GGEMTV.COM
+
+Technical Contact: dotname.co.kr/domain/whois/domain_search?mode=doit&domain=GGEMTV.COM
+
+For more information on Whois status codes, please visit https://www.icann.org/resources/pages/epp-status-codes-2014-06-16-en
+
+
+Notes: 
+
+IMPORTANT: Port43 will provide the ICANN-required minimum data set 
+
+per ICANN Temporary Specification, adopted 17 May 2018. 
+
+https://www.icann.org/resources/pages/gtld-registration-data-specs-en/#appendixA
+
+2.5.1. Registrar MUST provide an email address or a web form to facilitate 
+
+email communication with the relevant contact, 
+
+but MUST NOT identify the contact email address or the contact itself.

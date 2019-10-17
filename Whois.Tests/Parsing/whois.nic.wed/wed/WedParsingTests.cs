@@ -28,10 +28,9 @@ namespace Whois.Parsing.Whois.Nic.Wed.Wed
             Assert.AreEqual(WhoisStatus.NotAvailable, response.Status);
 
             Assert.AreEqual(0, response.ParsingErrors);
-            Assert.AreEqual("generic/tld/Found001", response.TemplateName);
+            Assert.AreEqual("generic/tld/Found02", response.TemplateName);
 
             Assert.AreEqual("u34jedzcq.wed", response.DomainName);
-
 
             // Domain Status
             Assert.AreEqual(1, response.DomainStatus.Count);

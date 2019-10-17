@@ -2,12 +2,10 @@
 #
 # .com Parsing Template
 #
-name: whois.verisign-grs.com/Found
+name: generic/tld/Found02
 
-# Use this template for queries to whois.verisign-grs.com:
-tag: whois.verisign-grs.com
-tag: com
-tag: net
+# Use this template for catch-all parsing:
+tag: catch-all
 
 # Lines can appear out of order
 outOfOrder: true
@@ -35,7 +33,7 @@ set: Status = Found
    Registrar IANA ID: { Registrar.IanaId ? : Trim, IsNumeric }
    Registrar Abuse Contact Email: { Registrar.AbuseEmail ? : Trim, IsEmail }
    Registrar Abuse Contact Phone: { Registrar.AbuseTelephoneNumber ? : Trim, IsPhoneNumber }
-   Domain Status: { DomainStatus ? : Trim, Repeating, SubstringBefore(' ') }
-   Status: { DomainStatus ? : Trim, Repeating, SubstringBefore(' ') }
+   Domain Status: { DomainStatus ? : Trim, Repeating, CleanDomainStatus }
+   Status: { DomainStatus ? : Trim, Repeating, CleanDomainStatus }
    Name Server: { NameServers : Trim, IsDomainName, ToLower, Repeating }
    DNSSEC: { DnsSecStatus ? : Trim }
