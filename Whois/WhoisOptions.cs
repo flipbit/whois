@@ -3,7 +3,7 @@
 namespace Whois
 {
     /// <summary>
-    /// Specifies options for looking up WHOIS information
+    /// Specifies default options for looking up WHOIS information
     /// </summary>
     public class WhoisOptions
     {
@@ -13,9 +13,8 @@ namespace Whois
         {
             Defaults = new WhoisOptions
             {
-                DefaultEncoding = Encoding.UTF8,
-                ParseWhoisResponse = true,
-                ThrowOnParsingException = true,
+                Encoding = Encoding.UTF8,
+                FollowReferrer = true,
                 TimeoutSeconds = 10
             };
         }
@@ -23,12 +22,7 @@ namespace Whois
         /// <summary>
         /// The default encoding to use.
         /// </summary>
-        public Encoding DefaultEncoding { get; set; }
-
-        /// <summary>
-        /// Determines whether to parse the WHOIS response into a <see cref="ParseWhoisResponse"/> object.
-        /// </summary>
-        public bool ParseWhoisResponse { get; set; }
+        public Encoding Encoding { get; set; }
 
         /// <summary>
         /// Defines the network timeout to use when communicating with servers.
@@ -36,18 +30,20 @@ namespace Whois
         public int TimeoutSeconds { get; set; }
 
         /// <summary>
-        /// Determines whether an exception is thrown is WHOIS parsing fails.
+        /// Determines whether to following referral links when downloading WHOIS data.
         /// </summary>
-        public bool ThrowOnParsingException { get; set; }
+        public bool FollowReferrer { get; set; }
 
+        /// <summary>
+        /// Clones this instance.
+        /// </summary>
         public WhoisOptions Clone()
         {
             return new WhoisOptions
             {
-                DefaultEncoding = DefaultEncoding,
-                ParseWhoisResponse = ParseWhoisResponse,
-                ThrowOnParsingException = ThrowOnParsingException,
-                TimeoutSeconds = TimeoutSeconds
+                Encoding = Encoding,
+                TimeoutSeconds = TimeoutSeconds,
+                FollowReferrer = FollowReferrer
             };
         }
     }

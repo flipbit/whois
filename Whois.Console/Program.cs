@@ -20,7 +20,8 @@ namespace Whois
                 .Console(outputTemplate: "{Timestamp:HH:mm} [{Level}] {Message}{NewLine}{Exception}")
                 .WriteTo
                 .RollingFile("whois-{date}.txt")
-                .MinimumLevel.Debug()
+                .MinimumLevel
+                .Debug()
                 .CreateLogger();
 
             Log.Logger = log;
@@ -32,7 +33,6 @@ namespace Whois
             runner.Commands.Add(new WhoisCommand());
             runner.Commands.Add(new ExitCommand());
             runner.Commands.Add(new HelpCommand());
-            runner.Commands.Add(new Top500Command());
 
             runner.Run(args);
         }

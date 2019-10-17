@@ -141,8 +141,6 @@ namespace Whois
         /// <summary>
         /// Returns a new <see cref="WhoisResponse"/> with the specified WHOIS server URL
         /// </summary>
-        /// <param name="url"></param>
-        /// <returns></returns>
         internal static WhoisResponse WithServerUrl(string url)
         {
             return new WhoisResponse

@@ -3,7 +3,6 @@ using System.Text;
 using System.Text.RegularExpressions;
 using System.Threading.Tasks;
 using Whois.Logging;
-using Whois.Models;
 using Whois.Net;
 using Whois.Parsers;
 using Whois.Servers;
@@ -53,38 +52,54 @@ namespace Whois
         }
 
         /// <summary>
-        /// 
+        /// Performs a WHOIS lookup on the specified domain.
         /// </summary>
         public WhoisResponse Lookup(string domain)
         {
             return AsyncHelper.RunSync(() => LookupAsync(domain));
         }
 
+        /// <summary>
+        /// Performs a WHOIS lookup on the specified domain with the given encoding.
+        /// </summary>
         public WhoisResponse Lookup(string domain, Encoding encoding)
         {
             return AsyncHelper.RunSync(() => LookupAsync(domain, encoding));
         }
 
+        /// <summary>
+        /// Performs a WHOIS lookup for the given request.
+        /// </summary>
         public WhoisResponse Lookup(WhoisRequest request)
         {
             return AsyncHelper.RunSync(() => LookupAsync(request));
         }
 
+        /// <summary>
+        /// Performs a WHOIS lookup on the specified domain.
+        /// </summary>
         public Task<WhoisResponse> LookupAsync(string domain)
         {
-            return LookupAsync(domain, Options.DefaultEncoding);
+            return LookupAsync(domain, Options.Encoding);
         }
 
+        /// <summary>
+        /// Performs a WHOIS lookup on the specified domain with the given encoding.
+        /// </summary>
         public Task<WhoisResponse> LookupAsync(string domain, Encoding encoding)
         {
             return LookupAsync(new WhoisRequest
             {
                 Query = domain,
                 Encoding = encoding,
-                TimeoutSeconds = Options.TimeoutSeconds
+                TimeoutSeconds = Options.TimeoutSeconds,
+                FollowReferrer = Options.FollowReferrer
             });
         }
 
+        /// <summary>
+        /// Performs a WHOIS lookup for the given request.
+        /// </summary>
         public async Task<WhoisResponse> LookupAsync(WhoisRequest request)
         {
             if (string.IsNullOrEmpty(request.Query))

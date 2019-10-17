@@ -12,7 +12,7 @@ namespace Whois
         /// </summary>
         public WhoisRequest()
         {
-            Encoding = WhoisOptions.Defaults.DefaultEncoding;
+            Encoding = WhoisOptions.Defaults.Encoding;
             TimeoutSeconds = WhoisOptions.Defaults.TimeoutSeconds;
             FollowReferrer = true;
         }

@@ -14,5 +14,13 @@ namespace Whois
         public WhoisException(string message, Exception innerException) : base(message, innerException)
         {
         }
+
+        public override string Message
+        {
+            get
+            {
+                return $"{base.Message}{Environment.NewLine}{Environment.NewLine}Please log issues at:{Environment.NewLine}https://github.com/flipbit/whois/issues";
+            }
+        }
     }
 }
