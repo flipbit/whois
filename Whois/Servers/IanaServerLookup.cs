@@ -58,10 +58,17 @@ namespace Whois.Servers
             {
                 var match = result.BestMatch.Value;
 
+                match.Content = content;
+
                 return match;
             }
 
-            return new WhoisResponse { DomainName = tld, Status = WhoisStatus.Unknown };
+            return new WhoisResponse
+            {
+                Content = content,
+                DomainName = tld, 
+                Status = WhoisStatus.Unknown
+            };
         }
 
         private async Task<string> Download(string tld, WhoisRequest request)

@@ -2,6 +2,7 @@
 using System.Text;
 using System.Text.RegularExpressions;
 using System.Threading.Tasks;
+using Tokens.Extensions;
 using Whois.Logging;
 using Whois.Net;
 using Whois.Parsers;
@@ -107,7 +108,13 @@ namespace Whois
                 throw new ArgumentNullException("domain");
             }
 
-            if (IsValidDomainName(request.Query) == false)
+            var isTldQuery = false;
+            if (IsTldQuery(request.Query))
+            {
+                isTldQuery = true;
+                request.Query = request.Query.SubstringAfterString(".");
+            }
+            else if (IsValidDomainName(request.Query) == false)
             {
                 throw new WhoisException($"Domain Name is invalid: {request.Query}");
             }
@@ -129,7 +136,7 @@ namespace Whois
 
             // Main loop: download & parse WHOIS data and follow the referrer chain
             var whoisServerUrl = response?.WhoisServerUrl;
-            while (string.IsNullOrEmpty(whoisServerUrl) == false)
+            while (string.IsNullOrEmpty(whoisServerUrl) == false && !isTldQuery)
             {
                 // Download
                 var content = await Download(whoisServerUrl, request);
@@ -163,6 +170,21 @@ namespace Whois
             }
 
             return valid;
+        }
+
+        internal bool IsTldQuery(string query)
+        {
+            var isTldQuery = false;
+
+            if (!string.IsNullOrEmpty(query))
+            {
+                var regex = new Regex(@"^\.([a-zA-Z0-9]([a-zA-Z0-9\-]{0,61}[a-zA-Z0-9])?)");
+
+                isTldQuery = regex.Match(query).Success;
+            }
+
+
+            return isTldQuery;
         }
 
         private async Task<string> Download(string url, WhoisRequest request)

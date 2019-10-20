@@ -144,6 +144,26 @@ namespace Whois
         }
 
         [Test]
+        public async Task TestLookupTld()
+        {
+            var request = new WhoisRequest(".com");
+
+            var rootServer = new WhoisResponse
+            {
+                DomainName = "com",
+                Registrar = new Registrar { WhoisServerUrl = "whois.markmonitor.com" }
+            };
+
+            whoisServerLookup
+                .Setup(call => call.LookupAsync(request))
+                .Returns(Task.FromResult(rootServer));
+
+            var result = await lookup.LookupAsync(request);
+
+            Assert.AreEqual(rootServer, result);
+        }
+
+        [Test]
         public void TestLookupDomainWithEmptyQuery()
         {
             Assert.Throws<ArgumentNullException>(() => lookup.Lookup(string.Empty));
