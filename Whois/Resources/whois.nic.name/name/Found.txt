@@ -15,7 +15,7 @@ terminateOnNewLine: true
 set: Status = Found
 ---
    Domain Name ID: { RegistryDomainId ? }
-   Domain Name: { DomainName : IsDomainName, ToLower }
+   Domain Name: { DomainName : IsDomainName, ToHostName }
    Sponsoring Registrar: { Registrar.Name ? }
    Domain Status: { DomainStatus ? : Repeating, CleanDomainStatus }
    Registrant ID: { Registrant.RegistryId ? }

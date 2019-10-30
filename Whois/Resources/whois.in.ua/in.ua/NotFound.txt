@@ -13,4 +13,4 @@ set: Status = NotFound
 
 hint: No records found
 ---
-% No records found for object { DomainName : IsDomainName, ToLower }
+% No records found for object { DomainName : IsDomainName, ToHostName }

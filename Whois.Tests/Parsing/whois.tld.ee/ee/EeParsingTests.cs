@@ -30,7 +30,7 @@ namespace Whois.Parsing.Whois.Tld.Ee.Ee
             Assert.AreEqual(0, response.ParsingErrors);
             Assert.AreEqual("whois.tld.ee/ee/Found", response.TemplateName);
 
-            Assert.AreEqual("samanacrafts.ee", response.DomainName);
+            Assert.AreEqual("samanacrafts.ee", response.DomainName.ToString());
 
             // Registrar Details
             Assert.AreEqual("Edicy OÜ", response.Registrar.Name);
@@ -94,7 +94,7 @@ namespace Whois.Parsing.Whois.Tld.Ee.Ee
             Assert.AreEqual(0, response.ParsingErrors);
             Assert.AreEqual("whois.tld.ee/ee/Found", response.TemplateName);
 
-            Assert.AreEqual("eestiinternet.ee", response.DomainName);
+            Assert.AreEqual("eestiinternet.ee", response.DomainName.ToString());
 
             // Registrar Details
             Assert.AreEqual("Elisa Eesti AS", response.Registrar.Name);
@@ -144,7 +144,7 @@ namespace Whois.Parsing.Whois.Tld.Ee.Ee
             Assert.AreEqual(0, response.ParsingErrors);
             Assert.AreEqual("whois.tld.ee/ee/Found", response.TemplateName);
 
-            Assert.AreEqual("internet.ee", response.DomainName);
+            Assert.AreEqual("internet.ee", response.DomainName.ToString());
 
             // Registrar Details
             Assert.AreEqual("Elisa Eesti AS", response.Registrar.Name);

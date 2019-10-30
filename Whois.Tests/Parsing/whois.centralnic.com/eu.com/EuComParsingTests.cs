@@ -45,7 +45,7 @@ namespace Whois.Parsing.Whois.Centralnic.Com.EuCom
             Assert.AreEqual(0, response.ParsingErrors);
             Assert.AreEqual("whois.centralnic.com/Found", response.TemplateName);
 
-            Assert.AreEqual("walkabout.eu.com", response.DomainName);
+            Assert.AreEqual("walkabout.eu.com", response.DomainName.ToString());
             Assert.AreEqual("CNIC-DO85080", response.RegistryDomainId);
 
             // Registrar Details

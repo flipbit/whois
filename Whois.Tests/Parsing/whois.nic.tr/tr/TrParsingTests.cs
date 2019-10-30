@@ -507,7 +507,7 @@ namespace Whois.Parsing.Whois.Nic.Tr.Tr
             Assert.AreEqual(0, response.ParsingErrors);
             Assert.AreEqual("whois.nic.tr/tr/NotFound", response.TemplateName);
 
-            Assert.AreEqual("u34jedzcq.com.tr", response.DomainName);
+            Assert.AreEqual("u34jedzcq.com.tr", response.DomainName.ToString());
 
             Assert.AreEqual(2, response.FieldsParsed);
         }

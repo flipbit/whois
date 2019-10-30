@@ -30,7 +30,7 @@ namespace Whois.Parsing.Whois.Nic.Fr.Fr
             Assert.AreEqual(0, response.ParsingErrors);
             Assert.AreEqual("generic/tld/Found05", response.TemplateName);
 
-            Assert.AreEqual("shingara.fr", response.DomainName);
+            Assert.AreEqual("shingara.fr", response.DomainName.ToString());
 
             // Registrar Details
             Assert.AreEqual("1&1 Internet AG", response.Registrar.Name);
@@ -90,7 +90,7 @@ namespace Whois.Parsing.Whois.Nic.Fr.Fr
             Assert.AreEqual(0, response.ParsingErrors);
             Assert.AreEqual("generic/tld/Found05", response.TemplateName);
 
-            Assert.AreEqual("1c2.fr", response.DomainName);
+            Assert.AreEqual("1c2.fr", response.DomainName.ToString());
 
             // Registrar Details
             Assert.AreEqual("MAGIC ON LINE", response.Registrar.Name);
@@ -167,7 +167,7 @@ namespace Whois.Parsing.Whois.Nic.Fr.Fr
             Assert.AreEqual(0, response.ParsingErrors);
             Assert.AreEqual("generic/tld/Found05", response.TemplateName);
 
-            Assert.AreEqual("google.fr", response.DomainName);
+            Assert.AreEqual("google.fr", response.DomainName.ToString());
 
             // Registrar Details
             Assert.AreEqual("eMARKMONITOR Inc. dba MARKMONITOR", response.Registrar.Name);
@@ -247,7 +247,7 @@ namespace Whois.Parsing.Whois.Nic.Fr.Fr
             Assert.AreEqual(0, response.ParsingErrors);
             Assert.AreEqual("generic/tld/Found05", response.TemplateName);
 
-            Assert.AreEqual("boursedirect.fr", response.DomainName);
+            Assert.AreEqual("boursedirect.fr", response.DomainName.ToString());
 
             // Registrar Details
             Assert.AreEqual("FRANCE TELECOM", response.Registrar.Name);
@@ -324,7 +324,7 @@ namespace Whois.Parsing.Whois.Nic.Fr.Fr
             Assert.AreEqual(0, response.ParsingErrors);
             Assert.AreEqual("generic/tld/Found05", response.TemplateName);
 
-            Assert.AreEqual("nic.fr", response.DomainName);
+            Assert.AreEqual("nic.fr", response.DomainName.ToString());
 
             // Registrar Details
             Assert.AreEqual("AFNIC registry", response.Registrar.Name);
@@ -420,7 +420,7 @@ namespace Whois.Parsing.Whois.Nic.Fr.Fr
             Assert.AreEqual(0, response.ParsingErrors);
             Assert.AreEqual("generic/tld/Found05", response.TemplateName);
 
-            Assert.AreEqual("google.fr", response.DomainName);
+            Assert.AreEqual("google.fr", response.DomainName.ToString());
 
             // Registrar Details
             Assert.AreEqual("eMARKMONITOR Inc. dba MARKMONITOR", response.Registrar.Name);
@@ -500,7 +500,7 @@ namespace Whois.Parsing.Whois.Nic.Fr.Fr
             Assert.AreEqual(0, response.ParsingErrors);
             Assert.AreEqual("generic/tld/Found05", response.TemplateName);
 
-            Assert.AreEqual("amazingsales.fr", response.DomainName);
+            Assert.AreEqual("amazingsales.fr", response.DomainName.ToString());
 
             // Registrar Details
             Assert.AreEqual("OVH", response.Registrar.Name);
@@ -592,7 +592,7 @@ namespace Whois.Parsing.Whois.Nic.Fr.Fr
             Assert.AreEqual(0, response.ParsingErrors);
             Assert.AreEqual("generic/tld/Found05", response.TemplateName);
 
-            Assert.AreEqual("asso.fr", response.DomainName);
+            Assert.AreEqual("asso.fr", response.DomainName.ToString());
 
             // Registrar Details
             Assert.AreEqual("AFNIC registry", response.Registrar.Name);
@@ -681,7 +681,7 @@ namespace Whois.Parsing.Whois.Nic.Fr.Fr
             Assert.AreEqual(0, response.ParsingErrors);
             Assert.AreEqual("generic/tld/Found05", response.TemplateName);
 
-            Assert.AreEqual("behotel.fr", response.DomainName);
+            Assert.AreEqual("behotel.fr", response.DomainName.ToString());
 
             // Registrar Details
             Assert.AreEqual("OVH", response.Registrar.Name);
@@ -754,7 +754,7 @@ namespace Whois.Parsing.Whois.Nic.Fr.Fr
             Assert.AreEqual(0, response.ParsingErrors);
             Assert.AreEqual("generic/tld/Found05", response.TemplateName);
 
-            Assert.AreEqual("behotel.fr", response.DomainName);
+            Assert.AreEqual("behotel.fr", response.DomainName.ToString());
 
             // Registrar Details
             Assert.AreEqual("OVH", response.Registrar.Name);
@@ -827,7 +827,7 @@ namespace Whois.Parsing.Whois.Nic.Fr.Fr
             Assert.AreEqual(0, response.ParsingErrors);
             Assert.AreEqual("generic/tld/Found05", response.TemplateName);
 
-            Assert.AreEqual("shingara.fr", response.DomainName);
+            Assert.AreEqual("shingara.fr", response.DomainName.ToString());
 
             // Registrar Details
             Assert.AreEqual("1&1 Internet AG", response.Registrar.Name);
@@ -887,7 +887,7 @@ namespace Whois.Parsing.Whois.Nic.Fr.Fr
             Assert.AreEqual(0, response.ParsingErrors);
             Assert.AreEqual("generic/tld/Found05", response.TemplateName);
 
-            Assert.AreEqual("hotel.fr", response.DomainName);
+            Assert.AreEqual("hotel.fr", response.DomainName.ToString());
 
             // Registrar Details
             Assert.AreEqual("GANDI", response.Registrar.Name);
@@ -994,7 +994,7 @@ namespace Whois.Parsing.Whois.Nic.Fr.Fr
             Assert.AreEqual(0, response.ParsingErrors);
             Assert.AreEqual("generic/tld/Found05", response.TemplateName);
 
-            Assert.AreEqual("google.fr", response.DomainName);
+            Assert.AreEqual("google.fr", response.DomainName.ToString());
 
             // Registrar Details
             Assert.AreEqual("MARKMONITOR Inc.", response.Registrar.Name);

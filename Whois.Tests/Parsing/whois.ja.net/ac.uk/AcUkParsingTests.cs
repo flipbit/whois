@@ -31,7 +31,7 @@ namespace Whois.Parsing.Whois.Ja.Net.AcUk
             Assert.AreEqual(0, response.ParsingErrors);
             Assert.AreEqual("whois.ja.net/NotFound", response.TemplateName);
 
-            Assert.AreEqual("u34jedzcq.ac.uk", response.DomainName);
+            Assert.AreEqual("u34jedzcq.ac.uk", response.DomainName.ToString());
 
             Assert.AreEqual(2, response.FieldsParsed);
         }
@@ -48,7 +48,7 @@ namespace Whois.Parsing.Whois.Ja.Net.AcUk
             Assert.AreEqual(0, response.ParsingErrors);
             Assert.AreEqual("whois.ja.net/Found", response.TemplateName);
 
-            Assert.AreEqual("lboro.ac.uk", response.DomainName);
+            Assert.AreEqual("lboro.ac.uk", response.DomainName.ToString());
 
             // Registrar Details
             Assert.AreEqual("Jisc Collections and Janet Limited", response.Registrar.Name);

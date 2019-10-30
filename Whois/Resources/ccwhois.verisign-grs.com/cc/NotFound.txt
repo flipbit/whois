@@ -14,4 +14,4 @@ set: Status = NotFound
 # Must contain
 hint: No match
 ---
-No match for "{ DomainName : IsDomainName, ToLower }".
+No match for "{ DomainName : IsDomainName, ToHostName }".

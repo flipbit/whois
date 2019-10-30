@@ -11,7 +11,7 @@ tag: fj
 # Set query response type:
 set: Status = Found
 ---
-Domain name: { DomainName : IsDomainName, ToLower }	Status: { DomainStatus ? : EOL, CleanDomainStatus }
+Domain name: { DomainName : IsDomainName, ToHostName }	Status: { DomainStatus ? : EOL, CleanDomainStatus }
 Expires:     { Expiration ? : ToDateTimeUtc("d MMM yyyy"), EOL }
 
   Registrant:

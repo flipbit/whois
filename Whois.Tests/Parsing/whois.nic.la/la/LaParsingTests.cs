@@ -30,7 +30,7 @@ namespace Whois.Parsing.Whois.Nic.La.La
             Assert.AreEqual(0, response.ParsingErrors);
             Assert.AreEqual("generic/tld/Found001", response.TemplateName);
 
-            Assert.AreEqual("plasticsurgery.la", response.DomainName);
+            Assert.AreEqual("plasticsurgery.la", response.DomainName.ToString());
             Assert.AreEqual("CNIC-DO469366", response.RegistryDomainId);
 
             // Registrar Details
@@ -134,7 +134,7 @@ namespace Whois.Parsing.Whois.Nic.La.La
             Assert.AreEqual(0, response.ParsingErrors);
             Assert.AreEqual("generic/tld/Found001", response.TemplateName);
 
-            Assert.AreEqual("google.la", response.DomainName);
+            Assert.AreEqual("google.la", response.DomainName.ToString());
             Assert.AreEqual("CNIC-DO471480", response.RegistryDomainId);
 
             // Registrar Details
@@ -252,7 +252,7 @@ namespace Whois.Parsing.Whois.Nic.La.La
             Assert.AreEqual(0, response.ParsingErrors);
             Assert.AreEqual("generic/tld/Found001", response.TemplateName);
 
-            Assert.AreEqual("google.la", response.DomainName);
+            Assert.AreEqual("google.la", response.DomainName.ToString());
             Assert.AreEqual("CNIC-DO471480", response.RegistryDomainId);
 
             // Registrar Details

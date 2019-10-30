@@ -39,7 +39,7 @@ namespace Whois
 
             var rootServer = new WhoisResponse
             {
-                DomainName = "com",
+                DomainName = new HostName("com"),
                 Registrar = new Registrar { WhoisServerUrl = "whois.markmonitor.com" }
             };
 
@@ -53,7 +53,7 @@ namespace Whois
 
             var result = await lookup.LookupAsync(request);
 
-            Assert.AreEqual("google.com", result.DomainName);
+            Assert.AreEqual("google.com", result.DomainName.ToString());
             Assert.AreEqual(WhoisStatus.Found, result.Status);
         }
 
@@ -66,7 +66,7 @@ namespace Whois
 
             var rootServer = new WhoisResponse
             {
-                DomainName = "com",
+                DomainName = new HostName("com"),
                 Registrar = new Registrar { WhoisServerUrl = "whois.verisign-grs.com" }
             };
 
@@ -84,7 +84,7 @@ namespace Whois
 
             var result = await lookup.LookupAsync(request);
 
-            Assert.AreEqual("google.com", result.DomainName);
+            Assert.AreEqual("google.com", result.DomainName.ToString());
             Assert.AreEqual(WhoisStatus.Found, result.Status);
 
             Assert.AreEqual(authoritativeResult, result.Content);
@@ -100,7 +100,7 @@ namespace Whois
 
             var rootServer = new WhoisResponse
             {
-                DomainName = "com",
+                DomainName = new HostName("com"),
                 Registrar = new Registrar { WhoisServerUrl = "whois.verisign-grs.com" }
             };
 
@@ -114,7 +114,7 @@ namespace Whois
 
             var result = await lookup.LookupAsync(request);
 
-            Assert.AreEqual("google.com", result.DomainName);
+            Assert.AreEqual("google.com", result.DomainName.ToString());
             Assert.AreEqual(WhoisStatus.Found, result.Status);
 
             Assert.AreEqual(intermediateResult, result.Content);
@@ -133,7 +133,7 @@ namespace Whois
 
             var result = await lookup.LookupAsync(request);
 
-            Assert.AreEqual("google.com", result.DomainName);
+            Assert.AreEqual("google.com", result.DomainName.ToString());
             Assert.AreEqual(WhoisStatus.Found, result.Status);
 
             Assert.AreEqual(authoritativeResult, result.Content);
@@ -150,7 +150,7 @@ namespace Whois
 
             var rootServer = new WhoisResponse
             {
-                DomainName = "com",
+                DomainName = new HostName("com"),
                 Registrar = new Registrar { WhoisServerUrl = "whois.markmonitor.com" }
             };
 

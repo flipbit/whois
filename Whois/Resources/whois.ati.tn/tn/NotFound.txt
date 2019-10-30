@@ -14,4 +14,4 @@ set: Status = NotFound
 # Must contain:
 hint: not found
 ---
-Domain { DomainName : IsDomainName, ToLower, EOL } not found
+Domain { DomainName : IsDomainName, ToHostName, EOL } not found

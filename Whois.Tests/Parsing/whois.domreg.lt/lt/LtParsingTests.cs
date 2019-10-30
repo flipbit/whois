@@ -30,7 +30,7 @@ namespace Whois.Parsing.Whois.Domreg.Lt.Lt
             Assert.AreEqual(0, response.ParsingErrors);
             Assert.AreEqual("whois.domreg.lt/lt/Found", response.TemplateName);
 
-            Assert.AreEqual("serveriai.lt", response.DomainName);
+            Assert.AreEqual("serveriai.lt", response.DomainName.ToString());
 
             // Registrar Details
             Assert.AreEqual(@"UAB ""Interneto vizija""", response.Registrar.Name);
@@ -61,7 +61,7 @@ namespace Whois.Parsing.Whois.Domreg.Lt.Lt
             Assert.AreEqual(0, response.ParsingErrors);
             Assert.AreEqual("whois.domreg.lt/lt/NotFound", response.TemplateName);
 
-            Assert.AreEqual("u34jedzcq.lt", response.DomainName);
+            Assert.AreEqual("u34jedzcq.lt", response.DomainName.ToString());
 
             Assert.AreEqual(2, response.FieldsParsed);
         }
@@ -78,7 +78,7 @@ namespace Whois.Parsing.Whois.Domreg.Lt.Lt
             Assert.AreEqual(0, response.ParsingErrors);
             Assert.AreEqual("whois.domreg.lt/lt/Found", response.TemplateName);
 
-            Assert.AreEqual("google.lt", response.DomainName);
+            Assert.AreEqual("google.lt", response.DomainName.ToString());
 
             // Registrar Details
             Assert.AreEqual("MarkMonitor, Inc.", response.Registrar.Name);

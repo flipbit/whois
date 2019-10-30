@@ -30,7 +30,7 @@ namespace Whois.Parsing.Whois.Tcinet.Ru.Ru
             Assert.AreEqual(0, response.ParsingErrors);
             Assert.AreEqual("whois.tcinet.ru/Found", response.TemplateName);
 
-            Assert.AreEqual("masterhost.ru", response.DomainName);
+            Assert.AreEqual("masterhost.ru", response.DomainName.ToString());
 
             // Registrar Details
             Assert.AreEqual("REGISTRATOR-REG-RIPN", response.Registrar.Name);
@@ -84,7 +84,7 @@ namespace Whois.Parsing.Whois.Tcinet.Ru.Ru
             Assert.AreEqual(0, response.ParsingErrors);
             Assert.AreEqual("whois.tcinet.ru/Found", response.TemplateName);
 
-            Assert.AreEqual("google.ru", response.DomainName);
+            Assert.AreEqual("google.ru", response.DomainName.ToString());
 
             // Registrar Details
             Assert.AreEqual("RU-CENTER-REG-RIPN", response.Registrar.Name);

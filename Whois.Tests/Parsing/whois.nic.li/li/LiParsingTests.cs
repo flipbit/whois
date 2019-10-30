@@ -44,7 +44,7 @@ namespace Whois.Parsing.Whois.Nic.Li.Li
             Assert.AreEqual(0, response.ParsingErrors);
             Assert.AreEqual("whois.nic.li/li/Found", response.TemplateName);
 
-            Assert.AreEqual("google.li", response.DomainName);
+            Assert.AreEqual("google.li", response.DomainName.ToString());
 
              // Registrant Details
             Assert.AreEqual("Google Inc.", response.Registrant.Name);

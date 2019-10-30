@@ -14,4 +14,4 @@ set: Status = Throttled
 hint: Error for
 hint: The WHOIS query quota for
 ---
-    Error for "{ DomainName : IsDomainName, ToLower }".
+    Error for "{ DomainName : IsDomainName, ToHostName }".

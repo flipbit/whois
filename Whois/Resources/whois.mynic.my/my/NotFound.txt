@@ -13,4 +13,4 @@ set: Status = NotFound
 
 hint: does not exist in database
 ---
-Domain Name [{ DomainName : IsDomainName, ToLower }] does not exist in database
+Domain Name [{ DomainName : IsDomainName, ToHostName }] does not exist in database

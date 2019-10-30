@@ -27,7 +27,6 @@ namespace Whois.Parsing.Whois.Nic.Fo.Fo
             Assert.Greater(sample.Length, 0);
             Assert.AreEqual(WhoisStatus.NotFound, response.Status);
 
-            AssertWriter.Write(response);
             Assert.AreEqual(0, response.ParsingErrors);
             Assert.AreEqual("whois.nic.fo/fo/NotFound", response.TemplateName);
 
@@ -46,7 +45,7 @@ namespace Whois.Parsing.Whois.Nic.Fo.Fo
             Assert.AreEqual(0, response.ParsingErrors);
             Assert.AreEqual("whois.nic.fo/fo/Found", response.TemplateName);
 
-            Assert.AreEqual("nic.fo", response.DomainName);
+            Assert.AreEqual("nic.fo", response.DomainName.ToString());
 
             Assert.AreEqual(new DateTime(2011, 07, 12, 12, 52, 57, 000, DateTimeKind.Utc), response.Updated);
             Assert.AreEqual(new DateTime(2010, 06, 03, 03, 34, 05, 000, DateTimeKind.Utc), response.Registered);

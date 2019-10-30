@@ -15,7 +15,7 @@ terminateOnNewLine: true
 set: Status = Found
 ---
 Domain:
-name:       { DomainName : IsDomainName, ToLower }
+name:       { DomainName : IsDomainName, ToHostName }
 status:     { DomainStatus ? : Repeating, CleanDomainStatus }
 registered: { Registered ? : ToDateTimeUtc("yyyy-MM-dd HH:mm:ss zzz") }
 changed:    { Updated    ? : ToDateTimeUtc("yyyy-MM-dd HH:mm:ss zzz") }

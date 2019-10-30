@@ -45,7 +45,7 @@ namespace Whois.Parsing.Whois.Nic.Design.Design
             Assert.AreEqual(0, response.ParsingErrors);
             Assert.AreEqual("generic/tld/Found001", response.TemplateName);
 
-            Assert.AreEqual("toplevel.design", response.DomainName);
+            Assert.AreEqual("toplevel.design", response.DomainName.ToString());
             Assert.AreEqual("D7069819-CNIC", response.RegistryDomainId);
 
             // Registrar Details

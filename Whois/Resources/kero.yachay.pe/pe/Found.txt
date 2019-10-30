@@ -15,7 +15,7 @@ set: Status = Found
 hint: Status: Active 
 ---
 Domain Information
-Query: { DomainName : IsDomainName, ToLower, EOL }
+Query: { DomainName : IsDomainName, ToHostName, EOL }
 Status: { DomainStatus ? : Repeating, Trim, SubstringBefore(' '), EOL }
 Registrar: { Registrar.Name ? : EOL }
 Name Servers:

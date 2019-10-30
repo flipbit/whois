@@ -11,7 +11,7 @@ tag: co.ca
 # Set query response type:
 set: Status = Found
 ---
-domain: { DomainName : IsDomainName, ToLower, EOL }
+domain: { DomainName : IsDomainName, ToHostName, EOL }
 date_approved: { Registered ? : ToDateTimeUtc("yyyy-MM-dd HH:mm:ss"), EOL }
 date_renewal: { Expiration ? : ToDateTimeUtc("yyyy-MM-dd"), EOL }
 ns1_hostname: { NameServers ? : IsDomainName, ToLower, EOL }

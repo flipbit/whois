@@ -30,7 +30,7 @@ namespace Whois.Parsing.Whois.Educause.Edu.Edu
             Assert.AreEqual(0, response.ParsingErrors);
             Assert.AreEqual("whois.educause.edu/edu/Found01", response.TemplateName);
 
-            Assert.AreEqual("nic.edu", response.DomainName);
+            Assert.AreEqual("nic.edu", response.DomainName.ToString());
 
             Assert.AreEqual(new DateTime(2010, 06, 29, 00, 00, 00, 000, DateTimeKind.Utc), response.Updated);
             Assert.AreEqual(new DateTime(1996, 12, 20, 00, 00, 00, 000, DateTimeKind.Utc), response.Registered);
@@ -92,7 +92,7 @@ namespace Whois.Parsing.Whois.Educause.Edu.Edu
             Assert.AreEqual(0, response.ParsingErrors);
             Assert.AreEqual("whois.educause.edu/edu/Found01", response.TemplateName);
 
-            Assert.AreEqual("harvard.edu", response.DomainName);
+            Assert.AreEqual("harvard.edu", response.DomainName.ToString());
 
             Assert.AreEqual(new DateTime(2012, 03, 19, 00, 00, 00, 000, DateTimeKind.Utc), response.Updated);
             Assert.AreEqual(new DateTime(1985, 06, 27, 00, 00, 00, 000, DateTimeKind.Utc), response.Registered);
@@ -156,7 +156,7 @@ namespace Whois.Parsing.Whois.Educause.Edu.Edu
             Assert.AreEqual(0, response.ParsingErrors);
             Assert.AreEqual("whois.educause.edu/edu/Found02", response.TemplateName);
 
-            Assert.AreEqual("stanford.edu", response.DomainName);
+            Assert.AreEqual("stanford.edu", response.DomainName.ToString());
 
             Assert.AreEqual(new DateTime(2009, 05, 07, 00, 00, 00, 000, DateTimeKind.Utc), response.Updated);
             Assert.AreEqual(new DateTime(1985, 10, 04, 00, 00, 00, 000, DateTimeKind.Utc), response.Registered);
@@ -219,7 +219,7 @@ namespace Whois.Parsing.Whois.Educause.Edu.Edu
             Assert.AreEqual(0, response.ParsingErrors);
             Assert.AreEqual("whois.educause.edu/edu/Found02", response.TemplateName);
 
-            Assert.AreEqual("nyu.edu", response.DomainName);
+            Assert.AreEqual("nyu.edu", response.DomainName.ToString());
 
             Assert.AreEqual(new DateTime(2007, 10, 12, 00, 00, 00, 000, DateTimeKind.Utc), response.Updated);
             Assert.AreEqual(new DateTime(1986, 10, 08, 00, 00, 00, 000, DateTimeKind.Utc), response.Registered);
@@ -283,7 +283,7 @@ namespace Whois.Parsing.Whois.Educause.Edu.Edu
             Assert.AreEqual(0, response.ParsingErrors);
             Assert.AreEqual("whois.educause.edu/edu/Found01", response.TemplateName);
 
-            Assert.AreEqual("uiuc.edu", response.DomainName);
+            Assert.AreEqual("uiuc.edu", response.DomainName.ToString());
 
             Assert.AreEqual(new DateTime(2011, 03, 22, 00, 00, 00, 000, DateTimeKind.Utc), response.Updated);
             Assert.AreEqual(new DateTime(1985, 07, 18, 00, 00, 00, 000, DateTimeKind.Utc), response.Registered);
@@ -348,7 +348,7 @@ namespace Whois.Parsing.Whois.Educause.Edu.Edu
             Assert.AreEqual(0, response.ParsingErrors);
             Assert.AreEqual("whois.educause.edu/edu/Found03", response.TemplateName);
 
-            Assert.AreEqual("brown.edu", response.DomainName);
+            Assert.AreEqual("brown.edu", response.DomainName.ToString());
 
             Assert.AreEqual(new DateTime(2011, 01, 05, 00, 00, 00, 000, DateTimeKind.Utc), response.Updated);
             Assert.AreEqual(new DateTime(1986, 08, 27, 00, 00, 00, 000, DateTimeKind.Utc), response.Registered);
@@ -411,7 +411,7 @@ namespace Whois.Parsing.Whois.Educause.Edu.Edu
             Assert.AreEqual(0, response.ParsingErrors);
             Assert.AreEqual("whois.educause.edu/edu/Found01", response.TemplateName);
 
-            Assert.AreEqual("nic.edu", response.DomainName);
+            Assert.AreEqual("nic.edu", response.DomainName.ToString());
 
             Assert.AreEqual(new DateTime(2010, 06, 29, 00, 00, 00, 000, DateTimeKind.Utc), response.Updated);
             Assert.AreEqual(new DateTime(1996, 12, 20, 00, 00, 00, 000, DateTimeKind.Utc), response.Registered);
@@ -474,7 +474,7 @@ namespace Whois.Parsing.Whois.Educause.Edu.Edu
             Assert.AreEqual(0, response.ParsingErrors);
             Assert.AreEqual("whois.educause.edu/edu/Found01", response.TemplateName);
 
-            Assert.AreEqual("educause.edu", response.DomainName);
+            Assert.AreEqual("educause.edu", response.DomainName.ToString());
 
             Assert.AreEqual(new DateTime(2009, 10, 02, 00, 00, 00, 000, DateTimeKind.Utc), response.Updated);
             Assert.AreEqual(new DateTime(1998, 03, 11, 00, 00, 00, 000, DateTimeKind.Utc), response.Registered);
@@ -538,7 +538,7 @@ namespace Whois.Parsing.Whois.Educause.Edu.Edu
             Assert.AreEqual(0, response.ParsingErrors);
             Assert.AreEqual("whois.educause.edu/edu/Found02", response.TemplateName);
 
-            Assert.AreEqual("stanford.edu", response.DomainName);
+            Assert.AreEqual("stanford.edu", response.DomainName.ToString());
 
             Assert.AreEqual(new DateTime(2009, 05, 07, 00, 00, 00, 000, DateTimeKind.Utc), response.Updated);
             Assert.AreEqual(new DateTime(1985, 10, 04, 00, 00, 00, 000, DateTimeKind.Utc), response.Registered);
@@ -602,7 +602,7 @@ namespace Whois.Parsing.Whois.Educause.Edu.Edu
             Assert.AreEqual(0, response.ParsingErrors);
             Assert.AreEqual("whois.educause.edu/edu/Found01", response.TemplateName);
 
-            Assert.AreEqual("uiuc.edu", response.DomainName);
+            Assert.AreEqual("uiuc.edu", response.DomainName.ToString());
 
             Assert.AreEqual(new DateTime(2011, 03, 22, 00, 00, 00, 000, DateTimeKind.Utc), response.Updated);
             Assert.AreEqual(new DateTime(1985, 07, 18, 00, 00, 00, 000, DateTimeKind.Utc), response.Registered);
@@ -666,7 +666,7 @@ namespace Whois.Parsing.Whois.Educause.Edu.Edu
             Assert.AreEqual(0, response.ParsingErrors);
             Assert.AreEqual("whois.educause.edu/edu/Found02", response.TemplateName);
 
-            Assert.AreEqual("syr.edu", response.DomainName);
+            Assert.AreEqual("syr.edu", response.DomainName.ToString());
 
             Assert.AreEqual(new DateTime(2010, 07, 07, 00, 00, 00, 000, DateTimeKind.Utc), response.Updated);
             Assert.AreEqual(new DateTime(1986, 09, 02, 00, 00, 00, 000, DateTimeKind.Utc), response.Registered);
@@ -731,7 +731,7 @@ namespace Whois.Parsing.Whois.Educause.Edu.Edu
             Assert.AreEqual(0, response.ParsingErrors);
             Assert.AreEqual("whois.educause.edu/edu/Found01", response.TemplateName);
 
-            Assert.AreEqual("nic.edu", response.DomainName);
+            Assert.AreEqual("nic.edu", response.DomainName.ToString());
 
             Assert.AreEqual(new DateTime(2010, 06, 29, 00, 00, 00, 000, DateTimeKind.Utc), response.Updated);
             Assert.AreEqual(new DateTime(1996, 12, 20, 00, 00, 00, 000, DateTimeKind.Utc), response.Registered);
@@ -794,7 +794,7 @@ namespace Whois.Parsing.Whois.Educause.Edu.Edu
             Assert.AreEqual(0, response.ParsingErrors);
             Assert.AreEqual("whois.educause.edu/edu/Found01", response.TemplateName);
 
-            Assert.AreEqual("mit.edu", response.DomainName);
+            Assert.AreEqual("mit.edu", response.DomainName.ToString());
 
             Assert.AreEqual(new DateTime(2010, 06, 18, 00, 00, 00, 000, DateTimeKind.Utc), response.Updated);
             Assert.AreEqual(new DateTime(1985, 05, 23, 00, 00, 00, 000, DateTimeKind.Utc), response.Registered);
@@ -850,7 +850,7 @@ namespace Whois.Parsing.Whois.Educause.Edu.Edu
             Assert.AreEqual(0, response.ParsingErrors);
             Assert.AreEqual("whois.educause.edu/edu/Found01", response.TemplateName);
 
-            Assert.AreEqual("aucmed.edu", response.DomainName);
+            Assert.AreEqual("aucmed.edu", response.DomainName.ToString());
 
             Assert.AreEqual(new DateTime(2011, 08, 09, 00, 00, 00, 000, DateTimeKind.Utc), response.Updated);
             Assert.AreEqual(new DateTime(1997, 07, 02, 00, 00, 00, 000, DateTimeKind.Utc), response.Registered);
@@ -912,7 +912,7 @@ namespace Whois.Parsing.Whois.Educause.Edu.Edu
             Assert.AreEqual(0, response.ParsingErrors);
             Assert.AreEqual("whois.educause.edu/edu/Found01", response.TemplateName);
 
-            Assert.AreEqual("harvard.edu", response.DomainName);
+            Assert.AreEqual("harvard.edu", response.DomainName.ToString());
 
             Assert.AreEqual(new DateTime(2012, 03, 19, 00, 00, 00, 000, DateTimeKind.Utc), response.Updated);
             Assert.AreEqual(new DateTime(1985, 06, 27, 00, 00, 00, 000, DateTimeKind.Utc), response.Registered);
@@ -977,7 +977,7 @@ namespace Whois.Parsing.Whois.Educause.Edu.Edu
             Assert.AreEqual(0, response.ParsingErrors);
             Assert.AreEqual("whois.educause.edu/edu/Found01", response.TemplateName);
 
-            Assert.AreEqual("pcihealth.edu", response.DomainName);
+            Assert.AreEqual("pcihealth.edu", response.DomainName.ToString());
 
             Assert.AreEqual(new DateTime(2004, 03, 12, 00, 00, 00, 000, DateTimeKind.Utc), response.Registered);
             Assert.AreEqual(new DateTime(2012, 07, 31, 00, 00, 00, 000, DateTimeKind.Utc), response.Expiration);
@@ -1054,7 +1054,7 @@ namespace Whois.Parsing.Whois.Educause.Edu.Edu
             Assert.AreEqual(0, response.ParsingErrors);
             Assert.AreEqual("whois.educause.edu/edu/Found01", response.TemplateName);
 
-            Assert.AreEqual("academia.edu", response.DomainName);
+            Assert.AreEqual("academia.edu", response.DomainName.ToString());
 
             Assert.AreEqual(new DateTime(2012, 04, 04, 00, 00, 00, 000, DateTimeKind.Utc), response.Updated);
             Assert.AreEqual(new DateTime(1999, 05, 10, 00, 00, 00, 000, DateTimeKind.Utc), response.Registered);

@@ -30,7 +30,7 @@ namespace Whois.Parsing.Whois.Sk.Nic.Sk.Sk
             Assert.AreEqual(0, response.ParsingErrors);
             Assert.AreEqual("whois.sk-nic.sk/sk/Found", response.TemplateName);
 
-            Assert.AreEqual("plac.sk", response.DomainName);
+            Assert.AreEqual("plac.sk", response.DomainName.ToString());
 
             Assert.AreEqual(new DateTime(2011, 04, 20, 00, 00, 00, 000, DateTimeKind.Utc), response.Updated);
             Assert.AreEqual(new DateTime(2011, 05, 04, 00, 00, 00, 000, DateTimeKind.Utc), response.Expiration);
@@ -81,7 +81,7 @@ namespace Whois.Parsing.Whois.Sk.Nic.Sk.Sk
             Assert.AreEqual(0, response.ParsingErrors);
             Assert.AreEqual("whois.sk-nic.sk/sk/Found", response.TemplateName);
 
-            Assert.AreEqual("kuphry.sk", response.DomainName);
+            Assert.AreEqual("kuphry.sk", response.DomainName.ToString());
 
             Assert.AreEqual(new DateTime(2011, 08, 02, 00, 00, 00, 000, DateTimeKind.Utc), response.Updated);
             Assert.AreEqual(new DateTime(2011, 08, 16, 00, 00, 00, 000, DateTimeKind.Utc), response.Expiration);
@@ -134,7 +134,7 @@ namespace Whois.Parsing.Whois.Sk.Nic.Sk.Sk
             Assert.AreEqual(0, response.ParsingErrors);
             Assert.AreEqual("whois.sk-nic.sk/sk/Found", response.TemplateName);
 
-            Assert.AreEqual("plac.sk", response.DomainName);
+            Assert.AreEqual("plac.sk", response.DomainName.ToString());
 
             Assert.AreEqual(new DateTime(2011, 03, 06, 00, 00, 00, 000, DateTimeKind.Utc), response.Updated);
             Assert.AreEqual(new DateTime(2011, 04, 03, 00, 00, 00, 000, DateTimeKind.Utc), response.Expiration);
@@ -169,7 +169,7 @@ namespace Whois.Parsing.Whois.Sk.Nic.Sk.Sk
             Assert.AreEqual(0, response.ParsingErrors);
             Assert.AreEqual("whois.sk-nic.sk/sk/Found", response.TemplateName);
 
-            Assert.AreEqual("dobramasaz.sk", response.DomainName);
+            Assert.AreEqual("dobramasaz.sk", response.DomainName.ToString());
 
             Assert.AreEqual(new DateTime(2011, 08, 02, 00, 00, 00, 000, DateTimeKind.Utc), response.Updated);
             Assert.AreEqual(new DateTime(2011, 08, 16, 00, 00, 00, 000, DateTimeKind.Utc), response.Expiration);
@@ -221,7 +221,7 @@ namespace Whois.Parsing.Whois.Sk.Nic.Sk.Sk
             Assert.AreEqual(0, response.ParsingErrors);
             Assert.AreEqual("whois.sk-nic.sk/sk/Found", response.TemplateName);
 
-            Assert.AreEqual("google.sk", response.DomainName);
+            Assert.AreEqual("google.sk", response.DomainName.ToString());
 
             Assert.AreEqual(new DateTime(2010, 06, 28, 00, 00, 00, 000, DateTimeKind.Utc), response.Updated);
             Assert.AreEqual(new DateTime(2011, 07, 23, 00, 00, 00, 000, DateTimeKind.Utc), response.Expiration);
@@ -274,7 +274,7 @@ namespace Whois.Parsing.Whois.Sk.Nic.Sk.Sk
             Assert.AreEqual(0, response.ParsingErrors);
             Assert.AreEqual("whois.sk-nic.sk/sk/Found", response.TemplateName);
 
-            Assert.AreEqual("plac.sk", response.DomainName);
+            Assert.AreEqual("plac.sk", response.DomainName.ToString());
 
             Assert.AreEqual(new DateTime(2011, 08, 02, 00, 00, 00, 000, DateTimeKind.Utc), response.Updated);
             Assert.AreEqual(new DateTime(2011, 08, 16, 00, 00, 00, 000, DateTimeKind.Utc), response.Expiration);
@@ -325,7 +325,7 @@ namespace Whois.Parsing.Whois.Sk.Nic.Sk.Sk
             Assert.AreEqual(0, response.ParsingErrors);
             Assert.AreEqual("whois.sk-nic.sk/sk/Found", response.TemplateName);
 
-            Assert.AreEqual("e-biznis.sk", response.DomainName);
+            Assert.AreEqual("e-biznis.sk", response.DomainName.ToString());
 
             Assert.AreEqual(new DateTime(2011, 07, 30, 00, 00, 00, 000, DateTimeKind.Utc), response.Updated);
             Assert.AreEqual(new DateTime(2011, 08, 27, 00, 00, 00, 000, DateTimeKind.Utc), response.Expiration);
@@ -390,7 +390,7 @@ namespace Whois.Parsing.Whois.Sk.Nic.Sk.Sk
             Assert.AreEqual(0, response.ParsingErrors);
             Assert.AreEqual("whois.sk-nic.sk/sk/Found", response.TemplateName);
 
-            Assert.AreEqual("google.sk", response.DomainName);
+            Assert.AreEqual("google.sk", response.DomainName.ToString());
 
             Assert.AreEqual(new DateTime(2010, 06, 28, 00, 00, 00, 000, DateTimeKind.Utc), response.Updated);
             Assert.AreEqual(new DateTime(2011, 07, 23, 00, 00, 00, 000, DateTimeKind.Utc), response.Expiration);

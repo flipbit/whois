@@ -17,7 +17,7 @@ Registrant:
    TEL { Registrant.TelephoneNumber ? : IsPhoneNumber, EOL }
    FAX { Registrant.FaxNumber ? : IsPhoneNumber, EOL }
 
-   Domain Name: { DomainName : IsDomainName, ToLower, EOL }
+   Domain Name: { DomainName : IsDomainName, ToHostName, EOL }
 
    Contacts:
       { AdminContact.Name ? }      { AdminContact.Email ? : IsEmail, EOL }

@@ -39,7 +39,7 @@ namespace Whois.Parsing.Whois.Aeda.Net.Ae.Ae
             Assert.AreEqual(11, response.FieldsParsed);
             Assert.AreEqual(0, response.ParsingErrors);
 
-            Assert.AreEqual("google.ae", response.DomainName);
+            Assert.AreEqual("google.ae", response.DomainName.ToString());
 
             Assert.AreEqual("MarkMonitor", response.Registrar.Name);
 

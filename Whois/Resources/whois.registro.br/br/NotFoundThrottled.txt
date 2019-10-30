@@ -14,4 +14,4 @@ set: Status = Throttled
 hint: No match for
 hint: Query rate limit exceeded
 ---
-% No match for domain "{ DomainName : IsDomainName, ToLower, EOL }"
+% No match for domain "{ DomainName : IsDomainName, ToHostName, EOL }"

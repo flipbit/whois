@@ -13,5 +13,5 @@ set: Status = Invalid
 
 hint: Status: invalid
 ---
-Domain: { DomainName : IsDomainName, ToLower, EOL }
+Domain: { DomainName : IsDomainName, ToHostName, EOL }
 Status: { DomainStatus ? : EOL }

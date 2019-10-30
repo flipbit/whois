@@ -46,7 +46,7 @@ namespace Whois.Parsing.Whois.Bnnic.Bn.Bn
             Assert.AreEqual(0, response.ParsingErrors);
             Assert.AreEqual("whois.bnnic.bn/bn/Found", response.TemplateName);
 
-            Assert.AreEqual("telbru.com.bn", response.DomainName);
+            Assert.AreEqual("telbru.com.bn", response.DomainName.ToString());
 
             // Registrar Details
             Assert.AreEqual("TELEKOM BRUNEI BERHAD", response.Registrar.Name);

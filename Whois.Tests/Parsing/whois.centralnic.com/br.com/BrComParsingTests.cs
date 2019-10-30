@@ -45,7 +45,7 @@ namespace Whois.Parsing.Whois.Centralnic.Com.BrCom
             Assert.AreEqual(0, response.ParsingErrors);
             Assert.AreEqual("whois.centralnic.com/Found", response.TemplateName);
 
-            Assert.AreEqual("billboard.br.com", response.DomainName);
+            Assert.AreEqual("billboard.br.com", response.DomainName.ToString());
             Assert.AreEqual("CNIC-DO624205", response.RegistryDomainId);
 
             // Registrar Details

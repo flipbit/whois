@@ -15,7 +15,7 @@ terminateOnNewLine: true
 set: Status = Found
 ---
 Domain Information
-Query: { DomainName : IsDomainName, ToLower }
+Query: { DomainName : IsDomainName, ToHostName }
 Status: { DomainStatus ? : Repeating, CleanDomainStatus }
 Created: { Registered ? : Replace(' WAT', '+01:00'), ToDateTimeUtc("dd MMM yyyy HH:mmzzz") }
 Modified: { Updated ? : Replace(' WAT', '+01:00'), ToDateTimeUtc("dd MMM yyyy HH:mmzzz") }

@@ -30,7 +30,7 @@ namespace Whois.Parsing.Whois.Nc.Nc
             Assert.AreEqual(0, response.ParsingErrors);
             Assert.AreEqual("whois.nc/nc/Found", response.TemplateName);
 
-            Assert.AreEqual("rya.nc", response.DomainName);
+            Assert.AreEqual("rya.nc", response.DomainName.ToString());
 
             Assert.AreEqual(new DateTime(2013, 03, 19, 00, 00, 00, 000, DateTimeKind.Utc), response.Updated);
             Assert.AreEqual(new DateTime(2013, 03, 15, 00, 00, 00, 000, DateTimeKind.Utc), response.Registered);
@@ -66,7 +66,7 @@ namespace Whois.Parsing.Whois.Nc.Nc
             Assert.AreEqual(0, response.ParsingErrors);
             Assert.AreEqual("whois.nc/nc/Found", response.TemplateName);
 
-            Assert.AreEqual("gouv.nc", response.DomainName);
+            Assert.AreEqual("gouv.nc", response.DomainName.ToString());
 
             Assert.AreEqual(new DateTime(2011, 10, 20, 00, 00, 00, 000, DateTimeKind.Utc), response.Updated);
             Assert.AreEqual(new DateTime(1999, 10, 20, 00, 00, 00, 000, DateTimeKind.Utc), response.Registered);
@@ -116,7 +116,7 @@ namespace Whois.Parsing.Whois.Nc.Nc
             Assert.AreEqual(0, response.ParsingErrors);
             Assert.AreEqual("whois.nc/nc/Found", response.TemplateName);
 
-            Assert.AreEqual("domaine.nc", response.DomainName);
+            Assert.AreEqual("domaine.nc", response.DomainName.ToString());
 
             Assert.AreEqual(new DateTime(2013, 04, 03, 00, 00, 00, 000, DateTimeKind.Utc), response.Updated);
             Assert.AreEqual(new DateTime(2006, 05, 14, 00, 00, 00, 000, DateTimeKind.Utc), response.Registered);

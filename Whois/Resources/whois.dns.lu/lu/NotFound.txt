@@ -13,5 +13,5 @@ set: Status = NotFound
 
 hint: No such domain
 ---
-% WHOIS { DomainName : IsDomainName, ToLower }
+% WHOIS { DomainName : IsDomainName, ToHostName }
 % No such domain

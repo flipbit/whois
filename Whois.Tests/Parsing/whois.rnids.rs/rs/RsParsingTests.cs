@@ -30,7 +30,7 @@ namespace Whois.Parsing.Whois.Rnids.Rs.Rs
             Assert.AreEqual(0, response.ParsingErrors);
             Assert.AreEqual("whois.rnids.rs/rs/Found", response.TemplateName);
 
-            Assert.AreEqual("eg.rs", response.DomainName);
+            Assert.AreEqual("eg.rs", response.DomainName.ToString());
 
             // Registrar Details
             Assert.AreEqual("GAMA Electronics d.o.o.", response.Registrar.Name);
@@ -63,7 +63,7 @@ namespace Whois.Parsing.Whois.Rnids.Rs.Rs
             Assert.AreEqual(0, response.ParsingErrors);
             Assert.AreEqual("whois.rnids.rs/rs/Found", response.TemplateName);
 
-            Assert.AreEqual("eg.rs", response.DomainName);
+            Assert.AreEqual("eg.rs", response.DomainName.ToString());
 
             // Registrar Details
             Assert.AreEqual("GAMA Electronics d.o.o.", response.Registrar.Name);
@@ -96,7 +96,7 @@ namespace Whois.Parsing.Whois.Rnids.Rs.Rs
             Assert.AreEqual(0, response.ParsingErrors);
             Assert.AreEqual("whois.rnids.rs/rs/Found", response.TemplateName);
 
-            Assert.AreEqual("saj.rs", response.DomainName);
+            Assert.AreEqual("saj.rs", response.DomainName.ToString());
 
             // Registrar Details
             Assert.AreEqual("BGSVETIONIK.S.A.", response.Registrar.Name);
@@ -133,7 +133,7 @@ namespace Whois.Parsing.Whois.Rnids.Rs.Rs
             Assert.AreEqual(0, response.ParsingErrors);
             Assert.AreEqual("whois.rnids.rs/rs/Found", response.TemplateName);
 
-            Assert.AreEqual("saj.rs", response.DomainName);
+            Assert.AreEqual("saj.rs", response.DomainName.ToString());
 
             // Registrar Details
             Assert.AreEqual("NINET Company d.o.o.", response.Registrar.Name);
@@ -170,7 +170,7 @@ namespace Whois.Parsing.Whois.Rnids.Rs.Rs
             Assert.AreEqual(0, response.ParsingErrors);
             Assert.AreEqual("whois.rnids.rs/rs/Found", response.TemplateName);
 
-            Assert.AreEqual("kondor.rs", response.DomainName);
+            Assert.AreEqual("kondor.rs", response.DomainName.ToString());
 
             // Registrar Details
             Assert.AreEqual("BGSVETIONIK.S.A.", response.Registrar.Name);
@@ -224,7 +224,7 @@ namespace Whois.Parsing.Whois.Rnids.Rs.Rs
             Assert.AreEqual(0, response.ParsingErrors);
             Assert.AreEqual("whois.rnids.rs/rs/Found", response.TemplateName);
 
-            Assert.AreEqual("google.rs", response.DomainName);
+            Assert.AreEqual("google.rs", response.DomainName.ToString());
 
             // Registrar Details
             Assert.AreEqual("NINET Company d.o.o.", response.Registrar.Name);

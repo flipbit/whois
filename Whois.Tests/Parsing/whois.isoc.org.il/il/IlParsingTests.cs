@@ -27,7 +27,6 @@ namespace Whois.Parsing.Whois.Isoc.Org.Il.Il
             Assert.Greater(sample.Length, 0);
             Assert.AreEqual(WhoisStatus.NotFound, response.Status);
 
-            AssertWriter.Write(response);
             Assert.AreEqual(0, response.ParsingErrors);
             Assert.AreEqual("whois.isoc.org.il/il/NotFound", response.TemplateName);
 
@@ -46,7 +45,7 @@ namespace Whois.Parsing.Whois.Isoc.Org.Il.Il
             Assert.AreEqual(0, response.ParsingErrors);
             Assert.AreEqual("whois.isoc.org.il/il/Found", response.TemplateName);
 
-            Assert.AreEqual("spd.co.il", response.DomainName);
+            Assert.AreEqual("spd.co.il", response.DomainName.ToString());
 
             // Registrar Details
             Assert.AreEqual("Israel Internet Association ISOC-IL", response.Registrar.Name);
@@ -135,7 +134,7 @@ namespace Whois.Parsing.Whois.Isoc.Org.Il.Il
             Assert.AreEqual(0, response.ParsingErrors);
             Assert.AreEqual("whois.isoc.org.il/il/Found", response.TemplateName);
 
-            Assert.AreEqual("isoc.org.il", response.DomainName);
+            Assert.AreEqual("isoc.org.il", response.DomainName.ToString());
 
             // Registrar Details
             Assert.AreEqual("Israel Internet Association ISOC-IL", response.Registrar.Name);
@@ -248,7 +247,7 @@ namespace Whois.Parsing.Whois.Isoc.Org.Il.Il
             Assert.AreEqual(0, response.ParsingErrors);
             Assert.AreEqual("whois.isoc.org.il/il/Found", response.TemplateName);
 
-            Assert.AreEqual("isoc.org.il", response.DomainName);
+            Assert.AreEqual("isoc.org.il", response.DomainName.ToString());
 
             // Registrar Details
             Assert.AreEqual("Israel Internet Association ISOC-IL", response.Registrar.Name);

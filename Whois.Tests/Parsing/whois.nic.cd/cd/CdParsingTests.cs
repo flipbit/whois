@@ -29,7 +29,7 @@ namespace Whois.Parsing.Whois.Nic.Cd.Cd
             Assert.AreEqual(0, response.ParsingErrors);
             Assert.AreEqual("whois.nic.cd/cd/NotFound", response.TemplateName);
 
-            Assert.AreEqual("u34jedzcq.cd", response.DomainName);
+            Assert.AreEqual("u34jedzcq.cd", response.DomainName.ToString());
 
             // Domain Status
             Assert.AreEqual(1, response.DomainStatus.Count);
@@ -50,7 +50,7 @@ namespace Whois.Parsing.Whois.Nic.Cd.Cd
             Assert.AreEqual(0, response.ParsingErrors);
             Assert.AreEqual("whois.nic.cd/cd/Found", response.TemplateName);
 
-            Assert.AreEqual("google.cd", response.DomainName);
+            Assert.AreEqual("google.cd", response.DomainName.ToString());
             Assert.AreEqual("5758-CD", response.RegistryDomainId);
 
             // Registrar Details

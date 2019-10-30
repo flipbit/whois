@@ -30,7 +30,7 @@ namespace Whois.Parsing.Whois.Domainregistry.Ie.Ie
             Assert.AreEqual(0, response.ParsingErrors);
             Assert.AreEqual("whois.domainregistry.ie/ie/Reserved", response.TemplateName);
 
-            Assert.AreEqual("peter.ie", response.DomainName);
+            Assert.AreEqual("peter.ie", response.DomainName.ToString());
 
             Assert.AreEqual(new DateTime(2012, 04, 17, 00, 00, 00, DateTimeKind.Utc), response.Expiration);
 
@@ -49,7 +49,7 @@ namespace Whois.Parsing.Whois.Domainregistry.Ie.Ie
             Assert.AreEqual(0, response.ParsingErrors);
             Assert.AreEqual("whois.domainregistry.ie/ie/Found02", response.TemplateName);
 
-            Assert.AreEqual("rte.ie", response.DomainName);
+            Assert.AreEqual("rte.ie", response.DomainName.ToString());
 
             Assert.AreEqual(new DateTime(2012, 03, 31, 00, 00, 00, DateTimeKind.Utc), response.Expiration);
 
@@ -82,7 +82,7 @@ namespace Whois.Parsing.Whois.Domainregistry.Ie.Ie
             Assert.AreEqual(0, response.ParsingErrors);
             Assert.AreEqual("whois.domainregistry.ie/ie/Found", response.TemplateName);
 
-            Assert.AreEqual("tcd.ie", response.DomainName);
+            Assert.AreEqual("tcd.ie", response.DomainName.ToString());
 
             Assert.AreEqual(new DateTime(1999, 08, 24, 00, 00, 00, DateTimeKind.Utc), response.Registered);
             Assert.AreEqual(new DateTime(2013, 08, 24, 00, 00, 00, DateTimeKind.Utc), response.Expiration);
@@ -120,7 +120,7 @@ namespace Whois.Parsing.Whois.Domainregistry.Ie.Ie
             Assert.AreEqual(0, response.ParsingErrors);
             Assert.AreEqual("whois.domainregistry.ie/ie/Found02", response.TemplateName);
 
-            Assert.AreEqual("dns.ie", response.DomainName);
+            Assert.AreEqual("dns.ie", response.DomainName.ToString());
 
             Assert.AreEqual(new DateTime(2021, 02, 20, 00, 00, 00, DateTimeKind.Utc), response.Expiration);
 
@@ -157,7 +157,7 @@ namespace Whois.Parsing.Whois.Domainregistry.Ie.Ie
             Assert.AreEqual(0, response.ParsingErrors);
             Assert.AreEqual("whois.domainregistry.ie/ie/NotFound", response.TemplateName);
 
-            Assert.AreEqual("u34jedzcq.ie", response.DomainName);
+            Assert.AreEqual("u34jedzcq.ie", response.DomainName.ToString());
 
             Assert.AreEqual(2, response.FieldsParsed);
         }
@@ -174,7 +174,7 @@ namespace Whois.Parsing.Whois.Domainregistry.Ie.Ie
             Assert.AreEqual(0, response.ParsingErrors);
             Assert.AreEqual("whois.domainregistry.ie/ie/Found", response.TemplateName);
 
-            Assert.AreEqual("google.ie", response.DomainName);
+            Assert.AreEqual("google.ie", response.DomainName.ToString());
 
             Assert.AreEqual(new DateTime(2002, 03, 21, 00, 00, 00, DateTimeKind.Utc), response.Registered);
             Assert.AreEqual(new DateTime(2015, 03, 21, 00, 00, 00, DateTimeKind.Utc), response.Expiration);

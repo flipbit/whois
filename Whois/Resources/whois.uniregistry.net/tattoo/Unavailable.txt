@@ -17,4 +17,4 @@ set: Status = Unavailable
 hint: is not available for registration
 hint: is registry reserved by Uniregistry
 ---
-Domain Name: { DomainName : IsDomainName, ToLower }
+Domain Name: { DomainName : IsDomainName, ToHostName }

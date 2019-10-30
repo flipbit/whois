@@ -13,5 +13,5 @@ set: Status = NotFound
 
 hint: No records matching
 ---
-No records matching { DomainName : IsDomainName, ToLower } found.
+No records matching { DomainName : IsDomainName, ToHostName } found.
 

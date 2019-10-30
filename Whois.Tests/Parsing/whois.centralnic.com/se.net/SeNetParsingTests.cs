@@ -45,7 +45,7 @@ namespace Whois.Parsing.Whois.Centralnic.Com.SeNet
             Assert.AreEqual(0, response.ParsingErrors);
             Assert.AreEqual("whois.centralnic.com/Found", response.TemplateName);
 
-            Assert.AreEqual("hotel.se.net", response.DomainName);
+            Assert.AreEqual("hotel.se.net", response.DomainName.ToString());
             Assert.AreEqual("CNIC-DO1617446", response.RegistryDomainId);
 
             // Registrar Details

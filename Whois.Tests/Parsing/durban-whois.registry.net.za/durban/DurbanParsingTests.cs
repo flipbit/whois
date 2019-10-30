@@ -30,7 +30,7 @@ namespace Whois.Parsing.Durban.Whois.Registry.Net.Za.Durban
             Assert.AreEqual(2, response.FieldsParsed);
             Assert.AreEqual(0, response.ParsingErrors);
 
-            Assert.AreEqual("nosuchdomain.durban", response.DomainName);
+            Assert.AreEqual("nosuchdomain.durban", response.DomainName.ToString());
         }
 
         [Test]
@@ -45,7 +45,7 @@ namespace Whois.Parsing.Durban.Whois.Registry.Net.Za.Durban
             Assert.AreEqual(0, response.ParsingErrors);
             Assert.AreEqual("durban-whois.registry.net.za/durban/Found", response.TemplateName);
 
-            Assert.AreEqual("wordpress.durban", response.DomainName);
+            Assert.AreEqual("wordpress.durban", response.DomainName.ToString());
             Assert.AreEqual("dom_7G-9999", response.RegistryDomainId);
 
             // Registrar Details

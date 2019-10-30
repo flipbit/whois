@@ -14,7 +14,7 @@ terminateOnNewLine: true
 # Set query response type:
 set: Status = Found
 ---
-Domain Name: { DomainName : IsDomainName, ToLower }google.sm
+Domain Name: { DomainName : IsDomainName, ToHostName }google.sm
 Registration date: { Registered ? : ToDateTimeUtc("dd/MM/yyyy") }
 Last Update: { Updated ? : ToDateTimeUtc("dd/MM/yyyy") }
 Status: { DomainStatus ? : Repeating, CleanDomainStatus }

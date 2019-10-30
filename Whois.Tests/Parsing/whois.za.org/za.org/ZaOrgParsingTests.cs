@@ -30,7 +30,7 @@ namespace Whois.Parsing.Whois.Za.Org.ZaOrg
             Assert.AreEqual(0, response.ParsingErrors);
             Assert.AreEqual("whois.za.org/za.org/NotFound", response.TemplateName);
 
-            Assert.AreEqual("u34jedzcq.za.org", response.DomainName);
+            Assert.AreEqual("u34jedzcq.za.org", response.DomainName.ToString());
             Assert.AreEqual(2, response.FieldsParsed);
         }
 
@@ -46,7 +46,7 @@ namespace Whois.Parsing.Whois.Za.Org.ZaOrg
             Assert.AreEqual(0, response.ParsingErrors);
             Assert.AreEqual("whois.za.org/za.org/Found", response.TemplateName);
 
-            Assert.AreEqual("csa.za.org", response.DomainName);
+            Assert.AreEqual("csa.za.org", response.DomainName.ToString());
 
             Assert.AreEqual(new DateTime(2009, 11, 22, 16, 01, 16, 000, DateTimeKind.Utc), response.Expiration);
 

@@ -43,7 +43,7 @@ namespace Whois.Parsing.Whois.Afilias.Grs.Info.Vc
             Assert.AreEqual(0, response.ParsingErrors);
             Assert.AreEqual("generic/tld/Found001", response.TemplateName);
 
-            Assert.AreEqual("google.vc", response.DomainName);
+            Assert.AreEqual("google.vc", response.DomainName.ToString());
             Assert.AreEqual("D133753-LRCC", response.RegistryDomainId);
 
             // Registrar Details

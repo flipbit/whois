@@ -45,7 +45,7 @@ namespace Whois.Parsing.Whois.Centralnic.Com.SaCom
             Assert.AreEqual(0, response.ParsingErrors);
             Assert.AreEqual("whois.centralnic.com/Found", response.TemplateName);
 
-            Assert.AreEqual("fynbos.sa.com", response.DomainName);
+            Assert.AreEqual("fynbos.sa.com", response.DomainName.ToString());
             Assert.AreEqual("CNIC-DO501005", response.RegistryDomainId);
 
             // Registrar Details

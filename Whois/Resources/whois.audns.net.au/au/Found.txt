@@ -11,7 +11,7 @@ tag: au
 # Set query response type:
 set: Status = Found
 ---
-Domain Name:                     { DomainName : IsDomainName, ToLower, EOL }
+Domain Name:                     { DomainName : IsDomainName, ToHostName, EOL }
 Last Modified:                   { Updated ? : SubstringBefore(" UTC"), ToDateTime("dd-MMM-yyyy HH:mm:ss"), EOL }
 Registrar Name:                  { Registrar.Name ? : EOL }
 Status:                          { DomainStatus ? : Repeating, EOL }

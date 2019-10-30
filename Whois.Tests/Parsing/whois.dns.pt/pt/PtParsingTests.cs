@@ -30,7 +30,7 @@ namespace Whois.Parsing.Whois.Dns.Pt.Pt
             Assert.AreEqual(0, response.ParsingErrors);
             Assert.AreEqual("whois.dns.pt/pt/Found", response.TemplateName);
 
-            Assert.AreEqual("google.pt", response.DomainName);
+            Assert.AreEqual("google.pt", response.DomainName.ToString());
 
             Assert.AreEqual(new DateTime(2003, 01, 09, 00, 00, 00, DateTimeKind.Utc), response.Registered);
 
@@ -74,7 +74,7 @@ namespace Whois.Parsing.Whois.Dns.Pt.Pt
             Assert.AreEqual(0, response.ParsingErrors);
             Assert.AreEqual("whois.dns.pt/pt/Found", response.TemplateName);
 
-            Assert.AreEqual("wiki.pt", response.DomainName);
+            Assert.AreEqual("wiki.pt", response.DomainName.ToString());
 
             Assert.AreEqual(new DateTime(2009, 02, 09, 00, 00, 00, DateTimeKind.Utc), response.Registered);
             Assert.AreEqual(new DateTime(2014, 03, 01, 00, 00, 00, DateTimeKind.Utc), response.Expiration);
@@ -118,7 +118,7 @@ namespace Whois.Parsing.Whois.Dns.Pt.Pt
             Assert.AreEqual(0, response.ParsingErrors);
             Assert.AreEqual("whois.dns.pt/pt/NotFound", response.TemplateName);
 
-            Assert.AreEqual("u34jedzcq.pt", response.DomainName);
+            Assert.AreEqual("u34jedzcq.pt", response.DomainName.ToString());
 
 
             Assert.AreEqual(2, response.FieldsParsed);
@@ -136,7 +136,7 @@ namespace Whois.Parsing.Whois.Dns.Pt.Pt
             Assert.AreEqual(0, response.ParsingErrors);
             Assert.AreEqual("whois.dns.pt/pt/Found", response.TemplateName);
 
-            Assert.AreEqual("wiki.pt", response.DomainName);
+            Assert.AreEqual("wiki.pt", response.DomainName.ToString());
 
             Assert.AreEqual(new DateTime(2009, 02, 09, 00, 00, 00, DateTimeKind.Utc), response.Registered);
             Assert.AreEqual(new DateTime(2014, 03, 01, 00, 00, 00, DateTimeKind.Utc), response.Expiration);
@@ -180,7 +180,7 @@ namespace Whois.Parsing.Whois.Dns.Pt.Pt
             Assert.AreEqual(0, response.ParsingErrors);
             Assert.AreEqual("whois.dns.pt/pt/Found", response.TemplateName);
 
-            Assert.AreEqual("google.pt", response.DomainName);
+            Assert.AreEqual("google.pt", response.DomainName.ToString());
 
             Assert.AreEqual(new DateTime(2003, 01, 09, 00, 00, 00, DateTimeKind.Utc), response.Registered);
 
@@ -224,7 +224,7 @@ namespace Whois.Parsing.Whois.Dns.Pt.Pt
             Assert.AreEqual(0, response.ParsingErrors);
             Assert.AreEqual("whois.dns.pt/pt/Found", response.TemplateName);
 
-            Assert.AreEqual("wiki.pt", response.DomainName);
+            Assert.AreEqual("wiki.pt", response.DomainName.ToString());
 
             Assert.AreEqual(new DateTime(2009, 02, 09, 00, 00, 00, DateTimeKind.Utc), response.Registered);
 

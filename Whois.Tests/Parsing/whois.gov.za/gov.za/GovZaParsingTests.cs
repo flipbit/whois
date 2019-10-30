@@ -30,7 +30,7 @@ namespace Whois.Parsing.Whois.Gov.Za.GovZa
             Assert.AreEqual(0, response.ParsingErrors);
             Assert.AreEqual("whois.gov.za/gov.za/NotFound", response.TemplateName);
 
-            Assert.AreEqual("u34jedzcq.gov.za", response.DomainName);
+            Assert.AreEqual("u34jedzcq.gov.za", response.DomainName.ToString());
 
             Assert.AreEqual(2, response.FieldsParsed);
         }
@@ -47,7 +47,7 @@ namespace Whois.Parsing.Whois.Gov.Za.GovZa
             Assert.AreEqual(0, response.ParsingErrors);
             Assert.AreEqual("whois.gov.za/gov.za/Found", response.TemplateName);
 
-            Assert.AreEqual("dha.gov.za", response.DomainName);
+            Assert.AreEqual("dha.gov.za", response.DomainName.ToString());
 
             Assert.AreEqual(new DateTime(2012, 09, 03, 00, 00, 00, DateTimeKind.Utc), response.Registered);
 

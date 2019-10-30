@@ -42,7 +42,7 @@ namespace Whois.Parsing.Whois.Afilias.Grs.Info.Mn
             Assert.AreEqual(0, response.ParsingErrors);
             Assert.AreEqual("generic/tld/Found001", response.TemplateName);
 
-            Assert.AreEqual("google.mn", response.DomainName);
+            Assert.AreEqual("google.mn", response.DomainName.ToString());
             Assert.AreEqual("D444956-LRCC", response.RegistryDomainId);
 
             // Registrar Details

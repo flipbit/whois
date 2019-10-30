@@ -30,7 +30,7 @@ namespace Whois.Parsing.Whois.Iis.Se.Se
             Assert.AreEqual(0, response.ParsingErrors);
             Assert.AreEqual("whois.iis.se/se/Found", response.TemplateName);
 
-            Assert.AreEqual("populiscreate.se", response.DomainName);
+            Assert.AreEqual("populiscreate.se", response.DomainName.ToString());
 
             // Registrar Details
             Assert.AreEqual("EuroDNS S.A", response.Registrar.Name);
@@ -79,7 +79,7 @@ namespace Whois.Parsing.Whois.Iis.Se.Se
             Assert.AreEqual(0, response.ParsingErrors);
             Assert.AreEqual("whois.iis.se/se/Found", response.TemplateName);
 
-            Assert.AreEqual("nhv.se", response.DomainName);
+            Assert.AreEqual("nhv.se", response.DomainName.ToString());
 
             // Registrar Details
             Assert.AreEqual("SE Direkt", response.Registrar.Name);
@@ -111,7 +111,7 @@ namespace Whois.Parsing.Whois.Iis.Se.Se
             Assert.AreEqual(0, response.ParsingErrors);
             Assert.AreEqual("whois.iis.se/se/Found", response.TemplateName);
 
-            Assert.AreEqual("loopia.se", response.DomainName);
+            Assert.AreEqual("loopia.se", response.DomainName.ToString());
 
             // Registrar Details
             Assert.AreEqual("Loopia AB", response.Registrar.Name);
@@ -150,7 +150,7 @@ namespace Whois.Parsing.Whois.Iis.Se.Se
             Assert.AreEqual(0, response.ParsingErrors);
             Assert.AreEqual("whois.iis.se/se/Found", response.TemplateName);
 
-            Assert.AreEqual("example.se", response.DomainName);
+            Assert.AreEqual("example.se", response.DomainName.ToString());
 
             // Registrar Details
             Assert.AreEqual("CoreRegistry", response.Registrar.Name);
@@ -178,7 +178,7 @@ namespace Whois.Parsing.Whois.Iis.Se.Se
             Assert.AreEqual(0, response.ParsingErrors);
             Assert.AreEqual("whois.iis.se/se/NotFound", response.TemplateName);
 
-            Assert.AreEqual("u34jedzcq.se", response.DomainName);
+            Assert.AreEqual("u34jedzcq.se", response.DomainName.ToString());
 
 
             Assert.AreEqual(2, response.FieldsParsed);
@@ -196,7 +196,7 @@ namespace Whois.Parsing.Whois.Iis.Se.Se
             Assert.AreEqual(0, response.ParsingErrors);
             Assert.AreEqual("whois.iis.se/se/Found", response.TemplateName);
 
-            Assert.AreEqual("google.se", response.DomainName);
+            Assert.AreEqual("google.se", response.DomainName.ToString());
 
             // Registrar Details
             Assert.AreEqual("MarkMonitor Inc", response.Registrar.Name);
@@ -235,7 +235,7 @@ namespace Whois.Parsing.Whois.Iis.Se.Se
             Assert.AreEqual(0, response.ParsingErrors);
             Assert.AreEqual("whois.iis.se/se/Found", response.TemplateName);
 
-            Assert.AreEqual("ogogle.se", response.DomainName);
+            Assert.AreEqual("ogogle.se", response.DomainName.ToString());
 
             // Registrar Details
             Assert.AreEqual("Frobbit AB", response.Registrar.Name);
@@ -272,7 +272,7 @@ namespace Whois.Parsing.Whois.Iis.Se.Se
             Assert.AreEqual(0, response.ParsingErrors);
             Assert.AreEqual("whois.iis.se/se/NotFound", response.TemplateName);
 
-            Assert.AreEqual("u34jedzcq.se", response.DomainName);
+            Assert.AreEqual("u34jedzcq.se", response.DomainName.ToString());
 
 
             Assert.AreEqual(2, response.FieldsParsed);
@@ -290,7 +290,7 @@ namespace Whois.Parsing.Whois.Iis.Se.Se
             Assert.AreEqual(0, response.ParsingErrors);
             Assert.AreEqual("whois.iis.se/se/Found", response.TemplateName);
 
-            Assert.AreEqual("google.se", response.DomainName);
+            Assert.AreEqual("google.se", response.DomainName.ToString());
 
             // Registrar Details
             Assert.AreEqual("MarkMonitor Inc", response.Registrar.Name);

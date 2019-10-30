@@ -30,7 +30,7 @@ namespace Whois.Parsing.Whois.Jprs.Jp.Jp
             Assert.AreEqual(0, response.ParsingErrors);
             Assert.AreEqual("whois.jprs.jp/Found02", response.TemplateName);
 
-            Assert.AreEqual("veganwiz.jp", response.DomainName);
+            Assert.AreEqual("veganwiz.jp", response.DomainName.ToString());
 
             Assert.AreEqual(new DateTime(2012, 08, 01, 00, 29, 53, 000, DateTimeKind.Utc), response.Updated);
             Assert.AreEqual(new DateTime(2010, 07, 07, 00, 00, 00, 000, DateTimeKind.Utc), response.Registered);
@@ -55,7 +55,7 @@ namespace Whois.Parsing.Whois.Jprs.Jp.Jp
             Assert.AreEqual(0, response.ParsingErrors);
             Assert.AreEqual("whois.jprs.jp/Found02", response.TemplateName);
 
-            Assert.AreEqual("flirtbox.jp", response.DomainName);
+            Assert.AreEqual("flirtbox.jp", response.DomainName.ToString());
 
             Assert.AreEqual(new DateTime(2011, 12, 21, 18, 30, 48, 000, DateTimeKind.Utc), response.Updated);
             Assert.AreEqual(new DateTime(2003, 12, 09, 00, 00, 00, 000, DateTimeKind.Utc), response.Registered);
@@ -100,7 +100,7 @@ namespace Whois.Parsing.Whois.Jprs.Jp.Jp
             Assert.AreEqual(0, response.ParsingErrors);
             Assert.AreEqual("whois.jprs.jp/Found02", response.TemplateName);
 
-            Assert.AreEqual("fashionwatch.jp", response.DomainName);
+            Assert.AreEqual("fashionwatch.jp", response.DomainName.ToString());
 
             Assert.AreEqual(new DateTime(2010, 10, 18, 11, 30, 47, 000, DateTimeKind.Utc), response.Updated);
             Assert.AreEqual(new DateTime(2009, 05, 11, 00, 00, 00, 000, DateTimeKind.Utc), response.Registered);
@@ -162,7 +162,7 @@ namespace Whois.Parsing.Whois.Jprs.Jp.Jp
             Assert.AreEqual(0, response.ParsingErrors);
             Assert.AreEqual("whois.jprs.jp/Found02", response.TemplateName);
 
-            Assert.AreEqual("google.jp", response.DomainName);
+            Assert.AreEqual("google.jp", response.DomainName.ToString());
 
             Assert.AreEqual(new DateTime(2013, 06, 01, 01, 05, 07, 000, DateTimeKind.Utc), response.Updated);
             Assert.AreEqual(new DateTime(2005, 05, 30, 00, 00, 00, 000, DateTimeKind.Utc), response.Registered);
@@ -212,7 +212,7 @@ namespace Whois.Parsing.Whois.Jprs.Jp.Jp
             Assert.AreEqual(0, response.ParsingErrors);
             Assert.AreEqual("whois.jprs.jp/Found02", response.TemplateName);
 
-            Assert.AreEqual("example.jp", response.DomainName);
+            Assert.AreEqual("example.jp", response.DomainName.ToString());
 
             Assert.AreEqual(new DateTime(2001, 02, 21, 00, 00, 00, 000, DateTimeKind.Utc), response.Updated);
 
@@ -236,7 +236,7 @@ namespace Whois.Parsing.Whois.Jprs.Jp.Jp
             Assert.AreEqual(0, response.ParsingErrors);
             Assert.AreEqual("whois.jprs.jp/Found02", response.TemplateName);
 
-            Assert.AreEqual("ameblo.jp", response.DomainName);
+            Assert.AreEqual("ameblo.jp", response.DomainName.ToString());
 
             Assert.AreEqual(new DateTime(2018, 08, 01, 01, 05, 09, 000, DateTimeKind.Utc), response.Updated);
             Assert.AreEqual(new DateTime(2004, 07, 30, 00, 00, 00, 000, DateTimeKind.Utc), response.Registered);

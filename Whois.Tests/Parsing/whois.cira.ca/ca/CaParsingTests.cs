@@ -30,7 +30,7 @@ namespace Whois.Parsing.Whois.Cira.Ca.Ca
             Assert.AreEqual(0, response.ParsingErrors);
             Assert.AreEqual("whois.cira.ca/ca/Found", response.TemplateName);
 
-            Assert.AreEqual("glu.ca", response.DomainName);
+            Assert.AreEqual("glu.ca", response.DomainName.ToString());
 
             // Registrar Details
             Assert.AreEqual("Webnames.ca Inc.", response.Registrar.Name);
@@ -91,7 +91,7 @@ namespace Whois.Parsing.Whois.Cira.Ca.Ca
             Assert.AreEqual(0, response.ParsingErrors);
             Assert.AreEqual("whois.cira.ca/ca/Found", response.TemplateName);
 
-            Assert.AreEqual("abbylane.pe.ca", response.DomainName);
+            Assert.AreEqual("abbylane.pe.ca", response.DomainName.ToString());
 
             // Registrar Details
             Assert.AreEqual("easyDNS Technologies Inc.", response.Registrar.Name);
@@ -159,7 +159,7 @@ namespace Whois.Parsing.Whois.Cira.Ca.Ca
             Assert.AreEqual(0, response.ParsingErrors);
             Assert.AreEqual("whois.cira.ca/ca/NotFound", response.TemplateName);
 
-            Assert.AreEqual("u34jedzcq.ca", response.DomainName);
+            Assert.AreEqual("u34jedzcq.ca", response.DomainName.ToString());
 
             // Domain Status
             Assert.AreEqual(1, response.DomainStatus.Count);
@@ -180,7 +180,7 @@ namespace Whois.Parsing.Whois.Cira.Ca.Ca
             Assert.AreEqual(0, response.ParsingErrors);
             Assert.AreEqual("whois.cira.ca/ca/Found", response.TemplateName);
 
-            Assert.AreEqual("sagespa.ca", response.DomainName);
+            Assert.AreEqual("sagespa.ca", response.DomainName.ToString());
 
             // Registrar Details
             Assert.AreEqual("Go Daddy Domains Canada, Inc", response.Registrar.Name);
@@ -214,7 +214,7 @@ namespace Whois.Parsing.Whois.Cira.Ca.Ca
             Assert.AreEqual(0, response.ParsingErrors);
             Assert.AreEqual("whois.cira.ca/ca/Found", response.TemplateName);
 
-            Assert.AreEqual("glu.ca", response.DomainName);
+            Assert.AreEqual("glu.ca", response.DomainName.ToString());
 
             // Registrar Details
             Assert.AreEqual("Webnames.ca Inc.", response.Registrar.Name);
@@ -275,7 +275,7 @@ namespace Whois.Parsing.Whois.Cira.Ca.Ca
             Assert.AreEqual(0, response.ParsingErrors);
             Assert.AreEqual("whois.cira.ca/ca/Found", response.TemplateName);
 
-            Assert.AreEqual("google.ca", response.DomainName);
+            Assert.AreEqual("google.ca", response.DomainName.ToString());
 
             // Registrar Details
             Assert.AreEqual("Webnames.ca Inc.", response.Registrar.Name);
@@ -338,7 +338,7 @@ namespace Whois.Parsing.Whois.Cira.Ca.Ca
             Assert.AreEqual(0, response.ParsingErrors);
             Assert.AreEqual("whois.cira.ca/ca/ToBeReleased", response.TemplateName);
 
-            Assert.AreEqual("thomascraft.ca", response.DomainName);
+            Assert.AreEqual("thomascraft.ca", response.DomainName.ToString());
 
 
             // Domain Status
@@ -360,7 +360,7 @@ namespace Whois.Parsing.Whois.Cira.Ca.Ca
             Assert.AreEqual(0, response.ParsingErrors);
             Assert.AreEqual("whois.cira.ca/ca/Unavailable", response.TemplateName);
 
-            Assert.AreEqual("mediom.ca", response.DomainName);
+            Assert.AreEqual("mediom.ca", response.DomainName.ToString());
 
             Assert.AreEqual(2, response.FieldsParsed);
         }
@@ -377,7 +377,7 @@ namespace Whois.Parsing.Whois.Cira.Ca.Ca
             Assert.AreEqual(0, response.ParsingErrors);
             Assert.AreEqual("whois.cira.ca/ca/NotFound", response.TemplateName);
 
-            Assert.AreEqual("u34jedzcq.ca", response.DomainName);
+            Assert.AreEqual("u34jedzcq.ca", response.DomainName.ToString());
 
             // Domain Status
             Assert.AreEqual(1, response.DomainStatus.Count);
@@ -398,7 +398,7 @@ namespace Whois.Parsing.Whois.Cira.Ca.Ca
             Assert.AreEqual(0, response.ParsingErrors);
             Assert.AreEqual("whois.cira.ca/ca/Unavailable", response.TemplateName);
 
-            Assert.AreEqual("mediom.ca", response.DomainName);
+            Assert.AreEqual("mediom.ca", response.DomainName.ToString());
 
             Assert.AreEqual(2, response.FieldsParsed);
         }
@@ -415,7 +415,7 @@ namespace Whois.Parsing.Whois.Cira.Ca.Ca
             Assert.AreEqual(0, response.ParsingErrors);
             Assert.AreEqual("whois.cira.ca/ca/Found", response.TemplateName);
 
-            Assert.AreEqual("google.ca", response.DomainName);
+            Assert.AreEqual("google.ca", response.DomainName.ToString());
 
             // Registrar Details
             Assert.AreEqual("MarkMonitor International Canada Ltd.", response.Registrar.Name);

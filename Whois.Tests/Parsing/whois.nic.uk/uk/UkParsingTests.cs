@@ -30,7 +30,7 @@ namespace Whois.Parsing.Whois.Nic.Uk.Uk
             Assert.AreEqual(0, response.ParsingErrors);
             Assert.AreEqual("whois.nic.uk/uk/Found", response.TemplateName);
 
-            Assert.AreEqual("netbenefit.co.uk", response.DomainName);
+            Assert.AreEqual("netbenefit.co.uk", response.DomainName.ToString());
 
             // Registrar Details
             Assert.AreEqual("Ascio Technologies Inc t/a Ascio Technologies inc [Tag = ASCIO]", response.Registrar.Name);
@@ -76,7 +76,7 @@ namespace Whois.Parsing.Whois.Nic.Uk.Uk
             Assert.AreEqual(0, response.ParsingErrors);
             Assert.AreEqual("whois.nic.uk/uk/Found", response.TemplateName);
 
-            Assert.AreEqual("bedandbreakfastsearcher.co.uk", response.DomainName);
+            Assert.AreEqual("bedandbreakfastsearcher.co.uk", response.DomainName.ToString());
 
             // Registrar Details
             Assert.AreEqual("Webfusion Ltd t/a 123-reg [Tag = 123-REG]", response.Registrar.Name);
@@ -113,7 +113,7 @@ namespace Whois.Parsing.Whois.Nic.Uk.Uk
             Assert.AreEqual(0, response.ParsingErrors);
             Assert.AreEqual("whois.nic.uk/uk/Found", response.TemplateName);
 
-            Assert.AreEqual("google.co.uk", response.DomainName);
+            Assert.AreEqual("google.co.uk", response.DomainName.ToString());
 
             // Registrar Details
             Assert.AreEqual("Markmonitor Inc. t/a Markmonitor [Tag = MARKMONITOR]", response.Registrar.Name);
@@ -161,7 +161,7 @@ namespace Whois.Parsing.Whois.Nic.Uk.Uk
             Assert.AreEqual(0, response.ParsingErrors);
             Assert.AreEqual("whois.nic.uk/uk/Found", response.TemplateName);
 
-            Assert.AreEqual("ecigsbrand.co.uk", response.DomainName);
+            Assert.AreEqual("ecigsbrand.co.uk", response.DomainName.ToString());
 
             // Registrar Details
             Assert.AreEqual("GoDaddy.com, LLP. [Tag = GODADDY]", response.Registrar.Name);
@@ -206,7 +206,7 @@ namespace Whois.Parsing.Whois.Nic.Uk.Uk
             Assert.AreEqual(0, response.ParsingErrors);
             Assert.AreEqual("whois.nic.uk/uk/Found", response.TemplateName);
 
-            Assert.AreEqual("netbenefit.co.uk", response.DomainName);
+            Assert.AreEqual("netbenefit.co.uk", response.DomainName.ToString());
 
             // Registrar Details
             Assert.AreEqual("NetNames Limited [Tag = NETNAMES]", response.Registrar.Name);
@@ -251,7 +251,7 @@ namespace Whois.Parsing.Whois.Nic.Uk.Uk
             Assert.AreEqual(0, response.ParsingErrors);
             Assert.AreEqual("whois.nic.uk/uk/NotFound", response.TemplateName);
 
-            Assert.AreEqual("u34jedzcq.co.uk", response.DomainName);
+            Assert.AreEqual("u34jedzcq.co.uk", response.DomainName.ToString());
 
             Assert.AreEqual(2, response.FieldsParsed);
         }
@@ -268,7 +268,7 @@ namespace Whois.Parsing.Whois.Nic.Uk.Uk
             Assert.AreEqual(0, response.ParsingErrors);
             Assert.AreEqual("whois.nic.uk/uk/Found", response.TemplateName);
 
-            Assert.AreEqual("atlasholidays.co.uk", response.DomainName);
+            Assert.AreEqual("atlasholidays.co.uk", response.DomainName.ToString());
 
             // Registrar Details
             Assert.AreEqual("Print Copy Systems Limited t/a Lan Systems [Tag = LANSYSTEMS]", response.Registrar.Name);
@@ -315,7 +315,7 @@ namespace Whois.Parsing.Whois.Nic.Uk.Uk
             Assert.AreEqual(0, response.ParsingErrors);
             Assert.AreEqual("whois.nic.uk/uk/Found", response.TemplateName);
 
-            Assert.AreEqual("internet.co.uk", response.DomainName);
+            Assert.AreEqual("internet.co.uk", response.DomainName.ToString());
 
             // Registrar Details
             Assert.AreEqual("No registrar listed.  This domain is registered directly with Nominet.", response.Registrar.Name);
@@ -361,7 +361,7 @@ namespace Whois.Parsing.Whois.Nic.Uk.Uk
             Assert.AreEqual(0, response.ParsingErrors);
             Assert.AreEqual("whois.nic.uk/uk/Found", response.TemplateName);
 
-            Assert.AreEqual("reachingyoungmales.co.uk", response.DomainName);
+            Assert.AreEqual("reachingyoungmales.co.uk", response.DomainName.ToString());
 
             // Registrar Details
             Assert.AreEqual("Webfusion Ltd t/a 123-Reg.co.uk [Tag = 123-REG]", response.Registrar.Name);
@@ -407,7 +407,7 @@ namespace Whois.Parsing.Whois.Nic.Uk.Uk
             Assert.AreEqual(0, response.ParsingErrors);
             Assert.AreEqual("whois.nic.uk/uk/Found", response.TemplateName);
 
-            Assert.AreEqual("creatinghomeowners.co.uk", response.DomainName);
+            Assert.AreEqual("creatinghomeowners.co.uk", response.DomainName.ToString());
 
             // Registrar Details
             Assert.AreEqual("Webfusion Ltd t/a 123-Reg.co.uk [Tag = 123-REG]", response.Registrar.Name);
@@ -453,7 +453,7 @@ namespace Whois.Parsing.Whois.Nic.Uk.Uk
             Assert.AreEqual(0, response.ParsingErrors);
             Assert.AreEqual("whois.nic.uk/uk/Found", response.TemplateName);
 
-            Assert.AreEqual("google.co.uk", response.DomainName);
+            Assert.AreEqual("google.co.uk", response.DomainName.ToString());
 
             // Registrar Details
             Assert.AreEqual("Markmonitor Inc. t/a Markmonitor [Tag = MARKMONITOR]", response.Registrar.Name);
@@ -501,7 +501,7 @@ namespace Whois.Parsing.Whois.Nic.Uk.Uk
             Assert.AreEqual(0, response.ParsingErrors);
             Assert.AreEqual("whois.nic.uk/uk/Found", response.TemplateName);
 
-            Assert.AreEqual("allofshoes.co.uk", response.DomainName);
+            Assert.AreEqual("allofshoes.co.uk", response.DomainName.ToString());
 
             // Registrar Details
             Assert.AreEqual("Key-Systems GmbH [Tag = KEY-SYSTEMS-DE]", response.Registrar.Name);
@@ -542,7 +542,7 @@ namespace Whois.Parsing.Whois.Nic.Uk.Uk
             Assert.AreEqual(0, response.ParsingErrors);
             Assert.AreEqual("whois.nic.uk/uk/Throttled", response.TemplateName);
 
-            Assert.AreEqual("google.co.uk", response.DomainName);
+            Assert.AreEqual("google.co.uk", response.DomainName.ToString());
 
             Assert.AreEqual(2, response.FieldsParsed);
         }
@@ -559,7 +559,7 @@ namespace Whois.Parsing.Whois.Nic.Uk.Uk
             Assert.AreEqual(0, response.ParsingErrors);
             Assert.AreEqual("whois.nic.uk/uk/NotFound", response.TemplateName);
 
-            Assert.AreEqual("u34jedzcq.co.uk", response.DomainName);
+            Assert.AreEqual("u34jedzcq.co.uk", response.DomainName.ToString());
 
             Assert.AreEqual(2, response.FieldsParsed);
         }
@@ -576,7 +576,7 @@ namespace Whois.Parsing.Whois.Nic.Uk.Uk
             Assert.AreEqual(0, response.ParsingErrors);
             Assert.AreEqual("whois.nic.uk/uk/Invalid", response.TemplateName);
 
-            Assert.AreEqual("u34jedzcq.uk", response.DomainName);
+            Assert.AreEqual("u34jedzcq.uk", response.DomainName.ToString());
 
             Assert.AreEqual(2, response.FieldsParsed);
         }
@@ -593,7 +593,7 @@ namespace Whois.Parsing.Whois.Nic.Uk.Uk
             Assert.AreEqual(0, response.ParsingErrors);
             Assert.AreEqual("whois.nic.uk/uk/Found", response.TemplateName);
 
-            Assert.AreEqual("google.co.uk", response.DomainName);
+            Assert.AreEqual("google.co.uk", response.DomainName.ToString());
 
             // Registrar Details
             Assert.AreEqual("Markmonitor Inc. t/a Markmonitor [Tag = MARKMONITOR]", response.Registrar.Name);
@@ -641,7 +641,7 @@ namespace Whois.Parsing.Whois.Nic.Uk.Uk
             Assert.AreEqual(0, response.ParsingErrors);
             Assert.AreEqual("whois.nic.uk/uk/Found", response.TemplateName);
 
-            Assert.AreEqual("internet.co.uk", response.DomainName);
+            Assert.AreEqual("internet.co.uk", response.DomainName.ToString());
 
             // Registrar Details
             Assert.AreEqual("No registrar listed.  This domain is registered directly with Nominet.", response.Registrar.Name);
@@ -687,7 +687,7 @@ namespace Whois.Parsing.Whois.Nic.Uk.Uk
             Assert.AreEqual(0, response.ParsingErrors);
             Assert.AreEqual("whois.nic.uk/uk/Found", response.TemplateName);
 
-            Assert.AreEqual("allofshoes.co.uk", response.DomainName);
+            Assert.AreEqual("allofshoes.co.uk", response.DomainName.ToString());
 
             // Registrar Details
             Assert.AreEqual("Key-Systems GmbH [Tag = KEY-SYSTEMS-DE]", response.Registrar.Name);

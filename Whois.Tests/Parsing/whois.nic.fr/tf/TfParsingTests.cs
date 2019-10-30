@@ -30,7 +30,7 @@ namespace Whois.Parsing.Whois.Nic.Fr.Tf
             Assert.AreEqual(0, response.ParsingErrors);
             Assert.AreEqual("generic/tld/Found05", response.TemplateName);
 
-            Assert.AreEqual("nic.tf", response.DomainName);
+            Assert.AreEqual("nic.tf", response.DomainName.ToString());
 
             // Registrar Details
             Assert.AreEqual("AFNIC registry", response.Registrar.Name);
@@ -121,7 +121,6 @@ namespace Whois.Parsing.Whois.Nic.Fr.Tf
             Assert.Greater(sample.Length, 0);
             Assert.AreEqual(WhoisStatus.Throttled, response.Status);
 
-            AssertWriter.Write(response);
             Assert.AreEqual(0, response.ParsingErrors);
             Assert.AreEqual("generic/tld/Throttled02", response.TemplateName);
 
@@ -155,7 +154,7 @@ namespace Whois.Parsing.Whois.Nic.Fr.Tf
             Assert.AreEqual(0, response.ParsingErrors);
             Assert.AreEqual("generic/tld/Found05", response.TemplateName);
 
-            Assert.AreEqual("nic.tf", response.DomainName);
+            Assert.AreEqual("nic.tf", response.DomainName.ToString());
 
             // Registrar Details
             Assert.AreEqual("AFNIC registry", response.Registrar.Name);

@@ -30,7 +30,7 @@ namespace Whois.Parsing.Whois.Tznic.Or.Tz.Tz
             Assert.AreEqual(0, response.ParsingErrors);
             Assert.AreEqual("whois.tznic.or.tz/tz/Found", response.TemplateName);
 
-            Assert.AreEqual("amanabank.co.tz", response.DomainName);
+            Assert.AreEqual("amanabank.co.tz", response.DomainName.ToString());
 
             // Registrar Details
             Assert.AreEqual("REG-XTREME", response.Registrar.Name);
@@ -126,7 +126,7 @@ namespace Whois.Parsing.Whois.Tznic.Or.Tz.Tz
             Assert.AreEqual(0, response.ParsingErrors);
             Assert.AreEqual("whois.tznic.or.tz/tz/Found", response.TemplateName);
 
-            Assert.AreEqual("dailynews.co.tz", response.DomainName);
+            Assert.AreEqual("dailynews.co.tz", response.DomainName.ToString());
 
             // Registrar Details
             Assert.AreEqual("REG-TZNIC", response.Registrar.Name);

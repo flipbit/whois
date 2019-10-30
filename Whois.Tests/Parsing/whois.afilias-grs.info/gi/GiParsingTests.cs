@@ -40,7 +40,7 @@ namespace Whois.Parsing.Whois.Afilias.Grs.Info.Gi
             Assert.AreEqual(0, response.ParsingErrors);
             Assert.AreEqual("generic/tld/Found001", response.TemplateName);
 
-            Assert.AreEqual("sapphire.gi", response.DomainName);
+            Assert.AreEqual("sapphire.gi", response.DomainName.ToString());
             Assert.AreEqual("D68296-LRCC", response.RegistryDomainId);
 
             // Registrar Details

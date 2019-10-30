@@ -45,7 +45,7 @@ namespace Whois.Parsing.Whois.Nic.College.College
             Assert.AreEqual(0, response.ParsingErrors);
             Assert.AreEqual("generic/tld/Found001", response.TemplateName);
 
-            Assert.AreEqual("nic.college", response.DomainName);
+            Assert.AreEqual("nic.college", response.DomainName.ToString());
             Assert.AreEqual("D1465621-CNIC", response.RegistryDomainId);
 
             // Registrar Details

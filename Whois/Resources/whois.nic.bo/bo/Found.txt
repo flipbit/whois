@@ -17,7 +17,7 @@ set: Status = Found
 hint: solo acepta consultas con dominios
 hint: Dominio
 ---
-Dominio: { DomainName : IsDomainName, ToLower }
+Dominio: { DomainName : IsDomainName, ToHostName }
 
 TITULAR:
 Organizacion: { Registrant.Organization ? }

@@ -13,5 +13,5 @@ set: Status = NotFound
 
 hint: No entries found 
 ---
-% Information related to '{ DomainName : IsDomainName, ToLower }'
+% Information related to '{ DomainName : IsDomainName, ToHostName }'
 

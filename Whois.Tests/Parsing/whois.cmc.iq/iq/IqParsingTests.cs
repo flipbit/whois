@@ -30,7 +30,7 @@ namespace Whois.Parsing.Whois.Cmc.Iq.Iq
             Assert.AreEqual(0, response.ParsingErrors);
             Assert.AreEqual("whois.cmc.iq/iq/NotFound", response.TemplateName);
 
-            Assert.AreEqual("u34jedzcq.iq", response.DomainName);
+            Assert.AreEqual("u34jedzcq.iq", response.DomainName.ToString());
 
             // Domain Status
             Assert.AreEqual(1, response.DomainStatus.Count);
@@ -51,7 +51,7 @@ namespace Whois.Parsing.Whois.Cmc.Iq.Iq
             Assert.AreEqual(0, response.ParsingErrors);
             Assert.AreEqual("whois.cmc.iq/iq/Found", response.TemplateName);
 
-            Assert.AreEqual("google.iq", response.DomainName);
+            Assert.AreEqual("google.iq", response.DomainName.ToString());
             Assert.AreEqual("895-CoCCA", response.RegistryDomainId);
 
             // Registrar Details

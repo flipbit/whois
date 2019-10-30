@@ -16,7 +16,7 @@ set: Status = Found
 ---
     Domain:
     -------
-       Domain Name:                  { DomainName : IsDomainName, ToLower }
+       Domain Name:                  { DomainName : IsDomainName, ToHostName }
        Creation Date:                { Registered ? : ToDateTimeUtc("dd/MM/yy") }
        Expiration Date:              { Expiration ? : ToDateTimeUtc("dd/MM/yy") }
 

@@ -29,7 +29,7 @@ namespace Whois.Parsing.Whois.Registry.Qa.Qa
             Assert.AreEqual(0, response.ParsingErrors);
             Assert.AreEqual("whois.registry.qa/qa/Found", response.TemplateName);
 
-            Assert.AreEqual("qnb.com.qa", response.DomainName);
+            Assert.AreEqual("qnb.com.qa", response.DomainName.ToString());
 
             // Registrar Details
             Assert.AreEqual("Qatar Telecom (Qtel) Q. S. C", response.Registrar.Name);
@@ -85,7 +85,7 @@ namespace Whois.Parsing.Whois.Registry.Qa.Qa
             Assert.AreEqual(0, response.ParsingErrors);
             Assert.AreEqual("whois.registry.qa/qa/Found", response.TemplateName);
 
-            Assert.AreEqual("qtel.com.qa", response.DomainName);
+            Assert.AreEqual("qtel.com.qa", response.DomainName.ToString());
 
             // Registrar Details
             Assert.AreEqual("Qatar Telecom (Qtel) Q. S. C", response.Registrar.Name);

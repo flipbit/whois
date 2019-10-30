@@ -30,7 +30,7 @@ namespace Whois.Parsing.Whois.Iana.Org.Arpa
             Assert.AreEqual(0, response.ParsingErrors);
             Assert.AreEqual("whois.iana.org/NotFound", response.TemplateName);
 
-            Assert.AreEqual("u34jedzcq.arpa", response.DomainName);
+            Assert.AreEqual("u34jedzcq.arpa", response.DomainName.ToString());
 
 
             Assert.AreEqual(2, response.FieldsParsed);
@@ -48,7 +48,7 @@ namespace Whois.Parsing.Whois.Iana.Org.Arpa
             Assert.AreEqual(0, response.ParsingErrors);
             Assert.AreEqual("whois.iana.org/Found02", response.TemplateName);
 
-            Assert.AreEqual("ip6.arpa", response.DomainName);
+            Assert.AreEqual("ip6.arpa", response.DomainName.ToString());
 
             Assert.AreEqual(new DateTime(2011, 07, 21, 00, 00, 00, 000, DateTimeKind.Utc), response.Updated);
             Assert.AreEqual(new DateTime(2001, 11, 10, 00, 00, 00, 000, DateTimeKind.Utc), response.Registered);

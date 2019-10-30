@@ -30,7 +30,7 @@ namespace Whois.Parsing.Whois.Iana.Org.Tld
             Assert.AreEqual(0, response.ParsingErrors);
             Assert.AreEqual("whois.iana.org/Found01", response.TemplateName);
 
-            Assert.AreEqual("be", response.DomainName);
+            Assert.AreEqual("be", response.DomainName.ToString());
 
             // Registrar Details
             Assert.AreEqual("whois.dns.be", response.Registrar.WhoisServerUrl);
@@ -102,7 +102,7 @@ namespace Whois.Parsing.Whois.Iana.Org.Tld
             Assert.AreEqual(0, response.ParsingErrors);
             Assert.AreEqual("whois.iana.org/Found01", response.TemplateName);
 
-            Assert.AreEqual("com", response.DomainName);
+            Assert.AreEqual("com", response.DomainName.ToString());
 
             // Registrar Details
             Assert.AreEqual("whois.verisign-grs.com", response.Registrar.WhoisServerUrl);

@@ -10,7 +10,14 @@ namespace Whois.Servers
     {
         public WhoisResponse Lookup(WhoisRequest request)
         {
-            return new WhoisResponse {DomainName = "com", Registrar = new Registrar {WhoisServerUrl = "test.whois.com"}};
+            return new WhoisResponse
+            {
+                DomainName = new HostName("com"), 
+                Registrar = new Registrar
+                {
+                    WhoisServerUrl = "test.whois.com"
+                }
+            };
         }
 
         public Task<WhoisResponse> LookupAsync(WhoisRequest request)

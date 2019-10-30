@@ -30,7 +30,7 @@ namespace Whois.Parsing.Whois.Nic.Me.Me
             Assert.AreEqual(0, response.ParsingErrors);
             Assert.AreEqual("generic/tld/Found001", response.TemplateName);
 
-            Assert.AreEqual("wossna.me", response.DomainName);
+            Assert.AreEqual("wossna.me", response.DomainName.ToString());
             Assert.AreEqual("D82062-ME", response.RegistryDomainId);
 
             // Registrar Details
@@ -104,7 +104,7 @@ namespace Whois.Parsing.Whois.Nic.Me.Me
             Assert.AreEqual(0, response.ParsingErrors);
             Assert.AreEqual("generic/tld/Found001", response.TemplateName);
 
-            Assert.AreEqual("factoryoutlet.me", response.DomainName);
+            Assert.AreEqual("factoryoutlet.me", response.DomainName.ToString());
             Assert.AreEqual("D2021453-ME", response.RegistryDomainId);
 
             // Registrar Details
@@ -194,7 +194,7 @@ namespace Whois.Parsing.Whois.Nic.Me.Me
             Assert.AreEqual(1, response.ParsingErrors);
             Assert.AreEqual("generic/tld/Found001", response.TemplateName);
 
-            Assert.AreEqual("google.me", response.DomainName);
+            Assert.AreEqual("google.me", response.DomainName.ToString());
             Assert.AreEqual("D11599-ME", response.RegistryDomainId);
 
             // Registrar Details

@@ -29,7 +29,7 @@ namespace Whois.Parsing.Whois.Srs.Net.Nz.Nz
             Assert.AreEqual(0, response.ParsingErrors);
             Assert.AreEqual("whois.srs.net.nz/nz/Found", response.TemplateName);
 
-            Assert.AreEqual("zumbafitness.co.nz", response.DomainName);
+            Assert.AreEqual("zumbafitness.co.nz", response.DomainName.ToString());
 
             // Registrar Details
             Assert.AreEqual("NETREGISTRY PTY LTD", response.Registrar.Name);
@@ -102,7 +102,7 @@ namespace Whois.Parsing.Whois.Srs.Net.Nz.Nz
             Assert.AreEqual(0, response.ParsingErrors);
             Assert.AreEqual("whois.srs.net.nz/nz/Found", response.TemplateName);
 
-            Assert.AreEqual("jaycar.co.nz", response.DomainName);
+            Assert.AreEqual("jaycar.co.nz", response.DomainName.ToString());
 
             // Domain Status
             Assert.AreEqual(1, response.DomainStatus.Count);
@@ -123,7 +123,7 @@ namespace Whois.Parsing.Whois.Srs.Net.Nz.Nz
             Assert.AreEqual(0, response.ParsingErrors);
             Assert.AreEqual("whois.srs.net.nz/nz/Found", response.TemplateName);
 
-            Assert.AreEqual("u34jedzcq.co.nz", response.DomainName);
+            Assert.AreEqual("u34jedzcq.co.nz", response.DomainName.ToString());
 
             // Domain Status
             Assert.AreEqual(1, response.DomainStatus.Count);
@@ -144,7 +144,7 @@ namespace Whois.Parsing.Whois.Srs.Net.Nz.Nz
             Assert.AreEqual(0, response.ParsingErrors);
             Assert.AreEqual("whois.srs.net.nz/nz/Found", response.TemplateName);
 
-            Assert.AreEqual("u34jedzcq.nz", response.DomainName);
+            Assert.AreEqual("u34jedzcq.nz", response.DomainName.ToString());
 
             // Domain Status
             Assert.AreEqual(1, response.DomainStatus.Count);
@@ -165,7 +165,7 @@ namespace Whois.Parsing.Whois.Srs.Net.Nz.Nz
             Assert.AreEqual(0, response.ParsingErrors);
             Assert.AreEqual("whois.srs.net.nz/nz/Found", response.TemplateName);
 
-            Assert.AreEqual("google.co.nz", response.DomainName);
+            Assert.AreEqual("google.co.nz", response.DomainName.ToString());
 
             // Registrar Details
             Assert.AreEqual("MarkMonitor", response.Registrar.Name);

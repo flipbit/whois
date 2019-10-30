@@ -45,7 +45,7 @@ namespace Whois.Parsing.Whois.Nic.Ag.Ag
             Assert.AreEqual(0, response.ParsingErrors);
             Assert.AreEqual("generic/tld/Found001", response.TemplateName);
 
-            Assert.AreEqual("google.ag", response.DomainName);
+            Assert.AreEqual("google.ag", response.DomainName.ToString());
             Assert.AreEqual("D48552-LRCC", response.RegistryDomainId);
 
             // Registrar Details

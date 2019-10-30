@@ -15,7 +15,7 @@ terminateOnNewLine: true
 set: Status = Found
 ---
 domain:ID:{ RegistryDomainId ? }
-domain:Domain-Name:{ DomainName : IsDomainName, ToLower }
+domain:Domain-Name:{ DomainName : IsDomainName, ToHostName }
 domain:Owner-Contact;I:{ Registrant.RegistryId ? }
 domain:Admin-Contact;I:{ AdminContact.RegistryId ? }
 domain:Tech-Contact;I:{ TechnicalContact.RegistryId  ? }

@@ -11,7 +11,7 @@ tag: tw
 # Set query response type:
 set: Status = Found
 ---
-Domain Name: { DomainName : IsDomainName, ToLower, EOL }
+Domain Name: { DomainName : IsDomainName, ToHostName, EOL }
    Registrant:
       { Registrant.Organization : EOL }
       { Registrant.Name ? }  { Registrant.Email ? : IsEmail, EOL }

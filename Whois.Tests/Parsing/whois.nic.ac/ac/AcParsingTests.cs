@@ -30,7 +30,7 @@ namespace Whois.Parsing.Whois.Nic.Ac.Ac
             Assert.AreEqual(0, response.ParsingErrors);
             Assert.AreEqual("whois.nic.ac/ac/NotFound", response.TemplateName);
 
-            Assert.AreEqual("u34jedzcq.ac", response.DomainName);
+            Assert.AreEqual("u34jedzcq.ac", response.DomainName.ToString());
 
             Assert.AreEqual(2, response.FieldsParsed);
         }
@@ -47,7 +47,7 @@ namespace Whois.Parsing.Whois.Nic.Ac.Ac
             Assert.AreEqual(0, response.ParsingErrors);
             Assert.AreEqual("whois.nic.ac/ac/Found", response.TemplateName);
 
-            Assert.AreEqual("google.ac", response.DomainName);
+            Assert.AreEqual("google.ac", response.DomainName.ToString());
 
             Assert.AreEqual(new DateTime(2014, 04, 03, 00, 00, 00, 000, DateTimeKind.Utc), response.Expiration);
 

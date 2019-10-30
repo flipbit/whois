@@ -31,7 +31,7 @@ namespace Whois.Parsing.Whois.Nic.Gs.Gs
             Assert.AreEqual(0, response.ParsingErrors);
             Assert.AreEqual("whois.nic.gs/gs/NotFound", response.TemplateName);
 
-            Assert.AreEqual("u34jedzcq.gs", response.DomainName);
+            Assert.AreEqual("u34jedzcq.gs", response.DomainName.ToString());
 
             Assert.AreEqual(2, response.FieldsParsed);
         }
@@ -48,7 +48,7 @@ namespace Whois.Parsing.Whois.Nic.Gs.Gs
             Assert.AreEqual(0, response.ParsingErrors);
             Assert.AreEqual("generic/tld/Found001", response.TemplateName);
 
-            Assert.AreEqual("google.gs", response.DomainName);
+            Assert.AreEqual("google.gs", response.DomainName.ToString());
             Assert.AreEqual("4258-CoCCA.gs", response.RegistryDomainId);
 
             // Registrar Details
@@ -101,7 +101,7 @@ namespace Whois.Parsing.Whois.Nic.Gs.Gs
             Assert.AreEqual(0, response.ParsingErrors);
             Assert.AreEqual("generic/tld/NotFound004", response.TemplateName);
 
-            Assert.AreEqual("u34jedzcq.gs", response.DomainName);
+            Assert.AreEqual("u34jedzcq.gs", response.DomainName.ToString());
 
             Assert.AreEqual(2, response.FieldsParsed);
         }
@@ -118,7 +118,7 @@ namespace Whois.Parsing.Whois.Nic.Gs.Gs
             Assert.AreEqual(0, response.ParsingErrors);
             Assert.AreEqual("generic/tld/Found001", response.TemplateName);
 
-            Assert.AreEqual("google.gs", response.DomainName);
+            Assert.AreEqual("google.gs", response.DomainName.ToString());
             Assert.AreEqual("4258-CoCCA.gs", response.RegistryDomainId);
 
             // Registrar Details

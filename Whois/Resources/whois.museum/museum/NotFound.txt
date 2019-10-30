@@ -13,4 +13,4 @@ set: Status = NotFound
 
 hint: NOT FOUND
 ---
-% Object "{ DomainName : IsDomainName, ToLower }" NOT FOUND.
+% Object "{ DomainName : IsDomainName, ToHostName }" NOT FOUND.

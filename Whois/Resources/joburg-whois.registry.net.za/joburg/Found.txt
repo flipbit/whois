@@ -11,7 +11,7 @@ tag: joburg
 # Set query response type:
 set: Status = Found
 ---
-Domain Name: { DomainName : IsDomainName, ToLower, EOL }
+Domain Name: { DomainName : IsDomainName, ToHostName, EOL }
 Domain ID: { RegistryDomainId : EOL }
 WHOIS Server: { Registrar.WhoisServerUrl : IsDomainName, ToLower, EOL }
 

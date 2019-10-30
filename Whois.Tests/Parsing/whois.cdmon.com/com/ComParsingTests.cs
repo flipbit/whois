@@ -30,7 +30,7 @@ namespace Whois.Parsing.Whois.Cdmon.Com.Com
             Assert.AreEqual(0, response.ParsingErrors);
             Assert.AreEqual("generic/tld/Found001", response.TemplateName);
 
-            Assert.AreEqual("cdmon.com", response.DomainName);
+            Assert.AreEqual("cdmon.com", response.DomainName.ToString());
 
             // Registrar Details
             Assert.AreEqual("10DENCEHISPAHARD, S.L", response.Registrar.Name);

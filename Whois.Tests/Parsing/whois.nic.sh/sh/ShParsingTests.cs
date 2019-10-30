@@ -42,7 +42,7 @@ namespace Whois.Parsing.Whois.Nic.Sh.Sh
             Assert.AreEqual(0, response.ParsingErrors);
             Assert.AreEqual("whois.nic.sh/sh/Found", response.TemplateName);
 
-            Assert.AreEqual("google.sh", response.DomainName);
+            Assert.AreEqual("google.sh", response.DomainName.ToString());
 
             Assert.AreEqual(new DateTime(2014, 06, 06, 00, 00, 00, 000, DateTimeKind.Utc), response.Expiration);
 

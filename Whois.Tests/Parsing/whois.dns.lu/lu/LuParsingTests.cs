@@ -30,7 +30,7 @@ namespace Whois.Parsing.Whois.Dns.Lu.Lu
             Assert.AreEqual(0, response.ParsingErrors);
             Assert.AreEqual("whois.dns.lu/lu/Found", response.TemplateName);
 
-            Assert.AreEqual("arbed.lu", response.DomainName);
+            Assert.AreEqual("arbed.lu", response.DomainName.ToString());
 
             // Registrar Details
             Assert.AreEqual("Nameshield", response.Registrar.Name);
@@ -100,7 +100,7 @@ namespace Whois.Parsing.Whois.Dns.Lu.Lu
             Assert.AreEqual(0, response.ParsingErrors);
             Assert.AreEqual("whois.dns.lu/lu/NotFound", response.TemplateName);
 
-            Assert.AreEqual("u34jedzcq.lu", response.DomainName);
+            Assert.AreEqual("u34jedzcq.lu", response.DomainName.ToString());
 
 
             Assert.AreEqual(2, response.FieldsParsed);
@@ -118,7 +118,7 @@ namespace Whois.Parsing.Whois.Dns.Lu.Lu
             Assert.AreEqual(0, response.ParsingErrors);
             Assert.AreEqual("whois.dns.lu/lu/Found", response.TemplateName);
 
-            Assert.AreEqual("google.lu", response.DomainName);
+            Assert.AreEqual("google.lu", response.DomainName.ToString());
 
             // Registrar Details
             Assert.AreEqual("Markmonitor", response.Registrar.Name);

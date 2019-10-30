@@ -45,7 +45,7 @@ namespace Whois.Parsing.Whois.Registre.Ma.Ma
             Assert.AreEqual(0, response.ParsingErrors);
             Assert.AreEqual("whois.registre.ma/ma/Found", response.TemplateName);
 
-            Assert.AreEqual("google.ma", response.DomainName);
+            Assert.AreEqual("google.ma", response.DomainName.ToString());
             Assert.AreEqual("333.google.ma", response.RegistryDomainId);
 
             Assert.AreEqual(new DateTime(2009, 03, 24, 00, 00, 00, 000, DateTimeKind.Utc), response.Updated);

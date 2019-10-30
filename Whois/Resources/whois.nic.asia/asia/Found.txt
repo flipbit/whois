@@ -18,7 +18,7 @@ terminateOnNewLine: true
 set: Status = Found
 ---
 Domain ID:{ RegistryDomainId ? }
-Domain Name:{ DomainName : IsDomainName, ToLower }
+Domain Name:{ DomainName : IsDomainName, ToHostName }
 Domain Create Date:{ Registered ? : ToDateTimeUtc("dd-MMM-yyyy HH:mm:ss") }
 Domain Expiration Date:{ Expiration ? : ToDateTimeUtc("dd-MMM-yyyy HH:mm:ss") }
 Domain Last Updated Date:{ Updated ? : ToDateTimeUtc("dd-MMM-yyyy HH:mm:ss") }

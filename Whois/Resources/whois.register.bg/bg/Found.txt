@@ -15,7 +15,7 @@ terminateOnNewLine: true
 set: Status = Found
 ---
 
-DOMAIN NAME: { DomainName : IsDomainName, ToLower }
+DOMAIN NAME: { DomainName : IsDomainName, ToHostName }
 activated on: { Registered ? : Replace(' EET', '+02:00'), Replace(' EEST', '+03:00'), ToDateTimeUtc("dd/MM/yyyy HH:mm:sszzz") }
 expires at: { Expiration ? : Replace(' EET', '+02:00'), Replace(' EEST', '+03:00'), ToDateTimeUtc("dd/MM/yyyy HH:mm:sszzz") }
 registration status: { DomainStatus ? : Repeating, CleanDomainStatus }

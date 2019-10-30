@@ -28,7 +28,7 @@ set: Status = Found
 
 hint: domain
 ---
-domain:       { DomainName : IsDomainName, ToLower }
+domain:       { DomainName : IsDomainName, ToHostName }
 registrant:   { Registrant.RegistryId ? }
 status:       { DomainStatus ? : Repeating, CleanDomainStatus }
 registered:   { Registered ? : ToDateTimeUtc("dd.MM.yyyy HH:mm:ss"), Repeating }

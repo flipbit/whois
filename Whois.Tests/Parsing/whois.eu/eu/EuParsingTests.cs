@@ -30,7 +30,7 @@ namespace Whois.Parsing.Whois.Eu.Eu
             Assert.AreEqual(0, response.ParsingErrors);
             Assert.AreEqual("whois.eu/eu/Found", response.TemplateName);
 
-            Assert.AreEqual("eurid.eu", response.DomainName);
+            Assert.AreEqual("eurid.eu", response.DomainName.ToString());
 
             // Registrar Details
             Assert.AreEqual("EURid vzw/asbl", response.Registrar.Name);
@@ -73,7 +73,7 @@ namespace Whois.Parsing.Whois.Eu.Eu
             Assert.AreEqual(0, response.ParsingErrors);
             Assert.AreEqual("whois.eu/eu/NotFound", response.TemplateName);
 
-            Assert.AreEqual("u34jedzcq.eu", response.DomainName);
+            Assert.AreEqual("u34jedzcq.eu", response.DomainName.ToString());
 
             Assert.AreEqual(2, response.FieldsParsed);
         }
@@ -90,7 +90,7 @@ namespace Whois.Parsing.Whois.Eu.Eu
             Assert.AreEqual(0, response.ParsingErrors);
             Assert.AreEqual("whois.eu/eu/Found", response.TemplateName);
 
-            Assert.AreEqual("google.eu", response.DomainName);
+            Assert.AreEqual("google.eu", response.DomainName.ToString());
 
             // Registrar Details
             Assert.AreEqual("https://www.markmonitor.com/", response.Registrar.Url);

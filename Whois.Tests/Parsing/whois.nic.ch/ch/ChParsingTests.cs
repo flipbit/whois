@@ -29,7 +29,7 @@ namespace Whois.Parsing.Whois.Nic.Ch.Ch
             Assert.AreEqual(0, response.ParsingErrors);
             Assert.AreEqual("whois.nic.ch/ch/Found", response.TemplateName);
 
-            Assert.AreEqual("ggoogle.ch", response.DomainName);
+            Assert.AreEqual("ggoogle.ch", response.DomainName.ToString());
 
              // Registrant Details
             Assert.AreEqual("EISD John", response.Registrant.Name);
@@ -73,7 +73,7 @@ namespace Whois.Parsing.Whois.Nic.Ch.Ch
             Assert.AreEqual(0, response.ParsingErrors);
             Assert.AreEqual("whois.nic.ch/ch/Found", response.TemplateName);
 
-            Assert.AreEqual("pui.ch", response.DomainName);
+            Assert.AreEqual("pui.ch", response.DomainName.ToString());
 
              // Registrant Details
             Assert.AreEqual("Keller Philipp", response.Registrant.Name);
@@ -133,7 +133,7 @@ namespace Whois.Parsing.Whois.Nic.Ch.Ch
             Assert.AreEqual(0, response.ParsingErrors);
             Assert.AreEqual("whois.nic.ch/ch/Found", response.TemplateName);
 
-            Assert.AreEqual("google.ch", response.DomainName);
+            Assert.AreEqual("google.ch", response.DomainName.ToString());
 
              // Registrant Details
             Assert.AreEqual("Google Inc.", response.Registrant.Name);

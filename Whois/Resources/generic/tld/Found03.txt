@@ -25,7 +25,7 @@ IgnoreMissingProperties: true
 # Set query response type:
 set: Status = Found
 ---
-domain:      { DomainName : IsDomainName, ToLower }
+domain:      { DomainName : IsDomainName, ToHostName }
 address:     { Address : IsNotEmpty, Repeating }
 changed:     { Changed ? : ToDateTimeUtc("yyyy-MM-dd HH:mm:ssZ") }
 changed:     { Changed ? : ToDateTimeUtc("yyyy-MM-dd HH:mm:sszzz") }

@@ -45,7 +45,7 @@ namespace Whois.Parsing.Whois.Centralnic.Com.GrCom
             Assert.AreEqual(0, response.ParsingErrors);
             Assert.AreEqual("whois.centralnic.com/Found", response.TemplateName);
 
-            Assert.AreEqual("google.gr.com", response.DomainName);
+            Assert.AreEqual("google.gr.com", response.DomainName.ToString());
             Assert.AreEqual("CNIC-DO735168", response.RegistryDomainId);
 
             Assert.AreEqual(new DateTime(2012, 6, 23, 10, 38, 2, DateTimeKind.Utc), response.Updated);

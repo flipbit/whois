@@ -45,7 +45,7 @@ namespace Whois.Parsing.Whois.Nic.At.At
             Assert.AreEqual(0, response.ParsingErrors);
             Assert.AreEqual("whois.nic.at/at/Found", response.TemplateName);
 
-            Assert.AreEqual("google.at", response.DomainName);
+            Assert.AreEqual("google.at", response.DomainName.ToString());
 
             Assert.AreEqual(new DateTime(2011, 04, 26, 17, 57, 27, 000, DateTimeKind.Utc), response.Updated);
 

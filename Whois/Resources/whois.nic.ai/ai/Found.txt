@@ -16,7 +16,7 @@ set: Status = Found
 ---
 DOMAIN INFORMATION
 
- Complete Domain Name........: { DomainName : IsDomainName, ToLower }
+ Complete Domain Name........: { DomainName : IsDomainName, ToHostName }
 Organization Using Domain Name
  Organization Name..........: { Registrant.Organization ? }
  Street Address.............: { Registrant.Address ? : IsNotEmpty }

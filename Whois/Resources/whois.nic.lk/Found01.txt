@@ -19,7 +19,7 @@ set: Status = Found
 Registrant:
 	{ Registrant.Name ? }
 Domain Name:
-	{ DomainName ? : IsDomainName, ToLower }
+	{ DomainName ? : IsDomainName, ToHostName }
 
 Created on...............:{ Registered ? : ToDateTimeUtc("yyyy-MM-dd") }
 Expires on...............:{ Expiration ? : ToDateTimeUtc("yyyy-MM-dd") }

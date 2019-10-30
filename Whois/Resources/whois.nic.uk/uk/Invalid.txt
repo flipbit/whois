@@ -13,4 +13,4 @@ set: Status = Invalid
 
 hint: Error for
 ---
-    Error for "{ DomainName : IsDomainName, ToLower }".
+    Error for "{ DomainName : IsDomainName, ToHostName }".

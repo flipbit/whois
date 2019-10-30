@@ -45,7 +45,7 @@ namespace Whois.Parsing.Whois.Nic.Fm.Fm
             Assert.AreEqual(0, response.ParsingErrors);
             Assert.AreEqual("generic/tld/Found001", response.TemplateName);
 
-            Assert.AreEqual("google.fm", response.DomainName);
+            Assert.AreEqual("google.fm", response.DomainName.ToString());
             Assert.AreEqual("D34865469-CNIC", response.RegistryDomainId);
 
             // Registrar Details

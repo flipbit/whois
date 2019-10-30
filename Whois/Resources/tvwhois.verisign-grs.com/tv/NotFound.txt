@@ -11,6 +11,6 @@ tag: tv
 # Set query response type:
 set: Status = NotFound
 ---
-No match for "{ DomainName : IsDomainName, ToLower, EOL }".
+No match for "{ DomainName : IsDomainName, ToHostName, EOL }".
 
 >>> Last update of whois database: 

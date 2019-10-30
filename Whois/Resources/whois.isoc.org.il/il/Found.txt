@@ -23,7 +23,7 @@ IgnoreMissingProperties: true
 # Set query response type:
 set: Status = Found
 ---
-domain:       { DomainName : IsDomainName, ToLower }
+domain:       { DomainName : IsDomainName, ToHostName }
 descr:        { Address : IsNotEmpty, Repeating }
 admin-c:      { AdminContact.RegistryId ? }
 tech-c:       { TechnicalContact.RegistryId ? }

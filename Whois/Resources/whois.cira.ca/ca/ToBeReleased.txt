@@ -13,6 +13,6 @@ set: Status = ToBeReleased
 
 hint: TBR Release date:      
 ---
-Domain name:           { DomainName : IsDomainName, ToLower, EOL }
+Domain name:           { DomainName : IsDomainName, ToHostName, EOL }
 Domain status:         { DomainStatus ? : Repeating, EOL }
 TBR Release date:      

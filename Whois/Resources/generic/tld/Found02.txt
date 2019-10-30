@@ -19,7 +19,7 @@ trimPreambleBeforeNewLine: true
 # Set query response type:
 set: Status = Found
 ---
-   Domain Name: { DomainName : Trim, IsDomainName, ToLower }
+   Domain Name: { DomainName : Trim, IsDomainName, ToHostName }
    Registry Domain ID: { RegistryDomainId ? : Trim }
    Registrar WHOIS Server: { Registrar.WhoisServerUrl ? : IsNotEmpty, Trim, IsDomainName, ToLower }
    Registrar URL: { Registrar.Url ? : Trim, IsUrl, ToLower }

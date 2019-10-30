@@ -46,7 +46,7 @@ namespace Whois.Parsing.Whois.Nic.Priv.At.At
             Assert.AreEqual(0, response.ParsingErrors);
             Assert.AreEqual("whois.nic.priv.at/at/Found", response.TemplateName);
 
-            Assert.AreEqual("nic.priv.at", response.DomainName);
+            Assert.AreEqual("nic.priv.at", response.DomainName.ToString());
 
             // Registrar Details
             Assert.AreEqual("Network Information Center for priv.at", response.Registrar.Name);

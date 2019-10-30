@@ -30,7 +30,7 @@ namespace Whois.Parsing.Whois.Nic.Re.Re
             Assert.AreEqual(0, response.ParsingErrors);
             Assert.AreEqual("generic/tld/Found05", response.TemplateName);
 
-            Assert.AreEqual("nic.re", response.DomainName);
+            Assert.AreEqual("nic.re", response.DomainName.ToString());
 
             // Registrar Details
             Assert.AreEqual("AFNIC registry", response.Registrar.Name);
@@ -154,7 +154,7 @@ namespace Whois.Parsing.Whois.Nic.Re.Re
             Assert.AreEqual(0, response.ParsingErrors);
             Assert.AreEqual("generic/tld/Found05", response.TemplateName);
 
-            Assert.AreEqual("nic.re", response.DomainName);
+            Assert.AreEqual("nic.re", response.DomainName.ToString());
 
             // Registrar Details
             Assert.AreEqual("AFNIC registry", response.Registrar.Name);

@@ -45,7 +45,7 @@ namespace Whois.Parsing.Whois.Centralnic.Com.JpnCom
             Assert.AreEqual(0, response.ParsingErrors);
             Assert.AreEqual("whois.centralnic.com/Found", response.TemplateName);
 
-            Assert.AreEqual("koi.jpn.com", response.DomainName);
+            Assert.AreEqual("koi.jpn.com", response.DomainName.ToString());
             Assert.AreEqual("CNIC-DO492866", response.RegistryDomainId);
 
             // Registrar Details

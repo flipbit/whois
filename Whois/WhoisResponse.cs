@@ -36,7 +36,7 @@ namespace Whois
         /// <summary>
         /// Gets the domain name
         /// </summary>
-        public string DomainName { get; set; }
+        public HostName DomainName { get; set; }
 
         /// <summary>
         /// Gets the registry Domain Id

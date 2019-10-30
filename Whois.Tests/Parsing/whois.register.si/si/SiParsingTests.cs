@@ -46,7 +46,7 @@ namespace Whois.Parsing.Whois.Register.Si.Si
             Assert.AreEqual(0, response.ParsingErrors);
             Assert.AreEqual("whois.register.si/si/Found", response.TemplateName);
 
-            Assert.AreEqual("google.si", response.DomainName);
+            Assert.AreEqual("google.si", response.DomainName.ToString());
 
             // Registrar Details
             Assert.AreEqual("AOI d.o.o.", response.Registrar.Name);

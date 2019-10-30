@@ -30,7 +30,7 @@ namespace Whois.Parsing.Whois.Website.Ws.Ws
             Assert.AreEqual(0, response.ParsingErrors);
             Assert.AreEqual("whois.website.ws/ws/NotFound", response.TemplateName);
 
-            Assert.AreEqual("u34jedzcq.ws", response.DomainName);
+            Assert.AreEqual("u34jedzcq.ws", response.DomainName.ToString());
 
             Assert.AreEqual(2, response.FieldsParsed);
         }
@@ -47,7 +47,7 @@ namespace Whois.Parsing.Whois.Website.Ws.Ws
             Assert.AreEqual(0, response.ParsingErrors);
             Assert.AreEqual("whois.website.ws/ws/Found", response.TemplateName);
 
-            Assert.AreEqual("google.ws", response.DomainName);
+            Assert.AreEqual("google.ws", response.DomainName.ToString());
 
             // Registrar Details
             Assert.AreEqual(".WS Registry", response.Registrar.Name);

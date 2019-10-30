@@ -30,7 +30,7 @@ namespace Whois.Parsing.Tvwhois.Verisign.Grs.Com.Tv
             Assert.AreEqual(7, response.FieldsParsed);
             Assert.AreEqual(0, response.ParsingErrors);
 
-            Assert.AreEqual("set.tv", response.DomainName);
+            Assert.AreEqual("set.tv", response.DomainName.ToString());
 
             Assert.AreEqual(".TV RESERVED DOMAINS", response.Registrar.Name);
 
@@ -54,7 +54,7 @@ namespace Whois.Parsing.Tvwhois.Verisign.Grs.Com.Tv
             Assert.AreEqual(2, response.FieldsParsed);
             Assert.AreEqual(0, response.ParsingErrors);
 
-            Assert.AreEqual("u34jedzcq.tv", response.DomainName);
+            Assert.AreEqual("u34jedzcq.tv", response.DomainName.ToString());
         }
 
         [Test]
@@ -69,7 +69,7 @@ namespace Whois.Parsing.Tvwhois.Verisign.Grs.Com.Tv
             Assert.AreEqual(21, response.FieldsParsed);
             Assert.AreEqual(0, response.ParsingErrors);
 
-            Assert.AreEqual("google.tv", response.DomainName);
+            Assert.AreEqual("google.tv", response.DomainName.ToString());
 
             Assert.AreEqual("MARKMONITOR INC.", response.Registrar.Name);
             Assert.AreEqual("http://www.markmonitor.com", response.Registrar.Url);

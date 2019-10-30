@@ -30,7 +30,7 @@ namespace Whois.Parsing.Whois.Nic.Bj.Bj
             Assert.AreEqual(0, response.ParsingErrors);
             Assert.AreEqual("whois.nic.bj/bj/NotFound", response.TemplateName);
 
-            Assert.AreEqual("u34jedzcq.bj", response.DomainName);
+            Assert.AreEqual("u34jedzcq.bj", response.DomainName.ToString());
 
             Assert.AreEqual(2, response.FieldsParsed);
         }
@@ -47,7 +47,7 @@ namespace Whois.Parsing.Whois.Nic.Bj.Bj
             Assert.AreEqual(0, response.ParsingErrors);
             Assert.AreEqual("whois.nic.bj/bj/Found", response.TemplateName);
 
-            Assert.AreEqual("google.bj", response.DomainName);
+            Assert.AreEqual("google.bj", response.DomainName.ToString());
 
             Assert.AreEqual(new DateTime(2012, 08, 10, 08, 57, 22, 000, DateTimeKind.Utc), response.Updated);
             Assert.AreEqual(new DateTime(2009, 03, 25, 08, 57, 22, 000, DateTimeKind.Utc), response.Registered);

@@ -11,5 +11,5 @@ tag: gov.za
 # Set query response type:
 set: Status = NotFound
 ---
-No match found for { DomainName : IsDomainName, ToLower }
+No match found for { DomainName : IsDomainName, ToHostName }
 

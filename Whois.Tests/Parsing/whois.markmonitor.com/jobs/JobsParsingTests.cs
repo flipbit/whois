@@ -30,7 +30,7 @@ namespace Whois.Parsing.Whois.Markmonitor.Com.Jobs
             Assert.AreEqual(0, response.ParsingErrors);
             Assert.AreEqual("generic/tld/Found001", response.TemplateName);
 
-            Assert.AreEqual("google.jobs", response.DomainName);
+            Assert.AreEqual("google.jobs", response.DomainName.ToString());
             Assert.AreEqual("86932313_DOMAIN_JOBS-VRSN", response.RegistryDomainId);
 
             // Registrar Details

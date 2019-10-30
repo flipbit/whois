@@ -30,7 +30,7 @@ namespace Whois.Parsing.Whois.Nic.Mx.Mx
             Assert.AreEqual(0, response.ParsingErrors);
             Assert.AreEqual("whois.nic.mx/mx/Found", response.TemplateName);
 
-            Assert.AreEqual("mpsnet.net.mx", response.DomainName);
+            Assert.AreEqual("mpsnet.net.mx", response.DomainName.ToString());
 
             // Registrar Details
             Assert.AreEqual("NIC Mexico", response.Registrar.Name);
@@ -114,7 +114,7 @@ namespace Whois.Parsing.Whois.Nic.Mx.Mx
             Assert.AreEqual(0, response.ParsingErrors);
             Assert.AreEqual("whois.nic.mx/mx/Found", response.TemplateName);
 
-            Assert.AreEqual("google.mx", response.DomainName);
+            Assert.AreEqual("google.mx", response.DomainName.ToString());
 
             // Registrar Details
             Assert.AreEqual("MarkMonitor", response.Registrar.Name);

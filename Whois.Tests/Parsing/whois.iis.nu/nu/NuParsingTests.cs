@@ -30,7 +30,7 @@ namespace Whois.Parsing.Whois.Iis.Nu.Nu
             Assert.AreEqual(0, response.ParsingErrors);
             Assert.AreEqual("whois.iis.nu/nu/NotFound", response.TemplateName);
 
-            Assert.AreEqual("u34jedzcq.nu", response.DomainName);
+            Assert.AreEqual("u34jedzcq.nu", response.DomainName.ToString());
 
             Assert.AreEqual(2, response.FieldsParsed);
         }
@@ -48,7 +48,7 @@ namespace Whois.Parsing.Whois.Iis.Nu.Nu
             Assert.AreEqual(0, response.ParsingErrors);
             Assert.AreEqual("whois.iis.nu/nu/Found", response.TemplateName);
 
-            Assert.AreEqual("google.nu", response.DomainName);
+            Assert.AreEqual("google.nu", response.DomainName.ToString());
 
             // Registrar Details
             Assert.AreEqual("MarkMonitor Inc.", response.Registrar.Name);

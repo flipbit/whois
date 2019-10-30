@@ -30,7 +30,7 @@ namespace Whois.Parsing.Whois.Nic.Ve.Ve
             Assert.AreEqual(0, response.ParsingErrors);
             Assert.AreEqual("whois.nic.ve/ve/Found", response.TemplateName);
 
-            Assert.AreEqual("ula.ve", response.DomainName);
+            Assert.AreEqual("ula.ve", response.DomainName.ToString());
 
             Assert.AreEqual(new DateTime(2005, 11, 17, 21, 16, 31, 000, DateTimeKind.Utc), response.Updated);
             Assert.AreEqual(new DateTime(2005, 11, 15, 14, 40, 48, 000, DateTimeKind.Utc), response.Registered);
@@ -115,7 +115,7 @@ namespace Whois.Parsing.Whois.Nic.Ve.Ve
             Assert.AreEqual(0, response.ParsingErrors);
             Assert.AreEqual("whois.nic.ve/ve/Found", response.TemplateName);
 
-            Assert.AreEqual("ula.ve", response.DomainName);
+            Assert.AreEqual("ula.ve", response.DomainName.ToString());
 
             Assert.AreEqual(new DateTime(2005, 11, 17, 21, 16, 31, 000, DateTimeKind.Utc), response.Updated);
             Assert.AreEqual(new DateTime(2005, 11, 15, 14, 40, 48, 000, DateTimeKind.Utc), response.Registered);
@@ -200,7 +200,7 @@ namespace Whois.Parsing.Whois.Nic.Ve.Ve
             Assert.AreEqual(0, response.ParsingErrors);
             Assert.AreEqual("whois.nic.ve/ve/Found", response.TemplateName);
 
-            Assert.AreEqual("zumba.com.ve", response.DomainName);
+            Assert.AreEqual("zumba.com.ve", response.DomainName.ToString());
 
             Assert.AreEqual(new DateTime(2010, 10, 27, 12, 23, 43, 000, DateTimeKind.Utc), response.Registered);
             Assert.AreEqual(new DateTime(2011, 10, 27, 12, 23, 43, 000, DateTimeKind.Utc), response.Expiration);
@@ -279,7 +279,7 @@ namespace Whois.Parsing.Whois.Nic.Ve.Ve
             Assert.AreEqual(0, response.ParsingErrors);
             Assert.AreEqual("whois.nic.ve/ve/Found", response.TemplateName);
 
-            Assert.AreEqual("zumba.com.ve", response.DomainName);
+            Assert.AreEqual("zumba.com.ve", response.DomainName.ToString());
 
             Assert.AreEqual(new DateTime(2010, 10, 27, 12, 23, 43, 000, DateTimeKind.Utc), response.Registered);
             Assert.AreEqual(new DateTime(2011, 10, 27, 12, 23, 43, 000, DateTimeKind.Utc), response.Expiration);
@@ -358,7 +358,7 @@ namespace Whois.Parsing.Whois.Nic.Ve.Ve
             Assert.AreEqual(0, response.ParsingErrors);
             Assert.AreEqual("whois.nic.ve/ve/NotFound", response.TemplateName);
 
-            Assert.AreEqual("u34jedzcq.ve", response.DomainName);
+            Assert.AreEqual("u34jedzcq.ve", response.DomainName.ToString());
 
             Assert.AreEqual(2, response.FieldsParsed);
         }
@@ -375,7 +375,7 @@ namespace Whois.Parsing.Whois.Nic.Ve.Ve
             Assert.AreEqual(0, response.ParsingErrors);
             Assert.AreEqual("whois.nic.ve/ve/Found", response.TemplateName);
 
-            Assert.AreEqual("aloespa.com.ve", response.DomainName);
+            Assert.AreEqual("aloespa.com.ve", response.DomainName.ToString());
 
             Assert.AreEqual(new DateTime(2006, 06, 08, 21, 54, 41, 000, DateTimeKind.Utc), response.Updated);
             Assert.AreEqual(new DateTime(2005, 11, 21, 15, 21, 32, 000, DateTimeKind.Utc), response.Registered);
@@ -459,7 +459,7 @@ namespace Whois.Parsing.Whois.Nic.Ve.Ve
             Assert.AreEqual(0, response.ParsingErrors);
             Assert.AreEqual("whois.nic.ve/ve/Found", response.TemplateName);
 
-            Assert.AreEqual("ula.ve", response.DomainName);
+            Assert.AreEqual("ula.ve", response.DomainName.ToString());
 
             Assert.AreEqual(new DateTime(2005, 11, 17, 21, 16, 31, 000, DateTimeKind.Utc), response.Updated);
             Assert.AreEqual(new DateTime(2005, 11, 15, 14, 40, 48, 000, DateTimeKind.Utc), response.Registered);
@@ -544,7 +544,7 @@ namespace Whois.Parsing.Whois.Nic.Ve.Ve
             Assert.AreEqual(0, response.ParsingErrors);
             Assert.AreEqual("whois.nic.ve/ve/Found", response.TemplateName);
 
-            Assert.AreEqual("zumba.com.ve", response.DomainName);
+            Assert.AreEqual("zumba.com.ve", response.DomainName.ToString());
 
             Assert.AreEqual(new DateTime(2010, 10, 27, 12, 23, 43, 000, DateTimeKind.Utc), response.Registered);
             Assert.AreEqual(new DateTime(2011, 10, 27, 12, 23, 43, 000, DateTimeKind.Utc), response.Expiration);
@@ -623,7 +623,7 @@ namespace Whois.Parsing.Whois.Nic.Ve.Ve
             Assert.AreEqual(0, response.ParsingErrors);
             Assert.AreEqual("whois.nic.ve/ve/NotFound", response.TemplateName);
 
-            Assert.AreEqual("u34jedzcq.ve", response.DomainName);
+            Assert.AreEqual("u34jedzcq.ve", response.DomainName.ToString());
 
             Assert.AreEqual(2, response.FieldsParsed);
         }
@@ -640,7 +640,7 @@ namespace Whois.Parsing.Whois.Nic.Ve.Ve
             Assert.AreEqual(0, response.ParsingErrors);
             Assert.AreEqual("whois.nic.ve/ve/Found", response.TemplateName);
 
-            Assert.AreEqual("aloespa.com.ve", response.DomainName);
+            Assert.AreEqual("aloespa.com.ve", response.DomainName.ToString());
 
             Assert.AreEqual(new DateTime(2006, 06, 08, 21, 54, 41, 000, DateTimeKind.Utc), response.Updated);
             Assert.AreEqual(new DateTime(2005, 11, 21, 15, 21, 32, 000, DateTimeKind.Utc), response.Registered);
@@ -724,7 +724,7 @@ namespace Whois.Parsing.Whois.Nic.Ve.Ve
             Assert.AreEqual(0, response.ParsingErrors);
             Assert.AreEqual("whois.nic.ve/ve/Found", response.TemplateName);
 
-            Assert.AreEqual("zumba.com.ve", response.DomainName);
+            Assert.AreEqual("zumba.com.ve", response.DomainName.ToString());
 
             Assert.AreEqual(new DateTime(2010, 10, 27, 12, 23, 43, 000, DateTimeKind.Utc), response.Registered);
             Assert.AreEqual(new DateTime(2011, 10, 27, 12, 23, 43, 000, DateTimeKind.Utc), response.Expiration);

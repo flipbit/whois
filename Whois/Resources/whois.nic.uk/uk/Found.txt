@@ -16,7 +16,7 @@ set: Status = Found
 ---
 
     Domain name:
-        { DomainName : IsDomainName, ToLower }
+        { DomainName : IsDomainName, ToHostName }
 
     Registrant:
         { Registrant.Name ? }

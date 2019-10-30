@@ -11,4 +11,4 @@ tag: ie
 # Set query response type:
 set: Status = NotFound
 ---
-% Not Registered - The domain you have requested ({ DomainName : IsDomainName, ToLower }) is not a registered .ie domain name.
+% Not Registered - The domain you have requested ({ DomainName : IsDomainName, ToHostName }) is not a registered .ie domain name.

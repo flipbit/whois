@@ -14,7 +14,7 @@ terminateOnNewLine: true
 # Set query response type:
 set: Status = Found
 ---
-ACE: { DomainName : SubstringBefore(' ('), IsDomainName, ToLower }
+ACE: { DomainName : SubstringBefore(' ('), IsDomainName, ToHostName }
 
 { Registrant.Name ? : IsNotEmpty }
 

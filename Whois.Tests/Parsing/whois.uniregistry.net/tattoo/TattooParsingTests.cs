@@ -30,7 +30,7 @@ namespace Whois.Parsing.Whois.Uniregistry.Net.Tattoo
             Assert.AreEqual(0, response.ParsingErrors);
             Assert.AreEqual("whois.uniregistry.net/tattoo/NotFound", response.TemplateName);
 
-            Assert.AreEqual("u34jedzcq.tattoo", response.DomainName);
+            Assert.AreEqual("u34jedzcq.tattoo", response.DomainName.ToString());
 
             Assert.AreEqual(2, response.FieldsParsed);
         }
@@ -47,7 +47,7 @@ namespace Whois.Parsing.Whois.Uniregistry.Net.Tattoo
             Assert.AreEqual(0, response.ParsingErrors);
             Assert.AreEqual("generic/tld/Found001", response.TemplateName);
 
-            Assert.AreEqual("nic.tattoo", response.DomainName);
+            Assert.AreEqual("nic.tattoo", response.DomainName.ToString());
             Assert.AreEqual("DO_4810ec9890fdf872f2e23b58df485dc4-ISC", response.RegistryDomainId);
 
             // Registrar Details
@@ -156,7 +156,7 @@ namespace Whois.Parsing.Whois.Uniregistry.Net.Tattoo
             Assert.AreEqual(0, response.ParsingErrors);
             Assert.AreEqual("whois.uniregistry.net/tattoo/Unavailable", response.TemplateName);
 
-            Assert.AreEqual("cheap.tattoo", response.DomainName);
+            Assert.AreEqual("cheap.tattoo", response.DomainName.ToString());
 
             Assert.AreEqual(2, response.FieldsParsed);
         }

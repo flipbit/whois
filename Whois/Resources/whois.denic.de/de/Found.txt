@@ -11,7 +11,7 @@ tag: de
 # Set query response type:
 set: Status = Found
 ---
-Domain: { DomainName : IsDomainName, ToLower, EOL }
+Domain: { DomainName : IsDomainName, ToHostName, EOL }
 Nserver: { NameServers ? : IsDomainName, ToLower, Repeating, EOL }
 Status: { DomainStatus ? : Trim, Repeating, EOL }
 Changed: { Updated ? : ToDateTimeUtc("yyyy-MM-ddTHH:mm:sszzz"), EOL }

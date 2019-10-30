@@ -31,7 +31,7 @@ namespace Whois.Parsing.Whois1.Nic.Bi.Bi
             Assert.AreEqual(0, response.ParsingErrors);
             Assert.AreEqual("generic/tld/NotFound004", response.TemplateName);
 
-            Assert.AreEqual("u34jedzcq.bi", response.DomainName);
+            Assert.AreEqual("u34jedzcq.bi", response.DomainName.ToString());
 
             Assert.AreEqual(2, response.FieldsParsed);
         }
@@ -48,7 +48,7 @@ namespace Whois.Parsing.Whois1.Nic.Bi.Bi
             Assert.AreEqual(0, response.ParsingErrors);
             Assert.AreEqual("generic/tld/Found001", response.TemplateName);
 
-            Assert.AreEqual("google.bi", response.DomainName);
+            Assert.AreEqual("google.bi", response.DomainName.ToString());
             Assert.AreEqual("2633NIC-BI", response.RegistryDomainId);
 
             // Registrar Details

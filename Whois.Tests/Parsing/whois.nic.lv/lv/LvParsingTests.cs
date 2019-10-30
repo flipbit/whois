@@ -29,7 +29,7 @@ namespace Whois.Parsing.Whois.Nic.Lv.Lv
             Assert.AreEqual(0, response.ParsingErrors);
             Assert.AreEqual("whois.nic.lv/lv/Found", response.TemplateName);
 
-            Assert.AreEqual("u34jedzcq.lv", response.DomainName);
+            Assert.AreEqual("u34jedzcq.lv", response.DomainName.ToString());
 
             // Domain Status
             Assert.AreEqual(1, response.DomainStatus.Count);
@@ -50,7 +50,7 @@ namespace Whois.Parsing.Whois.Nic.Lv.Lv
             Assert.AreEqual(0, response.ParsingErrors);
             Assert.AreEqual("whois.nic.lv/lv/Found", response.TemplateName);
 
-            Assert.AreEqual("google.lv", response.DomainName);
+            Assert.AreEqual("google.lv", response.DomainName.ToString());
 
             // Registrar Details
             Assert.AreEqual("MarkMonitor Inc.", response.Registrar.Name);

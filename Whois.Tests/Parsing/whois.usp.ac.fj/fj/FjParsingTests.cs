@@ -29,7 +29,7 @@ namespace Whois.Parsing.Whois.Usp.Ac.Fj.Fj
             Assert.AreEqual(0, response.ParsingErrors);
             Assert.AreEqual("whois.usp.ac.fj/fj/NotFound", response.TemplateName);
 
-            Assert.AreEqual("u34jedzcq.fj", response.DomainName);
+            Assert.AreEqual("u34jedzcq.fj", response.DomainName.ToString());
 
             Assert.AreEqual(2, response.FieldsParsed);
         }
@@ -46,7 +46,7 @@ namespace Whois.Parsing.Whois.Usp.Ac.Fj.Fj
             Assert.AreEqual(0, response.ParsingErrors);
             Assert.AreEqual("whois.usp.ac.fj/fj/Found", response.TemplateName);
 
-            Assert.AreEqual("google.com.fj", response.DomainName);
+            Assert.AreEqual("google.com.fj", response.DomainName.ToString());
 
              // Registrant Details
             Assert.AreEqual("Google Inc.", response.Registrant.Name);

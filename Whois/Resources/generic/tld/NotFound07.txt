@@ -12,4 +12,4 @@ set: Status = NotFound
 
 hint: No match for
 ---
-No match for "{ DomainName : IsDomainName, ToLower }".
+No match for "{ DomainName : IsDomainName, ToHostName }".

@@ -31,7 +31,7 @@ namespace Whois.Parsing.Whois.Ati.Tn.Tn
             Assert.AreEqual(0, response.ParsingErrors);
             Assert.AreEqual("whois.ati.tn/tn/Found", response.TemplateName);
 
-            Assert.AreEqual("equipements-pro.com.tn", response.DomainName);
+            Assert.AreEqual("equipements-pro.com.tn", response.DomainName.ToString());
 
             Assert.AreEqual("I-HOSTERS", response.Registrar.Name);
 
@@ -79,7 +79,7 @@ namespace Whois.Parsing.Whois.Ati.Tn.Tn
             Assert.AreEqual(0, response.ParsingErrors);
             Assert.AreEqual("whois.ati.tn/tn/NotFound", response.TemplateName);
 
-            Assert.AreEqual("u34jedzcq.tn", response.DomainName);        }
+            Assert.AreEqual("u34jedzcq.tn", response.DomainName.ToString());        }
 
         [Test]
         public void Test_found_status_registered()
@@ -94,7 +94,7 @@ namespace Whois.Parsing.Whois.Ati.Tn.Tn
             Assert.AreEqual(0, response.ParsingErrors);
             Assert.AreEqual("whois.ati.tn/tn/Found", response.TemplateName);
 
-            Assert.AreEqual("google.tn", response.DomainName);
+            Assert.AreEqual("google.tn", response.DomainName.ToString());
 
             Assert.AreEqual("3S Global Net", response.Registrar.Name);
 

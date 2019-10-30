@@ -13,5 +13,5 @@ set: Status = NotFound
 
 hint: Domain Status: Available
 ---
-Domain Name: { DomainName : IsDomainName, ToLower }
+Domain Name: { DomainName : IsDomainName, ToHostName }
 Domain Status: Available

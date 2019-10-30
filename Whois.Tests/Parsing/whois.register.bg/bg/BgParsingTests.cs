@@ -30,7 +30,7 @@ namespace Whois.Parsing.Whois.Register.Bg.Bg
             Assert.AreEqual(0, response.ParsingErrors);
             Assert.AreEqual("whois.register.bg/bg/Found", response.TemplateName);
 
-            Assert.AreEqual("orbitel.bg", response.DomainName);
+            Assert.AreEqual("orbitel.bg", response.DomainName.ToString());
 
             Assert.AreEqual(new DateTime(1997, 11, 23, 22, 00, 00, 000, DateTimeKind.Utc), response.Registered);
             Assert.AreEqual(new DateTime(2010, 12, 31, 22, 00, 00, 000, DateTimeKind.Utc), response.Expiration);
@@ -99,7 +99,7 @@ namespace Whois.Parsing.Whois.Register.Bg.Bg
             Assert.AreEqual(0, response.ParsingErrors);
             Assert.AreEqual("whois.register.bg/bg/NotFound", response.TemplateName);
 
-            Assert.AreEqual("u34jedzcq.bg", response.DomainName);
+            Assert.AreEqual("u34jedzcq.bg", response.DomainName.ToString());
 
             Assert.AreEqual(2, response.FieldsParsed);
         }
@@ -116,7 +116,7 @@ namespace Whois.Parsing.Whois.Register.Bg.Bg
             Assert.AreEqual(0, response.ParsingErrors);
             Assert.AreEqual("whois.register.bg/bg/Found", response.TemplateName);
 
-            Assert.AreEqual("google.bg", response.DomainName);
+            Assert.AreEqual("google.bg", response.DomainName.ToString());
 
             Assert.AreEqual(new DateTime(2003, 06, 29, 21, 00, 00, 000, DateTimeKind.Utc), response.Registered);
             Assert.AreEqual(new DateTime(2014, 06, 29, 21, 00, 00, 000, DateTimeKind.Utc), response.Expiration);

@@ -30,7 +30,7 @@ namespace Whois.Parsing.Whois.Nic.Md.Md
             Assert.AreEqual(0, response.ParsingErrors);
             Assert.AreEqual("whois.nic.md/md/Found", response.TemplateName);
 
-            Assert.AreEqual("hotel.md", response.DomainName);
+            Assert.AreEqual("hotel.md", response.DomainName.ToString());
 
             Assert.AreEqual(new DateTime(2002, 03, 25, 00, 00, 00, 000, DateTimeKind.Utc), response.Registered);
             Assert.AreEqual(new DateTime(2011, 03, 25, 00, 00, 00, 000, DateTimeKind.Utc), response.Expiration);
@@ -73,7 +73,7 @@ namespace Whois.Parsing.Whois.Nic.Md.Md
             Assert.AreEqual(0, response.ParsingErrors);
             Assert.AreEqual("whois.nic.md/md/Found", response.TemplateName);
 
-            Assert.AreEqual("google.md", response.DomainName);
+            Assert.AreEqual("google.md", response.DomainName.ToString());
 
             Assert.AreEqual(new DateTime(2006, 05, 02, 00, 00, 00, 000, DateTimeKind.Utc), response.Registered);
             Assert.AreEqual(new DateTime(2014, 05, 02, 00, 00, 00, 000, DateTimeKind.Utc), response.Expiration);

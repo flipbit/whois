@@ -30,7 +30,7 @@ namespace Whois.Parsing.Whois.Nic.Lk.Lk
             Assert.AreEqual(0, response.ParsingErrors);
             Assert.AreEqual("whois.nic.lk/Found01", response.TemplateName);
 
-            Assert.AreEqual("nestle.lk", response.DomainName);
+            Assert.AreEqual("nestle.lk", response.DomainName.ToString());
 
             Assert.AreEqual(new DateTime(2013, 03, 14, 00, 00, 00, 000, DateTimeKind.Utc), response.Updated);
             Assert.AreEqual(new DateTime(2019, 01, 01, 00, 00, 00, 000, DateTimeKind.Utc), response.Expiration);
@@ -59,7 +59,7 @@ namespace Whois.Parsing.Whois.Nic.Lk.Lk
             Assert.AreEqual(0, response.ParsingErrors);
             Assert.AreEqual("whois.nic.lk/Found01", response.TemplateName);
 
-            Assert.AreEqual("clear.lk", response.DomainName);
+            Assert.AreEqual("clear.lk", response.DomainName.ToString());
 
             Assert.AreEqual(new DateTime(2012, 11, 01, 00, 00, 00, 000, DateTimeKind.Utc), response.Registered);
             Assert.AreEqual(new DateTime(2013, 11, 01, 00, 00, 00, 000, DateTimeKind.Utc), response.Expiration);
@@ -97,7 +97,7 @@ namespace Whois.Parsing.Whois.Nic.Lk.Lk
             Assert.AreEqual(0, response.ParsingErrors);
             Assert.AreEqual("whois.nic.lk/Found01", response.TemplateName);
 
-            Assert.AreEqual("google.lk", response.DomainName);
+            Assert.AreEqual("google.lk", response.DomainName.ToString());
 
             Assert.AreEqual(new DateTime(2013, 03, 09, 00, 00, 00, 000, DateTimeKind.Utc), response.Updated);
             Assert.AreEqual(new DateTime(2003, 04, 01, 00, 00, 00, 000, DateTimeKind.Utc), response.Registered);

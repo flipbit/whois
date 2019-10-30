@@ -39,7 +39,7 @@ namespace Whois.Parsing.Whois.Nic.Lk.XnXkc2al3hye2a
             Assert.AreEqual(0, response.ParsingErrors);
             Assert.AreEqual("whois.nic.lk/Found02", response.TemplateName);
 
-            Assert.AreEqual("xn--4kcolx4fsa0gdt6j.xn--xkc2al3hye2a", response.DomainName);
+            Assert.AreEqual("xn--4kcolx4fsa0gdt6j.xn--xkc2al3hye2a", response.DomainName.ToString());
 
             Assert.AreEqual(new DateTime(2011, 04, 01, 00, 00, 00, 000, DateTimeKind.Utc), response.Updated);
             Assert.AreEqual(new DateTime(2011, 04, 01, 00, 00, 00, 000, DateTimeKind.Utc), response.Registered);

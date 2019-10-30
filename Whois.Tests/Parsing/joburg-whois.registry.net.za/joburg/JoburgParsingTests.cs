@@ -30,7 +30,7 @@ namespace Whois.Parsing.Joburg.Whois.Registry.Net.Za.Joburg
             Assert.AreEqual(2, response.FieldsParsed);
             Assert.AreEqual(0, response.ParsingErrors);
 
-            Assert.AreEqual("nosuchdomain.joburg", response.DomainName);
+            Assert.AreEqual("nosuchdomain.joburg", response.DomainName.ToString());
         }
 
         [Test]
@@ -45,7 +45,7 @@ namespace Whois.Parsing.Joburg.Whois.Registry.Net.Za.Joburg
             Assert.AreEqual(54, response.FieldsParsed);
             Assert.AreEqual(0, response.ParsingErrors);
 
-            Assert.AreEqual("usedautos.joburg", response.DomainName);
+            Assert.AreEqual("usedautos.joburg", response.DomainName.ToString());
             Assert.AreEqual("dom_7P-9999", response.RegistryDomainId);
 
             Assert.AreEqual("Lexsynergy", response.Registrar.Name);

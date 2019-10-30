@@ -18,4 +18,4 @@ hint: Tonic whoisd
 hint: No match for
 ---
 Tonic whoisd V1.1
-No match for { DomainName : IsDomainName, ToLower }
+No match for { DomainName : IsDomainName, ToHostName }

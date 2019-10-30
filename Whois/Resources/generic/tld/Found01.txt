@@ -23,8 +23,8 @@ set: Status = Found
 #
 # Domain
 #
-Domain name:{ DomainName : Trim, IsDomainName, ToLower }
-Domain Name:{ DomainName : Trim, IsDomainName, ToLower }
+Domain name:{ DomainName : Trim, IsDomainName, ToHostName }
+Domain Name:{ DomainName : Trim, IsDomainName, ToHostName }
 Domain ID:{ RegistryDomainId : Trim }
 
 #

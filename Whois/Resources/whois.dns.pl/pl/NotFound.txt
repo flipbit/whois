@@ -14,7 +14,7 @@ set: Status = NotFound
 hint: No information available about domain name
 ---
 
-No information available about domain name { DomainName : IsDomainName, ToLower, EOL } in the Registry NASK database.
+No information available about domain name { DomainName : IsDomainName, ToHostName, EOL } in the Registry NASK database.
 
 
 

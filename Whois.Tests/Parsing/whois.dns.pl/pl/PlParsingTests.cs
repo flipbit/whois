@@ -30,7 +30,7 @@ namespace Whois.Parsing.Whois.Dns.Pl.Pl
             Assert.AreEqual(0, response.ParsingErrors);
             Assert.AreEqual("whois.dns.pl/pl/Found", response.TemplateName);
 
-            Assert.AreEqual("nom.pl", response.DomainName);
+            Assert.AreEqual("nom.pl", response.DomainName.ToString());
 
             // Registrar Details
             Assert.AreEqual("NASK", response.Registrar.Name);
@@ -66,7 +66,7 @@ namespace Whois.Parsing.Whois.Dns.Pl.Pl
             Assert.AreEqual(0, response.ParsingErrors);
             Assert.AreEqual("whois.dns.pl/pl/Found", response.TemplateName);
 
-            Assert.AreEqual("pentex.pl", response.DomainName);
+            Assert.AreEqual("pentex.pl", response.DomainName.ToString());
 
             // Registrar Details
             Assert.AreEqual("OVH SAS", response.Registrar.Name);
@@ -111,7 +111,7 @@ namespace Whois.Parsing.Whois.Dns.Pl.Pl
             Assert.AreEqual(0, response.ParsingErrors);
             Assert.AreEqual("whois.dns.pl/pl/NotFound", response.TemplateName);
 
-            Assert.AreEqual("u34jedzcq.pl", response.DomainName);
+            Assert.AreEqual("u34jedzcq.pl", response.DomainName.ToString());
 
             Assert.AreEqual(2, response.FieldsParsed);
         }
@@ -128,7 +128,7 @@ namespace Whois.Parsing.Whois.Dns.Pl.Pl
             Assert.AreEqual(0, response.ParsingErrors);
             Assert.AreEqual("whois.dns.pl/pl/Found", response.TemplateName);
 
-            Assert.AreEqual("google.pl", response.DomainName);
+            Assert.AreEqual("google.pl", response.DomainName.ToString());
 
             // Registrar Details
             Assert.AreEqual("Markmonitor, Inc.", response.Registrar.Name);
@@ -153,12 +153,12 @@ namespace Whois.Parsing.Whois.Dns.Pl.Pl
 
             var response = parser.Parse("whois.dns.pl", sample);
 
-            Assert.AreEqual("08.pl", response.DomainName);
+            Assert.AreEqual("08.pl", response.DomainName.ToString());
 
             Assert.AreEqual(0, response.ParsingErrors);
             Assert.AreEqual("whois.dns.pl/pl/Found", response.TemplateName);
 
-            Assert.AreEqual("08.pl", response.DomainName);
+            Assert.AreEqual("08.pl", response.DomainName.ToString());
 
             // Registrar Details
             Assert.AreEqual("OVH SAS", response.Registrar.Name);

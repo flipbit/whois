@@ -14,5 +14,5 @@ terminateOnNewLine: true
 # Set query response type:
 set: Status = NotFound
 ---
-No match for "{ DomainName : IsDomainName, ToLower }".
+No match for "{ DomainName : IsDomainName, ToHostName }".
 

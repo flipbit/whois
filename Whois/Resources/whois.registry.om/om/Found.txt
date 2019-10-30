@@ -14,7 +14,7 @@ terminateOnNewLine: true
 # Set query response type:
 set: Status = Found
 ---
-Domain Name:                     { DomainName : IsDomainName, ToLower }
+Domain Name:                     { DomainName : IsDomainName, ToHostName }
 Last Modified:                   { Updated ? : ToDateTimeUtc("dd-MMM-yyyy HH:mm:ss") }
 Registrar Name:                  { Registrar.Name ? }
 Status:                          { DomainStatus ? : Repeating, CleanDomainStatus }

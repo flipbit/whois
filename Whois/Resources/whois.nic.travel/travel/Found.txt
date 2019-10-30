@@ -14,7 +14,7 @@ terminateOnNewLine: true
 # Set query response type:
 set: Status = Found
 ---
-Domain Name:                                 { DomainName : IsDomainName, ToLower }
+Domain Name:                                 { DomainName : IsDomainName, ToHostName }
 Domain ID:                                   { RegistryDomainId ? }
 dponsoring Registrar:                        { Registrar.Name ? }
 Sponsoring Registrar IANA ID:                { Registrar.IanaId ? : IsNumeric }

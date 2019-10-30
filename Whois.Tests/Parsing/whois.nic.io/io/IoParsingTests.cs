@@ -30,7 +30,7 @@ namespace Whois.Parsing.Whois.Nic.Io.Io
             Assert.AreEqual(0, response.ParsingErrors);
             Assert.AreEqual("whois.nic.io/io/Found", response.TemplateName);
 
-            Assert.AreEqual("google.io", response.DomainName);
+            Assert.AreEqual("google.io", response.DomainName.ToString());
 
             Assert.AreEqual(new DateTime(2013, 09, 30, 00, 00, 00, 000, DateTimeKind.Utc), response.Expiration);
 
@@ -85,7 +85,7 @@ namespace Whois.Parsing.Whois.Nic.Io.Io
             Assert.AreEqual(0, response.ParsingErrors);
             Assert.AreEqual("whois.nic.io/io/NotFound", response.TemplateName);
 
-            Assert.AreEqual("u34jedzcq.io", response.DomainName);
+            Assert.AreEqual("u34jedzcq.io", response.DomainName.ToString());
 
             Assert.AreEqual(2, response.FieldsParsed);
         }
@@ -102,7 +102,7 @@ namespace Whois.Parsing.Whois.Nic.Io.Io
             Assert.AreEqual(0, response.ParsingErrors);
             Assert.AreEqual("whois.nic.io/io/Found", response.TemplateName);
 
-            Assert.AreEqual("redis.io", response.DomainName);
+            Assert.AreEqual("redis.io", response.DomainName.ToString());
 
             Assert.AreEqual(new DateTime(2014, 05, 28, 00, 00, 00, 000, DateTimeKind.Utc), response.Expiration);
 

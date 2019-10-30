@@ -29,7 +29,7 @@ namespace Whois.Parsing.Whois.Tonic.To.To
             Assert.AreEqual(0, response.ParsingErrors);
             Assert.AreEqual("whois.tonic.to/to/NotFound", response.TemplateName);
 
-            Assert.AreEqual("u34jedzcq", response.DomainName);
+            Assert.AreEqual("u34jedzcq", response.DomainName.ToString());
 
             Assert.AreEqual(2, response.FieldsParsed);
         }

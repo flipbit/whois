@@ -30,7 +30,7 @@ namespace Whois.Parsing.Whois.Thnic.Co.Th.Th
             Assert.AreEqual(0, response.ParsingErrors);
             Assert.AreEqual("whois.thnic.co.th/th/NotFound", response.TemplateName);
 
-            Assert.AreEqual("u34jedzcq.co.th", response.DomainName);
+            Assert.AreEqual("u34jedzcq.co.th", response.DomainName.ToString());
 
             Assert.AreEqual(2, response.FieldsParsed);
         }
@@ -48,7 +48,7 @@ namespace Whois.Parsing.Whois.Thnic.Co.Th.Th
             Assert.AreEqual(0, response.ParsingErrors);
             Assert.AreEqual("whois.thnic.co.th/th/Found", response.TemplateName);
 
-            Assert.AreEqual("google.co.th", response.DomainName);
+            Assert.AreEqual("google.co.th", response.DomainName.ToString());
 
             // Registrar Details
             Assert.AreEqual("T.H.NIC Co., Ltd.", response.Registrar.Name);

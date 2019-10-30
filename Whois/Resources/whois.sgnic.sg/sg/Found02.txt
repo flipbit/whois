@@ -17,7 +17,7 @@ set: Status = Found
 Registrar:   { Registrar.Name ? }
 Registrant:  { Registrant.Name ? }
 
-    Domain Name:		{ DomainName : IsDomainName, ToLower }
+    Domain Name:		{ DomainName : IsDomainName, ToHostName }
     Creation Date:		{ Registered ? : ToDateTimeUtc("dd-MMM-yyyy HH:mm:ss") }
     Expiration Date:		{ Expiration ? : ToDateTimeUtc("dd-MMM-yyyy HH:mm:ss") }
     Domain Status:		{ DomainStatus ? : Repeating, CleanDomainStatus }

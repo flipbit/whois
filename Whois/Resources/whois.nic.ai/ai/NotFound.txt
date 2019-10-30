@@ -13,5 +13,5 @@ set: Status = NotFound
 
 hint: If you would like to register this
 ---
-Domain { DomainName : IsDomainName, ToLower } not registred.
+Domain { DomainName : IsDomainName, ToHostName } not registred.
 If you would like to register this, or any .ai domain, go to http://whois.ai

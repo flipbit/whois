@@ -28,7 +28,7 @@ namespace Whois.Servers
 
             Assert.AreEqual(0, response.ParsingErrors);
 
-            Assert.AreEqual("com", response.DomainName);
+            Assert.AreEqual("com", response.DomainName.ToString());
 
             // Registrar Details
             Assert.AreEqual("whois.verisign-grs.com", response.Registrar.WhoisServerUrl);
@@ -107,7 +107,7 @@ namespace Whois.Servers
             AssertWriter.Write(response);
             Assert.AreEqual(0, response.ParsingErrors);
 
-            Assert.AreEqual("be", response.DomainName);
+            Assert.AreEqual("be", response.DomainName.ToString());
 
             // Registrar Details
             Assert.AreEqual("whois.dns.be", response.Registrar.WhoisServerUrl);
@@ -179,7 +179,7 @@ namespace Whois.Servers
             AssertWriter.Write(response);
             Assert.AreEqual(0, response.ParsingErrors);
 
-            Assert.AreEqual("eh", response.DomainName);
+            Assert.AreEqual("eh", response.DomainName.ToString());
 
 
             Assert.AreEqual(0, response.FieldsParsed);

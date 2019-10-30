@@ -14,7 +14,7 @@ terminateOnNewLine: true
 # Set query response type:
 set: Status = Found
 ---
-DOMAIN NAME:                   { DomainName : IsDomainName, ToLower }
+DOMAIN NAME:                   { DomainName : IsDomainName, ToHostName }
 REGISTERED:                    { Registered ? : ToDateTimeUtc("yyyy-MM-dd") }
 EXPIRES:                       { Expiration ? : ToDateTimeUtc("yyyy-MM-dd") }
 REGISTRAR:                     { Registrar.Name ? }

@@ -18,5 +18,5 @@ set: Status = NotFound
 hint: No such domain
 ---
 
-No such domain { DomainName : IsDomainName, ToLower }
+No such domain { DomainName : IsDomainName, ToHostName }
 

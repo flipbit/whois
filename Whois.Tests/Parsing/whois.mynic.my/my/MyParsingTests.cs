@@ -30,7 +30,7 @@ namespace Whois.Parsing.Whois.Mynic.My.My
             Assert.AreEqual(0, response.ParsingErrors);
             Assert.AreEqual("whois.mynic.my/my/NotFound", response.TemplateName);
 
-            Assert.AreEqual("u34jedzcq.my", response.DomainName);
+            Assert.AreEqual("u34jedzcq.my", response.DomainName.ToString());
 
             Assert.AreEqual(2, response.FieldsParsed);
         }
@@ -47,7 +47,7 @@ namespace Whois.Parsing.Whois.Mynic.My.My
             Assert.AreEqual(0, response.ParsingErrors);
             Assert.AreEqual("whois.mynic.my/my/Found", response.TemplateName);
 
-            Assert.AreEqual("google.my", response.DomainName);
+            Assert.AreEqual("google.my", response.DomainName.ToString());
 
             Assert.AreEqual(new DateTime(2013, 10, 11, 00, 00, 00, 000, DateTimeKind.Utc), response.Updated);
             Assert.AreEqual(new DateTime(2009, 05, 13, 00, 00, 00, 000, DateTimeKind.Utc), response.Registered);

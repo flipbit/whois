@@ -44,7 +44,7 @@ namespace Whois.Parsing.Whois.Biz.Biz
             Assert.AreEqual(0, response.ParsingErrors);
             Assert.AreEqual("generic/tld/Found001", response.TemplateName);
 
-            Assert.AreEqual("google.biz", response.DomainName);
+            Assert.AreEqual("google.biz", response.DomainName.ToString());
             Assert.AreEqual("D2835288-BIZ", response.RegistryDomainId);
 
             // Registrar Details

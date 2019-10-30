@@ -15,7 +15,7 @@ set: Status = Inactive
 hint: Status: Inactive
 ---
 Domain Information
-Query: { DomainName : IsDomainName, ToLower, EOL }
+Query: { DomainName : IsDomainName, ToHostName, EOL }
 Status: { DomainStatus ? : Repeating, Trim, EOL }
 Registrar: { Registrar.Name ? : EOL }NIC .PE
 Name Servers:

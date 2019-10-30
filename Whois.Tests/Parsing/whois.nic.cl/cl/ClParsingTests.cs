@@ -29,7 +29,7 @@ namespace Whois.Parsing.Whois.Nic.Cl.Cl
             Assert.AreEqual(0, response.ParsingErrors);
             Assert.AreEqual("whois.nic.cl/cl/NotFound", response.TemplateName);
 
-            Assert.AreEqual("u34jedzcq.cl", response.DomainName);
+            Assert.AreEqual("u34jedzcq.cl", response.DomainName.ToString());
 
             Assert.AreEqual(2, response.FieldsParsed);
         }
@@ -46,7 +46,7 @@ namespace Whois.Parsing.Whois.Nic.Cl.Cl
             Assert.AreEqual(0, response.ParsingErrors);
             Assert.AreEqual("whois.nic.cl/cl/Found", response.TemplateName);
 
-            Assert.AreEqual("google.cl", response.DomainName);
+            Assert.AreEqual("google.cl", response.DomainName.ToString());
 
              // Registrant Details
             Assert.AreEqual("Google Inc. Representada por NameAction Chile S.A. (ASESORIAS NAMEACTION CHILE LIMITADA)", response.Registrant.Name);

@@ -30,7 +30,7 @@ namespace Whois.Parsing.Whois.Nic.Tc.Tc
             Assert.AreEqual(0, response.ParsingErrors);
             Assert.AreEqual("generic/tld/NotFound004", response.TemplateName);
 
-            Assert.AreEqual("u34jedzcq.tc", response.DomainName);
+            Assert.AreEqual("u34jedzcq.tc", response.DomainName.ToString());
 
             Assert.AreEqual(2, response.FieldsParsed);
         }
@@ -47,7 +47,7 @@ namespace Whois.Parsing.Whois.Nic.Tc.Tc
             Assert.AreEqual(0, response.ParsingErrors);
             Assert.AreEqual("generic/tld/Found001", response.TemplateName);
 
-            Assert.AreEqual("google.tc", response.DomainName);
+            Assert.AreEqual("google.tc", response.DomainName.ToString());
 
             // Registrar Details
             Assert.AreEqual("MarkMonitor", response.Registrar.Name);

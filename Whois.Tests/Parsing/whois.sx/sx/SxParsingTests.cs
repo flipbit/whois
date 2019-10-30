@@ -30,7 +30,7 @@ namespace Whois.Parsing.Whois.Sx.Sx
             Assert.AreEqual(0, response.ParsingErrors);
             Assert.AreEqual("whois.sx/sx/Unavailable", response.TemplateName);
 
-            Assert.AreEqual("domain.sx", response.DomainName);
+            Assert.AreEqual("domain.sx", response.DomainName.ToString());
 
             Assert.AreEqual(2, response.FieldsParsed);
         }
@@ -47,7 +47,7 @@ namespace Whois.Parsing.Whois.Sx.Sx
             Assert.AreEqual(0, response.ParsingErrors);
             Assert.AreEqual("whois.sx/sx/NotFound", response.TemplateName);
 
-            Assert.AreEqual("u34jedzcq.sx", response.DomainName);
+            Assert.AreEqual("u34jedzcq.sx", response.DomainName.ToString());
 
             Assert.AreEqual(2, response.FieldsParsed);
         }
@@ -64,7 +64,7 @@ namespace Whois.Parsing.Whois.Sx.Sx
             Assert.AreEqual(0, response.ParsingErrors);
             Assert.AreEqual("generic/tld/Found001", response.TemplateName);
 
-            Assert.AreEqual("whois.sx", response.DomainName);
+            Assert.AreEqual("whois.sx", response.DomainName.ToString());
             Assert.AreEqual("d5-sx", response.RegistryDomainId);
 
             // Registrar Details
@@ -142,7 +142,7 @@ namespace Whois.Parsing.Whois.Sx.Sx
             Assert.AreEqual(0, response.ParsingErrors);
             Assert.AreEqual("whois.sx/sx/Unavailable", response.TemplateName);
 
-            Assert.AreEqual("domain.sx", response.DomainName);
+            Assert.AreEqual("domain.sx", response.DomainName.ToString());
 
             Assert.AreEqual(2, response.FieldsParsed);
         }

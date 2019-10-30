@@ -45,7 +45,7 @@ namespace Whois.Parsing.Whois.Centralnic.Com.UkNet
             Assert.AreEqual(0, response.ParsingErrors);
             Assert.AreEqual("whois.centralnic.com/Found", response.TemplateName);
 
-            Assert.AreEqual("paramount.uk.net", response.DomainName);
+            Assert.AreEqual("paramount.uk.net", response.DomainName.ToString());
             Assert.AreEqual("CNIC-DO393884", response.RegistryDomainId);
 
             // Registrar Details

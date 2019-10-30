@@ -30,7 +30,7 @@ namespace Whois.Parsing.Whois.Fi.Fi
             Assert.AreEqual(0, response.ParsingErrors);
             Assert.AreEqual("whois.fi/fi/Found", response.TemplateName);
 
-            Assert.AreEqual("oogle.fi", response.DomainName);
+            Assert.AreEqual("oogle.fi", response.DomainName.ToString());
 
             Assert.AreEqual(new DateTime(2013, 06, 22, 00, 00, 00, DateTimeKind.Utc), response.Updated);
             Assert.AreEqual(new DateTime(2012, 06, 21, 00, 00, 00, DateTimeKind.Utc), response.Registered);
@@ -89,7 +89,7 @@ namespace Whois.Parsing.Whois.Fi.Fi
             Assert.AreEqual(0, response.ParsingErrors);
             Assert.AreEqual("whois.fi/fi/Found", response.TemplateName);
 
-            Assert.AreEqual("google.fi", response.DomainName);
+            Assert.AreEqual("google.fi", response.DomainName.ToString());
 
             Assert.AreEqual(new DateTime(2013, 06, 07, 00, 00, 00, DateTimeKind.Utc), response.Updated);
             Assert.AreEqual(new DateTime(2006, 06, 30, 00, 00, 00, DateTimeKind.Utc), response.Registered);

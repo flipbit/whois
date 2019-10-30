@@ -31,7 +31,7 @@ namespace Whois.Parsing.Whois.Audns.Net.Au.Au
             Assert.AreEqual(0, response.ParsingErrors);
             Assert.AreEqual("whois.audns.net.au/au/Found", response.TemplateName);
 
-            Assert.AreEqual("pinewood.com.au", response.DomainName);
+            Assert.AreEqual("pinewood.com.au", response.DomainName.ToString());
 
             Assert.AreEqual("Melbourne IT", response.Registrar.Name);
 
@@ -83,7 +83,7 @@ namespace Whois.Parsing.Whois.Audns.Net.Au.Au
             Assert.AreEqual(0, response.ParsingErrors);
             Assert.AreEqual("whois.audns.net.au/au/Found", response.TemplateName);
 
-            Assert.AreEqual("google.com.au", response.DomainName);
+            Assert.AreEqual("google.com.au", response.DomainName.ToString());
 
 
             Assert.AreEqual(new DateTime(2014, 11, 5, 10, 35, 59), response.Updated);

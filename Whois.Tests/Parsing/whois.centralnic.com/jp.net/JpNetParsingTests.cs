@@ -45,7 +45,7 @@ namespace Whois.Parsing.Whois.Centralnic.Com.JpNet
             Assert.AreEqual(0, response.ParsingErrors);
             Assert.AreEqual("whois.centralnic.com/Found", response.TemplateName);
 
-            Assert.AreEqual("ntt.jp.net", response.DomainName);
+            Assert.AreEqual("ntt.jp.net", response.DomainName.ToString());
             Assert.AreEqual("CNIC-DO846061", response.RegistryDomainId);
 
             // Registrar Details

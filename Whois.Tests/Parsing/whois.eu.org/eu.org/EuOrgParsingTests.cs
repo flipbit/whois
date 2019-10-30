@@ -45,7 +45,7 @@ namespace Whois.Parsing.Whois.Eu.Org.EuOrg
             Assert.AreEqual(0, response.ParsingErrors);
             Assert.AreEqual("generic/tld/Found03", response.TemplateName);
 
-            Assert.AreEqual("google.eu.org", response.DomainName);
+            Assert.AreEqual("google.eu.org", response.DomainName.ToString());
 
             Assert.AreEqual(new DateTime(2003, 03, 27, 23, 00, 00, 000, DateTimeKind.Utc), response.Updated);
 

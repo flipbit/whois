@@ -12,7 +12,7 @@ tag: tv
 set: Status = Found
 ---
 
-   Domain Name: { DomainName : IsDomainName, ToLower, EOL }
+   Domain Name: { DomainName : IsDomainName, ToHostName, EOL }
    Registrar: { Registrar.Name ? : EOL }
    Whois Server: { Registrar.WhoisServerUrl ?: IsDomainName, ToLower, EOL }
    Referral URL: { Registrar.Url ? : IsUrl, ToLower, EOL }

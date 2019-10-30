@@ -30,7 +30,7 @@ namespace Whois.Parsing.Whois.Dk.Hostmaster.Dk.Dk
             Assert.AreEqual(0, response.ParsingErrors);
             Assert.AreEqual("whois.dk-hostmaster.dk/dk/Found", response.TemplateName);
 
-            Assert.AreEqual("progolftours.dk", response.DomainName);
+            Assert.AreEqual("progolftours.dk", response.DomainName.ToString());
 
             Assert.AreEqual(new DateTime(2010, 08, 16, 00, 00, 00, DateTimeKind.Utc), response.Registered);
             Assert.AreEqual(new DateTime(2012, 08, 31, 00, 00, 00, DateTimeKind.Utc), response.Expiration);
@@ -88,7 +88,7 @@ namespace Whois.Parsing.Whois.Dk.Hostmaster.Dk.Dk
             Assert.AreEqual(0, response.ParsingErrors);
             Assert.AreEqual("whois.dk-hostmaster.dk/dk/Found", response.TemplateName);
 
-            Assert.AreEqual("googlle.dk", response.DomainName);
+            Assert.AreEqual("googlle.dk", response.DomainName.ToString());
 
             Assert.AreEqual(new DateTime(2013, 10, 24, 00, 00, 00, DateTimeKind.Utc), response.Registered);
             Assert.AreEqual(new DateTime(2014, 10, 31, 00, 00, 00, DateTimeKind.Utc), response.Expiration);
@@ -157,7 +157,7 @@ namespace Whois.Parsing.Whois.Dk.Hostmaster.Dk.Dk
             Assert.AreEqual(0, response.ParsingErrors);
             Assert.AreEqual("whois.dk-hostmaster.dk/dk/Found", response.TemplateName);
 
-            Assert.AreEqual("google.dk", response.DomainName);
+            Assert.AreEqual("google.dk", response.DomainName.ToString());
 
             Assert.AreEqual(new DateTime(1999, 01, 10, 00, 00, 00, DateTimeKind.Utc), response.Registered);
             Assert.AreEqual(new DateTime(2010, 03, 31, 00, 00, 00, DateTimeKind.Utc), response.Expiration);

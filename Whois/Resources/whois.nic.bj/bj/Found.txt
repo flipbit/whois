@@ -15,7 +15,7 @@ terminateOnNewLine: true
 set: Status = Found
 ---
 Name:                     { Registrant.Name ? }
-Domain Name:              { DomainName : IsDomainName, ToLower }
+Domain Name:              { DomainName : IsDomainName, ToHostName }
 Name Server 1:            { NameServers ? : IsDomainName, ToLower, Repeating }
 Name Server 2:            { NameServers ? : IsDomainName, ToLower, Repeating }
 Name Server 3:            { NameServers ? : IsDomainName, ToLower, Repeating }

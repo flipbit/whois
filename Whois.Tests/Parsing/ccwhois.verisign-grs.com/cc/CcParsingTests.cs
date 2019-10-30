@@ -27,7 +27,7 @@ namespace Whois.Parsing.Ccwhois.Verisign.Grs.Com.Cc
             Assert.Greater(sample.Length, 0);
             Assert.AreEqual(WhoisStatus.Found, response.Status);
 
-            Assert.AreEqual("m4r0c-s3curity.cc", response.DomainName);
+            Assert.AreEqual("m4r0c-s3curity.cc", response.DomainName.ToString());
 
             Assert.AreEqual("TUCOWS INC.", response.Registrar.Name);
             Assert.AreEqual("http://domainhelp.opensrs.net", response.Registrar.Url);
@@ -50,7 +50,7 @@ namespace Whois.Parsing.Ccwhois.Verisign.Grs.Com.Cc
 
             Assert.Greater(sample.Length, 0);
             Assert.AreEqual(WhoisStatus.NotFound, response.Status);
-            Assert.AreEqual("u34jedzcq.cc", response.DomainName);
+            Assert.AreEqual("u34jedzcq.cc", response.DomainName.ToString());
         }
 
         [Test]
@@ -62,7 +62,7 @@ namespace Whois.Parsing.Ccwhois.Verisign.Grs.Com.Cc
             Assert.Greater(sample.Length, 0);
             Assert.AreEqual(WhoisStatus.Found, response.Status);
 
-            Assert.AreEqual("google.cc", response.DomainName);
+            Assert.AreEqual("google.cc", response.DomainName.ToString());
             Assert.AreEqual("86420657_DOMAIN_CC-VRSN", response.RegistryDomainId);
 
             Assert.AreEqual("MARKMONITOR INC.", response.Registrar.Name);

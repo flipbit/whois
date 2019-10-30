@@ -45,7 +45,7 @@ namespace Whois.Parsing.Whois.Centralnic.Com.CnCom
             Assert.AreEqual(0, response.ParsingErrors);
             Assert.AreEqual("whois.centralnic.com/Found", response.TemplateName);
 
-            Assert.AreEqual("gsn.cn.com", response.DomainName);
+            Assert.AreEqual("gsn.cn.com", response.DomainName.ToString());
             Assert.AreEqual("CNIC-DO323367", response.RegistryDomainId);
 
             // Registrar Details

@@ -45,7 +45,7 @@ namespace Whois.Parsing.Whois.Tcinet.Ru.Su
             Assert.AreEqual(0, response.ParsingErrors);
             Assert.AreEqual("whois.tcinet.ru/Found", response.TemplateName);
 
-            Assert.AreEqual("google.su", response.DomainName);
+            Assert.AreEqual("google.su", response.DomainName.ToString());
 
             // Registrar Details
             Assert.AreEqual("RUCENTER-REG-FID", response.Registrar.Name);

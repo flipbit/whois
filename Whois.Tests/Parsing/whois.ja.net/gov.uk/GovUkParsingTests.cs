@@ -30,7 +30,7 @@ namespace Whois.Parsing.Whois.Ja.Net.GovUk
             Assert.AreEqual(0, response.ParsingErrors);
             Assert.AreEqual("whois.ja.net/NotFound", response.TemplateName);
 
-            Assert.AreEqual("u34jedzcq.gov.uk", response.DomainName);
+            Assert.AreEqual("u34jedzcq.gov.uk", response.DomainName.ToString());
 
             Assert.AreEqual(2, response.FieldsParsed);
         }
@@ -47,7 +47,7 @@ namespace Whois.Parsing.Whois.Ja.Net.GovUk
             Assert.AreEqual(0, response.ParsingErrors);
             Assert.AreEqual("whois.ja.net/Found", response.TemplateName);
 
-            Assert.AreEqual("direct.gov.uk", response.DomainName);
+            Assert.AreEqual("direct.gov.uk", response.DomainName.ToString());
 
             // Registrar Details
             Assert.AreEqual("NTT Europe Online Ltd", response.Registrar.Name);

@@ -14,5 +14,5 @@ set: Status = NotFound
 # Must contain:
 hint: No records
 ---
-No records matching { DomainName : IsDomainName, ToLower, EOL } found.
+No records matching { DomainName : IsDomainName, ToHostName, EOL } found.
 

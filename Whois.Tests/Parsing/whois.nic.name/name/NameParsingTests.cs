@@ -45,7 +45,7 @@ namespace Whois.Parsing.Whois.Nic.Name.Name
             Assert.AreEqual(0, response.ParsingErrors);
             Assert.AreEqual("whois.nic.name/name/NotFound", response.TemplateName);
 
-            Assert.AreEqual("u34jedzcq.name", response.DomainName);
+            Assert.AreEqual("u34jedzcq.name", response.DomainName.ToString());
             Assert.AreEqual(2, response.FieldsParsed);
         }
 
@@ -61,7 +61,7 @@ namespace Whois.Parsing.Whois.Nic.Name.Name
             Assert.AreEqual(0, response.ParsingErrors);
             Assert.AreEqual("whois.nic.name/name/Found", response.TemplateName);
 
-            Assert.AreEqual("carletti.name", response.DomainName);
+            Assert.AreEqual("carletti.name", response.DomainName.ToString());
             Assert.AreEqual("2788515_DOMAIN_NAME-VRSN", response.RegistryDomainId);
 
             // Registrar Details

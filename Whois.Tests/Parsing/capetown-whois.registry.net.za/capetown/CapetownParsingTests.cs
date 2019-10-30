@@ -26,7 +26,7 @@ namespace Whois.Parsing.Capetown.Whois.Registry.Net.Za.Capetown
 
             Assert.Greater(sample.Length, 0);
             Assert.AreEqual(WhoisStatus.NotFound, response.Status);
-            Assert.AreEqual("nosuchdomain.capetown", response.DomainName);
+            Assert.AreEqual("nosuchdomain.capetown", response.DomainName.ToString());
 
             AssertWriter.Write(response);
         }
@@ -40,7 +40,7 @@ namespace Whois.Parsing.Capetown.Whois.Registry.Net.Za.Capetown
             Assert.Greater(sample.Length, 0);
             Assert.AreEqual(WhoisStatus.Found, response.Status);
            
-            Assert.AreEqual("registry.capetown", response.DomainName);
+            Assert.AreEqual("registry.capetown", response.DomainName.ToString());
             Assert.AreEqual("dom_3K3-9999", response.RegistryDomainId);
 
             Assert.AreEqual("capetown-whois2.registry.net.za", response.Registrar.WhoisServerUrl);

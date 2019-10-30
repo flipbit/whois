@@ -15,7 +15,7 @@ set: Status = Found
 %AM TLD whois server #1
 %
 
-   Domain name: { DomainName : Required, IsDomainName, ToLower, EOL }
+   Domain name: { DomainName : Required, IsDomainName, ToHostName, EOL }
    Registrar:   { Registrar.Name ? : EOL }
    Status:      { DomainStatus ? : Repeating, EOL }
 

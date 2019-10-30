@@ -30,7 +30,7 @@ namespace Whois.Parsing.Whois.Nic.Net.Sb.Sb
             Assert.AreEqual(0, response.ParsingErrors);
             Assert.AreEqual("generic/tld/NotFound005", response.TemplateName);
 
-            Assert.AreEqual("u34jedzcq.sb", response.DomainName);
+            Assert.AreEqual("u34jedzcq.sb", response.DomainName.ToString());
 
             Assert.AreEqual(2, response.FieldsParsed);
         }
@@ -47,7 +47,7 @@ namespace Whois.Parsing.Whois.Nic.Net.Sb.Sb
             Assert.AreEqual(0, response.ParsingErrors);
             Assert.AreEqual("generic/tld/Found001", response.TemplateName);
 
-            Assert.AreEqual("baidu.com.sb", response.DomainName);
+            Assert.AreEqual("baidu.com.sb", response.DomainName.ToString());
             Assert.AreEqual("404765-CoCCA", response.RegistryDomainId);
 
             // Registrar Details
@@ -143,7 +143,7 @@ namespace Whois.Parsing.Whois.Nic.Net.Sb.Sb
             Assert.AreEqual(0, response.ParsingErrors);
             Assert.AreEqual("generic/tld/NotFound005", response.TemplateName);
 
-            Assert.AreEqual("u34jedzcq.sb", response.DomainName);
+            Assert.AreEqual("u34jedzcq.sb", response.DomainName.ToString());
 
             Assert.AreEqual(2, response.FieldsParsed);
         }
@@ -160,7 +160,7 @@ namespace Whois.Parsing.Whois.Nic.Net.Sb.Sb
             Assert.AreEqual(0, response.ParsingErrors);
             Assert.AreEqual("generic/tld/Found001", response.TemplateName);
 
-            Assert.AreEqual("baidu.com.sb", response.DomainName);
+            Assert.AreEqual("baidu.com.sb", response.DomainName.ToString());
             Assert.AreEqual("404765-CoCCA", response.RegistryDomainId);
 
             // Registrar Details

@@ -30,7 +30,7 @@ namespace Whois.Parsing.Whois.Domain.Registry.Nl.Nl
             Assert.AreEqual(0, response.ParsingErrors);
             Assert.AreEqual("whois.domain-registry.nl/nl/Found2", response.TemplateName);
 
-            Assert.AreEqual("tntpost.nl", response.DomainName);
+            Assert.AreEqual("tntpost.nl", response.DomainName.ToString());
 
             // Registrar Details
             Assert.AreEqual("Transip BV", response.Registrar.Name);
@@ -59,7 +59,7 @@ namespace Whois.Parsing.Whois.Domain.Registry.Nl.Nl
             Assert.AreEqual(0, response.ParsingErrors);
             Assert.AreEqual("whois.domain-registry.nl/nl/Found2", response.TemplateName);
 
-            Assert.AreEqual("smsexdates.nl", response.DomainName);
+            Assert.AreEqual("smsexdates.nl", response.DomainName.ToString());
 
             // Registrar Details
             Assert.AreEqual("JK Websolutions", response.Registrar.Name);
@@ -115,7 +115,10 @@ namespace Whois.Parsing.Whois.Domain.Registry.Nl.Nl
             Assert.Greater(sample.Length, 0);
             Assert.AreEqual(WhoisStatus.Unavailable, response.Status);
 
-            AssertWriter.Write(response);
+            Assert.AreEqual(0, response.ParsingErrors);
+            Assert.AreEqual("whois.domain-registry.nl/nl/Unavailable", response.TemplateName);
+
+            Assert.AreEqual(1, response.FieldsParsed);
         }
 
         [Test]
@@ -130,7 +133,7 @@ namespace Whois.Parsing.Whois.Domain.Registry.Nl.Nl
             Assert.AreEqual(0, response.ParsingErrors);
             Assert.AreEqual("whois.domain-registry.nl/nl/NotFound", response.TemplateName);
 
-            Assert.AreEqual("u34jedzcq.nl", response.DomainName);
+            Assert.AreEqual("u34jedzcq.nl", response.DomainName.ToString());
 
             Assert.AreEqual(2, response.FieldsParsed);
         }
@@ -147,7 +150,7 @@ namespace Whois.Parsing.Whois.Domain.Registry.Nl.Nl
             Assert.AreEqual(0, response.ParsingErrors);
             Assert.AreEqual("whois.domain-registry.nl/nl/Found2", response.TemplateName);
 
-            Assert.AreEqual("martijn-webdesign.nl", response.DomainName);
+            Assert.AreEqual("martijn-webdesign.nl", response.DomainName.ToString());
 
 
             // Domain Status
@@ -169,7 +172,7 @@ namespace Whois.Parsing.Whois.Domain.Registry.Nl.Nl
             Assert.AreEqual(0, response.ParsingErrors);
             Assert.AreEqual("whois.domain-registry.nl/nl/Found1", response.TemplateName);
 
-            Assert.AreEqual("google.nl", response.DomainName);
+            Assert.AreEqual("google.nl", response.DomainName.ToString());
 
             // Registrar Details
             Assert.AreEqual("MarkMonitor International LTD", response.Registrar.Name);

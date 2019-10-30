@@ -30,7 +30,7 @@ namespace Whois.Parsing.Whois.Gg.Gg
             Assert.AreEqual(0, response.ParsingErrors);
             Assert.AreEqual("generic/tld/NotFound005", response.TemplateName);
 
-            Assert.AreEqual("u34jedzcq.gg", response.DomainName);
+            Assert.AreEqual("u34jedzcq.gg", response.DomainName.ToString());
 
             Assert.AreEqual(2, response.FieldsParsed);
         }
@@ -47,7 +47,7 @@ namespace Whois.Parsing.Whois.Gg.Gg
             Assert.AreEqual(0, response.ParsingErrors);
             Assert.AreEqual("generic/tld/Found001", response.TemplateName);
 
-            Assert.AreEqual("google.gg", response.DomainName);
+            Assert.AreEqual("google.gg", response.DomainName.ToString());
             Assert.AreEqual("24221-CI", response.RegistryDomainId);
 
             // Registrar Details

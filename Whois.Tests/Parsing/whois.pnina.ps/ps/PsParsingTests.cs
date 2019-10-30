@@ -30,7 +30,7 @@ namespace Whois.Parsing.Whois.Pnina.Ps.Ps
             Assert.AreEqual(0, response.ParsingErrors);
             Assert.AreEqual("generic/tld/NotFound005", response.TemplateName);
 
-            Assert.AreEqual("u34jedzcq.ps", response.DomainName);
+            Assert.AreEqual("u34jedzcq.ps", response.DomainName.ToString());
 
             Assert.AreEqual(2, response.FieldsParsed);
         }
@@ -47,7 +47,7 @@ namespace Whois.Parsing.Whois.Pnina.Ps.Ps
             Assert.AreEqual(0, response.ParsingErrors);
             Assert.AreEqual("generic/tld/Found001", response.TemplateName);
 
-            Assert.AreEqual("google.ps", response.DomainName);
+            Assert.AreEqual("google.ps", response.DomainName.ToString());
             Assert.AreEqual("21665-PS", response.RegistryDomainId);
 
             // Registrar Details

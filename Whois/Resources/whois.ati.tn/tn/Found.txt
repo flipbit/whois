@@ -13,7 +13,7 @@ set: Status = Found
 ---
 Copyright "Tunisian Internet Agency - http://whois.tn"
 
-Domain   	: { DomainName : IsDomainName, ToLower, EOL }
+Domain   	: { DomainName : IsDomainName, ToHostName, EOL }
 Acivated 	: { Registered ? : ToDateTimeUtc("yyyy-MM-dd HH:mm:ss"), EOL }
 Registrar	: { Registrar.Name ? : EOL }
 

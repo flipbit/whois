@@ -30,7 +30,7 @@ namespace Whois.Parsing.Whois.Verisign.Grs.Com.Com
             Assert.AreEqual(0, response.ParsingErrors);
             Assert.AreEqual("generic/tld/Found02", response.TemplateName);
 
-            Assert.AreEqual("y.com", response.DomainName);
+            Assert.AreEqual("y.com", response.DomainName.ToString());
 
             // Registrar Details
             Assert.AreEqual("RESERVED-INTERNET ASSIGNED NUMBERS AUTHORITY", response.Registrar.Name);
@@ -60,7 +60,7 @@ namespace Whois.Parsing.Whois.Verisign.Grs.Com.Com
             Assert.AreEqual(0, response.ParsingErrors);
             Assert.AreEqual("generic/tld/Found02", response.TemplateName);
 
-            Assert.AreEqual("killianestates.com", response.DomainName);
+            Assert.AreEqual("killianestates.com", response.DomainName.ToString());
 
             // Registrar Details
             Assert.AreEqual("GODADDY.COM, LLC", response.Registrar.Name);
@@ -93,7 +93,7 @@ namespace Whois.Parsing.Whois.Verisign.Grs.Com.Com
             Assert.AreEqual(0, response.ParsingErrors);
             Assert.AreEqual("generic/tld/NotFound07", response.TemplateName);
 
-            Assert.AreEqual("u34jedzcq.com", response.DomainName);
+            Assert.AreEqual("u34jedzcq.com", response.DomainName.ToString());
 
             Assert.AreEqual(2, response.FieldsParsed);
         }
@@ -111,7 +111,7 @@ namespace Whois.Parsing.Whois.Verisign.Grs.Com.Com
             Assert.AreEqual(0, response.ParsingErrors);
             Assert.AreEqual("generic/tld/Found02", response.TemplateName);
 
-            Assert.AreEqual("google.com", response.DomainName);
+            Assert.AreEqual("google.com", response.DomainName.ToString());
             Assert.AreEqual("2138514_DOMAIN_COM-VRSN", response.RegistryDomainId);
 
             // Registrar Details

@@ -30,7 +30,7 @@ namespace Whois.Parsing.Whois.Markmonitor.Com.Tv
             Assert.AreEqual(0, response.ParsingErrors);
             Assert.AreEqual("generic/tld/Found001", response.TemplateName);
 
-            Assert.AreEqual("google.tv", response.DomainName);
+            Assert.AreEqual("google.tv", response.DomainName.ToString());
 
             // Registrar Details
             Assert.AreEqual("MarkMonitor, Inc.", response.Registrar.Name);

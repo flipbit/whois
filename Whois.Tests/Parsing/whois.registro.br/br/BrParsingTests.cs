@@ -30,7 +30,7 @@ namespace Whois.Parsing.Whois.Registro.Br.Br
             Assert.AreEqual(0, response.ParsingErrors);
             Assert.AreEqual("whois.registro.br/br/Found", response.TemplateName);
 
-            Assert.AreEqual("hostgator.com.br", response.DomainName);
+            Assert.AreEqual("hostgator.com.br", response.DomainName.ToString());
 
             // Registrar Details
             Assert.AreEqual("HOSTGATOR-BRASIL (43)", response.Registrar.Name);
@@ -91,7 +91,7 @@ namespace Whois.Parsing.Whois.Registro.Br.Br
             Assert.AreEqual(0, response.ParsingErrors);
             Assert.AreEqual("whois.registro.br/br/NotFound", response.TemplateName);
 
-            Assert.AreEqual("u34jedzcq.br", response.DomainName);
+            Assert.AreEqual("u34jedzcq.br", response.DomainName.ToString());
 
             Assert.AreEqual(2, response.FieldsParsed);
         }
@@ -108,7 +108,7 @@ namespace Whois.Parsing.Whois.Registro.Br.Br
             Assert.AreEqual(0, response.ParsingErrors);
             Assert.AreEqual("whois.registro.br/br/NotFoundThrottled", response.TemplateName);
 
-            Assert.AreEqual("u34jedzcq.br", response.DomainName);
+            Assert.AreEqual("u34jedzcq.br", response.DomainName.ToString());
 
             Assert.AreEqual(2, response.FieldsParsed);
         }
@@ -125,7 +125,7 @@ namespace Whois.Parsing.Whois.Registro.Br.Br
             Assert.AreEqual(0, response.ParsingErrors);
             Assert.AreEqual("whois.registro.br/br/Found", response.TemplateName);
 
-            Assert.AreEqual("google.com.br", response.DomainName);
+            Assert.AreEqual("google.com.br", response.DomainName.ToString());
 
             Assert.AreEqual(new DateTime(2017, 04, 27, 00, 00, 00, 000, DateTimeKind.Utc), response.Updated);
             Assert.AreEqual(new DateTime(1999, 05, 18, 00, 00, 00, 000, DateTimeKind.Utc), response.Registered);
@@ -178,7 +178,7 @@ namespace Whois.Parsing.Whois.Registro.Br.Br
             Assert.AreEqual(0, response.ParsingErrors);
             Assert.AreEqual("whois.registro.br/br/FoundThrottled", response.TemplateName);
 
-            Assert.AreEqual("registro.br", response.DomainName);
+            Assert.AreEqual("registro.br", response.DomainName.ToString());
 
              // Registrant Details
             Assert.AreEqual("Núcleo de Informação e Coordenação do Ponto BR (662379)", response.Registrant.Name);
@@ -198,7 +198,7 @@ namespace Whois.Parsing.Whois.Registro.Br.Br
             Assert.AreEqual(0, response.ParsingErrors);
             Assert.AreEqual("whois.registro.br/br/Found", response.TemplateName);
 
-            Assert.AreEqual("001hosting.com.br", response.DomainName);
+            Assert.AreEqual("001hosting.com.br", response.DomainName.ToString());
 
             Assert.AreEqual(new DateTime(2019, 04, 06, 00, 00, 00, 000, DateTimeKind.Utc), response.Updated);
             Assert.AreEqual(new DateTime(2001, 09, 19, 00, 00, 00, 000, DateTimeKind.Utc), response.Registered);

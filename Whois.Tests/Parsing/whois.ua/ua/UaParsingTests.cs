@@ -30,7 +30,7 @@ namespace Whois.Parsing.Whois.Ua.Ua
             Assert.AreEqual(0, response.ParsingErrors);
             Assert.AreEqual("whois.ua/ua/Found01", response.TemplateName);
 
-            Assert.AreEqual("oogle.com.ua", response.DomainName);
+            Assert.AreEqual("oogle.com.ua", response.DomainName.ToString());
 
             // Registrar Details
             Assert.AreEqual("ua.imena", response.Registrar.Name);
@@ -113,7 +113,7 @@ namespace Whois.Parsing.Whois.Ua.Ua
             Assert.AreEqual(0, response.ParsingErrors);
             Assert.AreEqual("whois.ua/ua/Found01", response.TemplateName);
 
-            Assert.AreEqual("fcbank.com.ua", response.DomainName);
+            Assert.AreEqual("fcbank.com.ua", response.DomainName.ToString());
 
             // Registrar Details
             Assert.AreEqual("ua.register", response.Registrar.Name);
@@ -195,7 +195,7 @@ namespace Whois.Parsing.Whois.Ua.Ua
             Assert.AreEqual(0, response.ParsingErrors);
             Assert.AreEqual("whois.ua/ua/Found01", response.TemplateName);
 
-            Assert.AreEqual("oogle.com.ua", response.DomainName);
+            Assert.AreEqual("oogle.com.ua", response.DomainName.ToString());
 
             // Registrar Details
             Assert.AreEqual("ua.imena", response.Registrar.Name);
@@ -278,7 +278,7 @@ namespace Whois.Parsing.Whois.Ua.Ua
             Assert.AreEqual(0, response.ParsingErrors);
             Assert.AreEqual("whois.ua/ua/Found01", response.TemplateName);
 
-            Assert.AreEqual("google.com.ua", response.DomainName);
+            Assert.AreEqual("google.com.ua", response.DomainName.ToString());
 
             // Registrar Details
             Assert.AreEqual("ua.imena", response.Registrar.Name);
@@ -362,7 +362,7 @@ namespace Whois.Parsing.Whois.Ua.Ua
             Assert.AreEqual(0, response.ParsingErrors);
             Assert.AreEqual("whois.ua/ua/Found01", response.TemplateName);
 
-            Assert.AreEqual("googke.com.ua", response.DomainName);
+            Assert.AreEqual("googke.com.ua", response.DomainName.ToString());
 
             // Registrar Details
             Assert.AreEqual("ua.imena", response.Registrar.Name);
@@ -445,7 +445,7 @@ namespace Whois.Parsing.Whois.Ua.Ua
             Assert.AreEqual(0, response.ParsingErrors);
             Assert.AreEqual("whois.ua/ua/Found01", response.TemplateName);
 
-            Assert.AreEqual("googlw.com.ua", response.DomainName);
+            Assert.AreEqual("googlw.com.ua", response.DomainName.ToString());
 
             // Registrar Details
             Assert.AreEqual("ua.freehost", response.Registrar.Name);
@@ -509,7 +509,7 @@ namespace Whois.Parsing.Whois.Ua.Ua
             Assert.AreEqual(0, response.ParsingErrors);
             Assert.AreEqual("whois.ua/ua/NotFound", response.TemplateName);
 
-            Assert.AreEqual("u34jedzcq.com.ua", response.DomainName);
+            Assert.AreEqual("u34jedzcq.com.ua", response.DomainName.ToString());
 
             Assert.AreEqual(2, response.FieldsParsed);
         }
@@ -526,7 +526,7 @@ namespace Whois.Parsing.Whois.Ua.Ua
             Assert.AreEqual(0, response.ParsingErrors);
             Assert.AreEqual("whois.ua/ua/Found02", response.TemplateName);
 
-            Assert.AreEqual("kyivstar.ua", response.DomainName);
+            Assert.AreEqual("kyivstar.ua", response.DomainName.ToString());
 
 
              // AdminContact Details
@@ -581,7 +581,7 @@ namespace Whois.Parsing.Whois.Ua.Ua
             Assert.AreEqual(0, response.ParsingErrors);
             Assert.AreEqual("whois.ua/ua/Found02", response.TemplateName);
 
-            Assert.AreEqual("kyivstar.ua", response.DomainName);
+            Assert.AreEqual("kyivstar.ua", response.DomainName.ToString());
 
 
              // AdminContact Details

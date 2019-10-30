@@ -13,6 +13,6 @@ set: Status = NotFound
 
 hint: was not found!
 ---
-The domain { DomainName ? : IsDomainName, ToLower } was not found!
+The domain { DomainName ? : IsDomainName, ToHostName } was not found!
 Go to http://domains.fj to register it now!
 

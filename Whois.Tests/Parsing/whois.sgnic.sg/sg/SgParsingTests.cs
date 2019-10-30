@@ -30,7 +30,7 @@ namespace Whois.Parsing.Whois.Sgnic.Sg.Sg
             Assert.AreEqual(0, response.ParsingErrors);
             Assert.AreEqual("whois.sgnic.sg/sg/Found01", response.TemplateName);
 
-            Assert.AreEqual("google.sg", response.DomainName);
+            Assert.AreEqual("google.sg", response.DomainName.ToString());
 
             // Registrar Details
             Assert.AreEqual("MARKMONITOR INC", response.Registrar.Name);
@@ -75,7 +75,7 @@ namespace Whois.Parsing.Whois.Sgnic.Sg.Sg
             Assert.AreEqual(0, response.ParsingErrors);
             Assert.AreEqual("whois.sgnic.sg/sg/Found01", response.TemplateName);
 
-            Assert.AreEqual("canon.com.sg", response.DomainName);
+            Assert.AreEqual("canon.com.sg", response.DomainName.ToString());
 
             // Registrar Details
             Assert.AreEqual("SINGNET PTE LTD", response.Registrar.Name);
@@ -115,7 +115,7 @@ namespace Whois.Parsing.Whois.Sgnic.Sg.Sg
             Assert.AreEqual(0, response.ParsingErrors);
             Assert.AreEqual("whois.sgnic.sg/sg/Found01", response.TemplateName);
 
-            Assert.AreEqual("google.sg", response.DomainName);
+            Assert.AreEqual("google.sg", response.DomainName.ToString());
 
             // Registrar Details
             Assert.AreEqual("MARKMONITOR INC", response.Registrar.Name);
@@ -174,7 +174,7 @@ namespace Whois.Parsing.Whois.Sgnic.Sg.Sg
             Assert.AreEqual(0, response.ParsingErrors);
             Assert.AreEqual("whois.sgnic.sg/sg/Found02", response.TemplateName);
 
-            Assert.AreEqual("google.sg", response.DomainName);
+            Assert.AreEqual("google.sg", response.DomainName.ToString());
 
             // Registrar Details
             Assert.AreEqual("MARKMONITOR INC", response.Registrar.Name);

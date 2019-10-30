@@ -45,7 +45,7 @@ namespace Whois.Parsing.Whois.Centralnic.Com.AeOrg
             Assert.AreEqual(0, response.ParsingErrors);
             Assert.AreEqual("whois.centralnic.com/Found", response.TemplateName);
 
-            Assert.AreEqual("kidzlink.ae.org", response.DomainName);
+            Assert.AreEqual("kidzlink.ae.org", response.DomainName.ToString());
             Assert.AreEqual("CNIC-DO887354", response.RegistryDomainId);
 
             // Registrar Details

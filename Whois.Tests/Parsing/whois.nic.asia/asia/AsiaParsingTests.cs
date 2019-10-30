@@ -30,7 +30,7 @@ namespace Whois.Parsing.Whois.Nic.Asia.Asia
             Assert.AreEqual(0, response.ParsingErrors);
             Assert.AreEqual("whois.nic.asia/asia/Found", response.TemplateName);
 
-            Assert.AreEqual("novalash.asia", response.DomainName);
+            Assert.AreEqual("novalash.asia", response.DomainName.ToString());
             Assert.AreEqual("D1032500-ASIA", response.RegistryDomainId);
 
             // Registrar Details
@@ -128,7 +128,7 @@ namespace Whois.Parsing.Whois.Nic.Asia.Asia
             Assert.AreEqual(0, response.ParsingErrors);
             Assert.AreEqual("whois.nic.asia/asia/Found", response.TemplateName);
 
-            Assert.AreEqual("cj7.asia", response.DomainName);
+            Assert.AreEqual("cj7.asia", response.DomainName.ToString());
             Assert.AreEqual("D93126-ASIA", response.RegistryDomainId);
 
             // Registrar Details
@@ -244,7 +244,7 @@ namespace Whois.Parsing.Whois.Nic.Asia.Asia
             Assert.AreEqual(0, response.ParsingErrors);
             Assert.AreEqual("whois.nic.asia/asia/Found", response.TemplateName);
 
-            Assert.AreEqual("cj7.asia", response.DomainName);
+            Assert.AreEqual("cj7.asia", response.DomainName.ToString());
             Assert.AreEqual("D93126-ASIA", response.RegistryDomainId);
 
             // Registrar Details

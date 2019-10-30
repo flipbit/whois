@@ -45,7 +45,7 @@ namespace Whois.Parsing.Whois.Centralnic.Com.ZaCom
             Assert.AreEqual(0, response.ParsingErrors);
             Assert.AreEqual("whois.centralnic.com/Found", response.TemplateName);
 
-            Assert.AreEqual("siyenza.za.com", response.DomainName);
+            Assert.AreEqual("siyenza.za.com", response.DomainName.ToString());
             Assert.AreEqual("CNIC-DO333077", response.RegistryDomainId);
 
             // Registrar Details

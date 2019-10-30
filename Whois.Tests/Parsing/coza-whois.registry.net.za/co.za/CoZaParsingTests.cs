@@ -27,7 +27,7 @@ namespace Whois.Parsing.Coza.Whois.Registry.Net.Za.CoZa
             Assert.Greater(sample.Length, 0);
             Assert.AreEqual(WhoisStatus.Found, response.Status);
 
-            Assert.AreEqual("fnb.co.za", response.DomainName);
+            Assert.AreEqual("fnb.co.za", response.DomainName.ToString());
             Assert.AreEqual("dom_1ZW3S--1", response.RegistryDomainId);
 
             Assert.AreEqual("Lexsynergy Limited", response.Registrar.Name);
@@ -121,7 +121,7 @@ namespace Whois.Parsing.Coza.Whois.Registry.Net.Za.CoZa
             Assert.Greater(sample.Length, 0);
             Assert.AreEqual(WhoisStatus.NotFound, response.Status);
 
-            Assert.AreEqual("nosuchdomainregistered.co.za", response.DomainName);
+            Assert.AreEqual("nosuchdomainregistered.co.za", response.DomainName.ToString());
         }
 
         [Test]
@@ -133,7 +133,7 @@ namespace Whois.Parsing.Coza.Whois.Registry.Net.Za.CoZa
             Assert.Greater(sample.Length, 0);
             Assert.AreEqual(WhoisStatus.Found, response.Status);
 
-            Assert.AreEqual("google.co.za", response.DomainName);
+            Assert.AreEqual("google.co.za", response.DomainName.ToString());
             Assert.AreEqual("dom_1SZMF--1", response.RegistryDomainId);
 
             Assert.AreEqual("MarkMonitor", response.Registrar.Name);

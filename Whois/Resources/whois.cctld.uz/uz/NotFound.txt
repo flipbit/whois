@@ -13,5 +13,5 @@ set: Status = NotFound
 
 hint: Sorry, but domain
 ---
-Sorry, but domain: "{ DomainName : Trim, IsDomainName, ToLower, EOL }", not found in database
+Sorry, but domain: "{ DomainName : Trim, IsDomainName, ToHostName, EOL }", not found in database
 

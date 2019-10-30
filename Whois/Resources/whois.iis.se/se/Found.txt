@@ -18,7 +18,7 @@ trimPreambleBeforeNewLine: true
 set: Status = Found
 ---
 state:            { DomainStatus ? : Trim, Repeating }
-domain:           { DomainName : Trim, IsDomainName, ToLower }
+domain:           { DomainName : Trim, IsDomainName, ToHostName }
 holder:           { Registrant.RegistryId ? : Trim, IsNot("-") }
 admin-c:          { AdminContact.RegistryId ? : Trim, IsNot("-") }
 tech-c:           { TechnicalContact.RegistryId  ? : Trim, IsNot("-") }

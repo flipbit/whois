@@ -15,7 +15,7 @@ terminateOnNewLine: true
 set: Status = Found
 ---
 
-Domain : { DomainName : IsDomainName, ToLower }
+Domain : { DomainName : IsDomainName, ToHostName }
 Status : { DomainStatus ? : Repeating, CleanDomainStatus }
 Expiry : { Expiration ? : ToDateTimeUtc("yyyy-MM-dd") }
 

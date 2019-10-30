@@ -29,7 +29,7 @@ namespace Whois.Parsing.Whois.Museum.Museum
             Assert.AreEqual(0, response.ParsingErrors);
             Assert.AreEqual("whois.museum/museum/NotFound", response.TemplateName);
 
-            Assert.AreEqual("u34jedzcq.museum", response.DomainName);
+            Assert.AreEqual("u34jedzcq.museum", response.DomainName.ToString());
 
             Assert.AreEqual(2, response.FieldsParsed);
         }
@@ -46,7 +46,7 @@ namespace Whois.Parsing.Whois.Museum.Museum
             Assert.AreEqual(0, response.ParsingErrors);
             Assert.AreEqual("generic/tld/Found001", response.TemplateName);
 
-            Assert.AreEqual("musedoma.museum", response.DomainName);
+            Assert.AreEqual("musedoma.museum", response.DomainName.ToString());
             Assert.AreEqual("D778-MUSEUM", response.RegistryDomainId);
 
 

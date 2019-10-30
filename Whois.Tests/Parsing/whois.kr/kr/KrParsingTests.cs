@@ -30,7 +30,7 @@ namespace Whois.Parsing.Whois.Kr.Kr
             Assert.AreEqual(0, response.ParsingErrors);
             Assert.AreEqual("whois.kr/kr/Found", response.TemplateName);
 
-            Assert.AreEqual("lg.co.kr", response.DomainName);
+            Assert.AreEqual("lg.co.kr", response.DomainName.ToString());
 
             // Registrar Details
             Assert.AreEqual("Whois Corp.(http://whois.co.kr)", response.Registrar.Name);
@@ -74,7 +74,7 @@ namespace Whois.Parsing.Whois.Kr.Kr
             Assert.AreEqual(0, response.ParsingErrors);
             Assert.AreEqual("whois.kr/kr/NotFound", response.TemplateName);
 
-            Assert.AreEqual("u34jedzcq.kr", response.DomainName);
+            Assert.AreEqual("u34jedzcq.kr", response.DomainName.ToString());
 
             Assert.AreEqual(2, response.FieldsParsed);
         }
@@ -91,7 +91,7 @@ namespace Whois.Parsing.Whois.Kr.Kr
             Assert.AreEqual(0, response.ParsingErrors);
             Assert.AreEqual("whois.kr/kr/Found", response.TemplateName);
 
-            Assert.AreEqual("google.kr", response.DomainName);
+            Assert.AreEqual("google.kr", response.DomainName.ToString());
 
             // Registrar Details
             Assert.AreEqual("Whois Corp.(http://whois.co.kr)", response.Registrar.Name);

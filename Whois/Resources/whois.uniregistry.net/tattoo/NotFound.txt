@@ -16,4 +16,4 @@ set: Status = NotFound
 
 hint: is available for registration
 ---
->>> Domain "{ DomainName : IsDomainName, ToLower }" is available for registration
+>>> Domain "{ DomainName : IsDomainName, ToHostName }" is available for registration

@@ -41,7 +41,7 @@ namespace Whois.Parsing.Whois.Amnic.Net.Am
             Assert.AreEqual(0, response.ParsingErrors);
             Assert.AreEqual("whois.amnic.net/am/Found", response.TemplateName);
 
-            Assert.AreEqual("google.am", response.DomainName);
+            Assert.AreEqual("google.am", response.DomainName.ToString());
             Assert.AreEqual("abcdomain", response.Registrar.Name);
 
             Assert.AreEqual(new DateTime(2014, 2, 13, 0, 0, 0), response.Updated);

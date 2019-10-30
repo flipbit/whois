@@ -12,7 +12,7 @@ tag: pl
 set: Status = Found
 ---
 
-DOMAIN NAME:           { DomainName : Trim, IsDomainName, ToLower, EOL }
+DOMAIN NAME:           { DomainName : Trim, IsDomainName, ToHostName, EOL }
 nameservers:           { NameServers ? : Trim, SubstringBefore(". "), IsDomainName, ToLower, Repeating, EOL }
                        { NameServers ? : Trim, SubstringBefore(". "), IsDomainName, ToLower, Repeating, EOL }
 created:               { Registered? : Trim, ToDateTime("yyyy.MM.dd HH:mm:ss", "dd-MMM-yyyy hh:MM:ss"), EOL }

@@ -20,7 +20,7 @@ IgnoreMissingProperties: true
 # Set query response type:
 set: Status = Found
 ---
-domain:      { DomainName : Trim, IsDomainName, ToLower }
+domain:      { DomainName : Trim, IsDomainName, ToHostName }
 owner:       { Registrant.Name ? : Trim }
 ownerid:     { Registrant.RegistryId ? : Trim }
 responsible: { Registrant.Name ? : Trim }

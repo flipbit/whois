@@ -15,7 +15,7 @@ set: Status = Suspended
 hint: Status: Suspended
 ---
 Domain Information
-Query: { DomainName : IsDomainName, ToLower, EOL }
+Query: { DomainName : IsDomainName, ToHostName, EOL }
 Status: { DomainStatus ? : Repeating, Trim, EOL }
 Registrar: { Registrar.Name ? : EOL }
 Name Servers:

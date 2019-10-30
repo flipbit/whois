@@ -31,7 +31,7 @@ namespace Whois.Parsing.Whois.Dotname.Co.Kr.Com
             Assert.AreEqual(0, response.ParsingErrors);
             Assert.AreEqual("generic/tld/Found02", response.TemplateName);
 
-            Assert.AreEqual("ggemtv.com", response.DomainName);
+            Assert.AreEqual("ggemtv.com", response.DomainName.ToString());
             Assert.AreEqual("2282446647_DOMAIN_COM-VRSN", response.RegistryDomainId);
 
             // Registrar Details

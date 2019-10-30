@@ -45,7 +45,7 @@ namespace Whois.Parsing.Whois.Centralnic.Com.GbNet
             Assert.AreEqual(0, response.ParsingErrors);
             Assert.AreEqual("whois.centralnic.com/Found", response.TemplateName);
 
-            Assert.AreEqual("hotel.gb.net", response.DomainName);
+            Assert.AreEqual("hotel.gb.net", response.DomainName.ToString());
             Assert.AreEqual("CNIC-DO1423750", response.RegistryDomainId);
 
             // Registrar Details

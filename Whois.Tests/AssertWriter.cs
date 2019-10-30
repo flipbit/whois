@@ -122,6 +122,21 @@ namespace Whois
             sb.AppendLine();
         }
 
+        private static void Write(string fieldName, HostName expectedValue)
+        {
+            if (expectedValue == null) return;
+
+            if (string.IsNullOrEmpty(expectedValue.ToString()) == false)
+            {
+                Write($"{fieldName}.ToString()", expectedValue.ToString());
+            }
+
+            if (string.IsNullOrEmpty(expectedValue.ToUnicodeString()) == false && expectedValue.IsPunyCode)
+            {
+                Write($"{fieldName}.ToUnicodeString()", expectedValue.ToString());
+            }
+        }
+
         private static void Write(string fieldName, string expectedValue)
         {
             if (string.IsNullOrEmpty(expectedValue)) return;

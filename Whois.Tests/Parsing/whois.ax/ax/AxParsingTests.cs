@@ -31,7 +31,7 @@ namespace Whois.Parsing.Whois.Ax.Ax
             Assert.AreEqual(0, response.ParsingErrors);
             Assert.AreEqual("whois.ax/ax/NotFound", response.TemplateName);
 
-            Assert.AreEqual("u34jedzcq.ax", response.DomainName);
+            Assert.AreEqual("u34jedzcq.ax", response.DomainName.ToString());
         }
 
         [Test]
@@ -47,7 +47,7 @@ namespace Whois.Parsing.Whois.Ax.Ax
             Assert.AreEqual(0, response.ParsingErrors);
             Assert.AreEqual("whois.ax/ax/Found", response.TemplateName);
 
-            Assert.AreEqual("regeringen.ax", response.DomainName);
+            Assert.AreEqual("regeringen.ax", response.DomainName.ToString());
 
 
             Assert.AreEqual(new DateTime(2006, 8, 3, 0, 0, 0), response.Registered);

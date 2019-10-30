@@ -17,4 +17,4 @@ terminateOnNewLine: true
 hint: Domain Status: Available
 
 ---
-Domain Name: { DomainName : IsDomainName, ToLower }
+Domain Name: { DomainName : IsDomainName, ToHostName }

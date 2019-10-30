@@ -14,7 +14,7 @@ set: Status = Found
 # Must contain:
 hint: Domain Name
 ---
-Domain Name:                     { DomainName : IsDomainName, ToLower, EOL }
+Domain Name:                     { DomainName : IsDomainName, ToHostName, EOL }
 Registrar ID:                    { Registrar.Name ? : EOL }
 Registrar Name:                  { Registrar.Name ? : EOL }
 Status:                          { DomainStatus ? : Repeating, SubstringBefore(' '), EOL }

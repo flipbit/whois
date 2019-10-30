@@ -11,7 +11,7 @@ tag: co.pl
 # Set query response type:
 set: Status = Found
 ---
-domain:           { DomainName : IsDomainName, ToLower, EOL }
+domain:           { DomainName : IsDomainName, ToHostName, EOL }
 nserver:          { NameServers ? : IsDomainName, ToLower, Repeating, EOL }
 changed:          { Updated ? :ToDateTimeUtc("yyyy-MM-dd HH:mm:ss"), EOL }
 

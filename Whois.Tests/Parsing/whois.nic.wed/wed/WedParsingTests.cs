@@ -30,7 +30,7 @@ namespace Whois.Parsing.Whois.Nic.Wed.Wed
             Assert.AreEqual(0, response.ParsingErrors);
             Assert.AreEqual("generic/tld/Found02", response.TemplateName);
 
-            Assert.AreEqual("u34jedzcq.wed", response.DomainName);
+            Assert.AreEqual("u34jedzcq.wed", response.DomainName.ToString());
 
             // Domain Status
             Assert.AreEqual(1, response.DomainStatus.Count);
@@ -51,7 +51,7 @@ namespace Whois.Parsing.Whois.Nic.Wed.Wed
             Assert.AreEqual(0, response.ParsingErrors);
             Assert.AreEqual("generic/tld/Found001", response.TemplateName);
 
-            Assert.AreEqual("nic.wed", response.DomainName);
+            Assert.AreEqual("nic.wed", response.DomainName.ToString());
             Assert.AreEqual("963171-CoCCA", response.RegistryDomainId);
 
             // Registrar Details

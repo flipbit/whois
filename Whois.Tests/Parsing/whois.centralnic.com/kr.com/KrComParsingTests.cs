@@ -45,7 +45,7 @@ namespace Whois.Parsing.Whois.Centralnic.Com.KrCom
             Assert.AreEqual(0, response.ParsingErrors);
             Assert.AreEqual("whois.centralnic.com/Found", response.TemplateName);
 
-            Assert.AreEqual("academyart.kr.com", response.DomainName);
+            Assert.AreEqual("academyart.kr.com", response.DomainName.ToString());
             Assert.AreEqual("CNIC-DO569707", response.RegistryDomainId);
 
             // Registrar Details

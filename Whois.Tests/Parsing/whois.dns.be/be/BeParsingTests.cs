@@ -30,7 +30,7 @@ namespace Whois.Parsing.Whois.Dns.Be.Be
             Assert.AreEqual(0, response.ParsingErrors);
             Assert.AreEqual("whois.dns.be/be/Found", response.TemplateName);
 
-            Assert.AreEqual("register.be", response.DomainName);
+            Assert.AreEqual("register.be", response.DomainName.ToString());
 
             // Registrar Details
             Assert.AreEqual("Register NV/SA", response.Registrar.Name);
@@ -63,7 +63,7 @@ namespace Whois.Parsing.Whois.Dns.Be.Be
             Assert.AreEqual(0, response.ParsingErrors);
             Assert.AreEqual("whois.dns.be/be/NotFound", response.TemplateName);
 
-            Assert.AreEqual("u34jedzcq.be", response.DomainName);
+            Assert.AreEqual("u34jedzcq.be", response.DomainName.ToString());
 
             Assert.AreEqual(2, response.FieldsParsed);        
         }
@@ -80,7 +80,7 @@ namespace Whois.Parsing.Whois.Dns.Be.Be
             Assert.AreEqual(0, response.ParsingErrors);
             Assert.AreEqual("whois.dns.be/be/Error", response.TemplateName);
 
-            Assert.AreEqual("www.kimdemolenaer.be", response.DomainName);
+            Assert.AreEqual("www.kimdemolenaer.be", response.DomainName.ToString());
 
             Assert.AreEqual(2, response.FieldsParsed);
         }
@@ -97,7 +97,7 @@ namespace Whois.Parsing.Whois.Dns.Be.Be
             Assert.AreEqual(0, response.ParsingErrors);
             Assert.AreEqual("whois.dns.be/be/Found", response.TemplateName);
 
-            Assert.AreEqual("gratisdatingplaza.be", response.DomainName);
+            Assert.AreEqual("gratisdatingplaza.be", response.DomainName.ToString());
 
             // Registrar Details
             Assert.AreEqual("AXC", response.Registrar.Name);
@@ -136,7 +136,7 @@ namespace Whois.Parsing.Whois.Dns.Be.Be
             Assert.AreEqual(0, response.ParsingErrors);
             Assert.AreEqual("whois.dns.be/be/OutOfService", response.TemplateName);
 
-            Assert.AreEqual("ee", response.DomainName);
+            Assert.AreEqual("ee", response.DomainName.ToString());
 
             Assert.AreEqual(new DateTime(2000, 12, 14, 0, 0, 0), response.Registered);
 
@@ -175,7 +175,7 @@ namespace Whois.Parsing.Whois.Dns.Be.Be
             Assert.AreEqual(0, response.ParsingErrors);
             Assert.AreEqual("whois.dns.be/be/Quarantined", response.TemplateName);
 
-            Assert.AreEqual("9i", response.DomainName);
+            Assert.AreEqual("9i", response.DomainName.ToString());
 
             Assert.AreEqual(new DateTime(2003, 12, 22, 0, 0, 0), response.Registered);
 
@@ -228,7 +228,7 @@ namespace Whois.Parsing.Whois.Dns.Be.Be
             Assert.AreEqual(0, response.ParsingErrors);
             Assert.AreEqual("whois.dns.be/be/NotFound", response.TemplateName);
 
-            Assert.AreEqual("u34jedzcq.be", response.DomainName);
+            Assert.AreEqual("u34jedzcq.be", response.DomainName.ToString());
 
             Assert.AreEqual(2, response.FieldsParsed);
         }
@@ -245,7 +245,7 @@ namespace Whois.Parsing.Whois.Dns.Be.Be
             Assert.AreEqual(0, response.ParsingErrors);
             Assert.AreEqual("whois.dns.be/be/Error", response.TemplateName);
 
-            Assert.AreEqual("www.kimdemolenaer.be", response.DomainName);
+            Assert.AreEqual("www.kimdemolenaer.be", response.DomainName.ToString());
 
 
             Assert.AreEqual(2, response.FieldsParsed);
@@ -273,7 +273,7 @@ namespace Whois.Parsing.Whois.Dns.Be.Be
             Assert.AreEqual(0, response.ParsingErrors);
             Assert.AreEqual("whois.dns.be/be/Found", response.TemplateName);
 
-            Assert.AreEqual("youtu.be", response.DomainName);
+            Assert.AreEqual("youtu.be", response.DomainName.ToString());
 
             // Registrar Details
             Assert.AreEqual("MarkMonitor Inc.", response.Registrar.Name);

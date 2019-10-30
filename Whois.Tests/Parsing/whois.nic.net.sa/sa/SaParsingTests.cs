@@ -30,7 +30,7 @@ namespace Whois.Parsing.Whois.Nic.Net.Sa.Sa
             Assert.AreEqual(0, response.ParsingErrors);
             Assert.AreEqual("whois.nic.net.sa/sa/NotFound", response.TemplateName);
 
-            Assert.AreEqual("u34jedzcq.com.sa", response.DomainName);
+            Assert.AreEqual("u34jedzcq.com.sa", response.DomainName.ToString());
 
 
             Assert.AreEqual(2, response.FieldsParsed);
@@ -48,7 +48,7 @@ namespace Whois.Parsing.Whois.Nic.Net.Sa.Sa
             Assert.AreEqual(0, response.ParsingErrors);
             Assert.AreEqual("whois.nic.net.sa/sa/Found", response.TemplateName);
 
-            Assert.AreEqual("saudigazette.com.sa", response.DomainName);
+            Assert.AreEqual("saudigazette.com.sa", response.DomainName.ToString());
 
             Assert.AreEqual(new DateTime(2000, 09, 11, 00, 00, 00, 000, DateTimeKind.Utc), response.Updated);
             Assert.AreEqual(new DateTime(2000, 09, 11, 00, 00, 00, 000, DateTimeKind.Utc), response.Registered);

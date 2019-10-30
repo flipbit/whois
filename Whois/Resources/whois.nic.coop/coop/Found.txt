@@ -24,7 +24,7 @@ tag: fixup-contact
 set: Status = Found
 ---
 Domain ID:               { RegistryDomainId ? }
-Domain Name:             { DomainName : IsDomainName, ToLower }
+Domain Name:             { DomainName : IsDomainName, ToHostName }
 Expiry Date:             { Expiration ? : ToDateTimeUtc("dd MMM yyyy HH:mm:ss") }
 Domain Status:           { DomainStatus ? : Repeating, CleanDomainStatus }
 Sponsoring registrar:    { Registrar.Name ? }

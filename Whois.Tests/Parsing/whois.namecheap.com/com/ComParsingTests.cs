@@ -29,7 +29,7 @@ namespace Whois.Parsing.Whois.Namecheap.Com.Com
             Assert.AreEqual(0, response.ParsingErrors);
             Assert.AreEqual("generic/tld/Found001", response.TemplateName);
 
-            Assert.AreEqual("slavichy.com", response.DomainName);
+            Assert.AreEqual("slavichy.com", response.DomainName.ToString());
             Assert.AreEqual("2175421662_DOMAIN_COM-VRSN", response.RegistryDomainId);
 
             // Registrar Details

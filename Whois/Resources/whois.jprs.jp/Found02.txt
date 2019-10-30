@@ -20,7 +20,7 @@ trimPreambleBeforeNewLine: true
 set: Status = Found
 ---
 Domain Information:
-[Domain Name]                   { DomainName : IsDomainName, ToLower }
+[Domain Name]                   { DomainName : IsDomainName, ToHostName }
 
 [Registrant]                    { Registrant.Name ? : EOL, IsNotEmpty }
 

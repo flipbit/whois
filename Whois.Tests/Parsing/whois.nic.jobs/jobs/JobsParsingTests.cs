@@ -30,7 +30,7 @@ namespace Whois.Parsing.Whois.Nic.Jobs.Jobs
             Assert.AreEqual(0, response.ParsingErrors);
             Assert.AreEqual("whois.nic.jobs/jobs/Found", response.TemplateName);
 
-            Assert.AreEqual("example.jobs", response.DomainName);
+            Assert.AreEqual("example.jobs", response.DomainName.ToString());
 
             // Registrar Details
             Assert.AreEqual("EMPLOY MEDIA LLC", response.Registrar.Name);
@@ -53,7 +53,7 @@ namespace Whois.Parsing.Whois.Nic.Jobs.Jobs
             Assert.AreEqual(0, response.ParsingErrors);
             Assert.AreEqual("whois.nic.jobs/jobs/NotFound", response.TemplateName);
 
-            Assert.AreEqual("u34jedzcq.jobs", response.DomainName);
+            Assert.AreEqual("u34jedzcq.jobs", response.DomainName.ToString());
 
             Assert.AreEqual(2, response.FieldsParsed);
         }
@@ -70,7 +70,7 @@ namespace Whois.Parsing.Whois.Nic.Jobs.Jobs
             Assert.AreEqual(0, response.ParsingErrors);
             Assert.AreEqual("whois.nic.jobs/jobs/Found", response.TemplateName);
 
-            Assert.AreEqual("google.jobs", response.DomainName);
+            Assert.AreEqual("google.jobs", response.DomainName.ToString());
             Assert.AreEqual("86932313_DOMAIN_JOBS-VRSN", response.RegistryDomainId);
 
             // Registrar Details

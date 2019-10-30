@@ -45,7 +45,7 @@ namespace Whois.Parsing.Whois.Nic.Xyz.Xyz
             Assert.AreEqual(0, response.ParsingErrors);
             Assert.AreEqual("generic/tld/Found001", response.TemplateName);
 
-            Assert.AreEqual("abc.xyz", response.DomainName);
+            Assert.AreEqual("abc.xyz", response.DomainName.ToString());
             Assert.AreEqual("D2192285-CNIC", response.RegistryDomainId);
 
             // Registrar Details

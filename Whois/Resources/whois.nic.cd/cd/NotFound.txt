@@ -16,5 +16,5 @@ set: Status = NotFound
 
 hint: Domain Status:
 ---
-Domain Name: { DomainName : IsDomainName, ToLower }
+Domain Name: { DomainName : IsDomainName, ToHostName }
 Domain Status: { DomainStatus ? : Repeating, CleanDomainStatus }

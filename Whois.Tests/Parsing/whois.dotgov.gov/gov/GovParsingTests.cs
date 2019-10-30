@@ -29,7 +29,7 @@ namespace Whois.Parsing.Whois.Dotgov.Gov.Gov
             Assert.AreEqual(0, response.ParsingErrors);
             Assert.AreEqual("whois.dotgov.gov/gov/NotFound", response.TemplateName);
 
-            Assert.AreEqual("u34jedzcq.gov", response.DomainName);
+            Assert.AreEqual("u34jedzcq.gov", response.DomainName.ToString());
 
             Assert.AreEqual(2, response.FieldsParsed);
         }
@@ -46,7 +46,7 @@ namespace Whois.Parsing.Whois.Dotgov.Gov.Gov
             Assert.AreEqual(0, response.ParsingErrors);
             Assert.AreEqual("whois.dotgov.gov/gov/Found", response.TemplateName);
 
-            Assert.AreEqual("gsa.gov", response.DomainName);
+            Assert.AreEqual("gsa.gov", response.DomainName.ToString());
 
             // Domain Status
             Assert.AreEqual(1, response.DomainStatus.Count);

@@ -30,7 +30,7 @@ namespace Whois.Parsing.Org.Whois.Registry.Net.Za.OrgZa
             Assert.AreEqual(2, response.FieldsParsed);
             Assert.AreEqual(0, response.ParsingErrors);
 
-            Assert.AreEqual("nosuchdomain.org.za", response.DomainName);
+            Assert.AreEqual("nosuchdomain.org.za", response.DomainName.ToString());
         }
 
         [Test]
@@ -45,7 +45,7 @@ namespace Whois.Parsing.Org.Whois.Registry.Net.Za.OrgZa
             Assert.AreEqual(0, response.ParsingErrors);
             Assert.AreEqual("org-whois.registry.net.za/org.za/Found", response.TemplateName);
 
-            Assert.AreEqual("joburg.org.za", response.DomainName);
+            Assert.AreEqual("joburg.org.za", response.DomainName.ToString());
             Assert.AreEqual("dom_8VP-9999", response.RegistryDomainId);
 
             // Registrar Details

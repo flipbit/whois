@@ -40,7 +40,7 @@ namespace Whois.Parsing.Whois.Afilias.Net.Pro
             Assert.AreEqual(0, response.ParsingErrors);
             Assert.AreEqual("generic/tld/Found001", response.TemplateName);
 
-            Assert.AreEqual("google.pro", response.DomainName);
+            Assert.AreEqual("google.pro", response.DomainName.ToString());
             Assert.AreEqual("D107300000000011545-LRMS", response.RegistryDomainId);
 
             // Registrar Details

@@ -27,7 +27,7 @@ namespace Whois.Parsing.Whois.Comlaude.Com.Com
             Assert.AreEqual(0, response.ParsingErrors);
             Assert.AreEqual("generic/tld/Found001", response.TemplateName);
 
-            Assert.AreEqual("adobe.com", response.DomainName);
+            Assert.AreEqual("adobe.com", response.DomainName.ToString());
             Assert.AreEqual("4364022_DOMAIN_COM-VRSN", response.RegistryDomainId);
 
             // Registrar Details

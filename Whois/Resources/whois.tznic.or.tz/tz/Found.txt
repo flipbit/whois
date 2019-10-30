@@ -26,7 +26,7 @@ IgnoreMissingProperties: true
 # Set query response type:
 set: Status = Found
 ---
-domain:       { DomainName : IsDomainName, ToLower }
+domain:       { DomainName : IsDomainName, ToHostName }
 registrant:   { Registrant.RegistryId ? }
 admin-c:      { AdminContact.RegistryId ? }
 tech-c:       { TechnicalContact.RegistryId ? }

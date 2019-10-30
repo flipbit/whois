@@ -16,7 +16,7 @@ terminateOnNewLine: true
 # Set query response type:
 set: Status = Found
 ---
-domain:    { DomainName : Trim, IsDomainName, ToLower }
+domain:    { DomainName : Trim, IsDomainName, ToHostName }
 nserver:   { NameServers ? : Trim, SubstringBefore('. '), IsDomainName, ToLower, Repeating }
 state:     { DomainStatus ? : Trim, Repeating, CleanDomainStatus }
 org:       { Registrant.Organization ? : Trim }

@@ -14,7 +14,7 @@ set: Status = Found
 # Must contain:
 hint: Found
 ---
-Domain Name:              { DomainName : IsDomainName, ToLower, EOL }
+Domain Name:              { DomainName : IsDomainName, ToHostName, EOL }
 Name:                     { Registrant.Name ? : EOL }
 Organization:             { Registrant.Organization ? : EOL }
 Administrative Contact:   { AdminContact.Name ? : EOL }

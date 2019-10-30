@@ -13,5 +13,5 @@ set: Status = NotFound
 
 hint: Status: free
 ---
-Domain: { DomainName : IsDomainName, ToLower, EOL }
+Domain: { DomainName : IsDomainName, ToHostName, EOL }
 Status: free

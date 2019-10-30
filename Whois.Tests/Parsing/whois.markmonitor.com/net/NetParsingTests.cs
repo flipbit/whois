@@ -30,7 +30,7 @@ namespace Whois.Parsing.Whois.Markmonitor.Com.Net
             Assert.AreEqual(0, response.ParsingErrors);
             Assert.AreEqual("generic/tld/Found001", response.TemplateName);
 
-            Assert.AreEqual("google.net", response.DomainName);
+            Assert.AreEqual("google.net", response.DomainName.ToString());
             Assert.AreEqual("4802712_DOMAIN_NET-VRSN", response.RegistryDomainId);
 
             // Registrar Details

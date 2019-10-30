@@ -1,6 +1,4 @@
 ﻿using NUnit.Framework;
-using System;
-using Whois.Models;
 
 namespace Whois.Parsers
 {
@@ -27,7 +25,7 @@ namespace Whois.Parsers
             var result = parser.Parse("capetown-whois.registry.net.za", sample);
 
             Assert.IsNotNull(result);
-            Assert.AreEqual("registry.capetown", result.DomainName);
+            Assert.AreEqual("registry.capetown", result.DomainName.ToString());
             Assert.AreEqual(WhoisStatus.Found, result.Status);
             Assert.AreEqual(2, parser.Templates.Names.Count);
         }

@@ -14,7 +14,7 @@ terminateOnNewLine: true
 # Set query response type:
 set: Status = Found
 ---
-domain_name: { DomainName : IsDomainName, ToLower }
+domain_name: { DomainName : IsDomainName, ToHostName }
 query_status: { DomainStatus ? : Repeating, CleanDomainStatus }
 domain_dateregistered: { Registered ? : ToDateTimeUtc("yyyy-MM-ddTHH:mm:ssZ") }
 domain_datebilleduntil: { Expiration ? : ToDateTimeUtc("yyyy-MM-ddTHH:mm:ssZ") }

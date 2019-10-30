@@ -17,7 +17,7 @@ outOfOrder: true
 # Set query response type:
 set: Status = Found
 ---
-   Domain Name: { DomainName : IsDomainName, ToLower }
+   Domain Name: { DomainName : IsDomainName, ToHostName }
    Registry Domain ID: { RegistryDomainId ? }
    Registrar WHOIS Server: { Registrar.WhoisServerUrl ? : IsDomainName, ToLower }
    Registrar URL: { Registrar.Url ? : IsUrl, ToLower }

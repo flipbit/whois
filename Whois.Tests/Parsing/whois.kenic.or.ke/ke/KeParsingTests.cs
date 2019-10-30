@@ -30,7 +30,7 @@ namespace Whois.Parsing.Whois.Kenic.Or.Ke.Ke
             Assert.AreEqual(0, response.ParsingErrors);
             Assert.AreEqual("whois.kenic.or.ke/ke/Found", response.TemplateName);
 
-            Assert.AreEqual("u34jedzcq.ke", response.DomainName);
+            Assert.AreEqual("u34jedzcq.ke", response.DomainName.ToString());
 
             // Domain Status
             Assert.AreEqual(1, response.DomainStatus.Count);
@@ -51,7 +51,7 @@ namespace Whois.Parsing.Whois.Kenic.Or.Ke.Ke
             Assert.AreEqual(0, response.ParsingErrors);
             Assert.AreEqual("whois.kenic.or.ke/ke/Found", response.TemplateName);
 
-            Assert.AreEqual("www.housekenya.co.ke", response.DomainName);
+            Assert.AreEqual("www.housekenya.co.ke", response.DomainName.ToString());
 
             // Domain Status
             Assert.AreEqual(1, response.DomainStatus.Count);
@@ -72,7 +72,7 @@ namespace Whois.Parsing.Whois.Kenic.Or.Ke.Ke
             Assert.AreEqual(0, response.ParsingErrors);
             Assert.AreEqual("whois.kenic.or.ke/ke/Found", response.TemplateName);
 
-            Assert.AreEqual("google.co.ke", response.DomainName);
+            Assert.AreEqual("google.co.ke", response.DomainName.ToString());
 
             // Registrar Details
             Assert.AreEqual("Afriregister Limited", response.Registrar.Name);

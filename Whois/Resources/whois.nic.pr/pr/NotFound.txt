@@ -13,6 +13,6 @@ set: Status = NotFound
 
 hint: is not registered.
 ---
-The domain { DomainName : IsDomainName, ToLower } is not registered.
+The domain { DomainName : IsDomainName, ToHostName } is not registered.
 
 

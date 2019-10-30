@@ -2,6 +2,7 @@
 using System.Threading.Tasks;
 using Tokens;
 using Whois.Logging;
+using Whois.Models;
 using Whois.Net;
 using Whois.Parsers;
 
@@ -66,7 +67,7 @@ namespace Whois.Servers
             return new WhoisResponse
             {
                 Content = content,
-                DomainName = tld, 
+                DomainName = new HostName(tld), 
                 Status = WhoisStatus.Unknown
             };
         }
@@ -86,6 +87,7 @@ namespace Whois.Servers
         {
             var matcher = new TokenMatcher();
             matcher.RegisterTransformer<CleanDomainStatusTransformer>();
+            matcher.RegisterTransformer<ToHostNameTransformer>();
 
             var resourceNames = resourceReader.GetNames("whois.iana.org");
 

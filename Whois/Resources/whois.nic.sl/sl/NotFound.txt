@@ -16,7 +16,7 @@ set: Status = NotFound
 
 hint: Domain not found, marked private, or error in your query.
 ---
-Domain Name:             { DomainName : IsDomainName, ToLower }
+Domain Name:             { DomainName : IsDomainName, ToHostName }
 
 Domain not found, marked private, or error in your query.
 

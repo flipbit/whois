@@ -45,7 +45,7 @@ namespace Whois.Parsing.Whois.Dns.Hr.Hr
             Assert.AreEqual(0, response.ParsingErrors);
             Assert.AreEqual("whois.dns.hr/hr/Found", response.TemplateName);
 
-            Assert.AreEqual("google.hr", response.DomainName);
+            Assert.AreEqual("google.hr", response.DomainName.ToString());
 
             Assert.AreEqual(new DateTime(2014, 09, 21, 00, 00, 00, DateTimeKind.Utc), response.Expiration);
 

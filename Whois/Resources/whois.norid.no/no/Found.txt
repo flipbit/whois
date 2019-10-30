@@ -21,7 +21,7 @@ IgnoreMissingProperties: true
 set: Status = Found
 ---
 NORID Handle...............: { RegistryDomainId ? }
-Domain Name................: { DomainName : IsDomainName, ToLower }
+Domain Name................: { DomainName : IsDomainName, ToHostName }
 Domain Holder Handle.......: { Registrant.RegistryId ? }
 Legal-c Handle.............: { AdminContact.RegistryId ? }
 Tech-c Handle..............: { TechnicalContact.RegistryId ? }

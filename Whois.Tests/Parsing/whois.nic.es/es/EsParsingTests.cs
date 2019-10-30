@@ -45,7 +45,7 @@ namespace Whois.Parsing.Whois.Nic.Es.Es
             Assert.AreEqual(0, response.ParsingErrors);
             Assert.AreEqual("whois.nic.es/es/Found", response.TemplateName);
 
-            Assert.AreEqual("google.es", response.DomainName);
+            Assert.AreEqual("google.es", response.DomainName.ToString());
 
             Assert.AreEqual(new DateTime(2013, 10, 10, 07, 00, 02, 000, DateTimeKind.Utc), response.Updated);
             Assert.AreEqual(new DateTime(2003, 09, 16, 00, 00, 00, 000, DateTimeKind.Utc), response.Registered);

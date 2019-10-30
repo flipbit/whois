@@ -45,7 +45,7 @@ namespace Whois.Parsing.Whois.Pandi.Or.Id.Id
             Assert.AreEqual(0, response.ParsingErrors);
             Assert.AreEqual("generic/tld/Found001", response.TemplateName);
 
-            Assert.AreEqual("google.co.id", response.DomainName);
+            Assert.AreEqual("google.co.id", response.DomainName.ToString());
             Assert.AreEqual("PANDI-DO246796", response.RegistryDomainId);
 
             // Registrar Details

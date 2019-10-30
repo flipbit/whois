@@ -30,7 +30,7 @@ namespace Whois.Parsing.Whois.Hkirc.Hk.Hk
             Assert.AreEqual(0, response.ParsingErrors);
             Assert.AreEqual("whois.hkirc.hk/hk/Found", response.TemplateName);
 
-            Assert.AreEqual("brighter.com.hk", response.DomainName);
+            Assert.AreEqual("brighter.com.hk", response.DomainName.ToString());
 
             // Registrar Details
             Assert.AreEqual("Hong Kong Domain Name Registration Company Limited", response.Registrar.Name);
@@ -114,7 +114,7 @@ namespace Whois.Parsing.Whois.Hkirc.Hk.Hk
             Assert.AreEqual(0, response.ParsingErrors);
             Assert.AreEqual("whois.hkirc.hk/hk/Found", response.TemplateName);
 
-            Assert.AreEqual("google.hk", response.DomainName);
+            Assert.AreEqual("google.hk", response.DomainName.ToString());
 
             // Registrar Details
             Assert.AreEqual("MARKMONITOR INC.", response.Registrar.Name);

@@ -14,7 +14,7 @@ outOfOrder: true
 set: Status = Found
 ---
 
-Domain Name:{ DomainName : Trim, IsDomainName, ToLower, EOL }
+Domain Name:{ DomainName : Trim, IsDomainName, ToHostName, EOL }
 Domain ID:{ RegistryDomainId ? : Trim, EOL }
 
 Last Updated On: { Updated ? : SubstringBefore("GMT"), ToDateTimeUtc("yyyy-MM-dd HH:mm:ss"), EOL }

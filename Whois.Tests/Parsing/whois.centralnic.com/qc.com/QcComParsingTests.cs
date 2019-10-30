@@ -45,7 +45,7 @@ namespace Whois.Parsing.Whois.Centralnic.Com.QcCom
             Assert.AreEqual(0, response.ParsingErrors);
             Assert.AreEqual("whois.centralnic.com/Found", response.TemplateName);
 
-            Assert.AreEqual("ceo.qc.com", response.DomainName);
+            Assert.AreEqual("ceo.qc.com", response.DomainName.ToString());
             Assert.AreEqual("CNIC-DO327026", response.RegistryDomainId);
 
             // Registrar Details

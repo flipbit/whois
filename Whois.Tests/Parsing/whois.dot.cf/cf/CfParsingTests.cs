@@ -30,7 +30,7 @@ namespace Whois.Parsing.Whois.Dot.Cf.Cf
             Assert.AreEqual(0, response.ParsingErrors);
             Assert.AreEqual("whois.dot.cf/cf/Found", response.TemplateName);
 
-            Assert.AreEqual("dot.cf", response.DomainName);
+            Assert.AreEqual("dot.cf", response.DomainName.ToString());
 
             Assert.AreEqual(new DateTime(2013, 03, 28, 00, 00, 00, 000, DateTimeKind.Utc), response.Registered);
 
@@ -137,7 +137,7 @@ namespace Whois.Parsing.Whois.Dot.Cf.Cf
             Assert.AreEqual(0, response.ParsingErrors);
             Assert.AreEqual("whois.dot.cf/cf/Found", response.TemplateName);
 
-            Assert.AreEqual("dot.cf", response.DomainName);
+            Assert.AreEqual("dot.cf", response.DomainName.ToString());
 
             Assert.AreEqual(new DateTime(2013, 03, 28, 00, 00, 00, 000, DateTimeKind.Utc), response.Registered);
 

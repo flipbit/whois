@@ -30,7 +30,7 @@ namespace Whois.Parsing.Whois.Eenet.Ee.Ee
             Assert.AreEqual(0, response.ParsingErrors);
             Assert.AreEqual("whois.eenet.ee/ee/NotFound", response.TemplateName);
 
-            Assert.AreEqual("u34jedzcq.ee", response.DomainName);
+            Assert.AreEqual("u34jedzcq.ee", response.DomainName.ToString());
 
             Assert.AreEqual(2, response.FieldsParsed);
         }
@@ -48,7 +48,7 @@ namespace Whois.Parsing.Whois.Eenet.Ee.Ee
             Assert.AreEqual(0, response.ParsingErrors);
             Assert.AreEqual("whois.eenet.ee/ee/Found", response.TemplateName);
 
-            Assert.AreEqual("google.ee", response.DomainName);
+            Assert.AreEqual("google.ee", response.DomainName.ToString());
 
             Assert.AreEqual(new DateTime(2010, 05, 28, 00, 00, 00, 000, DateTimeKind.Utc), response.Updated);
             Assert.AreEqual(new DateTime(2003, 04, 22, 00, 00, 00, 000, DateTimeKind.Utc), response.Registered);

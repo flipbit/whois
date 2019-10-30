@@ -16,4 +16,4 @@ set: Status = NotAssigned
 # Must contain
 hint: Not assigned
 ---
-domain:       { DomainName : ToLower, EOL }
+domain:       { DomainName : ToHostName, EOL }

@@ -30,7 +30,7 @@ namespace Whois.Parsing.Whois.Denic.De.De
             Assert.AreEqual(0, response.ParsingErrors);
             Assert.AreEqual("whois.denic.de/de/Found", response.TemplateName);
 
-            Assert.AreEqual("prodns.de", response.DomainName);
+            Assert.AreEqual("prodns.de", response.DomainName.ToString());
 
             Assert.AreEqual(new DateTime(2013, 12, 4, 13, 42, 43, DateTimeKind.Utc), response.Updated);
 
@@ -88,7 +88,7 @@ namespace Whois.Parsing.Whois.Denic.De.De
             Assert.AreEqual(0, response.ParsingErrors);
             Assert.AreEqual("whois.denic.de/de/Found", response.TemplateName);
 
-            Assert.AreEqual("google.de", response.DomainName);
+            Assert.AreEqual("google.de", response.DomainName.ToString());
 
             Assert.AreEqual(new DateTime(2010, 9, 8, 20, 40, 48, DateTimeKind.Utc), response.Updated);
 
@@ -178,7 +178,7 @@ namespace Whois.Parsing.Whois.Denic.De.De
             Assert.AreEqual(0, response.ParsingErrors);
             Assert.AreEqual("whois.denic.de/de/NotFound", response.TemplateName);
 
-            Assert.AreEqual("u34jedzcq.de", response.DomainName);
+            Assert.AreEqual("u34jedzcq.de", response.DomainName.ToString());
 
             Assert.AreEqual(2, response.FieldsParsed);
         }
@@ -195,7 +195,7 @@ namespace Whois.Parsing.Whois.Denic.De.De
             Assert.AreEqual(0, response.ParsingErrors);
             Assert.AreEqual("whois.denic.de/de/Found", response.TemplateName);
 
-            Assert.AreEqual("msens.de", response.DomainName);
+            Assert.AreEqual("msens.de", response.DomainName.ToString());
 
             Assert.AreEqual(new DateTime(2011, 2, 23, 4, 36, 15, DateTimeKind.Utc), response.Updated);
 
@@ -253,7 +253,8 @@ namespace Whois.Parsing.Whois.Denic.De.De
             Assert.AreEqual(0, response.ParsingErrors);
             Assert.AreEqual("whois.denic.de/de/Found", response.TemplateName);
 
-            Assert.AreEqual("tästdomain-failed-nserver.de", response.DomainName);
+            Assert.AreEqual("xn--tstdomain-failed-nserver-qbc.de", response.DomainName.ToString());
+            Assert.AreEqual("tästdomain-failed-nserver.de", response.DomainName.ToUnicodeString());
 
             Assert.AreEqual(new DateTime(2010, 6, 1, 8, 29, 38, DateTimeKind.Utc), response.Updated);
 
@@ -315,7 +316,7 @@ namespace Whois.Parsing.Whois.Denic.De.De
             Assert.AreEqual(0, response.ParsingErrors);
             Assert.AreEqual("whois.denic.de/de/Invalid", response.TemplateName);
 
-            Assert.AreEqual("googlededewdedewdewde.foo.de", response.DomainName);
+            Assert.AreEqual("googlededewdedewdewde.foo.de", response.DomainName.ToString());
 
             // Domain Status
             Assert.AreEqual(1, response.DomainStatus.Count);
@@ -336,7 +337,7 @@ namespace Whois.Parsing.Whois.Denic.De.De
             Assert.AreEqual(0, response.ParsingErrors);
             Assert.AreEqual("whois.denic.de/de/Found", response.TemplateName);
 
-            Assert.AreEqual("google.de", response.DomainName);
+            Assert.AreEqual("google.de", response.DomainName.ToString());
 
             Assert.AreEqual(new DateTime(2011, 3, 30, 17, 36, 27, DateTimeKind.Utc), response.Updated);
 
@@ -394,7 +395,7 @@ namespace Whois.Parsing.Whois.Denic.De.De
             Assert.AreEqual(0, response.ParsingErrors);
             Assert.AreEqual("whois.denic.de/de/Found", response.TemplateName);
 
-            Assert.AreEqual("amazon.de", response.DomainName);
+            Assert.AreEqual("amazon.de", response.DomainName.ToString());
 
             Assert.AreEqual(new DateTime(2018, 8, 10, 8, 41, 26, DateTimeKind.Utc), response.Updated);
 

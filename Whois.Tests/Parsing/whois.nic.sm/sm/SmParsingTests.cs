@@ -45,7 +45,7 @@ namespace Whois.Parsing.Whois.Nic.Sm.Sm
             Assert.AreEqual(0, response.ParsingErrors);
             Assert.AreEqual("whois.nic.sm/sm/Found", response.TemplateName);
 
-            Assert.AreEqual("google.sm", response.DomainName);
+            Assert.AreEqual("google.sm", response.DomainName.ToString());
 
             Assert.AreEqual(new DateTime(2008, 08, 01, 00, 00, 00, 000, DateTimeKind.Utc), response.Updated);
 

@@ -45,7 +45,7 @@ namespace Whois.Parsing.Whois.Centralnic.Com.ArCom
             Assert.AreEqual(0, response.ParsingErrors);
             Assert.AreEqual("whois.centralnic.com/Found", response.TemplateName);
 
-            Assert.AreEqual("hotel.ar.com", response.DomainName);
+            Assert.AreEqual("hotel.ar.com", response.DomainName.ToString());
             Assert.AreEqual("CNIC-DO557730", response.RegistryDomainId);
 
             // Registrar Details

@@ -11,7 +11,7 @@ tag: ca
 # Set query response type:
 set: Status = Found
 ---
-Domain name:           { DomainName : IsDomainName, ToLower, EOL }
+Domain name:           { DomainName : IsDomainName, ToHostName, EOL }
 Domain status:         { DomainStatus ? : Repeating, EOL }
 Creation date:         { Registered ? : ToDateTimeUtc("yyyy/MM/dd"), EOL }
 Expiry date:           { Expiration ? : ToDateTimeUtc("yyyy/MM/dd"), EOL }

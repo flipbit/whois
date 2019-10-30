@@ -16,5 +16,5 @@ set: Status = NotFound
 
 hint: No Match for
 ---
-No Match for { DomainName : IsDomainName, ToLower }
+No Match for { DomainName : IsDomainName, ToHostName }
 .

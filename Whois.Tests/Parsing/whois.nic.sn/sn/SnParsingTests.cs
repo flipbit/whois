@@ -42,7 +42,7 @@ namespace Whois.Parsing.Whois.Nic.Sn.Sn
             Assert.AreEqual(0, response.ParsingErrors);
             Assert.AreEqual("whois.nic.sn/sn/Found", response.TemplateName);
 
-            Assert.AreEqual("google.sn", response.DomainName);
+            Assert.AreEqual("google.sn", response.DomainName.ToString());
 
             // Registrar Details
             Assert.AreEqual("registry", response.Registrar.Name);

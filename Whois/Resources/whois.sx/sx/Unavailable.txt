@@ -13,4 +13,4 @@ set: Status = Unavailable
 
 hint:Status: PREMIUM NAME
 ---
-Status: PREMIUM NAME (No match for domain "{ DomainName : IsDomainName, ToLower }")
+Status: PREMIUM NAME (No match for domain "{ DomainName : IsDomainName, ToHostName }")

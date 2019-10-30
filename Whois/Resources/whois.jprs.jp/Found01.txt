@@ -22,7 +22,7 @@ trimPreambleBeforeNewLine: true
 # Set query response type:
 set: Status = Found
 ---
-a. [Domain Name]                { DomainName : Trim, IsDomainName, ToLower }
+a. [Domain Name]                { DomainName : Trim, IsDomainName, ToHostName }
 g. [Organization]               { Registrant.Name ? : Trim, IsNotEmpty }
 m. [Administrative Contact]     { AdminContact.RegistryId ? : Trim, IsNotEmpty }
 n. [Technical Contact]          { TechnicalContact.RegistryId ? : Trim, IsNotEmpty }

@@ -30,7 +30,7 @@ namespace Whois.Parsing.Whois.Cctld.Uz.Uz
             Assert.AreEqual(0, response.ParsingErrors);
             Assert.AreEqual("whois.cctld.uz/uz/Reserved", response.TemplateName);
 
-            Assert.AreEqual("cctld.uz", response.DomainName);
+            Assert.AreEqual("cctld.uz", response.DomainName.ToString());
 
             // Registrar Details
             Assert.AreEqual("UZINFOCOM", response.Registrar.Name);
@@ -122,7 +122,7 @@ namespace Whois.Parsing.Whois.Cctld.Uz.Uz
             Assert.AreEqual(0, response.ParsingErrors);
             Assert.AreEqual("whois.cctld.uz/uz/NotFound", response.TemplateName);
 
-            Assert.AreEqual("u34jedzcq.uz", response.DomainName);
+            Assert.AreEqual("u34jedzcq.uz", response.DomainName.ToString());
 
 
             Assert.AreEqual(2, response.FieldsParsed);
@@ -140,7 +140,7 @@ namespace Whois.Parsing.Whois.Cctld.Uz.Uz
             Assert.AreEqual(0, response.ParsingErrors);
             Assert.AreEqual("whois.cctld.uz/uz/Found", response.TemplateName);
 
-            Assert.AreEqual("google.uz", response.DomainName);
+            Assert.AreEqual("google.uz", response.DomainName.ToString());
 
             // Registrar Details
             Assert.AreEqual("TOMAS", response.Registrar.Name);

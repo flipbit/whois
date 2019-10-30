@@ -30,7 +30,7 @@ namespace Whois.Parsing.Whois.Nic.Cz.Cz
             Assert.AreEqual(0, response.ParsingErrors);
             Assert.AreEqual("whois.nic.cz/cz/Found", response.TemplateName);
 
-            Assert.AreEqual("rybarskepotreby-marek.cz", response.DomainName);
+            Assert.AreEqual("rybarskepotreby-marek.cz", response.DomainName.ToString());
 
             Assert.AreEqual(new DateTime(2011, 01, 04, 18, 57, 14, 000, DateTimeKind.Utc), response.Updated);
             Assert.AreEqual(new DateTime(2010, 12, 31, 03, 39, 20, 000, DateTimeKind.Utc), response.Registered);
@@ -103,7 +103,7 @@ namespace Whois.Parsing.Whois.Nic.Cz.Cz
             Assert.AreEqual(0, response.ParsingErrors);
             Assert.AreEqual("whois.nic.cz/cz/Found", response.TemplateName);
 
-            Assert.AreEqual("realityporno.cz", response.DomainName);
+            Assert.AreEqual("realityporno.cz", response.DomainName.ToString());
 
             Assert.AreEqual(new DateTime(2011, 10, 07, 21, 51, 15, 000, DateTimeKind.Utc), response.Updated);
             Assert.AreEqual(new DateTime(2006, 01, 30, 18, 55, 00, 000, DateTimeKind.Utc), response.Registered);
@@ -192,7 +192,7 @@ namespace Whois.Parsing.Whois.Nic.Cz.Cz
             Assert.AreEqual(0, response.ParsingErrors);
             Assert.AreEqual("whois.nic.cz/cz/Found", response.TemplateName);
 
-            Assert.AreEqual("google.cz", response.DomainName);
+            Assert.AreEqual("google.cz", response.DomainName.ToString());
 
             Assert.AreEqual(new DateTime(2011, 05, 18, 23, 28, 45, 000, DateTimeKind.Utc), response.Updated);
             Assert.AreEqual(new DateTime(2000, 07, 21, 15, 21, 00, 000, DateTimeKind.Utc), response.Registered);
@@ -269,7 +269,7 @@ namespace Whois.Parsing.Whois.Nic.Cz.Cz
             Assert.AreEqual(0, response.ParsingErrors);
             Assert.AreEqual("whois.nic.cz/cz/Found", response.TemplateName);
 
-            Assert.AreEqual("phoca.cz", response.DomainName);
+            Assert.AreEqual("phoca.cz", response.DomainName.ToString());
 
             Assert.AreEqual(new DateTime(2018, 05, 15, 21, 32, 00, 000, DateTimeKind.Utc), response.Updated);
             Assert.AreEqual(new DateTime(2007, 08, 08, 07, 15, 00, 000, DateTimeKind.Utc), response.Registered);

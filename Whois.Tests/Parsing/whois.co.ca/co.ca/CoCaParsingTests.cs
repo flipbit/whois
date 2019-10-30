@@ -30,7 +30,7 @@ namespace Whois.Parsing.Whois.Co.Ca.CoCa
             Assert.AreEqual(0, response.ParsingErrors);
             Assert.AreEqual("whois.co.ca/co.ca/NotFound", response.TemplateName);
 
-            Assert.AreEqual("u34jedzcq.co.ca", response.DomainName);
+            Assert.AreEqual("u34jedzcq.co.ca", response.DomainName.ToString());
 
             Assert.AreEqual(2, response.FieldsParsed);
         }
@@ -47,7 +47,7 @@ namespace Whois.Parsing.Whois.Co.Ca.CoCa
             Assert.AreEqual(0, response.ParsingErrors);
             Assert.AreEqual("whois.co.ca/co.ca/Found", response.TemplateName);
 
-            Assert.AreEqual("internet.co.ca", response.DomainName);
+            Assert.AreEqual("internet.co.ca", response.DomainName.ToString());
 
             // Registrar Details
             Assert.AreEqual("RegCA Enterprises Inc. (www.reg.ca)", response.Registrar.Name);

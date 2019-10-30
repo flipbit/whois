@@ -14,7 +14,7 @@ set: Status = Found
 # Response must contain:
 hint: Domain ID
 ---
-Domain Name: { DomainName : IsDomainName, ToLower, EOL }
+Domain Name: { DomainName : IsDomainName, ToHostName, EOL }
 Domain ID: { RegistryDomainId : EOL }
 WHOIS Server: { Registrar.WhoisServerUrl : IsDomainName, ToLower, EOL }
 

@@ -30,7 +30,7 @@ namespace Whois.Parsing.Whois.Centralnic.Com.UyCom
             Assert.AreEqual(0, response.ParsingErrors);
             Assert.AreEqual("whois.centralnic.com/Found", response.TemplateName);
 
-            Assert.AreEqual("bingo.uy.com", response.DomainName);
+            Assert.AreEqual("bingo.uy.com", response.DomainName.ToString());
             Assert.AreEqual("CNIC-DO705337", response.RegistryDomainId);
 
             // Registrar Details
@@ -93,7 +93,7 @@ namespace Whois.Parsing.Whois.Centralnic.Com.UyCom
             Assert.AreEqual(0, response.ParsingErrors);
             Assert.AreEqual("whois.centralnic.com/Found", response.TemplateName);
 
-            Assert.AreEqual("bestb.uy.com", response.DomainName);
+            Assert.AreEqual("bestb.uy.com", response.DomainName.ToString());
             Assert.AreEqual("CNIC-DO493832", response.RegistryDomainId);
 
             // Registrar Details

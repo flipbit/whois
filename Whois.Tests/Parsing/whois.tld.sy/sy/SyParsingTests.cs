@@ -30,7 +30,7 @@ namespace Whois.Parsing.Whois.Tld.Sy.Sy
             Assert.AreEqual(0, response.ParsingErrors);
             Assert.AreEqual("generic/tld/NotFound005", response.TemplateName);
 
-            Assert.AreEqual("u34jedzcq.sy", response.DomainName);
+            Assert.AreEqual("u34jedzcq.sy", response.DomainName.ToString());
 
             Assert.AreEqual(2, response.FieldsParsed);
         }
@@ -47,7 +47,7 @@ namespace Whois.Parsing.Whois.Tld.Sy.Sy
             Assert.AreEqual(0, response.ParsingErrors);
             Assert.AreEqual("generic/tld/Found001", response.TemplateName);
 
-            Assert.AreEqual("tld.sy", response.DomainName);
+            Assert.AreEqual("tld.sy", response.DomainName.ToString());
             Assert.AreEqual("7-sy", response.RegistryDomainId);
 
             // Registrar Details

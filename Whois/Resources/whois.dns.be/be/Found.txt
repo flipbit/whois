@@ -13,7 +13,7 @@ set: Status = Found
 
 hint: NOT AVAILABLE
 ---
-Domain:	{ DomainName : Trim, IsDomainName, ToLower, EOL }
+Domain:	{ DomainName : Trim, IsDomainName, ToHostName, EOL }
 Status:	{ DomainStatus ? : Trim, Repeating, EOL }
 Registered:	{ Registered? : Trim, ToDateTime("ddd MMM dd yyyy"), EOL }
 

@@ -17,5 +17,5 @@ set: Status = Reserved
 hint: Application Pending
 hint: There is currently an application being processed
 ---
-domain:      { DomainName : IsDomainName, ToLower }
+domain:      { DomainName : IsDomainName, ToHostName }
 expiry:      { Expiration ? : ToDateTimeUtc("dd-MMM-yyyy", "d MMMM yyyy") }

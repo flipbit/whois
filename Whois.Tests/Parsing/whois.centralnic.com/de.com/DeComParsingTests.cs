@@ -45,7 +45,7 @@ namespace Whois.Parsing.Whois.Centralnic.Com.DeCom
             Assert.AreEqual(0, response.ParsingErrors);
             Assert.AreEqual("whois.centralnic.com/Found", response.TemplateName);
 
-            Assert.AreEqual("autopoint.de.com", response.DomainName);
+            Assert.AreEqual("autopoint.de.com", response.DomainName.ToString());
             Assert.AreEqual("CNIC-DO578833", response.RegistryDomainId);
 
             // Registrar Details

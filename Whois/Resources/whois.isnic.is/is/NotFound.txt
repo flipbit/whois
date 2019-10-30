@@ -13,4 +13,4 @@ set: Status = NotFound
 
 hint: No entries found for query
 ---
-% No entries found for query "{ DomainName : IsDomainName, ToLower }".
+% No entries found for query "{ DomainName : IsDomainName, ToHostName }".

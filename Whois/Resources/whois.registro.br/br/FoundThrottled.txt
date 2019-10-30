@@ -14,5 +14,5 @@ set: Status = Throttled
 hint: for domain availability
 hint: Query rate limit exceeded
 ---
-domain:      { DomainName : IsDomainName, ToLower, EOL }
+domain:      { DomainName : IsDomainName, ToHostName, EOL }
 owner:       { Registrant.Name ? : EOL }

@@ -45,7 +45,7 @@ namespace Whois.Parsing.Whois.Centralnic.Com.UkCom
             Assert.AreEqual(0, response.ParsingErrors);
             Assert.AreEqual("whois.centralnic.com/Found", response.TemplateName);
 
-            Assert.AreEqual("history.uk.com", response.DomainName);
+            Assert.AreEqual("history.uk.com", response.DomainName.ToString());
             Assert.AreEqual("CNIC-DO86293", response.RegistryDomainId);
 
             // Registrar Details

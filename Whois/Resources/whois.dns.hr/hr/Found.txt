@@ -14,7 +14,7 @@ terminateOnNewLine: true
 # Set query response type:
 set: Status = Found
 ---
-domain:    { DomainName : IsDomainName, ToLower }
+domain:    { DomainName : IsDomainName, ToHostName }
 tech-c:    { TechnicalContact.RegistryId  ? }
 expires:   { Expiration ? : ToDateTimeUtc("yyyyMMdd") }
 

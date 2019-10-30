@@ -45,7 +45,7 @@ namespace Whois.Parsing.Whois.Nic.Hu.Hu
             Assert.AreEqual(0, response.ParsingErrors);
             Assert.AreEqual("whois.nic.hu/hu/Found", response.TemplateName);
 
-            Assert.AreEqual("google.hu", response.DomainName);
+            Assert.AreEqual("google.hu", response.DomainName.ToString());
 
             Assert.AreEqual(new DateTime(2000, 03, 25, 23, 20, 39, 000, DateTimeKind.Utc), response.Registered);
 

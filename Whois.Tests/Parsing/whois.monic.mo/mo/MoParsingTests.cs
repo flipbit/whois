@@ -29,7 +29,7 @@ namespace Whois.Parsing.Whois.Monic.Mo.Mo
             Assert.AreEqual(0, response.ParsingErrors);
             Assert.AreEqual("whois.monic.mo/mo/NotFound", response.TemplateName);
 
-            Assert.AreEqual("u34jedzcq.mo", response.DomainName);
+            Assert.AreEqual("u34jedzcq.mo", response.DomainName.ToString());
 
             Assert.AreEqual(2, response.FieldsParsed);
         }
@@ -46,7 +46,7 @@ namespace Whois.Parsing.Whois.Monic.Mo.Mo
             Assert.AreEqual(0, response.ParsingErrors);
             Assert.AreEqual("whois.monic.mo/mo/Found", response.TemplateName);
 
-            Assert.AreEqual("umac.mo", response.DomainName);
+            Assert.AreEqual("umac.mo", response.DomainName.ToString());
 
             // Registrar Details
             Assert.AreEqual("MONIC", response.Registrar.Name);

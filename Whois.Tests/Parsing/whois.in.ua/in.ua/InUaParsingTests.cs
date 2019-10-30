@@ -30,7 +30,7 @@ namespace Whois.Parsing.Whois.In.Ua.InUa
             Assert.AreEqual(0, response.ParsingErrors);
             Assert.AreEqual("whois.in.ua/in.ua/NotFound", response.TemplateName);
 
-            Assert.AreEqual("u34jedzcq.in.ua", response.DomainName);
+            Assert.AreEqual("u34jedzcq.in.ua", response.DomainName.ToString());
 
             Assert.AreEqual(2, response.FieldsParsed);
         }
@@ -47,7 +47,7 @@ namespace Whois.Parsing.Whois.In.Ua.InUa
             Assert.AreEqual(0, response.ParsingErrors);
             Assert.AreEqual("whois.in.ua/in.ua/Found", response.TemplateName);
 
-            Assert.AreEqual("dle.in.ua", response.DomainName);
+            Assert.AreEqual("dle.in.ua", response.DomainName.ToString());
 
             Assert.AreEqual(new DateTime(2012, 12, 16, 13, 41, 04, DateTimeKind.Utc), response.Updated);
 

@@ -60,7 +60,7 @@ namespace Whois.Parsing.Whois.Pir.Org.Org
             Assert.AreEqual(0, response.ParsingErrors);
             Assert.AreEqual("generic/tld/Found001", response.TemplateName);
 
-            Assert.AreEqual("google.org", response.DomainName);
+            Assert.AreEqual("google.org", response.DomainName.ToString());
             Assert.AreEqual("D2244233-LROR", response.RegistryDomainId);
 
             // Registrar Details

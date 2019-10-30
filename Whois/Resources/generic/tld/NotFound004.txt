@@ -16,4 +16,4 @@ terminateOnNewLine: true
 # Must contain:
 hint: No Object Found 
 ---
-Domain Name: { DomainName : IsDomainName, ToLower }
+Domain Name: { DomainName : IsDomainName, ToHostName }

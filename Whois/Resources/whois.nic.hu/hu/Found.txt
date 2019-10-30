@@ -11,6 +11,6 @@ tag: hu
 # Set query response type:
 set: Status = Found
 ---
-domain:         { DomainName : IsDomainName, ToLower }
+domain:         { DomainName : IsDomainName, ToHostName }
 record created: { Registered ? : ToDateTimeUtc("yyyy.MM.dd HH:mm:ss") }
 

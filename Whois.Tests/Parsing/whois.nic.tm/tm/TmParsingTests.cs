@@ -29,7 +29,7 @@ namespace Whois.Parsing.Whois.Nic.Tm.Tm
             Assert.AreEqual(0, response.ParsingErrors);
             Assert.AreEqual("whois.nic.tm/tm/NotFound", response.TemplateName);
 
-            Assert.AreEqual("u34jedzcq.tm", response.DomainName);
+            Assert.AreEqual("u34jedzcq.tm", response.DomainName.ToString());
 
             Assert.AreEqual(2, response.FieldsParsed);
         }
@@ -46,7 +46,7 @@ namespace Whois.Parsing.Whois.Nic.Tm.Tm
             Assert.AreEqual(0, response.ParsingErrors);
             Assert.AreEqual("whois.nic.tm/tm/Found", response.TemplateName);
 
-            Assert.AreEqual("google.tm", response.DomainName);
+            Assert.AreEqual("google.tm", response.DomainName.ToString());
 
              // Registrant Details
             Assert.AreEqual("DNS Admin", response.Registrant.Name);

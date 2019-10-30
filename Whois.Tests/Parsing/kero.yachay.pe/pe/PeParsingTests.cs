@@ -41,7 +41,7 @@ namespace Whois.Parsing.Kero.Yachay.Pe.Pe
             Assert.AreEqual(3, response.FieldsParsed);
             Assert.AreEqual(0, response.ParsingErrors);
 
-            Assert.AreEqual("u34jedzcq.pe", response.DomainName);
+            Assert.AreEqual("u34jedzcq.pe", response.DomainName.ToString());
 
             Assert.AreEqual(1, response.DomainStatus.Count);
             Assert.AreEqual("Not Registered", response.DomainStatus[0]);
@@ -59,7 +59,7 @@ namespace Whois.Parsing.Kero.Yachay.Pe.Pe
             Assert.AreEqual(7, response.FieldsParsed);
             Assert.AreEqual(0, response.ParsingErrors);
 
-            Assert.AreEqual("zumba.pe", response.DomainName);
+            Assert.AreEqual("zumba.pe", response.DomainName.ToString());
 
             Assert.AreEqual("NIC .PE", response.Registrar.Name);
 
@@ -85,7 +85,7 @@ namespace Whois.Parsing.Kero.Yachay.Pe.Pe
             Assert.AreEqual(11, response.FieldsParsed);
             Assert.AreEqual(0, response.ParsingErrors);
 
-            Assert.AreEqual("google.pe", response.DomainName);
+            Assert.AreEqual("google.pe", response.DomainName.ToString());
 
             Assert.AreEqual("MarkMonitor Inc.", response.Registrar.Name);
 
@@ -117,7 +117,7 @@ namespace Whois.Parsing.Kero.Yachay.Pe.Pe
             Assert.AreEqual(11, response.FieldsParsed);
             Assert.AreEqual(0, response.ParsingErrors);
 
-            Assert.AreEqual("bangladesh.pe", response.DomainName);
+            Assert.AreEqual("bangladesh.pe", response.DomainName.ToString());
 
             Assert.AreEqual("1API GmbH", response.Registrar.Name);
 

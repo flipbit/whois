@@ -30,7 +30,7 @@ namespace Whois.Parsing.Whois.Cnnic.Cn.Cn
             Assert.AreEqual(0, response.ParsingErrors);
             Assert.AreEqual("whois.cnnic.cn/cn/Found", response.TemplateName);
 
-            Assert.AreEqual("concordecals.com.cn", response.DomainName);
+            Assert.AreEqual("concordecals.com.cn", response.DomainName.ToString());
             Assert.AreEqual("20021209s10011s00041927-cn", response.RegistryDomainId);
 
             // Registrar Details
@@ -100,7 +100,7 @@ namespace Whois.Parsing.Whois.Cnnic.Cn.Cn
             Assert.AreEqual(0, response.ParsingErrors);
             Assert.AreEqual("whois.cnnic.cn/cn/Found", response.TemplateName);
 
-            Assert.AreEqual("google.cn", response.DomainName);
+            Assert.AreEqual("google.cn", response.DomainName.ToString());
             Assert.AreEqual("20030311s10001s00033735-cn", response.RegistryDomainId);
 
             // Registrar Details
@@ -142,7 +142,10 @@ namespace Whois.Parsing.Whois.Cnnic.Cn.Cn
             Assert.Greater(sample.Length, 0);
             Assert.AreEqual(WhoisStatus.Reserved, response.Status);
 
-            AssertWriter.Write(response);
+            Assert.AreEqual(0, response.ParsingErrors);
+            Assert.AreEqual("whois.cnnic.cn/cn/Prohibited", response.TemplateName);
+
+            Assert.AreEqual(1, response.FieldsParsed);
         }
 
         [Test]

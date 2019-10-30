@@ -11,7 +11,7 @@ tag: tv
 # Set query response type:
 set: Status = Found
 ---
-   Domain Name: { DomainName : IsDomainName, ToLower, EOL }
+   Domain Name: { DomainName : IsDomainName, ToHostName, EOL }
    Registry Domain ID: { RegistryDomainId ? : IsNumeric, EOL }
    Registrar WHOIS Server: { Registrar.WhoisServerUrl ? : IsDomainName, ToLower, EOL }
    Registrar URL: { Registrar.Url ? : IsUrl, ToLower, EOL }

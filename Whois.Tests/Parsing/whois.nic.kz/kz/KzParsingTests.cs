@@ -45,7 +45,7 @@ namespace Whois.Parsing.Whois.Nic.Kz.Kz
             Assert.AreEqual(0, response.ParsingErrors);
             Assert.AreEqual("whois.nic.kz/kz/Found", response.TemplateName);
 
-            Assert.AreEqual("tabu.kz", response.DomainName);
+            Assert.AreEqual("tabu.kz", response.DomainName.ToString());
 
             // Registrar Details
             Assert.AreEqual("HOSTER.KZ", response.Registrar.Name);
@@ -99,7 +99,7 @@ namespace Whois.Parsing.Whois.Nic.Kz.Kz
             Assert.AreEqual(0, response.ParsingErrors);
             Assert.AreEqual("whois.nic.kz/kz/Found", response.TemplateName);
 
-            Assert.AreEqual("google.kz", response.DomainName);
+            Assert.AreEqual("google.kz", response.DomainName.ToString());
 
             // Registrar Details
             Assert.AreEqual("KAZNIC", response.Registrar.Name);
@@ -152,7 +152,7 @@ namespace Whois.Parsing.Whois.Nic.Kz.Kz
             Assert.AreEqual(0, response.ParsingErrors);
             Assert.AreEqual("whois.nic.kz/kz/Found", response.TemplateName);
 
-            Assert.AreEqual("pedamotor.kz", response.DomainName);
+            Assert.AreEqual("pedamotor.kz", response.DomainName.ToString());
 
             // Registrar Details
             Assert.AreEqual("ICPS", response.Registrar.Name);
@@ -220,7 +220,7 @@ namespace Whois.Parsing.Whois.Nic.Kz.Kz
             Assert.AreEqual(0, response.ParsingErrors);
             Assert.AreEqual("whois.nic.kz/kz/Found", response.TemplateName);
 
-            Assert.AreEqual("google.kz", response.DomainName);
+            Assert.AreEqual("google.kz", response.DomainName.ToString());
 
             // Registrar Details
             Assert.AreEqual("KAZNIC", response.Registrar.Name);

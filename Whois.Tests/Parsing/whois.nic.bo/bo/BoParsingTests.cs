@@ -45,7 +45,7 @@ namespace Whois.Parsing.Whois.Nic.Bo.Bo
             Assert.AreEqual(0, response.ParsingErrors);
             Assert.AreEqual("whois.nic.bo/bo/Found", response.TemplateName);
 
-            Assert.AreEqual("google.bo", response.DomainName);
+            Assert.AreEqual("google.bo", response.DomainName.ToString());
 
             Assert.AreEqual(new DateTime(2006, 08, 22, 00, 00, 00, 000, DateTimeKind.Utc), response.Registered);
             Assert.AreEqual(new DateTime(2014, 08, 22, 00, 00, 00, 000, DateTimeKind.Utc), response.Expiration);

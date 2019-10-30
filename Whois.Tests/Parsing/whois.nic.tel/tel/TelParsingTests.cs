@@ -30,7 +30,7 @@ namespace Whois.Parsing.Whois.Nic.Tel.Tel
             Assert.AreEqual(0, response.ParsingErrors);
             Assert.AreEqual("whois.nic.tel/tel/NotFound", response.TemplateName);
 
-            Assert.AreEqual("u34jedzcq.tel", response.DomainName);
+            Assert.AreEqual("u34jedzcq.tel", response.DomainName.ToString());
 
             Assert.AreEqual(2, response.FieldsParsed);
         }
@@ -47,7 +47,7 @@ namespace Whois.Parsing.Whois.Nic.Tel.Tel
             Assert.AreEqual(0, response.ParsingErrors);
             Assert.AreEqual("whois.nic.tel/tel/Found", response.TemplateName);
 
-            Assert.AreEqual("google.tel", response.DomainName);
+            Assert.AreEqual("google.tel", response.DomainName.ToString());
             Assert.AreEqual("D587349-TEL", response.RegistryDomainId);
 
             // Registrar Details

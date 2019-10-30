@@ -15,7 +15,7 @@ terminateOnNewLine: true
 set: Status = Found
 ---
 Domain Information
-Query: { DomainName : IsDomainName, ToLower }
+Query: { DomainName : IsDomainName, ToHostName }
 Status: { DomainStatus ? : Repeating, CleanDomainStatus }
 Created: { Registered ? : ToDateTimeUtc("d MMM yyyy HH:mm") }
 Name Servers:

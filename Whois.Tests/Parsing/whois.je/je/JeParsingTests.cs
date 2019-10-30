@@ -30,7 +30,7 @@ namespace Whois.Parsing.Whois.Je.Je
             Assert.AreEqual(0, response.ParsingErrors);
             Assert.AreEqual("whois.je/je/NotFound", response.TemplateName);
 
-            Assert.AreEqual("u34jedzcq.je", response.DomainName);
+            Assert.AreEqual("u34jedzcq.je", response.DomainName.ToString());
 
             // Domain Status
             Assert.AreEqual(1, response.DomainStatus.Count);
@@ -51,7 +51,7 @@ namespace Whois.Parsing.Whois.Je.Je
             Assert.AreEqual(0, response.ParsingErrors);
             Assert.AreEqual("whois.je/je/Found", response.TemplateName);
 
-            Assert.AreEqual("google.je", response.DomainName);
+            Assert.AreEqual("google.je", response.DomainName.ToString());
 
             // Registrar Details
             Assert.AreEqual("MarkMonitor Inc.", response.Registrar.Name);

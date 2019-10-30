@@ -45,7 +45,7 @@ namespace Whois.Parsing.Whois.Registry.Om.Om
             Assert.AreEqual(0, response.ParsingErrors);
             Assert.AreEqual("whois.registry.om/om/Found", response.TemplateName);
 
-            Assert.AreEqual("rop.gov.om", response.DomainName);
+            Assert.AreEqual("rop.gov.om", response.DomainName.ToString());
 
             // Registrar Details
             Assert.AreEqual("Oman Telecommunication Company", response.Registrar.Name);

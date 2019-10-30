@@ -30,7 +30,7 @@ namespace Whois.Parsing.Whois.Kg.Kg
             Assert.AreEqual(0, response.ParsingErrors);
             Assert.AreEqual("whois.kg/kg/NotFound", response.TemplateName);
 
-            Assert.AreEqual("u34jedzcq.kg", response.DomainName);
+            Assert.AreEqual("u34jedzcq.kg", response.DomainName.ToString());
 
             Assert.AreEqual(2, response.FieldsParsed);
         }
@@ -47,7 +47,7 @@ namespace Whois.Parsing.Whois.Kg.Kg
             Assert.AreEqual(0, response.ParsingErrors);
             Assert.AreEqual("whois.kg/kg/Found", response.TemplateName);
 
-            Assert.AreEqual("google.kg", response.DomainName);
+            Assert.AreEqual("google.kg", response.DomainName.ToString());
 
             Assert.AreEqual(new DateTime(2010, 04, 19, 21, 47, 14, 000, DateTimeKind.Utc), response.Updated);
             Assert.AreEqual(new DateTime(2004, 02, 10, 09, 42, 42, 000, DateTimeKind.Utc), response.Registered);

@@ -45,7 +45,7 @@ namespace Whois.Parsing.Whois.Tcinet.Ru.XnP1ai
             Assert.AreEqual(0, response.ParsingErrors);
             Assert.AreEqual("whois.tcinet.ru/Found", response.TemplateName);
 
-            Assert.AreEqual("xn----8sbc3ahklcs4adf.xn--p1ai", response.DomainName);
+            Assert.AreEqual("xn----8sbc3ahklcs4adf.xn--p1ai", response.DomainName.ToString());
 
             // Registrar Details
             Assert.AreEqual("R01-REG-RF", response.Registrar.Name);

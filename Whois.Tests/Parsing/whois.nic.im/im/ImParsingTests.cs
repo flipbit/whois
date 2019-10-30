@@ -30,7 +30,7 @@ namespace Whois.Parsing.Whois.Nic.Im.Im
             Assert.AreEqual(0, response.ParsingErrors);
             Assert.AreEqual("whois.nic.im/im/NotFound", response.TemplateName);
 
-            Assert.AreEqual("u34jedzcq.im", response.DomainName);
+            Assert.AreEqual("u34jedzcq.im", response.DomainName.ToString());
 
             Assert.AreEqual(2, response.FieldsParsed);
         }
@@ -47,7 +47,7 @@ namespace Whois.Parsing.Whois.Nic.Im.Im
             Assert.AreEqual(0, response.ParsingErrors);
             Assert.AreEqual("whois.nic.im/im/Found", response.TemplateName);
 
-            Assert.AreEqual("google.im", response.DomainName);
+            Assert.AreEqual("google.im", response.DomainName.ToString());
 
             // Registrar Details
             Assert.AreEqual("Reseller - Mark Monitor", response.Registrar.Name);

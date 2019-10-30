@@ -14,5 +14,5 @@ set: Status = Unavailable
 hint: Error code
 hint: Error message
 ---
-Domain name:           { DomainName : IsDomainName, ToLower, EOL }mediom.ca
+Domain name:           { DomainName : IsDomainName, ToHostName, EOL }mediom.ca
 Domain status:         { DomainStatus ? : Repeating, EOL }unavailable

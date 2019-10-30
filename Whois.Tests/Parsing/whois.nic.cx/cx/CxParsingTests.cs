@@ -30,7 +30,7 @@ namespace Whois.Parsing.Whois.Nic.Cx.Cx
             Assert.AreEqual(0, response.ParsingErrors);
             Assert.AreEqual("generic/tld/Found001", response.TemplateName);
 
-            Assert.AreEqual("communication.cx", response.DomainName);
+            Assert.AreEqual("communication.cx", response.DomainName.ToString());
             Assert.AreEqual("919354-CoCCA", response.RegistryDomainId);
 
             // Registrar Details
@@ -114,7 +114,7 @@ namespace Whois.Parsing.Whois.Nic.Cx.Cx
             Assert.AreEqual(0, response.ParsingErrors);
             Assert.AreEqual("generic/tld/NotFound004", response.TemplateName);
 
-            Assert.AreEqual("u34jedzcq.cx", response.DomainName);
+            Assert.AreEqual("u34jedzcq.cx", response.DomainName.ToString());
 
             Assert.AreEqual(2, response.FieldsParsed);
         }
@@ -131,7 +131,7 @@ namespace Whois.Parsing.Whois.Nic.Cx.Cx
             Assert.AreEqual(0, response.ParsingErrors);
             Assert.AreEqual("generic/tld/Found001", response.TemplateName);
 
-            Assert.AreEqual("google.cx", response.DomainName);
+            Assert.AreEqual("google.cx", response.DomainName.ToString());
             Assert.AreEqual("447518-CoCCA", response.RegistryDomainId);
 
             // Registrar Details

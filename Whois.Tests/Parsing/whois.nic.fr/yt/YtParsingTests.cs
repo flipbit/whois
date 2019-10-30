@@ -60,7 +60,7 @@ namespace Whois.Parsing.Whois.Nic.Fr.Yt
             Assert.AreEqual(0, response.ParsingErrors);
             Assert.AreEqual("generic/tld/Found05", response.TemplateName);
 
-            Assert.AreEqual("nic.yt", response.DomainName);
+            Assert.AreEqual("nic.yt", response.DomainName.ToString());
 
             // Registrar Details
             Assert.AreEqual("AFNIC registry", response.Registrar.Name);

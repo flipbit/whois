@@ -45,7 +45,7 @@ namespace Whois.Parsing.Whois.Norid.No.No
             Assert.AreEqual(0, response.ParsingErrors);
             Assert.AreEqual("whois.norid.no/no/Found", response.TemplateName);
 
-            Assert.AreEqual("google.no", response.DomainName);
+            Assert.AreEqual("google.no", response.DomainName.ToString());
             Assert.AreEqual("GOO371D-NORID", response.RegistryDomainId);
 
             Assert.AreEqual(new DateTime(2015, 01, 27, 00, 00, 00, 000, DateTimeKind.Utc), response.Updated);

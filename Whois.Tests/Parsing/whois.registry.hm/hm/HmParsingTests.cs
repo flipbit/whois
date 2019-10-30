@@ -27,7 +27,6 @@ namespace Whois.Parsing.Whois.Registry.Hm.Hm
             Assert.Greater(sample.Length, 0);
             Assert.AreEqual(WhoisStatus.NotFound, response.Status);
 
-            AssertWriter.Write(response);
             Assert.AreEqual(0, response.ParsingErrors);
             Assert.AreEqual("generic/tld/NotFound003", response.TemplateName);
 
@@ -47,7 +46,7 @@ namespace Whois.Parsing.Whois.Registry.Hm.Hm
             Assert.AreEqual(0, response.ParsingErrors);
             Assert.AreEqual("whois.registry.hm/hm/Found", response.TemplateName);
 
-            Assert.AreEqual("google.hm", response.DomainName);
+            Assert.AreEqual("google.hm", response.DomainName.ToString());
 
             // Registrar Details
             Assert.AreEqual("HM Domain Registry", response.Registrar.Name);

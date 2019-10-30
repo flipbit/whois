@@ -30,7 +30,7 @@ namespace Whois.Parsing.Whois.Co.Ug.Ug
             Assert.AreEqual(0, response.ParsingErrors);
             Assert.AreEqual("whois.co.ug/ug/Found", response.TemplateName);
 
-            Assert.AreEqual("whois.co.ug", response.DomainName);
+            Assert.AreEqual("whois.co.ug", response.DomainName.ToString());
 
             Assert.AreEqual(new DateTime(2009, 11, 10, 14, 06, 58, DateTimeKind.Utc), response.Updated);
             Assert.AreEqual(new DateTime(2001, 04, 02, 00, 00, 00, DateTimeKind.Utc), response.Registered);
@@ -86,7 +86,7 @@ namespace Whois.Parsing.Whois.Co.Ug.Ug
             Assert.AreEqual(0, response.ParsingErrors);
             Assert.AreEqual("whois.co.ug/ug/Found", response.TemplateName);
 
-            Assert.AreEqual("youtube.ug", response.DomainName);
+            Assert.AreEqual("youtube.ug", response.DomainName.ToString());
 
             Assert.AreEqual(new DateTime(2011, 11, 01, 23, 27, 38, DateTimeKind.Utc), response.Updated);
             Assert.AreEqual(new DateTime(2011, 11, 01, 00, 00, 00, DateTimeKind.Utc), response.Registered);
@@ -151,7 +151,7 @@ namespace Whois.Parsing.Whois.Co.Ug.Ug
             Assert.AreEqual(0, response.ParsingErrors);
             Assert.AreEqual("whois.co.ug/ug/Found", response.TemplateName);
 
-            Assert.AreEqual("whois.co.ug", response.DomainName);
+            Assert.AreEqual("whois.co.ug", response.DomainName.ToString());
 
             Assert.AreEqual(new DateTime(2009, 11, 10, 14, 06, 58, DateTimeKind.Utc), response.Updated);
             Assert.AreEqual(new DateTime(2001, 04, 02, 00, 00, 00, DateTimeKind.Utc), response.Registered);

@@ -30,7 +30,7 @@ namespace Whois.Parsing.Whois.Cat.Cat
 
             Assert.AreEqual("whois.cat/cat/NotFound", response.TemplateName);
 
-            Assert.AreEqual("u34jedzcq.cat", response.DomainName);
+            Assert.AreEqual("u34jedzcq.cat", response.DomainName.ToString());
 
             Assert.AreEqual(2, response.FieldsParsed);
         }
@@ -47,7 +47,7 @@ namespace Whois.Parsing.Whois.Cat.Cat
             Assert.AreEqual(0, response.ParsingErrors);
             Assert.AreEqual("whois.cat/cat/Found", response.TemplateName);
 
-            Assert.AreEqual("abril.cat", response.DomainName);
+            Assert.AreEqual("abril.cat", response.DomainName.ToString());
             Assert.AreEqual("REG-D42136", response.RegistryDomainId);
 
             Assert.AreEqual(new DateTime(2011, 1, 12, 16, 50, 9, DateTimeKind.Utc), response.Updated);
@@ -140,7 +140,7 @@ namespace Whois.Parsing.Whois.Cat.Cat
             Assert.AreEqual(0, response.ParsingErrors);
             Assert.AreEqual("whois.cat/cat/Found", response.TemplateName);
 
-            Assert.AreEqual("gencat.cat", response.DomainName);
+            Assert.AreEqual("gencat.cat", response.DomainName.ToString());
             Assert.AreEqual("REG-D3862", response.RegistryDomainId);
 
             Assert.AreEqual(new DateTime(2009, 3, 31, 16, 22, 42, DateTimeKind.Utc), response.Updated);
@@ -236,7 +236,7 @@ namespace Whois.Parsing.Whois.Cat.Cat
             Assert.AreEqual(0, response.ParsingErrors);
             Assert.AreEqual("whois.cat/cat/NotFound", response.TemplateName);
 
-            Assert.AreEqual("u34jedzcq.cat", response.DomainName);
+            Assert.AreEqual("u34jedzcq.cat", response.DomainName.ToString());
 
             Assert.AreEqual(2, response.FieldsParsed);
         }
@@ -253,7 +253,7 @@ namespace Whois.Parsing.Whois.Cat.Cat
             Assert.AreEqual(0, response.ParsingErrors);
             Assert.AreEqual("whois.cat/cat/Found", response.TemplateName);
 
-            Assert.AreEqual("gencat.cat", response.DomainName);
+            Assert.AreEqual("gencat.cat", response.DomainName.ToString());
             Assert.AreEqual("REG-D3862", response.RegistryDomainId);
 
             Assert.AreEqual(new DateTime(2013, 11, 27, 17, 30, 59, DateTimeKind.Utc), response.Updated);

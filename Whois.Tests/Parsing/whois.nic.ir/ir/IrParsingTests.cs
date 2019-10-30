@@ -30,7 +30,7 @@ namespace Whois.Parsing.Whois.Nic.Ir.Ir
             Assert.AreEqual(0, response.ParsingErrors);
             Assert.AreEqual("whois.nic.ir/ir/NotFound", response.TemplateName);
 
-            Assert.AreEqual("u34jedzcq.ir", response.DomainName);
+            Assert.AreEqual("u34jedzcq.ir", response.DomainName.ToString());
 
             Assert.AreEqual(2, response.FieldsParsed);
         }
@@ -47,7 +47,7 @@ namespace Whois.Parsing.Whois.Nic.Ir.Ir
             Assert.AreEqual(0, response.ParsingErrors);
             Assert.AreEqual("whois.nic.ir/ir/Found", response.TemplateName);
 
-            Assert.AreEqual("google.ir", response.DomainName);
+            Assert.AreEqual("google.ir", response.DomainName.ToString());
 
             Assert.AreEqual(new DateTime(2014, 02, 17, 00, 00, 00, 000, DateTimeKind.Utc), response.Updated);
             Assert.AreEqual(new DateTime(2014, 12, 22, 00, 00, 00, 000, DateTimeKind.Utc), response.Expiration);

@@ -30,7 +30,7 @@ namespace Whois.Parsing.Whois.Nic.Travel.Travel
             Assert.AreEqual(0, response.ParsingErrors);
             Assert.AreEqual("whois.nic.travel/travel/Found", response.TemplateName);
 
-            Assert.AreEqual("webcams.travel", response.DomainName);
+            Assert.AreEqual("webcams.travel", response.DomainName.ToString());
             Assert.AreEqual("D108042-TRAVEL", response.RegistryDomainId);
 
             // Registrar Details
@@ -135,7 +135,7 @@ namespace Whois.Parsing.Whois.Nic.Travel.Travel
             Assert.AreEqual(0, response.ParsingErrors);
             Assert.AreEqual("whois.nic.travel/travel/Found", response.TemplateName);
 
-            Assert.AreEqual("travel.travel", response.DomainName);
+            Assert.AreEqual("travel.travel", response.DomainName.ToString());
             Assert.AreEqual("D24096-TRAVEL", response.RegistryDomainId);
 
             Assert.AreEqual(new DateTime(2010, 10, 03, 23, 59, 59, 000, DateTimeKind.Utc), response.Updated);
@@ -230,7 +230,7 @@ namespace Whois.Parsing.Whois.Nic.Travel.Travel
             Assert.AreEqual(0, response.ParsingErrors);
             Assert.AreEqual("whois.nic.travel/travel/NotFound", response.TemplateName);
 
-            Assert.AreEqual("u34jedzcq.travel", response.DomainName);
+            Assert.AreEqual("u34jedzcq.travel", response.DomainName.ToString());
 
             Assert.AreEqual(2, response.FieldsParsed);
         }
@@ -247,7 +247,7 @@ namespace Whois.Parsing.Whois.Nic.Travel.Travel
             Assert.AreEqual(0, response.ParsingErrors);
             Assert.AreEqual("whois.nic.travel/travel/Found", response.TemplateName);
 
-            Assert.AreEqual("travel.travel", response.DomainName);
+            Assert.AreEqual("travel.travel", response.DomainName.ToString());
             Assert.AreEqual("D24096-TRAVEL", response.RegistryDomainId);
 
             Assert.AreEqual(new DateTime(2021, 10, 03, 23, 59, 59, 000, DateTimeKind.Utc), response.Updated);

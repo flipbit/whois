@@ -30,7 +30,7 @@ namespace Whois.Parsing.Whois.Nic.Co.Co
             Assert.AreEqual(0, response.ParsingErrors);
             Assert.AreEqual("whois.nic.co/co/NotFound", response.TemplateName);
 
-            Assert.AreEqual("u34jedzcq.co", response.DomainName);
+            Assert.AreEqual("u34jedzcq.co", response.DomainName.ToString());
 
             Assert.AreEqual(2, response.FieldsParsed);
         }
@@ -48,7 +48,7 @@ namespace Whois.Parsing.Whois.Nic.Co.Co
             Assert.AreEqual(0, response.ParsingErrors);
             Assert.AreEqual("whois.nic.co/co/Found", response.TemplateName);
 
-            Assert.AreEqual("t.co", response.DomainName);
+            Assert.AreEqual("t.co", response.DomainName.ToString());
             Assert.AreEqual("D740225-CO", response.RegistryDomainId);
 
             // Registrar Details

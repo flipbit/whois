@@ -13,4 +13,4 @@ set: Status = NotFound
 
 hint: not found
 ---
-"{ DomainName : IsDomainName, ToLower }" not found.
+"{ DomainName : IsDomainName, ToHostName }" not found.

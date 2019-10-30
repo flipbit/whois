@@ -11,7 +11,7 @@ tag: hm
 # Set query response type:
 set: Status = Found
 ---
-   Domain name:  { DomainName : IsDomainName, ToLower, EOL }
+   Domain name:  { DomainName : IsDomainName, ToHostName, EOL }
    Registrar:    { Registrar.Name ? : EOL }
    Referral URL: { Registrar.Url ? : IsUrl, ToLower, EOL }
 

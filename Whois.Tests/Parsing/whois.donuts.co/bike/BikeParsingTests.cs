@@ -45,7 +45,7 @@ namespace Whois.Parsing.Whois.Donuts.Co.Bike
             Assert.AreEqual(0, response.ParsingErrors);
             Assert.AreEqual("generic/tld/Found001", response.TemplateName);
 
-            Assert.AreEqual("whereismy.bike", response.DomainName);
+            Assert.AreEqual("whereismy.bike", response.DomainName.ToString());
             Assert.AreEqual("e25432d5c94440c4a8ca0e5ecbc13904-DONUTS", response.RegistryDomainId);
 
             // Registrar Details

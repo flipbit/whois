@@ -30,7 +30,7 @@ namespace Whois.Parsing.Whois.Nic.Coop.Coop
             Assert.AreEqual(0, response.ParsingErrors);
             Assert.AreEqual("whois.nic.coop/coop/Found", response.TemplateName);
 
-            Assert.AreEqual("moscowfood.coop", response.DomainName);
+            Assert.AreEqual("moscowfood.coop", response.DomainName.ToString());
             Assert.AreEqual("5662D-COOP", response.RegistryDomainId);
 
             // Registrar Details
@@ -133,7 +133,7 @@ namespace Whois.Parsing.Whois.Nic.Coop.Coop
             Assert.AreEqual(0, response.ParsingErrors);
             Assert.AreEqual("whois.nic.coop/coop/Found", response.TemplateName);
 
-            Assert.AreEqual("calgary.coop", response.DomainName);
+            Assert.AreEqual("calgary.coop", response.DomainName.ToString());
             Assert.AreEqual("7441D-COOP", response.RegistryDomainId);
 
             // Registrar Details
@@ -235,7 +235,7 @@ namespace Whois.Parsing.Whois.Nic.Coop.Coop
             Assert.AreEqual(0, response.ParsingErrors);
             Assert.AreEqual("whois.nic.coop/coop/NotFound", response.TemplateName);
 
-            Assert.AreEqual("u34jedzcq.coop", response.DomainName);
+            Assert.AreEqual("u34jedzcq.coop", response.DomainName.ToString());
 
             Assert.AreEqual(2, response.FieldsParsed);
         }
@@ -253,7 +253,7 @@ namespace Whois.Parsing.Whois.Nic.Coop.Coop
             Assert.AreEqual(0, response.ParsingErrors);
             Assert.AreEqual("whois.nic.coop/coop/Found", response.TemplateName);
 
-            Assert.AreEqual("calgary.coop", response.DomainName);
+            Assert.AreEqual("calgary.coop", response.DomainName.ToString());
             Assert.AreEqual("7441D-COOP", response.RegistryDomainId);
 
             // Registrar Details

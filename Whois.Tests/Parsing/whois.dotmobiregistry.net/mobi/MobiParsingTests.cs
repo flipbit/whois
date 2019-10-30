@@ -45,7 +45,7 @@ namespace Whois.Parsing.Whois.Dotmobiregistry.Net.Mobi
             Assert.AreEqual(0, response.ParsingErrors);
             Assert.AreEqual("generic/tld/Found001", response.TemplateName);
 
-            Assert.AreEqual("google.mobi", response.DomainName);
+            Assert.AreEqual("google.mobi", response.DomainName.ToString());
             Assert.AreEqual("D117-MOBI", response.RegistryDomainId);
 
             // Registrar Details

@@ -45,7 +45,7 @@ namespace Whois.Parsing.Whois.Nic.Tech.Tech
             Assert.AreEqual(0, response.ParsingErrors);
             Assert.AreEqual("generic/tld/Found001", response.TemplateName);
 
-            Assert.AreEqual("google.tech", response.DomainName);
+            Assert.AreEqual("google.tech", response.DomainName.ToString());
             Assert.AreEqual("D9157622-CNIC", response.RegistryDomainId);
 
             // Registrar Details

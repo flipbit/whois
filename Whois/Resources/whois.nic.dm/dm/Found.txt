@@ -14,7 +14,7 @@ terminateOnNewLine: true
 # Set query response type:
 set: Status = Found
 ---
-domain name: { DomainName : IsDomainName, ToLower }
+domain name: { DomainName : IsDomainName, ToHostName }
 registrar: { Registrar.Name ? }
 url: { Registrar.Url ? : IsUrl, ToLower }
 status: { DomainStatus ? : Repeating, CleanDomainStatus }

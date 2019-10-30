@@ -31,6 +31,7 @@ namespace Whois.Parsers
 
             // Register default transformers
             matcher.RegisterTransformer<CleanDomainStatusTransformer>();
+            matcher.RegisterTransformer<ToHostNameTransformer>();
 
             // Register default FixUps
             FixUps.Add(new MultipleContactFixup());

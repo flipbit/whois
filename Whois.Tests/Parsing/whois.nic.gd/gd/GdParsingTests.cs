@@ -45,7 +45,7 @@ namespace Whois.Parsing.Whois.Nic.Gd.Gd
             Assert.AreEqual(0, response.ParsingErrors);
             Assert.AreEqual("whois.nic.gd/gd/Found", response.TemplateName);
 
-            Assert.AreEqual("google.gd", response.DomainName);
+            Assert.AreEqual("google.gd", response.DomainName.ToString());
 
             // Registrar Details
             Assert.AreEqual("MarkMonitor Inc.", response.Registrar.Name);

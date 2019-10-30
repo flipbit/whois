@@ -18,7 +18,7 @@ trimPreambleBeforeNewLine: true
 set: Status = Found
 ---
 [Domain]
-Domain: { DomainName : IsDomainName, ToLower }
+Domain: { DomainName : IsDomainName, ToHostName }
 Status: { DomainStatus ? : Repeating, CleanDomainStatus }
 Changed: { Updated ? : ToDateTimeUtc("yyyy-MM-ddTHH:mm:ss.fzzz") }
 

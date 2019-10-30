@@ -19,7 +19,7 @@ set: Status = Found
 *            The UG ccTLD Registry Database              *
 **********************************************************
 
-Domain:             { DomainName : IsDomainName, ToLower }
+Domain:             { DomainName : IsDomainName, ToHostName }
 Registered:         { Registered ? : Replace("st", ""), Replace("nd", ""), Replace("rd", ""), Replace("th", ""), ToDateTimeUtc("d MMMM, yyyy") }
 Expiry:             { Expiration ? : Replace("st", ""), Replace("nd", ""), Replace("rd", ""), Replace("th", ""), ToDateTimeUtc("d MMMM, yyyy") }
 Status:             { DomainStatus ? : Repeating, SubstringBefore(' ') }

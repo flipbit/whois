@@ -45,7 +45,7 @@ namespace Whois.Parsing.Whois.Twnic.Net.Tw.Tw
             Assert.AreEqual(0, response.ParsingErrors);
             Assert.AreEqual("whois.twnic.net.tw/tw/Found", response.TemplateName);
 
-            Assert.AreEqual("google.com.tw", response.DomainName);
+            Assert.AreEqual("google.com.tw", response.DomainName.ToString());
 
             // Registrar Details
             Assert.AreEqual("Markmonitor, Inc.", response.Registrar.Name);

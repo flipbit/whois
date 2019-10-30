@@ -14,5 +14,5 @@ terminateOnNewLine: true
 # Set query response type:
 set: Status = NotFound
 ---
-No such domain: { DomainName : IsDomainName, ToLower }
+No such domain: { DomainName : IsDomainName, ToHostName }
 

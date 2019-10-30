@@ -14,7 +14,7 @@ terminateOnNewLine: true
 # Set query response type:
 set: Status = Found
 ---
-1a.        Domain Name : { DomainName : IsDomainName, ToLower }
+1a.        Domain Name : { DomainName : IsDomainName, ToHostName }
 2a.        Department Name : { Registrant.Organization ? }
 2b.        Postal Address : { Registrant.Address ? : IsNotEmpty }
 2c.        Postal Code : { Registrant.Address ? : IsNotEmpty }

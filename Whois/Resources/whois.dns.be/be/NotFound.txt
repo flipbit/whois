@@ -14,6 +14,6 @@ set: Status = NotFound
 hint: AVAILABLE
 ---
 
-Domain:	{ DomainName : Trim, IsDomainName, ToLower, EOL }
+Domain:	{ DomainName : Trim, IsDomainName, ToHostName, EOL }
 Status:	AVAILABLE
 

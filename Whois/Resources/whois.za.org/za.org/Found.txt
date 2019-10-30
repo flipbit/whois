@@ -11,7 +11,7 @@ tag: za.org
 # Set query response type:
 set: Status = Found
 ---
-Domain Name            : { DomainName : IsDomainName, ToLower, EOL }
+Domain Name            : { DomainName : IsDomainName, ToHostName, EOL }
 
 Registered for         : { Registrant.Name : EOL }
                          { Registrant.Address ? : IsNotEmpty, Repeating, EOL }

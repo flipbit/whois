@@ -30,7 +30,7 @@ namespace Whois.Parsing.Whois.Nic.Dz.Dz
             Assert.AreEqual(0, response.ParsingErrors);
             Assert.AreEqual("whois.nic.dz/dz/NotFound", response.TemplateName);
 
-            Assert.AreEqual("u34jedzcq.dz", response.DomainName);
+            Assert.AreEqual("u34jedzcq.dz", response.DomainName.ToString());
 
             Assert.AreEqual(2, response.FieldsParsed);
         }
@@ -47,7 +47,7 @@ namespace Whois.Parsing.Whois.Nic.Dz.Dz
             Assert.AreEqual(0, response.ParsingErrors);
             Assert.AreEqual("whois.nic.dz/dz/Found", response.TemplateName);
 
-            Assert.AreEqual("google.dz", response.DomainName);
+            Assert.AreEqual("google.dz", response.DomainName.ToString());
 
             // Registrar Details
             Assert.AreEqual("cerist", response.Registrar.Name);

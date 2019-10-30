@@ -36,7 +36,7 @@ namespace Whois.Parsing.Ccwhois.Ksregistry.Net.Vg
 
             Assert.Greater(sample.Length, 0);
             Assert.AreEqual(WhoisStatus.Found, response.Status);
-            Assert.AreEqual("google.vg", response.DomainName);
+            Assert.AreEqual("google.vg", response.DomainName.ToString());
 
             Assert.AreEqual(new DateTime(2013, 3, 1, 0, 2, 14), response.Updated);
             Assert.AreEqual(new DateTime(1999, 6, 5, 0, 0, 0), response.Registered);

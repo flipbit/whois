@@ -30,7 +30,7 @@ namespace Whois.Parsing.Whois.Verisign.Grs.Com.Net
             Assert.AreEqual(0, response.ParsingErrors);
             Assert.AreEqual("generic/tld/NotFound07", response.TemplateName);
 
-            Assert.AreEqual("u34jedzcq.net", response.DomainName);
+            Assert.AreEqual("u34jedzcq.net", response.DomainName.ToString());
 
             Assert.AreEqual(2, response.FieldsParsed);
         }
@@ -47,7 +47,7 @@ namespace Whois.Parsing.Whois.Verisign.Grs.Com.Net
             Assert.AreEqual(0, response.ParsingErrors);
             Assert.AreEqual("generic/tld/Found02", response.TemplateName);
 
-            Assert.AreEqual("google.net", response.DomainName);
+            Assert.AreEqual("google.net", response.DomainName.ToString());
             Assert.AreEqual("4802712_DOMAIN_NET-VRSN", response.RegistryDomainId);
 
             // Registrar Details

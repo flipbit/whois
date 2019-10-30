@@ -45,7 +45,7 @@ namespace Whois.Parsing.Whois.Cctld.By.By
             Assert.AreEqual(0, response.ParsingErrors);
             Assert.AreEqual("whois.cctld.by/by/Found", response.TemplateName);
 
-            Assert.AreEqual("active.by", response.DomainName);
+            Assert.AreEqual("active.by", response.DomainName.ToString());
 
             // Registrar Details
             Assert.AreEqual("Active Technologies LLC", response.Registrar.Name);

@@ -45,7 +45,7 @@ namespace Whois.Parsing.Whois.Inregistry.Net.In
             Assert.AreEqual(0, response.ParsingErrors);
             Assert.AreEqual("generic/tld/Found001", response.TemplateName);
 
-            Assert.AreEqual("videogratis.in", response.DomainName);
+            Assert.AreEqual("videogratis.in", response.DomainName.ToString());
             Assert.AreEqual("D3271170-AFIN", response.RegistryDomainId);
 
             // Registrar Details
@@ -131,7 +131,7 @@ namespace Whois.Parsing.Whois.Inregistry.Net.In
             Assert.AreEqual(0, response.ParsingErrors);
             Assert.AreEqual("generic/tld/Found001", response.TemplateName);
 
-            Assert.AreEqual("google.in", response.DomainName);
+            Assert.AreEqual("google.in", response.DomainName.ToString());
             Assert.AreEqual("D21089-AFIN", response.RegistryDomainId);
 
             // Registrar Details
@@ -209,7 +209,6 @@ namespace Whois.Parsing.Whois.Inregistry.Net.In
             Assert.Greater(sample.Length, 0);
             Assert.AreEqual(WhoisStatus.NotFound, response.Status);
 
-            AssertWriter.Write(response);
             Assert.AreEqual(0, response.ParsingErrors);
             Assert.AreEqual("generic/tld/NotFound001", response.TemplateName);
 
@@ -228,7 +227,7 @@ namespace Whois.Parsing.Whois.Inregistry.Net.In
             Assert.AreEqual(0, response.ParsingErrors);
             Assert.AreEqual("generic/tld/Found001", response.TemplateName);
 
-            Assert.AreEqual("google.in", response.DomainName);
+            Assert.AreEqual("google.in", response.DomainName.ToString());
             Assert.AreEqual("D21089-AFIN", response.RegistryDomainId);
 
             // Registrar Details

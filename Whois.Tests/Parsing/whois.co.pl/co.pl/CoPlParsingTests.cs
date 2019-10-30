@@ -44,7 +44,7 @@ namespace Whois.Parsing.Whois.Co.Pl.CoPl
             Assert.AreEqual(0, response.ParsingErrors);
             Assert.AreEqual("whois.co.pl/co.pl/Found", response.TemplateName);
 
-            Assert.AreEqual("coco.co.pl", response.DomainName);
+            Assert.AreEqual("coco.co.pl", response.DomainName.ToString());
 
             Assert.AreEqual(new DateTime(2010, 06, 23, 09, 41, 50, DateTimeKind.Utc), response.Updated);
 

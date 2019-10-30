@@ -45,7 +45,7 @@ namespace Whois.Parsing.Whois.Nic.Pw.Pw
             Assert.AreEqual(0, response.ParsingErrors);
             Assert.AreEqual("generic/tld/Found001", response.TemplateName);
 
-            Assert.AreEqual("google.pw", response.DomainName);
+            Assert.AreEqual("google.pw", response.DomainName.ToString());
             Assert.AreEqual("CNIC-DO949924", response.RegistryDomainId);
 
             // Registrar Details

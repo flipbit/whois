@@ -17,7 +17,7 @@ set: Status = NotFound
 hint: Not Registered
 ---
 Domain Information
-Query: { DomainName : IsDomainName, ToLower }
+Query: { DomainName : IsDomainName, ToHostName }
 Status: { DomainStatus ? : Repeating, CleanDomainStatus }
 
 

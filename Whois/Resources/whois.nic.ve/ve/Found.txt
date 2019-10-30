@@ -18,7 +18,7 @@ Titular:
    { Registrant.Address ? : IsNotEmpty, EOL }
    { Registrant.TelephoneNumber ? : IsPhoneNumber, Once } (FAX) { Registrant.FaxNumber ? : IsPhoneNumber, EOL }
 
-   Nombre de Dominio: { DomainName : IsDomainName, ToLower, EOL }
+   Nombre de Dominio: { DomainName : IsDomainName, ToHostName, EOL }
 
    Contacto Administrativo: 
       { AdminContact.Name }  ({ AdminContact.RegistryId })		{ AdminContact.Email ? : IsEmail, EOL }

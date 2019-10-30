@@ -14,7 +14,7 @@ set: Status = Found
 # Must contain:
 hint: The data in the WHOIS database of KSregistry GmbH
 ---
-domain name: { DomainName : IsDomainName, ToLower, EOL }
+domain name: { DomainName : IsDomainName, ToHostName, EOL }
 registrar: { Registrar.Name ? : EOL }
 url: { Registrar.Url ? : IsDomainName, ToLower, EOL }
 status: { DomainStatus ? : Repeating, EOL }

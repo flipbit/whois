@@ -30,7 +30,7 @@ namespace Whois.Parsing.Whois.Rotld.Ro.Ro
             Assert.AreEqual(0, response.ParsingErrors);
             Assert.AreEqual("whois.rotld.ro/ro/Found", response.TemplateName);
 
-            Assert.AreEqual("google.ro", response.DomainName);
+            Assert.AreEqual("google.ro", response.DomainName.ToString());
 
             // Registrar Details
             Assert.AreEqual("MarkMonitor Inc.", response.Registrar.Name);
@@ -78,7 +78,7 @@ namespace Whois.Parsing.Whois.Rotld.Ro.Ro
             Assert.AreEqual(0, response.ParsingErrors);
             Assert.AreEqual("whois.rotld.ro/ro/Found", response.TemplateName);
 
-            Assert.AreEqual("google.ro", response.DomainName);
+            Assert.AreEqual("google.ro", response.DomainName.ToString());
 
             // Registrar Details
             Assert.AreEqual("MarkMonitor Inc.", response.Registrar.Name);

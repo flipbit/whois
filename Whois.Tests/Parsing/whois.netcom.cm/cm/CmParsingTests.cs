@@ -30,7 +30,7 @@ namespace Whois.Parsing.Whois.Netcom.Cm.Cm
             Assert.AreEqual(0, response.ParsingErrors);
             Assert.AreEqual("whois.netcom.cm/cm/Found", response.TemplateName);
 
-            Assert.AreEqual("u34jedzcq.cm", response.DomainName);
+            Assert.AreEqual("u34jedzcq.cm", response.DomainName.ToString());
 
             // Domain Status
             Assert.AreEqual(1, response.DomainStatus.Count);
@@ -51,7 +51,7 @@ namespace Whois.Parsing.Whois.Netcom.Cm.Cm
             Assert.AreEqual(0, response.ParsingErrors);
             Assert.AreEqual("whois.netcom.cm/cm/Found", response.TemplateName);
 
-            Assert.AreEqual("google.cm", response.DomainName);
+            Assert.AreEqual("google.cm", response.DomainName.ToString());
 
             // Registrar Details
             Assert.AreEqual("MarkMonitor Inc.", response.Registrar.Name);
@@ -133,7 +133,7 @@ namespace Whois.Parsing.Whois.Netcom.Cm.Cm
             Assert.AreEqual(0, response.ParsingErrors);
             Assert.AreEqual("whois.netcom.cm/cm/Found", response.TemplateName);
 
-            Assert.AreEqual("imdb.cm", response.DomainName);
+            Assert.AreEqual("imdb.cm", response.DomainName.ToString());
 
             // Registrar Details
             Assert.AreEqual("Registrar ANTIC", response.Registrar.Name);

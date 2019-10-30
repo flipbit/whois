@@ -45,7 +45,7 @@ namespace Whois.Parsing.Whois.Dotpostregistry.Net.Post
             Assert.AreEqual(0, response.ParsingErrors);
             Assert.AreEqual("generic/tld/Found001", response.TemplateName);
 
-            Assert.AreEqual("posteitaliane.post", response.DomainName);
+            Assert.AreEqual("posteitaliane.post", response.DomainName.ToString());
             Assert.AreEqual("D19482-POST", response.RegistryDomainId);
 
             // Registrar Details

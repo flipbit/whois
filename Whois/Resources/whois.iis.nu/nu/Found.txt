@@ -19,7 +19,7 @@ terminateOnNewLine: true
 
 hint:state:            active
 ---
-domain:           { DomainName : IsDomainName, ToLower }
+domain:           { DomainName : IsDomainName, ToHostName }
 holder:           { Registrant.RegistryId ? }
 created:          { Registered ? : ToDateTimeUtc("yyyy-MM-dd") }
 modified:         { Updated    ? : ToDateTimeUtc("yyyy-MM-dd") }

@@ -48,7 +48,7 @@ set: Status = Found
 # Domain
 #
 Domain ID:{ RegistryDomainId ? : EOL }
-Domain Name:{ DomainName : IsDomainName, ToLower, EOL }
+Domain Name:{ DomainName : IsDomainName, ToHostName, EOL }
 
 #
 # Registration, Updated and Expiration Dates

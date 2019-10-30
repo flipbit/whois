@@ -11,7 +11,7 @@ tag: hk
 # Set query response type:
 set: Status = Found
 ---
-Domain Name:  { DomainName : IsDomainName, ToLower, EOL }
+Domain Name:  { DomainName : IsDomainName, ToHostName, EOL }
 Registrar Name: { Registrar.Name ? : EOL }
 Registrar Contact Information: Email: { Registrar.AbuseEmail ? : IsEmail }                       Hotline: { Registrar.AbuseTelephoneNumber ? : IsPhoneNumber, EOL }
 

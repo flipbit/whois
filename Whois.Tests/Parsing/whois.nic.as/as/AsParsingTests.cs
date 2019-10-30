@@ -45,7 +45,7 @@ namespace Whois.Parsing.Whois.Nic.As.As
             Assert.AreEqual(0, response.ParsingErrors);
             Assert.AreEqual("whois.nic.as/as/Found", response.TemplateName);
 
-            Assert.AreEqual("google.as", response.DomainName);
+            Assert.AreEqual("google.as", response.DomainName.ToString());
 
             // Registrar Details
             Assert.AreEqual("MarkMonitor Inc. (http://www.markmonitor.com)", response.Registrar.Name);
