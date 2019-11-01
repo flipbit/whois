@@ -1,66 +1,97 @@
 ﻿using System;
 using System.Globalization;
 using System.Text;
-using System.Text.RegularExpressions;
 using Tokens.Extensions;
 
 namespace Whois
 {
+    /// <summary>
+    /// Represents an Internet host name.
+    /// </summary>
     public class HostName
     {
-        private static readonly Regex HostNameRegex = new Regex(@"^(?!-)(xn--)?[a-zA-Z0-9][a-zA-Z0-9-_]{0,61}[a-zA-Z0-9]{0,1}\.(?!-)(xn--)?([a-zA-Z0-9\-]{1,50}|[a-zA-Z0-9-]{1,30}\.[a-zA-Z]{2,})$");
-        private static readonly Regex TldRegex = new Regex(@"^([a-zA-Z0-9]([a-zA-Z0-9\-]{0,61}[a-zA-Z0-9])?)$");
-
-        private readonly string hostName;
-
+        /// <summary>
+        /// Create a new <see cref="HostName"/> with the given string.
+        /// </summary>
         public HostName(string hostName)
         {
-            if (string.IsNullOrEmpty(hostName)) throw new ArgumentNullException("hostName", "Must specify as host name.");
+            if (string.IsNullOrEmpty(hostName))
+            {
+                throw new ArgumentNullException("hostName", "Must specify as host name.");
+            }
 
-            // If unicode, convert to punycode
+            // If input is unicode, convert to punycode
             if (HasNonAsciiChars(hostName))
             {
                 hostName = ToPunyCode(hostName);
             }
 
+            // Check valid
             if (Uri.CheckHostName(hostName) != UriHostNameType.Dns)
             {
                 throw new FormatException($"'{hostName}' is not a valid host name.");
             }
 
-            this.hostName = hostName.ToLowerInvariant();
+            Value = hostName.ToLowerInvariant();
         }
 
+        /// <summary>
+        /// Determines if the host name is PunyCode encoded
+        /// </summary>
         public bool IsPunyCode
         {
-            get { return hostName.Contains("xn--"); }
+            get { return Value.Contains("xn--"); }
         }
 
+        /// <summary>
+        /// Determines if the host name is an internet Top Level Domain (TLD)
+        /// </summary>
         public bool IsTld
         {
-            get { return hostName.Contains(".") == false; }
+            get { return Value.Contains(".") == false; }
         }
 
+        /// <summary>
+        /// Gets the TLD part of the hostname, e.g. "com" for "example.com"
+        /// </summary>
         public string Tld
         {
-            get { return hostName.SubstringAfterLastString("."); }
+            get { return Value.SubstringAfterLastString("."); }
         }
 
+        /// <summary>
+        /// Gets the string value of the host name.
+        /// </summary>
+        public string Value { get; private set; }
+
+        /// <summary>
+        /// Returns a string representing the host name.
+        /// </summary>
         public override string ToString()
         {
-            return hostName;
+            return Value;
         }
 
+        /// <summary>
+        /// Returns a Unicode encoded version of the host name.
+        /// </summary>
         public string ToUnicodeString()
         {
-            return FromPunyCode(hostName);
+            return FromPunyCode(Value);
         }
 
+        /// <summary>
+        /// Parses the given value and returns a <see cref="HostName"/>.
+        /// </summary>
         public static HostName Parse(string value)
         {
             return new HostName(value);
         }
 
+        /// <summary>
+        /// Attempts to parse the given value into a <see cref="HostName"/>.  Returns
+        /// true if successful.
+        /// </summary>
         public static bool TryParse(string value, out HostName hostName)
         {
             try
@@ -81,30 +112,6 @@ namespace Whois
 
                 return false;
             }
-        }
-
-        private bool IsValidHostName(string hostName)
-        {
-            var valid = false;
-
-            if (!string.IsNullOrEmpty(hostName))
-            {
-                valid = HostNameRegex.Match(hostName).Success;
-            }
-
-            return valid;
-        }
-
-        private bool IsValidTld(string hostName)
-        {
-            var valid = false;
-
-            if (!string.IsNullOrEmpty(hostName))
-            {
-                valid = TldRegex.Match(hostName).Success;
-            }
-
-            return valid;
         }
 
         private string FromPunyCode(string hostName)

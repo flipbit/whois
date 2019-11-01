@@ -108,18 +108,16 @@ namespace Whois
                 throw new ArgumentNullException("domain");
             }
 
-            var isTldQuery = false;
-            if (IsTldQuery(request.Query))
+            // Trim leading '.'
+            if (request.Query.StartsWith(".")) request.Query = request.Query.Substring(1);
+
+            // Validate domain name
+            if (HostName.TryParse(request.Query, out var hostName) == false)
             {
-                isTldQuery = true;
-                request.Query = request.Query.SubstringAfterString(".");
-            }
-            else if (IsValidDomainName(request.Query) == false)
-            {
-                throw new WhoisException($"Domain Name is invalid: {request.Query}");
+                throw new WhoisException($"WHOIS Query Format Error: {request.Query}");
             }
 
-            Log.Debug("Looking up WHOIS response for: {0}", request.Query);
+            Log.Debug("Looking up WHOIS response for: {0}", hostName.Value);
 
             // Set our starting point
             WhoisResponse response;
@@ -136,7 +134,7 @@ namespace Whois
 
             // Main loop: download & parse WHOIS data and follow the referrer chain
             var whoisServerUrl = response?.WhoisServerUrl;
-            while (string.IsNullOrEmpty(whoisServerUrl) == false && !isTldQuery)
+            while (string.IsNullOrEmpty(whoisServerUrl) == false && !hostName.IsTld)
             {
                 // Download
                 var content = await Download(whoisServerUrl, request);
