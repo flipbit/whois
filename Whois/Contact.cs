@@ -1,7 +1,7 @@
 ﻿using System;
 using System.Collections.Generic;
 
-namespace Whois.Models
+namespace Whois
 {
     /// <summary>
     /// Represents a contact who is responsible for administering a TLD
@@ -16,62 +16,59 @@ namespace Whois.Models
             Address = new List<string>();
         }
 
+        /// <summary>
+        /// The Registrars Id for this contact
+        /// </summary>
         public string RegistryId { get; set; }
 
         /// <summary>
         /// Gets or sets the name.
         /// </summary>
-        /// <value>
-        /// The name.
-        /// </value>
         public string Name { get; set; }
 
         /// <summary>
         /// Gets or sets the organization.
         /// </summary>
-        /// <value>
-        /// The organisation.
-        /// </value>
         public string Organization { get; set; }
 
         /// <summary>
         /// Gets or sets the address.
         /// </summary>
-        /// <value>
-        /// The address.
-        /// </value>
-        public IList<string> Address { get; private set; }
+        public IList<string> Address { get; }
 
         /// <summary>
         /// Gets or sets the telephone number.
         /// </summary>
-        /// <value>
-        /// The telephone number.
-        /// </value>
         public string TelephoneNumber { get; set; }
 
+        /// <summary>
+        /// The Telephone Number extenstion.
+        /// </summary>
         public string TelephoneNumberExt { get; set; }
 
         /// <summary>
         /// Gets or sets the fax number.
         /// </summary>
-        /// <value>
-        /// The fax number.
-        /// </value>
         public string FaxNumber { get; set; }
 
+        /// <summary>
+        /// The Fax Number Extension.
+        /// </summary>
         public string FaxNumberExt { get; set; }
 
         /// <summary>
         /// Gets or sets the email.
         /// </summary>
-        /// <value>
-        /// The email.
-        /// </value>
         public string Email { get; set; }
 
+        /// <summary>
+        /// The date the contact was created, if available.
+        /// </summary>
         public DateTime? Created { get; set; }
 
+        /// <summary>
+        /// The date the contact was last updated, if available.
+        /// </summary>
         public DateTime? Updated { get; set; }
     }
 }

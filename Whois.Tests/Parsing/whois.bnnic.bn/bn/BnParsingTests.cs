@@ -1,6 +1,5 @@
 using NUnit.Framework;
 using System;
-using Whois.Models;
 using Whois.Parsers;
 
 namespace Whois.Parsing.Whois.Bnnic.Bn.Bn

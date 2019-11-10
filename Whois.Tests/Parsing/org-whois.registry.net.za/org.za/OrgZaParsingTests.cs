@@ -1,6 +1,5 @@
 using System;
 using NUnit.Framework;
-using Whois.Models;
 using Whois.Parsers;
 
 namespace Whois.Parsing.Org.Whois.Registry.Net.Za.OrgZa

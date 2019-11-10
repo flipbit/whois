@@ -1,6 +1,5 @@
 using System;
 using NUnit.Framework;
-using Whois.Models;
 using Whois.Parsers;
 
 namespace Whois.Parsing.Whois.Iana.Org.Arpa

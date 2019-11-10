@@ -1,0 +1,8 @@
+{
+  "profiles": {
+    "Whois.Console": {
+      "commandName": "Project",
+      "commandLineArgs": ".uk"
+    }
+  }
+}

@@ -2,7 +2,6 @@
 using System.Threading.Tasks;
 using Tokens;
 using Whois.Logging;
-using Whois.Models;
 using Whois.Net;
 using Whois.Parsers;
 

@@ -3,7 +3,6 @@ using System.Text;
 using System.Threading.Tasks;
 using Moq;
 using NUnit.Framework;
-using Whois.Models;
 using Whois.Net;
 using Whois.Servers;
 

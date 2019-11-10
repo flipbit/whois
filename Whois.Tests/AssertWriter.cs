@@ -2,7 +2,6 @@
 using System.Linq;
 using System.Security.Cryptography;
 using System.Text;
-using Whois.Models;
 
 namespace Whois
 {

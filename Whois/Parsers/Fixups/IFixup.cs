@@ -1,5 +1,4 @@
 ﻿using Tokens;
-using Whois.Models;
 
 namespace Whois.Parsers.Fixups
 {

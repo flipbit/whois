@@ -4,7 +4,7 @@ namespace Whois.JsonModels
 {
     public class Registrar
     {
-        public Registrar(Models.Registrar registrar)
+        public Registrar(Whois.Registrar registrar)
         {
             Name = registrar.Name;
             IanaId = registrar.IanaId;

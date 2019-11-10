@@ -1,5 +1,4 @@
 ﻿using System.Threading.Tasks;
-using Whois.Models;
 
 namespace Whois.Servers
 {

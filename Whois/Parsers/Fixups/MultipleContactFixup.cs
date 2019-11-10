@@ -2,7 +2,6 @@
 using System.Collections.Generic;
 using System.Linq;
 using Tokens;
-using Whois.Models;
 
 namespace Whois.Parsers.Fixups
 {

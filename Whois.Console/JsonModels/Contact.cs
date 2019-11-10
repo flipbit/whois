@@ -9,7 +9,7 @@ namespace Whois.JsonModels
         {
         }
 
-        public Contact(Models.Contact contact)
+        public Contact(Whois.Contact contact)
         {
             RegistryId = contact.RegistryId;
             Name = contact.Name;

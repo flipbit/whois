@@ -1,5 +1,4 @@
 using NUnit.Framework;
-using Whois.Models;
 using Whois.Parsers;
 
 namespace Whois.Parsing.Whois.Markmonitor.Com.Cc

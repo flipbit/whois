@@ -1,6 +1,5 @@
 using System;
 using NUnit.Framework;
-using Whois.Models;
 using Whois.Parsers;
 
 namespace Whois.Parsing.Joburg.Whois.Registry.Net.Za.Joburg

@@ -1,5 +1,4 @@
 ﻿using NUnit.Framework;
-using Whois.Models;
 
 namespace Whois.Servers
 {
