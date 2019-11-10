@@ -13,7 +13,7 @@ namespace Whois.JsonModels
 
         public WhoisResponse(Whois.WhoisResponse response)
         {
-            DomainName = response.DomainName;
+            DomainName = response.DomainName.ToString();
             RegistryDomainId = response.RegistryDomainId;
             Registered = response.Registered;
             Updated = response.Updated;

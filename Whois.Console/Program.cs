@@ -1,6 +1,9 @@
 ﻿using System;
+using System.Collections.Generic;
+using System.Threading.Tasks;
+using CommandLine;
+using Newtonsoft.Json;
 using Serilog;
-using Whois.Commands;
 
 namespace Whois
 {
@@ -13,28 +16,65 @@ namespace Whois
         /// Main entry point for the application.
         /// </summary>
         /// <param name="args">The args.</param>
-        static void Main(string[] args)
+        private static async Task Main(string[] args)
         {
             var log = new LoggerConfiguration()
                 .WriteTo
                 .Console(outputTemplate: "{Timestamp:HH:mm} [{Level}] {Message}{NewLine}{Exception}")
-                .WriteTo
-                .RollingFile("whois-{date}.txt")
                 .MinimumLevel
-                .Debug()
+                .Error()
                 .CreateLogger();
 
             Log.Logger = log;
 
-            Console.Title = "WHOIS";
+            var result = Parser
+                .Default
+                .ParseArguments<Options>(args);
 
-            var runner = new WhoisRunner();
+            await result.MapResult(async x => await Run(x), Error);
+        }
 
-            runner.Commands.Add(new WhoisCommand());
-            runner.Commands.Add(new ExitCommand());
-            runner.Commands.Add(new HelpCommand());
+        private static async Task Run(Options options)
+        {
+            var lookup = new WhoisLookup();
 
-            runner.Run(args);
+            var result = await lookup.LookupAsync(options.Query);
+
+            if (options.ConvertToJson)
+            {
+                result.Content = null;
+
+                var json = JsonConvert.SerializeObject(result, Formatting.Indented);
+
+                Console.WriteLine(json);
+            }
+            else
+            {
+                Console.WriteLine(result.Content);
+            }
+
+            lookup.Dispose();
+        }
+
+        private static Task Error(IEnumerable<Error> errors)
+        {
+            if (errors == null) return Task.FromResult(true);
+
+            foreach (var error in errors)
+            {
+                Console.WriteLine(error.ToString());
+            }
+
+            return Task.FromResult(true);
+        }
+
+        public class Options
+        {
+            [Value(0, Required = true, MetaName = "Domain Name")]
+            public string Query { get; set; }
+
+            [Option('j', "json", HelpText = "Show JSON") ]
+            public bool ConvertToJson { get; set; }
         }
     }
 }
