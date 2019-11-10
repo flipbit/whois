@@ -14,7 +14,7 @@ namespace Whois.Servers
                 DomainName = new HostName("com"), 
                 Registrar = new Registrar
                 {
-                    WhoisServerUrl = "test.whois.com"
+                    WhoisServer = new HostName("test.whois.com")
                 }
             };
         }

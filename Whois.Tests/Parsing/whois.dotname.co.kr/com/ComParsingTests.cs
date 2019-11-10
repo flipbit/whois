@@ -38,7 +38,7 @@ namespace Whois.Parsing.Whois.Dotname.Co.Kr.Com
             Assert.AreEqual("Dotname Korea Corp.", response.Registrar.Name);
             Assert.AreEqual("1132", response.Registrar.IanaId);
             Assert.AreEqual("http://www.dotname.co.kr", response.Registrar.Url);
-            Assert.AreEqual("whois.dotname.co.kr", response.Registrar.WhoisServerUrl);
+            Assert.AreEqual("whois.dotname.co.kr", response.Registrar.WhoisServer.Value);
             Assert.AreEqual("abuse@dotnamekorea.com", response.Registrar.AbuseEmail);
             Assert.AreEqual("+82.7070900820", response.Registrar.AbuseTelephoneNumber);
 

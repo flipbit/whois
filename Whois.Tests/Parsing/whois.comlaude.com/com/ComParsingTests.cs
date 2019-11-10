@@ -34,7 +34,7 @@ namespace Whois.Parsing.Whois.Comlaude.Com.Com
             Assert.AreEqual("NOM-IQ Ltd dba Com Laude", response.Registrar.Name);
             Assert.AreEqual("470", response.Registrar.IanaId);
             Assert.AreEqual("http://www.comlaude.com", response.Registrar.Url);
-            Assert.AreEqual("whois.comlaude.com", response.Registrar.WhoisServerUrl);
+            Assert.AreEqual("whois.comlaude.com", response.Registrar.WhoisServer.Value);
             Assert.AreEqual("abuse@comlaude.com", response.Registrar.AbuseEmail);
             Assert.AreEqual("+44.2074218250", response.Registrar.AbuseTelephoneNumber);
 

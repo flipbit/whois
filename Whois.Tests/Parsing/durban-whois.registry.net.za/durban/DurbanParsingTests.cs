@@ -49,7 +49,7 @@ namespace Whois.Parsing.Durban.Whois.Registry.Net.Za.Durban
 
             // Registrar Details
             Assert.AreEqual("MarkMonitor", response.Registrar.Name);
-            Assert.AreEqual("durban-whois1.registry.net.za", response.Registrar.WhoisServerUrl);
+            Assert.AreEqual("durban-whois1.registry.net.za", response.Registrar.WhoisServer.Value);
 
             Assert.AreEqual(new DateTime(2014, 11, 11, 6, 0, 3), response.Updated);
             Assert.AreEqual(new DateTime(2014, 11, 4, 6, 0, 1), response.Registered);

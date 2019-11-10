@@ -51,7 +51,7 @@ namespace Whois.Parsing.Whois.Nic.Tc.Tc
             // Registrar Details
             Assert.AreEqual("MarkMonitor", response.Registrar.Name);
             Assert.AreEqual("292", response.Registrar.IanaId);
-            Assert.AreEqual("whois.meridiantld.net", response.Registrar.WhoisServerUrl);
+            Assert.AreEqual("whois.meridiantld.net", response.Registrar.WhoisServer.Value);
             Assert.AreEqual("+1.2083895740", response.Registrar.AbuseTelephoneNumber);
 
             Assert.AreEqual(new DateTime(2006, 10, 11, 21, 00, 00, 000, DateTimeKind.Utc), response.Registered);

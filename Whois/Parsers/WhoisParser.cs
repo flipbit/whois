@@ -101,12 +101,6 @@ namespace Whois.Parsers
             };
         }
 
-        private class Server
-        {
-            public string DomainName { get; set; }
-            public string WhoisServerUrl { get; set; }
-        }
-
         public void AddTemplate(string content, string name)
         {
             matcher.RegisterTemplate(content, name);

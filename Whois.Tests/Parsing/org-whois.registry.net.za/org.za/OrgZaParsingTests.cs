@@ -49,7 +49,7 @@ namespace Whois.Parsing.Org.Whois.Registry.Net.Za.OrgZa
 
             // Registrar Details
             Assert.AreEqual("ZA Central Registry", response.Registrar.Name);
-            Assert.AreEqual("org-whois2.registry.net.za", response.Registrar.WhoisServerUrl);
+            Assert.AreEqual("org-whois2.registry.net.za", response.Registrar.WhoisServer.Value);
 
             Assert.AreEqual(new DateTime(2015, 2, 5, 8, 45, 51, DateTimeKind.Utc), response.Updated);
             Assert.AreEqual(new DateTime(1997, 10, 3, 9, 46, 34, DateTimeKind.Utc), response.Registered);

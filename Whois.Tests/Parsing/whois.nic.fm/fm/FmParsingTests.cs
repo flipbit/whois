@@ -50,7 +50,7 @@ namespace Whois.Parsing.Whois.Nic.Fm.Fm
             // Registrar Details
             Assert.AreEqual("MarkMonitor, Inc.", response.Registrar.Name);
             Assert.AreEqual("292", response.Registrar.IanaId);
-            Assert.AreEqual("whois.markmonitor.com", response.Registrar.WhoisServerUrl);
+            Assert.AreEqual("whois.markmonitor.com", response.Registrar.WhoisServer.Value);
             Assert.AreEqual("ccops@markmonitor.com", response.Registrar.AbuseEmail);
             Assert.AreEqual("+1.2083895740", response.Registrar.AbuseTelephoneNumber);
 

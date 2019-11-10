@@ -34,7 +34,7 @@ namespace Whois.Parsing.Whois.Nic.Cx.Cx
 
             // Registrar Details
             Assert.AreEqual("Marcaria.com", response.Registrar.Name);
-            Assert.AreEqual("whois.nic.cx", response.Registrar.WhoisServerUrl);
+            Assert.AreEqual("whois.nic.cx", response.Registrar.WhoisServer.Value);
 
             Assert.AreEqual(new DateTime(2013, 07, 17, 10, 26, 59, 132, DateTimeKind.Utc), response.Registered);
             Assert.AreEqual(new DateTime(2014, 07, 17, 10, 26, 59, 365, DateTimeKind.Utc), response.Expiration);
@@ -135,7 +135,7 @@ namespace Whois.Parsing.Whois.Nic.Cx.Cx
 
             // Registrar Details
             Assert.AreEqual("MarkMonitor", response.Registrar.Name);
-            Assert.AreEqual("whois.nic.cx", response.Registrar.WhoisServerUrl);
+            Assert.AreEqual("whois.nic.cx", response.Registrar.WhoisServer.Value);
 
             Assert.AreEqual(new DateTime(2014, 06, 28, 09, 18, 02, 516, DateTimeKind.Utc), response.Updated);
             Assert.AreEqual(new DateTime(2010, 07, 29, 18, 15, 42, 056, DateTimeKind.Utc), response.Registered);

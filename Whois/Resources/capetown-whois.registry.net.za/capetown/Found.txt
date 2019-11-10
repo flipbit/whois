@@ -16,7 +16,7 @@ hint: Domain ID
 ---
 Domain Name: { DomainName : IsDomainName, ToHostName, EOL }
 Domain ID: { RegistryDomainId : EOL }
-WHOIS Server: { Registrar.WhoisServerUrl : IsDomainName, ToLower, EOL }
+WHOIS Server: { Registrar.WhoisServer : IsDomainName, ToHostName, EOL }
 
 Updated Date: { Updated ? : ToDateTimeUtc("yyyy-MM-ddTHH:mm:ssZ"), EOL }
 Creation Date: { Registered ? : ToDateTimeUtc("yyyy-MM-ddTHH:mm:ssZ"), EOL }

@@ -51,7 +51,7 @@ namespace Whois.Parsing.Whois.Nic.Tech.Tech
             Assert.AreEqual("MarkMonitor, Inc (TLDs)", response.Registrar.Name);
             Assert.AreEqual("292", response.Registrar.IanaId);
             Assert.AreEqual("https://www.markmonitor.com/", response.Registrar.Url);
-            Assert.AreEqual("whois.markmonitor.com", response.Registrar.WhoisServerUrl);
+            Assert.AreEqual("whois.markmonitor.com", response.Registrar.WhoisServer.Value);
 
             Assert.AreEqual(new DateTime(2015, 08, 04, 09, 00, 43, 000, DateTimeKind.Utc), response.Updated);
             Assert.AreEqual(new DateTime(2015, 07, 29, 00, 00, 00, 000, DateTimeKind.Utc), response.Registered);

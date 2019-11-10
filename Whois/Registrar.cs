@@ -33,6 +33,6 @@
         /// <summary>
         /// The Hostname of the Registrar's WHOIS server
         /// </summary>
-        public string WhoisServerUrl { get; set; }
+        public HostName WhoisServer { get; set; }
     }
 }

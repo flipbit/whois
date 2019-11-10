@@ -32,7 +32,7 @@ namespace Whois.Parsing.Whois.Iana.Org.Tld
             Assert.AreEqual("be", response.DomainName.ToString());
 
             // Registrar Details
-            Assert.AreEqual("whois.dns.be", response.Registrar.WhoisServerUrl);
+            Assert.AreEqual("whois.dns.be", response.Registrar.WhoisServer.Value);
 
             Assert.AreEqual(new DateTime(2014, 07, 30, 00, 00, 00, 000, DateTimeKind.Utc), response.Updated);
             Assert.AreEqual(new DateTime(1988, 08, 05, 00, 00, 00, 000, DateTimeKind.Utc), response.Registered);
@@ -104,7 +104,7 @@ namespace Whois.Parsing.Whois.Iana.Org.Tld
             Assert.AreEqual("com", response.DomainName.ToString());
 
             // Registrar Details
-            Assert.AreEqual("whois.verisign-grs.com", response.Registrar.WhoisServerUrl);
+            Assert.AreEqual("whois.verisign-grs.com", response.Registrar.WhoisServer.Value);
 
             Assert.AreEqual(new DateTime(2012, 02, 15, 00, 00, 00, 000, DateTimeKind.Utc), response.Updated);
             Assert.AreEqual(new DateTime(1985, 01, 01, 00, 00, 00, 000, DateTimeKind.Utc), response.Registered);

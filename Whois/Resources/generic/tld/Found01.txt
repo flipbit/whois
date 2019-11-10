@@ -111,7 +111,7 @@ Trademark Number:{ Trademark.Number : Trim }
 # Technical
 #
 Name Server:{ NameServers : Trim, IsDomainName, ToLower, Repeating }
-WHOIS Server:{ Registrar.WhoisServerUrl : Trim, IsDomainName, ToLower } 
+WHOIS Server:{ Registrar.WhoisServer : Trim, IsDomainName, ToHostName } 
 DNSSEC:{ DnsSecStatus : Trim }
 
 #
@@ -122,7 +122,7 @@ Registrar IANA ID:{ Registrar.IanaId : Trim, IsNumeric }
 Registrar Abuse Contact Email:{ Registrar.AbuseEmail : Trim, IsEmail }
 Registrar Abuse Contact Phone:{ Registrar.AbuseTelephoneNumber : Trim, IsPhoneNumber }
 Registrar URL:{ Registrar.Url : Trim, IsUrl, ToLower } 
-Registrar WHOIS Server:{ Registrar.WhoisServerUrl : Trim, RemoveEnd('/'), IsDomainName, ToLower }
+Registrar WHOIS Server:{ Registrar.WhoisServer : Trim, RemoveEnd('/'), IsDomainName, ToHostName }
 
 #
 # Sponsoring Registrar

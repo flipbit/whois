@@ -50,7 +50,7 @@ namespace Whois.Parsing.Whois.Website.Ws.Ws
 
             // Registrar Details
             Assert.AreEqual(".WS Registry", response.Registrar.Name);
-            Assert.AreEqual("whois.website.ws", response.Registrar.WhoisServerUrl);
+            Assert.AreEqual("whois.website.ws", response.Registrar.WhoisServer.Value);
             Assert.AreEqual("support@website.ws", response.Registrar.AbuseEmail);
 
             Assert.AreEqual(new DateTime(2008, 12, 08, 00, 00, 00, 000, DateTimeKind.Utc), response.Updated);

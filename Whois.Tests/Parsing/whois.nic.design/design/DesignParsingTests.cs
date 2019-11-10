@@ -50,7 +50,7 @@ namespace Whois.Parsing.Whois.Nic.Design.Design
             // Registrar Details
             Assert.AreEqual("Top Level Design, LLC", response.Registrar.Name);
             Assert.AreEqual("9999", response.Registrar.IanaId);
-            Assert.AreEqual("whois.nic.wiki", response.Registrar.WhoisServerUrl);
+            Assert.AreEqual("whois.nic.wiki", response.Registrar.WhoisServer.Value);
 
             Assert.AreEqual(new DateTime(2015, 04, 21, 17, 48, 34, 000, DateTimeKind.Utc), response.Updated);
             Assert.AreEqual(new DateTime(2015, 02, 27, 16, 08, 32, 000, DateTimeKind.Utc), response.Registered);

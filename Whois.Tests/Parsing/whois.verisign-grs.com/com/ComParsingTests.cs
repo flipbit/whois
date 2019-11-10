@@ -116,7 +116,7 @@ namespace Whois.Parsing.Whois.Verisign.Grs.Com.Com
             // Registrar Details
             Assert.AreEqual("MarkMonitor Inc.", response.Registrar.Name);
             Assert.AreEqual("http://www.markmonitor.com", response.Registrar.Url);
-            Assert.AreEqual("whois.markmonitor.com", response.Registrar.WhoisServerUrl);
+            Assert.AreEqual("whois.markmonitor.com", response.Registrar.WhoisServer.Value);
             Assert.AreEqual("abusecomplaints@markmonitor.com", response.Registrar.AbuseEmail);
             Assert.AreEqual("+1.2083895740", response.Registrar.AbuseTelephoneNumber);
 

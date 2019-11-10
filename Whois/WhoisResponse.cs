@@ -135,19 +135,19 @@ namespace Whois
         /// <summary>
         /// Returns the URL of the WHOIS server
         /// </summary>
-        public string WhoisServerUrl => Registrar?.WhoisServerUrl;
+        public HostName WhoisServer => Registrar?.WhoisServer;
 
         /// <summary>
-        /// Returns a new <see cref="WhoisResponse"/> with the specified WHOIS server URL
+        /// Returns a new <see cref="WhoisResponse"/> with the specified WHOIS host name 
         /// </summary>
-        internal static WhoisResponse WithServerUrl(string url)
+        internal static WhoisResponse WithServerUrl(string hostName)
         {
             return new WhoisResponse
             {
                 Status = WhoisStatus.Found,
                 Registrar = new Registrar
                 {
-                    WhoisServerUrl = url
+                    WhoisServer = new HostName(hostName)
                 }
             };
         }
@@ -165,28 +165,26 @@ namespace Whois
         /// <summary>
         /// Determines if the given WHOIS server URL has been visited in this lookup chain
         /// </summary>
-        internal bool SeenServer(string whoisServerUrl)
+        internal bool SeenServer(HostName whoisServer)
         {
-            return SeenServer(whoisServerUrl, 0);
+            return SeenServer(whoisServer, 0);
         }
 
-        private bool SeenServer(string whoisServerUrl, int depth)
+        private bool SeenServer(HostName whoisServer, int depth)
         {
             // Referral limit
             if (depth > 255) return true;
 
             // Ignore top level request
-            if (depth == 0) return Referrer?.SeenServer(whoisServerUrl, 1) ?? false;
+            if (depth == 0) return Referrer?.SeenServer(whoisServer, 1) ?? false;
 
 
-            if (string.Compare(WhoisServerUrl, whoisServerUrl, StringComparison.InvariantCultureIgnoreCase) == 0)
+            if (WhoisServer.IsEqualTo(whoisServer))
             {
                 return true;
             }
 
-            if (Referrer == null) return false;
-
-            return Referrer.SeenServer(whoisServerUrl, depth + 1);
+            return Referrer != null && Referrer.SeenServer(whoisServer, depth + 1);
         }
     }
 }

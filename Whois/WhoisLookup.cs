@@ -121,7 +121,7 @@ namespace Whois
 
             // Set our starting point
             WhoisResponse response;
-            if (string.IsNullOrEmpty(request.WhoisServerUrl))
+            if (string.IsNullOrEmpty(request.WhoisServer))
             {
                 // Lookup root WHOIS server for the TLD
                 response = await ServerLookup.LookupAsync(request);
@@ -129,28 +129,28 @@ namespace Whois
             else
             {
                 // Use the given WHOIS server
-                response = WhoisResponse.WithServerUrl(request.WhoisServerUrl);
+                response = WhoisResponse.WithServerUrl(request.WhoisServer);
             }
 
             // Main loop: download & parse WHOIS data and follow the referrer chain
-            var whoisServerUrl = response?.WhoisServerUrl;
-            while (string.IsNullOrEmpty(whoisServerUrl) == false && !hostName.IsTld)
+            var whoisServer = response?.WhoisServer;
+            while (whoisServer != null && !hostName.IsTld)
             {
                 // Download
-                var content = await Download(whoisServerUrl, request);
+                var content = await Download(whoisServer.Value, request);
 
                 // Parse result
-                var parsed = whoisParser.Parse(whoisServerUrl, content);
+                var parsed = whoisParser.Parse(whoisServer.Value, content);
 
                 // Build referrer chain
                 response = response.Chain(parsed);
 
                 // Check for referral loop
                 if (request.FollowReferrer == false) break;
-                if (response.SeenServer(response.WhoisServerUrl)) break;
+                if (response.SeenServer(response.WhoisServer)) break;
            
                 // Lookup result in referral server
-                whoisServerUrl = response.WhoisServerUrl;
+                whoisServer = response.WhoisServer;
             }
 
             return response;

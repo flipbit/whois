@@ -35,7 +35,7 @@ namespace Whois.Parsing.Whois.Cdmon.Com.Com
             Assert.AreEqual("10DENCEHISPAHARD, S.L", response.Registrar.Name);
             Assert.AreEqual("1403", response.Registrar.IanaId);
             Assert.AreEqual("https://www.cdmon.com", response.Registrar.Url);
-            Assert.AreEqual("whois.cdmon.com", response.Registrar.WhoisServerUrl);
+            Assert.AreEqual("whois.cdmon.com", response.Registrar.WhoisServer.Value);
             Assert.AreEqual("abuse@cdmon.com", response.Registrar.AbuseEmail);
             Assert.AreEqual("+34.935677577", response.Registrar.AbuseTelephoneNumber);
 

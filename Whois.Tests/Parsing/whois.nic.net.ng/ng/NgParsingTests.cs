@@ -51,7 +51,7 @@ namespace Whois.Parsing.Whois.Nic.Net.Ng.Ng
 
             // Registrar Details
             Assert.AreEqual("nira", response.Registrar.Name);
-            Assert.AreEqual("nira", response.Registrar.WhoisServerUrl);
+            Assert.AreEqual("nira", response.Registrar.WhoisServer.Value);
 
             Assert.AreEqual(new DateTime(2012, 08, 24, 13, 46, 14, 774, DateTimeKind.Utc), response.Updated);
             Assert.AreEqual(new DateTime(2009, 05, 13, 14, 27, 27, 009, DateTimeKind.Utc), response.Registered);
@@ -128,7 +128,7 @@ namespace Whois.Parsing.Whois.Nic.Net.Ng.Ng
 
             // Registrar Details
             Assert.AreEqual("nira", response.Registrar.Name);
-            Assert.AreEqual("whois.nic.ng", response.Registrar.WhoisServerUrl);
+            Assert.AreEqual("whois.nic.ng", response.Registrar.WhoisServer.Value);
 
             Assert.AreEqual(new DateTime(2012, 08, 24, 13, 46, 14, 774, DateTimeKind.Utc), response.Updated);
             Assert.AreEqual(new DateTime(2009, 05, 13, 14, 27, 27, 009, DateTimeKind.Utc), response.Registered);

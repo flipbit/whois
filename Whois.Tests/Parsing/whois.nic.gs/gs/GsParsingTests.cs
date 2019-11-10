@@ -123,7 +123,7 @@ namespace Whois.Parsing.Whois.Nic.Gs.Gs
             // Registrar Details
             Assert.AreEqual("MarkMonitor", response.Registrar.Name);
             Assert.AreEqual("http://www.markmonitor.com", response.Registrar.Url);
-            Assert.AreEqual("whois.nic.gs", response.Registrar.WhoisServerUrl);
+            Assert.AreEqual("whois.nic.gs", response.Registrar.WhoisServer.Value);
             Assert.AreEqual("ccops@markmonitor.com", response.Registrar.AbuseEmail);
             Assert.AreEqual("+1.2083895740", response.Registrar.AbuseTelephoneNumber);
 

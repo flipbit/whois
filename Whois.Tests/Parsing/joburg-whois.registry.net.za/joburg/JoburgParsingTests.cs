@@ -48,7 +48,7 @@ namespace Whois.Parsing.Joburg.Whois.Registry.Net.Za.Joburg
             Assert.AreEqual("dom_7P-9999", response.RegistryDomainId);
 
             Assert.AreEqual("Lexsynergy", response.Registrar.Name);
-            Assert.AreEqual("joburg-whois2.registry.net.za", response.Registrar.WhoisServerUrl);
+            Assert.AreEqual("joburg-whois2.registry.net.za", response.Registrar.WhoisServer.Value);
 
             Assert.AreEqual(new DateTime(2014, 11, 10, 7, 8, 28), response.Updated);
             Assert.AreEqual(new DateTime(2014, 11, 3, 22, 0, 8), response.Registered);

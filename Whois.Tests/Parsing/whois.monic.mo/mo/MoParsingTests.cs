@@ -49,7 +49,7 @@ namespace Whois.Parsing.Whois.Monic.Mo.Mo
 
             // Registrar Details
             Assert.AreEqual("MONIC", response.Registrar.Name);
-            Assert.AreEqual("whois.monic.mo", response.Registrar.WhoisServerUrl);
+            Assert.AreEqual("whois.monic.mo", response.Registrar.WhoisServer.Value);
 
             // Nameservers
             Assert.AreEqual(2, response.NameServers.Count);

@@ -42,7 +42,7 @@ namespace Whois.Parsing.Capetown.Whois.Registry.Net.Za.Capetown
             Assert.AreEqual("registry.capetown", response.DomainName.ToString());
             Assert.AreEqual("dom_3K3-9999", response.RegistryDomainId);
 
-            Assert.AreEqual("capetown-whois2.registry.net.za", response.Registrar.WhoisServerUrl);
+            Assert.AreEqual("capetown-whois2.registry.net.za", response.Registrar.WhoisServer.Value);
 
             Assert.AreEqual(new DateTime(2015, 5, 30, 9, 21, 0, DateTimeKind.Utc), response.Updated);
             Assert.AreEqual(new DateTime(2015, 4, 1, 7, 41, 59, DateTimeKind.Utc), response.Registered);

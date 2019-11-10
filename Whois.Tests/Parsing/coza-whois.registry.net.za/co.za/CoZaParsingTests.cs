@@ -30,7 +30,7 @@ namespace Whois.Parsing.Coza.Whois.Registry.Net.Za.CoZa
             Assert.AreEqual("dom_1ZW3S--1", response.RegistryDomainId);
 
             Assert.AreEqual("Lexsynergy Limited", response.Registrar.Name);
-            Assert.AreEqual("coza-whois12.dns.net.za", response.Registrar.WhoisServerUrl);
+            Assert.AreEqual("coza-whois12.dns.net.za", response.Registrar.WhoisServer.Value);
 
             Assert.AreEqual(new DateTime(2016, 12, 1, 23, 41, 21, DateTimeKind.Utc), response.Updated);
             Assert.AreEqual(new DateTime(1994, 12, 31, 22, 0, 0, DateTimeKind.Utc), response.Registered);
@@ -136,7 +136,7 @@ namespace Whois.Parsing.Coza.Whois.Registry.Net.Za.CoZa
             Assert.AreEqual("dom_1SZMF--1", response.RegistryDomainId);
 
             Assert.AreEqual("MarkMonitor", response.Registrar.Name);
-            Assert.AreEqual("coza-whois12.dns.net.za", response.Registrar.WhoisServerUrl);
+            Assert.AreEqual("coza-whois12.dns.net.za", response.Registrar.WhoisServer.Value);
 
             Assert.AreEqual(new DateTime(2016, 9, 24, 16, 20, 9, DateTimeKind.Utc), response.Updated);
             Assert.AreEqual(new DateTime(2001, 6, 25, 20, 37, 59, DateTimeKind.Utc), response.Registered);

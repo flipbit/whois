@@ -51,7 +51,7 @@ namespace Whois.Parsing.Whois.Nic.College.College
             Assert.AreEqual("CentralNic Ltd", response.Registrar.Name);
             Assert.AreEqual("9999", response.Registrar.IanaId);
             Assert.AreEqual("http://www.centralnic.com/", response.Registrar.Url);
-            Assert.AreEqual("whois.centralnic.com", response.Registrar.WhoisServerUrl);
+            Assert.AreEqual("whois.centralnic.com", response.Registrar.WhoisServer.Value);
 
             Assert.AreEqual(new DateTime(2014, 09, 12, 00, 15, 47, 000, DateTimeKind.Utc), response.Updated);
             Assert.AreEqual(new DateTime(2013, 09, 11, 00, 00, 00, 000, DateTimeKind.Utc), response.Registered);

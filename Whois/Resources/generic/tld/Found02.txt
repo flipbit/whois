@@ -21,7 +21,7 @@ set: Status = Found
 ---
    Domain Name: { DomainName : Trim, IsDomainName, ToHostName }
    Registry Domain ID: { RegistryDomainId ? : Trim }
-   Registrar WHOIS Server: { Registrar.WhoisServerUrl ? : IsNotEmpty, Trim, IsDomainName, ToLower }
+   Registrar WHOIS Server: { Registrar.WhoisServer ? : IsNotEmpty, Trim, IsDomainName, ToHostName }
    Registrar URL: { Registrar.Url ? : Trim, IsUrl, ToLower }
    Updated Date: { Updated ? : Trim, ToDateTimeUtc("yyyy-MM-ddTHH:mm:ssZ") }
    Updated Date: { Updated ? : Trim, ToDateTimeUtc("dd-MMM-yyyy") }

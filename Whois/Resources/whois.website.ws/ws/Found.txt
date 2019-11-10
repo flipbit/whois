@@ -19,7 +19,7 @@ set: Status = Found
   Registrar Name: { Registrar.Name ? }
   Registrar Email: { Registrar.AbuseEmail ? : IsEmail }
   Registrar Telephone: { Registrar.AbuseTelephoneNumber ? : IsPhoneNumber }
-  Registrar Whois: { Registrar.WhoisServerUrl ? : IsDomainName, ToLower }
+  Registrar Whois: { Registrar.WhoisServer ? : IsDomainName, ToHostName }
 
   Registrant Name: { Registrant.Name ? }
   Registrant Email: { Registrant.Email ? : IsEmail }

@@ -38,31 +38,22 @@ namespace Whois
         /// <summary>
         /// Determines if the host name is PunyCode encoded
         /// </summary>
-        public bool IsPunyCode
-        {
-            get { return Value.Contains("xn--"); }
-        }
+        public bool IsPunyCode => Value.Contains("xn--");
 
         /// <summary>
         /// Determines if the host name is an internet Top Level Domain (TLD)
         /// </summary>
-        public bool IsTld
-        {
-            get { return Value.Contains(".") == false; }
-        }
+        public bool IsTld => Value.Contains(".") == false;
 
         /// <summary>
         /// Gets the TLD part of the hostname, e.g. "com" for "example.com"
         /// </summary>
-        public string Tld
-        {
-            get { return Value.SubstringAfterLastString("."); }
-        }
+        public string Tld => Value.SubstringAfterLastString(".");
 
         /// <summary>
         /// Gets the string value of the host name.
         /// </summary>
-        public string Value { get; private set; }
+        public string Value { get; }
 
         /// <summary>
         /// Returns a string representing the host name.
@@ -78,6 +69,13 @@ namespace Whois
         public string ToUnicodeString()
         {
             return FromPunyCode(Value);
+        }
+
+        public bool IsEqualTo(HostName other)
+        {
+            if (other == null) return false;
+
+            return string.Compare(Value, other.Value, StringComparison.InvariantCultureIgnoreCase) == 0;
         }
 
         /// <summary>
@@ -114,21 +112,21 @@ namespace Whois
             }
         }
 
-        private string FromPunyCode(string hostName)
+        private static string FromPunyCode(string hostName)
         {
             var idn = new IdnMapping();
 
             return idn.GetUnicode(hostName);
         }
 
-        private string ToPunyCode(string hostName)
+        private static string ToPunyCode(string hostName)
         {
             var idn = new IdnMapping();
 
             return idn.GetAscii(hostName);
         }
 
-        private bool HasNonAsciiChars(string input)
+        private static bool HasNonAsciiChars(string input)
         {
             if (string.IsNullOrEmpty(input)) return false;
 

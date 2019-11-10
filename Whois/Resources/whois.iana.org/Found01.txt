@@ -39,7 +39,7 @@ e-mail:       { TechnicalContact.Email ? : IsEmail }
 
 nserver:      { NameServers ? : SubstringBefore(' '), IsDomainName, ToLower, Repeating }
 
-whois:        { Registrar.WhoisServerUrl ? : IsDomainName, ToLower }
+whois:        { Registrar.WhoisServer ? : IsDomainName, ToHostName }
 status:       { DomainStatus ? : Repeating, CleanDomainStatus }
 remarks:      { Remarks ? }
 

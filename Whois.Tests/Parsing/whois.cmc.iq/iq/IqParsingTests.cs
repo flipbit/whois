@@ -55,7 +55,7 @@ namespace Whois.Parsing.Whois.Cmc.Iq.Iq
 
             // Registrar Details
             Assert.AreEqual("CMC Registrar", response.Registrar.Name);
-            Assert.AreEqual("whois.cmc.iq", response.Registrar.WhoisServerUrl);
+            Assert.AreEqual("whois.cmc.iq", response.Registrar.WhoisServer.Value);
 
             Assert.AreEqual(new DateTime(2013, 09, 29, 05, 19, 04, 997, DateTimeKind.Utc), response.Updated);
             Assert.AreEqual(new DateTime(2010, 10, 03, 21, 00, 00, DateTimeKind.Utc), response.Registered);

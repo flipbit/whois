@@ -7,7 +7,7 @@ namespace Whois.Parsers
     /// </summary>
     public class WhoisStatusParser
     {
-        public WhoisStatus Parse(string whoisServerUrl, string status, WhoisStatus existing)
+        public WhoisStatus Parse(string whoisServer, string status, WhoisStatus existing)
         {
             if (Equals(status, "auto-renew grace")) return WhoisStatus.NotAssigned;
             if (Equals(status, "pending delete")) return WhoisStatus.PendingDelete;
@@ -61,12 +61,12 @@ namespace Whois.Parsers
             if (Equals(status, "210 PendingRelease")) return WhoisStatus.Other;
             if (Equals(status, "440 Request Denied")) return WhoisStatus.Throttled;
 
-            if (whoisServerUrl == "whois.dns.pt")
+            if (whoisServer == "whois.dns.pt")
             {
                 if (Equals(status, "TECH-PRO")) return WhoisStatus.Other;
             }
 
-            if (whoisServerUrl == "whois.iis.se")
+            if (whoisServer == "whois.iis.se")
             {
                 if (Equals(status, "system")) return WhoisStatus.NotAssigned;
             }

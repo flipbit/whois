@@ -30,7 +30,7 @@ namespace Whois.Parsing.Ccwhois.Verisign.Grs.Com.Cc
 
             Assert.AreEqual("TUCOWS INC.", response.Registrar.Name);
             Assert.AreEqual("http://domainhelp.opensrs.net", response.Registrar.Url);
-            Assert.AreEqual("whois.tucows.com", response.Registrar.WhoisServerUrl);
+            Assert.AreEqual("whois.tucows.com", response.Registrar.WhoisServer.Value);
 
             Assert.AreEqual(new DateTime(2010, 5, 7, 0, 0, 0), response.Updated);
             Assert.AreEqual(new DateTime(2009, 3, 26, 0, 0, 0), response.Registered);
@@ -66,7 +66,7 @@ namespace Whois.Parsing.Ccwhois.Verisign.Grs.Com.Cc
 
             Assert.AreEqual("MARKMONITOR INC.", response.Registrar.Name);
             Assert.AreEqual("http://www.markmonitor.com", response.Registrar.Url);
-            Assert.AreEqual("whois.markmonitor.com", response.Registrar.WhoisServerUrl);
+            Assert.AreEqual("whois.markmonitor.com", response.Registrar.WhoisServer.Value);
             Assert.AreEqual("abusecomplaints@markmonitor.com", response.Registrar.AbuseEmail);
             Assert.AreEqual("+1.2083895740", response.Registrar.AbuseTelephoneNumber);
 

@@ -51,7 +51,7 @@ namespace Whois.Parsing.Whois.Nic.Space.Space
             Assert.AreEqual("CentralNic Ltd", response.Registrar.Name);
             Assert.AreEqual("9999", response.Registrar.IanaId);
             Assert.AreEqual("http://www.centralnic.com/", response.Registrar.Url);
-            Assert.AreEqual("whois.centralnic.com", response.Registrar.WhoisServerUrl);
+            Assert.AreEqual("whois.centralnic.com", response.Registrar.WhoisServer.Value);
 
             Assert.AreEqual(new DateTime(2015, 04, 04, 00, 14, 21, 000, DateTimeKind.Utc), response.Updated);
             Assert.AreEqual(new DateTime(2014, 04, 10, 09, 14, 07, 000, DateTimeKind.Utc), response.Registered);

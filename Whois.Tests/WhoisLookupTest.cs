@@ -39,7 +39,7 @@ namespace Whois
             var rootServer = new WhoisResponse
             {
                 DomainName = new HostName("com"),
-                Registrar = new Registrar { WhoisServerUrl = "whois.markmonitor.com" }
+                Registrar = new Registrar { WhoisServer = new HostName("whois.markmonitor.com") }
             };
 
             whoisServerLookup
@@ -66,7 +66,7 @@ namespace Whois
             var rootServer = new WhoisResponse
             {
                 DomainName = new HostName("com"),
-                Registrar = new Registrar { WhoisServerUrl = "whois.verisign-grs.com" }
+                Registrar = new Registrar { WhoisServer = new HostName("whois.verisign-grs.com") }
             };
 
             whoisServerLookup
@@ -100,7 +100,7 @@ namespace Whois
             var rootServer = new WhoisResponse
             {
                 DomainName = new HostName("com"),
-                Registrar = new Registrar { WhoisServerUrl = "whois.verisign-grs.com" }
+                Registrar = new Registrar { WhoisServer = new HostName("whois.verisign-grs.com") }
             };
 
             whoisServerLookup
@@ -123,7 +123,7 @@ namespace Whois
         [Test]
         public async Task TestLookupDomainSpecifyRootServer()
         {
-            var request = new WhoisRequest { Query = "google.com", WhoisServerUrl = "whois.markmonitor.com" };
+            var request = new WhoisRequest { Query = "google.com", WhoisServer = "whois.markmonitor.com" };
             var authoritativeResult = sampleReader.Read("whois.markmonitor.com", "com", "found.txt");
 
             tcpReader
@@ -136,7 +136,7 @@ namespace Whois
             Assert.AreEqual(WhoisStatus.Found, result.Status);
 
             Assert.AreEqual(authoritativeResult, result.Content);
-            Assert.AreEqual("whois.markmonitor.com", result.Referrer.WhoisServerUrl);
+            Assert.AreEqual("whois.markmonitor.com", result.Referrer.WhoisServer.Value);
 
             whoisServerLookup
                 .Verify(call => call.LookupAsync(request), Times.Never());
@@ -150,7 +150,7 @@ namespace Whois
             var rootServer = new WhoisResponse
             {
                 DomainName = new HostName("com"),
-                Registrar = new Registrar { WhoisServerUrl = "whois.markmonitor.com" }
+                Registrar = new Registrar { WhoisServer = new HostName("whois.markmonitor.com") }
             };
 
             whoisServerLookup

@@ -34,7 +34,7 @@ namespace Whois.Parsing.Whois.Cctld.Uz.Uz
             // Registrar Details
             Assert.AreEqual("UZINFOCOM", response.Registrar.Name);
             Assert.AreEqual("http://www.cctld.uz/", response.Registrar.Url);
-            Assert.AreEqual("www.whois.uz", response.Registrar.WhoisServerUrl);
+            Assert.AreEqual("www.whois.uz", response.Registrar.WhoisServer.Value);
 
             Assert.AreEqual(new DateTime(2005, 5, 1, 0, 0, 0), response.Updated);
             Assert.AreEqual(new DateTime(2005, 5, 1, 0, 0, 0), response.Registered);
@@ -144,7 +144,7 @@ namespace Whois.Parsing.Whois.Cctld.Uz.Uz
             // Registrar Details
             Assert.AreEqual("TOMAS", response.Registrar.Name);
             Assert.AreEqual("http://www.cctld.uz/", response.Registrar.Url);
-            Assert.AreEqual("www.whois.uz", response.Registrar.WhoisServerUrl);
+            Assert.AreEqual("www.whois.uz", response.Registrar.WhoisServer.Value);
 
             Assert.AreEqual(new DateTime(2010, 3, 26, 0, 0, 0), response.Updated);
             Assert.AreEqual(new DateTime(2006, 4, 13, 0, 0, 0), response.Registered);

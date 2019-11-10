@@ -55,7 +55,7 @@ namespace Whois.Parsing.Whois.Nic.Wed.Wed
 
             // Registrar Details
             Assert.AreEqual("WED gTLD Admin Reserved", response.Registrar.Name);
-            Assert.AreEqual("whois.nic.wed", response.Registrar.WhoisServerUrl);
+            Assert.AreEqual("whois.nic.wed", response.Registrar.WhoisServer.Value);
 
             Assert.AreEqual(new DateTime(2014, 01, 24, 05, 00, 34, 240, DateTimeKind.Utc), response.Updated);
             Assert.AreEqual(new DateTime(2013, 12, 29, 22, 02, 21, 427, DateTimeKind.Utc), response.Registered);

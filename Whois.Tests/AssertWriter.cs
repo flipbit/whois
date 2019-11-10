@@ -32,7 +32,7 @@ namespace Whois
                 Write(nameof(response.Registrar) + "." + nameof(response.Registrar.Name), response.Registrar?.Name);
                 Write(nameof(response.Registrar) + "." + nameof(response.Registrar.IanaId), response.Registrar?.IanaId);
                 Write(nameof(response.Registrar) + "." + nameof(response.Registrar.Url), response.Registrar?.Url);
-                Write(nameof(response.Registrar) + "." + nameof(response.Registrar.WhoisServerUrl), response.Registrar?.WhoisServerUrl);
+                Write(nameof(response.Registrar) + "." + nameof(response.Registrar.WhoisServer.Value), response.Registrar?.WhoisServer);
                 Write(nameof(response.Registrar) + "." + nameof(response.Registrar.AbuseEmail), response.Registrar?.AbuseEmail);
                 Write(nameof(response.Registrar) + "." + nameof(response.Registrar.AbuseTelephoneNumber), response.Registrar?.AbuseTelephoneNumber);
             }

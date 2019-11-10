@@ -11,7 +11,7 @@ namespace Whois.JsonModels
             Url = registrar.Url;
             AbuseEmail = registrar.AbuseEmail;
             AbuseTelephoneNumber = registrar.AbuseTelephoneNumber;
-            WhoisServerUrl = registrar.WhoisServerUrl;
+            WhoisServer = registrar.WhoisServer;
         }
 
         [JsonProperty(NullValueHandling = NullValueHandling.Ignore)]
@@ -30,6 +30,6 @@ namespace Whois.JsonModels
         public string AbuseTelephoneNumber { get; set; }
 
         [JsonProperty(NullValueHandling = NullValueHandling.Ignore)]
-        public string WhoisServerUrl { get; set; }
+        public HostName WhoisServer { get; set; }
     }
 }

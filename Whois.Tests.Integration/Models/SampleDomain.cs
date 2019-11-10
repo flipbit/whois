@@ -1,13 +1,9 @@
-﻿using System;
-using System.Collections.Generic;
-using System.Text;
-
-namespace Whois.Models
+﻿namespace Whois.Models
 {
     internal class SampleDomain
     {
         public string DomainName { get; set; }
 
-        public string WhoisServerUrl { get; set; }
+        public string WhoisServer { get; set; }
     }
 }

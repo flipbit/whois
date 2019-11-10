@@ -51,7 +51,7 @@ namespace Whois.Parsing.Whois.Donuts.Co.Bike
             Assert.AreEqual("GoDaddy.com, LLC", response.Registrar.Name);
             Assert.AreEqual("146", response.Registrar.IanaId);
             Assert.AreEqual("http://www.godaddy.com/domains/search.aspx?ci=8990", response.Registrar.Url);
-            Assert.AreEqual("who.godaddy.com", response.Registrar.WhoisServerUrl);
+            Assert.AreEqual("who.godaddy.com", response.Registrar.WhoisServer.Value);
             Assert.AreEqual("abuse@godaddy.com", response.Registrar.AbuseEmail);
             Assert.AreEqual("+1.4806242505", response.Registrar.AbuseTelephoneNumber);
 
