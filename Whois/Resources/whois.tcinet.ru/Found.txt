@@ -24,6 +24,6 @@ phone:     { Registrant.TelephoneNumber ? : Trim, IsPhoneNumber }
 fax-no:    { Registrant.FaxNumber ? : Trim, IsPhoneNumber }
 e-mail:    { Registrant.Email ? : Trim, IsEmail }
 registrar: { Registrar.Name ? : Trim }
-created:   { Registered ? : Trim, ToDateTimeUtc("yyyy.MM.dd") }
-paid-till: { Expiration ? : Trim, ToDateTimeUtc("yyyy.MM.dd") }
+created:   { Registered ? : Trim, ToDateTimeUtc("yyyy-MM-ddTHH:mm:ssZ") }
+paid-till: { Expiration ? : Trim, ToDateTimeUtc("yyyy-MM-ddTHH:mm:ssZ") }
 
