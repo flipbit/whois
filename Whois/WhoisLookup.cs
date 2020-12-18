@@ -132,15 +132,24 @@ namespace Whois
                 response = WhoisResponse.WithServerUrl(request.WhoisServer);
             }
 
+            // If query is for a top level domain, we're finished
+            if (hostName.IsTld) return response;
+
             // Main loop: download & parse WHOIS data and follow the referrer chain
             var whoisServer = response?.WhoisServer;
-            while (whoisServer != null && !hostName.IsTld)
+            while (whoisServer != null)
             {
                 // Download
                 var content = await Download(whoisServer.Value, request);
 
                 // Parse result
                 var parsed = whoisParser.Parse(whoisServer.Value, content);
+
+                // Sanity check: ensure the last response has some data
+                if (parsed.FieldsParsed == 0 && response.FieldsParsed > 0)
+                {
+                    break;
+                }
 
                 // Build referrer chain
                 response = response.Chain(parsed);
@@ -168,21 +177,6 @@ namespace Whois
             }
 
             return valid;
-        }
-
-        internal bool IsTldQuery(string query)
-        {
-            var isTldQuery = false;
-
-            if (!string.IsNullOrEmpty(query))
-            {
-                var regex = new Regex(@"^\.([a-zA-Z0-9]([a-zA-Z0-9\-]{0,61}[a-zA-Z0-9])?)");
-
-                isTldQuery = regex.Match(query).Success;
-            }
-
-
-            return isTldQuery;
         }
 
         private async Task<string> Download(string url, WhoisRequest request)
