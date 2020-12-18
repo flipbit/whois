@@ -24,7 +24,7 @@ Registrant Contact Email: { Registrant.Email ? : Trim, IsEmail, EOL }
 Administrative Email: { AdminContact.Email ? : Trim, IsEmail, EOL }
 Sponsoring Registrar: { Registrar.Name ? : Trim, EOL }
 Name Server:{ NameServers ? : Trim, IsDomainName, ToLower, Repeating, EOL }
-Registration Date: { Registered ? : Trim, ToDateTime("yyyy-MM-dd HH:mm", "yyyy-MM-dd HH:mm:ss"), EOL }
-Expiration Date: { Expiration ? : Trim, ToDateTime("yyyy-MM-dd HH:mm", "yyyy-MM-dd HH:mm:ss"), EOL }
-Registration Time: { Registered ? : Trim, ToDateTime("yyyy-MM-dd HH:mm:ss"), EOL }
-Expiration Time: { Expiration ? : Trim, ToDateTime("yyyy-MM-dd HH:mm:ss"), EOL }
+Registration Date: { Registered ? : Trim, ToDateTimeUtc("yyyy-MM-dd HH:mm", "yyyy-MM-dd HH:mm:ss"), EOL }
+Expiration Date: { Expiration ? : Trim, ToDateTimeUtc("yyyy-MM-dd HH:mm", "yyyy-MM-dd HH:mm:ss"), EOL }
+Registration Time: { Registered ? : Trim, ToDateTimeUtc("yyyy-MM-dd HH:mm:ss"), EOL }
+Expiration Time: { Expiration ? : Trim, ToDateTimeUtc("yyyy-MM-dd HH:mm:ss"), EOL }
