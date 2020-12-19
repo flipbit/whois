@@ -1,4 +1,4 @@
-using System;
+﻿using System;
 using NUnit.Framework;
 using Whois.Parsers;
 
@@ -45,29 +45,26 @@ namespace Whois.Parsing.Whois.Tcinet.Ru.XnP1ai
             Assert.AreEqual("whois.tcinet.ru/Found", response.TemplateName);
 
             Assert.AreEqual("xn----8sbc3ahklcs4adf.xn--p1ai", response.DomainName.ToString());
+            Assert.AreEqual("форум-кубани.рф", response.DomainName.ToUnicodeString());
 
             // Registrar Details
-            Assert.AreEqual("R01-REG-RF", response.Registrar.Name);
+            Assert.AreEqual("REGRU-RF", response.Registrar.Name);
 
-            Assert.AreEqual(new DateTime(2010, 11, 12, 00, 00, 00, 000, DateTimeKind.Utc), response.Registered);
-            Assert.AreEqual(new DateTime(2011, 11, 12, 00, 00, 00, 000, DateTimeKind.Utc), response.Expiration);
-
-             // Registrant Details
-            Assert.AreEqual("+7 800 3020800", response.Registrant.TelephoneNumber);
-            Assert.AreEqual("liderkubani@gmail.com", response.Registrant.Email);
-
+            Assert.AreEqual(new DateTime(2017, 12, 20, 17, 02, 51, 000, DateTimeKind.Utc), response.Registered);
+            Assert.AreEqual(new DateTime(2020, 12, 20, 17, 02, 51, 000, DateTimeKind.Utc), response.Expiration);
 
             // Nameservers
-            Assert.AreEqual(3, response.NameServers.Count);
-            Assert.AreEqual("ns1.redsoft.ru.", response.NameServers[0]);
-            Assert.AreEqual("ns2.redsoft.ru.", response.NameServers[1]);
-            Assert.AreEqual("ns2.r01.ru.", response.NameServers[2]);
+            Assert.AreEqual(2, response.NameServers.Count);
+            Assert.AreEqual("ns1.reg.ru.", response.NameServers[0]);
+            Assert.AreEqual("ns2.reg.ru.", response.NameServers[1]);
 
             // Domain Status
-            Assert.AreEqual(1, response.DomainStatus.Count);
-            Assert.AreEqual("REGISTERED, DELEGATED, VERIFIED", response.DomainStatus[0]);
+            Assert.AreEqual(3, response.DomainStatus.Count);
+            Assert.AreEqual("REGISTERED", response.DomainStatus[0]);
+            Assert.AreEqual("DELEGATED", response.DomainStatus[1]);
+            Assert.AreEqual("UNVERIFIED", response.DomainStatus[2]);
 
-            Assert.AreEqual(11, response.FieldsParsed);
+            Assert.AreEqual(8, response.FieldsParsed);
         }
     }
 }

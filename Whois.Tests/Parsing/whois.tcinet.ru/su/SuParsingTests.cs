@@ -47,27 +47,27 @@ namespace Whois.Parsing.Whois.Tcinet.Ru.Su
             Assert.AreEqual("google.su", response.DomainName.ToString());
 
             // Registrar Details
-            Assert.AreEqual("RUCENTER-REG-FID", response.Registrar.Name);
+            Assert.AreEqual("RUCENTER-SU", response.Registrar.Name);
 
-            Assert.AreEqual(new DateTime(2005, 10, 16, 00, 00, 00, 000, DateTimeKind.Utc), response.Registered);
-            Assert.AreEqual(new DateTime(2010, 10, 16, 00, 00, 00, 000, DateTimeKind.Utc), response.Expiration);
+            Assert.AreEqual(new DateTime(2005, 10, 15, 20, 00, 00, 000, DateTimeKind.Utc), response.Registered);
+            Assert.AreEqual(new DateTime(2021, 10, 15, 21, 00, 00, 000, DateTimeKind.Utc), response.Expiration);
 
              // Registrant Details
-            Assert.AreEqual("+7 495 9681807", response.Registrant.TelephoneNumber);
-            Assert.AreEqual("+7 495 9681807", response.Registrant.FaxNumber);
-            Assert.AreEqual("cis@cis.su", response.Registrant.Email);
+            Assert.AreEqual("domens@mail.com", response.Registrant.Email);
 
 
             // Nameservers
-            Assert.AreEqual(2, response.NameServers.Count);
-            Assert.AreEqual("ns1073.hostgator.com.", response.NameServers[0]);
-            Assert.AreEqual("ns1074.hostgator.com.", response.NameServers[1]);
+            Assert.AreEqual(3, response.NameServers.Count);
+            Assert.AreEqual("ns3.nic.ru.", response.NameServers[0]);
+            Assert.AreEqual("ns4.nic.ru.", response.NameServers[1]);
+            Assert.AreEqual("ns8.nic.ru.", response.NameServers[2]);
 
             // Domain Status
-            Assert.AreEqual(1, response.DomainStatus.Count);
-            Assert.AreEqual("REGISTERED, DELEGATED, UNVERIFIED", response.DomainStatus[0]);
+            Assert.AreEqual(2, response.DomainStatus.Count);
+            Assert.AreEqual("REGISTERED", response.DomainStatus[0]);
+            Assert.AreEqual("DELEGATED", response.DomainStatus[1]);
 
-            Assert.AreEqual(11, response.FieldsParsed);
+            Assert.AreEqual(10, response.FieldsParsed);
         }
     }
 }

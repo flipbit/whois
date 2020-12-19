@@ -32,29 +32,28 @@ namespace Whois.Parsing.Whois.Tcinet.Ru.Ru
             Assert.AreEqual("masterhost.ru", response.DomainName.ToString());
 
             // Registrar Details
-            Assert.AreEqual("REGISTRATOR-REG-RIPN", response.Registrar.Name);
+            Assert.AreEqual("RD-RU", response.Registrar.Name);
 
-            Assert.AreEqual(new DateTime(1999, 12, 15, 00, 00, 00, 000, DateTimeKind.Utc), response.Registered);
-            Assert.AreEqual(new DateTime(2011, 01, 01, 00, 00, 00, 000, DateTimeKind.Utc), response.Expiration);
+            Assert.AreEqual(new DateTime(1999, 12, 15, 16, 20, 39, 000, DateTimeKind.Utc), response.Registered);
+            Assert.AreEqual(new DateTime(2021, 12, 31, 21, 00, 00, 000, DateTimeKind.Utc), response.Expiration);
 
              // Registrant Details
-            Assert.AreEqual("ZAO MASTERHOST", response.Registrant.Organization);
-            Assert.AreEqual("+7 495 7729720", response.Registrant.TelephoneNumber);
-            Assert.AreEqual("+7 495 7729723", response.Registrant.FaxNumber);
-            Assert.AreEqual("domain-tld@masterhost.ru", response.Registrant.Email);
+            Assert.AreEqual(@"LLC ""MASTERHOST""", response.Registrant.Organization);
+
 
             // Nameservers
             Assert.AreEqual(3, response.NameServers.Count);
-            Assert.AreEqual("ns.masterhost.ru", response.NameServers[0]);
-            Assert.AreEqual("ns1.masterhost.ru", response.NameServers[1]);
-            Assert.AreEqual("ns2.masterhost.ru", response.NameServers[2]);
+            Assert.AreEqual("ns3.masterhost.ru", response.NameServers[0]);
+            Assert.AreEqual("ns4.masterhost.ru", response.NameServers[1]);
+            Assert.AreEqual("ns5.masterhost.ru", response.NameServers[2]);
 
             // Domain Status
-            Assert.AreEqual(1, response.DomainStatus.Count);
-            Assert.AreEqual("REGISTERED, DELEGATED, UNVERIFIED", response.DomainStatus[0]);
+            Assert.AreEqual(3, response.DomainStatus.Count);
+            Assert.AreEqual("REGISTERED", response.DomainStatus[0]);
+            Assert.AreEqual("DELEGATED", response.DomainStatus[1]);
+            Assert.AreEqual("UNVERIFIED", response.DomainStatus[2]);
 
-            Assert.AreEqual(13, response.FieldsParsed);
-        }
+            Assert.AreEqual(10, response.FieldsParsed);        }
 
         [Test]
         public void Test_not_found()
@@ -86,13 +85,13 @@ namespace Whois.Parsing.Whois.Tcinet.Ru.Ru
             Assert.AreEqual("google.ru", response.DomainName.ToString());
 
             // Registrar Details
-            Assert.AreEqual("RU-CENTER-REG-RIPN", response.Registrar.Name);
+            Assert.AreEqual("RU-CENTER-RU", response.Registrar.Name);
 
-            Assert.AreEqual(new DateTime(2004, 03, 04, 00, 00, 00, 000, DateTimeKind.Utc), response.Registered);
-            Assert.AreEqual(new DateTime(2015, 03, 05, 00, 00, 00, 000, DateTimeKind.Utc), response.Expiration);
+            Assert.AreEqual(new DateTime(2004, 03, 03, 21, 00, 00, 000, DateTimeKind.Utc), response.Registered);
+            Assert.AreEqual(new DateTime(2021, 03, 04, 21, 00, 00, 000, DateTimeKind.Utc), response.Expiration);
 
              // Registrant Details
-            Assert.AreEqual("Google Inc.", response.Registrant.Organization);
+            Assert.AreEqual("Google LLC", response.Registrant.Organization);
 
 
             // Nameservers
@@ -103,8 +102,10 @@ namespace Whois.Parsing.Whois.Tcinet.Ru.Ru
             Assert.AreEqual("ns4.google.com.", response.NameServers[3]);
 
             // Domain Status
-            Assert.AreEqual(1, response.DomainStatus.Count);
-            Assert.AreEqual("REGISTERED, DELEGATED, VERIFIED", response.DomainStatus[0]);
+            Assert.AreEqual(3, response.DomainStatus.Count);
+            Assert.AreEqual("REGISTERED", response.DomainStatus[0]);
+            Assert.AreEqual("DELEGATED", response.DomainStatus[1]);
+            Assert.AreEqual("VERIFIED", response.DomainStatus[2]);
 
             Assert.AreEqual(11, response.FieldsParsed);
         }

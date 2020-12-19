@@ -1,22 +1,19 @@
 % By submitting a query to RIPN's Whois Service
 % you agree to abide by the following terms of use:
-% http://www.ripn.net/about/servpol.html#3.2 (in Russian) 
+% http://www.ripn.net/about/servpol.html#3.2 (in Russian)
 % http://www.ripn.net/about/en/servpol.html#3.2 (in English).
 
-domain:     MASTERHOST.RU
-nserver:    ns.masterhost.ru. 217.16.20.30
-nserver:    ns1.masterhost.ru. 217.16.16.30
-nserver:    ns2.masterhost.ru. 217.16.22.30
-state:      REGISTERED, DELEGATED, UNVERIFIED
-org:        ZAO MASTERHOST
-phone:      +7 495 7729720
-phone:      +7 800 2009720
-fax-no:     +7 495 7729723
-e-mail:     domain-tld@masterhost.ru
-registrar:  REGISTRATOR-REG-RIPN
-created:    1999.12.15
-paid-till:  2011.01.01
-source:     TCI
+domain:        MASTERHOST.RU
+nserver:       ns3.masterhost.ru. 217.16.16.31, 2a00:15f8:a000:10:1:1:1:53
+nserver:       ns4.masterhost.ru. 217.16.20.31, 2a00:15f8:a000:11:1:1:2:53
+nserver:       ns5.masterhost.ru. 217.16.22.31, 2a00:15f8:a000:12:1:1:3:53
+state:         REGISTERED, DELEGATED, UNVERIFIED
+org:           LLC "MASTERHOST"
+registrar:     RD-RU
+admin-contact: https://cp.mastername.ru/domain_feedback/
+created:       1999-12-15T16:20:39Z
+paid-till:     2021-12-31T21:00:00Z
+free-date:     2022-02-01
+source:        TCI
 
-Last updated on 2010.03.25 12:27:24 MSK/MSD
-
+Last updated on 2020-12-19T17:16:42Z

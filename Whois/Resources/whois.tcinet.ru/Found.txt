@@ -18,7 +18,7 @@ set: Status = Found
 ---
 domain:    { DomainName : Trim, IsDomainName, ToHostName }
 nserver:   { NameServers ? : Trim, SubstringBefore('. '), IsDomainName, ToLower, Repeating }
-state:     { DomainStatus ? : Trim, Repeating, CleanDomainStatus }
+state:     { DomainStatus ? : Trim, Split(', ') }
 org:       { Registrant.Organization ? : Trim }
 phone:     { Registrant.TelephoneNumber ? : Trim, IsPhoneNumber }
 fax-no:    { Registrant.FaxNumber ? : Trim, IsPhoneNumber }
