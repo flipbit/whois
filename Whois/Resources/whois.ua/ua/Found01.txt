@@ -37,7 +37,7 @@ modified:         { Updated ? : ToDateTimeUtc("yyyy-MM-dd HH:mm:ssz") }
 expires:          { Expiration ? : ToDateTimeUtc("yyyy-MM-dd HH:mm:sszz") }
 
 registrar:        { Registrar.Name ? }
-url:              { Registrar.Url ? : IsUrl, ToLower }
+url:              { Registrar.Url ? : IsLooseAbsoluteUrl, ToLower }
 
 contact-id:       { Contact.Id : Repeating }
 person:           { Contact.Name : Repeating }

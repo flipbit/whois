@@ -38,5 +38,5 @@ tec-city:{ TechnicalContact.Address ? : Trim, IsNotEmpty }
 tec-country:{ TechnicalContact.Address ? : Trim, IsNotEmpty }
 tec-email:{ TechnicalContact.Email ? : Trim, IsEmail }
 registrar-name:{ Registrar.Name ? : Trim }
-registrar-url:{ Registrar.Url ? : Trim, IsUrl, ToLower }
+registrar-url:{ Registrar.Url ? : Trim, IsLooseAbsoluteUrl, ToLower }
 

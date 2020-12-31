@@ -121,7 +121,7 @@ Registrar:{ Registrar.Name : Trim }
 Registrar IANA ID:{ Registrar.IanaId : Trim, IsNumeric }
 Registrar Abuse Contact Email:{ Registrar.AbuseEmail : Trim, IsEmail }
 Registrar Abuse Contact Phone:{ Registrar.AbuseTelephoneNumber : Trim, IsPhoneNumber }
-Registrar URL:{ Registrar.Url : Trim, IsUrl, ToLower } 
+Registrar URL:{ Registrar.Url : Trim, IsLooseAbsoluteUrl, ToLower } 
 Registrar WHOIS Server:{ Registrar.WhoisServer : Trim, RemoveEnd('/'), IsDomainName, ToHostName }
 
 #
@@ -129,13 +129,13 @@ Registrar WHOIS Server:{ Registrar.WhoisServer : Trim, RemoveEnd('/'), IsDomainN
 #
 Sponsoring Registrar:{ Registrar.Name : Trim }
 Sponsoring Registrar IANA ID:{ Registrar.IanaId : Trim, IsNumeric }
-Sponsoring Registrar URL:{ Registrar.Url : Trim, IsUrl, ToLower }
+Sponsoring Registrar URL:{ Registrar.Url : Trim, IsLooseAbsoluteUrl, ToLower }
 Sponsoring Registrar Phone:{ Registrar.AbuseTelephoneNumber : Trim, IsPhoneNumber }
 Sponsoring Registrar Customer Service Contact:{ Registrar.AbuseTelephoneNumber : Trim, IsPhoneNumber }
 Sponsoring Registrar Customer Service Email:{ Registrar.AbuseEmail : Trim, IsEmail }
 
 # Alternate form
-Referral URL:{ Registrar.Url : Trim, IsUrl, ToLower } 
+Referral URL:{ Registrar.Url : Trim, IsLooseAbsoluteUrl, ToLower } 
 
 #
 # Domain Status

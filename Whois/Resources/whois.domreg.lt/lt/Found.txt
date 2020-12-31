@@ -18,7 +18,7 @@ Domain:			{ DomainName : Trim, IsDomainName, ToHostName }
 Status:			{ DomainStatus ? : Trim, Repeating }
 Registered:		{ Registered? : ToDateTimeUtc("yyyy-MM-dd") }
 Registrar:		{ Registrar.Name ? : Trim }
-Registrar website:	{ Registrar.Url ? : Trim, IsUrl, ToLower }
+Registrar website:	{ Registrar.Url ? : Trim, IsLooseAbsoluteUrl, ToLower }
 Contact organization:	{ Registrant.Organization ? : Trim }
 Contact email:		{ Registrant.Email ? : Trim, IsEmail }
 Nameserver:		{ NameServers ? : SubstringBefore(' '), IsDomainName, ToLower, Repeating }

@@ -14,7 +14,7 @@ set: Status = Found
 Domain Name: { DomainName : IsDomainName, ToHostName, EOL }
 Domain ID: { RegistryDomainId ? : EOL }
 WHOIS Server: { Registrar.WhoisServer ? : IsDomainName, ToHostName, EOL }
-Referral URL: { Registrar.Url ? : IsUrl, ToLower, EOL }
+Referral URL: { Registrar.Url ? : IsLooseAbsoluteUrl, ToLower, EOL }
 Updated Date: { Updated ? : ToDateTimeUtc("yyyy-MM-ddTHH:mm:ss.fffZ"), EOL }
 Creation Date: { Registered? : ToDateTimeUtc("yyyy-MM-ddTHH:mm:ss.fffZ"), EOL }
 Registry Expiry Date: { Expiration ? : ToDateTimeUtc("yyyy-MM-ddTHH:mm:ss.fffZ"), EOL }

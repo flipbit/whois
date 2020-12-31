@@ -26,8 +26,8 @@ Registrar IANA ID:{ Registrar.IanaId ? : Trim, IsNumeric, EOL }
 Sponsoring Registrar:{ Registrar.Name ? : Trim, EOL }
 Sponsoring Registrar IANA ID:{ Registrar.IanaId ? : Trim, IsNumeric, EOL }
 WHOIS Server:{ Registrar.WhoisServer ? : Trim, IsDomainName, ToHostName, EOL } 
-Referral URL:{ Registrar.Url ? : Trim, IsUrl, ToLower, EOL } 
-Registrar URL:{ Registrar.Url ? : Trim, IsUrl, ToLower, EOL } 
+Referral URL:{ Registrar.Url ? : Trim, IsLooseAbsoluteUrl, ToLower, EOL } 
+Registrar URL:{ Registrar.Url ? : Trim, IsLooseAbsoluteUrl, ToLower, EOL } 
 Domain Status:{ DomainStatus ? : Trim, Repeating, SubstringBefore(' '), EOL }
 Status:{ DomainStatus ? : Trim, Repeating, EOL }
 Registrant ID:{ Registrant.RegistryId ? : Trim, EOL }

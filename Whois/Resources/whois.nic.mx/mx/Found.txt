@@ -23,7 +23,7 @@ Created On: { Registered ? : Trim, ToDateTimeUtc("yyyy-MM-dd") }
 Expiration Date: { Expiration ? : Trim, ToDateTimeUtc("yyyy-MM-dd") }
 Last Updated On: { Updated ? : Trim, ToDateTimeUtc("yyyy-MM-dd") }
 Registrar: { Registrar.Name ? : Trim }
-URL: { Registrar.Url ? : Trim, IsUrl, ToLower }
+URL: { Registrar.Url ? : Trim, IsLooseAbsoluteUrl, ToLower }
 
 Registrant:
    Name: { Registrant.Name ? : Trim }

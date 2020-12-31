@@ -16,7 +16,7 @@ set: Status = Found
 ---
 domain:		{ DomainName : IsDomainName, ToHostName }
 registrar:	{ Registrar.Name ? }
-registrar-url:	{ Registrar.Url ? : IsUrl, ToLower }
+registrar-url:	{ Registrar.Url ? : IsLooseAbsoluteUrl, ToLower }
 nameserver:	{ NameServers ? : IsDomainName, ToLower, Repeating }
 registrant:	{ Registrant.RegistryId ? }
 status:		{ DomainStatus ? : Split(', ') }

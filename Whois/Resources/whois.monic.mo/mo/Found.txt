@@ -17,5 +17,5 @@ set: Status = Found
    Domain Name: { DomainName : IsDomainName, ToHostName }
    Registrar: { Registrar.Name ? }
    Whois Server: { Registrar.WhoisServer ? : IsDomainName, ToHostName }
-   Referral URL: { Registrar.Url ? : IsUrl, ToLower }
+   Referral URL: { Registrar.Url ? : IsLooseAbsoluteUrl, ToLower }
    Name Server: { NameServers ? : IsDomainName, ToLower, Repeating }

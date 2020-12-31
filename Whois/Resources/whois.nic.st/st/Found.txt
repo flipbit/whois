@@ -25,7 +25,7 @@ Expiration Date: { Expiration ? : ToDateTimeUtc("yyyy-MM-dd") }
 DOMAIN: { DomainName : IsDomainName, ToHostName }
 
 REGISTRATION-SERVICE-PROVIDER: { Registrar.Name ? }
-URL: { Registrar.Url ? : IsUrl, ToLower }
+URL: { Registrar.Url ? : IsLooseAbsoluteUrl, ToLower }
 
 created-date:    { Registered ? : ToDateTimeUtc("yyyy-MM-dd HH:mm:ss") }
 updated-date:    { Updated ? : ToDateTimeUtc("yyyy-MM-dd HH:mm:ss") }

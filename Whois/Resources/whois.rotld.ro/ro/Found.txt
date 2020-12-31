@@ -17,7 +17,7 @@ set: Status = Found
   Domain Name: { DomainName : IsDomainName, ToHostName }
   Registered On: { Registered ? : ToDateTimeUtc("yyyy-MM-dd") }
   Registrar: { Registrar.Name ? }
-  Referral URL: { Registrar.Url ? : IsUrl, ToLower }
+  Referral URL: { Registrar.Url ? : IsLooseAbsoluteUrl, ToLower }
 
   Nameserver: { NameServers ? : IsDomainName, ToLower, Repeating }
 
