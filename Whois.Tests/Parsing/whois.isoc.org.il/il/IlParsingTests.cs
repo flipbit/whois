@@ -48,6 +48,7 @@ namespace Whois.Parsing.Whois.Isoc.Org.Il.Il
 
             // Registrar Details
             Assert.AreEqual("Israel Internet Association ISOC-IL", response.Registrar.Name);
+            Assert.AreEqual("www.isoc.org.il", response.Registrar.Url);
 
             Assert.AreEqual(new DateTime(2005, 01, 26, 00, 00, 00, 000, DateTimeKind.Utc), response.Updated);
             Assert.AreEqual(new DateTime(2001, 08, 21, 00, 00, 00, 000, DateTimeKind.Utc), response.Registered);
@@ -118,7 +119,7 @@ namespace Whois.Parsing.Whois.Isoc.Org.Il.Il
             Assert.AreEqual(1, response.DomainStatus.Count);
             Assert.AreEqual("Transfer Allowed", response.DomainStatus[0]);
 
-            Assert.AreEqual(27, response.FieldsParsed);
+            Assert.AreEqual(28, response.FieldsParsed);
         }
 
         [Test]
@@ -137,6 +138,7 @@ namespace Whois.Parsing.Whois.Isoc.Org.Il.Il
 
             // Registrar Details
             Assert.AreEqual("Israel Internet Association ISOC-IL", response.Registrar.Name);
+            Assert.AreEqual("www.isoc.org.il", response.Registrar.Url);
 
             Assert.AreEqual(new DateTime(2010, 10, 07, 00, 00, 00, 000, DateTimeKind.Utc), response.Updated);
             Assert.AreEqual(new DateTime(1996, 01, 11, 00, 00, 00, 000, DateTimeKind.Utc), response.Registered);
@@ -216,7 +218,7 @@ namespace Whois.Parsing.Whois.Isoc.Org.Il.Il
             Assert.AreEqual(1, response.DomainStatus.Count);
             Assert.AreEqual("Transfer Locked", response.DomainStatus[0]);
 
-            Assert.AreEqual(56, response.FieldsParsed);
+            Assert.AreEqual(57, response.FieldsParsed);
         }
 
         [Test]
@@ -250,6 +252,7 @@ namespace Whois.Parsing.Whois.Isoc.Org.Il.Il
 
             // Registrar Details
             Assert.AreEqual("Israel Internet Association ISOC-IL", response.Registrar.Name);
+            Assert.AreEqual("www.isoc.org.il", response.Registrar.Url);
 
             Assert.AreEqual(new DateTime(2014, 01, 16, 00, 00, 00, 000, DateTimeKind.Utc), response.Updated);
             Assert.AreEqual(new DateTime(1996, 01, 11, 00, 00, 00, 000, DateTimeKind.Utc), response.Registered);
@@ -329,7 +332,7 @@ namespace Whois.Parsing.Whois.Isoc.Org.Il.Il
             Assert.AreEqual(1, response.DomainStatus.Count);
             Assert.AreEqual("Transfer Locked", response.DomainStatus[0]);
 
-            Assert.AreEqual(48, response.FieldsParsed);
+            Assert.AreEqual(49, response.FieldsParsed);
         }
     }
 }

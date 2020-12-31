@@ -51,6 +51,7 @@ namespace Whois.Parsing.Whois.Biz.Biz
             Assert.AreEqual("292", response.Registrar.IanaId);
             Assert.AreEqual("abusecomplaints@markmonitor.com", response.Registrar.AbuseEmail);
             Assert.AreEqual("+1.2083895740", response.Registrar.AbuseTelephoneNumber);
+            Assert.AreEqual("www.markmonitor.com", response.Registrar.Url);
 
             Assert.AreEqual(new DateTime(2017, 02, 22, 10, 27, 42, 000, DateTimeKind.Utc), response.Updated);
             Assert.AreEqual(new DateTime(2002, 03, 27, 16, 03, 44, 000, DateTimeKind.Utc), response.Registered);
@@ -121,7 +122,7 @@ namespace Whois.Parsing.Whois.Biz.Biz
             Assert.AreEqual("clientUpdateProhibited", response.DomainStatus[2]);
 
             Assert.AreEqual("unsigned", response.DnsSecStatus);
-            Assert.AreEqual(51, response.FieldsParsed);
+            Assert.AreEqual(52, response.FieldsParsed);
         }
     }
 }

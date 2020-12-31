@@ -48,6 +48,7 @@ namespace Whois.Parsing.Whois.Nic.Dm.Dm
 
             // Registrar Details
             Assert.AreEqual("MarkMonitor Inc.", response.Registrar.Name);
+            Assert.AreEqual("www.markmonitor.com", response.Registrar.Url);
 
             Assert.AreEqual(new DateTime(2013, 07, 23, 17, 50, 34, 000, DateTimeKind.Utc), response.Updated);
             Assert.AreEqual(new DateTime(2004, 08, 23, 23, 00, 00, 000, DateTimeKind.Utc), response.Registered);
@@ -115,7 +116,7 @@ namespace Whois.Parsing.Whois.Nic.Dm.Dm
             Assert.AreEqual(1, response.DomainStatus.Count);
             Assert.AreEqual("ACTIVE", response.DomainStatus[0]);
 
-            Assert.AreEqual(38, response.FieldsParsed);
+            Assert.AreEqual(39, response.FieldsParsed);
         }
     }
 }

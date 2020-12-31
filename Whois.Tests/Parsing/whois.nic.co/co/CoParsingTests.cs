@@ -53,6 +53,7 @@ namespace Whois.Parsing.Whois.Nic.Co.Co
             // Registrar Details
             Assert.AreEqual("CSC CORPORATE DOMAINS", response.Registrar.Name);
             Assert.AreEqual("299", response.Registrar.IanaId);
+            Assert.AreEqual("whois.corporatedomains.com", response.Registrar.Url);
 
             Assert.AreEqual(new DateTime(2013, 10, 14, 13, 03, 24, 000, DateTimeKind.Utc), response.Updated);
             Assert.AreEqual(new DateTime(2010, 04, 26, 07, 50, 40, 000, DateTimeKind.Utc), response.Registered);
@@ -144,7 +145,7 @@ namespace Whois.Parsing.Whois.Nic.Co.Co
             Assert.AreEqual(1, response.DomainStatus.Count);
             Assert.AreEqual("clientTransferProhibited", response.DomainStatus[0]);
 
-            Assert.AreEqual(65, response.FieldsParsed);
+            Assert.AreEqual(66, response.FieldsParsed);
         }
     }
 }

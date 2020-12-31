@@ -51,6 +51,7 @@ namespace Whois.Parsing.Whois.Centralnic.Com.SeNet
             Assert.AreEqual("Soluciones Corporativas IP, S.L.U.", response.Registrar.Name);
             Assert.AreEqual("1383", response.Registrar.IanaId);
             Assert.AreEqual("+34.871986600", response.Registrar.AbuseTelephoneNumber);
+            Assert.AreEqual("www.scip.es", response.Registrar.Url);
 
             Assert.AreEqual(new DateTime(2013, 11, 28, 11, 49, 39, DateTimeKind.Utc), response.Updated);
             Assert.AreEqual(new DateTime(2013, 11, 13, 10, 35, 3, DateTimeKind.Utc), response.Registered);
@@ -130,7 +131,7 @@ namespace Whois.Parsing.Whois.Centralnic.Com.SeNet
             Assert.AreEqual("ok", response.DomainStatus[0]);
 
             Assert.AreEqual("Unsigned", response.DnsSecStatus);
-            Assert.AreEqual(53, response.FieldsParsed);
+            Assert.AreEqual(54, response.FieldsParsed);
         }
     }
 }

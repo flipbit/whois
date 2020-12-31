@@ -253,6 +253,9 @@ namespace Whois.Parsing.Whois.Nic.Travel.Travel
             Assert.AreEqual(new DateTime(2005, 10, 04, 21, 44, 27, 000, DateTimeKind.Utc), response.Registered);
             Assert.AreEqual(new DateTime(2013, 09, 18, 15, 13, 32, 000, DateTimeKind.Utc), response.Expiration);
 
+             // Registrar Details
+            Assert.AreEqual("whois.neustar.us", response.Registrar.Url);
+
              // Registrant Details
             Assert.AreEqual("TRALLIANCE", response.Registrant.RegistryId);
             Assert.AreEqual("Tralliance Corporation", response.Registrant.Name);
@@ -326,7 +329,7 @@ namespace Whois.Parsing.Whois.Nic.Travel.Travel
             Assert.AreEqual(1, response.DomainStatus.Count);
             Assert.AreEqual("ok", response.DomainStatus[0]);
 
-            Assert.AreEqual(49, response.FieldsParsed);
+            Assert.AreEqual(50, response.FieldsParsed);
         }
     }
 }

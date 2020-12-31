@@ -49,6 +49,7 @@ namespace Whois.Parsing.Whois.Centralnic.Com.GbCom
             // Registrar Details
             Assert.AreEqual("Wind Internethaus GMBH", response.Registrar.Name);
             Assert.AreEqual("+49.77214070740", response.Registrar.AbuseTelephoneNumber);
+            Assert.AreEqual("www.windinternethaus.de", response.Registrar.Url);
 
             Assert.AreEqual(new DateTime(2014, 2, 12, 9, 45, 17, DateTimeKind.Utc), response.Updated);
             Assert.AreEqual(new DateTime(2006, 4, 23, 6, 26, 11, DateTimeKind.Utc), response.Registered);
@@ -132,7 +133,7 @@ namespace Whois.Parsing.Whois.Centralnic.Com.GbCom
             Assert.AreEqual("serverTransferProhibited", response.DomainStatus[0]);
 
             Assert.AreEqual("Unsigned", response.DnsSecStatus);
-            Assert.AreEqual(52, response.FieldsParsed);
+            Assert.AreEqual(53, response.FieldsParsed);
         }
     }
 }

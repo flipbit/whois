@@ -33,6 +33,7 @@ namespace Whois.Parsing.Whois.Dns.Be.Be
 
             // Registrar Details
             Assert.AreEqual("Register NV/SA", response.Registrar.Name);
+            Assert.AreEqual("www.register.be", response.Registrar.Url);
 
             Assert.AreEqual(new DateTime(2000, 12, 12, 0, 0, 0), response.Registered);
 
@@ -47,7 +48,7 @@ namespace Whois.Parsing.Whois.Dns.Be.Be
             Assert.AreEqual(1, response.DomainStatus.Count);
             Assert.AreEqual("NOT AVAILABLE", response.DomainStatus[0]);
 
-            Assert.AreEqual(10, response.FieldsParsed);
+            Assert.AreEqual(11, response.FieldsParsed);
         }
 
         [Test]
@@ -100,6 +101,7 @@ namespace Whois.Parsing.Whois.Dns.Be.Be
 
             // Registrar Details
             Assert.AreEqual("AXC", response.Registrar.Name);
+            Assert.AreEqual("axc.nl/", response.Registrar.Url);
 
             Assert.AreEqual(new DateTime(2011, 2, 15, 0, 0, 0), response.Registered);
 
@@ -120,7 +122,7 @@ namespace Whois.Parsing.Whois.Dns.Be.Be
             Assert.AreEqual(1, response.DomainStatus.Count);
             Assert.AreEqual("NOT AVAILABLE", response.DomainStatus[0]);
 
-            Assert.AreEqual(12, response.FieldsParsed);
+            Assert.AreEqual(13, response.FieldsParsed);
         }
 
         [Test]
@@ -138,6 +140,9 @@ namespace Whois.Parsing.Whois.Dns.Be.Be
             Assert.AreEqual("ee", response.DomainName.ToString());
 
             Assert.AreEqual(new DateTime(2000, 12, 14, 0, 0, 0), response.Registered);
+
+            // Registrar
+            Assert.AreEqual("www.dns.be", response.Registrar.Url);
 
              // TechnicalContact Details
             Assert.AreEqual("DNS BE Tech", response.TechnicalContact.Name);
@@ -159,7 +164,7 @@ namespace Whois.Parsing.Whois.Dns.Be.Be
             Assert.AreEqual(1, response.DomainStatus.Count);
             Assert.AreEqual("OUT OF SERVICE", response.DomainStatus[0]);
 
-            Assert.AreEqual(13, response.FieldsParsed);
+            Assert.AreEqual(14, response.FieldsParsed);
         }
 
         [Test]

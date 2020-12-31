@@ -50,6 +50,7 @@ namespace Whois.Parsing.Whois.Nic.St.St
 
             // Registrar Details
             Assert.AreEqual("MarkMonitor Inc.", response.Registrar.Name);
+            Assert.AreEqual("www.markmonitor.com", response.Registrar.Url);
 
             Assert.AreEqual(new DateTime(2017, 05, 14, 09, 28, 07, 000, DateTimeKind.Utc), response.Updated);
             Assert.AreEqual(new DateTime(2004, 06, 15, 18, 24, 45, 000, DateTimeKind.Utc), response.Registered);
@@ -127,7 +128,7 @@ namespace Whois.Parsing.Whois.Nic.St.St
             Assert.AreEqual(1, response.DomainStatus.Count);
             Assert.AreEqual("clientUpdateProhibited", response.DomainStatus[0]);
 
-            Assert.AreEqual(53, response.FieldsParsed);
+            Assert.AreEqual(54, response.FieldsParsed);
         }
     }
 }

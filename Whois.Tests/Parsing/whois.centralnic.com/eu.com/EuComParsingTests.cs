@@ -50,6 +50,7 @@ namespace Whois.Parsing.Whois.Centralnic.Com.EuCom
             // Registrar Details
             Assert.AreEqual("iTransact Ltd", response.Registrar.Name);
             Assert.AreEqual("01223 700322", response.Registrar.AbuseTelephoneNumber);
+            Assert.AreEqual("www.itransact.ltd.uk", response.Registrar.Url);
 
             Assert.AreEqual(new DateTime(2013, 8, 15, 11, 25, 43, DateTimeKind.Utc), response.Updated);
             Assert.AreEqual(new DateTime(2001, 8, 14, 10, 14, 41, DateTimeKind.Utc), response.Registered);
@@ -114,7 +115,7 @@ namespace Whois.Parsing.Whois.Centralnic.Com.EuCom
             Assert.AreEqual("ok", response.DomainStatus[0]);
 
             Assert.AreEqual("Unsigned", response.DnsSecStatus);
-            Assert.AreEqual(40, response.FieldsParsed);
+            Assert.AreEqual(41, response.FieldsParsed);
         }
     }
 }

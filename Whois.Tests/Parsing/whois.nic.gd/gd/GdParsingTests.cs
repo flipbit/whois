@@ -48,6 +48,7 @@ namespace Whois.Parsing.Whois.Nic.Gd.Gd
 
             // Registrar Details
             Assert.AreEqual("MarkMonitor Inc.", response.Registrar.Name);
+            Assert.AreEqual("www.markmonitor.com", response.Registrar.Url);
 
             Assert.AreEqual(new DateTime(2013, 11, 12, 16, 07, 05, 000, DateTimeKind.Utc), response.Updated);
             Assert.AreEqual(new DateTime(2006, 12, 11, 00, 00, 00, 000, DateTimeKind.Utc), response.Registered);
@@ -124,7 +125,7 @@ namespace Whois.Parsing.Whois.Nic.Gd.Gd
             Assert.AreEqual("clientupdateprohibited", response.DomainStatus[0]);
             Assert.AreEqual("clienttransferprohibited", response.DomainStatus[1]);
 
-            Assert.AreEqual(49, response.FieldsParsed);
+            Assert.AreEqual(50, response.FieldsParsed);
         }
 
         [Test]
