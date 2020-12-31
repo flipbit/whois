@@ -23,7 +23,7 @@ Name Servers:
 
 Registrar Information
 Registrar Name: { Registrar.Name ? }
-Registration URL: { Registrar.Url ? : IsUrl, ToLower }
+Registration URL: { Registrar.Url ? : IsLooseAbsoluteUrl, ToLower }
 
 Registrant:
 Name: { Registrant.Name ? }

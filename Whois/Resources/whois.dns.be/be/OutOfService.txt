@@ -33,7 +33,7 @@ Registrar Technical Contacts:
 
 Registrar:
 	Name:	 { Registrar.Name ? : Trim, EOL }
-	Website: { Registrar.Url ? : Trim, IsUrl, ToLower, EOL }
+	Website: { Registrar.Url ? : Trim, IsLooseAbsoluteUrl, ToLower, EOL }
 
 Nameservers:
 	{ NameServers : Trim, IsDomainName, ToLower, Repeating, EOL }

@@ -130,4 +130,4 @@ Billing Email:{ BillingContact.Email ? : IsEmail, EOL }
 Sponsoring Registrar IANA ID:{ Registrar.IanaId ? : IsNumeric, EOL }
 Sponsoring Registrar Organization:{ Registrar.Name ? : EOL }
 Sponsoring Registrar Phone:{ Registrar.AbuseTelephoneNumber ? : IsPhoneNumber, EOL }
-Sponsoring Registrar Website:{ Registrar.Url ? : IsUrl, ToLower, EOL }
+Sponsoring Registrar Website:{ Registrar.Url ? : IsLooseAbsoluteUrl, ToLower, EOL }

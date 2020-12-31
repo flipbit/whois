@@ -26,7 +26,7 @@ set: Status = Found
 
     Registrar:
         { Registrar.Name }
-        URL: { Registrar.Url ? : IsUrl, ToLower }
+        URL: { Registrar.Url ? : IsLooseAbsoluteUrl, ToLower }
 
     Relevant dates:
         Registered on: { Registered ? : Trim, Replace('before ', '01-'), ToDateTimeUtc("dd-MMM-yyyy") }

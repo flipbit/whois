@@ -39,7 +39,7 @@ changed:    { TechnicalContact.Updated ? : ToDateTimeUtc("yyyy-MM-dd HH:mm:ss zz
 
 Registrar:
 name:       { Registrar.Name ? }
-url:        { Registrar.Url ? : IsUrl, ToLower }
+url:        { Registrar.Url ? : IsLooseAbsoluteUrl, ToLower }
 phone:      { Registrar.AbuseTelephoneNumber ? : IsPhoneNumber }
 
 Name servers:

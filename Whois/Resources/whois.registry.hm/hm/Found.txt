@@ -13,7 +13,7 @@ set: Status = Found
 ---
    Domain name:  { DomainName : IsDomainName, ToHostName, EOL }
    Registrar:    { Registrar.Name ? : EOL }
-   Referral URL: { Registrar.Url ? : IsUrl, ToLower, EOL }
+   Referral URL: { Registrar.Url ? : IsLooseAbsoluteUrl, ToLower, EOL }
 
    Domain Registrant:
       { Registrant.Name : EOL }

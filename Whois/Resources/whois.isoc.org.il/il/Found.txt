@@ -43,4 +43,4 @@ fax-no:       { Fax : IsPhoneNumber, Repeating }
 e-mail:       { Email : Replace(' AT ', '@'), IsEmail, Repeating }
 
 registrar name: { Registrar.Name ? }
-registrar info: { Registrar.Url ? : IsUrl, ToLower }
+registrar info: { Registrar.Url ? : IsLooseAbsoluteUrl, ToLower }

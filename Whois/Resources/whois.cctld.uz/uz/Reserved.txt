@@ -18,7 +18,7 @@ hint: RESERVED
    Domain Name: { DomainName : IsDomainName, ToHostName, EOL }
    Registrar: { Registrar.Name ? : EOL }
    Whois Server: { Registrar.WhoisServer ? : IsDomainName, ToHostName, EOL }
-   Referral URL: { Registrar.Url ? : IsUrl, ToLower, EOL }
+   Referral URL: { Registrar.Url ? : IsLooseAbsoluteUrl, ToLower, EOL }
    Name Server: { NameServers ? : SubstringBefore(". "), IsDomainName, ToLower, Repeating, EOL }
    Status: { DomainStatus ? : Trim, Repeating, EOL }
    Updated Date: { Updated ? : ToDateTime("dd-MMM-yyyy"), EOL }

@@ -19,7 +19,7 @@ set: Status = Found
 ---
 domain name: { DomainName : IsDomainName, ToHostName }
 registrar: { Registrar.Name ? }
-url: { Registrar.Url ? : IsUrl, ToLower }
+url: { Registrar.Url ? : IsLooseAbsoluteUrl, ToLower }
 status: { DomainStatus ? : Repeating, CleanDomainStatus }
 status: { DomainStatus ? : Repeating, CleanDomainStatus }
 created date: { Registered ? : ToDateTimeUtc("yyyy-MM-dd HH:mm:ss") }

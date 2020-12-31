@@ -18,7 +18,7 @@ Domain: { DomainName : IsDomainName, ToHostName }
 
 Registrar:
 	Name:	 { Registrar.Name ? }
-	Website: { Registrar.Url ? : IsUrl, ToLower }
+	Website: { Registrar.Url ? : IsLooseAbsoluteUrl, ToLower }
 
 Name servers:
 	{ NameServers ? : SubstringBefore(' '), IsDomainName, ToLower, Repeating }

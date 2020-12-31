@@ -18,7 +18,7 @@ Domain Name:                                 { DomainName : IsDomainName, ToHost
 Domain ID:                                   { RegistryDomainId ? }
 dponsoring Registrar:                        { Registrar.Name ? }
 Sponsoring Registrar IANA ID:                { Registrar.IanaId ? : IsNumeric }
-Registrar URL (registration services):       { Registrar.Url ? : IsUrl, ToLower }
+Registrar URL (registration services):       { Registrar.Url ? : IsLooseAbsoluteUrl, ToLower }
 Domain Status:                               { DomainStatus ? : Repeating, CleanDomainStatus }
 Registrant ID:                               { Registrant.RegistryId ? }
 Registrant Name:                             { Registrant.Name ? }

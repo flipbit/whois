@@ -14,7 +14,7 @@ set: Status = Found
    Domain Name: { DomainName : IsDomainName, ToHostName, EOL }
    Registry Domain ID: { RegistryDomainId ? : IsNumeric, EOL }
    Registrar WHOIS Server: { Registrar.WhoisServer ? : IsDomainName, ToHostName, EOL }
-   Registrar URL: { Registrar.Url ? : IsUrl, ToLower, EOL }
+   Registrar URL: { Registrar.Url ? : IsLooseAbsoluteUrl, ToLower, EOL }
    Updated Date: { Updated ? : ToDateTimeUtc("yyyy-MM-ddTHH:mm:ssZ"), EOL }
    Creation Date: { Registered ? : ToDateTimeUtc("yyyy-MM-ddTHH:mm:ssZ"), EOL }
    Registry Expiry Date: { Expiration ? : ToDateTimeUtc("yyyy-MM-ddTHH:mm:ssZ"), EOL }
