@@ -51,6 +51,7 @@ namespace Whois.Parsing.Whois.Nic.Us.Us
 
             // Registrar Details
             Assert.AreEqual("292", response.Registrar.IanaId);
+            Assert.AreEqual("whois.markmonitor.com", response.Registrar.Url);
 
             Assert.AreEqual(new DateTime(2014, 04, 18, 23, 59, 59, 000, DateTimeKind.Utc), response.Updated);
             Assert.AreEqual(new DateTime(2002, 04, 19, 23, 15, 57, 000, DateTimeKind.Utc), response.Registered);
@@ -141,7 +142,7 @@ namespace Whois.Parsing.Whois.Nic.Us.Us
             Assert.AreEqual("clientTransferProhibited", response.DomainStatus[1]);
             Assert.AreEqual("clientUpdateProhibited", response.DomainStatus[2]);
 
-            Assert.AreEqual(62, response.FieldsParsed);
+            Assert.AreEqual(63, response.FieldsParsed);
         }
     }
 }

@@ -33,6 +33,7 @@ namespace Whois.Parsing.Whois.Eu.Eu
 
             // Registrar Details
             Assert.AreEqual("EURid vzw/asbl", response.Registrar.Name);
+            Assert.AreEqual("www.eurid.eu", response.Registrar.Url);
 
             // Nameservers
             Assert.AreEqual(5, response.NameServers.Count);
@@ -42,7 +43,7 @@ namespace Whois.Parsing.Whois.Eu.Eu
             Assert.AreEqual("ns1.eurid.eu", response.NameServers[3]);
             Assert.AreEqual("ns2.eurid.eu", response.NameServers[4]);
 
-            Assert.AreEqual(8, response.FieldsParsed);
+            Assert.AreEqual(9, response.FieldsParsed);
         }
 
         [Test]
