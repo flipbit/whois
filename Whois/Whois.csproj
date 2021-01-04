@@ -3,13 +3,13 @@
    <TargetFrameworks>netstandard2.0;net452</TargetFrameworks>
    <GeneratePackageOnBuild>true</GeneratePackageOnBuild>
    <Version>3.0.0.0</Version>
-   <PackageVersion>3.0.0-beta4</PackageVersion>
+   <PackageVersion>3.0.0</PackageVersion>
    <Authors>Chris Wood</Authors>
    <Company>flipbit.co.uk</Company>
    <PackageProjectUrl>http://github.com/flipbit/whois</PackageProjectUrl>
    <PackageTags>whois lookup parsing</PackageTags>
    <Description>A .NET Framework 4.5.2 and Standard 2.0 WHOIS Lookup and Parsing Library</Description>
-   <Copyright>Chris Wood 2019</Copyright>
+   <Copyright>Chris Wood 2021</Copyright>
    <RootNamespace>Whois</RootNamespace>
     
   </PropertyGroup>
@@ -681,7 +681,7 @@
       <IncludeAssets>runtime; build; native; contentfiles; analyzers</IncludeAssets>
     </PackageReference>
     <PackageReference Include="Microsoft.CSharp" Version="4.7.0" />
-    <PackageReference Include="Tokenizer" Version="2.2.1" />
+    <PackageReference Include="Tokenizer" Version="2.2.2" />
   </ItemGroup>
 
   <PropertyGroup>

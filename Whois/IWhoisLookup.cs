@@ -1,6 +1,8 @@
 ﻿using System;
 using System.Text;
 using System.Threading.Tasks;
+using Tokens.Validators;
+using Tokens.Transformers;
 
 namespace Whois
 {
@@ -38,5 +40,15 @@ namespace Whois
         /// Performs a WHOIS lookup for the given request.
         /// </summary>
         Task<WhoisResponse> LookupAsync(WhoisRequest request);
+
+        /// <summary>
+        /// Registers a Tokenizer validator with the WHOIS parser.
+        /// </summary>
+        void RegisterValidator<T>() where T : ITokenValidator;
+
+        /// <summary>
+        /// Registers a Tokenizer transformer with the WHOIS parser.
+        /// </summary>
+        void RegisterTransformer<T>() where T : ITokenTransformer;
     }
 }

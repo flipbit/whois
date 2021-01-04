@@ -3,6 +3,8 @@ using System.Text;
 using System.Text.RegularExpressions;
 using System.Threading.Tasks;
 using Tokens.Extensions;
+using Tokens.Transformers;
+using Tokens.Validators;
 using Whois.Logging;
 using Whois.Net;
 using Whois.Parsers;
@@ -165,18 +167,14 @@ namespace Whois
             return response;
         }
 
-        public bool IsValidDomainName(string domain)
+        public void RegisterValidator<T>() where T : ITokenValidator
         {
-            var valid = false;
+            whoisParser.RegisterValidator<T>();
+        }
 
-            if (!string.IsNullOrEmpty(domain))
-            {
-                var regex = new Regex(@"^([a-zA-Z0-9]([a-zA-Z0-9\-]{0,61}[a-zA-Z0-9])?\.)+[a-zA-Z]{2,6}$");
-
-                valid = regex.Match(domain).Success;
-            }
-
-            return valid;
+        public void RegisterTransformer<T>() where T : ITokenTransformer
+        {
+            whoisParser.RegisterTransformer<T>();
         }
 
         private async Task<string> Download(string url, WhoisRequest request)
