@@ -110,24 +110,24 @@ The library communicates via an `ITcpReader` interface.  The [default implementa
 // Create a custom ITcpReader implementation
 class MyCustomTcpReader : ITcpReader
 {
-	private readonly ITcpReader reader;
+  private readonly ITcpReader reader;
 
-	public MyCustomTcpReader()
-	{
-		reader = new TcpReader();
-	}
+  public MyCustomTcpReader()
+  {
+     reader = new TcpReader();
+  }
 
-	public Task<string> Read(string url, int port, string command, Encoding encoding, int timeoutSeconds)
-	{
-		Console.WriteLine($"Reading from URL: {url}");
+  public Task<string> Read(string url, int port, string command, Encoding encoding, int timeoutSeconds)
+  {
+    Console.WriteLine($"Reading from URL: {url}");
 
-		return reader.Read(url, port, command, encoding, timeoutSeconds);
-	}
+    return reader.Read(url, port, command, encoding, timeoutSeconds);
+  }
 
-	public void Dispose()
-	{
-		reader.Dispose();
-	}
+  public void Dispose()
+  {
+    reader.Dispose();
+  }
 }
 
 // Create a WhoisLookup instance
