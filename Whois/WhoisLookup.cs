@@ -1,8 +1,6 @@
 ﻿using System;
 using System.Text;
-using System.Text.RegularExpressions;
 using System.Threading.Tasks;
-using Tokens.Extensions;
 using Tokens.Transformers;
 using Tokens.Validators;
 using Whois.Logging;
@@ -19,12 +17,16 @@ namespace Whois
     {
         private static readonly ILog Log = LogProvider.GetCurrentClassLogger();
         
-        private readonly WhoisParser whoisParser;
-
         /// <summary>
         /// The default <see cref="WhoisOptions"/> to use for this instance
         /// </summary>
         public WhoisOptions Options { get; set; }
+
+        /// <summary>
+        /// The WHOIS parser that parses the free text WHOIS responses into
+        /// structured C# objects
+        /// </summary>
+        public WhoisParser Parser { get; private set; }
 
         /// <summary>
         /// The WHOIS Server Lookup that finds root TLD servers for queries
@@ -49,7 +51,7 @@ namespace Whois
         public WhoisLookup(WhoisOptions options) 
         {
             Options = options;
-            whoisParser = new WhoisParser();
+            Parser = new WhoisParser();
             TcpReader = new TcpReader();
             ServerLookup = new IanaServerLookup(TcpReader);
         }
@@ -107,7 +109,7 @@ namespace Whois
         {
             if (string.IsNullOrEmpty(request.Query))
             {
-                throw new ArgumentNullException("domain");
+                throw new ArgumentNullException($"{nameof(request)}.{nameof(request.Query)}");
             }
 
             // Trim leading '.'
@@ -145,7 +147,7 @@ namespace Whois
                 var content = await Download(whoisServer.Value, request);
 
                 // Parse result
-                var parsed = whoisParser.Parse(whoisServer.Value, content);
+                var parsed = Parser.Parse(whoisServer.Value, content);
 
                 // Sanity check: ensure the last response has some data
                 if (parsed.FieldsParsed == 0 && response.FieldsParsed > 0)
@@ -169,12 +171,12 @@ namespace Whois
 
         public void RegisterValidator<T>() where T : ITokenValidator
         {
-            whoisParser.RegisterValidator<T>();
+            Parser.RegisterValidator<T>();
         }
 
         public void RegisterTransformer<T>() where T : ITokenTransformer
         {
-            whoisParser.RegisterTransformer<T>();
+            Parser.RegisterTransformer<T>();
         }
 
         private async Task<string> Download(string url, WhoisRequest request)

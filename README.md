@@ -5,9 +5,13 @@
 Query and parse WHOIS domain registration information with this library for .NET Standard 2.0 and .NET Framework 4.5.2.
 
 ```csharp
+// Create a WhoisLookup instance
 var whois = new WhoisLookup();
+
+// Query github.com
 var response = whois.Lookup("github.com");
 
+// Output the response
 Console.WriteLine(response.Content);
 
 // Domain Name: github.com
@@ -22,18 +26,33 @@ Console.WriteLine(response.Content);
 WHOIS data is parsed into objects using extensible [Tokenizer](https://github.com/flipbit/tokenizer) templates.
 
 ```csharp
+// Query github.com
 var response = whois.Lookup("github.com");
-var json = JsonConvert.SerializeObject(response.ParsedResponse, Formatting.Indented);
 
+// Convert the response to JSON
+var json = JsonConvert.SerializeObject(response, Formatting.Indented);
+
+// Output the json 
 Console.WriteLine(json);
 
 // {
-//   "DomainName": "github.com",
+//   "ContentLength": 3730,
+//   "Status": 1,
+//   "DomainName": {
+//     "IsPunyCode": false,
+//     "IsTld": false,
+//     "Tld": "com",
+//     "Value": "github.com"
+//   },
 //   "RegistryDomainId": "1264983250_DOMAIN_COM-VRSN",
-//   "Expiration": "2020-10-09T20:20:50+02:00",
-//   "Registrar": {
-//     "Name": "MarkMonitor, Inc.",
-//     "Url": "http://www.markmonitor.com",
+//   "DomainStatus": [
+//     "clientUpdateProhibited",
+//     "clientTransferProhibited",
+//     "clientDeleteProhibited"
+//   ],
+//   "Registered": "2007-10-09T18:20:50Z",
+//   "Updated": "2020-09-08T09:18:27Z",
+//   "Expiration": "2022-10-09T07:00:00Z",
 // ...
 ```
 
@@ -42,12 +61,14 @@ Console.WriteLine(json);
 The library is fully `async/await` compatible.
 
 ```csharp
-public async Task<string> GetWhois()
-{
-    var whois = new WhoisLookup();
-    var response = await whois.LookupAsync("github.com");
-    return response.Content;
-}
+// Create a WhoisLookup instance
+var whois = new WhoisLookup();
+
+// Query github.com
+var response = await whois.LookupAsync("github.com");
+
+// Output the json 
+Console.WriteLine(response.Content);
 ```
 
 ### Configuration
@@ -56,11 +77,11 @@ The library can be configured globally or per instance:
 
 ```csharp
 // Global configuration
-WhoisOptions.Defaults.DefaultEncoding = Encoding.ASCII;
+WhoisOptions.Defaults.Encoding = Encoding.UTF8;
 
-// Instance configuration
+// Per-instance configuration
 var lookup = new WhoisLookup();
-lookup.Options.ParseWhoisResponse = false;
+lookup.Options.TimeoutSeconds = 30;
 ```
 
 ## Extending
@@ -72,11 +93,11 @@ If a registrar's WHOIS data isn't being parsed correctly, you can simply add a n
 ```csharp
 var lookup = new WhoisLookup();
 
-// Clear embedded patterns
-lookup.ClearPatterns()
+// Clear the embedded templates (not recommended)
+lookup.Parser.ClearTemplates();
 
-// Add new pattern
-lookup.AddPattern("Domain: {DomainName$}", "Simple Pattern")
+// Add a custom WHOIS response parsing template
+lookup.Parser.AddTemplate("Domain: { DomainName$ }", "Simple Pattern");
 ```
 
 See the [existing patterns](https://github.com/flipbit/whois/blob/master/Whois/Resources/Patterns/Domains/RegistrarSafe.txt) and [Tokenizer](https://github.com/flipbit/tokenizer) documentation for information about creating patterns.  You can also add validation and transformation functions to your patterns.
@@ -85,15 +106,38 @@ See the [existing patterns](https://github.com/flipbit/whois/blob/master/Whois/R
 
 The library communicates via an `ITcpReader` interface.  The [default implementation](https://github.com/flipbit/whois/blob/master/Whois/Net/TcpReader.cs) will talk directly to a WHOIS server over port 43.  You can change this behaviour by creating a new `ITcpReader` implementation and registering it the `TcpReaderFactory`:
 
-```csharp
-// Custom implementation
+```csharp        
+// Create a custom ITcpReader implementation
 class MyCustomTcpReader : ITcpReader
 {
-    ...
+	private readonly ITcpReader reader;
+
+	public MyCustomTcpReader()
+	{
+		reader = new TcpReader();
+	}
+
+	public Task<string> Read(string url, int port, string command, Encoding encoding, int timeoutSeconds)
+	{
+		Console.WriteLine($"Reading from URL: {url}");
+
+		return reader.Read(url, port, command, encoding, timeoutSeconds);
+	}
+
+	public void Dispose()
+	{
+		reader.Dispose();
+	}
 }
 
-// Register
-TcpReaderFactory.Bind(() => new MyCustomTcpReader());
+// Create a WhoisLookup instance
+var lookup = new WhoisLookup();
+
+// Assign the custom TcpReader
+lookup.TcpReader = new MyCustomTcpReader();
+
+// Lookups will now use the custom TcpReader
+var response = lookup.Lookup("github.com");
 ```
 
 ### Installation
