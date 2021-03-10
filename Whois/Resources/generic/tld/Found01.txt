@@ -7,7 +7,7 @@ name: generic/tld/Found001
 # Use this template for catch-all parsing:
 tag: catch-all
 
-# End tokens on new lines
+# Allow lines to appear out of order
 outOfOrder: true
 
 # End tokens on new lines

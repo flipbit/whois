@@ -100,7 +100,7 @@ lookup.Parser.ClearTemplates();
 lookup.Parser.AddTemplate("Domain: { DomainName$ }", "Simple Pattern");
 ```
 
-See the [existing patterns](https://github.com/flipbit/whois/blob/master/Whois/Resources/Patterns/Domains/RegistrarSafe.txt) and [Tokenizer](https://github.com/flipbit/tokenizer) documentation for information about creating patterns.  You can also add validation and transformation functions to your patterns.
+See the [existing patterns](https://github.com/flipbit/whois/blob/master/Whois/Resources/generic/tld/Found02.txt) and [Tokenizer](https://github.com/flipbit/tokenizer) documentation for information about creating patterns.  You can also add validation and transformation functions to your patterns.
 
 ### Networking
 

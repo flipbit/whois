@@ -1,6 +1,6 @@
 ---
 #
-# .com Parsing Template
+# Generic TLD Parsing Template
 #
 name: generic/tld/Found02
 
