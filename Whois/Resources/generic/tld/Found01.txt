@@ -30,6 +30,7 @@ Domain ID:{ RegistryDomainId : Trim }
 #
 # Creation Date
 #
+Creation Date:{ Registered : ToDateTimeUtc("yyyy-MM-ddTHH:mm:ss") }
 Creation Date:{ Registered : ToDateTimeUtc("yyyy-MM-ddTHH:mm:ssZ") }
 Creation Date:{ Registered : ToDateTimeUtc("yyyy-MM-ddTHH:mm:ss.fZ") }
 Creation Date:{ Registered : ToDateTimeUtc("yyyy-MM-ddTHH:mm:ss.ffZ") }
@@ -52,6 +53,7 @@ Domain Create Date:{ Registered : ToDateTimeUtc("yyyy-MM-ddTHH:mm:sszzz") }
 #
 # Updated Date
 #
+Updated Date:{ Updated : ToDateTimeUtc("yyyy-MM-ddTHH:mm:ss") }
 Updated Date:{ Updated : ToDateTimeUtc("yyyy-MM-ddTHH:mm:ssZ") }
 Updated Date:{ Updated : ToDateTimeUtc("yyyy-MM-ddTHH:mm:ss.fZ") }
 Updated Date:{ Updated : ToDateTimeUtc("yyyy-MM-ddTHH:mm:ss.ffZ") }
@@ -86,6 +88,7 @@ Registry Expiry Date:{ Expiration : ToDateTimeUtc("yyyy-MM-ddTHH:mm:ss.ffZ") }
 Registry Expiry Date:{ Expiration : ToDateTimeUtc("yyyy-MM-ddTHH:mm:ss.fffZ") }
 Registry Expiry Date:{ Expiration : ToDateTimeUtc("dd-MMM-yyyy HH:mm:ss") }
 Registry Expiry Date:{ Expiration : ToDateTimeUtc("yyyy-MM-ddTHH:mm:sszzz") }
+Registrar Registration Expiration Date:{ Expiration : ToDateTimeUtc("yyyy-MM-ddTHH:mm:ss") }
 Registrar Registration Expiration Date:{ Expiration : ToDateTimeUtc("yyyy-MM-ddTHH:mm:ssZ") }
 Registrar Registration Expiration Date:{ Expiration : ToDateTimeUtc("yyyy-MM-ddTHH:mm:ss.fZ") }
 Registrar Registration Expiration Date:{ Expiration : ToDateTimeUtc("yyyy-MM-ddTHH:mm:ss.ffZ") }
