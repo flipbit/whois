@@ -38,3 +38,4 @@ jobs:
         project_path: Whois.Tests
         report_name: whois_tests
         report_title: Whois Tests
+        github_token: ${{ secrets.GITHUB_TOKEN }}
