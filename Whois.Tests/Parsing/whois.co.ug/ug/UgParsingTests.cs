@@ -70,7 +70,6 @@ namespace Whois.Parsing.Whois.Co.Ug.Ug
             Assert.AreEqual("ACTIVE", response.DomainStatus[0]);
 
             Assert.AreEqual(23, response.FieldsParsed);
-            AssertWriter.Write(response);
         }
 
         [Test]

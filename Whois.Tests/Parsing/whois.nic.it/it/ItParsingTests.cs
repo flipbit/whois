@@ -1433,7 +1433,6 @@ namespace Whois.Parsing.Whois.Nic.It.It
             Assert.Greater(sample.Length, 0);
             Assert.AreEqual(WhoisStatus.Found, response.Status);
 
-            AssertWriter.Write(response);
             Assert.AreEqual(0, response.ParsingErrors);
             Assert.AreEqual("whois.nic.it/it/Found", response.TemplateName);
 

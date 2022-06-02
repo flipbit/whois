@@ -31,6 +31,10 @@ jobs:
  
     - name: Build
       run: dotnet build --configuration Release --no-restore
- 
+    
     - name: Test
-      run: dotnet test --no-restore
+      uses: zyborg/dotnet-tests-report@v1
+      with:
+        project_path: Whois.Tests
+        report_name: whois_tests
+        report_title: Whois Tests

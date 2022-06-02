@@ -193,7 +193,6 @@ namespace Whois.Parsing.Whois.Registro.Br.Br
 
             Assert.AreEqual(WhoisStatus.Found, response.Status);
 
-            AssertWriter.Write(response);
             Assert.AreEqual(0, response.ParsingErrors);
             Assert.AreEqual("whois.registro.br/br/Found", response.TemplateName);
 

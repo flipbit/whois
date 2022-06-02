@@ -35,8 +35,6 @@ namespace Whois.Parsing.Whois.Afilias.Grs.Info.Bz
 
             Assert.Greater(sample.Length, 0);
             Assert.AreEqual(WhoisStatus.Found, response.Status);
-
-            AssertWriter.Write(response);
         }
     }
 }

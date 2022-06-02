@@ -26,7 +26,12 @@ namespace Whois.Parsing.Whois.Nic.Sn.Sn
             Assert.Greater(sample.Length, 0);
             Assert.AreEqual(WhoisStatus.NotFound, response.Status);
 
-            AssertWriter.Write(response);
+            Assert.AreEqual(0, response.ParsingErrors);
+            Assert.AreEqual("whois.nic.sn/sn/NotFound", response.TemplateName);
+
+            Assert.AreEqual("u34jedzcq.sn", response.DomainName.ToString());
+
+            Assert.AreEqual(2, response.FieldsParsed);
         }
 
         [Test]

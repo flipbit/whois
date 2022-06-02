@@ -43,7 +43,6 @@ namespace Whois.Parsing.Whois.Thnic.Co.Th.Th
             Assert.Greater(sample.Length, 0);
             Assert.AreEqual(WhoisStatus.Found, response.Status);
 
-            AssertWriter.Write(response);
             Assert.AreEqual(0, response.ParsingErrors);
             Assert.AreEqual("whois.thnic.co.th/th/Found", response.TemplateName);
 

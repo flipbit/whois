@@ -26,8 +26,6 @@ namespace Whois.Parsing.Capetown.Whois.Registry.Net.Za.Capetown
             Assert.Greater(sample.Length, 0);
             Assert.AreEqual(WhoisStatus.NotFound, response.Status);
             Assert.AreEqual("nosuchdomain.capetown", response.DomainName.ToString());
-
-            AssertWriter.Write(response);
         }
 
         [Test]

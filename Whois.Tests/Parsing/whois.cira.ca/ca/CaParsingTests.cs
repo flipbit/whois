@@ -142,8 +142,6 @@ namespace Whois.Parsing.Whois.Cira.Ca.Ca
             Assert.AreEqual("auto-renew grace", response.DomainStatus[0]);
 
             Assert.AreEqual(27, response.FieldsParsed);
-
-            AssertWriter.Write(response);
         }
 
         [Test]

@@ -26,7 +26,6 @@ namespace Whois.Parsing.Whois.Nic.Gs.Gs
             Assert.Greater(sample.Length, 0);
             Assert.AreEqual(WhoisStatus.NotFound, response.Status);
 
-            AssertWriter.Write(response);
             Assert.AreEqual(0, response.ParsingErrors);
             Assert.AreEqual("whois.nic.gs/gs/NotFound", response.TemplateName);
 

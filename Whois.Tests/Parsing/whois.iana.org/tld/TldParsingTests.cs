@@ -177,7 +177,12 @@ namespace Whois.Parsing.Whois.Iana.Org.Tld
             Assert.Greater(sample.Length, 0);
             Assert.AreEqual(WhoisStatus.NotAssigned, response.Status);
 
-            AssertWriter.Write(response);
+            Assert.AreEqual(0, response.ParsingErrors);
+            Assert.AreEqual("whois.iana.org/tld/NotAssigned", response.TemplateName);
+
+            Assert.AreEqual("eh", response.DomainName.ToString());
+
+            Assert.AreEqual(2, response.FieldsParsed);
         }
     }
 }
