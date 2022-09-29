@@ -12,7 +12,7 @@ namespace Whois.Parsing.Whois.Website.Ws.Ws
         [SetUp]
         public void SetUp()
         {
-            SerilogConfig.Init();
+            LogConfig.Init();
 
             parser = new WhoisParser();
         }

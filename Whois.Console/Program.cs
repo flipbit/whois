@@ -2,8 +2,8 @@
 using System.Collections.Generic;
 using System.Threading.Tasks;
 using CommandLine;
+using Microsoft.Extensions.Logging;
 using Newtonsoft.Json;
-using Serilog;
 
 namespace Whois
 {
@@ -18,14 +18,12 @@ namespace Whois
         /// <param name="args">The args.</param>
         private static async Task Main(string[] args)
         {
-            var log = new LoggerConfiguration()
-                .WriteTo
-                .Console(outputTemplate: "{Timestamp:HH:mm} [{Level}] {Message}{NewLine}{Exception}")
-                .MinimumLevel
-                .Error()
-                .CreateLogger();
-
-            Log.Logger = log;
+            var loggerFactory = LoggerFactory.Create(builder =>
+            {
+                builder.SetMinimumLevel(LogLevel.Trace);
+                builder.AddConsole(options => options.DisableColors = true);
+            });
+            LogProvider.Factory = loggerFactory;
 
             var result = Parser
                 .Default

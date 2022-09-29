@@ -12,7 +12,7 @@ namespace Whois.Parsing.Whois.Dk.Hostmaster.Dk.Dk
         [SetUp]
         public void SetUp()
         {
-            SerilogConfig.Init();
+            LogConfig.Init();
 
             parser = new WhoisParser();
         }
@@ -43,7 +43,7 @@ namespace Whois.Parsing.Whois.Dk.Hostmaster.Dk.Dk
             Assert.AreEqual(4, response.Registrant.Address.Count);
             Assert.AreEqual("Hausergade 36 1th", response.Registrant.Address[0]);
             Assert.AreEqual("1128", response.Registrant.Address[1]);
-            Assert.AreEqual("København K", response.Registrant.Address[2]);
+            Assert.AreEqual("Kï¿½benhavn K", response.Registrant.Address[2]);
             Assert.AreEqual("DK", response.Registrant.Address[3]);
 
 
@@ -56,7 +56,7 @@ namespace Whois.Parsing.Whois.Dk.Hostmaster.Dk.Dk
             Assert.AreEqual(4, response.AdminContact.Address.Count);
             Assert.AreEqual("Hausergade 36 1th", response.AdminContact.Address[0]);
             Assert.AreEqual("1128", response.AdminContact.Address[1]);
-            Assert.AreEqual("København K", response.AdminContact.Address[2]);
+            Assert.AreEqual("Kï¿½benhavn K", response.AdminContact.Address[2]);
             Assert.AreEqual("DK", response.AdminContact.Address[3]);
 
 

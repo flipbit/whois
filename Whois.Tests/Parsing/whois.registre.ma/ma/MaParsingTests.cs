@@ -12,7 +12,7 @@ namespace Whois.Parsing.Whois.Registre.Ma.Ma
         [SetUp]
         public void SetUp()
         {
-            SerilogConfig.Init();
+            LogConfig.Init();
 
             parser = new WhoisParser();
         }

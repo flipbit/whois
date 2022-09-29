@@ -12,7 +12,7 @@ namespace Whois.Parsing.Whois.Dotname.Co.Kr.Com
         [SetUp]
         public void SetUp()
         {
-            SerilogConfig.Init();
+            LogConfig.Init();
 
             parser = new WhoisParser();
         }

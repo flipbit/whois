@@ -12,7 +12,7 @@ namespace Whois.Parsing.Whois.Pandi.Or.Id.Id
         [SetUp]
         public void SetUp()
         {
-            SerilogConfig.Init();
+            LogConfig.Init();
 
             parser = new WhoisParser();
         }

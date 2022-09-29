@@ -11,7 +11,7 @@ namespace Whois.Parsing.Whois.Eu.Eu
         [SetUp]
         public void SetUp()
         {
-            SerilogConfig.Init();
+            LogConfig.Init();
 
             parser = new WhoisParser();
         }

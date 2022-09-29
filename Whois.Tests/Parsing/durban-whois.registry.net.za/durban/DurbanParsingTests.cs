@@ -12,7 +12,7 @@ namespace Whois.Parsing.Durban.Whois.Registry.Net.Za.Durban
         [SetUp]
         public void SetUp()
         {
-            SerilogConfig.Init();
+            LogConfig.Init();
 
             parser = new WhoisParser();
         }

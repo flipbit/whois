@@ -12,7 +12,7 @@ namespace Whois.Parsing.Whois.Norid.No.No
         [SetUp]
         public void SetUp()
         {
-            SerilogConfig.Init();
+            LogConfig.Init();
 
             parser = new WhoisParser();
         }

@@ -12,7 +12,7 @@ namespace Whois.Parsing.Whois.Registro.Br.Br
         [SetUp]
         public void SetUp()
         {
-            SerilogConfig.Init();
+            LogConfig.Init();
 
             parser = new WhoisParser();
         }
@@ -180,7 +180,7 @@ namespace Whois.Parsing.Whois.Registro.Br.Br
             Assert.AreEqual("registro.br", response.DomainName.ToString());
 
              // Registrant Details
-            Assert.AreEqual("Núcleo de Informação e Coordenação do Ponto BR (662379)", response.Registrant.Name);
+            Assert.AreEqual("Nï¿½cleo de Informaï¿½ï¿½o e Coordenaï¿½ï¿½o do Ponto BR (662379)", response.Registrant.Name);
 
             Assert.AreEqual(3, response.FieldsParsed);
         }

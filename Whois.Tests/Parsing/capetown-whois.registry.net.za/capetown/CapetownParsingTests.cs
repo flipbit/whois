@@ -12,7 +12,7 @@ namespace Whois.Parsing.Capetown.Whois.Registry.Net.Za.Capetown
         [SetUp]
         public void SetUp()
         {
-            SerilogConfig.Init();
+            LogConfig.Init();
 
             parser = new WhoisParser();
         }

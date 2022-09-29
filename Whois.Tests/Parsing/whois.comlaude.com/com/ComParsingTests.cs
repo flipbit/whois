@@ -12,7 +12,7 @@ namespace Whois.Parsing.Whois.Comlaude.Com.Com
         [SetUp]
         public void SetUp()
         {
-            SerilogConfig.Init();
+            LogConfig.Init();
 
             parser = new WhoisParser();
         }

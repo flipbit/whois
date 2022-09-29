@@ -13,7 +13,7 @@ namespace Whois.Servers
         [SetUp]
         public void SetUp()
         {
-            SerilogConfig.Init();
+            LogConfig.Init();
 
             lookup = new IanaServerLookup();
             reader = new SampleReader();

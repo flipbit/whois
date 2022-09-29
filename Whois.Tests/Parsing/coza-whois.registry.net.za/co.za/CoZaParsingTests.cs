@@ -12,7 +12,7 @@ namespace Whois.Parsing.Coza.Whois.Registry.Net.Za.CoZa
         [SetUp]
         public void SetUp()
         {
-            SerilogConfig.Init();
+            LogConfig.Init();
 
             parser = new WhoisParser();
         }

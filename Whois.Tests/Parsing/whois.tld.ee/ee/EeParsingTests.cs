@@ -12,7 +12,7 @@ namespace Whois.Parsing.Whois.Tld.Ee.Ee
         [SetUp]
         public void SetUp()
         {
-            SerilogConfig.Init();
+            LogConfig.Init();
 
             parser = new WhoisParser();
         }
@@ -32,7 +32,7 @@ namespace Whois.Parsing.Whois.Tld.Ee.Ee
             Assert.AreEqual("samanacrafts.ee", response.DomainName.ToString());
 
             // Registrar Details
-            Assert.AreEqual("Edicy OÜ", response.Registrar.Name);
+            Assert.AreEqual("Edicy Oï¿½", response.Registrar.Name);
             Assert.AreEqual("http://www.edicy.com", response.Registrar.Url);
             Assert.AreEqual("+3727460064", response.Registrar.AbuseTelephoneNumber);
 
@@ -110,12 +110,12 @@ namespace Whois.Parsing.Whois.Tld.Ee.Ee
 
 
              // AdminContact Details
-            Assert.AreEqual("Jaana Järve", response.AdminContact.Name);
+            Assert.AreEqual("Jaana Jï¿½rve", response.AdminContact.Name);
             Assert.AreEqual(new DateTime(2015, 10, 30, 06, 31, 21, 000, DateTimeKind.Utc), response.AdminContact.Updated);
 
 
              // TechnicalContact Details
-            Assert.AreEqual("Jaana Järve", response.TechnicalContact.Name);
+            Assert.AreEqual("Jaana Jï¿½rve", response.TechnicalContact.Name);
             Assert.AreEqual(new DateTime(2015, 10, 30, 06, 31, 21, 000, DateTimeKind.Utc), response.TechnicalContact.Updated);
 
 
@@ -160,12 +160,12 @@ namespace Whois.Parsing.Whois.Tld.Ee.Ee
 
 
              // AdminContact Details
-            Assert.AreEqual("Jaana Järve", response.AdminContact.Name);
+            Assert.AreEqual("Jaana Jï¿½rve", response.AdminContact.Name);
             Assert.AreEqual(new DateTime(2015, 10, 30, 06, 31, 21, 000, DateTimeKind.Utc), response.AdminContact.Updated);
 
 
              // TechnicalContact Details
-            Assert.AreEqual("Jaana Järve", response.TechnicalContact.Name);
+            Assert.AreEqual("Jaana Jï¿½rve", response.TechnicalContact.Name);
             Assert.AreEqual(new DateTime(2015, 10, 30, 06, 31, 21, 000, DateTimeKind.Utc), response.TechnicalContact.Updated);
 
 

@@ -12,7 +12,7 @@ namespace Whois.Parsing.Whois.Denic.De.De
         [SetUp]
         public void SetUp()
         {
-            SerilogConfig.Init();
+            LogConfig.Init();
 
             parser = new WhoisParser();
         }
@@ -206,7 +206,7 @@ namespace Whois.Parsing.Whois.Denic.De.De
             Assert.AreEqual(4, response.AdminContact.Address.Count);
             Assert.AreEqual("Landerigatan 1", response.AdminContact.Address[0]);
             Assert.AreEqual("50451", response.AdminContact.Address[1]);
-            Assert.AreEqual("Borås", response.AdminContact.Address[2]);
+            Assert.AreEqual("Borï¿½s", response.AdminContact.Address[2]);
             Assert.AreEqual("SE", response.AdminContact.Address[3]);
 
             Assert.AreEqual("+46.701434896", response.AdminContact.TelephoneNumber);
@@ -221,7 +221,7 @@ namespace Whois.Parsing.Whois.Denic.De.De
             Assert.AreEqual(4, response.TechnicalContact.Address.Count);
             Assert.AreEqual("Landerigatan 1", response.TechnicalContact.Address[0]);
             Assert.AreEqual("50451", response.TechnicalContact.Address[1]);
-            Assert.AreEqual("Borås", response.TechnicalContact.Address[2]);
+            Assert.AreEqual("Borï¿½s", response.TechnicalContact.Address[2]);
             Assert.AreEqual("SE", response.TechnicalContact.Address[3]);
 
             Assert.AreEqual("+46.701434896", response.TechnicalContact.TelephoneNumber);
@@ -253,7 +253,7 @@ namespace Whois.Parsing.Whois.Denic.De.De
             Assert.AreEqual("whois.denic.de/de/Found", response.TemplateName);
 
             Assert.AreEqual("xn--tstdomain-failed-nserver-qbc.de", response.DomainName.ToString());
-            Assert.AreEqual("tästdomain-failed-nserver.de", response.DomainName.ToUnicodeString());
+            Assert.AreEqual("tï¿½stdomain-failed-nserver.de", response.DomainName.ToUnicodeString());
 
             Assert.AreEqual(new DateTime(2010, 6, 1, 8, 29, 38, DateTimeKind.Utc), response.Updated);
 

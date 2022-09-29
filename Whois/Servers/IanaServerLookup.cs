@@ -1,7 +1,7 @@
 ﻿using System;
 using System.Threading.Tasks;
+using Microsoft.Extensions.Logging;
 using Tokens;
-using Whois.Logging;
 using Whois.Net;
 using Whois.Parsers;
 
@@ -14,7 +14,7 @@ namespace Whois.Servers
     {
         private const string IanaUrl = "whois.iana.org";
         
-        private static readonly ILog Log = LogProvider.GetCurrentClassLogger();
+        private static readonly ILogger<IanaServerLookup> Log = LogProvider.For<IanaServerLookup>();
 
         private readonly Lazy<TokenMatcher> ianaTemplate;
         private readonly ResourceReader resourceReader;
@@ -73,11 +73,11 @@ namespace Whois.Servers
 
         private async Task<string> Download(string tld, WhoisRequest request)
         {
-            Log.Debug("Looking up Root TLD server for {0} from {1}", tld, IanaUrl);
+            Log.LogDebug("Looking up Root TLD server for {tld} from {IanaUrl}", new { tld , IanaUrl });
 
             var response = await TcpReader.Read(IanaUrl, 43, tld.ToUpper(), request.Encoding, request.TimeoutSeconds);
 
-            Log.Debug("Received {0:###,###,##0} byte(s).", response.Length);
+            Log.LogDebug("Received {length:###,###,##0} byte(s).", new { length = response.Length });
 
             return response;
         }

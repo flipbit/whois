@@ -11,7 +11,7 @@ namespace Whois.Parsing.Whois.Nic.Ai.Ai
         [SetUp]
         public void SetUp()
         {
-            SerilogConfig.Init();
+            LogConfig.Init();
 
             parser = new WhoisParser();
         }

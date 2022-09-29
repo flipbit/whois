@@ -12,7 +12,7 @@ namespace Whois.Parsing.Whois.Educause.Edu.Edu
         [SetUp]
         public void SetUp()
         {
-            SerilogConfig.Init();
+            LogConfig.Init();
 
             parser = new WhoisParser();
         }

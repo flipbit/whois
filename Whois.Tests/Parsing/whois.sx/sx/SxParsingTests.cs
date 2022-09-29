@@ -12,7 +12,7 @@ namespace Whois.Parsing.Whois.Sx.Sx
         [SetUp]
         public void SetUp()
         {
-            SerilogConfig.Init();
+            LogConfig.Init();
 
             parser = new WhoisParser();
         }
@@ -81,7 +81,7 @@ namespace Whois.Parsing.Whois.Sx.Sx
 
              // Registrant Address
             Assert.AreEqual(4, response.Registrant.Address.Count);
-            Assert.AreEqual("2, rue Léon Laval", response.Registrant.Address[0]);
+            Assert.AreEqual("2, rue Lï¿½on Laval", response.Registrant.Address[0]);
             Assert.AreEqual("Leudelange", response.Registrant.Address[1]);
             Assert.AreEqual("L3372", response.Registrant.Address[2]);
             Assert.AreEqual("LUXEMBOURG", response.Registrant.Address[3]);
@@ -95,7 +95,7 @@ namespace Whois.Parsing.Whois.Sx.Sx
 
              // AdminContact Address
             Assert.AreEqual(4, response.AdminContact.Address.Count);
-            Assert.AreEqual("2, rue Léon Laval", response.AdminContact.Address[0]);
+            Assert.AreEqual("2, rue Lï¿½on Laval", response.AdminContact.Address[0]);
             Assert.AreEqual("Leudelange", response.AdminContact.Address[1]);
             Assert.AreEqual("L3372", response.AdminContact.Address[2]);
             Assert.AreEqual("LUXEMBOURG", response.AdminContact.Address[3]);
@@ -109,7 +109,7 @@ namespace Whois.Parsing.Whois.Sx.Sx
 
              // TechnicalContact Address
             Assert.AreEqual(4, response.TechnicalContact.Address.Count);
-            Assert.AreEqual("2, rue Léon Laval", response.TechnicalContact.Address[0]);
+            Assert.AreEqual("2, rue Lï¿½on Laval", response.TechnicalContact.Address[0]);
             Assert.AreEqual("Leudelange", response.TechnicalContact.Address[1]);
             Assert.AreEqual("L3372", response.TechnicalContact.Address[2]);
             Assert.AreEqual("LUXEMBOURG", response.TechnicalContact.Address[3]);

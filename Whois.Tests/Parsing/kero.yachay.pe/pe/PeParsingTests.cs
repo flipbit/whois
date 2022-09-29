@@ -11,7 +11,7 @@ namespace Whois.Parsing.Kero.Yachay.Pe.Pe
         [SetUp]
         public void SetUp()
         {
-            SerilogConfig.Init();
+            LogConfig.Init();
 
             parser = new WhoisParser();
         }

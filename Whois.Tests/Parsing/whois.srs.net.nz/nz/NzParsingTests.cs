@@ -11,7 +11,7 @@ namespace Whois.Parsing.Whois.Srs.Net.Nz.Nz
         [SetUp]
         public void SetUp()
         {
-            SerilogConfig.Init();
+            LogConfig.Init();
 
             parser = new WhoisParser();
         }
