@@ -12,7 +12,7 @@ namespace Whois.Parsing.Whois.Tcinet.Ru.XnP1ai
         [SetUp]
         public void SetUp()
         {
-            SerilogConfig.Init();
+            LogConfig.Init();
 
             parser = new WhoisParser();
         }

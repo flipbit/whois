@@ -12,7 +12,7 @@ namespace Whois.Parsing.Whois.Kenic.Or.Ke.Ke
         [SetUp]
         public void SetUp()
         {
-            SerilogConfig.Init();
+            LogConfig.Init();
 
             parser = new WhoisParser();
         }

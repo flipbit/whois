@@ -12,7 +12,7 @@ namespace Whois.Parsing.Whois.Nic.Space.Space
         [SetUp]
         public void SetUp()
         {
-            SerilogConfig.Init();
+            LogConfig.Init();
 
             parser = new WhoisParser();
         }

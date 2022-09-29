@@ -12,7 +12,7 @@ namespace Whois.Parsing.Whois.Afilias.Grs.Info.Mn
         [SetUp]
         public void SetUp()
         {
-            SerilogConfig.Init();
+            LogConfig.Init();
 
             parser = new WhoisParser();
         }

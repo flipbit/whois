@@ -11,7 +11,7 @@ namespace Whois.Parsing.Whois.Nic.Ch.Ch
         [SetUp]
         public void SetUp()
         {
-            SerilogConfig.Init();
+            LogConfig.Init();
 
             parser = new WhoisParser();
         }
@@ -80,7 +80,7 @@ namespace Whois.Parsing.Whois.Nic.Ch.Ch
              // Registrant Address
             Assert.AreEqual(3, response.Registrant.Address.Count);
             Assert.AreEqual("Schauenbergstrasse 26", response.Registrant.Address[0]);
-            Assert.AreEqual("CH-8046 Zürich", response.Registrant.Address[1]);
+            Assert.AreEqual("CH-8046 Zï¿½rich", response.Registrant.Address[1]);
             Assert.AreEqual("Switzerland", response.Registrant.Address[2]);
 
 
@@ -90,7 +90,7 @@ namespace Whois.Parsing.Whois.Nic.Ch.Ch
              // TechnicalContact Address
             Assert.AreEqual(3, response.TechnicalContact.Address.Count);
             Assert.AreEqual("Schauenbergstrasse 26", response.TechnicalContact.Address[0]);
-            Assert.AreEqual("CH-8046 Zürich", response.TechnicalContact.Address[1]);
+            Assert.AreEqual("CH-8046 Zï¿½rich", response.TechnicalContact.Address[1]);
             Assert.AreEqual("Switzerland", response.TechnicalContact.Address[2]);
 
 

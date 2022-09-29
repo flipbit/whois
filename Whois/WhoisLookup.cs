@@ -1,9 +1,9 @@
 ﻿using System;
 using System.Text;
 using System.Threading.Tasks;
+using Microsoft.Extensions.Logging;
 using Tokens.Transformers;
 using Tokens.Validators;
-using Whois.Logging;
 using Whois.Net;
 using Whois.Parsers;
 using Whois.Servers;
@@ -15,7 +15,7 @@ namespace Whois
     /// </summary>
     public class WhoisLookup : IWhoisLookup
     {
-        private static readonly ILog Log = LogProvider.GetCurrentClassLogger();
+        private static readonly ILogger<WhoisLookup> Log = LogProvider.For<WhoisLookup>();
         
         /// <summary>
         /// The default <see cref="WhoisOptions"/> to use for this instance
@@ -121,7 +121,7 @@ namespace Whois
                 throw new WhoisException($"WHOIS Query Format Error: {request.Query}");
             }
 
-            Log.Debug("Looking up WHOIS response for: {0}", hostName.Value);
+            Log.LogDebug("Looking up WHOIS response for: {hostname}", new { hostname = hostName.Value });
 
             // Set our starting point
             WhoisResponse response;
@@ -187,7 +187,8 @@ namespace Whois
 
             var content = await TcpReader.Read(url, 43, query, request.Encoding, request.TimeoutSeconds);
 
-            Log.Debug("Lookup {0}: Downloaded {1:###,###,##0} byte(s) from {2}.", request.Query, content.Length, url);
+            Log.LogDebug("Lookup {query}: Downloaded {length:###,###,##0} byte(s) from {url}.", 
+                new { query = request.Query, length = content.Length, url = url });
 
             return content;
         }

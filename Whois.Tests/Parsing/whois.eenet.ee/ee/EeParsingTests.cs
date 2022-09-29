@@ -12,7 +12,7 @@ namespace Whois.Parsing.Whois.Eenet.Ee.Ee
         [SetUp]
         public void SetUp()
         {
-            SerilogConfig.Init();
+            LogConfig.Init();
 
             parser = new WhoisParser();
         }
@@ -53,13 +53,13 @@ namespace Whois.Parsing.Whois.Eenet.Ee.Ee
             Assert.AreEqual(new DateTime(2003, 04, 22, 00, 00, 00, 000, DateTimeKind.Utc), response.Registered);
 
              // Registrant Details
-            Assert.AreEqual("ADVOKAADIBÜROO SORAINEN AS", response.Registrant.Name);
+            Assert.AreEqual("ADVOKAADIBÃœROO SORAINEN AS", response.Registrant.Name);
             Assert.AreEqual("5274536", response.Registrant.TelephoneNumber);
             Assert.AreEqual("+372 6400 901", response.Registrant.FaxNumber);
 
              // Registrant Address
             Assert.AreEqual(1, response.Registrant.Address.Count);
-            Assert.AreEqual("PÄRNU MNT, 15, HARJUMAA TALLINN KESKLINN 10141", response.Registrant.Address[0]);
+            Assert.AreEqual("PÃ„RNU MNT, 15, HARJUMAA TALLINN KESKLINN 10141", response.Registrant.Address[0]);
 
 
              // AdminContact Details

@@ -11,7 +11,7 @@ namespace Whois.Parsers
         [SetUp]
         public void SetUp()
         {
-            SerilogConfig.Init();
+            LogConfig.Init();
 
             parser = new WhoisParser();
             sampleReader = new SampleReader();

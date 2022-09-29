@@ -12,7 +12,7 @@ namespace Whois.Parsing.Whois.Twnic.Net.Tw.Tw
         [SetUp]
         public void SetUp()
         {
-            SerilogConfig.Init();
+            LogConfig.Init();
 
             parser = new WhoisParser();
         }

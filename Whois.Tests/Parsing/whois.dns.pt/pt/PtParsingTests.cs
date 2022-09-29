@@ -12,7 +12,7 @@ namespace Whois.Parsing.Whois.Dns.Pt.Pt
         [SetUp]
         public void SetUp()
         {
-            SerilogConfig.Init();
+            LogConfig.Init();
 
             parser = new WhoisParser();
         }
@@ -79,23 +79,23 @@ namespace Whois.Parsing.Whois.Dns.Pt.Pt
             Assert.AreEqual(new DateTime(2014, 03, 01, 00, 00, 00, DateTimeKind.Utc), response.Expiration);
 
              // Registrant Details
-            Assert.AreEqual("Portugalmail - Comunicações S.A.", response.Registrant.Name);
+            Assert.AreEqual("Portugalmail - Comunicaï¿½ï¿½es S.A.", response.Registrant.Name);
             Assert.AreEqual("registrars@ping.pt", response.Registrant.Email);
 
              // Registrant Address
             Assert.AreEqual(3, response.Registrant.Address.Count);
-            Assert.AreEqual("Rua Ricardo Severo, Nº 3 - 5º Dto.", response.Registrant.Address[0]);
+            Assert.AreEqual("Rua Ricardo Severo, Nï¿½ 3 - 5ï¿½ Dto.", response.Registrant.Address[0]);
             Assert.AreEqual("Porto", response.Registrant.Address[1]);
             Assert.AreEqual("4050-515 Porto", response.Registrant.Address[2]);
 
 
              // BillingContact Details
-            Assert.AreEqual("Portugalmail - Comunicações S.A.", response.BillingContact.Name);
+            Assert.AreEqual("Portugalmail - Comunicaï¿½ï¿½es S.A.", response.BillingContact.Name);
             Assert.AreEqual("registrars@ping.pt", response.BillingContact.Email);
 
 
              // TechnicalContact Details
-            Assert.AreEqual("Portugalmail - Comunicações S.A.", response.TechnicalContact.Name);
+            Assert.AreEqual("Portugalmail - Comunicaï¿½ï¿½es S.A.", response.TechnicalContact.Name);
 
 
             // Domain Status
@@ -141,23 +141,23 @@ namespace Whois.Parsing.Whois.Dns.Pt.Pt
             Assert.AreEqual(new DateTime(2014, 03, 01, 00, 00, 00, DateTimeKind.Utc), response.Expiration);
 
              // Registrant Details
-            Assert.AreEqual("Portugalmail - Comunicações S.A.", response.Registrant.Name);
+            Assert.AreEqual("Portugalmail - Comunicaï¿½ï¿½es S.A.", response.Registrant.Name);
             Assert.AreEqual("registrars@ping.pt", response.Registrant.Email);
 
              // Registrant Address
             Assert.AreEqual(3, response.Registrant.Address.Count);
-            Assert.AreEqual("Rua Ricardo Severo, Nº 3 - 5º Dto.", response.Registrant.Address[0]);
+            Assert.AreEqual("Rua Ricardo Severo, Nï¿½ 3 - 5ï¿½ Dto.", response.Registrant.Address[0]);
             Assert.AreEqual("Porto", response.Registrant.Address[1]);
             Assert.AreEqual("4050-515 Porto", response.Registrant.Address[2]);
 
 
              // BillingContact Details
-            Assert.AreEqual("Portugalmail - Comunicações S.A.", response.BillingContact.Name);
+            Assert.AreEqual("Portugalmail - Comunicaï¿½ï¿½es S.A.", response.BillingContact.Name);
             Assert.AreEqual("registrars@ping.pt", response.BillingContact.Email);
 
 
              // TechnicalContact Details
-            Assert.AreEqual("Portugalmail - Comunicações S.A.", response.TechnicalContact.Name);
+            Assert.AreEqual("Portugalmail - Comunicaï¿½ï¿½es S.A.", response.TechnicalContact.Name);
 
 
             // Domain Status
@@ -228,23 +228,23 @@ namespace Whois.Parsing.Whois.Dns.Pt.Pt
             Assert.AreEqual(new DateTime(2009, 02, 09, 00, 00, 00, DateTimeKind.Utc), response.Registered);
 
              // Registrant Details
-            Assert.AreEqual("Portugalmail - Comunicações S.A.", response.Registrant.Name);
+            Assert.AreEqual("Portugalmail - Comunicaï¿½ï¿½es S.A.", response.Registrant.Name);
             Assert.AreEqual("registos@portugalmail.pt", response.Registrant.Email);
 
              // Registrant Address
             Assert.AreEqual(3, response.Registrant.Address.Count);
-            Assert.AreEqual("Rua Ricardo Severo, Nº 3 - 5º Dto.", response.Registrant.Address[0]);
+            Assert.AreEqual("Rua Ricardo Severo, Nï¿½ 3 - 5ï¿½ Dto.", response.Registrant.Address[0]);
             Assert.AreEqual("4050-515 Porto", response.Registrant.Address[1]);
             Assert.AreEqual("PT", response.Registrant.Address[2]);
 
 
              // BillingContact Details
-            Assert.AreEqual("Portugalmail - Comunicações S.A.", response.BillingContact.Name);
+            Assert.AreEqual("Portugalmail - Comunicaï¿½ï¿½es S.A.", response.BillingContact.Name);
             Assert.AreEqual("registos@portugalmail.pt", response.BillingContact.Email);
 
 
              // TechnicalContact Details
-            Assert.AreEqual("Portugalmail - Comunicações S.A.", response.TechnicalContact.Name);
+            Assert.AreEqual("Portugalmail - Comunicaï¿½ï¿½es S.A.", response.TechnicalContact.Name);
 
 
             // Domain Status

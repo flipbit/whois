@@ -12,7 +12,7 @@ namespace Whois.Parsing.Whois.Ax.Ax
         [SetUp]
         public void SetUp()
         {
-            SerilogConfig.Init();
+            LogConfig.Init();
 
             parser = new WhoisParser();
         }
@@ -50,7 +50,7 @@ namespace Whois.Parsing.Whois.Ax.Ax
 
 
             Assert.AreEqual(new DateTime(2006, 8, 3, 0, 0, 0), response.Registered);
-            Assert.AreEqual("Ålands landskapsregering", response.Registrant.Name);
+            Assert.AreEqual("Ã…lands landskapsregering", response.Registrant.Name);
             Assert.AreEqual("0145076-7", response.Registrant.Organization);
 
             Assert.AreEqual(1, response.Registrant.Address.Count);

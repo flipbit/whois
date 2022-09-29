@@ -12,7 +12,7 @@ namespace Whois.Parsing.Org.Whois.Registry.Net.Za.OrgZa
         [SetUp]
         public void SetUp()
         {
-            SerilogConfig.Init();
+            LogConfig.Init();
 
             parser = new WhoisParser();
         }

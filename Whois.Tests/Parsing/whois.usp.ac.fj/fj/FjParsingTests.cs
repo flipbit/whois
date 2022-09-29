@@ -11,7 +11,7 @@ namespace Whois.Parsing.Whois.Usp.Ac.Fj.Fj
         [SetUp]
         public void SetUp()
         {
-            SerilogConfig.Init();
+            LogConfig.Init();
 
             parser = new WhoisParser();
         }

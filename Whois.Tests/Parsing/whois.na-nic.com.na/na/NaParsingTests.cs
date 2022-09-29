@@ -12,7 +12,7 @@ namespace Whois.Parsing.Whois.Na.Nic.Com.Na.Na
         [SetUp]
         public void SetUp()
         {
-            SerilogConfig.Init();
+            LogConfig.Init();
 
             parser = new WhoisParser();
         }

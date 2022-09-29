@@ -11,7 +11,7 @@ namespace Whois
     {
         public List<SampleDomain> ReadSampleDomains()
         {
-            var json = File.ReadAllText(Path.Join("..\\..\\..\\Samples", "Domains.txt"));
+            var json = File.ReadAllText(Path.Join("..", "..", "..", "Samples", "Domains.txt"));
 
             return JsonConvert.DeserializeObject<List<SampleDomain>>(json);
         }

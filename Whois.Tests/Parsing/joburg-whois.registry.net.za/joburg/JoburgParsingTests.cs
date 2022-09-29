@@ -12,7 +12,7 @@ namespace Whois.Parsing.Joburg.Whois.Registry.Net.Za.Joburg
         [SetUp]
         public void SetUp()
         {
-            SerilogConfig.Init();
+            LogConfig.Init();
 
             parser = new WhoisParser();
         }

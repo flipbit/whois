@@ -11,7 +11,7 @@ namespace Whois.Parsing.Whois.Centralnic.Com.UsOrg
         [SetUp]
         public void SetUp()
         {
-            SerilogConfig.Init();
+            LogConfig.Init();
 
             parser = new WhoisParser();
         }

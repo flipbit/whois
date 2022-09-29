@@ -12,7 +12,7 @@ namespace Whois.Parsing.Tvwhois.Verisign.Grs.Com.Tv
         [SetUp]
         public void SetUp()
         {
-            SerilogConfig.Init();
+            LogConfig.Init();
 
             parser = new WhoisParser();
         }

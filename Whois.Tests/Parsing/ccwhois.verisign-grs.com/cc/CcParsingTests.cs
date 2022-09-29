@@ -12,7 +12,7 @@ namespace Whois.Parsing.Ccwhois.Verisign.Grs.Com.Cc
         [SetUp]
         public void SetUp()
         {
-            SerilogConfig.Init();
+            LogConfig.Init();
 
             parser = new WhoisParser();
         }

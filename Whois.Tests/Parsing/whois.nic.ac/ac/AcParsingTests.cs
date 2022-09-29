@@ -12,7 +12,7 @@ namespace Whois.Parsing.Whois.Nic.Ac.Ac
         [SetUp]
         public void SetUp()
         {
-            SerilogConfig.Init();
+            LogConfig.Init();
 
             parser = new WhoisParser();
         }

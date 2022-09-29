@@ -12,7 +12,7 @@ namespace Whois.Parsing.Whois.Co.Pl.CoPl
         [SetUp]
         public void SetUp()
         {
-            SerilogConfig.Init();
+            LogConfig.Init();
 
             parser = new WhoisParser();
         }

@@ -12,7 +12,7 @@ namespace Whois.Parsing.Whois.Centralnic.Com.EuCom
         [SetUp]
         public void SetUp()
         {
-            SerilogConfig.Init();
+            LogConfig.Init();
 
             parser = new WhoisParser();
         }
