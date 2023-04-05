@@ -132,7 +132,6 @@ namespace Whois.Parsing.Whois.Dot.Cf.Cf
             Assert.Greater(sample.Length, 0);
             Assert.AreEqual(WhoisStatus.Found, response.Status);
 
-            AssertWriter.Write(response);
             Assert.AreEqual(0, response.ParsingErrors);
             Assert.AreEqual("whois.dot.cf/cf/Found", response.TemplateName);
 

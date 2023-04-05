@@ -106,7 +106,6 @@ namespace Whois.Parsing.Whois.Cctld.Uz.Uz
             Assert.AreEqual("RESERVED", response.DomainStatus[0]);
 
             Assert.AreEqual(42, response.FieldsParsed);
-            AssertWriter.Write(response);
         }
 
         [Test]

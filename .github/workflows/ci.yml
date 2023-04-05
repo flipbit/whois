@@ -1,0 +1,41 @@
+name: CI Build
+
+on:
+  push:
+    branches:
+      - master
+    paths-ignore:
+      - '**.md'
+
+  pull_request:
+    branches:
+      - master
+    paths-ignore:
+      - '**.md'
+
+jobs:
+  build:
+ 
+    runs-on: ubuntu-latest
+ 
+    steps:
+    - uses: actions/checkout@v2
+ 
+    - name: Setup .NET SDK
+      uses: actions/setup-dotnet@v1.7.2
+      with:
+        dotnet-version: 6.0.x
+ 
+    - name: Restore
+      run: dotnet restore
+ 
+    - name: Build
+      run: dotnet build --configuration Release --no-restore
+    
+    - name: Test
+      uses: zyborg/dotnet-tests-report@v1
+      with:
+        project_path: Whois.Tests
+        report_name: whois_tests
+        report_title: Whois Tests
+        github_token: ${{ secrets.GITHUB_TOKEN }}

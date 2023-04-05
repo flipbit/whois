@@ -682,7 +682,6 @@ namespace Whois.Parsing.Whois.Nic.Uk.Uk
 
             Assert.AreEqual(WhoisStatus.Suspended, response.Status);
 
-            AssertWriter.Write(response);
             Assert.AreEqual(0, response.ParsingErrors);
             Assert.AreEqual("whois.nic.uk/uk/Found", response.TemplateName);
 

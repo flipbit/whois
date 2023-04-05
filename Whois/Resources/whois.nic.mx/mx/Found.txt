@@ -16,12 +16,12 @@ set: Status = Found
 ---
 Domain Name: { DomainName : Trim, IsDomainName, ToHostName }
 
-Created On: { Registered ? : Trim, ToDateTimeUtc("dd-MMM-yyyy") }
-Expiration Date: { Expiration ? : Trim, ToDateTimeUtc("dd-MMM-yyyy") }
-Last Updated On: { Updated ? : Trim, ToDateTimeUtc("dd-MMM-yyyy") }
-Created On: { Registered ? : Trim, ToDateTimeUtc("yyyy-MM-dd") }
-Expiration Date: { Expiration ? : Trim, ToDateTimeUtc("yyyy-MM-dd") }
-Last Updated On: { Updated ? : Trim, ToDateTimeUtc("yyyy-MM-dd") }
+Created On: { Registered ? : Trim, SpanishToDecimalMonth, ToDateTimeUtc("dd-MM-yyyy") }
+Expiration Date: { Expiration ? : Trim, SpanishToDecimalMonth, ToDateTimeUtc("dd-MM-yyyy") }
+Last Updated On: { Updated ? : Trim, SpanishToDecimalMonth, ToDateTimeUtc("dd-MM-yyyy") }
+Created On: { Registered ? : Trim, SpanishToDecimalMonth, ToDateTimeUtc("yyyy-MM-dd") }
+Expiration Date: { Expiration ? : Trim, SpanishToDecimalMonth, ToDateTimeUtc("yyyy-MM-dd") }
+Last Updated On: { Updated ? : Trim, SpanishToDecimalMonth, ToDateTimeUtc("yyyy-MM-dd") }
 Registrar: { Registrar.Name ? : Trim }
 URL: { Registrar.Url ? : Trim, IsLooseAbsoluteUrl, ToLower }
 

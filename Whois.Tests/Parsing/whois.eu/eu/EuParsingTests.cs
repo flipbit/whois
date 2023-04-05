@@ -25,7 +25,6 @@ namespace Whois.Parsing.Whois.Eu.Eu
             Assert.Greater(sample.Length, 0);
             Assert.AreEqual(WhoisStatus.Found, response.Status);
 
-            AssertWriter.Write(response);
             Assert.AreEqual(0, response.ParsingErrors);
             Assert.AreEqual("whois.eu/eu/Found", response.TemplateName);
 

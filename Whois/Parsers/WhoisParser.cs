@@ -32,6 +32,7 @@ namespace Whois.Parsers
             // Register default transformers
             matcher.RegisterTransformer<CleanDomainStatusTransformer>();
             matcher.RegisterTransformer<ToHostNameTransformer>();
+            matcher.RegisterTransformer<SpanishToDecimalMonthTransformer>();
 
             // Register default FixUps
             FixUps.Add(new MultipleContactFixup());
@@ -152,4 +153,5 @@ namespace Whois.Parsers
             }
         }
     }
+
 }

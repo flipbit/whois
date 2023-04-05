@@ -26,7 +26,12 @@ namespace Whois.Parsing.Whois.Nic.Sh.Sh
             Assert.Greater(sample.Length, 0);
             Assert.AreEqual(WhoisStatus.NotFound, response.Status);
 
-            AssertWriter.Write(response);
+            Assert.AreEqual(0, response.ParsingErrors);
+            Assert.AreEqual("whois.nic.sh/sh/NotFound", response.TemplateName);
+
+            Assert.AreEqual("u34jedzcq.sh", response.DomainName.ToString());
+
+            Assert.AreEqual(2, response.FieldsParsed);
         }
 
         [Test]

@@ -26,7 +26,6 @@ namespace Whois.Parsing.Whois.Ja.Net.AcUk
             Assert.Greater(sample.Length, 0);
             Assert.AreEqual(WhoisStatus.NotFound, response.Status);
 
-            AssertWriter.Write(response);
             Assert.AreEqual(0, response.ParsingErrors);
             Assert.AreEqual("whois.ja.net/NotFound", response.TemplateName);
 

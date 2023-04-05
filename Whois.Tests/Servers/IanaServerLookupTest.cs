@@ -104,7 +104,6 @@ namespace Whois.Servers
 
             var response = lookup.Lookup(new WhoisRequest("test.be"));
 
-            AssertWriter.Write(response);
             Assert.AreEqual(0, response.ParsingErrors);
 
             Assert.AreEqual("be", response.DomainName.ToString());
@@ -176,11 +175,9 @@ namespace Whois.Servers
 
             var response = lookup.Lookup(new WhoisRequest("test.be"));
 
-            AssertWriter.Write(response);
             Assert.AreEqual(0, response.ParsingErrors);
 
             Assert.AreEqual("eh", response.DomainName.ToString());
-
 
             Assert.AreEqual(0, response.FieldsParsed);
         }

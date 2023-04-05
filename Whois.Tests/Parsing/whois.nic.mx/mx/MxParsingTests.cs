@@ -162,7 +162,6 @@ namespace Whois.Parsing.Whois.Nic.Mx.Mx
             Assert.AreEqual("California", response.TechnicalContact.Address[1]);
             Assert.AreEqual("United States", response.TechnicalContact.Address[2]);
 
-
             Assert.AreEqual(23, response.FieldsParsed);
         }
     }

@@ -6,7 +6,8 @@ namespace Whois
     {
         public string Read(string whoisServer, string tld, string sampleFileName)
         {
-            var directory = Path.Join("..\\..\\..\\Samples", whoisServer, tld);
+            var sampleDirectory = Path.GetFullPath(Path.Join("..", "..", "..", "Samples"));
+            var directory = Path.Join(sampleDirectory, whoisServer, tld);
             var fileName = Path.Join(directory, sampleFileName);
 
             return File.ReadAllText(fileName);
