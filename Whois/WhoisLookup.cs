@@ -108,33 +108,25 @@ namespace Whois
         public async Task<WhoisResponse> LookupAsync(WhoisRequest request)
         {
             if (string.IsNullOrEmpty(request.Query))
-            {
                 throw new ArgumentNullException($"{nameof(request)}.{nameof(request.Query)}");
-            }
 
             // Trim leading '.'
             if (request.Query.StartsWith(".")) request.Query = request.Query.Substring(1);
 
             // Validate domain name
             if (HostName.TryParse(request.Query, out var hostName) == false)
-            {
                 throw new WhoisException($"WHOIS Query Format Error: {request.Query}");
-            }
 
             Log.Debug("Looking up WHOIS response for: {0}", hostName.Value);
 
             // Set our starting point
             WhoisResponse response;
             if (string.IsNullOrEmpty(request.WhoisServer))
-            {
                 // Lookup root WHOIS server for the TLD
                 response = await ServerLookup.LookupAsync(request);
-            }
             else
-            {
                 // Use the given WHOIS server
                 response = WhoisResponse.WithServerUrl(request.WhoisServer);
-            }
 
             // If query is for a top level domain, we're finished
             if (hostName.IsTld) return response;
@@ -151,9 +143,7 @@ namespace Whois
 
                 // Sanity check: ensure the last response has some data
                 if (parsed.FieldsParsed == 0 && response.FieldsParsed > 0)
-                {
                     break;
-                }
 
                 // Build referrer chain
                 response = response.Chain(parsed);
