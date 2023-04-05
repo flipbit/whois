@@ -146,9 +146,7 @@ namespace Whois
             {
                 Status = WhoisStatus.Found,
                 Registrar = new Registrar
-                {
                     WhoisServer = new HostName(hostName)
-                }
             };
         }
 
@@ -180,9 +178,7 @@ namespace Whois
 
 
             if (WhoisServer.IsEqualTo(whoisServer))
-            {
                 return true;
-            }
 
             return Referrer != null && Referrer.SeenServer(whoisServer, depth + 1);
         }
