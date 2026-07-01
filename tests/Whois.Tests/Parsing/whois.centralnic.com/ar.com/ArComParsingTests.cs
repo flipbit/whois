@@ -51,7 +51,7 @@ namespace Whois.Parsing.Whois.Centralnic.Com.ArCom
             Assert.AreEqual("CentralNic Ltd", response.Registrar.Name);
             Assert.AreEqual("+44.8700170900", response.Registrar.AbuseTelephoneNumber);
 
-            Assert.AreEqual(new DateTime(2013, 4, 26, 0, 15, 40, DateTimeKind.Utc), response.Updated.Value.ToUniversalTime());
+            Assert.AreEqual(new DateTime(2013, 4, 26, 0, 15, 40, DateTimeKind.Utc), response.Updated!.Value.ToUniversalTime());
             Assert.AreEqual(new DateTime(2008, 4, 25, 16, 22, 13, DateTimeKind.Utc), response.Registered);
             Assert.AreEqual(new DateTime(2014, 4, 25, 23, 59, 59, DateTimeKind.Utc), response.Expiration);
 

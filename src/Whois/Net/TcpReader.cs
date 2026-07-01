@@ -100,9 +100,7 @@ namespace Whois.Net
             finally
             {
                 if (tcpClient?.Connected == true) tcpClient.Close();
-#if !NET452
                 tcpClient?.Dispose();
-#endif
                 reader?.Dispose();
                 writer?.Dispose();
             }
@@ -120,9 +118,7 @@ namespace Whois.Net
                 tcpClient.Close();
             }
 
-#if !NET452
             tcpClient?.Dispose();
-#endif
             reader?.Dispose();
             writer?.Dispose();
         }
