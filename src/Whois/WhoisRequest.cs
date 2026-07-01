@@ -12,6 +12,7 @@ namespace Whois
         /// </summary>
         public WhoisRequest()
         {
+            Query = string.Empty;
             Encoding = WhoisOptions.Defaults.Encoding;
             TimeoutSeconds = WhoisOptions.Defaults.TimeoutSeconds;
             FollowReferrer = true;
@@ -50,6 +51,6 @@ namespace Whois
         /// If set, the given WHOIS server will be queried.  If blank, the WHOIS
         /// server for the domain TLD will be attempted to be found automatically.
         /// </summary>
-        public string WhoisServer { get; set; }
+        public string? WhoisServer { get; set; }
     }
 }

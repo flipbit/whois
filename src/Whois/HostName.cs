@@ -90,7 +90,7 @@ namespace Whois
         /// Attempts to parse the given value into a <see cref="HostName"/>.  Returns
         /// true if successful.
         /// </summary>
-        public static bool TryParse(string value, out HostName hostName)
+        public static bool TryParse(string value, out HostName? hostName)
         {
             try
             {

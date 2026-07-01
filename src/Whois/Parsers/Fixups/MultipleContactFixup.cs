@@ -87,7 +87,7 @@ namespace Whois.Parsers.Fixups
             return contactIdMatch?.Location.Paragraph;
         }
 
-        protected virtual bool TryGetRegistrant(IList<Match> matches, WhoisResponse response, out Contact contact)
+        protected virtual bool TryGetRegistrant(IList<Match> matches, WhoisResponse response, out Contact? contact)
         {
             contact = null;
 
@@ -105,7 +105,7 @@ namespace Whois.Parsers.Fixups
                 switch (match.Token.Name)
                 {
                     case "Address":
-                        var matchValueString = match.Value.ToString();
+                        var matchValueString = match.Value.ToString() ?? string.Empty;
                         if (string.IsNullOrEmpty(contact.Name))
                         {
                             contact.Name = matchValueString;
@@ -124,14 +124,14 @@ namespace Whois.Parsers.Fixups
                     case "Fax":
                         contact.FaxNumber = match.Value.ToString();
                         break;
-                        
+
                     case "Email":
                         contact.Email = match.Value.ToString();
                         break;
 
                     case "Changed":
                         var dateTime = (DateTime) match.Value;
-                        if (dateTime > response.Updated || 
+                        if (dateTime > response.Updated ||
                             !response.Updated.HasValue) response.Updated = dateTime;
                         break;
 
@@ -144,7 +144,7 @@ namespace Whois.Parsers.Fixups
             return count > 0;
         }
 
-        protected virtual bool TryGetContact(Contact input, IList<Match> matches, out Contact contact)
+        protected virtual bool TryGetContact(Contact? input, IList<Match> matches, out Contact? contact)
         {
             contact = null;
 
@@ -152,7 +152,7 @@ namespace Whois.Parsers.Fixups
 
             var contactIdMatch = matches
                 .Where(m => m.Token.Name == "Contact.Id")
-                .FirstOrDefault(m => string.CompareOrdinal(m.Value.ToString(), input.RegistryId) == 0);
+                .FirstOrDefault(m => string.CompareOrdinal(m.Value.ToString(), input!.RegistryId) == 0);
 
             if (contactIdMatch == null)
             {
@@ -182,7 +182,7 @@ namespace Whois.Parsers.Fixups
                         break;
 
                     case "Address":
-                        contact.Address.Add(match.Value.ToString());
+                        contact.Address.Add(match.Value.ToString() ?? string.Empty);
                         break;
 
                     case "Phone":
@@ -192,11 +192,11 @@ namespace Whois.Parsers.Fixups
                     case "Fax":
                         contact.FaxNumber = match.Value.ToString();
                         break;
-                        
+
                     case "Email":
                         contact.Email = match.Value.ToString();
                         break;
-                        
+
                     case "Created":
                         contact.Created = (DateTime) match.Value;
                         break;
@@ -206,7 +206,7 @@ namespace Whois.Parsers.Fixups
             return true;
         }
 
-        protected virtual bool TryGetContactId(Contact input, IList<Match> matches, string name, out string contactId)
+        protected virtual bool TryGetContactId(Contact? input, IList<Match> matches, string name, out string? contactId)
         {
             contactId = null;
 

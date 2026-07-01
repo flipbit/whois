@@ -22,7 +22,7 @@ namespace Whois
         /// <summary>
         /// The default encoding to use.
         /// </summary>
-        public Encoding Encoding { get; set; }
+        public Encoding Encoding { get; set; } = Encoding.UTF8;
 
         /// <summary>
         /// Defines the network timeout to use when communicating with servers.

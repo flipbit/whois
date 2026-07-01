@@ -7,7 +7,7 @@ namespace Whois.Parsers
     /// </summary>
     public class WhoisStatusParser
     {
-        public WhoisStatus Parse(string whoisServer, string status, WhoisStatus existing)
+        public WhoisStatus Parse(string whoisServer, string? status, WhoisStatus existing)
         {
             if (Equals(status, "auto-renew grace")) return WhoisStatus.NotAssigned;
             if (Equals(status, "pending delete")) return WhoisStatus.PendingDelete;
@@ -75,7 +75,7 @@ namespace Whois.Parsers
             return existing;
         }
 
-        private static bool Equals(string status, string value)
+        private static bool Equals(string? status, string value)
         {
             return string.Compare(status, value, StringComparison.InvariantCultureIgnoreCase) == 0;
         }

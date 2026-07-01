@@ -19,17 +19,17 @@ namespace Whois
         /// <summary>
         /// The Registrars Id for this contact
         /// </summary>
-        public string RegistryId { get; set; }
+        public string? RegistryId { get; set; }
 
         /// <summary>
         /// Gets or sets the name.
         /// </summary>
-        public string Name { get; set; }
+        public string? Name { get; set; }
 
         /// <summary>
         /// Gets or sets the organization.
         /// </summary>
-        public string Organization { get; set; }
+        public string? Organization { get; set; }
 
         /// <summary>
         /// Gets or sets the address.
@@ -39,27 +39,27 @@ namespace Whois
         /// <summary>
         /// Gets or sets the telephone number.
         /// </summary>
-        public string TelephoneNumber { get; set; }
+        public string? TelephoneNumber { get; set; }
 
         /// <summary>
         /// The Telephone Number extenstion.
         /// </summary>
-        public string TelephoneNumberExt { get; set; }
+        public string? TelephoneNumberExt { get; set; }
 
         /// <summary>
         /// Gets or sets the fax number.
         /// </summary>
-        public string FaxNumber { get; set; }
+        public string? FaxNumber { get; set; }
 
         /// <summary>
         /// The Fax Number Extension.
         /// </summary>
-        public string FaxNumberExt { get; set; }
+        public string? FaxNumberExt { get; set; }
 
         /// <summary>
         /// Gets or sets the email.
         /// </summary>
-        public string Email { get; set; }
+        public string? Email { get; set; }
 
         /// <summary>
         /// The date the contact was created, if available.

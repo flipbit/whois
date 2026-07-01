@@ -5,8 +5,6 @@
     <ImplicitUsings>enable</ImplicitUsings>
     <TreatWarningsAsErrors>true</TreatWarningsAsErrors>
     <Deterministic>true</Deterministic>
-    <!-- Suppress nullable warnings until Phase 3 annotates the codebase -->
-    <NoWarn>$(NoWarn);CS8600;CS8601;CS8602;CS8603;CS8604;CS8618;CS8625;CS8767;CS8769</NoWarn>
   </PropertyGroup>
 
   <!-- Shared package metadata -->

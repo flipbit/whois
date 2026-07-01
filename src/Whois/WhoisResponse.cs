@@ -13,6 +13,7 @@ namespace Whois
         /// </summary>
         public WhoisResponse()
         {
+            Content = string.Empty;
             NameServers = new List<string>();
             DomainStatus = new List<string>();
         }
@@ -35,12 +36,12 @@ namespace Whois
         /// <summary>
         /// Gets the domain name
         /// </summary>
-        public HostName DomainName { get; set; }
+        public HostName? DomainName { get; set; }
 
         /// <summary>
         /// Gets the registry Domain Id
         /// </summary>
-        public string RegistryDomainId { get; set; }
+        public string? RegistryDomainId { get; set; }
 
         /// <summary>
         /// Gets the domain name statuses
@@ -65,32 +66,32 @@ namespace Whois
         /// <summary>
         /// Gets or sets the registrar
         /// </summary>
-        public Registrar Registrar { get; set; }
+        public Registrar? Registrar { get; set; }
 
         /// <summary>
         /// Gets or sets the registrant.
         /// </summary>
-        public Contact Registrant { get; set; }
+        public Contact? Registrant { get; set; }
 
         /// <summary>
         /// Gets or sets the technical contact.
         /// </summary>
-        public Contact TechnicalContact { get; set; }
+        public Contact? TechnicalContact { get; set; }
 
         /// <summary>
         /// Gets or sets the admin contact.
         /// </summary>
-        public Contact AdminContact { get; set; }
+        public Contact? AdminContact { get; set; }
 
         /// <summary>
         /// Gets or sets the billing contact
         /// </summary>
-        public Contact BillingContact { get; set; }
+        public Contact? BillingContact { get; set; }
 
         /// <summary>
         /// Gets or sets the zone contact
         /// </summary>
-        public Contact ZoneContact { get; set; }
+        public Contact? ZoneContact { get; set; }
 
         /// <summary>
         /// Gets the domain name servers
@@ -100,17 +101,17 @@ namespace Whois
         /// <summary>
         /// Contains any remarks about the domain registration
         /// </summary>
-        public string Remarks { get; set; }
+        public string? Remarks { get; set; }
 
         /// <summary>
         /// Contains the DNS Sec status
         /// </summary>
-        public string DnsSecStatus { get; set; }
+        public string? DnsSecStatus { get; set; }
 
         /// <summary>
         /// Contains any trademark information about this registration
         /// </summary>
-        public Trademark Trademark { get; set; }
+        public Trademark? Trademark { get; set; }
 
         /// <summary>
         /// The number of fields parsed from the raw WHOIS response
@@ -125,17 +126,17 @@ namespace Whois
         /// <summary>
         /// The template that was used to parse this WHOIS response
         /// </summary>
-        public string TemplateName { get; set; }
+        public string? TemplateName { get; set; }
 
         /// <summary>
         /// The referring WHOIS server, if any
         /// </summary>
-        public WhoisResponse Referrer { get; set; }
+        public WhoisResponse? Referrer { get; set; }
 
         /// <summary>
         /// Returns the URL of the WHOIS server
         /// </summary>
-        public HostName WhoisServer => Registrar?.WhoisServer;
+        public HostName? WhoisServer => Registrar?.WhoisServer;
 
         /// <summary>
         /// Returns a new <see cref="WhoisResponse"/> with the specified WHOIS host name 
@@ -165,8 +166,10 @@ namespace Whois
         /// <summary>
         /// Determines if the given WHOIS server URL has been visited in this lookup chain
         /// </summary>
-        internal bool SeenServer(HostName whoisServer)
+        internal bool SeenServer(HostName? whoisServer)
         {
+            if (whoisServer == null) return false;
+
             return SeenServer(whoisServer, 0);
         }
 
@@ -178,8 +181,7 @@ namespace Whois
             // Ignore top level request
             if (depth == 0) return Referrer?.SeenServer(whoisServer, 1) ?? false;
 
-
-            if (WhoisServer.IsEqualTo(whoisServer))
+            if (WhoisServer?.IsEqualTo(whoisServer) == true)
             {
                 return true;
             }
