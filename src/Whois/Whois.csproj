@@ -14,6 +14,9 @@
     
   </PropertyGroup>
   <ItemGroup>
+    <EmbeddedResource Include="Resources\**\*.txt" />
+  </ItemGroup>
+  <ItemGroup>
     <None Remove="Resources\capetown-whois.registry.net.za\capetown\Found.txt" />
     <None Remove="Resources\capetown-whois.registry.net.za\capetown\NotFound.txt" />
     <None Remove="Resources\ccwhois.ksregistry.net\vg\Found.txt" />
@@ -679,7 +682,6 @@
     <PackageReference Include="LibLog">
       <IncludeAssets>runtime; build; native; contentfiles; analyzers</IncludeAssets>
     </PackageReference>
-    <PackageReference Include="Microsoft.CSharp" />
     <PackageReference Include="Tokenizer" />
   </ItemGroup>
 
