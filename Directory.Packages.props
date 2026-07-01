@@ -1,0 +1,24 @@
+<Project>
+  <PropertyGroup>
+    <ManagePackageVersionsCentrally>true</ManagePackageVersionsCentrally>
+  </PropertyGroup>
+  <ItemGroup>
+    <!-- Core library -->
+    <PackageVersion Include="Tokenizer" Version="2.2.2" />
+    <PackageVersion Include="LibLog" Version="5.0.6" PrivateAssets="all" />
+    <PackageVersion Include="Microsoft.CSharp" Version="4.7.0" />
+
+    <!-- Console app -->
+    <PackageVersion Include="CommandLineParser" Version="2.9.1" />
+    <PackageVersion Include="Newtonsoft.Json" Version="13.0.2" />
+    <PackageVersion Include="Serilog" Version="2.12.0" />
+    <PackageVersion Include="Serilog.Sinks.Console" Version="4.1.0" />
+    <PackageVersion Include="Serilog.Sinks.RollingFile" Version="3.3.0" />
+
+    <!-- Test -->
+    <PackageVersion Include="Microsoft.NET.Test.Sdk" Version="17.5.0" />
+    <PackageVersion Include="Moq" Version="4.18.4" />
+    <PackageVersion Include="NUnit" Version="3.13.3" />
+    <PackageVersion Include="NUnit3TestAdapter" Version="4.4.2" />
+  </ItemGroup>
+</Project>
