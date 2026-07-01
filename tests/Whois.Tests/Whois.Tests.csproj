@@ -5,6 +5,8 @@
     <ApplicationIcon />
     <OutputType>Library</OutputType>
     <StartupObject />
+    <!-- Suppress xUnit analyzer style rules that fire as errors via TreatWarningsAsErrors -->
+    <NoWarn>$(NoWarn);xUnit2004;xUnit2013</NoWarn>
   </PropertyGroup>
   <ItemGroup>
     <PackageReference Include="Microsoft.NET.Test.Sdk" />

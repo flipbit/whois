@@ -1,76 +1,74 @@
-﻿using NUnit.Framework;
+using Xunit;
 
 namespace Whois
 {
-    [TestFixture]
     public class ResourceReaderTests
     {
         private ResourceReader reader;
 
-        [SetUp]
-        public void SetUp()
+        public ResourceReaderTests()
         {
             reader = new ResourceReader();
         }
 
-        [Test]
+        [Fact]
         public void TestGetNames()
         {
             var names = reader.GetNames("capetown-whois.registry.net.za", "capetown");
 
-            Assert.AreEqual(2, names.Count);
-            Assert.AreEqual("Whois.Resources.capetown_whois.registry.net.za.capetown.Found.txt", names[0]);
-            Assert.AreEqual("Whois.Resources.capetown_whois.registry.net.za.capetown.NotFound.txt", names[1]);
+            Assert.Equal(2, names.Count);
+            Assert.Equal("Whois.Resources.capetown_whois.registry.net.za.capetown.Found.txt", names[0]);
+            Assert.Equal("Whois.Resources.capetown_whois.registry.net.za.capetown.NotFound.txt", names[1]);
         }
 
-        [Test]
+        [Fact]
         public void TestGetNamesWithDifferentCase()
         {
             var names = reader.GetNames("Capetown-whois.registry.net.za", "Capetown");
 
-            Assert.AreEqual(2, names.Count);
-            Assert.AreEqual("Whois.Resources.capetown_whois.registry.net.za.capetown.Found.txt", names[0]);
-            Assert.AreEqual("Whois.Resources.capetown_whois.registry.net.za.capetown.NotFound.txt", names[1]);
+            Assert.Equal(2, names.Count);
+            Assert.Equal("Whois.Resources.capetown_whois.registry.net.za.capetown.Found.txt", names[0]);
+            Assert.Equal("Whois.Resources.capetown_whois.registry.net.za.capetown.NotFound.txt", names[1]);
         }
 
-        [Test]
+        [Fact]
         public void TestGetNamesWhenNotFound()
         {
             var names = reader.GetNames("missing.server", "missing.tld");
 
-            Assert.AreEqual(0, names.Count);
+            Assert.Empty(names);
         }
 
-        [Test]
+        [Fact]
         public void TestGetNamesWhenEmptyInputs()
         {
             var names = reader.GetNames(string.Empty, string.Empty);
 
-            Assert.AreEqual(0, names.Count);
+            Assert.Empty(names);
         }
 
-        [Test]
+        [Fact]
         public void TestGetNamesWhenNullInputs()
         {
             var names = reader.GetNames(null, null);
 
-            Assert.AreEqual(0, names.Count);
+            Assert.Empty(names);
         }
 
-        [Test]
+        [Fact]
         public void TestGetContent()
         {
             var content = reader.GetContent("Whois.Resources.capetown_whois.registry.net.za.capetown.Found.txt");
 
-            Assert.IsTrue(content.Length > 0);
+            Assert.True(content.Length > 0);
         }
 
-        [Test]
+        [Fact]
         public void TestGetContentWhenNotFound()
         {
             var content = reader.GetContent("missing");
 
-            Assert.IsTrue(content.Length == 0);
+            Assert.True(content.Length == 0);
         }
     }
 }

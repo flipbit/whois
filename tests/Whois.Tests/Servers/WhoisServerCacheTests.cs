@@ -1,27 +1,25 @@
-﻿using NUnit.Framework;
+using Xunit;
 
 namespace Whois.Servers
 {
-    [TestFixture]
     public class WhoisServerCacheTests
     {
         private WhoisServerCache cache;
 
-        [SetUp]
-        public void SetUp()
+        public WhoisServerCacheTests()
         {
             cache = new WhoisServerCache();
         }
 
-        [Test]
+        [Fact]
         public void TestGetServerWhenNotCached()
         {
             var server = cache.Get("com");
 
-            Assert.IsNull(server);
+            Assert.Null(server);
         }
 
-        [Test]
+        [Fact]
         public void TestGetServerWhenCached()
         {
             var existing = new WhoisResponse { DomainName = new HostName("com") };
@@ -29,10 +27,10 @@ namespace Whois.Servers
 
             var server = cache.Get("com");
 
-            Assert.AreEqual(existing, server);
+            Assert.Equal(existing, server);
         }
 
-        [Test]
+        [Fact]
         public void TestCacheUpdate()
         {
             var first = new WhoisResponse { DomainName = new HostName("com")};
@@ -42,7 +40,7 @@ namespace Whois.Servers
 
             var server = cache.Get("com");
 
-            Assert.AreEqual(second, server);
+            Assert.Equal(second, server);
         }
     }
 }
