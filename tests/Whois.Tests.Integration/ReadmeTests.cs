@@ -56,11 +56,8 @@ namespace Whois
         [Fact]
         public void TestConfiguration()
         {
-            // Global configuration
-            WhoisOptions.Defaults.Encoding = Encoding.UTF8;
-
             // Per-instance configuration
-            var lookup = new WhoisLookup();
+            var lookup = new WhoisLookup(new WhoisOptions { Encoding = Encoding.UTF8 });
             lookup.Options.TimeoutSeconds = 30;
         }
 
