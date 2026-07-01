@@ -1,33 +1,31 @@
-﻿using NUnit.Framework;
+using Xunit;
 using Whois.Servers;
 
 namespace Whois
 {
-    [TestFixture]
     public class IanaServerLookupTest
     {
-        private IanaServerLookup lookup;
+        private readonly IanaServerLookup lookup;
 
-        [SetUp]
-        public void SetUp()
+        public IanaServerLookupTest()
         {
             lookup = new IanaServerLookup();
         }
 
-        [Test]
+        [Fact]
         public void TestLookupCom()
         {
             var result = lookup.Lookup(new WhoisRequest("com"));
 
-            Assert.AreEqual("whois.verisign-grs.com", result.Registrar.WhoisServer);
+            Assert.Equal("whois.verisign-grs.com", result.Registrar.WhoisServer.ToString());
         }
- 
-        [Test]
+
+        [Fact]
         public void TestLookupComBr()
         {
             var result = lookup.Lookup(new WhoisRequest("br"));
 
-            Assert.AreEqual("whois.registro.br", result.Registrar.WhoisServer);
+            Assert.Equal("whois.registro.br", result.Registrar.WhoisServer.ToString());
         }
     }
 }

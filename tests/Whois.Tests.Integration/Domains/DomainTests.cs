@@ -1,24 +1,22 @@
-﻿using NUnit.Framework;
+using Xunit;
 
 namespace Whois.Domains
 {
-    [TestFixture]
     public class DomainTests
     {
-        private WhoisLookup lookup;
+        private readonly WhoisLookup lookup;
 
-        [SetUp]
-        public void SetUp()
+        public DomainTests()
         {
             lookup = new WhoisLookup();
         }
 
-        [Test]
+        [Fact]
         public void TestLookupCom()
         {
             var result = lookup.Lookup("001hosting.com.br");
 
-            Assert.AreEqual(@"
+            Assert.Equal(@"
 % Copyright (c) Nic.br
 %  The use of the data below is only permitted as described in
 %  full by the terms of use at https://registro.br/termo/en.html ,

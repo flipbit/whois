@@ -1,8 +1,6 @@
-﻿using System;
 using System.Collections.Generic;
 using System.IO;
-using System.Text;
-using Newtonsoft.Json;
+using System.Text.Json;
 using Whois.Models;
 
 namespace Whois
@@ -13,7 +11,7 @@ namespace Whois
         {
             var json = File.ReadAllText(Path.Join("..\\..\\..\\Samples", "Domains.txt"));
 
-            return JsonConvert.DeserializeObject<List<SampleDomain>>(json);
+            return JsonSerializer.Deserialize<List<SampleDomain>>(json);
         }
     }
 }

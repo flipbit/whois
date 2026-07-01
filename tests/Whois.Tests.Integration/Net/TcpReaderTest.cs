@@ -1,17 +1,16 @@
-﻿using System;
+using System;
 using System.Text;
 using System.Threading.Tasks;
-using NUnit.Framework;
+using Xunit;
 
 namespace Whois.Net
 {
     /// <summary>
     /// These tests will only pass if your connected to the Internet
     /// </summary>
-    [TestFixture]
     public class TcpReaderTest
     {
-        [Test]
+        [Fact]
         public async Task TestReadWhoisForCogworksCoUk()
         {
             string result;
@@ -22,11 +21,10 @@ namespace Whois.Net
             }
 
             // Just check the domain name is in the response
-            Assert.Greater(result.IndexOf("cogworks.co.uk"), -1);
+            Assert.True(result.IndexOf("cogworks.co.uk") > -1);
         }
 
-        [Test]
-        [Ignore("Not working")]
+        [Fact(Skip = "Not working")]
         public async Task TestReadWhoisForSapoPt()
         {
             string result;
@@ -37,10 +35,10 @@ namespace Whois.Net
             }
 
             // Just check the domain name is in the response
-            Assert.Greater(result.IndexOf("sapo.pt"), -1);
+            Assert.True(result.IndexOf("sapo.pt") > -1);
         }
 
-        [Test]
+        [Fact]
         public async Task TestReadWhoisForUolComBr()
         {
             string result;
@@ -51,10 +49,10 @@ namespace Whois.Net
             }
 
             // Just check the domain name is in the response
-            Assert.Greater(result.IndexOf("uol.com.br"), -1);
+            Assert.True(result.IndexOf("uol.com.br") > -1);
         }
 
-        [Test]
+        [Fact]
         public async Task TestReadWhoisForUnknownDomain()
         {
             string result;
@@ -64,11 +62,11 @@ namespace Whois.Net
                 result = await reader.Read("whois.nic.uk", 43, "invalid domain", Encoding.UTF8);
             }
 
-            // SHould never be registered (as invalid)
-            Assert.AreEqual(result.IndexOf("Registered on:"), -1);
+            // Should never be registered (as invalid)
+            Assert.Equal(-1, result.IndexOf("Registered on:"));
         }
 
-        [Test]
+        [Fact]
         public async Task TestReadWhenInvalidHost()
         {
             try
