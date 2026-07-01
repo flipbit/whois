@@ -16,7 +16,7 @@ namespace Whois.Parsers.Fixups
             return result.Template.Name == "whois.isoc.org.il/il/Found";
         }
 
-        protected override bool TryGetRegistrant(IList<Match> matches, WhoisResponse response, out Contact contact)
+        protected override bool TryGetRegistrant(IList<Match> matches, WhoisResponse response, out Contact? contact)
         {
             contact = null;
 
@@ -40,7 +40,7 @@ namespace Whois.Parsers.Fixups
                 switch (match.Token.Name)
                 {
                     case "Address":
-                        var matchValueString = match.Value.ToString();
+                        var matchValueString = match.Value.ToString() ?? string.Empty;
                         if (string.IsNullOrEmpty(contact.Name))
                         {
                             contact.Name = matchValueString;
@@ -59,7 +59,7 @@ namespace Whois.Parsers.Fixups
                     case "Fax":
                         contact.FaxNumber = match.Value.ToString();
                         break;
-                        
+
                     case "Email":
                         contact.Email = match.Value.ToString();
                         break;
@@ -75,7 +75,7 @@ namespace Whois.Parsers.Fixups
             return count > 0;
         }
 
-        protected override bool TryGetContact(Contact input, IList<Match> matches, out Contact contact)
+        protected override bool TryGetContact(Contact? input, IList<Match> matches, out Contact? contact)
         {
             contact = null;
 
@@ -83,7 +83,7 @@ namespace Whois.Parsers.Fixups
 
             var contactIdMatch = matches
                 .Where(m => m.Token.Name == "Contact.Id")
-                .FirstOrDefault(m => string.CompareOrdinal(m.Value.ToString(), input.RegistryId) == 0);
+                .FirstOrDefault(m => string.CompareOrdinal(m.Value.ToString(), input!.RegistryId) == 0);
 
             if (contactIdMatch == null)
             {
@@ -113,7 +113,7 @@ namespace Whois.Parsers.Fixups
                         break;
 
                     case "Address":
-                        contact.Address.Add(match.Value.ToString());
+                        contact.Address.Add(match.Value.ToString() ?? string.Empty);
                         break;
 
                     case "Phone":
@@ -123,11 +123,11 @@ namespace Whois.Parsers.Fixups
                     case "Fax":
                         contact.FaxNumber = match.Value.ToString();
                         break;
-                        
+
                     case "Email":
                         contact.Email = match.Value.ToString();
                         break;
-                        
+
                     case "Changed":
                         var changedDateTime = (DateTime) match.Value;
                         if (changedDateTime > contact.Created || !contact.Created.HasValue) match.Value = changedDateTime;

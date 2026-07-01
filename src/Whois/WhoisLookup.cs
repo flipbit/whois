@@ -98,7 +98,7 @@ namespace Whois
                 throw new WhoisException($"WHOIS Query Format Error: {request.Query}");
             }
 
-            Log.Debug("Looking up WHOIS response for: {0}", hostName.Value);
+            Log.Debug("Looking up WHOIS response for: {0}", hostName!.Value);
 
             // Set our starting point
             WhoisResponse response;
@@ -110,14 +110,14 @@ namespace Whois
             else
             {
                 // Use the given WHOIS server
-                response = WhoisResponse.WithServerUrl(request.WhoisServer);
+                response = WhoisResponse.WithServerUrl(request.WhoisServer!);
             }
 
             // If query is for a top level domain, we're finished
-            if (hostName.IsTld) return response;
+            if (hostName!.IsTld) return response;
 
             // Main loop: download & parse WHOIS data and follow the referrer chain
-            var whoisServer = response?.WhoisServer;
+            var whoisServer = response.WhoisServer;
             while (whoisServer != null)
             {
                 cancellationToken.ThrowIfCancellationRequested();

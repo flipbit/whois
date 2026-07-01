@@ -8,7 +8,7 @@ namespace Whois.Parsers
     /// </summary>
     public class CleanDomainStatusTransformer : ITokenTransformer
     {
-        public bool CanTransform(object value, string[] args, out object transformed)
+        public bool CanTransform(object value, string[] args, out object? transformed)
         {
             if (value == null)
             {
@@ -16,7 +16,7 @@ namespace Whois.Parsers
                 return true;
             }
 
-            var valueString = value.ToString();
+            var valueString = value.ToString() ?? string.Empty;
 
             var index = valueString.IndexOf("(http", StringComparison.InvariantCultureIgnoreCase);
             if (index > -1)

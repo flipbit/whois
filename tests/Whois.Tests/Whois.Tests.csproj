@@ -6,7 +6,8 @@
     <OutputType>Library</OutputType>
     <StartupObject />
     <!-- Suppress xUnit analyzer style rules that fire as errors via TreatWarningsAsErrors -->
-    <NoWarn>$(NoWarn);xUnit2004;xUnit2013</NoWarn>
+    <!-- Suppress nullable warnings in test files — we don't annotate ~200 parsing test classes -->
+    <NoWarn>$(NoWarn);xUnit2004;xUnit2013;CS8600;CS8601;CS8602;CS8603;CS8604;CS8618;CS8625;CS8767;CS8769</NoWarn>
   </PropertyGroup>
   <ItemGroup>
     <PackageReference Include="Microsoft.NET.Test.Sdk" />

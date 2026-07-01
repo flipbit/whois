@@ -80,7 +80,7 @@ namespace Whois
             return $"Whois.Resources.{escapedWhoisServer}";
         }
 
-        private static Stream GetStream(string name)
+        private static Stream? GetStream(string name)
         {
             var assembly = typeof(ResourceReader).Assembly;
 

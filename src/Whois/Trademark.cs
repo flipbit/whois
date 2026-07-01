@@ -10,7 +10,7 @@ namespace Whois
         /// <summary>
         /// The Trademark Name
         /// </summary>
-        public string Name { get; set; }
+        public string? Name { get; set; }
 
         /// <summary>
         /// The date of the Trademark
@@ -20,7 +20,7 @@ namespace Whois
         /// <summary>
         /// The country where the Trademark is registered
         /// </summary>
-        public string Country { get; set; }
+        public string? Country { get; set; }
 
         /// <summary>
         /// The Trademark number
