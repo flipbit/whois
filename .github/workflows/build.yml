@@ -1,0 +1,33 @@
+name: Build and Test
+
+on:
+  push:
+    branches: [master]
+  pull_request:
+    branches: [master]
+
+jobs:
+  build:
+    strategy:
+      matrix:
+        os: [ubuntu-latest, windows-latest]
+    runs-on: ${{ matrix.os }}
+
+    steps:
+      - uses: actions/checkout@v4
+
+      - name: Setup .NET
+        uses: actions/setup-dotnet@v4
+        with:
+          dotnet-version: |
+            8.0.x
+            10.0.x
+
+      - name: Restore
+        run: dotnet restore Whois.sln
+
+      - name: Build
+        run: dotnet build Whois.sln --no-restore
+
+      - name: Test
+        run: dotnet test tests/Whois.Tests/Whois.Tests.csproj --no-build --verbosity normal
