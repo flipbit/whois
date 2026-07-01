@@ -2,9 +2,11 @@ using System;
 using System.Text;
 using System.Threading;
 using System.Threading.Tasks;
+using Microsoft.Extensions.Logging;
+using Microsoft.Extensions.Logging.Abstractions;
+using Microsoft.Extensions.Options;
 using Tokens.Transformers;
 using Tokens.Validators;
-using Whois.Logging;
 using Whois.Net;
 using Whois.Parsers;
 using Whois.Servers;
@@ -16,7 +18,7 @@ namespace Whois
     /// </summary>
     public class WhoisLookup : IWhoisLookup
     {
-        private static readonly ILog Log = LogProvider.GetCurrentClassLogger();
+        private readonly ILogger<WhoisLookup> _logger;
 
         /// <summary>
         /// The default <see cref="WhoisOptions"/> to use for this instance
@@ -42,16 +44,41 @@ namespace Whois
         /// <summary>
         /// Initializes a new instance of the <see cref="WhoisLookup"/> class with the default options
         /// </summary>
-        public WhoisLookup() : this(WhoisOptions.Defaults.Clone())
+        public WhoisLookup() : this(new WhoisOptions())
         {
         }
 
         /// <summary>
         /// Initializes a new instance of the <see cref="WhoisLookup"/> class with the given <see cref="WhoisOptions"/>.
         /// </summary>
-        public WhoisLookup(WhoisOptions options)
+        public WhoisLookup(WhoisOptions options) : this(options, NullLogger<WhoisLookup>.Instance)
+        {
+        }
+
+        /// <summary>
+        /// Initializes a new instance of the <see cref="WhoisLookup"/> class for use with the Options pattern.
+        /// </summary>
+        public WhoisLookup(IOptions<WhoisOptions> options, ILogger<WhoisLookup> logger)
+            : this(options.Value, logger)
+        {
+        }
+
+        /// <summary>
+        /// Full DI constructor — all dependencies supplied by the container.
+        /// </summary>
+        public WhoisLookup(IOptions<WhoisOptions> options, ILogger<WhoisLookup> logger, ITcpReader tcpReader, IWhoisServerLookup serverLookup)
+        {
+            Options = options.Value;
+            _logger = logger;
+            TcpReader = tcpReader;
+            ServerLookup = serverLookup;
+            Parser = new WhoisParser();
+        }
+
+        private WhoisLookup(WhoisOptions options, ILogger<WhoisLookup> logger)
         {
             Options = options;
+            _logger = logger;
             Parser = new WhoisParser();
             TcpReader = new TcpReader();
             ServerLookup = new IanaServerLookup(TcpReader);
@@ -98,7 +125,7 @@ namespace Whois
                 throw new WhoisException($"WHOIS Query Format Error: {request.Query}");
             }
 
-            Log.Debug("Looking up WHOIS response for: {0}", hostName!.Value);
+            _logger.LogDebug("Looking up WHOIS response for: {HostName}", hostName!.Value);
 
             // Set our starting point
             WhoisResponse response;
@@ -166,7 +193,7 @@ namespace Whois
 
             var content = await TcpReader.Read(url, 43, query, request.Encoding, request.TimeoutSeconds, cancellationToken);
 
-            Log.Debug("Lookup {0}: Downloaded {1:###,###,##0} byte(s) from {2}.", request.Query, content.Length, url);
+            _logger.LogDebug("Lookup {Query}: Downloaded {ByteCount:###,###,##0} byte(s) from {Url}.", request.Query, content.Length, url);
 
             return content;
         }
