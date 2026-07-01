@@ -1,62 +1,59 @@
-using NUnit.Framework;
+using Xunit;
 using Whois.Parsers;
 
 namespace Whois.Parsing.Whois.Monic.Mo.Mo
 {
-    [TestFixture]
     public class MoParsingTests : ParsingTests
     {
         private WhoisParser parser;
 
-        [SetUp]
-        public void SetUp()
+        public MoParsingTests()
         {
-            SerilogConfig.Init();
 
             parser = new WhoisParser();
         }
 
-        [Test]
+        [Fact]
         public void Test_not_found()
         {
             var sample = SampleReader.Read("whois.monic.mo", "mo", "not_found.txt");
             var response = parser.Parse("whois.monic.mo", sample);
 
-            Assert.Greater(sample.Length, 0);
-            Assert.AreEqual(WhoisStatus.NotFound, response.Status);
+            Assert.True(sample.Length > 0);
+            Assert.Equal(WhoisStatus.NotFound, response.Status);
 
-            Assert.AreEqual(0, response.ParsingErrors);
-            Assert.AreEqual("whois.monic.mo/mo/NotFound", response.TemplateName);
+            Assert.Equal(0, response.ParsingErrors);
+            Assert.Equal("whois.monic.mo/mo/NotFound", response.TemplateName);
 
-            Assert.AreEqual("u34jedzcq.mo", response.DomainName.ToString());
+            Assert.Equal("u34jedzcq.mo", response.DomainName.ToString());
 
-            Assert.AreEqual(2, response.FieldsParsed);
+            Assert.Equal(2, response.FieldsParsed);
         }
 
-        [Test]
+        [Fact]
         public void Test_found()
         {
             var sample = SampleReader.Read("whois.monic.mo", "mo", "found.txt");
             var response = parser.Parse("whois.monic.mo", sample);
 
-            Assert.Greater(sample.Length, 0);
-            Assert.AreEqual(WhoisStatus.Found, response.Status);
+            Assert.True(sample.Length > 0);
+            Assert.Equal(WhoisStatus.Found, response.Status);
 
-            Assert.AreEqual(0, response.ParsingErrors);
-            Assert.AreEqual("whois.monic.mo/mo/Found", response.TemplateName);
+            Assert.Equal(0, response.ParsingErrors);
+            Assert.Equal("whois.monic.mo/mo/Found", response.TemplateName);
 
-            Assert.AreEqual("umac.mo", response.DomainName.ToString());
+            Assert.Equal("umac.mo", response.DomainName.ToString());
 
             // Registrar Details
-            Assert.AreEqual("MONIC", response.Registrar.Name);
-            Assert.AreEqual("whois.monic.mo", response.Registrar.WhoisServer.Value);
+            Assert.Equal("MONIC", response.Registrar.Name);
+            Assert.Equal("whois.monic.mo", response.Registrar.WhoisServer.Value);
 
             // Nameservers
-            Assert.AreEqual(2, response.NameServers.Count);
-            Assert.AreEqual("umacsn1.umac.mo", response.NameServers[0]);
-            Assert.AreEqual("umacsn2.umac.mo", response.NameServers[1]);
+            Assert.Equal(2, response.NameServers.Count);
+            Assert.Equal("umacsn1.umac.mo", response.NameServers[0]);
+            Assert.Equal("umacsn2.umac.mo", response.NameServers[1]);
 
-            Assert.AreEqual(6, response.FieldsParsed);
+            Assert.Equal(6, response.FieldsParsed);
         }
     }
 }

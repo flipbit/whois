@@ -1,102 +1,99 @@
 using System;
-using NUnit.Framework;
+using Xunit;
 using Whois.Parsers;
 
 namespace Whois.Parsing.Whois.Rotld.Ro.Ro
 {
-    [TestFixture]
     public class RoParsingTests : ParsingTests
     {
         private WhoisParser parser;
 
-        [SetUp]
-        public void SetUp()
+        public RoParsingTests()
         {
-            SerilogConfig.Init();
 
             parser = new WhoisParser();
         }
 
-        [Test]
+        [Fact]
         public void Test_other_status_updateprohibited()
         {
             var sample = SampleReader.Read("whois.rotld.ro", "ro", "other_status_updateprohibited.txt");
             var response = parser.Parse("whois.rotld.ro", sample);
 
-            Assert.Greater(sample.Length, 0);
-            Assert.AreEqual(WhoisStatus.Found, response.Status);
+            Assert.True(sample.Length > 0);
+            Assert.Equal(WhoisStatus.Found, response.Status);
 
-            Assert.AreEqual(0, response.ParsingErrors);
-            Assert.AreEqual("whois.rotld.ro/ro/Found", response.TemplateName);
+            Assert.Equal(0, response.ParsingErrors);
+            Assert.Equal("whois.rotld.ro/ro/Found", response.TemplateName);
 
-            Assert.AreEqual("google.ro", response.DomainName.ToString());
+            Assert.Equal("google.ro", response.DomainName.ToString());
 
             // Registrar Details
-            Assert.AreEqual("MarkMonitor Inc.", response.Registrar.Name);
+            Assert.Equal("MarkMonitor Inc.", response.Registrar.Name);
 
-            Assert.AreEqual(new DateTime(2000, 07, 17, 00, 00, 00, 000, DateTimeKind.Utc), response.Registered);
+            Assert.Equal(new DateTime(2000, 07, 17, 00, 00, 00, 000, DateTimeKind.Utc), response.Registered);
 
             // Nameservers
-            Assert.AreEqual(4, response.NameServers.Count);
-            Assert.AreEqual("ns4.google.com", response.NameServers[0]);
-            Assert.AreEqual("ns1.google.com", response.NameServers[1]);
-            Assert.AreEqual("ns3.google.com", response.NameServers[2]);
-            Assert.AreEqual("ns2.google.com", response.NameServers[3]);
+            Assert.Equal(4, response.NameServers.Count);
+            Assert.Equal("ns4.google.com", response.NameServers[0]);
+            Assert.Equal("ns1.google.com", response.NameServers[1]);
+            Assert.Equal("ns3.google.com", response.NameServers[2]);
+            Assert.Equal("ns2.google.com", response.NameServers[3]);
 
             // Domain Status
-            Assert.AreEqual(1, response.DomainStatus.Count);
-            Assert.AreEqual("UpdateProhibited", response.DomainStatus[0]);
+            Assert.Equal(1, response.DomainStatus.Count);
+            Assert.Equal("UpdateProhibited", response.DomainStatus[0]);
 
-            Assert.AreEqual(9, response.FieldsParsed);
+            Assert.Equal(9, response.FieldsParsed);
         }
 
-        [Test]
+        [Fact]
         public void Test_not_found()
         {
             var sample = SampleReader.Read("whois.rotld.ro", "ro", "not_found.txt");
             var response = parser.Parse("whois.rotld.ro", sample);
 
-            Assert.Greater(sample.Length, 0);
-            Assert.AreEqual(WhoisStatus.NotFound, response.Status);
+            Assert.True(sample.Length > 0);
+            Assert.Equal(WhoisStatus.NotFound, response.Status);
 
-            Assert.AreEqual(0, response.ParsingErrors);
-            Assert.AreEqual("whois.rotld.ro/ro/NotFound", response.TemplateName);
+            Assert.Equal(0, response.ParsingErrors);
+            Assert.Equal("whois.rotld.ro/ro/NotFound", response.TemplateName);
 
-            Assert.AreEqual(1, response.FieldsParsed);
+            Assert.Equal(1, response.FieldsParsed);
         }
 
-        [Test]
+        [Fact]
         public void Test_found()
         {
             var sample = SampleReader.Read("whois.rotld.ro", "ro", "found.txt");
             var response = parser.Parse("whois.rotld.ro", sample);
 
-            Assert.Greater(sample.Length, 0);
-            Assert.AreEqual(WhoisStatus.Found, response.Status);
+            Assert.True(sample.Length > 0);
+            Assert.Equal(WhoisStatus.Found, response.Status);
 
-            Assert.AreEqual(0, response.ParsingErrors);
-            Assert.AreEqual("whois.rotld.ro/ro/Found", response.TemplateName);
+            Assert.Equal(0, response.ParsingErrors);
+            Assert.Equal("whois.rotld.ro/ro/Found", response.TemplateName);
 
-            Assert.AreEqual("google.ro", response.DomainName.ToString());
+            Assert.Equal("google.ro", response.DomainName.ToString());
 
             // Registrar Details
-            Assert.AreEqual("MarkMonitor Inc.", response.Registrar.Name);
-            Assert.AreEqual("http://www.markmonitor.com", response.Registrar.Url);
+            Assert.Equal("MarkMonitor Inc.", response.Registrar.Name);
+            Assert.Equal("http://www.markmonitor.com", response.Registrar.Url);
 
-            Assert.AreEqual(new DateTime(2000, 07, 17, 00, 00, 00, 000, DateTimeKind.Utc), response.Registered);
+            Assert.Equal(new DateTime(2000, 07, 17, 00, 00, 00, 000, DateTimeKind.Utc), response.Registered);
 
             // Nameservers
-            Assert.AreEqual(4, response.NameServers.Count);
-            Assert.AreEqual("ns1.google.com", response.NameServers[0]);
-            Assert.AreEqual("ns2.google.com", response.NameServers[1]);
-            Assert.AreEqual("ns3.google.com", response.NameServers[2]);
-            Assert.AreEqual("ns4.google.com", response.NameServers[3]);
+            Assert.Equal(4, response.NameServers.Count);
+            Assert.Equal("ns1.google.com", response.NameServers[0]);
+            Assert.Equal("ns2.google.com", response.NameServers[1]);
+            Assert.Equal("ns3.google.com", response.NameServers[2]);
+            Assert.Equal("ns4.google.com", response.NameServers[3]);
 
             // Domain Status
-            Assert.AreEqual(1, response.DomainStatus.Count);
-            Assert.AreEqual("UpdateProhibited", response.DomainStatus[0]);
+            Assert.Equal(1, response.DomainStatus.Count);
+            Assert.Equal("UpdateProhibited", response.DomainStatus[0]);
 
-            Assert.AreEqual(10, response.FieldsParsed);
+            Assert.Equal(10, response.FieldsParsed);
         }
     }
 }

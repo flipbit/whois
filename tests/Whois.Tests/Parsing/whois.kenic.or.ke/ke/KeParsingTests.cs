@@ -1,147 +1,144 @@
 using System;
-using NUnit.Framework;
+using Xunit;
 using Whois.Parsers;
 
 namespace Whois.Parsing.Whois.Kenic.Or.Ke.Ke
 {
-    [TestFixture]
     public class KeParsingTests : ParsingTests
     {
         private WhoisParser parser;
 
-        [SetUp]
-        public void SetUp()
+        public KeParsingTests()
         {
-            SerilogConfig.Init();
 
             parser = new WhoisParser();
         }
 
-        [Test]
+        [Fact]
         public void Test_not_found()
         {
             var sample = SampleReader.Read("whois.kenic.or.ke", "ke", "not_found.txt");
             var response = parser.Parse("whois.kenic.or.ke", sample);
 
-            Assert.Greater(sample.Length, 0);
-            Assert.AreEqual(WhoisStatus.NotFound, response.Status);
+            Assert.True(sample.Length > 0);
+            Assert.Equal(WhoisStatus.NotFound, response.Status);
 
-            Assert.AreEqual(0, response.ParsingErrors);
-            Assert.AreEqual("whois.kenic.or.ke/ke/Found", response.TemplateName);
+            Assert.Equal(0, response.ParsingErrors);
+            Assert.Equal("whois.kenic.or.ke/ke/Found", response.TemplateName);
 
-            Assert.AreEqual("u34jedzcq.ke", response.DomainName.ToString());
+            Assert.Equal("u34jedzcq.ke", response.DomainName.ToString());
 
             // Domain Status
-            Assert.AreEqual(1, response.DomainStatus.Count);
-            Assert.AreEqual("Not Registered", response.DomainStatus[0]);
+            Assert.Equal(1, response.DomainStatus.Count);
+            Assert.Equal("Not Registered", response.DomainStatus[0]);
 
-            Assert.AreEqual(3, response.FieldsParsed);
+            Assert.Equal(3, response.FieldsParsed);
         }
 
-        [Test]
+        [Fact]
         public void Test_invalid()
         {
             var sample = SampleReader.Read("whois.kenic.or.ke", "ke", "invalid.txt");
             var response = parser.Parse("whois.kenic.or.ke", sample);
 
-            Assert.Greater(sample.Length, 0);
-            Assert.AreEqual(WhoisStatus.Invalid, response.Status);
+            Assert.True(sample.Length > 0);
+            Assert.Equal(WhoisStatus.Invalid, response.Status);
 
-            Assert.AreEqual(0, response.ParsingErrors);
-            Assert.AreEqual("whois.kenic.or.ke/ke/Found", response.TemplateName);
+            Assert.Equal(0, response.ParsingErrors);
+            Assert.Equal("whois.kenic.or.ke/ke/Found", response.TemplateName);
 
-            Assert.AreEqual("www.housekenya.co.ke", response.DomainName.ToString());
+            Assert.Equal("www.housekenya.co.ke", response.DomainName.ToString());
 
             // Domain Status
-            Assert.AreEqual(1, response.DomainStatus.Count);
-            Assert.AreEqual("This WHOIS server does not have any records for that zone.", response.DomainStatus[0]);
+            Assert.Equal(1, response.DomainStatus.Count);
+            Assert.Equal("This WHOIS server does not have any records for that zone.", response.DomainStatus[0]);
 
-            Assert.AreEqual(3, response.FieldsParsed);
+            Assert.Equal(3, response.FieldsParsed);
         }
 
-        [Test]
+        [Fact]
         public void Test_found()
         {
             var sample = SampleReader.Read("whois.kenic.or.ke", "ke", "found.txt");
             var response = parser.Parse("whois.kenic.or.ke", sample);
 
-            Assert.Greater(sample.Length, 0);
-            Assert.AreEqual(WhoisStatus.Found, response.Status);
+            Assert.True(sample.Length > 0);
+            Assert.Equal(WhoisStatus.Found, response.Status);
 
-            Assert.AreEqual(0, response.ParsingErrors);
-            Assert.AreEqual("whois.kenic.or.ke/ke/Found", response.TemplateName);
+            Assert.Equal(0, response.ParsingErrors);
+            Assert.Equal("whois.kenic.or.ke/ke/Found", response.TemplateName);
 
-            Assert.AreEqual("google.co.ke", response.DomainName.ToString());
+            Assert.Equal("google.co.ke", response.DomainName.ToString());
 
             // Registrar Details
-            Assert.AreEqual("Afriregister Limited", response.Registrar.Name);
+            Assert.Equal("Afriregister Limited", response.Registrar.Name);
 
-            Assert.AreEqual(new DateTime(2013, 12, 16, 09, 48, 00, 000, DateTimeKind.Utc), response.Updated);
-            Assert.AreEqual(new DateTime(2003, 04, 17, 21, 00, 00, 000, DateTimeKind.Utc), response.Registered);
-            Assert.AreEqual(new DateTime(2014, 12, 31, 21, 00, 00, 000, DateTimeKind.Utc), response.Expiration);
+            Assert.Equal(new DateTime(2013, 12, 16, 09, 48, 00, 000, DateTimeKind.Utc), response.Updated);
+            Assert.Equal(new DateTime(2003, 04, 17, 21, 00, 00, 000, DateTimeKind.Utc), response.Registered);
+            Assert.Equal(new DateTime(2014, 12, 31, 21, 00, 00, 000, DateTimeKind.Utc), response.Expiration);
 
              // Registrant Details
-            Assert.AreEqual("DNS Admin", response.Registrant.Name);
-            Assert.AreEqual("Google Inc.", response.Registrant.Organization);
-            Assert.AreEqual("+1.6502530000", response.Registrant.TelephoneNumber);
+            Assert.Equal("DNS Admin", response.Registrant.Name);
+            Assert.Equal("Google Inc.", response.Registrant.Organization);
+            Assert.Equal("+1.6502530000", response.Registrant.TelephoneNumber);
 
              // Registrant Address
-            Assert.AreEqual(3, response.Registrant.Address.Count);
-            Assert.AreEqual("1600 Amphitheatre Parkway", response.Registrant.Address[0]);
-            Assert.AreEqual("Mountain View, CA 94043", response.Registrant.Address[1]);
-            Assert.AreEqual("US", response.Registrant.Address[2]);
+            Assert.Equal(3, response.Registrant.Address.Count);
+            Assert.Equal("1600 Amphitheatre Parkway", response.Registrant.Address[0]);
+            Assert.Equal("Mountain View, CA 94043", response.Registrant.Address[1]);
+            Assert.Equal("US", response.Registrant.Address[2]);
 
 
              // AdminContact Details
-            Assert.AreEqual("DNS Admin", response.AdminContact.Name);
-            Assert.AreEqual("Google Inc.", response.AdminContact.Organization);
-            Assert.AreEqual("+1.6502530000", response.AdminContact.TelephoneNumber);
-            Assert.AreEqual("dns-admin@google.com", response.AdminContact.Email);
+            Assert.Equal("DNS Admin", response.AdminContact.Name);
+            Assert.Equal("Google Inc.", response.AdminContact.Organization);
+            Assert.Equal("+1.6502530000", response.AdminContact.TelephoneNumber);
+            Assert.Equal("dns-admin@google.com", response.AdminContact.Email);
 
              // AdminContact Address
-            Assert.AreEqual(1, response.AdminContact.Address.Count);
-            Assert.AreEqual("1600 Amphitheatre Parkway", response.AdminContact.Address[0]);
+            Assert.Equal(1, response.AdminContact.Address.Count);
+            Assert.Equal("1600 Amphitheatre Parkway", response.AdminContact.Address[0]);
 
 
              // BillingContact Details
-            Assert.AreEqual("Domain Administrator", response.BillingContact.Name);
-            Assert.AreEqual("MarkMonitor Inc.", response.BillingContact.Organization);
-            Assert.AreEqual("+1.2083895740", response.BillingContact.TelephoneNumber);
-            Assert.AreEqual("+1.2083895771", response.BillingContact.FaxNumber);
-            Assert.AreEqual("ccopsbilling@markmonitor.com", response.BillingContact.Email);
+            Assert.Equal("Domain Administrator", response.BillingContact.Name);
+            Assert.Equal("MarkMonitor Inc.", response.BillingContact.Organization);
+            Assert.Equal("+1.2083895740", response.BillingContact.TelephoneNumber);
+            Assert.Equal("+1.2083895771", response.BillingContact.FaxNumber);
+            Assert.Equal("ccopsbilling@markmonitor.com", response.BillingContact.Email);
 
              // BillingContact Address
-            Assert.AreEqual(3, response.BillingContact.Address.Count);
-            Assert.AreEqual("391 N. Ancestor Place", response.BillingContact.Address[0]);
-            Assert.AreEqual("Boise, ID 83704", response.BillingContact.Address[1]);
-            Assert.AreEqual("US", response.BillingContact.Address[2]);
+            Assert.Equal(3, response.BillingContact.Address.Count);
+            Assert.Equal("391 N. Ancestor Place", response.BillingContact.Address[0]);
+            Assert.Equal("Boise, ID 83704", response.BillingContact.Address[1]);
+            Assert.Equal("US", response.BillingContact.Address[2]);
 
 
              // TechnicalContact Details
-            Assert.AreEqual("DNS Admin", response.TechnicalContact.Name);
-            Assert.AreEqual("Google Inc.", response.TechnicalContact.Organization);
-            Assert.AreEqual("+1.6502530000", response.TechnicalContact.TelephoneNumber);
-            Assert.AreEqual("dns-admin@google.com", response.TechnicalContact.Email);
+            Assert.Equal("DNS Admin", response.TechnicalContact.Name);
+            Assert.Equal("Google Inc.", response.TechnicalContact.Organization);
+            Assert.Equal("+1.6502530000", response.TechnicalContact.TelephoneNumber);
+            Assert.Equal("dns-admin@google.com", response.TechnicalContact.Email);
 
              // TechnicalContact Address
-            Assert.AreEqual(3, response.TechnicalContact.Address.Count);
-            Assert.AreEqual("1600 Amphitheatre Parkway", response.TechnicalContact.Address[0]);
-            Assert.AreEqual("Mountain View, CA 94043", response.TechnicalContact.Address[1]);
-            Assert.AreEqual("US", response.TechnicalContact.Address[2]);
+            Assert.Equal(3, response.TechnicalContact.Address.Count);
+            Assert.Equal("1600 Amphitheatre Parkway", response.TechnicalContact.Address[0]);
+            Assert.Equal("Mountain View, CA 94043", response.TechnicalContact.Address[1]);
+            Assert.Equal("US", response.TechnicalContact.Address[2]);
 
 
             // Nameservers
-            Assert.AreEqual(4, response.NameServers.Count);
-            Assert.AreEqual("ns1.google.com", response.NameServers[0]);
-            Assert.AreEqual("ns2.google.com", response.NameServers[1]);
-            Assert.AreEqual("ns3.google.com", response.NameServers[2]);
-            Assert.AreEqual("ns4.google.com", response.NameServers[3]);
+            Assert.Equal(4, response.NameServers.Count);
+            Assert.Equal("ns1.google.com", response.NameServers[0]);
+            Assert.Equal("ns2.google.com", response.NameServers[1]);
+            Assert.Equal("ns3.google.com", response.NameServers[2]);
+            Assert.Equal("ns4.google.com", response.NameServers[3]);
 
             // Domain Status
-            Assert.AreEqual(1, response.DomainStatus.Count);
-            Assert.AreEqual("Active", response.DomainStatus[0]);
+            Assert.Equal(1, response.DomainStatus.Count);
+            Assert.Equal("Active", response.DomainStatus[0]);
 
-            Assert.AreEqual(37, response.FieldsParsed);
+            Assert.Equal(37, response.FieldsParsed);
          }
     }
 }

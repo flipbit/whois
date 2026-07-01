@@ -1,72 +1,69 @@
-using NUnit.Framework;
+using Xunit;
 using Whois.Parsers;
 
 namespace Whois.Parsing.Whois.Nic.Cl.Cl
 {
-    [TestFixture]
     public class ClParsingTests : ParsingTests
     {
         private WhoisParser parser;
 
-        [SetUp]
-        public void SetUp()
+        public ClParsingTests()
         {
-            SerilogConfig.Init();
 
             parser = new WhoisParser();
         }
 
-        [Test]
+        [Fact]
         public void Test_not_found()
         {
             var sample = SampleReader.Read("whois.nic.cl", "cl", "not_found.txt");
             var response = parser.Parse("whois.nic.cl", sample);
 
-            Assert.Greater(sample.Length, 0);
-            Assert.AreEqual(WhoisStatus.NotFound, response.Status);
+            Assert.True(sample.Length > 0);
+            Assert.Equal(WhoisStatus.NotFound, response.Status);
 
-            Assert.AreEqual(0, response.ParsingErrors);
-            Assert.AreEqual("whois.nic.cl/cl/NotFound", response.TemplateName);
+            Assert.Equal(0, response.ParsingErrors);
+            Assert.Equal("whois.nic.cl/cl/NotFound", response.TemplateName);
 
-            Assert.AreEqual("u34jedzcq.cl", response.DomainName.ToString());
+            Assert.Equal("u34jedzcq.cl", response.DomainName.ToString());
 
-            Assert.AreEqual(2, response.FieldsParsed);
+            Assert.Equal(2, response.FieldsParsed);
         }
 
-        [Test]
+        [Fact]
         public void Test_found()
         {
             var sample = SampleReader.Read("whois.nic.cl", "cl", "found.txt");
             var response = parser.Parse("whois.nic.cl", sample);
 
-            Assert.Greater(sample.Length, 0);
-            Assert.AreEqual(WhoisStatus.Found, response.Status);
+            Assert.True(sample.Length > 0);
+            Assert.Equal(WhoisStatus.Found, response.Status);
 
-            Assert.AreEqual(0, response.ParsingErrors);
-            Assert.AreEqual("whois.nic.cl/cl/Found", response.TemplateName);
+            Assert.Equal(0, response.ParsingErrors);
+            Assert.Equal("whois.nic.cl/cl/Found", response.TemplateName);
 
-            Assert.AreEqual("google.cl", response.DomainName.ToString());
+            Assert.Equal("google.cl", response.DomainName.ToString());
 
              // Registrant Details
-            Assert.AreEqual("Google Inc. Representada por NameAction Chile S.A. (ASESORIAS NAMEACTION CHILE LIMITADA)", response.Registrant.Name);
+            Assert.Equal("Google Inc. Representada por NameAction Chile S.A. (ASESORIAS NAMEACTION CHILE LIMITADA)", response.Registrant.Name);
 
              // AdminContact Details
-            Assert.AreEqual("Markmonitor Tech", response.AdminContact.Name);
-            Assert.AreEqual("Markmonitor", response.AdminContact.Organization);
+            Assert.Equal("Markmonitor Tech", response.AdminContact.Name);
+            Assert.Equal("Markmonitor", response.AdminContact.Organization);
 
 
              // TechnicalContact Details
-            Assert.AreEqual("Markmonitor Tech", response.TechnicalContact.Name);
-            Assert.AreEqual("MarkMonitor", response.TechnicalContact.Organization);
+            Assert.Equal("Markmonitor Tech", response.TechnicalContact.Name);
+            Assert.Equal("MarkMonitor", response.TechnicalContact.Organization);
 
             // Nameservers
-            Assert.AreEqual(4, response.NameServers.Count);
-            Assert.AreEqual("ns3.google.com", response.NameServers[0]);
-            Assert.AreEqual("ns4.google.com", response.NameServers[1]);
-            Assert.AreEqual("ns1.google.com", response.NameServers[2]);
-            Assert.AreEqual("ns2.google.com", response.NameServers[3]);
+            Assert.Equal(4, response.NameServers.Count);
+            Assert.Equal("ns3.google.com", response.NameServers[0]);
+            Assert.Equal("ns4.google.com", response.NameServers[1]);
+            Assert.Equal("ns1.google.com", response.NameServers[2]);
+            Assert.Equal("ns2.google.com", response.NameServers[3]);
 
-            Assert.AreEqual(11, response.FieldsParsed);
+            Assert.Equal(11, response.FieldsParsed);
         }
     }
 }

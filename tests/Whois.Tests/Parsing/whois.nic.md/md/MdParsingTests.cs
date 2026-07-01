@@ -1,92 +1,89 @@
 using System;
-using NUnit.Framework;
+using Xunit;
 using Whois.Parsers;
 
 namespace Whois.Parsing.Whois.Nic.Md.Md
 {
-    [TestFixture]
     public class MdParsingTests : ParsingTests
     {
         private WhoisParser parser;
 
-        [SetUp]
-        public void SetUp()
+        public MdParsingTests()
         {
-            SerilogConfig.Init();
 
             parser = new WhoisParser();
         }
 
-        [Test]
+        [Fact]
         public void Test_found()
         {
             var sample = SampleReader.Read("whois.nic.md", "md", "found.txt");
             var response = parser.Parse("whois.nic.md", sample);
 
-            Assert.Greater(sample.Length, 0);
-            Assert.AreEqual(WhoisStatus.Found, response.Status);
+            Assert.True(sample.Length > 0);
+            Assert.Equal(WhoisStatus.Found, response.Status);
 
-            Assert.AreEqual(0, response.ParsingErrors);
-            Assert.AreEqual("whois.nic.md/md/Found", response.TemplateName);
+            Assert.Equal(0, response.ParsingErrors);
+            Assert.Equal("whois.nic.md/md/Found", response.TemplateName);
 
-            Assert.AreEqual("hotel.md", response.DomainName.ToString());
+            Assert.Equal("hotel.md", response.DomainName.ToString());
 
-            Assert.AreEqual(new DateTime(2002, 03, 25, 00, 00, 00, 000, DateTimeKind.Utc), response.Registered);
-            Assert.AreEqual(new DateTime(2011, 03, 25, 00, 00, 00, 000, DateTimeKind.Utc), response.Expiration);
+            Assert.Equal(new DateTime(2002, 03, 25, 00, 00, 00, 000, DateTimeKind.Utc), response.Registered);
+            Assert.Equal(new DateTime(2011, 03, 25, 00, 00, 00, 000, DateTimeKind.Utc), response.Expiration);
 
              // Registrant Details
-            Assert.AreEqual("Diginet S.R.L.", response.Registrant.Name);
+            Assert.Equal("Diginet S.R.L.", response.Registrant.Name);
 
             // Nameservers
-            Assert.AreEqual(2, response.NameServers.Count);
-            Assert.AreEqual("ns0.starnet.md", response.NameServers[0]);
-            Assert.AreEqual("ns1.starnet.md", response.NameServers[1]);
+            Assert.Equal(2, response.NameServers.Count);
+            Assert.Equal("ns0.starnet.md", response.NameServers[0]);
+            Assert.Equal("ns1.starnet.md", response.NameServers[1]);
 
-            Assert.AreEqual(7, response.FieldsParsed);
+            Assert.Equal(7, response.FieldsParsed);
         }
 
-        [Test]
+        [Fact]
         public void Test_not_found()
         {
             var sample = SampleReader.Read("whois.nic.md", "md", "not_found.txt");
             var response = parser.Parse("whois.nic.md", sample);
 
-            Assert.Greater(sample.Length, 0);
-            Assert.AreEqual(WhoisStatus.NotFound, response.Status);
+            Assert.True(sample.Length > 0);
+            Assert.Equal(WhoisStatus.NotFound, response.Status);
 
-            Assert.AreEqual(0, response.ParsingErrors);
-            Assert.AreEqual("whois.nic.md/md/NotFound", response.TemplateName);
+            Assert.Equal(0, response.ParsingErrors);
+            Assert.Equal("whois.nic.md/md/NotFound", response.TemplateName);
 
-            Assert.AreEqual(1, response.FieldsParsed);
+            Assert.Equal(1, response.FieldsParsed);
         }
 
-        [Test]
+        [Fact]
         public void Test_found_status_registered()
         {
             var sample = SampleReader.Read("whois.nic.md", "md", "found_status_registered.txt");
             var response = parser.Parse("whois.nic.md", sample);
 
-            Assert.Greater(sample.Length, 0);
-            Assert.AreEqual(WhoisStatus.Found, response.Status);
+            Assert.True(sample.Length > 0);
+            Assert.Equal(WhoisStatus.Found, response.Status);
 
-            Assert.AreEqual(0, response.ParsingErrors);
-            Assert.AreEqual("whois.nic.md/md/Found", response.TemplateName);
+            Assert.Equal(0, response.ParsingErrors);
+            Assert.Equal("whois.nic.md/md/Found", response.TemplateName);
 
-            Assert.AreEqual("google.md", response.DomainName.ToString());
+            Assert.Equal("google.md", response.DomainName.ToString());
 
-            Assert.AreEqual(new DateTime(2006, 05, 02, 00, 00, 00, 000, DateTimeKind.Utc), response.Registered);
-            Assert.AreEqual(new DateTime(2014, 05, 02, 00, 00, 00, 000, DateTimeKind.Utc), response.Expiration);
+            Assert.Equal(new DateTime(2006, 05, 02, 00, 00, 00, 000, DateTimeKind.Utc), response.Registered);
+            Assert.Equal(new DateTime(2014, 05, 02, 00, 00, 00, 000, DateTimeKind.Utc), response.Expiration);
 
              // Registrant Details
-            Assert.AreEqual("Google Inc.", response.Registrant.Name);
+            Assert.Equal("Google Inc.", response.Registrant.Name);
 
 
             // Nameservers
-            Assert.AreEqual(2, response.NameServers.Count);
-            Assert.AreEqual("ns1.google.com", response.NameServers[0]);
-            Assert.AreEqual("ns2.google.com", response.NameServers[1]);
+            Assert.Equal(2, response.NameServers.Count);
+            Assert.Equal("ns1.google.com", response.NameServers[0]);
+            Assert.Equal("ns2.google.com", response.NameServers[1]);
 
-            Assert.AreEqual(7, response.FieldsParsed);
+            Assert.Equal(7, response.FieldsParsed);
         }
     }
 }
