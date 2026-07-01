@@ -18,4 +18,4 @@ Registrar: { Registrar.Name ? : EOL }
 Name Server: { NameServers ? : IsDomainName, ToLower, Repeating, EOL }
 Updated Date: { Updated ? : ToDateTime("yyyy-MM-dd"), EOL }
 Creation Date: { Registered ? : ToDateTime("yyyy-MM-dd"), EOL }
-Expiration Date: { Expiration ? : ToDateTime("yyyy-MM-dd), EOL }
+Expiration Date: { Expiration ? : ToDateTime("yyyy-MM-dd"), EOL }

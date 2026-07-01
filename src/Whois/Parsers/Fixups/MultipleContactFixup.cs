@@ -79,7 +79,7 @@ namespace Whois.Parsers.Fixups
             }
         }
 
-        protected virtual int? GetRegistrantParagraph(IList<Match> matches)
+        protected virtual int? GetRegistrantParagraph(IReadOnlyList<Match> matches)
         {
             var contactIdMatch = matches
                 .FirstOrDefault(m => m.Token.Name == "DomainName");
@@ -87,7 +87,7 @@ namespace Whois.Parsers.Fixups
             return contactIdMatch?.Location.Paragraph;
         }
 
-        protected virtual bool TryGetRegistrant(IList<Match> matches, WhoisResponse response, out Contact? contact)
+        protected virtual bool TryGetRegistrant(IReadOnlyList<Match> matches, WhoisResponse response, out Contact? contact)
         {
             contact = null;
 
@@ -144,7 +144,7 @@ namespace Whois.Parsers.Fixups
             return count > 0;
         }
 
-        protected virtual bool TryGetContact(Contact? input, IList<Match> matches, out Contact? contact)
+        protected virtual bool TryGetContact(Contact? input, IReadOnlyList<Match> matches, out Contact? contact)
         {
             contact = null;
 
@@ -206,7 +206,7 @@ namespace Whois.Parsers.Fixups
             return true;
         }
 
-        protected virtual bool TryGetContactId(Contact? input, IList<Match> matches, string name, out string? contactId)
+        protected virtual bool TryGetContactId(Contact? input, IReadOnlyList<Match> matches, string name, out string? contactId)
         {
             contactId = null;
 

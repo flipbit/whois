@@ -8,11 +8,11 @@ namespace Whois.Parsers
     /// </summary>
     public class ToHostNameTransformer : ITokenTransformer
     {
-        public bool CanTransform(object value, string[] args, out object? transformed)
+        public bool CanTransform(object value, string[] args, out object transformed)
         {
             if (value == null)
             {
-                transformed = null;
+                transformed = null!;
                 return true;
             }
 
@@ -20,17 +20,17 @@ namespace Whois.Parsers
 
             if (string.IsNullOrEmpty(valueString))
             {
-                transformed = null;
+                transformed = null!;
                 return true;
             }
 
             if (HostName.TryParse(valueString, out var hostName))
             {
-                transformed = hostName;
+                transformed = hostName!;
                 return true;
             }
 
-            transformed = null;
+            transformed = null!;
 
             return false;
         }

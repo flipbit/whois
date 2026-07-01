@@ -15,5 +15,5 @@ terminateOnNewLine: true
 set: Status = Found
 ---
    Domain Name: { DomainName : IsDomainName, ToHostName }
-   Status: { DomainStatus ? : }
+   Status: { DomainStatus ? }
 

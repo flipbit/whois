@@ -38,7 +38,7 @@ namespace Whois.Parsing.Joburg.Whois.Registry.Net.Za.Joburg
             Assert.True(sample.Length > 0);
             Assert.Equal(WhoisStatus.Found, response.Status);
 
-            Assert.Equal(54, response.FieldsParsed);
+            Assert.Equal(55, response.FieldsParsed);
             Assert.Equal(0, response.ParsingErrors);
 
             Assert.Equal("usedautos.joburg", response.DomainName.ToString());

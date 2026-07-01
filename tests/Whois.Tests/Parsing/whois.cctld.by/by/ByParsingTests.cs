@@ -54,7 +54,7 @@ namespace Whois.Parsing.Whois.Cctld.By.By
             Assert.Equal("ns1.activeby.net", response.NameServers[0]);
             Assert.Equal("ns2.activeby.net", response.NameServers[1]);
 
-            Assert.Equal(7, response.FieldsParsed);
+            Assert.Equal(8, response.FieldsParsed);
         }
     }
 }

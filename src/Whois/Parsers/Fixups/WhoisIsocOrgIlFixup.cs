@@ -16,7 +16,7 @@ namespace Whois.Parsers.Fixups
             return result.Template.Name == "whois.isoc.org.il/il/Found";
         }
 
-        protected override bool TryGetRegistrant(IList<Match> matches, WhoisResponse response, out Contact? contact)
+        protected override bool TryGetRegistrant(IReadOnlyList<Match> matches, WhoisResponse response, out Contact? contact)
         {
             contact = null;
 
@@ -75,7 +75,7 @@ namespace Whois.Parsers.Fixups
             return count > 0;
         }
 
-        protected override bool TryGetContact(Contact? input, IList<Match> matches, out Contact? contact)
+        protected override bool TryGetContact(Contact? input, IReadOnlyList<Match> matches, out Contact? contact)
         {
             contact = null;
 

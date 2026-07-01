@@ -53,6 +53,15 @@ namespace Whois.Parsers
         /// </summary>
         public WhoisResponse Parse(string whoisServer, string content)
         {
+            if (string.IsNullOrEmpty(content))
+            {
+                return new WhoisResponse
+                {
+                    Content = content,
+                    Status = WhoisStatus.Unknown
+                };
+            }
+
             LoadServerTemplates(whoisServer);
 
             var result = matcher.Match<WhoisResponse>(content, new []{ whoisServer });

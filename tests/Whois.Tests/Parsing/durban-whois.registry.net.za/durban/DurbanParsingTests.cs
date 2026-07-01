@@ -129,7 +129,7 @@ namespace Whois.Parsing.Durban.Whois.Registry.Net.Za.Durban
             Assert.Equal(1, response.DomainStatus.Count);
             Assert.Equal("clientDeleteProhibited", response.DomainStatus[0]);
 
-            Assert.Equal(51, response.FieldsParsed);
+            Assert.Equal(52, response.FieldsParsed);
         }
     }
 }

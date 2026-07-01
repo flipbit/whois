@@ -56,7 +56,7 @@ namespace Whois.Servers
 
             if (result.Success)
             {
-                var match = result.BestMatch.Value;
+                var match = result.BestMatch!.Value;
 
                 match.Content = content;
 
