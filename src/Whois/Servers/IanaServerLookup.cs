@@ -1,8 +1,9 @@
 using System;
 using System.Threading;
 using System.Threading.Tasks;
+using Microsoft.Extensions.Logging;
+using Microsoft.Extensions.Logging.Abstractions;
 using Tokens;
-using Whois.Logging;
 using Whois.Net;
 using Whois.Parsers;
 
@@ -15,8 +16,7 @@ namespace Whois.Servers
     {
         private const string IanaUrl = "whois.iana.org";
 
-        private static readonly ILog Log = LogProvider.GetCurrentClassLogger();
-
+        private readonly ILogger<IanaServerLookup> _logger;
         private readonly Lazy<TokenMatcher> ianaTemplate;
         private readonly ResourceReader resourceReader;
 
@@ -28,15 +28,20 @@ namespace Whois.Servers
         /// <summary>
         /// Creates a new instance of the IANA Server Lookup
         /// </summary>
-        public IanaServerLookup() : this(new TcpReader())
+        public IanaServerLookup() : this(new TcpReader(), NullLogger<IanaServerLookup>.Instance)
         {
         }
 
-        public IanaServerLookup(ITcpReader tcpReader)
+        public IanaServerLookup(ITcpReader tcpReader) : this(tcpReader, NullLogger<IanaServerLookup>.Instance)
+        {
+        }
+
+        public IanaServerLookup(ITcpReader tcpReader, ILogger<IanaServerLookup> logger)
         {
             ianaTemplate = new Lazy<TokenMatcher>(CreateIanaTemplate);
             resourceReader = new ResourceReader();
             TcpReader = tcpReader;
+            _logger = logger;
         }
 
         public async Task<WhoisResponse> Lookup(WhoisRequest request, CancellationToken cancellationToken = default)
@@ -68,11 +73,11 @@ namespace Whois.Servers
 
         private async Task<string> Download(string tld, WhoisRequest request, CancellationToken cancellationToken)
         {
-            Log.Debug("Looking up Root TLD server for {0} from {1}", tld, IanaUrl);
+            _logger.LogDebug("Looking up Root TLD server for {Tld} from {IanaUrl}", tld, IanaUrl);
 
             var response = await TcpReader.Read(IanaUrl, 43, tld.ToUpper(), request.Encoding, request.TimeoutSeconds, cancellationToken);
 
-            Log.Debug("Received {0:###,###,##0} byte(s).", response.Length);
+            _logger.LogDebug("Received {ByteCount:###,###,##0} byte(s).", response.Length);
 
             return response;
         }
