@@ -24,7 +24,7 @@
   </ItemGroup>
 
   <ItemGroup>
-    <ProjectReference Include="..\Whois\Whois.csproj" />
+    <ProjectReference Include="..\..\src\Whois\Whois.csproj" />
   </ItemGroup>
 
   <ItemGroup>
