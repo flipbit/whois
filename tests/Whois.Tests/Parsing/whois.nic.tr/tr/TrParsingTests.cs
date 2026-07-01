@@ -52,30 +52,30 @@ namespace Whois.Parsing.Whois.Nic.Tr.Tr
 
              // BillingContact Details
             Assert.AreEqual("btl1-metu", response.BillingContact.RegistryId);
-            Assert.AreEqual("BER›L TEKNOLOJ› LTD. ﬁT›.", response.BillingContact.Organization);
+            Assert.AreEqual("BER√ùL TEKNOLOJ√ù LTD. √ûT√ù.", response.BillingContact.Organization);
             Assert.AreEqual("+ 90-312-4733035-", response.BillingContact.TelephoneNumber);
             Assert.AreEqual("+ 90-312-4733039-", response.BillingContact.FaxNumber);
 
              // BillingContact Address
             Assert.AreEqual(4, response.BillingContact.Address.Count);
-            Assert.AreEqual("Ceyhun Atuf Kansu Cad. Bayraktar ›˛ Merkezi", response.BillingContact.Address[0]);
+            Assert.AreEqual("Ceyhun Atuf Kansu Cad. Bayraktar √ù√æ Merkezi", response.BillingContact.Address[0]);
             Assert.AreEqual("No:114 G-4 Balgat", response.BillingContact.Address[1]);
             Assert.AreEqual("Ankara,06520", response.BillingContact.Address[2]);
-            Assert.AreEqual("T¸rkiye", response.BillingContact.Address[3]);
+            Assert.AreEqual("T√ºrkiye", response.BillingContact.Address[3]);
 
 
              // TechnicalContact Details
             Assert.AreEqual("btl1-metu", response.TechnicalContact.RegistryId);
-            Assert.AreEqual("BER›L TEKNOLOJ› LTD. ﬁT›.", response.TechnicalContact.Organization);
+            Assert.AreEqual("BER√ùL TEKNOLOJ√ù LTD. √ûT√ù.", response.TechnicalContact.Organization);
             Assert.AreEqual("+ 90-312-4733035-", response.TechnicalContact.TelephoneNumber);
             Assert.AreEqual("+ 90-312-4733039-", response.TechnicalContact.FaxNumber);
 
              // TechnicalContact Address
             Assert.AreEqual(4, response.TechnicalContact.Address.Count);
-            Assert.AreEqual("Ceyhun Atuf Kansu Cad. Bayraktar ›˛ Merkezi", response.TechnicalContact.Address[0]);
+            Assert.AreEqual("Ceyhun Atuf Kansu Cad. Bayraktar √ù√æ Merkezi", response.TechnicalContact.Address[0]);
             Assert.AreEqual("No:114 G-4 Balgat", response.TechnicalContact.Address[1]);
             Assert.AreEqual("Ankara,06520", response.TechnicalContact.Address[2]);
-            Assert.AreEqual("T¸rkiye", response.TechnicalContact.Address[3]);
+            Assert.AreEqual("T√ºrkiye", response.TechnicalContact.Address[3]);
 
 
             // Nameservers
@@ -111,9 +111,9 @@ namespace Whois.Parsing.Whois.Nic.Tr.Tr
 
              // Registrant Address
             Assert.AreEqual(3, response.Registrant.Address.Count);
-            Assert.AreEqual("«˝nar mh. 10.sok", response.Registrant.Address[0]);
-            Assert.AreEqual("›stanbul,", response.Registrant.Address[1]);
-            Assert.AreEqual("T¸rkiye", response.Registrant.Address[2]);
+            Assert.AreEqual("√á√Ωnar mh. 10.sok", response.Registrant.Address[0]);
+            Assert.AreEqual("√ùstanbul,", response.Registrant.Address[1]);
+            Assert.AreEqual("T√ºrkiye", response.Registrant.Address[2]);
 
 
              // AdminContact Details
@@ -153,58 +153,58 @@ namespace Whois.Parsing.Whois.Nic.Tr.Tr
             Assert.AreEqual(new DateTime(2015, 03, 15, 00, 00, 00, 000, DateTimeKind.Utc), response.Expiration);
 
              // Registrant Details
-            Assert.AreEqual("RH RADORE HOSTING INTERNET H›ZMETLER› T›C. LTD. ﬁT›.", response.Registrant.Name);
+            Assert.AreEqual("RH RADORE HOSTING INTERNET H√ùZMETLER√ù T√ùC. LTD. √ûT√ù.", response.Registrant.Name);
             Assert.AreEqual("+ 90-212-3479932-", response.Registrant.TelephoneNumber);
             Assert.AreEqual("kubilay@akyol.info", response.Registrant.Email);
 
              // Registrant Address
             Assert.AreEqual(4, response.Registrant.Address.Count);
-            Assert.AreEqual("Ataturk Sanayi Sitesi 1. K˝s˝m A Blok No:128", response.Registrant.Address[0]);
+            Assert.AreEqual("Ataturk Sanayi Sitesi 1. K√Ωs√Ωm A Blok No:128", response.Registrant.Address[0]);
             Assert.AreEqual("Maslak", response.Registrant.Address[1]);
-            Assert.AreEqual("›stanbul,", response.Registrant.Address[2]);
-            Assert.AreEqual("T¸rkiye", response.Registrant.Address[3]);
+            Assert.AreEqual("√ùstanbul,", response.Registrant.Address[2]);
+            Assert.AreEqual("T√ºrkiye", response.Registrant.Address[3]);
 
 
              // AdminContact Details
             Assert.AreEqual("rrh2-metu", response.AdminContact.RegistryId);
-            Assert.AreEqual("RH RADORE HOSTING INTERNET H›ZMETLER› T›C. LTD. ﬁT›.", response.AdminContact.Organization);
+            Assert.AreEqual("RH RADORE HOSTING INTERNET H√ùZMETLER√ù T√ùC. LTD. √ûT√ù.", response.AdminContact.Organization);
             Assert.AreEqual("+ 90-212-3440404-", response.AdminContact.TelephoneNumber);
             Assert.AreEqual("+ 90-212-3440009-", response.AdminContact.FaxNumber);
 
              // AdminContact Address
             Assert.AreEqual(4, response.AdminContact.Address.Count);
-            Assert.AreEqual("B¸y¸kdere Cad. No:171 Metrocity AVM 4B. D.39-46S", response.AdminContact.Address[0]);
+            Assert.AreEqual("B√ºy√ºkdere Cad. No:171 Metrocity AVM 4B. D.39-46S", response.AdminContact.Address[0]);
             Assert.AreEqual("Levent", response.AdminContact.Address[1]);
-            Assert.AreEqual("›stanbul,34394", response.AdminContact.Address[2]);
-            Assert.AreEqual("T¸rkiye", response.AdminContact.Address[3]);
+            Assert.AreEqual("√ùstanbul,34394", response.AdminContact.Address[2]);
+            Assert.AreEqual("T√ºrkiye", response.AdminContact.Address[3]);
 
 
              // BillingContact Details
             Assert.AreEqual("rrh2-metu", response.BillingContact.RegistryId);
-            Assert.AreEqual("RH RADORE HOSTING INTERNET H›ZMETLER› T›C. LTD. ﬁT›.", response.BillingContact.Organization);
+            Assert.AreEqual("RH RADORE HOSTING INTERNET H√ùZMETLER√ù T√ùC. LTD. √ûT√ù.", response.BillingContact.Organization);
             Assert.AreEqual("+ 90-212-3440404-", response.BillingContact.TelephoneNumber);
             Assert.AreEqual("+ 90-212-3440009-", response.BillingContact.FaxNumber);
 
              // BillingContact Address
             Assert.AreEqual(4, response.BillingContact.Address.Count);
-            Assert.AreEqual("B¸y¸kdere Cad. No:171 Metrocity AVM 4B. D.39-46S", response.BillingContact.Address[0]);
+            Assert.AreEqual("B√ºy√ºkdere Cad. No:171 Metrocity AVM 4B. D.39-46S", response.BillingContact.Address[0]);
             Assert.AreEqual("Levent", response.BillingContact.Address[1]);
-            Assert.AreEqual("›stanbul,34394", response.BillingContact.Address[2]);
-            Assert.AreEqual("T¸rkiye", response.BillingContact.Address[3]);
+            Assert.AreEqual("√ùstanbul,34394", response.BillingContact.Address[2]);
+            Assert.AreEqual("T√ºrkiye", response.BillingContact.Address[3]);
 
 
              // TechnicalContact Details
             Assert.AreEqual("rrh2-metu", response.TechnicalContact.RegistryId);
-            Assert.AreEqual("RH RADORE HOSTING INTERNET H›ZMETLER› T›C. LTD. ﬁT›.", response.TechnicalContact.Organization);
+            Assert.AreEqual("RH RADORE HOSTING INTERNET H√ùZMETLER√ù T√ùC. LTD. √ûT√ù.", response.TechnicalContact.Organization);
             Assert.AreEqual("+ 90-212-3440404-", response.TechnicalContact.TelephoneNumber);
             Assert.AreEqual("+ 90-212-3440009-", response.TechnicalContact.FaxNumber);
 
              // TechnicalContact Address
             Assert.AreEqual(4, response.TechnicalContact.Address.Count);
-            Assert.AreEqual("B¸y¸kdere Cad. No:171 Metrocity AVM 4B. D.39-46S", response.TechnicalContact.Address[0]);
+            Assert.AreEqual("B√ºy√ºkdere Cad. No:171 Metrocity AVM 4B. D.39-46S", response.TechnicalContact.Address[0]);
             Assert.AreEqual("Levent", response.TechnicalContact.Address[1]);
-            Assert.AreEqual("›stanbul,34394", response.TechnicalContact.Address[2]);
-            Assert.AreEqual("T¸rkiye", response.TechnicalContact.Address[3]);
+            Assert.AreEqual("√ùstanbul,34394", response.TechnicalContact.Address[2]);
+            Assert.AreEqual("T√ºrkiye", response.TechnicalContact.Address[3]);
 
 
             // Nameservers
@@ -237,9 +237,9 @@ namespace Whois.Parsing.Whois.Nic.Tr.Tr
 
              // Registrant Address
             Assert.AreEqual(3, response.Registrant.Address.Count);
-            Assert.AreEqual("«˝nar mh. 10.sok", response.Registrant.Address[0]);
-            Assert.AreEqual("›stanbul,", response.Registrant.Address[1]);
-            Assert.AreEqual("T¸rkiye", response.Registrant.Address[2]);
+            Assert.AreEqual("√á√Ωnar mh. 10.sok", response.Registrant.Address[0]);
+            Assert.AreEqual("√ùstanbul,", response.Registrant.Address[1]);
+            Assert.AreEqual("T√ºrkiye", response.Registrant.Address[2]);
 
 
              // AdminContact Details
@@ -279,7 +279,7 @@ namespace Whois.Parsing.Whois.Nic.Tr.Tr
             Assert.AreEqual(new DateTime(2013, 09, 21, 00, 00, 00, 000, DateTimeKind.Utc), response.Expiration);
 
              // Registrant Details
-            Assert.AreEqual("Yahoo ›nc.", response.Registrant.Name);
+            Assert.AreEqual("Yahoo √ùnc.", response.Registrant.Name);
             Assert.AreEqual("+ 901-408-3493300-", response.Registrant.TelephoneNumber);
             Assert.AreEqual("+ 901-408-3493301", response.Registrant.FaxNumber);
             Assert.AreEqual("domainadmin@yahoo-inc.com", response.Registrant.Email);
@@ -298,30 +298,30 @@ namespace Whois.Parsing.Whois.Nic.Tr.Tr
 
              // BillingContact Details
             Assert.AreEqual("btl1-metu", response.BillingContact.RegistryId);
-            Assert.AreEqual("BER›L TEKNOLOJ› LTD. ﬁT›.", response.BillingContact.Organization);
+            Assert.AreEqual("BER√ùL TEKNOLOJ√ù LTD. √ûT√ù.", response.BillingContact.Organization);
             Assert.AreEqual("+ 90-312-4733035-", response.BillingContact.TelephoneNumber);
             Assert.AreEqual("+ 90-312-4733039-", response.BillingContact.FaxNumber);
 
              // BillingContact Address
             Assert.AreEqual(4, response.BillingContact.Address.Count);
-            Assert.AreEqual("Ceyhun Atuf Kansu Cad. Bayraktar ›˛ Merkezi", response.BillingContact.Address[0]);
+            Assert.AreEqual("Ceyhun Atuf Kansu Cad. Bayraktar √ù√æ Merkezi", response.BillingContact.Address[0]);
             Assert.AreEqual("No:114 G-4 Balgat", response.BillingContact.Address[1]);
             Assert.AreEqual("Ankara,06520", response.BillingContact.Address[2]);
-            Assert.AreEqual("T¸rkiye", response.BillingContact.Address[3]);
+            Assert.AreEqual("T√ºrkiye", response.BillingContact.Address[3]);
 
 
              // TechnicalContact Details
             Assert.AreEqual("btl1-metu", response.TechnicalContact.RegistryId);
-            Assert.AreEqual("BER›L TEKNOLOJ› LTD. ﬁT›.", response.TechnicalContact.Organization);
+            Assert.AreEqual("BER√ùL TEKNOLOJ√ù LTD. √ûT√ù.", response.TechnicalContact.Organization);
             Assert.AreEqual("+ 90-312-4733035-", response.TechnicalContact.TelephoneNumber);
             Assert.AreEqual("+ 90-312-4733039-", response.TechnicalContact.FaxNumber);
 
              // TechnicalContact Address
             Assert.AreEqual(4, response.TechnicalContact.Address.Count);
-            Assert.AreEqual("Ceyhun Atuf Kansu Cad. Bayraktar ›˛ Merkezi", response.TechnicalContact.Address[0]);
+            Assert.AreEqual("Ceyhun Atuf Kansu Cad. Bayraktar √ù√æ Merkezi", response.TechnicalContact.Address[0]);
             Assert.AreEqual("No:114 G-4 Balgat", response.TechnicalContact.Address[1]);
             Assert.AreEqual("Ankara,06520", response.TechnicalContact.Address[2]);
-            Assert.AreEqual("T¸rkiye", response.TechnicalContact.Address[3]);
+            Assert.AreEqual("T√ºrkiye", response.TechnicalContact.Address[3]);
 
 
             // Nameservers
@@ -368,30 +368,30 @@ namespace Whois.Parsing.Whois.Nic.Tr.Tr
 
              // BillingContact Details
             Assert.AreEqual("btl1-metu", response.BillingContact.RegistryId);
-            Assert.AreEqual("BER›L TEKNOLOJ› LTD. ﬁT›.", response.BillingContact.Organization);
+            Assert.AreEqual("BER√ùL TEKNOLOJ√ù LTD. √ûT√ù.", response.BillingContact.Organization);
             Assert.AreEqual("+ 90-312-4733035-", response.BillingContact.TelephoneNumber);
             Assert.AreEqual("+ 90-312-4733039-", response.BillingContact.FaxNumber);
 
              // BillingContact Address
             Assert.AreEqual(4, response.BillingContact.Address.Count);
-            Assert.AreEqual("Ceyhun Atuf Kansu Cad. Bayraktar ›˛ Merkezi", response.BillingContact.Address[0]);
+            Assert.AreEqual("Ceyhun Atuf Kansu Cad. Bayraktar √ù√æ Merkezi", response.BillingContact.Address[0]);
             Assert.AreEqual("No:114 G-4 Balgat", response.BillingContact.Address[1]);
             Assert.AreEqual("Ankara,06520", response.BillingContact.Address[2]);
-            Assert.AreEqual("T¸rkiye", response.BillingContact.Address[3]);
+            Assert.AreEqual("T√ºrkiye", response.BillingContact.Address[3]);
 
 
              // TechnicalContact Details
             Assert.AreEqual("btl1-metu", response.TechnicalContact.RegistryId);
-            Assert.AreEqual("BER›L TEKNOLOJ› LTD. ﬁT›.", response.TechnicalContact.Organization);
+            Assert.AreEqual("BER√ùL TEKNOLOJ√ù LTD. √ûT√ù.", response.TechnicalContact.Organization);
             Assert.AreEqual("+ 90-312-4733035-", response.TechnicalContact.TelephoneNumber);
             Assert.AreEqual("+ 90-312-4733039-", response.TechnicalContact.FaxNumber);
 
              // TechnicalContact Address
             Assert.AreEqual(4, response.TechnicalContact.Address.Count);
-            Assert.AreEqual("Ceyhun Atuf Kansu Cad. Bayraktar ›˛ Merkezi", response.TechnicalContact.Address[0]);
+            Assert.AreEqual("Ceyhun Atuf Kansu Cad. Bayraktar √ù√æ Merkezi", response.TechnicalContact.Address[0]);
             Assert.AreEqual("No:114 G-4 Balgat", response.TechnicalContact.Address[1]);
             Assert.AreEqual("Ankara,06520", response.TechnicalContact.Address[2]);
-            Assert.AreEqual("T¸rkiye", response.TechnicalContact.Address[3]);
+            Assert.AreEqual("T√ºrkiye", response.TechnicalContact.Address[3]);
 
 
             // Nameservers
@@ -421,17 +421,17 @@ namespace Whois.Parsing.Whois.Nic.Tr.Tr
             Assert.AreEqual(new DateTime(2014, 06, 17, 00, 00, 00, 000, DateTimeKind.Utc), response.Expiration);
 
              // Registrant Details
-            Assert.AreEqual("Hotel Bilgisayar Hizmetleri San. Tic. Turizm Ltd. ﬁti.", response.Registrant.Name);
+            Assert.AreEqual("Hotel Bilgisayar Hizmetleri San. Tic. Turizm Ltd. √ûti.", response.Registrant.Name);
             Assert.AreEqual("+ 90-212-2473997-", response.Registrant.TelephoneNumber);
             Assert.AreEqual("+ 90-212-2473995", response.Registrant.FaxNumber);
             Assert.AreEqual("romeo6860@yahoo.com", response.Registrant.Email);
 
              // Registrant Address
             Assert.AreEqual(4, response.Registrant.Address.Count);
-            Assert.AreEqual("Cumhuriyet Cd. No:61 Bing¸l Han Asma Kat", response.Registrant.Address[0]);
-            Assert.AreEqual("Elmada", response.Registrant.Address[1]);
-            Assert.AreEqual("›stanbul,", response.Registrant.Address[2]);
-            Assert.AreEqual("T¸rkiye", response.Registrant.Address[3]);
+            Assert.AreEqual("Cumhuriyet Cd. No:61 Bing√ºl Han Asma Kat", response.Registrant.Address[0]);
+            Assert.AreEqual("Elmada√∞", response.Registrant.Address[1]);
+            Assert.AreEqual("√ùstanbul,", response.Registrant.Address[2]);
+            Assert.AreEqual("T√ºrkiye", response.Registrant.Address[3]);
 
 
              // AdminContact Details
@@ -444,8 +444,8 @@ namespace Whois.Parsing.Whois.Nic.Tr.Tr
             Assert.AreEqual(4, response.AdminContact.Address.Count);
             Assert.AreEqual("Cumhuriyet.cad.No:61 Bingul han asma kat", response.AdminContact.Address[0]);
             Assert.AreEqual("Elmada-ISTANBUL", response.AdminContact.Address[1]);
-            Assert.AreEqual("›stanbul,", response.AdminContact.Address[2]);
-            Assert.AreEqual("T¸rkiye", response.AdminContact.Address[3]);
+            Assert.AreEqual("√ùstanbul,", response.AdminContact.Address[2]);
+            Assert.AreEqual("T√ºrkiye", response.AdminContact.Address[3]);
 
 
              // BillingContact Details
@@ -458,8 +458,8 @@ namespace Whois.Parsing.Whois.Nic.Tr.Tr
             Assert.AreEqual(4, response.BillingContact.Address.Count);
             Assert.AreEqual("Cumhuriyet.cad.No:61 Bingul han asma kat", response.BillingContact.Address[0]);
             Assert.AreEqual("Elmada-ISTANBUL", response.BillingContact.Address[1]);
-            Assert.AreEqual("›stanbul,", response.BillingContact.Address[2]);
-            Assert.AreEqual("T¸rkiye", response.BillingContact.Address[3]);
+            Assert.AreEqual("√ùstanbul,", response.BillingContact.Address[2]);
+            Assert.AreEqual("T√ºrkiye", response.BillingContact.Address[3]);
 
 
              // TechnicalContact Details
@@ -472,8 +472,8 @@ namespace Whois.Parsing.Whois.Nic.Tr.Tr
             Assert.AreEqual(4, response.TechnicalContact.Address.Count);
             Assert.AreEqual("Cumhuriyet.cad.No:61 Bingul han asma kat", response.TechnicalContact.Address[0]);
             Assert.AreEqual("Elmada-ISTANBUL", response.TechnicalContact.Address[1]);
-            Assert.AreEqual("›stanbul,", response.TechnicalContact.Address[2]);
-            Assert.AreEqual("T¸rkiye", response.TechnicalContact.Address[3]);
+            Assert.AreEqual("√ùstanbul,", response.TechnicalContact.Address[2]);
+            Assert.AreEqual("T√ºrkiye", response.TechnicalContact.Address[3]);
 
 
             Assert.AreEqual(35, response.FieldsParsed);
@@ -558,30 +558,30 @@ namespace Whois.Parsing.Whois.Nic.Tr.Tr
 
              // BillingContact Details
             Assert.AreEqual("btl1-metu", response.BillingContact.RegistryId);
-            Assert.AreEqual("BER›L TEKNOLOJ› LTD. ﬁT›.", response.BillingContact.Organization);
+            Assert.AreEqual("BER√ùL TEKNOLOJ√ù LTD. √ûT√ù.", response.BillingContact.Organization);
             Assert.AreEqual("+ 90-312-4733035-", response.BillingContact.TelephoneNumber);
             Assert.AreEqual("+ 90-312-4733039-", response.BillingContact.FaxNumber);
 
              // BillingContact Address
             Assert.AreEqual(4, response.BillingContact.Address.Count);
-            Assert.AreEqual("Ceyhun Atuf Kansu Cad. Bayraktar ›˛ Merkezi", response.BillingContact.Address[0]);
+            Assert.AreEqual("Ceyhun Atuf Kansu Cad. Bayraktar √ù√æ Merkezi", response.BillingContact.Address[0]);
             Assert.AreEqual("No:114 G-4 Balgat", response.BillingContact.Address[1]);
             Assert.AreEqual("Ankara,06520", response.BillingContact.Address[2]);
-            Assert.AreEqual("T¸rkiye", response.BillingContact.Address[3]);
+            Assert.AreEqual("T√ºrkiye", response.BillingContact.Address[3]);
 
 
              // TechnicalContact Details
             Assert.AreEqual("btl1-metu", response.TechnicalContact.RegistryId);
-            Assert.AreEqual("BER›L TEKNOLOJ› LTD. ﬁT›.", response.TechnicalContact.Organization);
+            Assert.AreEqual("BER√ùL TEKNOLOJ√ù LTD. √ûT√ù.", response.TechnicalContact.Organization);
             Assert.AreEqual("+ 90-312-4733035-", response.TechnicalContact.TelephoneNumber);
             Assert.AreEqual("+ 90-312-4733039-", response.TechnicalContact.FaxNumber);
 
              // TechnicalContact Address
             Assert.AreEqual(4, response.TechnicalContact.Address.Count);
-            Assert.AreEqual("Ceyhun Atuf Kansu Cad. Bayraktar ›˛ Merkezi", response.TechnicalContact.Address[0]);
+            Assert.AreEqual("Ceyhun Atuf Kansu Cad. Bayraktar √ù√æ Merkezi", response.TechnicalContact.Address[0]);
             Assert.AreEqual("No:114 G-4 Balgat", response.TechnicalContact.Address[1]);
             Assert.AreEqual("Ankara,06520", response.TechnicalContact.Address[2]);
-            Assert.AreEqual("T¸rkiye", response.TechnicalContact.Address[3]);
+            Assert.AreEqual("T√ºrkiye", response.TechnicalContact.Address[3]);
 
 
             // Nameservers

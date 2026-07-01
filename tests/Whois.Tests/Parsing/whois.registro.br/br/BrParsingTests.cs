@@ -180,7 +180,7 @@ namespace Whois.Parsing.Whois.Registro.Br.Br
             Assert.AreEqual("registro.br", response.DomainName.ToString());
 
              // Registrant Details
-            Assert.AreEqual("Núcleo de Informação e Coordenação do Ponto BR (662379)", response.Registrant.Name);
+            Assert.AreEqual("NÃºcleo de InformaÃ§Ã£o e CoordenaÃ§Ã£o do Ponto BR (662379)", response.Registrant.Name);
 
             Assert.AreEqual(3, response.FieldsParsed);
         }
