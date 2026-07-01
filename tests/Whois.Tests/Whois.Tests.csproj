@@ -10,8 +10,10 @@
     <NoWarn>$(NoWarn);xUnit2004;xUnit2013;CS8600;CS8601;CS8602;CS8603;CS8604;CS8618;CS8625;CS8767;CS8769</NoWarn>
   </PropertyGroup>
   <ItemGroup>
+    <PackageReference Include="Microsoft.Extensions.DependencyInjection" />
+    <PackageReference Include="Microsoft.Extensions.Logging" />
     <PackageReference Include="Microsoft.NET.Test.Sdk" />
-<PackageReference Include="xunit" />
+    <PackageReference Include="xunit" />
     <PackageReference Include="xunit.runner.visualstudio" />
     <PackageReference Include="NSubstitute" />
   </ItemGroup>
