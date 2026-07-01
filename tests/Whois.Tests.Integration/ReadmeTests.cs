@@ -1,7 +1,6 @@
-﻿using System;
+using System;
 using System.Text;
 using System.Threading.Tasks;
-using Newtonsoft.Json;
 using NUnit.Framework;
 using Whois.Net;
 
@@ -36,9 +35,9 @@ namespace Whois
             var response = whois.Lookup("github.com");
 
             // Convert the response to JSON
-            var json = JsonConvert.SerializeObject(response, Formatting.Indented);
+            var json = System.Text.Json.JsonSerializer.Serialize(response, new System.Text.Json.JsonSerializerOptions { WriteIndented = true });
 
-            // Output the json 
+            // Output the json
             Console.WriteLine(json);
         }
 
@@ -51,7 +50,7 @@ namespace Whois
             // Query github.com
             var response = await whois.LookupAsync("github.com");
 
-            // Output the response 
+            // Output the response
             Console.WriteLine(response.Content);
         }
 
