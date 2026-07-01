@@ -1,24 +1,12 @@
-﻿using System.Text;
+using System.Text;
 
 namespace Whois
 {
     /// <summary>
-    /// Specifies default options for looking up WHOIS information
+    /// Specifies options for looking up WHOIS information
     /// </summary>
     public class WhoisOptions
     {
-        public static WhoisOptions Defaults { get; }
-
-        static WhoisOptions()
-        {
-            Defaults = new WhoisOptions
-            {
-                Encoding = Encoding.UTF8,
-                FollowReferrer = true,
-                TimeoutSeconds = 10
-            };
-        }
-
         /// <summary>
         /// The default encoding to use.
         /// </summary>
@@ -27,24 +15,11 @@ namespace Whois
         /// <summary>
         /// Defines the network timeout to use when communicating with servers.
         /// </summary>
-        public int TimeoutSeconds { get; set; }
+        public int TimeoutSeconds { get; set; } = 10;
 
         /// <summary>
-        /// Determines whether to following referral links when downloading WHOIS data.
+        /// Determines whether to follow referral links when downloading WHOIS data.
         /// </summary>
-        public bool FollowReferrer { get; set; }
-
-        /// <summary>
-        /// Clones this instance.
-        /// </summary>
-        public WhoisOptions Clone()
-        {
-            return new WhoisOptions
-            {
-                Encoding = Encoding,
-                TimeoutSeconds = TimeoutSeconds,
-                FollowReferrer = FollowReferrer
-            };
-        }
+        public bool FollowReferrer { get; set; } = true;
     }
 }
