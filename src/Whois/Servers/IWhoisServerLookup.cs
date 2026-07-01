@@ -1,4 +1,4 @@
-﻿using System;
+using System.Threading;
 using System.Threading.Tasks;
 
 namespace Whois.Servers
@@ -6,16 +6,11 @@ namespace Whois.Servers
     /// <summary>
     /// Interface to lookup the appropriate root WHOIS server for a given request.
     /// </summary>
-    public interface IWhoisServerLookup : IDisposable
+    public interface IWhoisServerLookup
     {
         /// <summary>
         /// Lookups the root WHOIS server for the specified request.
         /// </summary>
-        WhoisResponse Lookup(WhoisRequest request);
-
-        /// <summary>
-        /// Lookups the root WHOIS server for the specified request.
-        /// </summary>
-        Task<WhoisResponse> LookupAsync(WhoisRequest request);
+        Task<WhoisResponse> Lookup(WhoisRequest request, CancellationToken cancellationToken = default);
     }
 }

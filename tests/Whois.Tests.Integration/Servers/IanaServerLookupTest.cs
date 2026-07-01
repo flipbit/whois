@@ -1,3 +1,4 @@
+using System.Threading.Tasks;
 using Xunit;
 using Whois.Servers;
 
@@ -13,17 +14,17 @@ namespace Whois
         }
 
         [Fact]
-        public void TestLookupCom()
+        public async Task TestLookupCom()
         {
-            var result = lookup.Lookup(new WhoisRequest("com"));
+            var result = await lookup.Lookup(new WhoisRequest("com"));
 
             Assert.Equal("whois.verisign-grs.com", result.Registrar.WhoisServer.ToString());
         }
 
         [Fact]
-        public void TestLookupComBr()
+        public async Task TestLookupComBr()
         {
-            var result = lookup.Lookup(new WhoisRequest("br"));
+            var result = await lookup.Lookup(new WhoisRequest("br"));
 
             Assert.Equal("whois.registro.br", result.Registrar.WhoisServer.ToString());
         }

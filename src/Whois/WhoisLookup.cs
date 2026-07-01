@@ -1,5 +1,6 @@
-﻿using System;
+using System;
 using System.Text;
+using System.Threading;
 using System.Threading.Tasks;
 using Tokens.Transformers;
 using Tokens.Validators;
@@ -16,7 +17,7 @@ namespace Whois
     public class WhoisLookup : IWhoisLookup
     {
         private static readonly ILog Log = LogProvider.GetCurrentClassLogger();
-        
+
         /// <summary>
         /// The default <see cref="WhoisOptions"/> to use for this instance
         /// </summary>
@@ -48,7 +49,7 @@ namespace Whois
         /// <summary>
         /// Initializes a new instance of the <see cref="WhoisLookup"/> class with the given <see cref="WhoisOptions"/>.
         /// </summary>
-        public WhoisLookup(WhoisOptions options) 
+        public WhoisLookup(WhoisOptions options)
         {
             Options = options;
             Parser = new WhoisParser();
@@ -59,53 +60,29 @@ namespace Whois
         /// <summary>
         /// Performs a WHOIS lookup on the specified domain.
         /// </summary>
-        public WhoisResponse Lookup(string domain)
+        public Task<WhoisResponse> Lookup(string domain, CancellationToken cancellationToken = default)
         {
-            return AsyncHelper.RunSync(() => LookupAsync(domain));
+            return Lookup(domain, Options.Encoding, cancellationToken);
         }
 
         /// <summary>
         /// Performs a WHOIS lookup on the specified domain with the given encoding.
         /// </summary>
-        public WhoisResponse Lookup(string domain, Encoding encoding)
+        public Task<WhoisResponse> Lookup(string domain, Encoding encoding, CancellationToken cancellationToken = default)
         {
-            return AsyncHelper.RunSync(() => LookupAsync(domain, encoding));
-        }
-
-        /// <summary>
-        /// Performs a WHOIS lookup for the given request.
-        /// </summary>
-        public WhoisResponse Lookup(WhoisRequest request)
-        {
-            return AsyncHelper.RunSync(() => LookupAsync(request));
-        }
-
-        /// <summary>
-        /// Performs a WHOIS lookup on the specified domain.
-        /// </summary>
-        public Task<WhoisResponse> LookupAsync(string domain)
-        {
-            return LookupAsync(domain, Options.Encoding);
-        }
-
-        /// <summary>
-        /// Performs a WHOIS lookup on the specified domain with the given encoding.
-        /// </summary>
-        public Task<WhoisResponse> LookupAsync(string domain, Encoding encoding)
-        {
-            return LookupAsync(new WhoisRequest
+            return Lookup(new WhoisRequest
             {
                 Query = domain,
                 Encoding = encoding,
                 TimeoutSeconds = Options.TimeoutSeconds,
                 FollowReferrer = Options.FollowReferrer
-            });
+            }, cancellationToken);
         }
 
         /// <summary>
         /// Performs a WHOIS lookup for the given request.
         /// </summary>
-        public async Task<WhoisResponse> LookupAsync(WhoisRequest request)
+        public async Task<WhoisResponse> Lookup(WhoisRequest request, CancellationToken cancellationToken = default)
         {
             if (string.IsNullOrEmpty(request.Query))
             {
@@ -128,7 +105,7 @@ namespace Whois
             if (string.IsNullOrEmpty(request.WhoisServer))
             {
                 // Lookup root WHOIS server for the TLD
-                response = await ServerLookup.LookupAsync(request);
+                response = await ServerLookup.Lookup(request, cancellationToken);
             }
             else
             {
@@ -143,8 +120,10 @@ namespace Whois
             var whoisServer = response?.WhoisServer;
             while (whoisServer != null)
             {
+                cancellationToken.ThrowIfCancellationRequested();
+
                 // Download
-                var content = await Download(whoisServer.Value, request);
+                var content = await Download(whoisServer.Value, request, cancellationToken);
 
                 // Parse result
                 var parsed = Parser.Parse(whoisServer.Value, content);
@@ -161,7 +140,7 @@ namespace Whois
                 // Check for referral loop
                 if (request.FollowReferrer == false) break;
                 if (response.SeenServer(response.WhoisServer)) break;
-           
+
                 // Lookup result in referral server
                 whoisServer = response.WhoisServer;
             }
@@ -179,22 +158,17 @@ namespace Whois
             Parser.RegisterTransformer<T>();
         }
 
-        private async Task<string> Download(string url, WhoisRequest request)
+        private async Task<string> Download(string url, WhoisRequest request, CancellationToken cancellationToken)
         {
             // TODO: Expose this & extend for other TLDs
             var query = request.Query;
             if (query.EndsWith("jp")) query += "/e";    // Return English .jp results
 
-            var content = await TcpReader.Read(url, 43, query, request.Encoding, request.TimeoutSeconds);
+            var content = await TcpReader.Read(url, 43, query, request.Encoding, request.TimeoutSeconds, cancellationToken);
 
             Log.Debug("Lookup {0}: Downloaded {1:###,###,##0} byte(s) from {2}.", request.Query, content.Length, url);
 
             return content;
-        }
-
-        public void Dispose()
-        {
-            TcpReader?.Dispose();
         }
     }
 }

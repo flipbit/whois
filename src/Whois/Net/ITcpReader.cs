@@ -1,5 +1,5 @@
-﻿using System;
 using System.Text;
+using System.Threading;
 using System.Threading.Tasks;
 
 namespace Whois.Net
@@ -7,7 +7,7 @@ namespace Whois.Net
     /// <summary>
     /// Interface to allow access to TCP services
     /// </summary>
-    public interface ITcpReader : IDisposable
+    public interface ITcpReader
     {
         /// <summary>
         /// Reads data from the specified URL and port.
@@ -17,6 +17,7 @@ namespace Whois.Net
         /// <param name="command">The command.</param>
         /// <param name="encoding">The encoding to use whilst reading the server response.</param>
         /// <param name="timeoutSeconds">The network timeout in seconds</param>
-        Task<string> Read(string url, int port, string command, Encoding encoding, int timeoutSeconds);
+        /// <param name="cancellationToken">Cancellation token</param>
+        Task<string> Read(string url, int port, string command, Encoding encoding, int timeoutSeconds, CancellationToken cancellationToken = default);
     }
 }

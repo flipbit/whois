@@ -16,11 +16,11 @@ namespace Whois.Servers
         }
 
         [Fact]
-        public void TestLookupCom()
+        public async System.Threading.Tasks.Task TestLookupCom()
         {
             lookup.TcpReader = new FakeTcpReader(reader.Read("whois.iana.org", "tld", "com.txt"));
 
-            var response = lookup.Lookup(new WhoisRequest("test.com"));
+            var response = await lookup.Lookup(new WhoisRequest("test.com"));
 
             Assert.Equal(0, response.ParsingErrors);
 
@@ -94,11 +94,11 @@ namespace Whois.Servers
         }
 
         [Fact]
-        public void TestLookupBe()
+        public async System.Threading.Tasks.Task TestLookupBe()
         {
             lookup.TcpReader = new FakeTcpReader(reader.Read("whois.iana.org", "tld", "be.txt"));
 
-            var response = lookup.Lookup(new WhoisRequest("test.be"));
+            var response = await lookup.Lookup(new WhoisRequest("test.be"));
 
             AssertWriter.Write(response);
             Assert.Equal(0, response.ParsingErrors);
@@ -166,11 +166,11 @@ namespace Whois.Servers
         }
 
         [Fact]
-        public void TestLookupNotFound()
+        public async System.Threading.Tasks.Task TestLookupNotFound()
         {
             lookup.TcpReader = new FakeTcpReader(reader.Read("whois.iana.org", "tld", "not_assigned.txt"));
 
-            var response = lookup.Lookup(new WhoisRequest("test.be"));
+            var response = await lookup.Lookup(new WhoisRequest("test.be"));
 
             AssertWriter.Write(response);
             Assert.Equal(0, response.ParsingErrors);

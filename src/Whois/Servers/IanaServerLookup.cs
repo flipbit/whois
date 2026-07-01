@@ -1,4 +1,5 @@
-﻿using System;
+using System;
+using System.Threading;
 using System.Threading.Tasks;
 using Tokens;
 using Whois.Logging;
@@ -8,12 +9,12 @@ using Whois.Parsers;
 namespace Whois.Servers
 {
     /// <summary>
-    /// Class to lookup a WHOIS server for a TLD from IANA 
+    /// Class to lookup a WHOIS server for a TLD from IANA
     /// </summary>
     public class IanaServerLookup : IWhoisServerLookup
     {
         private const string IanaUrl = "whois.iana.org";
-        
+
         private static readonly ILog Log = LogProvider.GetCurrentClassLogger();
 
         private readonly Lazy<TokenMatcher> ianaTemplate;
@@ -37,18 +38,12 @@ namespace Whois.Servers
             resourceReader = new ResourceReader();
             TcpReader = tcpReader;
         }
-        
 
-        public WhoisResponse Lookup(WhoisRequest request)
-        {
-            return AsyncHelper.RunSync(() => LookupAsync(request));
-        }
-
-        public async Task<WhoisResponse> LookupAsync(WhoisRequest request)
+        public async Task<WhoisResponse> Lookup(WhoisRequest request, CancellationToken cancellationToken = default)
         {
             var tld = GetTld(request.Query);
 
-            var content = await Download(tld, request);
+            var content = await Download(tld, request, cancellationToken);
 
             // Reflect the raw response onto a ParsedWhoisServer object
             var matcher = ianaTemplate.Value;
@@ -66,16 +61,16 @@ namespace Whois.Servers
             return new WhoisResponse
             {
                 Content = content,
-                DomainName = new HostName(tld), 
+                DomainName = new HostName(tld),
                 Status = WhoisStatus.Unknown
             };
         }
 
-        private async Task<string> Download(string tld, WhoisRequest request)
+        private async Task<string> Download(string tld, WhoisRequest request, CancellationToken cancellationToken)
         {
             Log.Debug("Looking up Root TLD server for {0} from {1}", tld, IanaUrl);
 
-            var response = await TcpReader.Read(IanaUrl, 43, tld.ToUpper(), request.Encoding, request.TimeoutSeconds);
+            var response = await TcpReader.Read(IanaUrl, 43, tld.ToUpper(), request.Encoding, request.TimeoutSeconds, cancellationToken);
 
             Log.Debug("Received {0:###,###,##0} byte(s).", response.Length);
 
@@ -93,10 +88,10 @@ namespace Whois.Servers
             foreach (var resourceName in resourceNames)
             {
                 var content = resourceReader.GetContent(resourceName);
-            
+
                 matcher.RegisterTemplate(content);
             }
-            
+
             return matcher;
         }
 
@@ -112,11 +107,6 @@ namespace Whois.Servers
             }
 
             return tld;
-        }
-
-        public void Dispose()
-        {
-            TcpReader?.Dispose();
         }
     }
 }
