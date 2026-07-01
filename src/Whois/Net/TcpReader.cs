@@ -24,7 +24,12 @@ namespace Whois.Net
                 await NetStandardShims.ConnectAsync(tcpClient, url, port, token);
 
                 using var stream = tcpClient.GetStream();
-                using var writer = new StreamWriter(stream, encoding) { NewLine = "\r\n" };
+                // Use a BOM-less encoding for the writer to avoid sending a byte order mark
+                // to the WHOIS server (which would corrupt the query).
+                var writerEncoding = encoding is UTF8Encoding
+                    ? new UTF8Encoding(encoderShouldEmitUTF8Identifier: false)
+                    : encoding;
+                using var writer = new StreamWriter(stream, writerEncoding) { NewLine = "\r\n" };
                 using var reader = new StreamReader(stream, encoding);
 
                 await writer.WriteLineAsync(command);
