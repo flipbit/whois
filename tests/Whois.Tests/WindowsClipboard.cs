@@ -9,6 +9,8 @@ namespace Whois
     {
         public static void SetText(string text)
         {
+            if (!RuntimeInformation.IsOSPlatform(OSPlatform.Windows)) return;
+
             OpenClipboard();
 
             EmptyClipboard();
