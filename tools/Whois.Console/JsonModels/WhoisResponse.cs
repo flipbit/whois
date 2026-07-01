@@ -1,7 +1,7 @@
-﻿using System;
+using System;
 using System.Collections.Generic;
 using System.Linq;
-using Newtonsoft.Json;
+using System.Text.Json.Serialization;
 
 namespace Whois.JsonModels
 {
@@ -13,7 +13,7 @@ namespace Whois.JsonModels
 
         public WhoisResponse(Whois.WhoisResponse response)
         {
-            DomainName = response.DomainName.ToString();
+            DomainName = response.DomainName?.ToString();
             RegistryDomainId = response.RegistryDomainId;
             Registered = response.Registered;
             Updated = response.Updated;
@@ -27,40 +27,40 @@ namespace Whois.JsonModels
             DnsSecStatus = response.DnsSecStatus;
         }
 
-        [JsonProperty(NullValueHandling = NullValueHandling.Ignore)]
-        public string DomainName { get; set; }
+        [JsonIgnore(Condition = JsonIgnoreCondition.WhenWritingNull)]
+        public string? DomainName { get; set; }
 
-        [JsonProperty(NullValueHandling = NullValueHandling.Ignore)]
-        public string RegistryDomainId { get; set; }
+        [JsonIgnore(Condition = JsonIgnoreCondition.WhenWritingNull)]
+        public string? RegistryDomainId { get; set; }
 
-        [JsonProperty(NullValueHandling = NullValueHandling.Ignore)]
+        [JsonIgnore(Condition = JsonIgnoreCondition.WhenWritingNull)]
         public DateTime? Registered { get; set; }
 
-        [JsonProperty(NullValueHandling = NullValueHandling.Ignore)]
+        [JsonIgnore(Condition = JsonIgnoreCondition.WhenWritingNull)]
         public DateTime? Updated { get; set; }
 
-        [JsonProperty(NullValueHandling = NullValueHandling.Ignore)]
+        [JsonIgnore(Condition = JsonIgnoreCondition.WhenWritingNull)]
         public DateTime? Expiration { get; set; }
 
-        [JsonProperty(NullValueHandling = NullValueHandling.Ignore)]
-        public Registrar Registrar { get; set; }
+        [JsonIgnore(Condition = JsonIgnoreCondition.WhenWritingNull)]
+        public Registrar? Registrar { get; set; }
 
-        [JsonProperty(NullValueHandling = NullValueHandling.Ignore)]
-        public Contact Registrant { get; set; }
+        [JsonIgnore(Condition = JsonIgnoreCondition.WhenWritingNull)]
+        public Contact? Registrant { get; set; }
 
-        [JsonProperty(NullValueHandling = NullValueHandling.Ignore)]
-        public Contact TechnicalContact { get; set; }
+        [JsonIgnore(Condition = JsonIgnoreCondition.WhenWritingNull)]
+        public Contact? TechnicalContact { get; set; }
 
-        [JsonProperty(NullValueHandling = NullValueHandling.Ignore)]
-        public Contact AdminContact { get; set; }
+        [JsonIgnore(Condition = JsonIgnoreCondition.WhenWritingNull)]
+        public Contact? AdminContact { get; set; }
 
-        [JsonProperty(NullValueHandling = NullValueHandling.Ignore)]
-        public IList<string> NameServers { get; }
+        [JsonIgnore(Condition = JsonIgnoreCondition.WhenWritingNull)]
+        public IList<string>? NameServers { get; }
 
-        [JsonProperty(NullValueHandling = NullValueHandling.Ignore)]
-        public IList<string> DomainStatus { get; }
+        [JsonIgnore(Condition = JsonIgnoreCondition.WhenWritingNull)]
+        public IList<string>? DomainStatus { get; }
 
-        [JsonProperty(NullValueHandling = NullValueHandling.Ignore)]
-        public string DnsSecStatus { get; set; }
+        [JsonIgnore(Condition = JsonIgnoreCondition.WhenWritingNull)]
+        public string? DnsSecStatus { get; set; }
     }
 }
