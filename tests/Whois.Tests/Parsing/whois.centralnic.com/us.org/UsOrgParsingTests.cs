@@ -1,34 +1,31 @@
-using NUnit.Framework;
+using Xunit;
 using Whois.Parsers;
 
 namespace Whois.Parsing.Whois.Centralnic.Com.UsOrg
 {
-    [TestFixture]
     public class UsOrgParsingTests : ParsingTests
     {
         private WhoisParser parser;
 
-        [SetUp]
-        public void SetUp()
+        public UsOrgParsingTests()
         {
-            SerilogConfig.Init();
 
             parser = new WhoisParser();
         }
 
-        [Test]
+        [Fact]
         public void Test_not_found()
         {
             var sample = SampleReader.Read("whois.centralnic.com", "us.org", "not_found.txt");
             var response = parser.Parse("whois.centralnic.com", sample);
 
-            Assert.Greater(sample.Length, 0);
-            Assert.AreEqual(WhoisStatus.NotFound, response.Status);
+            Assert.True(sample.Length > 0);
+            Assert.Equal(WhoisStatus.NotFound, response.Status);
 
-            Assert.AreEqual(0, response.ParsingErrors);
-            Assert.AreEqual("whois.centralnic.com/NotFound", response.TemplateName);
+            Assert.Equal(0, response.ParsingErrors);
+            Assert.Equal("whois.centralnic.com/NotFound", response.TemplateName);
 
-            Assert.AreEqual(1, response.FieldsParsed);
+            Assert.Equal(1, response.FieldsParsed);
         }
     }
 }

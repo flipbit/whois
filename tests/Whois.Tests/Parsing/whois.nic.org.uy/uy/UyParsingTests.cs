@@ -1,60 +1,56 @@
-using NUnit.Framework;
+using Xunit;
 using Whois.Parsers;
 
 namespace Whois.Parsing.Whois.Nic.Org.Uy.Uy
 {
-    [TestFixture]
-    [Ignore("TODO")]
     public class UyParsingTests : ParsingTests
     {
         private WhoisParser parser;
 
-        [SetUp]
-        public void SetUp()
+        public UyParsingTests()
         {
-            SerilogConfig.Init();
 
             parser = new WhoisParser();
         }
 
-        [Test]
+        [Fact(Skip = "TODO")]
         public void Test_found()
         {
             var sample = SampleReader.Read("whois.nic.org.uy", "uy", "found.txt");
             var response = parser.Parse("whois.nic.org.uy", sample);
 
-            Assert.Greater(sample.Length, 0);
-            Assert.AreEqual(WhoisStatus.Found, response.Status);
+            Assert.True(sample.Length > 0);
+            Assert.Equal(WhoisStatus.Found, response.Status);
         }
 
-        [Test]
+        [Fact(Skip = "TODO")]
         public void Test_error()
         {
             var sample = SampleReader.Read("whois.nic.org.uy", "uy", "error.txt");
             var response = parser.Parse("whois.nic.org.uy", sample);
 
-            Assert.Greater(sample.Length, 0);
-            Assert.AreEqual(WhoisStatus.Error, response.Status);
+            Assert.True(sample.Length > 0);
+            Assert.Equal(WhoisStatus.Error, response.Status);
         }
 
-        [Test]
+        [Fact(Skip = "TODO")]
         public void Test_not_found()
         {
             var sample = SampleReader.Read("whois.nic.org.uy", "uy", "not_found.txt");
             var response = parser.Parse("whois.nic.org.uy", sample);
 
-            Assert.Greater(sample.Length, 0);
-            Assert.AreEqual(WhoisStatus.NotFound, response.Status);
+            Assert.True(sample.Length > 0);
+            Assert.Equal(WhoisStatus.NotFound, response.Status);
         }
 
-        [Test]
+        [Fact(Skip = "TODO")]
         public void Test_found_status_registered()
         {
             var sample = SampleReader.Read("whois.nic.org.uy", "uy", "found_status_registered.txt");
             var response = parser.Parse("whois.nic.org.uy", sample);
 
-            Assert.Greater(sample.Length, 0);
-            Assert.AreEqual(WhoisStatus.Found, response.Status);
+            Assert.True(sample.Length > 0);
+            Assert.Equal(WhoisStatus.Found, response.Status);
         }
     }
 }

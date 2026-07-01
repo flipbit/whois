@@ -1,80 +1,77 @@
 using System;
-using NUnit.Framework;
+using Xunit;
 using Whois.Parsers;
 
 namespace Whois.Parsing.Whois.Je.Je
 {
-    [TestFixture]
     public class JeParsingTests : ParsingTests
     {
         private WhoisParser parser;
 
-        [SetUp]
-        public void SetUp()
+        public JeParsingTests()
         {
-            SerilogConfig.Init();
 
             parser = new WhoisParser();
         }
 
-        [Test]
+        [Fact]
         public void Test_not_found()
         {
             var sample = SampleReader.Read("whois.je", "je", "not_found.txt");
             var response = parser.Parse("whois.je", sample);
 
-            Assert.Greater(sample.Length, 0);
-            Assert.AreEqual(WhoisStatus.NotFound, response.Status);
+            Assert.True(sample.Length > 0);
+            Assert.Equal(WhoisStatus.NotFound, response.Status);
 
-            Assert.AreEqual(0, response.ParsingErrors);
-            Assert.AreEqual("whois.je/je/NotFound", response.TemplateName);
+            Assert.Equal(0, response.ParsingErrors);
+            Assert.Equal("whois.je/je/NotFound", response.TemplateName);
 
-            Assert.AreEqual("u34jedzcq.je", response.DomainName.ToString());
+            Assert.Equal("u34jedzcq.je", response.DomainName.ToString());
 
             // Domain Status
-            Assert.AreEqual(1, response.DomainStatus.Count);
-            Assert.AreEqual("Not Registered", response.DomainStatus[0]);
+            Assert.Equal(1, response.DomainStatus.Count);
+            Assert.Equal("Not Registered", response.DomainStatus[0]);
 
-            Assert.AreEqual(3, response.FieldsParsed);
+            Assert.Equal(3, response.FieldsParsed);
         }
 
-        [Test]
+        [Fact]
         public void Test_found()
         {
             var sample = SampleReader.Read("whois.je", "je", "found.txt");
             var response = parser.Parse("whois.je", sample);
 
-            Assert.Greater(sample.Length, 0);
-            Assert.AreEqual(WhoisStatus.Found, response.Status);
+            Assert.True(sample.Length > 0);
+            Assert.Equal(WhoisStatus.Found, response.Status);
 
-            Assert.AreEqual(0, response.ParsingErrors);
-            Assert.AreEqual("whois.je/je/Found", response.TemplateName);
+            Assert.Equal(0, response.ParsingErrors);
+            Assert.Equal("whois.je/je/Found", response.TemplateName);
 
-            Assert.AreEqual("google.je", response.DomainName.ToString());
+            Assert.Equal("google.je", response.DomainName.ToString());
 
             // Registrar Details
-            Assert.AreEqual("MarkMonitor Inc.", response.Registrar.Name);
-            Assert.AreEqual("http://www.markmonitor.com", response.Registrar.Url);
+            Assert.Equal("MarkMonitor Inc.", response.Registrar.Name);
+            Assert.Equal("http://www.markmonitor.com", response.Registrar.Url);
 
-            Assert.AreEqual(new DateTime(2002, 10, 31, 00, 00, 00, 000, DateTimeKind.Utc), response.Registered);
+            Assert.Equal(new DateTime(2002, 10, 31, 00, 00, 00, 000, DateTimeKind.Utc), response.Registered);
 
              // Registrant Details
-            Assert.AreEqual("Google Inc.", response.Registrant.Name);
-            Assert.AreEqual("Google Inc.", response.Registrant.Organization);
+            Assert.Equal("Google Inc.", response.Registrant.Name);
+            Assert.Equal("Google Inc.", response.Registrant.Organization);
 
 
             // Nameservers
-            Assert.AreEqual(4, response.NameServers.Count);
-            Assert.AreEqual("ns1.google.com", response.NameServers[0]);
-            Assert.AreEqual("ns2.google.com", response.NameServers[1]);
-            Assert.AreEqual("ns4.google.com", response.NameServers[2]);
-            Assert.AreEqual("ns3.google.com", response.NameServers[3]);
+            Assert.Equal(4, response.NameServers.Count);
+            Assert.Equal("ns1.google.com", response.NameServers[0]);
+            Assert.Equal("ns2.google.com", response.NameServers[1]);
+            Assert.Equal("ns4.google.com", response.NameServers[2]);
+            Assert.Equal("ns3.google.com", response.NameServers[3]);
 
             // Domain Status
-            Assert.AreEqual(1, response.DomainStatus.Count);
-            Assert.AreEqual("Active", response.DomainStatus[0]);
+            Assert.Equal(1, response.DomainStatus.Count);
+            Assert.Equal("Active", response.DomainStatus[0]);
 
-            Assert.AreEqual(12, response.FieldsParsed);
+            Assert.Equal(12, response.FieldsParsed);
         }
     }
 }

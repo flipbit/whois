@@ -1,81 +1,78 @@
-using NUnit.Framework;
+using Xunit;
 using Whois.Parsers;
 
 namespace Whois.Parsing.Whois.Nic.Li.Li
 {
-    [TestFixture]
     public class LiParsingTests : ParsingTests
     {
         private WhoisParser parser;
 
-        [SetUp]
-        public void SetUp()
+        public LiParsingTests()
         {
-            SerilogConfig.Init();
 
             parser = new WhoisParser();
         }
 
-        [Test]
+        [Fact]
         public void Test_not_found()
         {
             var sample = SampleReader.Read("whois.nic.li", "li", "not_found.txt");
             var response = parser.Parse("whois.nic.li", sample);
 
-            Assert.Greater(sample.Length, 0);
-            Assert.AreEqual(WhoisStatus.NotFound, response.Status);
+            Assert.True(sample.Length > 0);
+            Assert.Equal(WhoisStatus.NotFound, response.Status);
 
-            Assert.AreEqual(0, response.ParsingErrors);
-            Assert.AreEqual("whois.nic.li/li/NotFound", response.TemplateName);
+            Assert.Equal(0, response.ParsingErrors);
+            Assert.Equal("whois.nic.li/li/NotFound", response.TemplateName);
 
-            Assert.AreEqual(1, response.FieldsParsed);
+            Assert.Equal(1, response.FieldsParsed);
         }
 
-        [Test]
+        [Fact]
         public void Test_found()
         {
             var sample = SampleReader.Read("whois.nic.li", "li", "found.txt");
             var response = parser.Parse("whois.nic.li", sample);
 
-            Assert.Greater(sample.Length, 0);
-            Assert.AreEqual(WhoisStatus.Found, response.Status);
+            Assert.True(sample.Length > 0);
+            Assert.Equal(WhoisStatus.Found, response.Status);
 
-            Assert.AreEqual(0, response.ParsingErrors);
-            Assert.AreEqual("whois.nic.li/li/Found", response.TemplateName);
+            Assert.Equal(0, response.ParsingErrors);
+            Assert.Equal("whois.nic.li/li/Found", response.TemplateName);
 
-            Assert.AreEqual("google.li", response.DomainName.ToString());
+            Assert.Equal("google.li", response.DomainName.ToString());
 
              // Registrant Details
-            Assert.AreEqual("Google Inc.", response.Registrant.Name);
+            Assert.Equal("Google Inc.", response.Registrant.Name);
 
              // Registrant Address
-            Assert.AreEqual(4, response.Registrant.Address.Count);
-            Assert.AreEqual("Administrator Domain", response.Registrant.Address[0]);
-            Assert.AreEqual("Amphitheatre Parkway 1600", response.Registrant.Address[1]);
-            Assert.AreEqual("US-94043 Mountain View, CA", response.Registrant.Address[2]);
-            Assert.AreEqual("United States", response.Registrant.Address[3]);
+            Assert.Equal(4, response.Registrant.Address.Count);
+            Assert.Equal("Administrator Domain", response.Registrant.Address[0]);
+            Assert.Equal("Amphitheatre Parkway 1600", response.Registrant.Address[1]);
+            Assert.Equal("US-94043 Mountain View, CA", response.Registrant.Address[2]);
+            Assert.Equal("United States", response.Registrant.Address[3]);
 
 
              // TechnicalContact Details
-            Assert.AreEqual("Google Inc.", response.TechnicalContact.Name);
+            Assert.Equal("Google Inc.", response.TechnicalContact.Name);
 
              // TechnicalContact Address
-            Assert.AreEqual(4, response.TechnicalContact.Address.Count);
-            Assert.AreEqual("DNS Admin", response.TechnicalContact.Address[0]);
-            Assert.AreEqual("2400 E. Bayshore Pkwy", response.TechnicalContact.Address[1]);
-            Assert.AreEqual("US-94043 Mountain View", response.TechnicalContact.Address[2]);
-            Assert.AreEqual("United States", response.TechnicalContact.Address[3]);
+            Assert.Equal(4, response.TechnicalContact.Address.Count);
+            Assert.Equal("DNS Admin", response.TechnicalContact.Address[0]);
+            Assert.Equal("2400 E. Bayshore Pkwy", response.TechnicalContact.Address[1]);
+            Assert.Equal("US-94043 Mountain View", response.TechnicalContact.Address[2]);
+            Assert.Equal("United States", response.TechnicalContact.Address[3]);
 
 
             // Nameservers
-            Assert.AreEqual(4, response.NameServers.Count);
-            Assert.AreEqual("ns1.google.com", response.NameServers[0]);
-            Assert.AreEqual("ns2.google.com", response.NameServers[1]);
-            Assert.AreEqual("ns3.google.com", response.NameServers[2]);
-            Assert.AreEqual("ns4.google.com", response.NameServers[3]);
+            Assert.Equal(4, response.NameServers.Count);
+            Assert.Equal("ns1.google.com", response.NameServers[0]);
+            Assert.Equal("ns2.google.com", response.NameServers[1]);
+            Assert.Equal("ns3.google.com", response.NameServers[2]);
+            Assert.Equal("ns4.google.com", response.NameServers[3]);
 
-            Assert.AreEqual("N", response.DnsSecStatus);
-            Assert.AreEqual(17, response.FieldsParsed);
+            Assert.Equal("N", response.DnsSecStatus);
+            Assert.Equal(17, response.FieldsParsed);
         }
     }
 }

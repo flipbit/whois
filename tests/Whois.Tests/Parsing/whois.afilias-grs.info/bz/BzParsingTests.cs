@@ -1,40 +1,37 @@
 using System;
-using NUnit.Framework;
+using Xunit;
 using Whois.Parsers;
 
 namespace Whois.Parsing.Whois.Afilias.Grs.Info.Bz
 {
-    [TestFixture]
     public class BzParsingTests : ParsingTests
     {
         private WhoisParser parser;
 
-        [SetUp]
-        public void SetUp()
+        public BzParsingTests()
         {
-            SerilogConfig.Init();
 
             parser = new WhoisParser();
         }
 
-        [Test]
+        [Fact]
         public void Test_not_found()
         {
             var sample = SampleReader.Read("whois.afilias-grs.info", "bz", "not_found.txt");
             var response = parser.Parse("whois.afilias-grs.info", sample);
 
-            Assert.Greater(sample.Length, 0);
-            Assert.AreEqual(WhoisStatus.NotFound, response.Status);
+            Assert.True(sample.Length > 0);
+            Assert.Equal(WhoisStatus.NotFound, response.Status);
         }
 
-        [Test]
+        [Fact]
         public void Test_found()
         {
             var sample = SampleReader.Read("whois.afilias-grs.info", "bz", "found.txt");
             var response = parser.Parse("whois.afilias-grs.info", sample);
 
-            Assert.Greater(sample.Length, 0);
-            Assert.AreEqual(WhoisStatus.Found, response.Status);
+            Assert.True(sample.Length > 0);
+            Assert.Equal(WhoisStatus.Found, response.Status);
 
             AssertWriter.Write(response);
         }
