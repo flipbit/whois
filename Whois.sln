@@ -13,7 +13,7 @@ Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Whois.Tests.Integration", "
 EndProject
 Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Solution Items", "Solution Items", "{2C0D742E-EB77-4FFB-85C5-EFEE3A50DDEE}"
 	ProjectSection(SolutionItems) = preProject
-README.md = README.md
+		README.md = README.md
 	EndProjectSection
 EndProject
 Global
