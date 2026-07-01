@@ -142,25 +142,25 @@ namespace Whois
 
             if (expectedValue.Contains("\""))
             {
-                sb.AppendLine($@"            Assert.AreEqual(@""{expectedValue.Replace("\"", "\"\"")}"", response.{fieldName});");
+                sb.AppendLine($@"            Assert.Equal(@""{expectedValue.Replace("\"", "\"\"")}"", response.{fieldName});");
             }
             else
             {
-                sb.AppendLine($@"            Assert.AreEqual(""{expectedValue}"", response.{fieldName});");
+                sb.AppendLine($@"            Assert.Equal(""{expectedValue}"", response.{fieldName});");
             }
 
         }
 
         private static void Write(string fieldName, int expectedValue)
         {
-            sb.AppendLine($@"            Assert.AreEqual({expectedValue}, response.{fieldName});");
+            sb.AppendLine($@"            Assert.Equal({expectedValue}, response.{fieldName});");
         }
 
         private static void Write(string fieldName, DateTime? expectedValue)
         {
             if (expectedValue.HasValue == false) return;
 
-            sb.AppendLine($@"            Assert.AreEqual(new DateTime({expectedValue.Value.Year}, {expectedValue.Value.Month:00}, {expectedValue.Value.Day:00}, {expectedValue.Value.Hour:00}, {expectedValue.Value.Minute:00}, {expectedValue.Value.Second:00}, {expectedValue.Value.Millisecond:000}, DateTimeKind.Utc), response.{fieldName});");
+            sb.AppendLine($@"            Assert.Equal(new DateTime({expectedValue.Value.Year}, {expectedValue.Value.Month:00}, {expectedValue.Value.Day:00}, {expectedValue.Value.Hour:00}, {expectedValue.Value.Minute:00}, {expectedValue.Value.Second:00}, {expectedValue.Value.Millisecond:000}, DateTimeKind.Utc), response.{fieldName});");
         }
     }
 }
