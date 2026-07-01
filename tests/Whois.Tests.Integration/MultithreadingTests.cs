@@ -1,25 +1,23 @@
-﻿using System;
+using System;
 using System.Collections.Concurrent;
 using System.Linq;
 using System.Threading;
 using System.Threading.Tasks;
-using NUnit.Framework;
+using Xunit;
 using Whois.Models;
 
 namespace Whois
 {
-    [TestFixture]
     public class MultithreadingTests
     {
-        private WhoisLookup lookup;
+        private readonly WhoisLookup lookup;
 
-        [SetUp]
-        public void SetUp()
+        public MultithreadingTests()
         {
             lookup = new WhoisLookup();
         }
 
-        [Test]
+        [Fact]
         public void TestDownloadSampleDomainsSingleThreaded()
         {
             var domains = new SampleReader().ReadSampleDomains();
@@ -44,7 +42,7 @@ namespace Whois
             }
         }
 
-        [Test]
+        [Fact]
         public async Task TestDownloadSamplesDomainsMultipleThreaded()
         {
             var domains = new SampleReader().ReadSampleDomains();
@@ -52,7 +50,7 @@ namespace Whois
             var queue = new ConcurrentQueue<SampleDomain>(domains);
             var responses = new ConcurrentBag<WhoisResponse>();
 
-            var tasks = Enumerable.Range(1, 25).Select(async i => 
+            var tasks = Enumerable.Range(1, 25).Select(async i =>
             {
                 while (queue.IsEmpty == false)
                 {

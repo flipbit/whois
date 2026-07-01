@@ -1,7 +1,7 @@
 using System;
 using System.Text;
 using System.Threading.Tasks;
-using NUnit.Framework;
+using Xunit;
 using Whois.Net;
 
 namespace Whois
@@ -9,10 +9,9 @@ namespace Whois
     /// <summary>
     /// Example code for the README.md on Github
     /// </summary>
-    [TestFixture]
     public class ReadmeTests
     {
-        [Test]
+        [Fact]
         public void TestBasicLookup()
         {
             // Create a WhoisLookup instance
@@ -25,7 +24,7 @@ namespace Whois
             Console.WriteLine(response.Content);
         }
 
-        [Test]
+        [Fact]
         public void TestParsedLookup()
         {
             // Create a WhoisLookup instance
@@ -41,7 +40,7 @@ namespace Whois
             Console.WriteLine(json);
         }
 
-        [Test]
+        [Fact]
         public async Task TestAsyncLookup()
         {
             // Create a WhoisLookup instance
@@ -54,7 +53,7 @@ namespace Whois
             Console.WriteLine(response.Content);
         }
 
-        [Test]
+        [Fact]
         public void TestConfiguration()
         {
             // Global configuration
@@ -65,7 +64,7 @@ namespace Whois
             lookup.Options.TimeoutSeconds = 30;
         }
 
-        [Test]
+        [Fact]
         public void TestParsing()
         {
             var lookup = new WhoisLookup();
@@ -99,7 +98,7 @@ namespace Whois
             }
         }
 
-        [Test]
+        [Fact]
         public void TestCustomNetworking()
         {
             // Create a WhoisLookup instance
