@@ -13,4 +13,12 @@
     <Company>flipbit.co.uk</Company>
     <Copyright>Copyright 2026 Chris Wood</Copyright>
   </PropertyGroup>
+
+  <!-- Source Link and symbol packages -->
+  <PropertyGroup>
+    <PublishRepositoryUrl>true</PublishRepositoryUrl>
+    <EmbedUntrackedSources>true</EmbedUntrackedSources>
+    <IncludeSymbols>true</IncludeSymbols>
+    <SymbolPackageFormat>snupkg</SymbolPackageFormat>
+  </PropertyGroup>
 </Project>
