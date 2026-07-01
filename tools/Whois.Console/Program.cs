@@ -38,7 +38,7 @@ namespace Whois
         {
             var lookup = new WhoisLookup();
 
-            var result = await lookup.LookupAsync(options.Query);
+            var result = await lookup.Lookup(options.Query);
 
             if (options.ConvertToJson)
             {
@@ -52,8 +52,6 @@ namespace Whois
             {
                 Console.WriteLine(result.Content);
             }
-
-            lookup.Dispose();
         }
 
         private static Task Error(IEnumerable<Error> errors)

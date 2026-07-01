@@ -1,3 +1,4 @@
+using System.Threading.Tasks;
 using Xunit;
 
 namespace Whois.Domains
@@ -12,9 +13,9 @@ namespace Whois.Domains
         }
 
         [Fact]
-        public void TestLookupCom()
+        public async Task TestLookupCom()
         {
-            var result = lookup.Lookup("001hosting.com.br");
+            var result = await lookup.Lookup("001hosting.com.br");
 
             Assert.Equal(@"
 % Copyright (c) Nic.br

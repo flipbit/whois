@@ -1,4 +1,5 @@
-﻿using System.Threading.Tasks;
+using System.Threading;
+using System.Threading.Tasks;
 
 namespace Whois.Servers
 {
@@ -7,25 +8,16 @@ namespace Whois.Servers
     /// </summary>
     internal class FakeWhoisServerLookup : IWhoisServerLookup
     {
-        public WhoisResponse Lookup(WhoisRequest request)
+        public Task<WhoisResponse> Lookup(WhoisRequest request, CancellationToken cancellationToken = default)
         {
-            return new WhoisResponse
+            return Task.FromResult(new WhoisResponse
             {
-                DomainName = new HostName("com"), 
+                DomainName = new HostName("com"),
                 Registrar = new Registrar
                 {
                     WhoisServer = new HostName("test.whois.com")
                 }
-            };
-        }
-
-        public Task<WhoisResponse> LookupAsync(WhoisRequest request)
-        {
-            return Task.FromResult(Lookup(request));
-        }
-
-        public void Dispose()
-        {
+            });
         }
     }
 }

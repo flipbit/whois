@@ -12,26 +12,26 @@ namespace Whois
     public class ReadmeTests
     {
         [Fact]
-        public void TestBasicLookup()
+        public async Task TestBasicLookup()
         {
             // Create a WhoisLookup instance
             var whois = new WhoisLookup();
 
             // Query github.com
-            var response = whois.Lookup("github.com");
+            var response = await whois.Lookup("github.com");
 
             // Output the response
             Console.WriteLine(response.Content);
         }
 
         [Fact]
-        public void TestParsedLookup()
+        public async Task TestParsedLookup()
         {
             // Create a WhoisLookup instance
             var whois = new WhoisLookup();
 
             // Query github.com
-            var response = whois.Lookup("github.com");
+            var response = await whois.Lookup("github.com");
 
             // Convert the response to JSON
             var json = System.Text.Json.JsonSerializer.Serialize(response, new System.Text.Json.JsonSerializerOptions { WriteIndented = true });
@@ -47,7 +47,7 @@ namespace Whois
             var whois = new WhoisLookup();
 
             // Query github.com
-            var response = await whois.LookupAsync("github.com");
+            var response = await whois.Lookup("github.com");
 
             // Output the response
             Console.WriteLine(response.Content);
@@ -85,21 +85,16 @@ namespace Whois
                 reader = new TcpReader();
             }
 
-            public Task<string> Read(string url, int port, string command, Encoding encoding, int timeoutSeconds)
+            public Task<string> Read(string url, int port, string command, Encoding encoding, int timeoutSeconds, System.Threading.CancellationToken cancellationToken = default)
             {
                 Console.WriteLine($"Reading from URL: {url}");
 
-                return reader.Read(url, port, command, encoding, timeoutSeconds);
-            }
-
-            public void Dispose()
-            {
-                reader.Dispose();
+                return reader.Read(url, port, command, encoding, timeoutSeconds, cancellationToken);
             }
         }
 
         [Fact]
-        public void TestCustomNetworking()
+        public async Task TestCustomNetworking()
         {
             // Create a WhoisLookup instance
             var lookup = new WhoisLookup();
@@ -108,7 +103,7 @@ namespace Whois
             lookup.TcpReader = new MyCustomTcpReader();
 
             // Lookups will now use the custom TcpReader
-            var response = lookup.Lookup("github.com");
+            var response = await lookup.Lookup("github.com");
 
             Console.WriteLine(response.Content);
         }

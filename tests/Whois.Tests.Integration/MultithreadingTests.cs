@@ -18,7 +18,7 @@ namespace Whois
         }
 
         [Fact]
-        public void TestDownloadSampleDomainsSingleThreaded()
+        public async Task TestDownloadSampleDomainsSingleThreaded()
         {
             var domains = new SampleReader().ReadSampleDomains();
 
@@ -30,7 +30,7 @@ namespace Whois
 
                 try
                 {
-                    response = lookup.Lookup(domain.DomainName);
+                    response = await lookup.Lookup(domain.DomainName);
 
                     Console.WriteLine($"Looked Up: {domain.DomainName}, Status: {response.Status}, Size: {response.Content.Length}");
                 }
@@ -60,7 +60,7 @@ namespace Whois
 
                     try
                     {
-                        var response = await lookup.LookupAsync(domain.DomainName);
+                        var response = await lookup.Lookup(domain.DomainName);
 
                         if (response != null)
                         {
