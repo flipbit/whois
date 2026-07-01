@@ -1,0 +1,103 @@
+name: Release
+
+on:
+  push:
+    tags: ['v*']
+
+permissions:
+  contents: write
+  packages: write
+
+jobs:
+  validate:
+    name: Validate Version
+    runs-on: ubuntu-latest
+    outputs:
+      version: ${{ steps.version.outputs.version }}
+    steps:
+      - uses: actions/checkout@v4
+
+      - name: Extract version from tag
+        id: version
+        run: |
+          TAG_VERSION="${GITHUB_REF_NAME#v}"
+          echo "version=$TAG_VERSION" >> "$GITHUB_OUTPUT"
+
+      - name: Read version from csproj
+        id: csproj
+        run: |
+          CSPROJ_VERSION=$(grep -oPm1 '(?<=<Version>)[^<]+' src/Whois/Whois.csproj)
+          echo "version=$CSPROJ_VERSION" >> "$GITHUB_OUTPUT"
+
+      - name: Validate versions match
+        run: |
+          echo "Tag version: ${{ steps.version.outputs.version }}"
+          echo "Csproj version: ${{ steps.csproj.outputs.version }}"
+          if [ "${{ steps.version.outputs.version }}" != "${{ steps.csproj.outputs.version }}" ]; then
+            echo "::error::Tag version (${{ steps.version.outputs.version }}) does not match csproj version (${{ steps.csproj.outputs.version }})"
+            exit 1
+          fi
+
+  build-and-test:
+    name: Build and Test (${{ matrix.os }})
+    needs: validate
+    strategy:
+      matrix:
+        os: [ubuntu-latest, windows-latest]
+    runs-on: ${{ matrix.os }}
+    steps:
+      - uses: actions/checkout@v4
+
+      - name: Setup .NET
+        uses: actions/setup-dotnet@v4
+        with:
+          dotnet-version: |
+            8.0.x
+            10.0.x
+
+      - name: Restore
+        run: dotnet restore Whois.sln
+
+      - name: Build
+        run: dotnet build Whois.sln --no-restore
+
+      - name: Test
+        run: dotnet test tests/Whois.Tests/Whois.Tests.csproj --no-build --verbosity normal
+
+  pack-and-publish:
+    name: Pack and Publish
+    needs: [validate, build-and-test]
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+
+      - name: Setup .NET
+        uses: actions/setup-dotnet@v4
+        with:
+          dotnet-version: |
+            8.0.x
+            10.0.x
+
+      - name: Restore
+        run: dotnet restore src/Whois/Whois.csproj
+
+      - name: Build Release
+        run: dotnet build src/Whois/Whois.csproj -c Release --no-restore /p:ContinuousIntegrationBuild=true
+
+      - name: Pack
+        run: dotnet pack src/Whois/Whois.csproj -c Release --no-build -o ./artifacts
+
+      - name: Push to NuGet.org
+        run: dotnet nuget push ./artifacts/*.nupkg --api-key ${{ secrets.NUGET_API_KEY }} --source https://api.nuget.org/v3/index.json --skip-duplicate
+
+      - name: Push to GitHub Packages
+        run: dotnet nuget push ./artifacts/*.nupkg --api-key ${{ secrets.GITHUB_TOKEN }} --source https://nuget.pkg.github.com/flipbit/index.json --skip-duplicate
+
+      - name: Create GitHub Release
+        env:
+          GH_TOKEN: ${{ secrets.GITHUB_TOKEN }}
+        run: |
+          gh release create "${{ github.ref_name }}" \
+            ./artifacts/*.nupkg \
+            --title "${{ github.ref_name }}" \
+            --generate-notes
