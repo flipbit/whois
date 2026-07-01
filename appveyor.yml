@@ -24,12 +24,12 @@ before_build:
   # Display .NET Core version
   - cmd: dotnet --version
   # Display minimal restore text
-  - cmd: dotnet restore ./Whois/Whois.csproj --verbosity m
+  - cmd: dotnet restore ./src/Whois/Whois.csproj --verbosity m
 build_script:
-  # output will be in ./Whois/Whois/bin/Release/{framework}
-  - cmd: dotnet build ./Whois/Whois.csproj -c Release -f netstandard2.0
-  - cmd: dotnet build ./Whois/Whois.csproj -c Release -f net452
-  - cmd: dotnet pack ./Whois/Whois.csproj -c Release
+  # output will be in ./src/Whois/bin/Release/{framework}
+  - cmd: dotnet build ./src/Whois/Whois.csproj -c Release -f netstandard2.0
+  - cmd: dotnet build ./src/Whois/Whois.csproj -c Release -f net452
+  - cmd: dotnet pack ./src/Whois/Whois.csproj -c Release
 after_build:
   # For once the build has completed
 artifacts:
@@ -39,8 +39,8 @@ artifacts:
 clone_depth: 1
 test_script:
   # restore packages for our unit tests
-  - cmd: dotnet restore ./Whois.Tests/Whois.Tests.csproj --verbosity m
+  - cmd: dotnet restore ./tests/Whois.Tests/Whois.Tests.csproj --verbosity m
   # run the unit tests (requires changing into the test directory)
-  - cmd: cd Whois.Tests
+  - cmd: cd tests/Whois.Tests
   - cmd: dotnet test
 on_finish :
