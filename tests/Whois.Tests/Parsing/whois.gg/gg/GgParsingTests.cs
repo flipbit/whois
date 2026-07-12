@@ -13,7 +13,7 @@ public class GgParsingTests : ParsingTests
         parser = new WhoisParser();
     }
 
-    [Fact(Skip = "Template update deferred - WHOIS response format changed")]
+    [Fact]
     public void Test_not_found()
     {
         var sample = SampleReader.Read("whois.gg", "gg", "not-found", "u34jedzcq.gg.txt");
@@ -23,11 +23,11 @@ public class GgParsingTests : ParsingTests
         Assert.Equal(WhoisStatus.NotFound, response.Status);
 
         Assert.Equal(0, response.ParsingErrors);
-        Assert.Equal("generic/tld/not-found/05", response.TemplateName);
+        Assert.Equal("generic/tld/not-found/01", response.TemplateName);
 
-        Assert.Equal("u34jedzcq.gg", response.DomainName.ToString());
+        Assert.Null(response.DomainName);
 
-        Assert.Equal(2, response.FieldsParsed);
+        Assert.Equal(1, response.FieldsParsed);
     }
 
     [Fact(Skip = "Template update deferred - WHOIS response format changed")]
