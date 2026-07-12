@@ -13,17 +13,32 @@ public class WhoisParser
     private const string GenericTemplateTag = "catch-all";
 
     private readonly TemplateMatcher _matcher;
+#pragma warning disable MA0158 // System.Threading.Lock is not available on netstandard2.0 / net8.0
+    private readonly object _loadLock = new();
+#pragma warning restore MA0158
+    private readonly Func<string, string?>? _cacheResolver;
 
     /// <summary>
     /// Creates a new instance of the <see cref="WhoisParser"/> class.
     /// </summary>
-    public WhoisParser()
+    public WhoisParser() : this(cacheResolver: null)
+    {
+    }
+
+    /// <summary>
+    /// Creates a new instance of the <see cref="WhoisParser"/> class with an optional cache resolver.
+    /// When <paramref name="cacheResolver"/> is non-null, it is called with the WHOIS server name
+    /// to retrieve a directory path containing pre-cached template files. When it returns null,
+    /// embedded resources are used instead.
+    /// </summary>
+    public WhoisParser(Func<string, string?>? cacheResolver)
     {
         var options = new TokenizerOptions()
             .WithTransformer<CleanDomainStatusTransformer>()
             .WithTransformer<ToHostNameTransformer>();
 
         _matcher = new TemplateMatcher(options);
+        _cacheResolver = cacheResolver;
         FixUps = new List<IFixup>();
 
         // Register default FixUps
@@ -123,20 +138,57 @@ public class WhoisParser
         _matcher.Templates.Clear();
     }
 
+    /// <summary>
+    /// Loads all .txt template files from the given directory and registers them with the matcher.
+    /// </summary>
+    public void LoadServerTemplatesFromDirectory(string whoisServer, string directoryPath)
+    {
+        if (Templates.ContainsTag(whoisServer)) return;
+
+        lock (_loadLock)
+        {
+            if (Templates.ContainsTag(whoisServer)) return;
+
+            foreach (var file in Directory.GetFiles(directoryPath, "*.txt"))
+            {
+                var content = File.ReadAllText(file);
+                _matcher.RegisterTemplate(content);
+            }
+        }
+    }
+
     private void LoadServerTemplates(string whoisServer)
     {
-        // Check templates for this server/tld not already loaded
-        var loaded = Templates.ContainsTag(whoisServer);
+        // Fast check outside the lock — avoid taking the lock when already loaded.
+        if (Templates.ContainsTag(whoisServer)) return;
 
-        if (loaded) return;
-
-        var templateNames = ResourceReader.GetNames(whoisServer);
-
-        foreach (var templateName in templateNames)
+        lock (_loadLock)
         {
-            var content = ResourceReader.GetContent(templateName);
+            // Double-checked locking: re-verify under the lock before loading.
+            if (Templates.ContainsTag(whoisServer)) return;
 
-            _matcher.RegisterTemplate(content);
+            if (_cacheResolver != null)
+            {
+                var directoryPath = _cacheResolver(whoisServer);
+                if (directoryPath != null)
+                {
+                    foreach (var file in Directory.GetFiles(directoryPath, "*.txt"))
+                    {
+                        var content = File.ReadAllText(file);
+                        _matcher.RegisterTemplate(content);
+                    }
+                    return;
+                }
+            }
+
+            var templateNames = ResourceReader.GetNames(whoisServer);
+
+            foreach (var templateName in templateNames)
+            {
+                var content = ResourceReader.GetContent(templateName);
+
+                _matcher.RegisterTemplate(content);
+            }
         }
     }
 
@@ -144,13 +196,18 @@ public class WhoisParser
     {
         if (Templates.ContainsTag(GenericTemplateTag)) return;
 
-        var templateNames = ResourceReader.GetNames("generic", "tld");
-
-        foreach (var templateName in templateNames)
+        lock (_loadLock)
         {
-            var content = ResourceReader.GetContent(templateName);
+            if (Templates.ContainsTag(GenericTemplateTag)) return;
 
-            _matcher.RegisterTemplate(content);
+            var templateNames = ResourceReader.GetNames("generic", "tld");
+
+            foreach (var templateName in templateNames)
+            {
+                var content = ResourceReader.GetContent(templateName);
+
+                _matcher.RegisterTemplate(content);
+            }
         }
     }
 }
