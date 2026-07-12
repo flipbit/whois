@@ -13,7 +13,7 @@ public class SyParsingTests : ParsingTests
         parser = new WhoisParser();
     }
 
-    [Fact(Skip = "Template update deferred - WHOIS response format changed")]
+    [Fact]
     public void Test_not_found()
     {
         var sample = SampleReader.Read("whois.tld.sy", "sy", "not-found", "u34jedzcq.sy.txt");
@@ -23,14 +23,14 @@ public class SyParsingTests : ParsingTests
         Assert.Equal(WhoisStatus.NotFound, response.Status);
 
         Assert.Equal(0, response.ParsingErrors);
-        Assert.Equal("generic/tld/not-found/05", response.TemplateName);
+        Assert.Equal("generic/tld/not-found/04", response.TemplateName);
 
         Assert.Equal("u34jedzcq.sy", response.DomainName.ToString());
 
         Assert.Equal(2, response.FieldsParsed);
     }
 
-    [Fact(Skip = "Template update deferred - WHOIS response format changed")]
+    [Fact]
     public void Test_found()
     {
         var sample = SampleReader.Read("whois.tld.sy", "sy", "found", "tld.sy.txt");
@@ -46,18 +46,18 @@ public class SyParsingTests : ParsingTests
         Assert.Equal("7-sy", response.RegistryDomainId);
 
         // Registrar Details
-        Assert.Equal("nans", response.Registrar.Name);
+        Assert.Equal("?????? ??????? ?????? ????? ?????????", response.Registrar.Name);
 
         Assert.Equal(new DateTime(2010, 12, 02, 16, 01, 27, 664, DateTimeKind.Utc), response.Registered);
-        Assert.Equal(new DateTime(2017, 12, 01, 22, 00, 00, 000, DateTimeKind.Utc), response.Expiration);
+        Assert.Equal(new DateTime(2055, 12, 30, 22, 00, 00, 000, DateTimeKind.Utc), response.Expiration);
 
         // Registrant Details
-        Assert.Equal("6714-sy", response.Registrant.RegistryId);
+        Assert.Null(response.Registrant.RegistryId);
         Assert.Equal("domain@tld.sy", response.Registrant.Email);
 
 
         // BillingContact Details
-        Assert.Equal("6714-sy", response.BillingContact.RegistryId);
+        Assert.Null(response.BillingContact.RegistryId);
         Assert.Equal("domain@tld.sy", response.BillingContact.Email);
 
 
@@ -71,6 +71,6 @@ public class SyParsingTests : ParsingTests
         Assert.Equal("ok", response.DomainStatus[0]);
 
         Assert.Equal("unsigned", response.DnsSecStatus);
-        Assert.Equal(14, response.FieldsParsed);
+        Assert.Equal(12, response.FieldsParsed);
     }
 }
