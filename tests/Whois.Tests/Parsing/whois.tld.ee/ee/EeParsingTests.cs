@@ -126,7 +126,7 @@ public class EeParsingTests : ParsingTests
         Assert.Equal(16, response.FieldsParsed);
     }
 
-    [Fact(Skip = "Template update deferred - WHOIS response format changed")]
+    [Fact]
     public void Test_found()
     {
         var sample = SampleReader.Read("whois.tld.ee", "ee", "found", "internet.ee.txt");
@@ -142,37 +142,36 @@ public class EeParsingTests : ParsingTests
         Assert.Equal("internet.ee", response.DomainName.ToString());
 
         // Registrar Details
-        Assert.Equal("Elisa Eesti AS", response.Registrar.Name);
-        Assert.Equal("http://www.elisa.ee", response.Registrar.Url);
-        Assert.Equal("+372 660 0600", response.Registrar.AbuseTelephoneNumber);
+        Assert.Equal("Zone Media OÜ", response.Registrar.Name);
+        Assert.Equal("http://www.zone.ee", response.Registrar.Url);
+        Assert.Equal("+372 6886886", response.Registrar.AbuseTelephoneNumber);
 
-        Assert.Equal(new DateTime(2010, 11, 29, 11, 32, 16, 000, DateTimeKind.Utc), response.Updated);
+        Assert.Equal(new DateTime(2025, 05, 29, 06, 38, 39, 000, DateTimeKind.Utc), response.Updated);
         Assert.Equal(new DateTime(2010, 08, 10, 13, 43, 38, 000, DateTimeKind.Utc), response.Registered);
-        Assert.Equal(new DateTime(2017, 02, 04, 00, 00, 00, 000, DateTimeKind.Utc), response.Expiration);
+        Assert.Equal(new DateTime(2030, 02, 05, 00, 00, 00, 000, DateTimeKind.Utc), response.Expiration);
 
         // Registrant Details
-        Assert.Equal("Eesti Interneti Sihtasutus", response.Registrant.Name);
-        Assert.Equal(new DateTime(2010, 11, 29, 11, 32, 16, 000, DateTimeKind.Utc), response.Registrant.Updated);
+        Assert.Equal("   Eesti Interneti Sihtasutus", response.Registrant.Name);
+        Assert.Equal(new DateTime(2025, 05, 29, 06, 38, 39, 000, DateTimeKind.Utc), response.Registrant.Updated);
 
 
         // AdminContact Details
-        Assert.Equal("Jaana Järve", response.AdminContact.Name);
-        Assert.Equal(new DateTime(2015, 10, 30, 06, 31, 21, 000, DateTimeKind.Utc), response.AdminContact.Updated);
+        Assert.Null(response.AdminContact);
 
 
         // TechnicalContact Details
-        Assert.Equal("Jaana Järve", response.TechnicalContact.Name);
-        Assert.Equal(new DateTime(2015, 10, 30, 06, 31, 21, 000, DateTimeKind.Utc), response.TechnicalContact.Updated);
+        Assert.Equal("Not Disclosed - Visit www.internet.ee for webbased WHOIS", response.TechnicalContact.Name);
+        Assert.Null(response.TechnicalContact.Updated);
 
 
         // Nameservers
         Assert.Equal(1, response.NameServers.Count);
-        Assert.Equal("c.tld.ee", response.NameServers[0]);
+        Assert.Equal("b.tld.ee", response.NameServers[0]);
 
         // Domain Status
         Assert.Equal(1, response.DomainStatus.Count);
         Assert.Equal("ok (paid and in zone)", response.DomainStatus[0]);
 
-        Assert.Equal(16, response.FieldsParsed);
+        Assert.Equal(13, response.FieldsParsed);
     }
 }
