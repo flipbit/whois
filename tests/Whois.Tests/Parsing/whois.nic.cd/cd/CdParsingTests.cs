@@ -13,7 +13,7 @@ public class CdParsingTests : ParsingTests
         parser = new WhoisParser();
     }
 
-    [Fact(Skip = "Template update deferred - WHOIS response format changed")]
+    [Fact]
     public void Test_not_found()
     {
         var sample = SampleReader.Read("whois.nic.cd", "cd", "not-found", "u34jedzcq.cd.txt");
@@ -29,7 +29,7 @@ public class CdParsingTests : ParsingTests
 
         // Domain Status
         Assert.Equal(1, response.DomainStatus.Count);
-        Assert.Equal("Available", response.DomainStatus[0]);
+        Assert.Equal("No Object Found", response.DomainStatus[0]);
 
         Assert.Equal(3, response.FieldsParsed);
     }
