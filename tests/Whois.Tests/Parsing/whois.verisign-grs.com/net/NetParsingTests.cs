@@ -30,7 +30,7 @@ public class NetParsingTests : ParsingTests
         Assert.Equal(2, response.FieldsParsed);
     }
 
-    [Fact(Skip = "Template update deferred - WHOIS response format changed")]
+    [Fact]
     public void Test_found()
     {
         var sample = SampleReader.Read("whois.verisign-grs.com", "net", "found", "google.net.txt");
@@ -51,11 +51,11 @@ public class NetParsingTests : ParsingTests
         Assert.Equal("http://www.markmonitor.com", response.Registrar.Url);
         Assert.Equal("whois.markmonitor.com", response.Registrar.WhoisServer.Value);
         Assert.Equal("abusecomplaints@markmonitor.com", response.Registrar.AbuseEmail);
-        Assert.Equal("+1.2083895740", response.Registrar.AbuseTelephoneNumber);
+        Assert.Equal("+1.2086851750", response.Registrar.AbuseTelephoneNumber);
 
-        Assert.Equal(new DateTime(2017, 02, 11, 10, 56, 37, 000, DateTimeKind.Utc), response.Updated);
+        Assert.Equal(new DateTime(2026, 02, 11, 10, 34, 25, 000, DateTimeKind.Utc), response.Updated);
         Assert.Equal(new DateTime(1999, 03, 15, 05, 00, 00, 000, DateTimeKind.Utc), response.Registered);
-        Assert.Equal(new DateTime(2018, 03, 15, 04, 00, 00, 000, DateTimeKind.Utc), response.Expiration);
+        Assert.Equal(new DateTime(2027, 03, 15, 04, 00, 00, 000, DateTimeKind.Utc), response.Expiration);
 
         // Nameservers
         Assert.Equal(4, response.NameServers.Count);
