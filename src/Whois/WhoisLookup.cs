@@ -15,6 +15,24 @@ namespace Whois;
 public class WhoisLookup : IWhoisLookup
 {
     private readonly ILogger<WhoisLookup> _logger;
+    private readonly ITemplatePackProvider _packProvider;
+    private int _autoUpdateTriggered = 0;
+
+    // Static shared instances for non-DI use — created lazily.
+    // The pack provider uses a static HttpClient and NullLoggers.
+    private static readonly Lazy<TemplatePackProvider> SharedPackProvider = new(() =>
+    {
+        var options = new WhoisOptions();
+        var cacheDir = GetDefaultCacheDirectory();
+        var cacheLogger = NullLogger<CacheDirectoryManager>.Instance;
+        var stateLogger = NullLogger<TemplateUpdateState>.Instance;
+        var cache = new CacheDirectoryManager(cacheDir, cacheLogger);
+        var state = new TemplateUpdateState(cache, stateLogger);
+        return new TemplatePackProvider(options, NullLogger<TemplatePackProvider>.Instance, cache, state);
+    });
+
+    private static readonly Lazy<WhoisParser> SharedParser = new(() =>
+        new WhoisParser(server => SharedPackProvider.Value.GetCachedTemplatePath(server)));
 
     /// <summary>
     /// The default <see cref="WhoisOptions"/> to use for this instance
@@ -38,7 +56,8 @@ public class WhoisLookup : IWhoisLookup
     public ITcpReader TcpReader { get; set; }
 
     /// <summary>
-    /// Initializes a new instance of the <see cref="WhoisLookup"/> class with the default options
+    /// Initializes a new instance of the <see cref="WhoisLookup"/> class with the default options.
+    /// Uses shared static instances of the parser and pack provider.
     /// </summary>
     public WhoisLookup() : this(new WhoisOptions())
     {
@@ -46,6 +65,7 @@ public class WhoisLookup : IWhoisLookup
 
     /// <summary>
     /// Initializes a new instance of the <see cref="WhoisLookup"/> class with the given <see cref="WhoisOptions"/>.
+    /// Uses shared static instances of the parser and pack provider.
     /// </summary>
     public WhoisLookup(WhoisOptions options) : this(options, NullLogger<WhoisLookup>.Instance)
     {
@@ -53,6 +73,7 @@ public class WhoisLookup : IWhoisLookup
 
     /// <summary>
     /// Initializes a new instance of the <see cref="WhoisLookup"/> class for use with the Options pattern.
+    /// Uses shared static instances of the parser and pack provider.
     /// </summary>
     public WhoisLookup(IOptions<WhoisOptions> options, ILogger<WhoisLookup> logger)
         : this(options.Value, logger)
@@ -62,20 +83,35 @@ public class WhoisLookup : IWhoisLookup
     /// <summary>
     /// Full DI constructor — all dependencies supplied by the container.
     /// </summary>
-    public WhoisLookup(IOptions<WhoisOptions> options, ILogger<WhoisLookup> logger, ITcpReader tcpReader, IWhoisServerLookup serverLookup)
+    public WhoisLookup(IOptions<WhoisOptions> options, ILogger<WhoisLookup> logger, ITcpReader tcpReader, IWhoisServerLookup serverLookup, ITemplatePackProvider packProvider, WhoisParser parser)
     {
         Options = options.Value;
         _logger = logger;
         TcpReader = tcpReader;
         ServerLookup = serverLookup;
-        Parser = new WhoisParser();
+        _packProvider = packProvider;
+        Parser = parser;
+    }
+
+    /// <summary>
+    /// Internal constructor for testing — accepts explicit pack provider and parser.
+    /// </summary>
+    internal WhoisLookup(ITemplatePackProvider packProvider, WhoisParser parser)
+        : this(new WhoisOptions(), NullLogger<WhoisLookup>.Instance, packProvider, parser)
+    {
     }
 
     private WhoisLookup(WhoisOptions options, ILogger<WhoisLookup> logger)
+        : this(options, logger, SharedPackProvider.Value, SharedParser.Value)
+    {
+    }
+
+    private WhoisLookup(WhoisOptions options, ILogger<WhoisLookup> logger, ITemplatePackProvider packProvider, WhoisParser parser)
     {
         Options = options;
         _logger = logger;
-        Parser = new WhoisParser();
+        _packProvider = packProvider;
+        Parser = parser;
         TcpReader = new TcpReader();
         ServerLookup = new IanaServerLookup(TcpReader);
     }
@@ -110,6 +146,18 @@ public class WhoisLookup : IWhoisLookup
         if (string.IsNullOrEmpty(request.Query))
         {
             throw new ArgumentNullException(nameof(request), "Query must not be null or empty.");
+        }
+
+        // Trigger a background template update check on the first lookup when auto-update is enabled.
+        if (Options.AutoUpdateTemplates && Interlocked.CompareExchange(ref _autoUpdateTriggered, 1, 0) == 0)
+        {
+#pragma warning disable CA1031 // Fire-and-forget: must catch all exceptions to prevent unobserved task faults
+            _ = Task.Run(async () =>
+            {
+                try { await _packProvider.CheckForUpdate(CancellationToken.None).ConfigureAwait(false); }
+                catch (Exception ex) { _logger.LogWarning(ex, "Background template update check failed"); }
+            }, CancellationToken.None);
+#pragma warning restore CA1031
         }
 
         // Trim leading '.'
@@ -172,21 +220,11 @@ public class WhoisLookup : IWhoisLookup
     }
 
     /// <inheritdoc />
-    public TemplateStatus TemplateStatus =>
-        new(
-            CurrentVersion: "embedded",
-            Source: TemplateSource.Embedded,
-            LastCheckTime: null,
-            NextCheckTime: null,
-            LastError: null,
-            AutoUpdateEnabled: false);
+    public TemplateStatus TemplateStatus => _packProvider.Status;
 
     /// <inheritdoc />
     public Task<TemplateUpdateResult> UpdateTemplates(CancellationToken cancellationToken = default) =>
-        Task.FromResult(new TemplateUpdateResult(
-            Outcome: TemplateUpdateOutcome.Failed,
-            Version: null,
-            Error: "Not implemented"));
+        _packProvider.CheckForUpdate(cancellationToken);
 
     private async Task<string> Download(string url, WhoisRequest request, CancellationToken cancellationToken)
     {
@@ -199,4 +237,10 @@ public class WhoisLookup : IWhoisLookup
 
         return content;
     }
+
+    private static string GetDefaultCacheDirectory() =>
+        Path.Combine(
+            Environment.GetFolderPath(Environment.SpecialFolder.LocalApplicationData),
+            "Whois",
+            "templates");
 }

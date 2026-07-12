@@ -1,7 +1,9 @@
 using Microsoft.Extensions.DependencyInjection;
 using Microsoft.Extensions.Options;
 using Whois.Net;
+using Whois.Parsers;
 using Whois.Servers;
+using Whois.Templates;
 using Xunit;
 
 namespace Whois;
@@ -36,5 +38,57 @@ public class WhoisServiceCollectionExtensionsTests
         var options = provider.GetRequiredService<IOptions<WhoisOptions>>();
         Assert.Equal(30, options.Value.TimeoutSeconds);
         Assert.False(options.Value.FollowReferrer);
+    }
+
+    [Fact]
+    public void AddWhois_RegistersTemplatePackProvider()
+    {
+        var services = new ServiceCollection();
+        services.AddLogging();
+        services.AddWhois();
+        var provider = services.BuildServiceProvider();
+
+        var packProvider = provider.GetService<ITemplatePackProvider>();
+        Assert.NotNull(packProvider);
+    }
+
+    [Fact]
+    public void AddWhois_TemplatePackProviderIsSingleton()
+    {
+        var services = new ServiceCollection();
+        services.AddLogging();
+        services.AddWhois();
+        var provider = services.BuildServiceProvider();
+
+        var first = provider.GetRequiredService<ITemplatePackProvider>();
+        var second = provider.GetRequiredService<ITemplatePackProvider>();
+
+        Assert.Same(first, second);
+    }
+
+    [Fact]
+    public void AddWhois_RegistersWhoisParser()
+    {
+        var services = new ServiceCollection();
+        services.AddLogging();
+        services.AddWhois();
+        var provider = services.BuildServiceProvider();
+
+        var parser = provider.GetService<WhoisParser>();
+        Assert.NotNull(parser);
+    }
+
+    [Fact]
+    public void AddWhois_WhoisParserIsSingleton()
+    {
+        var services = new ServiceCollection();
+        services.AddLogging();
+        services.AddWhois();
+        var provider = services.BuildServiceProvider();
+
+        var first = provider.GetRequiredService<WhoisParser>();
+        var second = provider.GetRequiredService<WhoisParser>();
+
+        Assert.Same(first, second);
     }
 }

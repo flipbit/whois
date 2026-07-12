@@ -1,7 +1,9 @@
 using System.Text;
 using NSubstitute;
 using Whois.Net;
+using Whois.Parsers;
 using Whois.Servers;
+using Whois.Templates;
 using Xunit;
 
 namespace Whois;
@@ -203,5 +205,120 @@ public class WhoisLookupTest
 
         Assert.Equal(intermediateResult, result.Content);
         Assert.Equal(rootServer, result.Referrer);
+    }
+
+    [Fact]
+    public void TemplateStatus_DefaultsToEmbedded()
+    {
+        var instance = new WhoisLookup();
+
+        Assert.Equal(TemplateSource.Embedded, instance.TemplateStatus.Source);
+        Assert.Equal("embedded", instance.TemplateStatus.CurrentVersion);
+    }
+
+    [Fact]
+    public async Task UpdateTemplates_DelegatesToPackProvider()
+    {
+        var packProvider = Substitute.For<ITemplatePackProvider>();
+        var parser = new WhoisParser();
+        var expected = new TemplateUpdateResult(TemplateUpdateOutcome.AlreadyUpToDate, "1.0.0", null);
+        packProvider.CheckForUpdate(Arg.Any<CancellationToken>()).Returns(expected);
+
+        var instance = new WhoisLookup(packProvider, parser)
+        {
+            TcpReader = tcpReader,
+            ServerLookup = whoisServerLookup,
+        };
+
+        var result = await instance.UpdateTemplates();
+
+        Assert.Equal(expected, result);
+        await packProvider.Received(1).CheckForUpdate(Arg.Any<CancellationToken>());
+    }
+
+    [Fact]
+    public async Task Lookup_WithAutoUpdate_TriggersBackgroundCheck()
+    {
+        var packProvider = Substitute.For<ITemplatePackProvider>();
+        var parser = new WhoisParser();
+        var triggered = new ManualResetEventSlim(false);
+
+        packProvider.CheckForUpdate(Arg.Any<CancellationToken>())
+            .Returns(callInfo =>
+            {
+                triggered.Set();
+                return new TemplateUpdateResult(TemplateUpdateOutcome.AlreadyUpToDate, "1.0.0", null);
+            });
+
+        packProvider.Status.Returns(new TemplateStatus("embedded", TemplateSource.Embedded, null, null, null, false));
+
+        var request = new WhoisRequest("google.com");
+        var rootServer = new WhoisResponse
+        {
+            DomainName = new HostName("com"),
+            Registrar = new Registrar { WhoisServer = new HostName("whois.markmonitor.com") },
+        };
+        whoisServerLookup.Lookup(request, Arg.Any<CancellationToken>()).Returns(rootServer);
+        tcpReader
+            .Read("whois.markmonitor.com", 43, "google.com", Encoding.UTF8, 10, Arg.Any<CancellationToken>())
+            .Returns(sampleReader.Read("whois.markmonitor.com", "com", "found", "found.txt"));
+
+        var instance = new WhoisLookup(packProvider, parser)
+        {
+            Options = { AutoUpdateTemplates = true },
+            TcpReader = tcpReader,
+            ServerLookup = whoisServerLookup,
+        };
+
+        await instance.Lookup(request);
+
+        Assert.True(triggered.Wait(TimeSpan.FromSeconds(5)), "CheckForUpdate was not called within timeout");
+    }
+
+    [Fact]
+    public async Task Lookup_MultipleCallsWithAutoUpdate_TriggersOnce()
+    {
+        var packProvider = Substitute.For<ITemplatePackProvider>();
+        var parser = new WhoisParser();
+        var callCount = 0;
+        var firstCallStarted = new ManualResetEventSlim(false);
+
+        packProvider.CheckForUpdate(Arg.Any<CancellationToken>())
+            .Returns(callInfo =>
+            {
+                Interlocked.Increment(ref callCount);
+                firstCallStarted.Set();
+                return new TemplateUpdateResult(TemplateUpdateOutcome.AlreadyUpToDate, "1.0.0", null);
+            });
+
+        packProvider.Status.Returns(new TemplateStatus("embedded", TemplateSource.Embedded, null, null, null, false));
+
+        var request = new WhoisRequest("google.com");
+        var rootServer = new WhoisResponse
+        {
+            DomainName = new HostName("com"),
+            Registrar = new Registrar { WhoisServer = new HostName("whois.markmonitor.com") },
+        };
+        whoisServerLookup.Lookup(request, Arg.Any<CancellationToken>()).Returns(rootServer);
+        tcpReader
+            .Read("whois.markmonitor.com", 43, "google.com", Encoding.UTF8, 10, Arg.Any<CancellationToken>())
+            .Returns(sampleReader.Read("whois.markmonitor.com", "com", "found", "found.txt"));
+
+        var instance = new WhoisLookup(packProvider, parser)
+        {
+            Options = { AutoUpdateTemplates = true },
+            TcpReader = tcpReader,
+            ServerLookup = whoisServerLookup,
+        };
+
+        await instance.Lookup(request);
+        await instance.Lookup(request);
+
+        firstCallStarted.Wait(TimeSpan.FromSeconds(5));
+
+        // Give the background task a moment to complete
+        await Task.Delay(200);
+
+        Assert.Equal(1, callCount);
     }
 }
