@@ -13,7 +13,7 @@ public class CaParsingTests : ParsingTests
         parser = new WhoisParser();
     }
 
-    [Fact(Skip = "Template update deferred - WHOIS response format changed")]
+    [Fact]
     public void Test_found()
     {
         var sample = SampleReader.Read("whois.cira.ca", "ca", "found", "glu.ca.txt");
@@ -23,55 +23,54 @@ public class CaParsingTests : ParsingTests
         Assert.Equal(WhoisStatus.Found, response.Status);
 
         Assert.Equal(0, response.ParsingErrors);
-        Assert.Equal("whois.cira.ca/ca/found/01", response.TemplateName);
+        Assert.Equal("generic/tld/found/01", response.TemplateName);
 
         Assert.Equal("glu.ca", response.DomainName.ToString());
 
         // Registrar Details
-        Assert.Equal("Webnames.ca Inc.", response.Registrar.Name);
-        Assert.Equal("70", response.Registrar.IanaId);
+        Assert.Equal("BareMetal.com inc", response.Registrar.Name);
+        Assert.Null(response.Registrar.IanaId);
 
-        Assert.Equal(new DateTime(2010, 12, 04, 00, 00, 00, DateTimeKind.Utc), response.Updated);
-        Assert.Equal(new DateTime(2004, 10, 30, 00, 00, 00, DateTimeKind.Utc), response.Registered);
-        Assert.Equal(new DateTime(2010, 10, 29, 00, 00, 00, DateTimeKind.Utc), response.Expiration);
+        Assert.Equal(new DateTime(2026, 2, 27, 0, 5, 27, DateTimeKind.Utc), response.Updated);
+        Assert.Equal(new DateTime(2011, 1, 12, 20, 20, 3, DateTimeKind.Utc), response.Registered);
+        Assert.Equal(new DateTime(2027, 1, 12, 20, 20, 3, DateTimeKind.Utc), response.Expiration);
 
         // Registrant Details
-        Assert.Equal("Sanamato Inc.", response.Registrant.Name);
+        Assert.Equal("REDACTED FOR PRIVACY", response.Registrant.Name);
 
 
         // AdminContact Details
-        Assert.Equal("Ross Vito", response.AdminContact.Name);
-        Assert.Equal("1 (647) 964-4544", response.AdminContact.TelephoneNumber);
-        Assert.Equal("mail@sanamato.com", response.AdminContact.Email);
+        Assert.Equal("REDACTED FOR PRIVACY", response.AdminContact.Name);
+        Assert.Null(response.AdminContact.TelephoneNumber);
+        Assert.Null(response.AdminContact.Email);
 
         // AdminContact Address
-        Assert.Equal(2, response.AdminContact.Address.Count);
-        Assert.Equal("405 Queen Street South, P.O. Box 75004", response.AdminContact.Address[0]);
-        Assert.Equal("Bolton ON L7E2B5 Canada", response.AdminContact.Address[1]);
+        Assert.Equal(5, response.AdminContact.Address.Count);
+        Assert.Equal("REDACTED FOR PRIVACY", response.AdminContact.Address[0]);
+        Assert.Equal("REDACTED FOR PRIVACY", response.AdminContact.Address[1]);
 
 
         // TechnicalContact Details
-        Assert.Equal("Ross Vito", response.TechnicalContact.Name);
-        Assert.Equal("1 (647) 964-4544", response.TechnicalContact.TelephoneNumber);
-        Assert.Equal("mail@sanamato.com", response.TechnicalContact.Email);
+        Assert.Equal("REDACTED FOR PRIVACY", response.TechnicalContact.Name);
+        Assert.Null(response.TechnicalContact.TelephoneNumber);
+        Assert.Null(response.TechnicalContact.Email);
 
         // TechnicalContact Address
-        Assert.Equal(2, response.TechnicalContact.Address.Count);
-        Assert.Equal("405 Queen Street South, P.O. Box 75004", response.TechnicalContact.Address[0]);
-        Assert.Equal("Bolton ON L7E2B5 Canada", response.TechnicalContact.Address[1]);
+        Assert.Equal(5, response.TechnicalContact.Address.Count);
+        Assert.Equal("REDACTED FOR PRIVACY", response.TechnicalContact.Address[0]);
+        Assert.Equal("REDACTED FOR PRIVACY", response.TechnicalContact.Address[1]);
 
 
         // Nameservers
-        Assert.Equal(3, response.NameServers.Count);
-        Assert.Equal("ns1.webnames.ca", response.NameServers[0]);
-        Assert.Equal("ns2.webnames.ca", response.NameServers[1]);
-        Assert.Equal("ns3.webnames.ca", response.NameServers[2]);
+        Assert.Equal(2, response.NameServers.Count);
+        Assert.Equal("launch1.spaceship.net", response.NameServers[0]);
+        Assert.Equal("launch2.spaceship.net", response.NameServers[1]);
 
         // Domain Status
         Assert.Equal(1, response.DomainStatus.Count);
-        Assert.Equal("registered", response.DomainStatus[0]);
+        Assert.Equal("ok", response.DomainStatus[0]);
 
-        Assert.Equal(22, response.FieldsParsed);
+        Assert.Equal(47, response.FieldsParsed);
     }
 
     [Fact]
@@ -258,7 +257,7 @@ public class CaParsingTests : ParsingTests
         Assert.Equal(22, response.FieldsParsed);
     }
 
-    [Fact(Skip = "Template update deferred - WHOIS response format changed")]
+    [Fact]
     public void Test_found_status_registered_2()
     {
         var sample = SampleReader.Read("whois.cira.ca", "ca", "found", "google.ca.txt");
@@ -268,43 +267,43 @@ public class CaParsingTests : ParsingTests
         Assert.Equal(WhoisStatus.Found, response.Status);
 
         Assert.Equal(0, response.ParsingErrors);
-        Assert.Equal("whois.cira.ca/ca/found/01", response.TemplateName);
+        Assert.Equal("generic/tld/found/01", response.TemplateName);
 
         Assert.Equal("google.ca", response.DomainName.ToString());
 
         // Registrar Details
-        Assert.Equal("Webnames.ca Inc.", response.Registrar.Name);
-        Assert.Equal("70", response.Registrar.IanaId);
+        Assert.Equal("MarkMonitor International Canada Ltd.", response.Registrar.Name);
+        Assert.Null(response.Registrar.IanaId);
 
-        Assert.Equal(new DateTime(2000, 10, 03, 00, 00, 00, DateTimeKind.Utc), response.Registered);
-        Assert.Equal(new DateTime(2011, 04, 28, 00, 00, 00, DateTimeKind.Utc), response.Expiration);
+        Assert.Equal(new DateTime(2000, 10, 4, 2, 21, 23, DateTimeKind.Utc), response.Registered);
+        Assert.Equal(new DateTime(2027, 4, 28, 4, 0, 0, DateTimeKind.Utc), response.Expiration);
 
         // Registrant Details
-        Assert.Equal("Google Inc.", response.Registrant.Name);
+        Assert.Equal("Google Canada Corporation", response.Registrant.Name);
 
 
         // AdminContact Details
-        Assert.Equal("Rose Hagan", response.AdminContact.Name);
-        Assert.Equal("1 416 8653361", response.AdminContact.TelephoneNumber);
-        Assert.Equal("1 416 9456616", response.AdminContact.FaxNumber);
+        Assert.Equal("Colm Buckley", response.AdminContact.Name);
+        Assert.Equal("+1.4162146034", response.AdminContact.TelephoneNumber);
+        Assert.Null(response.AdminContact.FaxNumber);
         Assert.Equal("dns-admin@google.com", response.AdminContact.Email);
 
         // AdminContact Address
-        Assert.Equal(2, response.AdminContact.Address.Count);
-        Assert.Equal("130 King St. W., Suite 1800", response.AdminContact.Address[0]);
-        Assert.Equal("Toronto ON M5X 1E3 Canada", response.AdminContact.Address[1]);
+        Assert.Equal(5, response.AdminContact.Address.Count);
+        Assert.Equal("12-111 Richmond St W", response.AdminContact.Address[0]);
+        Assert.Equal("Toronto", response.AdminContact.Address[1]);
 
 
         // TechnicalContact Details
-        Assert.Equal("Matt Serlin", response.TechnicalContact.Name);
-        Assert.Equal("1.2083895740", response.TechnicalContact.TelephoneNumber);
-        Assert.Equal("1.2083895771", response.TechnicalContact.FaxNumber);
-        Assert.Equal("ccops@markmonitor.com", response.TechnicalContact.Email);
+        Assert.Equal("Colm Buckley", response.TechnicalContact.Name);
+        Assert.Equal("+1.4162146034", response.TechnicalContact.TelephoneNumber);
+        Assert.Null(response.TechnicalContact.FaxNumber);
+        Assert.Equal("dns-admin@google.com", response.TechnicalContact.Email);
 
         // TechnicalContact Address
-        Assert.Equal(2, response.TechnicalContact.Address.Count);
-        Assert.Equal("Domain Provisioning,10400 Overland Rd. PMB 155", response.TechnicalContact.Address[0]);
-        Assert.Equal("Boise ID 83709 United States", response.TechnicalContact.Address[1]);
+        Assert.Equal(5, response.TechnicalContact.Address.Count);
+        Assert.Equal("12-111 Richmond St W", response.TechnicalContact.Address[0]);
+        Assert.Equal("Toronto", response.TechnicalContact.Address[1]);
 
 
         // Nameservers
@@ -315,10 +314,10 @@ public class CaParsingTests : ParsingTests
         Assert.Equal("ns4.google.com", response.NameServers[3]);
 
         // Domain Status
-        Assert.Equal(1, response.DomainStatus.Count);
-        Assert.Equal("registered", response.DomainStatus[0]);
+        Assert.Equal(6, response.DomainStatus.Count);
+        Assert.Equal("clientDeleteProhibited", response.DomainStatus[0]);
 
-        Assert.Equal(24, response.FieldsParsed);
+        Assert.Equal(52, response.FieldsParsed);
     }
 
     [Fact]
