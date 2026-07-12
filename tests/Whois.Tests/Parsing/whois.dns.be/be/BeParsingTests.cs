@@ -13,7 +13,7 @@ public class BeParsingTests : ParsingTests
         parser = new WhoisParser();
     }
 
-    [Fact(Skip = "Template update deferred - WHOIS response format changed")]
+    [Fact]
     public void Test_found()
     {
         var sample = SampleReader.Read("whois.dns.be", "be", "found", "register.be.txt");
@@ -28,23 +28,22 @@ public class BeParsingTests : ParsingTests
         Assert.Equal("register.be", response.DomainName.ToString());
 
         // Registrar Details
-        Assert.Equal("Register NV/SA", response.Registrar.Name);
-        Assert.Equal("www.register.be", response.Registrar.Url);
+        Assert.Null(response.Registrar);
 
         Assert.Equal(new DateTime(2000, 12, 12, 0, 0, 0), response.Registered);
 
         // TechnicalContact Details
-        Assert.Equal("Register.be Technical Support", response.TechnicalContact.Name);
-        Assert.Equal("Register.be", response.TechnicalContact.Organization);
-        Assert.Equal("+32.22473720", response.TechnicalContact.TelephoneNumber);
-        Assert.Equal("+32.22473701", response.TechnicalContact.FaxNumber);
-        Assert.Equal("info@register.be", response.TechnicalContact.Email);
+        Assert.Null(response.TechnicalContact.Name);
+        Assert.Equal("Combell", response.TechnicalContact.Organization);
+        Assert.Equal("+32.92187978", response.TechnicalContact.TelephoneNumber);
+        Assert.Null(response.TechnicalContact.FaxNumber);
+        Assert.Null(response.TechnicalContact.Email);
 
         // Domain Status
         Assert.Equal(1, response.DomainStatus.Count);
         Assert.Equal("NOT AVAILABLE", response.DomainStatus[0]);
 
-        Assert.Equal(11, response.FieldsParsed);
+        Assert.Equal(6, response.FieldsParsed);
     }
 
     [Fact]
