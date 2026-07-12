@@ -28,7 +28,7 @@ public class BnParsingTests : ParsingTests
         Assert.Equal(1, response.FieldsParsed);
     }
 
-    [Fact(Skip = "Template update deferred - WHOIS response format changed")]
+    [Fact]
     public void Test_found()
     {
         var sample = SampleReader.Read("whois.bnnic.bn", "bn", "found", "telbru.com.bn.txt");
@@ -37,28 +37,28 @@ public class BnParsingTests : ParsingTests
         Assert.True(sample.Length > 0);
         Assert.Equal(WhoisStatus.Found, response.Status);
 
-        Assert.Equal(11, response.FieldsParsed);
+        Assert.Equal(9, response.FieldsParsed);
         Assert.Equal(0, response.ParsingErrors);
         Assert.Equal("whois.bnnic.bn/bn/found/01", response.TemplateName);
 
         Assert.Equal("telbru.com.bn", response.DomainName.ToString());
 
         // Registrar Details
-        Assert.Equal("TELEKOM BRUNEI BERHAD", response.Registrar.Name);
+        Assert.Equal("IMAGINE SDN BHD", response.Registrar.Name);
 
-        Assert.Equal(new DateTime(2014, 12, 17, 18, 7, 42), response.Updated);
+        Assert.Equal(new DateTime(2015, 12, 22, 9, 14, 16), response.Updated);
         Assert.Equal(new DateTime(2014, 10, 7, 0, 0, 0), response.Registered);
-        Assert.Equal(new DateTime(2015, 10, 7, 0, 0, 0), response.Expiration);
+        Assert.Equal(new DateTime(2027, 10, 7, 0, 0, 0), response.Expiration);
 
         // Registrant Details
-        Assert.Equal("BruNet| Telekom Brunei Berhad - (BNC875T)", response.Registrant.Name);
+        Assert.Equal("JEFFREY TAN SIAW WEI  (BNC38N)", response.Registrant.Name);
 
         // AdminContact Details
-        Assert.Equal("BruNet| Telekom Brunei Berhad - (BNC875T)", response.AdminContact.Name);
+        Assert.Null(response.AdminContact);
 
         // TechnicalContact Details
-        Assert.Equal("BruNet| Telekom Brunei Berhad - (BNC875T)", response.TechnicalContact.Name);
-        Assert.Equal("info@telbru.com.bn", response.TechnicalContact.Email);
+        Assert.Null(response.TechnicalContact.Name);
+        Assert.Equal("jeffrey.tan@telbru.com.bn", response.TechnicalContact.Email);
 
 
         // Domain Status
