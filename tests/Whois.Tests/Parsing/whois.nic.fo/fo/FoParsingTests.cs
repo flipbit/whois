@@ -28,7 +28,7 @@ public class FoParsingTests : ParsingTests
         Assert.Equal(1, response.FieldsParsed);
     }
 
-    [Fact(Skip = "Template update deferred - WHOIS response format changed")]
+    [Fact]
     public void Test_found()
     {
         var sample = SampleReader.Read("whois.nic.fo", "fo", "found", "nic.fo.txt");
@@ -38,52 +38,52 @@ public class FoParsingTests : ParsingTests
         Assert.Equal(WhoisStatus.Found, response.Status);
 
         Assert.Equal(0, response.ParsingErrors);
-        Assert.Equal("whois.nic.fo/fo/found/01", response.TemplateName);
+        Assert.Equal("generic/tld/found/01", response.TemplateName);
 
         Assert.Equal("nic.fo", response.DomainName.ToString());
 
-        Assert.Equal(new DateTime(2011, 07, 12, 12, 52, 57, 000, DateTimeKind.Utc), response.Updated);
-        Assert.Equal(new DateTime(2010, 06, 03, 03, 34, 05, 000, DateTimeKind.Utc), response.Registered);
-        Assert.Equal(new DateTime(2015, 01, 03, 00, 00, 00, 000, DateTimeKind.Utc), response.Expiration);
+        Assert.Equal(new DateTime(2026, 02, 12, 16, 03, 54, 000, DateTimeKind.Utc), response.Updated);
+        Assert.Equal(new DateTime(2010, 06, 03, 02, 34, 05, 000, DateTimeKind.Utc), response.Registered);
+        Assert.Equal(new DateTime(2028, 01, 03, 23, 59, 59, 000, DateTimeKind.Utc), response.Expiration);
 
         // Registrant Details
-        Assert.Equal("ID005359", response.Registrant.RegistryId);
+        Assert.Null(response.Registrant.RegistryId);
         Assert.Equal("FO-umsitingin", response.Registrant.Name);
-        Assert.Equal(new DateTime(2010, 07, 21, 19, 11, 55, 000, DateTimeKind.Utc), response.Registrant.Created);
+        Assert.Null(response.Registrant.Created);
 
         // Registrant Address
-        Assert.Equal(4, response.Registrant.Address.Count);
-        Assert.Equal("Hoydalsvegur 19, Postboks 1255", response.Registrant.Address[0]);
-        Assert.Equal("Torshavn", response.Registrant.Address[1]);
-        Assert.Equal("110", response.Registrant.Address[2]);
-        Assert.Equal("FO", response.Registrant.Address[3]);
+        Assert.Equal(5, response.Registrant.Address.Count);
+        Assert.Equal("Undir Kongavarða 96", response.Registrant.Address[0]);
+        Assert.Equal("165", response.Registrant.Address[1]);
+        Assert.Equal("FO", response.Registrant.Address[2]);
+        Assert.Equal("165", response.Registrant.Address[3]);
 
 
         // TechnicalContact Details
-        Assert.Equal("ID005359", response.TechnicalContact.RegistryId);
+        Assert.Null(response.TechnicalContact.RegistryId);
         Assert.Equal("FO-umsitingin", response.TechnicalContact.Name);
-        Assert.Equal(new DateTime(2010, 07, 21, 19, 11, 55, 000, DateTimeKind.Utc), response.TechnicalContact.Created);
+        Assert.Null(response.TechnicalContact.Created);
 
         // TechnicalContact Address
-        Assert.Equal(4, response.TechnicalContact.Address.Count);
-        Assert.Equal("Hoydalsvegur 19, Postboks 1255", response.TechnicalContact.Address[0]);
-        Assert.Equal("Torshavn", response.TechnicalContact.Address[1]);
-        Assert.Equal("110", response.TechnicalContact.Address[2]);
-        Assert.Equal("FO", response.TechnicalContact.Address[3]);
+        Assert.Equal(5, response.TechnicalContact.Address.Count);
+        Assert.Equal("Undir Kongavarða 96", response.TechnicalContact.Address[0]);
+        Assert.Equal("165", response.TechnicalContact.Address[1]);
+        Assert.Equal("FO", response.TechnicalContact.Address[2]);
+        Assert.Equal("165", response.TechnicalContact.Address[3]);
 
 
         // Nameservers
-        Assert.Equal(5, response.NameServers.Count);
-        Assert.Equal("ns1.gratisdns.dk", response.NameServers[0]);
-        Assert.Equal("ns2.gratisdns.dk", response.NameServers[1]);
-        Assert.Equal("ns3.gratisdns.dk", response.NameServers[2]);
-        Assert.Equal("ns4.gratisdns.dk", response.NameServers[3]);
-        Assert.Equal("ns5.gratisdns.dk", response.NameServers[4]);
+        Assert.Equal(6, response.NameServers.Count);
+        Assert.Equal("xn--gurun-jta.nic.fo", response.NameServers[0]);
+        Assert.Equal("mimi.nic.fo", response.NameServers[1]);
+        Assert.Equal("a.nic.fo", response.NameServers[2]);
+        Assert.Equal("b.nic.fo", response.NameServers[3]);
+        Assert.Equal("c.nic.fo", response.NameServers[4]);
 
         // Domain Status
-        Assert.Equal(1, response.DomainStatus.Count);
-        Assert.Equal("paid and in zone", response.DomainStatus[0]);
+        Assert.Equal(4, response.DomainStatus.Count);
+        Assert.Equal("serverRenewProhibited", response.DomainStatus[0]);
 
-        Assert.Equal(21, response.FieldsParsed);
+        Assert.Equal(39, response.FieldsParsed);
     }
 }
