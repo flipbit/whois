@@ -30,7 +30,7 @@ public class CiParsingTests : ParsingTests
         Assert.Equal(2, response.FieldsParsed);
     }
 
-    [Fact(Skip = "Template update deferred - WHOIS response format changed")]
+    [Fact]
     public void Test_found()
     {
         var sample = SampleReader.Read("whois.nic.ci", "ci", "found", "google.ci.txt");
@@ -40,26 +40,26 @@ public class CiParsingTests : ParsingTests
         Assert.Equal(WhoisStatus.Found, response.Status);
 
         Assert.Equal(0, response.ParsingErrors);
-        Assert.Equal("whois.nic.ci/ci/found/01", response.TemplateName);
+        Assert.Equal("generic/tld/found/01", response.TemplateName);
 
         Assert.Equal("google.ci", response.DomainName.ToString());
 
         // Registrar Details
-        Assert.Equal("afriregister", response.Registrar.Name);
+        Assert.Equal("AFRIREGISTER", response.Registrar.Name);
 
-        Assert.Equal(new DateTime(2006, 01, 27, 11, 14, 47, 770, DateTimeKind.Utc), response.Registered);
-        Assert.Equal(new DateTime(2014, 02, 14, 11, 14, 47, 770, DateTimeKind.Utc), response.Expiration);
+        Assert.Equal(new DateTime(2013, 02, 14, 00, 00, 00, 000, DateTimeKind.Utc), response.Registered);
+        Assert.Equal(new DateTime(2027, 02, 13, 00, 00, 00, 000, DateTimeKind.Utc), response.Expiration);
 
         // Registrant Details
-        Assert.Equal("DG181-NICCI", response.Registrant.RegistryId);
+        Assert.Null(response.Registrant);
 
 
         // AdminContact Details
-        Assert.Equal("DG181-NICCI", response.AdminContact.RegistryId);
+        Assert.Null(response.AdminContact);
 
 
         // TechnicalContact Details
-        Assert.Equal("DG181-NICCI", response.TechnicalContact.RegistryId);
+        Assert.Null(response.TechnicalContact);
 
 
         // Nameservers
@@ -69,6 +69,6 @@ public class CiParsingTests : ParsingTests
         Assert.Equal("ns3.google.com", response.NameServers[2]);
         Assert.Equal("ns4.google.com", response.NameServers[3]);
 
-        Assert.Equal(12, response.FieldsParsed);
+        Assert.Equal(16, response.FieldsParsed);
     }
 }
