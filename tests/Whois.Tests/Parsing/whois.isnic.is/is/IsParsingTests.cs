@@ -30,7 +30,7 @@ public class IsParsingTests : ParsingTests
         Assert.Equal(2, response.FieldsParsed);
     }
 
-    [Fact(Skip = "Template update deferred - WHOIS response format changed")]
+    [Fact]
     public void Test_found()
     {
         var sample = SampleReader.Read("whois.isnic.is", "is", "found", "google.is.txt");
@@ -45,23 +45,23 @@ public class IsParsingTests : ParsingTests
         Assert.Equal("google.is", response.DomainName.ToString());
 
         Assert.Equal(new DateTime(2002, 05, 22, 00, 00, 00, 000, DateTimeKind.Utc), response.Registered);
-        Assert.Equal(new DateTime(2014, 05, 22, 00, 00, 00, 000, DateTimeKind.Utc), response.Expiration);
+        Assert.Equal(new DateTime(2027, 05, 22, 00, 00, 00, 000, DateTimeKind.Utc), response.Expiration);
 
         // Registrant Details
-        Assert.Equal("Google Inc", response.Registrant.Name);
+        Assert.Null(response.Registrant.Name);
 
         // Registrant Address
         Assert.Equal(3, response.Registrant.Address.Count);
-        Assert.Equal("1600 Ampitheatre Parkway", response.Registrant.Address[0]);
-        Assert.Equal("Mountain View, California 94043", response.Registrant.Address[1]);
+        Assert.Equal("1600 Amphitheatre Parkway", response.Registrant.Address[0]);
+        Assert.Equal("Mountain View, CA 94043", response.Registrant.Address[1]);
         Assert.Equal("US", response.Registrant.Address[2]);
 
 
         // AdminContact Details
-        Assert.Equal("GI58-IS", response.AdminContact.RegistryId);
-        Assert.Equal("Google Inc.", response.AdminContact.Organization);
+        Assert.Equal("GL210-IS", response.AdminContact.RegistryId);
+        Assert.Equal("Google LLC", response.AdminContact.Organization);
         Assert.Equal("ccops@markmonitor.com", response.AdminContact.Email);
-        Assert.Equal(new DateTime(2012, 10, 09, 00, 00, 00, 000, DateTimeKind.Utc), response.AdminContact.Created);
+        Assert.Equal(new DateTime(2018, 10, 22, 00, 00, 00, 000, DateTimeKind.Utc), response.AdminContact.Created);
 
         // AdminContact Address
         Assert.Equal(3, response.AdminContact.Address.Count);
@@ -72,46 +72,43 @@ public class IsParsingTests : ParsingTests
 
         // BillingContact Details
         Assert.Equal("MTC2-IS", response.BillingContact.RegistryId);
-        Assert.Equal("Markmonitor Tech Contact", response.BillingContact.Name);
-        Assert.Equal("+1 208 3895740", response.BillingContact.TelephoneNumber);
+        Assert.Null(response.BillingContact.Name);
+        Assert.Equal("+1 2083895740", response.BillingContact.TelephoneNumber);
         Assert.Equal("ccops@markmonitor.com", response.BillingContact.Email);
         Assert.Equal(new DateTime(2004, 07, 22, 00, 00, 00, 000, DateTimeKind.Utc), response.BillingContact.Created);
 
         // BillingContact Address
         Assert.Equal(3, response.BillingContact.Address.Count);
-        Assert.Equal("391 N. Ancestor Pl.", response.BillingContact.Address[0]);
-        Assert.Equal("Boise, ID 83704", response.BillingContact.Address[1]);
+        Assert.Equal("1120 S. Rackham Way, Suite 300", response.BillingContact.Address[0]);
+        Assert.Equal("Meridian, ID 83642", response.BillingContact.Address[1]);
         Assert.Equal("US", response.BillingContact.Address[2]);
 
 
         // TechnicalContact Details
         Assert.Equal("MTC2-IS", response.TechnicalContact.RegistryId);
-        Assert.Equal("Markmonitor Tech Contact", response.TechnicalContact.Name);
-        Assert.Equal("+1 208 3895740", response.TechnicalContact.TelephoneNumber);
+        Assert.Null(response.TechnicalContact.Name);
+        Assert.Equal("+1 2083895740", response.TechnicalContact.TelephoneNumber);
         Assert.Equal("ccops@markmonitor.com", response.TechnicalContact.Email);
         Assert.Equal(new DateTime(2004, 07, 22, 00, 00, 00, 000, DateTimeKind.Utc), response.TechnicalContact.Created);
 
         // TechnicalContact Address
         Assert.Equal(3, response.TechnicalContact.Address.Count);
-        Assert.Equal("391 N. Ancestor Pl.", response.TechnicalContact.Address[0]);
-        Assert.Equal("Boise, ID 83704", response.TechnicalContact.Address[1]);
+        Assert.Equal("1120 S. Rackham Way, Suite 300", response.TechnicalContact.Address[0]);
+        Assert.Equal("Meridian, ID 83642", response.TechnicalContact.Address[1]);
         Assert.Equal("US", response.TechnicalContact.Address[2]);
 
 
         // ZoneContact Details
         Assert.Equal("AG49-IS", response.ZoneContact.RegistryId);
-        Assert.Equal("Amit Garg", response.ZoneContact.Name);
-        Assert.Equal("+1 650 3300100", response.ZoneContact.TelephoneNumber);
-        Assert.Equal("+1 650 6188571", response.ZoneContact.FaxNumber);
-        Assert.Equal("dns-admin@google.com", response.ZoneContact.Email);
+        Assert.Null(response.ZoneContact.Name);
+        Assert.Null(response.ZoneContact.TelephoneNumber);
+        Assert.Null(response.ZoneContact.FaxNumber);
+        Assert.Null(response.ZoneContact.Email);
         Assert.Equal(new DateTime(2004, 10, 03, 00, 00, 00, 000, DateTimeKind.Utc), response.ZoneContact.Created);
 
         // ZoneContact Address
-        Assert.Equal(4, response.ZoneContact.Address.Count);
-        Assert.Equal("Google Inc.", response.ZoneContact.Address[0]);
-        Assert.Equal("1600 Amphitheatre Parkway", response.ZoneContact.Address[1]);
-        Assert.Equal("Mountain View, CA 94043", response.ZoneContact.Address[2]);
-        Assert.Equal("US", response.ZoneContact.Address[3]);
+        Assert.Equal(1, response.ZoneContact.Address.Count);
+        Assert.Equal("US", response.ZoneContact.Address[0]);
 
 
         // Nameservers
@@ -119,6 +116,6 @@ public class IsParsingTests : ParsingTests
         Assert.Equal("ns1.google.com", response.NameServers[0]);
         Assert.Equal("ns2.google.com", response.NameServers[1]);
 
-        Assert.Equal(39, response.FieldsParsed);
+        Assert.Equal(30, response.FieldsParsed);
     }
 }
