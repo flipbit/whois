@@ -13,7 +13,7 @@ public class CnParsingTests : ParsingTests
         parser = new WhoisParser();
     }
 
-    [Fact(Skip = "Template update deferred - WHOIS response format changed")]
+    [Fact]
     public void Test_found()
     {
         var sample = SampleReader.Read("whois.cnnic.cn", "cn", "found", "concordecals.com.cn.txt");
@@ -29,17 +29,17 @@ public class CnParsingTests : ParsingTests
         Assert.Equal("20021209s10011s00041927-cn", response.RegistryDomainId);
 
         // Registrar Details
-        Assert.Equal("北京新网互联科技有限公司", response.Registrar.Name);
+        Assert.Equal("商中在线科技股份有限公司", response.Registrar.Name);
 
         Assert.Equal(new DateTime(2002, 3, 6, 0, 0, 0), response.Registered);
-        Assert.Equal(new DateTime(2013, 3, 6, 0, 0, 0), response.Expiration);
+        Assert.Equal(new DateTime(2028, 3, 6, 0, 0, 0), response.Expiration);
 
         // Registrant Details
-        Assert.Equal("朴泰恩", response.Registrant.Name);
-        Assert.Equal("康科陶艺制造（深圳）有限公司", response.Registrant.Organization);
+        Assert.Equal("惠州市汇浩工艺品有限公司", response.Registrant.Name);
+        Assert.Null(response.Registrant.Organization);
 
         // AdminContact Details
-        Assert.Equal("taien@concordecals.com.cn", response.AdminContact.Email);
+        Assert.Null(response.AdminContact);
 
         // Nameservers
         Assert.Equal(2, response.NameServers.Count);
@@ -50,7 +50,7 @@ public class CnParsingTests : ParsingTests
         Assert.Equal(1, response.DomainStatus.Count);
         Assert.Equal("ok", response.DomainStatus[0]);
 
-        Assert.Equal(12, response.FieldsParsed);
+        Assert.Equal(11, response.FieldsParsed);
     }
 
     [Fact]
@@ -83,7 +83,7 @@ public class CnParsingTests : ParsingTests
         Assert.Equal(1, response.FieldsParsed);
     }
 
-    [Fact(Skip = "Template update deferred - WHOIS response format changed")]
+    [Fact]
     public void Test_found_status_registered()
     {
         var sample = SampleReader.Read("whois.cnnic.cn", "cn", "found", "google.cn.txt");
@@ -99,33 +99,32 @@ public class CnParsingTests : ParsingTests
         Assert.Equal("20030311s10001s00033735-cn", response.RegistryDomainId);
 
         // Registrar Details
-        Assert.Equal("MarkMonitor Inc.", response.Registrar.Name);
+        Assert.Equal("厦门易名科技股份有限公司", response.Registrar.Name);
 
         Assert.Equal(new DateTime(2003, 3, 17, 12, 20, 5), response.Registered);
-        Assert.Equal(new DateTime(2017, 3, 17, 12, 48, 36), response.Expiration);
+        Assert.Equal(new DateTime(2027, 3, 17, 12, 48, 36), response.Expiration);
 
         // Registrant Details
-        Assert.Equal("cnnic-zdmd-022", response.Registrant.RegistryId);
-        Assert.Equal("Google Ireland Holdings", response.Registrant.Name);
+        Assert.Null(response.Registrant.RegistryId);
+        Assert.Equal("北京谷翔信息技术有限公司", response.Registrant.Name);
         Assert.Equal("dns-admin@google.com", response.Registrant.Email);
 
         // Nameservers
         Assert.Equal(4, response.NameServers.Count);
-        Assert.Equal("ns1.google.com", response.NameServers[0]);
-        Assert.Equal("ns2.google.com", response.NameServers[1]);
+        Assert.Equal("ns2.google.com", response.NameServers[0]);
+        Assert.Equal("ns1.google.com", response.NameServers[1]);
         Assert.Equal("ns3.google.com", response.NameServers[2]);
         Assert.Equal("ns4.google.com", response.NameServers[3]);
 
         // Domain Status
-        Assert.Equal(6, response.DomainStatus.Count);
+        Assert.Equal(5, response.DomainStatus.Count);
         Assert.Equal("clientDeleteProhibited", response.DomainStatus[0]);
         Assert.Equal("serverDeleteProhibited", response.DomainStatus[1]);
-        Assert.Equal("clientUpdateProhibited", response.DomainStatus[2]);
-        Assert.Equal("serverUpdateProhibited", response.DomainStatus[3]);
-        Assert.Equal("clientTransferProhibited", response.DomainStatus[4]);
-        Assert.Equal("serverTransferProhibited", response.DomainStatus[5]);
+        Assert.Equal("serverUpdateProhibited", response.DomainStatus[2]);
+        Assert.Equal("clientTransferProhibited", response.DomainStatus[3]);
+        Assert.Equal("serverTransferProhibited", response.DomainStatus[4]);
 
-        Assert.Equal(19, response.FieldsParsed);
+        Assert.Equal(17, response.FieldsParsed);
     }
 
     [Fact]
