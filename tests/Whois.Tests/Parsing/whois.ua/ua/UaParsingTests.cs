@@ -13,7 +13,7 @@ public class UaParsingTests : ParsingTests
         parser = new WhoisParser();
     }
 
-    [Fact(Skip = "Template update deferred - WHOIS response format changed")]
+    [Fact]
     public void Test_other_status_clienthold()
     {
         var sample = SampleReader.Read("whois.ua", "ua", "found", "oogle.com.ua.txt");
@@ -28,75 +28,44 @@ public class UaParsingTests : ParsingTests
         Assert.Equal("oogle.com.ua", response.DomainName.ToString());
 
         // Registrar Details
-        Assert.Equal("ua.imena", response.Registrar.Name);
-        Assert.Equal("http://www.imena.ua", response.Registrar.Url);
+        Assert.Equal("ua.danesco", response.Registrar.Name);
+        Assert.Equal("https://danesconames.com", response.Registrar.Url);
 
-        Assert.Equal(new DateTime(2013, 07, 19, 01, 23, 16, 000, DateTimeKind.Utc), response.Updated);
-        Assert.Equal(new DateTime(2010, 07, 18, 12, 15, 39, 000, DateTimeKind.Utc), response.Registered);
-        Assert.Equal(new DateTime(2013, 07, 18, 12, 15, 38, 000, DateTimeKind.Utc), response.Expiration);
+        Assert.Equal(new DateTime(2026, 06, 17, 18, 17, 26, 000, DateTimeKind.Utc), response.Updated);
+        Assert.Equal(new DateTime(2017, 01, 03, 11, 07, 45, 000, DateTimeKind.Utc), response.Registered);
+        Assert.Equal(new DateTime(2033, 01, 03, 11, 07, 45, 000, DateTimeKind.Utc), response.Expiration);
 
         // Registrant Details
-        Assert.Equal("pl-imena-1", response.Registrant.RegistryId);
-        Assert.Equal(@"""Internet Invest"" Ltd", response.Registrant.Name);
-        Assert.Equal(@"""Internet Invest"" Ltd", response.Registrant.Organization);
-        Assert.Equal("+380.442010102", response.Registrant.TelephoneNumber);
-        Assert.Equal("+380.442010100", response.Registrant.FaxNumber);
-        Assert.Equal("hostmaster@imena.ua", response.Registrant.Email);
+        Assert.Null(response.Registrant);
 
         // Registrant Address
-        Assert.Equal(4, response.Registrant.Address.Count);
-        Assert.Equal("Gaidara st. 50", response.Registrant.Address[0]);
-        Assert.Equal("KYIV", response.Registrant.Address[1]);
-        Assert.Equal("UA", response.Registrant.Address[2]);
-        Assert.Equal("UA", response.Registrant.Address[3]);
 
 
         // AdminContact Details
-        Assert.Equal("pl-imena-1", response.AdminContact.RegistryId);
-        Assert.Equal(@"""Internet Invest"" Ltd", response.AdminContact.Name);
-        Assert.Equal(@"""Internet Invest"" Ltd", response.AdminContact.Organization);
-        Assert.Equal("+380.442010102", response.AdminContact.TelephoneNumber);
-        Assert.Equal("+380.442010100", response.AdminContact.FaxNumber);
-        Assert.Equal("hostmaster@imena.ua", response.AdminContact.Email);
+        Assert.Null(response.AdminContact);
 
         // AdminContact Address
-        Assert.Equal(4, response.AdminContact.Address.Count);
-        Assert.Equal("Gaidara st. 50", response.AdminContact.Address[0]);
-        Assert.Equal("KYIV", response.AdminContact.Address[1]);
-        Assert.Equal("UA", response.AdminContact.Address[2]);
-        Assert.Equal("UA", response.AdminContact.Address[3]);
 
 
         // TechnicalContact Details
-        Assert.Equal("pl-imena-1", response.TechnicalContact.RegistryId);
-        Assert.Equal(@"""Internet Invest"" Ltd", response.TechnicalContact.Name);
-        Assert.Equal(@"""Internet Invest"" Ltd", response.TechnicalContact.Organization);
-        Assert.Equal("+380.442010102", response.TechnicalContact.TelephoneNumber);
-        Assert.Equal("+380.442010100", response.TechnicalContact.FaxNumber);
-        Assert.Equal("hostmaster@imena.ua", response.TechnicalContact.Email);
+        Assert.Null(response.TechnicalContact);
 
         // TechnicalContact Address
-        Assert.Equal(4, response.TechnicalContact.Address.Count);
-        Assert.Equal("Gaidara st. 50", response.TechnicalContact.Address[0]);
-        Assert.Equal("KYIV", response.TechnicalContact.Address[1]);
-        Assert.Equal("UA", response.TechnicalContact.Address[2]);
-        Assert.Equal("UA", response.TechnicalContact.Address[3]);
 
 
         // Nameservers
-        Assert.Equal(3, response.NameServers.Count);
-        Assert.Equal("ns3.imena.com.ua", response.NameServers[0]);
-        Assert.Equal("ns2.imena.com.ua", response.NameServers[1]);
-        Assert.Equal("ns1.imena.com.ua", response.NameServers[2]);
+        Assert.Equal(2, response.NameServers.Count);
+        Assert.Equal("ns1.parkingcrew.net", response.NameServers[0]);
+        Assert.Equal("ns2.parkingcrew.net", response.NameServers[1]);
 
         // Domain Status
         Assert.Equal(1, response.DomainStatus.Count);
         Assert.Equal("clientHold", response.DomainStatus[0]);
 
-        Assert.Equal(46, response.FieldsParsed);
+        Assert.Equal(18, response.FieldsParsed);
     }
 
-    [Fact(Skip = "Template update deferred - WHOIS response format changed")]
+    [Fact]
     public void Test_other_status_clienttransferprohibited()
     {
         var sample = SampleReader.Read("whois.ua", "ua", "found", "fcbank.com.ua.txt");
@@ -111,71 +80,44 @@ public class UaParsingTests : ParsingTests
         Assert.Equal("fcbank.com.ua", response.DomainName.ToString());
 
         // Registrar Details
-        Assert.Equal("ua.register", response.Registrar.Name);
-        Assert.Equal("http://register.ua", response.Registrar.Url);
+        Assert.Equal("ua.forward", response.Registrar.Name);
+        Assert.Equal("http://forward.com.ua", response.Registrar.Url);
 
-        Assert.Equal(new DateTime(2013, 06, 14, 11, 09, 54, 000, DateTimeKind.Utc), response.Updated);
+        Assert.Equal(new DateTime(2025, 09, 05, 10, 19, 02, 000, DateTimeKind.Utc), response.Updated);
         Assert.Equal(new DateTime(2004, 08, 06, 10, 17, 36, 000, DateTimeKind.Utc), response.Registered);
-        Assert.Equal(new DateTime(2014, 08, 06, 10, 17, 36, 000, DateTimeKind.Utc), response.Expiration);
+        Assert.Equal(new DateTime(2026, 08, 06, 10, 17, 36, 000, DateTimeKind.Utc), response.Expiration);
 
         // Registrant Details
-        Assert.Equal("com-fac5-1", response.Registrant.RegistryId);
-        Assert.Equal(@"JSC ""Finance and Credit""  Bank", response.Registrant.Name);
-        Assert.Equal(@"JSC ""Finance and Credit""  Bank", response.Registrant.Organization);
-        Assert.Equal("+380.443642909", response.Registrant.TelephoneNumber);
-        Assert.Equal("hostmaster@fcbank.com.ua", response.Registrant.Email);
+        Assert.Null(response.Registrant);
 
         // Registrant Address
-        Assert.Equal(4, response.Registrant.Address.Count);
-        Assert.Equal("Artema str 60", response.Registrant.Address[0]);
-        Assert.Equal("KIEV", response.Registrant.Address[1]);
-        Assert.Equal("UA", response.Registrant.Address[2]);
-        Assert.Equal("UA", response.Registrant.Address[3]);
 
 
         // AdminContact Details
-        Assert.Equal("com-fac5-1", response.AdminContact.RegistryId);
-        Assert.Equal(@"JSC ""Finance and Credit""  Bank", response.AdminContact.Name);
-        Assert.Equal(@"JSC ""Finance and Credit""  Bank", response.AdminContact.Organization);
-        Assert.Equal("+380.443642909", response.AdminContact.TelephoneNumber);
-        Assert.Equal("hostmaster@fcbank.com.ua", response.AdminContact.Email);
+        Assert.Null(response.AdminContact);
 
         // AdminContact Address
-        Assert.Equal(4, response.AdminContact.Address.Count);
-        Assert.Equal("Artema str 60", response.AdminContact.Address[0]);
-        Assert.Equal("KIEV", response.AdminContact.Address[1]);
-        Assert.Equal("UA", response.AdminContact.Address[2]);
-        Assert.Equal("UA", response.AdminContact.Address[3]);
 
 
         // TechnicalContact Details
-        Assert.Equal("com-fac5-1", response.TechnicalContact.RegistryId);
-        Assert.Equal(@"JSC ""Finance and Credit""  Bank", response.TechnicalContact.Name);
-        Assert.Equal(@"JSC ""Finance and Credit""  Bank", response.TechnicalContact.Organization);
-        Assert.Equal("+380.443642909", response.TechnicalContact.TelephoneNumber);
-        Assert.Equal("hostmaster@fcbank.com.ua", response.TechnicalContact.Email);
+        Assert.Null(response.TechnicalContact);
 
         // TechnicalContact Address
-        Assert.Equal(4, response.TechnicalContact.Address.Count);
-        Assert.Equal("Artema str 60", response.TechnicalContact.Address[0]);
-        Assert.Equal("KIEV", response.TechnicalContact.Address[1]);
-        Assert.Equal("UA", response.TechnicalContact.Address[2]);
-        Assert.Equal("UA", response.TechnicalContact.Address[3]);
 
 
         // Nameservers
         Assert.Equal(5, response.NameServers.Count);
-        Assert.Equal("ns2.fcbank.com.ua", response.NameServers[0]);
-        Assert.Equal("ns1.fcbank.com.ua", response.NameServers[1]);
+        Assert.Equal("ns1.fcbank.com.ua", response.NameServers[0]);
+        Assert.Equal("ns2.fcbank.com.ua", response.NameServers[1]);
         Assert.Equal("ns.secondary.net.ua", response.NameServers[2]);
         Assert.Equal("ns1.fcbank.com.ua", response.NameServers[3]);
         Assert.Equal("ns2.fcbank.com.ua", response.NameServers[4]);
 
         // Domain Status
         Assert.Equal(1, response.DomainStatus.Count);
-        Assert.Equal("clientTransferProhibited", response.DomainStatus[0]);
+        Assert.Equal("ok", response.DomainStatus[0]);
 
-        Assert.Equal(45, response.FieldsParsed);
+        Assert.Equal(22, response.FieldsParsed);
     }
 
     [Fact]
@@ -261,7 +203,7 @@ public class UaParsingTests : ParsingTests
         Assert.Equal(46, response.FieldsParsed);
     }
 
-    [Fact(Skip = "Template update deferred - WHOIS response format changed")]
+    [Fact]
     public void Test_found()
     {
         var sample = SampleReader.Read("whois.ua", "ua", "found", "google.com.ua.txt");
@@ -276,73 +218,43 @@ public class UaParsingTests : ParsingTests
         Assert.Equal("google.com.ua", response.DomainName.ToString());
 
         // Registrar Details
-        Assert.Equal("ua.imena", response.Registrar.Name);
-        Assert.Equal("http://www.imena.ua", response.Registrar.Url);
+        Assert.Equal("ua.markmonitor", response.Registrar.Name);
+        Assert.Equal("http://markmonitor.com", response.Registrar.Url);
 
-        Assert.Equal(new DateTime(2013, 04, 15, 17, 00, 10, 000, DateTimeKind.Utc), response.Updated);
+        Assert.Equal(new DateTime(2025, 11, 02, 10, 12, 28, 000, DateTimeKind.Utc), response.Updated);
         Assert.Equal(new DateTime(2002, 12, 03, 22, 00, 00, 000, DateTimeKind.Utc), response.Registered);
-        Assert.Equal(new DateTime(2013, 12, 03, 22, 00, 00, 000, DateTimeKind.Utc), response.Expiration);
+        Assert.Equal(new DateTime(2026, 12, 03, 22, 00, 00, 000, DateTimeKind.Utc), response.Expiration);
 
         // Registrant Details
-        Assert.Equal("com-gi8-1", response.Registrant.RegistryId);
-        Assert.Equal("Google Inc.", response.Registrant.Name);
-        Assert.Equal("Google Inc.", response.Registrant.Organization);
-        Assert.Equal("+16503300100", response.Registrant.TelephoneNumber);
-        Assert.Equal("+16506188571", response.Registrant.FaxNumber);
-        Assert.Equal("dns-admin@google.com", response.Registrant.Email);
+        Assert.Null(response.Registrant);
 
         // Registrant Address
-        Assert.Equal(4, response.Registrant.Address.Count);
-        Assert.Equal("1600 Amphitheatre Parkway Mountain View CA 94043 US", response.Registrant.Address[0]);
-        Assert.Equal("n/a", response.Registrant.Address[1]);
-        Assert.Equal("UA", response.Registrant.Address[2]);
-        Assert.Equal("UA", response.Registrant.Address[3]);
 
 
         // AdminContact Details
-        Assert.Equal("com-gi8-1", response.AdminContact.RegistryId);
-        Assert.Equal("Google Inc.", response.AdminContact.Name);
-        Assert.Equal("Google Inc.", response.AdminContact.Organization);
-        Assert.Equal("+16503300100", response.AdminContact.TelephoneNumber);
-        Assert.Equal("+16506188571", response.AdminContact.FaxNumber);
-        Assert.Equal("dns-admin@google.com", response.AdminContact.Email);
+        Assert.Null(response.AdminContact);
 
         // AdminContact Address
-        Assert.Equal(4, response.AdminContact.Address.Count);
-        Assert.Equal("1600 Amphitheatre Parkway Mountain View CA 94043 US", response.AdminContact.Address[0]);
-        Assert.Equal("n/a", response.AdminContact.Address[1]);
-        Assert.Equal("UA", response.AdminContact.Address[2]);
-        Assert.Equal("UA", response.AdminContact.Address[3]);
 
 
         // TechnicalContact Details
-        Assert.Equal("com-gi8-1", response.TechnicalContact.RegistryId);
-        Assert.Equal("Google Inc.", response.TechnicalContact.Name);
-        Assert.Equal("Google Inc.", response.TechnicalContact.Organization);
-        Assert.Equal("+16503300100", response.TechnicalContact.TelephoneNumber);
-        Assert.Equal("+16506188571", response.TechnicalContact.FaxNumber);
-        Assert.Equal("dns-admin@google.com", response.TechnicalContact.Email);
+        Assert.Null(response.TechnicalContact);
 
         // TechnicalContact Address
-        Assert.Equal(4, response.TechnicalContact.Address.Count);
-        Assert.Equal("1600 Amphitheatre Parkway Mountain View CA 94043 US", response.TechnicalContact.Address[0]);
-        Assert.Equal("n/a", response.TechnicalContact.Address[1]);
-        Assert.Equal("UA", response.TechnicalContact.Address[2]);
-        Assert.Equal("UA", response.TechnicalContact.Address[3]);
 
 
         // Nameservers
         Assert.Equal(4, response.NameServers.Count);
-        Assert.Equal("ns3.google.com", response.NameServers[0]);
-        Assert.Equal("ns1.google.com", response.NameServers[1]);
-        Assert.Equal("ns4.google.com", response.NameServers[2]);
-        Assert.Equal("ns2.google.com", response.NameServers[3]);
+        Assert.Equal("ns1.google.com", response.NameServers[0]);
+        Assert.Equal("ns2.google.com", response.NameServers[1]);
+        Assert.Equal("ns3.google.com", response.NameServers[2]);
+        Assert.Equal("ns4.google.com", response.NameServers[3]);
 
         // Domain Status
         Assert.Equal(1, response.DomainStatus.Count);
-        Assert.Equal("ok", response.DomainStatus[0]);
+        Assert.Equal("clientDeleteProhibited", response.DomainStatus[0]);
 
-        Assert.Equal(47, response.FieldsParsed);
+        Assert.Equal(26, response.FieldsParsed);
     }
 
     [Fact]
@@ -509,7 +421,7 @@ public class UaParsingTests : ParsingTests
         Assert.Equal(2, response.FieldsParsed);
     }
 
-    [Fact(Skip = "Template update deferred - WHOIS response format changed")]
+    [Fact]
     public void Test_found_status_registered()
     {
         var sample = SampleReader.Read("whois.ua", "ua", "found", "kyivstar.ua.txt");
@@ -519,49 +431,33 @@ public class UaParsingTests : ParsingTests
         Assert.Equal(WhoisStatus.Found, response.Status);
 
         Assert.Equal(0, response.ParsingErrors);
-        Assert.Equal("whois.ua/ua/found/02", response.TemplateName);
+        Assert.Equal("whois.ua/ua/found/01", response.TemplateName);
 
         Assert.Equal("kyivstar.ua", response.DomainName.ToString());
 
 
         // AdminContact Details
-        Assert.Equal("KG780-UANIC", response.AdminContact.RegistryId);
-        Assert.Equal("Kyivstar GSM", response.AdminContact.Organization);
-        Assert.Equal("+380 (44) 2473939", response.AdminContact.TelephoneNumber);
-        Assert.Equal("+380 (44) 2473954", response.AdminContact.FaxNumber);
-        Assert.Equal("dnsmaster@kyivstar.net", response.AdminContact.Email);
+        Assert.Null(response.AdminContact);
 
         // AdminContact Address
-        Assert.Equal(3, response.AdminContact.Address.Count);
-        Assert.Equal("Chervonozoryanyi Av., 51", response.AdminContact.Address[0]);
-        Assert.Equal("03110 KYIV", response.AdminContact.Address[1]);
-        Assert.Equal("UA", response.AdminContact.Address[2]);
 
 
         // TechnicalContact Details
-        Assert.Equal("KG780-UANIC", response.TechnicalContact.RegistryId);
-        Assert.Equal("Kyivstar GSM", response.TechnicalContact.Organization);
-        Assert.Equal("+380 (44) 2473939", response.TechnicalContact.TelephoneNumber);
-        Assert.Equal("+380 (44) 2473954", response.TechnicalContact.FaxNumber);
-        Assert.Equal("dnsmaster@kyivstar.net", response.TechnicalContact.Email);
+        Assert.Null(response.TechnicalContact);
 
         // TechnicalContact Address
-        Assert.Equal(3, response.TechnicalContact.Address.Count);
-        Assert.Equal("Chervonozoryanyi Av., 51", response.TechnicalContact.Address[0]);
-        Assert.Equal("03110 KYIV", response.TechnicalContact.Address[1]);
-        Assert.Equal("UA", response.TechnicalContact.Address[2]);
 
 
         // Nameservers
-        Assert.Equal(2, response.NameServers.Count);
-        Assert.Equal("ns2.elvisti.kiev.ua", response.NameServers[0]);
-        Assert.Equal("ns.kyivstar.net", response.NameServers[1]);
+        Assert.Equal(3, response.NameServers.Count);
+        Assert.Equal("ns20.kyivstar.net", response.NameServers[0]);
+        Assert.Equal("ns21.kyivstar.net", response.NameServers[1]);
 
         // Domain Status
         Assert.Equal(1, response.DomainStatus.Count);
-        Assert.Equal("OK-UNTIL 20140903121852", response.DomainStatus[0]);
+        Assert.Equal("ok", response.DomainStatus[0]);
 
-        Assert.Equal(35, response.FieldsParsed);
+        Assert.Equal(40, response.FieldsParsed);
     }
 
     [Fact]
