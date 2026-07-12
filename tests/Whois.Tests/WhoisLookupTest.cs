@@ -321,4 +321,58 @@ public class WhoisLookupTest
 
         Assert.Equal(1, callCount);
     }
+
+    [Fact]
+    public async Task Lookup_WithAutoUpdate_DoesNotBlockQuery()
+    {
+        var packProvider = Substitute.For<ITemplatePackProvider>();
+        var parser = new WhoisParser();
+        var checkForUpdateBlocked = new ManualResetEventSlim(false);
+        var checkForUpdateStarted = new ManualResetEventSlim(false);
+
+        packProvider.CheckForUpdate(Arg.Any<CancellationToken>())
+            .Returns(callInfo =>
+            {
+                checkForUpdateStarted.Set();
+                // Block until signaled (simulating a long-running update check)
+                checkForUpdateBlocked.Wait(TimeSpan.FromSeconds(10));
+                return new TemplateUpdateResult(TemplateUpdateOutcome.AlreadyUpToDate, "1.0.0", null);
+            });
+
+        packProvider.Status.Returns(new TemplateStatus("embedded", TemplateSource.Embedded, null, null, null, false));
+
+        var request = new WhoisRequest("google.com");
+        var rootServer = new WhoisResponse
+        {
+            DomainName = new HostName("com"),
+            Registrar = new Registrar { WhoisServer = new HostName("whois.markmonitor.com") },
+        };
+        whoisServerLookup.Lookup(request, Arg.Any<CancellationToken>()).Returns(rootServer);
+        tcpReader
+            .Read("whois.markmonitor.com", 43, "google.com", Encoding.UTF8, 10, Arg.Any<CancellationToken>())
+            .Returns(sampleReader.Read("whois.markmonitor.com", "com", "found", "found.txt"));
+
+        var instance = new WhoisLookup(packProvider, parser)
+        {
+            Options = { AutoUpdateTemplates = true },
+            TcpReader = tcpReader,
+            ServerLookup = whoisServerLookup,
+        };
+
+        // Call Lookup - should return promptly even though CheckForUpdate is blocked
+        var lookupTask = instance.Lookup(request);
+        var completedWithinTimeout = await Task.WhenAny(
+            lookupTask,
+            Task.Delay(TimeSpan.FromSeconds(5))
+        ) == lookupTask;
+
+        Assert.True(completedWithinTimeout, "Lookup did not complete within timeout - it was blocked by CheckForUpdate");
+
+        var result = await lookupTask;
+        Assert.Equal("google.com", result.DomainName.ToString());
+        Assert.Equal(WhoisStatus.Found, result.Status);
+
+        // Signal the background check to complete (cleanup)
+        checkForUpdateBlocked.Set();
+    }
 }
