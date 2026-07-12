@@ -4,6 +4,7 @@ using System.Threading.Tasks;
 using Microsoft.Extensions.Logging;
 using Microsoft.Extensions.Logging.Abstractions;
 using Tokens;
+using Tokens.Transformers;
 using Whois.Net;
 using Whois.Parsers;
 
@@ -17,7 +18,7 @@ namespace Whois.Servers
         private const string IanaUrl = "whois.iana.org";
 
         private readonly ILogger<IanaServerLookup> _logger;
-        private readonly Lazy<TokenMatcher> ianaTemplate;
+        private readonly Lazy<TemplateMatcher> ianaTemplate;
         private readonly ResourceReader resourceReader;
 
         /// <summary>
@@ -38,7 +39,7 @@ namespace Whois.Servers
 
         public IanaServerLookup(ITcpReader tcpReader, ILogger<IanaServerLookup> logger)
         {
-            ianaTemplate = new Lazy<TokenMatcher>(CreateIanaTemplate);
+            ianaTemplate = new Lazy<TemplateMatcher>(CreateIanaTemplate);
             resourceReader = new ResourceReader();
             TcpReader = tcpReader;
             _logger = logger;
@@ -52,11 +53,11 @@ namespace Whois.Servers
 
             // Reflect the raw response onto a ParsedWhoisServer object
             var matcher = ianaTemplate.Value;
-            var result = matcher.Match<WhoisResponse>(content);
+            var result = matcher.Tokenize(content);
 
             if (result.Success)
             {
-                var match = result.BestMatch!.Value;
+                var match = result.BestMatch!.Assign<WhoisResponse>();
 
                 match.Content = content;
 
@@ -82,11 +83,13 @@ namespace Whois.Servers
             return response;
         }
 
-        private TokenMatcher CreateIanaTemplate()
+        private TemplateMatcher CreateIanaTemplate()
         {
-            var matcher = new TokenMatcher();
-            matcher.RegisterTransformer<CleanDomainStatusTransformer>();
-            matcher.RegisterTransformer<ToHostNameTransformer>();
+            var options = new TokenizerOptions()
+                .WithTransformer<CleanDomainStatusTransformer>()
+                .WithTransformer<ToHostNameTransformer>();
+
+            var matcher = new TemplateMatcher(options);
 
             var resourceNames = resourceReader.GetNames("whois.iana.org");
 

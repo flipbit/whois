@@ -1,8 +1,8 @@
 ﻿using System.Collections.Generic;
 using System.Linq;
 using Tokens;
+using Tokens.Exceptions;
 using Tokens.Transformers;
-using Tokens.Validators;
 using Whois.Parsers.Fixups;
 
 namespace Whois.Parsers
@@ -15,7 +15,7 @@ namespace Whois.Parsers
     {
         private const string GenericTemplateTag = "catch-all";
 
-        private readonly TokenMatcher matcher;
+        private readonly TemplateMatcher matcher;
         private readonly ResourceReader reader;
         private readonly WhoisStatusParser statusParser;
 
@@ -24,14 +24,14 @@ namespace Whois.Parsers
         /// </summary>
         public WhoisParser()
         {
-            matcher = new TokenMatcher();
+            var options = new TokenizerOptions()
+                .WithTransformer<CleanDomainStatusTransformer>()
+                .WithTransformer<ToHostNameTransformer>();
+
+            matcher = new TemplateMatcher(options);
             reader = new ResourceReader();
             statusParser = new WhoisStatusParser();
             FixUps = new List<IFixup>();
-
-            // Register default transformers
-            matcher.RegisterTransformer<CleanDomainStatusTransformer>();
-            matcher.RegisterTransformer<ToHostNameTransformer>();
 
             // Register default FixUps
             FixUps.Add(new MultipleContactFixup());
@@ -64,7 +64,7 @@ namespace Whois.Parsers
 
             LoadServerTemplates(whoisServer);
 
-            var result = matcher.Match<WhoisResponse>(content, new []{ whoisServer });
+            var result = matcher.Tokenize(content, new []{ whoisServer });
 
             var match = result.BestMatch;
 
@@ -73,27 +73,37 @@ namespace Whois.Parsers
                 LoadServerGenericTemplates();
 
                 match = matcher
-                    .Match<WhoisResponse>(content, new [] { "catch-all" })
+                    .Tokenize(content, new [] { "catch-all" })
                     .BestMatch;
             }
 
             if (match != null)
             {
+                WhoisResponse value;
+                var assignmentErrors = 0;
+                try
+                {
+                    value = match.Assign<WhoisResponse>();
+                }
+                catch (AssignmentFailedException ex)
+                {
+                    value = (WhoisResponse)ex.PartialResult!;
+                    assignmentErrors = ex.Errors.Count;
+                }
+
                 // Perform extended processing on parsed data
                 // via FixUps.
                 foreach (var fixup in FixUps)
                 {
                     if (fixup.CanFixup(match))
                     {
-                        fixup.Fixup(match);
+                        fixup.Fixup(match, value);
                     }
                 }
 
-                var value = match.Value;
-
                 value.Content = content;
                 value.FieldsParsed = match.Tokens.Matches.Count;
-                value.ParsingErrors = match.Exceptions.Count;
+                value.ParsingErrors = match.Exceptions.Count + assignmentErrors;
                 value.TemplateName = match.Template.Name;
 
                 var status = statusParser.Parse(whoisServer, value.DomainStatus.FirstOrDefault(), value.Status);
@@ -118,16 +128,6 @@ namespace Whois.Parsers
         public void ClearTemplates()
         {
             matcher.Templates.Clear();
-        }
-
-        public void RegisterValidator<T>() where T : ITokenValidator
-        {
-            matcher.RegisterValidator<T>();
-        }
-
-        public void RegisterTransformer<T>() where T : ITokenTransformer
-        {
-            matcher.RegisterTransformer<T>();
         }
 
         private void LoadServerTemplates(string whoisServer)

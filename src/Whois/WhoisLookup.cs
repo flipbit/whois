@@ -5,8 +5,6 @@ using System.Threading.Tasks;
 using Microsoft.Extensions.Logging;
 using Microsoft.Extensions.Logging.Abstractions;
 using Microsoft.Extensions.Options;
-using Tokens.Transformers;
-using Tokens.Validators;
 using Whois.Net;
 using Whois.Parsers;
 using Whois.Servers;
@@ -173,16 +171,6 @@ namespace Whois
             }
 
             return response;
-        }
-
-        public void RegisterValidator<T>() where T : ITokenValidator
-        {
-            Parser.RegisterValidator<T>();
-        }
-
-        public void RegisterTransformer<T>() where T : ITokenTransformer
-        {
-            Parser.RegisterTransformer<T>();
         }
 
         private async Task<string> Download(string url, WhoisRequest request, CancellationToken cancellationToken)

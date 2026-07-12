@@ -8,7 +8,7 @@ namespace Whois.Parsers
     /// </summary>
     public class ToHostNameTransformer : ITokenTransformer
     {
-        public bool CanTransform(object value, string[] args, out object transformed)
+        public bool TryTransform(object value, string[] args, out object transformed)
         {
             if (value == null)
             {

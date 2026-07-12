@@ -10,12 +10,12 @@ namespace Whois.Parsers.Fixups
         /// <summary>
         /// Determines if this Fixup can be applied to the given response.
         /// </summary>
-        bool CanFixup(TokenizeResult<WhoisResponse> result);
+        bool CanFixup(TokenizeResult result);
 
         /// <summary>
         /// Fixes the given result.
         /// </summary>
-        void Fixup(TokenizeResult<WhoisResponse> result);
+        void Fixup(TokenizeResult result, WhoisResponse response);
 
     }
 }
