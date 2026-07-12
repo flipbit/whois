@@ -28,7 +28,7 @@ public class DmParsingTests : ParsingTests
         Assert.Equal(1, response.FieldsParsed);
     }
 
-    [Fact(Skip = "Template update deferred - WHOIS response format changed")]
+    [Fact]
     public void Test_found()
     {
         var sample = SampleReader.Read("whois.nic.dm", "dm", "found", "google.dm.txt");
@@ -38,67 +38,67 @@ public class DmParsingTests : ParsingTests
         Assert.Equal(WhoisStatus.Found, response.Status);
 
         Assert.Equal(0, response.ParsingErrors);
-        Assert.Equal("whois.nic.dm/dm/found/01", response.TemplateName);
+        Assert.Equal("generic/tld/found/01", response.TemplateName);
 
         Assert.Equal("google.dm", response.DomainName.ToString());
 
         // Registrar Details
         Assert.Equal("MarkMonitor Inc.", response.Registrar.Name);
-        Assert.Equal("www.markmonitor.com", response.Registrar.Url);
+        Assert.Equal("http://www.markmonitor.com", response.Registrar.Url);
 
-        Assert.Equal(new DateTime(2013, 07, 23, 17, 50, 34, 000, DateTimeKind.Utc), response.Updated);
+        Assert.Equal(new DateTime(2025, 07, 30, 17, 30, 07, 009, DateTimeKind.Utc), response.Updated);
         Assert.Equal(new DateTime(2004, 08, 23, 23, 00, 00, 000, DateTimeKind.Utc), response.Registered);
-        Assert.Equal(new DateTime(2014, 08, 23, 23, 00, 00, 000, DateTimeKind.Utc), response.Expiration);
+        Assert.Equal(new DateTime(2026, 08, 23, 23, 59, 59, 000, DateTimeKind.Utc), response.Expiration);
 
         // Registrant Details
-        Assert.Equal("P-CQG21", response.Registrant.RegistryId);
-        Assert.Equal("Company Google Inc.", response.Registrant.Name);
+        Assert.Equal("REDACTED FOR PRIVACY", response.Registrant.RegistryId);
+        Assert.Equal("REDACTED FOR PRIVACY", response.Registrant.Name);
 
         // Registrant Address
         Assert.Equal(4, response.Registrant.Address.Count);
-        Assert.Equal("1600 Amphitheatre Parkway", response.Registrant.Address[0]);
-        Assert.Equal("Mountain View", response.Registrant.Address[1]);
-        Assert.Equal("94043", response.Registrant.Address[2]);
+        Assert.Equal("REDACTED FOR PRIVACY", response.Registrant.Address[0]);
+        Assert.Equal("REDACTED FOR PRIVACY", response.Registrant.Address[1]);
+        Assert.Equal("REDACTED FOR PRIVACY", response.Registrant.Address[2]);
         Assert.Equal("US", response.Registrant.Address[3]);
 
 
         // AdminContact Details
-        Assert.Equal("P-DNA22", response.AdminContact.RegistryId);
-        Assert.Equal("DNS Admin", response.AdminContact.Name);
-        Assert.Equal("Google Inc.", response.AdminContact.Organization);
+        Assert.Equal("REDACTED FOR PRIVACY", response.AdminContact.RegistryId);
+        Assert.Equal("REDACTED FOR PRIVACY", response.AdminContact.Name);
+        Assert.Equal("REDACTED FOR PRIVACY", response.AdminContact.Organization);
 
         // AdminContact Address
-        Assert.Equal(4, response.AdminContact.Address.Count);
-        Assert.Equal("1600 Amphitheatre", response.AdminContact.Address[0]);
-        Assert.Equal("Mountain View", response.AdminContact.Address[1]);
-        Assert.Equal("94043", response.AdminContact.Address[2]);
-        Assert.Equal("US", response.AdminContact.Address[3]);
+        Assert.Equal(5, response.AdminContact.Address.Count);
+        Assert.Equal("REDACTED FOR PRIVACY", response.AdminContact.Address[0]);
+        Assert.Equal("REDACTED FOR PRIVACY", response.AdminContact.Address[1]);
+        Assert.Equal("REDACTED FOR PRIVACY", response.AdminContact.Address[2]);
+        Assert.Equal("REDACTED FOR PRIVACY", response.AdminContact.Address[3]);
 
 
         // BillingContact Details
-        Assert.Equal("P-DXA21", response.BillingContact.RegistryId);
-        Assert.Equal("DNS Admin", response.BillingContact.Name);
-        Assert.Equal("Google Inc.", response.BillingContact.Organization);
+        Assert.Equal("REDACTED FOR PRIVACY", response.BillingContact.RegistryId);
+        Assert.Equal("REDACTED FOR PRIVACY", response.BillingContact.Name);
+        Assert.Equal("REDACTED FOR PRIVACY", response.BillingContact.Organization);
 
         // BillingContact Address
-        Assert.Equal(4, response.BillingContact.Address.Count);
-        Assert.Equal("1600 Amphitheatre", response.BillingContact.Address[0]);
-        Assert.Equal("Mountain View", response.BillingContact.Address[1]);
-        Assert.Equal("94043", response.BillingContact.Address[2]);
-        Assert.Equal("US", response.BillingContact.Address[3]);
+        Assert.Equal(5, response.BillingContact.Address.Count);
+        Assert.Equal("REDACTED FOR PRIVACY", response.BillingContact.Address[0]);
+        Assert.Equal("REDACTED FOR PRIVACY", response.BillingContact.Address[1]);
+        Assert.Equal("REDACTED FOR PRIVACY", response.BillingContact.Address[2]);
+        Assert.Equal("REDACTED FOR PRIVACY", response.BillingContact.Address[3]);
 
 
         // TechnicalContact Details
-        Assert.Equal("P-DXA21", response.TechnicalContact.RegistryId);
-        Assert.Equal("DNS Admin", response.TechnicalContact.Name);
-        Assert.Equal("Google Inc.", response.TechnicalContact.Organization);
+        Assert.Equal("REDACTED FOR PRIVACY", response.TechnicalContact.RegistryId);
+        Assert.Equal("REDACTED FOR PRIVACY", response.TechnicalContact.Name);
+        Assert.Equal("REDACTED FOR PRIVACY", response.TechnicalContact.Organization);
 
         // TechnicalContact Address
-        Assert.Equal(4, response.TechnicalContact.Address.Count);
-        Assert.Equal("1600 Amphitheatre", response.TechnicalContact.Address[0]);
-        Assert.Equal("Mountain View", response.TechnicalContact.Address[1]);
-        Assert.Equal("94043", response.TechnicalContact.Address[2]);
-        Assert.Equal("US", response.TechnicalContact.Address[3]);
+        Assert.Equal(5, response.TechnicalContact.Address.Count);
+        Assert.Equal("REDACTED FOR PRIVACY", response.TechnicalContact.Address[0]);
+        Assert.Equal("REDACTED FOR PRIVACY", response.TechnicalContact.Address[1]);
+        Assert.Equal("REDACTED FOR PRIVACY", response.TechnicalContact.Address[2]);
+        Assert.Equal("REDACTED FOR PRIVACY", response.TechnicalContact.Address[3]);
 
 
         // Nameservers
@@ -110,8 +110,8 @@ public class DmParsingTests : ParsingTests
 
         // Domain Status
         Assert.Equal(1, response.DomainStatus.Count);
-        Assert.Equal("ACTIVE", response.DomainStatus[0]);
+        Assert.Equal("ok", response.DomainStatus[0]);
 
-        Assert.Equal(39, response.FieldsParsed);
+        Assert.Equal(48, response.FieldsParsed);
     }
 }
