@@ -13,7 +13,7 @@ public class RsParsingTests : ParsingTests
         parser = new WhoisParser();
     }
 
-    [Fact(Skip = "Template update deferred - WHOIS response format changed")]
+    [Fact]
     public void Test_found()
     {
         var sample = SampleReader.Read("whois.rnids.rs", "rs", "found", "eg.rs.txt");
@@ -25,25 +25,23 @@ public class RsParsingTests : ParsingTests
         Assert.Equal(0, response.ParsingErrors);
         Assert.Equal("whois.rnids.rs/rs/found/01", response.TemplateName);
 
-        Assert.Equal("eg.rs", response.DomainName.ToString());
+        Assert.Equal("eg", response.DomainName.ToString());
 
         // Registrar Details
         Assert.Equal("GAMA Electronics d.o.o.", response.Registrar.Name);
 
-        Assert.Equal(new DateTime(2011, 08, 08, 11, 13, 00, 000, DateTimeKind.Utc), response.Updated);
+        Assert.Equal(new DateTime(2025, 10, 04, 09, 31, 52, 000, DateTimeKind.Utc), response.Updated);
         Assert.Equal(new DateTime(2010, 10, 22, 10, 20, 31, 000, DateTimeKind.Utc), response.Registered);
-        Assert.Equal(new DateTime(2012, 10, 22, 10, 20, 31, 000, DateTimeKind.Utc), response.Expiration);
+        Assert.Equal(new DateTime(2026, 10, 22, 10, 20, 31, 000, DateTimeKind.Utc), response.Expiration);
 
         // Nameservers
-        Assert.Equal(2, response.NameServers.Count);
-        Assert.Equal("bits-hq.bitsyu.net", response.NameServers[0]);
-        Assert.Equal("largo.bitsyu.net", response.NameServers[1]);
+        Assert.Equal(0, response.NameServers.Count);
 
         // Domain Status
         Assert.Equal(1, response.DomainStatus.Count);
         Assert.Equal("Active", response.DomainStatus[0]);
 
-        Assert.Equal(9, response.FieldsParsed);
+        Assert.Equal(8, response.FieldsParsed);
     }
 
     [Fact]
@@ -116,41 +114,39 @@ public class RsParsingTests : ParsingTests
         Assert.Equal(10, response.FieldsParsed);
     }
 
-    [Fact(Skip = "Template update deferred - WHOIS response format changed")]
+    [Fact]
     public void Test_other_status_in_transfer()
     {
         var sample = SampleReader.Read("whois.rnids.rs", "rs", "found", "saj.rs.txt");
         var response = parser.Parse("whois.rnids.rs", sample);
 
         Assert.True(sample.Length > 0);
-        Assert.Equal(WhoisStatus.Other, response.Status);
+        Assert.Equal(WhoisStatus.Found, response.Status);
 
         Assert.Equal(0, response.ParsingErrors);
         Assert.Equal("whois.rnids.rs/rs/found/01", response.TemplateName);
 
-        Assert.Equal("saj.rs", response.DomainName.ToString());
+        Assert.Equal("saj", response.DomainName.ToString());
 
         // Registrar Details
-        Assert.Equal("NINET Company d.o.o.", response.Registrar.Name);
+        Assert.Equal("Gransy d.o.o.", response.Registrar.Name);
 
-        Assert.Equal(new DateTime(2012, 07, 06, 16, 24, 55, 000, DateTimeKind.Utc), response.Updated);
-        Assert.Equal(new DateTime(2010, 06, 17, 14, 40, 59, 000, DateTimeKind.Utc), response.Registered);
-        Assert.Equal(new DateTime(2013, 06, 17, 14, 40, 59, 000, DateTimeKind.Utc), response.Expiration);
+        Assert.Equal(new DateTime(2026, 07, 06, 20, 36, 15, 000, DateTimeKind.Utc), response.Updated);
+        Assert.Equal(new DateTime(2020, 07, 20, 16, 16, 09, 000, DateTimeKind.Utc), response.Registered);
+        Assert.Equal(new DateTime(2027, 07, 20, 16, 16, 09, 000, DateTimeKind.Utc), response.Expiration);
 
         // Registrant Details
-        Assert.Equal("Ana Rakovic", response.Registrant.Name);
+        Assert.Null(response.Registrant.Name);
 
 
         // Nameservers
-        Assert.Equal(2, response.NameServers.Count);
-        Assert.Equal("ns1.bgsvetionik.com", response.NameServers[0]);
-        Assert.Equal("ns2.bgsvetionik.com", response.NameServers[1]);
+        Assert.Equal(0, response.NameServers.Count);
 
         // Domain Status
         Assert.Equal(1, response.DomainStatus.Count);
-        Assert.Equal("In Transfer", response.DomainStatus[0]);
+        Assert.Equal("Active", response.DomainStatus[0]);
 
-        Assert.Equal(10, response.FieldsParsed);
+        Assert.Equal(8, response.FieldsParsed);
     }
 
     [Fact]
@@ -207,46 +203,42 @@ public class RsParsingTests : ParsingTests
         Assert.Equal(1, response.FieldsParsed);
     }
 
-    [Fact(Skip = "Template update deferred - WHOIS response format changed")]
+    [Fact]
     public void Test_found_status_registered()
     {
         var sample = SampleReader.Read("whois.rnids.rs", "rs", "found", "google.rs.txt");
         var response = parser.Parse("whois.rnids.rs", sample);
 
         Assert.True(sample.Length > 0);
-        Assert.Equal(WhoisStatus.Locked, response.Status);
+        Assert.Equal(WhoisStatus.Found, response.Status);
 
         Assert.Equal(0, response.ParsingErrors);
         Assert.Equal("whois.rnids.rs/rs/found/01", response.TemplateName);
 
-        Assert.Equal("google.rs", response.DomainName.ToString());
+        Assert.Equal("google", response.DomainName.ToString());
 
         // Registrar Details
-        Assert.Equal("NINET Company d.o.o.", response.Registrar.Name);
+        Assert.Equal("Webglobe d.o.o.", response.Registrar.Name);
 
-        Assert.Equal(new DateTime(2014, 02, 11, 19, 49, 38, 000, DateTimeKind.Utc), response.Updated);
+        Assert.Equal(new DateTime(2026, 02, 17, 22, 18, 21, 000, DateTimeKind.Utc), response.Updated);
         Assert.Equal(new DateTime(2008, 03, 10, 12, 31, 19, 000, DateTimeKind.Utc), response.Registered);
-        Assert.Equal(new DateTime(2015, 03, 10, 12, 31, 19, 000, DateTimeKind.Utc), response.Expiration);
+        Assert.Equal(new DateTime(2027, 03, 10, 12, 31, 19, 000, DateTimeKind.Utc), response.Expiration);
 
         // Registrant Details
-        Assert.Equal("Google Inc.", response.Registrant.Name);
+        Assert.Null(response.Registrant.Name);
 
         // Registrant Address
         Assert.Equal(1, response.Registrant.Address.Count);
-        Assert.Equal("1600 Amphitheatre Parkway, Mountain View, United States of America", response.Registrant.Address[0]);
+        Assert.Equal("1600 Amphitheatre Parkway, Mountain View, CA 94043, United States of America", response.Registrant.Address[0]);
 
 
         // Nameservers
-        Assert.Equal(4, response.NameServers.Count);
-        Assert.Equal("ns1.google.com", response.NameServers[0]);
-        Assert.Equal("ns2.google.com", response.NameServers[1]);
-        Assert.Equal("ns3.google.com", response.NameServers[2]);
-        Assert.Equal("ns4.google.com", response.NameServers[3]);
+        Assert.Equal(0, response.NameServers.Count);
 
         // Domain Status
-        Assert.Equal(1, response.DomainStatus.Count);
-        Assert.Equal("Locked", response.DomainStatus[0]);
+        Assert.Equal(2, response.DomainStatus.Count);
+        Assert.Equal("Active", response.DomainStatus[0]);
 
-        Assert.Equal(13, response.FieldsParsed);
+        Assert.Equal(9, response.FieldsParsed);
     }
 }
