@@ -52,6 +52,15 @@ internal sealed class TemplatePackProvider : ITemplatePackProvider
     // Constructors
     // -------------------------------------------------------------------------
 
+    private static readonly Lazy<HttpClient> DefaultHttpClient = new(() =>
+    {
+        var handler = new HttpClientHandler
+        {
+            MaxAutomaticRedirections = 5,
+        };
+        return new HttpClient(handler) { Timeout = TimeSpan.FromSeconds(30) };
+    });
+
     /// <summary>
     /// Constructor for DI use — takes a named <see cref="HttpClient"/> created by
     /// the factory (avoids singleton-captures-handler anti-pattern).
@@ -69,6 +78,15 @@ internal sealed class TemplatePackProvider : ITemplatePackProvider
             cache,
             state,
             signatureVerifier: null)
+    {
+    }
+
+    /// <summary>
+    /// Constructor for non-DI use — uses a shared static <see cref="HttpClient"/>.
+    /// </summary>
+    internal TemplatePackProvider(WhoisOptions options, ILogger<TemplatePackProvider> logger,
+                                  CacheDirectoryManager cache, TemplateUpdateState state)
+        : this(DefaultHttpClient.Value, options, logger, cache, state)
     {
     }
 
@@ -267,7 +285,7 @@ internal sealed class TemplatePackProvider : ITemplatePackProvider
 #endif
         }
 #pragma warning disable CA1031 // Catching broad exception to guarantee "never throws" contract
-        catch (Exception ex) when (ex is not OperationCanceledException)
+        catch (Exception ex)
         {
             _logger.LogWarning(
                 "Template update check failed for {TemplateUpdateUrl}: {ExceptionType} — {ExceptionMessage}",
@@ -314,8 +332,6 @@ internal sealed class TemplatePackProvider : ITemplatePackProvider
                     offeredVersion,
                     currentVersion,
                     releaseUrl);
-                // Treat as already up-to-date; reset backoff
-                RecordSuccess(currentVersion);
                 return new TemplateUpdateResult(
                     Outcome: TemplateUpdateOutcome.AlreadyUpToDate,
                     Version: currentVersion,
@@ -403,7 +419,7 @@ internal sealed class TemplatePackProvider : ITemplatePackProvider
                 offeredVersion,
                 "ExtractPack returned false");
 
-            DisableForSession();
+            DisableForSession("ExtractionFailed", "ExtractPack returned false");
             RecordFailure();
             return new TemplateUpdateResult(
                 Outcome: TemplateUpdateOutcome.Failed,
@@ -537,9 +553,13 @@ internal sealed class TemplatePackProvider : ITemplatePackProvider
         _state.Save();
     }
 
-    private void DisableForSession()
+    private void DisableForSession(string errorType, string errorMessage)
     {
         _state.DisabledForSession = true;
-        _logger.LogWarning("Auto-update disabled: cache directory is not writable — extraction failed");
+        _logger.LogWarning(
+            "Auto-update disabled: cache directory {CacheDirectory} is not writable — {ErrorType}: {ErrorMessage}",
+            _cache.BaseDirectory,
+            errorType,
+            errorMessage);
     }
 }

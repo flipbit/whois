@@ -550,41 +550,37 @@ public class TemplatePackProviderTests : IDisposable
             "https://example.com/templates.zip",
             "https://example.com/templates.zip.minisig");
 
+        // Use a corrupt (non-zip) payload so ExtractPack returns false, triggering session disable
         var handler = new FuncHandler(req =>
         {
             if (req.RequestUri!.AbsoluteUri.EndsWith(".minisig", StringComparison.Ordinal))
                 return Task.FromResult(new HttpResponseMessage(HttpStatusCode.OK) { Content = new StringContent("sig") });
             if (req.RequestUri.AbsoluteUri.EndsWith(".zip", StringComparison.Ordinal))
-                return Task.FromResult(new HttpResponseMessage(HttpStatusCode.OK) { Content = new ByteArrayContent(BuildZip()) });
+                return Task.FromResult(new HttpResponseMessage(HttpStatusCode.OK)
+                {
+                    Content = new ByteArrayContent(Encoding.UTF8.GetBytes("NOT A ZIP FILE")),
+                });
             return Task.FromResult(new HttpResponseMessage(HttpStatusCode.OK) { Content = new StringContent(releaseJson) });
         });
-
-        // Use an invalid (non-existent) cache directory so disk writes fail
-        var badCacheDir = Path.Combine(_tempDir, "nonexistent", "deeply", "nested");
-        var badCache = new CacheDirectoryManager(badCacheDir, NullLogger<CacheDirectoryManager>.Instance);
-        var badState = new TemplateUpdateState(badCache, NullLogger<TemplateUpdateState>.Instance);
 
         var provider = new TemplatePackProvider(
             httpClient: new HttpClient(handler),
             options: new WhoisOptions(),
             logger: NullLogger<TemplatePackProvider>.Instance,
-            cache: badCache,
-            state: badState,
+            cache: _cache,
+            state: _state,
             signatureVerifier: (_, _) => true);
 
         // First attempt — will fail due to extraction failure
         var firstResult = await provider.CheckForUpdate();
 
-        // Even if the first result is Failed, subsequent calls should be Skipped if session disabled
-        // The session disable happens when extraction fails (disk failure)
+        Assert.Equal(TemplateUpdateOutcome.Failed, firstResult.Outcome);
+        Assert.False(provider.Status.AutoUpdateEnabled);
+
+        // Second call should be skipped immediately (session disabled)
         var secondResult = await provider.CheckForUpdate();
 
-        // Either the second is Skipped (session disabled) or also Failed
-        // but it should not make another HTTP round-trip with the same error
-        Assert.True(
-            secondResult.Outcome == TemplateUpdateOutcome.Skipped ||
-            provider.Status.AutoUpdateEnabled == false ||
-            secondResult.Outcome == TemplateUpdateOutcome.Failed);
+        Assert.Equal(TemplateUpdateOutcome.Skipped, secondResult.Outcome);
     }
 
     // =========================================================================

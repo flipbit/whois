@@ -25,6 +25,9 @@ internal sealed class CacheDirectoryManager
         _logger = logger;
     }
 
+    /// <summary>The root directory for the template cache.</summary>
+    public string BaseDirectory => _cacheDirectory;
+
     /// <summary>
     /// Creates the cache directory with restrictive permissions (0700 on Unix).
     /// Returns false if creation fails.
