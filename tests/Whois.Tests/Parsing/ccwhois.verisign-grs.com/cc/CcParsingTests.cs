@@ -48,7 +48,7 @@ public class CcParsingTests : ParsingTests
         Assert.Equal("u34jedzcq.cc", response.DomainName.ToString());
     }
 
-    [Fact(Skip = "Template update deferred - WHOIS response format changed")]
+    [Fact]
     public void Test_found_status_registered()
     {
         var sample = SampleReader.Read("ccwhois.verisign-grs.com", "cc", "found", "google.cc.txt");
@@ -60,15 +60,15 @@ public class CcParsingTests : ParsingTests
         Assert.Equal("google.cc", response.DomainName.ToString());
         Assert.Equal("86420657_DOMAIN_CC-VRSN", response.RegistryDomainId);
 
-        Assert.Equal("MARKMONITOR INC.", response.Registrar.Name);
+        Assert.Equal("MarkMonitor Inc.", response.Registrar.Name);
         Assert.Equal("http://www.markmonitor.com", response.Registrar.Url);
         Assert.Equal("whois.markmonitor.com", response.Registrar.WhoisServer.Value);
         Assert.Equal("abusecomplaints@markmonitor.com", response.Registrar.AbuseEmail);
-        Assert.Equal("+1.2083895740", response.Registrar.AbuseTelephoneNumber);
+        Assert.Equal("+1.2086851750", response.Registrar.AbuseTelephoneNumber);
 
-        Assert.Equal(new DateTime(2017, 5, 6, 9, 28, 40, DateTimeKind.Utc), response.Updated);
+        Assert.Equal(new DateTime(2026, 5, 6, 10, 52, 12, DateTimeKind.Utc), response.Updated);
         Assert.Equal(new DateTime(1999, 6, 7, 4, 0, 0, DateTimeKind.Utc), response.Registered);
-        Assert.Equal(new DateTime(2018, 6, 7, 4, 0, 0, DateTimeKind.Utc), response.Expiration);
+        Assert.Equal(new DateTime(2027, 6, 7, 4, 0, 0, DateTimeKind.Utc), response.Expiration);
 
         Assert.Equal(4, response.NameServers.Count);
         Assert.Equal("ns1.google.com", response.NameServers[0]);
