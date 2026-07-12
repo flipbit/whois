@@ -1,31 +1,30 @@
 using Xunit;
 using Whois.Parsers;
 
-namespace Whois.Parsing.Whois.Centralnic.Com.UsOrg
+namespace Whois.Parsing.Whois.Centralnic.Com.UsOrg;
+
+public class UsOrgParsingTests : ParsingTests
 {
-    public class UsOrgParsingTests : ParsingTests
+    private readonly WhoisParser parser;
+
+    public UsOrgParsingTests()
     {
-        private WhoisParser parser;
 
-        public UsOrgParsingTests()
-        {
+        parser = new WhoisParser();
+    }
 
-            parser = new WhoisParser();
-        }
+    [Fact]
+    public void Test_not_found()
+    {
+        var sample = SampleReader.Read("whois.centralnic.com", "us.org", "not-found", "not_found.txt");
+        var response = parser.Parse("whois.centralnic.com", sample);
 
-        [Fact]
-        public void Test_not_found()
-        {
-            var sample = SampleReader.Read("whois.centralnic.com", "us.org", "not-found", "not_found.txt");
-            var response = parser.Parse("whois.centralnic.com", sample);
+        Assert.True(sample.Length > 0);
+        Assert.Equal(WhoisStatus.NotFound, response.Status);
 
-            Assert.True(sample.Length > 0);
-            Assert.Equal(WhoisStatus.NotFound, response.Status);
+        Assert.Equal(0, response.ParsingErrors);
+        Assert.Equal("whois.centralnic.com/not-found/01", response.TemplateName);
 
-            Assert.Equal(0, response.ParsingErrors);
-            Assert.Equal("whois.centralnic.com/not-found/01", response.TemplateName);
-
-            Assert.Equal(1, response.FieldsParsed);
-        }
+        Assert.Equal(1, response.FieldsParsed);
     }
 }

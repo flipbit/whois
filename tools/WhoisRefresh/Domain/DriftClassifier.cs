@@ -35,8 +35,7 @@ public static class DriftClassifier
 {
     public static List<DriftEntry> Classify(
         RefreshResults baseline,
-        RefreshResults current,
-        DomainRegistryData registry)
+        RefreshResults current)
     {
         var entries = new List<DriftEntry>();
 

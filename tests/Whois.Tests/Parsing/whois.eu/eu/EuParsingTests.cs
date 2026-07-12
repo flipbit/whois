@@ -1,98 +1,97 @@
 using Xunit;
 using Whois.Parsers;
 
-namespace Whois.Parsing.Whois.Eu.Eu
+namespace Whois.Parsing.Whois.Eu.Eu;
+
+public class EuParsingTests : ParsingTests
 {
-    public class EuParsingTests : ParsingTests
+    private readonly WhoisParser parser;
+
+    public EuParsingTests()
     {
-        private WhoisParser parser;
 
-        public EuParsingTests()
-        {
+        parser = new WhoisParser();
+    }
 
-            parser = new WhoisParser();
-        }
+    [Fact(Skip = "Template update deferred - WHOIS response format changed")]
+    public void Test_found()
+    {
+        var sample = SampleReader.Read("whois.eu", "eu", "found", "eurid.eu.txt");
+        var response = parser.Parse("whois.eu", sample);
 
-        [Fact(Skip = "Template update deferred - WHOIS response format changed")]
-        public void Test_found()
-        {
-            var sample = SampleReader.Read("whois.eu", "eu", "found", "eurid.eu.txt");
-            var response = parser.Parse("whois.eu", sample);
+        Assert.True(sample.Length > 0);
+        Assert.Equal(WhoisStatus.Found, response.Status);
 
-            Assert.True(sample.Length > 0);
-            Assert.Equal(WhoisStatus.Found, response.Status);
+        AssertWriter.Write(response);
+        Assert.Equal(0, response.ParsingErrors);
+        Assert.Equal("whois.eu/eu/found/01", response.TemplateName);
 
-            AssertWriter.Write(response);
-            Assert.Equal(0, response.ParsingErrors);
-            Assert.Equal("whois.eu/eu/found/01", response.TemplateName);
+        Assert.Equal("eurid.eu", response.DomainName.ToString());
 
-            Assert.Equal("eurid.eu", response.DomainName.ToString());
+        // Registrar Details
+        Assert.Equal("EURid vzw/asbl", response.Registrar.Name);
+        Assert.Equal("www.eurid.eu", response.Registrar.Url);
 
-            // Registrar Details
-            Assert.Equal("EURid vzw/asbl", response.Registrar.Name);
-            Assert.Equal("www.eurid.eu", response.Registrar.Url);
+        // Nameservers
+        Assert.Equal(5, response.NameServers.Count);
+        Assert.Equal("a.nic.eu", response.NameServers[0]);
+        Assert.Equal("l.nic.eu", response.NameServers[1]);
+        Assert.Equal("p.nic.eu", response.NameServers[2]);
+        Assert.Equal("ns1.eurid.eu", response.NameServers[3]);
+        Assert.Equal("ns2.eurid.eu", response.NameServers[4]);
 
-            // Nameservers
-            Assert.Equal(5, response.NameServers.Count);
-            Assert.Equal("a.nic.eu", response.NameServers[0]);
-            Assert.Equal("l.nic.eu", response.NameServers[1]);
-            Assert.Equal("p.nic.eu", response.NameServers[2]);
-            Assert.Equal("ns1.eurid.eu", response.NameServers[3]);
-            Assert.Equal("ns2.eurid.eu", response.NameServers[4]);
+        Assert.Equal(9, response.FieldsParsed);
+    }
 
-            Assert.Equal(9, response.FieldsParsed);
-        }
+    [Fact]
+    public void Test_throttled()
+    {
+        var sample = SampleReader.Read("whois.eu", "eu", "throttled", "throttled.txt");
+        var response = parser.Parse("whois.eu", sample);
 
-        [Fact]
-        public void Test_throttled()
-        {
-            var sample = SampleReader.Read("whois.eu", "eu", "throttled", "throttled.txt");
-            var response = parser.Parse("whois.eu", sample);
+        Assert.True(sample.Length > 0);
+        Assert.Equal(WhoisStatus.Throttled, response.Status);
 
-            Assert.True(sample.Length > 0);
-            Assert.Equal(WhoisStatus.Throttled, response.Status);
+        Assert.Equal(0, response.ParsingErrors);
+        Assert.Equal("whois.eu/eu/throttled/01", response.TemplateName);
 
-            Assert.Equal(0, response.ParsingErrors);
-            Assert.Equal("whois.eu/eu/throttled/01", response.TemplateName);
+        Assert.Equal(1, response.FieldsParsed);
+    }
 
-            Assert.Equal(1, response.FieldsParsed);
-        }
+    [Fact]
+    public void Test_not_found()
+    {
+        var sample = SampleReader.Read("whois.eu", "eu", "not-found", "u34jedzcq.eu.txt");
+        var response = parser.Parse("whois.eu", sample);
 
-        [Fact]
-        public void Test_not_found()
-        {
-            var sample = SampleReader.Read("whois.eu", "eu", "not-found", "u34jedzcq.eu.txt");
-            var response = parser.Parse("whois.eu", sample);
+        Assert.True(sample.Length > 0);
+        Assert.Equal(WhoisStatus.NotFound, response.Status);
 
-            Assert.True(sample.Length > 0);
-            Assert.Equal(WhoisStatus.NotFound, response.Status);
+        Assert.Equal(0, response.ParsingErrors);
+        Assert.Equal("whois.eu/eu/not-found/01", response.TemplateName);
 
-            Assert.Equal(0, response.ParsingErrors);
-            Assert.Equal("whois.eu/eu/not-found/01", response.TemplateName);
+        Assert.Equal("u34jedzcq.eu", response.DomainName.ToString());
 
-            Assert.Equal("u34jedzcq.eu", response.DomainName.ToString());
+        Assert.Equal(2, response.FieldsParsed);
+    }
 
-            Assert.Equal(2, response.FieldsParsed);
-        }
+    [Fact]
+    public void Test_found_status_registered()
+    {
+        var sample = SampleReader.Read("whois.eu", "eu", "found", "google.eu.txt");
+        var response = parser.Parse("whois.eu", sample);
 
-        [Fact]
-        public void Test_found_status_registered()
-        {
-            var sample = SampleReader.Read("whois.eu", "eu", "found", "google.eu.txt");
-            var response = parser.Parse("whois.eu", sample);
+        Assert.True(sample.Length > 0);
+        Assert.Equal(WhoisStatus.Found, response.Status);
 
-            Assert.True(sample.Length > 0);
-            Assert.Equal(WhoisStatus.Found, response.Status);
+        Assert.Equal(0, response.ParsingErrors);
+        Assert.Equal("whois.eu/eu/found/01", response.TemplateName);
 
-            Assert.Equal(0, response.ParsingErrors);
-            Assert.Equal("whois.eu/eu/found/01", response.TemplateName);
+        Assert.Equal("google.eu", response.DomainName.ToString());
 
-            Assert.Equal("google.eu", response.DomainName.ToString());
+        // Registrar Details
+        Assert.Equal("https://www.markmonitor.com/", response.Registrar.Url);
 
-            // Registrar Details
-            Assert.Equal("https://www.markmonitor.com/", response.Registrar.Url);
-
-            Assert.Equal(3, response.FieldsParsed);
-        }
+        Assert.Equal(3, response.FieldsParsed);
     }
 }

@@ -39,7 +39,7 @@ public class DetectCommand : AsyncCommand<DetectSettings>
         var current = RefreshResults.Deserialize(currentJson);
 
         var detector = new DriftDetector(_reporter, _fileSystem);
-        var entries = await detector.DetectAsync(current, registry, settings.RepoRoot, "tools/WhoisRefresh", CancellationToken.None);
+        var entries = await detector.DetectAsync(current, settings.RepoRoot, "tools/WhoisRefresh", CancellationToken.None);
 
         var isCi = Environment.GetEnvironmentVariable("GITHUB_ACTIONS") == "true";
         OutputResults(entries, isCi);

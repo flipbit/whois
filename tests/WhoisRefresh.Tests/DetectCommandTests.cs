@@ -74,7 +74,7 @@ public class DetectCommandTests
             .Returns(RefreshResults.Serialize(baseline));
 
         var detector = new DriftDetector(reporter, fileSystem);
-        var entries = await detector.DetectAsync(current, registry, "/repo", "tools/WhoisRefresh", CancellationToken.None);
+        var entries = await detector.DetectAsync(current, "/repo", "tools/WhoisRefresh", CancellationToken.None);
 
         Assert.Single(entries);
         Assert.Equal(DriftClassification.NoMatch, entries[0].Classification);
@@ -116,19 +116,11 @@ public class DetectCommandTests
             }
         };
 
-        var registry = new DomainRegistryData(new Dictionary<string, ServerEntry>
-        {
-            ["whois.nic.uk"] = new("uk", false, null, new Dictionary<string, List<string>>
-            {
-                ["found"] = ["google.co.uk"]
-            })
-        });
-
         fileSystem.GitReadHeadAsync("/repo", "tools/WhoisRefresh/refresh-results.json", Arg.Any<CancellationToken>())
             .Returns(RefreshResults.Serialize(results));
 
         var detector = new DriftDetector(reporter, fileSystem);
-        var entries = await detector.DetectAsync(results, registry, "/repo", "tools/WhoisRefresh", CancellationToken.None);
+        var entries = await detector.DetectAsync(results, "/repo", "tools/WhoisRefresh", CancellationToken.None);
 
         Assert.Empty(entries);
         await reporter.DidNotReceive().ReportAsync(
@@ -165,20 +157,12 @@ public class DetectCommandTests
             }
         };
 
-        var registry = new DomainRegistryData(new Dictionary<string, ServerEntry>
-        {
-            ["whois.nic.uk"] = new("uk", false, null, new Dictionary<string, List<string>>
-            {
-                ["found"] = ["google.co.uk"]
-            })
-        });
-
         // Simulate file not tracked in git (git show returns null)
         fileSystem.GitReadHeadAsync(Arg.Any<string>(), Arg.Any<string>(), Arg.Any<CancellationToken>())
             .Returns((string?)null);
 
         var detector = new DriftDetector(reporter, fileSystem);
-        var entries = await detector.DetectAsync(current, registry, "/repo", "tools/WhoisRefresh", CancellationToken.None);
+        var entries = await detector.DetectAsync(current, "/repo", "tools/WhoisRefresh", CancellationToken.None);
 
         Assert.Single(entries);
         Assert.Equal(DriftClassification.NewEntry, entries[0].Classification);

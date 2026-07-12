@@ -15,18 +15,15 @@ public class MigrateCommand
     {
         var errors = new List<string>();
         var templateNameMap = new Dictionary<string, string>();
-        var templatesMoved = 0;
-        var samplesMoved = 0;
-        var frontMatterUpdated = 0;
 
         // --- Migrate templates ---
         var resourcesDir = Path.Combine(repoRoot, "src", "Whois", "Resources");
-        templatesMoved = MigrateTemplates(resourcesDir, dryRun, errors, templateNameMap);
-        frontMatterUpdated = templatesMoved;
+        int templatesMoved = MigrateTemplates(resourcesDir, dryRun, errors, templateNameMap);
+        int frontMatterUpdated = templatesMoved;
 
         // --- Migrate samples ---
         var samplesDir = Path.Combine(repoRoot, "tests", "Whois.Tests", "Samples");
-        samplesMoved = MigrateSamples(samplesDir, dryRun, errors);
+        int samplesMoved = MigrateSamples(samplesDir, dryRun, errors);
 
         return new MigrationResult(templatesMoved, samplesMoved, frontMatterUpdated, errors, templateNameMap);
     }

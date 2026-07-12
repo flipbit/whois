@@ -45,7 +45,7 @@ public class DriftClassifierTests
         var baseline = MakeResults("whois.nic.uk/uk/found/01", ["DomainName", "Registrar"]);
         var current = MakeResults(null, []);
 
-        var entries = DriftClassifier.Classify(baseline, current, SimpleRegistry());
+        var entries = DriftClassifier.Classify(baseline, current);
 
         Assert.Single(entries);
         Assert.Equal(DriftClassification.NoMatch, entries[0].Classification);
@@ -58,7 +58,7 @@ public class DriftClassifierTests
         var baseline = MakeResults("whois.nic.uk/uk/found/01", ["DomainName", "Registrar", "Expiration"]);
         var current = MakeResults("whois.nic.uk/uk/found/01", ["DomainName"]);
 
-        var entries = DriftClassifier.Classify(baseline, current, SimpleRegistry());
+        var entries = DriftClassifier.Classify(baseline, current);
 
         Assert.Single(entries);
         Assert.Equal(DriftClassification.FieldRegression, entries[0].Classification);
@@ -71,7 +71,7 @@ public class DriftClassifierTests
         var baseline = MakeResults("whois.nic.uk/uk/found/01", ["DomainName", "Registrar"]);
         var current = MakeResults("whois.nic.uk/uk/found/02", ["DomainName", "Registrar", "Expiration"]);
 
-        var entries = DriftClassifier.Classify(baseline, current, SimpleRegistry());
+        var entries = DriftClassifier.Classify(baseline, current);
 
         Assert.Single(entries);
         Assert.Equal(DriftClassification.TemplateShift, entries[0].Classification);
@@ -112,7 +112,7 @@ public class DriftClassifierTests
         // Registry says domain should be "found"
         var registry = SimpleRegistry();
 
-        var entries = DriftClassifier.Classify(baseline, current, registry);
+        var entries = DriftClassifier.Classify(baseline, current);
 
         Assert.Contains(entries, e => e.Classification == DriftClassification.StatusMismatch);
     }
@@ -123,7 +123,7 @@ public class DriftClassifierTests
         var baseline = new RefreshResults { Version = DateTimeOffset.UtcNow, Results = new() };
         var current = MakeResults("whois.nic.uk/uk/found/01", ["DomainName", "Registrar"]);
 
-        var entries = DriftClassifier.Classify(baseline, current, SimpleRegistry());
+        var entries = DriftClassifier.Classify(baseline, current);
 
         Assert.Single(entries);
         Assert.Equal(DriftClassification.NewEntry, entries[0].Classification);
@@ -140,7 +140,7 @@ public class DriftClassifierTests
             Message = "Timed out"
         });
 
-        var entries = DriftClassifier.Classify(baseline, current, SimpleRegistry());
+        var entries = DriftClassifier.Classify(baseline, current);
 
         Assert.Single(entries);
         Assert.Equal(DriftClassification.QueryError, entries[0].Classification);
@@ -153,7 +153,7 @@ public class DriftClassifierTests
         var baseline = MakeResults("whois.nic.uk/uk/found/01", ["DomainName", "Registrar"]);
         var current = MakeResults("whois.nic.uk/uk/found/01", ["DomainName", "Registrar"]);
 
-        var entries = DriftClassifier.Classify(baseline, current, SimpleRegistry());
+        var entries = DriftClassifier.Classify(baseline, current);
 
         Assert.Empty(entries);
     }

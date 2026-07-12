@@ -1,73 +1,71 @@
-using System;
 using Xunit;
 using Whois.Parsers;
 
-namespace Whois.Parsing.Whois.Register.Si.Si
+namespace Whois.Parsing.Whois.Register.Si.Si;
+
+public class SiParsingTests : ParsingTests
 {
-    public class SiParsingTests : ParsingTests
+    private readonly WhoisParser parser;
+
+    public SiParsingTests()
     {
-        private WhoisParser parser;
 
-        public SiParsingTests()
-        {
+        parser = new WhoisParser();
+    }
 
-            parser = new WhoisParser();
-        }
+    [Fact]
+    public void Test_not_found()
+    {
+        var sample = SampleReader.Read("whois.register.si", "si", "not-found", "not_found.txt");
+        var response = parser.Parse("whois.register.si", sample);
 
-        [Fact]
-        public void Test_not_found()
-        {
-            var sample = SampleReader.Read("whois.register.si", "si", "not-found", "not_found.txt");
-            var response = parser.Parse("whois.register.si", sample);
+        Assert.True(sample.Length > 0);
+        Assert.Equal(WhoisStatus.NotFound, response.Status);
 
-            Assert.True(sample.Length > 0);
-            Assert.Equal(WhoisStatus.NotFound, response.Status);
+        Assert.Equal(0, response.ParsingErrors);
+        Assert.Equal("whois.register.si/si/not-found/01", response.TemplateName);
 
-            Assert.Equal(0, response.ParsingErrors);
-            Assert.Equal("whois.register.si/si/not-found/01", response.TemplateName);
+        Assert.Equal(1, response.FieldsParsed);
+    }
 
-            Assert.Equal(1, response.FieldsParsed);
-        }
+    [Fact(Skip = "Template update deferred - WHOIS response format changed")]
+    public void Test_found()
+    {
+        var sample = SampleReader.Read("whois.register.si", "si", "found", "google.si.txt");
+        var response = parser.Parse("whois.register.si", sample);
 
-        [Fact(Skip = "Template update deferred - WHOIS response format changed")]
-        public void Test_found()
-        {
-            var sample = SampleReader.Read("whois.register.si", "si", "found", "google.si.txt");
-            var response = parser.Parse("whois.register.si", sample);
+        Assert.True(sample.Length > 0);
+        Assert.Equal(WhoisStatus.Found, response.Status);
 
-            Assert.True(sample.Length > 0);
-            Assert.Equal(WhoisStatus.Found, response.Status);
+        AssertWriter.Write(response);
+        Assert.Equal(0, response.ParsingErrors);
+        Assert.Equal("whois.register.si/si/found/01", response.TemplateName);
 
-            AssertWriter.Write(response);
-            Assert.Equal(0, response.ParsingErrors);
-            Assert.Equal("whois.register.si/si/found/01", response.TemplateName);
+        Assert.Equal("google.si", response.DomainName.ToString());
 
-            Assert.Equal("google.si", response.DomainName.ToString());
+        // Registrar Details
+        Assert.Equal("AOI d.o.o.", response.Registrar.Name);
+        Assert.Equal("http://www.aoi.eu/arneswhois", response.Registrar.Url);
 
-            // Registrar Details
-            Assert.Equal("AOI d.o.o.", response.Registrar.Name);
-            Assert.Equal("http://www.aoi.eu/arneswhois", response.Registrar.Url);
+        Assert.Equal(new DateTime(2005, 04, 04, 00, 00, 00, 000, DateTimeKind.Utc), response.Registered);
+        Assert.Equal(new DateTime(2015, 07, 19, 00, 00, 00, 000, DateTimeKind.Utc), response.Expiration);
 
-            Assert.Equal(new DateTime(2005, 04, 04, 00, 00, 00, 000, DateTimeKind.Utc), response.Registered);
-            Assert.Equal(new DateTime(2015, 07, 19, 00, 00, 00, 000, DateTimeKind.Utc), response.Expiration);
+        // Registrant Details
+        Assert.Equal("G79455", response.Registrant.RegistryId);
 
-             // Registrant Details
-            Assert.Equal("G79455", response.Registrant.RegistryId);
+        // Nameservers
+        Assert.Equal(4, response.NameServers.Count);
+        Assert.Equal("ns1.google.com", response.NameServers[0]);
+        Assert.Equal("ns2.google.com", response.NameServers[1]);
+        Assert.Equal("ns3.google.com", response.NameServers[2]);
+        Assert.Equal("ns4.google.com", response.NameServers[3]);
 
-            // Nameservers
-            Assert.Equal(4, response.NameServers.Count);
-            Assert.Equal("ns1.google.com", response.NameServers[0]);
-            Assert.Equal("ns2.google.com", response.NameServers[1]);
-            Assert.Equal("ns3.google.com", response.NameServers[2]);
-            Assert.Equal("ns4.google.com", response.NameServers[3]);
+        // Domain Status
+        Assert.Equal(3, response.DomainStatus.Count);
+        Assert.Equal("server_delete_prohibited", response.DomainStatus[0]);
+        Assert.Equal("server_transfer_prohibited", response.DomainStatus[1]);
+        Assert.Equal("server_update_prohibited", response.DomainStatus[2]);
 
-            // Domain Status
-            Assert.Equal(3, response.DomainStatus.Count);
-            Assert.Equal("server_delete_prohibited", response.DomainStatus[0]);
-            Assert.Equal("server_transfer_prohibited", response.DomainStatus[1]);
-            Assert.Equal("server_update_prohibited", response.DomainStatus[2]);
-
-            Assert.Equal(12, response.FieldsParsed);
-        }
+        Assert.Equal(12, response.FieldsParsed);
     }
 }

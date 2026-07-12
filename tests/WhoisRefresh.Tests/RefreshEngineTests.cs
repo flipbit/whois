@@ -2,7 +2,6 @@ using System.Text;
 using NSubstitute;
 using NSubstitute.ExceptionExtensions;
 using Whois.Net;
-using Whois.Parsers;
 using WhoisRefresh.Domain;
 using WhoisRefresh.Infrastructure;
 using Xunit;

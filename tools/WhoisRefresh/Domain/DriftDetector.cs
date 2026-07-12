@@ -15,7 +15,6 @@ public class DriftDetector
 
     public async Task<List<DriftEntry>> DetectAsync(
         RefreshResults current,
-        DomainRegistryData registry,
         string repoRoot,
         string toolDirectoryRelative,
         CancellationToken cancellationToken)
@@ -35,7 +34,7 @@ public class DriftDetector
             baseline = new RefreshResults { Version = DateTimeOffset.MinValue, Results = new() };
         }
 
-        var entries = DriftClassifier.Classify(baseline, current, registry);
+        var entries = DriftClassifier.Classify(baseline, current);
 
         var hasBreakages = entries.Any(e => e.Severity == DriftSeverity.Breakage);
 

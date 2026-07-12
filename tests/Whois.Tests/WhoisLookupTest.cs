@@ -1,211 +1,207 @@
-using System;
 using System.Text;
-using System.Threading;
-using System.Threading.Tasks;
 using NSubstitute;
 using Whois.Net;
 using Whois.Servers;
 using Xunit;
 
-namespace Whois
+namespace Whois;
+
+public class WhoisLookupTest
 {
-    public class WhoisLookupTest
+    private readonly WhoisLookup lookup;
+
+    private readonly IWhoisServerLookup whoisServerLookup;
+    private readonly ITcpReader tcpReader;
+    private readonly SampleReader sampleReader;
+
+    public WhoisLookupTest()
     {
-        private WhoisLookup lookup;
+        whoisServerLookup = Substitute.For<IWhoisServerLookup>();
+        tcpReader = Substitute.For<ITcpReader>();
+        sampleReader = new SampleReader();
 
-        private IWhoisServerLookup whoisServerLookup;
-        private ITcpReader tcpReader;
-        private SampleReader sampleReader;
-
-        public WhoisLookupTest()
+        lookup = new WhoisLookup
         {
-            whoisServerLookup = Substitute.For<IWhoisServerLookup>();
-            tcpReader = Substitute.For<ITcpReader>();
-            sampleReader = new SampleReader();
+            TcpReader = tcpReader,
+            ServerLookup = whoisServerLookup
+        };
+    }
 
-            lookup = new WhoisLookup
-            {
-                TcpReader = tcpReader,
-                ServerLookup = whoisServerLookup
-            };
-        }
+    [Fact]
+    public async Task TestLookupDomain()
+    {
+        var request = new WhoisRequest("google.com");
 
-        [Fact]
-        public async Task TestLookupDomain()
+        var rootServer = new WhoisResponse
         {
-            var request = new WhoisRequest("google.com");
+            DomainName = new HostName("com"),
+            Registrar = new Registrar { WhoisServer = new HostName("whois.markmonitor.com") }
+        };
 
-            var rootServer = new WhoisResponse
-            {
-                DomainName = new HostName("com"),
-                Registrar = new Registrar { WhoisServer = new HostName("whois.markmonitor.com") }
-            };
+        whoisServerLookup.Lookup(request, Arg.Any<CancellationToken>()).Returns(rootServer);
 
-            whoisServerLookup.Lookup(request, Arg.Any<CancellationToken>()).Returns(rootServer);
+        tcpReader
+            .Read("whois.markmonitor.com", 43, "google.com", Encoding.UTF8, 10, Arg.Any<CancellationToken>())
+            .Returns(sampleReader.Read("whois.markmonitor.com", "com", "found", "found.txt"));
 
-            tcpReader
-                .Read("whois.markmonitor.com", 43, "google.com", Encoding.UTF8, 10, Arg.Any<CancellationToken>())
-                .Returns(sampleReader.Read("whois.markmonitor.com", "com", "found", "found.txt"));
+        var result = await lookup.Lookup(request);
 
-            var result = await lookup.Lookup(request);
+        Assert.Equal("google.com", result.DomainName.ToString());
+        Assert.Equal(WhoisStatus.Found, result.Status);
+    }
 
-            Assert.Equal("google.com", result.DomainName.ToString());
-            Assert.Equal(WhoisStatus.Found, result.Status);
-        }
+    [Fact]
+    public async Task TestLookupDomainWithIntermediateServer()
+    {
+        var request = new WhoisRequest("google.com");
+        var intermediateResult = sampleReader.Read("whois.verisign-grs.com", "com", "found", "found_status_registered.txt");
+        var authoritativeResult = sampleReader.Read("whois.markmonitor.com", "com", "found", "found.txt");
 
-        [Fact]
-        public async Task TestLookupDomainWithIntermediateServer()
+        var rootServer = new WhoisResponse
         {
-            var request = new WhoisRequest("google.com");
-            var intermediateResult = sampleReader.Read("whois.verisign-grs.com", "com", "found", "found_status_registered.txt");
-            var authoritativeResult = sampleReader.Read("whois.markmonitor.com", "com", "found", "found.txt");
+            DomainName = new HostName("com"),
+            Registrar = new Registrar { WhoisServer = new HostName("whois.verisign-grs.com") }
+        };
 
-            var rootServer = new WhoisResponse
-            {
-                DomainName = new HostName("com"),
-                Registrar = new Registrar { WhoisServer = new HostName("whois.verisign-grs.com") }
-            };
+        whoisServerLookup.Lookup(request, Arg.Any<CancellationToken>()).Returns(rootServer);
 
-            whoisServerLookup.Lookup(request, Arg.Any<CancellationToken>()).Returns(rootServer);
+        tcpReader
+            .Read("whois.verisign-grs.com", 43, "google.com", Encoding.UTF8, 10, Arg.Any<CancellationToken>())
+            .Returns(intermediateResult);
 
-            tcpReader
-                .Read("whois.verisign-grs.com", 43, "google.com", Encoding.UTF8, 10, Arg.Any<CancellationToken>())
-                .Returns(intermediateResult);
+        tcpReader
+            .Read("whois.markmonitor.com", 43, "google.com", Encoding.UTF8, 10, Arg.Any<CancellationToken>())
+            .Returns(authoritativeResult);
 
-            tcpReader
-                .Read("whois.markmonitor.com", 43, "google.com", Encoding.UTF8, 10, Arg.Any<CancellationToken>())
-                .Returns(authoritativeResult);
+        var result = await lookup.Lookup(request);
 
-            var result = await lookup.Lookup(request);
+        Assert.Equal("google.com", result.DomainName.ToString());
+        Assert.Equal(WhoisStatus.Found, result.Status);
 
-            Assert.Equal("google.com", result.DomainName.ToString());
-            Assert.Equal(WhoisStatus.Found, result.Status);
+        Assert.Equal(authoritativeResult, result.Content);
+        Assert.Equal(intermediateResult, result.Referrer.Content);
+        Assert.Equal(rootServer, result.Referrer.Referrer);
+    }
 
-            Assert.Equal(authoritativeResult, result.Content);
-            Assert.Equal(intermediateResult, result.Referrer.Content);
-            Assert.Equal(rootServer, result.Referrer.Referrer);
-        }
+    [Fact]
+    public async Task TestLookupDomainDontFollowReferrer()
+    {
+        var request = new WhoisRequest { Query = "google.com", FollowReferrer = false };
+        var intermediateResult = sampleReader.Read("whois.verisign-grs.com", "com", "found", "found_status_registered.txt");
 
-        [Fact]
-        public async Task TestLookupDomainDontFollowReferrer()
+        var rootServer = new WhoisResponse
         {
-            var request = new WhoisRequest { Query = "google.com", FollowReferrer = false };
-            var intermediateResult = sampleReader.Read("whois.verisign-grs.com", "com", "found", "found_status_registered.txt");
+            DomainName = new HostName("com"),
+            Registrar = new Registrar { WhoisServer = new HostName("whois.verisign-grs.com") }
+        };
 
-            var rootServer = new WhoisResponse
-            {
-                DomainName = new HostName("com"),
-                Registrar = new Registrar { WhoisServer = new HostName("whois.verisign-grs.com") }
-            };
+        whoisServerLookup.Lookup(request, Arg.Any<CancellationToken>()).Returns(rootServer);
 
-            whoisServerLookup.Lookup(request, Arg.Any<CancellationToken>()).Returns(rootServer);
+        tcpReader
+            .Read("whois.verisign-grs.com", 43, "google.com", Encoding.UTF8, 10, Arg.Any<CancellationToken>())
+            .Returns(intermediateResult);
 
-            tcpReader
-                .Read("whois.verisign-grs.com", 43, "google.com", Encoding.UTF8, 10, Arg.Any<CancellationToken>())
-                .Returns(intermediateResult);
+        var result = await lookup.Lookup(request);
 
-            var result = await lookup.Lookup(request);
+        Assert.Equal("google.com", result.DomainName.ToString());
+        Assert.Equal(WhoisStatus.Found, result.Status);
 
-            Assert.Equal("google.com", result.DomainName.ToString());
-            Assert.Equal(WhoisStatus.Found, result.Status);
+        Assert.Equal(intermediateResult, result.Content);
+        Assert.Equal(rootServer, result.Referrer);
+    }
 
-            Assert.Equal(intermediateResult, result.Content);
-            Assert.Equal(rootServer, result.Referrer);
-        }
+    [Fact]
+    public async Task TestLookupDomainSpecifyRootServer()
+    {
+        var request = new WhoisRequest { Query = "google.com", WhoisServer = "whois.markmonitor.com" };
+        var authoritativeResult = sampleReader.Read("whois.markmonitor.com", "com", "found", "found.txt");
 
-        [Fact]
-        public async Task TestLookupDomainSpecifyRootServer()
+        tcpReader
+            .Read("whois.markmonitor.com", 43, "google.com", Encoding.UTF8, 10, Arg.Any<CancellationToken>())
+            .Returns(authoritativeResult);
+
+        var result = await lookup.Lookup(request);
+
+        Assert.Equal("google.com", result.DomainName.ToString());
+        Assert.Equal(WhoisStatus.Found, result.Status);
+
+        Assert.Equal(authoritativeResult, result.Content);
+        Assert.Equal("whois.markmonitor.com", result.Referrer.WhoisServer.Value);
+
+        await whoisServerLookup.DidNotReceive().Lookup(request, Arg.Any<CancellationToken>());
+    }
+
+    [Fact]
+    public async Task TestLookupTld()
+    {
+        var request = new WhoisRequest(".com");
+
+        var rootServer = new WhoisResponse
         {
-            var request = new WhoisRequest { Query = "google.com", WhoisServer = "whois.markmonitor.com" };
-            var authoritativeResult = sampleReader.Read("whois.markmonitor.com", "com", "found", "found.txt");
+            DomainName = new HostName("com"),
+            Registrar = new Registrar { WhoisServer = new HostName("whois.markmonitor.com") }
+        };
 
-            tcpReader
-                .Read("whois.markmonitor.com", 43, "google.com", Encoding.UTF8, 10, Arg.Any<CancellationToken>())
-                .Returns(authoritativeResult);
+        whoisServerLookup.Lookup(request, Arg.Any<CancellationToken>()).Returns(rootServer);
 
-            var result = await lookup.Lookup(request);
+        var result = await lookup.Lookup(request);
 
-            Assert.Equal("google.com", result.DomainName.ToString());
-            Assert.Equal(WhoisStatus.Found, result.Status);
+        Assert.Equal(rootServer, result);
+    }
 
-            Assert.Equal(authoritativeResult, result.Content);
-            Assert.Equal("whois.markmonitor.com", result.Referrer.WhoisServer.Value);
+    [Fact]
+    public async Task TestLookupDomainWithEmptyQuery()
+    {
+        await Assert.ThrowsAsync<ArgumentNullException>(() => lookup.Lookup(string.Empty));
+    }
 
-            await whoisServerLookup.DidNotReceive().Lookup(request, Arg.Any<CancellationToken>());
-        }
+    [Fact]
+    public async Task TestLookupDomainWithNullQuery()
+    {
+        await Assert.ThrowsAsync<ArgumentNullException>(() => lookup.Lookup(null, Encoding.UTF8));
+    }
 
-        [Fact]
-        public async Task TestLookupTld()
+    /// <summary>
+    /// When looking up a WHOIS domain, we follow a chain of responses:
+    ///
+    ///   Root Server > Intermediate Server > Authoritative Server
+    ///
+    /// Sometimes the response at the end of the chain contains less information than an
+    /// intermediate step.  In this case, we return the response with the most information
+    /// </summary>
+    [Fact]
+    public async Task TestLookupDomainUseBestResponse()
+    {
+        // Setup our initial request
+        var request = new WhoisRequest { Query = "fark.co", FollowReferrer = true };
+
+        // Setup the inital root server response
+        var rootServer = new WhoisResponse
         {
-            var request = new WhoisRequest(".com");
+            DomainName = new HostName("co"),
+            Registrar = new Registrar { WhoisServer = new HostName("whois.nic.co") }
+        };
+        whoisServerLookup.Lookup(request, Arg.Any<CancellationToken>()).Returns(rootServer);
 
-            var rootServer = new WhoisResponse
-            {
-                DomainName = new HostName("com"),
-                Registrar = new Registrar { WhoisServer = new HostName("whois.markmonitor.com") }
-            };
+        // Setup the intermediate server response
+        var intermediateResult = sampleReader.Read("whois.nic.co", "co", "found", "fark.co.txt");
+        tcpReader
+            .Read("whois.nic.co", 43, "fark.co", Encoding.UTF8, 10, Arg.Any<CancellationToken>())
+            .Returns(intermediateResult);
 
-            whoisServerLookup.Lookup(request, Arg.Any<CancellationToken>()).Returns(rootServer);
+        // Setup the authoritative server response
+        // Note: this contains less data than the intermediate response, so should be ignored
+        var authoritativeResult = sampleReader.Read("whois.dynadot.com", "co", "found", "fark.co.txt");
+        tcpReader
+            .Read("whois.dynadot.com", 43, "fark.co", Encoding.UTF8, 10, Arg.Any<CancellationToken>())
+            .Returns(authoritativeResult);
 
-            var result = await lookup.Lookup(request);
+        var result = await lookup.Lookup(request);
 
-            Assert.Equal(rootServer, result);
-        }
+        Assert.Equal("fark.co", result.DomainName.ToString());
+        Assert.Equal(WhoisStatus.Found, result.Status);
 
-        [Fact]
-        public async Task TestLookupDomainWithEmptyQuery()
-        {
-            await Assert.ThrowsAsync<ArgumentNullException>(() => lookup.Lookup(string.Empty));
-        }
-
-        [Fact]
-        public async Task TestLookupDomainWithNullQuery()
-        {
-            await Assert.ThrowsAsync<ArgumentNullException>(() => lookup.Lookup(null, Encoding.UTF8));
-        }
-
-        /// <summary>
-        /// When looking up a WHOIS domain, we follow a chain of responses:
-        ///
-        ///   Root Server > Intermediate Server > Authoritative Server
-        ///
-        /// Sometimes the response at the end of the chain contains less information than an
-        /// intermediate step.  In this case, we return the response with the most information
-        /// </summary>
-        [Fact]
-        public async Task TestLookupDomainUseBestResponse()
-        {
-            // Setup our initial request
-            var request = new WhoisRequest { Query = "fark.co", FollowReferrer = true };
-
-            // Setup the inital root server response
-            var rootServer = new WhoisResponse
-            {
-                DomainName = new HostName("co"),
-                Registrar = new Registrar { WhoisServer = new HostName("whois.nic.co") }
-            };
-            whoisServerLookup.Lookup(request, Arg.Any<CancellationToken>()).Returns(rootServer);
-
-            // Setup the intermediate server response
-            var intermediateResult = sampleReader.Read("whois.nic.co", "co", "found", "fark.co.txt");
-            tcpReader
-                .Read("whois.nic.co", 43, "fark.co", Encoding.UTF8, 10, Arg.Any<CancellationToken>())
-                .Returns(intermediateResult);
-
-            // Setup the authoritative server response
-            // Note: this contains less data than the intermediate response, so should be ignored
-            var authoritativeResult = sampleReader.Read("whois.dynadot.com", "co", "found", "fark.co.txt");
-            tcpReader
-                .Read("whois.dynadot.com", 43, "fark.co", Encoding.UTF8, 10, Arg.Any<CancellationToken>())
-                .Returns(authoritativeResult);
-
-            var result = await lookup.Lookup(request);
-
-            Assert.Equal("fark.co", result.DomainName.ToString());
-            Assert.Equal(WhoisStatus.Found, result.Status);
-
-            Assert.Equal(intermediateResult, result.Content);
-            Assert.Equal(rootServer, result.Referrer);
-        }
+        Assert.Equal(intermediateResult, result.Content);
+        Assert.Equal(rootServer, result.Referrer);
     }
 }

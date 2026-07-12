@@ -1,60 +1,58 @@
-using System;
 using Xunit;
 using Whois.Parsers;
 
-namespace Whois.Parsing.Whois.Cctld.By.By
+namespace Whois.Parsing.Whois.Cctld.By.By;
+
+public class ByParsingTests : ParsingTests
 {
-    public class ByParsingTests : ParsingTests
+    private readonly WhoisParser parser;
+
+    public ByParsingTests()
     {
-        private WhoisParser parser;
 
-        public ByParsingTests()
-        {
+        parser = new WhoisParser();
+    }
 
-            parser = new WhoisParser();
-        }
+    [Fact]
+    public void Test_not_found()
+    {
+        var sample = SampleReader.Read("whois.cctld.by", "by", "not-found", "not_found.txt");
+        var response = parser.Parse("whois.cctld.by", sample);
 
-        [Fact]
-        public void Test_not_found()
-        {
-            var sample = SampleReader.Read("whois.cctld.by", "by", "not-found", "not_found.txt");
-            var response = parser.Parse("whois.cctld.by", sample);
+        Assert.True(sample.Length > 0);
+        Assert.Equal(WhoisStatus.NotFound, response.Status);
 
-            Assert.True(sample.Length > 0);
-            Assert.Equal(WhoisStatus.NotFound, response.Status);
+        Assert.Equal(0, response.ParsingErrors);
+        Assert.Equal("whois.cctld.by/by/not-found/01", response.TemplateName);
 
-            Assert.Equal(0, response.ParsingErrors);
-            Assert.Equal("whois.cctld.by/by/not-found/01", response.TemplateName);
+        Assert.Equal(1, response.FieldsParsed);
+    }
 
-            Assert.Equal(1, response.FieldsParsed);
-        }
+    [Fact]
+    public void Test_found()
+    {
+        var sample = SampleReader.Read("whois.cctld.by", "by", "found", "active.by.txt");
+        var response = parser.Parse("whois.cctld.by", sample);
 
-        [Fact]
-        public void Test_found()
-        {
-            var sample = SampleReader.Read("whois.cctld.by", "by", "found", "active.by.txt");
-            var response = parser.Parse("whois.cctld.by", sample);
+        Assert.True(sample.Length > 0);
+        Assert.Equal(WhoisStatus.Found, response.Status);
 
-            Assert.True(sample.Length > 0);
-            Assert.Equal(WhoisStatus.Found, response.Status);
+        Assert.Equal(0, response.ParsingErrors);
+        Assert.Equal("whois.cctld.by/by/found/01", response.TemplateName);
 
-            Assert.Equal(0, response.ParsingErrors);
-            Assert.Equal("whois.cctld.by/by/found/01", response.TemplateName);
+        Assert.Equal("active.by", response.DomainName.ToString());
 
-            Assert.Equal("active.by", response.DomainName.ToString());
+        // Registrar Details
+        Assert.Equal("Active Technologies LLC", response.Registrar.Name);
 
-            // Registrar Details
-            Assert.Equal("Active Technologies LLC", response.Registrar.Name);
+        Assert.Equal(new DateTime(2013, 12, 16, 0, 0, 0), response.Updated);
+        Assert.Equal(new DateTime(2003, 2, 2, 0, 0, 0), response.Registered);
 
-            Assert.Equal(new DateTime(2013, 12, 16, 0, 0, 0), response.Updated);
-            Assert.Equal(new DateTime(2003, 2, 2, 0, 0, 0), response.Registered);
+        // Nameservers
+        Assert.Equal(2, response.NameServers.Count);
+        Assert.Equal("ns1.activeby.net", response.NameServers[0]);
+        Assert.Equal("ns2.activeby.net", response.NameServers[1]);
 
-            // Nameservers
-            Assert.Equal(2, response.NameServers.Count);
-            Assert.Equal("ns1.activeby.net", response.NameServers[0]);
-            Assert.Equal("ns2.activeby.net", response.NameServers[1]);
-
-            Assert.Equal(8, response.FieldsParsed);
-        }
+        Assert.Equal(8, response.FieldsParsed);
     }
 }

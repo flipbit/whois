@@ -1,76 +1,74 @@
-using System;
 using Xunit;
 using Whois.Parsers;
 
-namespace Whois.Parsing.Whois.Website.Ws.Ws
+namespace Whois.Parsing.Whois.Website.Ws.Ws;
+
+public class WsParsingTests : ParsingTests
 {
-    public class WsParsingTests : ParsingTests
+    private readonly WhoisParser parser;
+
+    public WsParsingTests()
     {
-        private WhoisParser parser;
 
-        public WsParsingTests()
-        {
+        parser = new WhoisParser();
+    }
 
-            parser = new WhoisParser();
-        }
+    [Fact(Skip = "Template update deferred - WHOIS response format changed")]
+    public void Test_not_found()
+    {
+        var sample = SampleReader.Read("whois.website.ws", "ws", "not-found", "u34jedzcq.ws.txt");
+        var response = parser.Parse("whois.website.ws", sample);
 
-        [Fact(Skip = "Template update deferred - WHOIS response format changed")]
-        public void Test_not_found()
-        {
-            var sample = SampleReader.Read("whois.website.ws", "ws", "not-found", "u34jedzcq.ws.txt");
-            var response = parser.Parse("whois.website.ws", sample);
+        Assert.True(sample.Length > 0);
+        Assert.Equal(WhoisStatus.NotFound, response.Status);
 
-            Assert.True(sample.Length > 0);
-            Assert.Equal(WhoisStatus.NotFound, response.Status);
+        Assert.Equal(0, response.ParsingErrors);
+        Assert.Equal("whois.website.ws/ws/not-found/01", response.TemplateName);
 
-            Assert.Equal(0, response.ParsingErrors);
-            Assert.Equal("whois.website.ws/ws/not-found/01", response.TemplateName);
+        Assert.Equal("u34jedzcq.ws", response.DomainName.ToString());
 
-            Assert.Equal("u34jedzcq.ws", response.DomainName.ToString());
+        Assert.Equal(2, response.FieldsParsed);
+    }
 
-            Assert.Equal(2, response.FieldsParsed);
-        }
+    [Fact(Skip = "Template update deferred - WHOIS response format changed")]
+    public void Test_found()
+    {
+        var sample = SampleReader.Read("whois.website.ws", "ws", "found", "google.ws.txt");
+        var response = parser.Parse("whois.website.ws", sample);
 
-        [Fact(Skip = "Template update deferred - WHOIS response format changed")]
-        public void Test_found()
-        {
-            var sample = SampleReader.Read("whois.website.ws", "ws", "found", "google.ws.txt");
-            var response = parser.Parse("whois.website.ws", sample);
+        Assert.True(sample.Length > 0);
+        Assert.Equal(WhoisStatus.Found, response.Status);
 
-            Assert.True(sample.Length > 0);
-            Assert.Equal(WhoisStatus.Found, response.Status);
+        Assert.Equal(0, response.ParsingErrors);
+        Assert.Equal("whois.website.ws/ws/found/01", response.TemplateName);
 
-            Assert.Equal(0, response.ParsingErrors);
-            Assert.Equal("whois.website.ws/ws/found/01", response.TemplateName);
+        Assert.Equal("google.ws", response.DomainName.ToString());
 
-            Assert.Equal("google.ws", response.DomainName.ToString());
+        // Registrar Details
+        Assert.Equal(".WS Registry", response.Registrar.Name);
+        Assert.Equal("whois.website.ws", response.Registrar.WhoisServer.Value);
+        Assert.Equal("support@website.ws", response.Registrar.AbuseEmail);
 
-            // Registrar Details
-            Assert.Equal(".WS Registry", response.Registrar.Name);
-            Assert.Equal("whois.website.ws", response.Registrar.WhoisServer.Value);
-            Assert.Equal("support@website.ws", response.Registrar.AbuseEmail);
+        Assert.Equal(new DateTime(2008, 12, 08, 00, 00, 00, 000, DateTimeKind.Utc), response.Updated);
+        Assert.Equal(new DateTime(2002, 03, 03, 00, 00, 00, 000, DateTimeKind.Utc), response.Registered);
+        Assert.Equal(new DateTime(2010, 03, 03, 00, 00, 00, 000, DateTimeKind.Utc), response.Expiration);
 
-            Assert.Equal(new DateTime(2008, 12, 08, 00, 00, 00, 000, DateTimeKind.Utc), response.Updated);
-            Assert.Equal(new DateTime(2002, 03, 03, 00, 00, 00, 000, DateTimeKind.Utc), response.Registered);
-            Assert.Equal(new DateTime(2010, 03, 03, 00, 00, 00, 000, DateTimeKind.Utc), response.Expiration);
-
-             // Registrant Details
-            Assert.Equal("Google, Inc.", response.Registrant.Name);
+        // Registrant Details
+        Assert.Equal("Google, Inc.", response.Registrant.Name);
 
 
-             // AdminContact Details
-            Assert.Equal("6503300100", response.AdminContact.TelephoneNumber);
-            Assert.Equal("kulpreet@google.com", response.AdminContact.Email);
+        // AdminContact Details
+        Assert.Equal("6503300100", response.AdminContact.TelephoneNumber);
+        Assert.Equal("kulpreet@google.com", response.AdminContact.Email);
 
 
-            // Nameservers
-            Assert.Equal(4, response.NameServers.Count);
-            Assert.Equal("ns1.google.com", response.NameServers[0]);
-            Assert.Equal("ns2.google.com", response.NameServers[1]);
-            Assert.Equal("ns3.google.com", response.NameServers[2]);
-            Assert.Equal("ns4.google.com", response.NameServers[3]);
+        // Nameservers
+        Assert.Equal(4, response.NameServers.Count);
+        Assert.Equal("ns1.google.com", response.NameServers[0]);
+        Assert.Equal("ns2.google.com", response.NameServers[1]);
+        Assert.Equal("ns3.google.com", response.NameServers[2]);
+        Assert.Equal("ns4.google.com", response.NameServers[3]);
 
-            Assert.Equal(15, response.FieldsParsed);
-        }
+        Assert.Equal(15, response.FieldsParsed);
     }
 }

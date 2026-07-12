@@ -1,12 +1,11 @@
-﻿namespace Whois
-{
-    public abstract class ParsingTests
-    {
-        protected ParsingTests()
-        {
-            SampleReader = new SampleReader();
-        }
+namespace Whois;
 
-        protected SampleReader SampleReader { get; }
+public abstract class ParsingTests
+{
+    protected ParsingTests()
+    {
+        SampleReader = new SampleReader();
     }
+
+    protected SampleReader SampleReader { get; }
 }

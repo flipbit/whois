@@ -1,9 +1,8 @@
-﻿namespace Whois.Models
-{
-    internal class SampleDomain
-    {
-        public string DomainName { get; set; }
+namespace Whois.Models;
 
-        public string WhoisServer { get; set; }
-    }
+internal class SampleDomain
+{
+    public string DomainName { get; set; }
+
+    public string WhoisServer { get; set; }
 }

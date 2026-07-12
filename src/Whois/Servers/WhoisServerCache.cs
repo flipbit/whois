@@ -1,27 +1,26 @@
-﻿using System.Collections.Concurrent;
+using System.Collections.Concurrent;
 
-namespace Whois.Servers
+namespace Whois.Servers;
+
+/// <summary>
+/// Simple thread-safe in-memory WHOIS server cache
+/// </summary>
+public class WhoisServerCache
 {
-    /// <summary>
-    /// Simple thread-safe in-memory WHOIS server cache
-    /// </summary>
-    public class WhoisServerCache
+    private readonly ConcurrentDictionary<string, WhoisResponse> _cache;
+
+    public WhoisServerCache()
     {
-        private readonly ConcurrentDictionary<string, WhoisResponse> cache;
+        _cache = new ConcurrentDictionary<string, WhoisResponse>();
+    }
 
-        public WhoisServerCache()
-        {
-            cache = new ConcurrentDictionary<string, WhoisResponse>();
-        }
+    public WhoisResponse? Get(string tld)
+    {
+        return _cache.TryGetValue(tld, out var server) ? server : null;
+    }
 
-        public WhoisResponse? Get(string tld)
-        {
-            return cache.TryGetValue(tld, out var server) ? server : null;
-        }
-
-        public void Set(WhoisResponse server)
-        {
-            cache.AddOrUpdate(server.DomainName!.ToUnicodeString(), server, (tld, existing) => server);
-        }
+    public void Set(WhoisResponse server)
+    {
+        _cache.AddOrUpdate(server.DomainName!.ToUnicodeString(), server, (tld, existing) => server);
     }
 }
