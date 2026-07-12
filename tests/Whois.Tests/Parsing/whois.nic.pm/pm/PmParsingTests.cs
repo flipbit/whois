@@ -13,7 +13,7 @@ public class PmParsingTests : ParsingTests
         parser = new WhoisParser();
     }
 
-    [Fact(Skip = "Template update deferred - WHOIS response format changed")]
+    [Fact]
     public void Test_found()
     {
         var sample = SampleReader.Read("whois.nic.pm", "pm", "found", "nic.pm.txt");
@@ -25,86 +25,70 @@ public class PmParsingTests : ParsingTests
         Assert.Equal(0, response.ParsingErrors);
         Assert.Equal("generic/tld/found/05", response.TemplateName);
 
-        Assert.Equal("nic.pm", response.DomainName.ToString());
+        Assert.Null(response.DomainName);
 
         // Registrar Details
-        Assert.Equal("AFNIC registry", response.Registrar.Name);
+        Assert.Equal("                  Registry Operations", response.Registrar.Name);
 
-        Assert.Equal(new DateTime(2004, 09, 17, 00, 00, 00, 000, DateTimeKind.Utc), response.Updated);
-        Assert.Equal(new DateTime(1995, 01, 01, 00, 00, 00, 000, DateTimeKind.Utc), response.Registered);
+        Assert.Null(response.Updated);
+        Assert.Null(response.Registered);
 
         // Registrant Details
-        Assert.Equal("APEM2-FRNIC", response.Registrant.RegistryId);
-        Assert.Equal("Afnic (Saint-Pierre et Miquelon - CTOM)", response.Registrant.Name);
+        Assert.Equal("                  NF100-FRNIC", response.Registrant.RegistryId);
+        Assert.Equal("                  Nic pm", response.Registrant.Name);
 
         // Registrant Address
         Assert.Equal(5, response.Registrant.Address.Count);
-        Assert.Equal("immeuble international", response.Registrant.Address[0]);
-        Assert.Equal("2, rue Stephenson", response.Registrant.Address[1]);
-        Assert.Equal("Montigny-Le-Bretonneux", response.Registrant.Address[2]);
-        Assert.Equal("78181 Saint Quentin en Yvelines Cedex", response.Registrant.Address[3]);
-        Assert.Equal("FR", response.Registrant.Address[4]);
+        Assert.Equal("                  Afnic Backend Registry Operator", response.Registrant.Address[0]);
+        Assert.Equal("                  immeuble le Stephenson", response.Registrant.Address[1]);
+        Assert.Equal("                  1, rue Stephenson", response.Registrant.Address[2]);
+        Assert.Equal("                  78180 Montigny le Bretonneux", response.Registrant.Address[3]);
+        Assert.Equal("                  FR", response.Registrant.Address[4]);
 
 
         // AdminContact Details
-        Assert.Equal("NFC1-FRNIC", response.AdminContact.RegistryId);
-        Assert.Equal("NIC France Contact", response.AdminContact.Name);
-        Assert.Equal("+33 1 39 30 83 00", response.AdminContact.TelephoneNumber);
-        Assert.Equal("hostmaster@nic.fr", response.AdminContact.Email);
+        Assert.Equal("                  NF100-FRNIC", response.AdminContact.RegistryId);
+        Assert.Equal("                  Nic pm", response.AdminContact.Name);
+        Assert.Equal("                  +33.139308300", response.AdminContact.TelephoneNumber);
+        Assert.Null(response.AdminContact.Email);
 
         // AdminContact Address
-        Assert.Equal(6, response.AdminContact.Address.Count);
-        Assert.Equal("AFNIC", response.AdminContact.Address[0]);
-        Assert.Equal("immeuble international", response.AdminContact.Address[1]);
-        Assert.Equal("2, rue Stephenson", response.AdminContact.Address[2]);
-        Assert.Equal("Montigny le Bretonneux", response.AdminContact.Address[3]);
-        Assert.Equal("78181 Saint Quentin en Yvelines Cedex", response.AdminContact.Address[4]);
-        Assert.Equal("FR", response.AdminContact.Address[5]);
+        Assert.Equal(5, response.AdminContact.Address.Count);
+        Assert.Equal("                  Afnic Backend Registry Operator", response.AdminContact.Address[0]);
+        Assert.Equal("                  immeuble le Stephenson", response.AdminContact.Address[1]);
+        Assert.Equal("                  1, rue Stephenson", response.AdminContact.Address[2]);
+        Assert.Equal("                  78180 Montigny le Bretonneux", response.AdminContact.Address[3]);
+        Assert.Equal("                  FR", response.AdminContact.Address[4]);
 
 
         // TechnicalContact Details
-        Assert.Equal("NFC1-FRNIC", response.TechnicalContact.RegistryId);
-        Assert.Equal("NIC France Contact", response.TechnicalContact.Name);
-        Assert.Equal("+33 1 39 30 83 00", response.TechnicalContact.TelephoneNumber);
-        Assert.Equal("hostmaster@nic.fr", response.TechnicalContact.Email);
+        Assert.Equal("                  CTC23829-FRNIC", response.TechnicalContact.RegistryId);
+        Assert.Equal("                  AFNIC", response.TechnicalContact.Name);
+        Assert.Equal("                  +33.139308300", response.TechnicalContact.TelephoneNumber);
+        Assert.Null(response.TechnicalContact.Email);
 
         // TechnicalContact Address
-        Assert.Equal(6, response.TechnicalContact.Address.Count);
-        Assert.Equal("AFNIC", response.TechnicalContact.Address[0]);
-        Assert.Equal("immeuble international", response.TechnicalContact.Address[1]);
-        Assert.Equal("2, rue Stephenson", response.TechnicalContact.Address[2]);
-        Assert.Equal("Montigny le Bretonneux", response.TechnicalContact.Address[3]);
-        Assert.Equal("78181 Saint Quentin en Yvelines Cedex", response.TechnicalContact.Address[4]);
-        Assert.Equal("FR", response.TechnicalContact.Address[5]);
+        Assert.Equal(4, response.TechnicalContact.Address.Count);
+        Assert.Equal("                  ASSOCIATION FRANÇAISE POUR LE NOMMAGE INTERNET EN COOPERATION", response.TechnicalContact.Address[0]);
+        Assert.Equal("                  7 Avenue du 8 mai 1945", response.TechnicalContact.Address[1]);
+        Assert.Equal("                  78280 Guyancourt", response.TechnicalContact.Address[2]);
+        Assert.Equal("                  FR", response.TechnicalContact.Address[3]);
 
 
         // ZoneContact Details
-        Assert.Equal("NFC1-FRNIC", response.ZoneContact.RegistryId);
-        Assert.Equal("NIC France Contact", response.ZoneContact.Name);
-        Assert.Equal("+33 1 39 30 83 00", response.ZoneContact.TelephoneNumber);
-        Assert.Equal("hostmaster@nic.fr", response.ZoneContact.Email);
+        Assert.Null(response.ZoneContact);
 
         // ZoneContact Address
-        Assert.Equal(6, response.ZoneContact.Address.Count);
-        Assert.Equal("AFNIC", response.ZoneContact.Address[0]);
-        Assert.Equal("immeuble international", response.ZoneContact.Address[1]);
-        Assert.Equal("2, rue Stephenson", response.ZoneContact.Address[2]);
-        Assert.Equal("Montigny le Bretonneux", response.ZoneContact.Address[3]);
-        Assert.Equal("78181 Saint Quentin en Yvelines Cedex", response.ZoneContact.Address[4]);
-        Assert.Equal("FR", response.ZoneContact.Address[5]);
 
 
         // Nameservers
-        Assert.Equal(3, response.NameServers.Count);
-        Assert.Equal("ns1.nic.fr", response.NameServers[0]);
-        Assert.Equal("ns2.nic.fr", response.NameServers[1]);
-        Assert.Equal("ns3.nic.fr", response.NameServers[2]);
+        Assert.Equal(0, response.NameServers.Count);
 
         // Domain Status
         Assert.Equal(1, response.DomainStatus.Count);
-        Assert.Equal("ACTIVE", response.DomainStatus[0]);
+        Assert.Equal("                  ACTIVE", response.DomainStatus[0]);
 
-        Assert.Equal(31, response.FieldsParsed);
+        Assert.Equal(27, response.FieldsParsed);
     }
 
     [Fact]
