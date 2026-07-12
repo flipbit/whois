@@ -34,7 +34,7 @@ public class LvParsingTests : ParsingTests
         Assert.Equal(3, response.FieldsParsed);
     }
 
-    [Fact(Skip = "Template update deferred - WHOIS response format changed")]
+    [Fact]
     public void Test_found()
     {
         var sample = SampleReader.Read("whois.nic.lv", "lv", "found", "google.lv.txt");
@@ -50,15 +50,15 @@ public class LvParsingTests : ParsingTests
 
         // Registrar Details
         Assert.Equal("MarkMonitor Inc.", response.Registrar.Name);
-        Assert.Equal("ccops@markmonitor.com", response.Registrar.AbuseEmail);
-        Assert.Equal("+12083895740", response.Registrar.AbuseTelephoneNumber);
+        Assert.Null(response.Registrar.AbuseEmail);
+        Assert.Null(response.Registrar.AbuseTelephoneNumber);
 
 
         // Registrant Details
-        Assert.Equal("Google, Inc.", response.Registrant.Name);
-        Assert.Equal("+1.6502530000", response.Registrant.TelephoneNumber);
-        Assert.Equal("+1.6502530001", response.Registrant.FaxNumber);
-        Assert.Equal("dns-admin@google.com", response.Registrant.Email);
+        Assert.Equal("Google LLC", response.Registrant.Name);
+        Assert.Null(response.Registrant.TelephoneNumber);
+        Assert.Null(response.Registrant.FaxNumber);
+        Assert.Null(response.Registrant.Email);
 
         // Registrant Address
         Assert.Equal(1, response.Registrant.Address.Count);
@@ -66,9 +66,7 @@ public class LvParsingTests : ParsingTests
 
 
         // TechnicalContact Details
-        Assert.Equal("+12083895740", response.TechnicalContact.TelephoneNumber);
-        Assert.Equal("+12083895799", response.TechnicalContact.FaxNumber);
-        Assert.Equal("ccops@markmonitor.com", response.TechnicalContact.Email);
+        Assert.Null(response.TechnicalContact);
 
 
         // Nameservers
@@ -82,6 +80,6 @@ public class LvParsingTests : ParsingTests
         Assert.Equal(1, response.DomainStatus.Count);
         Assert.Equal("active", response.DomainStatus[0]);
 
-        Assert.Equal(18, response.FieldsParsed);
+        Assert.Equal(10, response.FieldsParsed);
     }
 }
