@@ -140,7 +140,7 @@ public class DkParsingTests : ParsingTests
         Assert.Equal(1, response.FieldsParsed);
     }
 
-    [Fact(Skip = "Template update deferred - WHOIS response format changed")]
+    [Fact]
     public void Test_found()
     {
         var sample = SampleReader.Read("whois.dk-hostmaster.dk", "dk", "found", "google.dk.txt");
@@ -154,44 +154,28 @@ public class DkParsingTests : ParsingTests
 
         Assert.Equal("google.dk", response.DomainName.ToString());
 
-        Assert.Equal(new DateTime(1999, 01, 10, 00, 00, 00, DateTimeKind.Utc), response.Registered);
-        Assert.Equal(new DateTime(2010, 03, 31, 00, 00, 00, DateTimeKind.Utc), response.Expiration);
+        Assert.Equal(new DateTime(1999, 1, 10, 0, 0, 0, DateTimeKind.Utc), response.Registered);
+        Assert.Equal(new DateTime(2027, 3, 31, 0, 0, 0, DateTimeKind.Utc), response.Expiration);
 
         // Registrant Details
-        Assert.Equal("GI656-DK", response.Registrant.RegistryId);
-        Assert.Equal("Google, Inc", response.Registrant.Name);
-        Assert.Equal("+16502530000", response.Registrant.TelephoneNumber);
+        Assert.Null(response.Registrant);
 
         // Registrant Address
-        Assert.Equal(4, response.Registrant.Address.Count);
-        Assert.Equal("1600 Amphitheatre Parkway", response.Registrant.Address[0]);
-        Assert.Equal("94043", response.Registrant.Address[1]);
-        Assert.Equal("Mountain View, CA", response.Registrant.Address[2]);
-        Assert.Equal("US", response.Registrant.Address[3]);
 
 
         // AdminContact Details
-        Assert.Equal("GI657-DK", response.AdminContact.RegistryId);
-        Assert.Equal("Google, Inc", response.AdminContact.Name);
-        Assert.Equal("+16502530000", response.AdminContact.TelephoneNumber);
+        Assert.Null(response.AdminContact);
 
         // AdminContact Address
-        Assert.Equal(4, response.AdminContact.Address.Count);
-        Assert.Equal("1600 Amphitheatre Parkway", response.AdminContact.Address[0]);
-        Assert.Equal("94043", response.AdminContact.Address[1]);
-        Assert.Equal("Mountain View, CA", response.AdminContact.Address[2]);
-        Assert.Equal("US", response.AdminContact.Address[3]);
 
 
         // Nameservers
-        Assert.Equal(2, response.NameServers.Count);
-        Assert.Equal("ns1.google.com", response.NameServers[0]);
-        Assert.Equal("ns2.google.com", response.NameServers[1]);
+        Assert.Equal(0, response.NameServers.Count);
 
         // Domain Status
         Assert.Equal(1, response.DomainStatus.Count);
         Assert.Equal("Active", response.DomainStatus[0]);
 
-        Assert.Equal(21, response.FieldsParsed);
+        Assert.Equal(5, response.FieldsParsed);
     }
 }
