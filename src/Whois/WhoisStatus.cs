@@ -1,30 +1,29 @@
-﻿namespace Whois
+namespace Whois;
+
+public enum WhoisStatus
 {
-    public enum WhoisStatus
-    {
-        Unknown,
-        Found, 
-        NotFound, 
-        Error, 
-        Throttled,
-        Expired,
-        PendingDelete,
-        Reserved,
-        Suspended,
-        NotAssigned,
-        Invalid,
-        Inactive,
-        Locked,
-        Quarantined,
-        OutOfService,
-        NotAvailable,
-        Deactivated,
-        Failed,
-        Unconfirmed,
-        Unavailable,
-        ToBeReleased,
-        Redemption,
-        Blocked,
-        Other
-    }
+    Unknown,
+    Found,
+    NotFound,
+    Error,
+    Throttled,
+    Expired,
+    PendingDelete,
+    Reserved,
+    Suspended,
+    NotAssigned,
+    Invalid,
+    Inactive,
+    Locked,
+    Quarantined,
+    OutOfService,
+    NotAvailable,
+    Deactivated,
+    Failed,
+    Unconfirmed,
+    Unavailable,
+    ToBeReleased,
+    Redemption,
+    Blocked,
+    Other,
 }

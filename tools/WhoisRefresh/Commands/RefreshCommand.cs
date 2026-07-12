@@ -1,3 +1,4 @@
+using System.Globalization;
 using Spectre.Console.Cli;
 using Whois.Net;
 using WhoisRefresh.Domain;
@@ -44,7 +45,7 @@ public class RefreshCommand : AsyncCommand<RefreshSettings>
             return 1;
         }
 
-        var registry = await DomainRegistry.LoadFromFileAsync(registryPath);
+        var registry = await DomainRegistry.LoadFromFileAsync(registryPath).ConfigureAwait(false);
 
         var queryableServers = registry.Servers.Count(s => !s.Value.IsStatic);
         var totalDomains = registry.Servers
@@ -52,7 +53,7 @@ public class RefreshCommand : AsyncCommand<RefreshSettings>
             .SelectMany(s => s.Value.Domains.Values)
             .Sum(d => d.Count);
 
-        ConsoleOutput.WriteInfo($"Querying {totalDomains} domains across {queryableServers} servers...");
+        ConsoleOutput.WriteInfo(string.Format(CultureInfo.InvariantCulture, "Querying {0} domains across {1} servers...", totalDomains, queryableServers));
 
         var options = new RefreshEngineOptions(
             SamplesBasePath: samplesPath,
@@ -61,14 +62,14 @@ public class RefreshCommand : AsyncCommand<RefreshSettings>
             MaxResponseBytes: settings.MaxResponseBytes);
 
         var engine = new RefreshEngine(_tcpReader, _fileSystem);
-        var results = await engine.RunAsync(registry, options, CancellationToken.None);
+        var results = await engine.RunAsync(registry, options, CancellationToken.None).ConfigureAwait(false);
 
         // Prune removed domains
         results.Prune(registry);
 
         // Write results
         var json = RefreshResults.Serialize(results);
-        await _fileSystem.WriteAllTextAsync(resultsPath, json);
+        await _fileSystem.WriteAllTextAsync(resultsPath, json).ConfigureAwait(false);
 
         // Summary
         var errors = results.Results.Values
@@ -83,11 +84,11 @@ public class RefreshCommand : AsyncCommand<RefreshSettings>
             .SelectMany(d => d.Values)
             .Count(r => r.Error == null);
 
-        ConsoleOutput.WriteSuccess($"Refresh complete: {successes} succeeded, {errors} failed");
+        ConsoleOutput.WriteSuccess(string.Format(CultureInfo.InvariantCulture, "Refresh complete: {0} succeeded, {1} failed", successes, errors));
 
         if (errors > 0)
         {
-            ConsoleOutput.WriteWarning($"{errors} queries failed — check refresh-results.json for details");
+            ConsoleOutput.WriteWarning(string.Format(CultureInfo.InvariantCulture, "{0} queries failed — check refresh-results.json for details", errors));
         }
 
         return 0;

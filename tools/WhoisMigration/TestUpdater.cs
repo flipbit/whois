@@ -33,13 +33,14 @@ public static partial class TestUpdater
     /// </summary>
     public static string UpdateTemplateNameAssertions(
         string testFileContent,
-        Dictionary<string, string> templateNameMap)
+        IDictionary<string, string> templateNameMap)
     {
         foreach (var (oldName, newName) in templateNameMap)
         {
             testFileContent = testFileContent.Replace(
                 $"\"{oldName}\"",
-                $"\"{newName}\"");
+                $"\"{newName}\"",
+                StringComparison.Ordinal);
         }
         return testFileContent;
     }

@@ -2,7 +2,7 @@ using System.Text.Json;
 
 namespace WhoisRefresh.Domain;
 
-public record DomainRegistryData(Dictionary<string, ServerEntry> Servers)
+public record DomainRegistryData(IDictionary<string, ServerEntry> Servers)
 {
     /// <summary>
     /// Groups servers by rate group. Servers without a rateGroup are each their own group
@@ -12,7 +12,7 @@ public record DomainRegistryData(Dictionary<string, ServerEntry> Servers)
     {
         return Servers
             .Where(s => !s.Value.IsStatic)
-            .ToLookup(s => s.Value.RateGroup ?? s.Key);
+            .ToLookup(s => s.Value.RateGroup ?? s.Key, StringComparer.Ordinal);
     }
 }
 
@@ -26,15 +26,15 @@ public static class DomainRegistry
     private static readonly JsonDocumentOptions JsonOptions = new()
     {
         CommentHandling = JsonCommentHandling.Skip,
-        AllowTrailingCommas = true
+        AllowTrailingCommas = true,
     };
 
-    public static readonly HashSet<string> ValidStatusKeys = new(StringComparer.OrdinalIgnoreCase)
+    public static readonly IReadOnlySet<string> ValidStatusKeys = new HashSet<string>(StringComparer.OrdinalIgnoreCase)
     {
         "found", "not-found", "throttled", "reserved", "suspended", "inactive", "expired",
         "blocked", "deactivated", "error", "failed", "invalid", "locked", "not-assigned",
         "not-available", "out-of-service", "pending-delete", "quarantined", "redemption",
-        "to-be-released", "unavailable", "unconfirmed"
+        "to-be-released", "unavailable", "unconfirmed",
     };
 
     public static async Task<DomainRegistryData> LoadAsync(string jsonc)
@@ -45,7 +45,7 @@ public static class DomainRegistry
         var root = doc.RootElement;
         var serversElement = root.GetProperty("servers");
 
-        var servers = new Dictionary<string, ServerEntry>();
+        var servers = new Dictionary<string, ServerEntry>(StringComparer.Ordinal);
 
         foreach (var serverProp in serversElement.EnumerateObject())
         {
@@ -62,7 +62,7 @@ public static class DomainRegistry
                 ? rgProp.GetString()
                 : null;
 
-            var domains = new Dictionary<string, List<string>>();
+            var domains = new Dictionary<string, IList<string>>(StringComparer.Ordinal);
             var domainsObj = serverObj.GetProperty("domains");
 
             // Track all domains across all statuses for this server to detect duplicates
@@ -78,7 +78,7 @@ public static class DomainRegistry
                         $"Unknown status key '{status}' in server '{serverName}': valid keys are {string.Join(", ", ValidStatusKeys)}");
                 }
 
-                var domainList = new List<string>();
+                IList<string> domainList = new List<string>();
 
                 foreach (var domainElement in statusProp.Value.EnumerateArray())
                 {
@@ -106,13 +106,13 @@ public static class DomainRegistry
 
     public static async Task<DomainRegistryData> LoadFromFileAsync(string path)
     {
-        var content = await File.ReadAllTextAsync(path);
-        return await LoadAsync(content);
+        var content = await File.ReadAllTextAsync(path).ConfigureAwait(false);
+        return await LoadAsync(content).ConfigureAwait(false);
     }
 
     private static void ValidateDomainName(string domain)
     {
-        if (domain.Contains('/') || domain.Contains('\\') || domain.Contains(".."))
+        if (domain.Contains('/', StringComparison.Ordinal) || domain.Contains('\\', StringComparison.Ordinal) || domain.Contains("..", StringComparison.Ordinal))
         {
             throw new DomainRegistryValidationException(
                 $"Invalid domain name '{domain}': contains path separator or traversal sequence");
@@ -121,7 +121,7 @@ public static class DomainRegistry
 
     private static void ValidatePathComponent(string value, string fieldName)
     {
-        if (value.Contains('/') || value.Contains('\\') || value.Contains(".."))
+        if (value.Contains('/', StringComparison.Ordinal) || value.Contains('\\', StringComparison.Ordinal) || value.Contains("..", StringComparison.Ordinal))
         {
             throw new DomainRegistryValidationException(
                 $"Invalid {fieldName} '{value}': contains path separator or traversal sequence");

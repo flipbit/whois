@@ -33,11 +33,15 @@ public class BootstrapCommandTests
 
         Assert.Equal(2, entries.Count);
         Assert.Contains(entries, e =>
-            e.Server == "whois.nic.uk" && e.Tld == "uk" && e.Status == "found" &&
-            e.DomainName == "netbenefit.co.uk");
+            string.Equals(e.Server, "whois.nic.uk", StringComparison.Ordinal) &&
+            string.Equals(e.Tld, "uk", StringComparison.Ordinal) &&
+            string.Equals(e.Status, "found", StringComparison.Ordinal) &&
+            string.Equals(e.DomainName, "netbenefit.co.uk", StringComparison.Ordinal));
         Assert.Contains(entries, e =>
-            e.Server == "whois.nic.uk" && e.Tld == "uk" && e.Status == "not-found" &&
-            e.DomainName == "u34jedzcq.co.uk");
+            string.Equals(e.Server, "whois.nic.uk", StringComparison.Ordinal) &&
+            string.Equals(e.Tld, "uk", StringComparison.Ordinal) &&
+            string.Equals(e.Status, "not-found", StringComparison.Ordinal) &&
+            string.Equals(e.DomainName, "u34jedzcq.co.uk", StringComparison.Ordinal));
     }
 
     [Fact]
@@ -82,8 +86,8 @@ public class BootstrapCommandTests
         var entries = TestFileParser.ExtractDomains(testContent);
 
         Assert.Equal(2, entries.Count);
-        Assert.Contains(entries, e => e.DomainName == "netbenefit.co.uk");
-        Assert.Contains(entries, e => e.DomainName == "bedandbreakfastsearcher.co.uk");
+        Assert.Contains(entries, e => string.Equals(e.DomainName, "netbenefit.co.uk", StringComparison.Ordinal));
+        Assert.Contains(entries, e => string.Equals(e.DomainName, "bedandbreakfastsearcher.co.uk", StringComparison.Ordinal));
     }
 
     [Fact]
@@ -117,13 +121,13 @@ public class BootstrapCommandTests
     [Fact]
     public void BuildRegistry_GroupsByServerAndStatus_DeduplicatesDomains()
     {
-        var entries = new List<SampleDomainEntry>
-        {
+        IList<SampleDomainEntry> entries =
+        [
             new("whois.nic.uk", "uk", "found", "found.txt", "netbenefit.co.uk"),
             new("whois.nic.uk", "uk", "found", "found_other.txt", "netbenefit.co.uk"),
             new("whois.nic.uk", "uk", "found", "found_bbc.txt", "bbc.co.uk"),
             new("whois.nic.uk", "uk", "not-found", "not_found.txt", "u34jedzcq.co.uk"),
-        };
+        ];
 
         var registry = TestFileParser.BuildRegistry(entries);
 

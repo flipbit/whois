@@ -3,6 +3,12 @@
     <OutputType>Exe</OutputType>
     <TargetFramework>net10.0</TargetFramework>
     <RootNamespace>WhoisRefresh</RootNamespace>
+    <!-- MA0011: Spectre.Console MarkupLine has no IFormatProvider overload; suppress across this project -->
+    <!-- MA0048: Multiple types in single files is an existing design decision for co-located domain types -->
+    <!-- MA0003: Named parameters on Spectre.Console and DI calls is overly pedantic for tool code -->
+    <!-- MA0004: Console application; ConfigureAwait(false) is not needed without SynchronizationContext -->
+    <!-- MA0053: Console application classes; sealing entry/command classes provides no value here -->
+    <NoWarn>$(NoWarn);MA0011;MA0048;MA0003;MA0004;MA0053</NoWarn>
   </PropertyGroup>
   <ItemGroup>
     <PackageReference Include="Microsoft.Extensions.DependencyInjection" />

@@ -4,4 +4,4 @@ public record ServerEntry(
     string Tld,
     bool IsStatic,
     string? RateGroup,
-    Dictionary<string, List<string>> Domains);
+    IDictionary<string, IList<string>> Domains);

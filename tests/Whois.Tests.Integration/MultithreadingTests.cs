@@ -1,89 +1,88 @@
-using System;
 using System.Collections.Concurrent;
-using System.Linq;
-using System.Threading;
-using System.Threading.Tasks;
 using Xunit;
 using Whois.Models;
 
-namespace Whois
+namespace Whois;
+
+public class MultithreadingTests
 {
-    public class MultithreadingTests
+    private readonly WhoisLookup lookup;
+
+    public MultithreadingTests()
     {
-        private readonly WhoisLookup lookup;
+        lookup = new WhoisLookup();
+    }
 
-        public MultithreadingTests()
+    [Fact]
+    public async Task TestDownloadSampleDomainsSingleThreaded()
+    {
+        var domains = new SampleReader().ReadSampleDomains();
+
+        foreach (var domain in domains)
         {
-            lookup = new WhoisLookup();
-        }
+            Console.WriteLine($"Looking Up: {domain.DomainName}");
 
-        [Fact]
-        public async Task TestDownloadSampleDomainsSingleThreaded()
-        {
-            var domains = new SampleReader().ReadSampleDomains();
+            WhoisResponse response = null;
 
-            foreach (var domain in domains)
+            try
             {
-                Console.WriteLine($"Looking Up: {domain.DomainName}");
+                response = await lookup.Lookup(domain.DomainName);
 
-                WhoisResponse response = null;
+                Console.WriteLine($"Looked Up: {domain.DomainName}, Status: {response.Status}, Size: {response.Content.Length}");
+            }
+#pragma warning disable CA1031 // Catch-all: integration test continues on any network/parse error
+            catch (Exception e)
+#pragma warning restore CA1031
+            {
+                Console.WriteLine($"FAIL: {response?.DomainName}: {e.Message}");
+            }
+            Thread.Sleep(1000);
+        }
+    }
+
+    [Fact]
+    public async Task TestDownloadSamplesDomainsMultipleThreaded()
+    {
+        var domains = new SampleReader().ReadSampleDomains();
+
+        var queue = new ConcurrentQueue<SampleDomain>(domains);
+        var responses = new ConcurrentBag<WhoisResponse>();
+
+        var tasks = Enumerable.Range(1, 25).Select(async i =>
+        {
+            while (queue.IsEmpty == false)
+            {
+                if (!queue.TryDequeue(out var domain)) continue;
+
+                Console.WriteLine($"Looking Up: {domain.DomainName}");
 
                 try
                 {
-                    response = await lookup.Lookup(domain.DomainName);
+                    var response = await lookup.Lookup(domain.DomainName);
 
-                    Console.WriteLine($"Looked Up: {domain.DomainName}, Status: {response.Status}, Size: {response.Content.Length}");
+                    if (response != null)
+                    {
+                        responses.Add(response);
+                    }
+                    else
+                    {
+                        Console.WriteLine($"NULL: {domain.DomainName}");
+                    }
                 }
+#pragma warning disable CA1031 // Catch-all: integration test continues on any network/parse error
                 catch (Exception e)
+#pragma warning restore CA1031
                 {
-                    Console.WriteLine($"FAIL: {response?.DomainName}: {e.Message}");
+                    Console.WriteLine($"FAIL: {domain.DomainName}: {e.Message}");
                 }
-                Thread.Sleep(1000);
             }
-        }
+        });
 
-        [Fact]
-        public async Task TestDownloadSamplesDomainsMultipleThreaded()
+        await Task.WhenAll(tasks);
+
+        foreach (var response in responses)
         {
-            var domains = new SampleReader().ReadSampleDomains();
-
-            var queue = new ConcurrentQueue<SampleDomain>(domains);
-            var responses = new ConcurrentBag<WhoisResponse>();
-
-            var tasks = Enumerable.Range(1, 25).Select(async i =>
-            {
-                while (queue.IsEmpty == false)
-                {
-                    if (!queue.TryDequeue(out var domain)) continue;
-
-                    Console.WriteLine($"Looking Up: {domain.DomainName}");
-
-                    try
-                    {
-                        var response = await lookup.Lookup(domain.DomainName);
-
-                        if (response != null)
-                        {
-                            responses.Add(response);
-                        }
-                        else
-                        {
-                            Console.WriteLine($"NULL: {domain.DomainName}");
-                        }
-                    }
-                    catch (Exception e)
-                    {
-                        Console.WriteLine($"FAIL: {domain.DomainName}: {e.Message}");
-                    }
-                }
-            });
-
-            await Task.WhenAll(tasks);
-
-            foreach (var response in responses)
-            {
-                Console.WriteLine($"Looked Up: {response.DomainName}, Status: {response.Status}, Size: {response.ContentLength}");
-            }
+            Console.WriteLine($"Looked Up: {response.DomainName}, Status: {response.Status}, Size: {response.ContentLength}");
         }
     }
 }

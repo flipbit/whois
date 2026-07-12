@@ -7,7 +7,7 @@ public enum DriftClassification
     TemplateShift,
     StatusMismatch,
     NewEntry,
-    QueryError
+    QueryError,
 }
 
 public enum DriftSeverity
@@ -15,7 +15,7 @@ public enum DriftSeverity
     Breakage,
     Drift,
     Info,
-    Warning
+    Warning,
 }
 
 public record DriftEntry(
@@ -28,17 +28,16 @@ public record DriftEntry(
     string Details,
     string? PreviousTemplate,
     string? CurrentTemplate,
-    List<string> PreviousFields,
-    List<string> CurrentFields);
+    IList<string> PreviousFields,
+    IList<string> CurrentFields);
 
 public static class DriftClassifier
 {
-    public static List<DriftEntry> Classify(
+    public static IList<DriftEntry> Classify(
         RefreshResults baseline,
-        RefreshResults current,
-        DomainRegistryData registry)
+        RefreshResults current)
     {
-        var entries = new List<DriftEntry>();
+        List<DriftEntry> entries = [];
 
         foreach (var (server, tlds) in current.Results)
         {
@@ -91,7 +90,7 @@ public static class DriftClassifier
         }
 
         // Status mismatch (ActualStatus set by RefreshEngine when parsed status differs from expected)
-        if (currentResult.ActualStatus != null && currentResult.ActualStatus != status)
+        if (currentResult.ActualStatus != null && !string.Equals(currentResult.ActualStatus, status, StringComparison.OrdinalIgnoreCase))
         {
             return new DriftEntry(server, tld, status, domain,
                 DriftClassification.StatusMismatch, DriftSeverity.Drift,
@@ -115,13 +114,13 @@ public static class DriftClassifier
         {
             return new DriftEntry(server, tld, status, domain,
                 DriftClassification.FieldRegression, DriftSeverity.Breakage,
-                $"Fields reduced from {baselineResult.ExtractedFields.Count} to {currentResult.ExtractedFields.Count}",
+                string.Format(System.Globalization.CultureInfo.InvariantCulture, "Fields reduced from {0} to {1}", baselineResult.ExtractedFields.Count, currentResult.ExtractedFields.Count),
                 baselineResult.MatchedTemplate, currentResult.MatchedTemplate,
                 baselineResult.ExtractedFields, currentResult.ExtractedFields);
         }
 
         // Template shift (different template, same or better fields)
-        if (currentResult.MatchedTemplate != baselineResult.MatchedTemplate)
+        if (!string.Equals(currentResult.MatchedTemplate, baselineResult.MatchedTemplate, StringComparison.Ordinal))
         {
             return new DriftEntry(server, tld, status, domain,
                 DriftClassification.TemplateShift, DriftSeverity.Info,

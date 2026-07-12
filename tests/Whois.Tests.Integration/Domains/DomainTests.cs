@@ -1,23 +1,22 @@
-using System.Threading.Tasks;
 using Xunit;
 
-namespace Whois.Domains
+namespace Whois.Domains;
+
+public class DomainTests
 {
-    public class DomainTests
+    private readonly WhoisLookup lookup;
+
+    public DomainTests()
     {
-        private readonly WhoisLookup lookup;
+        lookup = new WhoisLookup();
+    }
 
-        public DomainTests()
-        {
-            lookup = new WhoisLookup();
-        }
+    [Fact]
+    public async Task TestLookupCom()
+    {
+        var result = await lookup.Lookup("001hosting.com.br");
 
-        [Fact]
-        public async Task TestLookupCom()
-        {
-            var result = await lookup.Lookup("001hosting.com.br");
-
-            Assert.Equal(@"
+        Assert.Equal(@"
 % Copyright (c) Nic.br
 %  The use of the data below is only permitted as described in
 %  full by the terms of use at https://registro.br/termo/en.html ,
@@ -62,6 +61,5 @@ changed:     20180226
 % whois.registro.br accepts only direct match queries. Types
 % of queries are: domain (.br), registrant (tax ID), ticket,
 % provider, contact handle (ID), CIDR block, IP and ASN.", result.Content);
-        }
     }
 }

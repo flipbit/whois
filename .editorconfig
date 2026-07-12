@@ -9,19 +9,142 @@ trim_trailing_whitespace = true
 insert_final_newline = true
 
 [*.cs]
-# Use Allman braces (existing style)
+# Allman braces
 csharp_new_line_before_open_brace = all
 csharp_new_line_before_else = true
 csharp_new_line_before_catch = true
 csharp_new_line_before_finally = true
 
-# var preferences (match existing usage)
-csharp_style_var_for_built_in_types = true:suggestion
-csharp_style_var_when_type_is_apparent = true:suggestion
-csharp_style_var_elsewhere = true:suggestion
+# File-scoped namespaces
+dotnet_diagnostic.IDE0161.severity = warning
+csharp_style_namespace_declarations = file_scoped:warning
 
-# Namespace style
-csharp_style_namespace_declarations = block_scoped:suggestion
+# Remove unnecessary usings
+dotnet_diagnostic.IDE0005.severity = warning
+
+# No 'this.' qualification
+dotnet_style_qualification_for_field = false:warning
+dotnet_style_qualification_for_property = false:warning
+dotnet_style_qualification_for_method = false:warning
+dotnet_style_qualification_for_event = false:warning
+
+# Explicit accessibility modifiers
+dotnet_diagnostic.IDE0040.severity = warning
+dotnet_style_require_accessibility_modifiers = always:warning
+
+# Remove unnecessary cast
+dotnet_diagnostic.IDE0004.severity = warning
+
+# Remove unused parameters
+dotnet_diagnostic.IDE0060.severity = warning
+
+# Remove unnecessary value assignment
+dotnet_diagnostic.IDE0059.severity = warning
+
+# Make field readonly
+dotnet_diagnostic.IDE0044.severity = warning
+
+# Code formatting
+dotnet_diagnostic.IDE0055.severity = warning
+
+# Naming conventions
+dotnet_diagnostic.IDE1006.severity = warning
+
+# Namespace must match folder structure
+dotnet_diagnostic.IDE0130.severity = warning
+
+# --- Naming conventions ---
+
+# Constants: PascalCase
+dotnet_naming_rule.constants_should_be_pascal_case.symbols = constant_fields
+dotnet_naming_rule.constants_should_be_pascal_case.style = pascal_case_style
+dotnet_naming_rule.constants_should_be_pascal_case.severity = warning
+dotnet_naming_symbols.constant_fields.applicable_kinds = field
+dotnet_naming_symbols.constant_fields.required_modifiers = const
+dotnet_naming_style.pascal_case_style.capitalization = pascal_case
+
+# Static readonly fields: PascalCase
+dotnet_naming_rule.static_readonly_should_be_pascal_case.symbols = static_readonly_fields
+dotnet_naming_rule.static_readonly_should_be_pascal_case.style = pascal_case_style
+dotnet_naming_rule.static_readonly_should_be_pascal_case.severity = warning
+dotnet_naming_symbols.static_readonly_fields.applicable_kinds = field
+dotnet_naming_symbols.static_readonly_fields.required_modifiers = static, readonly
+
+# Interfaces: IPascalCase
+dotnet_naming_rule.interfaces_should_begin_with_i.symbols = interface
+dotnet_naming_rule.interfaces_should_begin_with_i.style = begins_with_i
+dotnet_naming_rule.interfaces_should_begin_with_i.severity = warning
+dotnet_naming_symbols.interface.applicable_kinds = interface
+dotnet_naming_style.begins_with_i.required_prefix = I
+dotnet_naming_style.begins_with_i.capitalization = pascal_case
+
+# Public members: PascalCase
+dotnet_naming_rule.public_members_should_be_pascal_case.symbols = public_symbols
+dotnet_naming_rule.public_members_should_be_pascal_case.style = pascal_case_style
+dotnet_naming_rule.public_members_should_be_pascal_case.severity = warning
+dotnet_naming_symbols.public_symbols.applicable_kinds = property, method, event
+dotnet_naming_symbols.public_symbols.applicable_accessibilities = public
+
+# Private fields: _camelCase
+dotnet_naming_rule.private_fields_should_be_camel_case.symbols = private_fields
+dotnet_naming_rule.private_fields_should_be_camel_case.style = underscore_camel_case
+dotnet_naming_rule.private_fields_should_be_camel_case.severity = warning
+dotnet_naming_symbols.private_fields.applicable_kinds = field
+dotnet_naming_symbols.private_fields.applicable_accessibilities = private
+dotnet_naming_style.underscore_camel_case.required_prefix = _
+dotnet_naming_style.underscore_camel_case.capitalization = camel_case
+
+# --- Meziantou.Analyzer rules ---
+dotnet_diagnostic.MA0001.severity = warning
+dotnet_diagnostic.MA0002.severity = warning
+dotnet_diagnostic.MA0003.severity = warning
+dotnet_diagnostic.MA0007.severity = warning
+# MA0009 (regex DoS): downgraded — patterns in tool code use controlled input; fixing requires per-pattern analysis
+dotnet_diagnostic.MA0009.severity = suggestion
+dotnet_diagnostic.MA0011.severity = warning
+dotnet_diagnostic.MA0016.severity = warning
+dotnet_diagnostic.MA0017.severity = warning
+dotnet_diagnostic.MA0020.severity = warning
+dotnet_diagnostic.MA0021.severity = warning
+# MA0023 (ExplicitCapture): downgraded — changing group capture mode breaks $1/$2 back-references in replacements
+dotnet_diagnostic.MA0023.severity = suggestion
+dotnet_diagnostic.MA0028.severity = warning
+dotnet_diagnostic.MA0029.severity = warning
+dotnet_diagnostic.MA0031.severity = warning
+dotnet_diagnostic.MA0037.severity = warning
+# MA0042 (prefer await using): downgraded — netstandard2.0 target lacks IAsyncDisposable on NetworkStream/StreamWriter
+dotnet_diagnostic.MA0042.severity = suggestion
+dotnet_diagnostic.MA0048.severity = warning
+dotnet_diagnostic.MA0050.severity = warning
+dotnet_diagnostic.MA0051.severity = none
+dotnet_diagnostic.MA0053.severity = warning
+dotnet_diagnostic.MA0071.severity = warning
+dotnet_diagnostic.MA0073.severity = warning
+dotnet_diagnostic.MA0074.severity = warning
+dotnet_diagnostic.MA0076.severity = warning
+dotnet_diagnostic.MA0089.severity = warning
+dotnet_diagnostic.MA0098.severity = warning
+dotnet_diagnostic.MA0101.severity = warning
+dotnet_diagnostic.MA0106.severity = warning
+dotnet_diagnostic.MA0110.severity = warning
+dotnet_diagnostic.MA0140.severity = warning
+dotnet_diagnostic.MA0154.severity = warning
+dotnet_diagnostic.MA0158.severity = warning
+dotnet_diagnostic.MA0159.severity = warning
+dotnet_diagnostic.MA0182.severity = warning
+dotnet_diagnostic.MA0184.severity = warning
+dotnet_diagnostic.MA0206.severity = warning
+
+# --- Code Analysis rules ---
+dotnet_diagnostic.CA1031.severity = warning
+dotnet_diagnostic.CA1507.severity = warning
+dotnet_diagnostic.CA1508.severity = warning
+dotnet_diagnostic.CA1822.severity = warning
+dotnet_diagnostic.CA1825.severity = warning
+dotnet_diagnostic.CA2000.severity = warning
+dotnet_diagnostic.CA2016.severity = warning
+dotnet_diagnostic.CA2200.severity = warning
+dotnet_diagnostic.CA2213.severity = warning
 
 [*.{xml,csproj,props,targets}]
 indent_size = 2

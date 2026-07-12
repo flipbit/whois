@@ -5,6 +5,9 @@
     <TargetFramework>net10.0</TargetFramework>
     <AssemblyName>Whois.Console</AssemblyName>
     <RootNamespace>Whois</RootNamespace>
+    <!-- Suppress MA0053 (sealed): console tool program entry class and nested Options class are not sealed by convention -->
+    <!-- Suppress MA0004 (ConfigureAwait): top-level application code; no synchronization context concerns -->
+    <NoWarn>$(NoWarn);MA0053;MA0004</NoWarn>
     <PackAsTool>true</PackAsTool>
     <ToolCommandName>dotnet-whois</ToolCommandName>
     <GeneratePackageOnBuild>true</GeneratePackageOnBuild>

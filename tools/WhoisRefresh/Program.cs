@@ -23,4 +23,4 @@ app.Configure(config =>
         .WithDescription("Compare refresh results against baseline, detect drift");
 });
 
-return await app.RunAsync(args);
+return await app.RunAsync(args).ConfigureAwait(false);

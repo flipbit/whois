@@ -10,21 +10,21 @@ public static class DriftReportGenerator
     {
         WriteIndented = true,
         PropertyNamingPolicy = JsonNamingPolicy.CamelCase,
-        Converters = { new JsonStringEnumConverter(JsonNamingPolicy.CamelCase) }
+        Converters = { new JsonStringEnumConverter(JsonNamingPolicy.CamelCase), },
     };
 
-    public static string ToJson(List<DriftEntry> entries)
+    public static string ToJson(IList<DriftEntry> entries)
     {
         return JsonSerializer.Serialize(entries, JsonOptions);
     }
 
-    public static List<DriftEntry> FromJson(string json)
+    public static IList<DriftEntry> FromJson(string json)
     {
         return JsonSerializer.Deserialize<List<DriftEntry>>(json, JsonOptions)
             ?? throw new InvalidOperationException("Failed to deserialize drift entries");
     }
 
-    public static string ToMarkdown(List<DriftEntry> entries)
+    public static string ToMarkdown(IList<DriftEntry> entries)
     {
         var sb = new StringBuilder();
         sb.AppendLine("# Drift Report");
@@ -98,6 +98,6 @@ public static class DriftReportGenerator
         DriftClassification.StatusMismatch => "Status mismatch",
         DriftClassification.NewEntry => "New entry",
         DriftClassification.QueryError => "Query error",
-        _ => classification.ToString()
+        _ => classification.ToString(),
     };
 }

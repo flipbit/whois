@@ -284,9 +284,9 @@ public class DomainRegistryTests
 
         // "verisign" group has 2 servers, "whois.nic.uk" is its own group
         Assert.Equal(2, groups.Count);
-        var verisignGroup = groups.First(g => g.Key == "verisign");
+        var verisignGroup = groups.First(g => string.Equals(g.Key, "verisign", StringComparison.Ordinal));
         Assert.Equal(2, verisignGroup.Count());
-        var ukGroup = groups.First(g => g.Key == "whois.nic.uk");
+        var ukGroup = groups.First(g => string.Equals(g.Key, "whois.nic.uk", StringComparison.Ordinal));
         Assert.Single(ukGroup);
     }
 }

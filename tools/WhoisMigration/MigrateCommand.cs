@@ -8,43 +8,40 @@ public class MigrateCommand
         int TemplatesMoved,
         int SamplesMoved,
         int TemplatesFrontMatterUpdated,
-        List<string> Errors,
-        Dictionary<string, string> TemplateNameMap);
+        IList<string> Errors,
+        IDictionary<string, string> TemplateNameMap);
 
     public static MigrationResult Execute(string repoRoot, bool dryRun = false)
     {
         var errors = new List<string>();
-        var templateNameMap = new Dictionary<string, string>();
-        var templatesMoved = 0;
-        var samplesMoved = 0;
-        var frontMatterUpdated = 0;
+        var templateNameMap = new Dictionary<string, string>(StringComparer.OrdinalIgnoreCase);
 
         // --- Migrate templates ---
         var resourcesDir = Path.Combine(repoRoot, "src", "Whois", "Resources");
-        templatesMoved = MigrateTemplates(resourcesDir, dryRun, errors, templateNameMap);
-        frontMatterUpdated = templatesMoved;
+        int templatesMoved = MigrateTemplates(resourcesDir, dryRun, errors, templateNameMap);
+        int frontMatterUpdated = templatesMoved;
 
         // --- Migrate samples ---
         var samplesDir = Path.Combine(repoRoot, "tests", "Whois.Tests", "Samples");
-        samplesMoved = MigrateSamples(samplesDir, dryRun, errors);
+        int samplesMoved = MigrateSamples(samplesDir, dryRun, errors);
 
         return new MigrationResult(templatesMoved, samplesMoved, frontMatterUpdated, errors, templateNameMap);
     }
 
-    public static void SaveTemplateNameMap(Dictionary<string, string> map, string outputPath)
+    public static void SaveTemplateNameMap(IDictionary<string, string> map, string outputPath)
     {
         var json = JsonSerializer.Serialize(map, new JsonSerializerOptions { WriteIndented = true });
         File.WriteAllText(outputPath, json);
     }
 
-    public static Dictionary<string, string> LoadTemplateNameMap(string path)
+    public static IDictionary<string, string> LoadTemplateNameMap(string path)
     {
         var json = File.ReadAllText(path);
         return JsonSerializer.Deserialize<Dictionary<string, string>>(json)
                ?? throw new InvalidOperationException("Failed to deserialize template name map.");
     }
 
-    private static int MigrateTemplates(string resourcesDir, bool dryRun, List<string> errors, Dictionary<string, string> templateNameMap)
+    private static int MigrateTemplates(string resourcesDir, bool dryRun, IList<string> errors, IDictionary<string, string> templateNameMap)
     {
         var moved = 0;
 
@@ -74,8 +71,8 @@ public class MigrateCommand
         string templateDir,
         string namePrefix,
         bool dryRun,
-        List<string> errors,
-        Dictionary<string, string> templateNameMap)
+        IList<string> errors,
+        IDictionary<string, string> templateNameMap)
     {
         var moved = 0;
         var templateFiles = Directory.GetFiles(templateDir, "*.txt");
@@ -83,7 +80,7 @@ public class MigrateCommand
         if (templateFiles.Length == 0) return 0;
 
         // Group by status (extracted from front matter)
-        var groups = new Dictionary<string, List<(string OldPath, string OldName)>>();
+        var groups = new Dictionary<string, List<(string OldPath, string OldName)>>(StringComparer.OrdinalIgnoreCase);
         foreach (var filePath in templateFiles)
         {
             var content = File.ReadAllText(filePath);
@@ -136,7 +133,7 @@ public class MigrateCommand
         return moved;
     }
 
-    private static int MigrateSamples(string samplesDir, bool dryRun, List<string> errors)
+    private static int MigrateSamples(string samplesDir, bool dryRun, IList<string> errors)
     {
         var moved = 0;
 

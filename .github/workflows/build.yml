@@ -30,4 +30,16 @@ jobs:
         run: dotnet build Whois.sln --no-restore
 
       - name: Test
-        run: dotnet test tests/Whois.Tests/Whois.Tests.csproj --no-build --verbosity normal
+        run: dotnet test tests/Whois.Tests/Whois.Tests.csproj --no-build --verbosity normal --collect:"XPlat Code Coverage" --results-directory ./TestResults
+
+      - name: Generate Coverage Report
+        if: matrix.os == 'ubuntu-latest'
+        uses: danielpalme/ReportGenerator-GitHub-Action@5
+        with:
+          reports: ./TestResults/**/coverage.cobertura.xml
+          targetdir: ./CoverageReport
+          reporttypes: MarkdownSummaryGithub
+
+      - name: Write Coverage to Job Summary
+        if: matrix.os == 'ubuntu-latest'
+        run: cat ./CoverageReport/SummaryGithub.md >> $GITHUB_STEP_SUMMARY

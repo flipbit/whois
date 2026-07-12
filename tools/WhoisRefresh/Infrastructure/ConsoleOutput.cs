@@ -4,7 +4,7 @@ namespace WhoisRefresh.Infrastructure;
 
 public static class ConsoleOutput
 {
-    public static bool IsCi => Environment.GetEnvironmentVariable("GITHUB_ACTIONS") == "true";
+    public static bool IsCi => string.Equals(Environment.GetEnvironmentVariable("GITHUB_ACTIONS"), "true", StringComparison.Ordinal);
 
     public static void WriteInfo(string message)
     {

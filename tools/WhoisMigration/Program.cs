@@ -15,7 +15,7 @@ if (updateTests)
 {
     Console.WriteLine("Updating parsing tests...");
 
-    Dictionary<string, string> templateNameMap;
+    IDictionary<string, string> templateNameMap;
     if (File.Exists(templateMapPath))
     {
         Console.WriteLine($"Loading template name map from: {templateMapPath}");
@@ -38,7 +38,7 @@ if (updateTests)
         var updated = TestUpdater.UpdateSampleReaderCalls(content);
         updated = TestUpdater.UpdateTemplateNameAssertions(updated, templateNameMap);
 
-        if (content != updated)
+        if (!string.Equals(content, updated, StringComparison.Ordinal))
         {
             if (!dryRun) File.WriteAllText(testFile, updated);
             Console.WriteLine($"  Updated: {Path.GetRelativePath(repoRoot, testFile)}");
@@ -46,7 +46,7 @@ if (updateTests)
         }
     }
 
-    Console.WriteLine($"\nTest files updated: {updatedCount}");
+    Console.WriteLine(string.Format(System.Globalization.CultureInfo.InvariantCulture, "\nTest files updated: {0}", updatedCount));
     return 0;
 }
 
@@ -55,13 +55,13 @@ Console.WriteLine($"Dry run: {dryRun}");
 
 var result = MigrateCommand.Execute(repoRoot, dryRun);
 
-Console.WriteLine($"Templates moved: {result.TemplatesMoved}");
-Console.WriteLine($"Samples moved: {result.SamplesMoved}");
-Console.WriteLine($"Front matter updated: {result.TemplatesFrontMatterUpdated}");
+Console.WriteLine(string.Format(System.Globalization.CultureInfo.InvariantCulture, "Templates moved: {0}", result.TemplatesMoved));
+Console.WriteLine(string.Format(System.Globalization.CultureInfo.InvariantCulture, "Samples moved: {0}", result.SamplesMoved));
+Console.WriteLine(string.Format(System.Globalization.CultureInfo.InvariantCulture, "Front matter updated: {0}", result.TemplatesFrontMatterUpdated));
 
 if (result.Errors.Count > 0)
 {
-    Console.WriteLine($"\nErrors ({result.Errors.Count}):");
+    Console.WriteLine(string.Format(System.Globalization.CultureInfo.InvariantCulture, "\nErrors ({0}):", result.Errors.Count));
     foreach (var error in result.Errors)
     {
         Console.WriteLine($"  - {error}");
