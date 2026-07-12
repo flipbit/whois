@@ -69,18 +69,19 @@ public class DetectCommandTests
             })
         });
 
-        fileSystem.FileExists(Arg.Any<string>()).Returns(true);
-        fileSystem.ReadAllTextAsync(Arg.Is<string>(p => p.Contains("refresh-results.json")), Arg.Any<CancellationToken>())
+        // Baseline is read via git, not directly from the file system
+        fileSystem.GitReadHeadAsync("/repo", "tools/WhoisRefresh/refresh-results.json", Arg.Any<CancellationToken>())
             .Returns(RefreshResults.Serialize(baseline));
 
         var detector = new DriftDetector(reporter, fileSystem);
-        var entries = await detector.DetectAsync(current, registry, "/repo/tools/WhoisRefresh", CancellationToken.None);
+        var entries = await detector.DetectAsync(current, registry, "/repo", "tools/WhoisRefresh", CancellationToken.None);
 
         Assert.Single(entries);
         Assert.Equal(DriftClassification.NoMatch, entries[0].Classification);
 
         await reporter.Received(1).ReportAsync(
             Arg.Is<List<DriftEntry>>(e => e.Count == 1),
+            Arg.Any<string>(),
             Arg.Any<string>(),
             Arg.Any<CancellationToken>());
     }
@@ -123,20 +124,19 @@ public class DetectCommandTests
             })
         });
 
-        fileSystem.FileExists(Arg.Any<string>()).Returns(true);
-        fileSystem.ReadAllTextAsync(Arg.Is<string>(p => p.Contains("refresh-results.json")), Arg.Any<CancellationToken>())
+        fileSystem.GitReadHeadAsync("/repo", "tools/WhoisRefresh/refresh-results.json", Arg.Any<CancellationToken>())
             .Returns(RefreshResults.Serialize(results));
 
         var detector = new DriftDetector(reporter, fileSystem);
-        var entries = await detector.DetectAsync(results, registry, "/repo/tools/WhoisRefresh", CancellationToken.None);
+        var entries = await detector.DetectAsync(results, registry, "/repo", "tools/WhoisRefresh", CancellationToken.None);
 
         Assert.Empty(entries);
         await reporter.DidNotReceive().ReportAsync(
-            Arg.Any<List<DriftEntry>>(), Arg.Any<string>(), Arg.Any<CancellationToken>());
+            Arg.Any<List<DriftEntry>>(), Arg.Any<string>(), Arg.Any<string>(), Arg.Any<CancellationToken>());
     }
 
     [Fact]
-    public async Task DetectAsync_NoBaseline_AllEntriesAreNew()
+    public async Task DetectAsync_NoBaselineInGit_AllEntriesAreNew()
     {
         var reporter = Substitute.For<IDriftReporter>();
         var fileSystem = Substitute.For<IFileSystem>();
@@ -173,15 +173,17 @@ public class DetectCommandTests
             })
         });
 
-        fileSystem.FileExists(Arg.Any<string>()).Returns(false);
+        // Simulate file not tracked in git (git show returns null)
+        fileSystem.GitReadHeadAsync(Arg.Any<string>(), Arg.Any<string>(), Arg.Any<CancellationToken>())
+            .Returns((string?)null);
 
         var detector = new DriftDetector(reporter, fileSystem);
-        var entries = await detector.DetectAsync(current, registry, "/repo/tools/WhoisRefresh", CancellationToken.None);
+        var entries = await detector.DetectAsync(current, registry, "/repo", "tools/WhoisRefresh", CancellationToken.None);
 
         Assert.Single(entries);
         Assert.Equal(DriftClassification.NewEntry, entries[0].Classification);
         // New entries don't trigger PR
         await reporter.DidNotReceive().ReportAsync(
-            Arg.Any<List<DriftEntry>>(), Arg.Any<string>(), Arg.Any<CancellationToken>());
+            Arg.Any<List<DriftEntry>>(), Arg.Any<string>(), Arg.Any<string>(), Arg.Any<CancellationToken>());
     }
 }

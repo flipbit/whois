@@ -16,15 +16,18 @@ public class DriftDetector
     public async Task<List<DriftEntry>> DetectAsync(
         RefreshResults current,
         DomainRegistryData registry,
-        string toolDirectory,
+        string repoRoot,
+        string toolDirectoryRelative,
         CancellationToken cancellationToken)
     {
-        var baselinePath = Path.Combine(toolDirectory, "refresh-results.json");
+        // Read baseline from HEAD commit so that a freshly-written refresh-results.json
+        // does not shadow the previous run's data.
+        var repoRelativePath = $"{toolDirectoryRelative}/refresh-results.json".Replace('\\', '/');
+        var baselineJson = await _fileSystem.GitReadHeadAsync(repoRoot, repoRelativePath, cancellationToken);
 
         RefreshResults baseline;
-        if (_fileSystem.FileExists(baselinePath))
+        if (baselineJson != null)
         {
-            var baselineJson = await _fileSystem.ReadAllTextAsync(baselinePath, cancellationToken);
             baseline = RefreshResults.Deserialize(baselineJson);
         }
         else
@@ -39,7 +42,7 @@ public class DriftDetector
         if (hasBreakages)
         {
             var markdown = DriftReportGenerator.ToMarkdown(entries);
-            await _reporter.ReportAsync(entries, markdown, cancellationToken);
+            await _reporter.ReportAsync(entries, markdown, repoRoot, cancellationToken);
         }
 
         return entries;

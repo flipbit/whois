@@ -39,7 +39,7 @@ public class DetectCommand : AsyncCommand<DetectSettings>
         var current = RefreshResults.Deserialize(currentJson);
 
         var detector = new DriftDetector(_reporter, _fileSystem);
-        var entries = await detector.DetectAsync(current, registry, toolDir, CancellationToken.None);
+        var entries = await detector.DetectAsync(current, registry, settings.RepoRoot, "tools/WhoisRefresh", CancellationToken.None);
 
         var isCi = Environment.GetEnvironmentVariable("GITHUB_ACTIONS") == "true";
         OutputResults(entries, isCi);
@@ -84,7 +84,7 @@ public class DetectCommand : AsyncCommand<DetectSettings>
                     DriftSeverity.Drift => "yellow",
                     _ => "blue"
                 };
-                AnsiConsole.MarkupLine($"[{color}]{entry.Severity}[/] {entry.Domain} ({entry.Server}): {entry.Details}");
+                AnsiConsole.MarkupLine($"[{color}]{entry.Severity}[/] {Markup.Escape(entry.Domain)} ({Markup.Escape(entry.Server)}): {Markup.Escape(entry.Details)}");
             }
         }
     }

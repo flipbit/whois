@@ -143,6 +143,119 @@ public class DomainRegistryTests
     }
 
     [Fact]
+    public async Task LoadAsync_DuplicateDomainAcrossStatuses_ThrowsValidation()
+    {
+        var jsonc = """
+            {
+              "servers": {
+                "whois.nic.uk": {
+                  "tld": "uk",
+                  "domains": {
+                    "found": ["google.co.uk"],
+                    "not-found": ["google.co.uk"]
+                  }
+                }
+              }
+            }
+            """;
+
+        var ex = await Assert.ThrowsAsync<DomainRegistryValidationException>(
+            () => DomainRegistry.LoadAsync(jsonc));
+        Assert.Contains("google.co.uk", ex.Message);
+        Assert.Contains("found", ex.Message);
+        Assert.Contains("not-found", ex.Message);
+    }
+
+    [Fact]
+    public async Task LoadAsync_UnknownStatusKey_ThrowsValidation()
+    {
+        var jsonc = """
+            {
+              "servers": {
+                "whois.nic.uk": {
+                  "tld": "uk",
+                  "domains": {
+                    "active": ["google.co.uk"]
+                  }
+                }
+              }
+            }
+            """;
+
+        var ex = await Assert.ThrowsAsync<DomainRegistryValidationException>(
+            () => DomainRegistry.LoadAsync(jsonc));
+        Assert.Contains("active", ex.Message);
+    }
+
+    [Theory]
+    [InlineData("../evil", "../evil")]
+    [InlineData("foo/bar", "foo/bar")]
+    [InlineData("foo\\\\bar", "foo\\bar")]  // JSON \\\\  → JSON-string \\  → C# string \
+    public async Task LoadAsync_ServerNameWithPathTraversal_ThrowsValidation(string jsonServerName, string expectedInMessage)
+    {
+        var jsonc = $$"""
+            {
+              "servers": {
+                "{{jsonServerName}}": {
+                  "tld": "uk",
+                  "domains": { "found": ["google.co.uk"] }
+                }
+              }
+            }
+            """;
+
+        var ex = await Assert.ThrowsAsync<DomainRegistryValidationException>(
+            () => DomainRegistry.LoadAsync(jsonc));
+        Assert.Contains("server name", ex.Message);
+        Assert.Contains(expectedInMessage, ex.Message);
+    }
+
+    [Theory]
+    [InlineData("../etc", "../etc")]
+    [InlineData("foo/bar", "foo/bar")]
+    [InlineData("foo\\\\bar", "foo\\bar")]  // JSON \\\\  → JSON-string \\  → C# string \
+    public async Task LoadAsync_TldWithPathTraversal_ThrowsValidation(string jsonTld, string expectedInMessage)
+    {
+        var jsonc = $$"""
+            {
+              "servers": {
+                "whois.nic.uk": {
+                  "tld": "{{jsonTld}}",
+                  "domains": { "found": ["google.co.uk"] }
+                }
+              }
+            }
+            """;
+
+        var ex = await Assert.ThrowsAsync<DomainRegistryValidationException>(
+            () => DomainRegistry.LoadAsync(jsonc));
+        Assert.Contains("tld", ex.Message);
+        Assert.Contains(expectedInMessage, ex.Message);
+    }
+
+    [Fact]
+    public async Task LoadAsync_AllValidStatusKeys_Accepted()
+    {
+        // Verify each valid status key is accepted without exception
+        foreach (var status in DomainRegistry.ValidStatusKeys)
+        {
+            var jsonc = $$"""
+                {
+                  "servers": {
+                    "whois.nic.uk": {
+                      "tld": "uk",
+                      "domains": { "{{status}}": ["google.co.uk"] }
+                    }
+                  }
+                }
+                """;
+
+            var registry = await DomainRegistry.LoadAsync(jsonc);
+            Assert.True(registry.Servers["whois.nic.uk"].Domains.ContainsKey(status));
+        }
+    }
+
+    [Fact]
     public async Task GetRateGroups_GroupsServersCorrectly()
     {
         var jsonc = """

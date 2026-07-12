@@ -4,6 +4,6 @@ namespace WhoisRefresh.Infrastructure;
 
 public interface IDriftReporter
 {
-    Task ReportAsync(List<DriftEntry> entries, string markdownReport, CancellationToken cancellationToken);
+    Task ReportAsync(List<DriftEntry> entries, string markdownReport, string repoRoot, CancellationToken cancellationToken);
     Task<bool> HasHumanCommitsAsync(string branch, CancellationToken cancellationToken);
 }
