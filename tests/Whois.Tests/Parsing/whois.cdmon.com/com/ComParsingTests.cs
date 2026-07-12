@@ -13,7 +13,7 @@ public class ComParsingTests : ParsingTests
         parser = new WhoisParser();
     }
 
-    [Fact(Skip = "Template update deferred - WHOIS response format changed")]
+    [Fact]
     public void Test_found()
     {
         var sample = SampleReader.Read("whois.cdmon.com", "com", "found", "cdmon.com.txt");
@@ -35,57 +35,57 @@ public class ComParsingTests : ParsingTests
         Assert.Equal("abuse@cdmon.com", response.Registrar.AbuseEmail);
         Assert.Equal("+34.935677577", response.Registrar.AbuseTelephoneNumber);
 
-        Assert.Equal(new DateTime(2009, 12, 16, 11, 40, 44, 000, DateTimeKind.Utc), response.Updated);
+        Assert.Equal(new DateTime(2018, 10, 25, 12, 11, 22, 000, DateTimeKind.Utc), response.Updated);
         Assert.Equal(new DateTime(2001, 08, 12, 15, 02, 57, 000, DateTimeKind.Utc), response.Registered);
-        Assert.Equal(new DateTime(2024, 08, 12, 15, 02, 53, 000, DateTimeKind.Utc), response.Expiration);
+        Assert.Equal(new DateTime(2034, 08, 12, 15, 02, 53, 000, DateTimeKind.Utc), response.Expiration);
 
         // Registrant Details
-        Assert.Equal("10dencehispahard,s.l.", response.Registrant.Name);
+        Assert.Equal("REDACTED FOR PRIVACY", response.Registrant.Name);
         Assert.Equal("10dencehispahard,s.l.", response.Registrant.Organization);
-        Assert.Equal("+34.902364138", response.Registrant.TelephoneNumber);
-        Assert.Equal("info@cdmon.com", response.Registrant.Email);
+        Assert.Null(response.Registrant.TelephoneNumber);
+        Assert.Null(response.Registrant.Email);
 
         // Registrant Address
-        Assert.Equal(4, response.Registrant.Address.Count);
-        Assert.Equal("Girona 81-83 local 6", response.Registrant.Address[0]);
-        Assert.Equal("Malgrat de Mar", response.Registrant.Address[1]);
-        Assert.Equal("08380", response.Registrant.Address[2]);
+        Assert.Equal(5, response.Registrant.Address.Count);
+        Assert.Equal("REDACTED FOR PRIVACY", response.Registrant.Address[0]);
+        Assert.Equal("REDACTED FOR PRIVACY", response.Registrant.Address[1]);
+        Assert.Equal("Barcelona", response.Registrant.Address[2]);
         Assert.Equal("ES", response.Registrant.Address[3]);
 
 
         // AdminContact Details
-        Assert.Equal("10dencehispahard,s.l.", response.AdminContact.Name);
-        Assert.Equal("10dencehispahard,s.l.", response.AdminContact.Organization);
-        Assert.Equal("+34.902364138", response.AdminContact.TelephoneNumber);
-        Assert.Equal("info@cdmon.com", response.AdminContact.Email);
+        Assert.Equal("REDACTED FOR PRIVACY", response.AdminContact.Name);
+        Assert.Equal("REDACTED FOR PRIVACY", response.AdminContact.Organization);
+        Assert.Null(response.AdminContact.TelephoneNumber);
+        Assert.Null(response.AdminContact.Email);
 
         // AdminContact Address
-        Assert.Equal(4, response.AdminContact.Address.Count);
-        Assert.Equal("Girona 81-83 local 6", response.AdminContact.Address[0]);
-        Assert.Equal("Malgrat de Mar", response.AdminContact.Address[1]);
-        Assert.Equal("08380", response.AdminContact.Address[2]);
-        Assert.Equal("ES", response.AdminContact.Address[3]);
+        Assert.Equal(5, response.AdminContact.Address.Count);
+        Assert.Equal("REDACTED FOR PRIVACY", response.AdminContact.Address[0]);
+        Assert.Equal("REDACTED FOR PRIVACY", response.AdminContact.Address[1]);
+        Assert.Equal("REDACTED FOR PRIVACY", response.AdminContact.Address[2]);
+        Assert.Equal("REDACTED FOR PRIVACY", response.AdminContact.Address[3]);
 
 
         // TechnicalContact Details
-        Assert.Equal("10dencehispahard,s.l.", response.TechnicalContact.Name);
-        Assert.Equal("10dencehispahard,s.l.", response.TechnicalContact.Organization);
-        Assert.Equal("+34.902364138", response.TechnicalContact.TelephoneNumber);
-        Assert.Equal("info@cdmon.com", response.TechnicalContact.Email);
+        Assert.Equal("REDACTED FOR PRIVACY", response.TechnicalContact.Name);
+        Assert.Equal("REDACTED FOR PRIVACY", response.TechnicalContact.Organization);
+        Assert.Null(response.TechnicalContact.TelephoneNumber);
+        Assert.Null(response.TechnicalContact.Email);
 
         // TechnicalContact Address
-        Assert.Equal(4, response.TechnicalContact.Address.Count);
-        Assert.Equal("Girona 81-83 local 6", response.TechnicalContact.Address[0]);
-        Assert.Equal("Malgrat de Mar", response.TechnicalContact.Address[1]);
-        Assert.Equal("08380", response.TechnicalContact.Address[2]);
-        Assert.Equal("ES", response.TechnicalContact.Address[3]);
+        Assert.Equal(5, response.TechnicalContact.Address.Count);
+        Assert.Equal("REDACTED FOR PRIVACY", response.TechnicalContact.Address[0]);
+        Assert.Equal("REDACTED FOR PRIVACY", response.TechnicalContact.Address[1]);
+        Assert.Equal("REDACTED FOR PRIVACY", response.TechnicalContact.Address[2]);
+        Assert.Equal("REDACTED FOR PRIVACY", response.TechnicalContact.Address[3]);
 
 
         // Nameservers
-        Assert.Equal(3, response.NameServers.Count);
-        Assert.Equal("ns2.cdmon.es", response.NameServers[0]);
-        Assert.Equal("ns3.cdmon.es", response.NameServers[1]);
-        Assert.Equal("ns1.cdmon.es", response.NameServers[2]);
+        Assert.Equal(4, response.NameServers.Count);
+        Assert.Equal("ns-1123.cdmon.com", response.NameServers[0]);
+        Assert.Equal("ns-1740.cdmon.com", response.NameServers[1]);
+        Assert.Equal("ns-61.cdmon.com", response.NameServers[2]);
 
         // Domain Status
         Assert.Equal(3, response.DomainStatus.Count);
@@ -94,6 +94,6 @@ public class ComParsingTests : ParsingTests
         Assert.Equal("clientTransferProhibited", response.DomainStatus[2]);
 
         Assert.Equal("unsigned", response.DnsSecStatus);
-        Assert.Equal(42, response.FieldsParsed);
+        Assert.Equal(44, response.FieldsParsed);
     }
 }
