@@ -31,7 +31,10 @@ public static class DomainRegistry
 
     public static readonly HashSet<string> ValidStatusKeys = new(StringComparer.OrdinalIgnoreCase)
     {
-        "found", "not-found", "throttled", "reserved", "suspended", "inactive", "expired"
+        "found", "not-found", "throttled", "reserved", "suspended", "inactive", "expired",
+        "blocked", "deactivated", "error", "failed", "invalid", "locked", "not-assigned",
+        "not-available", "out-of-service", "pending-delete", "quarantined", "redemption",
+        "to-be-released", "unavailable", "unconfirmed"
     };
 
     public static async Task<DomainRegistryData> LoadAsync(string jsonc)
