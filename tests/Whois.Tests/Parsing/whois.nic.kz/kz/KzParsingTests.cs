@@ -28,7 +28,7 @@ public class KzParsingTests : ParsingTests
         Assert.Equal(1, response.FieldsParsed);
     }
 
-    [Fact(Skip = "Template update deferred - WHOIS response format changed")]
+    [Fact]
     public void Test_found()
     {
         var sample = SampleReader.Read("whois.nic.kz", "kz", "found", "tabu.kz.txt");
@@ -43,46 +43,45 @@ public class KzParsingTests : ParsingTests
         Assert.Equal("tabu.kz", response.DomainName.ToString());
 
         // Registrar Details
-        Assert.Equal("HOSTER.KZ", response.Registrar.Name);
+        Assert.Equal("ICPS", response.Registrar.Name);
 
-        Assert.Equal(new DateTime(2010, 10, 04, 17, 32, 58, 000, DateTimeKind.Utc), response.Updated);
-        Assert.Equal(new DateTime(2010, 10, 04, 17, 24, 09, 000, DateTimeKind.Utc), response.Registered);
+        Assert.Null(response.Updated);
+        Assert.Equal(new DateTime(2019, 11, 24, 16, 59, 32, 000, DateTimeKind.Utc), response.Registered);
 
         // Registrant Details
-        Assert.Equal("Alexey Chumakov", response.Registrant.Name);
-        Assert.Equal("Alexey Chumakov", response.Registrant.Organization);
+        Assert.Equal("Viktor Pokussov", response.Registrant.Name);
+        Assert.Equal("Private Person", response.Registrant.Organization);
 
         // Registrant Address
-        Assert.Equal(4, response.Registrant.Address.Count);
-        Assert.Equal("UA 13-25-27", response.Registrant.Address[0]);
-        Assert.Equal("Tashkent", response.Registrant.Address[1]);
-        Assert.Equal("700194", response.Registrant.Address[2]);
-        Assert.Equal("UZ", response.Registrant.Address[3]);
+        Assert.Equal(5, response.Registrant.Address.Count);
+        Assert.Equal("99-1 Masanchi Str.", response.Registrant.Address[0]);
+        Assert.Equal("Almaty", response.Registrant.Address[1]);
+        Assert.Equal("Almaty", response.Registrant.Address[2]);
+        Assert.Equal("050013", response.Registrant.Address[3]);
 
 
         // AdminContact Details
-        Assert.Equal("HOSTERKZ-59014", response.AdminContact.RegistryId);
-        Assert.Equal("Hostmaster", response.AdminContact.Name);
-        Assert.Equal("+7.7212501060", response.AdminContact.TelephoneNumber);
-        Assert.Equal("+7.7212501060", response.AdminContact.FaxNumber);
-        Assert.Equal("kohaner@gmail.com", response.AdminContact.Email);
+        Assert.Equal("PS-KZ-1574611172", response.AdminContact.RegistryId);
+        Assert.Equal("Viktor Pokussov", response.AdminContact.Name);
+        Assert.Equal("+7.7717161816", response.AdminContact.TelephoneNumber);
+        Assert.Equal("+7.7717161816", response.AdminContact.FaxNumber);
+        Assert.Equal("v@victor.kz", response.AdminContact.Email);
 
 
         // Nameservers
-        Assert.Equal(2, response.NameServers.Count);
-        Assert.Equal("ns1.regi.kz", response.NameServers[0]);
-        Assert.Equal("ns2.regi.kz", response.NameServers[1]);
+        Assert.Equal(3, response.NameServers.Count);
+        Assert.Equal("ns2.ps.kz", response.NameServers[0]);
+        Assert.Equal("ns1.ps.kz", response.NameServers[1]);
 
         // Domain Status
-        Assert.Equal(3, response.DomainStatus.Count);
-        Assert.Equal("clientDeleteProhibited", response.DomainStatus[0]);
+        Assert.Equal(2, response.DomainStatus.Count);
+        Assert.Equal("clientTransferProhibited", response.DomainStatus[0]);
         Assert.Equal("clientRenewProhibited", response.DomainStatus[1]);
-        Assert.Equal("clientTransferProhibited", response.DomainStatus[2]);
 
         Assert.Equal(21, response.FieldsParsed);
     }
 
-    [Fact(Skip = "Template update deferred - WHOIS response format changed")]
+    [Fact]
     public void Test_found_status_ok()
     {
         var sample = SampleReader.Read("whois.nic.kz", "kz", "found", "google.kz.txt");
@@ -99,8 +98,8 @@ public class KzParsingTests : ParsingTests
         // Registrar Details
         Assert.Equal("KAZNIC", response.Registrar.Name);
 
-        Assert.Equal(new DateTime(2009, 08, 21, 09, 11, 45, 000, DateTimeKind.Utc), response.Updated);
-        Assert.Equal(new DateTime(1999, 06, 07, 20, 01, 43, 000, DateTimeKind.Utc), response.Registered);
+        Assert.Equal(new DateTime(2012, 11, 28, 04, 16, 59, 000, DateTimeKind.Utc), response.Updated);
+        Assert.Equal(new DateTime(1999, 06, 07, 14, 01, 43, 000, DateTimeKind.Utc), response.Registered);
 
         // Registrant Details
         Assert.Equal("Google Inc.", response.Registrant.Name);
@@ -116,11 +115,11 @@ public class KzParsingTests : ParsingTests
 
 
         // AdminContact Details
-        Assert.Equal("DA141-SL", response.AdminContact.RegistryId);
+        Assert.Equal("C000000197393-KZ", response.AdminContact.RegistryId);
         Assert.Equal("DNS Admin", response.AdminContact.Name);
-        Assert.Equal("+1.6503300100", response.AdminContact.TelephoneNumber);
-        Assert.Equal("+1.6506181499", response.AdminContact.FaxNumber);
-        Assert.Equal("dns-admin@google.com", response.AdminContact.Email);
+        Assert.Equal("+1.6502530000", response.AdminContact.TelephoneNumber);
+        Assert.Equal("+1.6506188571", response.AdminContact.FaxNumber);
+        Assert.Equal("ccops@markmonitor.com", response.AdminContact.Email);
 
 
         // Nameservers
