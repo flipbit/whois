@@ -30,7 +30,7 @@ public class TcpReader : ITcpReader
             using var reader = new StreamReader(stream, encoding);
 
             await writer.WriteLineAsync(command).ConfigureAwait(false);
-            await writer.FlushAsync().ConfigureAwait(false);
+            await NetStandardShims.FlushAsync(writer, token).ConfigureAwait(false);
 
             var sb = new StringBuilder();
             string? line;

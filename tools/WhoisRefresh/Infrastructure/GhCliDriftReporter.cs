@@ -26,7 +26,9 @@ public class GhCliDriftReporter : IDriftReporter
             var result = await RunGhAsync($"api repos/{{owner}}/{{repo}}/compare/main...{branch} --jq '.ahead_by'", cancellationToken).ConfigureAwait(false);
             return int.TryParse(result.Trim(), out var ahead) && ahead > 0;
         }
+#pragma warning disable CA1031 // Catch-all: gh CLI may fail in many ways; treat any failure as no human commits
         catch
+#pragma warning restore CA1031
         {
             return false;
         }
@@ -74,7 +76,9 @@ public class GhCliDriftReporter : IDriftReporter
             var trimmed = result.Trim();
             return int.TryParse(trimmed, out var number) ? number : null;
         }
+#pragma warning disable CA1031 // Catch-all: gh CLI may fail in many ways; treat any failure as no existing PR
         catch
+#pragma warning restore CA1031
         {
             return null;
         }

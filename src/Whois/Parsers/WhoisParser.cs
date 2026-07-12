@@ -13,8 +13,6 @@ public class WhoisParser
     private const string GenericTemplateTag = "catch-all";
 
     private readonly TemplateMatcher _matcher;
-    private readonly ResourceReader _reader;
-    private readonly WhoisStatusParser _statusParser;
 
     /// <summary>
     /// Creates a new instance of the <see cref="WhoisParser"/> class.
@@ -26,8 +24,6 @@ public class WhoisParser
             .WithTransformer<ToHostNameTransformer>();
 
         _matcher = new TemplateMatcher(options);
-        _reader = new ResourceReader();
-        _statusParser = new WhoisStatusParser();
         FixUps = new List<IFixup>();
 
         // Register default FixUps
@@ -103,7 +99,7 @@ public class WhoisParser
             value.ParsingErrors = match.Exceptions.Count + assignmentErrors;
             value.TemplateName = match.Template.Name;
 
-            var status = _statusParser.Parse(whoisServer, value.DomainStatus.FirstOrDefault(), value.Status);
+            var status = WhoisStatusParser.Parse(whoisServer, value.DomainStatus.FirstOrDefault(), value.Status);
 
             value.Status = status;
 
@@ -134,11 +130,11 @@ public class WhoisParser
 
         if (loaded) return;
 
-        var templateNames = _reader.GetNames(whoisServer);
+        var templateNames = ResourceReader.GetNames(whoisServer);
 
         foreach (var templateName in templateNames)
         {
-            var content = _reader.GetContent(templateName);
+            var content = ResourceReader.GetContent(templateName);
 
             _matcher.RegisterTemplate(content);
         }
@@ -148,11 +144,11 @@ public class WhoisParser
     {
         if (Templates.ContainsTag(GenericTemplateTag)) return;
 
-        var templateNames = _reader.GetNames("generic", "tld");
+        var templateNames = ResourceReader.GetNames("generic", "tld");
 
         foreach (var templateName in templateNames)
         {
-            var content = _reader.GetContent(templateName);
+            var content = ResourceReader.GetContent(templateName);
 
             _matcher.RegisterTemplate(content);
         }

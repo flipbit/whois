@@ -62,7 +62,9 @@ public class TcpReaderTest
         {
             // Should thrown an exception
         }
+#pragma warning disable CA1031 // Catch-all to fail test with a diagnostic message for any unexpected exception type
         catch (Exception)
+#pragma warning restore CA1031
         {
             Assert.Fail("Thrown an unexpected exception!");
         }

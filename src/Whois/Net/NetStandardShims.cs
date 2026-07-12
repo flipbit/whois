@@ -23,4 +23,14 @@ internal static class NetStandardShims
         return reader.ReadLineAsync(cancellationToken).AsTask();
 #endif
     }
+
+    public static Task FlushAsync(StreamWriter writer, CancellationToken cancellationToken)
+    {
+#if NETSTANDARD2_0
+        cancellationToken.ThrowIfCancellationRequested();
+        return writer.FlushAsync();
+#else
+        return writer.FlushAsync(cancellationToken);
+#endif
+    }
 }

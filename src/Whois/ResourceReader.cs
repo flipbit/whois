@@ -5,7 +5,7 @@ namespace Whois;
 /// </summary>
 public class ResourceReader
 {
-    public string GetName(string whoisServer, string tld, string name)
+    public static string GetName(string whoisServer, string tld, string name)
     {
         return $"{GetResourcePrefix(whoisServer, tld)}{name}.txt";
     }
@@ -13,7 +13,7 @@ public class ResourceReader
     /// <summary>
     /// Gets the embedded resource names for the given WHOIS server and TLD.
     /// </summary>
-    public IList<string> GetNames(string whoisServer, string tld)
+    public static IList<string> GetNames(string whoisServer, string tld)
     {
         var results = new List<string>();
 
@@ -35,7 +35,7 @@ public class ResourceReader
         return results;
     }
 
-    public IList<string> GetNames(string whoisServer)
+    public static IList<string> GetNames(string whoisServer)
     {
         var results = new List<string>();
 
@@ -56,7 +56,7 @@ public class ResourceReader
         return results;
     }
 
-    public string GetContent(string name)
+    public static string GetContent(string name)
     {
         return GetString(name);
     }

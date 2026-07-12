@@ -30,7 +30,9 @@ public class MultithreadingTests
 
                 Console.WriteLine($"Looked Up: {domain.DomainName}, Status: {response.Status}, Size: {response.Content.Length}");
             }
+#pragma warning disable CA1031 // Catch-all: integration test continues on any network/parse error
             catch (Exception e)
+#pragma warning restore CA1031
             {
                 Console.WriteLine($"FAIL: {response?.DomainName}: {e.Message}");
             }
@@ -67,7 +69,9 @@ public class MultithreadingTests
                         Console.WriteLine($"NULL: {domain.DomainName}");
                     }
                 }
+#pragma warning disable CA1031 // Catch-all: integration test continues on any network/parse error
                 catch (Exception e)
+#pragma warning restore CA1031
                 {
                     Console.WriteLine($"FAIL: {domain.DomainName}: {e.Message}");
                 }

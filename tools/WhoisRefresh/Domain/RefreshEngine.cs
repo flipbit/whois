@@ -152,7 +152,9 @@ public class RefreshEngine
                 Detail = $"{serverName}:43",
             };
         }
+#pragma warning disable CA1031 // Catch-all: WHOIS queries may fail with any exception; classify as unknown error
         catch (Exception ex)
+#pragma warning restore CA1031
         {
             result.Error = new QueryError
             {

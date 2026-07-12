@@ -38,7 +38,9 @@ public class PhysicalFileSystem : IFileSystem
 
             return process.ExitCode == 0 ? output : null;
         }
+#pragma warning disable CA1031 // Catch-all: git subprocess may fail in many ways; return null to signal unavailability
         catch
+#pragma warning restore CA1031
         {
             return null;
         }

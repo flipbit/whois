@@ -4,17 +4,10 @@ namespace Whois;
 
 public class ResourceReaderTests
 {
-    private readonly ResourceReader reader;
-
-    public ResourceReaderTests()
-    {
-        reader = new ResourceReader();
-    }
-
     [Fact]
     public void TestGetNames()
     {
-        var names = reader.GetNames("capetown-whois.registry.net.za", "capetown");
+        var names = ResourceReader.GetNames("capetown-whois.registry.net.za", "capetown");
 
         Assert.Equal(2, names.Count);
         Assert.Equal("Whois.Resources.capetown_whois.registry.net.za.capetown.found.01.txt", names[0]);
@@ -24,7 +17,7 @@ public class ResourceReaderTests
     [Fact]
     public void TestGetNamesWithDifferentCase()
     {
-        var names = reader.GetNames("Capetown-whois.registry.net.za", "Capetown");
+        var names = ResourceReader.GetNames("Capetown-whois.registry.net.za", "Capetown");
 
         Assert.Equal(2, names.Count);
         Assert.Equal("Whois.Resources.capetown_whois.registry.net.za.capetown.found.01.txt", names[0]);
@@ -34,7 +27,7 @@ public class ResourceReaderTests
     [Fact]
     public void TestGetNamesWhenNotFound()
     {
-        var names = reader.GetNames("missing.server", "missing.tld");
+        var names = ResourceReader.GetNames("missing.server", "missing.tld");
 
         Assert.Empty(names);
     }
@@ -42,7 +35,7 @@ public class ResourceReaderTests
     [Fact]
     public void TestGetNamesWhenEmptyInputs()
     {
-        var names = reader.GetNames(string.Empty, string.Empty);
+        var names = ResourceReader.GetNames(string.Empty, string.Empty);
 
         Assert.Empty(names);
     }
@@ -50,7 +43,7 @@ public class ResourceReaderTests
     [Fact]
     public void TestGetNamesWhenNullInputs()
     {
-        var names = reader.GetNames(null, null);
+        var names = ResourceReader.GetNames(null, null);
 
         Assert.Empty(names);
     }
@@ -58,7 +51,7 @@ public class ResourceReaderTests
     [Fact]
     public void TestGetContent()
     {
-        var content = reader.GetContent("Whois.Resources.capetown_whois.registry.net.za.capetown.found.01.txt");
+        var content = ResourceReader.GetContent("Whois.Resources.capetown_whois.registry.net.za.capetown.found.01.txt");
 
         Assert.True(content.Length > 0);
     }
@@ -66,7 +59,7 @@ public class ResourceReaderTests
     [Fact]
     public void TestGetContentWhenNotFound()
     {
-        var content = reader.GetContent("missing");
+        var content = ResourceReader.GetContent("missing");
 
         Assert.True(content.Length == 0);
     }

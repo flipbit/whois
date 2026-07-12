@@ -135,6 +135,17 @@ dotnet_diagnostic.MA0182.severity = warning
 dotnet_diagnostic.MA0184.severity = warning
 dotnet_diagnostic.MA0206.severity = warning
 
+# --- Code Analysis rules ---
+dotnet_diagnostic.CA1031.severity = warning
+dotnet_diagnostic.CA1507.severity = warning
+dotnet_diagnostic.CA1508.severity = warning
+dotnet_diagnostic.CA1822.severity = warning
+dotnet_diagnostic.CA1825.severity = warning
+dotnet_diagnostic.CA2000.severity = warning
+dotnet_diagnostic.CA2016.severity = warning
+dotnet_diagnostic.CA2200.severity = warning
+dotnet_diagnostic.CA2213.severity = warning
+
 [*.{xml,csproj,props,targets}]
 indent_size = 2
 

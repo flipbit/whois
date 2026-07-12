@@ -5,7 +5,7 @@ namespace Whois.Parsers;
 /// </summary>
 public class WhoisStatusParser
 {
-    public WhoisStatus Parse(string whoisServer, string? status, WhoisStatus existing)
+    public static WhoisStatus Parse(string whoisServer, string? status, WhoisStatus existing)
     {
         if (Equals(status, "auto-renew grace")) return WhoisStatus.NotAssigned;
         if (Equals(status, "pending delete")) return WhoisStatus.PendingDelete;

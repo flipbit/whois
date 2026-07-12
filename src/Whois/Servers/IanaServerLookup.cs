@@ -15,7 +15,6 @@ public class IanaServerLookup : IWhoisServerLookup
 
     private readonly ILogger<IanaServerLookup> _logger;
     private readonly Lazy<TemplateMatcher> _ianaTemplate;
-    private readonly ResourceReader _resourceReader;
 
     /// <summary>
     /// The <see cref="ITcpReader"/> to use for network requests
@@ -36,7 +35,6 @@ public class IanaServerLookup : IWhoisServerLookup
     public IanaServerLookup(ITcpReader tcpReader, ILogger<IanaServerLookup> logger)
     {
         _ianaTemplate = new Lazy<TemplateMatcher>(CreateIanaTemplate);
-        _resourceReader = new ResourceReader();
         TcpReader = tcpReader;
         _logger = logger;
     }
@@ -87,11 +85,11 @@ public class IanaServerLookup : IWhoisServerLookup
 
         var matcher = new TemplateMatcher(options);
 
-        var resourceNames = _resourceReader.GetNames("whois.iana.org");
+        var resourceNames = ResourceReader.GetNames("whois.iana.org");
 
         foreach (var resourceName in resourceNames)
         {
-            var content = _resourceReader.GetContent(resourceName);
+            var content = ResourceReader.GetContent(resourceName);
 
             matcher.RegisterTemplate(content);
         }
@@ -99,7 +97,7 @@ public class IanaServerLookup : IWhoisServerLookup
         return matcher;
     }
 
-    private string GetTld(string domain)
+    private static string GetTld(string domain)
     {
         var tld = domain;
 

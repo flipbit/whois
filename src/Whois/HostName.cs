@@ -16,7 +16,7 @@ public class HostName
     {
         if (string.IsNullOrEmpty(hostName))
         {
-            throw new ArgumentNullException("hostName", "Must specify as host name.");
+            throw new ArgumentNullException(nameof(hostName), "Must specify as host name.");
         }
 
         // If input is unicode, convert to punycode
