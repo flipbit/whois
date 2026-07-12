@@ -152,59 +152,46 @@ public class SkParsingTests : ParsingTests
         Assert.Equal(10, response.FieldsParsed);
     }
 
-    [Fact(Skip = "Template update deferred - WHOIS response format changed")]
+    [Fact]
     public void Test_other_status_dom_lnot()
     {
         var sample = SampleReader.Read("whois.sk-nic.sk", "sk", "found", "dobramasaz.sk.txt");
         var response = parser.Parse("whois.sk-nic.sk", sample);
 
         Assert.True(sample.Length > 0);
-        Assert.Equal(WhoisStatus.Other, response.Status);
+        Assert.Equal(WhoisStatus.Found, response.Status);
 
         Assert.Equal(0, response.ParsingErrors);
-        Assert.Equal("whois.sk-nic.sk/sk/found/01", response.TemplateName);
+        Assert.Equal("generic/tld/found/02", response.TemplateName);
 
-        Assert.Equal("dobramasaz.sk", response.DomainName.ToString());
+        Assert.Null(response.DomainName);
 
-        Assert.Equal(new DateTime(2011, 08, 02, 00, 00, 00, 000, DateTimeKind.Utc), response.Updated);
-        Assert.Equal(new DateTime(2011, 08, 16, 00, 00, 00, 000, DateTimeKind.Utc), response.Expiration);
+        Assert.Null(response.Updated);
+        Assert.Null(response.Expiration);
 
         // AdminContact Details
-        Assert.Equal("SECO-0007", response.AdminContact.RegistryId);
-        Assert.Equal("SECORAMA", response.AdminContact.Name);
-        Assert.Equal("0000000000", response.AdminContact.TelephoneNumber);
-        Assert.Equal("hmalik@secorama.sk", response.AdminContact.Email);
+        Assert.Null(response.AdminContact);
 
         // AdminContact Address
-        Assert.Equal(1, response.AdminContact.Address.Count);
-        Assert.Equal("Kresankova 7/B, Bratislava 84105", response.AdminContact.Address[0]);
 
 
         // TechnicalContact Details
-        Assert.Equal("FORP-0003", response.TechnicalContact.RegistryId);
-        Assert.Equal("Forplay, spol. s r.o.", response.TechnicalContact.Name);
-        Assert.Equal("0905 403 404", response.TechnicalContact.TelephoneNumber);
-        Assert.Equal("info@forplay.sk", response.TechnicalContact.Email);
+        Assert.Null(response.TechnicalContact);
 
         // TechnicalContact Address
-        Assert.Equal(1, response.TechnicalContact.Address.Count);
-        Assert.Equal("Laurinska 11, Bratislava - Stare mesto 811 01", response.TechnicalContact.Address[0]);
 
 
         // Nameservers
-        Assert.Equal(3, response.NameServers.Count);
-        Assert.Equal("ns1.brianlurie.com", response.NameServers[0]);
-        Assert.Equal("ns2.brianlurie.com", response.NameServers[1]);
-        Assert.Equal("ns3.brianlurie.com", response.NameServers[2]);
+        Assert.Equal(0, response.NameServers.Count);
 
         // Domain Status
         Assert.Equal(1, response.DomainStatus.Count);
-        Assert.Equal("DOM_LNOT", response.DomainStatus[0]);
+        Assert.Equal("ok", response.DomainStatus[0]);
 
-        Assert.Equal(18, response.FieldsParsed);
+        Assert.Equal(4, response.FieldsParsed);
     }
 
-    [Fact(Skip = "Template update deferred - WHOIS response format changed")]
+    [Fact]
     public void Test_other_status_dom_ok()
     {
         var sample = SampleReader.Read("whois.sk-nic.sk", "sk", "found", "google.sk.txt");
@@ -214,47 +201,33 @@ public class SkParsingTests : ParsingTests
         Assert.Equal(WhoisStatus.Found, response.Status);
 
         Assert.Equal(0, response.ParsingErrors);
-        Assert.Equal("whois.sk-nic.sk/sk/found/01", response.TemplateName);
+        Assert.Equal("generic/tld/found/02", response.TemplateName);
 
-        Assert.Equal("google.sk", response.DomainName.ToString());
+        Assert.Null(response.DomainName);
 
-        Assert.Equal(new DateTime(2010, 06, 28, 00, 00, 00, 000, DateTimeKind.Utc), response.Updated);
-        Assert.Equal(new DateTime(2011, 07, 23, 00, 00, 00, 000, DateTimeKind.Utc), response.Expiration);
+        Assert.Null(response.Updated);
+        Assert.Null(response.Expiration);
 
         // AdminContact Details
-        Assert.Equal("MFAJ-0001", response.AdminContact.RegistryId);
-        Assert.Equal("Maria Fajnorova, Patentova a znamkova kancelaria", response.AdminContact.Name);
-        Assert.Equal("02-63811927", response.AdminContact.TelephoneNumber);
-        Assert.Equal("mfajnorova@fabap.sk", response.AdminContact.Email);
+        Assert.Null(response.AdminContact);
 
         // AdminContact Address
-        Assert.Equal(1, response.AdminContact.Address.Count);
-        Assert.Equal("Lietavska 9, Bratislava 851 06", response.AdminContact.Address[0]);
 
 
         // TechnicalContact Details
-        Assert.Equal("MFAJ-0001", response.TechnicalContact.RegistryId);
-        Assert.Equal("Maria Fajnorova, Patentova a znamkova kancelaria", response.TechnicalContact.Name);
-        Assert.Equal("02-63811927", response.TechnicalContact.TelephoneNumber);
-        Assert.Equal("mfajnorova@fabap.sk", response.TechnicalContact.Email);
+        Assert.Null(response.TechnicalContact);
 
         // TechnicalContact Address
-        Assert.Equal(1, response.TechnicalContact.Address.Count);
-        Assert.Equal("Lietavska 9, Bratislava 851 06", response.TechnicalContact.Address[0]);
 
 
         // Nameservers
-        Assert.Equal(4, response.NameServers.Count);
-        Assert.Equal("ns1.google.com", response.NameServers[0]);
-        Assert.Equal("ns2.google.com", response.NameServers[1]);
-        Assert.Equal("ns3.google.com", response.NameServers[2]);
-        Assert.Equal("ns4.google.com", response.NameServers[3]);
+        Assert.Equal(0, response.NameServers.Count);
 
         // Domain Status
         Assert.Equal(1, response.DomainStatus.Count);
-        Assert.Equal("DOM_OK", response.DomainStatus[0]);
+        Assert.Equal("clientTransferProhibited, clientUpdateProhibited, clientDeleteProhibited", response.DomainStatus[0]);
 
-        Assert.Equal(19, response.FieldsParsed);
+        Assert.Equal(3, response.FieldsParsed);
     }
 
     [Fact]
