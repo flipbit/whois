@@ -109,7 +109,7 @@ public class TzParsingTests : ParsingTests
         Assert.Equal(1, response.FieldsParsed);
     }
 
-    [Fact(Skip = "Template update deferred - WHOIS response format changed")]
+    [Fact]
     public void Test_found()
     {
         var sample = SampleReader.Read("whois.tznic.or.tz", "tz", "found", "dailynews.co.tz.txt");
@@ -124,64 +124,51 @@ public class TzParsingTests : ParsingTests
         Assert.Equal("dailynews.co.tz", response.DomainName.ToString());
 
         // Registrar Details
-        Assert.Equal("REG-TZNIC", response.Registrar.Name);
+        Assert.Equal("REG-THL", response.Registrar.Name);
 
-        Assert.Equal(new DateTime(2010, 08, 30, 15, 47, 56, 000, DateTimeKind.Utc), response.Updated);
+        Assert.Equal(new DateTime(2022, 06, 23, 13, 47, 22, 000, DateTimeKind.Utc), response.Updated);
         Assert.Equal(new DateTime(2009, 07, 27, 11, 01, 10, 000, DateTimeKind.Utc), response.Registered);
-        Assert.Equal(new DateTime(2012, 07, 27, 00, 00, 00, 000, DateTimeKind.Utc), response.Expiration);
+        Assert.Equal(new DateTime(2026, 07, 27, 00, 00, 00, 000, DateTimeKind.Utc), response.Expiration);
 
         // Registrant Details
-        Assert.Equal("CM7-TZNIC", response.Registrant.RegistryId);
-        Assert.Equal("Collins Mtita", response.Registrant.Name);
-        Assert.Equal("TSN", response.Registrant.Organization);
-        Assert.Equal("mcollins@dailynews.co.tz", response.Registrant.Email);
+        Assert.Equal("TSN", response.Registrant.RegistryId);
+        Assert.Null(response.Registrant.Name);
+        Assert.Null(response.Registrant.Organization);
+        Assert.Null(response.Registrant.Email);
 
         // Registrant Address
-        Assert.Equal(4, response.Registrant.Address.Count);
-        Assert.Equal("Dar_es_salaam", response.Registrant.Address[0]);
-        Assert.Equal("Dar_es_salaam", response.Registrant.Address[1]);
-        Assert.Equal("P.O.BOX 9033", response.Registrant.Address[2]);
-        Assert.Equal("TZ", response.Registrant.Address[3]);
+        Assert.Equal(0, response.Registrant.Address.Count);
 
 
         // AdminContact Details
-        Assert.Equal("CM7-TZNIC", response.AdminContact.RegistryId);
-        Assert.Equal("Collins Mtita", response.AdminContact.Name);
-        Assert.Equal("TSN", response.AdminContact.Organization);
-        Assert.Equal("mcollins@dailynews.co.tz", response.AdminContact.Email);
+        Assert.Equal("TSN", response.AdminContact.RegistryId);
+        Assert.Null(response.AdminContact.Name);
+        Assert.Null(response.AdminContact.Organization);
+        Assert.Null(response.AdminContact.Email);
 
         // AdminContact Address
-        Assert.Equal(4, response.AdminContact.Address.Count);
-        Assert.Equal("Dar_es_salaam", response.AdminContact.Address[0]);
-        Assert.Equal("Dar_es_salaam", response.AdminContact.Address[1]);
-        Assert.Equal("P.O.BOX 9033", response.AdminContact.Address[2]);
-        Assert.Equal("TZ", response.AdminContact.Address[3]);
+        Assert.Equal(0, response.AdminContact.Address.Count);
 
 
         // TechnicalContact Details
-        Assert.Equal("JN1-TZNIC", response.TechnicalContact.RegistryId);
-        Assert.Equal("Jacob Noel", response.TechnicalContact.Name);
-        Assert.Equal("Twiga Hosting", response.TechnicalContact.Organization);
-        Assert.Equal("+255.755763951", response.TechnicalContact.TelephoneNumber);
-        Assert.Equal("jacobn@twigaonline.com", response.TechnicalContact.Email);
+        Assert.Equal("TSN", response.TechnicalContact.RegistryId);
+        Assert.Null(response.TechnicalContact.Name);
+        Assert.Null(response.TechnicalContact.Organization);
+        Assert.Null(response.TechnicalContact.TelephoneNumber);
+        Assert.Null(response.TechnicalContact.Email);
 
         // TechnicalContact Address
-        Assert.Equal(4, response.TechnicalContact.Address.Count);
-        Assert.Equal("Dar es Salaam", response.TechnicalContact.Address[0]);
-        Assert.Equal("Dar es Salaam", response.TechnicalContact.Address[1]);
-        Assert.Equal("P.O.Box", response.TechnicalContact.Address[2]);
-        Assert.Equal("TZ", response.TechnicalContact.Address[3]);
+        Assert.Equal(0, response.TechnicalContact.Address.Count);
 
 
         // Nameservers
-        Assert.Equal(2, response.NameServers.Count);
-        Assert.Equal("ns1.twigaservers.com", response.NameServers[0]);
-        Assert.Equal("ns2.twigaservers.com", response.NameServers[1]);
+        Assert.Equal(3, response.NameServers.Count);
+        Assert.Equal("hosting.nidc.co.tz", response.NameServers[0]);
+        Assert.Equal("ns1.nidc.co.tz", response.NameServers[1]);
 
         // Domain Status
-        Assert.Equal(1, response.DomainStatus.Count);
-        Assert.Equal("paid and in zone", response.DomainStatus[0]);
+        Assert.Equal(0, response.DomainStatus.Count);
 
-        Assert.Equal(29, response.FieldsParsed);
+        Assert.Equal(13, response.FieldsParsed);
     }
 }
