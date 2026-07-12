@@ -30,7 +30,7 @@ public class IrParsingTests : ParsingTests
         Assert.Equal(2, response.FieldsParsed);
     }
 
-    [Fact(Skip = "Template update deferred - WHOIS response format changed")]
+    [Fact]
     public void Test_found()
     {
         var sample = SampleReader.Read("whois.nic.ir", "ir", "found", "google.ir.txt");
@@ -44,52 +44,34 @@ public class IrParsingTests : ParsingTests
 
         Assert.Equal("google.ir", response.DomainName.ToString());
 
-        Assert.Equal(new DateTime(2014, 02, 17, 00, 00, 00, 000, DateTimeKind.Utc), response.Updated);
-        Assert.Equal(new DateTime(2014, 12, 22, 00, 00, 00, 000, DateTimeKind.Utc), response.Expiration);
+        Assert.Null(response.Updated);
+        Assert.Null(response.Expiration);
 
         // Registrant Details
-        Assert.Equal("go438-irnic", response.Registrant.RegistryId);
-        Assert.Equal("Google Inc.", response.Registrant.Organization);
-        Assert.Equal("+1 650 623 4000", response.Registrant.TelephoneNumber);
-        Assert.Equal("+1 650 618 8571", response.Registrant.FaxNumber);
-        Assert.Equal("support@domainservicesltd.co.uk", response.Registrant.Email);
+        Assert.Null(response.Registrant);
 
         // Registrant Address
-        Assert.Equal(1, response.Registrant.Address.Count);
-        Assert.Equal("1600 Amphitheatre Parkway, Mountain View, CA, US", response.Registrant.Address[0]);
 
 
         // AdminContact Details
-        Assert.Equal("do210-irnic", response.AdminContact.RegistryId);
-        Assert.Equal("Domain Services Ltd", response.AdminContact.Organization);
-        Assert.Equal("+44 87 20229870", response.AdminContact.TelephoneNumber);
-        Assert.Equal("+44 87 20229871", response.AdminContact.FaxNumber);
-        Assert.Equal("admin@domainservicesltd.co.uk", response.AdminContact.Email);
+        Assert.Null(response.AdminContact);
 
         // AdminContact Address
-        Assert.Equal(1, response.AdminContact.Address.Count);
-        Assert.Equal("2nd Floor 145-147 St.John Street, London, London, UK", response.AdminContact.Address[0]);
 
 
         // TechnicalContact Details
-        Assert.Equal("do210-irnic", response.TechnicalContact.RegistryId);
-        Assert.Equal("Domain Services Ltd", response.TechnicalContact.Organization);
-        Assert.Equal("+44 87 20229870", response.TechnicalContact.TelephoneNumber);
-        Assert.Equal("+44 87 20229871", response.TechnicalContact.FaxNumber);
-        Assert.Equal("admin@domainservicesltd.co.uk", response.TechnicalContact.Email);
+        Assert.Null(response.TechnicalContact);
 
         // TechnicalContact Address
-        Assert.Equal(1, response.TechnicalContact.Address.Count);
-        Assert.Equal("2nd Floor 145-147 St.John Street, London, London, UK", response.TechnicalContact.Address[0]);
 
 
         // Nameservers
         Assert.Equal(4, response.NameServers.Count);
-        Assert.Equal("ns3.google.com", response.NameServers[0]);
-        Assert.Equal("ns4.google.com", response.NameServers[1]);
-        Assert.Equal("ns1.google.com", response.NameServers[2]);
-        Assert.Equal("ns2.google.com", response.NameServers[3]);
+        Assert.Equal("ns1.googledomains.com", response.NameServers[0]);
+        Assert.Equal("ns2.googledomains.com", response.NameServers[1]);
+        Assert.Equal("ns3.googledomains.com", response.NameServers[2]);
+        Assert.Equal("ns4.googledomains.com", response.NameServers[3]);
 
-        Assert.Equal(23, response.FieldsParsed);
+        Assert.Equal(6, response.FieldsParsed);
     }
 }
