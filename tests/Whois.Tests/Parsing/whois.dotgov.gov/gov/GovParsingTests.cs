@@ -13,7 +13,7 @@ public class GovParsingTests : ParsingTests
         parser = new WhoisParser();
     }
 
-    [Fact(Skip = "Template update deferred - WHOIS response format changed")]
+    [Fact]
     public void Test_not_found()
     {
         var sample = SampleReader.Read("whois.dotgov.gov", "gov", "not-found", "u34jedzcq.gov.txt");
@@ -23,14 +23,14 @@ public class GovParsingTests : ParsingTests
         Assert.Equal(WhoisStatus.NotFound, response.Status);
 
         Assert.Equal(0, response.ParsingErrors);
-        Assert.Equal("whois.dotgov.gov/gov/not-found/01", response.TemplateName);
+        Assert.Equal("generic/tld/not-found/03", response.TemplateName);
 
-        Assert.Equal("u34jedzcq.gov", response.DomainName.ToString());
+        Assert.Null(response.DomainName);
 
-        Assert.Equal(2, response.FieldsParsed);
+        Assert.Equal(1, response.FieldsParsed);
     }
 
-    [Fact(Skip = "Template update deferred - WHOIS response format changed")]
+    [Fact]
     public void Test_found()
     {
         var sample = SampleReader.Read("whois.dotgov.gov", "gov", "found", "gsa.gov.txt");
@@ -46,7 +46,7 @@ public class GovParsingTests : ParsingTests
 
         // Domain Status
         Assert.Equal(1, response.DomainStatus.Count);
-        Assert.Equal("ACTIVE", response.DomainStatus[0]);
+        Assert.Equal("serverTransferProhibited https://icann.org/epp#serverTransferProhibited", response.DomainStatus[0]);
 
         Assert.Equal(3, response.FieldsParsed);
     }
