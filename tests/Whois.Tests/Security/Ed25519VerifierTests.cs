@@ -125,4 +125,20 @@ public class Ed25519VerifierTests
 
         Assert.False(result, "Expected tampered signature to fail managed verification");
     }
+
+    [Theory]
+    [MemberData(nameof(Rfc8032Vectors))]
+    public void ManagedImpl_WithWrongPublicKey_ReturnsFalse(string publicKeyHex, string messageHex, string signatureHex)
+    {
+        var publicKey = Convert.FromHexString(publicKeyHex);
+        var message = messageHex.Length == 0 ? Array.Empty<byte>() : Convert.FromHexString(messageHex);
+        var signature = Convert.FromHexString(signatureHex);
+
+        // Flip a bit in the public key
+        publicKey[0] ^= 0x01;
+
+        var result = ManagedEd25519.Verify(signature, message, publicKey);
+
+        Assert.False(result, "Expected wrong public key to fail managed verification");
+    }
 }
