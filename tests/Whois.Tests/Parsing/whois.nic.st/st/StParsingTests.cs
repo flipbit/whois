@@ -30,7 +30,7 @@ public class StParsingTests : ParsingTests
         Assert.Equal(2, response.FieldsParsed);
     }
 
-    [Fact(Skip = "Template update deferred - WHOIS response format changed")]
+    [Fact]
     public void Test_found()
     {
         var sample = SampleReader.Read("whois.nic.st", "st", "found", "google.st.txt");
@@ -45,16 +45,16 @@ public class StParsingTests : ParsingTests
         Assert.Equal("google.st", response.DomainName.ToString());
 
         // Registrar Details
-        Assert.Equal("MarkMonitor Inc.", response.Registrar.Name);
+        Assert.Equal("Markmonitor Inc.", response.Registrar.Name);
         Assert.Equal("www.markmonitor.com", response.Registrar.Url);
 
-        Assert.Equal(new DateTime(2017, 05, 14, 09, 28, 07, 000, DateTimeKind.Utc), response.Updated);
+        Assert.Equal(new DateTime(2026, 05, 14, 10, 25, 52, 000, DateTimeKind.Utc), response.Updated);
         Assert.Equal(new DateTime(2004, 06, 15, 18, 24, 45, 000, DateTimeKind.Utc), response.Registered);
-        Assert.Equal(new DateTime(2018, 06, 15, 18, 24, 45, 000, DateTimeKind.Utc), response.Expiration);
+        Assert.Equal(new DateTime(2027, 06, 15, 18, 24, 45, 000, DateTimeKind.Utc), response.Expiration);
 
         // Registrant Details
-        Assert.Equal("DNS Admin (mm-87489)", response.Registrant.Name);
-        Assert.Equal("Google Inc.", response.Registrant.Organization);
+        Assert.Equal("Domain Administrator (mm-171195)", response.Registrant.Name);
+        Assert.Equal("Google LLC", response.Registrant.Organization);
         Assert.Equal("+1.6502530000", response.Registrant.TelephoneNumber);
         Assert.Equal("+1.6502530001", response.Registrant.FaxNumber);
         Assert.Equal("dns-admin@google.com", response.Registrant.Email);
@@ -69,8 +69,8 @@ public class StParsingTests : ParsingTests
 
 
         // AdminContact Details
-        Assert.Equal("DNS Admin (mm-87489)", response.AdminContact.Name);
-        Assert.Equal("Google Inc.", response.AdminContact.Organization);
+        Assert.Equal("Domain Administrator (mm-171195)", response.AdminContact.Name);
+        Assert.Equal("Google LLC", response.AdminContact.Organization);
         Assert.Equal("+1.6502530000", response.AdminContact.TelephoneNumber);
         Assert.Equal("+1.6502530001", response.AdminContact.FaxNumber);
         Assert.Equal("dns-admin@google.com", response.AdminContact.Email);
@@ -98,8 +98,8 @@ public class StParsingTests : ParsingTests
 
 
         // TechnicalContact Details
-        Assert.Equal("DNS Admin (mm-87489)", response.TechnicalContact.Name);
-        Assert.Equal("Google Inc.", response.TechnicalContact.Organization);
+        Assert.Equal("Domain Administrator (mm-171195)", response.TechnicalContact.Name);
+        Assert.Equal("Google LLC", response.TechnicalContact.Organization);
         Assert.Equal("+1.6502530000", response.TechnicalContact.TelephoneNumber);
         Assert.Equal("+1.6502530001", response.TechnicalContact.FaxNumber);
         Assert.Equal("dns-admin@google.com", response.TechnicalContact.Email);
@@ -122,7 +122,7 @@ public class StParsingTests : ParsingTests
 
         // Domain Status
         Assert.Equal(1, response.DomainStatus.Count);
-        Assert.Equal("clientUpdateProhibited", response.DomainStatus[0]);
+        Assert.Equal("clientDeleteProhibited, clientTransferProhibited, clientUpdateProhibited", response.DomainStatus[0]);
 
         Assert.Equal(54, response.FieldsParsed);
     }
