@@ -1,6 +1,7 @@
 {
   "servers": {
     "whois.nic.tr": {
+      "static": true,
       "tld": "tr",
       "domains": {
         "not-found": [
@@ -27,6 +28,7 @@
       }
     },
     "whois.registre.ma": {
+      "static": true,
       "tld": "ma",
       "domains": {
         "found": [
@@ -35,6 +37,7 @@
       }
     },
     "whois.registry.hm": {
+      "static": true,
       "tld": "hm",
       "domains": {
         "found": [
@@ -43,6 +46,7 @@
       }
     },
     "capetown-whois.registry.net.za": {
+      "static": true,
       "tld": "capetown",
       "domains": {
         "not-found": [
@@ -54,6 +58,7 @@
       }
     },
     "whois.domain-registry.nl": {
+      "static": true,
       "tld": "nl",
       "domains": {
         "found": [
@@ -92,6 +97,7 @@
       }
     },
     "whois.nc": {
+      "static": true,
       "tld": "nc",
       "domains": {
         "found": [
@@ -110,6 +116,7 @@
       }
     },
     "whois.inregistry.net": {
+      "static": true,
       "tld": "in",
       "domains": {
         "found": [
@@ -119,6 +126,7 @@
       }
     },
     "whois.kg": {
+      "static": true,
       "tld": "kg",
       "domains": {
         "not-found": [
@@ -182,6 +190,7 @@
       }
     },
     "whois.dns.pl": {
+      "static": true,
       "tld": "pl",
       "domains": {
         "found": [
@@ -196,6 +205,7 @@
       }
     },
     "whois.pnina.ps": {
+      "static": true,
       "tld": "ps",
       "domains": {
         "not-found": [
@@ -207,6 +217,7 @@
       }
     },
     "whois.nic.xxx": {
+      "static": true,
       "tld": "xxx",
       "domains": {
         "found": [
@@ -307,6 +318,7 @@
       }
     },
     "whois.cmc.iq": {
+      "static": true,
       "tld": "iq",
       "domains": {
         "not-found": [
@@ -338,6 +350,7 @@
       }
     },
     "joburg-whois.registry.net.za": {
+      "static": true,
       "tld": "joburg",
       "domains": {
         "not-found": [
@@ -404,6 +417,7 @@
       }
     },
     "whois.nic.cx": {
+      "static": true,
       "tld": "cx",
       "domains": {
         "found": [
@@ -463,6 +477,7 @@
       }
     },
     "whois.cat": {
+      "static": true,
       "tld": "cat",
       "domains": {
         "not-found": [
@@ -525,6 +540,7 @@
       }
     },
     "whois.nic.li": {
+      "static": true,
       "tld": "li",
       "domains": {
         "found": [
@@ -533,6 +549,7 @@
       }
     },
     "whois.nic.es": {
+      "static": true,
       "tld": "es",
       "domains": {
         "found": [
@@ -559,6 +576,7 @@
       }
     },
     "whois.nic.md": {
+      "static": true,
       "tld": "md",
       "domains": {
         "found": [
@@ -568,6 +586,7 @@
       }
     },
     "whois.nic.net.ng": {
+      "static": true,
       "tld": "ng",
       "domains": {
         "not-found": [
@@ -593,6 +612,7 @@
       }
     },
     "whois.nic.af": {
+      "static": true,
       "tld": "af",
       "domains": {
         "not-found": [
@@ -624,6 +644,7 @@
       }
     },
     "whois.nic.as": {
+      "static": true,
       "tld": "as",
       "domains": {
         "found": [
@@ -678,6 +699,7 @@
       }
     },
     "whois.na-nic.com.na": {
+      "static": true,
       "tld": "na",
       "domains": {
         "not-found": [
@@ -689,6 +711,7 @@
       }
     },
     "whois.nic.bo": {
+      "static": true,
       "tld": "bo",
       "domains": {
         "found": [
@@ -778,6 +801,7 @@
       }
     },
     "whois.in.ua": {
+      "static": true,
       "tld": "in.ua",
       "domains": {
         "not-found": [
@@ -789,6 +813,7 @@
       }
     },
     "whois.nic.ht": {
+      "static": true,
       "tld": "ht",
       "domains": {
         "not-found": [
@@ -808,6 +833,7 @@
       }
     },
     "whois.nic.ki": {
+      "static": true,
       "tld": "ki",
       "domains": {
         "not-found": [
@@ -853,6 +879,7 @@
       }
     },
     "ccwhois.ksregistry.net": {
+      "static": true,
       "tld": "vg",
       "domains": {
         "found": [
@@ -881,6 +908,7 @@
       }
     },
     "whois.kenic.or.ke": {
+      "static": true,
       "tld": "ke",
       "domains": {
         "not-found": [
@@ -955,6 +983,7 @@
       }
     },
     "whois.nic.jobs": {
+      "static": true,
       "tld": "jobs",
       "domains": {
         "found": [
@@ -967,6 +996,7 @@
       }
     },
     "whois.fi": {
+      "static": true,
       "tld": "fi",
       "domains": {
         "found": [
@@ -984,6 +1014,7 @@
       }
     },
     "whois.nic.net.sb": {
+      "static": true,
       "tld": "sb",
       "domains": {
         "not-found": [
@@ -1041,6 +1072,7 @@
       }
     },
     "whois.cctld.by": {
+      "static": true,
       "tld": "by",
       "domains": {
         "found": [
@@ -1111,6 +1143,7 @@
       }
     },
     "whois.nic.so": {
+      "static": true,
       "tld": "so",
       "domains": {
         "not-found": [
@@ -1138,6 +1171,7 @@
       }
     },
     "whois.nic.wed": {
+      "static": true,
       "tld": "wed",
       "domains": {
         "not-found": [
@@ -1161,6 +1195,7 @@
       }
     },
     "whois.ati.tn": {
+      "static": true,
       "tld": "tn",
       "domains": {
         "found": [
@@ -1173,6 +1208,7 @@
       }
     },
     "whois.nic.tm": {
+      "static": true,
       "tld": "tm",
       "domains": {
         "not-found": [
@@ -1212,6 +1248,7 @@
       }
     },
     "whois.ax": {
+      "static": true,
       "tld": "ax",
       "domains": {
         "not-found": [
@@ -1223,6 +1260,7 @@
       }
     },
     "whois.za.net": {
+      "static": true,
       "tld": "za.net",
       "domains": {
         "not-found": [
@@ -1303,6 +1341,7 @@
       }
     },
     "whois.registry.gy": {
+      "static": true,
       "tld": "gy",
       "domains": {
         "not-found": [
@@ -1364,6 +1403,7 @@
       }
     },
     "whois.nic.tl": {
+      "static": true,
       "tld": "tl",
       "domains": {
         "not-found": [
@@ -1386,6 +1426,7 @@
       }
     },
     "whois.monic.mo": {
+      "static": true,
       "tld": "mo",
       "domains": {
         "not-found": [
@@ -1397,6 +1438,7 @@
       }
     },
     "whois.dot.tk": {
+      "static": true,
       "tld": "tk",
       "domains": {
         "found": [
@@ -1405,6 +1447,7 @@
       }
     },
     "whois.nic.lk": {
+      "static": true,
       "tld": "xn--fzc2c9e2c",
       "domains": {
         "found": [
@@ -1417,6 +1460,7 @@
       }
     },
     "whois.nic.co": {
+      "static": true,
       "tld": "co",
       "domains": {
         "not-found": [
@@ -1447,6 +1491,7 @@
       }
     },
     "whois.nic.ch": {
+      "static": true,
       "tld": "ch",
       "domains": {
         "found": [
@@ -1509,6 +1554,7 @@
       }
     },
     "whois.dot.cf": {
+      "static": true,
       "tld": "cf",
       "domains": {
         "found": [
@@ -1528,6 +1574,7 @@
       }
     },
     "whois.nic.ec": {
+      "static": true,
       "tld": "ex",
       "domains": {
         "not-found": [
@@ -1573,6 +1620,7 @@
       }
     },
     "whois.dns.hr": {
+      "static": true,
       "tld": "hr",
       "domains": {
         "found": [
@@ -1592,6 +1640,7 @@
       }
     },
     "whois.eu.org": {
+      "static": true,
       "tld": "eu.org",
       "domains": {
         "found": [
@@ -1652,6 +1701,7 @@
       }
     },
     "whois.co.pl": {
+      "static": true,
       "tld": "co.pl",
       "domains": {
         "found": [
@@ -1669,6 +1719,7 @@
       }
     },
     "whois.usp.ac.fj": {
+      "static": true,
       "tld": "fj",
       "domains": {
         "not-found": [
@@ -1680,6 +1731,7 @@
       }
     },
     "whois.nic.travel": {
+      "static": true,
       "tld": "travel",
       "domains": {
         "found": [
@@ -1736,6 +1788,7 @@
       }
     },
     "whois.nic.mu": {
+      "static": true,
       "tld": "mu",
       "domains": {
         "not-found": [
@@ -1769,6 +1822,7 @@
       }
     },
     "whois.nic.nf": {
+      "static": true,
       "tld": "nf",
       "domains": {
         "not-found": [
@@ -1780,6 +1834,7 @@
       }
     },
     "whois.tonic.to": {
+      "static": true,
       "tld": "to",
       "domains": {
         "not-found": [
@@ -1799,6 +1854,7 @@
       }
     },
     "whois.afilias.net": {
+      "static": true,
       "tld": "pro",
       "domains": {
         "found": [
@@ -1865,6 +1921,7 @@
       }
     },
     "whois.nic.ms": {
+      "static": true,
       "tld": "ms",
       "domains": {
         "not-found": [
@@ -1876,6 +1933,7 @@
       }
     },
     "whois.dotname.co.kr": {
+      "static": true,
       "tld": "com",
       "domains": {
         "found": [
@@ -1942,6 +2000,7 @@
       }
     },
     "whois.nic.gs": {
+      "static": true,
       "tld": "gs",
       "domains": {
         "not-found": [
@@ -1961,6 +2020,7 @@
       }
     },
     "whois.donuts.co": {
+      "static": true,
       "tld": "bike",
       "domains": {
         "found": [
@@ -1977,6 +2037,7 @@
       }
     },
     "whois.nic.net.sa": {
+      "static": true,
       "tld": "sa",
       "domains": {
         "not-found": [
@@ -1988,6 +2049,7 @@
       }
     },
     "whois.nic.sm": {
+      "static": true,
       "tld": "sm",
       "domains": {
         "found": [
@@ -2026,6 +2088,7 @@
       }
     },
     "whois.pandi.or.id": {
+      "static": true,
       "tld": "id",
       "domains": {
         "found": [
@@ -2034,6 +2097,7 @@
       }
     },
     "whois.za.org": {
+      "static": true,
       "tld": "za.org",
       "domains": {
         "not-found": [
@@ -2057,6 +2121,7 @@
       }
     },
     "durban-whois.registry.net.za": {
+      "static": true,
       "tld": "durban",
       "domains": {
         "not-found": [
@@ -2143,6 +2208,7 @@
       }
     },
     "whois.namecheap.com": {
+      "static": true,
       "tld": "com",
       "domains": {
         "found": [
