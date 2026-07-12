@@ -30,7 +30,7 @@ public class NuParsingTests : ParsingTests
         Assert.Equal(2, response.FieldsParsed);
     }
 
-    [Fact(Skip = "Template update deferred - WHOIS response format changed")]
+    [Fact]
     public void Test_found()
     {
         var sample = SampleReader.Read("whois.iis.nu", "nu", "found", "google.nu.txt");
@@ -46,14 +46,14 @@ public class NuParsingTests : ParsingTests
         Assert.Equal("google.nu", response.DomainName.ToString());
 
         // Registrar Details
-        Assert.Equal("MarkMonitor Inc.", response.Registrar.Name);
+        Assert.Equal("MarkMonitor Inc", response.Registrar.Name);
 
-        Assert.Equal(new DateTime(2014, 05, 06, 00, 00, 00, DateTimeKind.Utc), response.Updated);
-        Assert.Equal(new DateTime(1999, 06, 07, 00, 00, 00, DateTimeKind.Utc), response.Registered);
-        Assert.Equal(new DateTime(2015, 06, 07, 00, 00, 00, DateTimeKind.Utc), response.Expiration);
+        Assert.Equal(new DateTime(2026, 5, 6, 0, 0, 0, DateTimeKind.Utc), response.Updated);
+        Assert.Equal(new DateTime(1999, 6, 7, 0, 0, 0, DateTimeKind.Utc), response.Registered);
+        Assert.Equal(new DateTime(2027, 6, 7, 0, 0, 0, DateTimeKind.Utc), response.Expiration);
 
         // Registrant Details
-        Assert.Equal("mmr-142621", response.Registrant.RegistryId);
+        Assert.Equal("mmr-171440", response.Registrant.RegistryId);
 
         // Nameservers
         Assert.Equal(4, response.NameServers.Count);
