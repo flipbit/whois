@@ -21,4 +21,24 @@ public class WhoisOptions
     /// Determines whether to follow referral links when downloading WHOIS data.
     /// </summary>
     public bool FollowReferrer { get; set; } = true;
+
+    /// <summary>
+    /// Whether to automatically check for and apply template updates in the background.
+    /// </summary>
+    public bool AutoUpdateTemplates { get; set; } = false;
+
+    /// <summary>
+    /// Directory where cached template packs are stored. Defaults to a system temp path when null.
+    /// </summary>
+    public string? TemplateCacheDirectory { get; set; }
+
+    /// <summary>
+    /// How often to check for template updates when <see cref="AutoUpdateTemplates"/> is enabled.
+    /// </summary>
+    public TimeSpan TemplateUpdateCheckInterval { get; set; } = TimeSpan.FromHours(24);
+
+    /// <summary>
+    /// URL of the GitHub Releases page used to download template packs. Uses the default release URL when null.
+    /// </summary>
+    public string? TemplateReleaseUrl { get; set; }
 }

@@ -1,4 +1,5 @@
 using System.Text;
+using Whois.Templates;
 
 namespace Whois;
 
@@ -21,4 +22,14 @@ public interface IWhoisLookup
     /// Performs a WHOIS lookup for the given request.
     /// </summary>
     public Task<WhoisResponse> Lookup(WhoisRequest request, CancellationToken cancellationToken = default);
+
+    /// <summary>
+    /// Reports the current state of the template cache.
+    /// </summary>
+    public TemplateStatus TemplateStatus { get; }
+
+    /// <summary>
+    /// Checks for and applies template updates from the configured release URL.
+    /// </summary>
+    public Task<TemplateUpdateResult> UpdateTemplates(CancellationToken cancellationToken = default);
 }

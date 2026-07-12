@@ -1,5 +1,6 @@
 using System.Text;
 using Microsoft.Extensions.Logging;
+using Whois.Templates;
 using Microsoft.Extensions.Logging.Abstractions;
 using Microsoft.Extensions.Options;
 using Whois.Net;
@@ -169,6 +170,23 @@ public class WhoisLookup : IWhoisLookup
 
         return response;
     }
+
+    /// <inheritdoc />
+    public TemplateStatus TemplateStatus =>
+        new(
+            CurrentVersion: "embedded",
+            Source: TemplateSource.Embedded,
+            LastCheckTime: null,
+            NextCheckTime: null,
+            LastError: null,
+            AutoUpdateEnabled: false);
+
+    /// <inheritdoc />
+    public Task<TemplateUpdateResult> UpdateTemplates(CancellationToken cancellationToken = default) =>
+        Task.FromResult(new TemplateUpdateResult(
+            Outcome: TemplateUpdateOutcome.Failed,
+            Version: null,
+            Error: "Not implemented"));
 
     private async Task<string> Download(string url, WhoisRequest request, CancellationToken cancellationToken)
     {
