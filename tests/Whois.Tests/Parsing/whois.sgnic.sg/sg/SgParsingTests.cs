@@ -13,7 +13,7 @@ public class SgParsingTests : ParsingTests
         parser = new WhoisParser();
     }
 
-    [Fact(Skip = "Template update deferred - WHOIS response format changed")]
+    [Fact]
     public void Test_found()
     {
         var sample = SampleReader.Read("whois.sgnic.sg", "sg", "found", "google.sg.txt");
@@ -23,41 +23,37 @@ public class SgParsingTests : ParsingTests
         Assert.Equal(WhoisStatus.Found, response.Status);
 
         Assert.Equal(0, response.ParsingErrors);
-        Assert.Equal("whois.sgnic.sg/sg/found/01", response.TemplateName);
+        Assert.Equal("generic/tld/found/01", response.TemplateName);
 
         Assert.Equal("google.sg", response.DomainName.ToString());
 
         // Registrar Details
-        Assert.Equal("MARKMONITOR INC", response.Registrar.Name);
+        Assert.Equal("MarkMonitor Inc.", response.Registrar.Name);
 
-        Assert.Equal(new DateTime(2005, 01, 03, 12, 00, 00, 000, DateTimeKind.Utc), response.Registered);
-        Assert.Equal(new DateTime(2011, 01, 03, 00, 00, 00, 000, DateTimeKind.Utc), response.Expiration);
+        Assert.Equal(new DateTime(2005, 01, 03, 04, 00, 00, 000, DateTimeKind.Utc), response.Registered);
+        Assert.Equal(new DateTime(2027, 01, 02, 16, 00, 00, 000, DateTimeKind.Utc), response.Expiration);
 
         // Registrant Details
-        Assert.Equal("GOOGLE INC.", response.Registrant.Name);
-        Assert.Equal("+1.6503300100", response.Registrant.TelephoneNumber);
-        Assert.Equal("+1.6506181434", response.Registrant.FaxNumber);
-        Assert.Equal("dns-admin@google.com", response.Registrant.Email);
+        Assert.Equal("GOOGLE LLC", response.Registrant.Name);
+        Assert.Null(response.Registrant.TelephoneNumber);
+        Assert.Null(response.Registrant.FaxNumber);
+        Assert.Null(response.Registrant.Email);
 
         // Registrant Address
-        Assert.Equal(4, response.Registrant.Address.Count);
-        Assert.Equal("1600 AMPHITHEATRE PARKWAY", response.Registrant.Address[0]);
-        Assert.Equal("CA", response.Registrant.Address[1]);
-        Assert.Equal("US", response.Registrant.Address[2]);
-        Assert.Equal("94043", response.Registrant.Address[3]);
+        Assert.Equal(0, response.Registrant.Address.Count);
 
 
         // Domain Status
         Assert.Equal(4, response.DomainStatus.Count);
-        Assert.Equal("OK", response.DomainStatus[0]);
-        Assert.Equal("CLIENT UPDATE PROHIBITED", response.DomainStatus[1]);
-        Assert.Equal("CLIENT TRANSFER PROHIBITED", response.DomainStatus[2]);
-        Assert.Equal("CLIENT DELETE PROHIBITED", response.DomainStatus[3]);
+        Assert.Equal("clientDeleteProhibited", response.DomainStatus[0]);
+        Assert.Equal("clientTransferProhibited", response.DomainStatus[1]);
+        Assert.Equal("clientUpdateProhibited", response.DomainStatus[2]);
+        Assert.Equal("VerifiedID@SG-Not Required", response.DomainStatus[3]);
 
-        Assert.Equal(18, response.FieldsParsed);
+        Assert.Equal(19, response.FieldsParsed);
     }
 
-    [Fact(Skip = "Template update deferred - WHOIS response format changed")]
+    [Fact]
     public void Test_found_nameservers_schema_1_with_ip()
     {
         var sample = SampleReader.Read("whois.sgnic.sg", "sg", "found", "canon.com.sg.txt");
@@ -68,34 +64,31 @@ public class SgParsingTests : ParsingTests
 
         AssertWriter.Write(response);
         Assert.Equal(0, response.ParsingErrors);
-        Assert.Equal("whois.sgnic.sg/sg/found/01", response.TemplateName);
+        Assert.Equal("generic/tld/found/01", response.TemplateName);
 
         Assert.Equal("canon.com.sg", response.DomainName.ToString());
 
         // Registrar Details
-        Assert.Equal("SINGNET PTE LTD", response.Registrar.Name);
+        Assert.Equal("Singnet Pte Ltd", response.Registrar.Name);
 
-        Assert.Equal(new DateTime(1996, 01, 09, 00, 00, 00, 000, DateTimeKind.Utc), response.Registered);
-        Assert.Equal(new DateTime(2012, 01, 09, 00, 00, 00, 000, DateTimeKind.Utc), response.Expiration);
+        Assert.Equal(new DateTime(1996, 01, 08, 16, 00, 00, 000, DateTimeKind.Utc), response.Registered);
+        Assert.Equal(new DateTime(2027, 01, 08, 16, 00, 00, 000, DateTimeKind.Utc), response.Expiration);
 
         // Registrant Details
         Assert.Equal("CANON SINGAPORE PTE. LTD.", response.Registrant.Name);
-        Assert.Equal("67845922", response.Registrant.TelephoneNumber);
-        Assert.Equal("64753273", response.Registrant.FaxNumber);
-        Assert.Equal("hostmaster@singnet.com.sg", response.Registrant.Email);
+        Assert.Null(response.Registrant.TelephoneNumber);
+        Assert.Null(response.Registrant.FaxNumber);
+        Assert.Null(response.Registrant.Email);
 
         // Registrant Address
-        Assert.Equal(3, response.Registrant.Address.Count);
-        Assert.Equal("1 HarbourFront Avenue", response.Registrant.Address[0]);
-        Assert.Equal("SG", response.Registrant.Address[1]);
-        Assert.Equal("098632", response.Registrant.Address[2]);
+        Assert.Equal(0, response.Registrant.Address.Count);
 
 
         // Domain Status
-        Assert.Equal(1, response.DomainStatus.Count);
-        Assert.Equal("OK", response.DomainStatus[0]);
+        Assert.Equal(2, response.DomainStatus.Count);
+        Assert.Equal("ok", response.DomainStatus[0]);
 
-        Assert.Equal(14, response.FieldsParsed);
+        Assert.Equal(18, response.FieldsParsed);
     }
 
     [Fact]
