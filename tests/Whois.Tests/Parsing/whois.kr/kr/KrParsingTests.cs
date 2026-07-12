@@ -13,7 +13,7 @@ public class KrParsingTests : ParsingTests
         parser = new WhoisParser();
     }
 
-    [Fact(Skip = "Template update deferred - WHOIS response format changed")]
+    [Fact]
     public void Test_found()
     {
         var sample = SampleReader.Read("whois.kr", "kr", "found", "lg.co.kr.txt");
@@ -30,9 +30,9 @@ public class KrParsingTests : ParsingTests
         // Registrar Details
         Assert.Equal("Whois Corp.(http://whois.co.kr)", response.Registrar.Name);
 
-        Assert.Equal(new DateTime(2012, 02, 28, 00, 00, 00, 000, DateTimeKind.Utc), response.Updated);
+        Assert.Equal(new DateTime(2014, 08, 26, 00, 00, 00, 000, DateTimeKind.Utc), response.Updated);
         Assert.Equal(new DateTime(1995, 03, 20, 00, 00, 00, 000, DateTimeKind.Utc), response.Registered);
-        Assert.Equal(new DateTime(2021, 10, 15, 00, 00, 00, 000, DateTimeKind.Utc), response.Expiration);
+        Assert.Equal(new DateTime(2033, 10, 15, 00, 00, 00, 000, DateTimeKind.Utc), response.Expiration);
 
         // Registrant Details
         Assert.Equal("LG Corp.", response.Registrant.Name);
@@ -74,7 +74,7 @@ public class KrParsingTests : ParsingTests
         Assert.Equal(2, response.FieldsParsed);
     }
 
-    [Fact(Skip = "Template update deferred - WHOIS response format changed")]
+    [Fact]
     public void Test_found_status_registered()
     {
         var sample = SampleReader.Read("whois.kr", "kr", "found", "google.kr.txt");
@@ -91,9 +91,9 @@ public class KrParsingTests : ParsingTests
         // Registrar Details
         Assert.Equal("Whois Corp.(http://whois.co.kr)", response.Registrar.Name);
 
-        Assert.Equal(new DateTime(2010, 10, 04, 00, 00, 00, 000, DateTimeKind.Utc), response.Updated);
+        Assert.Equal(new DateTime(2026, 04, 15, 00, 00, 00, 000, DateTimeKind.Utc), response.Updated);
         Assert.Equal(new DateTime(2007, 03, 02, 00, 00, 00, 000, DateTimeKind.Utc), response.Registered);
-        Assert.Equal(new DateTime(2015, 03, 02, 00, 00, 00, 000, DateTimeKind.Utc), response.Expiration);
+        Assert.Equal(new DateTime(2027, 03, 02, 00, 00, 00, 000, DateTimeKind.Utc), response.Expiration);
 
         // Registrant Details
         Assert.Equal("Google Korea, LLC", response.Registrant.Name);
