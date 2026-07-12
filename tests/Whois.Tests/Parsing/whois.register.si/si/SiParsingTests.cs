@@ -28,7 +28,7 @@ public class SiParsingTests : ParsingTests
         Assert.Equal(1, response.FieldsParsed);
     }
 
-    [Fact(Skip = "Template update deferred - WHOIS response format changed")]
+    [Fact]
     public void Test_found()
     {
         var sample = SampleReader.Read("whois.register.si", "si", "found", "google.si.txt");
@@ -44,14 +44,14 @@ public class SiParsingTests : ParsingTests
         Assert.Equal("google.si", response.DomainName.ToString());
 
         // Registrar Details
-        Assert.Equal("AOI d.o.o.", response.Registrar.Name);
-        Assert.Equal("http://www.aoi.eu/arneswhois", response.Registrar.Url);
+        Assert.Equal("Markmonitor Inc.", response.Registrar.Name);
+        Assert.Equal("http://www.markmonitor.com", response.Registrar.Url);
 
         Assert.Equal(new DateTime(2005, 04, 04, 00, 00, 00, 000, DateTimeKind.Utc), response.Registered);
-        Assert.Equal(new DateTime(2015, 07, 19, 00, 00, 00, 000, DateTimeKind.Utc), response.Expiration);
+        Assert.Equal(new DateTime(2027, 07, 19, 00, 00, 00, 000, DateTimeKind.Utc), response.Expiration);
 
         // Registrant Details
-        Assert.Equal("G79455", response.Registrant.RegistryId);
+        Assert.Equal("G830057", response.Registrant.RegistryId);
 
         // Nameservers
         Assert.Equal(4, response.NameServers.Count);
@@ -61,10 +61,8 @@ public class SiParsingTests : ParsingTests
         Assert.Equal("ns4.google.com", response.NameServers[3]);
 
         // Domain Status
-        Assert.Equal(3, response.DomainStatus.Count);
-        Assert.Equal("server_delete_prohibited", response.DomainStatus[0]);
-        Assert.Equal("server_transfer_prohibited", response.DomainStatus[1]);
-        Assert.Equal("server_update_prohibited", response.DomainStatus[2]);
+        Assert.Equal(1, response.DomainStatus.Count);
+        Assert.Equal("client_delete_prohibited,client_update_prohibited", response.DomainStatus[0]);
 
         Assert.Equal(12, response.FieldsParsed);
     }
