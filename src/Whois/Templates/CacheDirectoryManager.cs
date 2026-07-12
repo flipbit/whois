@@ -172,6 +172,12 @@ internal sealed class CacheDirectoryManager
         var fullPath = Path.Combine(_cacheDirectory, relativePath);
         var tmpPath = fullPath + ".tmp";
 
+        if (IsSymlink(fullPath))
+        {
+            _logger.LogWarning("Refusing to write to symlink: {Path}", fullPath);
+            return false;
+        }
+
         try
         {
             var dir = Path.GetDirectoryName(fullPath)!;
