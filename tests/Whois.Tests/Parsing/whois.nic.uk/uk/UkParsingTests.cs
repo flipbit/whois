@@ -59,7 +59,7 @@ public class UkParsingTests : ParsingTests
         Assert.Equal(16, response.FieldsParsed);
     }
 
-    [Fact(Skip = "Template update deferred - WHOIS response format changed")]
+    [Fact]
     public void Test_found_registrant_type_individual()
     {
         var sample = SampleReader.Read("whois.nic.uk", "uk", "found", "bedandbreakfastsearcher.co.uk.txt");
@@ -74,29 +74,29 @@ public class UkParsingTests : ParsingTests
         Assert.Equal("bedandbreakfastsearcher.co.uk", response.DomainName.ToString());
 
         // Registrar Details
-        Assert.Equal("Webfusion Ltd t/a 123-reg [Tag = 123-REG]", response.Registrar.Name);
-        Assert.Equal("http://www.123-reg.co.uk", response.Registrar.Url);
+        Assert.Equal("Namecheap, Inc. [Tag = NAMECHEAP-INC]", response.Registrar.Name);
+        Assert.Equal("https://www.namecheap.com", response.Registrar.Url);
 
-        Assert.Equal(new DateTime(2012, 04, 11, 00, 00, 00, 000, DateTimeKind.Utc), response.Updated);
-        Assert.Equal(new DateTime(2006, 04, 16, 00, 00, 00, 000, DateTimeKind.Utc), response.Registered);
-        Assert.Equal(new DateTime(2014, 04, 16, 00, 00, 00, 000, DateTimeKind.Utc), response.Expiration);
+        Assert.Equal(new DateTime(2026, 06, 20, 00, 00, 00, 000, DateTimeKind.Utc), response.Updated);
+        Assert.Equal(new DateTime(2025, 07, 20, 00, 00, 00, 000, DateTimeKind.Utc), response.Registered);
+        Assert.Equal(new DateTime(2027, 07, 20, 00, 00, 00, 000, DateTimeKind.Utc), response.Expiration);
 
         // Registrant Details
-        Assert.Equal("Mike Peacock", response.Registrant.Name);
+        Assert.Null(response.Registrant);
 
         // Nameservers
         Assert.Equal(2, response.NameServers.Count);
-        Assert.Equal("ns1.rapidswitch.com", response.NameServers[0]);
-        Assert.Equal("ns2.rapidswitch.com", response.NameServers[1]);
+        Assert.Equal("meadow.ns.cloudflare.com", response.NameServers[0]);
+        Assert.Equal("merlin.ns.cloudflare.com", response.NameServers[1]);
 
         // Domain Status
         Assert.Equal(1, response.DomainStatus.Count);
         Assert.Equal("Registered until expiry date.", response.DomainStatus[0]);
 
-        Assert.Equal(11, response.FieldsParsed);
+        Assert.Equal(10, response.FieldsParsed);
     }
 
-    [Fact(Skip = "Template update deferred - WHOIS response format changed")]
+    [Fact]
     public void Test_found_registrant_type_unknown()
     {
         var sample = SampleReader.Read("whois.nic.uk", "uk", "found", "google.co.uk.txt");
@@ -111,23 +111,17 @@ public class UkParsingTests : ParsingTests
         Assert.Equal("google.co.uk", response.DomainName.ToString());
 
         // Registrar Details
-        Assert.Equal("Markmonitor Inc. t/a Markmonitor [Tag = MARKMONITOR]", response.Registrar.Name);
-        Assert.Equal("http://www.markmonitor.com", response.Registrar.Url);
+        Assert.Equal("Markmonitor Inc. [Tag = MARKMONITOR]", response.Registrar.Name);
+        Assert.Equal("https://www.markmonitor.com", response.Registrar.Url);
 
-        Assert.Equal(new DateTime(2011, 02, 10, 00, 00, 00, 000, DateTimeKind.Utc), response.Updated);
+        Assert.Equal(new DateTime(2026, 01, 13, 00, 00, 00, 000, DateTimeKind.Utc), response.Updated);
         Assert.Equal(new DateTime(1999, 02, 14, 00, 00, 00, 000, DateTimeKind.Utc), response.Registered);
-        Assert.Equal(new DateTime(2013, 02, 14, 00, 00, 00, 000, DateTimeKind.Utc), response.Expiration);
+        Assert.Equal(new DateTime(2027, 02, 14, 00, 00, 00, 000, DateTimeKind.Utc), response.Expiration);
 
         // Registrant Details
-        Assert.Equal("Google Inc.", response.Registrant.Name);
+        Assert.Null(response.Registrant);
 
         // Registrant Address
-        Assert.Equal(5, response.Registrant.Address.Count);
-        Assert.Equal("1600 Amphitheatre Parkway", response.Registrant.Address[0]);
-        Assert.Equal("Mountain View", response.Registrant.Address[1]);
-        Assert.Equal("CA", response.Registrant.Address[2]);
-        Assert.Equal("94043", response.Registrant.Address[3]);
-        Assert.Equal("United States", response.Registrant.Address[4]);
 
 
         // Nameservers
@@ -141,7 +135,7 @@ public class UkParsingTests : ParsingTests
         Assert.Equal(1, response.DomainStatus.Count);
         Assert.Equal("Registered until expiry date.", response.DomainStatus[0]);
 
-        Assert.Equal(18, response.FieldsParsed);
+        Assert.Equal(12, response.FieldsParsed);
     }
 
     [Fact]
