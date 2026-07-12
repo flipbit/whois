@@ -25,7 +25,7 @@ public class PeParsingTests : ParsingTests
         Assert.Equal(0, response.ParsingErrors);
     }
 
-    [Fact(Skip = "Template update deferred - WHOIS response format changed")]
+    [Fact]
     public void Test_not_found()
     {
         var sample = SampleReader.Read("kero.yachay.pe", "pe", "not-found", "u34jedzcq.pe.txt");
@@ -34,13 +34,12 @@ public class PeParsingTests : ParsingTests
         Assert.True(sample.Length > 0);
         Assert.Equal(WhoisStatus.NotFound, response.Status);
 
-        Assert.Equal(3, response.FieldsParsed);
+        Assert.Equal(2, response.FieldsParsed);
         Assert.Equal(0, response.ParsingErrors);
 
         Assert.Equal("u34jedzcq.pe", response.DomainName.ToString());
 
-        Assert.Equal(1, response.DomainStatus.Count);
-        Assert.Equal("Not Registered", response.DomainStatus[0]);
+        Assert.Equal(0, response.DomainStatus.Count);
     }
 
     [Fact]
@@ -69,7 +68,7 @@ public class PeParsingTests : ParsingTests
         Assert.Equal("Inactive", response.DomainStatus[0]);
     }
 
-    [Fact(Skip = "Template update deferred - WHOIS response format changed")]
+    [Fact]
     public void Test_found()
     {
         var sample = SampleReader.Read("kero.yachay.pe", "pe", "found", "google.pe.txt");
@@ -78,17 +77,17 @@ public class PeParsingTests : ParsingTests
         Assert.True(sample.Length > 0);
         Assert.Equal(WhoisStatus.Found, response.Status);
 
-        Assert.Equal(11, response.FieldsParsed);
+        Assert.Equal(13, response.FieldsParsed);
         Assert.Equal(0, response.ParsingErrors);
 
         Assert.Equal("google.pe", response.DomainName.ToString());
 
         Assert.Equal("MarkMonitor Inc.", response.Registrar.Name);
 
-        Assert.Equal("google inc.", response.Registrant.Name);
+        Assert.Equal("Google LLC", response.Registrant.Name);
 
-        Assert.Equal("MarkMonitor", response.AdminContact.Name);
-        Assert.Equal("ccops@markmonitor.com", response.AdminContact.Email);
+        Assert.Equal("Google LLC", response.AdminContact.Name);
+        Assert.Equal("dns-admin@google.com", response.AdminContact.Email);
 
 
         Assert.Equal(4, response.NameServers.Count);
@@ -97,8 +96,8 @@ public class PeParsingTests : ParsingTests
         Assert.Equal("ns3.google.com", response.NameServers[2]);
         Assert.Equal("ns4.google.com", response.NameServers[3]);
 
-        Assert.Equal(1, response.DomainStatus.Count);
-        Assert.Equal("Active", response.DomainStatus[0]);
+        Assert.Equal(3, response.DomainStatus.Count);
+        Assert.Equal("clientDeleteProhibited", response.DomainStatus[0]);
     }
 
     [Fact]
