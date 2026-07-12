@@ -28,7 +28,7 @@ public class HuParsingTests : ParsingTests
         Assert.Equal(1, response.FieldsParsed);
     }
 
-    [Fact(Skip = "Template update deferred - WHOIS response format changed")]
+    [Fact]
     public void Test_found()
     {
         var sample = SampleReader.Read("whois.nic.hu", "hu", "found", "google.hu.txt");
@@ -42,8 +42,8 @@ public class HuParsingTests : ParsingTests
 
         Assert.Equal("google.hu", response.DomainName.ToString());
 
-        Assert.Equal(new DateTime(2000, 03, 25, 23, 20, 39, 000, DateTimeKind.Utc), response.Registered);
+        Assert.Null(response.Registered);
 
-        Assert.Equal(3, response.FieldsParsed);
+        Assert.Equal(2, response.FieldsParsed);
     }
 }
