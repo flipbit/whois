@@ -27,6 +27,7 @@ public class DomainResult
     public string? MatchedTemplate { get; set; }
     public List<string> ExtractedFields { get; set; } = [];
     public QueryError? Error { get; set; }
+    public string? ActualStatus { get; set; }
 }
 
 public class RefreshResults
