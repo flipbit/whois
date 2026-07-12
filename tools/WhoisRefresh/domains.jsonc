@@ -1,0 +1,2154 @@
+{
+  "servers": {
+    "whois.nic.tr": {
+      "tld": "tr",
+      "domains": {
+        "not-found": [
+          "u34jedzcq.com.tr"
+        ]
+      }
+    },
+    "whois.iis.se": {
+      "tld": "se",
+      "domains": {
+        "found": [
+          "google.se",
+          "loopia.se",
+          "nhv.se",
+          "ogogle.se",
+          "populiscreate.se"
+        ],
+        "not-assigned": [
+          "example.se"
+        ],
+        "not-found": [
+          "u34jedzcq.se"
+        ]
+      }
+    },
+    "whois.registre.ma": {
+      "tld": "ma",
+      "domains": {
+        "found": [
+          "google.ma"
+        ]
+      }
+    },
+    "whois.registry.hm": {
+      "tld": "hm",
+      "domains": {
+        "found": [
+          "google.hm"
+        ]
+      }
+    },
+    "capetown-whois.registry.net.za": {
+      "tld": "capetown",
+      "domains": {
+        "not-found": [
+          "nosuchdomain.capetown"
+        ],
+        "found": [
+          "registry.capetown"
+        ]
+      }
+    },
+    "whois.domain-registry.nl": {
+      "tld": "nl",
+      "domains": {
+        "found": [
+          "google.nl",
+          "tntpost.nl"
+        ],
+        "not-assigned": [
+          "smsexdates.nl"
+        ],
+        "not-found": [
+          "u34jedzcq.nl"
+        ],
+        "redemption": [
+          "martijn-webdesign.nl"
+        ]
+      }
+    },
+    "whois.nic.re": {
+      "tld": "re",
+      "domains": {
+        "found": [
+          "nic.re"
+        ]
+      }
+    },
+    "whois.kr": {
+      "tld": "kr",
+      "domains": {
+        "found": [
+          "google.kr",
+          "lg.co.kr"
+        ],
+        "not-found": [
+          "u34jedzcq.kr"
+        ]
+      }
+    },
+    "whois.nc": {
+      "tld": "nc",
+      "domains": {
+        "found": [
+          "domaine.nc",
+          "gouv.nc",
+          "rya.nc"
+        ]
+      }
+    },
+    "whois.nic.wf": {
+      "tld": "wf",
+      "domains": {
+        "found": [
+          "nic.wf"
+        ]
+      }
+    },
+    "whois.inregistry.net": {
+      "tld": "in",
+      "domains": {
+        "found": [
+          "google.in",
+          "videogratis.in"
+        ]
+      }
+    },
+    "whois.kg": {
+      "tld": "kg",
+      "domains": {
+        "not-found": [
+          "u34jedzcq.kg"
+        ],
+        "found": [
+          "google.kg"
+        ]
+      }
+    },
+    "whois.iana.org": {
+      "tld": "tld",
+      "domains": {
+        "found": [
+          "be",
+          "com",
+          "ip6.arpa",
+          "nato.int"
+        ],
+        "not-found": [
+          "u34jedzcq.arpa",
+          "u34jedzcq.int"
+        ]
+      }
+    },
+    "whois.verisign-grs.com": {
+      "tld": "net",
+      "domains": {
+        "not-found": [
+          "u34jedzcq.com",
+          "u34jedzcq.net"
+        ],
+        "found": [
+          "google.com",
+          "google.net",
+          "y.com"
+        ],
+        "pending-delete": [
+          "killianestates.com"
+        ]
+      }
+    },
+    "whois.biz": {
+      "tld": "biz",
+      "domains": {
+        "found": [
+          "google.biz"
+        ]
+      }
+    },
+    "coza-whois.registry.net.za": {
+      "tld": "co.za",
+      "domains": {
+        "found": [
+          "fnb.co.za",
+          "google.co.za"
+        ],
+        "not-found": [
+          "nosuchdomainregistered.co.za"
+        ]
+      }
+    },
+    "whois.dns.pl": {
+      "tld": "pl",
+      "domains": {
+        "found": [
+          "08.pl",
+          "google.pl",
+          "nom.pl",
+          "pentex.pl"
+        ],
+        "not-found": [
+          "u34jedzcq.pl"
+        ]
+      }
+    },
+    "whois.pnina.ps": {
+      "tld": "ps",
+      "domains": {
+        "not-found": [
+          "u34jedzcq.ps"
+        ],
+        "found": [
+          "google.ps"
+        ]
+      }
+    },
+    "whois.nic.xxx": {
+      "tld": "xxx",
+      "domains": {
+        "found": [
+          "masala.xxx"
+        ]
+      }
+    },
+    "whois.audns.net.au": {
+      "tld": "au",
+      "domains": {
+        "found": [
+          "google.com.au",
+          "pinewood.com.au"
+        ]
+      }
+    },
+    "whois.iis.nu": {
+      "tld": "nu",
+      "domains": {
+        "not-found": [
+          "u34jedzcq.nu"
+        ],
+        "found": [
+          "google.nu"
+        ]
+      }
+    },
+    "whois.nic.design": {
+      "tld": "design",
+      "domains": {
+        "found": [
+          "toplevel.design"
+        ]
+      }
+    },
+    "whois.nic.coop": {
+      "tld": "coop",
+      "domains": {
+        "found": [
+          "calgary.coop",
+          "moscowfood.coop"
+        ],
+        "not-found": [
+          "u34jedzcq.coop"
+        ]
+      }
+    },
+    "whois.nic.tel": {
+      "tld": "tel",
+      "domains": {
+        "not-found": [
+          "u34jedzcq.tel"
+        ],
+        "found": [
+          "google.tel"
+        ]
+      }
+    },
+    "whois.denic.de": {
+      "tld": "de",
+      "domains": {
+        "found": [
+          "amazon.de",
+          "google.de",
+          "prodns.de"
+        ],
+        "not-found": [
+          "u34jedzcq.de"
+        ],
+        "failed": [
+          "msens.de",
+          "xn--tstdomain-failed-nserver-qbc.de"
+        ],
+        "invalid": [
+          "googlededewdedewdewde.foo.de"
+        ]
+      }
+    },
+    "whois.ja.net": {
+      "tld": "gov.uk",
+      "domains": {
+        "not-found": [
+          "u34jedzcq.ac.uk",
+          "u34jedzcq.gov.uk"
+        ],
+        "found": [
+          "direct.gov.uk",
+          "lboro.ac.uk"
+        ]
+      }
+    },
+    "whois.nic.fo": {
+      "tld": "fo",
+      "domains": {
+        "found": [
+          "nic.fo"
+        ]
+      }
+    },
+    "whois.cmc.iq": {
+      "tld": "iq",
+      "domains": {
+        "not-found": [
+          "u34jedzcq.iq"
+        ],
+        "found": [
+          "google.iq"
+        ]
+      }
+    },
+    "whois.pir.org": {
+      "tld": "org",
+      "domains": {
+        "found": [
+          "google.org"
+        ]
+      }
+    },
+    "whois.markmonitor.com": {
+      "tld": "net",
+      "domains": {
+        "found": [
+          "google.cc",
+          "google.com",
+          "google.jobs",
+          "google.net",
+          "google.tv"
+        ]
+      }
+    },
+    "joburg-whois.registry.net.za": {
+      "tld": "joburg",
+      "domains": {
+        "not-found": [
+          "nosuchdomain.joburg"
+        ],
+        "found": [
+          "usedautos.joburg"
+        ]
+      }
+    },
+    "whois.dns.be": {
+      "tld": "be",
+      "domains": {
+        "found": [
+          "register.be",
+          "youtu.be"
+        ],
+        "not-found": [
+          "u34jedzcq.be"
+        ],
+        "error": [
+          "www.kimdemolenaer.be"
+        ],
+        "not-available": [
+          "gratisdatingplaza.be"
+        ],
+        "out-of-service": [
+          "ee"
+        ],
+        "quarantined": [
+          "9i"
+        ],
+        "invalid": [
+          "www-invalid.kimdemolenaer.be"
+        ]
+      }
+    },
+    "whois.nic.cl": {
+      "tld": "cl",
+      "domains": {
+        "not-found": [
+          "u34jedzcq.cl"
+        ],
+        "found": [
+          "google.cl"
+        ]
+      }
+    },
+    "whois.nic.la": {
+      "tld": "la",
+      "domains": {
+        "found": [
+          "google.la",
+          "plasticsurgery.la"
+        ]
+      }
+    },
+    "whois.rotld.ro": {
+      "tld": "ro",
+      "domains": {
+        "found": [
+          "google.ro"
+        ]
+      }
+    },
+    "whois.nic.cx": {
+      "tld": "cx",
+      "domains": {
+        "found": [
+          "communication.cx",
+          "google.cx"
+        ],
+        "not-found": [
+          "u34jedzcq.cx"
+        ]
+      }
+    },
+    "whois.nic.im": {
+      "tld": "im",
+      "domains": {
+        "not-found": [
+          "u34jedzcq.im"
+        ],
+        "found": [
+          "google.im"
+        ]
+      }
+    },
+    "whois.nic.cd": {
+      "tld": "cd",
+      "domains": {
+        "not-found": [
+          "u34jedzcq.cd"
+        ],
+        "found": [
+          "google.cd"
+        ]
+      }
+    },
+    "whois.nic.fr": {
+      "tld": "yt",
+      "domains": {
+        "found": [
+          "1c2.fr",
+          "asso.fr",
+          "boursedirect.fr",
+          "google.fr",
+          "hotel.fr",
+          "nic.fr",
+          "nic.tf",
+          "nic.yt",
+          "shingara.fr"
+        ],
+        "blocked": [
+          "amazingsales.fr"
+        ],
+        "redemption": [
+          "behotel.fr"
+        ],
+        "not-found": [
+          "behotel-not-found.fr"
+        ]
+      }
+    },
+    "whois.cat": {
+      "tld": "cat",
+      "domains": {
+        "not-found": [
+          "u34jedzcq.cat"
+        ],
+        "found": [
+          "abril.cat",
+          "gencat.cat"
+        ]
+      }
+    },
+    "whois.centralnic.com": {
+      "tld": "qc.com",
+      "domains": {
+        "found": [
+          "academyart.kr.com",
+          "autopoint.de.com",
+          "bestb.uy.com",
+          "billboard.br.com",
+          "bingo.uy.com",
+          "ceo.qc.com",
+          "college.us.com",
+          "fynbos.sa.com",
+          "google.gr.com",
+          "gsn.cn.com",
+          "history.uk.com",
+          "hotel.ar.com",
+          "hotel.gb.com",
+          "hotel.gb.net",
+          "hotel.hu.com",
+          "hotel.se.com",
+          "hotel.se.net",
+          "kidzlink.ae.org",
+          "koi.jpn.com",
+          "ntt.jp.net",
+          "paramount.uk.net",
+          "porn.hu.com",
+          "siyenza.za.com",
+          "srk.ru.com",
+          "walkabout.eu.com"
+        ]
+      }
+    },
+    "whois.srs.net.nz": {
+      "tld": "nz",
+      "domains": {
+        "found": [
+          "google.co.nz",
+          "zumbafitness.co.nz"
+        ],
+        "throttled": [
+          "jaycar.co.nz"
+        ],
+        "not-found": [
+          "u34jedzcq.co.nz"
+        ],
+        "invalid": [
+          "u34jedzcq.nz"
+        ]
+      }
+    },
+    "whois.nic.li": {
+      "tld": "li",
+      "domains": {
+        "found": [
+          "google.li"
+        ]
+      }
+    },
+    "whois.nic.es": {
+      "tld": "es",
+      "domains": {
+        "found": [
+          "google.es"
+        ]
+      }
+    },
+    "whois.nic.hu": {
+      "tld": "hu",
+      "domains": {
+        "found": [
+          "google.hu"
+        ]
+      }
+    },
+    "whois.nic.kz": {
+      "tld": "kz",
+      "domains": {
+        "found": [
+          "google.kz",
+          "pedamotor.kz",
+          "tabu.kz"
+        ]
+      }
+    },
+    "whois.nic.md": {
+      "tld": "md",
+      "domains": {
+        "found": [
+          "google.md",
+          "hotel.md"
+        ]
+      }
+    },
+    "whois.nic.net.ng": {
+      "tld": "ng",
+      "domains": {
+        "not-found": [
+          "u34jedzcq.ng"
+        ],
+        "found": [
+          "nic.net.ng"
+        ]
+      }
+    },
+    "whois.cctld.uz": {
+      "tld": "uz",
+      "domains": {
+        "reserved": [
+          "cctld.uz"
+        ],
+        "not-found": [
+          "u34jedzcq.uz"
+        ],
+        "found": [
+          "google.uz"
+        ]
+      }
+    },
+    "whois.nic.af": {
+      "tld": "af",
+      "domains": {
+        "not-found": [
+          "u34jedzcq.af"
+        ],
+        "found": [
+          "google.af"
+        ]
+      }
+    },
+    "whois.nic.mx": {
+      "tld": "mx",
+      "domains": {
+        "found": [
+          "google.mx",
+          "mpsnet.net.mx"
+        ]
+      }
+    },
+    "whois.nic.hn": {
+      "tld": "hn",
+      "domains": {
+        "not-found": [
+          "u34jedzcq.hn"
+        ],
+        "found": [
+          "google.hn"
+        ]
+      }
+    },
+    "whois.nic.as": {
+      "tld": "as",
+      "domains": {
+        "found": [
+          "google.as"
+        ]
+      }
+    },
+    "whois.dotmobiregistry.net": {
+      "tld": "mobi",
+      "domains": {
+        "found": [
+          "google.mobi"
+        ]
+      }
+    },
+    "whois.gov.za": {
+      "tld": "gov.za",
+      "domains": {
+        "not-found": [
+          "u34jedzcq.gov.za"
+        ],
+        "found": [
+          "dha.gov.za"
+        ]
+      }
+    },
+    "whois.nic.at": {
+      "tld": "at",
+      "domains": {
+        "found": [
+          "google.at"
+        ]
+      }
+    },
+    "whois.nic.gd": {
+      "tld": "gd",
+      "domains": {
+        "found": [
+          "google.gd"
+        ]
+      }
+    },
+    "whois.website.ws": {
+      "tld": "ws",
+      "domains": {
+        "not-found": [
+          "u34jedzcq.ws"
+        ],
+        "found": [
+          "google.ws"
+        ]
+      }
+    },
+    "whois.na-nic.com.na": {
+      "tld": "na",
+      "domains": {
+        "not-found": [
+          "u34jedzcq.na"
+        ],
+        "found": [
+          "google.na"
+        ]
+      }
+    },
+    "whois.nic.bo": {
+      "tld": "bo",
+      "domains": {
+        "found": [
+          "google.bo"
+        ]
+      }
+    },
+    "whois.nic.space": {
+      "tld": "space",
+      "domains": {
+        "found": [
+          "nic.space"
+        ]
+      }
+    },
+    "whois.sk-nic.sk": {
+      "tld": "sk",
+      "domains": {
+        "found": [
+          "dobramasaz.sk",
+          "e-biznis.sk",
+          "google.sk",
+          "kuphry.sk",
+          "plac.sk"
+        ]
+      }
+    },
+    "whois.aeda.net.ae": {
+      "tld": "ae",
+      "domains": {
+        "found": [
+          "google.ae"
+        ]
+      }
+    },
+    "whois.nic.ag": {
+      "tld": "ag",
+      "domains": {
+        "found": [
+          "google.ag"
+        ]
+      }
+    },
+    "whois.nic.tech": {
+      "tld": "tech",
+      "domains": {
+        "found": [
+          "google.tech"
+        ]
+      }
+    },
+    "whois.nic.me": {
+      "tld": "me",
+      "domains": {
+        "found": [
+          "factoryoutlet.me",
+          "google.me",
+          "wossna.me"
+        ]
+      }
+    },
+    "whois.rnids.rs": {
+      "tld": "rs",
+      "domains": {
+        "found": [
+          "eg.rs",
+          "google.rs",
+          "saj.rs"
+        ],
+        "expired": [
+          "saj-expired.rs"
+        ],
+        "locked": [
+          "kondor.rs"
+        ]
+      }
+    },
+    "whois.nic.ai": {
+      "tld": "ai",
+      "domains": {
+        "not-found": [
+          "u34jedzcq.ai"
+        ],
+        "found": [
+          "google.ai"
+        ]
+      }
+    },
+    "whois.in.ua": {
+      "tld": "in.ua",
+      "domains": {
+        "not-found": [
+          "u34jedzcq.in.ua"
+        ],
+        "found": [
+          "dle.in.ua"
+        ]
+      }
+    },
+    "whois.nic.ht": {
+      "tld": "ht",
+      "domains": {
+        "not-found": [
+          "u34jedzcq.ht"
+        ],
+        "found": [
+          "google.ht"
+        ]
+      }
+    },
+    "whois.nic.dm": {
+      "tld": "dm",
+      "domains": {
+        "found": [
+          "google.dm"
+        ]
+      }
+    },
+    "whois.nic.ki": {
+      "tld": "ki",
+      "domains": {
+        "not-found": [
+          "u34jedzcq.ki"
+        ],
+        "found": [
+          "google.ki"
+        ]
+      }
+    },
+    "ccwhois.verisign-grs.com": {
+      "tld": "cc",
+      "domains": {
+        "found": [
+          "google.cc",
+          "m4r0c-s3curity.cc"
+        ],
+        "not-found": [
+          "u34jedzcq.cc"
+        ]
+      }
+    },
+    "whois.tcinet.ru": {
+      "tld": "xn--p1ai",
+      "domains": {
+        "found": [
+          "google.ru",
+          "google.su",
+          "masterhost.ru",
+          "xn----8sbc3ahklcs4adf.xn--p1ai"
+        ]
+      }
+    },
+    "whois.nic.gl": {
+      "tld": "gl",
+      "domains": {
+        "not-found": [
+          "u34jedzcq.gl"
+        ],
+        "found": [
+          "google.gl"
+        ]
+      }
+    },
+    "ccwhois.ksregistry.net": {
+      "tld": "vg",
+      "domains": {
+        "found": [
+          "google.vg"
+        ]
+      }
+    },
+    "whois.thnic.co.th": {
+      "tld": "th",
+      "domains": {
+        "not-found": [
+          "u34jedzcq.co.th"
+        ],
+        "found": [
+          "google.co.th"
+        ]
+      }
+    },
+    "whois.registry.qa": {
+      "tld": "qa",
+      "domains": {
+        "found": [
+          "qnb.com.qa",
+          "qtel.com.qa"
+        ]
+      }
+    },
+    "whois.kenic.or.ke": {
+      "tld": "ke",
+      "domains": {
+        "not-found": [
+          "u34jedzcq.ke"
+        ],
+        "invalid": [
+          "www.housekenya.co.ke"
+        ],
+        "found": [
+          "google.co.ke"
+        ]
+      }
+    },
+    "whois.nic.name": {
+      "tld": "name",
+      "domains": {
+        "not-found": [
+          "u34jedzcq.name"
+        ],
+        "found": [
+          "carletti.name"
+        ]
+      }
+    },
+    "whois.je": {
+      "tld": "je",
+      "domains": {
+        "not-found": [
+          "u34jedzcq.je"
+        ],
+        "found": [
+          "google.je"
+        ]
+      }
+    },
+    "whois.nic.uk": {
+      "tld": "uk",
+      "domains": {
+        "found": [
+          "atlasholidays.co.uk",
+          "bedandbreakfastsearcher.co.uk",
+          "creatinghomeowners.co.uk",
+          "ecigsbrand.co.uk",
+          "google.co.uk",
+          "internet.co.uk",
+          "netbenefit.co.uk",
+          "reachingyoungmales.co.uk"
+        ],
+        "not-found": [
+          "u34jedzcq.co.uk"
+        ],
+        "suspended": [
+          "allofshoes.co.uk"
+        ],
+        "throttled": [
+          "google-throttled.co.uk"
+        ],
+        "invalid": [
+          "u34jedzcq.uk"
+        ],
+        "reserved": [
+          "internet-reserved.co.uk"
+        ]
+      }
+    },
+    "whois.cdmon.com": {
+      "tld": "com",
+      "domains": {
+        "found": [
+          "cdmon.com"
+        ]
+      }
+    },
+    "whois.nic.jobs": {
+      "tld": "jobs",
+      "domains": {
+        "found": [
+          "example.jobs",
+          "google.jobs"
+        ],
+        "not-found": [
+          "u34jedzcq.jobs"
+        ]
+      }
+    },
+    "whois.fi": {
+      "tld": "fi",
+      "domains": {
+        "found": [
+          "google.fi",
+          "oogle.fi"
+        ]
+      }
+    },
+    "whois.registry.om": {
+      "tld": "om",
+      "domains": {
+        "found": [
+          "rop.gov.om"
+        ]
+      }
+    },
+    "whois.nic.net.sb": {
+      "tld": "sb",
+      "domains": {
+        "not-found": [
+          "u34jedzcq.sb"
+        ],
+        "found": [
+          "baidu.com.sb"
+        ]
+      }
+    },
+    "org-whois.registry.net.za": {
+      "tld": "org.za",
+      "domains": {
+        "not-found": [
+          "nosuchdomain.org.za"
+        ],
+        "found": [
+          "joburg.org.za"
+        ]
+      }
+    },
+    "whois.norid.no": {
+      "tld": "no",
+      "domains": {
+        "found": [
+          "google.no"
+        ]
+      }
+    },
+    "whois.nic.college": {
+      "tld": "college",
+      "domains": {
+        "found": [
+          "nic.college"
+        ]
+      }
+    },
+    "whois.nic.sn": {
+      "tld": "sn",
+      "domains": {
+        "found": [
+          "google.sn"
+        ]
+      }
+    },
+    "whois.nic.st": {
+      "tld": "st",
+      "domains": {
+        "not-found": [
+          "u34jedzcq.st"
+        ],
+        "found": [
+          "google.st"
+        ]
+      }
+    },
+    "whois.cctld.by": {
+      "tld": "by",
+      "domains": {
+        "found": [
+          "active.by"
+        ]
+      }
+    },
+    "whois.nic.ve": {
+      "tld": "ve",
+      "domains": {
+        "found": [
+          "ula.ve",
+          "zumba.com.ve"
+        ],
+        "not-found": [
+          "u34jedzcq.ve"
+        ],
+        "suspended": [
+          "aloespa.com.ve"
+        ],
+        "inactive": [
+          "aloespa-inactive.com.ve"
+        ]
+      }
+    },
+    "whois.nic.pr": {
+      "tld": "pr",
+      "domains": {
+        "not-found": [
+          "u34jedzcq.pr"
+        ],
+        "found": [
+          "google.pr"
+        ]
+      }
+    },
+    "whois.nic.xyz": {
+      "tld": "xyz",
+      "domains": {
+        "found": [
+          "abc.xyz"
+        ]
+      }
+    },
+    "whois.uniregistry.net": {
+      "tld": "tattoo",
+      "domains": {
+        "not-found": [
+          "u34jedzcq.tattoo"
+        ],
+        "found": [
+          "nic.tattoo"
+        ],
+        "unavailable": [
+          "cheap.tattoo"
+        ]
+      }
+    },
+    "whois1.nic.bi": {
+      "tld": "bi",
+      "domains": {
+        "not-found": [
+          "u34jedzcq.bi"
+        ],
+        "found": [
+          "google.bi"
+        ]
+      }
+    },
+    "whois.nic.so": {
+      "tld": "so",
+      "domains": {
+        "not-found": [
+          "u34jedzcq.so"
+        ],
+        "found": [
+          "google.so"
+        ]
+      }
+    },
+    "whois.twnic.net.tw": {
+      "tld": "tw",
+      "domains": {
+        "found": [
+          "google.com.tw"
+        ]
+      }
+    },
+    "whois.nic.sh": {
+      "tld": "sh",
+      "domains": {
+        "found": [
+          "google.sh"
+        ]
+      }
+    },
+    "whois.nic.wed": {
+      "tld": "wed",
+      "domains": {
+        "not-found": [
+          "u34jedzcq.wed"
+        ],
+        "found": [
+          "nic.wed"
+        ]
+      }
+    },
+    "whois.eu": {
+      "tld": "eu",
+      "domains": {
+        "found": [
+          "eurid.eu",
+          "google.eu"
+        ],
+        "not-found": [
+          "u34jedzcq.eu"
+        ]
+      }
+    },
+    "whois.ati.tn": {
+      "tld": "tn",
+      "domains": {
+        "found": [
+          "equipements-pro.com.tn",
+          "google.tn"
+        ],
+        "not-found": [
+          "u34jedzcq.tn"
+        ]
+      }
+    },
+    "whois.nic.tm": {
+      "tld": "tm",
+      "domains": {
+        "not-found": [
+          "u34jedzcq.tm"
+        ],
+        "found": [
+          "google.tm"
+        ]
+      }
+    },
+    "whois.domainregistry.ie": {
+      "tld": "ie",
+      "domains": {
+        "reserved": [
+          "peter.ie"
+        ],
+        "found": [
+          "dns.ie",
+          "google.ie",
+          "rte.ie",
+          "tcd.ie"
+        ],
+        "not-found": [
+          "u34jedzcq.ie"
+        ]
+      }
+    },
+    "whois.nic.tc": {
+      "tld": "tc",
+      "domains": {
+        "not-found": [
+          "u34jedzcq.tc"
+        ],
+        "found": [
+          "google.tc"
+        ]
+      }
+    },
+    "whois.ax": {
+      "tld": "ax",
+      "domains": {
+        "not-found": [
+          "u34jedzcq.ax"
+        ],
+        "found": [
+          "regeringen.ax"
+        ]
+      }
+    },
+    "whois.za.net": {
+      "tld": "za.net",
+      "domains": {
+        "not-found": [
+          "u34jedzcq.za.net"
+        ],
+        "found": [
+          "karnaugh.za.net"
+        ]
+      }
+    },
+    "tvwhois.verisign-grs.com": {
+      "tld": "tv",
+      "domains": {
+        "found": [
+          "google.tv",
+          "set.tv"
+        ],
+        "not-found": [
+          "u34jedzcq.tv"
+        ]
+      }
+    },
+    "whois.nic.priv.at": {
+      "tld": "at",
+      "domains": {
+        "found": [
+          "nic.priv.at"
+        ]
+      }
+    },
+    "whois.educause.edu": {
+      "tld": "edu",
+      "domains": {
+        "found": [
+          "academia.edu",
+          "aucmed.edu",
+          "brown.edu",
+          "educause.edu",
+          "harvard.edu",
+          "mit.edu",
+          "nic.edu",
+          "nyu.edu",
+          "pcihealth.edu",
+          "stanford.edu",
+          "syr.edu",
+          "uiuc.edu"
+        ]
+      }
+    },
+    "whois.cira.ca": {
+      "tld": "ca",
+      "domains": {
+        "found": [
+          "glu.ca",
+          "google.ca"
+        ],
+        "not-assigned": [
+          "abbylane.pe.ca"
+        ],
+        "not-found": [
+          "u34jedzcq.ca"
+        ],
+        "pending-delete": [
+          "sagespa.ca"
+        ],
+        "redemption": [
+          "glu-redemption.ca"
+        ],
+        "to-be-released": [
+          "thomascraft.ca"
+        ],
+        "unavailable": [
+          "mediom.ca"
+        ],
+        "invalid": [
+          "mediom-invalid.ca"
+        ]
+      }
+    },
+    "whois.registry.gy": {
+      "tld": "gy",
+      "domains": {
+        "not-found": [
+          "u34jedzcq.gy"
+        ],
+        "found": [
+          "google.gy"
+        ]
+      }
+    },
+    "whois.gg": {
+      "tld": "gg",
+      "domains": {
+        "not-found": [
+          "u34jedzcq.gg"
+        ],
+        "found": [
+          "google.gg"
+        ]
+      }
+    },
+    "whois.dns.pt": {
+      "tld": "pt",
+      "domains": {
+        "found": [
+          "google.pt",
+          "wiki.pt"
+        ],
+        "not-found": [
+          "u34jedzcq.pt"
+        ],
+        "inactive": [
+          "wiki-inactive.pt"
+        ],
+        "reserved": [
+          "wiki-reserved.pt"
+        ]
+      }
+    },
+    "whois.tld.ee": {
+      "tld": "ee",
+      "domains": {
+        "found": [
+          "internet.ee",
+          "samanacrafts.ee"
+        ],
+        "expired": [
+          "eestiinternet.ee"
+        ]
+      }
+    },
+    "whois.cnnic.cn": {
+      "tld": "cn",
+      "domains": {
+        "found": [
+          "concordecals.com.cn",
+          "google.cn"
+        ]
+      }
+    },
+    "whois.nic.tl": {
+      "tld": "tl",
+      "domains": {
+        "not-found": [
+          "u34jedzcq.tl"
+        ],
+        "found": [
+          "google.tl"
+        ]
+      }
+    },
+    "whois.museum": {
+      "tld": "museum",
+      "domains": {
+        "not-found": [
+          "u34jedzcq.museum"
+        ],
+        "found": [
+          "musedoma.museum"
+        ]
+      }
+    },
+    "whois.monic.mo": {
+      "tld": "mo",
+      "domains": {
+        "not-found": [
+          "u34jedzcq.mo"
+        ],
+        "found": [
+          "umac.mo"
+        ]
+      }
+    },
+    "whois.dot.tk": {
+      "tld": "tk",
+      "domains": {
+        "found": [
+          "google.tk"
+        ]
+      }
+    },
+    "whois.nic.lk": {
+      "tld": "xn--fzc2c9e2c",
+      "domains": {
+        "found": [
+          "clear.lk",
+          "google.lk",
+          "nestle.lk",
+          "xn--4kcolx4fsa0gdt6j.xn--xkc2al3hye2a",
+          "xn--fzc3a2azd8dsa2ktat.xn--fzc2c9e2c"
+        ]
+      }
+    },
+    "whois.nic.co": {
+      "tld": "co",
+      "domains": {
+        "not-found": [
+          "u34jedzcq.co"
+        ],
+        "found": [
+          "t.co"
+        ]
+      }
+    },
+    "whois.co.ug": {
+      "tld": "ug",
+      "domains": {
+        "found": [
+          "whois.co.ug"
+        ],
+        "unconfirmed": [
+          "youtube.ug"
+        ]
+      }
+    },
+    "whois.comlaude.com": {
+      "tld": "com",
+      "domains": {
+        "found": [
+          "adobe.com"
+        ]
+      }
+    },
+    "whois.nic.ch": {
+      "tld": "ch",
+      "domains": {
+        "found": [
+          "ggoogle.ch",
+          "google.ch",
+          "pui.ch"
+        ]
+      }
+    },
+    "whois.nic.it": {
+      "tld": "it",
+      "domains": {
+        "found": [
+          "alessandrofusco.it",
+          "aversastore.it",
+          "bunkerfilm.it",
+          "cartucceweb.it",
+          "chiara.it",
+          "concessionari-fiat.it",
+          "decorstore.it",
+          "elle.it",
+          "fuoristradausato.it",
+          "google.it",
+          "hotellagioconda.it",
+          "html.it",
+          "imdb.it",
+          "la.it",
+          "pilotielicottero.it",
+          "tipassasubito.it",
+          "ucicinemas.it",
+          "venetamarmi.it"
+        ],
+        "not-found": [
+          "google-not-found.it",
+          "u34jedzcq.it"
+        ],
+        "reserved": [
+          "comunediroccaromana.it"
+        ],
+        "unavailable": [
+          "la-unavailable.it"
+        ]
+      }
+    },
+    "kero.yachay.pe": {
+      "tld": "pe",
+      "domains": {
+        "not-found": [
+          "u34jedzcq.pe"
+        ],
+        "inactive": [
+          "zumba.pe"
+        ],
+        "found": [
+          "google.pe"
+        ],
+        "suspended": [
+          "bangladesh.pe"
+        ]
+      }
+    },
+    "whois.dot.cf": {
+      "tld": "cf",
+      "domains": {
+        "found": [
+          "dot.cf"
+        ]
+      }
+    },
+    "whois.nic.cz": {
+      "tld": "cz",
+      "domains": {
+        "found": [
+          "google.cz",
+          "phoca.cz",
+          "realityporno.cz",
+          "rybarskepotreby-marek.cz"
+        ]
+      }
+    },
+    "whois.nic.ec": {
+      "tld": "ex",
+      "domains": {
+        "not-found": [
+          "u34jedzcq.ec"
+        ],
+        "found": [
+          "google.ec"
+        ]
+      }
+    },
+    "whois.nic.io": {
+      "tld": "io",
+      "domains": {
+        "found": [
+          "google.io",
+          "redis.io"
+        ],
+        "not-found": [
+          "u34jedzcq.io"
+        ]
+      }
+    },
+    "whois.mynic.my": {
+      "tld": "my",
+      "domains": {
+        "not-found": [
+          "u34jedzcq.my"
+        ],
+        "found": [
+          "google.my"
+        ]
+      }
+    },
+    "whois.nic.ir": {
+      "tld": "ir",
+      "domains": {
+        "not-found": [
+          "u34jedzcq.ir"
+        ],
+        "found": [
+          "google.ir"
+        ]
+      }
+    },
+    "whois.dns.hr": {
+      "tld": "hr",
+      "domains": {
+        "found": [
+          "google.hr"
+        ]
+      }
+    },
+    "whois.nic.ci": {
+      "tld": "ci",
+      "domains": {
+        "not-found": [
+          "u34jedzcq.ci"
+        ],
+        "found": [
+          "google.ci"
+        ]
+      }
+    },
+    "whois.eu.org": {
+      "tld": "eu.org",
+      "domains": {
+        "found": [
+          "google.eu.org"
+        ]
+      }
+    },
+    "whois.nic.fm": {
+      "tld": "fm",
+      "domains": {
+        "found": [
+          "google.fm"
+        ]
+      }
+    },
+    "whois.sx": {
+      "tld": "sx",
+      "domains": {
+        "found": [
+          "domain.sx",
+          "whois.sx"
+        ],
+        "not-found": [
+          "u34jedzcq.sx"
+        ],
+        "unavailable": [
+          "domain-unavailable.sx"
+        ]
+      }
+    },
+    "whois.ua": {
+      "tld": "ua",
+      "domains": {
+        "found": [
+          "fcbank.com.ua",
+          "google.com.ua",
+          "googlw.com.ua",
+          "kyivstar.ua",
+          "oogle.com.ua"
+        ],
+        "pending-delete": [
+          "googke.com.ua"
+        ],
+        "not-found": [
+          "u34jedzcq.com.ua"
+        ]
+      }
+    },
+    "whois.nic.lv": {
+      "tld": "lv",
+      "domains": {
+        "not-found": [
+          "u34jedzcq.lv"
+        ],
+        "found": [
+          "google.lv"
+        ]
+      }
+    },
+    "whois.co.pl": {
+      "tld": "co.pl",
+      "domains": {
+        "found": [
+          "coco.co.pl"
+        ]
+      }
+    },
+    "whois.sgnic.sg": {
+      "tld": "sg",
+      "domains": {
+        "found": [
+          "canon.com.sg",
+          "google.sg"
+        ]
+      }
+    },
+    "whois.usp.ac.fj": {
+      "tld": "fj",
+      "domains": {
+        "not-found": [
+          "u34jedzcq.fj"
+        ],
+        "found": [
+          "google.com.fj"
+        ]
+      }
+    },
+    "whois.nic.travel": {
+      "tld": "travel",
+      "domains": {
+        "found": [
+          "travel.travel",
+          "webcams.travel"
+        ],
+        "not-found": [
+          "u34jedzcq.travel"
+        ]
+      }
+    },
+    "whois.dns.lu": {
+      "tld": "lu",
+      "domains": {
+        "found": [
+          "arbed.lu",
+          "google.lu"
+        ],
+        "not-found": [
+          "u34jedzcq.lu"
+        ]
+      }
+    },
+    "whois.tznic.or.tz": {
+      "tld": "tz",
+      "domains": {
+        "expired": [
+          "amanabank.co.tz"
+        ],
+        "found": [
+          "dailynews.co.tz"
+        ]
+      }
+    },
+    "whois.hkirc.hk": {
+      "tld": "hk",
+      "domains": {
+        "found": [
+          "brighter.com.hk",
+          "google.hk"
+        ]
+      }
+    },
+    "whois.afilias-grs.info": {
+      "tld": "sc",
+      "domains": {
+        "found": [
+          "google.mn",
+          "google.sc",
+          "google.vc",
+          "nic.lc",
+          "sapphire.gi"
+        ]
+      }
+    },
+    "whois.nic.mu": {
+      "tld": "mu",
+      "domains": {
+        "not-found": [
+          "u34jedzcq.mu"
+        ],
+        "found": [
+          "google.mu"
+        ]
+      }
+    },
+    "whois.nic.dz": {
+      "tld": "dz",
+      "domains": {
+        "not-found": [
+          "u34jedzcq.dz"
+        ],
+        "found": [
+          "google.dz"
+        ]
+      }
+    },
+    "whois.nic.mg": {
+      "tld": "mg",
+      "domains": {
+        "not-found": [
+          "u34jedzcq.mg"
+        ],
+        "found": [
+          "google.mg"
+        ]
+      }
+    },
+    "whois.nic.nf": {
+      "tld": "nf",
+      "domains": {
+        "not-found": [
+          "u34jedzcq.nf"
+        ],
+        "found": [
+          "google.nf"
+        ]
+      }
+    },
+    "whois.tonic.to": {
+      "tld": "to",
+      "domains": {
+        "not-found": [
+          "u34jedzcq"
+        ]
+      }
+    },
+    "whois.nic.bj": {
+      "tld": "bj",
+      "domains": {
+        "not-found": [
+          "u34jedzcq.bj"
+        ],
+        "found": [
+          "google.bj"
+        ]
+      }
+    },
+    "whois.afilias.net": {
+      "tld": "pro",
+      "domains": {
+        "found": [
+          "google.info",
+          "google.pro"
+        ]
+      }
+    },
+    "whois.isoc.org.il": {
+      "tld": "il",
+      "domains": {
+        "found": [
+          "isoc.org.il",
+          "spd.co.il"
+        ],
+        "locked": [
+          "isoc-locked.org.il"
+        ]
+      }
+    },
+    "whois.tld.sy": {
+      "tld": "sy",
+      "domains": {
+        "not-found": [
+          "u34jedzcq.sy"
+        ],
+        "found": [
+          "tld.sy"
+        ]
+      }
+    },
+    "whois.jprs.jp": {
+      "tld": "co.jp",
+      "domains": {
+        "pending-delete": [
+          "gaylife.co.jp"
+        ],
+        "found": [
+          "ahoo.co.jp",
+          "amazon.co.jp",
+          "ameblo.jp",
+          "fashionwatch.jp",
+          "flirtbox.jp",
+          "google.jp",
+          "google.ne.jp",
+          "u-tokyo.ac.jp"
+        ],
+        "suspended": [
+          "veganwiz.jp"
+        ],
+        "reserved": [
+          "example.jp",
+          "ne.jp"
+        ]
+      }
+    },
+    "whois.nic.asia": {
+      "tld": "asia",
+      "domains": {
+        "found": [
+          "cj7.asia",
+          "novalash.asia"
+        ]
+      }
+    },
+    "whois.nic.ms": {
+      "tld": "ms",
+      "domains": {
+        "not-found": [
+          "u34jedzcq.ms"
+        ],
+        "found": [
+          "google.ms"
+        ]
+      }
+    },
+    "whois.dotname.co.kr": {
+      "tld": "com",
+      "domains": {
+        "found": [
+          "ggemtv.com"
+        ]
+      }
+    },
+    "whois.eenet.ee": {
+      "tld": "ee",
+      "domains": {
+        "not-found": [
+          "u34jedzcq.ee"
+        ],
+        "found": [
+          "google.ee"
+        ]
+      }
+    },
+    "whois.dk-hostmaster.dk": {
+      "tld": "dk",
+      "domains": {
+        "deactivated": [
+          "progolftours.dk"
+        ],
+        "reserved": [
+          "googlle.dk"
+        ],
+        "found": [
+          "google.dk"
+        ]
+      }
+    },
+    "whois.registro.br": {
+      "tld": "br",
+      "domains": {
+        "found": [
+          "001hosting.com.br",
+          "google.com.br",
+          "hostgator.com.br",
+          "registro.br"
+        ],
+        "not-found": [
+          "u34jedzcq.br"
+        ]
+      }
+    },
+    "whois.register.si": {
+      "tld": "si",
+      "domains": {
+        "found": [
+          "google.si"
+        ]
+      }
+    },
+    "whois.nic.ac": {
+      "tld": "ac",
+      "domains": {
+        "not-found": [
+          "u34jedzcq.ac"
+        ],
+        "found": [
+          "google.ac"
+        ]
+      }
+    },
+    "whois.nic.gs": {
+      "tld": "gs",
+      "domains": {
+        "not-found": [
+          "u34jedzcq.gs"
+        ],
+        "found": [
+          "google.gs"
+        ]
+      }
+    },
+    "whois.amnic.net": {
+      "tld": "am",
+      "domains": {
+        "found": [
+          "google.am"
+        ]
+      }
+    },
+    "whois.donuts.co": {
+      "tld": "bike",
+      "domains": {
+        "found": [
+          "whereismy.bike"
+        ]
+      }
+    },
+    "whois.dotpostregistry.net": {
+      "tld": "post",
+      "domains": {
+        "found": [
+          "posteitaliane.post"
+        ]
+      }
+    },
+    "whois.nic.net.sa": {
+      "tld": "sa",
+      "domains": {
+        "not-found": [
+          "u34jedzcq.com.sa"
+        ],
+        "found": [
+          "saudigazette.com.sa"
+        ]
+      }
+    },
+    "whois.nic.sm": {
+      "tld": "sm",
+      "domains": {
+        "found": [
+          "google.sm"
+        ]
+      }
+    },
+    "whois.nic.us": {
+      "tld": "us",
+      "domains": {
+        "not-found": [
+          "u34jedzcq.us"
+        ],
+        "found": [
+          "google.us"
+        ]
+      }
+    },
+    "whois.dotgov.gov": {
+      "tld": "gov",
+      "domains": {
+        "not-found": [
+          "u34jedzcq.gov"
+        ],
+        "found": [
+          "gsa.gov"
+        ]
+      }
+    },
+    "whois.nic.pw": {
+      "tld": "pw",
+      "domains": {
+        "found": [
+          "google.pw"
+        ]
+      }
+    },
+    "whois.pandi.or.id": {
+      "tld": "id",
+      "domains": {
+        "found": [
+          "google.co.id"
+        ]
+      }
+    },
+    "whois.za.org": {
+      "tld": "za.org",
+      "domains": {
+        "not-found": [
+          "u34jedzcq.za.org"
+        ],
+        "found": [
+          "csa.za.org"
+        ]
+      }
+    },
+    "whois.domreg.lt": {
+      "tld": "lt",
+      "domains": {
+        "found": [
+          "google.lt",
+          "serveriai.lt"
+        ],
+        "not-found": [
+          "u34jedzcq.lt"
+        ]
+      }
+    },
+    "durban-whois.registry.net.za": {
+      "tld": "durban",
+      "domains": {
+        "not-found": [
+          "nosuchdomain.durban"
+        ],
+        "found": [
+          "wordpress.durban"
+        ]
+      }
+    },
+    "whois.nic.sl": {
+      "tld": "sl",
+      "domains": {
+        "not-found": [
+          "u34jedzcq.sl"
+        ],
+        "found": [
+          "google.sl"
+        ]
+      }
+    },
+    "whois.netcom.cm": {
+      "tld": "cm",
+      "domains": {
+        "not-found": [
+          "u34jedzcq.cm"
+        ],
+        "found": [
+          "google.cm"
+        ],
+        "suspended": [
+          "imdb.cm"
+        ]
+      }
+    },
+    "whois.register.bg": {
+      "tld": "bg",
+      "domains": {
+        "found": [
+          "google.bg",
+          "orbitel.bg"
+        ],
+        "not-found": [
+          "u34jedzcq.bg"
+        ]
+      }
+    },
+    "whois.nic.pm": {
+      "tld": "pm",
+      "domains": {
+        "found": [
+          "nic.pm"
+        ]
+      }
+    },
+    "whois.co.ca": {
+      "tld": "co.ca",
+      "domains": {
+        "not-found": [
+          "u34jedzcq.co.ca"
+        ],
+        "found": [
+          "internet.co.ca"
+        ]
+      }
+    },
+    "whois.bnnic.bn": {
+      "tld": "bn",
+      "domains": {
+        "found": [
+          "telbru.com.bn"
+        ]
+      }
+    },
+    "whois.isnic.is": {
+      "tld": "is",
+      "domains": {
+        "not-found": [
+          "u34jedzcq.is"
+        ],
+        "found": [
+          "google.is"
+        ]
+      }
+    },
+    "whois.namecheap.com": {
+      "tld": "com",
+      "domains": {
+        "found": [
+          "slavichy.com"
+        ]
+      }
+    }
+  }
+}
