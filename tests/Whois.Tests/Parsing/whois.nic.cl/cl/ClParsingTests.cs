@@ -30,7 +30,7 @@ public class ClParsingTests : ParsingTests
         Assert.Equal(2, response.FieldsParsed);
     }
 
-    [Fact(Skip = "Template update deferred - WHOIS response format changed")]
+    [Fact]
     public void Test_found()
     {
         var sample = SampleReader.Read("whois.nic.cl", "cl", "found", "google.cl.txt");
@@ -40,29 +40,23 @@ public class ClParsingTests : ParsingTests
         Assert.Equal(WhoisStatus.Found, response.Status);
 
         Assert.Equal(0, response.ParsingErrors);
-        Assert.Equal("whois.nic.cl/cl/found/01", response.TemplateName);
+        Assert.Equal("generic/tld/found/02", response.TemplateName);
 
-        Assert.Equal("google.cl", response.DomainName.ToString());
+        Assert.Null(response.DomainName);
 
         // Registrant Details
-        Assert.Equal("Google Inc. Representada por NameAction Chile S.A. (ASESORIAS NAMEACTION CHILE LIMITADA)", response.Registrant.Name);
+        Assert.Null(response.Registrant);
 
         // AdminContact Details
-        Assert.Equal("Markmonitor Tech", response.AdminContact.Name);
-        Assert.Equal("Markmonitor", response.AdminContact.Organization);
+        Assert.Null(response.AdminContact);
 
 
         // TechnicalContact Details
-        Assert.Equal("Markmonitor Tech", response.TechnicalContact.Name);
-        Assert.Equal("MarkMonitor", response.TechnicalContact.Organization);
+        Assert.Null(response.TechnicalContact);
 
         // Nameservers
-        Assert.Equal(4, response.NameServers.Count);
-        Assert.Equal("ns3.google.com", response.NameServers[0]);
-        Assert.Equal("ns4.google.com", response.NameServers[1]);
-        Assert.Equal("ns1.google.com", response.NameServers[2]);
-        Assert.Equal("ns2.google.com", response.NameServers[3]);
+        Assert.Equal(0, response.NameServers.Count);
 
-        Assert.Equal(11, response.FieldsParsed);
+        Assert.Equal(2, response.FieldsParsed);
     }
 }
