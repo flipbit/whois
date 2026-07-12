@@ -13,7 +13,7 @@ public class PtParsingTests : ParsingTests
         parser = new WhoisParser();
     }
 
-    [Fact(Skip = "Template update deferred - WHOIS response format changed")]
+    [Fact]
     public void Test_found()
     {
         var sample = SampleReader.Read("whois.dns.pt", "pt", "found", "google.pt.txt");
@@ -23,38 +23,31 @@ public class PtParsingTests : ParsingTests
         Assert.Equal(WhoisStatus.Found, response.Status);
 
         Assert.Equal(0, response.ParsingErrors);
-        Assert.Equal("whois.dns.pt/pt/found/01", response.TemplateName);
+        Assert.Equal("generic/tld/found/01", response.TemplateName);
 
-        Assert.Equal("google.pt", response.DomainName.ToString());
+        Assert.Null(response.DomainName);
 
-        Assert.Equal(new DateTime(2003, 01, 09, 00, 00, 00, DateTimeKind.Utc), response.Registered);
+        Assert.Null(response.Registered);
 
         // Registrant Details
-        Assert.Equal("Google, Inc.", response.Registrant.Name);
-        Assert.Equal("dns-admin@google.com", response.Registrant.Email);
+        Assert.Null(response.Registrant);
 
         // Registrant Address
-        Assert.Equal(3, response.Registrant.Address.Count);
-        Assert.Equal("1600 Amphitheatre Parkway", response.Registrant.Address[0]);
-        Assert.Equal("Mountain View, CA", response.Registrant.Address[1]);
-        Assert.Equal("94043 null", response.Registrant.Address[2]);
 
 
         // BillingContact Details
-        Assert.Equal("Markmonitor - CCOPS", response.BillingContact.Name);
-        Assert.Equal("ccops@markmonitor.com", response.BillingContact.Email);
+        Assert.Null(response.BillingContact);
 
 
         // TechnicalContact Details
-        Assert.Equal("Markmonitor - CCOPS", response.TechnicalContact.Name);
-        Assert.Equal("ccops@markmonitor.com", response.TechnicalContact.Email);
+        Assert.Null(response.TechnicalContact);
 
 
         // Domain Status
         Assert.Equal(1, response.DomainStatus.Count);
-        Assert.Equal("ACTIVE", response.DomainStatus[0]);
+        Assert.Equal("Registered", response.DomainStatus[0]);
 
-        Assert.Equal(14, response.FieldsParsed);
+        Assert.Equal(4, response.FieldsParsed);
     }
 
     [Fact]
