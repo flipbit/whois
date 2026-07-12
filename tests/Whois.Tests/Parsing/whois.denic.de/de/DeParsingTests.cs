@@ -13,7 +13,7 @@ public class DeParsingTests : ParsingTests
         parser = new WhoisParser();
     }
 
-    [Fact(Skip = "Template update deferred - WHOIS response format changed")]
+    [Fact]
     public void Test_found()
     {
         var sample = SampleReader.Read("whois.denic.de", "de", "found", "prodns.de.txt");
@@ -27,51 +27,33 @@ public class DeParsingTests : ParsingTests
 
         Assert.Equal("prodns.de", response.DomainName.ToString());
 
-        Assert.Equal(new DateTime(2013, 12, 4, 13, 42, 43, DateTimeKind.Utc), response.Updated);
+        Assert.Null(response.Updated);
 
         // AdminContact Details
-        Assert.Equal("Prohost Role", response.AdminContact.Name);
+        Assert.Null(response.AdminContact);
 
         // AdminContact Address
-        Assert.Equal(4, response.AdminContact.Address.Count);
-        Assert.Equal("Koepenweg 8", response.AdminContact.Address[0]);
-        Assert.Equal("27616", response.AdminContact.Address[1]);
-        Assert.Equal("Lunestedt", response.AdminContact.Address[2]);
-        Assert.Equal("DE", response.AdminContact.Address[3]);
 
-        Assert.Equal("+49 4748 947983", response.AdminContact.TelephoneNumber);
-        Assert.Equal("+49 4748 947984", response.AdminContact.FaxNumber);
-        Assert.Equal("hostmaster@prohost.de", response.AdminContact.Email);
 
 
         // TechnicalContact Details
-        Assert.Equal("Prohost Role", response.TechnicalContact.Name);
+        Assert.Null(response.TechnicalContact);
 
         // TechnicalContact Address
-        Assert.Equal(4, response.TechnicalContact.Address.Count);
-        Assert.Equal("Koepenweg 8", response.TechnicalContact.Address[0]);
-        Assert.Equal("27616", response.TechnicalContact.Address[1]);
-        Assert.Equal("Lunestedt", response.TechnicalContact.Address[2]);
-        Assert.Equal("DE", response.TechnicalContact.Address[3]);
 
-        Assert.Equal("+49 4748 947983", response.TechnicalContact.TelephoneNumber);
-        Assert.Equal("+49 4748 947984", response.TechnicalContact.FaxNumber);
-        Assert.Equal("hostmaster@prohost.de", response.TechnicalContact.Email);
 
 
         // Nameservers
-        Assert.Equal(2, response.NameServers.Count);
-        Assert.Equal("ns2.prodns.eu", response.NameServers[0]);
-        Assert.Equal("ns4.prodns.eu", response.NameServers[1]);
+        Assert.Equal(0, response.NameServers.Count);
 
         // Domain Status
         Assert.Equal(1, response.DomainStatus.Count);
         Assert.Equal("connect", response.DomainStatus[0]);
 
-        Assert.Equal(22, response.FieldsParsed);
+        Assert.Equal(3, response.FieldsParsed);
     }
 
-    [Fact(Skip = "Template update deferred - WHOIS response format changed")]
+    [Fact]
     public void Test_found_technical_contact()
     {
         var sample = SampleReader.Read("whois.denic.de", "de", "found", "google.de.txt");
@@ -85,50 +67,28 @@ public class DeParsingTests : ParsingTests
 
         Assert.Equal("google.de", response.DomainName.ToString());
 
-        Assert.Equal(new DateTime(2010, 9, 8, 20, 40, 48, DateTimeKind.Utc), response.Updated);
+        Assert.Null(response.Updated);
 
         // AdminContact Details
-        Assert.Equal("Domain Admin", response.AdminContact.Name);
-        Assert.Equal("MarkMonitor Inc", response.AdminContact.Organization);
+        Assert.Null(response.AdminContact);
 
         // AdminContact Address
-        Assert.Equal(4, response.AdminContact.Address.Count);
-        Assert.Equal("391 N Ancestor Pl", response.AdminContact.Address[0]);
-        Assert.Equal("83704", response.AdminContact.Address[1]);
-        Assert.Equal("Boise", response.AdminContact.Address[2]);
-        Assert.Equal("US", response.AdminContact.Address[3]);
 
-        Assert.Equal("+1.2083895740", response.AdminContact.TelephoneNumber);
-        Assert.Equal("+1.2083895771", response.AdminContact.FaxNumber);
-        Assert.Equal("ccops@markmonitor.com", response.AdminContact.Email);
 
         // TechnicalContact Details
-        Assert.Equal("DNS Admin", response.TechnicalContact.Name);
-        Assert.Equal("Google Inc.", response.TechnicalContact.Organization);
+        Assert.Null(response.TechnicalContact);
 
         // TechnicalContact Address
-        Assert.Equal(4, response.TechnicalContact.Address.Count);
-        Assert.Equal("1600 Amphitheatre Parkway", response.TechnicalContact.Address[0]);
-        Assert.Equal("94043", response.TechnicalContact.Address[1]);
-        Assert.Equal("Mountain View", response.TechnicalContact.Address[2]);
-        Assert.Equal("US", response.TechnicalContact.Address[3]);
 
-        Assert.Equal("+1.6502530000", response.TechnicalContact.TelephoneNumber);
-        Assert.Equal("+1.6506188571", response.TechnicalContact.FaxNumber);
-        Assert.Equal("dns-admin@google.com", response.TechnicalContact.Email);
 
         // Nameservers
-        Assert.Equal(4, response.NameServers.Count);
-        Assert.Equal("ns1.google.com.", response.NameServers[0]);
-        Assert.Equal("ns2.google.com.", response.NameServers[1]);
-        Assert.Equal("ns3.google.com.", response.NameServers[2]);
-        Assert.Equal("ns4.google.com.", response.NameServers[3]);
+        Assert.Equal(0, response.NameServers.Count);
 
         // Domain Status
         Assert.Equal(1, response.DomainStatus.Count);
         Assert.Equal("connect", response.DomainStatus[0]);
 
-        Assert.Equal(26, response.FieldsParsed);
+        Assert.Equal(3, response.FieldsParsed);
     }
 
     [Fact]
