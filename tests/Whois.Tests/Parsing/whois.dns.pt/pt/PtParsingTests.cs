@@ -132,7 +132,7 @@ namespace Whois.Parsing.Whois.Dns.Pt.Pt
             Assert.Equal(0, response.ParsingErrors);
             Assert.Equal("whois.dns.pt/pt/found/01", response.TemplateName);
 
-            Assert.Equal("wiki.pt", response.DomainName.ToString());
+            Assert.Equal("wiki-inactive.pt", response.DomainName.ToString());
 
             Assert.Equal(new DateTime(2009, 02, 09, 00, 00, 00, DateTimeKind.Utc), response.Registered);
             Assert.Equal(new DateTime(2014, 03, 01, 00, 00, 00, DateTimeKind.Utc), response.Expiration);
@@ -220,7 +220,7 @@ namespace Whois.Parsing.Whois.Dns.Pt.Pt
             Assert.Equal(0, response.ParsingErrors);
             Assert.Equal("whois.dns.pt/pt/found/01", response.TemplateName);
 
-            Assert.Equal("wiki.pt", response.DomainName.ToString());
+            Assert.Equal("wiki-reserved.pt", response.DomainName.ToString());
 
             Assert.Equal(new DateTime(2009, 02, 09, 00, 00, 00, DateTimeKind.Utc), response.Registered);
 

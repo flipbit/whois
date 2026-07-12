@@ -341,7 +341,7 @@ namespace Whois.Parsing.Whois.Nic.It.It
             Assert.Equal(0, response.ParsingErrors);
             Assert.Equal("whois.nic.it/it/found/01", response.TemplateName);
 
-            Assert.Equal("google.it", response.DomainName.ToString());
+            Assert.Equal("google-not-found.it", response.DomainName.ToString());
 
             // Domain Status
             Assert.Equal(1, response.DomainStatus.Count);
@@ -1623,7 +1623,7 @@ namespace Whois.Parsing.Whois.Nic.It.It
             Assert.Equal(0, response.ParsingErrors);
             Assert.Equal("whois.nic.it/it/found/01", response.TemplateName);
 
-            Assert.Equal("la.it", response.DomainName.ToString());
+            Assert.Equal("la-unavailable.it", response.DomainName.ToString());
 
             // Domain Status
             Assert.Equal(1, response.DomainStatus.Count);

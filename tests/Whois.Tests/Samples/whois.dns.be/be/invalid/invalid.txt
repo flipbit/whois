@@ -34,7 +34,7 @@
 % protect the privacy of its registrants or the integrity of the database.
 %
 
-Domain:	www.kimdemolenaer.be
+Domain:	www-invalid.kimdemolenaer.be
 Status:	NOT ALLOWED
 Message:	Use only approved characters.
 

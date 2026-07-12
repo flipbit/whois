@@ -131,11 +131,11 @@ namespace Whois.Parsing.Whois.Isoc.Org.Il.Il
             Assert.Equal(0, response.ParsingErrors);
             Assert.Equal("whois.isoc.org.il/il/found/01", response.TemplateName);
 
-            Assert.Equal("isoc.org.il", response.DomainName.ToString());
+            Assert.Equal("isoc-locked.org.il", response.DomainName.ToString());
 
             // Registrar Details
             Assert.Equal("Israel Internet Association ISOC-IL", response.Registrar.Name);
-            Assert.Equal("www.isoc.org.il", response.Registrar.Url);
+            Assert.Equal("www.isoc-locked.org.il", response.Registrar.Url);
 
             Assert.Equal(new DateTime(2010, 10, 07, 00, 00, 00, 000, DateTimeKind.Utc), response.Updated);
             Assert.Equal(new DateTime(1996, 01, 11, 00, 00, 00, 000, DateTimeKind.Utc), response.Registered);
@@ -144,7 +144,7 @@ namespace Whois.Parsing.Whois.Isoc.Org.Il.Il
             Assert.Equal("Israel Internet Association (ISOC-IL)", response.Registrant.Name);
             Assert.Equal("+972 3 9700900", response.Registrant.TelephoneNumber);
             Assert.Equal("+972 3 9700901", response.Registrant.FaxNumber);
-            Assert.Equal("info-domains@isoc.org.il", response.Registrant.Email);
+            Assert.Equal("info-domains@isoc-locked.org.il", response.Registrant.Email);
 
              // Registrant Address
             Assert.Equal(4, response.Registrant.Address.Count);
@@ -159,7 +159,7 @@ namespace Whois.Parsing.Whois.Isoc.Org.Il.Il
             Assert.Equal("Doron Shikmoni", response.AdminContact.Name);
             Assert.Equal("+972 3 9700900", response.AdminContact.TelephoneNumber);
             Assert.Equal("+972 3 9700901", response.AdminContact.FaxNumber);
-            Assert.Equal("doron@isoc.org.il", response.AdminContact.Email);
+            Assert.Equal("doron@isoc-locked.org.il", response.AdminContact.Email);
 
              // AdminContact Address
             Assert.Equal(5, response.AdminContact.Address.Count);
@@ -175,7 +175,7 @@ namespace Whois.Parsing.Whois.Isoc.Org.Il.Il
             Assert.Equal("Ariel Biener", response.TechnicalContact.Name);
             Assert.Equal("+972 3 9700900", response.TechnicalContact.TelephoneNumber);
             Assert.Equal("+972 3 9700901", response.TechnicalContact.FaxNumber);
-            Assert.Equal("ariel@isoc.org.il", response.TechnicalContact.Email);
+            Assert.Equal("ariel@isoc-locked.org.il", response.TechnicalContact.Email);
 
              // TechnicalContact Address
             Assert.Equal(5, response.TechnicalContact.Address.Count);
@@ -191,7 +191,7 @@ namespace Whois.Parsing.Whois.Isoc.Org.Il.Il
             Assert.Equal("Doron Shikmoni", response.ZoneContact.Name);
             Assert.Equal("+972 3 9700900", response.ZoneContact.TelephoneNumber);
             Assert.Equal("+972 3 9700901", response.ZoneContact.FaxNumber);
-            Assert.Equal("doron@isoc.org.il", response.ZoneContact.Email);
+            Assert.Equal("doron@isoc-locked.org.il", response.ZoneContact.Email);
 
              // ZoneContact Address
             Assert.Equal(5, response.ZoneContact.Address.Count);
@@ -204,11 +204,11 @@ namespace Whois.Parsing.Whois.Isoc.Org.Il.Il
 
             // Nameservers
             Assert.Equal(6, response.NameServers.Count);
-            Assert.Equal("ns.isoc.org.il", response.NameServers[0]);
-            Assert.Equal("grappa.isoc.org.il", response.NameServers[1]);
+            Assert.Equal("ns.isoc-locked.org.il", response.NameServers[0]);
+            Assert.Equal("grappa.isoc-locked.org.il", response.NameServers[1]);
             Assert.Equal("aristo.tau.ac.il", response.NameServers[2]);
             Assert.Equal("relay.huji.ac.il", response.NameServers[3]);
-            Assert.Equal("drns.isoc.org.il", response.NameServers[4]);
+            Assert.Equal("drns.isoc-locked.org.il", response.NameServers[4]);
             Assert.Equal("sps-pb.isc.org", response.NameServers[5]);
 
             // Domain Status

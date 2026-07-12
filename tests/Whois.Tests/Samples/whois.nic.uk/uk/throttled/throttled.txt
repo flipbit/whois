@@ -1,4 +1,4 @@
-    Error for "google.co.uk".
+    Error for "google-throttled.co.uk".
 
     The WHOIS query quota for 127.0.0.1 has been exceeded
     and will be replenished in 50 seconds.

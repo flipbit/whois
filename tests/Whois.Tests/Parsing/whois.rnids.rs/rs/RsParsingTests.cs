@@ -92,7 +92,7 @@ namespace Whois.Parsing.Whois.Rnids.Rs.Rs
             Assert.Equal(0, response.ParsingErrors);
             Assert.Equal("whois.rnids.rs/rs/found/01", response.TemplateName);
 
-            Assert.Equal("saj.rs", response.DomainName.ToString());
+            Assert.Equal("saj-expired.rs", response.DomainName.ToString());
 
             // Registrar Details
             Assert.Equal("BGSVETIONIK.S.A.", response.Registrar.Name);

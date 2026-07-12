@@ -138,7 +138,7 @@ namespace Whois.Parsing.Whois.Sx.Sx
             Assert.Equal(0, response.ParsingErrors);
             Assert.Equal("whois.sx/sx/unavailable/01", response.TemplateName);
 
-            Assert.Equal("domain.sx", response.DomainName.ToString());
+            Assert.Equal("domain-unavailable.sx", response.DomainName.ToString());
 
             Assert.Equal(2, response.FieldsParsed);
         }

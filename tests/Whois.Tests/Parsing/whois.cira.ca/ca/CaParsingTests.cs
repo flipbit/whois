@@ -210,7 +210,7 @@ namespace Whois.Parsing.Whois.Cira.Ca.Ca
             Assert.Equal(0, response.ParsingErrors);
             Assert.Equal("whois.cira.ca/ca/found/01", response.TemplateName);
 
-            Assert.Equal("glu.ca", response.DomainName.ToString());
+            Assert.Equal("glu-redemption.ca", response.DomainName.ToString());
 
             // Registrar Details
             Assert.Equal("Webnames.ca Inc.", response.Registrar.Name);
@@ -394,7 +394,7 @@ namespace Whois.Parsing.Whois.Cira.Ca.Ca
             Assert.Equal(0, response.ParsingErrors);
             Assert.Equal("whois.cira.ca/ca/unavailable/01", response.TemplateName);
 
-            Assert.Equal("mediom.ca", response.DomainName.ToString());
+            Assert.Equal("mediom-invalid.ca", response.DomainName.ToString());
 
             Assert.Equal(2, response.FieldsParsed);
         }

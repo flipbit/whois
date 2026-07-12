@@ -750,7 +750,7 @@ namespace Whois.Parsing.Whois.Nic.Fr.Fr
             Assert.Equal(0, response.ParsingErrors);
             Assert.Equal("generic/tld/found/05", response.TemplateName);
 
-            Assert.Equal("behotel.fr", response.DomainName.ToString());
+            Assert.Equal("behotel-not-found.fr", response.DomainName.ToString());
 
             // Registrar Details
             Assert.Equal("OVH", response.Registrar.Name);

@@ -538,7 +538,7 @@ namespace Whois.Parsing.Whois.Nic.Uk.Uk
             Assert.Equal(0, response.ParsingErrors);
             Assert.Equal("whois.nic.uk/uk/throttled/01", response.TemplateName);
 
-            Assert.Equal("google.co.uk", response.DomainName.ToString());
+            Assert.Equal("google-throttled.co.uk", response.DomainName.ToString());
 
             Assert.Equal(2, response.FieldsParsed);
         }
@@ -637,7 +637,7 @@ namespace Whois.Parsing.Whois.Nic.Uk.Uk
             Assert.Equal(0, response.ParsingErrors);
             Assert.Equal("whois.nic.uk/uk/found/01", response.TemplateName);
 
-            Assert.Equal("internet.co.uk", response.DomainName.ToString());
+            Assert.Equal("internet-reserved.co.uk", response.DomainName.ToString());
 
             // Registrar Details
             Assert.Equal("No registrar listed.  This domain is registered directly with Nominet.", response.Registrar.Name);

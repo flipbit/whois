@@ -1,4 +1,4 @@
-Domain name:           glu.ca
+Domain name:           glu-redemption.ca
 Domain status:         redemption
 Creation date:         2004/10/30
 Expiry date:           2010/10/29

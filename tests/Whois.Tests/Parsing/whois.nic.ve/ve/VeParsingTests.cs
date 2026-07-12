@@ -636,14 +636,14 @@ namespace Whois.Parsing.Whois.Nic.Ve.Ve
             Assert.Equal(0, response.ParsingErrors);
             Assert.Equal("whois.nic.ve/ve/found/01", response.TemplateName);
 
-            Assert.Equal("aloespa.com.ve", response.DomainName.ToString());
+            Assert.Equal("aloespa-inactive.com.ve", response.DomainName.ToString());
 
             Assert.Equal(new DateTime(2006, 06, 08, 21, 54, 41, 000, DateTimeKind.Utc), response.Updated);
             Assert.Equal(new DateTime(2005, 11, 21, 15, 21, 32, 000, DateTimeKind.Utc), response.Registered);
             Assert.Equal(new DateTime(2010, 11, 21, 15, 21, 32, 000, DateTimeKind.Utc), response.Expiration);
 
              // Registrant Details
-            Assert.Equal("aloespa.com.ve-dom", response.Registrant.RegistryId);
+            Assert.Equal("aloespa-inactive.com.ve-dom", response.Registrant.RegistryId);
             Assert.Equal("Rafael Perez", response.Registrant.Name);
             Assert.Equal("registro@tepuynet.com", response.Registrant.Email);
 
@@ -655,7 +655,7 @@ namespace Whois.Parsing.Whois.Nic.Ve.Ve
 
 
              // AdminContact Details
-            Assert.Equal("aloespa.com.ve-adm", response.AdminContact.RegistryId);
+            Assert.Equal("aloespa-inactive.com.ve-adm", response.AdminContact.RegistryId);
             Assert.Equal("Tepuynet", response.AdminContact.Name);
             Assert.Equal("2418246437", response.AdminContact.TelephoneNumber);
             Assert.Equal("2418246437", response.AdminContact.FaxNumber);
@@ -669,7 +669,7 @@ namespace Whois.Parsing.Whois.Nic.Ve.Ve
 
 
              // BillingContact Details
-            Assert.Equal("aloespa.com.ve-bil", response.BillingContact.RegistryId);
+            Assert.Equal("aloespa-inactive.com.ve-bil", response.BillingContact.RegistryId);
             Assert.Equal("Tepuynet", response.BillingContact.Name);
             Assert.Equal("2418246437", response.BillingContact.TelephoneNumber);
             Assert.Equal("2418246437", response.BillingContact.FaxNumber);
@@ -683,7 +683,7 @@ namespace Whois.Parsing.Whois.Nic.Ve.Ve
 
 
              // TechnicalContact Details
-            Assert.Equal("aloespa.com.ve-tec", response.TechnicalContact.RegistryId);
+            Assert.Equal("aloespa-inactive.com.ve-tec", response.TechnicalContact.RegistryId);
             Assert.Equal("Tepuynet", response.TechnicalContact.Name);
             Assert.Equal("2418246437", response.TechnicalContact.TelephoneNumber);
             Assert.Equal("2418246437", response.TechnicalContact.FaxNumber);

@@ -10,12 +10,12 @@
 %%
 %% Use '-h' option to obtain more information about this service.
 %%
-%% [95.74.216.182 REQUEST] >> behotel.fr
+%% [95.74.216.182 REQUEST] >> behotel-not-found.fr
 %%
 %% RL Net [##########] - RL IP [#########.]
 %%
 
-domain:      behotel.fr
+domain:      behotel-not-found.fr
 status:      REGISTERED
 hold:        YES
 holder-c:    AS1245-FRNIC

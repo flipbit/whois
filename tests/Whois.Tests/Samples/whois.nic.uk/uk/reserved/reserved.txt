@@ -1,6 +1,6 @@
 
     Domain name:
-        internet.co.uk
+        internet-reserved.co.uk
 
     Registrant:
         Nominet UK

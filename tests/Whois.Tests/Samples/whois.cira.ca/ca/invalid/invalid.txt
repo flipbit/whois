@@ -1,4 +1,4 @@
-Domain name:           mediom.ca
+Domain name:           mediom-invalid.ca
 Domain status:         unavailable
 Error code:            01114
 Error message:         The domain name provided conflicts with at least one other registered domain name and as a result is not available for registration (e.g. xyz.ca conflicts with xyz.on.ca).

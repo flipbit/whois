@@ -246,7 +246,7 @@ namespace Whois.Parsing.Whois.Dns.Be.Be
             Assert.Equal(0, response.ParsingErrors);
             Assert.Equal("whois.dns.be/be/error/01", response.TemplateName);
 
-            Assert.Equal("www.kimdemolenaer.be", response.DomainName.ToString());
+            Assert.Equal("www-invalid.kimdemolenaer.be", response.DomainName.ToString());
 
 
             Assert.Equal(2, response.FieldsParsed);
