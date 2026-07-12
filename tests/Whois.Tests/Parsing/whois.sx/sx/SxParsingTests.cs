@@ -13,21 +13,21 @@ public class SxParsingTests : ParsingTests
         parser = new WhoisParser();
     }
 
-    [Fact(Skip = "Template update deferred - WHOIS response format changed")]
+    [Fact]
     public void Test_other_status_premium_name()
     {
         var sample = SampleReader.Read("whois.sx", "sx", "found", "domain.sx.txt");
         var response = parser.Parse("whois.sx", sample);
 
         Assert.True(sample.Length > 0);
-        Assert.Equal(WhoisStatus.Unavailable, response.Status);
+        Assert.Equal(WhoisStatus.Found, response.Status);
 
         Assert.Equal(0, response.ParsingErrors);
-        Assert.Equal("whois.sx/sx/unavailable/01", response.TemplateName);
+        Assert.Equal("generic/tld/found/01", response.TemplateName);
 
         Assert.Equal("domain.sx", response.DomainName.ToString());
 
-        Assert.Equal(2, response.FieldsParsed);
+        Assert.Equal(47, response.FieldsParsed);
     }
 
     [Fact]
