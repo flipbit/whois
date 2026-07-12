@@ -32,10 +32,15 @@ public class SampleMapperTests
         Assert.Equal(expectedFilename, filename);
     }
 
-    [Fact]
-    public void MapToStatusDirectory_throws_for_unknown_prefix()
+    [Theory]
+    [InlineData("adobe.com.txt", "found", "adobe.com.txt")]
+    [InlineData("youtu.be.txt", "found", "youtu.be.txt")]
+    [InlineData("unknown_status.txt", "found", "unknown_status.txt")]
+    public void MapToStatusDirectory_falls_back_to_found_for_domain_named_samples(
+        string input, string expectedStatus, string expectedFilename)
     {
-        Assert.Throws<InvalidOperationException>(() =>
-            SampleMapper.MapToStatusDirectory("unknown_status.txt"));
+        var (status, filename) = SampleMapper.MapToStatusDirectory(input);
+        Assert.Equal(expectedStatus, status);
+        Assert.Equal(expectedFilename, filename);
     }
 }
