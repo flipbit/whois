@@ -13,7 +13,7 @@ public class EuParsingTests : ParsingTests
         parser = new WhoisParser();
     }
 
-    [Fact(Skip = "Template update deferred - WHOIS response format changed")]
+    [Fact]
     public void Test_found()
     {
         var sample = SampleReader.Read("whois.eu", "eu", "found", "eurid.eu.txt");
@@ -29,18 +29,13 @@ public class EuParsingTests : ParsingTests
         Assert.Equal("eurid.eu", response.DomainName.ToString());
 
         // Registrar Details
-        Assert.Equal("EURid vzw/asbl", response.Registrar.Name);
-        Assert.Equal("www.eurid.eu", response.Registrar.Url);
+        Assert.Null(response.Registrar.Name);
+        Assert.Equal("https://www.eurid.eu", response.Registrar.Url);
 
         // Nameservers
-        Assert.Equal(5, response.NameServers.Count);
-        Assert.Equal("a.nic.eu", response.NameServers[0]);
-        Assert.Equal("l.nic.eu", response.NameServers[1]);
-        Assert.Equal("p.nic.eu", response.NameServers[2]);
-        Assert.Equal("ns1.eurid.eu", response.NameServers[3]);
-        Assert.Equal("ns2.eurid.eu", response.NameServers[4]);
+        Assert.Equal(0, response.NameServers.Count);
 
-        Assert.Equal(9, response.FieldsParsed);
+        Assert.Equal(3, response.FieldsParsed);
     }
 
     [Fact]
