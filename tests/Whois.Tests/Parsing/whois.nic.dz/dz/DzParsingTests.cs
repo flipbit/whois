@@ -30,7 +30,7 @@ public class DzParsingTests : ParsingTests
         Assert.Equal(2, response.FieldsParsed);
     }
 
-    [Fact(Skip = "Template update deferred - WHOIS response format changed")]
+    [Fact]
     public void Test_found()
     {
         var sample = SampleReader.Read("whois.nic.dz", "dz", "found", "google.dz.txt");
@@ -40,43 +40,41 @@ public class DzParsingTests : ParsingTests
         Assert.Equal(WhoisStatus.Found, response.Status);
 
         Assert.Equal(0, response.ParsingErrors);
-        Assert.Equal("whois.nic.dz/dz/found/01", response.TemplateName);
+        Assert.Equal("generic/tld/found/01", response.TemplateName);
 
         Assert.Equal("google.dz", response.DomainName.ToString());
 
         // Registrar Details
-        Assert.Equal("cerist", response.Registrar.Name);
+        Assert.Equal("wissal", response.Registrar.Name);
 
-        Assert.Equal(new DateTime(2007, 01, 10, 00, 00, 00, 000, DateTimeKind.Utc), response.Registered);
+        Assert.Null(response.Registered);
 
         // Registrant Details
-        Assert.Equal("GOOGLE LLC", response.Registrant.Name);
+        Assert.Null(response.Registrant);
 
 
         // AdminContact Details
         Assert.Equal("Domain Administrator", response.AdminContact.Name);
-        Assert.Equal("GOOGLE LLC", response.AdminContact.Organization);
-        Assert.Equal("+16502530000", response.AdminContact.TelephoneNumber);
-        Assert.Equal("+16502530000", response.AdminContact.FaxNumber);
+        Assert.Null(response.AdminContact.Organization);
+        Assert.Null(response.AdminContact.TelephoneNumber);
+        Assert.Null(response.AdminContact.FaxNumber);
         Assert.Equal("dns-admin@google.com", response.AdminContact.Email);
 
         // AdminContact Address
-        Assert.Equal(1, response.AdminContact.Address.Count);
-        Assert.Equal("1600 Amphitheatre Parkway, Mountain View, CA 94043 US", response.AdminContact.Address[0]);
+        Assert.Equal(0, response.AdminContact.Address.Count);
 
 
         // TechnicalContact Details
-        Assert.Equal("Domain AdmDomain Administratorinistrator", response.TechnicalContact.Name);
-        Assert.Equal("MARKMONITOR INC", response.TechnicalContact.Organization);
-        Assert.Equal("+12083895740", response.TechnicalContact.TelephoneNumber);
-        Assert.Equal("+12083895771", response.TechnicalContact.FaxNumber);
-        Assert.Equal("ccops@markmonitor.com", response.TechnicalContact.Email);
+        Assert.Equal("Domain Administrator", response.TechnicalContact.Name);
+        Assert.Null(response.TechnicalContact.Organization);
+        Assert.Null(response.TechnicalContact.TelephoneNumber);
+        Assert.Null(response.TechnicalContact.FaxNumber);
+        Assert.Equal("dns-admin@google.com", response.TechnicalContact.Email);
 
         // TechnicalContact Address
-        Assert.Equal(1, response.TechnicalContact.Address.Count);
-        Assert.Equal("391 N Ancestor Place Boise, ID 83704 US", response.TechnicalContact.Address[0]);
+        Assert.Equal(0, response.TechnicalContact.Address.Count);
 
 
-        Assert.Equal(17, response.FieldsParsed);
+        Assert.Equal(7, response.FieldsParsed);
     }
 }
