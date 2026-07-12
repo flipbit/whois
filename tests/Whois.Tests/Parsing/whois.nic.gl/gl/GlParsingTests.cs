@@ -13,7 +13,7 @@ public class GlParsingTests : ParsingTests
         parser = new WhoisParser();
     }
 
-    [Fact(Skip = "Template update deferred - WHOIS response format changed")]
+    [Fact]
     public void Test_not_found()
     {
         var sample = SampleReader.Read("whois.nic.gl", "gl", "not-found", "u34jedzcq.gl.txt");
@@ -23,14 +23,14 @@ public class GlParsingTests : ParsingTests
         Assert.Equal(WhoisStatus.NotFound, response.Status);
 
         Assert.Equal(0, response.ParsingErrors);
-        Assert.Equal("generic/tld/not-found/04", response.TemplateName);
+        Assert.Equal("generic/tld/not-found/01", response.TemplateName);
 
-        Assert.Equal("u34jedzcq.gl", response.DomainName.ToString());
+        Assert.Null(response.DomainName);
 
-        Assert.Equal(2, response.FieldsParsed);
+        Assert.Equal(1, response.FieldsParsed);
     }
 
-    [Fact(Skip = "Template update deferred - WHOIS response format changed")]
+    [Fact]
     public void Test_found()
     {
         var sample = SampleReader.Read("whois.nic.gl", "gl", "found", "google.gl.txt");
@@ -40,33 +40,24 @@ public class GlParsingTests : ParsingTests
         Assert.Equal(WhoisStatus.Found, response.Status);
 
         Assert.Equal(0, response.ParsingErrors);
-        Assert.Equal("generic/tld/found/01", response.TemplateName);
+        Assert.Equal("generic/tld/found/02", response.TemplateName);
 
         Assert.Equal("google.gl", response.DomainName.ToString());
-        Assert.Equal("Imp669-GL", response.RegistryDomainId);
+        Assert.Equal("D327730546-CNIC", response.RegistryDomainId);
 
         // Registrar Details
-        Assert.Equal("MarkMonitor", response.Registrar.Name);
-        Assert.Equal("http://www.markmonitor.com", response.Registrar.Url);
+        Assert.Equal("MarkMonitor Inc.", response.Registrar.Name);
+        Assert.Null(response.Registrar.Url);
         Assert.Equal("ccops@markmonitor.com", response.Registrar.AbuseEmail);
 
-        Assert.Equal(new DateTime(2013, 12, 02, 19, 11, 52, 734, DateTimeKind.Utc), response.Updated);
+        Assert.Equal(new DateTime(2026, 01, 01, 16, 02, 36, 000, DateTimeKind.Utc), response.Updated);
         Assert.Equal(new DateTime(2003, 03, 11, 03, 00, 00, 000, DateTimeKind.Utc), response.Registered);
-        Assert.Equal(new DateTime(2015, 01, 01, 03, 00, 00, 000, DateTimeKind.Utc), response.Expiration);
+        Assert.Equal(new DateTime(2027, 01, 01, 23, 59, 59, 000, DateTimeKind.Utc), response.Expiration);
 
         // Registrant Details
-        Assert.Equal("4738-GL", response.Registrant.RegistryId);
-        Assert.Equal("Google Inc.", response.Registrant.Name);
-        Assert.Equal("+1.6303300100", response.Registrant.TelephoneNumber);
-        Assert.Equal("dns-admin@google.com", response.Registrant.Email);
+        Assert.Null(response.Registrant);
 
         // Registrant Address
-        Assert.Equal(5, response.Registrant.Address.Count);
-        Assert.Equal("1600 Amphitheatre Parkway", response.Registrant.Address[0]);
-        Assert.Equal("Mountain View", response.Registrant.Address[1]);
-        Assert.Equal("CA", response.Registrant.Address[2]);
-        Assert.Equal("94043", response.Registrant.Address[3]);
-        Assert.Equal("US", response.Registrant.Address[4]);
 
 
         // Nameservers
@@ -75,14 +66,12 @@ public class GlParsingTests : ParsingTests
         Assert.Equal("ns2.google.com", response.NameServers[1]);
 
         // Domain Status
-        Assert.Equal(5, response.DomainStatus.Count);
-        Assert.Equal("clientRenewProhibited", response.DomainStatus[0]);
-        Assert.Equal("clientDeleteProhibited", response.DomainStatus[1]);
-        Assert.Equal("clientTransferProhibited", response.DomainStatus[2]);
-        Assert.Equal("ok", response.DomainStatus[3]);
-        Assert.Equal("clientUpdateProhibited", response.DomainStatus[4]);
+        Assert.Equal(3, response.DomainStatus.Count);
+        Assert.Equal("clientTransferProhibited", response.DomainStatus[0]);
+        Assert.Equal("clientUpdateProhibited", response.DomainStatus[1]);
+        Assert.Equal("clientDeleteProhibited", response.DomainStatus[2]);
 
         Assert.Equal("unsigned", response.DnsSecStatus);
-        Assert.Equal(27, response.FieldsParsed);
+        Assert.Equal(17, response.FieldsParsed);
     }
 }
