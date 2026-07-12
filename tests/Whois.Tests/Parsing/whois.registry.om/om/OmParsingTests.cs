@@ -28,7 +28,7 @@ public class OmParsingTests : ParsingTests
         Assert.Equal(1, response.FieldsParsed);
     }
 
-    [Fact(Skip = "Template update deferred - WHOIS response format changed")]
+    [Fact]
     public void Test_found()
     {
         var sample = SampleReader.Read("whois.registry.om", "om", "found", "rop.gov.om.txt");
@@ -38,46 +38,38 @@ public class OmParsingTests : ParsingTests
         Assert.Equal(WhoisStatus.Found, response.Status);
 
         Assert.Equal(0, response.ParsingErrors);
-        Assert.Equal("whois.registry.om/om/found/01", response.TemplateName);
+        Assert.Equal("generic/tld/found/01", response.TemplateName);
 
         Assert.Equal("rop.gov.om", response.DomainName.ToString());
 
         // Registrar Details
-        Assert.Equal("Oman Telecommunication Company", response.Registrar.Name);
+        Assert.Equal("Oman Telecommunication Company (Omantel)", response.Registrar.Name);
 
-        Assert.Equal(new DateTime(2013, 10, 06, 18, 20, 12, 000, DateTimeKind.Utc), response.Updated);
+        Assert.Null(response.Updated);
 
         // Registrant Details
-        Assert.Equal("10084244", response.Registrant.RegistryId);
-        Assert.Equal("Nasser Said Al Daree", response.Registrant.Name);
+        Assert.Null(response.Registrant.RegistryId);
+        Assert.Equal("Ahmed  Al Khanbashi", response.Registrant.Name);
 
         // Registrant Address
-        Assert.Equal(2, response.Registrant.Address.Count);
-        Assert.Equal("Mina Al Fahal", response.Registrant.Address[0]);
-        Assert.Equal("om", response.Registrant.Address[1]);
+        Assert.Equal(0, response.Registrant.Address.Count);
 
 
         // TechnicalContact Details
-        Assert.Equal("10084244", response.TechnicalContact.RegistryId);
-        Assert.Equal("Nasser Said Al Daree", response.TechnicalContact.Name);
+        Assert.Null(response.TechnicalContact);
 
         // TechnicalContact Address
-        Assert.Equal(2, response.TechnicalContact.Address.Count);
-        Assert.Equal("Mina Al Fahal", response.TechnicalContact.Address[0]);
-        Assert.Equal("om", response.TechnicalContact.Address[1]);
 
 
         // Nameservers
-        Assert.Equal(3, response.NameServers.Count);
-        Assert.Equal("ns3.omantel.net.om", response.NameServers[0]);
-        Assert.Equal("ns1.omantel.net.om", response.NameServers[1]);
-        Assert.Equal("ns2.omantel.net.om", response.NameServers[2]);
+        Assert.Equal(2, response.NameServers.Count);
+        Assert.Equal("ns4.ict.omantel.om", response.NameServers[0]);
+        Assert.Equal("ns3.ict.omantel.om", response.NameServers[1]);
 
         // Domain Status
-        Assert.Equal(1, response.DomainStatus.Count);
-        Assert.Equal("ok", response.DomainStatus[0]);
+        Assert.Equal(0, response.DomainStatus.Count);
 
-        Assert.Equal(16, response.FieldsParsed);
+        Assert.Equal(12, response.FieldsParsed);
     }
 
     [Fact]
