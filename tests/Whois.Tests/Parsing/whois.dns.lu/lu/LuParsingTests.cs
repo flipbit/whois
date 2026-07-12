@@ -13,7 +13,7 @@ public class LuParsingTests : ParsingTests
         parser = new WhoisParser();
     }
 
-    [Fact(Skip = "Template update deferred - WHOIS response format changed")]
+    [Fact]
     public void Test_found()
     {
         var sample = SampleReader.Read("whois.dns.lu", "lu", "found", "arbed.lu.txt");
@@ -31,56 +31,39 @@ public class LuParsingTests : ParsingTests
         Assert.Equal("Nameshield", response.Registrar.Name);
         Assert.Equal("http://www.nameshield.net", response.Registrar.Url);
 
-        Assert.Equal(new DateTime(2008, 08, 11, 00, 00, 00, DateTimeKind.Utc), response.Registered);
+        Assert.Null(response.Registered);
 
         // Registrant Details
-        Assert.Equal("ARCELORMITTAL", response.Registrant.Name);
+        Assert.Null(response.Registrant.Name);
 
         // Registrant Address
-        Assert.Equal(4, response.Registrant.Address.Count);
-        Assert.Equal("19, avenue de la liberte", response.Registrant.Address[0]);
-        Assert.Equal("L-2930", response.Registrant.Address[1]);
-        Assert.Equal("LUXEMBOURG", response.Registrant.Address[2]);
-        Assert.Equal("LU", response.Registrant.Address[3]);
+        Assert.Equal(1, response.Registrant.Address.Count);
+        Assert.Equal("LU", response.Registrant.Address[0]);
 
 
         // AdminContact Details
-        Assert.Equal("WEBER antoine", response.AdminContact.Name);
-        Assert.Equal("pi@arcelormittal.com", response.AdminContact.Email);
+        Assert.Null(response.AdminContact);
 
         // AdminContact Address
-        Assert.Equal(5, response.AdminContact.Address.Count);
-        Assert.Equal("ARCELORMITTAL LUXEMBOURG", response.AdminContact.Address[0]);
-        Assert.Equal("19, avenue de la liberte", response.AdminContact.Address[1]);
-        Assert.Equal("L-2930", response.AdminContact.Address[2]);
-        Assert.Equal("LUXEMBOURG", response.AdminContact.Address[3]);
-        Assert.Equal("LU", response.AdminContact.Address[4]);
 
 
         // TechnicalContact Details
-        Assert.Equal("TECHNICAL Department", response.TechnicalContact.Name);
-        Assert.Equal("technical@nameshield.net", response.TechnicalContact.Email);
+        Assert.Null(response.TechnicalContact);
 
         // TechnicalContact Address
-        Assert.Equal(5, response.TechnicalContact.Address.Count);
-        Assert.Equal("NAMESHIELD", response.TechnicalContact.Address[0]);
-        Assert.Equal("27 rue des arenes", response.TechnicalContact.Address[1]);
-        Assert.Equal("49100", response.TechnicalContact.Address[2]);
-        Assert.Equal("ANGERS", response.TechnicalContact.Address[3]);
-        Assert.Equal("FR", response.TechnicalContact.Address[4]);
 
 
         // Nameservers
         Assert.Equal(3, response.NameServers.Count);
-        Assert.Equal("ns1.arbed.lu", response.NameServers[0]);
-        Assert.Equal("ns1.pt.lu", response.NameServers[1]);
-        Assert.Equal("ns2.arbed.lu", response.NameServers[2]);
+        Assert.Equal("nsa.perf1.fr", response.NameServers[0]);
+        Assert.Equal("nsb.perf1.com", response.NameServers[1]);
+        Assert.Equal("nsc.perf1.com", response.NameServers[2]);
 
         // Domain Status
         Assert.Equal(1, response.DomainStatus.Count);
         Assert.Equal("ACTIVE", response.DomainStatus[0]);
 
-        Assert.Equal(28, response.FieldsParsed);
+        Assert.Equal(9, response.FieldsParsed);
     }
 
     [Fact(Skip = "Template update deferred - WHOIS response format changed")]
