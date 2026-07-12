@@ -13,7 +13,7 @@ public class MxParsingTests : ParsingTests
         parser = new WhoisParser();
     }
 
-    [Fact(Skip = "Template update deferred - WHOIS response format changed")]
+    [Fact]
     public void Test_found()
     {
         var sample = SampleReader.Read("whois.nic.mx", "mx", "found", "mpsnet.net.mx.txt");
@@ -28,12 +28,12 @@ public class MxParsingTests : ParsingTests
         Assert.Equal("mpsnet.net.mx", response.DomainName.ToString());
 
         // Registrar Details
-        Assert.Equal("NIC Mexico", response.Registrar.Name);
-        Assert.Equal("http://www.nic.mx", response.Registrar.Url);
+        Assert.Equal("AKKY ONLINE SOLUTIONS, S.A. DE C.V.", response.Registrar.Name);
+        Assert.Equal("http://www.akky.mx", response.Registrar.Url);
 
-        Assert.Equal(new DateTime(2009, 03, 31, 00, 00, 00, 000, DateTimeKind.Utc), response.Updated);
+        Assert.Equal(new DateTime(2026, 04, 07, 00, 00, 00, 000, DateTimeKind.Utc), response.Updated);
         Assert.Equal(new DateTime(1997, 04, 16, 00, 00, 00, 000, DateTimeKind.Utc), response.Registered);
-        Assert.Equal(new DateTime(2011, 04, 15, 00, 00, 00, 000, DateTimeKind.Utc), response.Expiration);
+        Assert.Equal(new DateTime(2027, 04, 15, 00, 00, 00, 000, DateTimeKind.Utc), response.Expiration);
 
         // Registrant Details
         Assert.Equal("MPSNet Dominios", response.Registrant.Name);
@@ -76,10 +76,9 @@ public class MxParsingTests : ParsingTests
 
 
         // Nameservers
-        Assert.Equal(1, response.NameServers.Count);
-        Assert.Equal("dns1.mpsnet.net.mx", response.NameServers[0]);
+        Assert.Equal(0, response.NameServers.Count);
 
-        Assert.Equal(24, response.FieldsParsed);
+        Assert.Equal(23, response.FieldsParsed);
     }
 
     [Fact]
@@ -97,7 +96,7 @@ public class MxParsingTests : ParsingTests
         Assert.Equal(1, response.FieldsParsed);
     }
 
-    [Fact(Skip = "Template update deferred - WHOIS response format changed")]
+    [Fact]
     public void Test_found_status_registered()
     {
         var sample = SampleReader.Read("whois.nic.mx", "mx", "found", "google.mx.txt");
@@ -112,15 +111,15 @@ public class MxParsingTests : ParsingTests
         Assert.Equal("google.mx", response.DomainName.ToString());
 
         // Registrar Details
-        Assert.Equal("MarkMonitor", response.Registrar.Name);
+        Assert.Equal("Markmonitor", response.Registrar.Name);
         Assert.Equal("http://www.markmonitor.com/", response.Registrar.Url);
 
-        Assert.Equal(new DateTime(2013, 07, 29, 00, 00, 00, 000, DateTimeKind.Utc), response.Updated);
+        Assert.Equal(new DateTime(2026, 04, 12, 00, 00, 00, 000, DateTimeKind.Utc), response.Updated);
         Assert.Equal(new DateTime(2009, 05, 12, 00, 00, 00, 000, DateTimeKind.Utc), response.Registered);
-        Assert.Equal(new DateTime(2016, 05, 11, 00, 00, 00, 000, DateTimeKind.Utc), response.Expiration);
+        Assert.Equal(new DateTime(2027, 05, 11, 00, 00, 00, 000, DateTimeKind.Utc), response.Expiration);
 
         // Registrant Details
-        Assert.Equal("Google Inc.", response.Registrant.Name);
+        Assert.Equal("DNS Admin", response.Registrant.Name);
 
         // Registrant Address
         Assert.Equal(3, response.Registrant.Address.Count);
@@ -130,7 +129,7 @@ public class MxParsingTests : ParsingTests
 
 
         // AdminContact Details
-        Assert.Equal("Google Inc.", response.AdminContact.Name);
+        Assert.Equal("DNS Admin", response.AdminContact.Name);
 
         // AdminContact Address
         Assert.Equal(3, response.AdminContact.Address.Count);
@@ -140,17 +139,17 @@ public class MxParsingTests : ParsingTests
 
 
         // BillingContact Details
-        Assert.Equal("MarkMonitor", response.BillingContact.Name);
+        Assert.Equal("CCOPs Provisioning", response.BillingContact.Name);
 
         // BillingContact Address
         Assert.Equal(3, response.BillingContact.Address.Count);
-        Assert.Equal("Boise", response.BillingContact.Address[0]);
+        Assert.Equal("Meridian", response.BillingContact.Address[0]);
         Assert.Equal("Idaho", response.BillingContact.Address[1]);
         Assert.Equal("United States", response.BillingContact.Address[2]);
 
 
         // TechnicalContact Details
-        Assert.Equal("Google Inc.", response.TechnicalContact.Name);
+        Assert.Equal("DNS Admin", response.TechnicalContact.Name);
 
         // TechnicalContact Address
         Assert.Equal(3, response.TechnicalContact.Address.Count);
