@@ -17,7 +17,7 @@ namespace Whois.Parsing.Coza.Whois.Registry.Net.Za.CoZa
         [Fact]
         public void Test_found()
         {
-            var sample = SampleReader.Read("coza-whois.registry.net.za", "co.za", "found.txt");
+            var sample = SampleReader.Read("coza-whois.registry.net.za", "co.za", "found", "found.txt");
             var response = parser.Parse("coza-whois.registry.net.za", sample);
 
             Assert.True(sample.Length > 0);
@@ -101,7 +101,7 @@ namespace Whois.Parsing.Coza.Whois.Registry.Net.Za.CoZa
         [Fact]
         public void Test_throttled()
         {
-            var sample = SampleReader.Read("coza-whois.registry.net.za", "co.za", "throttled.txt");
+            var sample = SampleReader.Read("coza-whois.registry.net.za", "co.za", "throttled", "throttled.txt");
             var response = parser.Parse("coza-whois.registry.net.za", sample);
 
             Assert.True(sample.Length > 0);
@@ -111,7 +111,7 @@ namespace Whois.Parsing.Coza.Whois.Registry.Net.Za.CoZa
         [Fact]
         public void Test_not_found()
         {
-            var sample = SampleReader.Read("coza-whois.registry.net.za", "co.za", "not_found.txt");
+            var sample = SampleReader.Read("coza-whois.registry.net.za", "co.za", "not-found", "not_found.txt");
             var response = parser.Parse("coza-whois.registry.net.za", sample);
 
             Assert.True(sample.Length > 0);
@@ -123,7 +123,7 @@ namespace Whois.Parsing.Coza.Whois.Registry.Net.Za.CoZa
         [Fact]
         public void Test_found_status_registered()
         {
-            var sample = SampleReader.Read("coza-whois.registry.net.za", "co.za", "found_status_registered.txt");
+            var sample = SampleReader.Read("coza-whois.registry.net.za", "co.za", "found", "found_status_registered.txt");
             var response = parser.Parse("coza-whois.registry.net.za", sample);
 
             Assert.True(sample.Length > 0);

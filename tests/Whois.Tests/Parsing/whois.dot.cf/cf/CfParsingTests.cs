@@ -17,14 +17,14 @@ namespace Whois.Parsing.Whois.Dot.Cf.Cf
         [Fact]
         public void Test_found()
         {
-            var sample = SampleReader.Read("whois.dot.cf", "cf", "found.txt");
+            var sample = SampleReader.Read("whois.dot.cf", "cf", "found", "found.txt");
             var response = parser.Parse("whois.dot.cf", sample);
 
             Assert.True(sample.Length > 0);
             Assert.Equal(WhoisStatus.Found, response.Status);
 
             Assert.Equal(0, response.ParsingErrors);
-            Assert.Equal("whois.dot.cf/cf/Found", response.TemplateName);
+            Assert.Equal("whois.dot.cf/cf/found/01", response.TemplateName);
 
             Assert.Equal("dot.cf", response.DomainName.ToString());
 
@@ -108,14 +108,14 @@ namespace Whois.Parsing.Whois.Dot.Cf.Cf
         [Fact]
         public void Test_not_found()
         {
-            var sample = SampleReader.Read("whois.dot.cf", "cf", "not_found.txt");
+            var sample = SampleReader.Read("whois.dot.cf", "cf", "not-found", "not_found.txt");
             var response = parser.Parse("whois.dot.cf", sample);
 
             Assert.True(sample.Length > 0);
             Assert.Equal(WhoisStatus.NotFound, response.Status);
 
             Assert.Equal(0, response.ParsingErrors);
-            Assert.Equal("whois.dot.cf/cf/NotFound", response.TemplateName);
+            Assert.Equal("whois.dot.cf/cf/not-found/01", response.TemplateName);
 
             Assert.Equal(1, response.FieldsParsed);
         }
@@ -123,7 +123,7 @@ namespace Whois.Parsing.Whois.Dot.Cf.Cf
         [Fact]
         public void Test_found_status_registered()
         {
-            var sample = SampleReader.Read("whois.dot.cf", "cf", "found_status_registered.txt");
+            var sample = SampleReader.Read("whois.dot.cf", "cf", "found", "found_status_registered.txt");
             var response = parser.Parse("whois.dot.cf", sample);
 
             Assert.True(sample.Length > 0);
@@ -131,7 +131,7 @@ namespace Whois.Parsing.Whois.Dot.Cf.Cf
 
             AssertWriter.Write(response);
             Assert.Equal(0, response.ParsingErrors);
-            Assert.Equal("whois.dot.cf/cf/Found", response.TemplateName);
+            Assert.Equal("whois.dot.cf/cf/found/01", response.TemplateName);
 
             Assert.Equal("dot.cf", response.DomainName.ToString());
 

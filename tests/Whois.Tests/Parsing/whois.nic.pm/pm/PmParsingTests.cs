@@ -17,14 +17,14 @@ namespace Whois.Parsing.Whois.Nic.Pm.Pm
         [Fact]
         public void Test_found()
         {
-            var sample = SampleReader.Read("whois.nic.pm", "pm", "found.txt");
+            var sample = SampleReader.Read("whois.nic.pm", "pm", "found", "found.txt");
             var response = parser.Parse("whois.nic.pm", sample);
 
             Assert.True(sample.Length > 0);
             Assert.Equal(WhoisStatus.Found, response.Status);
 
             Assert.Equal(0, response.ParsingErrors);
-            Assert.Equal("generic/tld/Found05", response.TemplateName);
+            Assert.Equal("generic/tld/found/05", response.TemplateName);
 
             Assert.Equal("nic.pm", response.DomainName.ToString());
 
@@ -111,14 +111,14 @@ namespace Whois.Parsing.Whois.Nic.Pm.Pm
         [Fact]
         public void Test_throttled()
         {
-            var sample = SampleReader.Read("whois.nic.pm", "pm", "throttled.txt");
+            var sample = SampleReader.Read("whois.nic.pm", "pm", "throttled", "throttled.txt");
             var response = parser.Parse("whois.nic.pm", sample);
 
             Assert.True(sample.Length > 0);
             Assert.Equal(WhoisStatus.Throttled, response.Status);
 
             Assert.Equal(0, response.ParsingErrors);
-            Assert.Equal("generic/tld/Throttled02", response.TemplateName);
+            Assert.Equal("generic/tld/throttled/02", response.TemplateName);
 
             Assert.Equal(1, response.FieldsParsed);
         }
@@ -126,14 +126,14 @@ namespace Whois.Parsing.Whois.Nic.Pm.Pm
         [Fact]
         public void Test_not_found()
         {
-            var sample = SampleReader.Read("whois.nic.pm", "pm", "not_found.txt");
+            var sample = SampleReader.Read("whois.nic.pm", "pm", "not-found", "not_found.txt");
             var response = parser.Parse("whois.nic.pm", sample);
 
             Assert.True(sample.Length > 0);
             Assert.Equal(WhoisStatus.NotFound, response.Status);
 
             Assert.Equal(0, response.ParsingErrors);
-            Assert.Equal("generic/tld/NotFound06", response.TemplateName);
+            Assert.Equal("generic/tld/not-found/06", response.TemplateName);
 
             Assert.Equal(1, response.FieldsParsed);
         }
@@ -141,14 +141,14 @@ namespace Whois.Parsing.Whois.Nic.Pm.Pm
         [Fact]
         public void Test_found_status_registered()
         {
-            var sample = SampleReader.Read("whois.nic.pm", "pm", "found_status_registered.txt");
+            var sample = SampleReader.Read("whois.nic.pm", "pm", "found", "found_status_registered.txt");
             var response = parser.Parse("whois.nic.pm", sample);
 
             Assert.True(sample.Length > 0);
             Assert.Equal(WhoisStatus.Found, response.Status);
 
             Assert.Equal(0, response.ParsingErrors);
-            Assert.Equal("generic/tld/Found05", response.TemplateName);
+            Assert.Equal("generic/tld/found/05", response.TemplateName);
 
             Assert.Equal("nic.pm", response.DomainName.ToString());
 

@@ -17,14 +17,14 @@ namespace Whois.Parsing.Whois.Cat.Cat
         [Fact]
         public void Test_not_found()
         {
-            var sample = SampleReader.Read("whois.cat", "cat", "not_found.txt");
+            var sample = SampleReader.Read("whois.cat", "cat", "not-found", "not_found.txt");
             var response = parser.Parse("whois.cat", sample);
 
             Assert.True(sample.Length > 0);
             Assert.Equal(WhoisStatus.NotFound, response.Status);
             Assert.Equal(0, response.ParsingErrors);
 
-            Assert.Equal("whois.cat/cat/NotFound", response.TemplateName);
+            Assert.Equal("whois.cat/cat/not-found/01", response.TemplateName);
 
             Assert.Equal("u34jedzcq.cat", response.DomainName.ToString());
 
@@ -34,14 +34,14 @@ namespace Whois.Parsing.Whois.Cat.Cat
         [Fact]
         public void Test_found()
         {
-            var sample = SampleReader.Read("whois.cat", "cat", "found.txt");
+            var sample = SampleReader.Read("whois.cat", "cat", "found", "found.txt");
             var response = parser.Parse("whois.cat", sample);
 
             Assert.True(sample.Length > 0);
             Assert.Equal(WhoisStatus.Found, response.Status);
 
             Assert.Equal(0, response.ParsingErrors);
-            Assert.Equal("whois.cat/cat/Found", response.TemplateName);
+            Assert.Equal("whois.cat/cat/found/01", response.TemplateName);
 
             Assert.Equal("abril.cat", response.DomainName.ToString());
             Assert.Equal("REG-D42136", response.RegistryDomainId);
@@ -127,14 +127,14 @@ namespace Whois.Parsing.Whois.Cat.Cat
         [Fact]
         public void Test_found_status_ok()
         {
-            var sample = SampleReader.Read("whois.cat", "cat", "found_status_ok.txt");
+            var sample = SampleReader.Read("whois.cat", "cat", "found", "found_status_ok.txt");
             var response = parser.Parse("whois.cat", sample);
 
             Assert.True(sample.Length > 0);
             Assert.Equal(WhoisStatus.Found, response.Status);
 
             Assert.Equal(0, response.ParsingErrors);
-            Assert.Equal("whois.cat/cat/Found", response.TemplateName);
+            Assert.Equal("whois.cat/cat/found/01", response.TemplateName);
 
             Assert.Equal("gencat.cat", response.DomainName.ToString());
             Assert.Equal("REG-D3862", response.RegistryDomainId);
@@ -223,14 +223,14 @@ namespace Whois.Parsing.Whois.Cat.Cat
         [Fact]
         public void Test_not_found_status_available()
         {
-            var sample = SampleReader.Read("whois.cat", "cat", "not_found_status_available.txt");
+            var sample = SampleReader.Read("whois.cat", "cat", "not-found", "not_found_status_available.txt");
             var response = parser.Parse("whois.cat", sample);
 
             Assert.True(sample.Length > 0);
             Assert.Equal(WhoisStatus.NotFound, response.Status);
 
             Assert.Equal(0, response.ParsingErrors);
-            Assert.Equal("whois.cat/cat/NotFound", response.TemplateName);
+            Assert.Equal("whois.cat/cat/not-found/01", response.TemplateName);
 
             Assert.Equal("u34jedzcq.cat", response.DomainName.ToString());
 
@@ -240,14 +240,14 @@ namespace Whois.Parsing.Whois.Cat.Cat
         [Fact]
         public void Test_found_status_registered()
         {
-            var sample = SampleReader.Read("whois.cat", "cat", "found_status_registered.txt");
+            var sample = SampleReader.Read("whois.cat", "cat", "found", "found_status_registered.txt");
             var response = parser.Parse("whois.cat", sample);
 
             Assert.True(sample.Length > 0);
             Assert.Equal(WhoisStatus.Found, response.Status);
 
             Assert.Equal(0, response.ParsingErrors);
-            Assert.Equal("whois.cat/cat/Found", response.TemplateName);
+            Assert.Equal("whois.cat/cat/found/01", response.TemplateName);
 
             Assert.Equal("gencat.cat", response.DomainName.ToString());
             Assert.Equal("REG-D3862", response.RegistryDomainId);

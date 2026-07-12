@@ -17,14 +17,14 @@ namespace Whois.Parsing.Whois.Isoc.Org.Il.Il
         [Fact]
         public void Test_not_found()
         {
-            var sample = SampleReader.Read("whois.isoc.org.il", "il", "not_found.txt");
+            var sample = SampleReader.Read("whois.isoc.org.il", "il", "not-found", "not_found.txt");
             var response = parser.Parse("whois.isoc.org.il", sample);
 
             Assert.True(sample.Length > 0);
             Assert.Equal(WhoisStatus.NotFound, response.Status);
 
             Assert.Equal(0, response.ParsingErrors);
-            Assert.Equal("whois.isoc.org.il/il/NotFound", response.TemplateName);
+            Assert.Equal("whois.isoc.org.il/il/not-found/01", response.TemplateName);
 
             Assert.Equal(1, response.FieldsParsed);
         }
@@ -32,14 +32,14 @@ namespace Whois.Parsing.Whois.Isoc.Org.Il.Il
         [Fact]
         public void Test_other_status_transfer_allowed()
         {
-            var sample = SampleReader.Read("whois.isoc.org.il", "il", "other_status_transfer_allowed.txt");
+            var sample = SampleReader.Read("whois.isoc.org.il", "il", "found", "other_status_transfer_allowed.txt");
             var response = parser.Parse("whois.isoc.org.il", sample);
 
             Assert.True(sample.Length > 0);
             Assert.Equal(WhoisStatus.Found, response.Status);
 
             Assert.Equal(0, response.ParsingErrors);
-            Assert.Equal("whois.isoc.org.il/il/Found", response.TemplateName);
+            Assert.Equal("whois.isoc.org.il/il/found/01", response.TemplateName);
 
             Assert.Equal("spd.co.il", response.DomainName.ToString());
 
@@ -122,14 +122,14 @@ namespace Whois.Parsing.Whois.Isoc.Org.Il.Il
         [Fact]
         public void Test_locked()
         {
-            var sample = SampleReader.Read("whois.isoc.org.il", "il", "locked.txt");
+            var sample = SampleReader.Read("whois.isoc.org.il", "il", "locked", "locked.txt");
             var response = parser.Parse("whois.isoc.org.il", sample);
 
             Assert.True(sample.Length > 0);
             Assert.Equal(WhoisStatus.Locked, response.Status);
 
             Assert.Equal(0, response.ParsingErrors);
-            Assert.Equal("whois.isoc.org.il/il/Found", response.TemplateName);
+            Assert.Equal("whois.isoc.org.il/il/found/01", response.TemplateName);
 
             Assert.Equal("isoc.org.il", response.DomainName.ToString());
 
@@ -221,14 +221,14 @@ namespace Whois.Parsing.Whois.Isoc.Org.Il.Il
         [Fact]
         public void Test_not_found_status_available()
         {
-            var sample = SampleReader.Read("whois.isoc.org.il", "il", "not_found_status_available.txt");
+            var sample = SampleReader.Read("whois.isoc.org.il", "il", "not-found", "not_found_status_available.txt");
             var response = parser.Parse("whois.isoc.org.il", sample);
 
             Assert.True(sample.Length > 0);
             Assert.Equal(WhoisStatus.NotFound, response.Status);
 
             Assert.Equal(0, response.ParsingErrors);
-            Assert.Equal("whois.isoc.org.il/il/NotFound", response.TemplateName);
+            Assert.Equal("whois.isoc.org.il/il/not-found/01", response.TemplateName);
 
             Assert.Equal(1, response.FieldsParsed);
         }
@@ -236,14 +236,14 @@ namespace Whois.Parsing.Whois.Isoc.Org.Il.Il
         [Fact]
         public void Test_found()
         {
-            var sample = SampleReader.Read("whois.isoc.org.il", "il", "found.txt");
+            var sample = SampleReader.Read("whois.isoc.org.il", "il", "found", "found.txt");
             var response = parser.Parse("whois.isoc.org.il", sample);
 
             Assert.True(sample.Length > 0);
             Assert.Equal(WhoisStatus.Locked, response.Status);
 
             Assert.Equal(0, response.ParsingErrors);
-            Assert.Equal("whois.isoc.org.il/il/Found", response.TemplateName);
+            Assert.Equal("whois.isoc.org.il/il/found/01", response.TemplateName);
 
             Assert.Equal("isoc.org.il", response.DomainName.ToString());
 

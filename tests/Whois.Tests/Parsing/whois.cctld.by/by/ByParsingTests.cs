@@ -17,14 +17,14 @@ namespace Whois.Parsing.Whois.Cctld.By.By
         [Fact]
         public void Test_not_found()
         {
-            var sample = SampleReader.Read("whois.cctld.by", "by", "not_found.txt");
+            var sample = SampleReader.Read("whois.cctld.by", "by", "not-found", "not_found.txt");
             var response = parser.Parse("whois.cctld.by", sample);
 
             Assert.True(sample.Length > 0);
             Assert.Equal(WhoisStatus.NotFound, response.Status);
 
             Assert.Equal(0, response.ParsingErrors);
-            Assert.Equal("whois.cctld.by/by/NotFound", response.TemplateName);
+            Assert.Equal("whois.cctld.by/by/not-found/01", response.TemplateName);
 
             Assert.Equal(1, response.FieldsParsed);
         }
@@ -32,14 +32,14 @@ namespace Whois.Parsing.Whois.Cctld.By.By
         [Fact]
         public void Test_found()
         {
-            var sample = SampleReader.Read("whois.cctld.by", "by", "found.txt");
+            var sample = SampleReader.Read("whois.cctld.by", "by", "found", "found.txt");
             var response = parser.Parse("whois.cctld.by", sample);
 
             Assert.True(sample.Length > 0);
             Assert.Equal(WhoisStatus.Found, response.Status);
 
             Assert.Equal(0, response.ParsingErrors);
-            Assert.Equal("whois.cctld.by/by/Found", response.TemplateName);
+            Assert.Equal("whois.cctld.by/by/found/01", response.TemplateName);
 
             Assert.Equal("active.by", response.DomainName.ToString());
 

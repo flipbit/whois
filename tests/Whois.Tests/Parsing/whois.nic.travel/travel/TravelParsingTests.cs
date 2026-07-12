@@ -17,14 +17,14 @@ namespace Whois.Parsing.Whois.Nic.Travel.Travel
         [Fact]
         public void Test_found()
         {
-            var sample = SampleReader.Read("whois.nic.travel", "travel", "found.txt");
+            var sample = SampleReader.Read("whois.nic.travel", "travel", "found", "found.txt");
             var response = parser.Parse("whois.nic.travel", sample);
 
             Assert.True(sample.Length > 0);
             Assert.Equal(WhoisStatus.Found, response.Status);
 
             Assert.Equal(0, response.ParsingErrors);
-            Assert.Equal("whois.nic.travel/travel/Found", response.TemplateName);
+            Assert.Equal("whois.nic.travel/travel/found/01", response.TemplateName);
 
             Assert.Equal("webcams.travel", response.DomainName.ToString());
             Assert.Equal("D108042-TRAVEL", response.RegistryDomainId);
@@ -122,14 +122,14 @@ namespace Whois.Parsing.Whois.Nic.Travel.Travel
         [Fact]
         public void Test_other_status_single()
         {
-            var sample = SampleReader.Read("whois.nic.travel", "travel", "other_status_single.txt");
+            var sample = SampleReader.Read("whois.nic.travel", "travel", "found", "other_status_single.txt");
             var response = parser.Parse("whois.nic.travel", sample);
 
             Assert.True(sample.Length > 0);
             Assert.Equal(WhoisStatus.Found, response.Status);
 
             Assert.Equal(0, response.ParsingErrors);
-            Assert.Equal("whois.nic.travel/travel/Found", response.TemplateName);
+            Assert.Equal("whois.nic.travel/travel/found/01", response.TemplateName);
 
             Assert.Equal("travel.travel", response.DomainName.ToString());
             Assert.Equal("D24096-TRAVEL", response.RegistryDomainId);
@@ -217,14 +217,14 @@ namespace Whois.Parsing.Whois.Nic.Travel.Travel
         [Fact]
         public void Test_not_found()
         {
-            var sample = SampleReader.Read("whois.nic.travel", "travel", "not_found.txt");
+            var sample = SampleReader.Read("whois.nic.travel", "travel", "not-found", "not_found.txt");
             var response = parser.Parse("whois.nic.travel", sample);
 
             Assert.True(sample.Length > 0);
             Assert.Equal(WhoisStatus.NotFound, response.Status);
 
             Assert.Equal(0, response.ParsingErrors);
-            Assert.Equal("whois.nic.travel/travel/NotFound", response.TemplateName);
+            Assert.Equal("whois.nic.travel/travel/not-found/01", response.TemplateName);
 
             Assert.Equal("u34jedzcq.travel", response.DomainName.ToString());
 
@@ -234,14 +234,14 @@ namespace Whois.Parsing.Whois.Nic.Travel.Travel
         [Fact]
         public void Test_found_status_registered()
         {
-            var sample = SampleReader.Read("whois.nic.travel", "travel", "found_status_registered.txt");
+            var sample = SampleReader.Read("whois.nic.travel", "travel", "found", "found_status_registered.txt");
             var response = parser.Parse("whois.nic.travel", sample);
 
             Assert.True(sample.Length > 0);
             Assert.Equal(WhoisStatus.Found, response.Status);
 
             Assert.Equal(0, response.ParsingErrors);
-            Assert.Equal("whois.nic.travel/travel/Found", response.TemplateName);
+            Assert.Equal("whois.nic.travel/travel/found/01", response.TemplateName);
 
             Assert.Equal("travel.travel", response.DomainName.ToString());
             Assert.Equal("D24096-TRAVEL", response.RegistryDomainId);

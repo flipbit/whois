@@ -17,14 +17,14 @@ namespace Whois.Parsing.Whois.Fi.Fi
         [Fact]
         public void Test_other_status_graceperiod()
         {
-            var sample = SampleReader.Read("whois.fi", "fi", "other_status_graceperiod.txt");
+            var sample = SampleReader.Read("whois.fi", "fi", "found", "other_status_graceperiod.txt");
             var response = parser.Parse("whois.fi", sample);
 
             Assert.True(sample.Length > 0);
             Assert.Equal(WhoisStatus.Other, response.Status);
 
             Assert.Equal(0, response.ParsingErrors);
-            Assert.Equal("whois.fi/fi/Found", response.TemplateName);
+            Assert.Equal("whois.fi/fi/found/01", response.TemplateName);
 
             Assert.Equal("oogle.fi", response.DomainName.ToString());
 
@@ -61,14 +61,14 @@ namespace Whois.Parsing.Whois.Fi.Fi
         [Fact]
         public void Test_not_found()
         {
-            var sample = SampleReader.Read("whois.fi", "fi", "not_found.txt");
+            var sample = SampleReader.Read("whois.fi", "fi", "not-found", "not_found.txt");
             var response = parser.Parse("whois.fi", sample);
 
             Assert.True(sample.Length > 0);
             Assert.Equal(WhoisStatus.NotFound, response.Status);
 
             Assert.Equal(0, response.ParsingErrors);
-            Assert.Equal("generic/tld/NotFound003", response.TemplateName);
+            Assert.Equal("generic/tld/not-found/03", response.TemplateName);
 
             Assert.Equal(1, response.FieldsParsed);
         }
@@ -76,14 +76,14 @@ namespace Whois.Parsing.Whois.Fi.Fi
         [Fact]
         public void Test_found()
         {
-            var sample = SampleReader.Read("whois.fi", "fi", "found.txt");
+            var sample = SampleReader.Read("whois.fi", "fi", "found", "found.txt");
             var response = parser.Parse("whois.fi", sample);
 
             Assert.True(sample.Length > 0);
             Assert.Equal(WhoisStatus.Found, response.Status);
 
             Assert.Equal(0, response.ParsingErrors);
-            Assert.Equal("whois.fi/fi/Found", response.TemplateName);
+            Assert.Equal("whois.fi/fi/found/01", response.TemplateName);
 
             Assert.Equal("google.fi", response.DomainName.ToString());
 
@@ -122,14 +122,14 @@ namespace Whois.Parsing.Whois.Fi.Fi
         [Fact]
         public void Test_reserved()
         {
-            var sample = SampleReader.Read("whois.fi", "fi", "reserved.txt");
+            var sample = SampleReader.Read("whois.fi", "fi", "reserved", "reserved.txt");
             var response = parser.Parse("whois.fi", sample);
 
             Assert.True(sample.Length > 0);
             Assert.Equal(WhoisStatus.Reserved, response.Status);
 
             Assert.Equal(0, response.ParsingErrors);
-            Assert.Equal("whois.fi/fi/Reserved", response.TemplateName);
+            Assert.Equal("whois.fi/fi/reserved/01", response.TemplateName);
 
             Assert.Equal(1, response.FieldsParsed);
         }

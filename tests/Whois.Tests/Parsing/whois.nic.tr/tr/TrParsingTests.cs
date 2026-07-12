@@ -17,14 +17,14 @@ namespace Whois.Parsing.Whois.Nic.Tr.Tr
         [Fact]
         public void Test_found()
         {
-            var sample = SampleReader.Read("whois.nic.tr", "tr", "found.txt");
+            var sample = SampleReader.Read("whois.nic.tr", "tr", "found", "found.txt");
             var response = parser.Parse("whois.nic.tr", sample);
 
             Assert.True(sample.Length > 0);
             Assert.Equal(WhoisStatus.Found, response.Status);
 
             Assert.Equal(0, response.ParsingErrors);
-            Assert.Equal("whois.nic.tr/tr/Found", response.TemplateName);
+            Assert.Equal("whois.nic.tr/tr/found/01", response.TemplateName);
 
             Assert.Equal(new DateTime(2001, 08, 23, 00, 00, 00, 000, DateTimeKind.Utc), response.Registered);
             Assert.Equal(new DateTime(2013, 08, 22, 00, 00, 00, 000, DateTimeKind.Utc), response.Expiration);
@@ -88,14 +88,14 @@ namespace Whois.Parsing.Whois.Nic.Tr.Tr
         [Fact]
         public void Test_found_contact_person()
         {
-            var sample = SampleReader.Read("whois.nic.tr", "tr", "found_contact_person.txt");
+            var sample = SampleReader.Read("whois.nic.tr", "tr", "found", "found_contact_person.txt");
             var response = parser.Parse("whois.nic.tr", sample);
 
             Assert.True(sample.Length > 0);
             Assert.Equal(WhoisStatus.Found, response.Status);
 
             Assert.Equal(0, response.ParsingErrors);
-            Assert.Equal("whois.nic.tr/tr/Found", response.TemplateName);
+            Assert.Equal("whois.nic.tr/tr/found/01", response.TemplateName);
 
 
             Assert.Equal(new DateTime(2009, 11, 16, 00, 00, 00, 000, DateTimeKind.Utc), response.Registered);
@@ -136,14 +136,14 @@ namespace Whois.Parsing.Whois.Nic.Tr.Tr
         [Fact]
         public void Test_found_nameservers_with_ip()
         {
-            var sample = SampleReader.Read("whois.nic.tr", "tr", "found_nameservers_with_ip.txt");
+            var sample = SampleReader.Read("whois.nic.tr", "tr", "found", "found_nameservers_with_ip.txt");
             var response = parser.Parse("whois.nic.tr", sample);
 
             Assert.True(sample.Length > 0);
             Assert.Equal(WhoisStatus.Found, response.Status);
 
             Assert.Equal(0, response.ParsingErrors);
-            Assert.Equal("whois.nic.tr/tr/Found", response.TemplateName);
+            Assert.Equal("whois.nic.tr/tr/found/01", response.TemplateName);
 
 
             Assert.Equal(new DateTime(2004, 03, 16, 00, 00, 00, 000, DateTimeKind.Utc), response.Registered);
@@ -215,14 +215,14 @@ namespace Whois.Parsing.Whois.Nic.Tr.Tr
         [Fact]
         public void Test_found_nameservers_with_trailing_space()
         {
-            var sample = SampleReader.Read("whois.nic.tr", "tr", "found_nameservers_with_trailing_space.txt");
+            var sample = SampleReader.Read("whois.nic.tr", "tr", "found", "found_nameservers_with_trailing_space.txt");
             var response = parser.Parse("whois.nic.tr", sample);
 
             Assert.True(sample.Length > 0);
             Assert.Equal(WhoisStatus.Found, response.Status);
 
             Assert.Equal(0, response.ParsingErrors);
-            Assert.Equal("whois.nic.tr/tr/Found", response.TemplateName);
+            Assert.Equal("whois.nic.tr/tr/found/01", response.TemplateName);
 
             Assert.Equal(new DateTime(2009, 11, 16, 00, 00, 00, 000, DateTimeKind.Utc), response.Registered);
             Assert.Equal(new DateTime(2010, 11, 15, 00, 00, 00, 000, DateTimeKind.Utc), response.Expiration);
@@ -262,14 +262,14 @@ namespace Whois.Parsing.Whois.Nic.Tr.Tr
         [Fact]
         public void Test_found_registrant_contact_outside_cityinoneline()
         {
-            var sample = SampleReader.Read("whois.nic.tr", "tr", "found_registrant_contact_outside_cityinoneline.txt");
+            var sample = SampleReader.Read("whois.nic.tr", "tr", "found", "found_registrant_contact_outside_cityinoneline.txt");
             var response = parser.Parse("whois.nic.tr", sample);
 
             Assert.True(sample.Length > 0);
             Assert.Equal(WhoisStatus.Found, response.Status);
 
             Assert.Equal(0, response.ParsingErrors);
-            Assert.Equal("whois.nic.tr/tr/Found", response.TemplateName);
+            Assert.Equal("whois.nic.tr/tr/found/01", response.TemplateName);
 
 
             Assert.Equal(new DateTime(1998, 09, 22, 00, 00, 00, 000, DateTimeKind.Utc), response.Registered);
@@ -332,14 +332,14 @@ namespace Whois.Parsing.Whois.Nic.Tr.Tr
         [Fact]
         public void Test_found_registrant_contact_outside_citynextline()
         {
-            var sample = SampleReader.Read("whois.nic.tr", "tr", "found_registrant_contact_outside_citynextline.txt");
+            var sample = SampleReader.Read("whois.nic.tr", "tr", "found", "found_registrant_contact_outside_citynextline.txt");
             var response = parser.Parse("whois.nic.tr", sample);
 
             Assert.True(sample.Length > 0);
             Assert.Equal(WhoisStatus.Found, response.Status);
 
             Assert.Equal(0, response.ParsingErrors);
-            Assert.Equal("whois.nic.tr/tr/Found", response.TemplateName);
+            Assert.Equal("whois.nic.tr/tr/found/01", response.TemplateName);
 
 
             Assert.Equal(new DateTime(2001, 08, 23, 00, 00, 00, 000, DateTimeKind.Utc), response.Registered);
@@ -404,14 +404,14 @@ namespace Whois.Parsing.Whois.Nic.Tr.Tr
         [Fact]
         public void Test_found_registrant_contact_turkey()
         {
-            var sample = SampleReader.Read("whois.nic.tr", "tr", "found_registrant_contact_turkey.txt");
+            var sample = SampleReader.Read("whois.nic.tr", "tr", "found", "found_registrant_contact_turkey.txt");
             var response = parser.Parse("whois.nic.tr", sample);
 
             Assert.True(sample.Length > 0);
             Assert.Equal(WhoisStatus.Found, response.Status);
 
             Assert.Equal(0, response.ParsingErrors);
-            Assert.Equal("whois.nic.tr/tr/Found", response.TemplateName);
+            Assert.Equal("whois.nic.tr/tr/found/01", response.TemplateName);
 
 
             Assert.Equal(new DateTime(2004, 06, 18, 00, 00, 00, 000, DateTimeKind.Utc), response.Registered);
@@ -479,14 +479,14 @@ namespace Whois.Parsing.Whois.Nic.Tr.Tr
         [Fact]
         public void Test_error()
         {
-            var sample = SampleReader.Read("whois.nic.tr", "tr", "error.txt");
+            var sample = SampleReader.Read("whois.nic.tr", "tr", "error", "error.txt");
             var response = parser.Parse("whois.nic.tr", sample);
 
             Assert.True(sample.Length > 0);
             Assert.Equal(WhoisStatus.Error, response.Status);
 
             Assert.Equal(0, response.ParsingErrors);
-            Assert.Equal("whois.nic.tr/tr/Error", response.TemplateName);
+            Assert.Equal("whois.nic.tr/tr/error/01", response.TemplateName);
 
             Assert.Equal(1, response.FieldsParsed);
         }
@@ -494,14 +494,14 @@ namespace Whois.Parsing.Whois.Nic.Tr.Tr
         [Fact]
         public void Test_not_found()
         {
-            var sample = SampleReader.Read("whois.nic.tr", "tr", "not_found.txt");
+            var sample = SampleReader.Read("whois.nic.tr", "tr", "not-found", "not_found.txt");
             var response = parser.Parse("whois.nic.tr", sample);
 
             Assert.True(sample.Length > 0);
             Assert.Equal(WhoisStatus.NotFound, response.Status);
 
             Assert.Equal(0, response.ParsingErrors);
-            Assert.Equal("whois.nic.tr/tr/NotFound", response.TemplateName);
+            Assert.Equal("whois.nic.tr/tr/not-found/01", response.TemplateName);
 
             Assert.Equal("u34jedzcq.com.tr", response.DomainName.ToString());
 
@@ -511,14 +511,14 @@ namespace Whois.Parsing.Whois.Nic.Tr.Tr
         [Fact]
         public void Test_invalid()
         {
-            var sample = SampleReader.Read("whois.nic.tr", "tr", "invalid.txt");
+            var sample = SampleReader.Read("whois.nic.tr", "tr", "invalid", "invalid.txt");
             var response = parser.Parse("whois.nic.tr", sample);
 
             Assert.True(sample.Length > 0);
             Assert.Equal(WhoisStatus.Error, response.Status);
 
             Assert.Equal(0, response.ParsingErrors);
-            Assert.Equal("whois.nic.tr/tr/Error", response.TemplateName);
+            Assert.Equal("whois.nic.tr/tr/error/01", response.TemplateName);
 
             Assert.Equal(1, response.FieldsParsed);
         }
@@ -526,14 +526,14 @@ namespace Whois.Parsing.Whois.Nic.Tr.Tr
         [Fact]
         public void Test_found_status_registered()
         {
-            var sample = SampleReader.Read("whois.nic.tr", "tr", "found_status_registered.txt");
+            var sample = SampleReader.Read("whois.nic.tr", "tr", "found", "found_status_registered.txt");
             var response = parser.Parse("whois.nic.tr", sample);
 
             Assert.True(sample.Length > 0);
             Assert.Equal(WhoisStatus.Found, response.Status);
 
             Assert.Equal(0, response.ParsingErrors);
-            Assert.Equal("whois.nic.tr/tr/Found", response.TemplateName);
+            Assert.Equal("whois.nic.tr/tr/found/01", response.TemplateName);
 
              // Registrant Details
             Assert.Equal("Google Inc.", response.Registrant.Name);

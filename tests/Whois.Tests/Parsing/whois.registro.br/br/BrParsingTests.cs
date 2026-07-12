@@ -17,14 +17,14 @@ namespace Whois.Parsing.Whois.Registro.Br.Br
         [Fact]
         public void Test_found()
         {
-            var sample = SampleReader.Read("whois.registro.br", "br", "found.txt");
+            var sample = SampleReader.Read("whois.registro.br", "br", "found", "found.txt");
             var response = parser.Parse("whois.registro.br", sample);
 
             Assert.True(sample.Length > 0);
             Assert.Equal(WhoisStatus.Found, response.Status);
 
             Assert.Equal(0, response.ParsingErrors);
-            Assert.Equal("whois.registro.br/br/Found", response.TemplateName);
+            Assert.Equal("whois.registro.br/br/found/01", response.TemplateName);
 
             Assert.Equal("hostgator.com.br", response.DomainName.ToString());
 
@@ -78,14 +78,14 @@ namespace Whois.Parsing.Whois.Registro.Br.Br
         [Fact]
         public void Test_not_found()
         {
-            var sample = SampleReader.Read("whois.registro.br", "br", "not_found.txt");
+            var sample = SampleReader.Read("whois.registro.br", "br", "not-found", "not_found.txt");
             var response = parser.Parse("whois.registro.br", sample);
 
             Assert.True(sample.Length > 0);
             Assert.Equal(WhoisStatus.NotFound, response.Status);
 
             Assert.Equal(0, response.ParsingErrors);
-            Assert.Equal("whois.registro.br/br/NotFound", response.TemplateName);
+            Assert.Equal("whois.registro.br/br/not-found/01", response.TemplateName);
 
             Assert.Equal("u34jedzcq.br", response.DomainName.ToString());
 
@@ -95,14 +95,14 @@ namespace Whois.Parsing.Whois.Registro.Br.Br
         [Fact]
         public void Test_not_found_status_available_limited()
         {
-            var sample = SampleReader.Read("whois.registro.br", "br", "not_found_status_available_limited.txt");
+            var sample = SampleReader.Read("whois.registro.br", "br", "not-found", "not_found_status_available_limited.txt");
             var response = parser.Parse("whois.registro.br", sample);
 
             Assert.True(sample.Length > 0);
             Assert.Equal(WhoisStatus.Throttled, response.Status);
 
             Assert.Equal(0, response.ParsingErrors);
-            Assert.Equal("whois.registro.br/br/NotFoundThrottled", response.TemplateName);
+            Assert.Equal("whois.registro.br/br/throttled/02", response.TemplateName);
 
             Assert.Equal("u34jedzcq.br", response.DomainName.ToString());
 
@@ -112,14 +112,14 @@ namespace Whois.Parsing.Whois.Registro.Br.Br
         [Fact]
         public void Test_found_status_registered()
         {
-            var sample = SampleReader.Read("whois.registro.br", "br", "found_status_registered.txt");
+            var sample = SampleReader.Read("whois.registro.br", "br", "found", "found_status_registered.txt");
             var response = parser.Parse("whois.registro.br", sample);
 
             Assert.True(sample.Length > 0);
             Assert.Equal(WhoisStatus.Found, response.Status);
 
             Assert.Equal(0, response.ParsingErrors);
-            Assert.Equal("whois.registro.br/br/Found", response.TemplateName);
+            Assert.Equal("whois.registro.br/br/found/01", response.TemplateName);
 
             Assert.Equal("google.com.br", response.DomainName.ToString());
 
@@ -165,14 +165,14 @@ namespace Whois.Parsing.Whois.Registro.Br.Br
         [Fact]
         public void Test_found_status_registered_limited()
         {
-            var sample = SampleReader.Read("whois.registro.br", "br", "found_status_registered_limited.txt");
+            var sample = SampleReader.Read("whois.registro.br", "br", "found", "found_status_registered_limited.txt");
             var response = parser.Parse("whois.registro.br", sample);
 
             Assert.True(sample.Length > 0);
             Assert.Equal(WhoisStatus.Throttled, response.Status);
 
             Assert.Equal(0, response.ParsingErrors);
-            Assert.Equal("whois.registro.br/br/FoundThrottled", response.TemplateName);
+            Assert.Equal("whois.registro.br/br/throttled/01", response.TemplateName);
 
             Assert.Equal("registro.br", response.DomainName.ToString());
 
@@ -185,14 +185,14 @@ namespace Whois.Parsing.Whois.Registro.Br.Br
         [Fact]
         public void Test_found_001hosting()
         {
-            var sample = SampleReader.Read("whois.registro.br", "br", "001hosting.com.br.txt");
+            var sample = SampleReader.Read("whois.registro.br", "br", "found", "001hosting.com.br.txt");
             var response = parser.Parse("whois.registro.br", sample);
 
             Assert.Equal(WhoisStatus.Found, response.Status);
 
             AssertWriter.Write(response);
             Assert.Equal(0, response.ParsingErrors);
-            Assert.Equal("whois.registro.br/br/Found", response.TemplateName);
+            Assert.Equal("whois.registro.br/br/found/01", response.TemplateName);
 
             Assert.Equal("001hosting.com.br", response.DomainName.ToString());
 

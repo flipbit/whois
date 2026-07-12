@@ -17,14 +17,14 @@ namespace Whois.Parsing.Whois.Pandi.Or.Id.Id
         [Fact]
         public void Test_not_found()
         {
-            var sample = SampleReader.Read("whois.pandi.or.id", "id", "not_found.txt");
+            var sample = SampleReader.Read("whois.pandi.or.id", "id", "not-found", "not_found.txt");
             var response = parser.Parse("whois.pandi.or.id", sample);
 
             Assert.True(sample.Length > 0);
             Assert.Equal(WhoisStatus.NotFound, response.Status);
 
             Assert.Equal(0, response.ParsingErrors);
-            Assert.Equal("generic/tld/NotFound001", response.TemplateName);
+            Assert.Equal("generic/tld/not-found/01", response.TemplateName);
 
             Assert.Equal(1, response.FieldsParsed);
         }
@@ -32,14 +32,14 @@ namespace Whois.Parsing.Whois.Pandi.Or.Id.Id
         [Fact]
         public void Test_found()
         {
-            var sample = SampleReader.Read("whois.pandi.or.id", "id", "found.txt");
+            var sample = SampleReader.Read("whois.pandi.or.id", "id", "found", "found.txt");
             var response = parser.Parse("whois.pandi.or.id", sample);
 
             Assert.True(sample.Length > 0);
             Assert.Equal(WhoisStatus.Found, response.Status);
 
             Assert.Equal(0, response.ParsingErrors);
-            Assert.Equal("generic/tld/Found001", response.TemplateName);
+            Assert.Equal("generic/tld/found/01", response.TemplateName);
 
             Assert.Equal("google.co.id", response.DomainName.ToString());
             Assert.Equal("PANDI-DO246796", response.RegistryDomainId);

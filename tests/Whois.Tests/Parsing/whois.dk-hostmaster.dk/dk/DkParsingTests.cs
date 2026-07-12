@@ -17,14 +17,14 @@ namespace Whois.Parsing.Whois.Dk.Hostmaster.Dk.Dk
         [Fact]
         public void Test_deactivated()
         {
-            var sample = SampleReader.Read("whois.dk-hostmaster.dk", "dk", "deactivated.txt");
+            var sample = SampleReader.Read("whois.dk-hostmaster.dk", "dk", "deactivated", "deactivated.txt");
             var response = parser.Parse("whois.dk-hostmaster.dk", sample);
 
             Assert.True(sample.Length > 0);
             Assert.Equal(WhoisStatus.Deactivated, response.Status);
 
             Assert.Equal(0, response.ParsingErrors);
-            Assert.Equal("whois.dk-hostmaster.dk/dk/Found", response.TemplateName);
+            Assert.Equal("whois.dk-hostmaster.dk/dk/found/01", response.TemplateName);
 
             Assert.Equal("progolftours.dk", response.DomainName.ToString());
 
@@ -75,14 +75,14 @@ namespace Whois.Parsing.Whois.Dk.Hostmaster.Dk.Dk
         [Fact]
         public void Test_reserved()
         {
-            var sample = SampleReader.Read("whois.dk-hostmaster.dk", "dk", "reserved.txt");
+            var sample = SampleReader.Read("whois.dk-hostmaster.dk", "dk", "reserved", "reserved.txt");
             var response = parser.Parse("whois.dk-hostmaster.dk", sample);
 
             Assert.True(sample.Length > 0);
             Assert.Equal(WhoisStatus.Reserved, response.Status);
 
             Assert.Equal(0, response.ParsingErrors);
-            Assert.Equal("whois.dk-hostmaster.dk/dk/Found", response.TemplateName);
+            Assert.Equal("whois.dk-hostmaster.dk/dk/found/01", response.TemplateName);
 
             Assert.Equal("googlle.dk", response.DomainName.ToString());
 
@@ -99,14 +99,14 @@ namespace Whois.Parsing.Whois.Dk.Hostmaster.Dk.Dk
         [Fact]
         public void Test_throttled()
         {
-            var sample = SampleReader.Read("whois.dk-hostmaster.dk", "dk", "throttled.txt");
+            var sample = SampleReader.Read("whois.dk-hostmaster.dk", "dk", "throttled", "throttled.txt");
             var response = parser.Parse("whois.dk-hostmaster.dk", sample);
 
             Assert.True(sample.Length > 0);
             Assert.Equal(WhoisStatus.Throttled, response.Status);
 
             Assert.Equal(0, response.ParsingErrors);
-            Assert.Equal("whois.dk-hostmaster.dk/dk/Throttled1", response.TemplateName);
+            Assert.Equal("whois.dk-hostmaster.dk/dk/throttled/01", response.TemplateName);
 
             Assert.Equal(1, response.FieldsParsed);
         }
@@ -114,14 +114,14 @@ namespace Whois.Parsing.Whois.Dk.Hostmaster.Dk.Dk
         [Fact]
         public void Test_throttled_response_throttled()
         {
-            var sample = SampleReader.Read("whois.dk-hostmaster.dk", "dk", "throttled_response_throttled.txt");
+            var sample = SampleReader.Read("whois.dk-hostmaster.dk", "dk", "throttled", "throttled_response_throttled.txt");
             var response = parser.Parse("whois.dk-hostmaster.dk", sample);
 
             Assert.True(sample.Length > 0);
             Assert.Equal(WhoisStatus.Throttled, response.Status);
 
             Assert.Equal(0, response.ParsingErrors);
-            Assert.Equal("whois.dk-hostmaster.dk/dk/Throttled2", response.TemplateName);
+            Assert.Equal("whois.dk-hostmaster.dk/dk/throttled/02", response.TemplateName);
 
             Assert.Equal(1, response.FieldsParsed);
         }
@@ -129,14 +129,14 @@ namespace Whois.Parsing.Whois.Dk.Hostmaster.Dk.Dk
         [Fact]
         public void Test_not_found()
         {
-            var sample = SampleReader.Read("whois.dk-hostmaster.dk", "dk", "not_found.txt");
+            var sample = SampleReader.Read("whois.dk-hostmaster.dk", "dk", "not-found", "not_found.txt");
             var response = parser.Parse("whois.dk-hostmaster.dk", sample);
 
             Assert.True(sample.Length > 0);
             Assert.Equal(WhoisStatus.NotFound, response.Status);
 
             Assert.Equal(0, response.ParsingErrors);
-            Assert.Equal("whois.dk-hostmaster.dk/dk/NotFound", response.TemplateName);
+            Assert.Equal("whois.dk-hostmaster.dk/dk/not-found/01", response.TemplateName);
 
             Assert.Equal(1, response.FieldsParsed);
         }
@@ -144,14 +144,14 @@ namespace Whois.Parsing.Whois.Dk.Hostmaster.Dk.Dk
         [Fact]
         public void Test_found()
         {
-            var sample = SampleReader.Read("whois.dk-hostmaster.dk", "dk", "found.txt");
+            var sample = SampleReader.Read("whois.dk-hostmaster.dk", "dk", "found", "found.txt");
             var response = parser.Parse("whois.dk-hostmaster.dk", sample);
 
             Assert.True(sample.Length > 0);
             Assert.Equal(WhoisStatus.Found, response.Status);
 
             Assert.Equal(0, response.ParsingErrors);
-            Assert.Equal("whois.dk-hostmaster.dk/dk/Found", response.TemplateName);
+            Assert.Equal("whois.dk-hostmaster.dk/dk/found/01", response.TemplateName);
 
             Assert.Equal("google.dk", response.DomainName.ToString());
 

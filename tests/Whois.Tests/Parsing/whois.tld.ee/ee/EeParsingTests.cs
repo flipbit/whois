@@ -17,14 +17,14 @@ namespace Whois.Parsing.Whois.Tld.Ee.Ee
         [Fact]
         public void Test_other_status_serverhold()
         {
-            var sample = SampleReader.Read("whois.tld.ee", "ee", "other_status_serverhold.txt");
+            var sample = SampleReader.Read("whois.tld.ee", "ee", "found", "other_status_serverhold.txt");
             var response = parser.Parse("whois.tld.ee", sample);
 
             Assert.True(sample.Length > 0);
             Assert.Equal(WhoisStatus.Expired, response.Status);
 
             Assert.Equal(0, response.ParsingErrors);
-            Assert.Equal("whois.tld.ee/ee/Found", response.TemplateName);
+            Assert.Equal("whois.tld.ee/ee/found/01", response.TemplateName);
 
             Assert.Equal("samanacrafts.ee", response.DomainName.ToString());
 
@@ -66,14 +66,14 @@ namespace Whois.Parsing.Whois.Tld.Ee.Ee
         [Fact]
         public void Test_not_found()
         {
-            var sample = SampleReader.Read("whois.tld.ee", "ee", "not_found.txt");
+            var sample = SampleReader.Read("whois.tld.ee", "ee", "not-found", "not_found.txt");
             var response = parser.Parse("whois.tld.ee", sample);
 
             Assert.True(sample.Length > 0);
             Assert.Equal(WhoisStatus.NotFound, response.Status);
 
             Assert.Equal(0, response.ParsingErrors);
-            Assert.Equal("generic/tld/NotFound003", response.TemplateName);
+            Assert.Equal("generic/tld/not-found/03", response.TemplateName);
 
             Assert.Equal(1, response.FieldsParsed);
         }
@@ -81,14 +81,14 @@ namespace Whois.Parsing.Whois.Tld.Ee.Ee
         [Fact]
         public void Test_expired()
         {
-            var sample = SampleReader.Read("whois.tld.ee", "ee", "expired.txt");
+            var sample = SampleReader.Read("whois.tld.ee", "ee", "expired", "expired.txt");
             var response = parser.Parse("whois.tld.ee", sample);
 
             Assert.True(sample.Length > 0);
             Assert.Equal(WhoisStatus.Expired, response.Status);
 
             Assert.Equal(0, response.ParsingErrors);
-            Assert.Equal("whois.tld.ee/ee/Found", response.TemplateName);
+            Assert.Equal("whois.tld.ee/ee/found/01", response.TemplateName);
 
             Assert.Equal("eestiinternet.ee", response.DomainName.ToString());
 
@@ -130,7 +130,7 @@ namespace Whois.Parsing.Whois.Tld.Ee.Ee
         [Fact]
         public void Test_found()
         {
-            var sample = SampleReader.Read("whois.tld.ee", "ee", "found.txt");
+            var sample = SampleReader.Read("whois.tld.ee", "ee", "found", "found.txt");
             var response = parser.Parse("whois.tld.ee", sample);
 
             Assert.True(sample.Length > 0);
@@ -138,7 +138,7 @@ namespace Whois.Parsing.Whois.Tld.Ee.Ee
 
             AssertWriter.Write(response);
             Assert.Equal(0, response.ParsingErrors);
-            Assert.Equal("whois.tld.ee/ee/Found", response.TemplateName);
+            Assert.Equal("whois.tld.ee/ee/found/01", response.TemplateName);
 
             Assert.Equal("internet.ee", response.DomainName.ToString());
 

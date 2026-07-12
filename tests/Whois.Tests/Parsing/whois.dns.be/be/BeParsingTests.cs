@@ -17,14 +17,14 @@ namespace Whois.Parsing.Whois.Dns.Be.Be
         [Fact]
         public void Test_found()
         {
-            var sample = SampleReader.Read("whois.dns.be", "be", "found.txt");
+            var sample = SampleReader.Read("whois.dns.be", "be", "found", "found.txt");
             var response = parser.Parse("whois.dns.be", sample);
 
             Assert.True(sample.Length > 0);
             Assert.Equal(WhoisStatus.Found, response.Status);
 
             Assert.Equal(0, response.ParsingErrors);
-            Assert.Equal("whois.dns.be/be/Found", response.TemplateName);
+            Assert.Equal("whois.dns.be/be/found/01", response.TemplateName);
 
             Assert.Equal("register.be", response.DomainName.ToString());
 
@@ -51,14 +51,14 @@ namespace Whois.Parsing.Whois.Dns.Be.Be
         [Fact]
         public void Test_not_found()
         {
-            var sample = SampleReader.Read("whois.dns.be", "be", "not_found.txt");
+            var sample = SampleReader.Read("whois.dns.be", "be", "not-found", "not_found.txt");
             var response = parser.Parse("whois.dns.be", sample);
 
             Assert.True(sample.Length > 0);
             Assert.Equal(WhoisStatus.NotFound, response.Status);
 
             Assert.Equal(0, response.ParsingErrors);
-            Assert.Equal("whois.dns.be/be/NotFound", response.TemplateName);
+            Assert.Equal("whois.dns.be/be/not-found/01", response.TemplateName);
 
             Assert.Equal("u34jedzcq.be", response.DomainName.ToString());
 
@@ -68,14 +68,14 @@ namespace Whois.Parsing.Whois.Dns.Be.Be
         [Fact]
         public void Test_error()
         {
-            var sample = SampleReader.Read("whois.dns.be", "be", "error.txt");
+            var sample = SampleReader.Read("whois.dns.be", "be", "error", "error.txt");
             var response = parser.Parse("whois.dns.be", sample);
 
             Assert.True(sample.Length > 0);
             Assert.Equal(WhoisStatus.Error, response.Status);
 
             Assert.Equal(0, response.ParsingErrors);
-            Assert.Equal("whois.dns.be/be/Error", response.TemplateName);
+            Assert.Equal("whois.dns.be/be/error/01", response.TemplateName);
 
             Assert.Equal("www.kimdemolenaer.be", response.DomainName.ToString());
 
@@ -85,14 +85,14 @@ namespace Whois.Parsing.Whois.Dns.Be.Be
         [Fact]
         public void Test_not_available()
         {
-            var sample = SampleReader.Read("whois.dns.be", "be", "not_available.txt");
+            var sample = SampleReader.Read("whois.dns.be", "be", "not-available", "not_available.txt");
             var response = parser.Parse("whois.dns.be", sample);
 
             Assert.True(sample.Length > 0);
             Assert.Equal(WhoisStatus.Found, response.Status);
 
             Assert.Equal(0, response.ParsingErrors);
-            Assert.Equal("whois.dns.be/be/Found", response.TemplateName);
+            Assert.Equal("whois.dns.be/be/found/01", response.TemplateName);
 
             Assert.Equal("gratisdatingplaza.be", response.DomainName.ToString());
 
@@ -125,14 +125,14 @@ namespace Whois.Parsing.Whois.Dns.Be.Be
         [Fact]
         public void Test_out_of_service()
         {
-            var sample = SampleReader.Read("whois.dns.be", "be", "out_of_service.txt");
+            var sample = SampleReader.Read("whois.dns.be", "be", "out-of-service", "out_of_service.txt");
             var response = parser.Parse("whois.dns.be", sample);
 
             Assert.True(sample.Length > 0);
             Assert.Equal(WhoisStatus.OutOfService, response.Status);
 
             Assert.Equal(0, response.ParsingErrors);
-            Assert.Equal("whois.dns.be/be/OutOfService", response.TemplateName);
+            Assert.Equal("whois.dns.be/be/out-of-service/01", response.TemplateName);
 
             Assert.Equal("ee", response.DomainName.ToString());
 
@@ -167,14 +167,14 @@ namespace Whois.Parsing.Whois.Dns.Be.Be
         [Fact]
         public void Test_quarantined()
         {
-            var sample = SampleReader.Read("whois.dns.be", "be", "quarantined.txt");
+            var sample = SampleReader.Read("whois.dns.be", "be", "quarantined", "quarantined.txt");
             var response = parser.Parse("whois.dns.be", sample);
 
             Assert.True(sample.Length > 0);
             Assert.Equal(WhoisStatus.Quarantined, response.Status);
 
             Assert.Equal(0, response.ParsingErrors);
-            Assert.Equal("whois.dns.be/be/Quarantined", response.TemplateName);
+            Assert.Equal("whois.dns.be/be/quarantined/01", response.TemplateName);
 
             Assert.Equal("9i", response.DomainName.ToString());
 
@@ -190,7 +190,7 @@ namespace Whois.Parsing.Whois.Dns.Be.Be
         [Fact]
         public void Test_blocked()
         {
-            var sample = SampleReader.Read("whois.dns.be", "be", "blocked.txt");
+            var sample = SampleReader.Read("whois.dns.be", "be", "blocked", "blocked.txt");
             var response = parser.Parse("whois.dns.be", sample);
 
             Assert.True(sample.Length > 0);
@@ -200,7 +200,7 @@ namespace Whois.Parsing.Whois.Dns.Be.Be
         [Fact]
         public void Test_throttled()
         {
-            var sample = SampleReader.Read("whois.dns.be", "be", "throttled.txt");
+            var sample = SampleReader.Read("whois.dns.be", "be", "throttled", "throttled.txt");
             var response = parser.Parse("whois.dns.be", sample);
 
             Assert.True(sample.Length > 0);
@@ -210,7 +210,7 @@ namespace Whois.Parsing.Whois.Dns.Be.Be
         [Fact]
         public void Test_throttled_response_throttled_limit()
         {
-            var sample = SampleReader.Read("whois.dns.be", "be", "throttled_response_throttled_limit.txt");
+            var sample = SampleReader.Read("whois.dns.be", "be", "throttled", "throttled_response_throttled_limit.txt");
             var response = parser.Parse("whois.dns.be", sample);
 
             Assert.True(sample.Length > 0);
@@ -220,14 +220,14 @@ namespace Whois.Parsing.Whois.Dns.Be.Be
         [Fact]
         public void Test_not_found_status_available()
         {
-            var sample = SampleReader.Read("whois.dns.be", "be", "not_found_status_available.txt");
+            var sample = SampleReader.Read("whois.dns.be", "be", "not-found", "not_found_status_available.txt");
             var response = parser.Parse("whois.dns.be", sample);
 
             Assert.True(sample.Length > 0);
             Assert.Equal(WhoisStatus.NotFound, response.Status);
 
             Assert.Equal(0, response.ParsingErrors);
-            Assert.Equal("whois.dns.be/be/NotFound", response.TemplateName);
+            Assert.Equal("whois.dns.be/be/not-found/01", response.TemplateName);
 
             Assert.Equal("u34jedzcq.be", response.DomainName.ToString());
 
@@ -237,14 +237,14 @@ namespace Whois.Parsing.Whois.Dns.Be.Be
         [Fact]
         public void Test_invalid()
         {
-            var sample = SampleReader.Read("whois.dns.be", "be", "invalid.txt");
+            var sample = SampleReader.Read("whois.dns.be", "be", "invalid", "invalid.txt");
             var response = parser.Parse("whois.dns.be", sample);
 
             Assert.True(sample.Length > 0);
             Assert.Equal(WhoisStatus.Error, response.Status);
 
             Assert.Equal(0, response.ParsingErrors);
-            Assert.Equal("whois.dns.be/be/Error", response.TemplateName);
+            Assert.Equal("whois.dns.be/be/error/01", response.TemplateName);
 
             Assert.Equal("www.kimdemolenaer.be", response.DomainName.ToString());
 
@@ -255,7 +255,7 @@ namespace Whois.Parsing.Whois.Dns.Be.Be
         [Fact]
         public void Test_found_status_registered()
         {
-            var sample = SampleReader.Read("whois.dns.be", "be", "found_status_registered.txt");
+            var sample = SampleReader.Read("whois.dns.be", "be", "found", "found_status_registered.txt");
             var response = parser.Parse("whois.dns.be", sample);
 
             Assert.True(sample.Length > 0);
@@ -265,14 +265,14 @@ namespace Whois.Parsing.Whois.Dns.Be.Be
         [Fact]
         public void Test_youtube()
         {
-            var sample = SampleReader.Read("whois.dns.be", "be", "youtu.be.txt");
+            var sample = SampleReader.Read("whois.dns.be", "be", "found", "youtu.be.txt");
             var response = parser.Parse("whois.dns.be", sample);
 
             Assert.True(sample.Length > 0);
             Assert.Equal(WhoisStatus.Found, response.Status);
 
             Assert.Equal(0, response.ParsingErrors);
-            Assert.Equal("whois.dns.be/be/Found", response.TemplateName);
+            Assert.Equal("whois.dns.be/be/found/01", response.TemplateName);
 
             Assert.Equal("youtu.be", response.DomainName.ToString());
 

@@ -17,14 +17,14 @@ namespace Whois.Parsing.Whois.Iis.Se.Se
         [Fact]
         public void Test_found()
         {
-            var sample = SampleReader.Read("whois.iis.se", "se", "found.txt");
+            var sample = SampleReader.Read("whois.iis.se", "se", "found", "found.txt");
             var response = parser.Parse("whois.iis.se", sample);
 
             Assert.True(sample.Length > 0);
             Assert.Equal(WhoisStatus.Found, response.Status);
 
             Assert.Equal(0, response.ParsingErrors);
-            Assert.Equal("whois.iis.se/se/Found", response.TemplateName);
+            Assert.Equal("whois.iis.se/se/found/01", response.TemplateName);
 
             Assert.Equal("populiscreate.se", response.DomainName.ToString());
 
@@ -66,14 +66,14 @@ namespace Whois.Parsing.Whois.Iis.Se.Se
         [Fact]
         public void Test_found_nameservers_single()
         {
-            var sample = SampleReader.Read("whois.iis.se", "se", "found_nameservers_single.txt");
+            var sample = SampleReader.Read("whois.iis.se", "se", "found", "found_nameservers_single.txt");
             var response = parser.Parse("whois.iis.se", sample);
 
             Assert.True(sample.Length > 0);
             Assert.Equal(WhoisStatus.Found, response.Status);
 
             Assert.Equal(0, response.ParsingErrors);
-            Assert.Equal("whois.iis.se/se/Found", response.TemplateName);
+            Assert.Equal("whois.iis.se/se/found/01", response.TemplateName);
 
             Assert.Equal("nhv.se", response.DomainName.ToString());
 
@@ -98,14 +98,14 @@ namespace Whois.Parsing.Whois.Iis.Se.Se
         [Fact]
         public void Test_found_nameservers_with_ip()
         {
-            var sample = SampleReader.Read("whois.iis.se", "se", "found_nameservers_with_ip.txt");
+            var sample = SampleReader.Read("whois.iis.se", "se", "found", "found_nameservers_with_ip.txt");
             var response = parser.Parse("whois.iis.se", sample);
 
             Assert.True(sample.Length > 0);
             Assert.Equal(WhoisStatus.Found, response.Status);
 
             Assert.Equal(0, response.ParsingErrors);
-            Assert.Equal("whois.iis.se/se/Found", response.TemplateName);
+            Assert.Equal("whois.iis.se/se/found/01", response.TemplateName);
 
             Assert.Equal("loopia.se", response.DomainName.ToString());
 
@@ -137,14 +137,14 @@ namespace Whois.Parsing.Whois.Iis.Se.Se
         [Fact]
         public void Test_not_assigned()
         {
-            var sample = SampleReader.Read("whois.iis.se", "se", "not_assigned.txt");
+            var sample = SampleReader.Read("whois.iis.se", "se", "not-assigned", "not_assigned.txt");
             var response = parser.Parse("whois.iis.se", sample);
 
             Assert.True(sample.Length > 0);
             Assert.Equal(WhoisStatus.NotAssigned, response.Status);
 
             Assert.Equal(0, response.ParsingErrors);
-            Assert.Equal("whois.iis.se/se/Found", response.TemplateName);
+            Assert.Equal("whois.iis.se/se/found/01", response.TemplateName);
 
             Assert.Equal("example.se", response.DomainName.ToString());
 
@@ -165,14 +165,14 @@ namespace Whois.Parsing.Whois.Iis.Se.Se
         [Fact]
         public void Test_not_found()
         {
-            var sample = SampleReader.Read("whois.iis.se", "se", "not_found.txt");
+            var sample = SampleReader.Read("whois.iis.se", "se", "not-found", "not_found.txt");
             var response = parser.Parse("whois.iis.se", sample);
 
             Assert.True(sample.Length > 0);
             Assert.Equal(WhoisStatus.NotFound, response.Status);
 
             Assert.Equal(0, response.ParsingErrors);
-            Assert.Equal("whois.iis.se/se/NotFound", response.TemplateName);
+            Assert.Equal("whois.iis.se/se/not-found/01", response.TemplateName);
 
             Assert.Equal("u34jedzcq.se", response.DomainName.ToString());
 
@@ -183,14 +183,14 @@ namespace Whois.Parsing.Whois.Iis.Se.Se
         [Fact]
         public void Test_found_status_ok()
         {
-            var sample = SampleReader.Read("whois.iis.se", "se", "found_status_ok.txt");
+            var sample = SampleReader.Read("whois.iis.se", "se", "found", "found_status_ok.txt");
             var response = parser.Parse("whois.iis.se", sample);
 
             Assert.True(sample.Length > 0);
             Assert.Equal(WhoisStatus.Found, response.Status);
 
             Assert.Equal(0, response.ParsingErrors);
-            Assert.Equal("whois.iis.se/se/Found", response.TemplateName);
+            Assert.Equal("whois.iis.se/se/found/01", response.TemplateName);
 
             Assert.Equal("google.se", response.DomainName.ToString());
 
@@ -222,14 +222,14 @@ namespace Whois.Parsing.Whois.Iis.Se.Se
         [Fact]
         public void Test_other_status_serverhold()
         {
-            var sample = SampleReader.Read("whois.iis.se", "se", "other_status_serverhold.txt");
+            var sample = SampleReader.Read("whois.iis.se", "se", "found", "other_status_serverhold.txt");
             var response = parser.Parse("whois.iis.se", sample);
 
             Assert.True(sample.Length > 0);
             Assert.Equal(WhoisStatus.Deactivated, response.Status);
 
             Assert.Equal(0, response.ParsingErrors);
-            Assert.Equal("whois.iis.se/se/Found", response.TemplateName);
+            Assert.Equal("whois.iis.se/se/found/01", response.TemplateName);
 
             Assert.Equal("ogogle.se", response.DomainName.ToString());
 
@@ -259,14 +259,14 @@ namespace Whois.Parsing.Whois.Iis.Se.Se
         [Fact]
         public void Test_not_found_status_available()
         {
-            var sample = SampleReader.Read("whois.iis.se", "se", "not_found_status_available.txt");
+            var sample = SampleReader.Read("whois.iis.se", "se", "not-found", "not_found_status_available.txt");
             var response = parser.Parse("whois.iis.se", sample);
 
             Assert.True(sample.Length > 0);
             Assert.Equal(WhoisStatus.NotFound, response.Status);
 
             Assert.Equal(0, response.ParsingErrors);
-            Assert.Equal("whois.iis.se/se/NotFound", response.TemplateName);
+            Assert.Equal("whois.iis.se/se/not-found/01", response.TemplateName);
 
             Assert.Equal("u34jedzcq.se", response.DomainName.ToString());
 
@@ -277,14 +277,14 @@ namespace Whois.Parsing.Whois.Iis.Se.Se
         [Fact]
         public void Test_found_status_registered()
         {
-            var sample = SampleReader.Read("whois.iis.se", "se", "found_status_registered.txt");
+            var sample = SampleReader.Read("whois.iis.se", "se", "found", "found_status_registered.txt");
             var response = parser.Parse("whois.iis.se", sample);
 
             Assert.True(sample.Length > 0);
             Assert.Equal(WhoisStatus.Found, response.Status);
 
             Assert.Equal(0, response.ParsingErrors);
-            Assert.Equal("whois.iis.se/se/Found", response.TemplateName);
+            Assert.Equal("whois.iis.se/se/found/01", response.TemplateName);
 
             Assert.Equal("google.se", response.DomainName.ToString());
 

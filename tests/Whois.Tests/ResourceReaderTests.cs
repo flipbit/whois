@@ -17,8 +17,8 @@ namespace Whois
             var names = reader.GetNames("capetown-whois.registry.net.za", "capetown");
 
             Assert.Equal(2, names.Count);
-            Assert.Equal("Whois.Resources.capetown_whois.registry.net.za.capetown.Found.txt", names[0]);
-            Assert.Equal("Whois.Resources.capetown_whois.registry.net.za.capetown.NotFound.txt", names[1]);
+            Assert.Equal("Whois.Resources.capetown_whois.registry.net.za.capetown.found.01.txt", names[0]);
+            Assert.Equal("Whois.Resources.capetown_whois.registry.net.za.capetown.not_found.01.txt", names[1]);
         }
 
         [Fact]
@@ -27,8 +27,8 @@ namespace Whois
             var names = reader.GetNames("Capetown-whois.registry.net.za", "Capetown");
 
             Assert.Equal(2, names.Count);
-            Assert.Equal("Whois.Resources.capetown_whois.registry.net.za.capetown.Found.txt", names[0]);
-            Assert.Equal("Whois.Resources.capetown_whois.registry.net.za.capetown.NotFound.txt", names[1]);
+            Assert.Equal("Whois.Resources.capetown_whois.registry.net.za.capetown.found.01.txt", names[0]);
+            Assert.Equal("Whois.Resources.capetown_whois.registry.net.za.capetown.not_found.01.txt", names[1]);
         }
 
         [Fact]
@@ -58,7 +58,7 @@ namespace Whois
         [Fact]
         public void TestGetContent()
         {
-            var content = reader.GetContent("Whois.Resources.capetown_whois.registry.net.za.capetown.Found.txt");
+            var content = reader.GetContent("Whois.Resources.capetown_whois.registry.net.za.capetown.found.01.txt");
 
             Assert.True(content.Length > 0);
         }

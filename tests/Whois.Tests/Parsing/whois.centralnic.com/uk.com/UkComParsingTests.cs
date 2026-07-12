@@ -17,14 +17,14 @@ namespace Whois.Parsing.Whois.Centralnic.Com.UkCom
         [Fact]
         public void Test_not_found()
         {
-            var sample = SampleReader.Read("whois.centralnic.com", "uk.com", "not_found.txt");
+            var sample = SampleReader.Read("whois.centralnic.com", "uk.com", "not-found", "not_found.txt");
             var response = parser.Parse("whois.centralnic.com", sample);
 
             Assert.True(sample.Length > 0);
             Assert.Equal(WhoisStatus.NotFound, response.Status);
 
             Assert.Equal(0, response.ParsingErrors);
-            Assert.Equal("whois.centralnic.com/NotFound", response.TemplateName);
+            Assert.Equal("whois.centralnic.com/not-found/01", response.TemplateName);
 
             Assert.Equal(1, response.FieldsParsed);
         }
@@ -32,14 +32,14 @@ namespace Whois.Parsing.Whois.Centralnic.Com.UkCom
         [Fact]
         public void Test_found()
         {
-            var sample = SampleReader.Read("whois.centralnic.com", "uk.com", "found.txt");
+            var sample = SampleReader.Read("whois.centralnic.com", "uk.com", "found", "found.txt");
             var response = parser.Parse("whois.centralnic.com", sample);
 
             Assert.True(sample.Length > 0);
             Assert.Equal(WhoisStatus.Found, response.Status);
 
             Assert.Equal(0, response.ParsingErrors);
-            Assert.Equal("whois.centralnic.com/Found", response.TemplateName);
+            Assert.Equal("whois.centralnic.com/found/01", response.TemplateName);
 
             Assert.Equal("history.uk.com", response.DomainName.ToString());
             Assert.Equal("CNIC-DO86293", response.RegistryDomainId);

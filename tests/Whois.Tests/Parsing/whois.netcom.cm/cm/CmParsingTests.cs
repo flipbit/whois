@@ -17,14 +17,14 @@ namespace Whois.Parsing.Whois.Netcom.Cm.Cm
         [Fact]
         public void Test_not_found()
         {
-            var sample = SampleReader.Read("whois.netcom.cm", "cm", "not_found.txt");
+            var sample = SampleReader.Read("whois.netcom.cm", "cm", "not-found", "not_found.txt");
             var response = parser.Parse("whois.netcom.cm", sample);
 
             Assert.True(sample.Length > 0);
             Assert.Equal(WhoisStatus.NotFound, response.Status);
 
             Assert.Equal(0, response.ParsingErrors);
-            Assert.Equal("whois.netcom.cm/cm/Found", response.TemplateName);
+            Assert.Equal("whois.netcom.cm/cm/found/01", response.TemplateName);
 
             Assert.Equal("u34jedzcq.cm", response.DomainName.ToString());
 
@@ -38,14 +38,14 @@ namespace Whois.Parsing.Whois.Netcom.Cm.Cm
         [Fact]
         public void Test_found()
         {
-            var sample = SampleReader.Read("whois.netcom.cm", "cm", "found.txt");
+            var sample = SampleReader.Read("whois.netcom.cm", "cm", "found", "found.txt");
             var response = parser.Parse("whois.netcom.cm", sample);
 
             Assert.True(sample.Length > 0);
             Assert.Equal(WhoisStatus.Found, response.Status);
 
             Assert.Equal(0, response.ParsingErrors);
-            Assert.Equal("whois.netcom.cm/cm/Found", response.TemplateName);
+            Assert.Equal("whois.netcom.cm/cm/found/01", response.TemplateName);
 
             Assert.Equal("google.cm", response.DomainName.ToString());
 
@@ -120,14 +120,14 @@ namespace Whois.Parsing.Whois.Netcom.Cm.Cm
         [Fact]
         public void Test_suspended()
         {
-            var sample = SampleReader.Read("whois.netcom.cm", "cm", "suspended.txt");
+            var sample = SampleReader.Read("whois.netcom.cm", "cm", "suspended", "suspended.txt");
             var response = parser.Parse("whois.netcom.cm", sample);
 
             Assert.True(sample.Length > 0);
             Assert.Equal(WhoisStatus.Suspended, response.Status);
 
             Assert.Equal(0, response.ParsingErrors);
-            Assert.Equal("whois.netcom.cm/cm/Found", response.TemplateName);
+            Assert.Equal("whois.netcom.cm/cm/found/01", response.TemplateName);
 
             Assert.Equal("imdb.cm", response.DomainName.ToString());
 

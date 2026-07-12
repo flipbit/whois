@@ -17,7 +17,7 @@ namespace Whois.Parsing.Joburg.Whois.Registry.Net.Za.Joburg
         [Fact]
         public void Test_not_found()
         {
-            var sample = SampleReader.Read("joburg-whois.registry.net.za", "joburg", "not_found.txt");
+            var sample = SampleReader.Read("joburg-whois.registry.net.za", "joburg", "not-found", "not_found.txt");
             var response = parser.Parse("joburg-whois.registry.net.za", sample);
 
             Assert.True(sample.Length > 0);
@@ -32,7 +32,7 @@ namespace Whois.Parsing.Joburg.Whois.Registry.Net.Za.Joburg
         [Fact]
         public void Test_found()
         {
-            var sample = SampleReader.Read("joburg-whois.registry.net.za", "joburg", "found.txt");
+            var sample = SampleReader.Read("joburg-whois.registry.net.za", "joburg", "found", "found.txt");
             var response = parser.Parse("joburg-whois.registry.net.za", sample);
 
             Assert.True(sample.Length > 0);

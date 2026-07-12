@@ -17,7 +17,7 @@ namespace Whois.Parsing.Whois.Nic.Lk.XnXkc2al3hye2a
         [Fact]
         public void Test_not_found()
         {
-            var sample = SampleReader.Read("whois.nic.lk", "xn--xkc2al3hye2a", "not_found.txt");
+            var sample = SampleReader.Read("whois.nic.lk", "xn--xkc2al3hye2a", "not-found", "not_found.txt");
             var response = parser.Parse("whois.nic.lk", sample);
 
             Assert.Equal(WhoisStatus.Unknown, response.Status);
@@ -27,14 +27,14 @@ namespace Whois.Parsing.Whois.Nic.Lk.XnXkc2al3hye2a
         [Fact]
         public void Test_found()
         {
-            var sample = SampleReader.Read("whois.nic.lk", "xn--xkc2al3hye2a", "found.txt");
+            var sample = SampleReader.Read("whois.nic.lk", "xn--xkc2al3hye2a", "found", "found.txt");
             var response = parser.Parse("whois.nic.lk", sample);
 
             Assert.True(sample.Length > 0);
             Assert.Equal(WhoisStatus.Found, response.Status);
 
             Assert.Equal(0, response.ParsingErrors);
-            Assert.Equal("whois.nic.lk/Found02", response.TemplateName);
+            Assert.Equal("whois.nic.lk/found/02", response.TemplateName);
 
             Assert.Equal("xn--4kcolx4fsa0gdt6j.xn--xkc2al3hye2a", response.DomainName.ToString());
 

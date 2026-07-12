@@ -17,14 +17,14 @@ namespace Whois.Parsing.Whois.Denic.De.De
         [Fact]
         public void Test_found()
         {
-            var sample = SampleReader.Read("whois.denic.de", "de", "found.txt");
+            var sample = SampleReader.Read("whois.denic.de", "de", "found", "found.txt");
             var response = parser.Parse("whois.denic.de", sample);
 
             Assert.True(sample.Length > 0);
             Assert.Equal(WhoisStatus.Found, response.Status);
 
             Assert.Equal(0, response.ParsingErrors);
-            Assert.Equal("whois.denic.de/de/Found", response.TemplateName);
+            Assert.Equal("whois.denic.de/de/found/01", response.TemplateName);
 
             Assert.Equal("prodns.de", response.DomainName.ToString());
 
@@ -75,14 +75,14 @@ namespace Whois.Parsing.Whois.Denic.De.De
         [Fact]
         public void Test_found_technical_contact()
         {
-            var sample = SampleReader.Read("whois.denic.de", "de", "found_technical_contact.txt");
+            var sample = SampleReader.Read("whois.denic.de", "de", "found", "found_technical_contact.txt");
             var response = parser.Parse("whois.denic.de", sample);
 
             Assert.True(sample.Length > 0);
             Assert.Equal(WhoisStatus.Found, response.Status);
 
             Assert.Equal(0, response.ParsingErrors);
-            Assert.Equal("whois.denic.de/de/Found", response.TemplateName);
+            Assert.Equal("whois.denic.de/de/found/01", response.TemplateName);
 
             Assert.Equal("google.de", response.DomainName.ToString());
 
@@ -135,14 +135,14 @@ namespace Whois.Parsing.Whois.Denic.De.De
         [Fact]
         public void Test_error()
         {
-            var sample = SampleReader.Read("whois.denic.de", "de", "error.txt");
+            var sample = SampleReader.Read("whois.denic.de", "de", "error", "error.txt");
             var response = parser.Parse("whois.denic.de", sample);
 
             Assert.True(sample.Length > 0);
             Assert.Equal(WhoisStatus.Error, response.Status);
 
             Assert.Equal(0, response.ParsingErrors);
-            Assert.Equal("whois.denic.de/de/Error", response.TemplateName);
+            Assert.Equal("whois.denic.de/de/error/01", response.TemplateName);
 
             Assert.Equal(1, response.FieldsParsed);
         }
@@ -150,14 +150,14 @@ namespace Whois.Parsing.Whois.Denic.De.De
         [Fact]
         public void Test_throttled()
         {
-            var sample = SampleReader.Read("whois.denic.de", "de", "throttled.txt");
+            var sample = SampleReader.Read("whois.denic.de", "de", "throttled", "throttled.txt");
             var response = parser.Parse("whois.denic.de", sample);
 
             Assert.True(sample.Length > 0);
             Assert.Equal(WhoisStatus.Throttled, response.Status);
 
             Assert.Equal(0, response.ParsingErrors);
-            Assert.Equal("whois.denic.de/de/Throttled", response.TemplateName);
+            Assert.Equal("whois.denic.de/de/throttled/01", response.TemplateName);
 
             Assert.Equal(1, response.FieldsParsed);
         }
@@ -165,14 +165,14 @@ namespace Whois.Parsing.Whois.Denic.De.De
         [Fact]
         public void Test_not_found()
         {
-            var sample = SampleReader.Read("whois.denic.de", "de", "not_found.txt");
+            var sample = SampleReader.Read("whois.denic.de", "de", "not-found", "not_found.txt");
             var response = parser.Parse("whois.denic.de", sample);
 
             Assert.True(sample.Length > 0);
             Assert.Equal(WhoisStatus.NotFound, response.Status);
 
             Assert.Equal(0, response.ParsingErrors);
-            Assert.Equal("whois.denic.de/de/NotFound", response.TemplateName);
+            Assert.Equal("whois.denic.de/de/not-found/01", response.TemplateName);
 
             Assert.Equal("u34jedzcq.de", response.DomainName.ToString());
 
@@ -182,14 +182,14 @@ namespace Whois.Parsing.Whois.Denic.De.De
         [Fact]
         public void Test_failed()
         {
-            var sample = SampleReader.Read("whois.denic.de", "de", "failed.txt");
+            var sample = SampleReader.Read("whois.denic.de", "de", "failed", "failed.txt");
             var response = parser.Parse("whois.denic.de", sample);
 
             Assert.True(sample.Length > 0);
             Assert.Equal(WhoisStatus.Failed, response.Status);
 
             Assert.Equal(0, response.ParsingErrors);
-            Assert.Equal("whois.denic.de/de/Found", response.TemplateName);
+            Assert.Equal("whois.denic.de/de/found/01", response.TemplateName);
 
             Assert.Equal("msens.de", response.DomainName.ToString());
 
@@ -240,14 +240,14 @@ namespace Whois.Parsing.Whois.Denic.De.De
         [Fact]
         public void Test_failed_status_failed_ace()
         {
-            var sample = SampleReader.Read("whois.denic.de", "de", "failed_status_failed_ace.txt");
+            var sample = SampleReader.Read("whois.denic.de", "de", "failed", "failed_status_failed_ace.txt");
             var response = parser.Parse("whois.denic.de", sample);
 
             Assert.True(sample.Length > 0);
             Assert.Equal(WhoisStatus.Failed, response.Status);
 
             Assert.Equal(0, response.ParsingErrors);
-            Assert.Equal("whois.denic.de/de/Found", response.TemplateName);
+            Assert.Equal("whois.denic.de/de/found/01", response.TemplateName);
 
             Assert.Equal("xn--tstdomain-failed-nserver-qbc.de", response.DomainName.ToString());
             Assert.Equal("tästdomain-failed-nserver.de", response.DomainName.ToUnicodeString());
@@ -303,14 +303,14 @@ namespace Whois.Parsing.Whois.Denic.De.De
         [Fact]
         public void Test_invalid()
         {
-            var sample = SampleReader.Read("whois.denic.de", "de", "invalid.txt");
+            var sample = SampleReader.Read("whois.denic.de", "de", "invalid", "invalid.txt");
             var response = parser.Parse("whois.denic.de", sample);
 
             Assert.True(sample.Length > 0);
             Assert.Equal(WhoisStatus.Invalid, response.Status);
 
             Assert.Equal(0, response.ParsingErrors);
-            Assert.Equal("whois.denic.de/de/Invalid", response.TemplateName);
+            Assert.Equal("whois.denic.de/de/invalid/01", response.TemplateName);
 
             Assert.Equal("googlededewdedewdewde.foo.de", response.DomainName.ToString());
 
@@ -324,14 +324,14 @@ namespace Whois.Parsing.Whois.Denic.De.De
         [Fact]
         public void Test_found_status_registered()
         {
-            var sample = SampleReader.Read("whois.denic.de", "de", "found_status_registered.txt");
+            var sample = SampleReader.Read("whois.denic.de", "de", "found", "found_status_registered.txt");
             var response = parser.Parse("whois.denic.de", sample);
 
             Assert.True(sample.Length > 0);
             Assert.Equal(WhoisStatus.Found, response.Status);
 
             Assert.Equal(0, response.ParsingErrors);
-            Assert.Equal("whois.denic.de/de/Found", response.TemplateName);
+            Assert.Equal("whois.denic.de/de/found/01", response.TemplateName);
 
             Assert.Equal("google.de", response.DomainName.ToString());
 
@@ -384,12 +384,12 @@ namespace Whois.Parsing.Whois.Denic.De.De
         [Fact]
         public void Test_found_amazon_de()
         {
-            var sample = SampleReader.Read("whois.denic.de", "de", "amazon.de.txt");
+            var sample = SampleReader.Read("whois.denic.de", "de", "found", "amazon.de.txt");
             
             var response = parser.Parse("whois.denic.de", sample);
 
             Assert.Equal(0, response.ParsingErrors);
-            Assert.Equal("whois.denic.de/de/Found", response.TemplateName);
+            Assert.Equal("whois.denic.de/de/found/01", response.TemplateName);
 
             Assert.Equal("amazon.de", response.DomainName.ToString());
 

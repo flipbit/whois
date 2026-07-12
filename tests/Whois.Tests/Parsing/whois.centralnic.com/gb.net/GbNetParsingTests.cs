@@ -17,14 +17,14 @@ namespace Whois.Parsing.Whois.Centralnic.Com.GbNet
         [Fact]
         public void Test_not_found()
         {
-            var sample = SampleReader.Read("whois.centralnic.com", "gb.net", "not_found.txt");
+            var sample = SampleReader.Read("whois.centralnic.com", "gb.net", "not-found", "not_found.txt");
             var response = parser.Parse("whois.centralnic.com", sample);
 
             Assert.True(sample.Length > 0);
             Assert.Equal(WhoisStatus.NotFound, response.Status);
 
             Assert.Equal(0, response.ParsingErrors);
-            Assert.Equal("whois.centralnic.com/NotFound", response.TemplateName);
+            Assert.Equal("whois.centralnic.com/not-found/01", response.TemplateName);
 
             Assert.Equal(1, response.FieldsParsed);
         }
@@ -32,14 +32,14 @@ namespace Whois.Parsing.Whois.Centralnic.Com.GbNet
         [Fact]
         public void Test_found()
         {
-            var sample = SampleReader.Read("whois.centralnic.com", "gb.net", "found.txt");
+            var sample = SampleReader.Read("whois.centralnic.com", "gb.net", "found", "found.txt");
             var response = parser.Parse("whois.centralnic.com", sample);
 
             Assert.True(sample.Length > 0);
             Assert.Equal(WhoisStatus.Found, response.Status);
 
             Assert.Equal(0, response.ParsingErrors);
-            Assert.Equal("whois.centralnic.com/Found", response.TemplateName);
+            Assert.Equal("whois.centralnic.com/found/01", response.TemplateName);
 
             Assert.Equal("hotel.gb.net", response.DomainName.ToString());
             Assert.Equal("CNIC-DO1423750", response.RegistryDomainId);

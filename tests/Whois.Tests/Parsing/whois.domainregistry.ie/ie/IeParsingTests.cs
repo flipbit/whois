@@ -17,14 +17,14 @@ namespace Whois.Parsing.Whois.Domainregistry.Ie.Ie
         [Fact]
         public void Test_reserved()
         {
-            var sample = SampleReader.Read("whois.domainregistry.ie", "ie", "reserved.txt");
+            var sample = SampleReader.Read("whois.domainregistry.ie", "ie", "reserved", "reserved.txt");
             var response = parser.Parse("whois.domainregistry.ie", sample);
 
             Assert.True(sample.Length > 0);
             Assert.Equal(WhoisStatus.Reserved, response.Status);
 
             Assert.Equal(0, response.ParsingErrors);
-            Assert.Equal("whois.domainregistry.ie/ie/Reserved", response.TemplateName);
+            Assert.Equal("whois.domainregistry.ie/ie/reserved/01", response.TemplateName);
 
             Assert.Equal("peter.ie", response.DomainName.ToString());
 
@@ -36,14 +36,14 @@ namespace Whois.Parsing.Whois.Domainregistry.Ie.Ie
         [Fact]
         public void Test_found_contacts_multiple()
         {
-            var sample = SampleReader.Read("whois.domainregistry.ie", "ie", "found_contacts_multiple.txt");
+            var sample = SampleReader.Read("whois.domainregistry.ie", "ie", "found", "found_contacts_multiple.txt");
             var response = parser.Parse("whois.domainregistry.ie", sample);
 
             Assert.True(sample.Length > 0);
             Assert.Equal(WhoisStatus.Found, response.Status);
             
             Assert.Equal(0, response.ParsingErrors);
-            Assert.Equal("whois.domainregistry.ie/ie/Found02", response.TemplateName);
+            Assert.Equal("whois.domainregistry.ie/ie/found/02", response.TemplateName);
 
             Assert.Equal("rte.ie", response.DomainName.ToString());
 
@@ -69,14 +69,14 @@ namespace Whois.Parsing.Whois.Domainregistry.Ie.Ie
         [Fact]
         public void Test_found_contacts_not_matching_id()
         {
-            var sample = SampleReader.Read("whois.domainregistry.ie", "ie", "found_contacts_not_matching_id.txt");
+            var sample = SampleReader.Read("whois.domainregistry.ie", "ie", "found", "found_contacts_not_matching_id.txt");
             var response = parser.Parse("whois.domainregistry.ie", sample);
 
             Assert.True(sample.Length > 0);
             Assert.Equal(WhoisStatus.Found, response.Status);
 
             Assert.Equal(0, response.ParsingErrors);
-            Assert.Equal("whois.domainregistry.ie/ie/Found", response.TemplateName);
+            Assert.Equal("whois.domainregistry.ie/ie/found/01", response.TemplateName);
 
             Assert.Equal("tcd.ie", response.DomainName.ToString());
 
@@ -107,14 +107,14 @@ namespace Whois.Parsing.Whois.Domainregistry.Ie.Ie
         [Fact]
         public void Test_found_nameservers_with_ip()
         {
-            var sample = SampleReader.Read("whois.domainregistry.ie", "ie", "found_nameservers_with_ip.txt");
+            var sample = SampleReader.Read("whois.domainregistry.ie", "ie", "found", "found_nameservers_with_ip.txt");
             var response = parser.Parse("whois.domainregistry.ie", sample);
 
             Assert.True(sample.Length > 0);
             Assert.Equal(WhoisStatus.Found, response.Status);
 
             Assert.Equal(0, response.ParsingErrors);
-            Assert.Equal("whois.domainregistry.ie/ie/Found02", response.TemplateName);
+            Assert.Equal("whois.domainregistry.ie/ie/found/02", response.TemplateName);
 
             Assert.Equal("dns.ie", response.DomainName.ToString());
 
@@ -144,14 +144,14 @@ namespace Whois.Parsing.Whois.Domainregistry.Ie.Ie
         [Fact]
         public void Test_not_found()
         {
-            var sample = SampleReader.Read("whois.domainregistry.ie", "ie", "not_found.txt");
+            var sample = SampleReader.Read("whois.domainregistry.ie", "ie", "not-found", "not_found.txt");
             var response = parser.Parse("whois.domainregistry.ie", sample);
 
             Assert.True(sample.Length > 0);
             Assert.Equal(WhoisStatus.NotFound, response.Status);
 
             Assert.Equal(0, response.ParsingErrors);
-            Assert.Equal("whois.domainregistry.ie/ie/NotFound", response.TemplateName);
+            Assert.Equal("whois.domainregistry.ie/ie/not-found/01", response.TemplateName);
 
             Assert.Equal("u34jedzcq.ie", response.DomainName.ToString());
 
@@ -161,14 +161,14 @@ namespace Whois.Parsing.Whois.Domainregistry.Ie.Ie
         [Fact]
         public void Test_found_status_registered()
         {
-            var sample = SampleReader.Read("whois.domainregistry.ie", "ie", "found_status_registered.txt");
+            var sample = SampleReader.Read("whois.domainregistry.ie", "ie", "found", "found_status_registered.txt");
             var response = parser.Parse("whois.domainregistry.ie", sample);
 
             Assert.True(sample.Length > 0);
             Assert.Equal(WhoisStatus.Found, response.Status);
 
             Assert.Equal(0, response.ParsingErrors);
-            Assert.Equal("whois.domainregistry.ie/ie/Found", response.TemplateName);
+            Assert.Equal("whois.domainregistry.ie/ie/found/01", response.TemplateName);
 
             Assert.Equal("google.ie", response.DomainName.ToString());
 

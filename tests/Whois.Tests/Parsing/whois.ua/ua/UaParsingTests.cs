@@ -17,14 +17,14 @@ namespace Whois.Parsing.Whois.Ua.Ua
         [Fact]
         public void Test_other_status_clienthold()
         {
-            var sample = SampleReader.Read("whois.ua", "ua", "other_status_clienthold.txt");
+            var sample = SampleReader.Read("whois.ua", "ua", "found", "other_status_clienthold.txt");
             var response = parser.Parse("whois.ua", sample);
 
             Assert.True(sample.Length > 0);
             Assert.Equal(WhoisStatus.Found, response.Status);
 
             Assert.Equal(0, response.ParsingErrors);
-            Assert.Equal("whois.ua/ua/Found01", response.TemplateName);
+            Assert.Equal("whois.ua/ua/found/01", response.TemplateName);
 
             Assert.Equal("oogle.com.ua", response.DomainName.ToString());
 
@@ -100,14 +100,14 @@ namespace Whois.Parsing.Whois.Ua.Ua
         [Fact]
         public void Test_other_status_clienttransferprohibited()
         {
-            var sample = SampleReader.Read("whois.ua", "ua", "other_status_clienttransferprohibited.txt");
+            var sample = SampleReader.Read("whois.ua", "ua", "found", "other_status_clienttransferprohibited.txt");
             var response = parser.Parse("whois.ua", sample);
 
             Assert.True(sample.Length > 0);
             Assert.Equal(WhoisStatus.Found, response.Status);
 
             Assert.Equal(0, response.ParsingErrors);
-            Assert.Equal("whois.ua/ua/Found01", response.TemplateName);
+            Assert.Equal("whois.ua/ua/found/01", response.TemplateName);
 
             Assert.Equal("fcbank.com.ua", response.DomainName.ToString());
 
@@ -182,14 +182,14 @@ namespace Whois.Parsing.Whois.Ua.Ua
         [Fact]
         public void Test_other_status_graceperiod()
         {
-            var sample = SampleReader.Read("whois.ua", "ua", "other_status_graceperiod.txt");
+            var sample = SampleReader.Read("whois.ua", "ua", "found", "other_status_graceperiod.txt");
             var response = parser.Parse("whois.ua", sample);
 
             Assert.True(sample.Length > 0);
             Assert.Equal(WhoisStatus.Other, response.Status);
 
             Assert.Equal(0, response.ParsingErrors);
-            Assert.Equal("whois.ua/ua/Found01", response.TemplateName);
+            Assert.Equal("whois.ua/ua/found/01", response.TemplateName);
 
             Assert.Equal("oogle.com.ua", response.DomainName.ToString());
 
@@ -265,14 +265,14 @@ namespace Whois.Parsing.Whois.Ua.Ua
         [Fact]
         public void Test_found()
         {
-            var sample = SampleReader.Read("whois.ua", "ua", "found.txt");
+            var sample = SampleReader.Read("whois.ua", "ua", "found", "found.txt");
             var response = parser.Parse("whois.ua", sample);
 
             Assert.True(sample.Length > 0);
             Assert.Equal(WhoisStatus.Found, response.Status);
 
             Assert.Equal(0, response.ParsingErrors);
-            Assert.Equal("whois.ua/ua/Found01", response.TemplateName);
+            Assert.Equal("whois.ua/ua/found/01", response.TemplateName);
 
             Assert.Equal("google.com.ua", response.DomainName.ToString());
 
@@ -349,14 +349,14 @@ namespace Whois.Parsing.Whois.Ua.Ua
         [Fact]
         public void Test_pending_delete()
         {
-            var sample = SampleReader.Read("whois.ua", "ua", "pending_delete.txt");
+            var sample = SampleReader.Read("whois.ua", "ua", "pending-delete", "pending_delete.txt");
             var response = parser.Parse("whois.ua", sample);
 
             Assert.True(sample.Length > 0);
             Assert.Equal(WhoisStatus.PendingDelete, response.Status);
 
             Assert.Equal(0, response.ParsingErrors);
-            Assert.Equal("whois.ua/ua/Found01", response.TemplateName);
+            Assert.Equal("whois.ua/ua/found/01", response.TemplateName);
 
             Assert.Equal("googke.com.ua", response.DomainName.ToString());
 
@@ -432,14 +432,14 @@ namespace Whois.Parsing.Whois.Ua.Ua
         [Fact]
         public void Test_other_status_redemptionperiod()
         {
-            var sample = SampleReader.Read("whois.ua", "ua", "other_status_redemptionperiod.txt");
+            var sample = SampleReader.Read("whois.ua", "ua", "found", "other_status_redemptionperiod.txt");
             var response = parser.Parse("whois.ua", sample);
 
             Assert.True(sample.Length > 0);
             Assert.Equal(WhoisStatus.Redemption, response.Status);
 
             Assert.Equal(0, response.ParsingErrors);
-            Assert.Equal("whois.ua/ua/Found01", response.TemplateName);
+            Assert.Equal("whois.ua/ua/found/01", response.TemplateName);
 
             Assert.Equal("googlw.com.ua", response.DomainName.ToString());
 
@@ -496,14 +496,14 @@ namespace Whois.Parsing.Whois.Ua.Ua
         [Fact]
         public void Test_not_found()
         {
-            var sample = SampleReader.Read("whois.ua", "ua", "not_found.txt");
+            var sample = SampleReader.Read("whois.ua", "ua", "not-found", "not_found.txt");
             var response = parser.Parse("whois.ua", sample);
 
             Assert.True(sample.Length > 0);
             Assert.Equal(WhoisStatus.NotFound, response.Status);
 
             Assert.Equal(0, response.ParsingErrors);
-            Assert.Equal("whois.ua/ua/NotFound", response.TemplateName);
+            Assert.Equal("whois.ua/ua/not-found/01", response.TemplateName);
 
             Assert.Equal("u34jedzcq.com.ua", response.DomainName.ToString());
 
@@ -513,14 +513,14 @@ namespace Whois.Parsing.Whois.Ua.Ua
         [Fact]
         public void Test_found_status_registered()
         {
-            var sample = SampleReader.Read("whois.ua", "ua", "found_status_registered.txt");
+            var sample = SampleReader.Read("whois.ua", "ua", "found", "found_status_registered.txt");
             var response = parser.Parse("whois.ua", sample);
 
             Assert.True(sample.Length > 0);
             Assert.Equal(WhoisStatus.Found, response.Status);
 
             Assert.Equal(0, response.ParsingErrors);
-            Assert.Equal("whois.ua/ua/Found02", response.TemplateName);
+            Assert.Equal("whois.ua/ua/found/02", response.TemplateName);
 
             Assert.Equal("kyivstar.ua", response.DomainName.ToString());
 
@@ -568,14 +568,14 @@ namespace Whois.Parsing.Whois.Ua.Ua
         [Fact]
         public void Test_found_contacts_multiple()
         {
-            var sample = SampleReader.Read("whois.ua", "ua", "found_contacts_multiple.txt");
+            var sample = SampleReader.Read("whois.ua", "ua", "found", "found_contacts_multiple.txt");
             var response = parser.Parse("whois.ua", sample);
 
             Assert.True(sample.Length > 0);
             Assert.Equal(WhoisStatus.Found, response.Status);
 
             Assert.Equal(0, response.ParsingErrors);
-            Assert.Equal("whois.ua/ua/Found02", response.TemplateName);
+            Assert.Equal("whois.ua/ua/found/02", response.TemplateName);
 
             Assert.Equal("kyivstar.ua", response.DomainName.ToString());
 

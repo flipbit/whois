@@ -17,7 +17,7 @@ namespace Whois.Parsing.Whois.Ati.Tn.Tn
         [Fact]
         public void Test_found()
         {
-            var sample = SampleReader.Read("whois.ati.tn", "tn", "found.txt");
+            var sample = SampleReader.Read("whois.ati.tn", "tn", "found", "found.txt");
             var response = parser.Parse("whois.ati.tn", sample);
 
             Assert.True(sample.Length > 0);
@@ -25,7 +25,7 @@ namespace Whois.Parsing.Whois.Ati.Tn.Tn
 
             Assert.Equal(18, response.FieldsParsed);
             Assert.Equal(0, response.ParsingErrors);
-            Assert.Equal("whois.ati.tn/tn/Found", response.TemplateName);
+            Assert.Equal("whois.ati.tn/tn/found/01", response.TemplateName);
 
             Assert.Equal("equipements-pro.com.tn", response.DomainName.ToString());
 
@@ -65,7 +65,7 @@ namespace Whois.Parsing.Whois.Ati.Tn.Tn
         [Fact]
         public void Test_not_found()
         {
-            var sample = SampleReader.Read("whois.ati.tn", "tn", "not_found.txt");
+            var sample = SampleReader.Read("whois.ati.tn", "tn", "not-found", "not_found.txt");
             var response = parser.Parse("whois.ati.tn", sample);
 
             Assert.True(sample.Length > 0);
@@ -73,14 +73,14 @@ namespace Whois.Parsing.Whois.Ati.Tn.Tn
 
             Assert.Equal(2, response.FieldsParsed);
             Assert.Equal(0, response.ParsingErrors);
-            Assert.Equal("whois.ati.tn/tn/NotFound", response.TemplateName);
+            Assert.Equal("whois.ati.tn/tn/not-found/01", response.TemplateName);
 
             Assert.Equal("u34jedzcq.tn", response.DomainName.ToString());        }
 
         [Fact]
         public void Test_found_status_registered()
         {
-            var sample = SampleReader.Read("whois.ati.tn", "tn", "found_status_registered.txt");
+            var sample = SampleReader.Read("whois.ati.tn", "tn", "found", "found_status_registered.txt");
             var response = parser.Parse("whois.ati.tn", sample);
 
             Assert.True(sample.Length > 0);
@@ -88,7 +88,7 @@ namespace Whois.Parsing.Whois.Ati.Tn.Tn
 
             Assert.Equal(23, response.FieldsParsed);
             Assert.Equal(0, response.ParsingErrors);
-            Assert.Equal("whois.ati.tn/tn/Found", response.TemplateName);
+            Assert.Equal("whois.ati.tn/tn/found/01", response.TemplateName);
 
             Assert.Equal("google.tn", response.DomainName.ToString());
 

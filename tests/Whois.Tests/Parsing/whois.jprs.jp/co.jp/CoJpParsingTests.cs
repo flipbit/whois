@@ -17,14 +17,14 @@ namespace Whois.Parsing.Whois.Jprs.Jp.CoJp
         [Fact]
         public void Test_pending_delete()
         {
-            var sample = SampleReader.Read("whois.jprs.jp", "co.jp", "pending_delete.txt");
+            var sample = SampleReader.Read("whois.jprs.jp", "co.jp", "pending-delete", "pending_delete.txt");
             var response = parser.Parse("whois.jprs.jp", sample);
 
             Assert.True(sample.Length > 0);
             Assert.Equal(WhoisStatus.PendingDelete, response.Status);
 
             Assert.Equal(0, response.ParsingErrors);
-            Assert.Equal("whois.jprs.jp/Found01", response.TemplateName);
+            Assert.Equal("whois.jprs.jp/found/01", response.TemplateName);
 
             Assert.Equal("gaylife.co.jp", response.DomainName.ToString());
 
@@ -43,14 +43,14 @@ namespace Whois.Parsing.Whois.Jprs.Jp.CoJp
         [Fact]
         public void Test_found()
         {
-            var sample = SampleReader.Read("whois.jprs.jp", "co.jp", "found.txt");
+            var sample = SampleReader.Read("whois.jprs.jp", "co.jp", "found", "found.txt");
             var response = parser.Parse("whois.jprs.jp", sample);
 
             Assert.True(sample.Length > 0);
             Assert.Equal(WhoisStatus.Found, response.Status);
 
             Assert.Equal(0, response.ParsingErrors);
-            Assert.Equal("whois.jprs.jp/Found01", response.TemplateName);
+            Assert.Equal("whois.jprs.jp/found/01", response.TemplateName);
 
             Assert.Equal("ahoo.co.jp", response.DomainName.ToString());
 
@@ -76,7 +76,7 @@ namespace Whois.Parsing.Whois.Jprs.Jp.CoJp
         [Fact]
         public void Test_found_amazon_co_jp()
         {
-            var sample = SampleReader.Read("whois.jprs.jp", "co.jp", "amazon.co.jp.txt");
+            var sample = SampleReader.Read("whois.jprs.jp", "co.jp", "found", "amazon.co.jp.txt");
 
             var response = parser.Parse("whois.jprs.jp", sample);
 
@@ -84,7 +84,7 @@ namespace Whois.Parsing.Whois.Jprs.Jp.CoJp
             Assert.Equal(WhoisStatus.Found, response.Status);
 
             Assert.Equal(0, response.ParsingErrors);
-            Assert.Equal("whois.jprs.jp/Found01", response.TemplateName);
+            Assert.Equal("whois.jprs.jp/found/01", response.TemplateName);
 
             Assert.Equal("amazon.co.jp", response.DomainName.ToString());
 

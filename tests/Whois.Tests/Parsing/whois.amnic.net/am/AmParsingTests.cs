@@ -17,7 +17,7 @@ namespace Whois.Parsing.Whois.Amnic.Net.Am
         [Fact]
         public void Test_not_found()
         {
-            var sample = SampleReader.Read("whois.amnic.net", "am", "not_found.txt");
+            var sample = SampleReader.Read("whois.amnic.net", "am", "not-found", "not_found.txt");
             var response = parser.Parse("whois.amnic.net", sample);
 
             Assert.True(sample.Length > 0);
@@ -27,7 +27,7 @@ namespace Whois.Parsing.Whois.Amnic.Net.Am
         [Fact]
         public void Test_found()
         {
-            var sample = SampleReader.Read("whois.amnic.net", "am", "found.txt");
+            var sample = SampleReader.Read("whois.amnic.net", "am", "found", "found.txt");
             var response = parser.Parse("whois.amnic.net", sample);
 
             Assert.True(sample.Length > 0);
@@ -35,7 +35,7 @@ namespace Whois.Parsing.Whois.Amnic.Net.Am
 
             Assert.Equal(31, response.FieldsParsed);
             Assert.Equal(0, response.ParsingErrors);
-            Assert.Equal("whois.amnic.net/am/Found", response.TemplateName);
+            Assert.Equal("whois.amnic.net/am/found/01", response.TemplateName);
 
             Assert.Equal("google.am", response.DomainName.ToString());
             Assert.Equal("abcdomain", response.Registrar.Name);

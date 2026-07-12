@@ -17,14 +17,14 @@ namespace Whois.Parsing.Whois.Nic.Cx.Cx
         [Fact]
         public void Test_found()
         {
-            var sample = SampleReader.Read("whois.nic.cx", "cx", "found.txt");
+            var sample = SampleReader.Read("whois.nic.cx", "cx", "found", "found.txt");
             var response = parser.Parse("whois.nic.cx", sample);
 
             Assert.True(sample.Length > 0);
             Assert.Equal(WhoisStatus.Found, response.Status);
 
             Assert.Equal(0, response.ParsingErrors);
-            Assert.Equal("generic/tld/Found001", response.TemplateName);
+            Assert.Equal("generic/tld/found/01", response.TemplateName);
 
             Assert.Equal("communication.cx", response.DomainName.ToString());
             Assert.Equal("919354-CoCCA", response.RegistryDomainId);
@@ -101,14 +101,14 @@ namespace Whois.Parsing.Whois.Nic.Cx.Cx
         [Fact]
         public void Test_not_found()
         {
-            var sample = SampleReader.Read("whois.nic.cx", "cx", "not_found.txt");
+            var sample = SampleReader.Read("whois.nic.cx", "cx", "not-found", "not_found.txt");
             var response = parser.Parse("whois.nic.cx", sample);
 
             Assert.True(sample.Length > 0);
             Assert.Equal(WhoisStatus.NotFound, response.Status);
 
             Assert.Equal(0, response.ParsingErrors);
-            Assert.Equal("generic/tld/NotFound004", response.TemplateName);
+            Assert.Equal("generic/tld/not-found/04", response.TemplateName);
 
             Assert.Equal("u34jedzcq.cx", response.DomainName.ToString());
 
@@ -118,14 +118,14 @@ namespace Whois.Parsing.Whois.Nic.Cx.Cx
         [Fact]
         public void Test_found_status_registered()
         {
-            var sample = SampleReader.Read("whois.nic.cx", "cx", "found_status_registered.txt");
+            var sample = SampleReader.Read("whois.nic.cx", "cx", "found", "found_status_registered.txt");
             var response = parser.Parse("whois.nic.cx", sample);
 
             Assert.True(sample.Length > 0);
             Assert.Equal(WhoisStatus.Found, response.Status);
 
             Assert.Equal(0, response.ParsingErrors);
-            Assert.Equal("generic/tld/Found001", response.TemplateName);
+            Assert.Equal("generic/tld/found/01", response.TemplateName);
 
             Assert.Equal("google.cx", response.DomainName.ToString());
             Assert.Equal("447518-CoCCA", response.RegistryDomainId);

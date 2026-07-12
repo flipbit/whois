@@ -17,14 +17,14 @@ namespace Whois.Parsing.Whois.Kenic.Or.Ke.Ke
         [Fact]
         public void Test_not_found()
         {
-            var sample = SampleReader.Read("whois.kenic.or.ke", "ke", "not_found.txt");
+            var sample = SampleReader.Read("whois.kenic.or.ke", "ke", "not-found", "not_found.txt");
             var response = parser.Parse("whois.kenic.or.ke", sample);
 
             Assert.True(sample.Length > 0);
             Assert.Equal(WhoisStatus.NotFound, response.Status);
 
             Assert.Equal(0, response.ParsingErrors);
-            Assert.Equal("whois.kenic.or.ke/ke/Found", response.TemplateName);
+            Assert.Equal("whois.kenic.or.ke/ke/found/01", response.TemplateName);
 
             Assert.Equal("u34jedzcq.ke", response.DomainName.ToString());
 
@@ -38,14 +38,14 @@ namespace Whois.Parsing.Whois.Kenic.Or.Ke.Ke
         [Fact]
         public void Test_invalid()
         {
-            var sample = SampleReader.Read("whois.kenic.or.ke", "ke", "invalid.txt");
+            var sample = SampleReader.Read("whois.kenic.or.ke", "ke", "invalid", "invalid.txt");
             var response = parser.Parse("whois.kenic.or.ke", sample);
 
             Assert.True(sample.Length > 0);
             Assert.Equal(WhoisStatus.Invalid, response.Status);
 
             Assert.Equal(0, response.ParsingErrors);
-            Assert.Equal("whois.kenic.or.ke/ke/Found", response.TemplateName);
+            Assert.Equal("whois.kenic.or.ke/ke/found/01", response.TemplateName);
 
             Assert.Equal("www.housekenya.co.ke", response.DomainName.ToString());
 
@@ -59,14 +59,14 @@ namespace Whois.Parsing.Whois.Kenic.Or.Ke.Ke
         [Fact]
         public void Test_found()
         {
-            var sample = SampleReader.Read("whois.kenic.or.ke", "ke", "found.txt");
+            var sample = SampleReader.Read("whois.kenic.or.ke", "ke", "found", "found.txt");
             var response = parser.Parse("whois.kenic.or.ke", sample);
 
             Assert.True(sample.Length > 0);
             Assert.Equal(WhoisStatus.Found, response.Status);
 
             Assert.Equal(0, response.ParsingErrors);
-            Assert.Equal("whois.kenic.or.ke/ke/Found", response.TemplateName);
+            Assert.Equal("whois.kenic.or.ke/ke/found/01", response.TemplateName);
 
             Assert.Equal("google.co.ke", response.DomainName.ToString());
 

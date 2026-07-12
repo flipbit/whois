@@ -17,14 +17,14 @@ namespace Whois.Parsing.Whois.Inregistry.Net.In
         [Fact]
         public void Test_not_found()
         {
-            var sample = SampleReader.Read("whois.inregistry.net", "in", "not_found.txt");
+            var sample = SampleReader.Read("whois.inregistry.net", "in", "not-found", "not_found.txt");
             var response = parser.Parse("whois.inregistry.net", sample);
 
             Assert.True(sample.Length > 0);
             Assert.Equal(WhoisStatus.NotFound, response.Status);
 
             Assert.Equal(0, response.ParsingErrors);
-            Assert.Equal("generic/tld/NotFound001", response.TemplateName);
+            Assert.Equal("generic/tld/not-found/01", response.TemplateName);
 
             Assert.Equal(1, response.FieldsParsed);
         }
@@ -32,14 +32,14 @@ namespace Whois.Parsing.Whois.Inregistry.Net.In
         [Fact]
         public void Test_found()
         {
-            var sample = SampleReader.Read("whois.inregistry.net", "in", "found.txt");
+            var sample = SampleReader.Read("whois.inregistry.net", "in", "found", "found.txt");
             var response = parser.Parse("whois.inregistry.net", sample);
 
             Assert.True(sample.Length > 0);
             Assert.Equal(WhoisStatus.Found, response.Status);
 
             Assert.Equal(0, response.ParsingErrors);
-            Assert.Equal("generic/tld/Found001", response.TemplateName);
+            Assert.Equal("generic/tld/found/01", response.TemplateName);
 
             Assert.Equal("videogratis.in", response.DomainName.ToString());
             Assert.Equal("D3271170-AFIN", response.RegistryDomainId);
@@ -118,14 +118,14 @@ namespace Whois.Parsing.Whois.Inregistry.Net.In
         [Fact]
         public void Test_found_status_ok()
         {
-            var sample = SampleReader.Read("whois.inregistry.net", "in", "found_status_ok.txt");
+            var sample = SampleReader.Read("whois.inregistry.net", "in", "found", "found_status_ok.txt");
             var response = parser.Parse("whois.inregistry.net", sample);
 
             Assert.True(sample.Length > 0);
             Assert.Equal(WhoisStatus.Found, response.Status);
 
             Assert.Equal(0, response.ParsingErrors);
-            Assert.Equal("generic/tld/Found001", response.TemplateName);
+            Assert.Equal("generic/tld/found/01", response.TemplateName);
 
             Assert.Equal("google.in", response.DomainName.ToString());
             Assert.Equal("D21089-AFIN", response.RegistryDomainId);
@@ -199,14 +199,14 @@ namespace Whois.Parsing.Whois.Inregistry.Net.In
         [Fact]
         public void Test_not_found_status_available()
         {
-            var sample = SampleReader.Read("whois.inregistry.net", "in", "not_found_status_available.txt");
+            var sample = SampleReader.Read("whois.inregistry.net", "in", "not-found", "not_found_status_available.txt");
             var response = parser.Parse("whois.inregistry.net", sample);
 
             Assert.True(sample.Length > 0);
             Assert.Equal(WhoisStatus.NotFound, response.Status);
 
             Assert.Equal(0, response.ParsingErrors);
-            Assert.Equal("generic/tld/NotFound001", response.TemplateName);
+            Assert.Equal("generic/tld/not-found/01", response.TemplateName);
 
             Assert.Equal(1, response.FieldsParsed);
         }
@@ -214,14 +214,14 @@ namespace Whois.Parsing.Whois.Inregistry.Net.In
         [Fact]
         public void Test_found_status_registered()
         {
-            var sample = SampleReader.Read("whois.inregistry.net", "in", "found_status_registered.txt");
+            var sample = SampleReader.Read("whois.inregistry.net", "in", "found", "found_status_registered.txt");
             var response = parser.Parse("whois.inregistry.net", sample);
 
             Assert.True(sample.Length > 0);
             Assert.Equal(WhoisStatus.Found, response.Status);
 
             Assert.Equal(0, response.ParsingErrors);
-            Assert.Equal("generic/tld/Found001", response.TemplateName);
+            Assert.Equal("generic/tld/found/01", response.TemplateName);
 
             Assert.Equal("google.in", response.DomainName.ToString());
             Assert.Equal("D21089-AFIN", response.RegistryDomainId);

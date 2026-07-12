@@ -17,12 +17,12 @@ namespace Whois.Parsing.Whois.Comlaude.Com.Com
         [Fact]
         public void Test_found_adobe_com()
         {
-            var sample = SampleReader.Read("whois.comlaude.com", "com", "adobe.com.txt");
+            var sample = SampleReader.Read("whois.comlaude.com", "com", "found", "adobe.com.txt");
             
             var response = parser.Parse("whois.comlaude.com", sample);
 
             Assert.Equal(0, response.ParsingErrors);
-            Assert.Equal("generic/tld/Found001", response.TemplateName);
+            Assert.Equal("generic/tld/found/01", response.TemplateName);
 
             Assert.Equal("adobe.com", response.DomainName.ToString());
             Assert.Equal("4364022_DOMAIN_COM-VRSN", response.RegistryDomainId);

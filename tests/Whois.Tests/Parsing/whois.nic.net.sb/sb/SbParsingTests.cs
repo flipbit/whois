@@ -17,14 +17,14 @@ namespace Whois.Parsing.Whois.Nic.Net.Sb.Sb
         [Fact]
         public void Test_not_found()
         {
-            var sample = SampleReader.Read("whois.nic.net.sb", "sb", "not_found.txt");
+            var sample = SampleReader.Read("whois.nic.net.sb", "sb", "not-found", "not_found.txt");
             var response = parser.Parse("whois.nic.net.sb", sample);
 
             Assert.True(sample.Length > 0);
             Assert.Equal(WhoisStatus.NotFound, response.Status);
 
             Assert.Equal(0, response.ParsingErrors);
-            Assert.Equal("generic/tld/NotFound005", response.TemplateName);
+            Assert.Equal("generic/tld/not-found/05", response.TemplateName);
 
             Assert.Equal("u34jedzcq.sb", response.DomainName.ToString());
 
@@ -34,14 +34,14 @@ namespace Whois.Parsing.Whois.Nic.Net.Sb.Sb
         [Fact]
         public void Test_found()
         {
-            var sample = SampleReader.Read("whois.nic.net.sb", "sb", "found.txt");
+            var sample = SampleReader.Read("whois.nic.net.sb", "sb", "found", "found.txt");
             var response = parser.Parse("whois.nic.net.sb", sample);
 
             Assert.True(sample.Length > 0);
             Assert.Equal(WhoisStatus.Found, response.Status);
 
             Assert.Equal(0, response.ParsingErrors);
-            Assert.Equal("generic/tld/Found001", response.TemplateName);
+            Assert.Equal("generic/tld/found/01", response.TemplateName);
 
             Assert.Equal("baidu.com.sb", response.DomainName.ToString());
             Assert.Equal("404765-CoCCA", response.RegistryDomainId);
@@ -130,14 +130,14 @@ namespace Whois.Parsing.Whois.Nic.Net.Sb.Sb
         [Fact]
         public void Test_not_found_status_available()
         {
-            var sample = SampleReader.Read("whois.nic.net.sb", "sb", "not_found_status_available.txt");
+            var sample = SampleReader.Read("whois.nic.net.sb", "sb", "not-found", "not_found_status_available.txt");
             var response = parser.Parse("whois.nic.net.sb", sample);
 
             Assert.True(sample.Length > 0);
             Assert.Equal(WhoisStatus.NotFound, response.Status);
 
             Assert.Equal(0, response.ParsingErrors);
-            Assert.Equal("generic/tld/NotFound005", response.TemplateName);
+            Assert.Equal("generic/tld/not-found/05", response.TemplateName);
 
             Assert.Equal("u34jedzcq.sb", response.DomainName.ToString());
 
@@ -147,14 +147,14 @@ namespace Whois.Parsing.Whois.Nic.Net.Sb.Sb
         [Fact]
         public void Test_found_status_registered()
         {
-            var sample = SampleReader.Read("whois.nic.net.sb", "sb", "found_status_registered.txt");
+            var sample = SampleReader.Read("whois.nic.net.sb", "sb", "found", "found_status_registered.txt");
             var response = parser.Parse("whois.nic.net.sb", sample);
 
             Assert.True(sample.Length > 0);
             Assert.Equal(WhoisStatus.Found, response.Status);
 
             Assert.Equal(0, response.ParsingErrors);
-            Assert.Equal("generic/tld/Found001", response.TemplateName);
+            Assert.Equal("generic/tld/found/01", response.TemplateName);
 
             Assert.Equal("baidu.com.sb", response.DomainName.ToString());
             Assert.Equal("404765-CoCCA", response.RegistryDomainId);

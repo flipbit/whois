@@ -17,14 +17,14 @@ namespace Whois.Parsing.Whois.Sgnic.Sg.Sg
         [Fact]
         public void Test_found()
         {
-            var sample = SampleReader.Read("whois.sgnic.sg", "sg", "found.txt");
+            var sample = SampleReader.Read("whois.sgnic.sg", "sg", "found", "found.txt");
             var response = parser.Parse("whois.sgnic.sg", sample);
 
             Assert.True(sample.Length > 0);
             Assert.Equal(WhoisStatus.Found, response.Status);
 
             Assert.Equal(0, response.ParsingErrors);
-            Assert.Equal("whois.sgnic.sg/sg/Found01", response.TemplateName);
+            Assert.Equal("whois.sgnic.sg/sg/found/01", response.TemplateName);
 
             Assert.Equal("google.sg", response.DomainName.ToString());
 
@@ -61,7 +61,7 @@ namespace Whois.Parsing.Whois.Sgnic.Sg.Sg
         [Fact]
         public void Test_found_nameservers_schema_1_with_ip()
         {
-            var sample = SampleReader.Read("whois.sgnic.sg", "sg", "found_nameservers_schema_1_with_ip.txt");
+            var sample = SampleReader.Read("whois.sgnic.sg", "sg", "found", "found_nameservers_schema_1_with_ip.txt");
             var response = parser.Parse("whois.sgnic.sg", sample);
 
             Assert.True(sample.Length > 0);
@@ -69,7 +69,7 @@ namespace Whois.Parsing.Whois.Sgnic.Sg.Sg
 
             AssertWriter.Write(response);
             Assert.Equal(0, response.ParsingErrors);
-            Assert.Equal("whois.sgnic.sg/sg/Found01", response.TemplateName);
+            Assert.Equal("whois.sgnic.sg/sg/found/01", response.TemplateName);
 
             Assert.Equal("canon.com.sg", response.DomainName.ToString());
 
@@ -102,14 +102,14 @@ namespace Whois.Parsing.Whois.Sgnic.Sg.Sg
         [Fact]
         public void Test_found_nameservers_schema_2()
         {
-            var sample = SampleReader.Read("whois.sgnic.sg", "sg", "found_nameservers_schema_2.txt");
+            var sample = SampleReader.Read("whois.sgnic.sg", "sg", "found", "found_nameservers_schema_2.txt");
             var response = parser.Parse("whois.sgnic.sg", sample);
 
             Assert.True(sample.Length > 0);
             Assert.Equal(WhoisStatus.Found, response.Status);
 
             Assert.Equal(0, response.ParsingErrors);
-            Assert.Equal("whois.sgnic.sg/sg/Found01", response.TemplateName);
+            Assert.Equal("whois.sgnic.sg/sg/found/01", response.TemplateName);
 
             Assert.Equal("google.sg", response.DomainName.ToString());
 
@@ -146,14 +146,14 @@ namespace Whois.Parsing.Whois.Sgnic.Sg.Sg
         [Fact]
         public void Test_not_found()
         {
-            var sample = SampleReader.Read("whois.sgnic.sg", "sg", "not_found.txt");
+            var sample = SampleReader.Read("whois.sgnic.sg", "sg", "not-found", "not_found.txt");
             var response = parser.Parse("whois.sgnic.sg", sample);
 
             Assert.True(sample.Length > 0);
             Assert.Equal(WhoisStatus.NotFound, response.Status);
 
             Assert.Equal(0, response.ParsingErrors);
-            Assert.Equal("generic/tld/NotFound002", response.TemplateName);
+            Assert.Equal("generic/tld/not-found/02", response.TemplateName);
 
             Assert.Equal(1, response.FieldsParsed);
         }
@@ -161,14 +161,14 @@ namespace Whois.Parsing.Whois.Sgnic.Sg.Sg
         [Fact]
         public void Test_found_status_registered()
         {
-            var sample = SampleReader.Read("whois.sgnic.sg", "sg", "found_status_registered.txt");
+            var sample = SampleReader.Read("whois.sgnic.sg", "sg", "found", "found_status_registered.txt");
             var response = parser.Parse("whois.sgnic.sg", sample);
 
             Assert.True(sample.Length > 0);
             Assert.Equal(WhoisStatus.Found, response.Status);
 
             Assert.Equal(0, response.ParsingErrors);
-            Assert.Equal("whois.sgnic.sg/sg/Found02", response.TemplateName);
+            Assert.Equal("whois.sgnic.sg/sg/found/02", response.TemplateName);
 
             Assert.Equal("google.sg", response.DomainName.ToString());
 

@@ -17,7 +17,7 @@ namespace Whois.Parsing.Tvwhois.Verisign.Grs.Com.Tv
         [Fact]
         public void Test_found()
         {
-            var sample = SampleReader.Read("tvwhois.verisign-grs.com", "tv", "found.txt");
+            var sample = SampleReader.Read("tvwhois.verisign-grs.com", "tv", "found", "found.txt");
             var response = parser.Parse("tvwhois.verisign-grs.com", sample);
 
             Assert.True(sample.Length > 0);
@@ -41,7 +41,7 @@ namespace Whois.Parsing.Tvwhois.Verisign.Grs.Com.Tv
         [Fact]
         public void Test_not_found()
         {
-            var sample = SampleReader.Read("tvwhois.verisign-grs.com", "tv", "not_found.txt");
+            var sample = SampleReader.Read("tvwhois.verisign-grs.com", "tv", "not-found", "not_found.txt");
             var response = parser.Parse("tvwhois.verisign-grs.com", sample);
 
             Assert.True(sample.Length > 0);
@@ -56,7 +56,7 @@ namespace Whois.Parsing.Tvwhois.Verisign.Grs.Com.Tv
         [Fact]
         public void Test_found_status_registered()
         {
-            var sample = SampleReader.Read("tvwhois.verisign-grs.com", "tv", "found_status_registered.txt");
+            var sample = SampleReader.Read("tvwhois.verisign-grs.com", "tv", "found", "found_status_registered.txt");
             var response = parser.Parse("tvwhois.verisign-grs.com", sample);
 
             Assert.True(sample.Length > 0);

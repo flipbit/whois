@@ -17,14 +17,14 @@ namespace Whois.Parsing.Whois.Pnina.Ps.Ps
         [Fact]
         public void Test_not_found()
         {
-            var sample = SampleReader.Read("whois.pnina.ps", "ps", "not_found.txt");
+            var sample = SampleReader.Read("whois.pnina.ps", "ps", "not-found", "not_found.txt");
             var response = parser.Parse("whois.pnina.ps", sample);
 
             Assert.True(sample.Length > 0);
             Assert.Equal(WhoisStatus.NotFound, response.Status);
 
             Assert.Equal(0, response.ParsingErrors);
-            Assert.Equal("generic/tld/NotFound005", response.TemplateName);
+            Assert.Equal("generic/tld/not-found/05", response.TemplateName);
 
             Assert.Equal("u34jedzcq.ps", response.DomainName.ToString());
 
@@ -34,14 +34,14 @@ namespace Whois.Parsing.Whois.Pnina.Ps.Ps
         [Fact]
         public void Test_found()
         {
-            var sample = SampleReader.Read("whois.pnina.ps", "ps", "found.txt");
+            var sample = SampleReader.Read("whois.pnina.ps", "ps", "found", "found.txt");
             var response = parser.Parse("whois.pnina.ps", sample);
 
             Assert.True(sample.Length > 0);
             Assert.Equal(WhoisStatus.Found, response.Status);
 
             Assert.Equal(0, response.ParsingErrors);
-            Assert.Equal("generic/tld/Found001", response.TemplateName);
+            Assert.Equal("generic/tld/found/01", response.TemplateName);
 
             Assert.Equal("google.ps", response.DomainName.ToString());
             Assert.Equal("21665-PS", response.RegistryDomainId);

@@ -17,14 +17,14 @@ namespace Whois.Parsing.Whois.Dns.Lu.Lu
         [Fact]
         public void Test_found()
         {
-            var sample = SampleReader.Read("whois.dns.lu", "lu", "found.txt");
+            var sample = SampleReader.Read("whois.dns.lu", "lu", "found", "found.txt");
             var response = parser.Parse("whois.dns.lu", sample);
 
             Assert.True(sample.Length > 0);
             Assert.Equal(WhoisStatus.Found, response.Status);
 
             Assert.Equal(0, response.ParsingErrors);
-            Assert.Equal("whois.dns.lu/lu/Found", response.TemplateName);
+            Assert.Equal("whois.dns.lu/lu/found/01", response.TemplateName);
 
             Assert.Equal("arbed.lu", response.DomainName.ToString());
 
@@ -87,14 +87,14 @@ namespace Whois.Parsing.Whois.Dns.Lu.Lu
         [Fact]
         public void Test_not_found()
         {
-            var sample = SampleReader.Read("whois.dns.lu", "lu", "not_found.txt");
+            var sample = SampleReader.Read("whois.dns.lu", "lu", "not-found", "not_found.txt");
             var response = parser.Parse("whois.dns.lu", sample);
 
             Assert.True(sample.Length > 0);
             Assert.Equal(WhoisStatus.NotFound, response.Status);
 
             Assert.Equal(0, response.ParsingErrors);
-            Assert.Equal("whois.dns.lu/lu/NotFound", response.TemplateName);
+            Assert.Equal("whois.dns.lu/lu/not-found/01", response.TemplateName);
 
             Assert.Equal("u34jedzcq.lu", response.DomainName.ToString());
 
@@ -105,14 +105,14 @@ namespace Whois.Parsing.Whois.Dns.Lu.Lu
         [Fact]
         public void Test_found_status_registered()
         {
-            var sample = SampleReader.Read("whois.dns.lu", "lu", "found_status_registered.txt");
+            var sample = SampleReader.Read("whois.dns.lu", "lu", "found", "found_status_registered.txt");
             var response = parser.Parse("whois.dns.lu", sample);
 
             Assert.True(sample.Length > 0);
             Assert.Equal(WhoisStatus.Found, response.Status);
 
             Assert.Equal(0, response.ParsingErrors);
-            Assert.Equal("whois.dns.lu/lu/Found", response.TemplateName);
+            Assert.Equal("whois.dns.lu/lu/found/01", response.TemplateName);
 
             Assert.Equal("google.lu", response.DomainName.ToString());
 

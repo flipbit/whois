@@ -17,14 +17,14 @@ namespace Whois.Parsing.Whois.Nic.Coop.Coop
         [Fact]
         public void Test_found()
         {
-            var sample = SampleReader.Read("whois.nic.coop", "coop", "found.txt");
+            var sample = SampleReader.Read("whois.nic.coop", "coop", "found", "found.txt");
             var response = parser.Parse("whois.nic.coop", sample);
 
             Assert.True(sample.Length > 0);
             Assert.Equal(WhoisStatus.Found, response.Status);
 
             Assert.Equal(0, response.ParsingErrors);
-            Assert.Equal("whois.nic.coop/coop/Found", response.TemplateName);
+            Assert.Equal("whois.nic.coop/coop/found/01", response.TemplateName);
 
             Assert.Equal("moscowfood.coop", response.DomainName.ToString());
             Assert.Equal("5662D-COOP", response.RegistryDomainId);
@@ -120,14 +120,14 @@ namespace Whois.Parsing.Whois.Nic.Coop.Coop
         [Fact]
         public void Test_other_status_single()
         {
-            var sample = SampleReader.Read("whois.nic.coop", "coop", "other_status_single.txt");
+            var sample = SampleReader.Read("whois.nic.coop", "coop", "found", "other_status_single.txt");
             var response = parser.Parse("whois.nic.coop", sample);
 
             Assert.True(sample.Length > 0);
             Assert.Equal(WhoisStatus.Found, response.Status);
 
             Assert.Equal(0, response.ParsingErrors);
-            Assert.Equal("whois.nic.coop/coop/Found", response.TemplateName);
+            Assert.Equal("whois.nic.coop/coop/found/01", response.TemplateName);
 
             Assert.Equal("calgary.coop", response.DomainName.ToString());
             Assert.Equal("7441D-COOP", response.RegistryDomainId);
@@ -222,14 +222,14 @@ namespace Whois.Parsing.Whois.Nic.Coop.Coop
         [Fact]
         public void Test_not_found()
         {
-            var sample = SampleReader.Read("whois.nic.coop", "coop", "not_found.txt");
+            var sample = SampleReader.Read("whois.nic.coop", "coop", "not-found", "not_found.txt");
             var response = parser.Parse("whois.nic.coop", sample);
 
             Assert.True(sample.Length > 0);
             Assert.Equal(WhoisStatus.NotFound, response.Status);
 
             Assert.Equal(0, response.ParsingErrors);
-            Assert.Equal("whois.nic.coop/coop/NotFound", response.TemplateName);
+            Assert.Equal("whois.nic.coop/coop/not-found/01", response.TemplateName);
 
             Assert.Equal("u34jedzcq.coop", response.DomainName.ToString());
 
@@ -239,7 +239,7 @@ namespace Whois.Parsing.Whois.Nic.Coop.Coop
         [Fact]
         public void Test_found_status_registered()
         {
-            var sample = SampleReader.Read("whois.nic.coop", "coop", "found_status_registered.txt");
+            var sample = SampleReader.Read("whois.nic.coop", "coop", "found", "found_status_registered.txt");
             var response = parser.Parse("whois.nic.coop", sample);
 
             Assert.True(sample.Length > 0);
@@ -247,7 +247,7 @@ namespace Whois.Parsing.Whois.Nic.Coop.Coop
 
             AssertWriter.Write(response);
             Assert.Equal(0, response.ParsingErrors);
-            Assert.Equal("whois.nic.coop/coop/Found", response.TemplateName);
+            Assert.Equal("whois.nic.coop/coop/found/01", response.TemplateName);
 
             Assert.Equal("calgary.coop", response.DomainName.ToString());
             Assert.Equal("7441D-COOP", response.RegistryDomainId);

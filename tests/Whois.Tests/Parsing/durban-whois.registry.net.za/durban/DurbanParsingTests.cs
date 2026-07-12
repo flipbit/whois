@@ -17,7 +17,7 @@ namespace Whois.Parsing.Durban.Whois.Registry.Net.Za.Durban
         [Fact]
         public void Test_not_found()
         {
-            var sample = SampleReader.Read("durban-whois.registry.net.za", "durban", "not_found.txt");
+            var sample = SampleReader.Read("durban-whois.registry.net.za", "durban", "not-found", "not_found.txt");
             var response = parser.Parse("durban-whois.registry.net.za", sample);
 
             Assert.True(sample.Length > 0);
@@ -32,14 +32,14 @@ namespace Whois.Parsing.Durban.Whois.Registry.Net.Za.Durban
         [Fact]
         public void Test_found()
         {
-            var sample = SampleReader.Read("durban-whois.registry.net.za", "durban", "found.txt");
+            var sample = SampleReader.Read("durban-whois.registry.net.za", "durban", "found", "found.txt");
             var response = parser.Parse("durban-whois.registry.net.za", sample);
 
             Assert.True(sample.Length > 0);
             Assert.Equal(WhoisStatus.Found, response.Status);
 
             Assert.Equal(0, response.ParsingErrors);
-            Assert.Equal("durban-whois.registry.net.za/durban/Found", response.TemplateName);
+            Assert.Equal("durban-whois.registry.net.za/durban/found/01", response.TemplateName);
 
             Assert.Equal("wordpress.durban", response.DomainName.ToString());
             Assert.Equal("dom_7G-9999", response.RegistryDomainId);

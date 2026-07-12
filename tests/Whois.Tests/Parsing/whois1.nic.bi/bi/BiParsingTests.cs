@@ -17,7 +17,7 @@ namespace Whois.Parsing.Whois1.Nic.Bi.Bi
         [Fact]
         public void Test_not_found()
         {
-            var sample = SampleReader.Read("whois1.nic.bi", "bi", "not_found.txt");
+            var sample = SampleReader.Read("whois1.nic.bi", "bi", "not-found", "not_found.txt");
             var response = parser.Parse("whois1.nic.bi", sample);
 
             Assert.True(sample.Length > 0);
@@ -25,7 +25,7 @@ namespace Whois.Parsing.Whois1.Nic.Bi.Bi
 
             AssertWriter.Write(response);
             Assert.Equal(0, response.ParsingErrors);
-            Assert.Equal("generic/tld/NotFound004", response.TemplateName);
+            Assert.Equal("generic/tld/not-found/04", response.TemplateName);
 
             Assert.Equal("u34jedzcq.bi", response.DomainName.ToString());
 
@@ -35,14 +35,14 @@ namespace Whois.Parsing.Whois1.Nic.Bi.Bi
         [Fact]
         public void Test_found()
         {
-            var sample = SampleReader.Read("whois1.nic.bi", "bi", "found.txt");
+            var sample = SampleReader.Read("whois1.nic.bi", "bi", "found", "found.txt");
             var response = parser.Parse("whois1.nic.bi", sample);
 
             Assert.True(sample.Length > 0);
             Assert.Equal(WhoisStatus.Found, response.Status);
 
             Assert.Equal(0, response.ParsingErrors);
-            Assert.Equal("generic/tld/Found001", response.TemplateName);
+            Assert.Equal("generic/tld/found/01", response.TemplateName);
 
             Assert.Equal("google.bi", response.DomainName.ToString());
             Assert.Equal("2633NIC-BI", response.RegistryDomainId);

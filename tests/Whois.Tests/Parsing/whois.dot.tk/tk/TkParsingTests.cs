@@ -17,14 +17,14 @@ namespace Whois.Parsing.Whois.Dot.Tk.Tk
         [Fact]
         public void Test_not_found()
         {
-            var sample = SampleReader.Read("whois.dot.tk", "tk", "not_found.txt");
+            var sample = SampleReader.Read("whois.dot.tk", "tk", "not-found", "not_found.txt");
             var response = parser.Parse("whois.dot.tk", sample);
 
             Assert.True(sample.Length > 0);
             Assert.Equal(WhoisStatus.NotFound, response.Status);
 
             Assert.Equal(0, response.ParsingErrors);
-            Assert.Equal("whois.dot.tk/tk/NotFound", response.TemplateName);
+            Assert.Equal("whois.dot.tk/tk/not-found/01", response.TemplateName);
 
             Assert.Equal(1, response.FieldsParsed);
         }
@@ -32,14 +32,14 @@ namespace Whois.Parsing.Whois.Dot.Tk.Tk
         [Fact]
         public void Test_found()
         {
-            var sample = SampleReader.Read("whois.dot.tk", "tk", "found.txt");
+            var sample = SampleReader.Read("whois.dot.tk", "tk", "found", "found.txt");
             var response = parser.Parse("whois.dot.tk", sample);
 
             Assert.True(sample.Length > 0);
             Assert.Equal(WhoisStatus.Found, response.Status);
 
             Assert.Equal(0, response.ParsingErrors);
-            Assert.Equal("whois.dot.tk/tk/Found", response.TemplateName);
+            Assert.Equal("whois.dot.tk/tk/found/01", response.TemplateName);
 
             Assert.Equal("google.tk", response.DomainName.ToString());
 

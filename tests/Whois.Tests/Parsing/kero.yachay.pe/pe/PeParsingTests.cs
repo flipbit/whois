@@ -16,7 +16,7 @@ namespace Whois.Parsing.Kero.Yachay.Pe.Pe
         [Fact]
         public void Test_throttled()
         {
-            var sample = SampleReader.Read("kero.yachay.pe", "pe", "throttled.txt");
+            var sample = SampleReader.Read("kero.yachay.pe", "pe", "throttled", "throttled.txt");
             var response = parser.Parse("kero.yachay.pe", sample);
 
             Assert.True(sample.Length > 0);
@@ -28,7 +28,7 @@ namespace Whois.Parsing.Kero.Yachay.Pe.Pe
         [Fact]
         public void Test_not_found()
         {
-            var sample = SampleReader.Read("kero.yachay.pe", "pe", "not_found.txt");
+            var sample = SampleReader.Read("kero.yachay.pe", "pe", "not-found", "not_found.txt");
             var response = parser.Parse("kero.yachay.pe", sample);
 
             Assert.True(sample.Length > 0);
@@ -46,7 +46,7 @@ namespace Whois.Parsing.Kero.Yachay.Pe.Pe
         [Fact]
         public void Test_inactive()
         {
-            var sample = SampleReader.Read("kero.yachay.pe", "pe", "inactive.txt");
+            var sample = SampleReader.Read("kero.yachay.pe", "pe", "inactive", "inactive.txt");
             var response = parser.Parse("kero.yachay.pe", sample);
 
             Assert.True(sample.Length > 0);
@@ -72,7 +72,7 @@ namespace Whois.Parsing.Kero.Yachay.Pe.Pe
         [Fact]
         public void Test_found()
         {
-            var sample = SampleReader.Read("kero.yachay.pe", "pe", "found.txt");
+            var sample = SampleReader.Read("kero.yachay.pe", "pe", "found", "found.txt");
             var response = parser.Parse("kero.yachay.pe", sample);
 
             Assert.True(sample.Length > 0);
@@ -104,7 +104,7 @@ namespace Whois.Parsing.Kero.Yachay.Pe.Pe
         [Fact]
         public void Test_suspended()
         {
-            var sample = SampleReader.Read("kero.yachay.pe", "pe", "suspended.txt");
+            var sample = SampleReader.Read("kero.yachay.pe", "pe", "suspended", "suspended.txt");
             var response = parser.Parse("kero.yachay.pe", sample);
 
             Assert.True(sample.Length > 0);

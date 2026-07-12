@@ -17,14 +17,14 @@ namespace Whois.Parsing.Whois.Namecheap.Com.Com
         [Fact]
         public void Test_found()
         {
-            var sample = SampleReader.Read("whois.namecheap.com", "com", "found.txt");
+            var sample = SampleReader.Read("whois.namecheap.com", "com", "found", "found.txt");
             var response = parser.Parse("whois.namecheap.com", sample);
 
             Assert.True(sample.Length > 0);
             Assert.Equal(WhoisStatus.Found, response.Status);
 
             Assert.Equal(0, response.ParsingErrors);
-            Assert.Equal("generic/tld/Found001", response.TemplateName);
+            Assert.Equal("generic/tld/found/01", response.TemplateName);
 
             Assert.Equal("slavichy.com", response.DomainName.ToString());
             Assert.Equal("2175421662_DOMAIN_COM-VRSN", response.RegistryDomainId);

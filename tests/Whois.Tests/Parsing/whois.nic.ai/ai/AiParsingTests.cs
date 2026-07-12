@@ -16,14 +16,14 @@ namespace Whois.Parsing.Whois.Nic.Ai.Ai
         [Fact]
         public void Test_not_found()
         {
-            var sample = SampleReader.Read("whois.nic.ai", "ai", "not_found.txt");
+            var sample = SampleReader.Read("whois.nic.ai", "ai", "not-found", "not_found.txt");
             var response = parser.Parse("whois.nic.ai", sample);
 
             Assert.True(sample.Length > 0);
             Assert.Equal(WhoisStatus.NotFound, response.Status);
 
             Assert.Equal(0, response.ParsingErrors);
-            Assert.Equal("whois.nic.ai/ai/NotFound", response.TemplateName);
+            Assert.Equal("whois.nic.ai/ai/not-found/01", response.TemplateName);
 
             Assert.Equal("u34jedzcq.ai", response.DomainName.ToString());
 
@@ -33,14 +33,14 @@ namespace Whois.Parsing.Whois.Nic.Ai.Ai
         [Fact]
         public void Test_found()
         {
-            var sample = SampleReader.Read("whois.nic.ai", "ai", "found.txt");
+            var sample = SampleReader.Read("whois.nic.ai", "ai", "found", "found.txt");
             var response = parser.Parse("whois.nic.ai", sample);
 
             Assert.True(sample.Length > 0);
             Assert.Equal(WhoisStatus.Found, response.Status);
 
             Assert.Equal(0, response.ParsingErrors);
-            Assert.Equal("whois.nic.ai/ai/Found", response.TemplateName);
+            Assert.Equal("whois.nic.ai/ai/found/01", response.TemplateName);
 
             Assert.Equal("google.ai", response.DomainName.ToString());
 

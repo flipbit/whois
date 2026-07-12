@@ -16,14 +16,14 @@ namespace Whois.Parsing.Whois.Registry.Qa.Qa
         [Fact]
         public void Test_found()
         {
-            var sample = SampleReader.Read("whois.registry.qa", "qa", "found.txt");
+            var sample = SampleReader.Read("whois.registry.qa", "qa", "found", "found.txt");
             var response = parser.Parse("whois.registry.qa", sample);
 
             Assert.True(sample.Length > 0);
             Assert.Equal(WhoisStatus.Found, response.Status);
 
             Assert.Equal(0, response.ParsingErrors);
-            Assert.Equal("whois.registry.qa/qa/Found", response.TemplateName);
+            Assert.Equal("whois.registry.qa/qa/found/01", response.TemplateName);
 
             Assert.Equal("qnb.com.qa", response.DomainName.ToString());
 
@@ -57,14 +57,14 @@ namespace Whois.Parsing.Whois.Registry.Qa.Qa
         [Fact]
         public void Test_not_found()
         {
-            var sample = SampleReader.Read("whois.registry.qa", "qa", "not_found.txt");
+            var sample = SampleReader.Read("whois.registry.qa", "qa", "not-found", "not_found.txt");
             var response = parser.Parse("whois.registry.qa", sample);
 
             Assert.True(sample.Length > 0);
             Assert.Equal(WhoisStatus.NotFound, response.Status);
 
             Assert.Equal(0, response.ParsingErrors);
-            Assert.Equal("whois.registry.qa/qa/NotFound", response.TemplateName);
+            Assert.Equal("whois.registry.qa/qa/not-found/01", response.TemplateName);
 
             Assert.Equal(1, response.FieldsParsed);
         }
@@ -72,14 +72,14 @@ namespace Whois.Parsing.Whois.Registry.Qa.Qa
         [Fact]
         public void Test_found_status_registered()
         {
-            var sample = SampleReader.Read("whois.registry.qa", "qa", "found_status_registered.txt");
+            var sample = SampleReader.Read("whois.registry.qa", "qa", "found", "found_status_registered.txt");
             var response = parser.Parse("whois.registry.qa", sample);
 
             Assert.True(sample.Length > 0);
             Assert.Equal(WhoisStatus.Found, response.Status);
 
             Assert.Equal(0, response.ParsingErrors);
-            Assert.Equal("whois.registry.qa/qa/Found", response.TemplateName);
+            Assert.Equal("whois.registry.qa/qa/found/01", response.TemplateName);
 
             Assert.Equal("qtel.com.qa", response.DomainName.ToString());
 

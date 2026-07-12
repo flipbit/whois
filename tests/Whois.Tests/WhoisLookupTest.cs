@@ -45,7 +45,7 @@ namespace Whois
 
             tcpReader
                 .Read("whois.markmonitor.com", 43, "google.com", Encoding.UTF8, 10, Arg.Any<CancellationToken>())
-                .Returns(sampleReader.Read("whois.markmonitor.com", "com", "found.txt"));
+                .Returns(sampleReader.Read("whois.markmonitor.com", "com", "found", "found.txt"));
 
             var result = await lookup.Lookup(request);
 
@@ -57,8 +57,8 @@ namespace Whois
         public async Task TestLookupDomainWithIntermediateServer()
         {
             var request = new WhoisRequest("google.com");
-            var intermediateResult = sampleReader.Read("whois.verisign-grs.com", "com", "found_status_registered.txt");
-            var authoritativeResult = sampleReader.Read("whois.markmonitor.com", "com", "found.txt");
+            var intermediateResult = sampleReader.Read("whois.verisign-grs.com", "com", "found", "found_status_registered.txt");
+            var authoritativeResult = sampleReader.Read("whois.markmonitor.com", "com", "found", "found.txt");
 
             var rootServer = new WhoisResponse
             {
@@ -90,7 +90,7 @@ namespace Whois
         public async Task TestLookupDomainDontFollowReferrer()
         {
             var request = new WhoisRequest { Query = "google.com", FollowReferrer = false };
-            var intermediateResult = sampleReader.Read("whois.verisign-grs.com", "com", "found_status_registered.txt");
+            var intermediateResult = sampleReader.Read("whois.verisign-grs.com", "com", "found", "found_status_registered.txt");
 
             var rootServer = new WhoisResponse
             {
@@ -117,7 +117,7 @@ namespace Whois
         public async Task TestLookupDomainSpecifyRootServer()
         {
             var request = new WhoisRequest { Query = "google.com", WhoisServer = "whois.markmonitor.com" };
-            var authoritativeResult = sampleReader.Read("whois.markmonitor.com", "com", "found.txt");
+            var authoritativeResult = sampleReader.Read("whois.markmonitor.com", "com", "found", "found.txt");
 
             tcpReader
                 .Read("whois.markmonitor.com", 43, "google.com", Encoding.UTF8, 10, Arg.Any<CancellationToken>())
@@ -187,14 +187,14 @@ namespace Whois
             whoisServerLookup.Lookup(request, Arg.Any<CancellationToken>()).Returns(rootServer);
 
             // Setup the intermediate server response
-            var intermediateResult = sampleReader.Read("whois.nic.co", "co", "fark.co.txt");
+            var intermediateResult = sampleReader.Read("whois.nic.co", "co", "found", "fark.co.txt");
             tcpReader
                 .Read("whois.nic.co", 43, "fark.co", Encoding.UTF8, 10, Arg.Any<CancellationToken>())
                 .Returns(intermediateResult);
 
             // Setup the authoritative server response
             // Note: this contains less data than the intermediate response, so should be ignored
-            var authoritativeResult = sampleReader.Read("whois.dynadot.com", "co", "fark.co.txt");
+            var authoritativeResult = sampleReader.Read("whois.dynadot.com", "co", "found", "fark.co.txt");
             tcpReader
                 .Read("whois.dynadot.com", 43, "fark.co", Encoding.UTF8, 10, Arg.Any<CancellationToken>())
                 .Returns(authoritativeResult);

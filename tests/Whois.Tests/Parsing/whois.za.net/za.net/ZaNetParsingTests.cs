@@ -17,14 +17,14 @@ namespace Whois.Parsing.Whois.Za.Net.ZaNet
         [Fact]
         public void Test_not_found()
         {
-            var sample = SampleReader.Read("whois.za.net", "za.net", "not_found.txt");
+            var sample = SampleReader.Read("whois.za.net", "za.net", "not-found", "not_found.txt");
             var response = parser.Parse("whois.za.net", sample);
 
             Assert.True(sample.Length > 0);
             Assert.Equal(WhoisStatus.NotFound, response.Status);
 
             Assert.Equal(0, response.ParsingErrors);
-            Assert.Equal("whois.za.net/za.net/NotFound", response.TemplateName);
+            Assert.Equal("whois.za.net/za.net/not-found/01", response.TemplateName);
 
             Assert.Equal("u34jedzcq.za.net", response.DomainName.ToString());
 
@@ -34,14 +34,14 @@ namespace Whois.Parsing.Whois.Za.Net.ZaNet
         [Fact]
         public void Test_found()
         {
-            var sample = SampleReader.Read("whois.za.net", "za.net", "found.txt");
+            var sample = SampleReader.Read("whois.za.net", "za.net", "found", "found.txt");
             var response = parser.Parse("whois.za.net", sample);
 
             Assert.True(sample.Length > 0);
             Assert.Equal(WhoisStatus.Found, response.Status);
 
             Assert.Equal(0, response.ParsingErrors);
-            Assert.Equal("whois.za.net/za.net/Found", response.TemplateName);
+            Assert.Equal("whois.za.net/za.net/found/01", response.TemplateName);
 
             Assert.Equal("karnaugh.za.net", response.DomainName.ToString());
 

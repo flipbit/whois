@@ -17,14 +17,14 @@ namespace Whois.Parsing.Whois.Rnids.Rs.Rs
         [Fact]
         public void Test_found()
         {
-            var sample = SampleReader.Read("whois.rnids.rs", "rs", "found.txt");
+            var sample = SampleReader.Read("whois.rnids.rs", "rs", "found", "found.txt");
             var response = parser.Parse("whois.rnids.rs", sample);
 
             Assert.True(sample.Length > 0);
             Assert.Equal(WhoisStatus.Found, response.Status);
 
             Assert.Equal(0, response.ParsingErrors);
-            Assert.Equal("whois.rnids.rs/rs/Found", response.TemplateName);
+            Assert.Equal("whois.rnids.rs/rs/found/01", response.TemplateName);
 
             Assert.Equal("eg.rs", response.DomainName.ToString());
 
@@ -50,14 +50,14 @@ namespace Whois.Parsing.Whois.Rnids.Rs.Rs
         [Fact]
         public void Test_found_nameservers_hyphenated()
         {
-            var sample = SampleReader.Read("whois.rnids.rs", "rs", "found_nameservers_hyphenated.txt");
+            var sample = SampleReader.Read("whois.rnids.rs", "rs", "found", "found_nameservers_hyphenated.txt");
             var response = parser.Parse("whois.rnids.rs", sample);
 
             Assert.True(sample.Length > 0);
             Assert.Equal(WhoisStatus.Found, response.Status);
 
             Assert.Equal(0, response.ParsingErrors);
-            Assert.Equal("whois.rnids.rs/rs/Found", response.TemplateName);
+            Assert.Equal("whois.rnids.rs/rs/found/01", response.TemplateName);
 
             Assert.Equal("eg.rs", response.DomainName.ToString());
 
@@ -83,14 +83,14 @@ namespace Whois.Parsing.Whois.Rnids.Rs.Rs
         [Fact]
         public void Test_expired()
         {
-            var sample = SampleReader.Read("whois.rnids.rs", "rs", "expired.txt");
+            var sample = SampleReader.Read("whois.rnids.rs", "rs", "expired", "expired.txt");
             var response = parser.Parse("whois.rnids.rs", sample);
 
             Assert.True(sample.Length > 0);
             Assert.Equal(WhoisStatus.Expired, response.Status);
 
             Assert.Equal(0, response.ParsingErrors);
-            Assert.Equal("whois.rnids.rs/rs/Found", response.TemplateName);
+            Assert.Equal("whois.rnids.rs/rs/found/01", response.TemplateName);
 
             Assert.Equal("saj.rs", response.DomainName.ToString());
 
@@ -120,14 +120,14 @@ namespace Whois.Parsing.Whois.Rnids.Rs.Rs
         [Fact]
         public void Test_other_status_in_transfer()
         {
-            var sample = SampleReader.Read("whois.rnids.rs", "rs", "other_status_in_transfer.txt");
+            var sample = SampleReader.Read("whois.rnids.rs", "rs", "found", "other_status_in_transfer.txt");
             var response = parser.Parse("whois.rnids.rs", sample);
 
             Assert.True(sample.Length > 0);
             Assert.Equal(WhoisStatus.Other, response.Status);
 
             Assert.Equal(0, response.ParsingErrors);
-            Assert.Equal("whois.rnids.rs/rs/Found", response.TemplateName);
+            Assert.Equal("whois.rnids.rs/rs/found/01", response.TemplateName);
 
             Assert.Equal("saj.rs", response.DomainName.ToString());
 
@@ -157,14 +157,14 @@ namespace Whois.Parsing.Whois.Rnids.Rs.Rs
         [Fact]
         public void Test_locked()
         {
-            var sample = SampleReader.Read("whois.rnids.rs", "rs", "locked.txt");
+            var sample = SampleReader.Read("whois.rnids.rs", "rs", "locked", "locked.txt");
             var response = parser.Parse("whois.rnids.rs", sample);
 
             Assert.True(sample.Length > 0);
             Assert.Equal(WhoisStatus.Locked, response.Status);
 
             Assert.Equal(0, response.ParsingErrors);
-            Assert.Equal("whois.rnids.rs/rs/Found", response.TemplateName);
+            Assert.Equal("whois.rnids.rs/rs/found/01", response.TemplateName);
 
             Assert.Equal("kondor.rs", response.DomainName.ToString());
 
@@ -196,14 +196,14 @@ namespace Whois.Parsing.Whois.Rnids.Rs.Rs
         [Fact]
         public void Test_not_found()
         {
-            var sample = SampleReader.Read("whois.rnids.rs", "rs", "not_found.txt");
+            var sample = SampleReader.Read("whois.rnids.rs", "rs", "not-found", "not_found.txt");
             var response = parser.Parse("whois.rnids.rs", sample);
 
             Assert.True(sample.Length > 0);
             Assert.Equal(WhoisStatus.NotFound, response.Status);
 
             Assert.Equal(0, response.ParsingErrors);
-            Assert.Equal("whois.rnids.rs/rs/NotFound", response.TemplateName);
+            Assert.Equal("whois.rnids.rs/rs/not-found/01", response.TemplateName);
 
             Assert.Equal(1, response.FieldsParsed);
         }
@@ -211,14 +211,14 @@ namespace Whois.Parsing.Whois.Rnids.Rs.Rs
         [Fact]
         public void Test_found_status_registered()
         {
-            var sample = SampleReader.Read("whois.rnids.rs", "rs", "found_status_registered.txt");
+            var sample = SampleReader.Read("whois.rnids.rs", "rs", "found", "found_status_registered.txt");
             var response = parser.Parse("whois.rnids.rs", sample);
 
             Assert.True(sample.Length > 0);
             Assert.Equal(WhoisStatus.Locked, response.Status);
 
             Assert.Equal(0, response.ParsingErrors);
-            Assert.Equal("whois.rnids.rs/rs/Found", response.TemplateName);
+            Assert.Equal("whois.rnids.rs/rs/found/01", response.TemplateName);
 
             Assert.Equal("google.rs", response.DomainName.ToString());
 

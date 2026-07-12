@@ -16,7 +16,7 @@ namespace Whois.Parsing.Whois.Aeda.Net.Ae.Ae
         [Fact]
         public void Test_not_found()
         {
-            var sample = SampleReader.Read("whois.aeda.net.ae", "ae", "not_found.txt");
+            var sample = SampleReader.Read("whois.aeda.net.ae", "ae", "not-found", "not_found.txt");
             var response = parser.Parse("whois.aeda.net.ae", sample);
 
             Assert.True(sample.Length > 0);
@@ -26,7 +26,7 @@ namespace Whois.Parsing.Whois.Aeda.Net.Ae.Ae
         [Fact]
         public void Test_found()
         {
-            var sample = SampleReader.Read("whois.aeda.net.ae", "ae", "found.txt");
+            var sample = SampleReader.Read("whois.aeda.net.ae", "ae", "found", "found.txt");
             var response = parser.Parse("whois.aeda.net.ae", sample);
 
             Assert.True(sample.Length > 0);

@@ -17,14 +17,14 @@ namespace Whois.Parsing.Whois.Norid.No.No
         [Fact]
         public void Test_not_found()
         {
-            var sample = SampleReader.Read("whois.norid.no", "no", "not_found.txt");
+            var sample = SampleReader.Read("whois.norid.no", "no", "not-found", "not_found.txt");
             var response = parser.Parse("whois.norid.no", sample);
 
             Assert.True(sample.Length > 0);
             Assert.Equal(WhoisStatus.NotFound, response.Status);
 
             Assert.Equal(0, response.ParsingErrors);
-            Assert.Equal("whois.norid.no/no/NotFound", response.TemplateName);
+            Assert.Equal("whois.norid.no/no/not-found/01", response.TemplateName);
 
             Assert.Equal(1, response.FieldsParsed);
         }
@@ -32,14 +32,14 @@ namespace Whois.Parsing.Whois.Norid.No.No
         [Fact]
         public void Test_found()
         {
-            var sample = SampleReader.Read("whois.norid.no", "no", "found.txt");
+            var sample = SampleReader.Read("whois.norid.no", "no", "found", "found.txt");
             var response = parser.Parse("whois.norid.no", sample);
 
             Assert.True(sample.Length > 0);
             Assert.Equal(WhoisStatus.Found, response.Status);
 
             Assert.Equal(0, response.ParsingErrors);
-            Assert.Equal("whois.norid.no/no/Found", response.TemplateName);
+            Assert.Equal("whois.norid.no/no/found/01", response.TemplateName);
 
             Assert.Equal("google.no", response.DomainName.ToString());
             Assert.Equal("GOO371D-NORID", response.RegistryDomainId);

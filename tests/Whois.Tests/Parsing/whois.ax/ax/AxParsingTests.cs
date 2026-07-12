@@ -17,7 +17,7 @@ namespace Whois.Parsing.Whois.Ax.Ax
         [Fact]
         public void Test_not_found()
         {
-            var sample = SampleReader.Read("whois.ax", "ax", "not_found.txt");
+            var sample = SampleReader.Read("whois.ax", "ax", "not-found", "not_found.txt");
             var response = parser.Parse("whois.ax", sample);
 
             Assert.True(sample.Length > 0);
@@ -25,7 +25,7 @@ namespace Whois.Parsing.Whois.Ax.Ax
 
             Assert.Equal(2, response.FieldsParsed);
             Assert.Equal(0, response.ParsingErrors);
-            Assert.Equal("whois.ax/ax/NotFound", response.TemplateName);
+            Assert.Equal("whois.ax/ax/not-found/01", response.TemplateName);
 
             Assert.Equal("u34jedzcq.ax", response.DomainName.ToString());
         }
@@ -33,7 +33,7 @@ namespace Whois.Parsing.Whois.Ax.Ax
         [Fact]
         public void Test_found()
         {
-            var sample = SampleReader.Read("whois.ax", "ax", "found.txt");
+            var sample = SampleReader.Read("whois.ax", "ax", "found", "found.txt");
             var response = parser.Parse("whois.ax", sample);
 
             Assert.True(sample.Length > 0);
@@ -41,7 +41,7 @@ namespace Whois.Parsing.Whois.Ax.Ax
 
             Assert.Equal(11, response.FieldsParsed);
             Assert.Equal(0, response.ParsingErrors);
-            Assert.Equal("whois.ax/ax/Found", response.TemplateName);
+            Assert.Equal("whois.ax/ax/found/01", response.TemplateName);
 
             Assert.Equal("regeringen.ax", response.DomainName.ToString());
 

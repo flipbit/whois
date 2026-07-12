@@ -16,25 +16,25 @@ namespace Whois.Parsers
         [Fact]
         public void TestParseDomainNameWhois()
         {
-            var sample = sampleReader.Read("capetown-whois.registry.net.za", "capetown", "found.txt");
+            var sample = sampleReader.Read("capetown-whois.registry.net.za", "capetown", "found", "found.txt");
 
             var result = parser.Parse("capetown-whois.registry.net.za", sample);
 
             Assert.NotNull(result);
             Assert.Equal("registry.capetown", result.DomainName.ToString());
             Assert.Equal(WhoisStatus.Found, result.Status);
-            Assert.Equal(2, parser.Templates.Names.Count);
+            Assert.Equal(2, parser.Templates.Count);
         }
 
         [Fact]
         public void TestParseDomainNameWhoisDoesNotRegisterTemplateTwice()
         {
-            var sample = sampleReader.Read("capetown-whois.registry.net.za", "capetown", "found.txt");
+            var sample = sampleReader.Read("capetown-whois.registry.net.za", "capetown", "found", "found.txt");
 
             parser.Parse("capetown-whois.registry.net.za", sample);
             parser.Parse("capetown-whois.registry.net.za", sample);
 
-            Assert.Equal(2, parser.Templates.Names.Count);
+            Assert.Equal(2, parser.Templates.Count);
         }
     }
 }

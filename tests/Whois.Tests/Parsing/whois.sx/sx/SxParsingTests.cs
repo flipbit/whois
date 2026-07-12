@@ -17,14 +17,14 @@ namespace Whois.Parsing.Whois.Sx.Sx
         [Fact]
         public void Test_other_status_premium_name()
         {
-            var sample = SampleReader.Read("whois.sx", "sx", "other_status_premium_name.txt");
+            var sample = SampleReader.Read("whois.sx", "sx", "found", "other_status_premium_name.txt");
             var response = parser.Parse("whois.sx", sample);
 
             Assert.True(sample.Length > 0);
             Assert.Equal(WhoisStatus.Unavailable, response.Status);
 
             Assert.Equal(0, response.ParsingErrors);
-            Assert.Equal("whois.sx/sx/Unavailable", response.TemplateName);
+            Assert.Equal("whois.sx/sx/unavailable/01", response.TemplateName);
 
             Assert.Equal("domain.sx", response.DomainName.ToString());
 
@@ -34,14 +34,14 @@ namespace Whois.Parsing.Whois.Sx.Sx
         [Fact]
         public void Test_not_found()
         {
-            var sample = SampleReader.Read("whois.sx", "sx", "not_found.txt");
+            var sample = SampleReader.Read("whois.sx", "sx", "not-found", "not_found.txt");
             var response = parser.Parse("whois.sx", sample);
 
             Assert.True(sample.Length > 0);
             Assert.Equal(WhoisStatus.NotFound, response.Status);
 
             Assert.Equal(0, response.ParsingErrors);
-            Assert.Equal("whois.sx/sx/NotFound", response.TemplateName);
+            Assert.Equal("whois.sx/sx/not-found/01", response.TemplateName);
 
             Assert.Equal("u34jedzcq.sx", response.DomainName.ToString());
 
@@ -51,14 +51,14 @@ namespace Whois.Parsing.Whois.Sx.Sx
         [Fact]
         public void Test_found()
         {
-            var sample = SampleReader.Read("whois.sx", "sx", "found.txt");
+            var sample = SampleReader.Read("whois.sx", "sx", "found", "found.txt");
             var response = parser.Parse("whois.sx", sample);
 
             Assert.True(sample.Length > 0);
             Assert.Equal(WhoisStatus.Found, response.Status);
 
             Assert.Equal(0, response.ParsingErrors);
-            Assert.Equal("generic/tld/Found001", response.TemplateName);
+            Assert.Equal("generic/tld/found/01", response.TemplateName);
 
             Assert.Equal("whois.sx", response.DomainName.ToString());
             Assert.Equal("d5-sx", response.RegistryDomainId);
@@ -129,14 +129,14 @@ namespace Whois.Parsing.Whois.Sx.Sx
         [Fact]
         public void Test_unavailable()
         {
-            var sample = SampleReader.Read("whois.sx", "sx", "unavailable.txt");
+            var sample = SampleReader.Read("whois.sx", "sx", "unavailable", "unavailable.txt");
             var response = parser.Parse("whois.sx", sample);
 
             Assert.True(sample.Length > 0);
             Assert.Equal(WhoisStatus.Unavailable, response.Status);
 
             Assert.Equal(0, response.ParsingErrors);
-            Assert.Equal("whois.sx/sx/Unavailable", response.TemplateName);
+            Assert.Equal("whois.sx/sx/unavailable/01", response.TemplateName);
 
             Assert.Equal("domain.sx", response.DomainName.ToString());
 

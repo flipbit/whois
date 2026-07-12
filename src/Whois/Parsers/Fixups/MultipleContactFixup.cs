@@ -10,7 +10,7 @@ namespace Whois.Parsers.Fixups
     /// </summary>
     public class MultipleContactFixup : IFixup
     {
-        public virtual bool CanFixup(TokenizeResult<WhoisResponse> result)
+        public virtual bool CanFixup(TokenizeResult result)
         {
             if (result.Template.HasTag("fixup-contact"))
             {
@@ -18,14 +18,13 @@ namespace Whois.Parsers.Fixups
             }
 
             // Templates that this Fixup can work on
-            return result.Template.Name == "generic/tld/Found03" || 
-                   result.Template.Name == "generic/tld/Found04" || 
-                   result.Template.Name == "whois.nic.at/at/Found";
+            return result.Template.Name == "generic/tld/found/03" ||
+                   result.Template.Name == "generic/tld/found/04" ||
+                   result.Template.Name == "whois.nic.at/at/found/01";
         }
 
-        public void Fixup(TokenizeResult<WhoisResponse> result)
+        public void Fixup(TokenizeResult result, WhoisResponse response)
         {
-            var response = result.Value;
 
             if (TryGetRegistrant(result.Tokens.Matches, response, out var registrant))
             {
@@ -79,7 +78,7 @@ namespace Whois.Parsers.Fixups
             }
         }
 
-        protected virtual int? GetRegistrantParagraph(IReadOnlyList<Match> matches)
+        protected virtual int? GetRegistrantParagraph(IReadOnlyList<TokenMatch> matches)
         {
             var contactIdMatch = matches
                 .FirstOrDefault(m => m.Token.Name == "DomainName");
@@ -87,7 +86,7 @@ namespace Whois.Parsers.Fixups
             return contactIdMatch?.Location.Paragraph;
         }
 
-        protected virtual bool TryGetRegistrant(IReadOnlyList<Match> matches, WhoisResponse response, out Contact? contact)
+        protected virtual bool TryGetRegistrant(IReadOnlyList<TokenMatch> matches, WhoisResponse response, out Contact? contact)
         {
             contact = null;
 
@@ -130,13 +129,14 @@ namespace Whois.Parsers.Fixups
                         break;
 
                     case "Changed":
-                        var dateTime = (DateTime) match.Value;
+                        var changedDto = (DateTimeOffset) match.Value;
+                        var dateTime = changedDto.UtcDateTime;
                         if (dateTime > response.Updated ||
                             !response.Updated.HasValue) response.Updated = dateTime;
                         break;
 
                     case "Created":
-                        response.Registered = (DateTime) match.Value;
+                        response.Registered = ((DateTimeOffset) match.Value).UtcDateTime;
                         break;
                 }
             }
@@ -144,7 +144,7 @@ namespace Whois.Parsers.Fixups
             return count > 0;
         }
 
-        protected virtual bool TryGetContact(Contact? input, IReadOnlyList<Match> matches, out Contact? contact)
+        protected virtual bool TryGetContact(Contact? input, IReadOnlyList<TokenMatch> matches, out Contact? contact)
         {
             contact = null;
 
@@ -198,7 +198,7 @@ namespace Whois.Parsers.Fixups
                         break;
 
                     case "Created":
-                        contact.Created = (DateTime) match.Value;
+                        contact.Created = ((DateTimeOffset) match.Value).UtcDateTime;
                         break;
                 }
             }
@@ -206,7 +206,7 @@ namespace Whois.Parsers.Fixups
             return true;
         }
 
-        protected virtual bool TryGetContactId(Contact? input, IReadOnlyList<Match> matches, string name, out string? contactId)
+        protected virtual bool TryGetContactId(Contact? input, IReadOnlyList<TokenMatch> matches, string name, out string? contactId)
         {
             contactId = null;
 

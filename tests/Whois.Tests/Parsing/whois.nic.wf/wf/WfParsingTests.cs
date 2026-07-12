@@ -17,14 +17,14 @@ namespace Whois.Parsing.Whois.Nic.Wf.Wf
         [Fact]
         public void Test_throttled()
         {
-            var sample = SampleReader.Read("whois.nic.wf", "wf", "throttled.txt");
+            var sample = SampleReader.Read("whois.nic.wf", "wf", "throttled", "throttled.txt");
             var response = parser.Parse("whois.nic.wf", sample);
 
             Assert.True(sample.Length > 0);
             Assert.Equal(WhoisStatus.Throttled, response.Status);
 
             Assert.Equal(0, response.ParsingErrors);
-            Assert.Equal("generic/tld/Throttled02", response.TemplateName);
+            Assert.Equal("generic/tld/throttled/02", response.TemplateName);
 
             Assert.Equal(1, response.FieldsParsed);
         }
@@ -32,14 +32,14 @@ namespace Whois.Parsing.Whois.Nic.Wf.Wf
         [Fact]
         public void Test_not_found()
         {
-            var sample = SampleReader.Read("whois.nic.wf", "wf", "not_found.txt");
+            var sample = SampleReader.Read("whois.nic.wf", "wf", "not-found", "not_found.txt");
             var response = parser.Parse("whois.nic.wf", sample);
 
             Assert.True(sample.Length > 0);
             Assert.Equal(WhoisStatus.NotFound, response.Status);
 
             Assert.Equal(0, response.ParsingErrors);
-            Assert.Equal("generic/tld/NotFound06", response.TemplateName);
+            Assert.Equal("generic/tld/not-found/06", response.TemplateName);
 
             Assert.Equal(1, response.FieldsParsed);
         }
@@ -47,14 +47,14 @@ namespace Whois.Parsing.Whois.Nic.Wf.Wf
         [Fact]
         public void Test_found()
         {
-            var sample = SampleReader.Read("whois.nic.wf", "wf", "found.txt");
+            var sample = SampleReader.Read("whois.nic.wf", "wf", "found", "found.txt");
             var response = parser.Parse("whois.nic.wf", sample);
 
             Assert.True(sample.Length > 0);
             Assert.Equal(WhoisStatus.Found, response.Status);
 
             Assert.Equal(0, response.ParsingErrors);
-            Assert.Equal("generic/tld/Found05", response.TemplateName);
+            Assert.Equal("generic/tld/found/05", response.TemplateName);
 
             Assert.Equal("nic.wf", response.DomainName.ToString());
 

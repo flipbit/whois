@@ -17,14 +17,14 @@ namespace Whois.Parsing.Whois.Nic.Xyz.Xyz
         [Fact]
         public void Test_not_found()
         {
-            var sample = SampleReader.Read("whois.nic.xyz", "xyz", "not_found.txt");
+            var sample = SampleReader.Read("whois.nic.xyz", "xyz", "not-found", "not_found.txt");
             var response = parser.Parse("whois.nic.xyz", sample);
 
             Assert.True(sample.Length > 0);
             Assert.Equal(WhoisStatus.NotFound, response.Status);
 
             Assert.Equal(0, response.ParsingErrors);
-            Assert.Equal("generic/tld/NotFound001", response.TemplateName);
+            Assert.Equal("generic/tld/not-found/01", response.TemplateName);
 
             Assert.Equal(1, response.FieldsParsed);
         }
@@ -32,14 +32,14 @@ namespace Whois.Parsing.Whois.Nic.Xyz.Xyz
         [Fact]
         public void Test_found()
         {
-            var sample = SampleReader.Read("whois.nic.xyz", "xyz", "found.txt");
+            var sample = SampleReader.Read("whois.nic.xyz", "xyz", "found", "found.txt");
             var response = parser.Parse("whois.nic.xyz", sample);
 
             Assert.True(sample.Length > 0);
             Assert.Equal(WhoisStatus.Found, response.Status);
 
             Assert.Equal(0, response.ParsingErrors);
-            Assert.Equal("generic/tld/Found001", response.TemplateName);
+            Assert.Equal("generic/tld/found/01", response.TemplateName);
 
             Assert.Equal("abc.xyz", response.DomainName.ToString());
             Assert.Equal("D2192285-CNIC", response.RegistryDomainId);

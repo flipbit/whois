@@ -17,14 +17,14 @@ namespace Whois.Parsing.Whois.Donuts.Co.Bike
         [Fact]
         public void Test_not_found()
         {
-            var sample = SampleReader.Read("whois.donuts.co", "bike", "not_found.txt");
+            var sample = SampleReader.Read("whois.donuts.co", "bike", "not-found", "not_found.txt");
             var response = parser.Parse("whois.donuts.co", sample);
 
             Assert.True(sample.Length > 0);
             Assert.Equal(WhoisStatus.NotFound, response.Status);
 
             Assert.Equal(0, response.ParsingErrors);
-            Assert.Equal("generic/tld/NotFound003", response.TemplateName);
+            Assert.Equal("generic/tld/not-found/03", response.TemplateName);
 
             Assert.Equal(1, response.FieldsParsed);
         }
@@ -32,14 +32,14 @@ namespace Whois.Parsing.Whois.Donuts.Co.Bike
         [Fact]
         public void Test_found()
         {
-            var sample = SampleReader.Read("whois.donuts.co", "bike", "found.txt");
+            var sample = SampleReader.Read("whois.donuts.co", "bike", "found", "found.txt");
             var response = parser.Parse("whois.donuts.co", sample);
 
             Assert.True(sample.Length > 0);
             Assert.Equal(WhoisStatus.Found, response.Status);
 
             Assert.Equal(0, response.ParsingErrors);
-            Assert.Equal("generic/tld/Found001", response.TemplateName);
+            Assert.Equal("generic/tld/found/01", response.TemplateName);
 
             Assert.Equal("whereismy.bike", response.DomainName.ToString());
             Assert.Equal("e25432d5c94440c4a8ca0e5ecbc13904-DONUTS", response.RegistryDomainId);

@@ -1,4 +1,4 @@
-﻿using System;
+using System;
 using Xunit;
 using Whois.Parsers;
 
@@ -17,14 +17,14 @@ namespace Whois.Parsing.Whois.Cnnic.Cn.Cn
         [Fact]
         public void Test_found()
         {
-            var sample = SampleReader.Read("whois.cnnic.cn", "cn", "found.txt");
+            var sample = SampleReader.Read("whois.cnnic.cn", "cn", "found", "found.txt");
             var response = parser.Parse("whois.cnnic.cn", sample);
 
             Assert.True(sample.Length > 0);
             Assert.Equal(WhoisStatus.Found, response.Status);
 
             Assert.Equal(0, response.ParsingErrors);
-            Assert.Equal("whois.cnnic.cn/cn/Found", response.TemplateName);
+            Assert.Equal("whois.cnnic.cn/cn/found/01", response.TemplateName);
 
             Assert.Equal("concordecals.com.cn", response.DomainName.ToString());
             Assert.Equal("20021209s10011s00041927-cn", response.RegistryDomainId);
@@ -57,14 +57,14 @@ namespace Whois.Parsing.Whois.Cnnic.Cn.Cn
         [Fact]
         public void Test_reserved()
         {
-            var sample = SampleReader.Read("whois.cnnic.cn", "cn", "reserved.txt");
+            var sample = SampleReader.Read("whois.cnnic.cn", "cn", "reserved", "reserved.txt");
             var response = parser.Parse("whois.cnnic.cn", sample);
 
             Assert.True(sample.Length > 0);
             Assert.Equal(WhoisStatus.Reserved, response.Status);
 
             Assert.Equal(0, response.ParsingErrors);
-            Assert.Equal("whois.cnnic.cn/cn/Reserved", response.TemplateName);
+            Assert.Equal("whois.cnnic.cn/cn/reserved/02", response.TemplateName);
 
             Assert.Equal(1, response.FieldsParsed);
         }
@@ -72,14 +72,14 @@ namespace Whois.Parsing.Whois.Cnnic.Cn.Cn
         [Fact]
         public void Test_not_found()
         {
-            var sample = SampleReader.Read("whois.cnnic.cn", "cn", "not_found.txt");
+            var sample = SampleReader.Read("whois.cnnic.cn", "cn", "not-found", "not_found.txt");
             var response = parser.Parse("whois.cnnic.cn", sample);
 
             Assert.True(sample.Length > 0);
             Assert.Equal(WhoisStatus.NotFound, response.Status);
 
             Assert.Equal(0, response.ParsingErrors);
-            Assert.Equal("whois.cnnic.cn/cn/NotFound", response.TemplateName);
+            Assert.Equal("whois.cnnic.cn/cn/not-found/01", response.TemplateName);
 
             Assert.Equal(1, response.FieldsParsed);
         }
@@ -87,14 +87,14 @@ namespace Whois.Parsing.Whois.Cnnic.Cn.Cn
         [Fact]
         public void Test_found_status_registered()
         {
-            var sample = SampleReader.Read("whois.cnnic.cn", "cn", "found_status_registered.txt");
+            var sample = SampleReader.Read("whois.cnnic.cn", "cn", "found", "found_status_registered.txt");
             var response = parser.Parse("whois.cnnic.cn", sample);
 
             Assert.True(sample.Length > 0);
             Assert.Equal(WhoisStatus.Found, response.Status);
 
             Assert.Equal(0, response.ParsingErrors);
-            Assert.Equal("whois.cnnic.cn/cn/Found", response.TemplateName);
+            Assert.Equal("whois.cnnic.cn/cn/found/01", response.TemplateName);
 
             Assert.Equal("google.cn", response.DomainName.ToString());
             Assert.Equal("20030311s10001s00033735-cn", response.RegistryDomainId);
@@ -132,14 +132,14 @@ namespace Whois.Parsing.Whois.Cnnic.Cn.Cn
         [Fact]
         public void Test_reserved_status_reserved()
         {
-            var sample = SampleReader.Read("whois.cnnic.cn", "cn", "reserved_status_reserved.txt");
+            var sample = SampleReader.Read("whois.cnnic.cn", "cn", "reserved", "reserved_status_reserved.txt");
             var response = parser.Parse("whois.cnnic.cn", sample);
 
             Assert.True(sample.Length > 0);
             Assert.Equal(WhoisStatus.Reserved, response.Status);
 
             Assert.Equal(0, response.ParsingErrors);
-            Assert.Equal("whois.cnnic.cn/cn/Prohibited", response.TemplateName);
+            Assert.Equal("whois.cnnic.cn/cn/reserved/01", response.TemplateName);
 
             Assert.Equal(1, response.FieldsParsed);
         }
@@ -147,7 +147,7 @@ namespace Whois.Parsing.Whois.Cnnic.Cn.Cn
         [Fact]
         public void Test_found_025bbs_cn()
         {
-            var sample = SampleReader.Read("whois.cnnic.cn", "cn", "025bbs.cn.txt");
+            var sample = SampleReader.Read("whois.cnnic.cn", "cn", "found", "025bbs.cn.txt");
 
             var record = parser.Parse("whois.cnnic.cn", sample);
 

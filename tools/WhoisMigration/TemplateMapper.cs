@@ -13,6 +13,16 @@ public static partial class TemplateMapper
     [GeneratedRegex(@"^(name:\s*).+$", RegexOptions.Multiline)]
     private static partial Regex NameDirectivePattern();
 
+    public static string? ExtractName(string templateContent)
+    {
+        var match = NameDirectivePattern().Match(templateContent);
+        if (!match.Success) return null;
+        // Extract value after "name: "
+        var line = match.Value;
+        var colonIdx = line.IndexOf(':');
+        return colonIdx >= 0 ? line[(colonIdx + 1)..].Trim() : null;
+    }
+
     public static string ExtractStatus(string templateContent)
     {
         var match = StatusDirectivePattern().Match(templateContent);

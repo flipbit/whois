@@ -16,14 +16,14 @@ namespace Whois.Parsing.Whois.Srs.Net.Nz.Nz
         [Fact]
         public void Test_other_status_pendingrelease()
         {
-            var sample = SampleReader.Read("whois.srs.net.nz", "nz", "other_status_pendingrelease.txt");
+            var sample = SampleReader.Read("whois.srs.net.nz", "nz", "found", "other_status_pendingrelease.txt");
             var response = parser.Parse("whois.srs.net.nz", sample);
 
             Assert.True(sample.Length > 0);
             Assert.Equal(WhoisStatus.Other, response.Status);
 
             Assert.Equal(0, response.ParsingErrors);
-            Assert.Equal("whois.srs.net.nz/nz/Found", response.TemplateName);
+            Assert.Equal("whois.srs.net.nz/nz/found/01", response.TemplateName);
 
             Assert.Equal("zumbafitness.co.nz", response.DomainName.ToString());
 
@@ -89,14 +89,14 @@ namespace Whois.Parsing.Whois.Srs.Net.Nz.Nz
         [Fact]
         public void Test_throttled()
         {
-            var sample = SampleReader.Read("whois.srs.net.nz", "nz", "throttled.txt");
+            var sample = SampleReader.Read("whois.srs.net.nz", "nz", "throttled", "throttled.txt");
             var response = parser.Parse("whois.srs.net.nz", sample);
 
             Assert.True(sample.Length > 0);
             Assert.Equal(WhoisStatus.Throttled, response.Status);
 
             Assert.Equal(0, response.ParsingErrors);
-            Assert.Equal("whois.srs.net.nz/nz/Found", response.TemplateName);
+            Assert.Equal("whois.srs.net.nz/nz/found/01", response.TemplateName);
 
             Assert.Equal("jaycar.co.nz", response.DomainName.ToString());
 
@@ -110,14 +110,14 @@ namespace Whois.Parsing.Whois.Srs.Net.Nz.Nz
         [Fact]
         public void Test_not_found()
         {
-            var sample = SampleReader.Read("whois.srs.net.nz", "nz", "not_found.txt");
+            var sample = SampleReader.Read("whois.srs.net.nz", "nz", "not-found", "not_found.txt");
             var response = parser.Parse("whois.srs.net.nz", sample);
 
             Assert.True(sample.Length > 0);
             Assert.Equal(WhoisStatus.NotFound, response.Status);
 
             Assert.Equal(0, response.ParsingErrors);
-            Assert.Equal("whois.srs.net.nz/nz/Found", response.TemplateName);
+            Assert.Equal("whois.srs.net.nz/nz/found/01", response.TemplateName);
 
             Assert.Equal("u34jedzcq.co.nz", response.DomainName.ToString());
 
@@ -131,14 +131,14 @@ namespace Whois.Parsing.Whois.Srs.Net.Nz.Nz
         [Fact]
         public void Test_invalid()
         {
-            var sample = SampleReader.Read("whois.srs.net.nz", "nz", "invalid.txt");
+            var sample = SampleReader.Read("whois.srs.net.nz", "nz", "invalid", "invalid.txt");
             var response = parser.Parse("whois.srs.net.nz", sample);
 
             Assert.True(sample.Length > 0);
             Assert.Equal(WhoisStatus.Invalid, response.Status);
 
             Assert.Equal(0, response.ParsingErrors);
-            Assert.Equal("whois.srs.net.nz/nz/Found", response.TemplateName);
+            Assert.Equal("whois.srs.net.nz/nz/found/01", response.TemplateName);
 
             Assert.Equal("u34jedzcq.nz", response.DomainName.ToString());
 
@@ -152,14 +152,14 @@ namespace Whois.Parsing.Whois.Srs.Net.Nz.Nz
         [Fact]
         public void Test_found()
         {
-            var sample = SampleReader.Read("whois.srs.net.nz", "nz", "found.txt");
+            var sample = SampleReader.Read("whois.srs.net.nz", "nz", "found", "found.txt");
             var response = parser.Parse("whois.srs.net.nz", sample);
 
             Assert.True(sample.Length > 0);
             Assert.Equal(WhoisStatus.Found, response.Status);
 
             Assert.Equal(0, response.ParsingErrors);
-            Assert.Equal("whois.srs.net.nz/nz/Found", response.TemplateName);
+            Assert.Equal("whois.srs.net.nz/nz/found/01", response.TemplateName);
 
             Assert.Equal("google.co.nz", response.DomainName.ToString());
 

@@ -17,7 +17,7 @@ namespace Whois.Parsing.Whois.Nic.Gs.Gs
         [Fact]
         public void Test_not_found()
         {
-            var sample = SampleReader.Read("whois.nic.gs", "gs", "not_found.txt");
+            var sample = SampleReader.Read("whois.nic.gs", "gs", "not-found", "not_found.txt");
             var response = parser.Parse("whois.nic.gs", sample);
 
             Assert.True(sample.Length > 0);
@@ -25,7 +25,7 @@ namespace Whois.Parsing.Whois.Nic.Gs.Gs
 
             AssertWriter.Write(response);
             Assert.Equal(0, response.ParsingErrors);
-            Assert.Equal("whois.nic.gs/gs/NotFound", response.TemplateName);
+            Assert.Equal("whois.nic.gs/gs/not-found/01", response.TemplateName);
 
             Assert.Equal("u34jedzcq.gs", response.DomainName.ToString());
 
@@ -35,14 +35,14 @@ namespace Whois.Parsing.Whois.Nic.Gs.Gs
         [Fact]
         public void Test_found()
         {
-            var sample = SampleReader.Read("whois.nic.gs", "gs", "found.txt");
+            var sample = SampleReader.Read("whois.nic.gs", "gs", "found", "found.txt");
             var response = parser.Parse("whois.nic.gs", sample);
 
             Assert.True(sample.Length > 0);
             Assert.Equal(WhoisStatus.Found, response.Status);
 
             Assert.Equal(0, response.ParsingErrors);
-            Assert.Equal("generic/tld/Found001", response.TemplateName);
+            Assert.Equal("generic/tld/found/01", response.TemplateName);
 
             Assert.Equal("google.gs", response.DomainName.ToString());
             Assert.Equal("4258-CoCCA.gs", response.RegistryDomainId);
@@ -88,14 +88,14 @@ namespace Whois.Parsing.Whois.Nic.Gs.Gs
         [Fact]
         public void Test_not_found_status_available()
         {
-            var sample = SampleReader.Read("whois.nic.gs", "gs", "not_found_status_available.txt");
+            var sample = SampleReader.Read("whois.nic.gs", "gs", "not-found", "not_found_status_available.txt");
             var response = parser.Parse("whois.nic.gs", sample);
 
             Assert.True(sample.Length > 0);
             Assert.Equal(WhoisStatus.NotFound, response.Status);
 
             Assert.Equal(0, response.ParsingErrors);
-            Assert.Equal("generic/tld/NotFound004", response.TemplateName);
+            Assert.Equal("generic/tld/not-found/04", response.TemplateName);
 
             Assert.Equal("u34jedzcq.gs", response.DomainName.ToString());
 
@@ -105,14 +105,14 @@ namespace Whois.Parsing.Whois.Nic.Gs.Gs
         [Fact]
         public void Test_found_status_registered()
         {
-            var sample = SampleReader.Read("whois.nic.gs", "gs", "found_status_registered.txt");
+            var sample = SampleReader.Read("whois.nic.gs", "gs", "found", "found_status_registered.txt");
             var response = parser.Parse("whois.nic.gs", sample);
 
             Assert.True(sample.Length > 0);
             Assert.Equal(WhoisStatus.Found, response.Status);
 
             Assert.Equal(0, response.ParsingErrors);
-            Assert.Equal("generic/tld/Found001", response.TemplateName);
+            Assert.Equal("generic/tld/found/01", response.TemplateName);
 
             Assert.Equal("google.gs", response.DomainName.ToString());
             Assert.Equal("4258-CoCCA.gs", response.RegistryDomainId);

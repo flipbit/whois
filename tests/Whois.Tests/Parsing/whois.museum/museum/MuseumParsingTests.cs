@@ -16,14 +16,14 @@ namespace Whois.Parsing.Whois.Museum.Museum
         [Fact]
         public void Test_not_found()
         {
-            var sample = SampleReader.Read("whois.museum", "museum", "not_found.txt");
+            var sample = SampleReader.Read("whois.museum", "museum", "not-found", "not_found.txt");
             var response = parser.Parse("whois.museum", sample);
 
             Assert.True(sample.Length > 0);
             Assert.Equal(WhoisStatus.NotFound, response.Status);
 
             Assert.Equal(0, response.ParsingErrors);
-            Assert.Equal("whois.museum/museum/NotFound", response.TemplateName);
+            Assert.Equal("whois.museum/museum/not-found/01", response.TemplateName);
 
             Assert.Equal("u34jedzcq.museum", response.DomainName.ToString());
 
@@ -33,14 +33,14 @@ namespace Whois.Parsing.Whois.Museum.Museum
         [Fact]
         public void Test_found()
         {
-            var sample = SampleReader.Read("whois.museum", "museum", "found.txt");
+            var sample = SampleReader.Read("whois.museum", "museum", "found", "found.txt");
             var response = parser.Parse("whois.museum", sample);
 
             Assert.True(sample.Length > 0);
             Assert.Equal(WhoisStatus.Found, response.Status);
 
             Assert.Equal(0, response.ParsingErrors);
-            Assert.Equal("generic/tld/Found001", response.TemplateName);
+            Assert.Equal("generic/tld/found/01", response.TemplateName);
 
             Assert.Equal("musedoma.museum", response.DomainName.ToString());
             Assert.Equal("D778-MUSEUM", response.RegistryDomainId);

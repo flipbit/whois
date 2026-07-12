@@ -1,4 +1,4 @@
-﻿using System;
+using System;
 using Xunit;
 using Whois.Parsers;
 
@@ -17,14 +17,14 @@ namespace Whois.Parsing.Whois.Nic.Net.Sa.Sa
         [Fact]
         public void Test_not_found()
         {
-            var sample = SampleReader.Read("whois.nic.net.sa", "sa", "not_found.txt");
+            var sample = SampleReader.Read("whois.nic.net.sa", "sa", "not-found", "not_found.txt");
             var response = parser.Parse("whois.nic.net.sa", sample);
 
             Assert.True(sample.Length > 0);
             Assert.Equal(WhoisStatus.NotFound, response.Status);
 
             Assert.Equal(0, response.ParsingErrors);
-            Assert.Equal("whois.nic.net.sa/sa/NotFound", response.TemplateName);
+            Assert.Equal("whois.nic.net.sa/sa/not-found/01", response.TemplateName);
 
             Assert.Equal("u34jedzcq.com.sa", response.DomainName.ToString());
 
@@ -35,14 +35,14 @@ namespace Whois.Parsing.Whois.Nic.Net.Sa.Sa
         [Fact]
         public void Test_found()
         {
-            var sample = SampleReader.Read("whois.nic.net.sa", "sa", "found.txt");
+            var sample = SampleReader.Read("whois.nic.net.sa", "sa", "found", "found.txt");
             var response = parser.Parse("whois.nic.net.sa", sample);
 
             Assert.True(sample.Length > 0);
             Assert.Equal(WhoisStatus.Found, response.Status);
 
             Assert.Equal(0, response.ParsingErrors);
-            Assert.Equal("whois.nic.net.sa/sa/Found", response.TemplateName);
+            Assert.Equal("whois.nic.net.sa/sa/found/01", response.TemplateName);
 
             Assert.Equal("saudigazette.com.sa", response.DomainName.ToString());
 

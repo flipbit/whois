@@ -17,14 +17,14 @@ namespace Whois.Parsing.Whois.Cdmon.Com.Com
         [Fact]
         public void Test_found()
         {
-            var sample = SampleReader.Read("whois.cdmon.com", "com", "found.txt");
+            var sample = SampleReader.Read("whois.cdmon.com", "com", "found", "found.txt");
             var response = parser.Parse("whois.cdmon.com", sample);
 
             Assert.True(sample.Length > 0);
             Assert.Equal(WhoisStatus.Found, response.Status);
 
             Assert.Equal(0, response.ParsingErrors);
-            Assert.Equal("generic/tld/Found001", response.TemplateName);
+            Assert.Equal("generic/tld/found/01", response.TemplateName);
 
             Assert.Equal("cdmon.com", response.DomainName.ToString());
 

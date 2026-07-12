@@ -17,14 +17,14 @@ namespace Whois.Parsing.Whois.Registry.Hm.Hm
         [Fact]
         public void Test_not_found()
         {
-            var sample = SampleReader.Read("whois.registry.hm", "hm", "not_found.txt");
+            var sample = SampleReader.Read("whois.registry.hm", "hm", "not-found", "not_found.txt");
             var response = parser.Parse("whois.registry.hm", sample);
 
             Assert.True(sample.Length > 0);
             Assert.Equal(WhoisStatus.NotFound, response.Status);
 
             Assert.Equal(0, response.ParsingErrors);
-            Assert.Equal("generic/tld/NotFound003", response.TemplateName);
+            Assert.Equal("generic/tld/not-found/03", response.TemplateName);
 
             Assert.Equal(1, response.FieldsParsed);
         }
@@ -32,7 +32,7 @@ namespace Whois.Parsing.Whois.Registry.Hm.Hm
         [Fact]
         public void Test_found()
         {
-            var sample = SampleReader.Read("whois.registry.hm", "hm", "found.txt");
+            var sample = SampleReader.Read("whois.registry.hm", "hm", "found", "found.txt");
             var response = parser.Parse("whois.registry.hm", sample);
 
             Assert.True(sample.Length > 0);
@@ -40,7 +40,7 @@ namespace Whois.Parsing.Whois.Registry.Hm.Hm
 
             AssertWriter.Write(response);
             Assert.Equal(0, response.ParsingErrors);
-            Assert.Equal("whois.registry.hm/hm/Found", response.TemplateName);
+            Assert.Equal("whois.registry.hm/hm/found/01", response.TemplateName);
 
             Assert.Equal("google.hm", response.DomainName.ToString());
 

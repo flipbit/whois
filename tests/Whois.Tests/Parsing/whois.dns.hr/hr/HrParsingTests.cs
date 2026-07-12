@@ -1,4 +1,4 @@
-﻿using System;
+using System;
 using Xunit;
 using Whois.Parsers;
 
@@ -17,14 +17,14 @@ namespace Whois.Parsing.Whois.Dns.Hr.Hr
         [Fact]
         public void Test_not_found()
         {
-            var sample = SampleReader.Read("whois.dns.hr", "hr", "not_found.txt");
+            var sample = SampleReader.Read("whois.dns.hr", "hr", "not-found", "not_found.txt");
             var response = parser.Parse("whois.dns.hr", sample);
 
             Assert.True(sample.Length > 0);
             Assert.Equal(WhoisStatus.NotFound, response.Status);
 
             Assert.Equal(0, response.ParsingErrors);
-            Assert.Equal("whois.dns.hr/hr/NotFound", response.TemplateName);
+            Assert.Equal("whois.dns.hr/hr/not-found/01", response.TemplateName);
 
             Assert.Equal(1, response.FieldsParsed);
         }
@@ -32,14 +32,14 @@ namespace Whois.Parsing.Whois.Dns.Hr.Hr
         [Fact]
         public void Test_found()
         {
-            var sample = SampleReader.Read("whois.dns.hr", "hr", "found.txt");
+            var sample = SampleReader.Read("whois.dns.hr", "hr", "found", "found.txt");
             var response = parser.Parse("whois.dns.hr", sample);
 
             Assert.True(sample.Length > 0);
             Assert.Equal(WhoisStatus.Found, response.Status);
 
             Assert.Equal(0, response.ParsingErrors);
-            Assert.Equal("whois.dns.hr/hr/Found", response.TemplateName);
+            Assert.Equal("whois.dns.hr/hr/found/01", response.TemplateName);
 
             Assert.Equal("google.hr", response.DomainName.ToString());
 

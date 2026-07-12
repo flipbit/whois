@@ -17,14 +17,14 @@ namespace Whois.Parsing.Whois.Registry.Om.Om
         [Fact]
         public void Test_not_found()
         {
-            var sample = SampleReader.Read("whois.registry.om", "om", "not_found.txt");
+            var sample = SampleReader.Read("whois.registry.om", "om", "not-found", "not_found.txt");
             var response = parser.Parse("whois.registry.om", sample);
 
             Assert.True(sample.Length > 0);
             Assert.Equal(WhoisStatus.NotFound, response.Status);
 
             Assert.Equal(0, response.ParsingErrors);
-            Assert.Equal("whois.registry.om/om/NotFound", response.TemplateName);
+            Assert.Equal("whois.registry.om/om/not-found/01", response.TemplateName);
 
             Assert.Equal(1, response.FieldsParsed);
         }
@@ -32,14 +32,14 @@ namespace Whois.Parsing.Whois.Registry.Om.Om
         [Fact]
         public void Test_found()
         {
-            var sample = SampleReader.Read("whois.registry.om", "om", "found.txt");
+            var sample = SampleReader.Read("whois.registry.om", "om", "found", "found.txt");
             var response = parser.Parse("whois.registry.om", sample);
 
             Assert.True(sample.Length > 0);
             Assert.Equal(WhoisStatus.Found, response.Status);
 
             Assert.Equal(0, response.ParsingErrors);
-            Assert.Equal("whois.registry.om/om/Found", response.TemplateName);
+            Assert.Equal("whois.registry.om/om/found/01", response.TemplateName);
 
             Assert.Equal("rop.gov.om", response.DomainName.ToString());
 
@@ -84,14 +84,14 @@ namespace Whois.Parsing.Whois.Registry.Om.Om
         [Fact]
         public void Test_reserved()
         {
-            var sample = SampleReader.Read("whois.registry.om", "om", "reserved.txt");
+            var sample = SampleReader.Read("whois.registry.om", "om", "reserved", "reserved.txt");
             var response = parser.Parse("whois.registry.om", sample);
 
             Assert.True(sample.Length > 0);
             Assert.Equal(WhoisStatus.Reserved, response.Status);
 
             Assert.Equal(0, response.ParsingErrors);
-            Assert.Equal("whois.registry.om/om/Reserved", response.TemplateName);
+            Assert.Equal("whois.registry.om/om/reserved/01", response.TemplateName);
 
             Assert.Equal(1, response.FieldsParsed);
         }

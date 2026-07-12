@@ -17,7 +17,7 @@ namespace Whois.Parsing.Whois.Nic.Sn.Sn
         [Fact]
         public void Test_not_found()
         {
-            var sample = SampleReader.Read("whois.nic.sn", "sn", "not_found.txt");
+            var sample = SampleReader.Read("whois.nic.sn", "sn", "not-found", "not_found.txt");
             var response = parser.Parse("whois.nic.sn", sample);
 
             Assert.True(sample.Length > 0);
@@ -29,14 +29,14 @@ namespace Whois.Parsing.Whois.Nic.Sn.Sn
         [Fact]
         public void Test_found()
         {
-            var sample = SampleReader.Read("whois.nic.sn", "sn", "found.txt");
+            var sample = SampleReader.Read("whois.nic.sn", "sn", "found", "found.txt");
             var response = parser.Parse("whois.nic.sn", sample);
 
             Assert.True(sample.Length > 0);
             Assert.Equal(WhoisStatus.Found, response.Status);
 
             Assert.Equal(0, response.ParsingErrors);
-            Assert.Equal("whois.nic.sn/sn/Found", response.TemplateName);
+            Assert.Equal("whois.nic.sn/sn/found/01", response.TemplateName);
 
             Assert.Equal("google.sn", response.DomainName.ToString());
 

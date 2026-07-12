@@ -17,14 +17,14 @@ namespace Whois.Parsing.Whois.Iana.Org.Tld
         [Fact]
         public void Test_found_be()
         {
-            var sample = SampleReader.Read("whois.iana.org", "tld", "be.txt");
+            var sample = SampleReader.Read("whois.iana.org", "tld", "found", "be.txt");
             var response = parser.Parse("whois.iana.org", sample);
 
             Assert.True(sample.Length > 0);
             Assert.Equal(WhoisStatus.Found, response.Status);
 
             Assert.Equal(0, response.ParsingErrors);
-            Assert.Equal("whois.iana.org/Found01", response.TemplateName);
+            Assert.Equal("whois.iana.org/found/01", response.TemplateName);
 
             Assert.Equal("be", response.DomainName.ToString());
 
@@ -89,14 +89,14 @@ namespace Whois.Parsing.Whois.Iana.Org.Tld
         [Fact]
         public void Test_found_com()
         {
-            var sample = SampleReader.Read("whois.iana.org", "tld", "com.txt");
+            var sample = SampleReader.Read("whois.iana.org", "tld", "found", "com.txt");
             var response = parser.Parse("whois.iana.org", sample);
 
             Assert.True(sample.Length > 0);
             Assert.Equal(WhoisStatus.Found, response.Status);
 
             Assert.Equal(0, response.ParsingErrors);
-            Assert.Equal("whois.iana.org/Found01", response.TemplateName);
+            Assert.Equal("whois.iana.org/found/01", response.TemplateName);
 
             Assert.Equal("com", response.DomainName.ToString());
 
@@ -168,7 +168,7 @@ namespace Whois.Parsing.Whois.Iana.Org.Tld
         [Fact]
         public void Test_not_assigned()
         {
-            var sample = SampleReader.Read("whois.iana.org", "tld", "not_assigned.txt");
+            var sample = SampleReader.Read("whois.iana.org", "tld", "not-assigned", "not_assigned.txt");
             var response = parser.Parse("whois.iana.org", sample);
 
             Assert.True(sample.Length > 0);

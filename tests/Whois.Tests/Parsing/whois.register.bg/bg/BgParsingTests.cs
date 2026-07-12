@@ -17,14 +17,14 @@ namespace Whois.Parsing.Whois.Register.Bg.Bg
         [Fact]
         public void Test_found()
         {
-            var sample = SampleReader.Read("whois.register.bg", "bg", "found.txt");
+            var sample = SampleReader.Read("whois.register.bg", "bg", "found", "found.txt");
             var response = parser.Parse("whois.register.bg", sample);
 
             Assert.True(sample.Length > 0);
             Assert.Equal(WhoisStatus.Found, response.Status);
 
             Assert.Equal(0, response.ParsingErrors);
-            Assert.Equal("whois.register.bg/bg/Found", response.TemplateName);
+            Assert.Equal("whois.register.bg/bg/found/01", response.TemplateName);
 
             Assert.Equal("orbitel.bg", response.DomainName.ToString());
 
@@ -86,14 +86,14 @@ namespace Whois.Parsing.Whois.Register.Bg.Bg
         [Fact]
         public void Test_not_found()
         {
-            var sample = SampleReader.Read("whois.register.bg", "bg", "not_found.txt");
+            var sample = SampleReader.Read("whois.register.bg", "bg", "not-found", "not_found.txt");
             var response = parser.Parse("whois.register.bg", sample);
 
             Assert.True(sample.Length > 0);
             Assert.Equal(WhoisStatus.NotFound, response.Status);
 
             Assert.Equal(0, response.ParsingErrors);
-            Assert.Equal("whois.register.bg/bg/NotFound", response.TemplateName);
+            Assert.Equal("whois.register.bg/bg/not-found/01", response.TemplateName);
 
             Assert.Equal("u34jedzcq.bg", response.DomainName.ToString());
 
@@ -103,14 +103,14 @@ namespace Whois.Parsing.Whois.Register.Bg.Bg
         [Fact]
         public void Test_found_status_registered()
         {
-            var sample = SampleReader.Read("whois.register.bg", "bg", "found_status_registered.txt");
+            var sample = SampleReader.Read("whois.register.bg", "bg", "found", "found_status_registered.txt");
             var response = parser.Parse("whois.register.bg", sample);
 
             Assert.True(sample.Length > 0);
             Assert.Equal(WhoisStatus.Found, response.Status);
 
             Assert.Equal(0, response.ParsingErrors);
-            Assert.Equal("whois.register.bg/bg/Found", response.TemplateName);
+            Assert.Equal("whois.register.bg/bg/found/01", response.TemplateName);
 
             Assert.Equal("google.bg", response.DomainName.ToString());
 

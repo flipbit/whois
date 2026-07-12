@@ -17,14 +17,14 @@ namespace Whois.Parsing.Whois.Domain.Registry.Nl.Nl
         [Fact]
         public void Test_found()
         {
-            var sample = SampleReader.Read("whois.domain-registry.nl", "nl", "found.txt");
+            var sample = SampleReader.Read("whois.domain-registry.nl", "nl", "found", "found.txt");
             var response = parser.Parse("whois.domain-registry.nl", sample);
 
             Assert.True(sample.Length > 0);
             Assert.Equal(WhoisStatus.Found, response.Status);
 
             Assert.Equal(0, response.ParsingErrors);
-            Assert.Equal("whois.domain-registry.nl/nl/Found2", response.TemplateName);
+            Assert.Equal("whois.domain-registry.nl/nl/found/02", response.TemplateName);
 
             Assert.Equal("tntpost.nl", response.DomainName.ToString());
 
@@ -46,14 +46,14 @@ namespace Whois.Parsing.Whois.Domain.Registry.Nl.Nl
         [Fact]
         public void Test_not_assigned()
         {
-            var sample = SampleReader.Read("whois.domain-registry.nl", "nl", "not_assigned.txt");
+            var sample = SampleReader.Read("whois.domain-registry.nl", "nl", "not-assigned", "not_assigned.txt");
             var response = parser.Parse("whois.domain-registry.nl", sample);
 
             Assert.True(sample.Length > 0);
             Assert.Equal(WhoisStatus.NotAssigned, response.Status);
 
             Assert.Equal(0, response.ParsingErrors);
-            Assert.Equal("whois.domain-registry.nl/nl/Found2", response.TemplateName);
+            Assert.Equal("whois.domain-registry.nl/nl/found/02", response.TemplateName);
 
             Assert.Equal("smsexdates.nl", response.DomainName.ToString());
 
@@ -75,14 +75,14 @@ namespace Whois.Parsing.Whois.Domain.Registry.Nl.Nl
         [Fact]
         public void Test_throttled()
         {
-            var sample = SampleReader.Read("whois.domain-registry.nl", "nl", "throttled.txt");
+            var sample = SampleReader.Read("whois.domain-registry.nl", "nl", "throttled", "throttled.txt");
             var response = parser.Parse("whois.domain-registry.nl", sample);
 
             Assert.True(sample.Length > 0);
             Assert.Equal(WhoisStatus.Throttled, response.Status);
 
             Assert.Equal(0, response.ParsingErrors);
-            Assert.Equal("whois.domain-registry.nl/nl/Throttled1", response.TemplateName);
+            Assert.Equal("whois.domain-registry.nl/nl/throttled/01", response.TemplateName);
 
             Assert.Equal(1, response.FieldsParsed);
         }
@@ -90,14 +90,14 @@ namespace Whois.Parsing.Whois.Domain.Registry.Nl.Nl
         [Fact]
         public void Test_throttled_response_throttled_daily()
         {
-            var sample = SampleReader.Read("whois.domain-registry.nl", "nl", "throttled_response_throttled_daily.txt");
+            var sample = SampleReader.Read("whois.domain-registry.nl", "nl", "throttled", "throttled_response_throttled_daily.txt");
             var response = parser.Parse("whois.domain-registry.nl", sample);
 
             Assert.True(sample.Length > 0);
             Assert.Equal(WhoisStatus.Throttled, response.Status);
 
             Assert.Equal(0, response.ParsingErrors);
-            Assert.Equal("whois.domain-registry.nl/nl/Throttled2", response.TemplateName);
+            Assert.Equal("whois.domain-registry.nl/nl/throttled/02", response.TemplateName);
 
             Assert.Equal(1, response.FieldsParsed);
         }
@@ -105,14 +105,14 @@ namespace Whois.Parsing.Whois.Domain.Registry.Nl.Nl
         [Fact]
         public void Test_unavailable()
         {
-            var sample = SampleReader.Read("whois.domain-registry.nl", "nl", "unavailable.txt");
+            var sample = SampleReader.Read("whois.domain-registry.nl", "nl", "unavailable", "unavailable.txt");
             var response = parser.Parse("whois.domain-registry.nl", sample);
 
             Assert.True(sample.Length > 0);
             Assert.Equal(WhoisStatus.Unavailable, response.Status);
 
             Assert.Equal(0, response.ParsingErrors);
-            Assert.Equal("whois.domain-registry.nl/nl/Unavailable", response.TemplateName);
+            Assert.Equal("whois.domain-registry.nl/nl/unavailable/01", response.TemplateName);
 
             Assert.Equal(1, response.FieldsParsed);
         }
@@ -120,14 +120,14 @@ namespace Whois.Parsing.Whois.Domain.Registry.Nl.Nl
         [Fact]
         public void Test_not_found()
         {
-            var sample = SampleReader.Read("whois.domain-registry.nl", "nl", "not_found.txt");
+            var sample = SampleReader.Read("whois.domain-registry.nl", "nl", "not-found", "not_found.txt");
             var response = parser.Parse("whois.domain-registry.nl", sample);
 
             Assert.True(sample.Length > 0);
             Assert.Equal(WhoisStatus.NotFound, response.Status);
 
             Assert.Equal(0, response.ParsingErrors);
-            Assert.Equal("whois.domain-registry.nl/nl/NotFound", response.TemplateName);
+            Assert.Equal("whois.domain-registry.nl/nl/not-found/01", response.TemplateName);
 
             Assert.Equal("u34jedzcq.nl", response.DomainName.ToString());
 
@@ -137,14 +137,14 @@ namespace Whois.Parsing.Whois.Domain.Registry.Nl.Nl
         [Fact]
         public void Test_quarantined()
         {
-            var sample = SampleReader.Read("whois.domain-registry.nl", "nl", "redemption.txt");
+            var sample = SampleReader.Read("whois.domain-registry.nl", "nl", "redemption", "redemption.txt");
             var response = parser.Parse("whois.domain-registry.nl", sample);
 
             Assert.True(sample.Length > 0);
             Assert.Equal(WhoisStatus.Quarantined, response.Status);
 
             Assert.Equal(0, response.ParsingErrors);
-            Assert.Equal("whois.domain-registry.nl/nl/Found2", response.TemplateName);
+            Assert.Equal("whois.domain-registry.nl/nl/found/02", response.TemplateName);
 
             Assert.Equal("martijn-webdesign.nl", response.DomainName.ToString());
 
@@ -159,14 +159,14 @@ namespace Whois.Parsing.Whois.Domain.Registry.Nl.Nl
         [Fact]
         public void Test_found_status_registered()
         {
-            var sample = SampleReader.Read("whois.domain-registry.nl", "nl", "found_status_registered.txt");
+            var sample = SampleReader.Read("whois.domain-registry.nl", "nl", "found", "found_status_registered.txt");
             var response = parser.Parse("whois.domain-registry.nl", sample);
 
             Assert.True(sample.Length > 0);
             Assert.Equal(WhoisStatus.Found, response.Status);
 
             Assert.Equal(0, response.ParsingErrors);
-            Assert.Equal("whois.domain-registry.nl/nl/Found1", response.TemplateName);
+            Assert.Equal("whois.domain-registry.nl/nl/found/01", response.TemplateName);
 
             Assert.Equal("google.nl", response.DomainName.ToString());
 

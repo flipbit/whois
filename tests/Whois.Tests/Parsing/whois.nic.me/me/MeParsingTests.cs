@@ -17,14 +17,14 @@ namespace Whois.Parsing.Whois.Nic.Me.Me
         [Fact]
         public void Test_found()
         {
-            var sample = SampleReader.Read("whois.nic.me", "me", "found.txt");
+            var sample = SampleReader.Read("whois.nic.me", "me", "found", "found.txt");
             var response = parser.Parse("whois.nic.me", sample);
 
             Assert.True(sample.Length > 0);
             Assert.Equal(WhoisStatus.Found, response.Status);
 
             Assert.Equal(0, response.ParsingErrors);
-            Assert.Equal("generic/tld/Found001", response.TemplateName);
+            Assert.Equal("generic/tld/found/01", response.TemplateName);
 
             Assert.Equal("wossna.me", response.DomainName.ToString());
             Assert.Equal("D82062-ME", response.RegistryDomainId);
@@ -91,14 +91,14 @@ namespace Whois.Parsing.Whois.Nic.Me.Me
         [Fact]
         public void Test_found_updated_on_is_blank()
         {
-            var sample = SampleReader.Read("whois.nic.me", "me", "found_updated_on_is_blank.txt");
+            var sample = SampleReader.Read("whois.nic.me", "me", "found", "found_updated_on_is_blank.txt");
             var response = parser.Parse("whois.nic.me", sample);
 
             Assert.True(sample.Length > 0);
             Assert.Equal(WhoisStatus.Found, response.Status);
 
             Assert.Equal(0, response.ParsingErrors);
-            Assert.Equal("generic/tld/Found001", response.TemplateName);
+            Assert.Equal("generic/tld/found/01", response.TemplateName);
 
             Assert.Equal("factoryoutlet.me", response.DomainName.ToString());
             Assert.Equal("D2021453-ME", response.RegistryDomainId);
@@ -166,14 +166,14 @@ namespace Whois.Parsing.Whois.Nic.Me.Me
         [Fact]
         public void Test_not_found()
         {
-            var sample = SampleReader.Read("whois.nic.me", "me", "not_found.txt");
+            var sample = SampleReader.Read("whois.nic.me", "me", "not-found", "not_found.txt");
             var response = parser.Parse("whois.nic.me", sample);
 
             Assert.True(sample.Length > 0);
             Assert.Equal(WhoisStatus.NotFound, response.Status);
 
             Assert.Equal(0, response.ParsingErrors);
-            Assert.Equal("generic/tld/NotFound001", response.TemplateName);
+            Assert.Equal("generic/tld/not-found/01", response.TemplateName);
 
             Assert.Equal(1, response.FieldsParsed);
         }
@@ -181,14 +181,14 @@ namespace Whois.Parsing.Whois.Nic.Me.Me
         [Fact]
         public void Test_found_status_registered()
         {
-            var sample = SampleReader.Read("whois.nic.me", "me", "found_status_registered.txt");
+            var sample = SampleReader.Read("whois.nic.me", "me", "found", "found_status_registered.txt");
             var response = parser.Parse("whois.nic.me", sample);
 
             Assert.True(sample.Length > 0);
             Assert.Equal(WhoisStatus.Found, response.Status);
 
             Assert.Equal(1, response.ParsingErrors);
-            Assert.Equal("generic/tld/Found001", response.TemplateName);
+            Assert.Equal("generic/tld/found/01", response.TemplateName);
 
             Assert.Equal("google.me", response.DomainName.ToString());
             Assert.Equal("D11599-ME", response.RegistryDomainId);
@@ -258,7 +258,7 @@ namespace Whois.Parsing.Whois.Nic.Me.Me
             Assert.Equal("UPDATE PROHIBITED", response.DomainStatus[5]);
 
             Assert.Equal("Unsigned", response.DnsSecStatus);
-            Assert.Equal(47, response.FieldsParsed);
+            Assert.Equal(48, response.FieldsParsed);
         }
     }
 }

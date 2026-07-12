@@ -17,7 +17,7 @@ namespace Whois.Parsing.Whois.Afilias.Net.Info
         [Fact]
         public void Test_not_found()
         {
-            var sample = SampleReader.Read("whois.afilias.net", "info", "not_found.txt");
+            var sample = SampleReader.Read("whois.afilias.net", "info", "not-found", "not_found.txt");
             var response = parser.Parse("whois.afilias.net", sample);
 
             Assert.True(sample.Length > 0);
@@ -27,14 +27,14 @@ namespace Whois.Parsing.Whois.Afilias.Net.Info
         [Fact]
         public void Test_found()
         {
-            var sample = SampleReader.Read("whois.afilias.net", "info", "found.txt");
+            var sample = SampleReader.Read("whois.afilias.net", "info", "found", "found.txt");
             var response = parser.Parse("whois.afilias.net", sample);
 
             Assert.True(sample.Length > 0);
             Assert.Equal(WhoisStatus.Found, response.Status);
 
             Assert.Equal(0, response.ParsingErrors);
-            Assert.Equal("generic/tld/Found001", response.TemplateName);
+            Assert.Equal("generic/tld/found/01", response.TemplateName);
 
             Assert.Equal("google.info", response.DomainName.ToString());
             Assert.Equal("D37288-LRMS", response.RegistryDomainId);
@@ -135,7 +135,7 @@ namespace Whois.Parsing.Whois.Afilias.Net.Info
         [Fact]
         public void Test_reserved()
         {
-            var sample = SampleReader.Read("whois.afilias.net", "info", "reserved.txt");
+            var sample = SampleReader.Read("whois.afilias.net", "info", "reserved", "reserved.txt");
             var response = parser.Parse("whois.afilias.net", sample);
 
             Assert.True(sample.Length > 0);

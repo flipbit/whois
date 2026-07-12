@@ -17,14 +17,14 @@ namespace Whois.Parsing.Whois.Eu.Org.EuOrg
         [Fact]
         public void Test_not_found()
         {
-            var sample = SampleReader.Read("whois.eu.org", "eu.org", "not_found.txt");
+            var sample = SampleReader.Read("whois.eu.org", "eu.org", "not-found", "not_found.txt");
             var response = parser.Parse("whois.eu.org", sample);
 
             Assert.True(sample.Length > 0);
             Assert.Equal(WhoisStatus.NotFound, response.Status);
 
             Assert.Equal(0, response.ParsingErrors);
-            Assert.Equal("whois.eu.org/eu.org/NotFound", response.TemplateName);
+            Assert.Equal("whois.eu.org/eu.org/not-found/01", response.TemplateName);
 
             Assert.Equal(1, response.FieldsParsed);
         }
@@ -32,14 +32,14 @@ namespace Whois.Parsing.Whois.Eu.Org.EuOrg
         [Fact]
         public void Test_found()
         {
-            var sample = SampleReader.Read("whois.eu.org", "eu.org", "found.txt");
+            var sample = SampleReader.Read("whois.eu.org", "eu.org", "found", "found.txt");
             var response = parser.Parse("whois.eu.org", sample);
 
             Assert.True(sample.Length > 0);
             Assert.Equal(WhoisStatus.Found, response.Status);
 
             Assert.Equal(0, response.ParsingErrors);
-            Assert.Equal("generic/tld/Found03", response.TemplateName);
+            Assert.Equal("generic/tld/found/03", response.TemplateName);
 
             Assert.Equal("google.eu.org", response.DomainName.ToString());
 

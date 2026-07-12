@@ -17,14 +17,14 @@ namespace Whois.Parsing.Whois.Verisign.Grs.Com.Com
         [Fact]
         public void Test_found()
         {
-            var sample = SampleReader.Read("whois.verisign-grs.com", "com", "found.txt");
+            var sample = SampleReader.Read("whois.verisign-grs.com", "com", "found", "found.txt");
             var response = parser.Parse("whois.verisign-grs.com", sample);
 
             Assert.True(sample.Length > 0);
             Assert.Equal(WhoisStatus.Found, response.Status);
 
             Assert.Equal(0, response.ParsingErrors);
-            Assert.Equal("generic/tld/Found02", response.TemplateName);
+            Assert.Equal("generic/tld/found/02", response.TemplateName);
 
             Assert.Equal("y.com", response.DomainName.ToString());
 
@@ -47,14 +47,14 @@ namespace Whois.Parsing.Whois.Verisign.Grs.Com.Com
         [Fact]
         public void Test_pending_delete()
         {
-            var sample = SampleReader.Read("whois.verisign-grs.com", "com", "pending_delete.txt");
+            var sample = SampleReader.Read("whois.verisign-grs.com", "com", "pending-delete", "pending_delete.txt");
             var response = parser.Parse("whois.verisign-grs.com", sample);
 
             Assert.True(sample.Length > 0);
             Assert.Equal(WhoisStatus.PendingDelete, response.Status);
 
             Assert.Equal(0, response.ParsingErrors);
-            Assert.Equal("generic/tld/Found02", response.TemplateName);
+            Assert.Equal("generic/tld/found/02", response.TemplateName);
 
             Assert.Equal("killianestates.com", response.DomainName.ToString());
 
@@ -80,14 +80,14 @@ namespace Whois.Parsing.Whois.Verisign.Grs.Com.Com
         [Fact]
         public void Test_not_found()
         {
-            var sample = SampleReader.Read("whois.verisign-grs.com", "com", "not_found.txt");
+            var sample = SampleReader.Read("whois.verisign-grs.com", "com", "not-found", "not_found.txt");
             var response = parser.Parse("whois.verisign-grs.com", sample);
 
             Assert.True(sample.Length > 0);
             Assert.Equal(WhoisStatus.NotFound, response.Status);
 
             Assert.Equal(0, response.ParsingErrors);
-            Assert.Equal("generic/tld/NotFound07", response.TemplateName);
+            Assert.Equal("generic/tld/not-found/07", response.TemplateName);
 
             Assert.Equal("u34jedzcq.com", response.DomainName.ToString());
 
@@ -97,7 +97,7 @@ namespace Whois.Parsing.Whois.Verisign.Grs.Com.Com
         [Fact]
         public void Test_found_status_registered()
         {
-            var sample = SampleReader.Read("whois.verisign-grs.com", "com", "found_status_registered.txt");
+            var sample = SampleReader.Read("whois.verisign-grs.com", "com", "found", "found_status_registered.txt");
             var response = parser.Parse("whois.verisign-grs.com", sample);
 
             Assert.True(sample.Length > 0);
@@ -105,7 +105,7 @@ namespace Whois.Parsing.Whois.Verisign.Grs.Com.Com
 
             Assert.Equal(23, response.FieldsParsed);
             Assert.Equal(0, response.ParsingErrors);
-            Assert.Equal("generic/tld/Found02", response.TemplateName);
+            Assert.Equal("generic/tld/found/02", response.TemplateName);
 
             Assert.Equal("google.com", response.DomainName.ToString());
             Assert.Equal("2138514_DOMAIN_COM-VRSN", response.RegistryDomainId);

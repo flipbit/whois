@@ -17,14 +17,14 @@ namespace Whois.Parsing.Whois.Uniregistry.Net.Tattoo
         [Fact]
         public void Test_not_found()
         {
-            var sample = SampleReader.Read("whois.uniregistry.net", "tattoo", "not_found.txt");
+            var sample = SampleReader.Read("whois.uniregistry.net", "tattoo", "not-found", "not_found.txt");
             var response = parser.Parse("whois.uniregistry.net", sample);
 
             Assert.True(sample.Length > 0);
             Assert.Equal(WhoisStatus.NotFound, response.Status);
 
             Assert.Equal(0, response.ParsingErrors);
-            Assert.Equal("whois.uniregistry.net/tattoo/NotFound", response.TemplateName);
+            Assert.Equal("whois.uniregistry.net/tattoo/not-found/01", response.TemplateName);
 
             Assert.Equal("u34jedzcq.tattoo", response.DomainName.ToString());
 
@@ -34,14 +34,14 @@ namespace Whois.Parsing.Whois.Uniregistry.Net.Tattoo
         [Fact]
         public void Test_found()
         {
-            var sample = SampleReader.Read("whois.uniregistry.net", "tattoo", "found.txt");
+            var sample = SampleReader.Read("whois.uniregistry.net", "tattoo", "found", "found.txt");
             var response = parser.Parse("whois.uniregistry.net", sample);
 
             Assert.True(sample.Length > 0);
             Assert.Equal(WhoisStatus.Found, response.Status);
 
             Assert.Equal(0, response.ParsingErrors);
-            Assert.Equal("generic/tld/Found001", response.TemplateName);
+            Assert.Equal("generic/tld/found/01", response.TemplateName);
 
             Assert.Equal("nic.tattoo", response.DomainName.ToString());
             Assert.Equal("DO_4810ec9890fdf872f2e23b58df485dc4-ISC", response.RegistryDomainId);
@@ -143,14 +143,14 @@ namespace Whois.Parsing.Whois.Uniregistry.Net.Tattoo
         [Fact]
         public void Test_unavailable()
         {
-            var sample = SampleReader.Read("whois.uniregistry.net", "tattoo", "unavailable.txt");
+            var sample = SampleReader.Read("whois.uniregistry.net", "tattoo", "unavailable", "unavailable.txt");
             var response = parser.Parse("whois.uniregistry.net", sample);
 
             Assert.True(sample.Length > 0);
             Assert.Equal(WhoisStatus.Unavailable, response.Status);
 
             Assert.Equal(0, response.ParsingErrors);
-            Assert.Equal("whois.uniregistry.net/tattoo/Unavailable", response.TemplateName);
+            Assert.Equal("whois.uniregistry.net/tattoo/unavailable/01", response.TemplateName);
 
             Assert.Equal("cheap.tattoo", response.DomainName.ToString());
 

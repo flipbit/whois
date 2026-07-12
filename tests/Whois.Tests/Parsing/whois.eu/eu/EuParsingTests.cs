@@ -16,7 +16,7 @@ namespace Whois.Parsing.Whois.Eu.Eu
         [Fact]
         public void Test_found()
         {
-            var sample = SampleReader.Read("whois.eu", "eu", "found.txt");
+            var sample = SampleReader.Read("whois.eu", "eu", "found", "found.txt");
             var response = parser.Parse("whois.eu", sample);
 
             Assert.True(sample.Length > 0);
@@ -24,7 +24,7 @@ namespace Whois.Parsing.Whois.Eu.Eu
 
             AssertWriter.Write(response);
             Assert.Equal(0, response.ParsingErrors);
-            Assert.Equal("whois.eu/eu/Found", response.TemplateName);
+            Assert.Equal("whois.eu/eu/found/01", response.TemplateName);
 
             Assert.Equal("eurid.eu", response.DomainName.ToString());
 
@@ -46,14 +46,14 @@ namespace Whois.Parsing.Whois.Eu.Eu
         [Fact]
         public void Test_throttled()
         {
-            var sample = SampleReader.Read("whois.eu", "eu", "throttled.txt");
+            var sample = SampleReader.Read("whois.eu", "eu", "throttled", "throttled.txt");
             var response = parser.Parse("whois.eu", sample);
 
             Assert.True(sample.Length > 0);
             Assert.Equal(WhoisStatus.Throttled, response.Status);
 
             Assert.Equal(0, response.ParsingErrors);
-            Assert.Equal("whois.eu/eu/Throttled", response.TemplateName);
+            Assert.Equal("whois.eu/eu/throttled/01", response.TemplateName);
 
             Assert.Equal(1, response.FieldsParsed);
         }
@@ -61,14 +61,14 @@ namespace Whois.Parsing.Whois.Eu.Eu
         [Fact]
         public void Test_not_found()
         {
-            var sample = SampleReader.Read("whois.eu", "eu", "not_found.txt");
+            var sample = SampleReader.Read("whois.eu", "eu", "not-found", "not_found.txt");
             var response = parser.Parse("whois.eu", sample);
 
             Assert.True(sample.Length > 0);
             Assert.Equal(WhoisStatus.NotFound, response.Status);
 
             Assert.Equal(0, response.ParsingErrors);
-            Assert.Equal("whois.eu/eu/NotFound", response.TemplateName);
+            Assert.Equal("whois.eu/eu/not-found/01", response.TemplateName);
 
             Assert.Equal("u34jedzcq.eu", response.DomainName.ToString());
 
@@ -78,14 +78,14 @@ namespace Whois.Parsing.Whois.Eu.Eu
         [Fact]
         public void Test_found_status_registered()
         {
-            var sample = SampleReader.Read("whois.eu", "eu", "found_status_registered.txt");
+            var sample = SampleReader.Read("whois.eu", "eu", "found", "found_status_registered.txt");
             var response = parser.Parse("whois.eu", sample);
 
             Assert.True(sample.Length > 0);
             Assert.Equal(WhoisStatus.Found, response.Status);
 
             Assert.Equal(0, response.ParsingErrors);
-            Assert.Equal("whois.eu/eu/Found", response.TemplateName);
+            Assert.Equal("whois.eu/eu/found/01", response.TemplateName);
 
             Assert.Equal("google.eu", response.DomainName.ToString());
 

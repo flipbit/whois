@@ -17,7 +17,7 @@ namespace Whois.Parsing.Org.Whois.Registry.Net.Za.OrgZa
         [Fact]
         public void Test_not_found()
         {
-            var sample = SampleReader.Read("org-whois.registry.net.za", "org.za", "not_found.txt");
+            var sample = SampleReader.Read("org-whois.registry.net.za", "org.za", "not-found", "not_found.txt");
             var response = parser.Parse("org-whois.registry.net.za", sample);
 
             Assert.True(sample.Length > 0);
@@ -32,14 +32,14 @@ namespace Whois.Parsing.Org.Whois.Registry.Net.Za.OrgZa
         [Fact]
         public void Test_found()
         {
-            var sample = SampleReader.Read("org-whois.registry.net.za", "org.za", "found.txt");
+            var sample = SampleReader.Read("org-whois.registry.net.za", "org.za", "found", "found.txt");
             var response = parser.Parse("org-whois.registry.net.za", sample);
 
             Assert.True(sample.Length > 0);
             Assert.Equal(WhoisStatus.Found, response.Status);
 
             Assert.Equal(0, response.ParsingErrors);
-            Assert.Equal("org-whois.registry.net.za/org.za/Found", response.TemplateName);
+            Assert.Equal("org-whois.registry.net.za/org.za/found/01", response.TemplateName);
 
             Assert.Equal("joburg.org.za", response.DomainName.ToString());
             Assert.Equal("dom_8VP-9999", response.RegistryDomainId);

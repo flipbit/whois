@@ -17,14 +17,14 @@ namespace Whois.Parsing.Whois.Je.Je
         [Fact]
         public void Test_not_found()
         {
-            var sample = SampleReader.Read("whois.je", "je", "not_found.txt");
+            var sample = SampleReader.Read("whois.je", "je", "not-found", "not_found.txt");
             var response = parser.Parse("whois.je", sample);
 
             Assert.True(sample.Length > 0);
             Assert.Equal(WhoisStatus.NotFound, response.Status);
 
             Assert.Equal(0, response.ParsingErrors);
-            Assert.Equal("whois.je/je/NotFound", response.TemplateName);
+            Assert.Equal("whois.je/je/not-found/01", response.TemplateName);
 
             Assert.Equal("u34jedzcq.je", response.DomainName.ToString());
 
@@ -38,14 +38,14 @@ namespace Whois.Parsing.Whois.Je.Je
         [Fact]
         public void Test_found()
         {
-            var sample = SampleReader.Read("whois.je", "je", "found.txt");
+            var sample = SampleReader.Read("whois.je", "je", "found", "found.txt");
             var response = parser.Parse("whois.je", sample);
 
             Assert.True(sample.Length > 0);
             Assert.Equal(WhoisStatus.Found, response.Status);
 
             Assert.Equal(0, response.ParsingErrors);
-            Assert.Equal("whois.je/je/Found", response.TemplateName);
+            Assert.Equal("whois.je/je/found/01", response.TemplateName);
 
             Assert.Equal("google.je", response.DomainName.ToString());
 

@@ -17,14 +17,14 @@ namespace Whois.Parsing.Whois.Pir.Org.Org
         [Fact]
         public void Test_throttled()
         {
-            var sample = SampleReader.Read("whois.pir.org", "org", "throttled.txt");
+            var sample = SampleReader.Read("whois.pir.org", "org", "throttled", "throttled.txt");
             var response = parser.Parse("whois.pir.org", sample);
 
             Assert.True(sample.Length > 0);
             Assert.Equal(WhoisStatus.Throttled, response.Status);
 
             Assert.Equal(0, response.ParsingErrors);
-            Assert.Equal("generic/tld/throttled-01", response.TemplateName);
+            Assert.Equal("generic/tld/throttled/01", response.TemplateName);
 
             Assert.Equal(1, response.FieldsParsed);
         }
@@ -32,14 +32,14 @@ namespace Whois.Parsing.Whois.Pir.Org.Org
         [Fact]
         public void Test_not_found()
         {
-            var sample = SampleReader.Read("whois.pir.org", "org", "not_found.txt");
+            var sample = SampleReader.Read("whois.pir.org", "org", "not-found", "not_found.txt");
             var response = parser.Parse("whois.pir.org", sample);
 
             Assert.True(sample.Length > 0);
             Assert.Equal(WhoisStatus.NotFound, response.Status);
 
             Assert.Equal(0, response.ParsingErrors);
-            Assert.Equal("generic/tld/NotFound001", response.TemplateName);
+            Assert.Equal("generic/tld/not-found/01", response.TemplateName);
 
             Assert.Equal(1, response.FieldsParsed);
         }
@@ -47,14 +47,14 @@ namespace Whois.Parsing.Whois.Pir.Org.Org
         [Fact]
         public void Test_found()
         {
-            var sample = SampleReader.Read("whois.pir.org", "org", "found.txt");
+            var sample = SampleReader.Read("whois.pir.org", "org", "found", "found.txt");
             var response = parser.Parse("whois.pir.org", sample);
 
             Assert.True(sample.Length > 0);
             Assert.Equal(WhoisStatus.Found, response.Status);
 
             Assert.Equal(0, response.ParsingErrors);
-            Assert.Equal("generic/tld/Found001", response.TemplateName);
+            Assert.Equal("generic/tld/found/01", response.TemplateName);
 
             Assert.Equal("google.org", response.DomainName.ToString());
             Assert.Equal("D2244233-LROR", response.RegistryDomainId);

@@ -17,14 +17,14 @@ namespace Whois.Parsing.Whois.Nic.Mx.Mx
         [Fact]
         public void Test_found()
         {
-            var sample = SampleReader.Read("whois.nic.mx", "mx", "found.txt");
+            var sample = SampleReader.Read("whois.nic.mx", "mx", "found", "found.txt");
             var response = parser.Parse("whois.nic.mx", sample);
 
             Assert.True(sample.Length > 0);
             Assert.Equal(WhoisStatus.Found, response.Status);
 
             Assert.Equal(0, response.ParsingErrors);
-            Assert.Equal("whois.nic.mx/mx/Found", response.TemplateName);
+            Assert.Equal("whois.nic.mx/mx/found/01", response.TemplateName);
 
             Assert.Equal("mpsnet.net.mx", response.DomainName.ToString());
 
@@ -86,14 +86,14 @@ namespace Whois.Parsing.Whois.Nic.Mx.Mx
         [Fact]
         public void Test_not_found()
         {
-            var sample = SampleReader.Read("whois.nic.mx", "mx", "not_found.txt");
+            var sample = SampleReader.Read("whois.nic.mx", "mx", "not-found", "not_found.txt");
             var response = parser.Parse("whois.nic.mx", sample);
 
             Assert.True(sample.Length > 0);
             Assert.Equal(WhoisStatus.NotFound, response.Status);
 
             Assert.Equal(0, response.ParsingErrors);
-            Assert.Equal("whois.nic.mx/mx/NotFound", response.TemplateName);
+            Assert.Equal("whois.nic.mx/mx/not-found/01", response.TemplateName);
 
             Assert.Equal(1, response.FieldsParsed);
         }
@@ -101,14 +101,14 @@ namespace Whois.Parsing.Whois.Nic.Mx.Mx
         [Fact]
         public void Test_found_status_registered()
         {
-            var sample = SampleReader.Read("whois.nic.mx", "mx", "found_status_registered.txt");
+            var sample = SampleReader.Read("whois.nic.mx", "mx", "found", "found_status_registered.txt");
             var response = parser.Parse("whois.nic.mx", sample);
 
             Assert.True(sample.Length > 0);
             Assert.Equal(WhoisStatus.Found, response.Status);
 
             Assert.Equal(0, response.ParsingErrors);
-            Assert.Equal("whois.nic.mx/mx/Found", response.TemplateName);
+            Assert.Equal("whois.nic.mx/mx/found/01", response.TemplateName);
 
             Assert.Equal("google.mx", response.DomainName.ToString());
 

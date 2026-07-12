@@ -17,14 +17,14 @@ namespace Whois.Parsing.Whois.Kg.Kg
         [Fact]
         public void Test_not_found()
         {
-            var sample = SampleReader.Read("whois.kg", "kg", "not_found.txt");
+            var sample = SampleReader.Read("whois.kg", "kg", "not-found", "not_found.txt");
             var response = parser.Parse("whois.kg", sample);
 
             Assert.True(sample.Length > 0);
             Assert.Equal(WhoisStatus.NotFound, response.Status);
 
             Assert.Equal(0, response.ParsingErrors);
-            Assert.Equal("whois.kg/kg/NotFound", response.TemplateName);
+            Assert.Equal("whois.kg/kg/not-found/01", response.TemplateName);
 
             Assert.Equal("u34jedzcq.kg", response.DomainName.ToString());
 
@@ -34,14 +34,14 @@ namespace Whois.Parsing.Whois.Kg.Kg
         [Fact]
         public void Test_found()
         {
-            var sample = SampleReader.Read("whois.kg", "kg", "found.txt");
+            var sample = SampleReader.Read("whois.kg", "kg", "found", "found.txt");
             var response = parser.Parse("whois.kg", sample);
 
             Assert.True(sample.Length > 0);
             Assert.Equal(WhoisStatus.Found, response.Status);
 
             Assert.Equal(0, response.ParsingErrors);
-            Assert.Equal("whois.kg/kg/Found", response.TemplateName);
+            Assert.Equal("whois.kg/kg/found/01", response.TemplateName);
 
             Assert.Equal("google.kg", response.DomainName.ToString());
 

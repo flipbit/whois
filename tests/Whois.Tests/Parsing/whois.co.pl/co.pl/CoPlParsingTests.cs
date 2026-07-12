@@ -17,13 +17,13 @@ namespace Whois.Parsing.Whois.Co.Pl.CoPl
         [Fact]
         public void Test_not_found()
         {
-            var sample = SampleReader.Read("whois.co.pl", "co.pl", "not_found.txt");
+            var sample = SampleReader.Read("whois.co.pl", "co.pl", "not-found", "not_found.txt");
             var response = parser.Parse("whois.co.pl", sample);
 
             Assert.True(sample.Length > 0);
             Assert.Equal(WhoisStatus.NotFound, response.Status);
             Assert.Equal(0, response.ParsingErrors);
-            Assert.Equal("whois.co.pl/co.pl/NotFound", response.TemplateName);
+            Assert.Equal("whois.co.pl/co.pl/not-found/01", response.TemplateName);
 
             Assert.Equal(1, response.FieldsParsed);
         }
@@ -31,14 +31,14 @@ namespace Whois.Parsing.Whois.Co.Pl.CoPl
         [Fact]
         public void Test_found()
         {
-            var sample = SampleReader.Read("whois.co.pl", "co.pl", "found.txt");
+            var sample = SampleReader.Read("whois.co.pl", "co.pl", "found", "found.txt");
             var response = parser.Parse("whois.co.pl", sample);
 
             Assert.True(sample.Length > 0);
             Assert.Equal(WhoisStatus.Found, response.Status);
 
             Assert.Equal(0, response.ParsingErrors);
-            Assert.Equal("whois.co.pl/co.pl/Found", response.TemplateName);
+            Assert.Equal("whois.co.pl/co.pl/found/01", response.TemplateName);
 
             Assert.Equal("coco.co.pl", response.DomainName.ToString());
 

@@ -17,7 +17,7 @@ namespace Whois.Parsing.Whois.Biz.Biz
         [Fact]
         public void Test_not_found()
         {
-            var sample = SampleReader.Read("whois.biz", "biz", "not_found.txt");
+            var sample = SampleReader.Read("whois.biz", "biz", "not-found", "not_found.txt");
             var response = parser.Parse("whois.biz", sample);
 
             Assert.True(sample.Length > 0);
@@ -25,20 +25,20 @@ namespace Whois.Parsing.Whois.Biz.Biz
 
             Assert.Equal(1, response.FieldsParsed);
             Assert.Equal(0, response.ParsingErrors);
-            Assert.Equal("whois.biz/biz/NotFound", response.TemplateName);
+            Assert.Equal("whois.biz/biz/not-found/01", response.TemplateName);
         }
 
         [Fact]
         public void Test_found()
         {
-            var sample = SampleReader.Read("whois.biz", "biz", "found.txt");
+            var sample = SampleReader.Read("whois.biz", "biz", "found", "found.txt");
             var response = parser.Parse("whois.biz", sample);
 
             Assert.True(sample.Length > 0);
             Assert.Equal(WhoisStatus.Found, response.Status);
 
             Assert.Equal(0, response.ParsingErrors);
-            Assert.Equal("generic/tld/Found001", response.TemplateName);
+            Assert.Equal("generic/tld/found/01", response.TemplateName);
 
             Assert.Equal("google.biz", response.DomainName.ToString());
             Assert.Equal("D2835288-BIZ", response.RegistryDomainId);

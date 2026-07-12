@@ -17,14 +17,14 @@ namespace Whois.Parsing.Whois.Tcinet.Ru.Ru
         [Fact]
         public void Test_found()
         {
-            var sample = SampleReader.Read("whois.tcinet.ru", "ru", "found.txt");
+            var sample = SampleReader.Read("whois.tcinet.ru", "ru", "found", "found.txt");
             var response = parser.Parse("whois.tcinet.ru", sample);
 
             Assert.True(sample.Length > 0);
             Assert.Equal(WhoisStatus.Found, response.Status);
 
             Assert.Equal(0, response.ParsingErrors);
-            Assert.Equal("whois.tcinet.ru/Found", response.TemplateName);
+            Assert.Equal("whois.tcinet.ru/found/01", response.TemplateName);
 
             Assert.Equal("masterhost.ru", response.DomainName.ToString());
 
@@ -55,14 +55,14 @@ namespace Whois.Parsing.Whois.Tcinet.Ru.Ru
         [Fact]
         public void Test_not_found()
         {
-            var sample = SampleReader.Read("whois.tcinet.ru", "ru", "not_found.txt");
+            var sample = SampleReader.Read("whois.tcinet.ru", "ru", "not-found", "not_found.txt");
             var response = parser.Parse("whois.tcinet.ru", sample);
 
             Assert.True(sample.Length > 0);
             Assert.Equal(WhoisStatus.NotFound, response.Status);
 
             Assert.Equal(0, response.ParsingErrors);
-            Assert.Equal("whois.tcinet.ru/NotFound", response.TemplateName);
+            Assert.Equal("whois.tcinet.ru/not-found/01", response.TemplateName);
 
             Assert.Equal(1, response.FieldsParsed);
         }
@@ -70,14 +70,14 @@ namespace Whois.Parsing.Whois.Tcinet.Ru.Ru
         [Fact]
         public void Test_found_status_registered()
         {
-            var sample = SampleReader.Read("whois.tcinet.ru", "ru", "found_status_registered.txt");
+            var sample = SampleReader.Read("whois.tcinet.ru", "ru", "found", "found_status_registered.txt");
             var response = parser.Parse("whois.tcinet.ru", sample);
 
             Assert.True(sample.Length > 0);
             Assert.Equal(WhoisStatus.Found, response.Status);
 
             Assert.Equal(0, response.ParsingErrors);
-            Assert.Equal("whois.tcinet.ru/Found", response.TemplateName);
+            Assert.Equal("whois.tcinet.ru/found/01", response.TemplateName);
 
             Assert.Equal("google.ru", response.DomainName.ToString());
 

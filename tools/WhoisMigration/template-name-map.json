@@ -335,5 +335,8 @@
   "whois.nic.lk/Found01": "whois.nic.lk/found/01",
   "whois.jprs.jp/NotFound": "whois.jprs.jp/not-found/01",
   "whois.jprs.jp/Found02": "whois.jprs.jp/found/02",
-  "whois.jprs.jp/Found01": "whois.jprs.jp/found/01"
+  "whois.jprs.jp/Found01": "whois.jprs.jp/found/01",
+  "generic/tld/Found001": "generic/tld/found/01",
+  "generic/tld/throttled-01": "generic/tld/throttled/01",
+  "whois.domainregistry.ie/ie/Found": "whois.domainregistry.ie/ie/found/01"
 }

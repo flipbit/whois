@@ -17,14 +17,14 @@ namespace Whois.Parsing.Whois.Rotld.Ro.Ro
         [Fact]
         public void Test_other_status_updateprohibited()
         {
-            var sample = SampleReader.Read("whois.rotld.ro", "ro", "other_status_updateprohibited.txt");
+            var sample = SampleReader.Read("whois.rotld.ro", "ro", "found", "other_status_updateprohibited.txt");
             var response = parser.Parse("whois.rotld.ro", sample);
 
             Assert.True(sample.Length > 0);
             Assert.Equal(WhoisStatus.Found, response.Status);
 
             Assert.Equal(0, response.ParsingErrors);
-            Assert.Equal("whois.rotld.ro/ro/Found", response.TemplateName);
+            Assert.Equal("whois.rotld.ro/ro/found/01", response.TemplateName);
 
             Assert.Equal("google.ro", response.DomainName.ToString());
 
@@ -50,14 +50,14 @@ namespace Whois.Parsing.Whois.Rotld.Ro.Ro
         [Fact]
         public void Test_not_found()
         {
-            var sample = SampleReader.Read("whois.rotld.ro", "ro", "not_found.txt");
+            var sample = SampleReader.Read("whois.rotld.ro", "ro", "not-found", "not_found.txt");
             var response = parser.Parse("whois.rotld.ro", sample);
 
             Assert.True(sample.Length > 0);
             Assert.Equal(WhoisStatus.NotFound, response.Status);
 
             Assert.Equal(0, response.ParsingErrors);
-            Assert.Equal("whois.rotld.ro/ro/NotFound", response.TemplateName);
+            Assert.Equal("whois.rotld.ro/ro/not-found/01", response.TemplateName);
 
             Assert.Equal(1, response.FieldsParsed);
         }
@@ -65,14 +65,14 @@ namespace Whois.Parsing.Whois.Rotld.Ro.Ro
         [Fact]
         public void Test_found()
         {
-            var sample = SampleReader.Read("whois.rotld.ro", "ro", "found.txt");
+            var sample = SampleReader.Read("whois.rotld.ro", "ro", "found", "found.txt");
             var response = parser.Parse("whois.rotld.ro", sample);
 
             Assert.True(sample.Length > 0);
             Assert.Equal(WhoisStatus.Found, response.Status);
 
             Assert.Equal(0, response.ParsingErrors);
-            Assert.Equal("whois.rotld.ro/ro/Found", response.TemplateName);
+            Assert.Equal("whois.rotld.ro/ro/found/01", response.TemplateName);
 
             Assert.Equal("google.ro", response.DomainName.ToString());
 

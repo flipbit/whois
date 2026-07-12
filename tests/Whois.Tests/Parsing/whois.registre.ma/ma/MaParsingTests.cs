@@ -17,14 +17,14 @@ namespace Whois.Parsing.Whois.Registre.Ma.Ma
         [Fact]
         public void Test_not_found()
         {
-            var sample = SampleReader.Read("whois.registre.ma", "ma", "not_found.txt");
+            var sample = SampleReader.Read("whois.registre.ma", "ma", "not-found", "not_found.txt");
             var response = parser.Parse("whois.registre.ma", sample);
 
             Assert.True(sample.Length > 0);
             Assert.Equal(WhoisStatus.NotFound, response.Status);
 
             Assert.Equal(0, response.ParsingErrors);
-            Assert.Equal("whois.registre.ma/ma/NotFound", response.TemplateName);
+            Assert.Equal("whois.registre.ma/ma/not-found/01", response.TemplateName);
 
             Assert.Equal(1, response.FieldsParsed);
         }
@@ -32,14 +32,14 @@ namespace Whois.Parsing.Whois.Registre.Ma.Ma
         [Fact]
         public void Test_found()
         {
-            var sample = SampleReader.Read("whois.registre.ma", "ma", "found.txt");
+            var sample = SampleReader.Read("whois.registre.ma", "ma", "found", "found.txt");
             var response = parser.Parse("whois.registre.ma", sample);
 
             Assert.True(sample.Length > 0);
             Assert.Equal(WhoisStatus.Found, response.Status);
 
             Assert.Equal(0, response.ParsingErrors);
-            Assert.Equal("whois.registre.ma/ma/Found", response.TemplateName);
+            Assert.Equal("whois.registre.ma/ma/found/01", response.TemplateName);
 
             Assert.Equal("google.ma", response.DomainName.ToString());
             Assert.Equal("333.google.ma", response.RegistryDomainId);

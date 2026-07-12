@@ -16,14 +16,14 @@ namespace Whois.Parsing.Whois.Tonic.To.To
         [Fact]
         public void Test_not_found()
         {
-            var sample = SampleReader.Read("whois.tonic.to", "to", "not_found.txt");
+            var sample = SampleReader.Read("whois.tonic.to", "to", "not-found", "not_found.txt");
             var response = parser.Parse("whois.tonic.to", sample);
 
             Assert.True(sample.Length > 0);
             Assert.Equal(WhoisStatus.NotFound, response.Status);
 
             Assert.Equal(0, response.ParsingErrors);
-            Assert.Equal("whois.tonic.to/to/NotFound", response.TemplateName);
+            Assert.Equal("whois.tonic.to/to/not-found/01", response.TemplateName);
 
             Assert.Equal("u34jedzcq", response.DomainName.ToString());
 
@@ -33,14 +33,14 @@ namespace Whois.Parsing.Whois.Tonic.To.To
         [Fact]
         public void Test_found()
         {
-            var sample = SampleReader.Read("whois.tonic.to", "to", "found.txt");
+            var sample = SampleReader.Read("whois.tonic.to", "to", "found", "found.txt");
             var response = parser.Parse("whois.tonic.to", sample);
 
             Assert.True(sample.Length > 0);
             Assert.Equal(WhoisStatus.Found, response.Status);
 
             Assert.Equal(0, response.ParsingErrors);
-            Assert.Equal("whois.tonic.to/to/Found", response.TemplateName);
+            Assert.Equal("whois.tonic.to/to/found/01", response.TemplateName);
 
             // Nameservers
             Assert.Equal(2, response.NameServers.Count);

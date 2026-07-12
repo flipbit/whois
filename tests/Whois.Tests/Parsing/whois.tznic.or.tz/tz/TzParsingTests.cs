@@ -17,14 +17,14 @@ namespace Whois.Parsing.Whois.Tznic.Or.Tz.Tz
         [Fact]
         public void Test_expired()
         {
-            var sample = SampleReader.Read("whois.tznic.or.tz", "tz", "expired.txt");
+            var sample = SampleReader.Read("whois.tznic.or.tz", "tz", "expired", "expired.txt");
             var response = parser.Parse("whois.tznic.or.tz", sample);
 
             Assert.True(sample.Length > 0);
             Assert.Equal(WhoisStatus.Expired, response.Status);
 
             Assert.Equal(0, response.ParsingErrors);
-            Assert.Equal("whois.tznic.or.tz/tz/Found", response.TemplateName);
+            Assert.Equal("whois.tznic.or.tz/tz/found/01", response.TemplateName);
 
             Assert.Equal("amanabank.co.tz", response.DomainName.ToString());
 
@@ -98,14 +98,14 @@ namespace Whois.Parsing.Whois.Tznic.Or.Tz.Tz
         [Fact]
         public void Test_not_found()
         {
-            var sample = SampleReader.Read("whois.tznic.or.tz", "tz", "not_found.txt");
+            var sample = SampleReader.Read("whois.tznic.or.tz", "tz", "not-found", "not_found.txt");
             var response = parser.Parse("whois.tznic.or.tz", sample);
 
             Assert.True(sample.Length > 0);
             Assert.Equal(WhoisStatus.NotFound, response.Status);
 
             Assert.Equal(0, response.ParsingErrors);
-            Assert.Equal("whois.tznic.or.tz/tz/NotFound", response.TemplateName);
+            Assert.Equal("whois.tznic.or.tz/tz/not-found/01", response.TemplateName);
 
             Assert.Equal(1, response.FieldsParsed);
         }
@@ -113,14 +113,14 @@ namespace Whois.Parsing.Whois.Tznic.Or.Tz.Tz
         [Fact]
         public void Test_found()
         {
-            var sample = SampleReader.Read("whois.tznic.or.tz", "tz", "found.txt");
+            var sample = SampleReader.Read("whois.tznic.or.tz", "tz", "found", "found.txt");
             var response = parser.Parse("whois.tznic.or.tz", sample);
 
             Assert.True(sample.Length > 0);
             Assert.Equal(WhoisStatus.Found, response.Status);
 
             Assert.Equal(0, response.ParsingErrors);
-            Assert.Equal("whois.tznic.or.tz/tz/Found", response.TemplateName);
+            Assert.Equal("whois.tznic.or.tz/tz/found/01", response.TemplateName);
 
             Assert.Equal("dailynews.co.tz", response.DomainName.ToString());
 

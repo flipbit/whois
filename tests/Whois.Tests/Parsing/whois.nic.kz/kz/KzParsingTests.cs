@@ -17,14 +17,14 @@ namespace Whois.Parsing.Whois.Nic.Kz.Kz
         [Fact]
         public void Test_not_found()
         {
-            var sample = SampleReader.Read("whois.nic.kz", "kz", "not_found.txt");
+            var sample = SampleReader.Read("whois.nic.kz", "kz", "not-found", "not_found.txt");
             var response = parser.Parse("whois.nic.kz", sample);
 
             Assert.True(sample.Length > 0);
             Assert.Equal(WhoisStatus.NotFound, response.Status);
 
             Assert.Equal(0, response.ParsingErrors);
-            Assert.Equal("whois.nic.kz/kz/NotFound", response.TemplateName);
+            Assert.Equal("whois.nic.kz/kz/not-found/01", response.TemplateName);
 
             Assert.Equal(1, response.FieldsParsed);
         }
@@ -32,14 +32,14 @@ namespace Whois.Parsing.Whois.Nic.Kz.Kz
         [Fact]
         public void Test_found()
         {
-            var sample = SampleReader.Read("whois.nic.kz", "kz", "found.txt");
+            var sample = SampleReader.Read("whois.nic.kz", "kz", "found", "found.txt");
             var response = parser.Parse("whois.nic.kz", sample);
 
             Assert.True(sample.Length > 0);
             Assert.Equal(WhoisStatus.Found, response.Status);
 
             Assert.Equal(0, response.ParsingErrors);
-            Assert.Equal("whois.nic.kz/kz/Found", response.TemplateName);
+            Assert.Equal("whois.nic.kz/kz/found/01", response.TemplateName);
 
             Assert.Equal("tabu.kz", response.DomainName.ToString());
 
@@ -86,14 +86,14 @@ namespace Whois.Parsing.Whois.Nic.Kz.Kz
         [Fact]
         public void Test_found_status_ok()
         {
-            var sample = SampleReader.Read("whois.nic.kz", "kz", "found_status_ok.txt");
+            var sample = SampleReader.Read("whois.nic.kz", "kz", "found", "found_status_ok.txt");
             var response = parser.Parse("whois.nic.kz", sample);
 
             Assert.True(sample.Length > 0);
             Assert.Equal(WhoisStatus.Found, response.Status);
 
             Assert.Equal(0, response.ParsingErrors);
-            Assert.Equal("whois.nic.kz/kz/Found", response.TemplateName);
+            Assert.Equal("whois.nic.kz/kz/found/01", response.TemplateName);
 
             Assert.Equal("google.kz", response.DomainName.ToString());
 
@@ -139,14 +139,14 @@ namespace Whois.Parsing.Whois.Nic.Kz.Kz
         [Fact]
         public void Test_found_updated_on_blank()
         {
-            var sample = SampleReader.Read("whois.nic.kz", "kz", "found_updated_on_blank.txt");
+            var sample = SampleReader.Read("whois.nic.kz", "kz", "found", "found_updated_on_blank.txt");
             var response = parser.Parse("whois.nic.kz", sample);
 
             Assert.True(sample.Length > 0);
             Assert.Equal(WhoisStatus.Found, response.Status);
 
             Assert.Equal(0, response.ParsingErrors);
-            Assert.Equal("whois.nic.kz/kz/Found", response.TemplateName);
+            Assert.Equal("whois.nic.kz/kz/found/01", response.TemplateName);
 
             Assert.Equal("pedamotor.kz", response.DomainName.ToString());
 
@@ -191,14 +191,14 @@ namespace Whois.Parsing.Whois.Nic.Kz.Kz
         [Fact]
         public void Test_not_found_status_available()
         {
-            var sample = SampleReader.Read("whois.nic.kz", "kz", "not_found_status_available.txt");
+            var sample = SampleReader.Read("whois.nic.kz", "kz", "not-found", "not_found_status_available.txt");
             var response = parser.Parse("whois.nic.kz", sample);
 
             Assert.True(sample.Length > 0);
             Assert.Equal(WhoisStatus.NotFound, response.Status);
 
             Assert.Equal(0, response.ParsingErrors);
-            Assert.Equal("whois.nic.kz/kz/NotFound", response.TemplateName);
+            Assert.Equal("whois.nic.kz/kz/not-found/01", response.TemplateName);
 
 
             Assert.Equal(1, response.FieldsParsed);
@@ -207,14 +207,14 @@ namespace Whois.Parsing.Whois.Nic.Kz.Kz
         [Fact]
         public void Test_found_status_registered()
         {
-            var sample = SampleReader.Read("whois.nic.kz", "kz", "found_status_registered.txt");
+            var sample = SampleReader.Read("whois.nic.kz", "kz", "found", "found_status_registered.txt");
             var response = parser.Parse("whois.nic.kz", sample);
 
             Assert.True(sample.Length > 0);
             Assert.Equal(WhoisStatus.Found, response.Status);
 
             Assert.Equal(0, response.ParsingErrors);
-            Assert.Equal("whois.nic.kz/kz/Found", response.TemplateName);
+            Assert.Equal("whois.nic.kz/kz/found/01", response.TemplateName);
 
             Assert.Equal("google.kz", response.DomainName.ToString());
 

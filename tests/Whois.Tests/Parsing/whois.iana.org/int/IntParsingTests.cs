@@ -17,14 +17,14 @@ namespace Whois.Parsing.Whois.Iana.Org.Int
         [Fact]
         public void Test_not_found()
         {
-            var sample = SampleReader.Read("whois.iana.org", "int", "not_found.txt");
+            var sample = SampleReader.Read("whois.iana.org", "int", "not-found", "not_found.txt");
             var response = parser.Parse("whois.iana.org", sample);
 
             Assert.True(sample.Length > 0);
             Assert.Equal(WhoisStatus.NotFound, response.Status);
 
             Assert.Equal(0, response.ParsingErrors);
-            Assert.Equal("whois.iana.org/NotFound", response.TemplateName);
+            Assert.Equal("whois.iana.org/not-found/01", response.TemplateName);
 
             Assert.Equal("u34jedzcq.int", response.DomainName.ToString());
 
@@ -34,14 +34,14 @@ namespace Whois.Parsing.Whois.Iana.Org.Int
         [Fact]
         public void Test_found()
         {
-            var sample = SampleReader.Read("whois.iana.org", "int", "found.txt");
+            var sample = SampleReader.Read("whois.iana.org", "int", "found", "found.txt");
             var response = parser.Parse("whois.iana.org", sample);
 
             Assert.True(sample.Length > 0);
             Assert.Equal(WhoisStatus.Found, response.Status);
 
             Assert.Equal(0, response.ParsingErrors);
-            Assert.Equal("whois.iana.org/Found01", response.TemplateName);
+            Assert.Equal("whois.iana.org/found/01", response.TemplateName);
 
             Assert.Equal("nato.int", response.DomainName.ToString());
 

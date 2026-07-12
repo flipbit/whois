@@ -17,7 +17,7 @@ namespace Whois.Parsing.Whois.Audns.Net.Au.Au
         [Fact]
         public void Test_found()
         {
-            var sample = SampleReader.Read("whois.audns.net.au", "au", "found.txt");
+            var sample = SampleReader.Read("whois.audns.net.au", "au", "found", "found.txt");
             var response = parser.Parse("whois.audns.net.au", sample);
 
             Assert.True(sample.Length > 0);
@@ -25,7 +25,7 @@ namespace Whois.Parsing.Whois.Audns.Net.Au.Au
 
             Assert.Equal(15, response.FieldsParsed);
             Assert.Equal(0, response.ParsingErrors);
-            Assert.Equal("whois.audns.net.au/au/Found", response.TemplateName);
+            Assert.Equal("whois.audns.net.au/au/found/01", response.TemplateName);
 
             Assert.Equal("pinewood.com.au", response.DomainName.ToString());
 
@@ -55,7 +55,7 @@ namespace Whois.Parsing.Whois.Audns.Net.Au.Au
         [Fact]
         public void Test_not_found()
         {
-            var sample = SampleReader.Read("whois.audns.net.au", "au", "not_found.txt");
+            var sample = SampleReader.Read("whois.audns.net.au", "au", "not-found", "not_found.txt");
             var response = parser.Parse("whois.audns.net.au", sample);
 
             Assert.True(sample.Length > 0);
@@ -63,13 +63,13 @@ namespace Whois.Parsing.Whois.Audns.Net.Au.Au
 
             Assert.Equal(1, response.FieldsParsed);
             Assert.Equal(0, response.ParsingErrors);
-            Assert.Equal("whois.audns.net.au/au/NotFound", response.TemplateName);
+            Assert.Equal("whois.audns.net.au/au/not-found/01", response.TemplateName);
         }
 
         [Fact]
         public void Test_found_status_registered()
         {
-            var sample = SampleReader.Read("whois.audns.net.au", "au", "found_status_registered.txt");
+            var sample = SampleReader.Read("whois.audns.net.au", "au", "found", "found_status_registered.txt");
             var response = parser.Parse("whois.audns.net.au", sample);
 
             Assert.True(sample.Length > 0);
@@ -77,7 +77,7 @@ namespace Whois.Parsing.Whois.Audns.Net.Au.Au
 
             Assert.Equal(16, response.FieldsParsed);
             Assert.Equal(0, response.ParsingErrors);
-            Assert.Equal("whois.audns.net.au/au/Found", response.TemplateName);
+            Assert.Equal("whois.audns.net.au/au/found/01", response.TemplateName);
 
             Assert.Equal("google.com.au", response.DomainName.ToString());
 

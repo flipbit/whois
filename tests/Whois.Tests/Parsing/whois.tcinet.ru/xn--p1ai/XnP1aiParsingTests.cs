@@ -1,4 +1,4 @@
-﻿using System;
+using System;
 using Xunit;
 using Whois.Parsers;
 
@@ -17,14 +17,14 @@ namespace Whois.Parsing.Whois.Tcinet.Ru.XnP1ai
         [Fact]
         public void Test_not_found()
         {
-            var sample = SampleReader.Read("whois.tcinet.ru", "xn--p1ai", "not_found.txt");
+            var sample = SampleReader.Read("whois.tcinet.ru", "xn--p1ai", "not-found", "not_found.txt");
             var response = parser.Parse("whois.tcinet.ru", sample);
 
             Assert.True(sample.Length > 0);
             Assert.Equal(WhoisStatus.NotFound, response.Status);
 
             Assert.Equal(0, response.ParsingErrors);
-            Assert.Equal("whois.tcinet.ru/NotFound", response.TemplateName);
+            Assert.Equal("whois.tcinet.ru/not-found/01", response.TemplateName);
 
             Assert.Equal(1, response.FieldsParsed);
         }
@@ -32,14 +32,14 @@ namespace Whois.Parsing.Whois.Tcinet.Ru.XnP1ai
         [Fact]
         public void Test_found()
         {
-            var sample = SampleReader.Read("whois.tcinet.ru", "xn--p1ai", "found.txt");
+            var sample = SampleReader.Read("whois.tcinet.ru", "xn--p1ai", "found", "found.txt");
             var response = parser.Parse("whois.tcinet.ru", sample);
 
             Assert.True(sample.Length > 0);
             Assert.Equal(WhoisStatus.Found, response.Status);
 
             Assert.Equal(0, response.ParsingErrors);
-            Assert.Equal("whois.tcinet.ru/Found", response.TemplateName);
+            Assert.Equal("whois.tcinet.ru/found/01", response.TemplateName);
 
             Assert.Equal("xn----8sbc3ahklcs4adf.xn--p1ai", response.DomainName.ToString());
             Assert.Equal("форум-кубани.рф", response.DomainName.ToUnicodeString());

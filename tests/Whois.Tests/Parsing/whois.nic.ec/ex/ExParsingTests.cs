@@ -17,14 +17,14 @@ namespace Whois.Parsing.Whois.Nic.Ec.Ex
         [Fact]
         public void Test_not_found()
         {
-            var sample = SampleReader.Read("whois.nic.ec", "ex", "not_found.txt");
+            var sample = SampleReader.Read("whois.nic.ec", "ex", "not-found", "not_found.txt");
             var response = parser.Parse("whois.nic.ec", sample);
 
             Assert.True(sample.Length > 0);
             Assert.Equal(WhoisStatus.NotFound, response.Status);
 
             Assert.Equal(0, response.ParsingErrors);
-            Assert.Equal("whois.nic.ec/ex/NotFound", response.TemplateName);
+            Assert.Equal("whois.nic.ec/ex/not-found/01", response.TemplateName);
 
             Assert.Equal("u34jedzcq.ec", response.DomainName.ToString());
 
@@ -34,7 +34,7 @@ namespace Whois.Parsing.Whois.Nic.Ec.Ex
         [Fact]
         public void Test_found()
         {
-            var sample = SampleReader.Read("whois.nic.ec", "ex", "found.txt");
+            var sample = SampleReader.Read("whois.nic.ec", "ex", "found", "found.txt");
             var response = parser.Parse("whois.nic.ec", sample);
 
             Assert.True(sample.Length > 0);
@@ -42,7 +42,7 @@ namespace Whois.Parsing.Whois.Nic.Ec.Ex
 
             AssertWriter.Write(response);
             Assert.Equal(0, response.ParsingErrors);
-            Assert.Equal("whois.nic.ec/ex/Found", response.TemplateName);
+            Assert.Equal("whois.nic.ec/ex/found/01", response.TemplateName);
 
             Assert.Equal("google.ec", response.DomainName.ToString());
 

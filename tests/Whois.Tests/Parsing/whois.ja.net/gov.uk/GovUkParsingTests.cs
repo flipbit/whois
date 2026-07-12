@@ -17,14 +17,14 @@ namespace Whois.Parsing.Whois.Ja.Net.GovUk
         [Fact]
         public void Test_not_found()
         {
-            var sample = SampleReader.Read("whois.ja.net", "gov.uk", "not_found.txt");
+            var sample = SampleReader.Read("whois.ja.net", "gov.uk", "not-found", "not_found.txt");
             var response = parser.Parse("whois.ja.net", sample);
 
             Assert.True(sample.Length > 0);
             Assert.Equal(WhoisStatus.NotFound, response.Status);
 
             Assert.Equal(0, response.ParsingErrors);
-            Assert.Equal("whois.ja.net/NotFound", response.TemplateName);
+            Assert.Equal("whois.ja.net/not-found/01", response.TemplateName);
 
             Assert.Equal("u34jedzcq.gov.uk", response.DomainName.ToString());
 
@@ -34,14 +34,14 @@ namespace Whois.Parsing.Whois.Ja.Net.GovUk
         [Fact]
         public void Test_found()
         {
-            var sample = SampleReader.Read("whois.ja.net", "gov.uk", "found.txt");
+            var sample = SampleReader.Read("whois.ja.net", "gov.uk", "found", "found.txt");
             var response = parser.Parse("whois.ja.net", sample);
 
             Assert.True(sample.Length > 0);
             Assert.Equal(WhoisStatus.Found, response.Status);
 
             Assert.Equal(0, response.ParsingErrors);
-            Assert.Equal("whois.ja.net/Found", response.TemplateName);
+            Assert.Equal("whois.ja.net/found/01", response.TemplateName);
 
             Assert.Equal("direct.gov.uk", response.DomainName.ToString());
 

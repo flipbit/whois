@@ -17,14 +17,14 @@ namespace Whois.Parsing.Whois.Jprs.Jp.Jp
         [Fact]
         public void Test_suspended()
         {
-            var sample = SampleReader.Read("whois.jprs.jp", "jp", "suspended.txt");
+            var sample = SampleReader.Read("whois.jprs.jp", "jp", "suspended", "suspended.txt");
             var response = parser.Parse("whois.jprs.jp", sample);
 
             Assert.True(sample.Length > 0);
             Assert.Equal(WhoisStatus.Suspended, response.Status);
 
             Assert.Equal(0, response.ParsingErrors);
-            Assert.Equal("whois.jprs.jp/Found02", response.TemplateName);
+            Assert.Equal("whois.jprs.jp/found/02", response.TemplateName);
 
             Assert.Equal("veganwiz.jp", response.DomainName.ToString());
 
@@ -42,14 +42,14 @@ namespace Whois.Parsing.Whois.Jprs.Jp.Jp
         [Fact]
         public void Test_other_status_to_be_suspended()
         {
-            var sample = SampleReader.Read("whois.jprs.jp", "jp", "other_status_to_be_suspended.txt");
+            var sample = SampleReader.Read("whois.jprs.jp", "jp", "found", "other_status_to_be_suspended.txt");
             var response = parser.Parse("whois.jprs.jp", sample);
 
             Assert.True(sample.Length > 0);
             Assert.Equal(WhoisStatus.Suspended, response.Status);
 
             Assert.Equal(0, response.ParsingErrors);
-            Assert.Equal("whois.jprs.jp/Found02", response.TemplateName);
+            Assert.Equal("whois.jprs.jp/found/02", response.TemplateName);
 
             Assert.Equal("flirtbox.jp", response.DomainName.ToString());
 
@@ -87,14 +87,14 @@ namespace Whois.Parsing.Whois.Jprs.Jp.Jp
         [Fact]
         public void Test_found()
         {
-            var sample = SampleReader.Read("whois.jprs.jp", "jp", "found.txt");
+            var sample = SampleReader.Read("whois.jprs.jp", "jp", "found", "found.txt");
             var response = parser.Parse("whois.jprs.jp", sample);
 
             Assert.True(sample.Length > 0);
             Assert.Equal(WhoisStatus.Found, response.Status);
 
             Assert.Equal(0, response.ParsingErrors);
-            Assert.Equal("whois.jprs.jp/Found02", response.TemplateName);
+            Assert.Equal("whois.jprs.jp/found/02", response.TemplateName);
 
             Assert.Equal("fashionwatch.jp", response.DomainName.ToString());
 
@@ -134,14 +134,14 @@ namespace Whois.Parsing.Whois.Jprs.Jp.Jp
         [Fact]
         public void Test_not_found()
         {
-            var sample = SampleReader.Read("whois.jprs.jp", "jp", "not_found.txt");
+            var sample = SampleReader.Read("whois.jprs.jp", "jp", "not-found", "not_found.txt");
             var response = parser.Parse("whois.jprs.jp", sample);
 
             Assert.True(sample.Length > 0);
             Assert.Equal(WhoisStatus.NotFound, response.Status);
 
             Assert.Equal(0, response.ParsingErrors);
-            Assert.Equal("whois.jprs.jp/NotFound", response.TemplateName);
+            Assert.Equal("whois.jprs.jp/not-found/01", response.TemplateName);
 
             Assert.Equal(1, response.FieldsParsed);
         }
@@ -149,14 +149,14 @@ namespace Whois.Parsing.Whois.Jprs.Jp.Jp
         [Fact]
         public void Test_found_status_registered()
         {
-            var sample = SampleReader.Read("whois.jprs.jp", "jp", "found_status_registered.txt");
+            var sample = SampleReader.Read("whois.jprs.jp", "jp", "found", "found_status_registered.txt");
             var response = parser.Parse("whois.jprs.jp", sample);
 
             Assert.True(sample.Length > 0);
             Assert.Equal(WhoisStatus.Found, response.Status);
 
             Assert.Equal(0, response.ParsingErrors);
-            Assert.Equal("whois.jprs.jp/Found02", response.TemplateName);
+            Assert.Equal("whois.jprs.jp/found/02", response.TemplateName);
 
             Assert.Equal("google.jp", response.DomainName.ToString());
 
@@ -199,14 +199,14 @@ namespace Whois.Parsing.Whois.Jprs.Jp.Jp
         [Fact]
         public void Test_reserved()
         {
-            var sample = SampleReader.Read("whois.jprs.jp", "jp", "reserved.txt");
+            var sample = SampleReader.Read("whois.jprs.jp", "jp", "reserved", "reserved.txt");
             var response = parser.Parse("whois.jprs.jp", sample);
 
             Assert.True(sample.Length > 0);
             Assert.Equal(WhoisStatus.Reserved, response.Status);
 
             Assert.Equal(0, response.ParsingErrors);
-            Assert.Equal("whois.jprs.jp/Found02", response.TemplateName);
+            Assert.Equal("whois.jprs.jp/found/02", response.TemplateName);
 
             Assert.Equal("example.jp", response.DomainName.ToString());
 
@@ -222,7 +222,7 @@ namespace Whois.Parsing.Whois.Jprs.Jp.Jp
         [Fact]
         public void Test_found_ameblo_jp()
         {
-            var sample = SampleReader.Read("whois.jprs.jp", "jp", "ameblo.jp.txt");
+            var sample = SampleReader.Read("whois.jprs.jp", "jp", "found", "ameblo.jp.txt");
             
             var response = parser.Parse("whois.jprs.jp", sample);
 
@@ -230,7 +230,7 @@ namespace Whois.Parsing.Whois.Jprs.Jp.Jp
             Assert.Equal(WhoisStatus.Found, response.Status);
 
             Assert.Equal(0, response.ParsingErrors);
-            Assert.Equal("whois.jprs.jp/Found02", response.TemplateName);
+            Assert.Equal("whois.jprs.jp/found/02", response.TemplateName);
 
             Assert.Equal("ameblo.jp", response.DomainName.ToString());
 

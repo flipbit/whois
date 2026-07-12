@@ -17,7 +17,7 @@ namespace Whois.Parsing.Whois.Afilias.Grs.Info.Bz
         [Fact]
         public void Test_not_found()
         {
-            var sample = SampleReader.Read("whois.afilias-grs.info", "bz", "not_found.txt");
+            var sample = SampleReader.Read("whois.afilias-grs.info", "bz", "not-found", "not_found.txt");
             var response = parser.Parse("whois.afilias-grs.info", sample);
 
             Assert.True(sample.Length > 0);
@@ -27,7 +27,7 @@ namespace Whois.Parsing.Whois.Afilias.Grs.Info.Bz
         [Fact]
         public void Test_found()
         {
-            var sample = SampleReader.Read("whois.afilias-grs.info", "bz", "found.txt");
+            var sample = SampleReader.Read("whois.afilias-grs.info", "bz", "found", "found.txt");
             var response = parser.Parse("whois.afilias-grs.info", sample);
 
             Assert.True(sample.Length > 0);

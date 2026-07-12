@@ -17,7 +17,7 @@ namespace Whois.Parsing.Whois.Dotname.Co.Kr.Com
         [Fact]
         public void Test_found()
         {
-            var sample = SampleReader.Read("whois.dotname.co.kr", "com", "found.txt");
+            var sample = SampleReader.Read("whois.dotname.co.kr", "com", "found", "found.txt");
             
             var response = parser.Parse("whois.dotname.co.kr", sample);
 
@@ -26,7 +26,7 @@ namespace Whois.Parsing.Whois.Dotname.Co.Kr.Com
 
             AssertWriter.Write(response);
             Assert.Equal(0, response.ParsingErrors);
-            Assert.Equal("generic/tld/Found02", response.TemplateName);
+            Assert.Equal("generic/tld/found/02", response.TemplateName);
 
             Assert.Equal("ggemtv.com", response.DomainName.ToString());
             Assert.Equal("2282446647_DOMAIN_COM-VRSN", response.RegistryDomainId);

@@ -17,14 +17,14 @@ namespace Whois.Parsing.Whois.Nic.Ly.Ly
         [Fact]
         public void Test_not_found()
         {
-            var sample = SampleReader.Read("whois.nic.ly", "ly", "not_found.txt");
+            var sample = SampleReader.Read("whois.nic.ly", "ly", "not-found", "not_found.txt");
             var response = parser.Parse("whois.nic.ly", sample);
 
             Assert.True(sample.Length > 0);
             Assert.Equal(WhoisStatus.NotFound, response.Status);
 
             Assert.Equal(0, response.ParsingErrors);
-            Assert.Equal("whois.nic.ly/ly/NotFound", response.TemplateName);
+            Assert.Equal("whois.nic.ly/ly/not-found/01", response.TemplateName);
 
             Assert.Equal(1, response.FieldsParsed);
         }
@@ -32,14 +32,14 @@ namespace Whois.Parsing.Whois.Nic.Ly.Ly
         [Fact]
         public void Test_found()
         {
-            var sample = SampleReader.Read("whois.nic.ly", "ly", "found.txt");
+            var sample = SampleReader.Read("whois.nic.ly", "ly", "found", "found.txt");
             var response = parser.Parse("whois.nic.ly", sample);
 
             Assert.True(sample.Length > 0);
             Assert.Equal(WhoisStatus.Found, response.Status);
 
             Assert.Equal(0, response.ParsingErrors);
-            Assert.Equal("whois.nic.ly/ly/Found", response.TemplateName);
+            Assert.Equal("whois.nic.ly/ly/found/01", response.TemplateName);
 
 
             Assert.Equal(new DateTime(2009, 08, 07, 22, 52, 02, 000, DateTimeKind.Utc), response.Updated);

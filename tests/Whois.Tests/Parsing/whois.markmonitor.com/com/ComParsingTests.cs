@@ -17,14 +17,14 @@ namespace Whois.Parsing.Whois.Markmonitor.Com.Com
         [Fact]
         public void Test_found()
         {
-            var sample = SampleReader.Read("whois.markmonitor.com", "com", "found.txt");
+            var sample = SampleReader.Read("whois.markmonitor.com", "com", "found", "found.txt");
             var response = parser.Parse("whois.markmonitor.com", sample);
 
             Assert.True(sample.Length > 0);
             Assert.Equal(WhoisStatus.Found, response.Status);
 
             Assert.Equal(0, response.ParsingErrors);
-            Assert.Equal("generic/tld/Found001", response.TemplateName);
+            Assert.Equal("generic/tld/found/01", response.TemplateName);
 
             Assert.Equal("google.com", response.DomainName.ToString());
             Assert.Equal("2138514_DOMAIN_COM-VRSN", response.RegistryDomainId);

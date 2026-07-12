@@ -17,14 +17,14 @@ namespace Whois.Parsing.Whois.Cira.Ca.Ca
         [Fact]
         public void Test_found()
         {
-            var sample = SampleReader.Read("whois.cira.ca", "ca", "found.txt");
+            var sample = SampleReader.Read("whois.cira.ca", "ca", "found", "found.txt");
             var response = parser.Parse("whois.cira.ca", sample);
 
             Assert.True(sample.Length > 0);
             Assert.Equal(WhoisStatus.Found, response.Status);
 
             Assert.Equal(0, response.ParsingErrors);
-            Assert.Equal("whois.cira.ca/ca/Found", response.TemplateName);
+            Assert.Equal("whois.cira.ca/ca/found/01", response.TemplateName);
 
             Assert.Equal("glu.ca", response.DomainName.ToString());
 
@@ -78,14 +78,14 @@ namespace Whois.Parsing.Whois.Cira.Ca.Ca
         [Fact]
         public void Test_not_assigned()
         {
-            var sample = SampleReader.Read("whois.cira.ca", "ca", "not_assigned.txt");
+            var sample = SampleReader.Read("whois.cira.ca", "ca", "not-assigned", "not_assigned.txt");
             var response = parser.Parse("whois.cira.ca", sample);
 
             Assert.True(sample.Length > 0);
             Assert.Equal(WhoisStatus.NotAssigned, response.Status);
 
             Assert.Equal(0, response.ParsingErrors);
-            Assert.Equal("whois.cira.ca/ca/Found", response.TemplateName);
+            Assert.Equal("whois.cira.ca/ca/found/01", response.TemplateName);
 
             Assert.Equal("abbylane.pe.ca", response.DomainName.ToString());
 
@@ -146,14 +146,14 @@ namespace Whois.Parsing.Whois.Cira.Ca.Ca
         [Fact]
         public void Test_not_found()
         {
-            var sample = SampleReader.Read("whois.cira.ca", "ca", "not_found.txt");
+            var sample = SampleReader.Read("whois.cira.ca", "ca", "not-found", "not_found.txt");
             var response = parser.Parse("whois.cira.ca", sample);
 
             Assert.True(sample.Length > 0);
             Assert.Equal(WhoisStatus.NotFound, response.Status);
 
             Assert.Equal(0, response.ParsingErrors);
-            Assert.Equal("whois.cira.ca/ca/NotFound", response.TemplateName);
+            Assert.Equal("whois.cira.ca/ca/not-found/01", response.TemplateName);
 
             Assert.Equal("u34jedzcq.ca", response.DomainName.ToString());
 
@@ -167,14 +167,14 @@ namespace Whois.Parsing.Whois.Cira.Ca.Ca
         [Fact]
         public void Test_pending_delete()
         {
-            var sample = SampleReader.Read("whois.cira.ca", "ca", "pending_delete.txt");
+            var sample = SampleReader.Read("whois.cira.ca", "ca", "pending-delete", "pending_delete.txt");
             var response = parser.Parse("whois.cira.ca", sample);
 
             Assert.True(sample.Length > 0);
             Assert.Equal(WhoisStatus.PendingDelete, response.Status);
 
             Assert.Equal(0, response.ParsingErrors);
-            Assert.Equal("whois.cira.ca/ca/Found", response.TemplateName);
+            Assert.Equal("whois.cira.ca/ca/found/01", response.TemplateName);
 
             Assert.Equal("sagespa.ca", response.DomainName.ToString());
 
@@ -201,14 +201,14 @@ namespace Whois.Parsing.Whois.Cira.Ca.Ca
         [Fact]
         public void Test_redemption()
         {
-            var sample = SampleReader.Read("whois.cira.ca", "ca", "redemption.txt");
+            var sample = SampleReader.Read("whois.cira.ca", "ca", "redemption", "redemption.txt");
             var response = parser.Parse("whois.cira.ca", sample);
 
             Assert.True(sample.Length > 0);
             Assert.Equal(WhoisStatus.Redemption, response.Status);
 
             Assert.Equal(0, response.ParsingErrors);
-            Assert.Equal("whois.cira.ca/ca/Found", response.TemplateName);
+            Assert.Equal("whois.cira.ca/ca/found/01", response.TemplateName);
 
             Assert.Equal("glu.ca", response.DomainName.ToString());
 
@@ -262,14 +262,14 @@ namespace Whois.Parsing.Whois.Cira.Ca.Ca
         [Fact]
         public void Test_found_status_registered_2()
         {
-            var sample = SampleReader.Read("whois.cira.ca", "ca", "found_status_registered_2.txt");
+            var sample = SampleReader.Read("whois.cira.ca", "ca", "found", "found_status_registered_2.txt");
             var response = parser.Parse("whois.cira.ca", sample);
 
             Assert.True(sample.Length > 0);
             Assert.Equal(WhoisStatus.Found, response.Status);
 
             Assert.Equal(0, response.ParsingErrors);
-            Assert.Equal("whois.cira.ca/ca/Found", response.TemplateName);
+            Assert.Equal("whois.cira.ca/ca/found/01", response.TemplateName);
 
             Assert.Equal("google.ca", response.DomainName.ToString());
 
@@ -325,14 +325,14 @@ namespace Whois.Parsing.Whois.Cira.Ca.Ca
         [Fact]
         public void Test_to_be_released()
         {
-            var sample = SampleReader.Read("whois.cira.ca", "ca", "to_be_released.txt");
+            var sample = SampleReader.Read("whois.cira.ca", "ca", "to-be-released", "to_be_released.txt");
             var response = parser.Parse("whois.cira.ca", sample);
 
             Assert.True(sample.Length > 0);
             Assert.Equal(WhoisStatus.ToBeReleased, response.Status);
 
             Assert.Equal(0, response.ParsingErrors);
-            Assert.Equal("whois.cira.ca/ca/ToBeReleased", response.TemplateName);
+            Assert.Equal("whois.cira.ca/ca/to-be-released/01", response.TemplateName);
 
             Assert.Equal("thomascraft.ca", response.DomainName.ToString());
 
@@ -347,14 +347,14 @@ namespace Whois.Parsing.Whois.Cira.Ca.Ca
         [Fact]
         public void Test_unavailable()
         {
-            var sample = SampleReader.Read("whois.cira.ca", "ca", "unavailable.txt");
+            var sample = SampleReader.Read("whois.cira.ca", "ca", "unavailable", "unavailable.txt");
             var response = parser.Parse("whois.cira.ca", sample);
 
             Assert.True(sample.Length > 0);
             Assert.Equal(WhoisStatus.Unavailable, response.Status);
 
             Assert.Equal(0, response.ParsingErrors);
-            Assert.Equal("whois.cira.ca/ca/Unavailable", response.TemplateName);
+            Assert.Equal("whois.cira.ca/ca/unavailable/01", response.TemplateName);
 
             Assert.Equal("mediom.ca", response.DomainName.ToString());
 
@@ -364,14 +364,14 @@ namespace Whois.Parsing.Whois.Cira.Ca.Ca
         [Fact]
         public void Test_not_found_status_available()
         {
-            var sample = SampleReader.Read("whois.cira.ca", "ca", "not_found_status_available.txt");
+            var sample = SampleReader.Read("whois.cira.ca", "ca", "not-found", "not_found_status_available.txt");
             var response = parser.Parse("whois.cira.ca", sample);
 
             Assert.True(sample.Length > 0);
             Assert.Equal(WhoisStatus.NotFound, response.Status);
 
             Assert.Equal(0, response.ParsingErrors);
-            Assert.Equal("whois.cira.ca/ca/NotFound", response.TemplateName);
+            Assert.Equal("whois.cira.ca/ca/not-found/01", response.TemplateName);
 
             Assert.Equal("u34jedzcq.ca", response.DomainName.ToString());
 
@@ -385,14 +385,14 @@ namespace Whois.Parsing.Whois.Cira.Ca.Ca
         [Fact]
         public void Test_invalid()
         {
-            var sample = SampleReader.Read("whois.cira.ca", "ca", "invalid.txt");
+            var sample = SampleReader.Read("whois.cira.ca", "ca", "invalid", "invalid.txt");
             var response = parser.Parse("whois.cira.ca", sample);
 
             Assert.True(sample.Length > 0);
             Assert.Equal(WhoisStatus.Unavailable, response.Status);
 
             Assert.Equal(0, response.ParsingErrors);
-            Assert.Equal("whois.cira.ca/ca/Unavailable", response.TemplateName);
+            Assert.Equal("whois.cira.ca/ca/unavailable/01", response.TemplateName);
 
             Assert.Equal("mediom.ca", response.DomainName.ToString());
 
@@ -402,14 +402,14 @@ namespace Whois.Parsing.Whois.Cira.Ca.Ca
         [Fact]
         public void Test_found_status_registered()
         {
-            var sample = SampleReader.Read("whois.cira.ca", "ca", "found_status_registered.txt");
+            var sample = SampleReader.Read("whois.cira.ca", "ca", "found", "found_status_registered.txt");
             var response = parser.Parse("whois.cira.ca", sample);
 
             Assert.True(sample.Length > 0);
             Assert.Equal(WhoisStatus.Found, response.Status);
 
             Assert.Equal(0, response.ParsingErrors);
-            Assert.Equal("whois.cira.ca/ca/Found", response.TemplateName);
+            Assert.Equal("whois.cira.ca/ca/found/01", response.TemplateName);
 
             Assert.Equal("google.ca", response.DomainName.ToString());
 

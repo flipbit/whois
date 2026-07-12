@@ -17,14 +17,14 @@ namespace Whois.Parsing.Whois.Register.Si.Si
         [Fact]
         public void Test_not_found()
         {
-            var sample = SampleReader.Read("whois.register.si", "si", "not_found.txt");
+            var sample = SampleReader.Read("whois.register.si", "si", "not-found", "not_found.txt");
             var response = parser.Parse("whois.register.si", sample);
 
             Assert.True(sample.Length > 0);
             Assert.Equal(WhoisStatus.NotFound, response.Status);
 
             Assert.Equal(0, response.ParsingErrors);
-            Assert.Equal("whois.register.si/si/NotFound", response.TemplateName);
+            Assert.Equal("whois.register.si/si/not-found/01", response.TemplateName);
 
             Assert.Equal(1, response.FieldsParsed);
         }
@@ -32,7 +32,7 @@ namespace Whois.Parsing.Whois.Register.Si.Si
         [Fact]
         public void Test_found()
         {
-            var sample = SampleReader.Read("whois.register.si", "si", "found.txt");
+            var sample = SampleReader.Read("whois.register.si", "si", "found", "found.txt");
             var response = parser.Parse("whois.register.si", sample);
 
             Assert.True(sample.Length > 0);
@@ -40,7 +40,7 @@ namespace Whois.Parsing.Whois.Register.Si.Si
 
             AssertWriter.Write(response);
             Assert.Equal(0, response.ParsingErrors);
-            Assert.Equal("whois.register.si/si/Found", response.TemplateName);
+            Assert.Equal("whois.register.si/si/found/01", response.TemplateName);
 
             Assert.Equal("google.si", response.DomainName.ToString());
 

@@ -17,14 +17,14 @@ namespace Whois.Parsing.Whois.Bnnic.Bn.Bn
         [Fact]
         public void Test_not_found()
         {
-            var sample = SampleReader.Read("whois.bnnic.bn", "bn", "not_found.txt");
+            var sample = SampleReader.Read("whois.bnnic.bn", "bn", "not-found", "not_found.txt");
             var response = parser.Parse("whois.bnnic.bn", sample);
 
             Assert.True(sample.Length > 0);
             Assert.Equal(WhoisStatus.NotFound, response.Status);
 
             Assert.Equal(0, response.ParsingErrors);
-            Assert.Equal("generic/tld/NotFound002", response.TemplateName);
+            Assert.Equal("generic/tld/not-found/02", response.TemplateName);
 
             Assert.Equal(1, response.FieldsParsed);
         }
@@ -32,7 +32,7 @@ namespace Whois.Parsing.Whois.Bnnic.Bn.Bn
         [Fact]
         public void Test_found()
         {
-            var sample = SampleReader.Read("whois.bnnic.bn", "bn", "found.txt");
+            var sample = SampleReader.Read("whois.bnnic.bn", "bn", "found", "found.txt");
             var response = parser.Parse("whois.bnnic.bn", sample);
 
             Assert.True(sample.Length > 0);
@@ -40,7 +40,7 @@ namespace Whois.Parsing.Whois.Bnnic.Bn.Bn
 
             Assert.Equal(11, response.FieldsParsed);
             Assert.Equal(0, response.ParsingErrors);
-            Assert.Equal("whois.bnnic.bn/bn/Found", response.TemplateName);
+            Assert.Equal("whois.bnnic.bn/bn/found/01", response.TemplateName);
 
             Assert.Equal("telbru.com.bn", response.DomainName.ToString());
 

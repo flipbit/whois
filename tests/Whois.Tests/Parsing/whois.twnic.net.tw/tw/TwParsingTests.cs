@@ -17,14 +17,14 @@ namespace Whois.Parsing.Whois.Twnic.Net.Tw.Tw
         [Fact]
         public void Test_not_found()
         {
-            var sample = SampleReader.Read("whois.twnic.net.tw", "tw", "not_found.txt");
+            var sample = SampleReader.Read("whois.twnic.net.tw", "tw", "not-found", "not_found.txt");
             var response = parser.Parse("whois.twnic.net.tw", sample);
 
             Assert.True(sample.Length > 0);
             Assert.Equal(WhoisStatus.NotFound, response.Status);
 
             Assert.Equal(0, response.ParsingErrors);
-            Assert.Equal("whois.twnic.net.tw/tw/NotFound", response.TemplateName);
+            Assert.Equal("whois.twnic.net.tw/tw/not-found/01", response.TemplateName);
 
             Assert.Equal(1, response.FieldsParsed);
         }
@@ -32,14 +32,14 @@ namespace Whois.Parsing.Whois.Twnic.Net.Tw.Tw
         [Fact]
         public void Test_found()
         {
-            var sample = SampleReader.Read("whois.twnic.net.tw", "tw", "found.txt");
+            var sample = SampleReader.Read("whois.twnic.net.tw", "tw", "found", "found.txt");
             var response = parser.Parse("whois.twnic.net.tw", sample);
 
             Assert.True(sample.Length > 0);
             Assert.Equal(WhoisStatus.Found, response.Status);
 
             Assert.Equal(0, response.ParsingErrors);
-            Assert.Equal("whois.twnic.net.tw/tw/Found", response.TemplateName);
+            Assert.Equal("whois.twnic.net.tw/tw/found/01", response.TemplateName);
 
             Assert.Equal("google.com.tw", response.DomainName.ToString());
 

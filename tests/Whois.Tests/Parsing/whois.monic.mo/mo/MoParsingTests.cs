@@ -16,14 +16,14 @@ namespace Whois.Parsing.Whois.Monic.Mo.Mo
         [Fact]
         public void Test_not_found()
         {
-            var sample = SampleReader.Read("whois.monic.mo", "mo", "not_found.txt");
+            var sample = SampleReader.Read("whois.monic.mo", "mo", "not-found", "not_found.txt");
             var response = parser.Parse("whois.monic.mo", sample);
 
             Assert.True(sample.Length > 0);
             Assert.Equal(WhoisStatus.NotFound, response.Status);
 
             Assert.Equal(0, response.ParsingErrors);
-            Assert.Equal("whois.monic.mo/mo/NotFound", response.TemplateName);
+            Assert.Equal("whois.monic.mo/mo/not-found/01", response.TemplateName);
 
             Assert.Equal("u34jedzcq.mo", response.DomainName.ToString());
 
@@ -33,14 +33,14 @@ namespace Whois.Parsing.Whois.Monic.Mo.Mo
         [Fact]
         public void Test_found()
         {
-            var sample = SampleReader.Read("whois.monic.mo", "mo", "found.txt");
+            var sample = SampleReader.Read("whois.monic.mo", "mo", "found", "found.txt");
             var response = parser.Parse("whois.monic.mo", sample);
 
             Assert.True(sample.Length > 0);
             Assert.Equal(WhoisStatus.Found, response.Status);
 
             Assert.Equal(0, response.ParsingErrors);
-            Assert.Equal("whois.monic.mo/mo/Found", response.TemplateName);
+            Assert.Equal("whois.monic.mo/mo/found/01", response.TemplateName);
 
             Assert.Equal("umac.mo", response.DomainName.ToString());
 

@@ -17,27 +17,27 @@ namespace Whois.Parsing.Whois.Afilias.Grs.Info.Vc
         [Fact]
         public void Test_not_found()
         {
-            var sample = SampleReader.Read("whois.afilias-grs.info", "vc", "not_found.txt");
+            var sample = SampleReader.Read("whois.afilias-grs.info", "vc", "not-found", "not_found.txt");
             var response = parser.Parse("whois.afilias-grs.info", sample);
 
             Assert.True(sample.Length > 0);
             Assert.Equal(WhoisStatus.NotFound, response.Status);
 
             Assert.Equal(1, response.FieldsParsed);
-            Assert.Equal("generic/tld/NotFound001", response.TemplateName);
+            Assert.Equal("generic/tld/not-found/01", response.TemplateName);
         }
 
         [Fact]
         public void Test_found()
         {
-            var sample = SampleReader.Read("whois.afilias-grs.info", "vc", "found.txt");
+            var sample = SampleReader.Read("whois.afilias-grs.info", "vc", "found", "found.txt");
             var response = parser.Parse("whois.afilias-grs.info", sample);
 
             Assert.True(sample.Length > 0);
             Assert.Equal(WhoisStatus.Found, response.Status);
 
             Assert.Equal(0, response.ParsingErrors);
-            Assert.Equal("generic/tld/Found001", response.TemplateName);
+            Assert.Equal("generic/tld/found/01", response.TemplateName);
 
             Assert.Equal("google.vc", response.DomainName.ToString());
             Assert.Equal("D133753-LRCC", response.RegistryDomainId);

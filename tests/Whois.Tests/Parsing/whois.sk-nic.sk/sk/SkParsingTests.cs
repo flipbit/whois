@@ -17,14 +17,14 @@ namespace Whois.Parsing.Whois.Sk.Nic.Sk.Sk
         [Fact]
         public void Test_other_status_dom_dakt()
         {
-            var sample = SampleReader.Read("whois.sk-nic.sk", "sk", "other_status_dom_dakt.txt");
+            var sample = SampleReader.Read("whois.sk-nic.sk", "sk", "found", "other_status_dom_dakt.txt");
             var response = parser.Parse("whois.sk-nic.sk", sample);
 
             Assert.True(sample.Length > 0);
             Assert.Equal(WhoisStatus.Other, response.Status);
 
             Assert.Equal(0, response.ParsingErrors);
-            Assert.Equal("whois.sk-nic.sk/sk/Found", response.TemplateName);
+            Assert.Equal("whois.sk-nic.sk/sk/found/01", response.TemplateName);
 
             Assert.Equal("plac.sk", response.DomainName.ToString());
 
@@ -68,14 +68,14 @@ namespace Whois.Parsing.Whois.Sk.Nic.Sk.Sk
         [Fact]
         public void Test_other_status_dom_exp()
         {
-            var sample = SampleReader.Read("whois.sk-nic.sk", "sk", "other_status_dom_exp.txt");
+            var sample = SampleReader.Read("whois.sk-nic.sk", "sk", "found", "other_status_dom_exp.txt");
             var response = parser.Parse("whois.sk-nic.sk", sample);
 
             Assert.True(sample.Length > 0);
             Assert.Equal(WhoisStatus.Expired, response.Status);
 
             Assert.Equal(0, response.ParsingErrors);
-            Assert.Equal("whois.sk-nic.sk/sk/Found", response.TemplateName);
+            Assert.Equal("whois.sk-nic.sk/sk/found/01", response.TemplateName);
 
             Assert.Equal("kuphry.sk", response.DomainName.ToString());
 
@@ -121,14 +121,14 @@ namespace Whois.Parsing.Whois.Sk.Nic.Sk.Sk
         [Fact]
         public void Test_other_status_dom_held()
         {
-            var sample = SampleReader.Read("whois.sk-nic.sk", "sk", "other_status_dom_held.txt");
+            var sample = SampleReader.Read("whois.sk-nic.sk", "sk", "found", "other_status_dom_held.txt");
             var response = parser.Parse("whois.sk-nic.sk", sample);
 
             Assert.True(sample.Length > 0);
             Assert.Equal(WhoisStatus.Other, response.Status);
 
             Assert.Equal(0, response.ParsingErrors);
-            Assert.Equal("whois.sk-nic.sk/sk/Found", response.TemplateName);
+            Assert.Equal("whois.sk-nic.sk/sk/found/01", response.TemplateName);
 
             Assert.Equal("plac.sk", response.DomainName.ToString());
 
@@ -156,14 +156,14 @@ namespace Whois.Parsing.Whois.Sk.Nic.Sk.Sk
         [Fact]
         public void Test_other_status_dom_lnot()
         {
-            var sample = SampleReader.Read("whois.sk-nic.sk", "sk", "other_status_dom_lnot.txt");
+            var sample = SampleReader.Read("whois.sk-nic.sk", "sk", "found", "other_status_dom_lnot.txt");
             var response = parser.Parse("whois.sk-nic.sk", sample);
 
             Assert.True(sample.Length > 0);
             Assert.Equal(WhoisStatus.Other, response.Status);
 
             Assert.Equal(0, response.ParsingErrors);
-            Assert.Equal("whois.sk-nic.sk/sk/Found", response.TemplateName);
+            Assert.Equal("whois.sk-nic.sk/sk/found/01", response.TemplateName);
 
             Assert.Equal("dobramasaz.sk", response.DomainName.ToString());
 
@@ -208,14 +208,14 @@ namespace Whois.Parsing.Whois.Sk.Nic.Sk.Sk
         [Fact]
         public void Test_other_status_dom_ok()
         {
-            var sample = SampleReader.Read("whois.sk-nic.sk", "sk", "other_status_dom_ok.txt");
+            var sample = SampleReader.Read("whois.sk-nic.sk", "sk", "found", "other_status_dom_ok.txt");
             var response = parser.Parse("whois.sk-nic.sk", sample);
 
             Assert.True(sample.Length > 0);
             Assert.Equal(WhoisStatus.Found, response.Status);
 
             Assert.Equal(0, response.ParsingErrors);
-            Assert.Equal("whois.sk-nic.sk/sk/Found", response.TemplateName);
+            Assert.Equal("whois.sk-nic.sk/sk/found/01", response.TemplateName);
 
             Assert.Equal("google.sk", response.DomainName.ToString());
 
@@ -261,14 +261,14 @@ namespace Whois.Parsing.Whois.Sk.Nic.Sk.Sk
         [Fact]
         public void Test_other_status_dom_ta()
         {
-            var sample = SampleReader.Read("whois.sk-nic.sk", "sk", "other_status_dom_ta.txt");
+            var sample = SampleReader.Read("whois.sk-nic.sk", "sk", "found", "other_status_dom_ta.txt");
             var response = parser.Parse("whois.sk-nic.sk", sample);
 
             Assert.True(sample.Length > 0);
             Assert.Equal(WhoisStatus.Other, response.Status);
 
             Assert.Equal(0, response.ParsingErrors);
-            Assert.Equal("whois.sk-nic.sk/sk/Found", response.TemplateName);
+            Assert.Equal("whois.sk-nic.sk/sk/found/01", response.TemplateName);
 
             Assert.Equal("plac.sk", response.DomainName.ToString());
 
@@ -312,14 +312,14 @@ namespace Whois.Parsing.Whois.Sk.Nic.Sk.Sk
         [Fact]
         public void Test_other_status_dom_warn()
         {
-            var sample = SampleReader.Read("whois.sk-nic.sk", "sk", "other_status_dom_warn.txt");
+            var sample = SampleReader.Read("whois.sk-nic.sk", "sk", "found", "other_status_dom_warn.txt");
             var response = parser.Parse("whois.sk-nic.sk", sample);
 
             Assert.True(sample.Length > 0);
             Assert.Equal(WhoisStatus.Other, response.Status);
 
             Assert.Equal(0, response.ParsingErrors);
-            Assert.Equal("whois.sk-nic.sk/sk/Found", response.TemplateName);
+            Assert.Equal("whois.sk-nic.sk/sk/found/01", response.TemplateName);
 
             Assert.Equal("e-biznis.sk", response.DomainName.ToString());
 
@@ -362,14 +362,14 @@ namespace Whois.Parsing.Whois.Sk.Nic.Sk.Sk
         [Fact]
         public void Test_not_found()
         {
-            var sample = SampleReader.Read("whois.sk-nic.sk", "sk", "not_found.txt");
+            var sample = SampleReader.Read("whois.sk-nic.sk", "sk", "not-found", "not_found.txt");
             var response = parser.Parse("whois.sk-nic.sk", sample);
 
             Assert.True(sample.Length > 0);
             Assert.Equal(WhoisStatus.NotFound, response.Status);
 
             Assert.Equal(0, response.ParsingErrors);
-            Assert.Equal("whois.sk-nic.sk/sk/NotFound", response.TemplateName);
+            Assert.Equal("whois.sk-nic.sk/sk/not-found/01", response.TemplateName);
 
             Assert.Equal(1, response.FieldsParsed);
         }
@@ -377,14 +377,14 @@ namespace Whois.Parsing.Whois.Sk.Nic.Sk.Sk
         [Fact]
         public void Test_found()
         {
-            var sample = SampleReader.Read("whois.sk-nic.sk", "sk", "found.txt");
+            var sample = SampleReader.Read("whois.sk-nic.sk", "sk", "found", "found.txt");
             var response = parser.Parse("whois.sk-nic.sk", sample);
 
             Assert.True(sample.Length > 0);
             Assert.Equal(WhoisStatus.Found, response.Status);
 
             Assert.Equal(0, response.ParsingErrors);
-            Assert.Equal("whois.sk-nic.sk/sk/Found", response.TemplateName);
+            Assert.Equal("whois.sk-nic.sk/sk/found/01", response.TemplateName);
 
             Assert.Equal("google.sk", response.DomainName.ToString());
 

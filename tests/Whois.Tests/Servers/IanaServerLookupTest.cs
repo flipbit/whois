@@ -18,7 +18,7 @@ namespace Whois.Servers
         [Fact]
         public async System.Threading.Tasks.Task TestLookupCom()
         {
-            lookup.TcpReader = new FakeTcpReader(reader.Read("whois.iana.org", "tld", "com.txt"));
+            lookup.TcpReader = new FakeTcpReader(reader.Read("whois.iana.org", "tld", "found", "com.txt"));
 
             var response = await lookup.Lookup(new WhoisRequest("test.com"));
 
@@ -96,7 +96,7 @@ namespace Whois.Servers
         [Fact]
         public async System.Threading.Tasks.Task TestLookupBe()
         {
-            lookup.TcpReader = new FakeTcpReader(reader.Read("whois.iana.org", "tld", "be.txt"));
+            lookup.TcpReader = new FakeTcpReader(reader.Read("whois.iana.org", "tld", "found", "be.txt"));
 
             var response = await lookup.Lookup(new WhoisRequest("test.be"));
 
@@ -168,7 +168,7 @@ namespace Whois.Servers
         [Fact]
         public async System.Threading.Tasks.Task TestLookupNotFound()
         {
-            lookup.TcpReader = new FakeTcpReader(reader.Read("whois.iana.org", "tld", "not_assigned.txt"));
+            lookup.TcpReader = new FakeTcpReader(reader.Read("whois.iana.org", "tld", "not-assigned", "not_assigned.txt"));
 
             var response = await lookup.Lookup(new WhoisRequest("test.be"));
 

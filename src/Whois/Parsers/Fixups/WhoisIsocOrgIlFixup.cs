@@ -10,13 +10,13 @@ namespace Whois.Parsers.Fixups
     /// </summary>
     public class WhoisIsocOrgIlFixup : MultipleContactFixup
     {
-        public override bool CanFixup(TokenizeResult<WhoisResponse> result)
+        public override bool CanFixup(TokenizeResult result)
         {
             // Templates that this Fixup can work on
-            return result.Template.Name == "whois.isoc.org.il/il/Found";
+            return result.Template.Name == "whois.isoc.org.il/il/found/01";
         }
 
-        protected override bool TryGetRegistrant(IReadOnlyList<Match> matches, WhoisResponse response, out Contact? contact)
+        protected override bool TryGetRegistrant(IReadOnlyList<TokenMatch> matches, WhoisResponse response, out Contact? contact)
         {
             contact = null;
 
@@ -65,7 +65,7 @@ namespace Whois.Parsers.Fixups
                         break;
 
                     case "Changed":
-                        var dateTime = (DateTime) match.Value;
+                        var dateTime = ((DateTimeOffset) match.Value).UtcDateTime;
                         if (dateTime > response.Updated || !response.Updated.HasValue) response.Updated = dateTime;
                         if (dateTime < response.Registered || !response.Registered.HasValue) response.Registered = dateTime;
                         break;
@@ -75,7 +75,7 @@ namespace Whois.Parsers.Fixups
             return count > 0;
         }
 
-        protected override bool TryGetContact(Contact? input, IReadOnlyList<Match> matches, out Contact? contact)
+        protected override bool TryGetContact(Contact? input, IReadOnlyList<TokenMatch> matches, out Contact? contact)
         {
             contact = null;
 
@@ -129,8 +129,8 @@ namespace Whois.Parsers.Fixups
                         break;
 
                     case "Changed":
-                        var changedDateTime = (DateTime) match.Value;
-                        if (changedDateTime > contact.Created || !contact.Created.HasValue) match.Value = changedDateTime;
+                        var changedDateTime = ((DateTimeOffset) match.Value).UtcDateTime;
+                        if (changedDateTime > contact.Created || !contact.Created.HasValue) contact.Created = changedDateTime;
                         break;
                 }
             }

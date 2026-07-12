@@ -17,14 +17,14 @@ namespace Whois.Parsing.Whois.Iana.Org.Arpa
         [Fact]
         public void Test_not_found()
         {
-            var sample = SampleReader.Read("whois.iana.org", "arpa", "not_found.txt");
+            var sample = SampleReader.Read("whois.iana.org", "arpa", "not-found", "not_found.txt");
             var response = parser.Parse("whois.iana.org", sample);
 
             Assert.True(sample.Length > 0);
             Assert.Equal(WhoisStatus.NotFound, response.Status);
 
             Assert.Equal(0, response.ParsingErrors);
-            Assert.Equal("whois.iana.org/NotFound", response.TemplateName);
+            Assert.Equal("whois.iana.org/not-found/01", response.TemplateName);
 
             Assert.Equal("u34jedzcq.arpa", response.DomainName.ToString());
 
@@ -35,14 +35,14 @@ namespace Whois.Parsing.Whois.Iana.Org.Arpa
         [Fact]
         public void Test_found()
         {
-            var sample = SampleReader.Read("whois.iana.org", "arpa", "found.txt");
+            var sample = SampleReader.Read("whois.iana.org", "arpa", "found", "found.txt");
             var response = parser.Parse("whois.iana.org", sample);
 
             Assert.True(sample.Length > 0);
             Assert.Equal(WhoisStatus.Found, response.Status);
 
             Assert.Equal(0, response.ParsingErrors);
-            Assert.Equal("whois.iana.org/Found02", response.TemplateName);
+            Assert.Equal("whois.iana.org/found/02", response.TemplateName);
 
             Assert.Equal("ip6.arpa", response.DomainName.ToString());
 

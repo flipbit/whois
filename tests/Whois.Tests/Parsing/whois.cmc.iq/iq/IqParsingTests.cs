@@ -17,14 +17,14 @@ namespace Whois.Parsing.Whois.Cmc.Iq.Iq
         [Fact]
         public void Test_not_found()
         {
-            var sample = SampleReader.Read("whois.cmc.iq", "iq", "not_found.txt");
+            var sample = SampleReader.Read("whois.cmc.iq", "iq", "not-found", "not_found.txt");
             var response = parser.Parse("whois.cmc.iq", sample);
 
             Assert.True(sample.Length > 0);
             Assert.Equal(WhoisStatus.NotFound, response.Status);
 
             Assert.Equal(0, response.ParsingErrors);
-            Assert.Equal("whois.cmc.iq/iq/NotFound", response.TemplateName);
+            Assert.Equal("whois.cmc.iq/iq/not-found/01", response.TemplateName);
 
             Assert.Equal("u34jedzcq.iq", response.DomainName.ToString());
 
@@ -38,14 +38,14 @@ namespace Whois.Parsing.Whois.Cmc.Iq.Iq
         [Fact]
         public void Test_found()
         {
-            var sample = SampleReader.Read("whois.cmc.iq", "iq", "found.txt");
+            var sample = SampleReader.Read("whois.cmc.iq", "iq", "found", "found.txt");
             var response = parser.Parse("whois.cmc.iq", sample);
 
             Assert.True(sample.Length > 0);
             Assert.Equal(WhoisStatus.Found, response.Status);
 
             Assert.Equal(0, response.ParsingErrors);
-            Assert.Equal("whois.cmc.iq/iq/Found", response.TemplateName);
+            Assert.Equal("whois.cmc.iq/iq/found/01", response.TemplateName);
 
             Assert.Equal("google.iq", response.DomainName.ToString());
             Assert.Equal("895-CoCCA", response.RegistryDomainId);

@@ -17,14 +17,14 @@ namespace Whois.Parsing.Whois.Cctld.Uz.Uz
         [Fact]
         public void Test_reserved()
         {
-            var sample = SampleReader.Read("whois.cctld.uz", "uz", "reserved.txt");
+            var sample = SampleReader.Read("whois.cctld.uz", "uz", "reserved", "reserved.txt");
             var response = parser.Parse("whois.cctld.uz", sample);
 
             Assert.True(sample.Length > 0);
             Assert.Equal(WhoisStatus.Reserved, response.Status);
 
             Assert.Equal(0, response.ParsingErrors);
-            Assert.Equal("whois.cctld.uz/uz/Reserved", response.TemplateName);
+            Assert.Equal("whois.cctld.uz/uz/reserved/01", response.TemplateName);
 
             Assert.Equal("cctld.uz", response.DomainName.ToString());
 
@@ -109,14 +109,14 @@ namespace Whois.Parsing.Whois.Cctld.Uz.Uz
         [Fact]
         public void Test_not_found()
         {
-            var sample = SampleReader.Read("whois.cctld.uz", "uz", "not_found.txt");
+            var sample = SampleReader.Read("whois.cctld.uz", "uz", "not-found", "not_found.txt");
             var response = parser.Parse("whois.cctld.uz", sample);
 
             Assert.True(sample.Length > 0);
             Assert.Equal(WhoisStatus.NotFound, response.Status);
 
             Assert.Equal(0, response.ParsingErrors);
-            Assert.Equal("whois.cctld.uz/uz/NotFound", response.TemplateName);
+            Assert.Equal("whois.cctld.uz/uz/not-found/01", response.TemplateName);
 
             Assert.Equal("u34jedzcq.uz", response.DomainName.ToString());
 
@@ -127,14 +127,14 @@ namespace Whois.Parsing.Whois.Cctld.Uz.Uz
         [Fact]
         public void Test_found_status_registered()
         {
-            var sample = SampleReader.Read("whois.cctld.uz", "uz", "found_status_registered.txt");
+            var sample = SampleReader.Read("whois.cctld.uz", "uz", "found", "found_status_registered.txt");
             var response = parser.Parse("whois.cctld.uz", sample);
 
             Assert.True(sample.Length > 0);
             Assert.Equal(WhoisStatus.Found, response.Status);
 
             Assert.Equal(0, response.ParsingErrors);
-            Assert.Equal("whois.cctld.uz/uz/Found", response.TemplateName);
+            Assert.Equal("whois.cctld.uz/uz/found/01", response.TemplateName);
 
             Assert.Equal("google.uz", response.DomainName.ToString());
 

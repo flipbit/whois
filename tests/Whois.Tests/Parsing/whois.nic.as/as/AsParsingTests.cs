@@ -17,14 +17,14 @@ namespace Whois.Parsing.Whois.Nic.As.As
         [Fact]
         public void Test_not_found()
         {
-            var sample = SampleReader.Read("whois.nic.as", "as", "not_found.txt");
+            var sample = SampleReader.Read("whois.nic.as", "as", "not-found", "not_found.txt");
             var response = parser.Parse("whois.nic.as", sample);
 
             Assert.True(sample.Length > 0);
             Assert.Equal(WhoisStatus.NotFound, response.Status);
 
             Assert.Equal(0, response.ParsingErrors);
-            Assert.Equal("generic/tld/NotFound001", response.TemplateName);
+            Assert.Equal("generic/tld/not-found/01", response.TemplateName);
 
             Assert.Equal(1, response.FieldsParsed);
         }
@@ -32,14 +32,14 @@ namespace Whois.Parsing.Whois.Nic.As.As
         [Fact]
         public void Test_found()
         {
-            var sample = SampleReader.Read("whois.nic.as", "as", "found.txt");
+            var sample = SampleReader.Read("whois.nic.as", "as", "found", "found.txt");
             var response = parser.Parse("whois.nic.as", sample);
 
             Assert.True(sample.Length > 0);
             Assert.Equal(WhoisStatus.Found, response.Status);
 
             Assert.Equal(0, response.ParsingErrors);
-            Assert.Equal("whois.nic.as/as/Found", response.TemplateName);
+            Assert.Equal("whois.nic.as/as/found/01", response.TemplateName);
 
             Assert.Equal("google.as", response.DomainName.ToString());
 

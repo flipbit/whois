@@ -17,14 +17,14 @@ namespace Whois.Parsing.Whois.Nic.Ve.Ve
         [Fact]
         public void Test_found()
         {
-            var sample = SampleReader.Read("whois.nic.ve", "ve", "found.txt");
+            var sample = SampleReader.Read("whois.nic.ve", "ve", "found", "found.txt");
             var response = parser.Parse("whois.nic.ve", sample);
 
             Assert.True(sample.Length > 0);
             Assert.Equal(WhoisStatus.Found, response.Status);
 
             Assert.Equal(0, response.ParsingErrors);
-            Assert.Equal("whois.nic.ve/ve/Found", response.TemplateName);
+            Assert.Equal("whois.nic.ve/ve/found/01", response.TemplateName);
 
             Assert.Equal("ula.ve", response.DomainName.ToString());
 
@@ -102,14 +102,14 @@ namespace Whois.Parsing.Whois.Nic.Ve.Ve
         [Fact]
         public void Test_found_nameservers()
         {
-            var sample = SampleReader.Read("whois.nic.ve", "ve", "found_nameservers.txt");
+            var sample = SampleReader.Read("whois.nic.ve", "ve", "found", "found_nameservers.txt");
             var response = parser.Parse("whois.nic.ve", sample);
 
             Assert.True(sample.Length > 0);
             Assert.Equal(WhoisStatus.Found, response.Status);
 
             Assert.Equal(0, response.ParsingErrors);
-            Assert.Equal("whois.nic.ve/ve/Found", response.TemplateName);
+            Assert.Equal("whois.nic.ve/ve/found/01", response.TemplateName);
 
             Assert.Equal("ula.ve", response.DomainName.ToString());
 
@@ -187,14 +187,14 @@ namespace Whois.Parsing.Whois.Nic.Ve.Ve
         [Fact]
         public void Test_found_nameservers_missing()
         {
-            var sample = SampleReader.Read("whois.nic.ve", "ve", "found_nameservers_missing.txt");
+            var sample = SampleReader.Read("whois.nic.ve", "ve", "found", "found_nameservers_missing.txt");
             var response = parser.Parse("whois.nic.ve", sample);
 
             Assert.True(sample.Length > 0);
             Assert.Equal(WhoisStatus.Found, response.Status);
 
             Assert.Equal(0, response.ParsingErrors);
-            Assert.Equal("whois.nic.ve/ve/Found", response.TemplateName);
+            Assert.Equal("whois.nic.ve/ve/found/01", response.TemplateName);
 
             Assert.Equal("zumba.com.ve", response.DomainName.ToString());
 
@@ -266,14 +266,14 @@ namespace Whois.Parsing.Whois.Nic.Ve.Ve
         [Fact]
         public void Test_found_status_activo()
         {
-            var sample = SampleReader.Read("whois.nic.ve", "ve", "found_status_activo.txt");
+            var sample = SampleReader.Read("whois.nic.ve", "ve", "found", "found_status_activo.txt");
             var response = parser.Parse("whois.nic.ve", sample);
 
             Assert.True(sample.Length > 0);
             Assert.Equal(WhoisStatus.Found, response.Status);
 
             Assert.Equal(0, response.ParsingErrors);
-            Assert.Equal("whois.nic.ve/ve/Found", response.TemplateName);
+            Assert.Equal("whois.nic.ve/ve/found/01", response.TemplateName);
 
             Assert.Equal("zumba.com.ve", response.DomainName.ToString());
 
@@ -345,14 +345,14 @@ namespace Whois.Parsing.Whois.Nic.Ve.Ve
         [Fact]
         public void Test_not_found()
         {
-            var sample = SampleReader.Read("whois.nic.ve", "ve", "not_found.txt");
+            var sample = SampleReader.Read("whois.nic.ve", "ve", "not-found", "not_found.txt");
             var response = parser.Parse("whois.nic.ve", sample);
 
             Assert.True(sample.Length > 0);
             Assert.Equal(WhoisStatus.NotFound, response.Status);
 
             Assert.Equal(0, response.ParsingErrors);
-            Assert.Equal("whois.nic.ve/ve/NotFound", response.TemplateName);
+            Assert.Equal("whois.nic.ve/ve/not-found/01", response.TemplateName);
 
             Assert.Equal("u34jedzcq.ve", response.DomainName.ToString());
 
@@ -362,14 +362,14 @@ namespace Whois.Parsing.Whois.Nic.Ve.Ve
         [Fact]
         public void Test_suspended()
         {
-            var sample = SampleReader.Read("whois.nic.ve", "ve", "suspended.txt");
+            var sample = SampleReader.Read("whois.nic.ve", "ve", "suspended", "suspended.txt");
             var response = parser.Parse("whois.nic.ve", sample);
 
             Assert.True(sample.Length > 0);
             Assert.Equal(WhoisStatus.Suspended, response.Status);
 
             Assert.Equal(0, response.ParsingErrors);
-            Assert.Equal("whois.nic.ve/ve/Found", response.TemplateName);
+            Assert.Equal("whois.nic.ve/ve/found/01", response.TemplateName);
 
             Assert.Equal("aloespa.com.ve", response.DomainName.ToString());
 
@@ -446,14 +446,14 @@ namespace Whois.Parsing.Whois.Nic.Ve.Ve
         [Fact]
         public void Test_found_updated_on()
         {
-            var sample = SampleReader.Read("whois.nic.ve", "ve", "found_updated_on.txt");
+            var sample = SampleReader.Read("whois.nic.ve", "ve", "found", "found_updated_on.txt");
             var response = parser.Parse("whois.nic.ve", sample);
 
             Assert.True(sample.Length > 0);
             Assert.Equal(WhoisStatus.Found, response.Status);
 
             Assert.Equal(0, response.ParsingErrors);
-            Assert.Equal("whois.nic.ve/ve/Found", response.TemplateName);
+            Assert.Equal("whois.nic.ve/ve/found/01", response.TemplateName);
 
             Assert.Equal("ula.ve", response.DomainName.ToString());
 
@@ -531,14 +531,14 @@ namespace Whois.Parsing.Whois.Nic.Ve.Ve
         [Fact]
         public void Test_found_updated_on_blank()
         {
-            var sample = SampleReader.Read("whois.nic.ve", "ve", "found_updated_on_blank.txt");
+            var sample = SampleReader.Read("whois.nic.ve", "ve", "found", "found_updated_on_blank.txt");
             var response = parser.Parse("whois.nic.ve", sample);
 
             Assert.True(sample.Length > 0);
             Assert.Equal(WhoisStatus.Found, response.Status);
 
             Assert.Equal(0, response.ParsingErrors);
-            Assert.Equal("whois.nic.ve/ve/Found", response.TemplateName);
+            Assert.Equal("whois.nic.ve/ve/found/01", response.TemplateName);
 
             Assert.Equal("zumba.com.ve", response.DomainName.ToString());
 
@@ -610,14 +610,14 @@ namespace Whois.Parsing.Whois.Nic.Ve.Ve
         [Fact]
         public void Test_not_found_status_available()
         {
-            var sample = SampleReader.Read("whois.nic.ve", "ve", "not_found_status_available.txt");
+            var sample = SampleReader.Read("whois.nic.ve", "ve", "not-found", "not_found_status_available.txt");
             var response = parser.Parse("whois.nic.ve", sample);
 
             Assert.True(sample.Length > 0);
             Assert.Equal(WhoisStatus.NotFound, response.Status);
 
             Assert.Equal(0, response.ParsingErrors);
-            Assert.Equal("whois.nic.ve/ve/NotFound", response.TemplateName);
+            Assert.Equal("whois.nic.ve/ve/not-found/01", response.TemplateName);
 
             Assert.Equal("u34jedzcq.ve", response.DomainName.ToString());
 
@@ -627,14 +627,14 @@ namespace Whois.Parsing.Whois.Nic.Ve.Ve
         [Fact]
         public void Test_inactive()
         {
-            var sample = SampleReader.Read("whois.nic.ve", "ve", "inactive.txt");
+            var sample = SampleReader.Read("whois.nic.ve", "ve", "inactive", "inactive.txt");
             var response = parser.Parse("whois.nic.ve", sample);
 
             Assert.True(sample.Length > 0);
             Assert.Equal(WhoisStatus.Suspended, response.Status);
 
             Assert.Equal(0, response.ParsingErrors);
-            Assert.Equal("whois.nic.ve/ve/Found", response.TemplateName);
+            Assert.Equal("whois.nic.ve/ve/found/01", response.TemplateName);
 
             Assert.Equal("aloespa.com.ve", response.DomainName.ToString());
 
@@ -711,14 +711,14 @@ namespace Whois.Parsing.Whois.Nic.Ve.Ve
         [Fact]
         public void Test_found_status_registered()
         {
-            var sample = SampleReader.Read("whois.nic.ve", "ve", "found_status_registered.txt");
+            var sample = SampleReader.Read("whois.nic.ve", "ve", "found", "found_status_registered.txt");
             var response = parser.Parse("whois.nic.ve", sample);
 
             Assert.True(sample.Length > 0);
             Assert.Equal(WhoisStatus.Found, response.Status);
 
             Assert.Equal(0, response.ParsingErrors);
-            Assert.Equal("whois.nic.ve/ve/Found", response.TemplateName);
+            Assert.Equal("whois.nic.ve/ve/found/01", response.TemplateName);
 
             Assert.Equal("zumba.com.ve", response.DomainName.ToString());
 
