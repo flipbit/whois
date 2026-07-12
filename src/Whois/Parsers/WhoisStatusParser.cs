@@ -59,12 +59,12 @@ public class WhoisStatusParser
         if (Equals(status, "210 PendingRelease")) return WhoisStatus.Other;
         if (Equals(status, "440 Request Denied")) return WhoisStatus.Throttled;
 
-        if (whoisServer == "whois.dns.pt")
+        if (string.Equals(whoisServer, "whois.dns.pt", StringComparison.Ordinal))
         {
             if (Equals(status, "TECH-PRO")) return WhoisStatus.Other;
         }
 
-        if (whoisServer == "whois.iis.se")
+        if (string.Equals(whoisServer, "whois.iis.se", StringComparison.Ordinal))
         {
             if (Equals(status, "system")) return WhoisStatus.NotAssigned;
         }

@@ -10,7 +10,7 @@ public interface IFileSystem
 
     /// <summary>
     /// Returns the content of <paramref name="repoRelativePath"/> as it exists in the HEAD
-    /// commit via <c>git show HEAD:&lt;path&gt;</c>. Returns <c>null</c> if the file is not
+    /// commit via <c>git show HEAD:&lt;path&gt;</c>. Returns <see langword="null"/> if the file is not
     /// tracked (new file, or git command fails).
     /// </summary>
     public Task<string?> GitReadHeadAsync(string repoRoot, string repoRelativePath, CancellationToken cancellationToken = default);

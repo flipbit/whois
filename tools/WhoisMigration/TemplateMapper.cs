@@ -1,3 +1,4 @@
+using System.Globalization;
 using System.Text.RegularExpressions;
 
 namespace WhoisMigration;
@@ -19,7 +20,7 @@ public static partial class TemplateMapper
         if (!match.Success) return null;
         // Extract value after "name: "
         var line = match.Value;
-        var colonIdx = line.IndexOf(':');
+        var colonIdx = line.IndexOf(':', StringComparison.Ordinal);
         return colonIdx >= 0 ? line[(colonIdx + 1)..].Trim() : null;
     }
 
@@ -35,13 +36,13 @@ public static partial class TemplateMapper
         return PascalCaseBoundary().Replace(pascalCaseStatus, "-$1").ToLowerInvariant();
     }
 
-    public static Dictionary<string, string> AssignNumbers(List<string> filenames)
+    public static IDictionary<string, string> AssignNumbers(IList<string> filenames)
     {
-        var sorted = filenames.OrderBy(f => f, StringComparer.OrdinalIgnoreCase).ToList();
-        var result = new Dictionary<string, string>();
+        var sorted = filenames.Order(StringComparer.OrdinalIgnoreCase).ToList();
+        var result = new Dictionary<string, string>(StringComparer.OrdinalIgnoreCase);
         for (var i = 0; i < sorted.Count; i++)
         {
-            result[sorted[i]] = (i + 1).ToString("D2");
+            result[sorted[i]] = (i + 1).ToString("D2", CultureInfo.InvariantCulture);
         }
         return result;
     }

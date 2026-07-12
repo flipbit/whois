@@ -1,3 +1,4 @@
+using System.Globalization;
 using System.Net.Sockets;
 using System.Text;
 using Whois.Net;
@@ -31,7 +32,7 @@ public class RefreshEngine
         var results = new RefreshResults
         {
             Version = DateTimeOffset.UtcNow,
-            Results = new()
+            Results = new Dictionary<string, IDictionary<string, IDictionary<string, IDictionary<string, DomainResult>>>>(StringComparer.Ordinal),
         };
 
         var groups = registry.GetRateGroups();
@@ -39,7 +40,7 @@ public class RefreshEngine
         var tasks = groups.Select(group =>
             ProcessRateGroupAsync(group, options, results, cancellationToken));
 
-        await Task.WhenAll(tasks);
+        await Task.WhenAll(tasks).ConfigureAwait(false);
 
         return results;
     }
@@ -60,12 +61,12 @@ public class RefreshEngine
                 {
                     if (!isFirst && options.DelayBetweenQueries > TimeSpan.Zero)
                     {
-                        await Task.Delay(options.DelayBetweenQueries, cancellationToken);
+                        await Task.Delay(options.DelayBetweenQueries, cancellationToken).ConfigureAwait(false);
                     }
                     isFirst = false;
 
                     var domainResult = await QueryDomainAsync(
-                        serverName, server.Tld, status, domain, options, cancellationToken);
+                        serverName, server.Tld, status, domain, options, cancellationToken).ConfigureAwait(false);
 
                     RecordResult(results, serverName, server.Tld, status, domain, domainResult);
                 }
@@ -79,22 +80,22 @@ public class RefreshEngine
     {
         var result = new DomainResult
         {
-            Timestamp = DateTimeOffset.UtcNow
+            Timestamp = DateTimeOffset.UtcNow,
         };
 
         try
         {
             var response = await _tcpReader.Read(
                 serverName, 43, $"{domain}\r\n",
-                Encoding.UTF8, options.QueryTimeoutSeconds, cancellationToken);
+                Encoding.UTF8, options.QueryTimeoutSeconds, cancellationToken).ConfigureAwait(false);
 
             if (response.Length > options.MaxResponseBytes)
             {
                 result.Error = new QueryError
                 {
                     Type = QueryErrorType.ResponseTooLarge,
-                    Message = $"Response size {response.Length} exceeds maximum {options.MaxResponseBytes}",
-                    Detail = $"{serverName}:43"
+                    Message = string.Format(CultureInfo.InvariantCulture, "Response size {0} exceeds maximum {1}", response.Length, options.MaxResponseBytes),
+                    Detail = $"{serverName}:43",
                 };
                 response = response[..options.MaxResponseBytes];
             }
@@ -109,7 +110,7 @@ public class RefreshEngine
             // Determine actual status for save directory
             var actualStatus = MapWhoisStatus(parsed.Status);
             var saveStatus = actualStatus ?? status;
-            if (actualStatus != null && actualStatus != status)
+            if (actualStatus != null && !string.Equals(actualStatus, status, StringComparison.OrdinalIgnoreCase))
             {
                 result.ActualStatus = actualStatus;
             }
@@ -121,7 +122,7 @@ public class RefreshEngine
                 _fileSystem.CreateDirectory(dir);
             }
             var filePath = Path.Combine(dir, $"{domain}.txt");
-            await _fileSystem.WriteAllTextAsync(filePath, response, cancellationToken);
+            await _fileSystem.WriteAllTextAsync(filePath, response, cancellationToken).ConfigureAwait(false);
 
             if (result.Error == null && parsed.TemplateName == null)
             {
@@ -129,7 +130,7 @@ public class RefreshEngine
                 {
                     Type = QueryErrorType.ParseFailure,
                     Message = "No template matched",
-                    Detail = $"{serverName}/{tld}/{status}/{domain}"
+                    Detail = $"{serverName}/{tld}/{status}/{domain}",
                 };
             }
         }
@@ -139,7 +140,7 @@ public class RefreshEngine
             {
                 Type = QueryErrorType.Timeout,
                 Message = "Query timed out",
-                Detail = $"{serverName}:43"
+                Detail = $"{serverName}:43",
             };
         }
         catch (SocketException ex)
@@ -148,7 +149,7 @@ public class RefreshEngine
             {
                 Type = QueryErrorType.ConnectionRefused,
                 Message = ex.Message,
-                Detail = $"{serverName}:43"
+                Detail = $"{serverName}:43",
             };
         }
         catch (Exception ex)
@@ -157,14 +158,14 @@ public class RefreshEngine
             {
                 Type = QueryErrorType.Unknown,
                 Message = ex.Message,
-                Detail = $"{serverName}:43"
+                Detail = $"{serverName}:43",
             };
         }
 
         return result;
     }
 
-    private static List<string> GetExtractedFieldNames(Whois.WhoisResponse parsed)
+    private static IList<string> GetExtractedFieldNames(Whois.WhoisResponse parsed)
     {
         var fields = new List<string>();
         if (parsed.DomainName != null) fields.Add("DomainName");
@@ -208,7 +209,7 @@ public class RefreshEngine
         Whois.WhoisStatus.Unavailable => "unavailable",
         Whois.WhoisStatus.Unconfirmed => "unconfirmed",
         Whois.WhoisStatus.Unknown => null,
-        _ => null
+        _ => null,
     };
 
     private static void RecordResult(
@@ -218,11 +219,11 @@ public class RefreshEngine
         lock (results)
         {
             if (!results.Results.ContainsKey(server))
-                results.Results[server] = new();
+                results.Results[server] = new Dictionary<string, IDictionary<string, IDictionary<string, DomainResult>>>(StringComparer.Ordinal);
             if (!results.Results[server].ContainsKey(tld))
-                results.Results[server][tld] = new();
+                results.Results[server][tld] = new Dictionary<string, IDictionary<string, DomainResult>>(StringComparer.Ordinal);
             if (!results.Results[server][tld].ContainsKey(status))
-                results.Results[server][tld][status] = new();
+                results.Results[server][tld][status] = new Dictionary<string, DomainResult>(StringComparer.Ordinal);
 
             results.Results[server][tld][status][domain] = domainResult;
         }

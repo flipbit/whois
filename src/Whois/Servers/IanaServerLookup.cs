@@ -45,7 +45,7 @@ public class IanaServerLookup : IWhoisServerLookup
     {
         var tld = GetTld(request.Query);
 
-        var content = await Download(tld, request, cancellationToken);
+        var content = await Download(tld, request, cancellationToken).ConfigureAwait(false);
 
         // Reflect the raw response onto a ParsedWhoisServer object
         var matcher = _ianaTemplate.Value;
@@ -64,7 +64,7 @@ public class IanaServerLookup : IWhoisServerLookup
         {
             Content = content,
             DomainName = new HostName(tld),
-            Status = WhoisStatus.Unknown
+            Status = WhoisStatus.Unknown,
         };
     }
 
@@ -72,7 +72,7 @@ public class IanaServerLookup : IWhoisServerLookup
     {
         _logger.LogDebug("Looking up Root TLD server for {Tld} from {IanaUrl}", tld, IanaUrl);
 
-        var response = await TcpReader.Read(IanaUrl, 43, tld.ToUpper(), request.Encoding, request.TimeoutSeconds, cancellationToken);
+        var response = await TcpReader.Read(IanaUrl, 43, tld.ToUpperInvariant(), request.Encoding, request.TimeoutSeconds, cancellationToken).ConfigureAwait(false);
 
         _logger.LogDebug("Received {ByteCount:###,###,##0} byte(s).", response.Length);
 

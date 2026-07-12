@@ -11,7 +11,7 @@ public class WhoisServerCache
 
     public WhoisServerCache()
     {
-        _cache = new ConcurrentDictionary<string, WhoisResponse>();
+        _cache = new ConcurrentDictionary<string, WhoisResponse>(StringComparer.OrdinalIgnoreCase);
     }
 
     public WhoisResponse? Get(string tld)
@@ -21,6 +21,6 @@ public class WhoisServerCache
 
     public void Set(WhoisResponse server)
     {
-        _cache.AddOrUpdate(server.DomainName!.ToUnicodeString(), server, (tld, existing) => server);
+        _cache[server.DomainName!.ToUnicodeString()] = server;
     }
 }

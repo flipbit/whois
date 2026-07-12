@@ -8,7 +8,7 @@
     <!-- Suppress nullable warnings in integration test files -->
     <!-- Suppress naming convention for test fields — test fields use camelCase without _ prefix -->
     <!-- Suppress namespace-folder match — test namespaces use PascalCase but folders contain dots (e.g. whois.nic.uk) -->
-    <NoWarn>$(NoWarn);CS8600;CS8601;CS8602;CS8603;CS8604;CS8618;CS8625;CS8767;CS8769;IDE1006;IDE0130</NoWarn>
+    <NoWarn>$(NoWarn);CS8600;CS8601;CS8602;CS8603;CS8604;CS8618;CS8625;CS8767;CS8769;IDE1006;IDE0130;MA0053;MA0004;MA0026;MA0101;MA0073;MA0074;MA0076</NoWarn>
   </PropertyGroup>
   <ItemGroup>
     <PackageReference Include="Microsoft.NET.Test.Sdk" />

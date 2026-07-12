@@ -37,12 +37,14 @@ public class HostName
     /// <summary>
     /// Determines if the host name is PunyCode encoded
     /// </summary>
-    public bool IsPunyCode => Value.Contains("xn--");
+    public bool IsPunyCode => Value.Contains("xn--", StringComparison.Ordinal);
 
     /// <summary>
     /// Determines if the host name is an internet Top Level Domain (TLD)
     /// </summary>
-    public bool IsTld => Value.Contains(".") == false;
+#pragma warning disable MA0001 // No StringComparison overload for char on netstandard2.0
+    public bool IsTld => Value.IndexOf('.') < 0;
+#pragma warning restore MA0001
 
     /// <summary>
     /// Gets the TLD part of the hostname, e.g. "com" for "example.com"

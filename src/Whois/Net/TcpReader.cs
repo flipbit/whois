@@ -1,3 +1,4 @@
+using System.Globalization;
 using System.Net.Sockets;
 using System.Text;
 
@@ -17,7 +18,7 @@ public class TcpReader : ITcpReader
         using var tcpClient = new TcpClient();
         try
         {
-            await NetStandardShims.ConnectAsync(tcpClient, url, port, token);
+            await NetStandardShims.ConnectAsync(tcpClient, url, port, token).ConfigureAwait(false);
 
             using var stream = tcpClient.GetStream();
             // Use a BOM-less encoding for the writer to avoid sending a byte order mark
@@ -28,12 +29,12 @@ public class TcpReader : ITcpReader
             using var writer = new StreamWriter(stream, writerEncoding) { NewLine = "\r\n" };
             using var reader = new StreamReader(stream, encoding);
 
-            await writer.WriteLineAsync(command);
-            await writer.FlushAsync();
+            await writer.WriteLineAsync(command).ConfigureAwait(false);
+            await writer.FlushAsync().ConfigureAwait(false);
 
             var sb = new StringBuilder();
             string? line;
-            while ((line = await NetStandardShims.ReadLineAsync(reader, token)) != null)
+            while ((line = await NetStandardShims.ReadLineAsync(reader, token).ConfigureAwait(false)) != null)
             {
                 sb.AppendLine(line);
             }
@@ -45,11 +46,11 @@ public class TcpReader : ITcpReader
         }
         catch (OperationCanceledException)
         {
-            throw new WhoisException($"Connection to {url}:{port} timed out after {timeoutSeconds} seconds.");
+            throw new WhoisException(string.Format(CultureInfo.InvariantCulture, "Connection to {0}:{1} timed out after {2} seconds.", url, port, timeoutSeconds));
         }
         catch (SocketException ex)
         {
-            throw new WhoisException($"Couldn't connect to {url}:{port}: {ex.Message}", ex);
+            throw new WhoisException(string.Format(CultureInfo.InvariantCulture, "Couldn't connect to {0}:{1}: {2}", url, port, ex.Message), ex);
         }
     }
 }

@@ -25,5 +25,5 @@ public enum WhoisStatus
     ToBeReleased,
     Redemption,
     Blocked,
-    Other
+    Other,
 }

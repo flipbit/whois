@@ -1,3 +1,4 @@
+using System.Globalization;
 using System.Text;
 
 namespace Whois;
@@ -57,7 +58,7 @@ public class AssertWriter
             {
                 var nameServer = response.NameServers[i];
 
-                Write($"{nameof(response.NameServers)}[{i}]", nameServer);
+                Write(string.Format(CultureInfo.InvariantCulture, "{0}[{1}]", nameof(response.NameServers), i), nameServer);
             }
             sb.AppendLine();
         }
@@ -71,7 +72,7 @@ public class AssertWriter
             {
                 var status = response.DomainStatus[i];
 
-                Write($"{nameof(response.DomainStatus)}[{i}]", status);
+                Write(string.Format(CultureInfo.InvariantCulture, "{0}[{1}]", nameof(response.DomainStatus), i), status);
             }
             sb.AppendLine();
         }
@@ -111,7 +112,7 @@ public class AssertWriter
             {
                 var address = contact.Address[i];
 
-                Write($"{prefix}.{nameof(Contact.Address)}[{i}]", address);
+                Write(string.Format(CultureInfo.InvariantCulture, "{0}.{1}[{2}]", prefix, nameof(Contact.Address), i), address);
             }
         }
 
@@ -122,12 +123,12 @@ public class AssertWriter
     {
         if (expectedValue == null) return;
 
-        if (string.IsNullOrEmpty(expectedValue.ToString()) == false)
+        if (!string.IsNullOrEmpty(expectedValue.ToString()))
         {
             Write($"{fieldName}.ToString()", expectedValue.ToString());
         }
 
-        if (string.IsNullOrEmpty(expectedValue.ToUnicodeString()) == false && expectedValue.IsPunyCode)
+        if (!string.IsNullOrEmpty(expectedValue.ToUnicodeString()) && expectedValue.IsPunyCode)
         {
             Write($"{fieldName}.ToUnicodeString()", expectedValue.ToString());
         }
@@ -137,9 +138,9 @@ public class AssertWriter
     {
         if (string.IsNullOrEmpty(expectedValue)) return;
 
-        if (expectedValue.Contains("\""))
+        if (expectedValue.Contains("\"", StringComparison.Ordinal))
         {
-            sb.AppendLine($@"            Assert.Equal(@""{expectedValue.Replace("\"", "\"\"")}"", response.{fieldName});");
+            sb.AppendLine($@"            Assert.Equal(@""{expectedValue.Replace("\"", "\"\"", StringComparison.Ordinal)}"", response.{fieldName});");
         }
         else
         {
@@ -150,13 +151,23 @@ public class AssertWriter
 
     private static void Write(string fieldName, int expectedValue)
     {
-        sb.AppendLine($@"            Assert.Equal({expectedValue}, response.{fieldName});");
+        sb.AppendFormat(CultureInfo.InvariantCulture, "            Assert.Equal({0}, response.{1});", expectedValue, fieldName).AppendLine();
     }
 
     private static void Write(string fieldName, DateTime? expectedValue)
     {
-        if (expectedValue.HasValue == false) return;
+        if (!expectedValue.HasValue) return;
 
-        sb.AppendLine($@"            Assert.Equal(new DateTime({expectedValue.Value.Year}, {expectedValue.Value.Month:00}, {expectedValue.Value.Day:00}, {expectedValue.Value.Hour:00}, {expectedValue.Value.Minute:00}, {expectedValue.Value.Second:00}, {expectedValue.Value.Millisecond:000}, DateTimeKind.Utc), response.{fieldName});");
+        sb.AppendFormat(
+            CultureInfo.InvariantCulture,
+            "            Assert.Equal(new DateTime({0}, {1:00}, {2:00}, {3:00}, {4:00}, {5:00}, {6:000}, DateTimeKind.Utc), response.{7});",
+            expectedValue.Value.Year,
+            expectedValue.Value.Month,
+            expectedValue.Value.Day,
+            expectedValue.Value.Hour,
+            expectedValue.Value.Minute,
+            expectedValue.Value.Second,
+            expectedValue.Value.Millisecond,
+            fieldName).AppendLine();
     }
 }

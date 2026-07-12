@@ -13,7 +13,7 @@ public class ResourceReader
     /// <summary>
     /// Gets the embedded resource names for the given WHOIS server and TLD.
     /// </summary>
-    public List<string> GetNames(string whoisServer, string tld)
+    public IList<string> GetNames(string whoisServer, string tld)
     {
         var results = new List<string>();
 
@@ -25,7 +25,7 @@ public class ResourceReader
 
         foreach (var name in names)
         {
-            if (!name.StartsWith(prefix)) continue;
+            if (!name.StartsWith(prefix, StringComparison.Ordinal)) continue;
 
             if (!name.EndsWith(".txt", StringComparison.InvariantCultureIgnoreCase)) continue;
 
@@ -35,7 +35,7 @@ public class ResourceReader
         return results;
     }
 
-    public List<string> GetNames(string whoisServer)
+    public IList<string> GetNames(string whoisServer)
     {
         var results = new List<string>();
 
@@ -46,7 +46,7 @@ public class ResourceReader
 
         foreach (var name in names)
         {
-            if (!name.StartsWith(prefix)) continue;
+            if (!name.StartsWith(prefix, StringComparison.Ordinal)) continue;
 
             if (!name.EndsWith(".txt", StringComparison.InvariantCultureIgnoreCase)) continue;
 
@@ -61,17 +61,17 @@ public class ResourceReader
         return GetString(name);
     }
 
-    private string GetResourcePrefix(string whoisServer, string tld)
+    private static string GetResourcePrefix(string whoisServer, string tld)
     {
-        var escapedWhoisServer = whoisServer.Replace("-", "_").ToLowerInvariant();
-        var escapedTld = tld.Replace("-", "_").ToLowerInvariant();
+        var escapedWhoisServer = whoisServer.Replace('-', '_').ToLowerInvariant();
+        var escapedTld = tld.Replace('-', '_').ToLowerInvariant();
 
         return $"Whois.Resources.{escapedWhoisServer}.{escapedTld}.";
     }
 
-    private string GetResourcePrefix(string whoisServer)
+    private static string GetResourcePrefix(string whoisServer)
     {
-        var escapedWhoisServer = whoisServer.Replace("-", "_").ToLowerInvariant();
+        var escapedWhoisServer = whoisServer.Replace('-', '_').ToLowerInvariant();
 
         return $"Whois.Resources.{escapedWhoisServer}";
     }

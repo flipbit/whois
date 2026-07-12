@@ -75,9 +75,9 @@ public class TemplateMapperTests
         var content = "---\n#\n# .tr Parsing Template\n#\nname: whois.nic.tr/tr/Found\ntag: whois.nic.tr\nset: Status = Found\n---\nContent here";
         var result = TemplateMapper.UpdateFrontMatterName(content, "whois.nic.tr/tr/found/01");
 
-        Assert.Contains("name: whois.nic.tr/tr/found/01", result);
-        Assert.DoesNotContain("name: whois.nic.tr/tr/Found", result);
-        Assert.Contains("Content here", result);
+        Assert.Contains("name: whois.nic.tr/tr/found/01", result, StringComparison.Ordinal);
+        Assert.DoesNotContain("name: whois.nic.tr/tr/Found", result, StringComparison.Ordinal);
+        Assert.Contains("Content here", result, StringComparison.Ordinal);
     }
 
     [Fact]
@@ -86,8 +86,8 @@ public class TemplateMapperTests
         var content = "---\nname: old/name\ntag: whois.nic.tr\ntag: tr\nset: Status = Found\n---\n";
         var result = TemplateMapper.UpdateFrontMatterName(content, "new/name");
 
-        Assert.Contains("tag: whois.nic.tr", result);
-        Assert.Contains("tag: tr", result);
-        Assert.Contains("set: Status = Found", result);
+        Assert.Contains("tag: whois.nic.tr", result, StringComparison.Ordinal);
+        Assert.Contains("tag: tr", result, StringComparison.Ordinal);
+        Assert.Contains("set: Status = Found", result, StringComparison.Ordinal);
     }
 }

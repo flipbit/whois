@@ -15,9 +15,9 @@ public class MultipleContactFixup : IFixup
         }
 
         // Templates that this Fixup can work on
-        return result.Template.Name == "generic/tld/found/03" ||
-               result.Template.Name == "generic/tld/found/04" ||
-               result.Template.Name == "whois.nic.at/at/found/01";
+        return string.Equals(result.Template.Name, "generic/tld/found/03", StringComparison.Ordinal) ||
+               string.Equals(result.Template.Name, "generic/tld/found/04", StringComparison.Ordinal) ||
+               string.Equals(result.Template.Name, "whois.nic.at/at/found/01", StringComparison.Ordinal);
     }
 
     public void Fixup(TokenizeResult result, WhoisResponse response)
@@ -78,7 +78,7 @@ public class MultipleContactFixup : IFixup
     protected virtual int? GetRegistrantParagraph(IReadOnlyList<TokenMatch> matches)
     {
         var contactIdMatch = matches
-            .FirstOrDefault(m => m.Token.Name == "DomainName");
+            .FirstOrDefault(m => string.Equals(m.Token.Name, "DomainName", StringComparison.Ordinal));
 
         return contactIdMatch?.Location.Paragraph;
     }
@@ -89,7 +89,7 @@ public class MultipleContactFixup : IFixup
 
         var paragraph = GetRegistrantParagraph(matches);
 
-        if (paragraph.HasValue == false) return false;
+        if (!paragraph.HasValue) return false;
 
         contact = new Contact();
         var count = 0;
@@ -148,8 +148,8 @@ public class MultipleContactFixup : IFixup
         if (string.IsNullOrEmpty(input?.RegistryId)) return false;
 
         var contactIdMatch = matches
-            .Where(m => m.Token.Name == "Contact.Id")
-            .FirstOrDefault(m => string.CompareOrdinal(m.Value.ToString(), input!.RegistryId) == 0);
+            .FirstOrDefault(m => string.Equals(m.Token.Name, "Contact.Id", StringComparison.Ordinal) &&
+                                 string.Equals(m.Value.ToString(), input!.RegistryId, StringComparison.Ordinal));
 
         if (contactIdMatch == null)
         {
@@ -210,16 +210,15 @@ public class MultipleContactFixup : IFixup
         if (input != null) return false;
 
         var paragraph = matches
-            .Where(m => m.Token.Name == "Type")
-            .FirstOrDefault(m => string.CompareOrdinal(m.Value.ToString(), name) == 0)?
+            .FirstOrDefault(m => string.Equals(m.Token.Name, "Type", StringComparison.Ordinal) &&
+                                 string.Equals(m.Value.ToString(), name, StringComparison.Ordinal))?
             .Location.Paragraph;
 
         if (paragraph == null) return false;
 
         var match = matches
-            .Where(m => m.Token.Name == "Contact.Id")
-            .Where(m => m.Location.Paragraph == paragraph.Value)
-            .FirstOrDefault();
+            .FirstOrDefault(m => string.Equals(m.Token.Name, "Contact.Id", StringComparison.Ordinal) &&
+                                 m.Location.Paragraph == paragraph.Value);
 
         if (match == null) return false;
 

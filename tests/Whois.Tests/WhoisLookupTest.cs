@@ -23,7 +23,7 @@ public class WhoisLookupTest
         lookup = new WhoisLookup
         {
             TcpReader = tcpReader,
-            ServerLookup = whoisServerLookup
+            ServerLookup = whoisServerLookup,
         };
     }
 
@@ -35,7 +35,7 @@ public class WhoisLookupTest
         var rootServer = new WhoisResponse
         {
             DomainName = new HostName("com"),
-            Registrar = new Registrar { WhoisServer = new HostName("whois.markmonitor.com") }
+            Registrar = new Registrar { WhoisServer = new HostName("whois.markmonitor.com"), },
         };
 
         whoisServerLookup.Lookup(request, Arg.Any<CancellationToken>()).Returns(rootServer);
@@ -60,7 +60,7 @@ public class WhoisLookupTest
         var rootServer = new WhoisResponse
         {
             DomainName = new HostName("com"),
-            Registrar = new Registrar { WhoisServer = new HostName("whois.verisign-grs.com") }
+            Registrar = new Registrar { WhoisServer = new HostName("whois.verisign-grs.com"), },
         };
 
         whoisServerLookup.Lookup(request, Arg.Any<CancellationToken>()).Returns(rootServer);
@@ -92,7 +92,7 @@ public class WhoisLookupTest
         var rootServer = new WhoisResponse
         {
             DomainName = new HostName("com"),
-            Registrar = new Registrar { WhoisServer = new HostName("whois.verisign-grs.com") }
+            Registrar = new Registrar { WhoisServer = new HostName("whois.verisign-grs.com"), },
         };
 
         whoisServerLookup.Lookup(request, Arg.Any<CancellationToken>()).Returns(rootServer);
@@ -139,7 +139,7 @@ public class WhoisLookupTest
         var rootServer = new WhoisResponse
         {
             DomainName = new HostName("com"),
-            Registrar = new Registrar { WhoisServer = new HostName("whois.markmonitor.com") }
+            Registrar = new Registrar { WhoisServer = new HostName("whois.markmonitor.com"), },
         };
 
         whoisServerLookup.Lookup(request, Arg.Any<CancellationToken>()).Returns(rootServer);
@@ -179,7 +179,7 @@ public class WhoisLookupTest
         var rootServer = new WhoisResponse
         {
             DomainName = new HostName("co"),
-            Registrar = new Registrar { WhoisServer = new HostName("whois.nic.co") }
+            Registrar = new Registrar { WhoisServer = new HostName("whois.nic.co"), },
         };
         whoisServerLookup.Lookup(request, Arg.Any<CancellationToken>()).Returns(rootServer);
 

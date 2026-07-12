@@ -11,7 +11,7 @@ public enum QueryErrorType
     AccessDenied,
     ParseFailure,
     ResponseTooLarge,
-    Unknown
+    Unknown,
 }
 
 public class QueryError
@@ -25,7 +25,7 @@ public class DomainResult
 {
     public DateTimeOffset Timestamp { get; set; }
     public string? MatchedTemplate { get; set; }
-    public List<string> ExtractedFields { get; set; } = [];
+    public IList<string> ExtractedFields { get; set; } = [];
     public QueryError? Error { get; set; }
     public string? ActualStatus { get; set; }
 }
@@ -34,13 +34,13 @@ public class RefreshResults
 {
     public DateTimeOffset Version { get; set; }
 
-    public Dictionary<string, Dictionary<string, Dictionary<string, Dictionary<string, DomainResult>>>> Results { get; set; } = new();
+    public IDictionary<string, IDictionary<string, IDictionary<string, IDictionary<string, DomainResult>>>> Results { get; set; } = new Dictionary<string, IDictionary<string, IDictionary<string, IDictionary<string, DomainResult>>>>(StringComparer.Ordinal);
 
     private static readonly JsonSerializerOptions SerializerOptions = new()
     {
         WriteIndented = true,
         PropertyNamingPolicy = JsonNamingPolicy.CamelCase,
-        Converters = { new JsonStringEnumConverter(JsonNamingPolicy.CamelCase) }
+        Converters = { new JsonStringEnumConverter(JsonNamingPolicy.CamelCase), },
     };
 
     public static string Serialize(RefreshResults results)
@@ -75,7 +75,8 @@ public class RefreshResults
             {
                 foreach (var (status, domains) in statuses)
                 {
-                    var registryDomains = registryServer.Domains.GetValueOrDefault(status) ?? [];
+                    registryServer.Domains.TryGetValue(status, out var registryDomains);
+                    registryDomains ??= [];
                     var domainsToRemove = domains.Keys
                         .Where(d => !registryDomains.Contains(d))
                         .ToList();

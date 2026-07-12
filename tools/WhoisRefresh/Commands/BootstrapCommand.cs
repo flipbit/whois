@@ -35,7 +35,7 @@ public class BootstrapCommand : AsyncCommand<BootstrapSettings>
 
         foreach (var testFile in testFiles)
         {
-            var content = await File.ReadAllTextAsync(testFile);
+            var content = await File.ReadAllTextAsync(testFile).ConfigureAwait(false);
             var entries = TestFileParser.ExtractDomains(content);
             allEntries.AddRange(entries);
         }
@@ -47,7 +47,7 @@ public class BootstrapCommand : AsyncCommand<BootstrapSettings>
         AnsiConsole.MarkupLine("Generated registry with [green]{0}[/] servers", registry.Servers.Count);
 
         var json = SerializeRegistry(registry);
-        await File.WriteAllTextAsync(outputPath, json);
+        await File.WriteAllTextAsync(outputPath, json).ConfigureAwait(false);
 
         AnsiConsole.MarkupLine("Written to [blue]{0}[/]", outputPath);
         return 0;
@@ -58,19 +58,22 @@ public class BootstrapCommand : AsyncCommand<BootstrapSettings>
         var options = new JsonSerializerOptions
         {
             WriteIndented = true,
-            PropertyNamingPolicy = JsonNamingPolicy.CamelCase
+            PropertyNamingPolicy = JsonNamingPolicy.CamelCase,
         };
 
         // Build a structure that serializes cleanly
-        var output = new Dictionary<string, object>
+        var serverMap = registry.Servers.ToDictionary(
+            kvp => kvp.Key,
+            kvp => (object)new Dictionary<string, object?>(StringComparer.Ordinal)
+            {
+                ["tld"] = kvp.Value.Tld,
+                ["domains"] = kvp.Value.Domains,
+            },
+            StringComparer.Ordinal);
+
+        var output = new Dictionary<string, object>(StringComparer.Ordinal)
         {
-            ["servers"] = registry.Servers.ToDictionary(
-                kvp => kvp.Key,
-                kvp => new Dictionary<string, object?>
-                {
-                    ["tld"] = kvp.Value.Tld,
-                    ["domains"] = kvp.Value.Domains
-                })
+            ["servers"] = serverMap,
         };
 
         return JsonSerializer.Serialize(output, options);

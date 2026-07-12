@@ -12,8 +12,8 @@ internal class FakeWhoisServerLookup : IWhoisServerLookup
             DomainName = new HostName("com"),
             Registrar = new Registrar
             {
-                WhoisServer = new HostName("test.whois.com")
-            }
+                WhoisServer = new HostName("test.whois.com"),
+            },
         });
     }
 }

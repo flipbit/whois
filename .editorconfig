@@ -94,6 +94,47 @@ dotnet_naming_symbols.private_fields.applicable_accessibilities = private
 dotnet_naming_style.underscore_camel_case.required_prefix = _
 dotnet_naming_style.underscore_camel_case.capitalization = camel_case
 
+# --- Meziantou.Analyzer rules ---
+dotnet_diagnostic.MA0001.severity = warning
+dotnet_diagnostic.MA0002.severity = warning
+dotnet_diagnostic.MA0003.severity = warning
+dotnet_diagnostic.MA0007.severity = warning
+# MA0009 (regex DoS): downgraded — patterns in tool code use controlled input; fixing requires per-pattern analysis
+dotnet_diagnostic.MA0009.severity = suggestion
+dotnet_diagnostic.MA0011.severity = warning
+dotnet_diagnostic.MA0016.severity = warning
+dotnet_diagnostic.MA0017.severity = warning
+dotnet_diagnostic.MA0020.severity = warning
+dotnet_diagnostic.MA0021.severity = warning
+# MA0023 (ExplicitCapture): downgraded — changing group capture mode breaks $1/$2 back-references in replacements
+dotnet_diagnostic.MA0023.severity = suggestion
+dotnet_diagnostic.MA0028.severity = warning
+dotnet_diagnostic.MA0029.severity = warning
+dotnet_diagnostic.MA0031.severity = warning
+dotnet_diagnostic.MA0037.severity = warning
+# MA0042 (prefer await using): downgraded — netstandard2.0 target lacks IAsyncDisposable on NetworkStream/StreamWriter
+dotnet_diagnostic.MA0042.severity = suggestion
+dotnet_diagnostic.MA0048.severity = warning
+dotnet_diagnostic.MA0050.severity = warning
+dotnet_diagnostic.MA0051.severity = none
+dotnet_diagnostic.MA0053.severity = warning
+dotnet_diagnostic.MA0071.severity = warning
+dotnet_diagnostic.MA0073.severity = warning
+dotnet_diagnostic.MA0074.severity = warning
+dotnet_diagnostic.MA0076.severity = warning
+dotnet_diagnostic.MA0089.severity = warning
+dotnet_diagnostic.MA0098.severity = warning
+dotnet_diagnostic.MA0101.severity = warning
+dotnet_diagnostic.MA0106.severity = warning
+dotnet_diagnostic.MA0110.severity = warning
+dotnet_diagnostic.MA0140.severity = warning
+dotnet_diagnostic.MA0154.severity = warning
+dotnet_diagnostic.MA0158.severity = warning
+dotnet_diagnostic.MA0159.severity = warning
+dotnet_diagnostic.MA0182.severity = warning
+dotnet_diagnostic.MA0184.severity = warning
+dotnet_diagnostic.MA0206.severity = warning
+
 [*.{xml,csproj,props,targets}]
 indent_size = 2
 

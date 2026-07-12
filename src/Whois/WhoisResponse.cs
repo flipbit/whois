@@ -145,8 +145,8 @@ public class WhoisResponse
             Status = WhoisStatus.Found,
             Registrar = new Registrar
             {
-                WhoisServer = new HostName(hostName)
-            }
+                WhoisServer = new HostName(hostName),
+            },
         };
     }
 
@@ -178,7 +178,7 @@ public class WhoisResponse
         // Ignore top level request
         if (depth == 0) return Referrer?.SeenServer(whoisServer, 1) ?? false;
 
-        if (WhoisServer?.IsEqualTo(whoisServer) == true)
+        if (WhoisServer?.IsEqualTo(whoisServer) is true)
         {
             return true;
         }

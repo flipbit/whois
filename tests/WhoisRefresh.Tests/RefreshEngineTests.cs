@@ -18,18 +18,21 @@ public class RefreshEngineTests
         QueryTimeoutSeconds: 30,
         MaxResponseBytes: 65536);
 
+    private static DomainRegistryData SingleServer(string server, string tld, string status, string domain, bool isStatic = false, string? rateGroup = null) =>
+        new(new Dictionary<string, ServerEntry>(StringComparer.Ordinal)
+        {
+            [server] = new(tld, isStatic, rateGroup, new Dictionary<string, IList<string>>(StringComparer.Ordinal)
+            {
+                [status] = [domain],
+            }),
+        });
+
     private RefreshEngine CreateEngine() => new(_tcpReader, _fileSystem);
 
     [Fact]
     public async Task RunAsync_SingleDomain_QueriesAndSavesResponse()
     {
-        var registry = new DomainRegistryData(new Dictionary<string, ServerEntry>
-        {
-            ["whois.nic.uk"] = new("uk", false, null, new Dictionary<string, List<string>>
-            {
-                ["found"] = ["google.co.uk"]
-            })
-        });
+        var registry = SingleServer("whois.nic.uk", "uk", "found", "google.co.uk");
 
         var whoisResponse = "Domain Name: google.co.uk\r\nRegistrar: Test Registrar\r\n";
         _tcpReader.Read("whois.nic.uk", 43, "google.co.uk\r\n", Arg.Any<Encoding>(), 30, Arg.Any<CancellationToken>())
@@ -54,13 +57,7 @@ public class RefreshEngineTests
     [Fact]
     public async Task RunAsync_StaticServer_SkipsQuery()
     {
-        var registry = new DomainRegistryData(new Dictionary<string, ServerEntry>
-        {
-            ["whois.denic.de"] = new("de", IsStatic: true, null, new Dictionary<string, List<string>>
-            {
-                ["found"] = ["google.de"]
-            })
-        });
+        var registry = SingleServer("whois.denic.de", "de", "found", "google.de", isStatic: true);
 
         var results = await CreateEngine().RunAsync(registry, _options, CancellationToken.None);
 
@@ -74,13 +71,7 @@ public class RefreshEngineTests
     [Fact]
     public async Task RunAsync_QueryTimeout_RecordsError()
     {
-        var registry = new DomainRegistryData(new Dictionary<string, ServerEntry>
-        {
-            ["whois.nic.uk"] = new("uk", false, null, new Dictionary<string, List<string>>
-            {
-                ["found"] = ["google.co.uk"]
-            })
-        });
+        var registry = SingleServer("whois.nic.uk", "uk", "found", "google.co.uk");
 
         _tcpReader.Read(Arg.Any<string>(), Arg.Any<int>(), Arg.Any<string>(),
                 Arg.Any<Encoding>(), Arg.Any<int>(), Arg.Any<CancellationToken>())
@@ -96,13 +87,7 @@ public class RefreshEngineTests
     [Fact]
     public async Task RunAsync_ResponseExceedsMaxSize_TruncatesAndRecordsError()
     {
-        var registry = new DomainRegistryData(new Dictionary<string, ServerEntry>
-        {
-            ["whois.nic.uk"] = new("uk", false, null, new Dictionary<string, List<string>>
-            {
-                ["found"] = ["google.co.uk"]
-            })
-        });
+        var registry = SingleServer("whois.nic.uk", "uk", "found", "google.co.uk");
 
         var largeResponse = new string('x', 200);
 
@@ -122,12 +107,12 @@ public class RefreshEngineTests
     [Fact]
     public async Task RunAsync_PartialFailure_CollectsAllResults()
     {
-        var registry = new DomainRegistryData(new Dictionary<string, ServerEntry>
+        var registry = new DomainRegistryData(new Dictionary<string, ServerEntry>(StringComparer.Ordinal)
         {
-            ["whois.nic.uk"] = new("uk", false, null, new Dictionary<string, List<string>>
+            ["whois.nic.uk"] = new("uk", false, null, new Dictionary<string, IList<string>>(StringComparer.Ordinal)
             {
-                ["found"] = ["google.co.uk", "bbc.co.uk"]
-            })
+                ["found"] = ["google.co.uk", "bbc.co.uk"],
+            }),
         });
 
         _tcpReader.Read("whois.nic.uk", 43, "google.co.uk\r\n", Arg.Any<Encoding>(), 30, Arg.Any<CancellationToken>())
@@ -147,21 +132,20 @@ public class RefreshEngineTests
     [Fact]
     public async Task RunAsync_RateGroups_QueriesGroupsInParallel()
     {
-        // Two servers in the same rate group + one independent
-        var registry = new DomainRegistryData(new Dictionary<string, ServerEntry>
+        var registry = new DomainRegistryData(new Dictionary<string, ServerEntry>(StringComparer.Ordinal)
         {
-            ["whois.verisign-grs.com"] = new("com", false, "verisign", new Dictionary<string, List<string>>
+            ["whois.verisign-grs.com"] = new("com", false, "verisign", new Dictionary<string, IList<string>>(StringComparer.Ordinal)
             {
-                ["found"] = ["google.com"]
+                ["found"] = ["google.com"],
             }),
-            ["ccwhois.verisign-grs.com"] = new("cc", false, "verisign", new Dictionary<string, List<string>>
+            ["ccwhois.verisign-grs.com"] = new("cc", false, "verisign", new Dictionary<string, IList<string>>(StringComparer.Ordinal)
             {
-                ["found"] = ["example.cc"]
+                ["found"] = ["example.cc"],
             }),
-            ["whois.nic.uk"] = new("uk", false, null, new Dictionary<string, List<string>>
+            ["whois.nic.uk"] = new("uk", false, null, new Dictionary<string, IList<string>>(StringComparer.Ordinal)
             {
-                ["found"] = ["google.co.uk"]
-            })
+                ["found"] = ["google.co.uk"],
+            }),
         });
 
         _tcpReader.Read(Arg.Any<string>(), Arg.Any<int>(), Arg.Any<string>(),
@@ -171,7 +155,6 @@ public class RefreshEngineTests
 
         var results = await CreateEngine().RunAsync(registry, _options, CancellationToken.None);
 
-        // All 3 domains queried
         Assert.True(results.Results.ContainsKey("whois.verisign-grs.com"));
         Assert.True(results.Results.ContainsKey("ccwhois.verisign-grs.com"));
         Assert.True(results.Results.ContainsKey("whois.nic.uk"));
@@ -180,13 +163,7 @@ public class RefreshEngineTests
     [Fact]
     public async Task RunAsync_CreatesDirectoryIfMissing()
     {
-        var registry = new DomainRegistryData(new Dictionary<string, ServerEntry>
-        {
-            ["whois.nic.uk"] = new("uk", false, null, new Dictionary<string, List<string>>
-            {
-                ["found"] = ["google.co.uk"]
-            })
-        });
+        var registry = SingleServer("whois.nic.uk", "uk", "found", "google.co.uk");
 
         _tcpReader.Read(Arg.Any<string>(), Arg.Any<int>(), Arg.Any<string>(),
                 Arg.Any<Encoding>(), Arg.Any<int>(), Arg.Any<CancellationToken>())

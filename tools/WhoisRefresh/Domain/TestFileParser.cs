@@ -14,7 +14,7 @@ public static partial class TestFileParser
     [GeneratedRegex("""Assert\.Equal\("([^"]+)",\s*response\.DomainName\.ToString\(\)\)""")]
     private static partial Regex DomainNameAssertionPattern();
 
-    public static List<SampleDomainEntry> ExtractDomains(string testFileContent)
+    public static IList<SampleDomainEntry> ExtractDomains(string testFileContent)
     {
         var results = new List<SampleDomainEntry>();
         var lines = testFileContent.Split('\n');
@@ -53,24 +53,24 @@ public static partial class TestFileParser
         return results;
     }
 
-    public static DomainRegistryData BuildRegistry(List<SampleDomainEntry> entries)
+    public static DomainRegistryData BuildRegistry(IList<SampleDomainEntry> entries)
     {
-        var servers = new Dictionary<string, ServerEntry>();
+        var servers = new Dictionary<string, ServerEntry>(StringComparer.Ordinal);
 
-        var grouped = entries.GroupBy(e => e.Server);
+        var grouped = entries.GroupBy(e => e.Server, StringComparer.Ordinal);
 
         foreach (var serverGroup in grouped)
         {
             var serverName = serverGroup.Key;
             var tld = serverGroup.First().Tld;
-            var domains = new Dictionary<string, List<string>>();
+            var domains = new Dictionary<string, IList<string>>(StringComparer.Ordinal);
 
-            foreach (var statusGroup in serverGroup.GroupBy(e => e.Status))
+            foreach (var statusGroup in serverGroup.GroupBy(e => e.Status, StringComparer.Ordinal))
             {
-                var uniqueDomains = statusGroup
+                IList<string> uniqueDomains = statusGroup
                     .Select(e => e.DomainName)
-                    .Distinct()
-                    .OrderBy(d => d)
+                    .Distinct(StringComparer.Ordinal)
+                    .Order(StringComparer.Ordinal)
                     .ToList();
                 domains[statusGroup.Key] = uniqueDomains;
             }

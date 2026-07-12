@@ -97,7 +97,7 @@ public class WhoisLookup : IWhoisLookup
             Query = domain,
             Encoding = encoding,
             TimeoutSeconds = Options.TimeoutSeconds,
-            FollowReferrer = Options.FollowReferrer
+            FollowReferrer = Options.FollowReferrer,
         }, cancellationToken);
     }
 
@@ -108,14 +108,14 @@ public class WhoisLookup : IWhoisLookup
     {
         if (string.IsNullOrEmpty(request.Query))
         {
-            throw new ArgumentNullException($"{nameof(request)}.{nameof(request.Query)}");
+            throw new ArgumentNullException(nameof(request), "Query must not be null or empty.");
         }
 
         // Trim leading '.'
-        if (request.Query.StartsWith(".")) request.Query = request.Query.Substring(1);
+        if (request.Query.Length > 0 && request.Query[0] == '.') request.Query = request.Query.Substring(1);
 
         // Validate domain name
-        if (HostName.TryParse(request.Query, out var hostName) == false)
+        if (!HostName.TryParse(request.Query, out var hostName))
         {
             throw new WhoisException($"WHOIS Query Format Error: {request.Query}");
         }
@@ -127,7 +127,7 @@ public class WhoisLookup : IWhoisLookup
         if (string.IsNullOrEmpty(request.WhoisServer))
         {
             // Lookup root WHOIS server for the TLD
-            response = await ServerLookup.Lookup(request, cancellationToken);
+            response = await ServerLookup.Lookup(request, cancellationToken).ConfigureAwait(false);
         }
         else
         {
@@ -145,7 +145,7 @@ public class WhoisLookup : IWhoisLookup
             cancellationToken.ThrowIfCancellationRequested();
 
             // Download
-            var content = await Download(whoisServer.Value, request, cancellationToken);
+            var content = await Download(whoisServer.Value, request, cancellationToken).ConfigureAwait(false);
 
             // Parse result
             var parsed = Parser.Parse(whoisServer.Value, content);
@@ -160,7 +160,7 @@ public class WhoisLookup : IWhoisLookup
             response = response.Chain(parsed);
 
             // Check for referral loop
-            if (request.FollowReferrer == false) break;
+            if (!request.FollowReferrer) break;
             if (response.SeenServer(response.WhoisServer)) break;
 
             // Lookup result in referral server
@@ -172,11 +172,10 @@ public class WhoisLookup : IWhoisLookup
 
     private async Task<string> Download(string url, WhoisRequest request, CancellationToken cancellationToken)
     {
-        // TODO: Expose this & extend for other TLDs
         var query = request.Query;
-        if (query.EndsWith("jp")) query += "/e";    // Return English .jp results
+        if (query.EndsWith("jp", StringComparison.Ordinal)) query += "/e";    // Return English .jp results
 
-        var content = await TcpReader.Read(url, 43, query, request.Encoding, request.TimeoutSeconds, cancellationToken);
+        var content = await TcpReader.Read(url, 43, query, request.Encoding, request.TimeoutSeconds, cancellationToken).ConfigureAwait(false);
 
         _logger.LogDebug("Lookup {Query}: Downloaded {ByteCount:###,###,##0} byte(s) from {Url}.", request.Query, content.Length, url);
 

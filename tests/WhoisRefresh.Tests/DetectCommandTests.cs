@@ -7,6 +7,24 @@ namespace WhoisRefresh.Tests;
 
 public class DetectCommandTests
 {
+    private static IDictionary<string, IDictionary<string, IDictionary<string, IDictionary<string, DomainResult>>>> MakeResults(
+        string server, string tld, string status, string domain, DomainResult result)
+    {
+        return new Dictionary<string, IDictionary<string, IDictionary<string, IDictionary<string, DomainResult>>>>(StringComparer.Ordinal)
+        {
+            [server] = new Dictionary<string, IDictionary<string, IDictionary<string, DomainResult>>>(StringComparer.Ordinal)
+            {
+                [tld] = new Dictionary<string, IDictionary<string, DomainResult>>(StringComparer.Ordinal)
+                {
+                    [status] = new Dictionary<string, DomainResult>(StringComparer.Ordinal)
+                    {
+                        [domain] = result,
+                    },
+                },
+            },
+        };
+    }
+
     [Fact]
     public async Task DetectAsync_WithBreakages_InvokesDriftReporter()
     {
@@ -16,57 +34,33 @@ public class DetectCommandTests
         var baseline = new RefreshResults
         {
             Version = DateTimeOffset.UtcNow.AddDays(-7),
-            Results = new()
+            Results = MakeResults("whois.nic.uk", "uk", "found", "google.co.uk", new DomainResult
             {
-                ["whois.nic.uk"] = new()
-                {
-                    ["uk"] = new()
-                    {
-                        ["found"] = new()
-                        {
-                            ["google.co.uk"] = new DomainResult
-                            {
-                                Timestamp = DateTimeOffset.UtcNow.AddDays(-7),
-                                MatchedTemplate = "whois.nic.uk/uk/found/01",
-                                ExtractedFields = ["DomainName", "Registrar"],
-                                Error = null
-                            }
-                        }
-                    }
-                }
-            }
+                Timestamp = DateTimeOffset.UtcNow.AddDays(-7),
+                MatchedTemplate = "whois.nic.uk/uk/found/01",
+                ExtractedFields = ["DomainName", "Registrar"],
+                Error = null,
+            }),
         };
 
         var current = new RefreshResults
         {
             Version = DateTimeOffset.UtcNow,
-            Results = new()
+            Results = MakeResults("whois.nic.uk", "uk", "found", "google.co.uk", new DomainResult
             {
-                ["whois.nic.uk"] = new()
-                {
-                    ["uk"] = new()
-                    {
-                        ["found"] = new()
-                        {
-                            ["google.co.uk"] = new DomainResult
-                            {
-                                Timestamp = DateTimeOffset.UtcNow,
-                                MatchedTemplate = null,
-                                ExtractedFields = [],
-                                Error = null
-                            }
-                        }
-                    }
-                }
-            }
+                Timestamp = DateTimeOffset.UtcNow,
+                MatchedTemplate = null,
+                ExtractedFields = [],
+                Error = null,
+            }),
         };
 
-        var registry = new DomainRegistryData(new Dictionary<string, ServerEntry>
+        var registry = new DomainRegistryData(new Dictionary<string, ServerEntry>(StringComparer.Ordinal)
         {
-            ["whois.nic.uk"] = new("uk", false, null, new Dictionary<string, List<string>>
+            ["whois.nic.uk"] = new("uk", false, null, new Dictionary<string, IList<string>>(StringComparer.Ordinal)
             {
-                ["found"] = ["google.co.uk"]
-            })
+                ["found"] = ["google.co.uk"],
+            }),
         });
 
         // Baseline is read via git, not directly from the file system
@@ -80,7 +74,7 @@ public class DetectCommandTests
         Assert.Equal(DriftClassification.NoMatch, entries[0].Classification);
 
         await reporter.Received(1).ReportAsync(
-            Arg.Is<List<DriftEntry>>(e => e.Count == 1),
+            Arg.Is<IList<DriftEntry>>(e => e.Count == 1),
             Arg.Any<string>(),
             Arg.Any<string>(),
             Arg.Any<CancellationToken>());
@@ -95,25 +89,13 @@ public class DetectCommandTests
         var results = new RefreshResults
         {
             Version = DateTimeOffset.UtcNow,
-            Results = new()
+            Results = MakeResults("whois.nic.uk", "uk", "found", "google.co.uk", new DomainResult
             {
-                ["whois.nic.uk"] = new()
-                {
-                    ["uk"] = new()
-                    {
-                        ["found"] = new()
-                        {
-                            ["google.co.uk"] = new DomainResult
-                            {
-                                Timestamp = DateTimeOffset.UtcNow,
-                                MatchedTemplate = "whois.nic.uk/uk/found/01",
-                                ExtractedFields = ["DomainName", "Registrar"],
-                                Error = null
-                            }
-                        }
-                    }
-                }
-            }
+                Timestamp = DateTimeOffset.UtcNow,
+                MatchedTemplate = "whois.nic.uk/uk/found/01",
+                ExtractedFields = ["DomainName", "Registrar"],
+                Error = null,
+            }),
         };
 
         fileSystem.GitReadHeadAsync("/repo", "tools/WhoisRefresh/refresh-results.json", Arg.Any<CancellationToken>())
@@ -124,7 +106,7 @@ public class DetectCommandTests
 
         Assert.Empty(entries);
         await reporter.DidNotReceive().ReportAsync(
-            Arg.Any<List<DriftEntry>>(), Arg.Any<string>(), Arg.Any<string>(), Arg.Any<CancellationToken>());
+            Arg.Any<IList<DriftEntry>>(), Arg.Any<string>(), Arg.Any<string>(), Arg.Any<CancellationToken>());
     }
 
     [Fact]
@@ -136,25 +118,13 @@ public class DetectCommandTests
         var current = new RefreshResults
         {
             Version = DateTimeOffset.UtcNow,
-            Results = new()
+            Results = MakeResults("whois.nic.uk", "uk", "found", "google.co.uk", new DomainResult
             {
-                ["whois.nic.uk"] = new()
-                {
-                    ["uk"] = new()
-                    {
-                        ["found"] = new()
-                        {
-                            ["google.co.uk"] = new DomainResult
-                            {
-                                Timestamp = DateTimeOffset.UtcNow,
-                                MatchedTemplate = "whois.nic.uk/uk/found/01",
-                                ExtractedFields = ["DomainName"],
-                                Error = null
-                            }
-                        }
-                    }
-                }
-            }
+                Timestamp = DateTimeOffset.UtcNow,
+                MatchedTemplate = "whois.nic.uk/uk/found/01",
+                ExtractedFields = ["DomainName"],
+                Error = null,
+            }),
         };
 
         // Simulate file not tracked in git (git show returns null)
@@ -168,6 +138,6 @@ public class DetectCommandTests
         Assert.Equal(DriftClassification.NewEntry, entries[0].Classification);
         // New entries don't trigger PR
         await reporter.DidNotReceive().ReportAsync(
-            Arg.Any<List<DriftEntry>>(), Arg.Any<string>(), Arg.Any<string>(), Arg.Any<CancellationToken>());
+            Arg.Any<IList<DriftEntry>>(), Arg.Any<string>(), Arg.Any<string>(), Arg.Any<CancellationToken>());
     }
 }

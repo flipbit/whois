@@ -16,6 +16,9 @@
     <PackageVersion Include="Spectre.Console.Cli" Version="0.50.0" />
     <PackageVersion Include="Microsoft.Extensions.Logging.Console" Version="10.0.9" />
 
+    <!-- Analyzers -->
+    <PackageVersion Include="Meziantou.Analyzer" Version="3.0.122" />
+
     <!-- Test -->
     <PackageVersion Include="Microsoft.NET.Test.Sdk" Version="17.5.0" />
     <PackageVersion Include="Microsoft.Extensions.DependencyInjection" Version="10.0.9" />

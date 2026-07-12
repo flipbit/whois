@@ -10,7 +10,7 @@ public class WhoisIsocOrgIlFixup : MultipleContactFixup
     public override bool CanFixup(TokenizeResult result)
     {
         // Templates that this Fixup can work on
-        return result.Template.Name == "whois.isoc.org.il/il/found/01";
+        return string.Equals(result.Template.Name, "whois.isoc.org.il/il/found/01", StringComparison.Ordinal);
     }
 
     protected override bool TryGetRegistrant(IReadOnlyList<TokenMatch> matches, WhoisResponse response, out Contact? contact)
@@ -18,7 +18,7 @@ public class WhoisIsocOrgIlFixup : MultipleContactFixup
         contact = null;
 
         var contactIdMatch = matches
-            .FirstOrDefault(m => m.Token.Name == "Address");
+            .FirstOrDefault(m => string.Equals(m.Token.Name, "Address", StringComparison.Ordinal));
 
         if (contactIdMatch == null)
         {
@@ -79,8 +79,8 @@ public class WhoisIsocOrgIlFixup : MultipleContactFixup
         if (string.IsNullOrEmpty(input?.RegistryId)) return false;
 
         var contactIdMatch = matches
-            .Where(m => m.Token.Name == "Contact.Id")
-            .FirstOrDefault(m => string.CompareOrdinal(m.Value.ToString(), input!.RegistryId) == 0);
+            .FirstOrDefault(m => string.Equals(m.Token.Name, "Contact.Id", StringComparison.Ordinal) &&
+                                 string.Equals(m.Value.ToString(), input!.RegistryId, StringComparison.Ordinal));
 
         if (contactIdMatch == null)
         {

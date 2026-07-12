@@ -34,28 +34,28 @@ public class DetectCommand : AsyncCommand<DetectSettings>
             return 1;
         }
 
-        var registry = await DomainRegistry.LoadFromFileAsync(registryPath);
-        var currentJson = await _fileSystem.ReadAllTextAsync(resultsPath);
+        var registry = await DomainRegistry.LoadFromFileAsync(registryPath).ConfigureAwait(false);
+        var currentJson = await _fileSystem.ReadAllTextAsync(resultsPath).ConfigureAwait(false);
         var current = RefreshResults.Deserialize(currentJson);
 
         var detector = new DriftDetector(_reporter, _fileSystem);
-        var entries = await detector.DetectAsync(current, settings.RepoRoot, "tools/WhoisRefresh", CancellationToken.None);
+        var entries = await detector.DetectAsync(current, settings.RepoRoot, "tools/WhoisRefresh", CancellationToken.None).ConfigureAwait(false);
 
-        var isCi = Environment.GetEnvironmentVariable("GITHUB_ACTIONS") == "true";
+        var isCi = string.Equals(Environment.GetEnvironmentVariable("GITHUB_ACTIONS"), "true", StringComparison.Ordinal);
         OutputResults(entries, isCi);
 
         if (entries.Count > 0)
         {
             var jsonReport = DriftReportGenerator.ToJson(entries);
             var mdReport = DriftReportGenerator.ToMarkdown(entries);
-            await _fileSystem.WriteAllTextAsync(Path.Combine(toolDir, "drift-report.json"), jsonReport);
-            await _fileSystem.WriteAllTextAsync(Path.Combine(toolDir, "drift-report.md"), mdReport);
+            await _fileSystem.WriteAllTextAsync(Path.Combine(toolDir, "drift-report.json"), jsonReport).ConfigureAwait(false);
+            await _fileSystem.WriteAllTextAsync(Path.Combine(toolDir, "drift-report.md"), mdReport).ConfigureAwait(false);
         }
 
         return entries.Any(e => e.Severity == DriftSeverity.Breakage) ? 1 : 0;
     }
 
-    private static void OutputResults(List<DriftEntry> entries, bool isCi)
+    private static void OutputResults(IList<DriftEntry> entries, bool isCi)
     {
         if (entries.Count == 0)
         {
@@ -71,7 +71,7 @@ public class DetectCommand : AsyncCommand<DetectSettings>
                 {
                     DriftSeverity.Breakage => "::error::",
                     DriftSeverity.Warning => "::warning::",
-                    _ => "::notice::"
+                    _ => "::notice::",
                 };
                 Console.WriteLine($"{annotation}{entry.Domain} ({entry.Server}): {entry.Details}");
             }
@@ -82,7 +82,7 @@ public class DetectCommand : AsyncCommand<DetectSettings>
                     DriftSeverity.Breakage => "red",
                     DriftSeverity.Warning => "yellow",
                     DriftSeverity.Drift => "yellow",
-                    _ => "blue"
+                    _ => "blue",
                 };
                 AnsiConsole.MarkupLine($"[{color}]{entry.Severity}[/] {Markup.Escape(entry.Domain)} ({Markup.Escape(entry.Server)}): {Markup.Escape(entry.Details)}");
             }
