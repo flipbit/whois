@@ -192,7 +192,7 @@ Parses minisign's two-line base64 signature format (untrusted comment line + sig
 
 ### Ed25519Verifier (Whois.Security)
 
-Thin wrapper. On net8.0+ uses `System.Security.Cryptography` built-in Ed25519. On netstandard2.0 uses a vendored managed implementation sourced from Chaos.NaCl (CodesInChaos) — a pure managed C# Ed25519, no native dependencies. Both code paths are validated against RFC 8032 §7.1 test vectors in CI to detect any divergence. The `#if` dispatch lives in `Ed25519Verifier.cs` itself — crypto code stays with crypto code.
+Thin wrapper. Uses a vendored managed implementation sourced from Chaos.NaCl (CodesInChaos) — a pure managed C# Ed25519, no native dependencies. This runs on all targets (netstandard2.0, net8.0, net10.0). A `#if NET10_0_OR_GREATER` optimisation to use `System.Security.Cryptography` built-in Ed25519 may be added later — .NET 8 does not expose Ed25519 in its stable crypto API, so the managed path is the only cross-target option. Validated against all RFC 8032 §7.1 test vectors in CI.
 
 ### Signing Key
 
@@ -385,12 +385,7 @@ Templates loaded during a process lifetime are not replaced. If a new pack is do
 
 ## 10. netstandard2.0 Compatibility
 
-Auto-update is available on all targets. The Ed25519 implementation differs by target:
-
-- **net8.0+ / net10.0:** `System.Security.Cryptography` built-in Ed25519
-- **netstandard2.0:** vendored managed Ed25519 implementation
-
-The `#if` dispatch lives in `Ed25519Verifier.cs` itself. The previous single-file `#if` rule is relaxed — `#if` directives are permitted where cohesion demands it (crypto code stays in the crypto file, networking shims stay in the networking file).
+Auto-update is available on all targets. The Ed25519 implementation uses a vendored managed Chaos.NaCl implementation on all targets — .NET 8 does not expose Ed25519 in its stable `System.Security.Cryptography` API. A `#if NET10_0_OR_GREATER` optimisation may be added later if .NET 10 ships stable Ed25519 support.
 
 ---
 
