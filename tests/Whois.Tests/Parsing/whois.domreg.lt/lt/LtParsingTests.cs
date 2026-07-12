@@ -13,7 +13,7 @@ public class LtParsingTests : ParsingTests
         parser = new WhoisParser();
     }
 
-    [Fact(Skip = "Template update deferred - WHOIS response format changed")]
+    [Fact]
     public void Test_found()
     {
         var sample = SampleReader.Read("whois.domreg.lt", "lt", "found", "serveriai.lt.txt");
@@ -28,13 +28,13 @@ public class LtParsingTests : ParsingTests
         Assert.Equal("serveriai.lt", response.DomainName.ToString());
 
         // Registrar Details
-        Assert.Equal(@"UAB ""Interneto vizija""", response.Registrar.Name);
-        Assert.Equal("http://www.iv.lt/", response.Registrar.Url);
+        Assert.Equal("UAB \"Interneto vizija\"", response.Registrar.Name);
+        Assert.Equal("https://www.iv.lt/", response.Registrar.Url);
 
-        Assert.Equal(new DateTime(2003, 11, 17, 00, 00, 00, DateTimeKind.Utc), response.Registered);
+        Assert.Equal(new DateTime(2003, 11, 17, 0, 0, 0, DateTimeKind.Utc), response.Registered);
 
         // Registrant Details
-        Assert.Equal(@"UAB ""Interneto vizija""", response.Registrant.Organization);
+        Assert.Equal("UAB \"Interneto vizija\"", response.Registrant.Organization);
         Assert.Equal("hostmaster@iv.lt", response.Registrant.Email);
 
         // Domain Status
@@ -61,7 +61,7 @@ public class LtParsingTests : ParsingTests
         Assert.Equal(2, response.FieldsParsed);
     }
 
-    [Fact(Skip = "Template update deferred - WHOIS response format changed")]
+    [Fact]
     public void Test_found_status_registered()
     {
         var sample = SampleReader.Read("whois.domreg.lt", "lt", "found", "google.lt.txt");
@@ -79,10 +79,10 @@ public class LtParsingTests : ParsingTests
         Assert.Equal("MarkMonitor, Inc.", response.Registrar.Name);
         Assert.Equal("http://www.markmonitor.com", response.Registrar.Url);
 
-        Assert.Equal(new DateTime(1999, 06, 06, 00, 00, 00, DateTimeKind.Utc), response.Registered);
+        Assert.Equal(new DateTime(2018, 12, 7, 0, 0, 0, DateTimeKind.Utc), response.Registered);
 
         // Registrant Details
-        Assert.Equal("dns-admin@google.com", response.Registrant.Email);
+        Assert.Equal("ccops@markmonitor.com", response.Registrant.Email);
 
         // Nameservers
         Assert.Equal(3, response.NameServers.Count);
@@ -94,6 +94,6 @@ public class LtParsingTests : ParsingTests
         Assert.Equal(1, response.DomainStatus.Count);
         Assert.Equal("registered", response.DomainStatus[0]);
 
-        Assert.Equal(10, response.FieldsParsed);
+        Assert.Equal(11, response.FieldsParsed);
     }
 }
