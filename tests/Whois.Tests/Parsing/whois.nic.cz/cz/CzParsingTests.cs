@@ -175,7 +175,7 @@ public class CzParsingTests : ParsingTests
         Assert.Equal(1, response.FieldsParsed);
     }
 
-    [Fact(Skip = "Template update deferred - WHOIS response format changed")]
+    [Fact]
     public void Test_found_status_registered()
     {
         var sample = SampleReader.Read("whois.nic.cz", "cz", "found", "google.cz.txt");
@@ -189,16 +189,16 @@ public class CzParsingTests : ParsingTests
 
         Assert.Equal("google.cz", response.DomainName.ToString());
 
-        Assert.Equal(new DateTime(2011, 05, 18, 23, 28, 45, 000, DateTimeKind.Utc), response.Updated);
+        Assert.Equal(new DateTime(2021, 06, 29, 23, 29, 20, 000, DateTimeKind.Utc), response.Updated);
         Assert.Equal(new DateTime(2000, 07, 21, 15, 21, 00, 000, DateTimeKind.Utc), response.Registered);
-        Assert.Equal(new DateTime(2014, 07, 22, 00, 00, 00, 000, DateTimeKind.Utc), response.Expiration);
+        Assert.Equal(new DateTime(2027, 07, 22, 00, 00, 00, 000, DateTimeKind.Utc), response.Expiration);
 
         // Registrant Details
-        Assert.Equal("MM12383", response.Registrant.RegistryId);
-        Assert.Equal("DNS Admin", response.Registrant.Name);
-        Assert.Equal("Google Inc.", response.Registrant.Organization);
-        Assert.Equal("dns-admin@google.com", response.Registrant.Email);
-        Assert.Equal(new DateTime(2011, 05, 18, 23, 28, 26, 000, DateTimeKind.Utc), response.Registrant.Created);
+        Assert.Equal("MM1171195", response.Registrant.RegistryId);
+        Assert.Equal("Domain Administrator", response.Registrant.Name);
+        Assert.Equal("Google LLC", response.Registrant.Organization);
+        Assert.Null(response.Registrant.Email);
+        Assert.Equal(new DateTime(2018, 03, 02, 18, 52, 05, 000, DateTimeKind.Utc), response.Registrant.Created);
 
         // Registrant Address
         Assert.Equal(5, response.Registrant.Address.Count);
@@ -210,11 +210,11 @@ public class CzParsingTests : ParsingTests
 
 
         // AdminContact Details
-        Assert.Equal("MM12383", response.AdminContact.RegistryId);
-        Assert.Equal("DNS Admin", response.AdminContact.Name);
-        Assert.Equal("Google Inc.", response.AdminContact.Organization);
-        Assert.Equal("dns-admin@google.com", response.AdminContact.Email);
-        Assert.Equal(new DateTime(2011, 05, 18, 23, 28, 26, 000, DateTimeKind.Utc), response.AdminContact.Created);
+        Assert.Equal("MM1171195", response.AdminContact.RegistryId);
+        Assert.Equal("Domain Administrator", response.AdminContact.Name);
+        Assert.Equal("Google LLC", response.AdminContact.Organization);
+        Assert.Null(response.AdminContact.Email);
+        Assert.Equal(new DateTime(2018, 03, 02, 18, 52, 05, 000, DateTimeKind.Utc), response.AdminContact.Created);
 
         // AdminContact Address
         Assert.Equal(5, response.AdminContact.Address.Count);
@@ -228,17 +228,17 @@ public class CzParsingTests : ParsingTests
         // TechnicalContact Details
         Assert.Equal("MM193020", response.TechnicalContact.RegistryId);
         Assert.Equal("Domain Provisioning", response.TechnicalContact.Name);
-        Assert.Equal("MarkMonitor, Inc.", response.TechnicalContact.Organization);
-        Assert.Equal("ccops@markmonitor.com", response.TechnicalContact.Email);
+        Assert.Equal("MarkMonitor Inc.", response.TechnicalContact.Organization);
+        Assert.Null(response.TechnicalContact.Email);
         Assert.Equal(new DateTime(2011, 02, 03, 18, 24, 34, 000, DateTimeKind.Utc), response.TechnicalContact.Created);
 
         // TechnicalContact Address
-        Assert.Equal(5, response.TechnicalContact.Address.Count);
-        Assert.Equal("10400 Overland Road PMB 155", response.TechnicalContact.Address[0]);
-        Assert.Equal("Boise", response.TechnicalContact.Address[1]);
-        Assert.Equal("83709-1433", response.TechnicalContact.Address[2]);
-        Assert.Equal("ID", response.TechnicalContact.Address[3]);
-        Assert.Equal("US", response.TechnicalContact.Address[4]);
+        Assert.Equal(6, response.TechnicalContact.Address.Count);
+        Assert.Equal("2150 S Bonito Way", response.TechnicalContact.Address[0]);
+        Assert.Equal("Suite 150", response.TechnicalContact.Address[1]);
+        Assert.Equal("Meridian", response.TechnicalContact.Address[2]);
+        Assert.Equal("83642", response.TechnicalContact.Address[3]);
+        Assert.Equal("ID", response.TechnicalContact.Address[4]);
 
 
         // Nameservers
@@ -248,7 +248,7 @@ public class CzParsingTests : ParsingTests
         Assert.Equal("ns3.google.com", response.NameServers[2]);
         Assert.Equal("ns1.google.com", response.NameServers[3]);
 
-        Assert.Equal(33, response.FieldsParsed);
+        Assert.Equal(35, response.FieldsParsed);
     }
 
     [Fact]
