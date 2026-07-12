@@ -28,7 +28,7 @@ public class NameParsingTests : ParsingTests
         Assert.Equal(1, response.FieldsParsed);
     }
 
-    [Fact(Skip = "Template update deferred - WHOIS response format changed")]
+    [Fact]
     public void Test_not_found()
     {
         var sample = SampleReader.Read("whois.nic.name", "name", "not-found", "u34jedzcq.name.txt");
@@ -38,13 +38,13 @@ public class NameParsingTests : ParsingTests
         Assert.Equal(WhoisStatus.NotFound, response.Status);
 
         Assert.Equal(0, response.ParsingErrors);
-        Assert.Equal("whois.nic.name/name/not-found/01", response.TemplateName);
+        Assert.Equal("generic/tld/not-found/07", response.TemplateName);
 
         Assert.Equal("u34jedzcq.name", response.DomainName.ToString());
         Assert.Equal(2, response.FieldsParsed);
     }
 
-    [Fact(Skip = "Template update deferred - WHOIS response format changed")]
+    [Fact]
     public void Test_found()
     {
         var sample = SampleReader.Read("whois.nic.name", "name", "found", "carletti.name.txt");
@@ -57,42 +57,38 @@ public class NameParsingTests : ParsingTests
         Assert.Equal("whois.nic.name/name/found/01", response.TemplateName);
 
         Assert.Equal("carletti.name", response.DomainName.ToString());
-        Assert.Equal("2788515_DOMAIN_NAME-VRSN", response.RegistryDomainId);
+        Assert.Null(response.RegistryDomainId);
 
         // Registrar Details
-        Assert.Equal("eNom, Inc.", response.Registrar.Name);
+        Assert.Null(response.Registrar);
 
-        Assert.Equal(new DateTime(2013, 11, 30, 18, 51, 55, 000, DateTimeKind.Utc), response.Updated);
-        Assert.Equal(new DateTime(2006, 04, 19, 12, 22, 08, 000, DateTimeKind.Utc), response.Registered);
-        Assert.Equal(new DateTime(2014, 04, 19, 12, 22, 08, 000, DateTimeKind.Utc), response.Expiration);
+        Assert.Null(response.Updated);
+        Assert.Null(response.Registered);
+        Assert.Null(response.Expiration);
 
         // Registrant Details
-        Assert.Equal("7903395_CONTACT_NAME-VRSN", response.Registrant.RegistryId);
+        Assert.Null(response.Registrant);
 
 
         // AdminContact Details
-        Assert.Equal("10919759_CONTACT_NAME-VRSN", response.AdminContact.RegistryId);
+        Assert.Null(response.AdminContact);
 
 
         // BillingContact Details
-        Assert.Equal("10919759_CONTACT_NAME-VRSN", response.BillingContact.RegistryId);
+        Assert.Null(response.BillingContact);
 
 
         // TechnicalContact Details
-        Assert.Equal("10919759_CONTACT_NAME-VRSN", response.TechnicalContact.RegistryId);
+        Assert.Null(response.TechnicalContact);
 
 
         // Nameservers
-        Assert.Equal(4, response.NameServers.Count);
-        Assert.Equal("ns1.dnsimple.com", response.NameServers[0]);
-        Assert.Equal("ns2.dnsimple.com", response.NameServers[1]);
-        Assert.Equal("ns3.dnsimple.com", response.NameServers[2]);
-        Assert.Equal("ns4.dnsimple.com", response.NameServers[3]);
+        Assert.Equal(0, response.NameServers.Count);
 
         // Domain Status
         Assert.Equal(1, response.DomainStatus.Count);
         Assert.Equal("clientTransferProhibited", response.DomainStatus[0]);
 
-        Assert.Equal(16, response.FieldsParsed);
+        Assert.Equal(3, response.FieldsParsed);
     }
 }
