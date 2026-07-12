@@ -1,0 +1,16 @@
+---
+#
+# .bg Parsing Template
+#
+name: whois.register.bg/bg/not-found/01
+
+# Use this template for queries to whois.register.bg:
+tag: whois.register.bg
+tag: bg
+
+# Set query response type:
+set: Status = NotFound
+
+hint: does not exist
+---
+Domain name { DomainName : IsDomainName, ToHostName } does not exist in database!

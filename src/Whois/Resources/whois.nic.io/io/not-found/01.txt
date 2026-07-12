@@ -1,0 +1,17 @@
+---
+#
+# .io Parsing Template
+#
+name: whois.nic.io/io/not-found/01
+
+# Use this template for queries to whois.nic.io:
+tag: whois.nic.io
+tag: io
+
+# Set query response type:
+set: Status = NotFound
+
+hint: is available for purchase
+---
+Domain { DomainName : IsDomainName, ToHostName } is available for purchase
+Please visit http://www.nic.io/ for more information

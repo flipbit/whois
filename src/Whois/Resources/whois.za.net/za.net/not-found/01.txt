@@ -1,0 +1,18 @@
+---
+#
+# .za.net Parsing Template
+#
+name: whois.za.net/za.net/not-found/01
+
+# Use this template for queries to whois.za.net:
+tag: whois.za.net
+tag: za.net
+
+# End tokens on new lines
+terminateOnNewLine: true
+
+# Set query response type:
+set: Status = NotFound
+---
+No such domain: { DomainName : IsDomainName, ToHostName }
+

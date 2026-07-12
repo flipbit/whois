@@ -1,0 +1,17 @@
+---
+#
+# .ac Parsing Template
+#
+name: whois.nic.ac/ac/not-found/01
+
+# Use this template for queries to whois.nic.ac:
+tag: whois.nic.ac
+tag: ac
+
+# Set query response type:
+set: Status = NotFound
+
+hint: is available for purchase
+---
+Domain { DomainName : IsDomainName, ToHostName } is available for purchase
+Please visit http://www.nic.ac/ for more information

@@ -1,0 +1,20 @@
+---
+#
+# .tattoo Parsing Template
+#
+name: whois.uniregistry.net/tattoo/unavailable/01
+
+# Use this template for queries to whois.uniregistry.net:
+tag: whois.uniregistry.net
+tag: tattoo
+
+# End tokens on new lines
+terminateOnNewLine: true
+
+# Set query response type:
+set: Status = Unavailable
+
+hint: is not available for registration
+hint: is registry reserved by Uniregistry
+---
+Domain Name: { DomainName : IsDomainName, ToHostName }

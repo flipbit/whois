@@ -1,0 +1,17 @@
+---
+#
+# .info Parsing Template
+#
+name: whois.afilias.net/info/not-found/01
+
+# Use this template for queries to whois.afilias.net:
+tag: whois.afilias.net
+tag: info
+
+# Set query response type:
+set: Status = NotFound
+
+# Must contain:
+hint: NOT FOUND
+---
+NOT FOUND

@@ -28,6 +28,7 @@ public static class SampleMapper
         ("locked", "locked"),
         ("redemption", "redemption"),
         ("unconfirmed", "unconfirmed"),
+        ("other_status", "found"),
     ];
 
     public static (string Status, string Filename) MapToStatusDirectory(string sampleFilename)
@@ -43,8 +44,8 @@ public static class SampleMapper
             }
         }
 
-        throw new InvalidOperationException(
-            $"Unknown status prefix in sample filename: '{sampleFilename}'. " +
-            $"Add the prefix to SampleMapper.StatusPrefixes.");
+        // Domain-named samples (e.g. adobe.com.txt, youtu.be.txt) are found-status
+        // samples capturing a specific real domain response.
+        return ("found", sampleFilename);
     }
 }

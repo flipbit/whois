@@ -1,0 +1,16 @@
+---
+#
+# .hu Parsing Template
+#
+name: whois.nic.hu/hu/not-found/01
+
+# Use this template for queries to whois.nic.hu:
+tag: whois.nic.hu
+tag: hu
+
+# Set query response type:
+set: Status = NotFound
+
+hint: No match
+---
+Nincs találat / No match

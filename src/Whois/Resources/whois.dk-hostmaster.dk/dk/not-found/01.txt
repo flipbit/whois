@@ -1,0 +1,16 @@
+---
+#
+# .dk Parsing Template
+#
+name: whois.dk-hostmaster.dk/dk/not-found/01
+
+# Use this template for queries to whois.dk-hostmaster.dk:
+tag: whois.dk-hostmaster.dk
+tag: dk
+
+# Set query response type:
+set: Status = NotFound
+
+hint: No entries found for the selected source.
+---
+No entries found for the selected source.

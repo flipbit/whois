@@ -1,0 +1,16 @@
+---
+#
+# .cn Parsing Template
+#
+name: whois.cnnic.cn/cn/reserved/02
+
+# Use this template for queries to whois.cnnic.cn:
+tag: whois.cnnic.cn
+tag: cn
+
+# Set query response type:
+set: Status = Reserved
+
+hint: Sorry, The domain you requested is in the reserved list
+---
+Sorry, The domain you requested is in the reserved list.

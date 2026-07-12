@@ -1,0 +1,16 @@
+---
+#
+# .cat Parsing Template
+#
+name: whois.cat/cat/not-found/01
+
+# Use this template for queries to whois.cat:
+tag: whois.cat
+tag: cat
+
+# Set query response type:
+set: Status = NotFound
+
+hint: NOT FOUND
+---
+% Object "{ DomainName : IsDomainName, ToHostName }" NOT FOUND.

@@ -1,0 +1,16 @@
+---
+#
+# .it Parsing Template
+#
+name: whois.nic.it/it/unavailable/01
+
+# Use this template for queries to whois.nic.it:
+tag: whois.nic.it
+tag: it
+
+# Set query response type:
+set: Status = Unavailable
+
+hint: Service temporarily unavailable 
+---
+Service temporarily unavailable.

@@ -1,0 +1,16 @@
+---
+#
+# .af Parsing Template
+#
+name: whois.nic.af/af/not-found/01
+
+# Use this template for queries to whois.nic.af:
+tag: whois.nic.af
+tag: af
+
+# Set query response type:
+set: Status = NotFound
+
+hint: No Object Found
+---
+Domain Name: { DomainName : IsDomainName, ToHostName, EOL }

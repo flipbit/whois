@@ -1,0 +1,18 @@
+---
+#
+# .pr Parsing Template
+#
+name: whois.nic.pr/pr/error/01
+
+# Use this template for queries to whois.nic.pr:
+tag: whois.nic.pr
+tag: pr
+
+# Set query response type:
+set: Status = Error
+
+hint: Connection attempt failed
+---
+Connection attempt failed 2.
+
+

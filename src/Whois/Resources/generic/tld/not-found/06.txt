@@ -1,0 +1,16 @@
+---
+#
+# Generic TLD Parsing Template
+#
+name: generic/tld/not-found/06
+
+# Use this template for catch-all parsing:
+tag: catch-all
+
+# Set query response type:
+set: Status = NotFound
+
+hint: No entries found 
+---
+No entries found 
+

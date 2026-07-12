@@ -1,0 +1,18 @@
+---
+#
+# .ws Parsing Template
+#
+name: whois.website.ws/ws/not-found/01
+
+# Use this template for queries to whois.website.ws:
+tag: whois.website.ws
+tag: ws
+
+# Set query response type:
+set: Status = NotFound
+
+hint: No match for
+---
+No match for "{ DomainName : IsDomainName, ToHostName }".
+
+

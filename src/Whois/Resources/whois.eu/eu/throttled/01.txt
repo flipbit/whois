@@ -1,0 +1,16 @@
+---
+#
+# .eu Parsing Template
+#
+name: whois.eu/eu/throttled/01
+
+# Use this template for queries to whois.eu:
+tag: whois.eu
+tag: eu
+
+# Set query response type:
+set: Status = Throttled
+
+hint: Still in grace period, wait
+---
+-1: Still in grace period, wait x seconds

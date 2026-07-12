@@ -1,0 +1,16 @@
+---
+#
+# .ly Parsing Template
+#
+name: whois.nic.ly/ly/not-found/01
+
+# Use this template for queries to whois.nic.ly:
+tag: whois.nic.ly
+tag: ly
+
+# Set query response type:
+set: Status = NotFound
+
+hint: Not found
+---
+Not found

@@ -1,0 +1,18 @@
+---
+#
+# .gov Parsing Template
+#
+name: whois.dotgov.gov/gov/not-found/01
+
+# Use this template for queries to whois.dotgov.gov:
+tag: whois.dotgov.gov
+tag: gov
+
+# End tokens on new lines
+terminateOnNewLine: true
+
+# Set query response type:
+set: Status = NotFound
+---
+No match for "{ DomainName : IsDomainName, ToHostName }".
+

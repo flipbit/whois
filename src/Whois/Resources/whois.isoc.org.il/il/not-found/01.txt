@@ -1,0 +1,16 @@
+---
+#
+# .il Parsing Template
+#
+name: whois.isoc.org.il/il/not-found/01
+
+# Use this template for queries to whois.isoc.org.il:
+tag: whois.isoc.org.il
+tag: il
+
+# Set query response type:
+set: Status = NotFound
+
+hint: No data was found 
+---
+% No data was found to match the request criteria.

@@ -1,0 +1,16 @@
+---
+#
+# .ci Parsing Template
+#
+name: whois.nic.ci/ci/not-found/01
+
+# Use this template for queries to whois.nic.ci:
+tag: whois.nic.ci
+tag: ci
+
+# Set query response type:
+set: Status = NotFound
+
+hint: not found
+---
+Domain { DomainName : IsDomainName, ToHostName } not found

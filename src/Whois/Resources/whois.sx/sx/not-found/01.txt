@@ -1,0 +1,16 @@
+---
+#
+# .sx Parsing Template
+#
+name: whois.sx/sx/not-found/01
+
+# Use this template for queries to whois.sx:
+tag: whois.sx
+tag: sx
+
+# Set query response type:
+set: Status = NotFound
+
+hint: Status: AVAILABLE
+---
+Status: AVAILABLE (No match for domain "{ DomainName : IsDomainName, ToHostName }")

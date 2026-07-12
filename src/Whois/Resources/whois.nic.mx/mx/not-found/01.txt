@@ -1,0 +1,16 @@
+---
+#
+# .mx Parsing Template
+#
+name: whois.nic.mx/mx/not-found/01
+
+# Use this template for queries to whois.nic.mx:
+tag: whois.nic.mx
+tag: mx
+
+# Set query response type:
+set: Status = NotFound
+
+hint: Object_Not_Found
+---
+No_Se_Encontro_El_Objeto/Object_Not_Found

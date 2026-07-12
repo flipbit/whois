@@ -1,0 +1,16 @@
+---
+#
+# .ma Parsing Template
+#
+name: whois.registre.ma/ma/not-found/01
+
+# Use this template for queries to whois.registre.ma:
+tag: whois.registre.ma
+tag: ma
+
+# Set query response type:
+set: Status = NotFound
+
+hint: No Objects Found
+---
+%error 230 No Objects Found

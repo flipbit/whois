@@ -1,0 +1,16 @@
+---
+#
+# .kz Parsing Template
+#
+name: whois.nic.kz/kz/not-found/01
+
+# Use this template for queries to whois.nic.kz:
+tag: whois.nic.kz
+tag: kz
+
+# Set query response type:
+set: Status = NotFound
+
+hint: Nothing found for this query.
+---
+*** Nothing found for this query.

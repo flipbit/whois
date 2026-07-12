@@ -1,0 +1,17 @@
+---
+#
+# .de Parsing Template
+#
+name: whois.denic.de/de/not-found/01
+
+# Use this template for queries to whois.denic.de:
+tag: whois.denic.de
+tag: de
+
+# Set query response type:
+set: Status = NotFound
+
+hint: Status: free
+---
+Domain: { DomainName : IsDomainName, ToHostName, EOL }
+Status: free

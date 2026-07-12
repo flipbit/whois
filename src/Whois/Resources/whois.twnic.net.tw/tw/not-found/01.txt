@@ -1,0 +1,16 @@
+---
+#
+# .tw Parsing Template
+#
+name: whois.twnic.net.tw/tw/not-found/01
+
+# Use this template for queries to whois.twnic.net.tw:
+tag: whois.twnic.net.tw
+tag: tw
+
+# Set query response type:
+set: Status = NotFound
+
+hint: No Found
+---
+No Found

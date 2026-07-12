@@ -1,0 +1,17 @@
+---
+#
+# .at Parsing Template
+#
+name: whois.nic.at/at/not-found/01
+
+# Use this template for queries to whois.nic.at:
+tag: whois.nic.at
+tag: at
+
+# Set query response type:
+set: Status = NotFound
+
+hint: nothing found
+---
+% nothing found
+
