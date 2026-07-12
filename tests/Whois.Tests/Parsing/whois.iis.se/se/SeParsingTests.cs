@@ -62,7 +62,7 @@ public class SeParsingTests : ParsingTests
         Assert.Equal(13, response.FieldsParsed);
     }
 
-    [Fact(Skip = "Template update deferred - WHOIS response format changed")]
+    [Fact]
     public void Test_found_nameservers_single()
     {
         var sample = SampleReader.Read("whois.iis.se", "se", "found", "nhv.se.txt");
@@ -77,24 +77,24 @@ public class SeParsingTests : ParsingTests
         Assert.Equal("nhv.se", response.DomainName.ToString());
 
         // Registrar Details
-        Assert.Equal("SE Direkt", response.Registrar.Name);
+        Assert.Equal("INLEED", response.Registrar.Name);
 
-        Assert.Equal(new DateTime(2014, 03, 18, 00, 00, 00, DateTimeKind.Utc), response.Updated);
-        Assert.Equal(new DateTime(1992, 11, 05, 00, 00, 00, DateTimeKind.Utc), response.Registered);
-        Assert.Equal(new DateTime(2014, 12, 31, 00, 00, 00, DateTimeKind.Utc), response.Expiration);
+        Assert.Equal(new DateTime(2026, 4, 4, 0, 0, 0, DateTimeKind.Utc), response.Updated);
+        Assert.Equal(new DateTime(2025, 6, 2, 0, 0, 0, DateTimeKind.Utc), response.Registered);
+        Assert.Equal(new DateTime(2027, 6, 2, 0, 0, 0, DateTimeKind.Utc), response.Expiration);
 
         // Registrant Details
-        Assert.Equal("nordis0702-00149", response.Registrant.RegistryId);
+        Assert.Equal("Lxcc3SYeXq3VFNLq", response.Registrant.RegistryId);
 
         // Domain Status
         Assert.Equal(1, response.DomainStatus.Count);
         Assert.Equal("active", response.DomainStatus[0]);
 
-        Assert.Equal("unsigned delegation", response.DnsSecStatus);
-        Assert.Equal(10, response.FieldsParsed);
+        Assert.Equal("signed delegation", response.DnsSecStatus);
+        Assert.Equal(15, response.FieldsParsed);
     }
 
-    [Fact(Skip = "Template update deferred - WHOIS response format changed")]
+    [Fact]
     public void Test_found_nameservers_with_ip()
     {
         var sample = SampleReader.Read("whois.iis.se", "se", "found", "loopia.se.txt");
@@ -111,29 +111,27 @@ public class SeParsingTests : ParsingTests
         // Registrar Details
         Assert.Equal("Loopia AB", response.Registrar.Name);
 
-        Assert.Equal(new DateTime(2010, 02, 15, 00, 00, 00, DateTimeKind.Utc), response.Updated);
-        Assert.Equal(new DateTime(2003, 09, 15, 00, 00, 00, DateTimeKind.Utc), response.Registered);
-        Assert.Equal(new DateTime(2020, 09, 15, 00, 00, 00, DateTimeKind.Utc), response.Expiration);
+        Assert.Equal(new DateTime(2025, 9, 15, 0, 0, 0, DateTimeKind.Utc), response.Updated);
+        Assert.Equal(new DateTime(2003, 9, 15, 0, 0, 0, DateTimeKind.Utc), response.Registered);
+        Assert.Equal(new DateTime(2026, 9, 15, 0, 0, 0, DateTimeKind.Utc), response.Expiration);
 
         // Registrant Details
-        Assert.Equal("looloo8804-00001", response.Registrant.RegistryId);
+        Assert.Equal("lrc9039-9244", response.Registrant.RegistryId);
 
         // Nameservers
-        Assert.Equal(4, response.NameServers.Count);
+        Assert.Equal(2, response.NameServers.Count);
         Assert.Equal("ns2.loopia.se", response.NameServers[0]);
-        Assert.Equal("ns4.loopia.se", response.NameServers[1]);
-        Assert.Equal("ns3.loopia.se", response.NameServers[2]);
-        Assert.Equal("ns1.loopia.se", response.NameServers[3]);
+        Assert.Equal("ns1.loopia.se", response.NameServers[1]);
 
         // Domain Status
         Assert.Equal(1, response.DomainStatus.Count);
         Assert.Equal("active", response.DomainStatus[0]);
 
-        Assert.Equal("unsigned delegation", response.DnsSecStatus);
-        Assert.Equal(13, response.FieldsParsed);
+        Assert.Equal("signed delegation", response.DnsSecStatus);
+        Assert.Equal(11, response.FieldsParsed);
     }
 
-    [Fact(Skip = "Template update deferred - WHOIS response format changed")]
+    [Fact]
     public void Test_not_assigned()
     {
         var sample = SampleReader.Read("whois.iis.se", "se", "not-assigned", "example.se.txt");
@@ -148,17 +146,17 @@ public class SeParsingTests : ParsingTests
         Assert.Equal("example.se", response.DomainName.ToString());
 
         // Registrar Details
-        Assert.Equal("CoreRegistry", response.Registrar.Name);
+        Assert.Equal("CoreRegistry 2", response.Registrar.Name);
 
-        Assert.Equal(new DateTime(2000, 11, 01, 00, 00, 00, DateTimeKind.Utc), response.Registered);
-        Assert.Equal(new DateTime(2006, 04, 18, 00, 00, 00, DateTimeKind.Utc), response.Expiration);
+        Assert.Equal(new DateTime(2000, 11, 1, 0, 0, 0, DateTimeKind.Utc), response.Registered);
+        Assert.Equal(new DateTime(2006, 4, 18, 0, 0, 0, DateTimeKind.Utc), response.Expiration);
 
         // Domain Status
         Assert.Equal(1, response.DomainStatus.Count);
         Assert.Equal("system", response.DomainStatus[0]);
 
         Assert.Equal("unsigned delegation", response.DnsSecStatus);
-        Assert.Equal(7, response.FieldsParsed);
+        Assert.Equal(9, response.FieldsParsed);
     }
 
     [Fact]
@@ -179,7 +177,7 @@ public class SeParsingTests : ParsingTests
         Assert.Equal(2, response.FieldsParsed);
     }
 
-    [Fact(Skip = "Template update deferred - WHOIS response format changed")]
+    [Fact]
     public void Test_found_status_ok()
     {
         var sample = SampleReader.Read("whois.iis.se", "se", "found", "google.se.txt");
@@ -196,12 +194,12 @@ public class SeParsingTests : ParsingTests
         // Registrar Details
         Assert.Equal("MarkMonitor Inc", response.Registrar.Name);
 
-        Assert.Equal(new DateTime(2009, 08, 01, 00, 00, 00, DateTimeKind.Utc), response.Updated);
-        Assert.Equal(new DateTime(2008, 10, 20, 00, 00, 00, DateTimeKind.Utc), response.Registered);
-        Assert.Equal(new DateTime(2010, 10, 20, 00, 00, 00, DateTimeKind.Utc), response.Expiration);
+        Assert.Equal(new DateTime(2025, 9, 18, 0, 0, 0, DateTimeKind.Utc), response.Updated);
+        Assert.Equal(new DateTime(2003, 8, 27, 0, 0, 0, DateTimeKind.Utc), response.Registered);
+        Assert.Equal(new DateTime(2026, 10, 20, 0, 0, 0, DateTimeKind.Utc), response.Expiration);
 
         // Registrant Details
-        Assert.Equal("googoo5855-00001", response.Registrant.RegistryId);
+        Assert.Equal("mmr8008-171440", response.Registrant.RegistryId);
 
         // Nameservers
         Assert.Equal(4, response.NameServers.Count);
