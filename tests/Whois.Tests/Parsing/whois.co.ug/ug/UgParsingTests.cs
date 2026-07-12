@@ -17,7 +17,7 @@ namespace Whois.Parsing.Whois.Co.Ug.Ug
         [Fact]
         public void Test_found()
         {
-            var sample = SampleReader.Read("whois.co.ug", "ug", "found", "found.txt");
+            var sample = SampleReader.Read("whois.co.ug", "ug", "found", "whois.co.ug.txt");
             var response = parser.Parse("whois.co.ug", sample);
 
             Assert.True(sample.Length > 0);

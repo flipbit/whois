@@ -17,7 +17,7 @@ namespace Whois.Parsing.Whois.Cira.Ca.Ca
         [Fact]
         public void Test_found()
         {
-            var sample = SampleReader.Read("whois.cira.ca", "ca", "found", "found.txt");
+            var sample = SampleReader.Read("whois.cira.ca", "ca", "found", "glu.ca.txt");
             var response = parser.Parse("whois.cira.ca", sample);
 
             Assert.True(sample.Length > 0);
@@ -146,7 +146,7 @@ namespace Whois.Parsing.Whois.Cira.Ca.Ca
         [Fact]
         public void Test_not_found()
         {
-            var sample = SampleReader.Read("whois.cira.ca", "ca", "not-found", "not_found.txt");
+            var sample = SampleReader.Read("whois.cira.ca", "ca", "not-found", "u34jedzcq.ca.txt");
             var response = parser.Parse("whois.cira.ca", sample);
 
             Assert.True(sample.Length > 0);
@@ -201,7 +201,7 @@ namespace Whois.Parsing.Whois.Cira.Ca.Ca
         [Fact]
         public void Test_redemption()
         {
-            var sample = SampleReader.Read("whois.cira.ca", "ca", "redemption", "redemption.txt");
+            var sample = SampleReader.Read("whois.cira.ca", "ca", "redemption", "glu-redemption.ca.txt");
             var response = parser.Parse("whois.cira.ca", sample);
 
             Assert.True(sample.Length > 0);
@@ -262,7 +262,7 @@ namespace Whois.Parsing.Whois.Cira.Ca.Ca
         [Fact]
         public void Test_found_status_registered_2()
         {
-            var sample = SampleReader.Read("whois.cira.ca", "ca", "found", "found_status_registered_2.txt");
+            var sample = SampleReader.Read("whois.cira.ca", "ca", "found", "google.ca.txt");
             var response = parser.Parse("whois.cira.ca", sample);
 
             Assert.True(sample.Length > 0);
@@ -347,7 +347,7 @@ namespace Whois.Parsing.Whois.Cira.Ca.Ca
         [Fact]
         public void Test_unavailable()
         {
-            var sample = SampleReader.Read("whois.cira.ca", "ca", "unavailable", "unavailable.txt");
+            var sample = SampleReader.Read("whois.cira.ca", "ca", "unavailable", "mediom.ca.txt");
             var response = parser.Parse("whois.cira.ca", sample);
 
             Assert.True(sample.Length > 0);
@@ -385,7 +385,7 @@ namespace Whois.Parsing.Whois.Cira.Ca.Ca
         [Fact]
         public void Test_invalid()
         {
-            var sample = SampleReader.Read("whois.cira.ca", "ca", "invalid", "invalid.txt");
+            var sample = SampleReader.Read("whois.cira.ca", "ca", "invalid", "mediom-invalid.ca.txt");
             var response = parser.Parse("whois.cira.ca", sample);
 
             Assert.True(sample.Length > 0);

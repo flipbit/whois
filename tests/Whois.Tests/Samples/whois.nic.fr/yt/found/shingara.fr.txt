@@ -1,0 +1,94 @@
+%%
+%% This is the AFNIC Whois server.
+%%
+%% complete date format: YYYY-MM-DDThh:mm:ssZ
+%%
+%% Rights restricted by copyright.
+%% See https://www.afnic.fr/en/domain-names-and-support/everything-there-is-to-know-about-domain-names/find-a-domain-name-or-a-holder-using-whois/
+%%
+%%
+
+domain:                        shingara.fr
+status:                        ACTIVE
+eppstatus:                     active
+hold:                          NO
+holder-c:                      ANO00-FRNIC
+admin-c:                       ANO00-FRNIC
+tech-c:                        CTC202672-FRNIC
+registrar:                     Hosting Concepts B.V. d/b/a Openprovider
+Expiry Date:                   2027-06-07T08:32:12.826414Z
+created:                       2024-06-07T08:32:12.857065Z
+last-update:                   2026-06-10T07:07:23.539171Z
+source:                        FRNIC
+
+nserver:                       ns1.parkingcrew.net
+nserver:                       ns2.parkingcrew.net
+source:                        FRNIC
+
+registrar:                     Hosting Concepts B.V. d/b/a Openprovider
+address:                       Hofplein 20
+address:                       Spaces Business Centre
+address:                       3032 AC ROTTERDAM
+country:                       NL
+phone:                         +31.104482299
+fax-no:                        +31.102440250
+e-mail:                        sales@openprovider.com
+website:                       https://www.openprovider.com
+anonymous:                     No
+registered:                    2005-06-27T00:00:00Z
+source:                        FRNIC
+
+nic-hdl:                       ANO00-FRNIC
+type:                          PERSON
+contact:                       Ano Nymous
+registrar:                     Hosting Concepts B.V. d/b/a Openprovider
+changed:                       2026-06-01T10:31:40.839265Z
+anonymous:                     YES
+remarks:                       -------------- WARNING --------------
+remarks:                       While the registrar knows him/her,
+remarks:                       this person chose to restrict access
+remarks:                       to his/her personal data. So PLEASE,
+remarks:                       don't send emails to Ano Nymous. This
+remarks:                       address is bogus and there is no hope
+remarks:                       of a reply.
+remarks:                       -------------- WARNING --------------
+obsoleted:                     NO
+eppstatus:                     associated
+eppstatus:                     active
+eligstatus:                    ok
+eligsource:                    REGISTRAR
+eligdate:                      2026-06-01T10:31:40.839266Z
+reachstatus:                   ok
+reachmedia:                    email
+reachsource:                   REGISTRAR
+reachdate:                     2026-06-01T10:31:40.839267Z
+source:                        FRNIC
+
+nic-hdl:                       CTC202672-FRNIC
+type:                          ORGANIZATION
+contact:                       Tool Domains Ltd
+address:                       Tool Domains Ltd
+address:                       Koziak 19
+address:                       1407 Sofia
+address:                       Sofia
+country:                       BG
+phone:                         +359.884632528
+fax-no:                        +359.884632528
+e-mail:                        domains@tool-domains.com
+registrar:                     Hosting Concepts B.V. d/b/a Openprovider
+changed:                       2026-06-01T09:54:00.645378Z
+anonymous:                     NO
+obsoleted:                     NO
+eppstatus:                     associated
+eppstatus:                     active
+eligstatus:                    ok
+eligsource:                    REGISTRAR
+eligdate:                      2026-06-01T09:54:00.645379Z
+reachstatus:                   ok
+reachmedia:                    email
+reachsource:                   REGISTRAR
+reachdate:                     2026-06-01T09:54:00.64538Z
+source:                        FRNIC
+
+>>> Last update of WHOIS database: 2026-07-12T12:34:26.947788Z <<<
+

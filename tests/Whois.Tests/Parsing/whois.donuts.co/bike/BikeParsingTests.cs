@@ -32,7 +32,7 @@ namespace Whois.Parsing.Whois.Donuts.Co.Bike
         [Fact]
         public void Test_found()
         {
-            var sample = SampleReader.Read("whois.donuts.co", "bike", "found", "found.txt");
+            var sample = SampleReader.Read("whois.donuts.co", "bike", "found", "whereismy.bike.txt");
             var response = parser.Parse("whois.donuts.co", sample);
 
             Assert.True(sample.Length > 0);

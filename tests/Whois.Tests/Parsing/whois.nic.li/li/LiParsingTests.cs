@@ -31,7 +31,7 @@ namespace Whois.Parsing.Whois.Nic.Li.Li
         [Fact]
         public void Test_found()
         {
-            var sample = SampleReader.Read("whois.nic.li", "li", "found", "found.txt");
+            var sample = SampleReader.Read("whois.nic.li", "li", "found", "google.li.txt");
             var response = parser.Parse("whois.nic.li", sample);
 
             Assert.True(sample.Length > 0);

@@ -17,7 +17,7 @@ namespace Whois.Parsing.Whois.Nic.La.La
         [Fact]
         public void Test_found()
         {
-            var sample = SampleReader.Read("whois.nic.la", "la", "found", "found.txt");
+            var sample = SampleReader.Read("whois.nic.la", "la", "found", "plasticsurgery.la.txt");
             var response = parser.Parse("whois.nic.la", sample);
 
             Assert.True(sample.Length > 0);
@@ -121,7 +121,7 @@ namespace Whois.Parsing.Whois.Nic.La.La
         [Fact]
         public void Test_other_status_single()
         {
-            var sample = SampleReader.Read("whois.nic.la", "la", "found", "other_status_single.txt");
+            var sample = SampleReader.Read("whois.nic.la", "la", "found", "google.la.txt");
             var response = parser.Parse("whois.nic.la", sample);
 
             Assert.True(sample.Length > 0);

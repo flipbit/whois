@@ -16,7 +16,7 @@ namespace Whois.Parsing.Whois.Srs.Net.Nz.Nz
         [Fact]
         public void Test_other_status_pendingrelease()
         {
-            var sample = SampleReader.Read("whois.srs.net.nz", "nz", "found", "other_status_pendingrelease.txt");
+            var sample = SampleReader.Read("whois.srs.net.nz", "nz", "found", "zumbafitness.co.nz.txt");
             var response = parser.Parse("whois.srs.net.nz", sample);
 
             Assert.True(sample.Length > 0);
@@ -110,7 +110,7 @@ namespace Whois.Parsing.Whois.Srs.Net.Nz.Nz
         [Fact]
         public void Test_not_found()
         {
-            var sample = SampleReader.Read("whois.srs.net.nz", "nz", "not-found", "not_found.txt");
+            var sample = SampleReader.Read("whois.srs.net.nz", "nz", "not-found", "u34jedzcq.co.nz.txt");
             var response = parser.Parse("whois.srs.net.nz", sample);
 
             Assert.True(sample.Length > 0);
@@ -131,7 +131,7 @@ namespace Whois.Parsing.Whois.Srs.Net.Nz.Nz
         [Fact]
         public void Test_invalid()
         {
-            var sample = SampleReader.Read("whois.srs.net.nz", "nz", "invalid", "invalid.txt");
+            var sample = SampleReader.Read("whois.srs.net.nz", "nz", "invalid", "u34jedzcq.nz.txt");
             var response = parser.Parse("whois.srs.net.nz", sample);
 
             Assert.True(sample.Length > 0);
@@ -152,7 +152,7 @@ namespace Whois.Parsing.Whois.Srs.Net.Nz.Nz
         [Fact]
         public void Test_found()
         {
-            var sample = SampleReader.Read("whois.srs.net.nz", "nz", "found", "found.txt");
+            var sample = SampleReader.Read("whois.srs.net.nz", "nz", "found", "google.co.nz.txt");
             var response = parser.Parse("whois.srs.net.nz", sample);
 
             Assert.True(sample.Length > 0);

@@ -1,0 +1,41 @@
+%  Servidor whois del Centro de Información de Red de Venezuela (NIC.VE)
+%  Este servidor contiene información autoritativa exclusivamente de dominios .ve
+% 
+% Whoisd Server Version: 3.12.1
+% Timestamp: Sun Jul 12 08:34:27 2026
+
+domain:       zumba.com.ve
+registrant:   CON000008238
+admin-c:      CON000030857
+nsset:        DNS000103164
+registrar:    NIC-VE
+registered:   27.10.2010 07:53:43
+expire:       04.06.2027
+
+contact:      CON000008238
+address:      800 Silks Run, Suite 2310
+address:      Hallandale
+address:      1012
+address:      US
+registrar:    NIC-VE
+created:      04.08.2019 13:12:42
+
+contact:      CON000030857
+org:          Markmonitor Inc
+address:      2150 S Bonito Way Suite 150
+address:      Meridian
+address:      83642
+address:      Idaho
+address:      US
+registrar:    NIC-VE
+created:      04.08.2019 17:08:06
+changed:      11.03.2021 15:02:30
+
+nsset:        DNS000103164
+nserver:      abby.ns.cloudflare.com 
+nserver:      paul.ns.cloudflare.com 
+tech-c:       CON000030857
+registrar:    NIC-VE
+created:      08.08.2019 13:47:15
+
+

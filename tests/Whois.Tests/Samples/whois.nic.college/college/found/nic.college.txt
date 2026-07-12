@@ -1,0 +1,43 @@
+Domain Name: NIC.COLLEGE
+Registry Domain ID: D1465621-CNIC
+Registrar WHOIS Server: whois.nic.xyz
+Registrar URL: https://gen.xyz/
+Updated Date: 2026-02-12T15:12:35.0Z
+Creation Date: 2013-09-11T11:58:15.0Z
+Registry Expiry Date: 2026-09-11T23:59:59.0Z
+Registrar: XYZ.com, LLC
+Registrar IANA ID: 9999
+Domain Status: serverRenewProhibited https://icann.org/epp#serverRenewProhibited
+Domain Status: serverUpdateProhibited https://icann.org/epp#serverUpdateProhibited
+Domain Status: serverDeleteProhibited https://icann.org/epp#serverDeleteProhibited
+Domain Status: serverTransferProhibited https://icann.org/epp#serverTransferProhibited
+Name Server: A.NIC.COLLEGE
+Name Server: B.NIC.COLLEGE
+Name Server: C.NIC.COLLEGE
+Name Server: D.NIC.COLLEGE
+DNSSEC: unsigned
+Registrar Abuse Contact Email: xyz_abuse@gen.xyz
+Registrar Abuse Contact Phone: +1.8009998422
+URL of the ICANN Whois Inaccuracy Complaint Form: https://www.icann.org/wicf/
+>>> Last update of WHOIS database: 2026-07-12T12:34:25.0Z <<<
+
+For more information on Whois status codes, please visit https://icann.org/epp
+
+>>> IMPORTANT INFORMATION ABOUT THE DEPLOYMENT OF RDAP: please visit
+https://www.centralnicregistry.com/support/information/rdap <<<
+
+The registration data available in this service is limited. Additional
+data may be available at https://lookup.icann.org
+
+The Whois and RDAP services are provided by CentralNic, and contain
+information pertaining to Internet domain names registered by our
+our customers. By using this service you are agreeing (1) not to use any
+information presented here for any purpose other than determining
+ownership of domain names, (2) not to store or reproduce this data in
+any way, (3) not to use any high-volume, automated, electronic processes
+to obtain data from this service. Abuse of this service is monitored and
+actions in contravention of these terms will result in being permanently
+blacklisted. All data is (c) CentralNic Ltd (https://www.centralnicregistry.com)
+
+Access to the Whois and RDAP services is rate limited. For more
+information, visit https://centralnicregistry.com/policies/whois-guidance.

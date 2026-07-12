@@ -1,0 +1,15 @@
+Domain Name:                     qtel.com.qa
+Registrar ID:                    QatarTelecom
+Registrar Name:                  Ooredoo QSC
+Status:                          ok
+
+Registrant:                      Qatar Telecom (Qtel) Q.S.C
+Eligibility Type:                Trade License
+Eligibility ID:                  Ooredoo Domain
+
+Name Server:                     dns2.qatar.net.qa
+Name Server IP:                  212.77.192.30
+Name Server:                     dns1.qatar.net.qa
+Name Server IP:                  212.77.192.28
+Name Server:                     dns3.qatar.net.qa
+Name Server IP:                  3.69.128.92

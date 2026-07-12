@@ -17,7 +17,7 @@ namespace Whois.Parsing.Whois.Rnids.Rs.Rs
         [Fact]
         public void Test_found()
         {
-            var sample = SampleReader.Read("whois.rnids.rs", "rs", "found", "found.txt");
+            var sample = SampleReader.Read("whois.rnids.rs", "rs", "found", "eg.rs.txt");
             var response = parser.Parse("whois.rnids.rs", sample);
 
             Assert.True(sample.Length > 0);
@@ -120,7 +120,7 @@ namespace Whois.Parsing.Whois.Rnids.Rs.Rs
         [Fact]
         public void Test_other_status_in_transfer()
         {
-            var sample = SampleReader.Read("whois.rnids.rs", "rs", "found", "other_status_in_transfer.txt");
+            var sample = SampleReader.Read("whois.rnids.rs", "rs", "found", "saj.rs.txt");
             var response = parser.Parse("whois.rnids.rs", sample);
 
             Assert.True(sample.Length > 0);
@@ -211,7 +211,7 @@ namespace Whois.Parsing.Whois.Rnids.Rs.Rs
         [Fact]
         public void Test_found_status_registered()
         {
-            var sample = SampleReader.Read("whois.rnids.rs", "rs", "found", "found_status_registered.txt");
+            var sample = SampleReader.Read("whois.rnids.rs", "rs", "found", "google.rs.txt");
             var response = parser.Parse("whois.rnids.rs", sample);
 
             Assert.True(sample.Length > 0);

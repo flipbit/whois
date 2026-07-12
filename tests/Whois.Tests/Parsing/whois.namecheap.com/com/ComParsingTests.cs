@@ -17,7 +17,7 @@ namespace Whois.Parsing.Whois.Namecheap.Com.Com
         [Fact]
         public void Test_found()
         {
-            var sample = SampleReader.Read("whois.namecheap.com", "com", "found", "found.txt");
+            var sample = SampleReader.Read("whois.namecheap.com", "com", "found", "slavichy.com.txt");
             var response = parser.Parse("whois.namecheap.com", sample);
 
             Assert.True(sample.Length > 0);

@@ -17,7 +17,7 @@ namespace Whois.Parsing.Whois.Cdmon.Com.Com
         [Fact]
         public void Test_found()
         {
-            var sample = SampleReader.Read("whois.cdmon.com", "com", "found", "found.txt");
+            var sample = SampleReader.Read("whois.cdmon.com", "com", "found", "cdmon.com.txt");
             var response = parser.Parse("whois.cdmon.com", sample);
 
             Assert.True(sample.Length > 0);

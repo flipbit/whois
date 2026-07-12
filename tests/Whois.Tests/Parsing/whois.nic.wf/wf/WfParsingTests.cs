@@ -47,7 +47,7 @@ namespace Whois.Parsing.Whois.Nic.Wf.Wf
         [Fact]
         public void Test_found()
         {
-            var sample = SampleReader.Read("whois.nic.wf", "wf", "found", "found.txt");
+            var sample = SampleReader.Read("whois.nic.wf", "wf", "found", "nic.wf.txt");
             var response = parser.Parse("whois.nic.wf", sample);
 
             Assert.True(sample.Length > 0);

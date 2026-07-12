@@ -29,7 +29,7 @@ namespace Whois.Parsing.Whois.Nic.Sn.Sn
         [Fact]
         public void Test_found()
         {
-            var sample = SampleReader.Read("whois.nic.sn", "sn", "found", "found.txt");
+            var sample = SampleReader.Read("whois.nic.sn", "sn", "found", "google.sn.txt");
             var response = parser.Parse("whois.nic.sn", sample);
 
             Assert.True(sample.Length > 0);

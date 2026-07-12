@@ -32,7 +32,7 @@ namespace Whois.Parsing.Whois.Nic.Kz.Kz
         [Fact]
         public void Test_found()
         {
-            var sample = SampleReader.Read("whois.nic.kz", "kz", "found", "found.txt");
+            var sample = SampleReader.Read("whois.nic.kz", "kz", "found", "tabu.kz.txt");
             var response = parser.Parse("whois.nic.kz", sample);
 
             Assert.True(sample.Length > 0);
@@ -86,7 +86,7 @@ namespace Whois.Parsing.Whois.Nic.Kz.Kz
         [Fact]
         public void Test_found_status_ok()
         {
-            var sample = SampleReader.Read("whois.nic.kz", "kz", "found", "found_status_ok.txt");
+            var sample = SampleReader.Read("whois.nic.kz", "kz", "found", "google.kz.txt");
             var response = parser.Parse("whois.nic.kz", sample);
 
             Assert.True(sample.Length > 0);

@@ -156,7 +156,7 @@ namespace Whois.Parsing.Whois.Sk.Nic.Sk.Sk
         [Fact]
         public void Test_other_status_dom_lnot()
         {
-            var sample = SampleReader.Read("whois.sk-nic.sk", "sk", "found", "other_status_dom_lnot.txt");
+            var sample = SampleReader.Read("whois.sk-nic.sk", "sk", "found", "dobramasaz.sk.txt");
             var response = parser.Parse("whois.sk-nic.sk", sample);
 
             Assert.True(sample.Length > 0);
@@ -208,7 +208,7 @@ namespace Whois.Parsing.Whois.Sk.Nic.Sk.Sk
         [Fact]
         public void Test_other_status_dom_ok()
         {
-            var sample = SampleReader.Read("whois.sk-nic.sk", "sk", "found", "other_status_dom_ok.txt");
+            var sample = SampleReader.Read("whois.sk-nic.sk", "sk", "found", "google.sk.txt");
             var response = parser.Parse("whois.sk-nic.sk", sample);
 
             Assert.True(sample.Length > 0);

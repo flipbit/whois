@@ -17,7 +17,7 @@ namespace Whois.Parsing.Whois.Kr.Kr
         [Fact]
         public void Test_found()
         {
-            var sample = SampleReader.Read("whois.kr", "kr", "found", "found.txt");
+            var sample = SampleReader.Read("whois.kr", "kr", "found", "lg.co.kr.txt");
             var response = parser.Parse("whois.kr", sample);
 
             Assert.True(sample.Length > 0);
@@ -61,7 +61,7 @@ namespace Whois.Parsing.Whois.Kr.Kr
         [Fact]
         public void Test_not_found()
         {
-            var sample = SampleReader.Read("whois.kr", "kr", "not-found", "not_found.txt");
+            var sample = SampleReader.Read("whois.kr", "kr", "not-found", "u34jedzcq.kr.txt");
             var response = parser.Parse("whois.kr", sample);
 
             Assert.True(sample.Length > 0);
@@ -78,7 +78,7 @@ namespace Whois.Parsing.Whois.Kr.Kr
         [Fact]
         public void Test_found_status_registered()
         {
-            var sample = SampleReader.Read("whois.kr", "kr", "found", "found_status_registered.txt");
+            var sample = SampleReader.Read("whois.kr", "kr", "found", "google.kr.txt");
             var response = parser.Parse("whois.kr", sample);
 
             Assert.True(sample.Length > 0);

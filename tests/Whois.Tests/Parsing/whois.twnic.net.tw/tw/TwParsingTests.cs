@@ -32,7 +32,7 @@ namespace Whois.Parsing.Whois.Twnic.Net.Tw.Tw
         [Fact]
         public void Test_found()
         {
-            var sample = SampleReader.Read("whois.twnic.net.tw", "tw", "found", "found.txt");
+            var sample = SampleReader.Read("whois.twnic.net.tw", "tw", "found", "google.com.tw.txt");
             var response = parser.Parse("whois.twnic.net.tw", sample);
 
             Assert.True(sample.Length > 0);

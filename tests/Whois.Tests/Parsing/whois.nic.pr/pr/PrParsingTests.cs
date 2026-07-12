@@ -32,7 +32,7 @@ namespace Whois.Parsing.Whois.Nic.Pr.Pr
         [Fact]
         public void Test_not_found()
         {
-            var sample = SampleReader.Read("whois.nic.pr", "pr", "not-found", "not_found.txt");
+            var sample = SampleReader.Read("whois.nic.pr", "pr", "not-found", "u34jedzcq.pr.txt");
             var response = parser.Parse("whois.nic.pr", sample);
 
             Assert.True(sample.Length > 0);
@@ -49,7 +49,7 @@ namespace Whois.Parsing.Whois.Nic.Pr.Pr
         [Fact]
         public void Test_found()
         {
-            var sample = SampleReader.Read("whois.nic.pr", "pr", "found", "found.txt");
+            var sample = SampleReader.Read("whois.nic.pr", "pr", "found", "google.pr.txt");
             var response = parser.Parse("whois.nic.pr", sample);
 
             Assert.True(sample.Length > 0);

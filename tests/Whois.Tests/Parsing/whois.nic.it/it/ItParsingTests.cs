@@ -17,7 +17,7 @@ namespace Whois.Parsing.Whois.Nic.It.It
         [Fact]
         public void Test_found()
         {
-            var sample = SampleReader.Read("whois.nic.it", "it", "found", "found.txt");
+            var sample = SampleReader.Read("whois.nic.it", "it", "found", "html.it.txt");
             var response = parser.Parse("whois.nic.it", sample);
 
             Assert.True(sample.Length > 0);
@@ -96,7 +96,7 @@ namespace Whois.Parsing.Whois.Nic.It.It
         [Fact]
         public void Test_found_contact_with_company_in_address()
         {
-            var sample = SampleReader.Read("whois.nic.it", "it", "found", "found_contact_with_company_in_address.txt");
+            var sample = SampleReader.Read("whois.nic.it", "it", "found", "ucicinemas.it.txt");
             var response = parser.Parse("whois.nic.it", sample);
 
             Assert.True(sample.Length > 0);
@@ -177,7 +177,7 @@ namespace Whois.Parsing.Whois.Nic.It.It
         [Fact]
         public void Test_found_contact_with_organization()
         {
-            var sample = SampleReader.Read("whois.nic.it", "it", "found", "found_contact_with_organization.txt");
+            var sample = SampleReader.Read("whois.nic.it", "it", "found", "google.it.txt");
             var response = parser.Parse("whois.nic.it", sample);
 
             Assert.True(sample.Length > 0);
@@ -247,7 +247,7 @@ namespace Whois.Parsing.Whois.Nic.It.It
         [Fact]
         public void Test_found_status_autorenewperiod_clientdeleteprohibited_clientupdateprohibited()
         {
-            var sample = SampleReader.Read("whois.nic.it", "it", "found", "found_status_autorenewperiod_clientdeleteprohibited_clientupdateprohibited.txt");
+            var sample = SampleReader.Read("whois.nic.it", "it", "found", "imdb.it.txt");
             var response = parser.Parse("whois.nic.it", sample);
 
             Assert.True(sample.Length > 0);
@@ -332,7 +332,7 @@ namespace Whois.Parsing.Whois.Nic.It.It
         [Fact]
         public void Test_not_found()
         {
-            var sample = SampleReader.Read("whois.nic.it", "it", "not-found", "not_found.txt");
+            var sample = SampleReader.Read("whois.nic.it", "it", "not-found", "google-not-found.it.txt");
             var response = parser.Parse("whois.nic.it", sample);
 
             Assert.True(sample.Length > 0);
@@ -353,7 +353,7 @@ namespace Whois.Parsing.Whois.Nic.It.It
         [Fact]
         public void Test_other_status_client()
         {
-            var sample = SampleReader.Read("whois.nic.it", "it", "found", "other_status_client.txt");
+            var sample = SampleReader.Read("whois.nic.it", "it", "found", "elle.it.txt");
             var response = parser.Parse("whois.nic.it", sample);
 
             Assert.True(sample.Length > 0);
@@ -433,7 +433,7 @@ namespace Whois.Parsing.Whois.Nic.It.It
         [Fact]
         public void Test_other_status_graceperiod()
         {
-            var sample = SampleReader.Read("whois.nic.it", "it", "found", "other_status_graceperiod.txt");
+            var sample = SampleReader.Read("whois.nic.it", "it", "found", "hotellagioconda.it.txt");
             var response = parser.Parse("whois.nic.it", sample);
 
             Assert.True(sample.Length > 0);
@@ -593,7 +593,7 @@ namespace Whois.Parsing.Whois.Nic.It.It
         [Fact]
         public void Test_other_status_no_provider()
         {
-            var sample = SampleReader.Read("whois.nic.it", "it", "found", "other_status_no_provider.txt");
+            var sample = SampleReader.Read("whois.nic.it", "it", "found", "chiara.it.txt");
             var response = parser.Parse("whois.nic.it", sample);
 
             Assert.True(sample.Length > 0);
@@ -670,7 +670,7 @@ namespace Whois.Parsing.Whois.Nic.It.It
         [Fact]
         public void Test_found_status_ok()
         {
-            var sample = SampleReader.Read("whois.nic.it", "it", "found", "found_status_ok.txt");
+            var sample = SampleReader.Read("whois.nic.it", "it", "found", "decorstore.it.txt");
             var response = parser.Parse("whois.nic.it", sample);
 
             Assert.True(sample.Length > 0);
@@ -751,7 +751,7 @@ namespace Whois.Parsing.Whois.Nic.It.It
         [Fact]
         public void Test_other_status_ok_autorenew()
         {
-            var sample = SampleReader.Read("whois.nic.it", "it", "found", "other_status_ok_autorenew.txt");
+            var sample = SampleReader.Read("whois.nic.it", "it", "found", "venetamarmi.it.txt");
             var response = parser.Parse("whois.nic.it", sample);
 
             Assert.True(sample.Length > 0);
@@ -1050,7 +1050,7 @@ namespace Whois.Parsing.Whois.Nic.It.It
         [Fact]
         public void Test_other_status_pendingtransfer()
         {
-            var sample = SampleReader.Read("whois.nic.it", "it", "found", "other_status_pendingtransfer.txt");
+            var sample = SampleReader.Read("whois.nic.it", "it", "found", "alessandrofusco.it.txt");
             var response = parser.Parse("whois.nic.it", sample);
 
             Assert.True(sample.Length > 0);
@@ -1111,7 +1111,7 @@ namespace Whois.Parsing.Whois.Nic.It.It
         [Fact]
         public void Test_other_status_pendingtransfer_autorenewperiod()
         {
-            var sample = SampleReader.Read("whois.nic.it", "it", "found", "other_status_pendingtransfer_autorenewperiod.txt");
+            var sample = SampleReader.Read("whois.nic.it", "it", "found", "aversastore.it.txt");
             var response = parser.Parse("whois.nic.it", sample);
 
             Assert.True(sample.Length > 0);
@@ -1161,7 +1161,7 @@ namespace Whois.Parsing.Whois.Nic.It.It
         [Fact]
         public void Test_other_status_pendingupdate()
         {
-            var sample = SampleReader.Read("whois.nic.it", "it", "found", "other_status_pendingupdate.txt");
+            var sample = SampleReader.Read("whois.nic.it", "it", "found", "fuoristradausato.it.txt");
             var response = parser.Parse("whois.nic.it", sample);
 
             Assert.True(sample.Length > 0);
@@ -1241,7 +1241,7 @@ namespace Whois.Parsing.Whois.Nic.It.It
         [Fact]
         public void Test_other_status_pendingupdate_autorenewperiod()
         {
-            var sample = SampleReader.Read("whois.nic.it", "it", "found", "other_status_pendingupdate_autorenewperiod.txt");
+            var sample = SampleReader.Read("whois.nic.it", "it", "found", "bunkerfilm.it.txt");
             var response = parser.Parse("whois.nic.it", sample);
 
             Assert.True(sample.Length > 0);
@@ -1382,7 +1382,7 @@ namespace Whois.Parsing.Whois.Nic.It.It
         [Fact]
         public void Test_reserved()
         {
-            var sample = SampleReader.Read("whois.nic.it", "it", "reserved", "reserved.txt");
+            var sample = SampleReader.Read("whois.nic.it", "it", "reserved", "comunediroccaromana.it.txt");
             var response = parser.Parse("whois.nic.it", sample);
 
             Assert.True(sample.Length > 0);
@@ -1510,7 +1510,7 @@ namespace Whois.Parsing.Whois.Nic.It.It
         [Fact]
         public void Test_not_found_status_available()
         {
-            var sample = SampleReader.Read("whois.nic.it", "it", "not-found", "not_found_status_available.txt");
+            var sample = SampleReader.Read("whois.nic.it", "it", "not-found", "u34jedzcq.it.txt");
             var response = parser.Parse("whois.nic.it", sample);
 
             Assert.True(sample.Length > 0);

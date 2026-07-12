@@ -17,7 +17,7 @@ namespace Whois.Parsing.Whois.Ax.Ax
         [Fact]
         public void Test_not_found()
         {
-            var sample = SampleReader.Read("whois.ax", "ax", "not-found", "not_found.txt");
+            var sample = SampleReader.Read("whois.ax", "ax", "not-found", "u34jedzcq.ax.txt");
             var response = parser.Parse("whois.ax", sample);
 
             Assert.True(sample.Length > 0);
@@ -33,7 +33,7 @@ namespace Whois.Parsing.Whois.Ax.Ax
         [Fact]
         public void Test_found()
         {
-            var sample = SampleReader.Read("whois.ax", "ax", "found", "found.txt");
+            var sample = SampleReader.Read("whois.ax", "ax", "found", "regeringen.ax.txt");
             var response = parser.Parse("whois.ax", sample);
 
             Assert.True(sample.Length > 0);

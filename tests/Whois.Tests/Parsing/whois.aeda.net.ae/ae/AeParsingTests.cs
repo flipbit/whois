@@ -26,7 +26,7 @@ namespace Whois.Parsing.Whois.Aeda.Net.Ae.Ae
         [Fact]
         public void Test_found()
         {
-            var sample = SampleReader.Read("whois.aeda.net.ae", "ae", "found", "found.txt");
+            var sample = SampleReader.Read("whois.aeda.net.ae", "ae", "found", "google.ae.txt");
             var response = parser.Parse("whois.aeda.net.ae", sample);
 
             Assert.True(sample.Length > 0);

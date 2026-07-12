@@ -17,7 +17,7 @@ namespace Whois.Parsing.Whois.In.Ua.InUa
         [Fact]
         public void Test_not_found()
         {
-            var sample = SampleReader.Read("whois.in.ua", "in.ua", "not-found", "not_found.txt");
+            var sample = SampleReader.Read("whois.in.ua", "in.ua", "not-found", "u34jedzcq.in.ua.txt");
             var response = parser.Parse("whois.in.ua", sample);
 
             Assert.True(sample.Length > 0);
@@ -34,7 +34,7 @@ namespace Whois.Parsing.Whois.In.Ua.InUa
         [Fact]
         public void Test_found()
         {
-            var sample = SampleReader.Read("whois.in.ua", "in.ua", "found", "found.txt");
+            var sample = SampleReader.Read("whois.in.ua", "in.ua", "found", "dle.in.ua.txt");
             var response = parser.Parse("whois.in.ua", sample);
 
             Assert.True(sample.Length > 0);

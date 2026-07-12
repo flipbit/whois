@@ -17,7 +17,7 @@ namespace Whois.Parsing.Whois.Dns.Be.Be
         [Fact]
         public void Test_found()
         {
-            var sample = SampleReader.Read("whois.dns.be", "be", "found", "found.txt");
+            var sample = SampleReader.Read("whois.dns.be", "be", "found", "register.be.txt");
             var response = parser.Parse("whois.dns.be", sample);
 
             Assert.True(sample.Length > 0);
@@ -51,7 +51,7 @@ namespace Whois.Parsing.Whois.Dns.Be.Be
         [Fact]
         public void Test_not_found()
         {
-            var sample = SampleReader.Read("whois.dns.be", "be", "not-found", "not_found.txt");
+            var sample = SampleReader.Read("whois.dns.be", "be", "not-found", "u34jedzcq.be.txt");
             var response = parser.Parse("whois.dns.be", sample);
 
             Assert.True(sample.Length > 0);
@@ -68,7 +68,7 @@ namespace Whois.Parsing.Whois.Dns.Be.Be
         [Fact]
         public void Test_error()
         {
-            var sample = SampleReader.Read("whois.dns.be", "be", "error", "error.txt");
+            var sample = SampleReader.Read("whois.dns.be", "be", "error", "www.kimdemolenaer.be.txt");
             var response = parser.Parse("whois.dns.be", sample);
 
             Assert.True(sample.Length > 0);

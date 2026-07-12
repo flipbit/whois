@@ -41,7 +41,7 @@ namespace Whois.Parsing.Tvwhois.Verisign.Grs.Com.Tv
         [Fact]
         public void Test_not_found()
         {
-            var sample = SampleReader.Read("tvwhois.verisign-grs.com", "tv", "not-found", "not_found.txt");
+            var sample = SampleReader.Read("tvwhois.verisign-grs.com", "tv", "not-found", "u34jedzcq.tv.txt");
             var response = parser.Parse("tvwhois.verisign-grs.com", sample);
 
             Assert.True(sample.Length > 0);

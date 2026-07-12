@@ -32,7 +32,7 @@ namespace Whois.Parsing.Whois.Dot.Tk.Tk
         [Fact]
         public void Test_found()
         {
-            var sample = SampleReader.Read("whois.dot.tk", "tk", "found", "found.txt");
+            var sample = SampleReader.Read("whois.dot.tk", "tk", "found", "google.tk.txt");
             var response = parser.Parse("whois.dot.tk", sample);
 
             Assert.True(sample.Length > 0);

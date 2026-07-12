@@ -1,0 +1,32 @@
+# Copyright (c) 1997- The Swedish Internet Foundation.
+# All rights reserved.
+# The information obtained through searches, or otherwise, is protected
+# by the Swedish Copyright Act (1960:729) and international conventions.
+# It is also subject to database protection according to the Swedish
+# Copyright Act.
+# Any use of this material to target advertising or
+# similar activities is forbidden and will be prosecuted.
+# If any of the information below is transferred to a third
+# party, it must be done in its entirety. This server must
+# not be used as a backend for a search engine.
+# Result of search for registered domain names under
+# the .se top level domain.
+# This whois printout is printed with UTF-8 encoding.
+#
+state:            active
+domain:           nhv.se
+holder:           Lxcc3SYeXq3VFNLq
+created:          2025-06-02
+modified:         2026-04-04
+expires:          2027-06-02
+transferred:      2025-06-07
+nserver:          ns1.inleed.net
+nserver:          ns2.inleed.net
+nserver:          ns3.inleed.net
+nserver:          ns4.inleed.net
+nserver:          ns5.inleed.net
+nserver:          ns6.inleed.net
+dnssec:           signed delegation
+registry-lock:    unlocked
+status:           ok
+registrar:        INLEED

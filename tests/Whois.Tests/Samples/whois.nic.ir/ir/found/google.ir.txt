@@ -1,0 +1,20 @@
+% This is the IRNIC Whois server v1.6.2.
+% Available on web at http://whois.nic.ir/
+% Find the terms and conditions of use on http://www.nic.ir/
+% 
+% This server uses UTF-8 as the encoding for requests and responses.
+
+% NOTE: This output has been filtered.
+
+% Information related to 'google.ir'
+
+
+domain:		google.ir
+ascii:		google.ir
+remarks:	The information about this domain is hidden by the domain holder
+nserver:	ns1.googledomains.com
+nserver:	ns2.googledomains.com
+nserver:	ns3.googledomains.com
+nserver:	ns4.googledomains.com
+source:		IRNIC
+

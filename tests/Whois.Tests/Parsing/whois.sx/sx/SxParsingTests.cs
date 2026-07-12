@@ -17,7 +17,7 @@ namespace Whois.Parsing.Whois.Sx.Sx
         [Fact]
         public void Test_other_status_premium_name()
         {
-            var sample = SampleReader.Read("whois.sx", "sx", "found", "other_status_premium_name.txt");
+            var sample = SampleReader.Read("whois.sx", "sx", "found", "domain.sx.txt");
             var response = parser.Parse("whois.sx", sample);
 
             Assert.True(sample.Length > 0);
@@ -129,7 +129,7 @@ namespace Whois.Parsing.Whois.Sx.Sx
         [Fact]
         public void Test_unavailable()
         {
-            var sample = SampleReader.Read("whois.sx", "sx", "unavailable", "unavailable.txt");
+            var sample = SampleReader.Read("whois.sx", "sx", "unavailable", "domain-unavailable.sx.txt");
             var response = parser.Parse("whois.sx", sample);
 
             Assert.True(sample.Length > 0);

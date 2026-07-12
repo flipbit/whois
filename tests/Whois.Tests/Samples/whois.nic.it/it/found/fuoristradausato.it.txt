@@ -1,0 +1,59 @@
+
+*********************************************************************
+* Please note that the following result could be a subgroup of      *
+* the data contained in the database.                               *
+*                                                                   *
+* Additional information can be visualized at:                      *
+* http://web-whois.nic.it                                           *
+*********************************************************************
+
+Domain:             fuoristradausato.it
+Status:             ok
+Signed:             no
+Created:            2012-11-16 08:21:06
+Last Update:        2025-12-02 00:48:40
+Expire Date:        2026-11-16
+
+Registrant
+  Organization:     Imnoko S.r.l.
+  Address:          Via Garibaldi, 97
+                    Arezzo
+                    52100
+                    AR
+                    IT
+  Created:          2019-10-29 10:25:49
+  Last Update:      2024-10-28 12:54:39
+
+Admin Contact
+  Name:             Imnoko S.r.l.
+  Organization:     Imnoko S.r.l.
+  Address:          Via Garibaldi, 97
+                    Arezzo
+                    52100
+                    AR
+                    IT
+  Created:          2019-10-29 10:25:49
+  Last Update:      2024-10-28 12:54:39
+
+Technical Contacts
+  Name:             Imnoko S.r.l.
+  Organization:     Imnoko S.r.l.
+  Address:          Via Garibaldi, 97
+                    Arezzo
+                    52100
+                    AR
+                    IT
+  Created:          2019-10-29 10:25:49
+  Last Update:      2024-10-28 12:54:39
+
+Registrar
+  Organization:     Imnoko S.r.l.
+  Name:             MNK-REG
+  Web:              https://www.imnoko.com
+  DNSSEC:           no
+
+
+Nameservers
+  ns1.bodis.com
+  ns2.bodis.com
+

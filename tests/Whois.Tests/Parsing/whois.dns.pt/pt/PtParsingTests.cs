@@ -17,7 +17,7 @@ namespace Whois.Parsing.Whois.Dns.Pt.Pt
         [Fact]
         public void Test_found()
         {
-            var sample = SampleReader.Read("whois.dns.pt", "pt", "found", "found.txt");
+            var sample = SampleReader.Read("whois.dns.pt", "pt", "found", "google.pt.txt");
             var response = parser.Parse("whois.dns.pt", sample);
 
             Assert.True(sample.Length > 0);
@@ -105,7 +105,7 @@ namespace Whois.Parsing.Whois.Dns.Pt.Pt
         [Fact]
         public void Test_not_found()
         {
-            var sample = SampleReader.Read("whois.dns.pt", "pt", "not-found", "not_found.txt");
+            var sample = SampleReader.Read("whois.dns.pt", "pt", "not-found", "u34jedzcq.pt.txt");
             var response = parser.Parse("whois.dns.pt", sample);
 
             Assert.True(sample.Length > 0);
@@ -123,7 +123,7 @@ namespace Whois.Parsing.Whois.Dns.Pt.Pt
         [Fact]
         public void Test_inactive()
         {
-            var sample = SampleReader.Read("whois.dns.pt", "pt", "inactive", "inactive.txt");
+            var sample = SampleReader.Read("whois.dns.pt", "pt", "inactive", "wiki-inactive.pt.txt");
             var response = parser.Parse("whois.dns.pt", sample);
 
             Assert.True(sample.Length > 0);
@@ -211,7 +211,7 @@ namespace Whois.Parsing.Whois.Dns.Pt.Pt
         [Fact]
         public void Test_reserved()
         {
-            var sample = SampleReader.Read("whois.dns.pt", "pt", "reserved", "reserved.txt");
+            var sample = SampleReader.Read("whois.dns.pt", "pt", "reserved", "wiki-reserved.pt.txt");
             var response = parser.Parse("whois.dns.pt", sample);
 
             Assert.True(sample.Length > 0);

@@ -1,0 +1,45 @@
+Domain Name: jaycar.co.nz
+Registrar URL: https://www.key-systems.net
+Updated Date: 2026-06-23T11:23:52Z
+Creation Date: 2002-04-10T23:04:03Z
+Original Created: 2001-02-21T11:00:00Z
+Registrar: Key-Systems GmbH
+Domain Status: ok https://icann.org/epp#ok
+Name Server: ns1.partnerconsole.net
+Name Server: ns2.partnerconsole.net
+Name Server: ns3.partnerconsole.net
+DNSSEC: unsigned
+URL of the Domain Name Commission Limited Inaccuracy Complaint Form: https://dnc.org.nz/enquiry-form/
+>>> Last update of WHOIS database: 2026-07-12T12:34:22Z <<<
+
+% Terms of Use
+%
+% By submitting a WHOIS query you are entering into an agreement with Domain
+% Name Commission Ltd on the following terms and conditions, and subject to
+% all relevant .nz Policies and procedures as found at https://dnc.org.nz/.
+%
+% It is prohibited to:
+% - Send high volume WHOIS queries with the effect of downloading part of or
+%   all of the .nz Register or collecting register data or records;
+% - Access the .nz Register in bulk through the WHOIS service (ie. where a
+%   user is able to access WHOIS data other than by sending individual queries
+%   to the database);
+% - Use WHOIS data to allow, enable, or otherwise support mass unsolicited
+%   commercial advertising, or mass solicitations to registrants or to
+%   undertake market research via direct mail, electronic mail, SMS, telephone
+%   or any other medium;
+% - Use WHOIS data in contravention of any applicable data and privacy laws,
+%   including the Unsolicited Electronic Messages Act 2007;
+% - Store or compile WHOIS data to build up a secondary register of
+%   information;
+% - Publish historical or non-current versions of WHOIS data; and
+% - Publish any WHOIS data in bulk.
+%
+% Copyright Domain Name Commission Limited (a company wholly-owned by Internet
+% New Zealand Incorporated) which may enforce its rights against any person or
+% entity that undertakes any prohibited activity without its written
+% permission.
+%
+% The WHOIS service is provided by Internet New Zealand Incorporated.
+%
+% Additional information may be available at https://www.dnc.org.nz

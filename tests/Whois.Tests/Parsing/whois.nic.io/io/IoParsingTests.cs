@@ -17,7 +17,7 @@ namespace Whois.Parsing.Whois.Nic.Io.Io
         [Fact]
         public void Test_found()
         {
-            var sample = SampleReader.Read("whois.nic.io", "io", "found", "found.txt");
+            var sample = SampleReader.Read("whois.nic.io", "io", "found", "google.io.txt");
             var response = parser.Parse("whois.nic.io", sample);
 
             Assert.True(sample.Length > 0);
@@ -72,7 +72,7 @@ namespace Whois.Parsing.Whois.Nic.Io.Io
         [Fact]
         public void Test_not_found()
         {
-            var sample = SampleReader.Read("whois.nic.io", "io", "not-found", "not_found.txt");
+            var sample = SampleReader.Read("whois.nic.io", "io", "not-found", "u34jedzcq.io.txt");
             var response = parser.Parse("whois.nic.io", sample);
 
             Assert.True(sample.Length > 0);
@@ -89,7 +89,7 @@ namespace Whois.Parsing.Whois.Nic.Io.Io
         [Fact]
         public void Test_found_status_registered()
         {
-            var sample = SampleReader.Read("whois.nic.io", "io", "found", "found_status_registered.txt");
+            var sample = SampleReader.Read("whois.nic.io", "io", "found", "redis.io.txt");
             var response = parser.Parse("whois.nic.io", sample);
 
             Assert.True(sample.Length > 0);

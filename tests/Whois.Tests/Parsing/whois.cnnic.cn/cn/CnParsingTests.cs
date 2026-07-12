@@ -17,7 +17,7 @@ namespace Whois.Parsing.Whois.Cnnic.Cn.Cn
         [Fact]
         public void Test_found()
         {
-            var sample = SampleReader.Read("whois.cnnic.cn", "cn", "found", "found.txt");
+            var sample = SampleReader.Read("whois.cnnic.cn", "cn", "found", "concordecals.com.cn.txt");
             var response = parser.Parse("whois.cnnic.cn", sample);
 
             Assert.True(sample.Length > 0);
@@ -87,7 +87,7 @@ namespace Whois.Parsing.Whois.Cnnic.Cn.Cn
         [Fact]
         public void Test_found_status_registered()
         {
-            var sample = SampleReader.Read("whois.cnnic.cn", "cn", "found", "found_status_registered.txt");
+            var sample = SampleReader.Read("whois.cnnic.cn", "cn", "found", "google.cn.txt");
             var response = parser.Parse("whois.cnnic.cn", sample);
 
             Assert.True(sample.Length > 0);

@@ -27,7 +27,7 @@ namespace Whois.Parsing.Whois.Afilias.Net.Pro
         [Fact]
         public void Test_found()
         {
-            var sample = SampleReader.Read("whois.afilias.net", "pro", "found", "found.txt");
+            var sample = SampleReader.Read("whois.afilias.net", "pro", "found", "google.pro.txt");
             var response = parser.Parse("whois.afilias.net", sample);
 
             Assert.True(sample.Length > 0);

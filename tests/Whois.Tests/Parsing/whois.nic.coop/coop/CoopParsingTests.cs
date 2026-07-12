@@ -17,7 +17,7 @@ namespace Whois.Parsing.Whois.Nic.Coop.Coop
         [Fact]
         public void Test_found()
         {
-            var sample = SampleReader.Read("whois.nic.coop", "coop", "found", "found.txt");
+            var sample = SampleReader.Read("whois.nic.coop", "coop", "found", "moscowfood.coop.txt");
             var response = parser.Parse("whois.nic.coop", sample);
 
             Assert.True(sample.Length > 0);
@@ -120,7 +120,7 @@ namespace Whois.Parsing.Whois.Nic.Coop.Coop
         [Fact]
         public void Test_other_status_single()
         {
-            var sample = SampleReader.Read("whois.nic.coop", "coop", "found", "other_status_single.txt");
+            var sample = SampleReader.Read("whois.nic.coop", "coop", "found", "calgary.coop.txt");
             var response = parser.Parse("whois.nic.coop", sample);
 
             Assert.True(sample.Length > 0);
@@ -222,7 +222,7 @@ namespace Whois.Parsing.Whois.Nic.Coop.Coop
         [Fact]
         public void Test_not_found()
         {
-            var sample = SampleReader.Read("whois.nic.coop", "coop", "not-found", "not_found.txt");
+            var sample = SampleReader.Read("whois.nic.coop", "coop", "not-found", "u34jedzcq.coop.txt");
             var response = parser.Parse("whois.nic.coop", sample);
 
             Assert.True(sample.Length > 0);

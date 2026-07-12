@@ -17,7 +17,7 @@ namespace Whois.Parsing.Whois.Kg.Kg
         [Fact]
         public void Test_not_found()
         {
-            var sample = SampleReader.Read("whois.kg", "kg", "not-found", "not_found.txt");
+            var sample = SampleReader.Read("whois.kg", "kg", "not-found", "u34jedzcq.kg.txt");
             var response = parser.Parse("whois.kg", sample);
 
             Assert.True(sample.Length > 0);
@@ -34,7 +34,7 @@ namespace Whois.Parsing.Whois.Kg.Kg
         [Fact]
         public void Test_found()
         {
-            var sample = SampleReader.Read("whois.kg", "kg", "found", "found.txt");
+            var sample = SampleReader.Read("whois.kg", "kg", "found", "google.kg.txt");
             var response = parser.Parse("whois.kg", sample);
 
             Assert.True(sample.Length > 0);

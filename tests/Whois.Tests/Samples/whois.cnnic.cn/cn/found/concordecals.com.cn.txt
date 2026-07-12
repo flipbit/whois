@@ -1,0 +1,11 @@
+Domain Name: concordecals.com.cn
+ROID: 20021209s10011s00041927-cn
+Domain Status: ok
+Registrant: 惠州市汇浩工艺品有限公司
+Registrant Contact Email: taien@concordecals.com.cn
+Sponsoring Registrar: 商中在线科技股份有限公司
+Name Server: ns1.dns.com.cn
+Name Server: ns2.dns.com.cn
+Registration Time: 2002-03-06 00:00:00
+Expiration Time: 2028-03-06 00:00:00
+DNSSEC: unsigned

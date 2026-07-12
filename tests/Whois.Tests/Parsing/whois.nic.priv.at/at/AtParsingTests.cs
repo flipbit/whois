@@ -32,7 +32,7 @@ namespace Whois.Parsing.Whois.Nic.Priv.At.At
         [Fact]
         public void Test_found()
         {
-            var sample = SampleReader.Read("whois.nic.priv.at", "at", "found", "found.txt");
+            var sample = SampleReader.Read("whois.nic.priv.at", "at", "found", "nic.priv.at.txt");
             var response = parser.Parse("whois.nic.priv.at", sample);
 
             Assert.True(sample.Length > 0);

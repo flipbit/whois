@@ -1,0 +1,112 @@
+%%
+%% This is the AFNIC Whois server.
+%%
+%% complete date format: YYYY-MM-DDThh:mm:ssZ
+%%
+%% Rights restricted by copyright.
+%% See https://www.afnic.fr/en/domain-names-and-support/everything-there-is-to-know-about-domain-names/find-a-domain-name-or-a-holder-using-whois/
+%%
+%%
+
+domain:                        boursedirect.fr
+status:                        ACTIVE
+eppstatus:                     active
+hold:                          NO
+holder-c:                      BD11748-FRNIC
+admin-c:                       BD13095-FRNIC
+tech-c:                        G768-FRNIC
+registrar:                     GANDI
+Expiry Date:                   2028-01-07T23:07:01Z
+created:                       1997-12-30T23:00:00Z
+last-update:                   2025-11-24T09:14:02.626894Z
+source:                        FRNIC
+
+nserver:                       ns0.boursedirect.fr
+nserver:                       ns101.boursedirect.fr
+nserver:                       ns102.boursedirect.fr
+nserver:                       ns103.boursedirect.fr
+nserver:                       ns201.boursedirect.fr
+nserver:                       ns202.boursedirect.fr
+nserver:                       ns203.boursedirect.fr
+nserver:                       ns204.boursedirect.fr
+source:                        FRNIC
+
+registrar:                     GANDI
+address:                       63-65 boulevard Massena
+address:                       75013 PARIS
+country:                       FR
+phone:                         +33.170377661
+fax-no:                        +33.143731851
+e-mail:                        support@support.gandi.net
+website:                       https://www.gandi.net/fr/tlds/fr/
+anonymous:                     No
+registered:                    2004-03-08T00:00:00Z
+source:                        FRNIC
+
+nic-hdl:                       BD11748-FRNIC
+type:                          ORGANIZATION
+contact:                       BOURSE DIRECT
+address:                       374, rue Saint-Honore
+address:                       75001 Paris
+country:                       FR
+phone:                         +33.185655686
+e-mail:                        hlestrat@boursedirect.fr
+registrar:                     GANDI
+changed:                       2016-06-08T07:34:07Z
+anonymous:                     NO
+obsoleted:                     NO
+eppstatus:                     associated
+eppstatus:                     active
+eligstatus:                    ok
+eligsource:                    REGISTRY
+eligdate:                      2018-12-12T00:00:00Z
+reachstatus:                   ok
+reachmedia:                    email
+reachsource:                   REGISTRY
+reachdate:                     2018-12-12T00:00:00Z
+source:                        FRNIC
+
+nic-hdl:                       BD13095-FRNIC
+type:                          ORGANIZATION
+contact:                       BOUSE DIRECT
+address:                       BOUSE DIRECT
+address:                       374 rue Saint Honore
+address:                       75001 PARIS
+country:                       FR
+phone:                         +33.185655684
+e-mail:                        cangin@boursedirect.fr
+registrar:                     GANDI
+changed:                       2022-02-02T08:53:14Z
+anonymous:                     NO
+obsoleted:                     NO
+eppstatus:                     associated
+eppstatus:                     active
+eligstatus:                    not identified
+reachstatus:                   not identified
+source:                        FRNIC
+
+nic-hdl:                       G768-FRNIC
+type:                          ORGANIZATION
+contact:                       GANDI
+address:                       GANDI
+address:                       63-65 Boulevard MASSENA
+address:                       75013 Paris
+country:                       FR
+phone:                         +33.143737851
+fax-no:                        +33.143731851
+e-mail:                        noc@gandi.net
+registrar:                     GANDI
+changed:                       2026-07-11T14:49:28.642041Z
+anonymous:                     NO
+obsoleted:                     NO
+eppstatus:                     associated
+eppstatus:                     active
+eligstatus:                    not identified
+reachstatus:                   ok
+reachmedia:                    email
+reachsource:                   REGISTRAR
+reachdate:                     2026-07-10T07:05:27.605282Z
+source:                        FRNIC
+
+>>> Last update of WHOIS database: 2026-07-12T12:34:25.425545Z <<<
+

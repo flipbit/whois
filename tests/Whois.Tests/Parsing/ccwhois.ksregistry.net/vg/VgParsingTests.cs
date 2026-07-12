@@ -27,7 +27,7 @@ namespace Whois.Parsing.Ccwhois.Ksregistry.Net.Vg
         [Fact]
         public void Test_found()
         {
-            var sample = SampleReader.Read("ccwhois.ksregistry.net", "vg", "found", "found.txt");
+            var sample = SampleReader.Read("ccwhois.ksregistry.net", "vg", "found", "google.vg.txt");
             var response = parser.Parse("ccwhois.ksregistry.net", sample);
 
             Assert.True(sample.Length > 0);

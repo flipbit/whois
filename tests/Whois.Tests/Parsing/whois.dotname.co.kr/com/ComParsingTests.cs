@@ -17,7 +17,7 @@ namespace Whois.Parsing.Whois.Dotname.Co.Kr.Com
         [Fact]
         public void Test_found()
         {
-            var sample = SampleReader.Read("whois.dotname.co.kr", "com", "found", "found.txt");
+            var sample = SampleReader.Read("whois.dotname.co.kr", "com", "found", "ggemtv.com.txt");
             
             var response = parser.Parse("whois.dotname.co.kr", sample);
 

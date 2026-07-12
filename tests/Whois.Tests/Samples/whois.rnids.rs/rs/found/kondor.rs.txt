@@ -1,0 +1,40 @@
+
+% The data in the Whois database are provided by RNIDS
+% for information purposes only and to assist persons in obtaining
+% information about or related to a domain name registration record. 
+% Data in the database are created by registrants and we do not guarantee 
+% their accuracy. We reserve the right to remove access 
+% for entities abusing the data, without notice.
+% All timestamps are given in Serbian local time. 
+%
+Domain name: kondor.rs
+Domain status: Active https://www.rnids.rs/en/domain-name-status-codes#Active
+Registration date: 30.09.2009 16:19:08
+Modification date: 04.08.2025 14:05:42
+Expiration date: 30.09.2026 16:19:08
+Confirmed: 30.09.2009 16:19:08
+Registrar: Ivapix PR Ivan Pjano
+
+
+Registrant: Individual
+
+Administrative contact: Ivapix
+Address: 39A/3, Smederevo, Serbia
+Postal Code: 11300
+ID Number: 63087599
+Tax ID: 107921976
+
+Technical contact: Ivapix
+Address: 39A/3, Smederevo, Serbia
+Postal Code: 11300
+ID Number: 63087599
+Tax ID: 107921976
+
+
+DNS: ns1.ivapix.cloud - 
+DNS: ns2.ivapix.cloud - 
+
+
+DNSSEC signed: no
+
+Whois Timestamp: 12.07.2026 14:34:26

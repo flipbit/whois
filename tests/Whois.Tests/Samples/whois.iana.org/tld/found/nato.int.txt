@@ -1,0 +1,46 @@
+% IANA WHOIS server
+% for more information on IANA, visit http://www.iana.org
+% This query returned 1 object
+
+domain:       NATO.INT
+
+organisation: North Atlantic Treaty Organization
+address:      Boulevard Leopold III
+address:      Brussels
+address:      Belgium
+
+contact:      administrative
+name:         NATO C&I Agency Naming and Registration Authority
+address:      Place du luxembourg, 1420
+address:      Braine L'Alleud
+address:      Belgium
+phone:        +32 49 219 0832
+e-mail:       nraddi@ncia.nato.int
+
+contact:      technical
+name:         NATO C&I Agency NISC CISS
+address:      Rue Grande – N6
+address:      SHAPE
+address:      Maisieres Hainaut 7010
+address:      Belgium
+phone:        +32 494 56 52 27
+e-mail:       dmzsupport@ncia.nato.int
+
+nserver:      A1-71.AKAM.NET
+nserver:      A11-65.AKAM.NET
+nserver:      A12-67.AKAM.NET
+nserver:      A14-67.AKAM.NET
+nserver:      A7-65.AKAM.NET
+nserver:      A8-64.AKAM.NET
+ds-rdata:     34918 13 2 88C5360EB7A548AA8D211EA553C06E9355075EE4005DF70CD2D221A30D4261D8
+ds-rdata:     31950 13 2 CDDA4965E5E6A6B5BA7362AEEFD2C76C90857E7CE4E184A8848C9D3E7B76FDD8
+
+created:      1997-08-26
+changed:      2026-03-06
+source:       IANA
+
+% IANA WHOIS server
+% for more information on IANA, visit http://www.iana.org
+%
+% Error: Invalid query 
+

@@ -1,0 +1,82 @@
+Domain Name: google.sl
+WHOIS Server: whois.nic.sl
+Creation Date: 2008-05-17T21:00:00.0Z
+Registry Expiry Date: 2027-05-17T21:00:00.0Z
+Sponsoring Registrar: nicsl
+Registrant Name: Domain Administrator
+Registrant Organization: Google LLC
+Registrant Street: 1600 Amphitheatre Parkway
+Registrant City: Mountain View
+Registrant State/Province: CA
+Registrant Postal Code: 94043
+Registrant Country: US
+Registrant Phone: +1.6502530000
+Registrant Phone Ext: 
+Registrant Fax: +1.6502530001
+Registrant Fax Ext: 
+Registrant Email: ccops@markmonitor.com
+Admin Name: Domain Administrator
+Admin Organization: Markmonitor Inc.
+Admin Street: 1120 S. Rackham Way
+Admin Street: Suite 300
+Admin City: Meridian
+Admin State/Province: ID
+Admin Postal Code: 83642
+Admin Country: US
+Admin Phone: +1.2083895740
+Admin Phone Ext: 
+Admin Email: ccops@markmonitor.com
+Billing Name: CCOPS Billing
+Billing Organization: Markmonitor Inc.
+Billing Street: 1120 S. Rackham Way
+Billing Street: Suite 300
+Billing City: Meridian
+Billing State/Province: ID
+Billing Postal Code: 83642
+Billing Country: US
+Billing Phone: +1.2083895740
+Billing Phone Ext: 
+Billing Fax: +1.2083895771
+Billing Fax Ext: 
+Billing Email: ccopsbilling@markmonitor.com
+Tech Name: Domain Administrator
+Tech Organization: Markmonitor Inc.
+Tech Street: 1120 S. Rackham Way
+Tech Street: Suite 300
+Tech City: Meridian
+Tech State/Province: ID
+Tech Postal Code: 83642
+Tech Country: US
+Tech Phone: +1.2083895740
+Tech Phone Ext: 
+Tech Email: ccops@markmonitor.com
+Name Server: ns1.google.com
+Name Server: ns2.google.com
+Name Server: ns3.google.com
+Name Server: ns4.google.com
+>>> Last update of WHOIS database: 2026-07-12T09:04:52.357Z <<<
+
+------------------------------------------------------------------------------
+ NOTICE AND TERMS OF USE:
+ You are not authorized to access or query our WHOIS database through the use
+ of high-volume, automated, electronic processes. The data in WHOIS database
+ is provided by NIC.SL for information purposes only, and to assist persons
+ in obtaining information about or related to a domain name registration
+ record. NIC.SL does not guarantee its accuracy. By submitting a WHOIS query,
+ you agree to abide by the following terms of use:
+ You agree that you may use this data only for lawful purposes and that under
+ no circumstances will you use this data to: (1) allow, enable, or otherwise
+ support the transmission of mass unsolicited, commercial advertising or
+ solicitations via e-mail, telephone, or facsimile; or (2) enable high volume,
+ automated, electronic processes that apply to NIC.SL (or its computer
+ systems). The compilation, repackaging, dissemination or other use of this
+ data is expressly prohibited without the prior written consent of NIC.SL.
+ You agree not to use high-volume, automated, electronic processes to access
+ or query the WHOIS database. NIC.SL reserves the right to terminate your
+ access to the WHOIS database in its sole discretion, including without
+ limitation, for excessive querying of the WHOIS database or for failure to
+ otherwise abide by this policy. NIC.SL reserves the right to modify these
+ terms at any time.
+ SIMPLE WORDS: Do not abuse this service or you'll get blocked.
+
+------------------------------------------------------------------------------

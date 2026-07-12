@@ -17,7 +17,7 @@ namespace Whois.Parsing.Whois.Fi.Fi
         [Fact]
         public void Test_other_status_graceperiod()
         {
-            var sample = SampleReader.Read("whois.fi", "fi", "found", "other_status_graceperiod.txt");
+            var sample = SampleReader.Read("whois.fi", "fi", "found", "oogle.fi.txt");
             var response = parser.Parse("whois.fi", sample);
 
             Assert.True(sample.Length > 0);
@@ -76,7 +76,7 @@ namespace Whois.Parsing.Whois.Fi.Fi
         [Fact]
         public void Test_found()
         {
-            var sample = SampleReader.Read("whois.fi", "fi", "found", "found.txt");
+            var sample = SampleReader.Read("whois.fi", "fi", "found", "google.fi.txt");
             var response = parser.Parse("whois.fi", sample);
 
             Assert.True(sample.Length > 0);

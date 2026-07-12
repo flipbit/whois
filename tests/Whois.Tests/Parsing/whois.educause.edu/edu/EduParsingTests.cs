@@ -17,7 +17,7 @@ namespace Whois.Parsing.Whois.Educause.Edu.Edu
         [Fact]
         public void Test_found()
         {
-            var sample = SampleReader.Read("whois.educause.edu", "edu", "found", "found.txt");
+            var sample = SampleReader.Read("whois.educause.edu", "edu", "found", "nic.edu.txt");
             var response = parser.Parse("whois.educause.edu", sample);
 
             Assert.True(sample.Length > 0);
@@ -79,7 +79,7 @@ namespace Whois.Parsing.Whois.Educause.Edu.Edu
         [Fact]
         public void Test_found_fixture2()
         {
-            var sample = SampleReader.Read("whois.educause.edu", "edu", "found", "found_fixture2.txt");
+            var sample = SampleReader.Read("whois.educause.edu", "edu", "found", "harvard.edu.txt");
             var response = parser.Parse("whois.educause.edu", sample);
 
             Assert.True(sample.Length > 0);
@@ -143,7 +143,7 @@ namespace Whois.Parsing.Whois.Educause.Edu.Edu
         [Fact]
         public void Test_found_fixture3()
         {
-            var sample = SampleReader.Read("whois.educause.edu", "edu", "found", "found_fixture3.txt");
+            var sample = SampleReader.Read("whois.educause.edu", "edu", "found", "stanford.edu.txt");
             var response = parser.Parse("whois.educause.edu", sample);
 
             Assert.True(sample.Length > 0);
@@ -206,7 +206,7 @@ namespace Whois.Parsing.Whois.Educause.Edu.Edu
         [Fact]
         public void Test_found_fixture4()
         {
-            var sample = SampleReader.Read("whois.educause.edu", "edu", "found", "found_fixture4.txt");
+            var sample = SampleReader.Read("whois.educause.edu", "edu", "found", "nyu.edu.txt");
             var response = parser.Parse("whois.educause.edu", sample);
 
             Assert.True(sample.Length > 0);
@@ -270,7 +270,7 @@ namespace Whois.Parsing.Whois.Educause.Edu.Edu
         [Fact]
         public void Test_found_fixture5()
         {
-            var sample = SampleReader.Read("whois.educause.edu", "edu", "found", "found_fixture5.txt");
+            var sample = SampleReader.Read("whois.educause.edu", "edu", "found", "uiuc.edu.txt");
             var response = parser.Parse("whois.educause.edu", sample);
 
             Assert.True(sample.Length > 0);
@@ -334,7 +334,7 @@ namespace Whois.Parsing.Whois.Educause.Edu.Edu
         [Fact]
         public void Test_found_fixture6()
         {
-            var sample = SampleReader.Read("whois.educause.edu", "edu", "found", "found_fixture6.txt");
+            var sample = SampleReader.Read("whois.educause.edu", "edu", "found", "brown.edu.txt");
             var response = parser.Parse("whois.educause.edu", sample);
 
             Assert.True(sample.Length > 0);
@@ -461,7 +461,7 @@ namespace Whois.Parsing.Whois.Educause.Edu.Edu
         [Fact]
         public void Test_found_contacts_case1()
         {
-            var sample = SampleReader.Read("whois.educause.edu", "edu", "found", "found_contacts_case1.txt");
+            var sample = SampleReader.Read("whois.educause.edu", "edu", "found", "educause.edu.txt");
             var response = parser.Parse("whois.educause.edu", sample);
 
             Assert.True(sample.Length > 0);
@@ -653,7 +653,7 @@ namespace Whois.Parsing.Whois.Educause.Edu.Edu
         [Fact]
         public void Test_found_contacts_case4()
         {
-            var sample = SampleReader.Read("whois.educause.edu", "edu", "found", "found_contacts_case4.txt");
+            var sample = SampleReader.Read("whois.educause.edu", "edu", "found", "syr.edu.txt");
             var response = parser.Parse("whois.educause.edu", sample);
 
             Assert.True(sample.Length > 0);
@@ -781,7 +781,7 @@ namespace Whois.Parsing.Whois.Educause.Edu.Edu
         [Fact]
         public void Test_found_contact_registrant_without_address()
         {
-            var sample = SampleReader.Read("whois.educause.edu", "edu", "found", "found_contact_registrant_without_address.txt");
+            var sample = SampleReader.Read("whois.educause.edu", "edu", "found", "mit.edu.txt");
             var response = parser.Parse("whois.educause.edu", sample);
 
             Assert.True(sample.Length > 0);
@@ -837,7 +837,7 @@ namespace Whois.Parsing.Whois.Educause.Edu.Edu
         [Fact]
         public void Test_found_contact_registrant_without_zip()
         {
-            var sample = SampleReader.Read("whois.educause.edu", "edu", "found", "found_contact_registrant_without_zip.txt");
+            var sample = SampleReader.Read("whois.educause.edu", "edu", "found", "aucmed.edu.txt");
             var response = parser.Parse("whois.educause.edu", sample);
 
             Assert.True(sample.Length > 0);
@@ -963,7 +963,7 @@ namespace Whois.Parsing.Whois.Educause.Edu.Edu
         [Fact]
         public void Test_found_updated_on_unknown()
         {
-            var sample = SampleReader.Read("whois.educause.edu", "edu", "found", "found_updated_on_unknown.txt");
+            var sample = SampleReader.Read("whois.educause.edu", "edu", "found", "pcihealth.edu.txt");
             var response = parser.Parse("whois.educause.edu", sample);
 
             Assert.True(sample.Length > 0);
@@ -1041,7 +1041,7 @@ namespace Whois.Parsing.Whois.Educause.Edu.Edu
         [Fact]
         public void Test_found_status_registered()
         {
-            var sample = SampleReader.Read("whois.educause.edu", "edu", "found", "found_status_registered.txt");
+            var sample = SampleReader.Read("whois.educause.edu", "edu", "found", "academia.edu.txt");
             var response = parser.Parse("whois.educause.edu", sample);
 
             Assert.True(sample.Length > 0);

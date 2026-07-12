@@ -32,7 +32,7 @@ namespace Whois.Parsing.Whois.Cctld.By.By
         [Fact]
         public void Test_found()
         {
-            var sample = SampleReader.Read("whois.cctld.by", "by", "found", "found.txt");
+            var sample = SampleReader.Read("whois.cctld.by", "by", "found", "active.by.txt");
             var response = parser.Parse("whois.cctld.by", sample);
 
             Assert.True(sample.Length > 0);

@@ -17,7 +17,7 @@ namespace Whois.Parsing.Whois.Audns.Net.Au.Au
         [Fact]
         public void Test_found()
         {
-            var sample = SampleReader.Read("whois.audns.net.au", "au", "found", "found.txt");
+            var sample = SampleReader.Read("whois.audns.net.au", "au", "found", "pinewood.com.au.txt");
             var response = parser.Parse("whois.audns.net.au", sample);
 
             Assert.True(sample.Length > 0);
@@ -69,7 +69,7 @@ namespace Whois.Parsing.Whois.Audns.Net.Au.Au
         [Fact]
         public void Test_found_status_registered()
         {
-            var sample = SampleReader.Read("whois.audns.net.au", "au", "found", "found_status_registered.txt");
+            var sample = SampleReader.Read("whois.audns.net.au", "au", "found", "google.com.au.txt");
             var response = parser.Parse("whois.audns.net.au", sample);
 
             Assert.True(sample.Length > 0);

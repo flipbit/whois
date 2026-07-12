@@ -1,0 +1,6 @@
+% This is the WHOIS server for Example Registry.
+% Queries are subject to terms of use.
+%
+% No match for domain 'U34JEDZCQ.DZ'.
+
+% Query served at 2026-07-12T13:34:01.143131776+01:00

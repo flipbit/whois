@@ -17,7 +17,7 @@ namespace Whois.Parsing.Whois.Hkirc.Hk.Hk
         [Fact]
         public void Test_found()
         {
-            var sample = SampleReader.Read("whois.hkirc.hk", "hk", "found", "found.txt");
+            var sample = SampleReader.Read("whois.hkirc.hk", "hk", "found", "brighter.com.hk.txt");
             var response = parser.Parse("whois.hkirc.hk", sample);
 
             Assert.True(sample.Length > 0);
@@ -101,7 +101,7 @@ namespace Whois.Parsing.Whois.Hkirc.Hk.Hk
         [Fact]
         public void Test_found_status_registered()
         {
-            var sample = SampleReader.Read("whois.hkirc.hk", "hk", "found", "found_status_registered.txt");
+            var sample = SampleReader.Read("whois.hkirc.hk", "hk", "found", "google.hk.txt");
             var response = parser.Parse("whois.hkirc.hk", sample);
 
             Assert.True(sample.Length > 0);

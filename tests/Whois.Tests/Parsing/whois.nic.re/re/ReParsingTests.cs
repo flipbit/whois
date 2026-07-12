@@ -17,7 +17,7 @@ namespace Whois.Parsing.Whois.Nic.Re.Re
         [Fact]
         public void Test_found()
         {
-            var sample = SampleReader.Read("whois.nic.re", "re", "found", "found.txt");
+            var sample = SampleReader.Read("whois.nic.re", "re", "found", "nic.re.txt");
             var response = parser.Parse("whois.nic.re", sample);
 
             Assert.True(sample.Length > 0);

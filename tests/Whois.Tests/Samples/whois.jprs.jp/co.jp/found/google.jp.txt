@@ -1,0 +1,38 @@
+[ JPRS database provides information on network administration. Its use is    ]
+[ restricted to network administration purposes. For further information,     ]
+[ use 'whois -h whois.jprs.jp help'. To suppress Japanese output, add'/e'     ]
+[ at the end of command, e.g. 'whois -h whois.jprs.jp xxx/e'.                 ]
+Domain Information: [ドメイン情報]
+[Domain Name]                   GOOGLE.JP
+
+[登録者名]                      Google LLC
+[Registrant]                    Google LLC
+
+[Name Server]                   ns1.google.com
+[Name Server]                   ns2.google.com
+[Name Server]                   ns3.google.com
+[Name Server]                   ns4.google.com
+[Signing Key]                   
+
+[登録年月日]                    2005/05/30
+[有効期限]                      2027/05/31
+[状態]                          Active
+[ロック状態]                    DomainTransferLocked
+[ロック状態]                    AgentChangeLocked
+[最終更新]                      2026/06/01 01:05:03 (JST)
+
+Contact Information: [公開連絡窓口]
+[名前]                          Google LLC
+[Name]                          Google LLC
+[Email]                         dns-admin@google.com
+[Web Page]                       
+[郵便番号]                      94043
+[住所]                          Mountain View
+                                1600 Amphitheatre Parkway
+                                CA
+[Postal Address]                Mountain View
+                                1600 Amphitheatre Parkway
+                                CA
+[電話番号]                      16502530000
+[FAX番号]                       16502530001
+

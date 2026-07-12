@@ -17,7 +17,7 @@ namespace Whois.Parsing.Whois.Ua.Ua
         [Fact]
         public void Test_other_status_clienthold()
         {
-            var sample = SampleReader.Read("whois.ua", "ua", "found", "other_status_clienthold.txt");
+            var sample = SampleReader.Read("whois.ua", "ua", "found", "oogle.com.ua.txt");
             var response = parser.Parse("whois.ua", sample);
 
             Assert.True(sample.Length > 0);
@@ -100,7 +100,7 @@ namespace Whois.Parsing.Whois.Ua.Ua
         [Fact]
         public void Test_other_status_clienttransferprohibited()
         {
-            var sample = SampleReader.Read("whois.ua", "ua", "found", "other_status_clienttransferprohibited.txt");
+            var sample = SampleReader.Read("whois.ua", "ua", "found", "fcbank.com.ua.txt");
             var response = parser.Parse("whois.ua", sample);
 
             Assert.True(sample.Length > 0);
@@ -265,7 +265,7 @@ namespace Whois.Parsing.Whois.Ua.Ua
         [Fact]
         public void Test_found()
         {
-            var sample = SampleReader.Read("whois.ua", "ua", "found", "found.txt");
+            var sample = SampleReader.Read("whois.ua", "ua", "found", "google.com.ua.txt");
             var response = parser.Parse("whois.ua", sample);
 
             Assert.True(sample.Length > 0);
@@ -496,7 +496,7 @@ namespace Whois.Parsing.Whois.Ua.Ua
         [Fact]
         public void Test_not_found()
         {
-            var sample = SampleReader.Read("whois.ua", "ua", "not-found", "not_found.txt");
+            var sample = SampleReader.Read("whois.ua", "ua", "not-found", "u34jedzcq.com.ua.txt");
             var response = parser.Parse("whois.ua", sample);
 
             Assert.True(sample.Length > 0);
@@ -513,7 +513,7 @@ namespace Whois.Parsing.Whois.Ua.Ua
         [Fact]
         public void Test_found_status_registered()
         {
-            var sample = SampleReader.Read("whois.ua", "ua", "found", "found_status_registered.txt");
+            var sample = SampleReader.Read("whois.ua", "ua", "found", "kyivstar.ua.txt");
             var response = parser.Parse("whois.ua", sample);
 
             Assert.True(sample.Length > 0);

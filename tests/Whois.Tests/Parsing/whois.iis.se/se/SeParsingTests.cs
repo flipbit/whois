@@ -66,7 +66,7 @@ namespace Whois.Parsing.Whois.Iis.Se.Se
         [Fact]
         public void Test_found_nameservers_single()
         {
-            var sample = SampleReader.Read("whois.iis.se", "se", "found", "found_nameservers_single.txt");
+            var sample = SampleReader.Read("whois.iis.se", "se", "found", "nhv.se.txt");
             var response = parser.Parse("whois.iis.se", sample);
 
             Assert.True(sample.Length > 0);
@@ -98,7 +98,7 @@ namespace Whois.Parsing.Whois.Iis.Se.Se
         [Fact]
         public void Test_found_nameservers_with_ip()
         {
-            var sample = SampleReader.Read("whois.iis.se", "se", "found", "found_nameservers_with_ip.txt");
+            var sample = SampleReader.Read("whois.iis.se", "se", "found", "loopia.se.txt");
             var response = parser.Parse("whois.iis.se", sample);
 
             Assert.True(sample.Length > 0);
@@ -137,7 +137,7 @@ namespace Whois.Parsing.Whois.Iis.Se.Se
         [Fact]
         public void Test_not_assigned()
         {
-            var sample = SampleReader.Read("whois.iis.se", "se", "not-assigned", "not_assigned.txt");
+            var sample = SampleReader.Read("whois.iis.se", "se", "not-assigned", "example.se.txt");
             var response = parser.Parse("whois.iis.se", sample);
 
             Assert.True(sample.Length > 0);
@@ -165,7 +165,7 @@ namespace Whois.Parsing.Whois.Iis.Se.Se
         [Fact]
         public void Test_not_found()
         {
-            var sample = SampleReader.Read("whois.iis.se", "se", "not-found", "not_found.txt");
+            var sample = SampleReader.Read("whois.iis.se", "se", "not-found", "u34jedzcq.se.txt");
             var response = parser.Parse("whois.iis.se", sample);
 
             Assert.True(sample.Length > 0);
@@ -183,7 +183,7 @@ namespace Whois.Parsing.Whois.Iis.Se.Se
         [Fact]
         public void Test_found_status_ok()
         {
-            var sample = SampleReader.Read("whois.iis.se", "se", "found", "found_status_ok.txt");
+            var sample = SampleReader.Read("whois.iis.se", "se", "found", "google.se.txt");
             var response = parser.Parse("whois.iis.se", sample);
 
             Assert.True(sample.Length > 0);

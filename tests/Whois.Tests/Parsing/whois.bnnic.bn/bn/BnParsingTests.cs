@@ -32,7 +32,7 @@ namespace Whois.Parsing.Whois.Bnnic.Bn.Bn
         [Fact]
         public void Test_found()
         {
-            var sample = SampleReader.Read("whois.bnnic.bn", "bn", "found", "found.txt");
+            var sample = SampleReader.Read("whois.bnnic.bn", "bn", "found", "telbru.com.bn.txt");
             var response = parser.Parse("whois.bnnic.bn", sample);
 
             Assert.True(sample.Length > 0);

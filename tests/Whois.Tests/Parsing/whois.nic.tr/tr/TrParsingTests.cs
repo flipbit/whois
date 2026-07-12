@@ -494,7 +494,7 @@ namespace Whois.Parsing.Whois.Nic.Tr.Tr
         [Fact]
         public void Test_not_found()
         {
-            var sample = SampleReader.Read("whois.nic.tr", "tr", "not-found", "not_found.txt");
+            var sample = SampleReader.Read("whois.nic.tr", "tr", "not-found", "u34jedzcq.com.tr.txt");
             var response = parser.Parse("whois.nic.tr", sample);
 
             Assert.True(sample.Length > 0);

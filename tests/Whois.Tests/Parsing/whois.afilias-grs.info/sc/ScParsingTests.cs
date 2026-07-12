@@ -30,7 +30,7 @@ namespace Whois.Parsing.Whois.Afilias.Grs.Info.Sc
         [Fact]
         public void Test_found()
         {
-            var sample = SampleReader.Read("whois.afilias-grs.info", "sc", "found", "found.txt");
+            var sample = SampleReader.Read("whois.afilias-grs.info", "sc", "found", "google.sc.txt");
             var response = parser.Parse("whois.afilias-grs.info", sample);
 
             Assert.True(sample.Length > 0);

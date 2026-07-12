@@ -1,0 +1,42 @@
+
+Domain:
+	lboro.ac.uk
+
+Registered For:
+	Loughborough University
+
+Domain Owner:
+	Loughborough University
+
+Registered By:
+	Loughborough University
+
+Servers:
+	agate.lut.ac.uk	
+	bgate.lut.ac.uk	
+	cgate.lut.ac.uk	
+	ns1.surfnet.nl	
+
+Registrant Contact:
+	IT Services
+
+Registrant Address:
+	Loughborough University
+	Garendon Wing
+	Holywell Park
+	Loughborough
+	LEICS
+	LE11 3TU
+	United Kingdom
+	+44 1509 222333 (Phone)
+	it.services@lboro.ac.uk
+
+Renewal date:
+	Friday 16th Jun 2028
+
+Entry updated:
+	Monday 16th March 2026
+
+Entry created:
+	Friday 7th November 2003
+

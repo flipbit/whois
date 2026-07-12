@@ -63,7 +63,7 @@ namespace Whois.Parsing.Whois.Nic.Uk.Uk
         [Fact]
         public void Test_found_registrant_type_individual()
         {
-            var sample = SampleReader.Read("whois.nic.uk", "uk", "found", "found_registrant_type_individual.txt");
+            var sample = SampleReader.Read("whois.nic.uk", "uk", "found", "bedandbreakfastsearcher.co.uk.txt");
             var response = parser.Parse("whois.nic.uk", sample);
 
             Assert.True(sample.Length > 0);
@@ -100,7 +100,7 @@ namespace Whois.Parsing.Whois.Nic.Uk.Uk
         [Fact]
         public void Test_found_registrant_type_unknown()
         {
-            var sample = SampleReader.Read("whois.nic.uk", "uk", "found", "found_registrant_type_unknown.txt");
+            var sample = SampleReader.Read("whois.nic.uk", "uk", "found", "google.co.uk.txt");
             var response = parser.Parse("whois.nic.uk", sample);
 
             Assert.True(sample.Length > 0);
@@ -238,7 +238,7 @@ namespace Whois.Parsing.Whois.Nic.Uk.Uk
         [Fact]
         public void Test_not_found()
         {
-            var sample = SampleReader.Read("whois.nic.uk", "uk", "not-found", "not_found.txt");
+            var sample = SampleReader.Read("whois.nic.uk", "uk", "not-found", "u34jedzcq.co.uk.txt");
             var response = parser.Parse("whois.nic.uk", sample);
 
             Assert.True(sample.Length > 0);

@@ -32,7 +32,7 @@ namespace Whois.Parsing.Whois.Nic.Dm.Dm
         [Fact]
         public void Test_found()
         {
-            var sample = SampleReader.Read("whois.nic.dm", "dm", "found", "found.txt");
+            var sample = SampleReader.Read("whois.nic.dm", "dm", "found", "google.dm.txt");
             var response = parser.Parse("whois.nic.dm", sample);
 
             Assert.True(sample.Length > 0);

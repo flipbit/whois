@@ -32,7 +32,7 @@ namespace Whois.Parsing.Whois.Inregistry.Net.In
         [Fact]
         public void Test_found()
         {
-            var sample = SampleReader.Read("whois.inregistry.net", "in", "found", "found.txt");
+            var sample = SampleReader.Read("whois.inregistry.net", "in", "found", "videogratis.in.txt");
             var response = parser.Parse("whois.inregistry.net", sample);
 
             Assert.True(sample.Length > 0);
@@ -118,7 +118,7 @@ namespace Whois.Parsing.Whois.Inregistry.Net.In
         [Fact]
         public void Test_found_status_ok()
         {
-            var sample = SampleReader.Read("whois.inregistry.net", "in", "found", "found_status_ok.txt");
+            var sample = SampleReader.Read("whois.inregistry.net", "in", "found", "google.in.txt");
             var response = parser.Parse("whois.inregistry.net", sample);
 
             Assert.True(sample.Length > 0);

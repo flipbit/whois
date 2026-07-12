@@ -17,7 +17,7 @@ namespace Whois.Parsing.Whois.Co.Ca.CoCa
         [Fact]
         public void Test_not_found()
         {
-            var sample = SampleReader.Read("whois.co.ca", "co.ca", "not-found", "not_found.txt");
+            var sample = SampleReader.Read("whois.co.ca", "co.ca", "not-found", "u34jedzcq.co.ca.txt");
             var response = parser.Parse("whois.co.ca", sample);
 
             Assert.True(sample.Length > 0);

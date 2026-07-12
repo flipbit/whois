@@ -17,7 +17,7 @@ namespace Whois.Parsing.Whois.Ja.Net.GovUk
         [Fact]
         public void Test_not_found()
         {
-            var sample = SampleReader.Read("whois.ja.net", "gov.uk", "not-found", "not_found.txt");
+            var sample = SampleReader.Read("whois.ja.net", "gov.uk", "not-found", "u34jedzcq.gov.uk.txt");
             var response = parser.Parse("whois.ja.net", sample);
 
             Assert.True(sample.Length > 0);

@@ -32,7 +32,7 @@ namespace Whois.Parsing.Whois.Registry.Om.Om
         [Fact]
         public void Test_found()
         {
-            var sample = SampleReader.Read("whois.registry.om", "om", "found", "found.txt");
+            var sample = SampleReader.Read("whois.registry.om", "om", "found", "rop.gov.om.txt");
             var response = parser.Parse("whois.registry.om", sample);
 
             Assert.True(sample.Length > 0);

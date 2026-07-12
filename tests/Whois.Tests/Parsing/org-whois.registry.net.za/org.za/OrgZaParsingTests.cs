@@ -17,7 +17,7 @@ namespace Whois.Parsing.Org.Whois.Registry.Net.Za.OrgZa
         [Fact]
         public void Test_not_found()
         {
-            var sample = SampleReader.Read("org-whois.registry.net.za", "org.za", "not-found", "not_found.txt");
+            var sample = SampleReader.Read("org-whois.registry.net.za", "org.za", "not-found", "nosuchdomain.org.za.txt");
             var response = parser.Parse("org-whois.registry.net.za", sample);
 
             Assert.True(sample.Length > 0);
@@ -32,7 +32,7 @@ namespace Whois.Parsing.Org.Whois.Registry.Net.Za.OrgZa
         [Fact]
         public void Test_found()
         {
-            var sample = SampleReader.Read("org-whois.registry.net.za", "org.za", "found", "found.txt");
+            var sample = SampleReader.Read("org-whois.registry.net.za", "org.za", "found", "joburg.org.za.txt");
             var response = parser.Parse("org-whois.registry.net.za", sample);
 
             Assert.True(sample.Length > 0);

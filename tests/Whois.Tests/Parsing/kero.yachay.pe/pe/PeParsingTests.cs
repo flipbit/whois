@@ -28,7 +28,7 @@ namespace Whois.Parsing.Kero.Yachay.Pe.Pe
         [Fact]
         public void Test_not_found()
         {
-            var sample = SampleReader.Read("kero.yachay.pe", "pe", "not-found", "not_found.txt");
+            var sample = SampleReader.Read("kero.yachay.pe", "pe", "not-found", "u34jedzcq.pe.txt");
             var response = parser.Parse("kero.yachay.pe", sample);
 
             Assert.True(sample.Length > 0);
@@ -72,7 +72,7 @@ namespace Whois.Parsing.Kero.Yachay.Pe.Pe
         [Fact]
         public void Test_found()
         {
-            var sample = SampleReader.Read("kero.yachay.pe", "pe", "found", "found.txt");
+            var sample = SampleReader.Read("kero.yachay.pe", "pe", "found", "google.pe.txt");
             var response = parser.Parse("kero.yachay.pe", sample);
 
             Assert.True(sample.Length > 0);

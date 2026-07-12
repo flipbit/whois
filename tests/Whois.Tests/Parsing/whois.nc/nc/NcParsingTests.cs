@@ -17,7 +17,7 @@ namespace Whois.Parsing.Whois.Nc.Nc
         [Fact]
         public void Test_found()
         {
-            var sample = SampleReader.Read("whois.nc", "nc", "found", "found.txt");
+            var sample = SampleReader.Read("whois.nc", "nc", "found", "rya.nc.txt");
             var response = parser.Parse("whois.nc", sample);
 
             Assert.True(sample.Length > 0);
@@ -53,7 +53,7 @@ namespace Whois.Parsing.Whois.Nc.Nc
         [Fact]
         public void Test_found_contact_without_state_and_address()
         {
-            var sample = SampleReader.Read("whois.nc", "nc", "found", "found_contact_without_state_and_address.txt");
+            var sample = SampleReader.Read("whois.nc", "nc", "found", "gouv.nc.txt");
             var response = parser.Parse("whois.nc", sample);
 
             Assert.True(sample.Length > 0);
@@ -103,7 +103,7 @@ namespace Whois.Parsing.Whois.Nc.Nc
         [Fact]
         public void Test_found_status_registered()
         {
-            var sample = SampleReader.Read("whois.nc", "nc", "found", "found_status_registered.txt");
+            var sample = SampleReader.Read("whois.nc", "nc", "found", "domaine.nc.txt");
             var response = parser.Parse("whois.nc", sample);
 
             Assert.True(sample.Length > 0);

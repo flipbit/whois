@@ -17,7 +17,7 @@ namespace Whois.Parsing.Whois.Registry.Gy.Gy
         [Fact]
         public void Test_not_found()
         {
-            var sample = SampleReader.Read("whois.registry.gy", "gy", "not-found", "not_found.txt");
+            var sample = SampleReader.Read("whois.registry.gy", "gy", "not-found", "u34jedzcq.gy.txt");
             var response = parser.Parse("whois.registry.gy", sample);
 
             Assert.True(sample.Length > 0);
@@ -35,7 +35,7 @@ namespace Whois.Parsing.Whois.Registry.Gy.Gy
         [Fact]
         public void Test_found()
         {
-            var sample = SampleReader.Read("whois.registry.gy", "gy", "found", "found.txt");
+            var sample = SampleReader.Read("whois.registry.gy", "gy", "found", "google.gy.txt");
             var response = parser.Parse("whois.registry.gy", sample);
 
             Assert.True(sample.Length > 0);

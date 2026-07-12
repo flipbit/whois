@@ -32,7 +32,7 @@ namespace Whois.Parsing.Whois.Nic.Fm.Fm
         [Fact]
         public void Test_found()
         {
-            var sample = SampleReader.Read("whois.nic.fm", "fm", "found", "found.txt");
+            var sample = SampleReader.Read("whois.nic.fm", "fm", "found", "google.fm.txt");
             var response = parser.Parse("whois.nic.fm", sample);
 
             Assert.True(sample.Length > 0);

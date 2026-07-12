@@ -47,7 +47,7 @@ namespace Whois.Parsing.Whois.Pir.Org.Org
         [Fact]
         public void Test_found()
         {
-            var sample = SampleReader.Read("whois.pir.org", "org", "found", "found.txt");
+            var sample = SampleReader.Read("whois.pir.org", "org", "found", "google.org.txt");
             var response = parser.Parse("whois.pir.org", sample);
 
             Assert.True(sample.Length > 0);

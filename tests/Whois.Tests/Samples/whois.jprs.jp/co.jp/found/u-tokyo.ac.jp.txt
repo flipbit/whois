@@ -1,0 +1,24 @@
+[ JPRS database provides information on network administration. Its use is    ]
+[ restricted to network administration purposes. For further information,     ]
+[ use 'whois -h whois.jprs.jp help'. To suppress Japanese output, add'/e'     ]
+[ at the end of command, e.g. 'whois -h whois.jprs.jp xxx/e'.                 ]
+Domain Information: [ドメイン情報]
+a. [ドメイン名]                 U-TOKYO.AC.JP
+e. [そしきめい]                  
+f. [組織名]                     東京大学
+g. [Organization]               University of Tokyo
+k. [組織種別]                   国立大学
+l. [Organization Type]          National University
+m. [登録担当者]                 MN010JP
+n. [技術連絡担当者]             MN010JP
+n. [技術連絡担当者]             YS7474JP
+p. [ネームサーバ]               dns1.nc.u-tokyo.ac.jp
+p. [ネームサーバ]               dns2.nc.u-tokyo.ac.jp
+p. [ネームサーバ]               dns3.nc.u-tokyo.ac.jp
+p. [ネームサーバ]               dns-x.sinet.ad.jp
+s. [署名鍵]                     
+[状態]                          Connected (2027/03/31)
+[登録年月日]                     
+[接続年月日]                    2020/06/08
+[最終更新]                      2026/04/01 01:03:07 (JST)
+

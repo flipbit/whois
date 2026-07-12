@@ -36,7 +36,7 @@ namespace Whois.Parsing.Whois.Domainregistry.Ie.Ie
         [Fact]
         public void Test_found_contacts_multiple()
         {
-            var sample = SampleReader.Read("whois.domainregistry.ie", "ie", "found", "found_contacts_multiple.txt");
+            var sample = SampleReader.Read("whois.domainregistry.ie", "ie", "found", "rte.ie.txt");
             var response = parser.Parse("whois.domainregistry.ie", sample);
 
             Assert.True(sample.Length > 0);
@@ -69,7 +69,7 @@ namespace Whois.Parsing.Whois.Domainregistry.Ie.Ie
         [Fact]
         public void Test_found_contacts_not_matching_id()
         {
-            var sample = SampleReader.Read("whois.domainregistry.ie", "ie", "found", "found_contacts_not_matching_id.txt");
+            var sample = SampleReader.Read("whois.domainregistry.ie", "ie", "found", "tcd.ie.txt");
             var response = parser.Parse("whois.domainregistry.ie", sample);
 
             Assert.True(sample.Length > 0);
@@ -107,7 +107,7 @@ namespace Whois.Parsing.Whois.Domainregistry.Ie.Ie
         [Fact]
         public void Test_found_nameservers_with_ip()
         {
-            var sample = SampleReader.Read("whois.domainregistry.ie", "ie", "found", "found_nameservers_with_ip.txt");
+            var sample = SampleReader.Read("whois.domainregistry.ie", "ie", "found", "dns.ie.txt");
             var response = parser.Parse("whois.domainregistry.ie", sample);
 
             Assert.True(sample.Length > 0);
@@ -144,7 +144,7 @@ namespace Whois.Parsing.Whois.Domainregistry.Ie.Ie
         [Fact]
         public void Test_not_found()
         {
-            var sample = SampleReader.Read("whois.domainregistry.ie", "ie", "not-found", "not_found.txt");
+            var sample = SampleReader.Read("whois.domainregistry.ie", "ie", "not-found", "u34jedzcq.ie.txt");
             var response = parser.Parse("whois.domainregistry.ie", sample);
 
             Assert.True(sample.Length > 0);
@@ -161,7 +161,7 @@ namespace Whois.Parsing.Whois.Domainregistry.Ie.Ie
         [Fact]
         public void Test_found_status_registered()
         {
-            var sample = SampleReader.Read("whois.domainregistry.ie", "ie", "found", "found_status_registered.txt");
+            var sample = SampleReader.Read("whois.domainregistry.ie", "ie", "found", "google.ie.txt");
             var response = parser.Parse("whois.domainregistry.ie", sample);
 
             Assert.True(sample.Length > 0);

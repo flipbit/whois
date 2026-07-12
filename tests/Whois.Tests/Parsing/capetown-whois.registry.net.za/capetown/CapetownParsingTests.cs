@@ -17,7 +17,7 @@ namespace Whois.Parsing.Capetown.Whois.Registry.Net.Za.Capetown
         [Fact]
         public void Test_not_found()
         {
-            var sample = SampleReader.Read("capetown-whois.registry.net.za", "capetown", "not-found", "not_found.txt");
+            var sample = SampleReader.Read("capetown-whois.registry.net.za", "capetown", "not-found", "nosuchdomain.capetown.txt");
             var response = parser.Parse("capetown-whois.registry.net.za", sample);
 
             Assert.True(sample.Length > 0);
@@ -30,7 +30,7 @@ namespace Whois.Parsing.Capetown.Whois.Registry.Net.Za.Capetown
         [Fact]
         public void Test_found()
         {
-            var sample = SampleReader.Read("capetown-whois.registry.net.za", "capetown", "found", "found.txt");
+            var sample = SampleReader.Read("capetown-whois.registry.net.za", "capetown", "found", "registry.capetown.txt");
             var response = parser.Parse("capetown-whois.registry.net.za", sample);
 
             Assert.True(sample.Length > 0);

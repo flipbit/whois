@@ -17,7 +17,7 @@ namespace Whois.Parsing.Whois.Nic.Asia.Asia
         [Fact]
         public void Test_found()
         {
-            var sample = SampleReader.Read("whois.nic.asia", "asia", "found", "found.txt");
+            var sample = SampleReader.Read("whois.nic.asia", "asia", "found", "novalash.asia.txt");
             var response = parser.Parse("whois.nic.asia", sample);
 
             Assert.True(sample.Length > 0);
@@ -115,7 +115,7 @@ namespace Whois.Parsing.Whois.Nic.Asia.Asia
         [Fact]
         public void Test_other_status_single()
         {
-            var sample = SampleReader.Read("whois.nic.asia", "asia", "found", "other_status_single.txt");
+            var sample = SampleReader.Read("whois.nic.asia", "asia", "found", "cj7.asia.txt");
             var response = parser.Parse("whois.nic.asia", sample);
 
             Assert.True(sample.Length > 0);

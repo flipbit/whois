@@ -16,7 +16,7 @@ namespace Whois.Parsers
         [Fact]
         public void TestParseDomainNameWhois()
         {
-            var sample = sampleReader.Read("capetown-whois.registry.net.za", "capetown", "found", "found.txt");
+            var sample = sampleReader.Read("capetown-whois.registry.net.za", "capetown", "found", "registry.capetown.txt");
 
             var result = parser.Parse("capetown-whois.registry.net.za", sample);
 
@@ -29,7 +29,7 @@ namespace Whois.Parsers
         [Fact]
         public void TestParseDomainNameWhoisDoesNotRegisterTemplateTwice()
         {
-            var sample = sampleReader.Read("capetown-whois.registry.net.za", "capetown", "found", "found.txt");
+            var sample = sampleReader.Read("capetown-whois.registry.net.za", "capetown", "found", "registry.capetown.txt");
 
             parser.Parse("capetown-whois.registry.net.za", sample);
             parser.Parse("capetown-whois.registry.net.za", sample);

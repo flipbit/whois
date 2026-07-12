@@ -32,7 +32,7 @@ namespace Whois.Parsing.Whois.Registry.Hm.Hm
         [Fact]
         public void Test_found()
         {
-            var sample = SampleReader.Read("whois.registry.hm", "hm", "found", "found.txt");
+            var sample = SampleReader.Read("whois.registry.hm", "hm", "found", "google.hm.txt");
             var response = parser.Parse("whois.registry.hm", sample);
 
             Assert.True(sample.Length > 0);

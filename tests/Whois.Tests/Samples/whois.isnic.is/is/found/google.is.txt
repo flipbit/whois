@@ -1,0 +1,44 @@
+% This is the ISNIC Whois server.
+%
+% Rights restricted by copyright.
+% See https://www.isnic.is/en/about/copyright
+
+domain:       google.is
+registrant:   GL210-IS
+admin-c:      GL210-IS
+tech-c:       MTC2-IS
+zone-c:       AG49-IS
+billing-c:    MTC2-IS
+nserver:      ns1.google.com
+nserver:      ns2.google.com
+dnssec:       unsigned delegation
+created:      May 22 2002
+expires:      May 22 2027
+source:       ISNIC 
+
+role:         Google LLC
+nic-hdl:      GL210-IS
+address:      1600 Amphitheatre Parkway
+address:      Mountain View, CA 94043
+address:      US
+phone:        +1 6502530000
+e-mail:       ccops@markmonitor.com
+created:      October 22 2018
+source:       ISNIC 
+
+role:         MarkMonitor Tech Contact
+nic-hdl:      MTC2-IS
+address:      1120 S. Rackham Way, Suite 300
+address:      Meridian, ID 83642
+address:      US
+phone:        +1 2083895740
+e-mail:       ccops@markmonitor.com
+created:      July 22 2004
+source:       ISNIC 
+
+nic-hdl:      AG49-IS
+address:      US
+created:      October  3 2004
+source:       ISNIC 
+
+

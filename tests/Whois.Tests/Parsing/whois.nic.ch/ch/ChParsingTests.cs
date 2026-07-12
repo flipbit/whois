@@ -16,7 +16,7 @@ namespace Whois.Parsing.Whois.Nic.Ch.Ch
         [Fact]
         public void Test_found()
         {
-            var sample = SampleReader.Read("whois.nic.ch", "ch", "found", "found.txt");
+            var sample = SampleReader.Read("whois.nic.ch", "ch", "found", "ggoogle.ch.txt");
             var response = parser.Parse("whois.nic.ch", sample);
 
             Assert.True(sample.Length > 0);
@@ -60,7 +60,7 @@ namespace Whois.Parsing.Whois.Nic.Ch.Ch
         [Fact]
         public void Test_found_nameservers_with_ip()
         {
-            var sample = SampleReader.Read("whois.nic.ch", "ch", "found", "found_nameservers_with_ip.txt");
+            var sample = SampleReader.Read("whois.nic.ch", "ch", "found", "pui.ch.txt");
             var response = parser.Parse("whois.nic.ch", sample);
 
             Assert.True(sample.Length > 0);
@@ -120,7 +120,7 @@ namespace Whois.Parsing.Whois.Nic.Ch.Ch
         [Fact]
         public void Test_found_status_registered()
         {
-            var sample = SampleReader.Read("whois.nic.ch", "ch", "found", "found_status_registered.txt");
+            var sample = SampleReader.Read("whois.nic.ch", "ch", "found", "google.ch.txt");
             var response = parser.Parse("whois.nic.ch", sample);
 
             Assert.True(sample.Length > 0);

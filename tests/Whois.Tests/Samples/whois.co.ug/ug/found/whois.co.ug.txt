@@ -1,0 +1,49 @@
+**********************************************************
+*            The UG ccTLD Registry Database              *
+**********************************************************
+
+Domain name:                    whois.co.ug
+Status:                         ACTIVE
+Locked:                         No
+Expires On:                     2050-11-05
+Registered On:                  2001-04-02
+Renewed On:                     2008-04-08
+Nameserver:                     dns1.i3c.co.ug
+Nameserver:                     dns2.i3c.co.ug
+Nameserver:                     dns3.i3c.co.ug
+Nameserver:                     dns4.i3c.co.ug
+
+Registrant Contact Information:
+Registrant Name:                UNKNOWN
+Registrant Organization:        UG CCTLD Database
+Registrant Country:             UG
+Registrant State / Province:    
+Registrant City:                Kampala
+Registrant Address:             Plot 6B, windsor loop
+Registrant Postal Code:         P.O. Box 12510
+Registrant Phone:               +256 312 30 1800
+Registrant Email:               registrar@i3c.co.ug
+
+Administrative Contact Information:
+Admin Name:                     Charles Musisi
+Admin Organization:             UNKNOWN
+Admin Country:                  UG
+Admin State / Province:         
+Admin City:                     Kampala
+Admin Address:                  Computer Frontiers InternationalPlot 6B Windsor LoopP.O. Box 12510 - Kampala
+Admin Postal Code:              UNKNOWN
+Admin Phone:                    +256 31 230 1800
+Admin Email:                    cmusisi@cfi.co.ug
+
+Technical Contact Information:
+Tech Name:                      Johnson Mpeirwe
+Tech Organization:              UNKNOWN
+Tech Country:                   UG
+Tech State / Province:          
+Tech City:                      Kampala
+Tech Address:                   P.O.Box Kampala
+Tech Postal Code:               UNKNOWN
+Tech Phone:                     256752455566
+Tech Email:                     mpeirwe@gmail.com
+
+Information Last Updated:       2025-10-20T11:58:59.000+03:00

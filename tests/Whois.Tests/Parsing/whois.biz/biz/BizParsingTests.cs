@@ -31,7 +31,7 @@ namespace Whois.Parsing.Whois.Biz.Biz
         [Fact]
         public void Test_found()
         {
-            var sample = SampleReader.Read("whois.biz", "biz", "found", "found.txt");
+            var sample = SampleReader.Read("whois.biz", "biz", "found", "google.biz.txt");
             var response = parser.Parse("whois.biz", sample);
 
             Assert.True(sample.Length > 0);

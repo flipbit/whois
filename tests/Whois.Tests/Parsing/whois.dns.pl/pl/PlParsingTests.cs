@@ -17,7 +17,7 @@ namespace Whois.Parsing.Whois.Dns.Pl.Pl
         [Fact]
         public void Test_found()
         {
-            var sample = SampleReader.Read("whois.dns.pl", "pl", "found", "found.txt");
+            var sample = SampleReader.Read("whois.dns.pl", "pl", "found", "nom.pl.txt");
             var response = parser.Parse("whois.dns.pl", sample);
 
             Assert.True(sample.Length > 0);
@@ -53,7 +53,7 @@ namespace Whois.Parsing.Whois.Dns.Pl.Pl
         [Fact]
         public void Test_found_nameservers_with_ip()
         {
-            var sample = SampleReader.Read("whois.dns.pl", "pl", "found", "found_nameservers_with_ip.txt");
+            var sample = SampleReader.Read("whois.dns.pl", "pl", "found", "pentex.pl.txt");
             var response = parser.Parse("whois.dns.pl", sample);
 
             Assert.True(sample.Length > 0);
@@ -98,7 +98,7 @@ namespace Whois.Parsing.Whois.Dns.Pl.Pl
         [Fact]
         public void Test_not_found()
         {
-            var sample = SampleReader.Read("whois.dns.pl", "pl", "not-found", "not_found.txt");
+            var sample = SampleReader.Read("whois.dns.pl", "pl", "not-found", "u34jedzcq.pl.txt");
             var response = parser.Parse("whois.dns.pl", sample);
 
             Assert.True(sample.Length > 0);
@@ -115,7 +115,7 @@ namespace Whois.Parsing.Whois.Dns.Pl.Pl
         [Fact]
         public void Test_found_status_registered()
         {
-            var sample = SampleReader.Read("whois.dns.pl", "pl", "found", "found_status_registered.txt");
+            var sample = SampleReader.Read("whois.dns.pl", "pl", "found", "google.pl.txt");
             var response = parser.Parse("whois.dns.pl", sample);
 
             Assert.True(sample.Length > 0);

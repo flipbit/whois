@@ -17,7 +17,7 @@ namespace Whois.Parsing.Whois.Netcom.Cm.Cm
         [Fact]
         public void Test_not_found()
         {
-            var sample = SampleReader.Read("whois.netcom.cm", "cm", "not-found", "not_found.txt");
+            var sample = SampleReader.Read("whois.netcom.cm", "cm", "not-found", "u34jedzcq.cm.txt");
             var response = parser.Parse("whois.netcom.cm", sample);
 
             Assert.True(sample.Length > 0);
@@ -38,7 +38,7 @@ namespace Whois.Parsing.Whois.Netcom.Cm.Cm
         [Fact]
         public void Test_found()
         {
-            var sample = SampleReader.Read("whois.netcom.cm", "cm", "found", "found.txt");
+            var sample = SampleReader.Read("whois.netcom.cm", "cm", "found", "google.cm.txt");
             var response = parser.Parse("whois.netcom.cm", sample);
 
             Assert.True(sample.Length > 0);

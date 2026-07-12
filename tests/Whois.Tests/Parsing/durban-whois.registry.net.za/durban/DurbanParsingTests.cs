@@ -17,7 +17,7 @@ namespace Whois.Parsing.Durban.Whois.Registry.Net.Za.Durban
         [Fact]
         public void Test_not_found()
         {
-            var sample = SampleReader.Read("durban-whois.registry.net.za", "durban", "not-found", "not_found.txt");
+            var sample = SampleReader.Read("durban-whois.registry.net.za", "durban", "not-found", "nosuchdomain.durban.txt");
             var response = parser.Parse("durban-whois.registry.net.za", sample);
 
             Assert.True(sample.Length > 0);
@@ -32,7 +32,7 @@ namespace Whois.Parsing.Durban.Whois.Registry.Net.Za.Durban
         [Fact]
         public void Test_found()
         {
-            var sample = SampleReader.Read("durban-whois.registry.net.za", "durban", "found", "found.txt");
+            var sample = SampleReader.Read("durban-whois.registry.net.za", "durban", "found", "wordpress.durban.txt");
             var response = parser.Parse("durban-whois.registry.net.za", sample);
 
             Assert.True(sample.Length > 0);

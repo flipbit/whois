@@ -32,7 +32,7 @@ namespace Whois.Parsing.Whois.Registre.Ma.Ma
         [Fact]
         public void Test_found()
         {
-            var sample = SampleReader.Read("whois.registre.ma", "ma", "found", "found.txt");
+            var sample = SampleReader.Read("whois.registre.ma", "ma", "found", "google.ma.txt");
             var response = parser.Parse("whois.registre.ma", sample);
 
             Assert.True(sample.Length > 0);

@@ -17,7 +17,7 @@ namespace Whois.Parsing.Whois.Sgnic.Sg.Sg
         [Fact]
         public void Test_found()
         {
-            var sample = SampleReader.Read("whois.sgnic.sg", "sg", "found", "found.txt");
+            var sample = SampleReader.Read("whois.sgnic.sg", "sg", "found", "google.sg.txt");
             var response = parser.Parse("whois.sgnic.sg", sample);
 
             Assert.True(sample.Length > 0);
@@ -61,7 +61,7 @@ namespace Whois.Parsing.Whois.Sgnic.Sg.Sg
         [Fact]
         public void Test_found_nameservers_schema_1_with_ip()
         {
-            var sample = SampleReader.Read("whois.sgnic.sg", "sg", "found", "found_nameservers_schema_1_with_ip.txt");
+            var sample = SampleReader.Read("whois.sgnic.sg", "sg", "found", "canon.com.sg.txt");
             var response = parser.Parse("whois.sgnic.sg", sample);
 
             Assert.True(sample.Length > 0);

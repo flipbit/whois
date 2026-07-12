@@ -1,0 +1,80 @@
+Domain Name: sagespa.ca
+Registry Domain ID: 116957416-CIRA
+Registrar WHOIS Server: whois.ca.fury.ca
+Registrar URL: ca.godaddy.com
+Updated Date: 2025-10-03T20:30:37Z
+Creation Date: 2025-08-04T20:27:51Z
+Registry Expiry Date: 2028-08-04T20:27:51Z
+Registrar: Go Daddy Domains Canada, Inc
+Registrar IANA ID: not applicable
+Registrar Abuse Contact Email: abuse@godaddy.com
+Registrar Abuse Contact Phone: +1.4806242505
+Registrar Abuse Contact Phone Ext:
+Domain Status: clientDeleteProhibited https://icann.org/epp#clientDeleteProhibited
+Domain Status: clientTransferProhibited https://icann.org/epp#clientTransferProhibited
+Domain Status: clientUpdateProhibited https://icann.org/epp#clientUpdateProhibited
+Registry Registrant ID: 116957510-CIRA
+Registrant Name: Amirmehdi Nehzat
+Registrant Organization: Sage Beauty Spa
+Registrant Street: 2407-30 Inn On the Park Dr.
+Registrant City: Toronto
+Registrant State/Province: ON
+Registrant Postal Code: M3N0P7
+Registrant Country: CA
+Registrant Phone: +1.6475457775
+Registrant Phone Ext:
+Registrant Fax:
+Registrant Fax Ext:
+Registrant Email: ar.nehzat@gmail.com
+Registry Admin ID: 116957512-CIRA
+Admin Name: Amirmehdi Nehzat
+Admin Organization: Sage Beauty Spa
+Admin Street: 2407-30 Inn On the Park Dr.
+Admin City: Toronto
+Admin State/Province: ON
+Admin Postal Code: M3N0P7
+Admin Country: CA
+Admin Phone: +1.6475457775
+Admin Phone Ext:
+Admin Fax:
+Admin Fax Ext:
+Admin Email: ar.nehzat@gmail.com
+Registry Tech ID: 116957511-CIRA
+Tech Name: Amirmehdi Nehzat
+Tech Organization: Sage Beauty Spa
+Tech Street: 2407-30 Inn On the Park Dr.
+Tech City: Toronto
+Tech State/Province: ON
+Tech Postal Code: M3N0P7
+Tech Country: CA
+Tech Phone: +1.6475457775
+Tech Phone Ext:
+Tech Fax:
+Tech Fax Ext:
+Tech Email: ar.nehzat@gmail.com
+Registry Billing ID:
+Billing Name:
+Billing Organization:
+Billing Street:
+Billing City:
+Billing State/Province:
+Billing Postal Code:
+Billing Country:
+Billing Phone:
+Billing Phone Ext:
+Billing Fax:
+Billing Fax Ext:
+Billing Email:
+Name Server: ns71.domaincontrol.com
+Name Server: ns72.domaincontrol.com
+DNSSEC: unsigned
+URL of the ICANN Whois Inaccuracy Complaint Form: https://www.icann.org/wicf/
+>>> Last update of WHOIS database: 2026-07-12T12:34:39Z <<<
+
+For more information on Whois status codes, please visit https://icann.org/epp
+
+%
+% Use of CIRA's WHOIS service is governed by the Terms of Use in its Legal
+% Notice, available at https://www.cira.ca/en/resources/documents/about/website-terms-use
+%
+% (c) 2026 Canadian Internet Registration Authority, (http://www.cira.ca/)

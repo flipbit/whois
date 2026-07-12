@@ -1,0 +1,17 @@
+Domain: wiki.pt
+Domain Status: Reserved
+Creation Date: 07/05/2015 23:40:09
+Expiration Date: 06/05/2031 23:59:09
+Owner Name: 
+Owner Address: 
+Owner Locality: 
+Owner ZipCode: 
+Owner Locality ZipCode: 
+Owner Country Code: 
+Admin Name: SOOMA.COM - WEB SERVICES, LDA
+Admin Address: Rua D. Joao I 99
+Admin Locality: Matosinhos
+Admin ZipCode: 4450-164
+Admin Locality ZipCode: Matosinhos
+Admin Country Code: PT
+

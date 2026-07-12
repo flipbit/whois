@@ -1,0 +1,85 @@
+Domain Name: google.ca
+Registry Domain ID: D73081-CIRA
+Registrar WHOIS Server: whois.ca.fury.ca
+Registrar URL: Markmonitor.com
+Updated Date: 2026-04-28T04:05:31Z
+Creation Date: 2000-10-04T02:21:23Z
+Registry Expiry Date: 2027-04-28T04:00:00Z
+Registrar: MarkMonitor International Canada Ltd.
+Registrar IANA ID: not applicable
+Registrar Abuse Contact Email: abusecomplaints@markmonitor.com
+Registrar Abuse Contact Phone: +1.2083895740
+Registrar Abuse Contact Phone Ext:
+Domain Status: clientDeleteProhibited https://icann.org/epp#clientDeleteProhibited
+Domain Status: clientTransferProhibited https://icann.org/epp#clientTransferProhibited
+Domain Status: clientUpdateProhibited https://icann.org/epp#clientUpdateProhibited
+Domain Status: serverDeleteProhibited https://icann.org/epp#serverDeleteProhibited
+Domain Status: serverTransferProhibited https://icann.org/epp#serverTransferProhibited
+Domain Status: serverUpdateProhibited https://icann.org/epp#serverUpdateProhibited
+Registry Registrant ID: 106113561-CIRA
+Registrant Name: Google Canada Corporation
+Registrant Organization: Google Canada Corporation
+Registrant Street: 12-111 Richmond St. W
+Registrant City: Toronto
+Registrant State/Province: ON
+Registrant Postal Code: M5H2G4
+Registrant Country: CA
+Registrant Phone: +1.4162146034
+Registrant Phone Ext:
+Registrant Fax:
+Registrant Fax Ext:
+Registrant Email: dns-admin@google.com
+Registry Admin ID: 114145987-CIRA
+Admin Name: Colm Buckley
+Admin Organization: Google Canada Corporation
+Admin Street: 12-111 Richmond St W
+Admin City: Toronto
+Admin State/Province: ON
+Admin Postal Code: M5H2G4
+Admin Country: CA
+Admin Phone: +1.4162146034
+Admin Phone Ext:
+Admin Fax:
+Admin Fax Ext:
+Admin Email: dns-admin@google.com
+Registry Tech ID: 114145987-CIRA
+Tech Name: Colm Buckley
+Tech Organization: Google Canada Corporation
+Tech Street: 12-111 Richmond St W
+Tech City: Toronto
+Tech State/Province: ON
+Tech Postal Code: M5H2G4
+Tech Country: CA
+Tech Phone: +1.4162146034
+Tech Phone Ext:
+Tech Fax:
+Tech Fax Ext:
+Tech Email: dns-admin@google.com
+Registry Billing ID:
+Billing Name:
+Billing Organization:
+Billing Street:
+Billing City:
+Billing State/Province:
+Billing Postal Code:
+Billing Country:
+Billing Phone:
+Billing Phone Ext:
+Billing Fax:
+Billing Fax Ext:
+Billing Email:
+Name Server: ns1.google.com
+Name Server: ns2.google.com
+Name Server: ns3.google.com
+Name Server: ns4.google.com
+DNSSEC: unsigned
+URL of the ICANN Whois Inaccuracy Complaint Form: https://www.icann.org/wicf/
+>>> Last update of WHOIS database: 2026-07-12T12:33:41Z <<<
+
+For more information on Whois status codes, please visit https://icann.org/epp
+
+%
+% Use of CIRA's WHOIS service is governed by the Terms of Use in its Legal
+% Notice, available at https://www.cira.ca/en/resources/documents/about/website-terms-use
+%
+% (c) 2026 Canadian Internet Registration Authority, (http://www.cira.ca/)

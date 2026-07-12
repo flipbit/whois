@@ -17,7 +17,7 @@ namespace Whois.Parsing.Whois.Nic.Me.Me
         [Fact]
         public void Test_found()
         {
-            var sample = SampleReader.Read("whois.nic.me", "me", "found", "found.txt");
+            var sample = SampleReader.Read("whois.nic.me", "me", "found", "wossna.me.txt");
             var response = parser.Parse("whois.nic.me", sample);
 
             Assert.True(sample.Length > 0);
@@ -91,7 +91,7 @@ namespace Whois.Parsing.Whois.Nic.Me.Me
         [Fact]
         public void Test_found_updated_on_is_blank()
         {
-            var sample = SampleReader.Read("whois.nic.me", "me", "found", "found_updated_on_is_blank.txt");
+            var sample = SampleReader.Read("whois.nic.me", "me", "found", "factoryoutlet.me.txt");
             var response = parser.Parse("whois.nic.me", sample);
 
             Assert.True(sample.Length > 0);
@@ -181,7 +181,7 @@ namespace Whois.Parsing.Whois.Nic.Me.Me
         [Fact]
         public void Test_found_status_registered()
         {
-            var sample = SampleReader.Read("whois.nic.me", "me", "found", "found_status_registered.txt");
+            var sample = SampleReader.Read("whois.nic.me", "me", "found", "google.me.txt");
             var response = parser.Parse("whois.nic.me", sample);
 
             Assert.True(sample.Length > 0);

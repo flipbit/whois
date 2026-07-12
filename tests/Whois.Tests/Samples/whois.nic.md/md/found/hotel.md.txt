@@ -1,0 +1,15 @@
+% © NIC.MD
+% Whois Server  v2.8.1
+% Website       https://nic.md/en/whois/
+% Terms of use  https://nic.md/img/legal/Rules_registration_subdomain_md.pdf
+% Last  update  2026-07-12T15:27:41+03:00
+
+Domain  name:   hotel.md
+Domain state:   OK
+
+Registered on:  2002-03-25
+Expires on:     2027-03-25
+
+NameServer:     ns1.solei.md
+NameServer:     ns2.solei.md
+

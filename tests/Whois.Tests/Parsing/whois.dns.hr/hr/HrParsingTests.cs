@@ -32,7 +32,7 @@ namespace Whois.Parsing.Whois.Dns.Hr.Hr
         [Fact]
         public void Test_found()
         {
-            var sample = SampleReader.Read("whois.dns.hr", "hr", "found", "found.txt");
+            var sample = SampleReader.Read("whois.dns.hr", "hr", "found", "google.hr.txt");
             var response = parser.Parse("whois.dns.hr", sample);
 
             Assert.True(sample.Length > 0);

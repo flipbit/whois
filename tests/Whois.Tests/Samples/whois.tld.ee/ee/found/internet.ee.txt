@@ -1,0 +1,48 @@
+Search results may not be used for commercial, advertising, recompilation,
+repackaging, redistribution, reuse, obscuring or other similar activities.
+
+Estonia .ee Top Level Domain WHOIS server
+
+Domain:
+name:       internet.ee
+status:     ok (paid and in zone)
+registered: 2010-08-10 16:43:38 +03:00
+changed:    2025-05-29 09:38:39 +03:00
+expire:     2030-02-05
+outzone:    
+delete:     
+
+Registrant:
+name:       Eesti Interneti Sihtasutus
+org id:     90010019
+country:    EE
+email:      Not Disclosed - Visit www.internet.ee for webbased WHOIS
+phone:      Not Disclosed - Visit www.internet.ee for webbased WHOIS
+changed:    2025-05-29 09:38:39 +03:00
+
+Administrative contact:
+name:       Not Disclosed - Visit www.internet.ee for webbased WHOIS
+email:      Not Disclosed - Visit www.internet.ee for webbased WHOIS
+changed:    Not Disclosed - Visit www.internet.ee for webbased WHOIS
+
+Technical contact:
+name:       Not Disclosed - Visit www.internet.ee for webbased WHOIS
+email:      Not Disclosed - Visit www.internet.ee for webbased WHOIS
+changed:    Not Disclosed - Visit www.internet.ee for webbased WHOIS
+
+Registrar:
+name:       Zone Media OÜ
+url:        http://www.zone.ee
+phone:      +372 6886886
+changed:    2020-07-01 13:55:58 +03:00
+
+Name servers:
+nserver:   b.tld.ee
+nserver:   c.tld.ee
+nserver:   e.tld.ee
+nserver:   x.tld.ee
+changed:   2019-11-07 12:33:55 +02:00
+
+
+Estonia .ee Top Level Domain WHOIS server
+More information at http://internet.ee

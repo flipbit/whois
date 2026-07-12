@@ -16,7 +16,7 @@ namespace Whois.Parsing.Whois.Tonic.To.To
         [Fact]
         public void Test_not_found()
         {
-            var sample = SampleReader.Read("whois.tonic.to", "to", "not-found", "not_found.txt");
+            var sample = SampleReader.Read("whois.tonic.to", "to", "not-found", "u34jedzcq.txt");
             var response = parser.Parse("whois.tonic.to", sample);
 
             Assert.True(sample.Length > 0);

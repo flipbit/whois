@@ -17,7 +17,7 @@ namespace Whois.Parsing.Whois.Domreg.Lt.Lt
         [Fact]
         public void Test_found()
         {
-            var sample = SampleReader.Read("whois.domreg.lt", "lt", "found", "found.txt");
+            var sample = SampleReader.Read("whois.domreg.lt", "lt", "found", "serveriai.lt.txt");
             var response = parser.Parse("whois.domreg.lt", sample);
 
             Assert.True(sample.Length > 0);
@@ -48,7 +48,7 @@ namespace Whois.Parsing.Whois.Domreg.Lt.Lt
         [Fact]
         public void Test_not_found()
         {
-            var sample = SampleReader.Read("whois.domreg.lt", "lt", "not-found", "not_found.txt");
+            var sample = SampleReader.Read("whois.domreg.lt", "lt", "not-found", "u34jedzcq.lt.txt");
             var response = parser.Parse("whois.domreg.lt", sample);
 
             Assert.True(sample.Length > 0);
@@ -65,7 +65,7 @@ namespace Whois.Parsing.Whois.Domreg.Lt.Lt
         [Fact]
         public void Test_found_status_registered()
         {
-            var sample = SampleReader.Read("whois.domreg.lt", "lt", "found", "found_status_registered.txt");
+            var sample = SampleReader.Read("whois.domreg.lt", "lt", "found", "google.lt.txt");
             var response = parser.Parse("whois.domreg.lt", sample);
 
             Assert.True(sample.Length > 0);

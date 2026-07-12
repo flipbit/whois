@@ -17,7 +17,7 @@ namespace Whois.Parsing.Whois.Denic.De.De
         [Fact]
         public void Test_found()
         {
-            var sample = SampleReader.Read("whois.denic.de", "de", "found", "found.txt");
+            var sample = SampleReader.Read("whois.denic.de", "de", "found", "prodns.de.txt");
             var response = parser.Parse("whois.denic.de", sample);
 
             Assert.True(sample.Length > 0);
@@ -75,7 +75,7 @@ namespace Whois.Parsing.Whois.Denic.De.De
         [Fact]
         public void Test_found_technical_contact()
         {
-            var sample = SampleReader.Read("whois.denic.de", "de", "found", "found_technical_contact.txt");
+            var sample = SampleReader.Read("whois.denic.de", "de", "found", "google.de.txt");
             var response = parser.Parse("whois.denic.de", sample);
 
             Assert.True(sample.Length > 0);
@@ -165,7 +165,7 @@ namespace Whois.Parsing.Whois.Denic.De.De
         [Fact]
         public void Test_not_found()
         {
-            var sample = SampleReader.Read("whois.denic.de", "de", "not-found", "not_found.txt");
+            var sample = SampleReader.Read("whois.denic.de", "de", "not-found", "u34jedzcq.de.txt");
             var response = parser.Parse("whois.denic.de", sample);
 
             Assert.True(sample.Length > 0);

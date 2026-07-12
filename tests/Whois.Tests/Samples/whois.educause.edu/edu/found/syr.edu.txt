@@ -1,0 +1,59 @@
+This Registry database contains ONLY .EDU domains.
+The data in the EDUCAUSE Whois database is provided
+by EDUCAUSE for information purposes in order to
+assist in the process of obtaining information about
+or related to .edu domain registration records.
+
+The EDUCAUSE Whois database is authoritative for the
+.EDU domain.
+
+A Web interface for the .EDU EDUCAUSE Whois Server is
+available at: http://whois.educause.edu
+
+By submitting a Whois query, you agree that this information
+will not be used to allow, enable, or otherwise support
+the transmission of unsolicited commercial advertising or
+solicitations via e-mail.  The use of electronic processes to
+harvest information from this server is generally prohibited
+except as reasonably necessary to register or modify .edu
+domain names.
+
+-------------------------------------------------------------
+
+Domain Name: SYR.EDU
+
+Registrant:
+	Syracuse University
+	Room 200 Machinery Hall
+	111 College Place
+	Syracuse, NY 13244
+	USA
+
+Administrative Contact:
+	Mindi Stoffel
+	Syracuse University
+	1-130 Center for Science and Technology
+	111 College Place
+	Syracuse, NY 13244
+	USA
+	+1.3154432716
+	itsoffice@syr.edu
+
+Technical Contact:
+	Peter Morrissey
+	Syracuse University
+	214 Machinery Hall
+	120 Smith Drive
+	Syracuse, NY 13244
+	USA
+	+1.3154432677
+	ndd@listserv.syr.edu
+
+Name Servers:
+	NS1.SYR.EDU
+	NS2.SYR.EDU
+
+Domain record activated:    02-Sep-1986
+Domain record last updated: 03-Jun-2026
+Domain expires:             31-Jul-2027
+

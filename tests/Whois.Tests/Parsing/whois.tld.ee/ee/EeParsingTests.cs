@@ -130,7 +130,7 @@ namespace Whois.Parsing.Whois.Tld.Ee.Ee
         [Fact]
         public void Test_found()
         {
-            var sample = SampleReader.Read("whois.tld.ee", "ee", "found", "found.txt");
+            var sample = SampleReader.Read("whois.tld.ee", "ee", "found", "internet.ee.txt");
             var response = parser.Parse("whois.tld.ee", sample);
 
             Assert.True(sample.Length > 0);

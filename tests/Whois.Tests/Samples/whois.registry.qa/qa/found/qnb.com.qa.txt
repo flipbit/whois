@@ -1,0 +1,11 @@
+Domain Name:                     qnb.com.qa
+Registrar ID:                    QatarTelecom
+Registrar Name:                  Ooredoo QSC
+Status:                          ok
+
+Registrant:                      Qatar National Bank
+Eligibility Type:                Trade License
+Eligibility ID:                  Paid Domain
+
+Name Server:                     brenna.ns.cloudflare.com
+Name Server:                     emerson.ns.cloudflare.com

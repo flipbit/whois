@@ -1,0 +1,15 @@
+
+% Rights restricted by copyright and data protection act.
+% See http://www.nic.priv.at/ for details.
+
+domain:      nic.priv.at
+descr:       Network Information Center for priv.at
+admin-c:     HM-PRIVAT
+tech-c:      HM-PRIVAT
+zone-c:      HM-PRIVAT
+notify:      hostmaster@nic.priv.at
+mnt-by:      PRIVAT-MNT
+changed:     cm@nic.priv.at 20021013
+source:      PRIVAT
+
+

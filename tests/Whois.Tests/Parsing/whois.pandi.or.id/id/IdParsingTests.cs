@@ -32,7 +32,7 @@ namespace Whois.Parsing.Whois.Pandi.Or.Id.Id
         [Fact]
         public void Test_found()
         {
-            var sample = SampleReader.Read("whois.pandi.or.id", "id", "found", "found.txt");
+            var sample = SampleReader.Read("whois.pandi.or.id", "id", "found", "google.co.id.txt");
             var response = parser.Parse("whois.pandi.or.id", sample);
 
             Assert.True(sample.Length > 0);

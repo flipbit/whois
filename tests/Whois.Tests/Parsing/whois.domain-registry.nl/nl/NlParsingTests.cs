@@ -17,7 +17,7 @@ namespace Whois.Parsing.Whois.Domain.Registry.Nl.Nl
         [Fact]
         public void Test_found()
         {
-            var sample = SampleReader.Read("whois.domain-registry.nl", "nl", "found", "found.txt");
+            var sample = SampleReader.Read("whois.domain-registry.nl", "nl", "found", "tntpost.nl.txt");
             var response = parser.Parse("whois.domain-registry.nl", sample);
 
             Assert.True(sample.Length > 0);
@@ -46,7 +46,7 @@ namespace Whois.Parsing.Whois.Domain.Registry.Nl.Nl
         [Fact]
         public void Test_not_assigned()
         {
-            var sample = SampleReader.Read("whois.domain-registry.nl", "nl", "not-assigned", "not_assigned.txt");
+            var sample = SampleReader.Read("whois.domain-registry.nl", "nl", "not-assigned", "smsexdates.nl.txt");
             var response = parser.Parse("whois.domain-registry.nl", sample);
 
             Assert.True(sample.Length > 0);
@@ -120,7 +120,7 @@ namespace Whois.Parsing.Whois.Domain.Registry.Nl.Nl
         [Fact]
         public void Test_not_found()
         {
-            var sample = SampleReader.Read("whois.domain-registry.nl", "nl", "not-found", "not_found.txt");
+            var sample = SampleReader.Read("whois.domain-registry.nl", "nl", "not-found", "u34jedzcq.nl.txt");
             var response = parser.Parse("whois.domain-registry.nl", sample);
 
             Assert.True(sample.Length > 0);
@@ -137,7 +137,7 @@ namespace Whois.Parsing.Whois.Domain.Registry.Nl.Nl
         [Fact]
         public void Test_quarantined()
         {
-            var sample = SampleReader.Read("whois.domain-registry.nl", "nl", "redemption", "redemption.txt");
+            var sample = SampleReader.Read("whois.domain-registry.nl", "nl", "redemption", "martijn-webdesign.nl.txt");
             var response = parser.Parse("whois.domain-registry.nl", sample);
 
             Assert.True(sample.Length > 0);
@@ -159,7 +159,7 @@ namespace Whois.Parsing.Whois.Domain.Registry.Nl.Nl
         [Fact]
         public void Test_found_status_registered()
         {
-            var sample = SampleReader.Read("whois.domain-registry.nl", "nl", "found", "found_status_registered.txt");
+            var sample = SampleReader.Read("whois.domain-registry.nl", "nl", "found", "google.nl.txt");
             var response = parser.Parse("whois.domain-registry.nl", sample);
 
             Assert.True(sample.Length > 0);

@@ -17,7 +17,7 @@ namespace Whois.Parsing.Whois.Gov.Za.GovZa
         [Fact]
         public void Test_not_found()
         {
-            var sample = SampleReader.Read("whois.gov.za", "gov.za", "not-found", "not_found.txt");
+            var sample = SampleReader.Read("whois.gov.za", "gov.za", "not-found", "u34jedzcq.gov.za.txt");
             var response = parser.Parse("whois.gov.za", sample);
 
             Assert.True(sample.Length > 0);
@@ -34,7 +34,7 @@ namespace Whois.Parsing.Whois.Gov.Za.GovZa
         [Fact]
         public void Test_found()
         {
-            var sample = SampleReader.Read("whois.gov.za", "gov.za", "found", "found.txt");
+            var sample = SampleReader.Read("whois.gov.za", "gov.za", "found", "dha.gov.za.txt");
             var response = parser.Parse("whois.gov.za", sample);
 
             Assert.True(sample.Length > 0);

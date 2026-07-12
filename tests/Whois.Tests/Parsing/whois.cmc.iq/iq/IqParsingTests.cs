@@ -17,7 +17,7 @@ namespace Whois.Parsing.Whois.Cmc.Iq.Iq
         [Fact]
         public void Test_not_found()
         {
-            var sample = SampleReader.Read("whois.cmc.iq", "iq", "not-found", "not_found.txt");
+            var sample = SampleReader.Read("whois.cmc.iq", "iq", "not-found", "u34jedzcq.iq.txt");
             var response = parser.Parse("whois.cmc.iq", sample);
 
             Assert.True(sample.Length > 0);
@@ -38,7 +38,7 @@ namespace Whois.Parsing.Whois.Cmc.Iq.Iq
         [Fact]
         public void Test_found()
         {
-            var sample = SampleReader.Read("whois.cmc.iq", "iq", "found", "found.txt");
+            var sample = SampleReader.Read("whois.cmc.iq", "iq", "found", "google.iq.txt");
             var response = parser.Parse("whois.cmc.iq", sample);
 
             Assert.True(sample.Length > 0);

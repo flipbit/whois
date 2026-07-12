@@ -27,7 +27,7 @@ namespace Whois.Parsing.Whois.Nic.Lk.XnFzc2c9e2c
         [Fact]
         public void Test_found()
         {
-            var sample = SampleReader.Read("whois.nic.lk", "xn--fzc2c9e2c", "found", "found.txt");
+            var sample = SampleReader.Read("whois.nic.lk", "xn--fzc2c9e2c", "found", "xn--fzc3a2azd8dsa2ktat.xn--fzc2c9e2c.txt");
             var response = parser.Parse("whois.nic.lk", sample);
 
             Assert.True(sample.Length > 0);

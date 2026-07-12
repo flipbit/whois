@@ -17,7 +17,7 @@ namespace Whois.Parsing.Whois.Dot.Cf.Cf
         [Fact]
         public void Test_found()
         {
-            var sample = SampleReader.Read("whois.dot.cf", "cf", "found", "found.txt");
+            var sample = SampleReader.Read("whois.dot.cf", "cf", "found", "dot.cf.txt");
             var response = parser.Parse("whois.dot.cf", sample);
 
             Assert.True(sample.Length > 0);

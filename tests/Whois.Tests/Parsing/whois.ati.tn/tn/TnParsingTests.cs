@@ -17,7 +17,7 @@ namespace Whois.Parsing.Whois.Ati.Tn.Tn
         [Fact]
         public void Test_found()
         {
-            var sample = SampleReader.Read("whois.ati.tn", "tn", "found", "found.txt");
+            var sample = SampleReader.Read("whois.ati.tn", "tn", "found", "equipements-pro.com.tn.txt");
             var response = parser.Parse("whois.ati.tn", sample);
 
             Assert.True(sample.Length > 0);
@@ -65,7 +65,7 @@ namespace Whois.Parsing.Whois.Ati.Tn.Tn
         [Fact]
         public void Test_not_found()
         {
-            var sample = SampleReader.Read("whois.ati.tn", "tn", "not-found", "not_found.txt");
+            var sample = SampleReader.Read("whois.ati.tn", "tn", "not-found", "u34jedzcq.tn.txt");
             var response = parser.Parse("whois.ati.tn", sample);
 
             Assert.True(sample.Length > 0);
@@ -80,7 +80,7 @@ namespace Whois.Parsing.Whois.Ati.Tn.Tn
         [Fact]
         public void Test_found_status_registered()
         {
-            var sample = SampleReader.Read("whois.ati.tn", "tn", "found", "found_status_registered.txt");
+            var sample = SampleReader.Read("whois.ati.tn", "tn", "found", "google.tn.txt");
             var response = parser.Parse("whois.ati.tn", sample);
 
             Assert.True(sample.Length > 0);

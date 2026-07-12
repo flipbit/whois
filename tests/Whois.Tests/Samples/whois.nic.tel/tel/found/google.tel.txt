@@ -1,0 +1,100 @@
+Domain Name: google.tel
+Registry Domain ID: D587349-TEL
+Registrar WHOIS Server: whois.markmonitor.com
+Registrar URL: http://www.markmonitor.com
+Updated Date: 2026-02-18T10:41:34.924Z
+Creation Date: 2009-01-22T21:06:56.0Z
+Registry Expiry Date: 2027-03-22T23:59:59.0Z
+Registrar Registration Expiration Date: 
+Registrar: MarkMonitor, Inc.
+Registrar IANA ID: 292
+Registrar Abuse Contact Email: registry.admin@markmonitor.com
+Registrar Abuse Contact Phone: +1.208398574
+Reseller: 
+Domain Status: clientDeleteProhibited https://icann.org/epp#clientDeleteProhibited
+Domain Status: clientTransferProhibited https://icann.org/epp#clientTransferProhibited
+Domain Status: clientUpdateProhibited https://icann.org/epp#clientUpdateProhibited
+Registry Registrant ID: REDACTED FOR PRIVACY
+Registrant Name: REDACTED FOR PRIVACY
+Registrant Organization: Google LLC
+Registrant Street: REDACTED FOR PRIVACY
+Registrant City: REDACTED FOR PRIVACY
+Registrant State/Province: CA
+Registrant Postal Code: REDACTED FOR PRIVACY
+Registrant Country: US
+Registrant Phone: REDACTED FOR PRIVACY
+Registrant Phone Ext: 
+Registrant Fax: REDACTED FOR PRIVACY
+Registrant Fax Ext: 
+Registrant Email: Please query the Whois service of the Registrar of Record identified in this output for information on how to contact the Registrant, Admin, or Tech contact of the queried domain name.
+Registry Admin ID: REDACTED FOR PRIVACY
+Admin Name: REDACTED FOR PRIVACY
+Admin Organization: REDACTED FOR PRIVACY
+Admin Street: REDACTED FOR PRIVACY
+Admin City: REDACTED FOR PRIVACY
+Admin State/Province: CA
+Admin Postal Code: REDACTED FOR PRIVACY
+Admin Country: US
+Admin Phone: REDACTED FOR PRIVACY
+Admin Phone Ext: 
+Admin Fax: REDACTED FOR PRIVACY
+Admin Fax Ext: 
+Admin Email: Please query the Whois service of the Registrar of Record identified in this output for information on how to contact the Registrant, Admin, or Tech contact of the queried domain name.
+Registry Tech ID: REDACTED FOR PRIVACY
+Tech Name: REDACTED FOR PRIVACY
+Tech Organization: REDACTED FOR PRIVACY
+Tech Street: REDACTED FOR PRIVACY
+Tech City: REDACTED FOR PRIVACY
+Tech State/Province: CA
+Tech Postal Code: REDACTED FOR PRIVACY
+Tech Country: US
+Tech Phone: REDACTED FOR PRIVACY
+Tech Phone Ext: 
+Tech Fax: REDACTED FOR PRIVACY
+Tech Fax Ext: 
+Tech Email: Please query the Whois service of the Registrar of Record identified in this output for information on how to contact the Registrant, Admin, or Tech contact of the queried domain name.
+Name Server: ns1.google.com
+Name Server: ns2.google.com
+Name Server: ns3.google.com
+Name Server: ns4.google.com
+DNSSEC: unsigned
+IDN Tag:
+URL of the ICANN Whois Inaccuracy Complaint Form: https://icann.org/wicf
+>>> Last update of Whois database: 2026-07-12T12:34:03.62Z <<<
+
+For more information on domain status codes, please visit https://icann.org/epp
+
+Terms and Conditions of Use
+
+The data in this record is provided by Telnames
+("the Registry") for informational purposes only. The Registry
+does not guarantee its accuracy and cannot, under any circumstances,
+be held liable in case the stored information would prove to be
+wrong, incomplete or not accurate in any sense.
+
+NOTICE: Access to the domain name's information is restricted in
+order to protect the privacy of Registrants. If you believe you have
+a legitimate interest in having access to part or all of the data not
+published in the above output, please contact the Registrar of record
+at the address shown in the output above OR the Registry at the
+following address:
+
+http://nic.tel
+
+The compilation, repackaging, dissemination or other use of the data
+in this Whois database is expressly prohibited without the
+prior written consent of the Registry.
+
+The Registry maintains the right to restrict your access to the Whois
+database in its sole discretion to ensure operational stability. The
+Registry may restrict or terminate your access to the Whois database
+for failure to abide by these terms of use. The Registry reserves the
+right to modify these terms at any time.
+
+By maintaining the connection you assure that you have a legitimate
+interest in the data and that you will only use it for the stated
+purposes. You are aware the Registry maintains the right to initiate
+legal proceedings against you in the event of any breach of this
+assurance and to bar you from using its Whois service.
+
+End of Whois record.

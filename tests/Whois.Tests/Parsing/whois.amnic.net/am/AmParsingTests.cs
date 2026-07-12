@@ -27,7 +27,7 @@ namespace Whois.Parsing.Whois.Amnic.Net.Am
         [Fact]
         public void Test_found()
         {
-            var sample = SampleReader.Read("whois.amnic.net", "am", "found", "found.txt");
+            var sample = SampleReader.Read("whois.amnic.net", "am", "found", "google.am.txt");
             var response = parser.Parse("whois.amnic.net", sample);
 
             Assert.True(sample.Length > 0);

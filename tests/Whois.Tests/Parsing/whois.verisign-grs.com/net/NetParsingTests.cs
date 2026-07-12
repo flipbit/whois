@@ -17,7 +17,7 @@ namespace Whois.Parsing.Whois.Verisign.Grs.Com.Net
         [Fact]
         public void Test_not_found()
         {
-            var sample = SampleReader.Read("whois.verisign-grs.com", "net", "not-found", "not_found.txt");
+            var sample = SampleReader.Read("whois.verisign-grs.com", "net", "not-found", "u34jedzcq.net.txt");
             var response = parser.Parse("whois.verisign-grs.com", sample);
 
             Assert.True(sample.Length > 0);
@@ -34,7 +34,7 @@ namespace Whois.Parsing.Whois.Verisign.Grs.Com.Net
         [Fact]
         public void Test_found()
         {
-            var sample = SampleReader.Read("whois.verisign-grs.com", "net", "found", "found.txt");
+            var sample = SampleReader.Read("whois.verisign-grs.com", "net", "found", "google.net.txt");
             var response = parser.Parse("whois.verisign-grs.com", sample);
 
             Assert.True(sample.Length > 0);

@@ -17,7 +17,7 @@ namespace Whois.Parsing.Whois.Thnic.Co.Th.Th
         [Fact]
         public void Test_not_found()
         {
-            var sample = SampleReader.Read("whois.thnic.co.th", "th", "not-found", "not_found.txt");
+            var sample = SampleReader.Read("whois.thnic.co.th", "th", "not-found", "u34jedzcq.co.th.txt");
             var response = parser.Parse("whois.thnic.co.th", sample);
 
             Assert.True(sample.Length > 0);
@@ -34,7 +34,7 @@ namespace Whois.Parsing.Whois.Thnic.Co.Th.Th
         [Fact]
         public void Test_found()
         {
-            var sample = SampleReader.Read("whois.thnic.co.th", "th", "found", "found.txt");
+            var sample = SampleReader.Read("whois.thnic.co.th", "th", "found", "google.co.th.txt");
             var response = parser.Parse("whois.thnic.co.th", sample);
 
             Assert.True(sample.Length > 0);

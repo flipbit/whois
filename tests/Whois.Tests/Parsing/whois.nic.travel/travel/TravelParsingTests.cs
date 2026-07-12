@@ -17,7 +17,7 @@ namespace Whois.Parsing.Whois.Nic.Travel.Travel
         [Fact]
         public void Test_found()
         {
-            var sample = SampleReader.Read("whois.nic.travel", "travel", "found", "found.txt");
+            var sample = SampleReader.Read("whois.nic.travel", "travel", "found", "webcams.travel.txt");
             var response = parser.Parse("whois.nic.travel", sample);
 
             Assert.True(sample.Length > 0);
@@ -122,7 +122,7 @@ namespace Whois.Parsing.Whois.Nic.Travel.Travel
         [Fact]
         public void Test_other_status_single()
         {
-            var sample = SampleReader.Read("whois.nic.travel", "travel", "found", "other_status_single.txt");
+            var sample = SampleReader.Read("whois.nic.travel", "travel", "found", "travel.travel.txt");
             var response = parser.Parse("whois.nic.travel", sample);
 
             Assert.True(sample.Length > 0);
@@ -217,7 +217,7 @@ namespace Whois.Parsing.Whois.Nic.Travel.Travel
         [Fact]
         public void Test_not_found()
         {
-            var sample = SampleReader.Read("whois.nic.travel", "travel", "not-found", "not_found.txt");
+            var sample = SampleReader.Read("whois.nic.travel", "travel", "not-found", "u34jedzcq.travel.txt");
             var response = parser.Parse("whois.nic.travel", sample);
 
             Assert.True(sample.Length > 0);

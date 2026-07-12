@@ -113,7 +113,7 @@ namespace Whois.Parsing.Whois.Tznic.Or.Tz.Tz
         [Fact]
         public void Test_found()
         {
-            var sample = SampleReader.Read("whois.tznic.or.tz", "tz", "found", "found.txt");
+            var sample = SampleReader.Read("whois.tznic.or.tz", "tz", "found", "dailynews.co.tz.txt");
             var response = parser.Parse("whois.tznic.or.tz", sample);
 
             Assert.True(sample.Length > 0);

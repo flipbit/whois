@@ -1,0 +1,49 @@
+**********************************************************
+*            The UG ccTLD Registry Database              *
+**********************************************************
+
+Domain name:                    youtube.ug
+Status:                         ACTIVE
+Locked:                         Yes
+Expires On:                     2026-11-01
+Registered On:                  2011-11-01
+Renewed On:                     2025-10-08
+Nameserver:                     ns1.google.com
+Nameserver:                     ns2.google.com
+Nameserver:                     ns3.google.com
+Nameserver:                     ns4.google.com
+
+Registrant Contact Information:
+Registrant Name:                Domain Administrator
+Registrant Organization:        Google LLC
+Registrant Country:             US
+Registrant State / Province:    CA
+Registrant City:                Mountain View
+Registrant Address:             1600 Amphitheatre Parkway
+Registrant Postal Code:         94043
+Registrant Phone:               +1.6502530000
+Registrant Email:               ccops@markmonitor.com
+
+Administrative Contact Information:
+Admin Name:                     Domain Administrator
+Admin Organization:             Google LLC
+Admin Country:                  US
+Admin State / Province:         CA
+Admin City:                     Mountain View
+Admin Address:                  1600 Amphitheatre Parkway
+Admin Postal Code:              94043
+Admin Phone:                    +1.6502530000
+Admin Email:                    ccops@markmonitor.com
+
+Technical Contact Information:
+Tech Name:                      Domain Administrator
+Tech Organization:              Google LLC
+Tech Country:                   US
+Tech State / Province:          CA
+Tech City:                      Mountain View
+Tech Address:                   1600 Amphitheatre Parkway
+Tech Postal Code:               94043
+Tech Phone:                     +1.6502530000
+Tech Email:                     ccops@markmonitor.com
+
+Information Last Updated:       2026-05-18T03:16:33.000+03:00

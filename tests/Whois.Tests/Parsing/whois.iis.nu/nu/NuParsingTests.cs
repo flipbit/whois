@@ -17,7 +17,7 @@ namespace Whois.Parsing.Whois.Iis.Nu.Nu
         [Fact]
         public void Test_not_found()
         {
-            var sample = SampleReader.Read("whois.iis.nu", "nu", "not-found", "not_found.txt");
+            var sample = SampleReader.Read("whois.iis.nu", "nu", "not-found", "u34jedzcq.nu.txt");
             var response = parser.Parse("whois.iis.nu", sample);
 
             Assert.True(sample.Length > 0);
@@ -34,7 +34,7 @@ namespace Whois.Parsing.Whois.Iis.Nu.Nu
         [Fact]
         public void Test_found()
         {
-            var sample = SampleReader.Read("whois.iis.nu", "nu", "found", "found.txt");
+            var sample = SampleReader.Read("whois.iis.nu", "nu", "found", "google.nu.txt");
             var response = parser.Parse("whois.iis.nu", sample);
 
             Assert.True(sample.Length > 0);

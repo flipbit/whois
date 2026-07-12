@@ -16,7 +16,7 @@ namespace Whois.Parsing.Whois.Nic.Cd.Cd
         [Fact]
         public void Test_not_found()
         {
-            var sample = SampleReader.Read("whois.nic.cd", "cd", "not-found", "not_found.txt");
+            var sample = SampleReader.Read("whois.nic.cd", "cd", "not-found", "u34jedzcq.cd.txt");
             var response = parser.Parse("whois.nic.cd", sample);
 
             Assert.True(sample.Length > 0);

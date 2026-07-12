@@ -32,7 +32,7 @@ namespace Whois.Parsing.Whois.Dotmobiregistry.Net.Mobi
         [Fact]
         public void Test_found()
         {
-            var sample = SampleReader.Read("whois.dotmobiregistry.net", "mobi", "found", "found.txt");
+            var sample = SampleReader.Read("whois.dotmobiregistry.net", "mobi", "found", "google.mobi.txt");
             var response = parser.Parse("whois.dotmobiregistry.net", sample);
 
             Assert.True(sample.Length > 0);

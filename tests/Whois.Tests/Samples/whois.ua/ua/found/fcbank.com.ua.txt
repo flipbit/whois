@@ -1,0 +1,65 @@
+% Request from 2003:fe:7f09:5c36:c53c:1b2:2254:6fc1
+% This is the Ukrainian Whois query server #S.
+% The Whois is subject to Terms of use
+% See https://hostmaster.ua/services/
+%
+% IN THE PROCESS OF DELEGATION OF A DOMAIN NAME,
+% THE REGISTRANT IS AN ENTITY WHO USES AND MANAGES A CERTAIN DOMAIN NAME,
+% AND THE REGISTRAR IS A BUSINESS ENTITY THAT PROVIDES THE REGISTRANT
+% WITH THE SERVICES NECESSARY FOR THE TECHNICAL MAINTENANCE OF THE REGISTRATION AND OPERATION OF THE DOMAIN NAME.
+% FOR INFORMATION ABOUT THE REGISTRANT OF THE DOMAIN NAME, YOU SHOULD CONTACT THE REGISTRAR.
+
+domain:           fcbank.com.ua
+dom-public:       NO
+mnt-by:           ua.forward
+nserver:          ns1.fcbank.com.ua
+nserver:          ns2.fcbank.com.ua
+nserver:          ns.secondary.net.ua
+status:           ok
+created:          2004-08-06 13:17:36+03
+modified:         2025-09-05 13:19:02+03
+expires:          2026-08-06 13:17:36+03
+source:           UAEPP
+
+% Glue Records:
+% =============
+nserver:          ns1.fcbank.com.ua
+ip-address:       194.50.169.2
+
+nserver:          ns2.fcbank.com.ua
+ip-address:       194.50.169.3
+
+% Registrar:
+% ==========
+registrar:        ua.forward
+organization:     PE Cherkashin Vyacheslav
+organization-loc: ФОП Черкашин В'ячеслав Юрійович
+url:              http://forward.com.ua
+city:             Dnipro
+country:          UA
+abuse-email:      info@forward.com.ua
+abuse-phone:      +380.563705242
+abuse-postal:     P.o. box 179, Dnipro, 49000, Ukraine
+abuse-postal-loc: а/с 179, м. Дніпро, 49000, Україна
+source:           UAEPP
+
+% Registrant:
+% ===========
+person:           JSC "Finance and Credit"  Bank
+organization:     JSC "Finance and Credit"  Bank
+e-mail:           igor.kravchuk@fcbank.com.ua
+address:          vul. Sichovyh Strilctiv, 60
+address:          Kyiv
+postal-code:      04050
+country:          UA
+phone:            +380.443642909
+mnt-by:           ua.forward
+status:           ok
+status:           linked
+created:          2021-08-02 13:22:17+03
+source:           UAEPP
+
+
+
+% Query time:     5 msec
+

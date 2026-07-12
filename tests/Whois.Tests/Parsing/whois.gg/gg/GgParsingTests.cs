@@ -17,7 +17,7 @@ namespace Whois.Parsing.Whois.Gg.Gg
         [Fact]
         public void Test_not_found()
         {
-            var sample = SampleReader.Read("whois.gg", "gg", "not-found", "not_found.txt");
+            var sample = SampleReader.Read("whois.gg", "gg", "not-found", "u34jedzcq.gg.txt");
             var response = parser.Parse("whois.gg", sample);
 
             Assert.True(sample.Length > 0);
@@ -34,7 +34,7 @@ namespace Whois.Parsing.Whois.Gg.Gg
         [Fact]
         public void Test_found()
         {
-            var sample = SampleReader.Read("whois.gg", "gg", "found", "found.txt");
+            var sample = SampleReader.Read("whois.gg", "gg", "found", "google.gg.txt");
             var response = parser.Parse("whois.gg", sample);
 
             Assert.True(sample.Length > 0);

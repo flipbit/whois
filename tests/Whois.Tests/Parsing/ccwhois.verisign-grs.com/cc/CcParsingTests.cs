@@ -41,7 +41,7 @@ namespace Whois.Parsing.Ccwhois.Verisign.Grs.Com.Cc
         [Fact]
         public void Test_not_found()
         {
-            var sample = SampleReader.Read("ccwhois.verisign-grs.com", "cc", "not-found", "not_found.txt");
+            var sample = SampleReader.Read("ccwhois.verisign-grs.com", "cc", "not-found", "u34jedzcq.cc.txt");
             var response = parser.Parse("ccwhois.verisign-grs.com", sample);
 
             Assert.True(sample.Length > 0);
@@ -52,7 +52,7 @@ namespace Whois.Parsing.Ccwhois.Verisign.Grs.Com.Cc
         [Fact]
         public void Test_found_status_registered()
         {
-            var sample = SampleReader.Read("ccwhois.verisign-grs.com", "cc", "found", "found_status_registered.txt");
+            var sample = SampleReader.Read("ccwhois.verisign-grs.com", "cc", "found", "google.cc.txt");
             var response = parser.Parse("ccwhois.verisign-grs.com", sample);
 
             Assert.True(sample.Length > 0);

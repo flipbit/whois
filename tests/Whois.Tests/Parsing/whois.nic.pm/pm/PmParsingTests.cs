@@ -17,7 +17,7 @@ namespace Whois.Parsing.Whois.Nic.Pm.Pm
         [Fact]
         public void Test_found()
         {
-            var sample = SampleReader.Read("whois.nic.pm", "pm", "found", "found.txt");
+            var sample = SampleReader.Read("whois.nic.pm", "pm", "found", "nic.pm.txt");
             var response = parser.Parse("whois.nic.pm", sample);
 
             Assert.True(sample.Length > 0);

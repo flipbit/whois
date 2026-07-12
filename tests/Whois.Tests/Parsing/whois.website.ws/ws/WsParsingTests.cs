@@ -17,7 +17,7 @@ namespace Whois.Parsing.Whois.Website.Ws.Ws
         [Fact]
         public void Test_not_found()
         {
-            var sample = SampleReader.Read("whois.website.ws", "ws", "not-found", "not_found.txt");
+            var sample = SampleReader.Read("whois.website.ws", "ws", "not-found", "u34jedzcq.ws.txt");
             var response = parser.Parse("whois.website.ws", sample);
 
             Assert.True(sample.Length > 0);
@@ -34,7 +34,7 @@ namespace Whois.Parsing.Whois.Website.Ws.Ws
         [Fact]
         public void Test_found()
         {
-            var sample = SampleReader.Read("whois.website.ws", "ws", "found", "found.txt");
+            var sample = SampleReader.Read("whois.website.ws", "ws", "found", "google.ws.txt");
             var response = parser.Parse("whois.website.ws", sample);
 
             Assert.True(sample.Length > 0);

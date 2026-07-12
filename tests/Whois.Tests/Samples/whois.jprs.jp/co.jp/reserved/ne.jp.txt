@@ -1,0 +1,27 @@
+[ JPRS database provides information on network administration. Its use is    ]
+[ restricted to network administration purposes. For further information,     ]
+[ use 'whois -h whois.jprs.jp help'. To suppress Japanese output, add'/e'     ]
+[ at the end of command, e.g. 'whois -h whois.jprs.jp xxx/e'.                 ]
+Domain Information: [ドメイン情報]
+a. [ドメイン名]                 NE.JP
+b. [ねっとわーくさーびすめい]    
+c. [ネットワークサービス名]     ネットワークサービスドメイン
+d. [Network Service Name]       Network Service Domain
+k. [組織種別]                    
+l. [Organization Type]           
+m. [登録担当者]                  
+n. [技術連絡担当者]             
+p. [ネームサーバ]               a.dns.jp
+p. [ネームサーバ]               b.dns.jp
+p. [ネームサーバ]               c.dns.jp
+p. [ネームサーバ]               d.dns.jp
+p. [ネームサーバ]               e.dns.jp
+p. [ネームサーバ]               f.dns.jp
+p. [ネームサーバ]               g.dns.jp
+p. [ネームサーバ]               h.dns.jp
+s. [署名鍵]                     
+[状態]                          Reserved
+[登録年月日]                     
+[接続年月日]                     
+[最終更新]                      2005/03/30 17:37:52 (JST)
+

@@ -17,7 +17,7 @@ namespace Whois.Parsing.Whois.Nic.Co.Co
         [Fact]
         public void Test_not_found()
         {
-            var sample = SampleReader.Read("whois.nic.co", "co", "not-found", "not_found.txt");
+            var sample = SampleReader.Read("whois.nic.co", "co", "not-found", "u34jedzcq.co.txt");
             var response = parser.Parse("whois.nic.co", sample);
 
             Assert.True(sample.Length > 0);
@@ -34,7 +34,7 @@ namespace Whois.Parsing.Whois.Nic.Co.Co
         [Fact]
         public void Test_found()
         {
-            var sample = SampleReader.Read("whois.nic.co", "co", "found", "found.txt");
+            var sample = SampleReader.Read("whois.nic.co", "co", "found", "t.co.txt");
             var response = parser.Parse("whois.nic.co", sample);
 
             Assert.True(sample.Length > 0);

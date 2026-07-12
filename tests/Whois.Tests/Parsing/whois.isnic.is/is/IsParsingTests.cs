@@ -17,7 +17,7 @@ namespace Whois.Parsing.Whois.Isnic.Is.Is
         [Fact]
         public void Test_not_found()
         {
-            var sample = SampleReader.Read("whois.isnic.is", "is", "not-found", "not_found.txt");
+            var sample = SampleReader.Read("whois.isnic.is", "is", "not-found", "u34jedzcq.is.txt");
             var response = parser.Parse("whois.isnic.is", sample);
 
             Assert.True(sample.Length > 0);
@@ -34,7 +34,7 @@ namespace Whois.Parsing.Whois.Isnic.Is.Is
         [Fact]
         public void Test_found()
         {
-            var sample = SampleReader.Read("whois.isnic.is", "is", "found", "found.txt");
+            var sample = SampleReader.Read("whois.isnic.is", "is", "found", "google.is.txt");
             var response = parser.Parse("whois.isnic.is", sample);
 
             Assert.True(sample.Length > 0);

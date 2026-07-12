@@ -31,7 +31,7 @@ namespace Whois.Parsing.Whois.Co.Pl.CoPl
         [Fact]
         public void Test_found()
         {
-            var sample = SampleReader.Read("whois.co.pl", "co.pl", "found", "found.txt");
+            var sample = SampleReader.Read("whois.co.pl", "co.pl", "found", "coco.co.pl.txt");
             var response = parser.Parse("whois.co.pl", sample);
 
             Assert.True(sample.Length > 0);

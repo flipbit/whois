@@ -17,7 +17,7 @@ namespace Whois.Parsing.Whois.Cctld.Uz.Uz
         [Fact]
         public void Test_reserved()
         {
-            var sample = SampleReader.Read("whois.cctld.uz", "uz", "reserved", "reserved.txt");
+            var sample = SampleReader.Read("whois.cctld.uz", "uz", "reserved", "cctld.uz.txt");
             var response = parser.Parse("whois.cctld.uz", sample);
 
             Assert.True(sample.Length > 0);
@@ -109,7 +109,7 @@ namespace Whois.Parsing.Whois.Cctld.Uz.Uz
         [Fact]
         public void Test_not_found()
         {
-            var sample = SampleReader.Read("whois.cctld.uz", "uz", "not-found", "not_found.txt");
+            var sample = SampleReader.Read("whois.cctld.uz", "uz", "not-found", "u34jedzcq.uz.txt");
             var response = parser.Parse("whois.cctld.uz", sample);
 
             Assert.True(sample.Length > 0);
@@ -127,7 +127,7 @@ namespace Whois.Parsing.Whois.Cctld.Uz.Uz
         [Fact]
         public void Test_found_status_registered()
         {
-            var sample = SampleReader.Read("whois.cctld.uz", "uz", "found", "found_status_registered.txt");
+            var sample = SampleReader.Read("whois.cctld.uz", "uz", "found", "google.uz.txt");
             var response = parser.Parse("whois.cctld.uz", sample);
 
             Assert.True(sample.Length > 0);

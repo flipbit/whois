@@ -17,7 +17,7 @@ namespace Whois.Parsing.Whois.Nic.Ve.Ve
         [Fact]
         public void Test_found()
         {
-            var sample = SampleReader.Read("whois.nic.ve", "ve", "found", "found.txt");
+            var sample = SampleReader.Read("whois.nic.ve", "ve", "found", "ula.ve.txt");
             var response = parser.Parse("whois.nic.ve", sample);
 
             Assert.True(sample.Length > 0);
@@ -187,7 +187,7 @@ namespace Whois.Parsing.Whois.Nic.Ve.Ve
         [Fact]
         public void Test_found_nameservers_missing()
         {
-            var sample = SampleReader.Read("whois.nic.ve", "ve", "found", "found_nameservers_missing.txt");
+            var sample = SampleReader.Read("whois.nic.ve", "ve", "found", "zumba.com.ve.txt");
             var response = parser.Parse("whois.nic.ve", sample);
 
             Assert.True(sample.Length > 0);
@@ -345,7 +345,7 @@ namespace Whois.Parsing.Whois.Nic.Ve.Ve
         [Fact]
         public void Test_not_found()
         {
-            var sample = SampleReader.Read("whois.nic.ve", "ve", "not-found", "not_found.txt");
+            var sample = SampleReader.Read("whois.nic.ve", "ve", "not-found", "u34jedzcq.ve.txt");
             var response = parser.Parse("whois.nic.ve", sample);
 
             Assert.True(sample.Length > 0);

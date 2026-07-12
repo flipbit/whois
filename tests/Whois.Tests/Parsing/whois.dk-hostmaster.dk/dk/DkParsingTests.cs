@@ -144,7 +144,7 @@ namespace Whois.Parsing.Whois.Dk.Hostmaster.Dk.Dk
         [Fact]
         public void Test_found()
         {
-            var sample = SampleReader.Read("whois.dk-hostmaster.dk", "dk", "found", "found.txt");
+            var sample = SampleReader.Read("whois.dk-hostmaster.dk", "dk", "found", "google.dk.txt");
             var response = parser.Parse("whois.dk-hostmaster.dk", sample);
 
             Assert.True(sample.Length > 0);

@@ -17,7 +17,7 @@ namespace Whois.Parsing.Whois.Nic.Jobs.Jobs
         [Fact]
         public void Test_found()
         {
-            var sample = SampleReader.Read("whois.nic.jobs", "jobs", "found", "found.txt");
+            var sample = SampleReader.Read("whois.nic.jobs", "jobs", "found", "example.jobs.txt");
             var response = parser.Parse("whois.nic.jobs", sample);
 
             Assert.True(sample.Length > 0);
@@ -40,7 +40,7 @@ namespace Whois.Parsing.Whois.Nic.Jobs.Jobs
         [Fact]
         public void Test_not_found()
         {
-            var sample = SampleReader.Read("whois.nic.jobs", "jobs", "not-found", "not_found.txt");
+            var sample = SampleReader.Read("whois.nic.jobs", "jobs", "not-found", "u34jedzcq.jobs.txt");
             var response = parser.Parse("whois.nic.jobs", sample);
 
             Assert.True(sample.Length > 0);
@@ -57,7 +57,7 @@ namespace Whois.Parsing.Whois.Nic.Jobs.Jobs
         [Fact]
         public void Test_found_status_registered()
         {
-            var sample = SampleReader.Read("whois.nic.jobs", "jobs", "found", "found_status_registered.txt");
+            var sample = SampleReader.Read("whois.nic.jobs", "jobs", "found", "google.jobs.txt");
             var response = parser.Parse("whois.nic.jobs", sample);
 
             Assert.True(sample.Length > 0);

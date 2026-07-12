@@ -32,7 +32,7 @@ namespace Whois.Parsing.Whois.Eu.Org.EuOrg
         [Fact]
         public void Test_found()
         {
-            var sample = SampleReader.Read("whois.eu.org", "eu.org", "found", "found.txt");
+            var sample = SampleReader.Read("whois.eu.org", "eu.org", "found", "google.eu.org.txt");
             var response = parser.Parse("whois.eu.org", sample);
 
             Assert.True(sample.Length > 0);

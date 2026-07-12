@@ -17,7 +17,7 @@ namespace Whois.Parsing.Whois.Nic.Cx.Cx
         [Fact]
         public void Test_found()
         {
-            var sample = SampleReader.Read("whois.nic.cx", "cx", "found", "found.txt");
+            var sample = SampleReader.Read("whois.nic.cx", "cx", "found", "communication.cx.txt");
             var response = parser.Parse("whois.nic.cx", sample);
 
             Assert.True(sample.Length > 0);
@@ -101,7 +101,7 @@ namespace Whois.Parsing.Whois.Nic.Cx.Cx
         [Fact]
         public void Test_not_found()
         {
-            var sample = SampleReader.Read("whois.nic.cx", "cx", "not-found", "not_found.txt");
+            var sample = SampleReader.Read("whois.nic.cx", "cx", "not-found", "u34jedzcq.cx.txt");
             var response = parser.Parse("whois.nic.cx", sample);
 
             Assert.True(sample.Length > 0);
@@ -118,7 +118,7 @@ namespace Whois.Parsing.Whois.Nic.Cx.Cx
         [Fact]
         public void Test_found_status_registered()
         {
-            var sample = SampleReader.Read("whois.nic.cx", "cx", "found", "found_status_registered.txt");
+            var sample = SampleReader.Read("whois.nic.cx", "cx", "found", "google.cx.txt");
             var response = parser.Parse("whois.nic.cx", sample);
 
             Assert.True(sample.Length > 0);

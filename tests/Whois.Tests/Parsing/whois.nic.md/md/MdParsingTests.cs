@@ -17,7 +17,7 @@ namespace Whois.Parsing.Whois.Nic.Md.Md
         [Fact]
         public void Test_found()
         {
-            var sample = SampleReader.Read("whois.nic.md", "md", "found", "found.txt");
+            var sample = SampleReader.Read("whois.nic.md", "md", "found", "hotel.md.txt");
             var response = parser.Parse("whois.nic.md", sample);
 
             Assert.True(sample.Length > 0);
@@ -60,7 +60,7 @@ namespace Whois.Parsing.Whois.Nic.Md.Md
         [Fact]
         public void Test_found_status_registered()
         {
-            var sample = SampleReader.Read("whois.nic.md", "md", "found", "found_status_registered.txt");
+            var sample = SampleReader.Read("whois.nic.md", "md", "found", "google.md.txt");
             var response = parser.Parse("whois.nic.md", sample);
 
             Assert.True(sample.Length > 0);

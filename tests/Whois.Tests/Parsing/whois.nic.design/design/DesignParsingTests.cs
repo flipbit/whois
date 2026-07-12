@@ -32,7 +32,7 @@ namespace Whois.Parsing.Whois.Nic.Design.Design
         [Fact]
         public void Test_found()
         {
-            var sample = SampleReader.Read("whois.nic.design", "design", "found", "found.txt");
+            var sample = SampleReader.Read("whois.nic.design", "design", "found", "toplevel.design.txt");
             var response = parser.Parse("whois.nic.design", sample);
 
             Assert.True(sample.Length > 0);

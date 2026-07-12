@@ -179,7 +179,7 @@ namespace Whois.Parsing.Whois.Nic.Cz.Cz
         [Fact]
         public void Test_found_status_registered()
         {
-            var sample = SampleReader.Read("whois.nic.cz", "cz", "found", "found_status_registered.txt");
+            var sample = SampleReader.Read("whois.nic.cz", "cz", "found", "google.cz.txt");
             var response = parser.Parse("whois.nic.cz", sample);
 
             Assert.True(sample.Length > 0);

@@ -34,7 +34,7 @@ namespace Whois.Parsing.Whois.Uniregistry.Net.Tattoo
         [Fact]
         public void Test_found()
         {
-            var sample = SampleReader.Read("whois.uniregistry.net", "tattoo", "found", "found.txt");
+            var sample = SampleReader.Read("whois.uniregistry.net", "tattoo", "found", "nic.tattoo.txt");
             var response = parser.Parse("whois.uniregistry.net", sample);
 
             Assert.True(sample.Length > 0);

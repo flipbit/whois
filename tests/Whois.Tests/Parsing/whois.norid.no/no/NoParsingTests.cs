@@ -32,7 +32,7 @@ namespace Whois.Parsing.Whois.Norid.No.No
         [Fact]
         public void Test_found()
         {
-            var sample = SampleReader.Read("whois.norid.no", "no", "found", "found.txt");
+            var sample = SampleReader.Read("whois.norid.no", "no", "found", "google.no.txt");
             var response = parser.Parse("whois.norid.no", sample);
 
             Assert.True(sample.Length > 0);

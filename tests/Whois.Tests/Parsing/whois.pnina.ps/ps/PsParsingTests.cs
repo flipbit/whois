@@ -17,7 +17,7 @@ namespace Whois.Parsing.Whois.Pnina.Ps.Ps
         [Fact]
         public void Test_not_found()
         {
-            var sample = SampleReader.Read("whois.pnina.ps", "ps", "not-found", "not_found.txt");
+            var sample = SampleReader.Read("whois.pnina.ps", "ps", "not-found", "u34jedzcq.ps.txt");
             var response = parser.Parse("whois.pnina.ps", sample);
 
             Assert.True(sample.Length > 0);
@@ -34,7 +34,7 @@ namespace Whois.Parsing.Whois.Pnina.Ps.Ps
         [Fact]
         public void Test_found()
         {
-            var sample = SampleReader.Read("whois.pnina.ps", "ps", "found", "found.txt");
+            var sample = SampleReader.Read("whois.pnina.ps", "ps", "found", "google.ps.txt");
             var response = parser.Parse("whois.pnina.ps", sample);
 
             Assert.True(sample.Length > 0);

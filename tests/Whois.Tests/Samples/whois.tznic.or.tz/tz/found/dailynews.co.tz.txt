@@ -1,0 +1,28 @@
+%  https://karibu.tz/media/WHOIS_TERMS_TOU.pdf
+% 
+% Whoisd Server Version: 3.15.0
+% Timestamp: Sun Jul 12 15:34:28 2026
+
+domain:       dailynews.co.tz
+registrant:   TSN
+admin-c:      TSN
+nsset:        NS-DAILY
+registrar:    REG-THL
+registered:   27.07.2009 11:01:10
+changed:      23.06.2022 13:47:22
+expire:       27.07.2026
+
+contact:      TSN
+registrar:    REG-THL
+created:      11.03.2022 15:50:34
+
+nsset:        NS-DAILY
+nserver:      hosting.nidc.co.tz 
+nserver:      ns1.nidc.co.tz 
+nserver:      ns2.nidc.co.tz 
+tech-c:       TSN
+registrar:    REG-THL
+created:      23.06.2022 13:44:05
+changed:      20.02.2023 15:09:46
+
+
