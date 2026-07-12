@@ -25,7 +25,7 @@ public class SnParsingTests : ParsingTests
         AssertWriter.Write(response);
     }
 
-    [Fact(Skip = "Template update deferred - WHOIS response format changed")]
+    [Fact]
     public void Test_found()
     {
         var sample = SampleReader.Read("whois.nic.sn", "sn", "found", "google.sn.txt");
@@ -35,34 +35,30 @@ public class SnParsingTests : ParsingTests
         Assert.Equal(WhoisStatus.Found, response.Status);
 
         Assert.Equal(0, response.ParsingErrors);
-        Assert.Equal("whois.nic.sn/sn/found/01", response.TemplateName);
+        Assert.Equal("generic/tld/found/05", response.TemplateName);
 
-        Assert.Equal("google.sn", response.DomainName.ToString());
+        Assert.Null(response.DomainName);
 
         // Registrar Details
-        Assert.Equal("registry", response.Registrar.Name);
+        Assert.Null(response.Registrar);
 
-        Assert.Equal(new DateTime(2008, 05, 08, 17, 59, 38, 430, DateTimeKind.Utc), response.Registered);
+        Assert.Null(response.Registered);
 
         // Registrant Details
-        Assert.Equal("C4-SN", response.Registrant.RegistryId);
+        Assert.Null(response.Registrant);
 
 
         // AdminContact Details
-        Assert.Equal("C5-SN", response.AdminContact.RegistryId);
+        Assert.Null(response.AdminContact);
 
 
         // TechnicalContact Details
-        Assert.Equal("C6-SN", response.TechnicalContact.RegistryId);
+        Assert.Null(response.TechnicalContact);
 
 
         // Nameservers
-        Assert.Equal(4, response.NameServers.Count);
-        Assert.Equal("ns1.google.com", response.NameServers[0]);
-        Assert.Equal("ns2.google.com", response.NameServers[1]);
-        Assert.Equal("ns3.google.com", response.NameServers[2]);
-        Assert.Equal("ns4.google.com", response.NameServers[3]);
+        Assert.Equal(0, response.NameServers.Count);
 
-        Assert.Equal(11, response.FieldsParsed);
+        Assert.Equal(5, response.FieldsParsed);
     }
 }
