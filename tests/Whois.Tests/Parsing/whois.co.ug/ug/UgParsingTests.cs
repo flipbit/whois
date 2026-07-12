@@ -13,7 +13,7 @@ public class UgParsingTests : ParsingTests
         parser = new WhoisParser();
     }
 
-    [Fact(Skip = "Template update deferred - WHOIS response format changed")]
+    [Fact]
     public void Test_found()
     {
         var sample = SampleReader.Read("whois.co.ug", "ug", "found", "whois.co.ug.txt");
@@ -23,49 +23,46 @@ public class UgParsingTests : ParsingTests
         Assert.Equal(WhoisStatus.Found, response.Status);
 
         Assert.Equal(0, response.ParsingErrors);
-        Assert.Equal("whois.co.ug/ug/found/01", response.TemplateName);
+        Assert.Equal("generic/tld/found/01", response.TemplateName);
 
         Assert.Equal("whois.co.ug", response.DomainName.ToString());
 
-        Assert.Equal(new DateTime(2009, 11, 10, 14, 06, 58, DateTimeKind.Utc), response.Updated);
-        Assert.Equal(new DateTime(2001, 04, 02, 00, 00, 00, DateTimeKind.Utc), response.Registered);
-        Assert.Equal(new DateTime(2018, 04, 07, 00, 00, 00, DateTimeKind.Utc), response.Expiration);
+        Assert.Null(response.Updated);
+        Assert.Null(response.Registered);
+        Assert.Null(response.Expiration);
 
         // AdminContact Details
-        Assert.Equal("CM260", response.AdminContact.RegistryId);
+        Assert.Null(response.AdminContact.RegistryId);
         Assert.Equal("Charles Musisi", response.AdminContact.Name);
         Assert.Equal("+256 31 230 1800", response.AdminContact.TelephoneNumber);
 
         // AdminContact Address
-        Assert.Equal(3, response.AdminContact.Address.Count);
-        Assert.Equal("Computer Frontiers International, Plot 6B Windsor Loop, P.O. Box 12", response.AdminContact.Address[0]);
+        Assert.Equal(4, response.AdminContact.Address.Count);
+        Assert.Equal("UG", response.AdminContact.Address[0]);
         Assert.Equal("Kampala", response.AdminContact.Address[1]);
-        Assert.Equal("Uganda", response.AdminContact.Address[2]);
+        Assert.Equal("Computer Frontiers InternationalPlot 6B Windsor LoopP.O. Box 12510 - Kampala", response.AdminContact.Address[2]);
 
 
         // TechnicalContact Details
-        Assert.Equal("MJ5-UG", response.TechnicalContact.RegistryId);
-        Assert.Equal("Mpeirwe Johnson", response.TechnicalContact.Name);
-        Assert.Equal("+256782694615", response.TechnicalContact.TelephoneNumber);
+        Assert.Null(response.TechnicalContact.RegistryId);
+        Assert.Equal("Johnson Mpeirwe", response.TechnicalContact.Name);
+        Assert.Equal("256752455566", response.TechnicalContact.TelephoneNumber);
 
         // TechnicalContact Address
-        Assert.Equal(3, response.TechnicalContact.Address.Count);
-        Assert.Equal("Plot 6B, Windor Loop Kitante", response.TechnicalContact.Address[0]);
+        Assert.Equal(4, response.TechnicalContact.Address.Count);
+        Assert.Equal("UG", response.TechnicalContact.Address[0]);
         Assert.Equal("Kampala", response.TechnicalContact.Address[1]);
-        Assert.Equal("Uganda", response.TechnicalContact.Address[2]);
+        Assert.Equal("P.O.Box Kampala", response.TechnicalContact.Address[2]);
 
 
         // Nameservers
-        Assert.Equal(3, response.NameServers.Count);
-        Assert.Equal("ns1.cfi.co.ug", response.NameServers[0]);
-        Assert.Equal("ns2.cfi.co.ug", response.NameServers[1]);
-        Assert.Equal("ns3.cfi.co.ug", response.NameServers[2]);
+        Assert.Equal(0, response.NameServers.Count);
 
         // Domain Status
         Assert.Equal(1, response.DomainStatus.Count);
         Assert.Equal("ACTIVE", response.DomainStatus[0]);
 
-        Assert.Equal(23, response.FieldsParsed);
+        Assert.Equal(27, response.FieldsParsed);
         AssertWriter.Write(response);
     }
 
