@@ -10,10 +10,7 @@ namespace Whois.Security;
 /// when a stable System.Security.Cryptography.Ed25519 is available (currently
 /// only in .NET 9+ preview, not yet in the stable API surface).
 /// </summary>
-// MA0182: This class will be consumed by MinisignVerifier (Task 2) — suppress until then.
-#pragma warning disable MA0182
 internal static class Ed25519Verifier
-#pragma warning restore MA0182
 {
     /// <summary>
     /// Verifies an Ed25519 signature.
