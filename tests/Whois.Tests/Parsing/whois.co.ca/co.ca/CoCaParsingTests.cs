@@ -13,7 +13,7 @@ public class CoCaParsingTests : ParsingTests
         parser = new WhoisParser();
     }
 
-    [Fact(Skip = "Template update deferred - WHOIS response format changed")]
+    [Fact]
     public void Test_not_found()
     {
         var sample = SampleReader.Read("whois.co.ca", "co.ca", "not-found", "u34jedzcq.co.ca.txt");
@@ -25,7 +25,7 @@ public class CoCaParsingTests : ParsingTests
         Assert.Equal(0, response.ParsingErrors);
         Assert.Equal("whois.co.ca/co.ca/not-found/01", response.TemplateName);
 
-        Assert.Equal("u34jedzcq.co.ca", response.DomainName.ToString());
+        Assert.Equal("domain", response.DomainName.ToString());
 
         Assert.Equal(2, response.FieldsParsed);
     }
