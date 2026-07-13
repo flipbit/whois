@@ -113,7 +113,7 @@ on:
    chmod 600 "$KEYFILE"
    trap 'rm -f "$KEYFILE"' EXIT
    echo "$MINISIGN_SECRET_KEY" > "$KEYFILE"
-   minisign -Sm artifacts/templates.zip -s "$KEYFILE" -t "templates-$VERSION"
+   minisign -Slm artifacts/templates.zip -s "$KEYFILE" -t "templates-$VERSION"
    ```
    Produces `artifacts/templates.zip.minisig` (minisign co-locates the sig with the signed file).
 8. **Create GitHub release** — conditionally use `--notes-file` only when changelog exists:
