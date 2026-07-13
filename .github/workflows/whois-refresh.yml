@@ -25,6 +25,11 @@ jobs:
         with:
           dotnet-version: '10.0.x'
 
+      - name: Configure git
+        run: |
+          git config user.name "github-actions[bot]"
+          git config user.email "41898282+github-actions[bot]@users.noreply.github.com"
+
       - name: Staleness check
         env:
           GH_TOKEN: ${{ secrets.GITHUB_TOKEN }}
@@ -76,9 +81,7 @@ jobs:
 
       - name: Run detect
         id: detect
-        run: |
-          dotnet run --project tools/WhoisRefresh -- detect .
-          echo "exit_code=$?" >> "$GITHUB_OUTPUT"
+        run: dotnet run --project tools/WhoisRefresh -- detect .
         continue-on-error: true
 
       - name: Handle results
