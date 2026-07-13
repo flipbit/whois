@@ -26,10 +26,9 @@ internal sealed class TemplatePackProvider : ITemplatePackProvider
     private const string DefaultReleaseUrl =
         "https://api.github.com/repos/flipbit/whois/releases/latest";
 
-    // RFC 8032 Vector 1 test public key — Plan 4 will replace with production key.
     private const string EmbeddedPublicKey =
-        "untrusted comment: minisign public key test\n" +
-        "RWQBAgMEBQYHCNdamAGCsQq31Uv+08lkBzoO4XLz2qYjJa8CGmj3B1Ea";
+        "untrusted comment: minisign public key BB627A8035F5648F\n" +
+        "RWSPZPU1gHpiu6ORNoQUGiAeuxhdDaq9rJ8HVRaqBy/PtM0//4zByp2I";
 
     private const long MaxDownloadBytes = 10L * 1024 * 1024; // 10 MB
     private const long MaxSigBytes = 4096;
