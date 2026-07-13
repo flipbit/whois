@@ -25,7 +25,7 @@ New Spectre.Cli command in `tools/WhoisRefresh/`: `package <repo-root> --version
 3. Computes an overall content hash (sorted concat of individual hashes, then SHA-256)
 4. Builds `manifest.json` using the existing `TemplateManifest` / `TemplateEntry` types
 5. Creates a zip containing templates in `{server}/{tld}/{status}/{nn}.txt` structure plus `manifest.json` at the root
-6. If `--previous-manifest` is provided, diffs the two manifests (added/removed/modified templates by comparing per-template hashes) and writes `changelog.json` + `changelog.md` alongside the zip
+6. If `--previous-manifest` is provided, diffs the two manifests (added/removed/modified templates by comparing per-template hashes) and writes `changelog.json` + `changelog.md` alongside the zip. If omitted (first release), changelog files are not generated and the release is created without a notes file.
 7. Outputs the zip path to stdout
 
 ### Output Files (default `./artifacts/`)
