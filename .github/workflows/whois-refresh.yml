@@ -1,0 +1,146 @@
+# .github/workflows/whois-refresh.yml
+name: Weekly WHOIS Refresh
+
+on:
+  schedule:
+    - cron: '0 2 * * 0'  # Sunday 02:00 UTC
+  workflow_dispatch:
+
+permissions: {}
+
+jobs:
+  refresh:
+    runs-on: ubuntu-latest
+    timeout-minutes: 30
+    permissions:
+      contents: write
+      pull-requests: write
+      issues: write
+
+    steps:
+      - uses: actions/checkout@v4
+
+      - name: Setup .NET
+        uses: actions/setup-dotnet@v4
+        with:
+          dotnet-version: '10.0.x'
+
+      - name: Staleness check
+        env:
+          GH_TOKEN: ${{ secrets.GITHUB_TOKEN }}
+        run: |
+          RESULTS_FILE="tools/WhoisRefresh/refresh-results.json"
+          if [ ! -f "$RESULTS_FILE" ]; then
+            echo "::warning::No refresh-results.json baseline found"
+            exit 0
+          fi
+
+          # Extract the version timestamp
+          LAST_RUN=$(python3 -c "
+          import json, sys
+          with open('$RESULTS_FILE') as f:
+              data = json.load(f)
+          print(data.get('version', ''))
+          ")
+
+          if [ -z "$LAST_RUN" ]; then
+            echo "::warning::Could not read version timestamp from refresh-results.json"
+            exit 0
+          fi
+
+          # Check if older than 28 days
+          LAST_EPOCH=$(date -d "$LAST_RUN" +%s 2>/dev/null || date -j -f "%Y-%m-%dT%H:%M:%S" "${LAST_RUN%%.*}" +%s 2>/dev/null || echo 0)
+          NOW_EPOCH=$(date +%s)
+          DAYS_OLD=$(( (NOW_EPOCH - LAST_EPOCH) / 86400 ))
+
+          if [ "$DAYS_OLD" -ge 28 ]; then
+            echo "::warning::Refresh baseline is ${DAYS_OLD} days old (threshold: 28 days)"
+
+            # Check for existing staleness issue
+            EXISTING=$(gh issue list --label "staleness-alert" --state open --json number --jq '.[0].number // ""')
+            if [ -z "$EXISTING" ]; then
+              gh issue create \
+                --title "WHOIS refresh baseline is stale (${DAYS_OLD} days)" \
+                --label "staleness-alert" \
+                --body "The refresh-results.json baseline has not been updated in ${DAYS_OLD} days. The last successful run was at ${LAST_RUN}. Please investigate why the weekly refresh workflow has not been running successfully."
+              echo "::notice::Staleness issue created"
+            else
+              echo "::notice::Staleness issue already exists (#${EXISTING})"
+            fi
+          else
+            echo "::notice::Baseline is ${DAYS_OLD} days old (within 28-day threshold)"
+          fi
+
+      - name: Run refresh
+        run: dotnet run --project tools/WhoisRefresh -- refresh .
+
+      - name: Run detect
+        id: detect
+        run: |
+          dotnet run --project tools/WhoisRefresh -- detect .
+          echo "exit_code=$?" >> "$GITHUB_OUTPUT"
+        continue-on-error: true
+
+      - name: Handle results
+        env:
+          GH_TOKEN: ${{ secrets.GITHUB_TOKEN }}
+        run: |
+          DETECT_EXIT="${{ steps.detect.outcome == 'failure' && '1' || '0' }}"
+
+          # Check if there are any changes
+          if git diff --quiet && git diff --cached --quiet; then
+            echo "::notice::No changes detected"
+            exit 0
+          fi
+
+          BRANCH_DATE=$(date -u +%Y-%m-%d)
+
+          if [ "$DETECT_EXIT" = "1" ]; then
+            # Breakages found — use template-drift branch
+            BRANCH="template-drift"
+
+            # Check if template-drift has human commits
+            if git rev-parse --verify "origin/${BRANCH}" >/dev/null 2>&1; then
+              HUMAN_COMMITS=$(git log "origin/main..origin/${BRANCH}" --format="%ae" | grep -v "github-actions" | head -1 || true)
+              if [ -n "$HUMAN_COMMITS" ]; then
+                BRANCH="template-drift/${BRANCH_DATE}"
+                echo "::notice::Using dated branch ${BRANCH} to avoid overwriting human work"
+              fi
+            fi
+
+            git checkout -B "$BRANCH"
+            git add tools/WhoisRefresh/refresh-results.json tests/Whois.Tests/Samples/ tools/WhoisRefresh/drift-report.json tools/WhoisRefresh/drift-report.md
+            git commit -m "chore: update refresh results and drift report (${BRANCH_DATE})" || true
+
+            git push -u origin "$BRANCH" --force-with-lease
+
+            # Check for existing PR
+            EXISTING_PR=$(gh pr list --head "$BRANCH" --json number --jq '.[0].number // ""')
+            BODY_FILE="tools/WhoisRefresh/drift-report.md"
+
+            if [ -n "$EXISTING_PR" ]; then
+              gh pr edit "$EXISTING_PR" --body-file "$BODY_FILE"
+              echo "::notice::Updated existing drift PR #${EXISTING_PR}"
+            else
+              gh pr create \
+                --head "$BRANCH" \
+                --title "Template drift detected (${BRANCH_DATE})" \
+                --body-file "$BODY_FILE" \
+                --label "template-drift"
+              echo "::notice::Created new drift PR"
+            fi
+          else
+            # No breakages, but samples changed
+            BRANCH="refresh/${BRANCH_DATE}"
+            git checkout -B "$BRANCH"
+            git add tools/WhoisRefresh/refresh-results.json tests/Whois.Tests/Samples/
+            git commit -m "chore: update WHOIS samples (${BRANCH_DATE})" || true
+            git push -u origin "$BRANCH"
+
+            gh pr create \
+              --head "$BRANCH" \
+              --title "WHOIS sample refresh (${BRANCH_DATE})" \
+              --body "Automated weekly refresh — no breakages detected. Updated samples and baseline." \
+              --label "refresh"
+            echo "::notice::Created refresh PR on branch ${BRANCH}"
+          fi
