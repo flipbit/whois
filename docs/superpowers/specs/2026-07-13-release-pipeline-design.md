@@ -22,23 +22,28 @@ New Spectre.Cli command in `tools/WhoisRefresh/`: `package <repo-root> --version
 
 1. Enumerates all template files under `src/Whois/Resources/**/*.txt`
 2. Computes SHA-256 hash per template file
-3. Computes an overall content hash (sorted concat of individual hashes, then SHA-256)
+3. Computes an overall content hash: sort template paths ascending by UTF-8 ordinal, concatenate each file's lowercase hex SHA-256 with no separator, then SHA-256 the resulting UTF-8 string. The final hash is lowercase hex.
 4. Builds `manifest.json` using the existing `TemplateManifest` / `TemplateEntry` types
 5. Creates a zip containing templates in `{server}/{tld}/{status}/{nn}.txt` structure plus `manifest.json` at the root
 6. If `--previous-manifest` is provided, diffs the two manifests (added/removed/modified templates by comparing per-template hashes) and writes `changelog.json` + `changelog.md` alongside the zip. If omitted (first release), changelog files are not generated and the release is created without a notes file.
-7. Outputs the zip path to stdout
+### Exit Codes
+
+- `0` — success
+- `1` — failure (missing templates directory, invalid version, I/O error)
+
+Output file paths are fixed by convention (`./artifacts/templates.zip` etc.), not captured from stdout.
 
 ### Output Files (default `./artifacts/`)
 
 - `templates.zip`
-- `manifest.json` (standalone copy for upload as release asset)
+- `manifest.json` (standalone copy for upload as release asset — same bytes as the manifest inside the zip)
 - `changelog.json` (if previous manifest provided)
 - `changelog.md` (if previous manifest provided)
 
-### New Types
+### New Types (all in `tools/WhoisRefresh/`)
 
 - `PackageCommand` / `PackageSettings` — Spectre.Cli command and settings
-- `TemplatePackager` — core logic: enumerate, hash, zip, manifest generation
+- `TemplatePackager` — core logic: enumerate, hash, zip, manifest generation. References `TemplateManifest`/`TemplateEntry` from `src/Whois/` via the existing project reference.
 - `ChangelogGenerator` — manifest diff → structured changelog (JSON + markdown)
 
 ---
@@ -84,18 +89,46 @@ on:
 
 ### Steps
 
-1. **Checkout** — `actions/checkout@v4` with `fetch-depth: 0` (full history for tag listing)
+1. **Checkout** — `actions/checkout@v4` (default `fetch-depth: 1` is sufficient; `gh release list` uses the GitHub API, not git history)
 2. **Setup .NET** — `actions/setup-dotnet@v4` (net8.0)
-3. **Install minisign** — `apt-get install minisign`
+3. **Install minisign** — `sudo apt-get install -y minisign`
 4. **Compute CalVer version** — shell script:
    - Today's date as `YYYY.MM.DD`
-   - List existing `templates-*` releases via `gh release list`
+   - List existing `templates-*` releases via `gh release list --limit 10 --json tagName`
    - If latest release has today's date prefix, increment sequence; otherwise sequence = 1
+   - Log the computed version: `echo "::notice::Template pack version: $VERSION"`
    - Output: e.g. `VERSION=2026.07.13.1`
 5. **Download previous manifest** — `gh release download <latest-templates-tag> --pattern manifest.json -D ./previous` (skip if no previous release exists)
-6. **Build package** — `dotnet run --project tools/WhoisRefresh -- package <repo-root> --version $VERSION --previous-manifest ./previous/manifest.json --output ./artifacts`
-7. **Sign** — write `MINISIGN_SECRET_KEY` secret to temp file, run `minisign -Sm artifacts/templates.zip -s $KEYFILE -t "templates-$VERSION"`, delete temp file. Produces `templates.zip.minisig`.
-8. **Create GitHub release** — `gh release create templates-$VERSION ./artifacts/templates.zip ./artifacts/templates.zip.minisig ./artifacts/manifest.json --title "Templates $VERSION" --notes-file ./artifacts/changelog.md`
+6. **Build package** — conditionally pass `--previous-manifest` only when the file was actually downloaded:
+   ```
+   PREV_FLAG=""
+   if [ -f ./previous/manifest.json ]; then
+     PREV_FLAG="--previous-manifest ./previous/manifest.json"
+   fi
+   dotnet run --project tools/WhoisRefresh -- package <repo-root> --version $VERSION $PREV_FLAG --output ./artifacts
+   ```
+7. **Sign** — secure temp file handling:
+   ```
+   KEYFILE=$(mktemp)
+   chmod 600 "$KEYFILE"
+   trap 'rm -f "$KEYFILE"' EXIT
+   echo "$MINISIGN_SECRET_KEY" > "$KEYFILE"
+   minisign -Sm artifacts/templates.zip -s "$KEYFILE" -t "templates-$VERSION"
+   ```
+   Produces `artifacts/templates.zip.minisig` (minisign co-locates the sig with the signed file).
+8. **Create GitHub release** — conditionally use `--notes-file` only when changelog exists:
+   ```
+   NOTES_FLAG=""
+   if [ -f ./artifacts/changelog.md ]; then
+     NOTES_FLAG="--notes-file ./artifacts/changelog.md"
+   fi
+   gh release create templates-$VERSION \
+     ./artifacts/templates.zip \
+     ./artifacts/templates.zip.minisig \
+     ./artifacts/manifest.json \
+     --title "Templates $VERSION" \
+     $NOTES_FLAG
+   ```
 
 ### Note
 
@@ -153,20 +186,28 @@ Cron (Sunday 02:00 UTC) + `workflow_dispatch` for manual runs.
 **TemplatePackager:**
 - Enumerate templates from a fixture directory
 - Verify manifest has correct template count, per-file hashes, and overall content hash
+- Content hash determinism: build manifest with templates given in two different insertion orders, assert identical content hash (validates ordinal sort is platform-independent)
 - Verify zip structure contains templates + `manifest.json` at expected paths
+- Verify all zip entry paths are relative (no leading `/` or drive letter) and contain no `..` components
+- End-to-end integrity: re-read templates from the produced zip, recompute content hash, assert it equals `manifest.ContentHash`
 
 **ChangelogGenerator:**
 - Given two manifests with known differences (added, removed, modified), verify changelog JSON structure and markdown output
-- Edge cases: no previous manifest (first release), identical manifests (no changes)
+- Markdown format contract: assert section headings present for added/removed/modified groups
+- Edge cases: identical manifests (no changes), unparseable previous manifest (log warning, skip changelog)
 
 **PackageCommand integration:**
 - End-to-end test with a temp directory containing sample templates
 - Verify zip + manifest + changelog are produced correctly
+- Verify exit code 0 on success, non-zero when templates directory doesn't exist
+- Verify no changelog files produced when `--previous-manifest` is omitted (first-release path)
+- Verify clear error when `--previous-manifest` path is provided but file does not exist
 
 ### Minisign Round-Trip Test
 
 - Generate a test keypair, sign a payload with minisign CLI format, verify with `MinisignVerifier`
 - Validates that production signing flow produces signatures the client-side verifier accepts
+- Negative case: generate a second keypair, sign with keypair A, verify against keypair B's public key — must return false (validates key ID mismatch rejection)
 
 ### Workflow Testing
 
