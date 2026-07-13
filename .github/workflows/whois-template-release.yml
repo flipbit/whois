@@ -1,0 +1,95 @@
+# .github/workflows/whois-template-release.yml
+name: Template Release
+
+on:
+  push:
+    branches: [main]
+    paths: ['src/Whois/Resources/**']
+
+permissions: {}
+
+jobs:
+  release:
+    runs-on: ubuntu-latest
+    environment: template-release
+    permissions:
+      contents: write
+
+    steps:
+      - uses: actions/checkout@v4
+
+      - name: Setup .NET
+        uses: actions/setup-dotnet@v4
+        with:
+          dotnet-version: '10.0.x'
+
+      - name: Install minisign
+        run: sudo apt-get install -y minisign
+
+      - name: Compute CalVer version
+        id: version
+        env:
+          GH_TOKEN: ${{ secrets.GITHUB_TOKEN }}
+        run: |
+          TODAY=$(date -u +%Y.%m.%d)
+          LATEST_TAG=$(gh release list --limit 10 --json tagName --jq '[.[] | select(.tagName | startswith("templates-"))][0].tagName // ""')
+
+          if [ -n "$LATEST_TAG" ]; then
+            LATEST_VERSION="${LATEST_TAG#templates-}"
+            LATEST_DATE=$(echo "$LATEST_VERSION" | cut -d. -f1-3)
+            LATEST_SEQ=$(echo "$LATEST_VERSION" | cut -d. -f4)
+            if [ "$LATEST_DATE" = "$TODAY" ]; then
+              SEQ=$((LATEST_SEQ + 1))
+            else
+              SEQ=1
+            fi
+          else
+            SEQ=1
+          fi
+
+          VERSION="${TODAY}.${SEQ}"
+          echo "version=$VERSION" >> "$GITHUB_OUTPUT"
+          echo "latest_tag=$LATEST_TAG" >> "$GITHUB_OUTPUT"
+          echo "::notice::Template pack version: $VERSION"
+
+      - name: Download previous manifest
+        if: steps.version.outputs.latest_tag != ''
+        env:
+          GH_TOKEN: ${{ secrets.GITHUB_TOKEN }}
+        run: |
+          mkdir -p ./previous
+          gh release download "${{ steps.version.outputs.latest_tag }}" --pattern manifest.json -D ./previous || true
+
+      - name: Build package
+        run: |
+          PREV_FLAG=""
+          if [ -f ./previous/manifest.json ]; then
+            PREV_FLAG="--previous-manifest ./previous/manifest.json"
+          fi
+          dotnet run --project tools/WhoisRefresh -- package . --version "${{ steps.version.outputs.version }}" $PREV_FLAG --output ./artifacts
+
+      - name: Sign template pack
+        env:
+          MINISIGN_SECRET_KEY: ${{ secrets.MINISIGN_SECRET_KEY }}
+        run: |
+          KEYFILE=$(mktemp)
+          chmod 600 "$KEYFILE"
+          trap 'rm -f "$KEYFILE"' EXIT
+          echo "$MINISIGN_SECRET_KEY" > "$KEYFILE"
+          minisign -Slm artifacts/templates.zip -s "$KEYFILE" -t "templates-${{ steps.version.outputs.version }}"
+
+      - name: Create GitHub release
+        env:
+          GH_TOKEN: ${{ secrets.GITHUB_TOKEN }}
+        run: |
+          VERSION="${{ steps.version.outputs.version }}"
+          NOTES_FLAG=""
+          if [ -f ./artifacts/changelog.md ]; then
+            NOTES_FLAG="--notes-file ./artifacts/changelog.md"
+          fi
+          gh release create "templates-${VERSION}" \
+            ./artifacts/templates.zip \
+            ./artifacts/templates.zip.minisig \
+            ./artifacts/manifest.json \
+            --title "Templates ${VERSION}" \
+            $NOTES_FLAG
