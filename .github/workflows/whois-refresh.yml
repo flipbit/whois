@@ -113,7 +113,13 @@ jobs:
 
             git checkout -B "$BRANCH"
             git add tools/WhoisRefresh/refresh-results.json tests/Whois.Tests/Samples/ tools/WhoisRefresh/drift-report.json tools/WhoisRefresh/drift-report.md
-            git commit -m "chore: update refresh results and drift report (${BRANCH_DATE})" || true
+
+            if ! git diff --cached --quiet; then
+              git commit -m "chore: update refresh results and drift report (${BRANCH_DATE})"
+            else
+              echo "::notice::Nothing to commit for drift branch"
+              exit 0
+            fi
 
             git push -u origin "$BRANCH" --force-with-lease
 
@@ -137,7 +143,14 @@ jobs:
             BRANCH="refresh/${BRANCH_DATE}"
             git checkout -B "$BRANCH"
             git add tools/WhoisRefresh/refresh-results.json tests/Whois.Tests/Samples/
-            git commit -m "chore: update WHOIS samples (${BRANCH_DATE})" || true
+
+            if ! git diff --cached --quiet; then
+              git commit -m "chore: update WHOIS samples (${BRANCH_DATE})"
+            else
+              echo "::notice::Nothing to commit for refresh branch"
+              exit 0
+            fi
+
             git push -u origin "$BRANCH"
 
             gh pr create \
