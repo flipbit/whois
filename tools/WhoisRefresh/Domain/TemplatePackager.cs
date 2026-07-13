@@ -1,5 +1,7 @@
+using System.IO.Compression;
 using System.Security.Cryptography;
 using System.Text;
+using System.Text.Json;
 using Whois.Templates;
 
 namespace WhoisRefresh.Domain;
@@ -50,6 +52,46 @@ public static class TemplatePackager
             TemplateCount = entries.Count,
             Templates = entries,
         };
+    }
+
+    /// <summary>
+    /// Builds the manifest and creates a zip containing all templates plus manifest.json.
+    /// Also writes a standalone manifest.json to the output directory (same bytes as in the zip).
+    /// </summary>
+    /// <returns>The path to the created zip file.</returns>
+    public static string CreatePackage(string resourcesDir, string version, string outputDir)
+    {
+        var manifest = BuildManifest(resourcesDir, version);
+        var manifestJson = JsonSerializer.Serialize(manifest, new JsonSerializerOptions
+        {
+            WriteIndented = true,
+        });
+        var manifestBytes = Encoding.UTF8.GetBytes(manifestJson);
+
+        Directory.CreateDirectory(outputDir);
+
+        var zipPath = Path.Combine(outputDir, "templates.zip");
+
+        using (var zipStream = File.Create(zipPath))
+        using (var archive = new ZipArchive(zipStream, ZipArchiveMode.Create))
+        {
+            foreach (var entry in manifest.Templates)
+            {
+                var sourcePath = Path.Combine(resourcesDir, entry.Path.Replace('/', Path.DirectorySeparatorChar));
+                var zipEntry = archive.CreateEntry(entry.Path, CompressionLevel.Optimal);
+                using var entryStream = zipEntry.Open();
+                using var fileStream = File.OpenRead(sourcePath);
+                fileStream.CopyTo(entryStream);
+            }
+
+            var manifestEntry = archive.CreateEntry("manifest.json", CompressionLevel.Optimal);
+            using var manifestStream = manifestEntry.Open();
+            manifestStream.Write(manifestBytes, 0, manifestBytes.Length);
+        }
+
+        File.WriteAllBytes(Path.Combine(outputDir, "manifest.json"), manifestBytes);
+
+        return zipPath;
     }
 
     internal static string ComputeSha256Hex(byte[] data)
