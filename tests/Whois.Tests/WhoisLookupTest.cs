@@ -241,7 +241,7 @@ public class WhoisLookupTest
     {
         var packProvider = Substitute.For<ITemplatePackProvider>();
         var parser = new WhoisParser();
-        var triggered = new ManualResetEventSlim(false);
+        using var triggered = new ManualResetEventSlim(false);
 
         packProvider.CheckForUpdate(Arg.Any<CancellationToken>())
             .Returns(callInfo =>
@@ -281,7 +281,7 @@ public class WhoisLookupTest
         var packProvider = Substitute.For<ITemplatePackProvider>();
         var parser = new WhoisParser();
         var callCount = 0;
-        var firstCallStarted = new ManualResetEventSlim(false);
+        using var firstCallStarted = new ManualResetEventSlim(false);
 
         packProvider.CheckForUpdate(Arg.Any<CancellationToken>())
             .Returns(callInfo =>
@@ -327,8 +327,8 @@ public class WhoisLookupTest
     {
         var packProvider = Substitute.For<ITemplatePackProvider>();
         var parser = new WhoisParser();
-        var checkForUpdateBlocked = new ManualResetEventSlim(false);
-        var checkForUpdateStarted = new ManualResetEventSlim(false);
+        using var checkForUpdateBlocked = new ManualResetEventSlim(false);
+        using var checkForUpdateStarted = new ManualResetEventSlim(false);
 
         packProvider.CheckForUpdate(Arg.Any<CancellationToken>())
             .Returns(callInfo =>
