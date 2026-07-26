@@ -80,4 +80,13 @@ internal static class NetStandardShims
         return writer.FlushAsync(cancellationToken);
 #endif
     }
+
+    public static Task<Stream> ReadAsStreamAsync(System.Net.Http.HttpContent content)
+    {
+#if NETSTANDARD2_0
+        return content.ReadAsStreamAsync();
+#else
+        return content.ReadAsStreamAsync(CancellationToken.None);
+#endif
+    }
 }
