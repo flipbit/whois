@@ -11,6 +11,7 @@ namespace Whois.Parsers;
 public class WhoisParser
 {
     private const string GenericTemplateTag = "catch-all";
+    private static readonly string[] CatchAllTags = [GenericTemplateTag];
 
     private readonly TemplateMatcher _matcher;
 #pragma warning disable MA0158 // System.Threading.Lock is not available on netstandard2.0 / net8.0
@@ -81,7 +82,7 @@ public class WhoisParser
             LoadServerGenericTemplates();
 
             match = _matcher
-                .Tokenize(content, new[] { "catch-all" })
+                .Tokenize(content, CatchAllTags)
                 .BestMatch;
         }
 

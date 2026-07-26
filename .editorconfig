@@ -152,6 +152,9 @@ dotnet_diagnostic.CA2016.severity = warning
 dotnet_diagnostic.CA2200.severity = warning
 dotnet_diagnostic.CA2213.severity = warning
 
+# Avoid constant arrays as arguments
+dotnet_diagnostic.CA1861.severity = warning
+
 [*.{xml,csproj,props,targets}]
 indent_size = 2
 

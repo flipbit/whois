@@ -12,7 +12,7 @@ public class TemplateVersionTests
 
         Assert.True(result);
         Assert.NotNull(components);
-        Assert.Equal(new[] { 2026, 7, 12, 1 }, components);
+        Assert.Equal([2026, 7, 12, 1], components);
     }
 
     [Fact]
@@ -22,7 +22,7 @@ public class TemplateVersionTests
 
         Assert.True(result);
         Assert.NotNull(components);
-        Assert.Equal(new[] { 2026, 7, 1, 1 }, components);
+        Assert.Equal([2026, 7, 1, 1], components);
     }
 
     [Fact]
