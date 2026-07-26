@@ -27,8 +27,8 @@ internal sealed class TemplatePackProvider : ITemplatePackProvider
         "https://api.github.com/repos/flipbit/whois/releases/latest";
 
     private const string EmbeddedPublicKey =
-        "untrusted comment: minisign public key BB627A8035F5648F\n" +
-        "RWSPZPU1gHpiu6ORNoQUGiAeuxhdDaq9rJ8HVRaqBy/PtM0//4zByp2I";
+        "untrusted comment: minisign public key F297E535E8BD4355\n" +
+        "RWRVQ73oNeWX8nCkcUU+rYe4ySzNZ7Op9dp7zSYjYfoiWNiRvbvW2eP/";
 
     private const long MaxDownloadBytes = 10L * 1024 * 1024; // 10 MB
     private const long MaxSigBytes = 4096;

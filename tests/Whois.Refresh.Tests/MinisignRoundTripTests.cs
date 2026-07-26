@@ -13,10 +13,10 @@ namespace Whois.Refresh.Tests;
 public class MinisignRoundTripTests
 {
     // Production signing key  -  matches EmbeddedPublicKey in TemplatePackProvider.
-    // Generated with: minisign -G -W -p whois-prod.pub -s whois-prod.key -c "whois template signing key"
+    // Generated with: minisign -G -W -p whois-prod.pub -s whois-prod.key
     private const string ProductionPublicKey =
-        "untrusted comment: minisign public key BB627A8035F5648F\n" +
-        "RWSPZPU1gHpiu6ORNoQUGiAeuxhdDaq9rJ8HVRaqBy/PtM0//4zByp2I";
+        "untrusted comment: minisign public key F297E535E8BD4355\n" +
+        "RWRVQ73oNeWX8nCkcUU+rYe4ySzNZ7Op9dp7zSYjYfoiWNiRvbvW2eP/";
 
     private const string TestPayload = "test payload for signature verification";
 
@@ -24,9 +24,9 @@ public class MinisignRoundTripTests
     // The -l flag uses legacy raw Ed25519 (algorithm "Ed"), required by MinisignVerifier.
     private const string ValidSignature =
         "untrusted comment: signature from minisign secret key\n" +
-        "RWSPZPU1gHpiuypHe8BITMc22gOoX9WSLCbUu06BtHZpw/SYNksOnOCHufcc4BLPL+SRVpA0D+24KRF2J+3u0j2uSqOIxzblKgU=\n" +
+        "RWRVQ73oNeWX8qa4/yzGqygf9YyDPxcnNoRRp9fhp+Qn0vNRWmYpTp3SlXRkSnbIbWXHu0HsDn24r0Da4Mh7YUzJ5qZyHfVVQgs=\n" +
         "trusted comment: test signature\n" +
-        "3X5rPOd8zicHRFDLV8vTofY6Mg70ENxwBgpf4m7hWeLI8rge7Ix+faCLH+HjjdINb4AXv54RetmbwWap7IkzAA==";
+        "k78QqXjPMwcs+yw8sHUtaWWAg6U2ED61Nb4qvbIrLW4ZYcgueZZD04MVqfjlbSOd8Dh3gLVWSFMXi4Q0NhoZCw==";
 
     // A second key pair used only for the negative tests.
     // Generated with: minisign -G -W -p test-b.pub -s test-b.key -c "test key B"
