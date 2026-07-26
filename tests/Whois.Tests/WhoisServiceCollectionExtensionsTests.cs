@@ -2,7 +2,6 @@ using Microsoft.Extensions.DependencyInjection;
 using Microsoft.Extensions.Options;
 using Whois.Net;
 using Whois.Parsers;
-using Whois.Servers;
 using Whois.Templates;
 using Xunit;
 
@@ -20,7 +19,7 @@ public class WhoisServiceCollectionExtensionsTests
 
         Assert.NotNull(provider.GetService<IWhoisLookup>());
         Assert.NotNull(provider.GetService<ITcpReader>());
-        Assert.NotNull(provider.GetService<IWhoisServerLookup>());
+        // IWhoisServerLookup removed in Task 3 refactor -- server discovery is handled by protocol clients (Task 6+)
     }
 
     [Fact]

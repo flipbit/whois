@@ -4,7 +4,6 @@ using Microsoft.Extensions.Logging;
 using Microsoft.Extensions.Options;
 using Whois.Net;
 using Whois.Parsers;
-using Whois.Servers;
 using Whois.Templates;
 
 namespace Whois;
@@ -46,7 +45,6 @@ public static class WhoisServiceCollectionExtensions
             new WhoisParser(server => sp.GetRequiredService<ITemplatePackProvider>().GetCachedTemplatePath(server)));
 
         services.AddTransient<ITcpReader, TcpReader>();
-        services.AddTransient<IWhoisServerLookup, IanaServerLookup>();
         services.AddTransient<IWhoisLookup, WhoisLookup>();
     }
 

@@ -1,11 +1,12 @@
 using Tokens;
 using Tokens.Exceptions;
 using Whois.Parsers.Fixups;
+using Whois.Protocols;
 
 namespace Whois.Parsers;
 
 /// <summary>
-/// Parser to turn WHOIS server responses into <see cref="WhoisResponse"/>
+/// Parser to turn WHOIS server responses into <see cref="WhoisRecord"/>
 /// objects.
 /// </summary>
 public class WhoisParser
@@ -55,16 +56,16 @@ public class WhoisParser
     /// <summary>
     /// Template Fixups
     /// </summary>
-    public IList<IFixup> FixUps { get; }
+    internal IList<IFixup> FixUps { get; }
 
     /// <summary>
     /// Parses the WHOIS server response for the given server and TLD.
     /// </summary>
-    public WhoisResponse Parse(string whoisServer, string content)
+    internal WhoisRecord Parse(string whoisServer, string content)
     {
         if (string.IsNullOrEmpty(content))
         {
-            return new WhoisResponse
+            return new WhoisRecord
             {
                 Content = content,
                 Status = RegistrationStatus.Unknown,
@@ -88,15 +89,15 @@ public class WhoisParser
 
         if (match != null)
         {
-            WhoisResponse value;
+            WhoisRecord value;
             var assignmentErrors = 0;
             try
             {
-                value = match.Assign<WhoisResponse>();
+                value = match.Assign<WhoisRecord>();
             }
             catch (AssignmentFailedException ex)
             {
-                value = (WhoisResponse)ex.PartialResult!;
+                value = (WhoisRecord)ex.PartialResult!;
                 assignmentErrors = ex.Errors.Count;
             }
 
@@ -122,7 +123,7 @@ public class WhoisParser
             return value;
         }
 
-        return new WhoisResponse
+        return new WhoisRecord
         {
             Content = content,
             Status = RegistrationStatus.Unknown,
