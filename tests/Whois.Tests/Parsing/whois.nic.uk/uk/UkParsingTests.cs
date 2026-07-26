@@ -672,7 +672,6 @@ public class UkParsingTests : ParsingTests
 
         Assert.Equal(WhoisStatus.Suspended, response.Status);
 
-        AssertWriter.Write(response);
         Assert.Equal(0, response.ParsingErrors);
         Assert.Equal("whois.nic.uk/uk/found/01", response.TemplateName);
 

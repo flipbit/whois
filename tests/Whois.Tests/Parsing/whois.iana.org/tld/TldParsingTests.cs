@@ -173,6 +173,5 @@ public class TldParsingTests : ParsingTests
         Assert.True(sample.Length > 0);
         Assert.Equal(WhoisStatus.NotAssigned, response.Status);
 
-        AssertWriter.Write(response);
     }
 }

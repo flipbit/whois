@@ -99,7 +99,6 @@ public class IanaServerLookupTest
 
         var response = await lookup.Lookup(new WhoisRequest("test.be"));
 
-        AssertWriter.Write(response);
         Assert.Equal(0, response.ParsingErrors);
 
         Assert.Equal("be", response.DomainName.ToString());
@@ -171,7 +170,6 @@ public class IanaServerLookupTest
 
         var response = await lookup.Lookup(new WhoisRequest("test.be"));
 
-        AssertWriter.Write(response);
         Assert.Equal(0, response.ParsingErrors);
 
         Assert.Equal("eh", response.DomainName.ToString());

@@ -63,7 +63,6 @@ public class UgParsingTests : ParsingTests
         Assert.Equal("ACTIVE", response.DomainStatus[0]);
 
         Assert.Equal(27, response.FieldsParsed);
-        AssertWriter.Write(response);
     }
 
     [Fact]

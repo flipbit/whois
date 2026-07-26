@@ -32,6 +32,5 @@ public class BzParsingTests : ParsingTests
         Assert.True(sample.Length > 0);
         Assert.Equal(WhoisStatus.Found, response.Status);
 
-        AssertWriter.Write(response);
     }
 }

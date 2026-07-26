@@ -68,7 +68,6 @@ public class UzParsingTests : ParsingTests
         Assert.Equal("RESERVED", response.DomainStatus[0]);
 
         Assert.Equal(7, response.FieldsParsed);
-        AssertWriter.Write(response);
     }
 
     [Fact]
