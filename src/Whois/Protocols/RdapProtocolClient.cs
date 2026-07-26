@@ -7,10 +7,7 @@ using Whois.Servers;
 
 namespace Whois.Protocols;
 
-// MA0182: Will be consumed by WhoisLookup orchestrator (Task 8) -- suppress until then.
-#pragma warning disable MA0182
 internal sealed class RdapProtocolClient : IProtocolClient
-#pragma warning restore MA0182
 {
     private const int MaxResponseSizeBytes = 2 * 1024 * 1024; // 2 MB
 

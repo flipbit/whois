@@ -7,10 +7,7 @@ using Whois.Servers;
 
 namespace Whois.Protocols;
 
-// MA0182: Will be consumed by WhoisLookup orchestrator (Task 8) -- suppress until then.
-#pragma warning disable MA0182
 internal sealed class WhoisProtocolClient : IProtocolClient
-#pragma warning restore MA0182
 {
     private readonly ITcpReader _tcpReader;
     private readonly IBootstrapRegistry _bootstrap;

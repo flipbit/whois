@@ -13,7 +13,7 @@ public class Contact
         RegistryId = contact.RegistryId;
         Name = contact.Name;
         Organization = contact.Organization;
-        Address = contact.Address;
+        Address = contact.Address?.Lines;
         TelephoneNumber = contact.TelephoneNumber;
         TelephoneNumberExt = contact.TelephoneNumberExt;
         FaxNumber = contact.FaxNumber;
@@ -28,7 +28,7 @@ public class Contact
     [JsonIgnore(Condition = JsonIgnoreCondition.WhenWritingNull)]
     public string? Organization { get; set; }
     [JsonIgnore(Condition = JsonIgnoreCondition.WhenWritingNull)]
-    public IList<string>? Address { get; }
+    public IReadOnlyList<string>? Address { get; }
     [JsonIgnore(Condition = JsonIgnoreCondition.WhenWritingNull)]
     public string? TelephoneNumber { get; set; }
     [JsonIgnore(Condition = JsonIgnoreCondition.WhenWritingNull)]

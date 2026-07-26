@@ -8,6 +8,26 @@ namespace Whois.Net;
 internal static class NetStandardShims
 {
     /// <summary>
+    /// Creates an <see cref="HttpClient"/> with connection pooling where the runtime supports it.
+    /// On net8.0+, uses <c>SocketsHttpHandler</c> with a 2-minute pooled connection lifetime.
+    /// On netstandard2.0, falls back to a plain <c>HttpClientHandler</c>.
+    /// </summary>
+#pragma warning disable CA2000 // Handler ownership transfers to HttpClient
+    public static HttpClient CreatePooledHttpClient()
+    {
+#if NETSTANDARD2_0
+        return new HttpClient(new HttpClientHandler { MaxAutomaticRedirections = 5 });
+#else
+        return new HttpClient(new SocketsHttpHandler
+        {
+            PooledConnectionLifetime = TimeSpan.FromMinutes(2),
+            MaxAutomaticRedirections = 5,
+        });
+#endif
+    }
+#pragma warning restore CA2000
+
+    /// <summary>
     /// Returns true when running on Windows. Shims <c>OperatingSystem.IsWindows()</c> for netstandard2.0.
     /// </summary>
     public static bool IsWindows()

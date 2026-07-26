@@ -108,7 +108,7 @@ public class RefreshEngine
             result.ExtractedFields = GetExtractedFieldNames(parsed);
 
             // Determine actual status for save directory
-            var actualStatus = MapWhoisStatus(parsed.Status);
+            var actualStatus = MapRegistrationStatus(parsed.Status);
             var saveStatus = actualStatus ?? status;
             if (actualStatus != null && !string.Equals(actualStatus, status, StringComparison.OrdinalIgnoreCase))
             {
@@ -167,7 +167,7 @@ public class RefreshEngine
         return result;
     }
 
-    private static List<string> GetExtractedFieldNames(Whois.WhoisResponse parsed)
+    private static List<string> GetExtractedFieldNames(Whois.Protocols.WhoisRecord parsed)
     {
         var fields = new List<string>();
         if (parsed.DomainName != null) fields.Add("DomainName");
@@ -186,31 +186,31 @@ public class RefreshEngine
         return fields;
     }
 
-    private static string? MapWhoisStatus(Whois.WhoisStatus status) => status switch
+    private static string? MapRegistrationStatus(RegistrationStatus status) => status switch
     {
-        Whois.WhoisStatus.Found => "found",
-        Whois.WhoisStatus.NotFound => "not-found",
-        Whois.WhoisStatus.Throttled => "throttled",
-        Whois.WhoisStatus.Reserved => "reserved",
-        Whois.WhoisStatus.Suspended => "suspended",
-        Whois.WhoisStatus.Inactive => "inactive",
-        Whois.WhoisStatus.Expired => "expired",
-        Whois.WhoisStatus.Blocked => "blocked",
-        Whois.WhoisStatus.Deactivated => "deactivated",
-        Whois.WhoisStatus.Error => "error",
-        Whois.WhoisStatus.Failed => "failed",
-        Whois.WhoisStatus.Invalid => "invalid",
-        Whois.WhoisStatus.Locked => "locked",
-        Whois.WhoisStatus.NotAssigned => "not-assigned",
-        Whois.WhoisStatus.NotAvailable => "not-available",
-        Whois.WhoisStatus.OutOfService => "out-of-service",
-        Whois.WhoisStatus.PendingDelete => "pending-delete",
-        Whois.WhoisStatus.Quarantined => "quarantined",
-        Whois.WhoisStatus.Redemption => "redemption",
-        Whois.WhoisStatus.ToBeReleased => "to-be-released",
-        Whois.WhoisStatus.Unavailable => "unavailable",
-        Whois.WhoisStatus.Unconfirmed => "unconfirmed",
-        Whois.WhoisStatus.Unknown => null,
+        RegistrationStatus.Found => "found",
+        RegistrationStatus.NotFound => "not-found",
+        RegistrationStatus.Throttled => "throttled",
+        RegistrationStatus.Reserved => "reserved",
+        RegistrationStatus.Suspended => "suspended",
+        RegistrationStatus.Inactive => "inactive",
+        RegistrationStatus.Expired => "expired",
+        RegistrationStatus.Blocked => "blocked",
+        RegistrationStatus.Deactivated => "deactivated",
+        RegistrationStatus.Error => "error",
+        RegistrationStatus.Failed => "failed",
+        RegistrationStatus.Invalid => "invalid",
+        RegistrationStatus.Locked => "locked",
+        RegistrationStatus.NotAssigned => "not-assigned",
+        RegistrationStatus.NotAvailable => "not-available",
+        RegistrationStatus.OutOfService => "out-of-service",
+        RegistrationStatus.PendingDelete => "pending-delete",
+        RegistrationStatus.Quarantined => "quarantined",
+        RegistrationStatus.Redemption => "redemption",
+        RegistrationStatus.ToBeReleased => "to-be-released",
+        RegistrationStatus.Unavailable => "unavailable",
+        RegistrationStatus.Unconfirmed => "unconfirmed",
+        RegistrationStatus.Unknown => null,
         _ => null,
     };
 
