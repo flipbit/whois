@@ -1,27 +1,27 @@
 namespace Whois;
 
 /// <summary>
-/// Represents Trademark information embedded in a <see cref="WhoisResponse"/>.
+/// Represents trademark information embedded in a domain registration.
 /// </summary>
 public class Trademark
 {
     /// <summary>
-    /// The Trademark Name
+    /// The trademark name.
     /// </summary>
-    public string? Name { get; set; }
+    public string? Name { get; init; }
 
     /// <summary>
-    /// The date of the Trademark
+    /// The date of the trademark.
     /// </summary>
-    public DateTime Date { get; set; }
+    public DateTime? Date { get; init; }
 
     /// <summary>
-    /// The country where the Trademark is registered
+    /// The country where the trademark is registered.
     /// </summary>
-    public string? Country { get; set; }
+    public string? Country { get; init; }
 
     /// <summary>
-    /// The Trademark number
+    /// The trademark number.
     /// </summary>
-    public int Number { get; set; }
+    public int? Number { get; init; }
 }

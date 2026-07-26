@@ -1,37 +1,37 @@
 namespace Whois;
 
 /// <summary>
-/// Represents a Domain Name registrar
+/// Represents a domain name registrar.
 /// </summary>
 public class Registrar
 {
     /// <summary>
-    /// The name of he Registrar
+    /// The registrar name.
     /// </summary>
-    public string? Name { get; set; }
+    public string? Name { get; init; }
 
     /// <summary>
-    /// The Registrar's IANA Number, if available
+    /// The registrar's IANA number, if available.
     /// </summary>
-    public string? IanaId { get; set; }
+    public string? IanaId { get; init; }
 
     /// <summary>
-    /// The URL of the Registrar's website
+    /// The URL of the registrar's website.
     /// </summary>
-    public string? Url { get; set; }
+    public string? Url { get; init; }
 
     /// <summary>
-    /// The Abuse contact email
+    /// The abuse contact email.
     /// </summary>
-    public string? AbuseEmail { get; set; }
+    public string? AbuseEmail { get; init; }
 
     /// <summary>
-    /// The Abuse contact telephone number
+    /// The abuse contact telephone number.
     /// </summary>
-    public string? AbuseTelephoneNumber { get; set; }
+    public string? AbuseTelephoneNumber { get; init; }
 
     /// <summary>
-    /// The Hostname of the Registrar's WHOIS server
+    /// The hostname of the registrar's WHOIS server.
     /// </summary>
-    public HostName? WhoisServer { get; set; }
+    public HostName? WhoisServer { get; init; }
 }
