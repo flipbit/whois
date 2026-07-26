@@ -1,0 +1,46 @@
+name: "Custom CodeQL config"
+
+paths-ignore:
+  - '**/obj/**'
+
+query-filters:
+  # --- Rules enforced at build time by Roslyn analyzers ---
+  - exclude:
+      id: cs/path-combine
+  - exclude:
+      id: cs/local-not-disposed
+  - exclude:
+      id: cs/catch-of-all-exceptions
+  - exclude:
+      id: cs/empty-catch-block
+  - exclude:
+      id: cs/constant-condition
+  - exclude:
+      id: cs/useless-assignment-to-local
+  - exclude:
+      id: cs/inefficient-containskey
+  # --- Style / noise ---
+  - exclude:
+      id: cs/unmanaged-code
+  - exclude:
+      id: cs/call-to-unmanaged-code
+  - exclude:
+      id: cs/too-many-ref-parameters
+  - exclude:
+      id: cs/complex-block
+  - exclude:
+      id: cs/missed-ternary-operator
+  - exclude:
+      id: cs/nested-if-statements
+  - exclude:
+      id: cs/linq/missed-where
+  - exclude:
+      id: cs/linq/missed-select
+  - exclude:
+      id: cs/useless-upcast
+  - exclude:
+      id: cs/useless-tostring-call
+  - exclude:
+      id: cs/unused-collection
+  - exclude:
+      id: cs/simplifiable-boolean-expression
