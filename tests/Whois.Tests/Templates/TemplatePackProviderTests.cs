@@ -409,7 +409,7 @@ public class TemplatePackProviderTests : IDisposable
 
             // metadata  -  first call blocks until we release the gate
             Interlocked.Increment(ref metadataCallCount);
-            await tcs.Task;
+            await tcs.Task.ConfigureAwait(false);
             return new HttpResponseMessage(HttpStatusCode.OK)
             {
                 Content = new StringContent(releaseJson, Encoding.UTF8),
@@ -431,7 +431,7 @@ public class TemplatePackProviderTests : IDisposable
 
         // Unblock first call
         tcs.SetResult(true);
-        var firstResult = await first;
+        var firstResult = await first.ConfigureAwait(false);
 
         Assert.Equal(TemplateUpdateOutcome.Updated, firstResult.Outcome);
         Assert.Equal(1, metadataCallCount);

@@ -39,7 +39,7 @@ public static class DomainRegistry
 
     public static async Task<DomainRegistryData> LoadAsync(string jsonc)
     {
-        await Task.CompletedTask; // Sync parse, async signature for file-based overload later
+        await Task.CompletedTask.ConfigureAwait(false); // Sync parse, async signature for file-based overload later
 
         using var doc = JsonDocument.Parse(jsonc, JsonOptions);
         var root = doc.RootElement;

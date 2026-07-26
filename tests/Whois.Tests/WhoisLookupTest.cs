@@ -368,7 +368,7 @@ public class WhoisLookupTest
 
         Assert.True(completedWithinTimeout, "Lookup did not complete within timeout - it was blocked by CheckForUpdate");
 
-        var result = await lookupTask;
+        var result = await lookupTask.ConfigureAwait(false);
         Assert.Equal("google.com", result.DomainName.ToString());
         Assert.Equal(WhoisStatus.Found, result.Status);
 

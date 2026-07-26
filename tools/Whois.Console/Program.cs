@@ -9,7 +9,7 @@ internal class Program
     private static async Task Main(string[] args)
     {
         await Parser.Default.ParseArguments<Options>(args)
-            .WithParsedAsync(RunLookup);
+            .WithParsedAsync(RunLookup).ConfigureAwait(false);
     }
 
     private static async Task RunLookup(Options options)
@@ -24,7 +24,7 @@ internal class Program
         var whoisOptions = Microsoft.Extensions.Options.Options.Create(new WhoisOptions());
         var lookup = new WhoisLookup(whoisOptions, logger);
 
-        var response = await lookup.Lookup(options.Query!);
+        var response = await lookup.Lookup(options.Query!).ConfigureAwait(false);
 
         if (options.ConvertToJson)
         {

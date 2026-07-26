@@ -58,7 +58,7 @@ public class MultithreadingTests
 
                 try
                 {
-                    var response = await lookup.Lookup(domain.DomainName);
+                    var response = await lookup.Lookup(domain.DomainName).ConfigureAwait(false);
 
                     if (response != null)
                     {
