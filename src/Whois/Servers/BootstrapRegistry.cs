@@ -30,14 +30,14 @@ public class BootstrapRegistry : IBootstrapRegistry
     {
         var data = _data.Value;
         data.Rdap.TryGetValue(tld.ToLowerInvariant(), out var url);
-        return Task.FromResult(url);
+        return Task.FromResult<string?>(url);
     }
 
     public Task<string?> GetWhoisServer(string tld, CancellationToken ct)
     {
         var data = _data.Value;
         data.Whois.TryGetValue(tld.ToLowerInvariant(), out var server);
-        return Task.FromResult(server);
+        return Task.FromResult<string?>(server);
     }
 
     public Task Refresh(CancellationToken ct)
