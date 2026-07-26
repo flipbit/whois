@@ -20,7 +20,7 @@ public class IoParsingTests : ParsingTests
         var response = parser.Parse("whois.nic.io", sample);
 
         Assert.True(sample.Length > 0);
-        Assert.Equal(WhoisStatus.Found, response.Status);
+        Assert.Equal(RegistrationStatus.Found, response.Status);
 
         Assert.Equal(0, response.ParsingErrors);
         Assert.Equal("generic/tld/found/01", response.TemplateName);
@@ -60,7 +60,7 @@ public class IoParsingTests : ParsingTests
         var response = parser.Parse("whois.nic.io", sample);
 
         Assert.True(sample.Length > 0);
-        Assert.Equal(WhoisStatus.Reserved, response.Status);
+        Assert.Equal(RegistrationStatus.Reserved, response.Status);
 
         Assert.Equal(0, response.ParsingErrors);
         Assert.Equal("whois.nic.io/io/reserved/01", response.TemplateName);
@@ -75,7 +75,7 @@ public class IoParsingTests : ParsingTests
         var response = parser.Parse("whois.nic.io", sample);
 
         Assert.True(sample.Length > 0);
-        Assert.Equal(WhoisStatus.NotFound, response.Status);
+        Assert.Equal(RegistrationStatus.NotFound, response.Status);
 
         Assert.Equal(0, response.ParsingErrors);
         Assert.Equal("generic/tld/not-found/03", response.TemplateName);
@@ -92,7 +92,7 @@ public class IoParsingTests : ParsingTests
         var response = parser.Parse("whois.nic.io", sample);
 
         Assert.True(sample.Length > 0);
-        Assert.Equal(WhoisStatus.Found, response.Status);
+        Assert.Equal(RegistrationStatus.Found, response.Status);
 
         Assert.Equal(0, response.ParsingErrors);
         Assert.Equal("generic/tld/found/01", response.TemplateName);

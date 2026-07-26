@@ -20,7 +20,7 @@ public class UaParsingTests : ParsingTests
         var response = parser.Parse("whois.ua", sample);
 
         Assert.True(sample.Length > 0);
-        Assert.Equal(WhoisStatus.Found, response.Status);
+        Assert.Equal(RegistrationStatus.Found, response.Status);
 
         Assert.Equal(0, response.ParsingErrors);
         Assert.Equal("whois.ua/ua/found/01", response.TemplateName);
@@ -72,7 +72,7 @@ public class UaParsingTests : ParsingTests
         var response = parser.Parse("whois.ua", sample);
 
         Assert.True(sample.Length > 0);
-        Assert.Equal(WhoisStatus.Found, response.Status);
+        Assert.Equal(RegistrationStatus.Found, response.Status);
 
         Assert.Equal(0, response.ParsingErrors);
         Assert.Equal("whois.ua/ua/found/01", response.TemplateName);
@@ -127,7 +127,7 @@ public class UaParsingTests : ParsingTests
         var response = parser.Parse("whois.ua", sample);
 
         Assert.True(sample.Length > 0);
-        Assert.Equal(WhoisStatus.Other, response.Status);
+        Assert.Equal(RegistrationStatus.Other, response.Status);
 
         Assert.Equal(0, response.ParsingErrors);
         Assert.Equal("whois.ua/ua/found/01", response.TemplateName);
@@ -210,7 +210,7 @@ public class UaParsingTests : ParsingTests
         var response = parser.Parse("whois.ua", sample);
 
         Assert.True(sample.Length > 0);
-        Assert.Equal(WhoisStatus.Found, response.Status);
+        Assert.Equal(RegistrationStatus.Found, response.Status);
 
         Assert.Equal(0, response.ParsingErrors);
         Assert.Equal("whois.ua/ua/found/01", response.TemplateName);
@@ -264,7 +264,7 @@ public class UaParsingTests : ParsingTests
         var response = parser.Parse("whois.ua", sample);
 
         Assert.True(sample.Length > 0);
-        Assert.Equal(WhoisStatus.PendingDelete, response.Status);
+        Assert.Equal(RegistrationStatus.PendingDelete, response.Status);
 
         Assert.Equal(0, response.ParsingErrors);
         Assert.Equal("whois.ua/ua/found/01", response.TemplateName);
@@ -347,7 +347,7 @@ public class UaParsingTests : ParsingTests
         var response = parser.Parse("whois.ua", sample);
 
         Assert.True(sample.Length > 0);
-        Assert.Equal(WhoisStatus.Redemption, response.Status);
+        Assert.Equal(RegistrationStatus.Redemption, response.Status);
 
         Assert.Equal(0, response.ParsingErrors);
         Assert.Equal("whois.ua/ua/found/01", response.TemplateName);
@@ -411,7 +411,7 @@ public class UaParsingTests : ParsingTests
         var response = parser.Parse("whois.ua", sample);
 
         Assert.True(sample.Length > 0);
-        Assert.Equal(WhoisStatus.NotFound, response.Status);
+        Assert.Equal(RegistrationStatus.NotFound, response.Status);
 
         Assert.Equal(0, response.ParsingErrors);
         Assert.Equal("whois.ua/ua/not-found/01", response.TemplateName);
@@ -428,7 +428,7 @@ public class UaParsingTests : ParsingTests
         var response = parser.Parse("whois.ua", sample);
 
         Assert.True(sample.Length > 0);
-        Assert.Equal(WhoisStatus.Found, response.Status);
+        Assert.Equal(RegistrationStatus.Found, response.Status);
 
         Assert.Equal(0, response.ParsingErrors);
         Assert.Equal("whois.ua/ua/found/01", response.TemplateName);
@@ -467,7 +467,7 @@ public class UaParsingTests : ParsingTests
         var response = parser.Parse("whois.ua", sample);
 
         Assert.True(sample.Length > 0);
-        Assert.Equal(WhoisStatus.Found, response.Status);
+        Assert.Equal(RegistrationStatus.Found, response.Status);
 
         Assert.Equal(0, response.ParsingErrors);
         Assert.Equal("whois.ua/ua/found/02", response.TemplateName);

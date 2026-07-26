@@ -20,7 +20,7 @@ public class CmParsingTests : ParsingTests
         var response = parser.Parse("whois.netcom.cm", sample);
 
         Assert.True(sample.Length > 0);
-        Assert.Equal(WhoisStatus.NotFound, response.Status);
+        Assert.Equal(RegistrationStatus.NotFound, response.Status);
 
         Assert.Equal(0, response.ParsingErrors);
         Assert.Equal("generic/tld/not-found/04", response.TemplateName);
@@ -40,7 +40,7 @@ public class CmParsingTests : ParsingTests
         var response = parser.Parse("whois.netcom.cm", sample);
 
         Assert.True(sample.Length > 0);
-        Assert.Equal(WhoisStatus.Found, response.Status);
+        Assert.Equal(RegistrationStatus.Found, response.Status);
 
         Assert.Equal(0, response.ParsingErrors);
         Assert.Equal("generic/tld/found/01", response.TemplateName);
@@ -99,7 +99,7 @@ public class CmParsingTests : ParsingTests
         var response = parser.Parse("whois.netcom.cm", sample);
 
         Assert.True(sample.Length > 0);
-        Assert.Equal(WhoisStatus.Suspended, response.Status);
+        Assert.Equal(RegistrationStatus.Suspended, response.Status);
 
         Assert.Equal(0, response.ParsingErrors);
         Assert.Equal("whois.netcom.cm/cm/found/01", response.TemplateName);

@@ -20,7 +20,7 @@ public class PtParsingTests : ParsingTests
         var response = parser.Parse("whois.dns.pt", sample);
 
         Assert.True(sample.Length > 0);
-        Assert.Equal(WhoisStatus.Found, response.Status);
+        Assert.Equal(RegistrationStatus.Found, response.Status);
 
         Assert.Equal(0, response.ParsingErrors);
         Assert.Equal("generic/tld/found/01", response.TemplateName);
@@ -57,7 +57,7 @@ public class PtParsingTests : ParsingTests
         var response = parser.Parse("whois.dns.pt", sample);
 
         Assert.True(sample.Length > 0);
-        Assert.Equal(WhoisStatus.Other, response.Status);
+        Assert.Equal(RegistrationStatus.Other, response.Status);
 
         Assert.Equal(0, response.ParsingErrors);
         Assert.Equal("whois.dns.pt/pt/found/01", response.TemplateName);
@@ -101,7 +101,7 @@ public class PtParsingTests : ParsingTests
         var response = parser.Parse("whois.dns.pt", sample);
 
         Assert.True(sample.Length > 0);
-        Assert.Equal(WhoisStatus.NotFound, response.Status);
+        Assert.Equal(RegistrationStatus.NotFound, response.Status);
 
         Assert.Equal(0, response.ParsingErrors);
         Assert.Equal("whois.dns.pt/pt/not-found/01", response.TemplateName);
@@ -119,7 +119,7 @@ public class PtParsingTests : ParsingTests
         var response = parser.Parse("whois.dns.pt", sample);
 
         Assert.True(sample.Length > 0);
-        Assert.Equal(WhoisStatus.Other, response.Status);
+        Assert.Equal(RegistrationStatus.Other, response.Status);
 
         Assert.Equal(0, response.ParsingErrors);
         Assert.Equal("whois.dns.pt/pt/found/01", response.TemplateName);
@@ -163,7 +163,7 @@ public class PtParsingTests : ParsingTests
         var response = parser.Parse("whois.dns.pt", sample);
 
         Assert.True(sample.Length > 0);
-        Assert.Equal(WhoisStatus.Found, response.Status);
+        Assert.Equal(RegistrationStatus.Found, response.Status);
 
         Assert.Equal(0, response.ParsingErrors);
         Assert.Equal("whois.dns.pt/pt/found/01", response.TemplateName);
@@ -207,7 +207,7 @@ public class PtParsingTests : ParsingTests
         var response = parser.Parse("whois.dns.pt", sample);
 
         Assert.True(sample.Length > 0);
-        Assert.Equal(WhoisStatus.Reserved, response.Status);
+        Assert.Equal(RegistrationStatus.Reserved, response.Status);
 
         Assert.Equal(0, response.ParsingErrors);
         Assert.Equal("whois.dns.pt/pt/found/01", response.TemplateName);

@@ -20,7 +20,7 @@ public class SlParsingTests : ParsingTests
         var response = parser.Parse("whois.nic.sl", sample);
 
         Assert.True(sample.Length > 0);
-        Assert.Equal(WhoisStatus.NotFound, response.Status);
+        Assert.Equal(RegistrationStatus.NotFound, response.Status);
 
         Assert.Equal(0, response.ParsingErrors);
         Assert.Equal("generic/tld/not-found/04", response.TemplateName);
@@ -36,7 +36,7 @@ public class SlParsingTests : ParsingTests
         var sample = SampleReader.Read("whois.nic.sl", "sl", "found", "google.sl.txt");
         var response = parser.Parse("whois.nic.sl", sample);
 
-        Assert.Equal(WhoisStatus.Found, response.Status);
+        Assert.Equal(RegistrationStatus.Found, response.Status);
 
         Assert.Equal(0, response.ParsingErrors);
         Assert.Equal("generic/tld/found/01", response.TemplateName);

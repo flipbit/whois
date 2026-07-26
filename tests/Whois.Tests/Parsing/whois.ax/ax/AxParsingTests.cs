@@ -20,7 +20,7 @@ public class AxParsingTests : ParsingTests
         var response = parser.Parse("whois.ax", sample);
 
         Assert.True(sample.Length > 0);
-        Assert.Equal(WhoisStatus.NotFound, response.Status);
+        Assert.Equal(RegistrationStatus.NotFound, response.Status);
 
         Assert.Equal(2, response.FieldsParsed);
         Assert.Equal(0, response.ParsingErrors);
@@ -36,7 +36,7 @@ public class AxParsingTests : ParsingTests
         var response = parser.Parse("whois.ax", sample);
 
         Assert.True(sample.Length > 0);
-        Assert.Equal(WhoisStatus.Found, response.Status);
+        Assert.Equal(RegistrationStatus.Found, response.Status);
 
         Assert.Equal(11, response.FieldsParsed);
         Assert.Equal(0, response.ParsingErrors);

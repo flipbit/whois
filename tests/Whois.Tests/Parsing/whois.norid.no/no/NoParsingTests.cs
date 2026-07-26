@@ -20,7 +20,7 @@ public class NoParsingTests : ParsingTests
         var response = parser.Parse("whois.norid.no", sample);
 
         Assert.True(sample.Length > 0);
-        Assert.Equal(WhoisStatus.NotFound, response.Status);
+        Assert.Equal(RegistrationStatus.NotFound, response.Status);
 
         Assert.Equal(0, response.ParsingErrors);
         Assert.Equal("whois.norid.no/no/not-found/01", response.TemplateName);
@@ -35,7 +35,7 @@ public class NoParsingTests : ParsingTests
         var response = parser.Parse("whois.norid.no", sample);
 
         Assert.True(sample.Length > 0);
-        Assert.Equal(WhoisStatus.Found, response.Status);
+        Assert.Equal(RegistrationStatus.Found, response.Status);
 
         Assert.Equal(0, response.ParsingErrors);
         Assert.Equal("whois.norid.no/no/found/01", response.TemplateName);

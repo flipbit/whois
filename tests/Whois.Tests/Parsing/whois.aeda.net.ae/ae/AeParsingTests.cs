@@ -20,7 +20,7 @@ public class AeParsingTests : ParsingTests
         var response = parser.Parse("whois.aeda.net.ae", sample);
 
         Assert.True(sample.Length > 0);
-        Assert.Equal(WhoisStatus.NotFound, response.Status);
+        Assert.Equal(RegistrationStatus.NotFound, response.Status);
     }
 
     [Fact]
@@ -30,7 +30,7 @@ public class AeParsingTests : ParsingTests
         var response = parser.Parse("whois.aeda.net.ae", sample);
 
         Assert.True(sample.Length > 0);
-        Assert.Equal(WhoisStatus.Found, response.Status);
+        Assert.Equal(RegistrationStatus.Found, response.Status);
 
         Assert.Equal(12, response.FieldsParsed);
         Assert.Equal(0, response.ParsingErrors);

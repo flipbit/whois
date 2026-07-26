@@ -20,7 +20,7 @@ public class BrParsingTests : ParsingTests
         var response = parser.Parse("whois.registro.br", sample);
 
         Assert.True(sample.Length > 0);
-        Assert.Equal(WhoisStatus.Found, response.Status);
+        Assert.Equal(RegistrationStatus.Found, response.Status);
 
         Assert.Equal(0, response.ParsingErrors);
         Assert.Equal("whois.registro.br/br/found/01", response.TemplateName);
@@ -73,7 +73,7 @@ public class BrParsingTests : ParsingTests
         var response = parser.Parse("whois.registro.br", sample);
 
         Assert.True(sample.Length > 0);
-        Assert.Equal(WhoisStatus.NotFound, response.Status);
+        Assert.Equal(RegistrationStatus.NotFound, response.Status);
 
         Assert.Equal(0, response.ParsingErrors);
         Assert.Equal("whois.registro.br/br/not-found/01", response.TemplateName);
@@ -90,7 +90,7 @@ public class BrParsingTests : ParsingTests
         var response = parser.Parse("whois.registro.br", sample);
 
         Assert.True(sample.Length > 0);
-        Assert.Equal(WhoisStatus.Throttled, response.Status);
+        Assert.Equal(RegistrationStatus.Throttled, response.Status);
 
         Assert.Equal(0, response.ParsingErrors);
         Assert.Equal("whois.registro.br/br/throttled/02", response.TemplateName);
@@ -107,7 +107,7 @@ public class BrParsingTests : ParsingTests
         var response = parser.Parse("whois.registro.br", sample);
 
         Assert.True(sample.Length > 0);
-        Assert.Equal(WhoisStatus.Found, response.Status);
+        Assert.Equal(RegistrationStatus.Found, response.Status);
 
         Assert.Equal(0, response.ParsingErrors);
         Assert.Equal("whois.registro.br/br/found/01", response.TemplateName);
@@ -157,7 +157,7 @@ public class BrParsingTests : ParsingTests
         var response = parser.Parse("whois.registro.br", sample);
 
         Assert.True(sample.Length > 0);
-        Assert.Equal(WhoisStatus.Found, response.Status);
+        Assert.Equal(RegistrationStatus.Found, response.Status);
 
         Assert.Equal(0, response.ParsingErrors);
         Assert.Equal("whois.registro.br/br/found/01", response.TemplateName);
@@ -176,7 +176,7 @@ public class BrParsingTests : ParsingTests
         var sample = SampleReader.Read("whois.registro.br", "br", "found", "001hosting.com.br.txt");
         var response = parser.Parse("whois.registro.br", sample);
 
-        Assert.Equal(WhoisStatus.Found, response.Status);
+        Assert.Equal(RegistrationStatus.Found, response.Status);
 
         Assert.Equal(0, response.ParsingErrors);
         Assert.Equal("whois.registro.br/br/found/01", response.TemplateName);

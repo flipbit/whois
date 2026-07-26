@@ -20,7 +20,7 @@ public class CoZaParsingTests : ParsingTests
         var response = parser.Parse("coza-whois.registry.net.za", sample);
 
         Assert.True(sample.Length > 0);
-        Assert.Equal(WhoisStatus.Found, response.Status);
+        Assert.Equal(RegistrationStatus.Found, response.Status);
 
         Assert.Equal("fnb.co.za", response.DomainName.ToString());
         Assert.Equal("1zw3s_DOMAIN-CO.ZA", response.RegistryDomainId);
@@ -70,7 +70,7 @@ public class CoZaParsingTests : ParsingTests
         var response = parser.Parse("coza-whois.registry.net.za", sample);
 
         Assert.True(sample.Length > 0);
-        Assert.Equal(WhoisStatus.Throttled, response.Status);
+        Assert.Equal(RegistrationStatus.Throttled, response.Status);
     }
 
     [Fact(Skip = "Template update deferred - WHOIS response format changed")]
@@ -80,7 +80,7 @@ public class CoZaParsingTests : ParsingTests
         var response = parser.Parse("coza-whois.registry.net.za", sample);
 
         Assert.True(sample.Length > 0);
-        Assert.Equal(WhoisStatus.NotFound, response.Status);
+        Assert.Equal(RegistrationStatus.NotFound, response.Status);
 
         Assert.Equal("nosuchdomainregistered.co.za", response.DomainName.ToString());
     }
@@ -92,7 +92,7 @@ public class CoZaParsingTests : ParsingTests
         var response = parser.Parse("coza-whois.registry.net.za", sample);
 
         Assert.True(sample.Length > 0);
-        Assert.Equal(WhoisStatus.Found, response.Status);
+        Assert.Equal(RegistrationStatus.Found, response.Status);
 
         Assert.Equal("google.co.za", response.DomainName.ToString());
         Assert.Equal("1szmf_DOMAIN-CO.ZA", response.RegistryDomainId);

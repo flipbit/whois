@@ -20,7 +20,7 @@ public class BeParsingTests : ParsingTests
         var response = parser.Parse("whois.dns.be", sample);
 
         Assert.True(sample.Length > 0);
-        Assert.Equal(WhoisStatus.Found, response.Status);
+        Assert.Equal(RegistrationStatus.Found, response.Status);
 
         Assert.Equal(0, response.ParsingErrors);
         Assert.Equal("whois.dns.be/be/found/01", response.TemplateName);
@@ -53,7 +53,7 @@ public class BeParsingTests : ParsingTests
         var response = parser.Parse("whois.dns.be", sample);
 
         Assert.True(sample.Length > 0);
-        Assert.Equal(WhoisStatus.NotFound, response.Status);
+        Assert.Equal(RegistrationStatus.NotFound, response.Status);
 
         Assert.Equal(0, response.ParsingErrors);
         Assert.Equal("whois.dns.be/be/not-found/01", response.TemplateName);
@@ -70,7 +70,7 @@ public class BeParsingTests : ParsingTests
         var response = parser.Parse("whois.dns.be", sample);
 
         Assert.True(sample.Length > 0);
-        Assert.Equal(WhoisStatus.Error, response.Status);
+        Assert.Equal(RegistrationStatus.Error, response.Status);
 
         Assert.Equal(0, response.ParsingErrors);
         Assert.Equal("whois.dns.be/be/error/01", response.TemplateName);
@@ -87,7 +87,7 @@ public class BeParsingTests : ParsingTests
         var response = parser.Parse("whois.dns.be", sample);
 
         Assert.True(sample.Length > 0);
-        Assert.Equal(WhoisStatus.Found, response.Status);
+        Assert.Equal(RegistrationStatus.Found, response.Status);
 
         Assert.Equal(0, response.ParsingErrors);
         Assert.Equal("whois.dns.be/be/found/01", response.TemplateName);
@@ -127,7 +127,7 @@ public class BeParsingTests : ParsingTests
         var response = parser.Parse("whois.dns.be", sample);
 
         Assert.True(sample.Length > 0);
-        Assert.Equal(WhoisStatus.OutOfService, response.Status);
+        Assert.Equal(RegistrationStatus.OutOfService, response.Status);
 
         Assert.Equal(0, response.ParsingErrors);
         Assert.Equal("whois.dns.be/be/out-of-service/01", response.TemplateName);
@@ -169,7 +169,7 @@ public class BeParsingTests : ParsingTests
         var response = parser.Parse("whois.dns.be", sample);
 
         Assert.True(sample.Length > 0);
-        Assert.Equal(WhoisStatus.Quarantined, response.Status);
+        Assert.Equal(RegistrationStatus.Quarantined, response.Status);
 
         Assert.Equal(0, response.ParsingErrors);
         Assert.Equal("whois.dns.be/be/quarantined/01", response.TemplateName);
@@ -192,7 +192,7 @@ public class BeParsingTests : ParsingTests
         var response = parser.Parse("whois.dns.be", sample);
 
         Assert.True(sample.Length > 0);
-        Assert.Equal(WhoisStatus.Blocked, response.Status);
+        Assert.Equal(RegistrationStatus.Blocked, response.Status);
     }
 
     [Fact]
@@ -202,7 +202,7 @@ public class BeParsingTests : ParsingTests
         var response = parser.Parse("whois.dns.be", sample);
 
         Assert.True(sample.Length > 0);
-        Assert.Equal(WhoisStatus.Throttled, response.Status);
+        Assert.Equal(RegistrationStatus.Throttled, response.Status);
     }
 
     [Fact]
@@ -212,7 +212,7 @@ public class BeParsingTests : ParsingTests
         var response = parser.Parse("whois.dns.be", sample);
 
         Assert.True(sample.Length > 0);
-        Assert.Equal(WhoisStatus.Throttled, response.Status);
+        Assert.Equal(RegistrationStatus.Throttled, response.Status);
     }
 
     [Fact]
@@ -222,7 +222,7 @@ public class BeParsingTests : ParsingTests
         var response = parser.Parse("whois.dns.be", sample);
 
         Assert.True(sample.Length > 0);
-        Assert.Equal(WhoisStatus.NotFound, response.Status);
+        Assert.Equal(RegistrationStatus.NotFound, response.Status);
 
         Assert.Equal(0, response.ParsingErrors);
         Assert.Equal("whois.dns.be/be/not-found/01", response.TemplateName);
@@ -239,7 +239,7 @@ public class BeParsingTests : ParsingTests
         var response = parser.Parse("whois.dns.be", sample);
 
         Assert.True(sample.Length > 0);
-        Assert.Equal(WhoisStatus.Error, response.Status);
+        Assert.Equal(RegistrationStatus.Error, response.Status);
 
         Assert.Equal(0, response.ParsingErrors);
         Assert.Equal("whois.dns.be/be/error/01", response.TemplateName);
@@ -257,7 +257,7 @@ public class BeParsingTests : ParsingTests
         var response = parser.Parse("whois.dns.be", sample);
 
         Assert.True(sample.Length > 0);
-        Assert.Equal(WhoisStatus.Found, response.Status);
+        Assert.Equal(RegistrationStatus.Found, response.Status);
     }
 
     [Fact]
@@ -267,7 +267,7 @@ public class BeParsingTests : ParsingTests
         var response = parser.Parse("whois.dns.be", sample);
 
         Assert.True(sample.Length > 0);
-        Assert.Equal(WhoisStatus.Found, response.Status);
+        Assert.Equal(RegistrationStatus.Found, response.Status);
 
         Assert.Equal(0, response.ParsingErrors);
         Assert.Equal("whois.dns.be/be/found/01", response.TemplateName);

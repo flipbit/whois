@@ -20,7 +20,7 @@ public class DeParsingTests : ParsingTests
         var response = parser.Parse("whois.denic.de", sample);
 
         Assert.True(sample.Length > 0);
-        Assert.Equal(WhoisStatus.Found, response.Status);
+        Assert.Equal(RegistrationStatus.Found, response.Status);
 
         Assert.Equal(0, response.ParsingErrors);
         Assert.Equal("whois.denic.de/de/found/01", response.TemplateName);
@@ -60,7 +60,7 @@ public class DeParsingTests : ParsingTests
         var response = parser.Parse("whois.denic.de", sample);
 
         Assert.True(sample.Length > 0);
-        Assert.Equal(WhoisStatus.Found, response.Status);
+        Assert.Equal(RegistrationStatus.Found, response.Status);
 
         Assert.Equal(0, response.ParsingErrors);
         Assert.Equal("whois.denic.de/de/found/01", response.TemplateName);
@@ -98,7 +98,7 @@ public class DeParsingTests : ParsingTests
         var response = parser.Parse("whois.denic.de", sample);
 
         Assert.True(sample.Length > 0);
-        Assert.Equal(WhoisStatus.Error, response.Status);
+        Assert.Equal(RegistrationStatus.Error, response.Status);
 
         Assert.Equal(0, response.ParsingErrors);
         Assert.Equal("whois.denic.de/de/error/01", response.TemplateName);
@@ -113,7 +113,7 @@ public class DeParsingTests : ParsingTests
         var response = parser.Parse("whois.denic.de", sample);
 
         Assert.True(sample.Length > 0);
-        Assert.Equal(WhoisStatus.Throttled, response.Status);
+        Assert.Equal(RegistrationStatus.Throttled, response.Status);
 
         Assert.Equal(0, response.ParsingErrors);
         Assert.Equal("whois.denic.de/de/throttled/01", response.TemplateName);
@@ -128,7 +128,7 @@ public class DeParsingTests : ParsingTests
         var response = parser.Parse("whois.denic.de", sample);
 
         Assert.True(sample.Length > 0);
-        Assert.Equal(WhoisStatus.NotFound, response.Status);
+        Assert.Equal(RegistrationStatus.NotFound, response.Status);
 
         Assert.Equal(0, response.ParsingErrors);
         Assert.Equal("whois.denic.de/de/not-found/01", response.TemplateName);
@@ -145,7 +145,7 @@ public class DeParsingTests : ParsingTests
         var response = parser.Parse("whois.denic.de", sample);
 
         Assert.True(sample.Length > 0);
-        Assert.Equal(WhoisStatus.Failed, response.Status);
+        Assert.Equal(RegistrationStatus.Failed, response.Status);
 
         Assert.Equal(0, response.ParsingErrors);
         Assert.Equal("whois.denic.de/de/found/01", response.TemplateName);
@@ -203,7 +203,7 @@ public class DeParsingTests : ParsingTests
         var response = parser.Parse("whois.denic.de", sample);
 
         Assert.True(sample.Length > 0);
-        Assert.Equal(WhoisStatus.Failed, response.Status);
+        Assert.Equal(RegistrationStatus.Failed, response.Status);
 
         Assert.Equal(0, response.ParsingErrors);
         Assert.Equal("whois.denic.de/de/found/01", response.TemplateName);
@@ -266,7 +266,7 @@ public class DeParsingTests : ParsingTests
         var response = parser.Parse("whois.denic.de", sample);
 
         Assert.True(sample.Length > 0);
-        Assert.Equal(WhoisStatus.Invalid, response.Status);
+        Assert.Equal(RegistrationStatus.Invalid, response.Status);
 
         Assert.Equal(0, response.ParsingErrors);
         Assert.Equal("whois.denic.de/de/invalid/01", response.TemplateName);
@@ -287,7 +287,7 @@ public class DeParsingTests : ParsingTests
         var response = parser.Parse("whois.denic.de", sample);
 
         Assert.True(sample.Length > 0);
-        Assert.Equal(WhoisStatus.Found, response.Status);
+        Assert.Equal(RegistrationStatus.Found, response.Status);
 
         Assert.Equal(0, response.ParsingErrors);
         Assert.Equal("whois.denic.de/de/found/01", response.TemplateName);

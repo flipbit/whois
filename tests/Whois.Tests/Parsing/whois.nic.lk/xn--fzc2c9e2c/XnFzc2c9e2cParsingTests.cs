@@ -19,7 +19,7 @@ public class XnFzc2c9e2cParsingTests : ParsingTests
         var sample = SampleReader.Read("whois.nic.lk", "xn--fzc2c9e2c", "not-found", "not_found.txt");
         var response = parser.Parse("whois.nic.lk", sample);
 
-        Assert.Equal(WhoisStatus.Unknown, response.Status);
+        Assert.Equal(RegistrationStatus.Unknown, response.Status);
         Assert.Equal(0, response.ContentLength);
     }
 
@@ -30,7 +30,7 @@ public class XnFzc2c9e2cParsingTests : ParsingTests
         var response = parser.Parse("whois.nic.lk", sample);
 
         Assert.True(sample.Length > 0);
-        Assert.Equal(WhoisStatus.Found, response.Status);
+        Assert.Equal(RegistrationStatus.Found, response.Status);
 
         Assert.Equal(0, response.ParsingErrors);
         Assert.Equal("whois.nic.lk/found/02", response.TemplateName);

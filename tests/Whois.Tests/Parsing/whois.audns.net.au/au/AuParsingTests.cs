@@ -20,7 +20,7 @@ public class AuParsingTests : ParsingTests
         var response = parser.Parse("whois.audns.net.au", sample);
 
         Assert.True(sample.Length > 0);
-        Assert.Equal(WhoisStatus.Found, response.Status);
+        Assert.Equal(RegistrationStatus.Found, response.Status);
 
         Assert.Equal(12, response.FieldsParsed);
         Assert.Equal(0, response.ParsingErrors);
@@ -54,7 +54,7 @@ public class AuParsingTests : ParsingTests
         var response = parser.Parse("whois.audns.net.au", sample);
 
         Assert.True(sample.Length > 0);
-        Assert.Equal(WhoisStatus.NotFound, response.Status);
+        Assert.Equal(RegistrationStatus.NotFound, response.Status);
 
         Assert.Equal(1, response.FieldsParsed);
         Assert.Equal(0, response.ParsingErrors);
@@ -68,7 +68,7 @@ public class AuParsingTests : ParsingTests
         var response = parser.Parse("whois.audns.net.au", sample);
 
         Assert.True(sample.Length > 0);
-        Assert.Equal(WhoisStatus.Found, response.Status);
+        Assert.Equal(RegistrationStatus.Found, response.Status);
 
         Assert.Equal(18, response.FieldsParsed);
         Assert.Equal(0, response.ParsingErrors);

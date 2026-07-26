@@ -20,7 +20,7 @@ public class CoJpParsingTests : ParsingTests
         var response = parser.Parse("whois.jprs.jp", sample);
 
         Assert.True(sample.Length > 0);
-        Assert.Equal(WhoisStatus.PendingDelete, response.Status);
+        Assert.Equal(RegistrationStatus.PendingDelete, response.Status);
 
         Assert.Equal(0, response.ParsingErrors);
         Assert.Equal("whois.jprs.jp/found/01", response.TemplateName);
@@ -46,7 +46,7 @@ public class CoJpParsingTests : ParsingTests
         var response = parser.Parse("whois.jprs.jp", sample);
 
         Assert.True(sample.Length > 0);
-        Assert.Equal(WhoisStatus.Found, response.Status);
+        Assert.Equal(RegistrationStatus.Found, response.Status);
 
         Assert.Equal(0, response.ParsingErrors);
         Assert.Equal("whois.jprs.jp/found/01", response.TemplateName);
@@ -80,7 +80,7 @@ public class CoJpParsingTests : ParsingTests
         var response = parser.Parse("whois.jprs.jp", sample);
 
         Assert.True(sample.Length > 0);
-        Assert.Equal(WhoisStatus.Found, response.Status);
+        Assert.Equal(RegistrationStatus.Found, response.Status);
 
         Assert.Equal(0, response.ParsingErrors);
         Assert.Equal("whois.jprs.jp/found/01", response.TemplateName);

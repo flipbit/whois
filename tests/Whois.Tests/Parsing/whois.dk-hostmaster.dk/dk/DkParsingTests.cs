@@ -20,7 +20,7 @@ public class DkParsingTests : ParsingTests
         var response = parser.Parse("whois.dk-hostmaster.dk", sample);
 
         Assert.True(sample.Length > 0);
-        Assert.Equal(WhoisStatus.Deactivated, response.Status);
+        Assert.Equal(RegistrationStatus.Deactivated, response.Status);
 
         Assert.Equal(0, response.ParsingErrors);
         Assert.Equal("whois.dk-hostmaster.dk/dk/found/01", response.TemplateName);
@@ -78,7 +78,7 @@ public class DkParsingTests : ParsingTests
         var response = parser.Parse("whois.dk-hostmaster.dk", sample);
 
         Assert.True(sample.Length > 0);
-        Assert.Equal(WhoisStatus.Reserved, response.Status);
+        Assert.Equal(RegistrationStatus.Reserved, response.Status);
 
         Assert.Equal(0, response.ParsingErrors);
         Assert.Equal("whois.dk-hostmaster.dk/dk/found/01", response.TemplateName);
@@ -102,7 +102,7 @@ public class DkParsingTests : ParsingTests
         var response = parser.Parse("whois.dk-hostmaster.dk", sample);
 
         Assert.True(sample.Length > 0);
-        Assert.Equal(WhoisStatus.Throttled, response.Status);
+        Assert.Equal(RegistrationStatus.Throttled, response.Status);
 
         Assert.Equal(0, response.ParsingErrors);
         Assert.Equal("whois.dk-hostmaster.dk/dk/throttled/01", response.TemplateName);
@@ -117,7 +117,7 @@ public class DkParsingTests : ParsingTests
         var response = parser.Parse("whois.dk-hostmaster.dk", sample);
 
         Assert.True(sample.Length > 0);
-        Assert.Equal(WhoisStatus.Throttled, response.Status);
+        Assert.Equal(RegistrationStatus.Throttled, response.Status);
 
         Assert.Equal(0, response.ParsingErrors);
         Assert.Equal("whois.dk-hostmaster.dk/dk/throttled/02", response.TemplateName);
@@ -132,7 +132,7 @@ public class DkParsingTests : ParsingTests
         var response = parser.Parse("whois.dk-hostmaster.dk", sample);
 
         Assert.True(sample.Length > 0);
-        Assert.Equal(WhoisStatus.NotFound, response.Status);
+        Assert.Equal(RegistrationStatus.NotFound, response.Status);
 
         Assert.Equal(0, response.ParsingErrors);
         Assert.Equal("whois.dk-hostmaster.dk/dk/not-found/01", response.TemplateName);
@@ -147,7 +147,7 @@ public class DkParsingTests : ParsingTests
         var response = parser.Parse("whois.dk-hostmaster.dk", sample);
 
         Assert.True(sample.Length > 0);
-        Assert.Equal(WhoisStatus.Found, response.Status);
+        Assert.Equal(RegistrationStatus.Found, response.Status);
 
         Assert.Equal(0, response.ParsingErrors);
         Assert.Equal("whois.dk-hostmaster.dk/dk/found/01", response.TemplateName);

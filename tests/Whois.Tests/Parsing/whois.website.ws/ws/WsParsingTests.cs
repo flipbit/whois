@@ -20,7 +20,7 @@ public class WsParsingTests : ParsingTests
         var response = parser.Parse("whois.website.ws", sample);
 
         Assert.True(sample.Length > 0);
-        Assert.Equal(WhoisStatus.NotFound, response.Status);
+        Assert.Equal(RegistrationStatus.NotFound, response.Status);
 
         Assert.Equal(0, response.ParsingErrors);
         Assert.Equal("whois.website.ws/ws/not-found/01", response.TemplateName);
@@ -37,7 +37,7 @@ public class WsParsingTests : ParsingTests
         var response = parser.Parse("whois.website.ws", sample);
 
         Assert.True(sample.Length > 0);
-        Assert.Equal(WhoisStatus.Found, response.Status);
+        Assert.Equal(RegistrationStatus.Found, response.Status);
 
         Assert.Equal(0, response.ParsingErrors);
         Assert.Equal("whois.website.ws/ws/found/01", response.TemplateName);

@@ -22,7 +22,7 @@ public class WhoisParserTests
 
         Assert.NotNull(result);
         Assert.Equal("registry.capetown", result.DomainName.ToString());
-        Assert.Equal(WhoisStatus.Found, result.Status);
+        Assert.Equal(RegistrationStatus.Found, result.Status);
         Assert.Equal(2, parser.Templates.Count);
     }
 

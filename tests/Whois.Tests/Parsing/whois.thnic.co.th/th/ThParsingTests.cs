@@ -20,7 +20,7 @@ public class ThParsingTests : ParsingTests
         var response = parser.Parse("whois.thnic.co.th", sample);
 
         Assert.True(sample.Length > 0);
-        Assert.Equal(WhoisStatus.NotFound, response.Status);
+        Assert.Equal(RegistrationStatus.NotFound, response.Status);
 
         Assert.Equal(0, response.ParsingErrors);
         Assert.Equal("whois.thnic.co.th/th/not-found/01", response.TemplateName);
@@ -37,7 +37,7 @@ public class ThParsingTests : ParsingTests
         var response = parser.Parse("whois.thnic.co.th", sample);
 
         Assert.True(sample.Length > 0);
-        Assert.Equal(WhoisStatus.Found, response.Status);
+        Assert.Equal(RegistrationStatus.Found, response.Status);
 
         Assert.Equal(0, response.ParsingErrors);
         Assert.Equal("generic/tld/found/01", response.TemplateName);

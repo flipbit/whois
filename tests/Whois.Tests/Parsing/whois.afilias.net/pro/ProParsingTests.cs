@@ -20,7 +20,7 @@ public class ProParsingTests : ParsingTests
         var response = parser.Parse("whois.afilias.net", sample);
 
         Assert.True(sample.Length > 0);
-        Assert.Equal(WhoisStatus.NotFound, response.Status);
+        Assert.Equal(RegistrationStatus.NotFound, response.Status);
     }
 
     [Fact(Skip = "Template update deferred - WHOIS response format changed")]
@@ -30,7 +30,7 @@ public class ProParsingTests : ParsingTests
         var response = parser.Parse("whois.afilias.net", sample);
 
         Assert.True(sample.Length > 0);
-        Assert.Equal(WhoisStatus.Found, response.Status);
+        Assert.Equal(RegistrationStatus.Found, response.Status);
 
         Assert.Equal(0, response.ParsingErrors);
         Assert.Equal("generic/tld/found/01", response.TemplateName);
@@ -137,6 +137,6 @@ public class ProParsingTests : ParsingTests
         var response = parser.Parse("whois.afilias.net", sample);
 
         Assert.True(sample.Length > 0);
-        Assert.Equal(WhoisStatus.Reserved, response.Status);
+        Assert.Equal(RegistrationStatus.Reserved, response.Status);
     }
 }

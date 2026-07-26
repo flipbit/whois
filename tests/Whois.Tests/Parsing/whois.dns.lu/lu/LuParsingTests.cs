@@ -20,7 +20,7 @@ public class LuParsingTests : ParsingTests
         var response = parser.Parse("whois.dns.lu", sample);
 
         Assert.True(sample.Length > 0);
-        Assert.Equal(WhoisStatus.Found, response.Status);
+        Assert.Equal(RegistrationStatus.Found, response.Status);
 
         Assert.Equal(0, response.ParsingErrors);
         Assert.Equal("whois.dns.lu/lu/found/01", response.TemplateName);
@@ -73,7 +73,7 @@ public class LuParsingTests : ParsingTests
         var response = parser.Parse("whois.dns.lu", sample);
 
         Assert.True(sample.Length > 0);
-        Assert.Equal(WhoisStatus.NotFound, response.Status);
+        Assert.Equal(RegistrationStatus.NotFound, response.Status);
 
         Assert.Equal(0, response.ParsingErrors);
         Assert.Equal("whois.dns.lu/lu/not-found/01", response.TemplateName);
@@ -91,7 +91,7 @@ public class LuParsingTests : ParsingTests
         var response = parser.Parse("whois.dns.lu", sample);
 
         Assert.True(sample.Length > 0);
-        Assert.Equal(WhoisStatus.Found, response.Status);
+        Assert.Equal(RegistrationStatus.Found, response.Status);
 
         Assert.Equal(0, response.ParsingErrors);
         Assert.Equal("whois.dns.lu/lu/found/01", response.TemplateName);

@@ -20,7 +20,7 @@ public class ZaOrgParsingTests : ParsingTests
         var response = parser.Parse("whois.za.org", sample);
 
         Assert.True(sample.Length > 0);
-        Assert.Equal(WhoisStatus.NotFound, response.Status);
+        Assert.Equal(RegistrationStatus.NotFound, response.Status);
 
         Assert.Equal(0, response.ParsingErrors);
         Assert.Equal("whois.za.org/za.org/not-found/01", response.TemplateName);
@@ -36,7 +36,7 @@ public class ZaOrgParsingTests : ParsingTests
         var response = parser.Parse("whois.za.org", sample);
 
         Assert.True(sample.Length > 0);
-        Assert.Equal(WhoisStatus.Found, response.Status);
+        Assert.Equal(RegistrationStatus.Found, response.Status);
 
         Assert.Equal(0, response.ParsingErrors);
         Assert.Equal("whois.za.org/za.org/found/01", response.TemplateName);

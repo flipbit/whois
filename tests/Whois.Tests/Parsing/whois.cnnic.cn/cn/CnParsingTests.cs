@@ -20,7 +20,7 @@ public class CnParsingTests : ParsingTests
         var response = parser.Parse("whois.cnnic.cn", sample);
 
         Assert.True(sample.Length > 0);
-        Assert.Equal(WhoisStatus.Found, response.Status);
+        Assert.Equal(RegistrationStatus.Found, response.Status);
 
         Assert.Equal(0, response.ParsingErrors);
         Assert.Equal("whois.cnnic.cn/cn/found/01", response.TemplateName);
@@ -60,7 +60,7 @@ public class CnParsingTests : ParsingTests
         var response = parser.Parse("whois.cnnic.cn", sample);
 
         Assert.True(sample.Length > 0);
-        Assert.Equal(WhoisStatus.Reserved, response.Status);
+        Assert.Equal(RegistrationStatus.Reserved, response.Status);
 
         Assert.Equal(0, response.ParsingErrors);
         Assert.Equal("whois.cnnic.cn/cn/reserved/02", response.TemplateName);
@@ -75,7 +75,7 @@ public class CnParsingTests : ParsingTests
         var response = parser.Parse("whois.cnnic.cn", sample);
 
         Assert.True(sample.Length > 0);
-        Assert.Equal(WhoisStatus.NotFound, response.Status);
+        Assert.Equal(RegistrationStatus.NotFound, response.Status);
 
         Assert.Equal(0, response.ParsingErrors);
         Assert.Equal("whois.cnnic.cn/cn/not-found/01", response.TemplateName);
@@ -90,7 +90,7 @@ public class CnParsingTests : ParsingTests
         var response = parser.Parse("whois.cnnic.cn", sample);
 
         Assert.True(sample.Length > 0);
-        Assert.Equal(WhoisStatus.Found, response.Status);
+        Assert.Equal(RegistrationStatus.Found, response.Status);
 
         Assert.Equal(0, response.ParsingErrors);
         Assert.Equal("whois.cnnic.cn/cn/found/01", response.TemplateName);
@@ -134,7 +134,7 @@ public class CnParsingTests : ParsingTests
         var response = parser.Parse("whois.cnnic.cn", sample);
 
         Assert.True(sample.Length > 0);
-        Assert.Equal(WhoisStatus.Reserved, response.Status);
+        Assert.Equal(RegistrationStatus.Reserved, response.Status);
 
         Assert.Equal(0, response.ParsingErrors);
         Assert.Equal("whois.cnnic.cn/cn/reserved/01", response.TemplateName);

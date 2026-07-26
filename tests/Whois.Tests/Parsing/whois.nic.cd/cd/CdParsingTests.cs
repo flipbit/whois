@@ -20,7 +20,7 @@ public class CdParsingTests : ParsingTests
         var response = parser.Parse("whois.nic.cd", sample);
 
         Assert.True(sample.Length > 0);
-        Assert.Equal(WhoisStatus.NotFound, response.Status);
+        Assert.Equal(RegistrationStatus.NotFound, response.Status);
 
         Assert.Equal(0, response.ParsingErrors);
         Assert.Equal("whois.nic.cd/cd/not-found/01", response.TemplateName);
@@ -41,7 +41,7 @@ public class CdParsingTests : ParsingTests
         var response = parser.Parse("whois.nic.cd", sample);
 
         Assert.True(sample.Length > 0);
-        Assert.Equal(WhoisStatus.Found, response.Status);
+        Assert.Equal(RegistrationStatus.Found, response.Status);
 
         Assert.Equal(0, response.ParsingErrors);
         Assert.Equal("whois.nic.cd/cd/found/01", response.TemplateName);

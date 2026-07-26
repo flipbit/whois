@@ -20,7 +20,7 @@ public class TzParsingTests : ParsingTests
         var response = parser.Parse("whois.tznic.or.tz", sample);
 
         Assert.True(sample.Length > 0);
-        Assert.Equal(WhoisStatus.Expired, response.Status);
+        Assert.Equal(RegistrationStatus.Expired, response.Status);
 
         Assert.Equal(0, response.ParsingErrors);
         Assert.Equal("whois.tznic.or.tz/tz/found/01", response.TemplateName);
@@ -101,7 +101,7 @@ public class TzParsingTests : ParsingTests
         var response = parser.Parse("whois.tznic.or.tz", sample);
 
         Assert.True(sample.Length > 0);
-        Assert.Equal(WhoisStatus.NotFound, response.Status);
+        Assert.Equal(RegistrationStatus.NotFound, response.Status);
 
         Assert.Equal(0, response.ParsingErrors);
         Assert.Equal("whois.tznic.or.tz/tz/not-found/01", response.TemplateName);
@@ -116,7 +116,7 @@ public class TzParsingTests : ParsingTests
         var response = parser.Parse("whois.tznic.or.tz", sample);
 
         Assert.True(sample.Length > 0);
-        Assert.Equal(WhoisStatus.Found, response.Status);
+        Assert.Equal(RegistrationStatus.Found, response.Status);
 
         Assert.Equal(0, response.ParsingErrors);
         Assert.Equal("whois.tznic.or.tz/tz/found/01", response.TemplateName);

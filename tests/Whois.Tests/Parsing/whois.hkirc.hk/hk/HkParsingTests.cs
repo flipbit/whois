@@ -20,7 +20,7 @@ public class HkParsingTests : ParsingTests
         var response = parser.Parse("whois.hkirc.hk", sample);
 
         Assert.True(sample.Length > 0);
-        Assert.Equal(WhoisStatus.Found, response.Status);
+        Assert.Equal(RegistrationStatus.Found, response.Status);
 
         Assert.Equal(0, response.ParsingErrors);
         Assert.Equal("whois.hkirc.hk/hk/found/01", response.TemplateName);
@@ -70,7 +70,7 @@ public class HkParsingTests : ParsingTests
         var response = parser.Parse("whois.hkirc.hk", sample);
 
         Assert.True(sample.Length > 0);
-        Assert.Equal(WhoisStatus.NotFound, response.Status);
+        Assert.Equal(RegistrationStatus.NotFound, response.Status);
 
         Assert.Equal(0, response.ParsingErrors);
         Assert.Equal("whois.hkirc.hk/hk/not-found/01", response.TemplateName);
@@ -85,7 +85,7 @@ public class HkParsingTests : ParsingTests
         var response = parser.Parse("whois.hkirc.hk", sample);
 
         Assert.True(sample.Length > 0);
-        Assert.Equal(WhoisStatus.Found, response.Status);
+        Assert.Equal(RegistrationStatus.Found, response.Status);
 
         Assert.Equal(0, response.ParsingErrors);
         Assert.Equal("whois.hkirc.hk/hk/found/01", response.TemplateName);
