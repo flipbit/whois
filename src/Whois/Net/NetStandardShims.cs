@@ -81,12 +81,13 @@ internal static class NetStandardShims
 #endif
     }
 
-    public static Task<Stream> ReadAsStreamAsync(System.Net.Http.HttpContent content)
+    public static Task<Stream> ReadAsStreamAsync(System.Net.Http.HttpContent content, CancellationToken ct)
     {
 #if NETSTANDARD2_0
+        // netstandard2.0 doesn't support CancellationToken on ReadAsStreamAsync; ignore it.
         return content.ReadAsStreamAsync();
 #else
-        return content.ReadAsStreamAsync(CancellationToken.None);
+        return content.ReadAsStreamAsync(ct);
 #endif
     }
 }

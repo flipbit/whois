@@ -55,7 +55,7 @@ internal sealed class RdapProtocolClient : IProtocolClient
         }
 
         var encodedQuery = Uri.EscapeDataString(request.Query);
-        var url = $"{baseUrl.TrimEnd('/')}domain/{encodedQuery}";
+        var url = $"{baseUrl.TrimEnd('/')}/domain/{encodedQuery}";
         ValidateUrl(url);
 
         _logger.LogDebug("RDAP: querying {Url}", url);
@@ -173,7 +173,7 @@ internal sealed class RdapProtocolClient : IProtocolClient
     private static async Task<string> ReadWithSizeLimit(HttpResponseMessage response, int maxBytes, CancellationToken ct)
     {
         // Use the shim -- the outer CancellationTokenSource handles timeout via GetAsync.
-        using var stream = await NetStandardShims.ReadAsStreamAsync(response.Content).ConfigureAwait(false);
+        using var stream = await NetStandardShims.ReadAsStreamAsync(response.Content, ct).ConfigureAwait(false);
         using var reader = new StreamReader(stream, Encoding.UTF8);
         var buffer = new char[8192];
         var sb = new StringBuilder();
