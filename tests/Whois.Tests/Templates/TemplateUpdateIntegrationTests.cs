@@ -216,7 +216,7 @@ public class TemplateUpdateIntegrationTests : IDisposable
         var parsed = parser.Parse(TestServer, whoisContent);
 
         Assert.Equal("example.test", parsed.DomainName?.Value);
-        Assert.Equal(WhoisStatus.Found, parsed.Status);
+        Assert.Equal(RegistrationStatus.Found, parsed.Status);
     }
 
     // =========================================================================
@@ -300,8 +300,8 @@ public class TemplateUpdateIntegrationTests : IDisposable
         Assert.Equal("example.test", secondParse.DomainName?.Value);
 
         // Both parses should succeed (template still in memory from first load)
-        Assert.Equal(WhoisStatus.Found, firstParse.Status);
-        Assert.Equal(WhoisStatus.Found, secondParse.Status);
+        Assert.Equal(RegistrationStatus.Found, firstParse.Status);
+        Assert.Equal(RegistrationStatus.Found, secondParse.Status);
     }
 
     // =========================================================================
@@ -332,7 +332,7 @@ public class TemplateUpdateIntegrationTests : IDisposable
 
         // The cached template should have been loaded and used
         Assert.Equal("another.test", parsed.DomainName?.Value);
-        Assert.Equal(WhoisStatus.Found, parsed.Status);
+        Assert.Equal(RegistrationStatus.Found, parsed.Status);
     }
 
     // =========================================================================
