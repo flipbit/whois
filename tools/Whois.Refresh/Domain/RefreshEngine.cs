@@ -167,7 +167,7 @@ public class RefreshEngine
         return result;
     }
 
-    private static IList<string> GetExtractedFieldNames(Whois.WhoisResponse parsed)
+    private static List<string> GetExtractedFieldNames(Whois.WhoisResponse parsed)
     {
         var fields = new List<string>();
         if (parsed.DomainName != null) fields.Add("DomainName");

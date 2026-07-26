@@ -5,7 +5,7 @@ namespace Whois.Refresh.Tests;
 
 public class RefreshResultTests
 {
-    private static IDictionary<string, IDictionary<string, IDictionary<string, IDictionary<string, DomainResult>>>> MakeResults(
+    private static Dictionary<string, IDictionary<string, IDictionary<string, IDictionary<string, DomainResult>>>> MakeResults(
         string server, string tld, string status, string domain, DomainResult result)
     {
         return new Dictionary<string, IDictionary<string, IDictionary<string, IDictionary<string, DomainResult>>>>(StringComparer.Ordinal)
@@ -23,7 +23,7 @@ public class RefreshResultTests
         };
     }
 
-    private static IDictionary<string, IDictionary<string, IDictionary<string, IDictionary<string, DomainResult>>>> MakeResultsTwoDomains(
+    private static Dictionary<string, IDictionary<string, IDictionary<string, IDictionary<string, DomainResult>>>> MakeResultsTwoDomains(
         string server, string tld, string status, string domain1, DomainResult result1, string domain2, DomainResult result2)
     {
         return new Dictionary<string, IDictionary<string, IDictionary<string, IDictionary<string, DomainResult>>>>(StringComparer.Ordinal)

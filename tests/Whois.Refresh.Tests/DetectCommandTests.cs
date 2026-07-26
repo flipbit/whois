@@ -7,7 +7,7 @@ namespace Whois.Refresh.Tests;
 
 public class DetectCommandTests
 {
-    private static IDictionary<string, IDictionary<string, IDictionary<string, IDictionary<string, DomainResult>>>> MakeResults(
+    private static Dictionary<string, IDictionary<string, IDictionary<string, IDictionary<string, DomainResult>>>> MakeResults(
         string server, string tld, string status, string domain, DomainResult result)
     {
         return new Dictionary<string, IDictionary<string, IDictionary<string, IDictionary<string, DomainResult>>>>(StringComparer.Ordinal)

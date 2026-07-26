@@ -73,7 +73,7 @@ public class TemplatePackProviderTests : IDisposable
     /// <summary>
     /// Creates a handler that returns a fixed sequence of responses for successive calls.
     /// </summary>
-    private static HttpMessageHandler SequentialHandler(params (HttpStatusCode status, string body)[] responses)
+    private static FuncHandler SequentialHandler(params (HttpStatusCode status, string body)[] responses)
     {
         var queue = new Queue<(HttpStatusCode, string)>(responses);
         return new FuncHandler(req =>
@@ -89,11 +89,11 @@ public class TemplatePackProviderTests : IDisposable
     }
 
     /// <summary>Handler that throws on every call.</summary>
-    private static HttpMessageHandler ThrowingHandler(Exception ex) =>
+    private static FuncHandler ThrowingHandler(Exception ex) =>
         new FuncHandler(_ => throw ex);
 
     /// <summary>Handler that returns a large body (>10MB) for the zip download.</summary>
-    private static HttpMessageHandler OversizedZipHandler(string releaseJson)
+    private static FuncHandler OversizedZipHandler(string releaseJson)
     {
         var callCount = 0;
         return new FuncHandler(req =>

@@ -155,6 +155,9 @@ dotnet_diagnostic.CA2213.severity = warning
 # Avoid constant arrays as arguments
 dotnet_diagnostic.CA1861.severity = warning
 
+# Use concrete types when possible for improved performance
+dotnet_diagnostic.CA1859.severity = warning
+
 [*.{xml,csproj,props,targets}]
 indent_size = 2
 

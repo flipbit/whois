@@ -78,7 +78,7 @@ public static class DomainRegistry
                         $"Unknown status key '{status}' in server '{serverName}': valid keys are {string.Join(", ", ValidStatusKeys)}");
                 }
 
-                IList<string> domainList = new List<string>();
+                List<string> domainList = new List<string>();
 
                 foreach (var domainElement in statusProp.Value.EnumerateArray())
                 {

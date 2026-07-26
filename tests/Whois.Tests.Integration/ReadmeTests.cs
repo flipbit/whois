@@ -73,7 +73,7 @@ public class ReadmeTests
 
     private class MyCustomTcpReader : ITcpReader
     {
-        private readonly ITcpReader reader;
+        private readonly TcpReader reader;
 
         public MyCustomTcpReader()
         {

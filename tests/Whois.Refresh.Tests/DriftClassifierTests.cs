@@ -5,7 +5,7 @@ namespace Whois.Refresh.Tests;
 
 public class DriftClassifierTests
 {
-    private static IDictionary<string, IDictionary<string, IDictionary<string, IDictionary<string, DomainResult>>>> MakeResultsDict(
+    private static Dictionary<string, IDictionary<string, IDictionary<string, IDictionary<string, DomainResult>>>> MakeResultsDict(
         string? template, IList<string> fields, QueryError? error = null)
     {
         return new Dictionary<string, IDictionary<string, IDictionary<string, IDictionary<string, DomainResult>>>>(StringComparer.Ordinal)

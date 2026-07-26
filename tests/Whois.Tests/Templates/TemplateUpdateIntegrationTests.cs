@@ -115,7 +115,7 @@ public class TemplateUpdateIntegrationTests : IDisposable
     /// Creates a handler that routes requests by URL pattern:
     /// metadata URL -> releaseJson, .minisig URL -> "fake-sig", .zip URL -> zipBytes.
     /// </summary>
-    private static HttpMessageHandler BuildHandler(string releaseJson, byte[] zipBytes) =>
+    private static FuncHandler BuildHandler(string releaseJson, byte[] zipBytes) =>
         new FuncHandler(req =>
         {
             var url = req.RequestUri!.AbsoluteUri;
