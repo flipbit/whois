@@ -5,10 +5,7 @@ namespace Whois.Protocols;
 /// <summary>
 /// Parses RFC 9083 RDAP JSON responses into <see cref="DomainInfo"/>.
 /// </summary>
-// MA0182: Will be consumed by RdapProtocolClient and WhoisLookup orchestrator (Tasks 7-8) -- suppress until then.
-#pragma warning disable MA0182
 internal static class RdapParser
-#pragma warning restore MA0182
 {
     /// <summary>
     /// Parses an RDAP JSON response string into a DomainInfo.

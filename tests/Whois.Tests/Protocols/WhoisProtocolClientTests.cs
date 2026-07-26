@@ -66,6 +66,6 @@ public class WhoisProtocolClientTests
         var response = await client.Query(request, CancellationToken.None);
 
         Assert.Equal("google.com", response.Response.DomainName!.ToString());
-        Assert.True(response.Diagnostics.ReferralChain.Count >= 1);
+        Assert.Equal(2, response.Diagnostics.ReferralChain.Count);
     }
 }

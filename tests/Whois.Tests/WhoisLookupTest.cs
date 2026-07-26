@@ -138,6 +138,45 @@ public class WhoisLookupTest
     }
 
     [Fact]
+    public async Task Lookup_GlobalPreferredProtocol_UsedWhenRequestProtocolIsNull()
+    {
+        var bootstrap = Substitute.For<IBootstrapRegistry>();
+        bootstrap.GetRdapBaseUrl("com", Arg.Any<CancellationToken>())
+            .Returns("https://rdap.verisign.com/com/v1/");
+        bootstrap.GetWhoisServer("com", Arg.Any<CancellationToken>())
+            .Returns("whois.verisign-grs.com");
+
+        var whoisClient = Substitute.For<IProtocolClient>();
+        whoisClient.Protocol.Returns(LookupProtocol.Whois);
+        whoisClient.Query(Arg.Any<WhoisRequest>(), Arg.Any<CancellationToken>())
+            .Returns(new ProtocolResponse
+            {
+                RawContent = "Domain Name: GOOGLE.COM",
+                Protocol = LookupProtocol.Whois,
+                Response = new DomainInfo
+                {
+                    DomainName = new HostName("google.com"),
+                    Status = RegistrationStatus.Found,
+                },
+                Diagnostics = new LookupDiagnostics(),
+            });
+
+        var rdapClient = Substitute.For<IProtocolClient>();
+        rdapClient.Protocol.Returns(LookupProtocol.Rdap);
+
+        // Global option forces WHOIS; request leaves PreferredProtocol null (inherits global).
+        var options = new WhoisOptions { PreferredProtocol = ProtocolPreference.Whois };
+        var request = new WhoisRequest("google.com"); // PreferredProtocol is null
+
+        var lookup = new WhoisLookup(options, bootstrap, [whoisClient, rdapClient]);
+
+        var result = await lookup.Lookup(request);
+
+        Assert.Equal(LookupProtocol.Whois, result.Protocol);
+        await rdapClient.DidNotReceive().Query(Arg.Any<WhoisRequest>(), Arg.Any<CancellationToken>());
+    }
+
+    [Fact]
     public async Task Lookup_EmptyQuery_ThrowsArgumentNullException()
     {
         var bootstrap = Substitute.For<IBootstrapRegistry>();

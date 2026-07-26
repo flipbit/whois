@@ -7,6 +7,10 @@ namespace Whois.Servers;
 /// <summary>
 /// Provides server discovery for both RDAP and WHOIS protocols using embedded IANA bootstrap data.
 /// Loads from embedded JSON resources on first access (lazy, thread-safe). No network calls.
+///
+/// Disk caching and network refresh are intentionally deferred -- the current implementation
+/// uses embedded snapshots only. Future versions may add automatic refresh from the IANA
+/// bootstrap endpoints and local disk caching of updated data.
 /// </summary>
 public class BootstrapRegistry : IBootstrapRegistry
 {
@@ -40,6 +44,11 @@ public class BootstrapRegistry : IBootstrapRegistry
         return Task.FromResult<string?>(server);
     }
 
+    /// <summary>
+    /// Reloads the bootstrap data from embedded resources, clearing the current in-memory
+    /// cache. This does not fetch updated data from the network -- it reloads the same
+    /// embedded snapshots bundled with the library.
+    /// </summary>
     public Task Refresh(CancellationToken ct)
     {
         _data = CreateLazy();

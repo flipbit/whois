@@ -3,10 +3,7 @@ namespace Whois.Protocols;
 /// <summary>
 /// Maps internal mutable <see cref="WhoisRecord"/> to public immutable <see cref="DomainInfo"/>.
 /// </summary>
-// MA0182: Will be consumed by WhoisLookup orchestrator (Task 8) -- suppress until then.
-#pragma warning disable MA0182
 internal static class WhoisRecordMapper
-#pragma warning restore MA0182
 {
     public static DomainInfo ToDomainInfo(WhoisRecord record)
     {

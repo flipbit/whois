@@ -58,6 +58,8 @@ public class WhoisRecordMapperTests
         Assert.Equal("123 Main St", info.Registrant.Address.Lines[0]);
         Assert.Equal(2, info.NameServers.Count);
         Assert.Equal("ns1.example.com", info.NameServers[0]);
+        Assert.Equal("Test remarks", info.Remarks);
+        Assert.Equal("unsigned", info.DnsSecStatus);
     }
 
     [Fact]
@@ -75,6 +77,7 @@ public class WhoisRecordMapperTests
         Assert.Null(info.AdminContact);
         Assert.Null(info.TechnicalContact);
         Assert.Null(info.BillingContact);
+        Assert.Null(info.ZoneContact);
         Assert.Null(info.Registrar);
     }
 
