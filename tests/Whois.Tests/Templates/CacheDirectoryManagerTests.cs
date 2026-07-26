@@ -125,7 +125,7 @@ public class CacheDirectoryManagerTests : IDisposable
     public void ExtractPack_AbsolutePath_Rejects()
     {
         Directory.CreateDirectory(_tempDir);
-        // Use a Unix-style absolute path — ZipArchive will store the entry name as-is
+        // Use a Unix-style absolute path  -  ZipArchive will store the entry name as-is
         var zip = BuildZipRawEntry("/etc/passwd", "should not be extracted");
 
         var result = _manager.ExtractPack(zip, "current");
@@ -263,7 +263,7 @@ public class CacheDirectoryManagerTests : IDisposable
     {
         Directory.CreateDirectory(_tempDir);
 
-        // Deleting a non-existent directory is idempotent — should succeed
+        // Deleting a non-existent directory is idempotent  -  should succeed
         var result = _manager.DeleteDirectory("does-not-exist");
 
         Assert.True(result);
@@ -330,7 +330,7 @@ public class CacheDirectoryManagerTests : IDisposable
     // Helpers
     // -------------------------------------------------------------------------
 
-    /// <summary>Builds an in-memory zip with the given path→content mapping.</summary>
+    /// <summary>Builds an in-memory zip with the given path->content mapping.</summary>
     private static byte[] BuildZip(Dictionary<string, string> entries)
     {
         using var ms = new MemoryStream();

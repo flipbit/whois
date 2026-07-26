@@ -108,7 +108,7 @@ public class TemplatePackProviderTests : IDisposable
                 });
             }
 
-            // Second call: the zip — 11 MB of zeros
+            // Second call: the zip  -  11 MB of zeros
             var oversized = new byte[11 * 1024 * 1024];
             return Task.FromResult(new HttpResponseMessage(HttpStatusCode.OK)
             {
@@ -155,7 +155,7 @@ public class TemplatePackProviderTests : IDisposable
     }
 
     // =========================================================================
-    // CheckForUpdate — Happy path
+    // CheckForUpdate  -  Happy path
     // =========================================================================
 
     [Fact]
@@ -207,7 +207,7 @@ public class TemplatePackProviderTests : IDisposable
     }
 
     // =========================================================================
-    // CheckForUpdate — AlreadyUpToDate
+    // CheckForUpdate  -  AlreadyUpToDate
     // =========================================================================
 
     [Fact]
@@ -237,7 +237,7 @@ public class TemplatePackProviderTests : IDisposable
     }
 
     // =========================================================================
-    // CheckForUpdate — Downgrade rejected
+    // CheckForUpdate  -  Downgrade rejected
     // =========================================================================
 
     [Fact]
@@ -268,7 +268,7 @@ public class TemplatePackProviderTests : IDisposable
     }
 
     // =========================================================================
-    // CheckForUpdate — HTTP errors
+    // CheckForUpdate  -  HTTP errors
     // =========================================================================
 
     [Theory]
@@ -328,7 +328,7 @@ public class TemplatePackProviderTests : IDisposable
     }
 
     // =========================================================================
-    // CheckForUpdate — Signature failure
+    // CheckForUpdate  -  Signature failure
     // =========================================================================
 
     [Fact]
@@ -375,7 +375,7 @@ public class TemplatePackProviderTests : IDisposable
     }
 
     // =========================================================================
-    // CheckForUpdate — Concurrency
+    // CheckForUpdate  -  Concurrency
     // =========================================================================
 
     [Fact]
@@ -407,7 +407,7 @@ public class TemplatePackProviderTests : IDisposable
                 };
             }
 
-            // metadata — first call blocks until we release the gate
+            // metadata  -  first call blocks until we release the gate
             Interlocked.Increment(ref metadataCallCount);
             await tcs.Task;
             return new HttpResponseMessage(HttpStatusCode.OK)
@@ -418,7 +418,7 @@ public class TemplatePackProviderTests : IDisposable
 
         var provider = MakeProvider(handler, currentVersion: Version1);
 
-        // Fire first call — it will block inside the handler
+        // Fire first call  -  it will block inside the handler
         var first = provider.CheckForUpdate();
 
         // Give first call time to enter the HTTP handler
@@ -438,7 +438,7 @@ public class TemplatePackProviderTests : IDisposable
     }
 
     // =========================================================================
-    // CheckForUpdate — Never throws
+    // CheckForUpdate  -  Never throws
     // =========================================================================
 
     [Theory]
@@ -459,18 +459,18 @@ public class TemplatePackProviderTests : IDisposable
 
         var result = await provider.CheckForUpdate();
 
-        // Must not throw — must return Failed
+        // Must not throw  -  must return Failed
         Assert.Equal(TemplateUpdateOutcome.Failed, result.Outcome);
     }
 
     // =========================================================================
-    // CheckForUpdate — Backoff
+    // CheckForUpdate  -  Backoff
     // =========================================================================
 
     [Fact]
     public async Task CheckForUpdate_InBackoff_ReturnsSkipped()
     {
-        // Record a failure just now — backoff starts at 1 hour
+        // Record a failure just now  -  backoff starts at 1 hour
         _state.RecordFailure(DateTimeOffset.UtcNow);
         _state.Save();
 
@@ -539,7 +539,7 @@ public class TemplatePackProviderTests : IDisposable
     }
 
     // =========================================================================
-    // CheckForUpdate — Disk failure disables for session
+    // CheckForUpdate  -  Disk failure disables for session
     // =========================================================================
 
     [Fact]
@@ -571,7 +571,7 @@ public class TemplatePackProviderTests : IDisposable
             state: _state,
             signatureVerifier: (_, _) => true);
 
-        // First attempt — will fail due to extraction failure
+        // First attempt  -  will fail due to extraction failure
         var firstResult = await provider.CheckForUpdate();
 
         Assert.Equal(TemplateUpdateOutcome.Failed, firstResult.Outcome);
@@ -644,7 +644,7 @@ public class TemplatePackProviderTests : IDisposable
     }
 
     // =========================================================================
-    // CheckForUpdate — Custom URL warning (smoke test)
+    // CheckForUpdate  -  Custom URL warning (smoke test)
     // =========================================================================
 
     [Fact]
@@ -668,15 +668,15 @@ public class TemplatePackProviderTests : IDisposable
             currentVersion: Version1,
             releaseUrl: "https://custom.example.com/releases/latest");
 
-        // Should not throw — custom URL warning is just a log event
+        // Should not throw  -  custom URL warning is just a log event
         var result = await provider.CheckForUpdate();
 
-        // We accept Updated or any outcome — just no exception
+        // We accept Updated or any outcome  -  just no exception
         Assert.NotNull(result);
     }
 
     // =========================================================================
-    // CheckForUpdate — Partial failure, previous cache intact
+    // CheckForUpdate  -  Partial failure, previous cache intact
     // =========================================================================
 
     [Fact]
@@ -714,7 +714,7 @@ public class TemplatePackProviderTests : IDisposable
     }
 
     // =========================================================================
-    // CheckForUpdate — Unparseable version in release JSON
+    // CheckForUpdate  -  Unparseable version in release JSON
     // =========================================================================
 
     [Fact]
@@ -741,7 +741,7 @@ public class TemplatePackProviderTests : IDisposable
     }
 
     // =========================================================================
-    // CheckForUpdate — DisabledForSession skips immediately
+    // CheckForUpdate  -  DisabledForSession skips immediately
     // =========================================================================
 
     [Fact]

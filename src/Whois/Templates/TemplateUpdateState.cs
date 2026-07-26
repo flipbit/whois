@@ -8,7 +8,7 @@ namespace Whois.Templates;
 /// Tracks when the last template update check happened, whether it succeeded,
 /// and when the next check is eligible (with exponential backoff on failure).
 /// </summary>
-// MA0182: Will be consumed by TemplatePackProvider (Task 7) — suppress until then.
+// MA0182: Will be consumed by TemplatePackProvider (Task 7)  -  suppress until then.
 #pragma warning disable MA0182
 internal sealed class TemplateUpdateState
 #pragma warning restore MA0182
@@ -43,7 +43,7 @@ internal sealed class TemplateUpdateState
     public string? CurrentVersion { get; private set; }
 
     /// <summary>
-    /// In-memory only — disables eligibility for the current process lifetime without persisting.
+    /// In-memory only  -  disables eligibility for the current process lifetime without persisting.
     /// </summary>
     public bool DisabledForSession { get; set; }
 
@@ -62,7 +62,7 @@ internal sealed class TemplateUpdateState
         {
             dto = JsonSerializer.Deserialize<StateDto>(bytes);
         }
-#pragma warning disable CA1031 // Treat any deserialization failure as "corrupt — use defaults"
+#pragma warning disable CA1031 // Treat any deserialization failure as "corrupt  -  use defaults"
         catch (Exception ex)
 #pragma warning restore CA1031
         {

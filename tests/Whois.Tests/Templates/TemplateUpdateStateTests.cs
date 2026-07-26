@@ -42,7 +42,7 @@ public class TemplateUpdateStateTests : IDisposable
     }
 
     // -------------------------------------------------------------------------
-    // Load — missing file
+    // Load  -  missing file
     // -------------------------------------------------------------------------
 
     [Fact]
@@ -93,7 +93,7 @@ public class TemplateUpdateStateTests : IDisposable
     }
 
     // -------------------------------------------------------------------------
-    // Load — corrupt JSON
+    // Load  -  corrupt JSON
     // -------------------------------------------------------------------------
 
     [Fact]
@@ -110,7 +110,7 @@ public class TemplateUpdateStateTests : IDisposable
     }
 
     // -------------------------------------------------------------------------
-    // Load — implausible value: ConsecutiveFailures > 10
+    // Load  -  implausible value: ConsecutiveFailures > 10
     // -------------------------------------------------------------------------
 
     [Fact]
@@ -125,7 +125,7 @@ public class TemplateUpdateStateTests : IDisposable
     }
 
     // -------------------------------------------------------------------------
-    // Load — implausible value: LastCheckTime more than 30 days in the past
+    // Load  -  implausible value: LastCheckTime more than 30 days in the past
     // -------------------------------------------------------------------------
 
     [Fact]
@@ -141,7 +141,7 @@ public class TemplateUpdateStateTests : IDisposable
     }
 
     // -------------------------------------------------------------------------
-    // Load — implausible value: LastCheckTime in the future
+    // Load  -  implausible value: LastCheckTime in the future
     // -------------------------------------------------------------------------
 
     [Fact]
@@ -157,7 +157,7 @@ public class TemplateUpdateStateTests : IDisposable
     }
 
     // -------------------------------------------------------------------------
-    // Load — implausible value: bad version string
+    // Load  -  implausible value: bad version string
     // -------------------------------------------------------------------------
 
     [Fact]
@@ -227,7 +227,7 @@ public class TemplateUpdateStateTests : IDisposable
     }
 
     // -------------------------------------------------------------------------
-    // GetNextEligibleTime — DisabledForSession
+    // GetNextEligibleTime  -  DisabledForSession
     // -------------------------------------------------------------------------
 
     [Fact]
@@ -241,7 +241,7 @@ public class TemplateUpdateStateTests : IDisposable
     }
 
     // -------------------------------------------------------------------------
-    // GetNextEligibleTime — no last check time
+    // GetNextEligibleTime  -  no last check time
     // -------------------------------------------------------------------------
 
     [Fact]
@@ -253,7 +253,7 @@ public class TemplateUpdateStateTests : IDisposable
     }
 
     // -------------------------------------------------------------------------
-    // GetNextEligibleTime — after success
+    // GetNextEligibleTime  -  after success
     // -------------------------------------------------------------------------
 
     [Fact]
@@ -269,15 +269,15 @@ public class TemplateUpdateStateTests : IDisposable
     }
 
     // -------------------------------------------------------------------------
-    // GetNextEligibleTime — backoff after failures
+    // GetNextEligibleTime  -  backoff after failures
     // -------------------------------------------------------------------------
 
     [Theory]
-    [InlineData(1, 1)]   // 1 failure → 1 hour
-    [InlineData(2, 4)]   // 2 failures → 4 hours
-    [InlineData(3, 24)]  // 3 failures → 24 hours
-    [InlineData(4, 168)] // 4 failures → 7 days = 168 hours
-    [InlineData(5, 168)] // 5+ failures → still 7 days (capped)
+    [InlineData(1, 1)]   // 1 failure -> 1 hour
+    [InlineData(2, 4)]   // 2 failures -> 4 hours
+    [InlineData(3, 24)]  // 3 failures -> 24 hours
+    [InlineData(4, 168)] // 4 failures -> 7 days = 168 hours
+    [InlineData(5, 168)] // 5+ failures -> still 7 days (capped)
     [InlineData(10, 168)]
     public void GetNextEligibleTime_AfterFailures_UsesBackoffDelay(int failureCount, int expectedHours)
     {
@@ -317,7 +317,7 @@ public class TemplateUpdateStateTests : IDisposable
         var checkTime = DateTimeOffset.UtcNow.AddMinutes(-30);
         _state.RecordSuccess("2026.07.12.1", checkTime);
 
-        // 24h interval — we checked 30 minutes ago so not eligible
+        // 24h interval  -  we checked 30 minutes ago so not eligible
         Assert.False(_state.IsEligibleForCheck(TimeSpan.FromHours(24)));
     }
 
@@ -327,14 +327,14 @@ public class TemplateUpdateStateTests : IDisposable
         var checkTime = DateTimeOffset.UtcNow.AddHours(-25);
         _state.RecordSuccess("2026.07.12.1", checkTime);
 
-        // 24h interval — we checked 25 hours ago so eligible
+        // 24h interval  -  we checked 25 hours ago so eligible
         Assert.True(_state.IsEligibleForCheck(TimeSpan.FromHours(24)));
     }
 
     [Fact]
     public void IsEligibleForCheck_RecentFailure_ReturnsFalse()
     {
-        // 1 failure → 1 hour backoff; failure was 30 min ago → not eligible
+        // 1 failure -> 1 hour backoff; failure was 30 min ago -> not eligible
         var checkTime = DateTimeOffset.UtcNow.AddMinutes(-30);
         _state.RecordFailure(checkTime);
 
@@ -344,7 +344,7 @@ public class TemplateUpdateStateTests : IDisposable
     [Fact]
     public void IsEligibleForCheck_OldFailure_ReturnsTrue()
     {
-        // 1 failure → 1 hour backoff; failure was 2 hours ago → eligible
+        // 1 failure -> 1 hour backoff; failure was 2 hours ago -> eligible
         var checkTime = DateTimeOffset.UtcNow.AddHours(-2);
         _state.RecordFailure(checkTime);
 

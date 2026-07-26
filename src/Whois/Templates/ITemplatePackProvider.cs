@@ -12,8 +12,8 @@ public interface ITemplatePackProvider
 
     /// <summary>
     /// Checks for a newer template pack, downloads and installs it if available.
-    /// Never throws — returns <see cref="TemplateUpdateOutcome.Failed"/> on any error.
-    /// Serialises concurrent calls — the second caller gets <see cref="TemplateUpdateOutcome.Skipped"/>.
+    /// Never throws  -  returns <see cref="TemplateUpdateOutcome.Failed"/> on any error.
+    /// Serialises concurrent calls  -  the second caller gets <see cref="TemplateUpdateOutcome.Skipped"/>.
     /// </summary>
     public Task<TemplateUpdateResult> CheckForUpdate(CancellationToken cancellationToken = default);
 

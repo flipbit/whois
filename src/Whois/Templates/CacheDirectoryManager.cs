@@ -8,7 +8,7 @@ namespace Whois.Templates;
 /// Manages the local template cache directory: creates it with restrictive permissions,
 /// extracts template pack zips with security checks, and provides atomic file writes.
 /// </summary>
-// MA0182: Will be consumed by TemplatePackProvider (Task 7) — suppress until then.
+// MA0182: Will be consumed by TemplatePackProvider (Task 7)  -  suppress until then.
 #pragma warning disable MA0182
 internal sealed class CacheDirectoryManager
 #pragma warning restore MA0182
@@ -32,9 +32,9 @@ internal sealed class CacheDirectoryManager
     /// Creates the cache directory with restrictive permissions (0700 on Unix).
     /// Returns false if creation fails.
     /// </summary>
-#pragma warning disable CA1031 // Catch any IO/security failure and return false rather than throwing
     public bool EnsureDirectory()
     {
+#pragma warning disable CA1031 // Catch any IO/security failure and return false rather than throwing
         try
         {
             if (Directory.Exists(_cacheDirectory))
@@ -49,8 +49,8 @@ internal sealed class CacheDirectoryManager
             _logger.LogWarning(ex, "Failed to create cache directory: {Dir}", _cacheDirectory);
             return false;
         }
-    }
 #pragma warning restore CA1031
+    }
 
     /// <summary>
     /// Extracts a zip archive to <c>{cacheDirectory}/{targetSubDirectory}</c> with security checks:
@@ -58,7 +58,6 @@ internal sealed class CacheDirectoryManager
     /// Cleans up the target directory on any failure.
     /// Returns false if extraction fails or any security check is violated.
     /// </summary>
-#pragma warning disable CA1031 // Catch any extraction failure and return false rather than throwing
     public bool ExtractPack(byte[] zipBytes, string targetSubDirectory)
     {
         var targetDir = Path.Combine(_cacheDirectory, targetSubDirectory);
@@ -70,6 +69,7 @@ internal sealed class CacheDirectoryManager
                                                               Path.AltDirectorySeparatorChar)
                                    + Path.DirectorySeparatorChar;
 
+#pragma warning disable CA1031 // Catch any extraction failure and return false rather than throwing
         try
         {
             Directory.CreateDirectory(targetDir);
@@ -139,17 +139,17 @@ internal sealed class CacheDirectoryManager
             DeleteTargetOnFailure(targetDir);
             return false;
         }
-    }
 #pragma warning restore CA1031
+    }
 
     /// <summary>
     /// Removes a subdirectory of the cache directory and all its contents.
     /// Returns true if the directory was removed or did not exist; false on error.
     /// </summary>
-#pragma warning disable CA1031 // Catch any IO failure and return false rather than throwing
     public bool DeleteDirectory(string subDirectory)
     {
         var path = Path.Combine(_cacheDirectory, subDirectory);
+#pragma warning disable CA1031 // Catch any IO failure and return false rather than throwing
         try
         {
             if (Directory.Exists(path))
@@ -161,15 +161,14 @@ internal sealed class CacheDirectoryManager
             _logger.LogWarning(ex, "Failed to delete directory: {Dir}", path);
             return false;
         }
-    }
 #pragma warning restore CA1031
+    }
 
     /// <summary>
     /// Atomically writes <paramref name="content"/> to <c>{cacheDirectory}/{relativePath}</c>
     /// via a temporary file and rename. Creates intermediate directories as needed.
     /// Returns false on any failure.
     /// </summary>
-#pragma warning disable CA1031 // Catch any IO failure and return false rather than throwing
     public bool WriteFile(string relativePath, byte[] content)
     {
         var fullPath = Path.Combine(_cacheDirectory, relativePath);
@@ -181,6 +180,7 @@ internal sealed class CacheDirectoryManager
             return false;
         }
 
+#pragma warning disable CA1031 // Catch any IO failure and return false rather than throwing
         try
         {
             var dir = Path.GetDirectoryName(fullPath)!;
@@ -196,8 +196,8 @@ internal sealed class CacheDirectoryManager
             TryDelete(tmpPath);
             return false;
         }
-    }
 #pragma warning restore CA1031
+    }
 
     /// <summary>
     /// Reads all bytes from <c>{cacheDirectory}/{relativePath}</c>.
@@ -236,7 +236,7 @@ internal sealed class CacheDirectoryManager
 
             return false;
         }
-#pragma warning disable CA1031 // Swallow any filesystem error — treat as "not a symlink"
+#pragma warning disable CA1031 // Swallow any filesystem error  -  treat as "not a symlink"
         catch
 #pragma warning restore CA1031
         {

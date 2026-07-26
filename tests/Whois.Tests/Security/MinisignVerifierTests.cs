@@ -23,7 +23,7 @@ public class MinisignVerifierTests
     // All blobs are base64-encoded in the minisign file format.
     // -------------------------------------------------------------------------
 
-    // RFC 8032 Vector 1 — empty message
+    // RFC 8032 Vector 1  -  empty message
     private const string ValidPublicKey =
         "untrusted comment: minisign public key test\n" +
         "RWQBAgMEBQYHCNdamAGCsQq31Uv+08lkBzoO4XLz2qYjJa8CGmj3B1Ea";
@@ -32,7 +32,7 @@ public class MinisignVerifierTests
         "untrusted comment: signature from test vector\n" +
         "RWQBAgMEBQYHCOVWQwDDYKxykIbizIBugoqEh38euOXZdNhz4GUiSQFVX7iCFZCjO6zGHjlwHPm0a9Jb9fBZW74kZVFBQ456EAs=";
 
-    // RFC 8032 Vector 2 — message = [0x72]
+    // RFC 8032 Vector 2  -  message = [0x72]
     private const string ValidPublicKey2 =
         "untrusted comment: minisign public key test 2\n" +
         "RWQBAgMEBQYHCD1AF8PoQ4lakrcKp00bfrycmCzPLsSWjMDNVfEq9GYM";
@@ -73,7 +73,7 @@ public class MinisignVerifierTests
     }
 
     // -------------------------------------------------------------------------
-    // Tampered content — same signature, different bytes
+    // Tampered content  -  same signature, different bytes
     // -------------------------------------------------------------------------
 
     [Fact]
@@ -88,7 +88,7 @@ public class MinisignVerifierTests
     }
 
     // -------------------------------------------------------------------------
-    // Tampered signature — flip one bit in the Ed25519 sig bytes
+    // Tampered signature  -  flip one bit in the Ed25519 sig bytes
     // -------------------------------------------------------------------------
 
     [Fact]
@@ -111,7 +111,7 @@ public class MinisignVerifierTests
     }
 
     // -------------------------------------------------------------------------
-    // Wrong public key — use vector-2 key to verify vector-1 signature
+    // Wrong public key  -  use vector-2 key to verify vector-1 signature
     // -------------------------------------------------------------------------
 
     [Fact]
@@ -126,7 +126,7 @@ public class MinisignVerifierTests
     }
 
     // -------------------------------------------------------------------------
-    // Key ID mismatch — right Ed25519 key, but key ID in public key doesn't match sig
+    // Key ID mismatch  -  right Ed25519 key, but key ID in public key doesn't match sig
     // -------------------------------------------------------------------------
 
     [Fact]
@@ -169,7 +169,7 @@ public class MinisignVerifierTests
     [Fact]
     public void Verify_MalformedPublicKey_TooShort_ReturnsFalse()
     {
-        // Valid base64 but only 10 bytes — too short for a 42-byte public key blob
+        // Valid base64 but only 10 bytes  -  too short for a 42-byte public key blob
         var shortBlob = Convert.ToBase64String(new byte[10]);
         var result = MinisignVerifier.Verify(
             content: Array.Empty<byte>(),

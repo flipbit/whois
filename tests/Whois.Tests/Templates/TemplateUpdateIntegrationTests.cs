@@ -11,7 +11,7 @@ namespace Whois.Tests.Templates;
 
 /// <summary>
 /// End-to-end integration tests for the template update pipeline:
-/// WhoisLookup → TemplatePackProvider → download → verify → extract → parser loads from cache.
+/// WhoisLookup -> TemplatePackProvider -> download -> verify -> extract -> parser loads from cache.
 ///
 /// All HTTP calls are intercepted via a custom DelegatingHandler.
 /// Signature verification is injected as a Func that always returns true.
@@ -113,7 +113,7 @@ public class TemplateUpdateIntegrationTests : IDisposable
 
     /// <summary>
     /// Creates a handler that routes requests by URL pattern:
-    /// metadata URL → releaseJson, .minisig URL → "fake-sig", .zip URL → zipBytes.
+    /// metadata URL -> releaseJson, .minisig URL -> "fake-sig", .zip URL -> zipBytes.
     /// </summary>
     private static HttpMessageHandler BuildHandler(string releaseJson, byte[] zipBytes) =>
         new FuncHandler(req =>
@@ -180,7 +180,7 @@ public class TemplateUpdateIntegrationTests : IDisposable
     }
 
     // =========================================================================
-    // Test 1: UpdateTemplates E2E — templates extracted and used for parsing
+    // Test 1: UpdateTemplates E2E  -  templates extracted and used for parsing
     // =========================================================================
 
     [Fact]
@@ -220,7 +220,7 @@ public class TemplateUpdateIntegrationTests : IDisposable
     }
 
     // =========================================================================
-    // Test 2: Cache-hit bypass — already-queried server keeps embedded templates
+    // Test 2: Cache-hit bypass  -  already-queried server keeps embedded templates
     // =========================================================================
 
     [Fact]
@@ -236,7 +236,7 @@ public class TemplateUpdateIntegrationTests : IDisposable
         //
         // For a more realistic test: pre-populate the cache with "old" templates,
         // parse once (parser caches internally), then update with "new" templates,
-        // parse again — parser should still use old in-memory templates.
+        // parse again  -  parser should still use old in-memory templates.
 
         // Pre-populate cache with "old" template (version A)
         var oldContent =
@@ -258,7 +258,7 @@ public class TemplateUpdateIntegrationTests : IDisposable
         var firstUpdate = await provider.CheckForUpdate();
         Assert.Equal(TemplateUpdateOutcome.Updated, firstUpdate.Outcome);
 
-        // Parse with the old templates — parser loads and caches internally
+        // Parse with the old templates  -  parser loads and caches internally
         var whoisContent = "Domain Name:example.test\n";
         var firstParse = parser.Parse(TestServer, whoisContent);
         Assert.Equal("example.test", firstParse.DomainName?.Value);
@@ -293,7 +293,7 @@ public class TemplateUpdateIntegrationTests : IDisposable
         var secondUpdate = await provider2.CheckForUpdate();
         Assert.Equal(TemplateUpdateOutcome.Updated, secondUpdate.Outcome);
 
-        // Parse again — same parser instance, TestServer already loaded
+        // Parse again  -  same parser instance, TestServer already loaded
         // Parser should use in-memory templates (from the first load), not re-read from disk.
         // The template tag is still present, so it won't reload from cache.
         var secondParse = parser.Parse(TestServer, whoisContent);
@@ -305,7 +305,7 @@ public class TemplateUpdateIntegrationTests : IDisposable
     }
 
     // =========================================================================
-    // Test 3: Cache-hit bypass — new server after update uses cached templates
+    // Test 3: Cache-hit bypass  -  new server after update uses cached templates
     // =========================================================================
 
     [Fact]
@@ -326,7 +326,7 @@ public class TemplateUpdateIntegrationTests : IDisposable
         // Create a fresh parser (AnotherServer never queried) backed by the cache
         var parser = MakeParserWithCacheResolver();
 
-        // Parse a response for AnotherServer — should use cached template
+        // Parse a response for AnotherServer  -  should use cached template
         var whoisContent = "Domain Name:another.test\n";
         var parsed = parser.Parse(AnotherServer, whoisContent);
 
@@ -371,7 +371,7 @@ public class TemplateUpdateIntegrationTests : IDisposable
 
         // Transition to: error state (extraction failure disables session)
         var errorState = new TemplateUpdateState(_cache, NullLogger<TemplateUpdateState>.Instance);
-        // Don't set a version — this is a fresh state for the error provider
+        // Don't set a version  -  this is a fresh state for the error provider
         var errorProvider = new TemplatePackProvider(
             httpClient: new HttpClient(new FuncHandler(req =>
             {
@@ -434,7 +434,7 @@ public class TemplateUpdateIntegrationTests : IDisposable
             });
         });
 
-        // Act: first call — triggers disk failure, disables for session
+        // Act: first call  -  triggers disk failure, disables for session
         var provider = MakeProvider(handler);
         var firstResult = await provider.CheckForUpdate();
 
@@ -446,7 +446,7 @@ public class TemplateUpdateIntegrationTests : IDisposable
         var lookup1 = new WhoisLookup(provider, sharedParser);
         var lookup2 = new WhoisLookup(provider, sharedParser);
 
-        // Both instances share the same provider — both should see AutoUpdateEnabled = false
+        // Both instances share the same provider  -  both should see AutoUpdateEnabled = false
         Assert.False(lookup1.TemplateStatus.AutoUpdateEnabled);
         Assert.False(lookup2.TemplateStatus.AutoUpdateEnabled);
 

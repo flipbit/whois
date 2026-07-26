@@ -11,10 +11,10 @@ namespace Whois.Templates;
 /// Downloads, verifies, and caches template packs from a GitHub releases endpoint.
 ///
 /// Singleton. Serialises concurrent <see cref="CheckForUpdate"/> calls via an
-/// <c>Interlocked</c> guard — the second concurrent caller receives
+/// <c>Interlocked</c> guard  -  the second concurrent caller receives
 /// <see cref="TemplateUpdateOutcome.Skipped"/> immediately.
 /// </summary>
-// MA0182: consumed by WhoisLookup (Task 8) — suppress until then.
+// MA0182: consumed by WhoisLookup (Task 8)  -  suppress until then.
 #pragma warning disable MA0182
 internal sealed class TemplatePackProvider : ITemplatePackProvider
 #pragma warning restore MA0182
@@ -61,7 +61,7 @@ internal sealed class TemplatePackProvider : ITemplatePackProvider
     });
 
     /// <summary>
-    /// Constructor for DI use — takes a named <see cref="HttpClient"/> created by
+    /// Constructor for DI use  -  takes a named <see cref="HttpClient"/> created by
     /// the factory (avoids singleton-captures-handler anti-pattern).
     /// </summary>
     public TemplatePackProvider(
@@ -81,7 +81,7 @@ internal sealed class TemplatePackProvider : ITemplatePackProvider
     }
 
     /// <summary>
-    /// Constructor for non-DI use — uses a shared static <see cref="HttpClient"/>.
+    /// Constructor for non-DI use  -  uses a shared static <see cref="HttpClient"/>.
     /// </summary>
     internal TemplatePackProvider(WhoisOptions options, ILogger<TemplatePackProvider> logger,
                                   CacheDirectoryManager cache, TemplateUpdateState state)
@@ -90,7 +90,7 @@ internal sealed class TemplatePackProvider : ITemplatePackProvider
     }
 
     /// <summary>
-    /// Constructor for non-DI use and testing — accepts a pre-built <see cref="HttpClient"/>.
+    /// Constructor for non-DI use and testing  -  accepts a pre-built <see cref="HttpClient"/>.
     /// </summary>
     internal TemplatePackProvider(
         HttpClient httpClient,
@@ -139,11 +139,10 @@ internal sealed class TemplatePackProvider : ITemplatePackProvider
     }
 
     /// <inheritdoc/>
-    public string? GetCachedTemplatePath(string server)
-        => _cache.GetServerDirectory(server);
+    public string? GetCachedTemplatePath(string server) => _cache.GetServerDirectory(server);
 
     /// <inheritdoc/>
-#pragma warning disable CA1031 // Never propagate — return Failed on any exception
+#pragma warning disable CA1031 // Never propagate  -  return Failed on any exception
     public async Task<TemplateUpdateResult> CheckForUpdate(CancellationToken cancellationToken = default)
     {
         // ── Concurrency guard ─────────────────────────────────────────────────
@@ -164,7 +163,7 @@ internal sealed class TemplatePackProvider : ITemplatePackProvider
         {
             _logger.LogWarning(
                 ex,
-                "Template update check failed for {TemplateUpdateUrl}: {ExceptionType} — {ExceptionMessage}",
+                "Template update check failed for {TemplateUpdateUrl}: {ExceptionType}  -  {ExceptionMessage}",
                 _options.TemplateReleaseUrl ?? DefaultReleaseUrl,
                 ex.GetType().Name,
                 ex.Message);
@@ -182,7 +181,7 @@ internal sealed class TemplatePackProvider : ITemplatePackProvider
 #pragma warning restore CA1031
 
     // -------------------------------------------------------------------------
-    // Private — main pipeline
+    // Private  -  main pipeline
     // -------------------------------------------------------------------------
 
     private async Task<TemplateUpdateResult> RunCheckAsync(CancellationToken cancellationToken)
@@ -287,7 +286,7 @@ internal sealed class TemplatePackProvider : ITemplatePackProvider
         catch (Exception ex)
         {
             _logger.LogWarning(
-                "Template update check failed for {TemplateUpdateUrl}: {ExceptionType} — {ExceptionMessage}",
+                "Template update check failed for {TemplateUpdateUrl}: {ExceptionType}  -  {ExceptionMessage}",
                 releaseUrl,
                 ex.GetType().Name,
                 ex.Message);
@@ -358,7 +357,7 @@ internal sealed class TemplatePackProvider : ITemplatePackProvider
         catch (Exception ex)
         {
             _logger.LogWarning(
-                "Template update check failed for {TemplateUpdateUrl}: {ExceptionType} — {ExceptionMessage}",
+                "Template update check failed for {TemplateUpdateUrl}: {ExceptionType}  -  {ExceptionMessage}",
                 releaseUrl,
                 ex.GetType().Name,
                 ex.Message);
@@ -382,7 +381,7 @@ internal sealed class TemplatePackProvider : ITemplatePackProvider
         catch (Exception ex)
         {
             _logger.LogWarning(
-                "Template update check failed for {TemplateUpdateUrl}: {ExceptionType} — {ExceptionMessage}",
+                "Template update check failed for {TemplateUpdateUrl}: {ExceptionType}  -  {ExceptionMessage}",
                 releaseUrl,
                 ex.GetType().Name,
                 ex.Message);
@@ -399,7 +398,7 @@ internal sealed class TemplatePackProvider : ITemplatePackProvider
         {
             _logger.LogWarning(
                 "Template pack signature verification failed for {TemplateUpdateUrl}, " +
-                "version {AttemptedVersion} — discarding pack",
+                "version {AttemptedVersion}  -  discarding pack",
                 releaseUrl,
                 offeredVersion);
             RecordFailure();
@@ -556,7 +555,7 @@ internal sealed class TemplatePackProvider : ITemplatePackProvider
     {
         _state.DisabledForSession = true;
         _logger.LogWarning(
-            "Auto-update disabled: cache directory {CacheDirectory} is not writable — {ErrorType}: {ErrorMessage}",
+            "Auto-update disabled: cache directory {CacheDirectory} is not writable  -  {ErrorType}: {ErrorMessage}",
             _cache.BaseDirectory,
             errorType,
             errorMessage);

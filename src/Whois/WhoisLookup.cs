@@ -18,7 +18,7 @@ public class WhoisLookup : IWhoisLookup
     private readonly ITemplatePackProvider _packProvider;
     private int _autoUpdateTriggered = 0;
 
-    // Static shared instances for non-DI use — created lazily.
+    // Static shared instances for non-DI use  -  created lazily.
     // The pack provider uses a static HttpClient and NullLoggers.
     private static readonly Lazy<TemplatePackProvider> SharedPackProvider = new(() =>
     {
@@ -81,7 +81,7 @@ public class WhoisLookup : IWhoisLookup
     }
 
     /// <summary>
-    /// Full DI constructor — all dependencies supplied by the container.
+    /// Full DI constructor  -  all dependencies supplied by the container.
     /// </summary>
     public WhoisLookup(IOptions<WhoisOptions> options, ILogger<WhoisLookup> logger, ITcpReader tcpReader, IWhoisServerLookup serverLookup, ITemplatePackProvider packProvider, WhoisParser parser)
     {
@@ -94,7 +94,7 @@ public class WhoisLookup : IWhoisLookup
     }
 
     /// <summary>
-    /// Internal constructor for testing — accepts explicit pack provider and parser.
+    /// Internal constructor for testing  -  accepts explicit pack provider and parser.
     /// </summary>
     internal WhoisLookup(ITemplatePackProvider packProvider, WhoisParser parser)
         : this(new WhoisOptions(), NullLogger<WhoisLookup>.Instance, packProvider, parser)

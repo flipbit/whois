@@ -1,7 +1,7 @@
 namespace Whois.Security;
 
 /// <summary>
-/// Verifies minisign signatures (legacy "Ed" algorithm — raw Ed25519, no prehashing).
+/// Verifies minisign signatures (legacy "Ed" algorithm  -  raw Ed25519, no prehashing).
 ///
 /// Minisign public key file format (two lines):
 ///   Line 1: "untrusted comment: ..." (ignored)
@@ -14,7 +14,7 @@ namespace Whois.Security;
 /// The Ed25519 signature covers the raw content bytes.
 /// The key ID in the signature must match the key ID in the public key.
 /// </summary>
-// MA0182: Will be consumed by TemplatePackProvider (Task 7) — suppress until then.
+// MA0182: Will be consumed by TemplatePackProvider (Task 7)  -  suppress until then.
 #pragma warning disable MA0182
 internal static class MinisignVerifier
 #pragma warning restore MA0182

@@ -159,7 +159,7 @@ public class WhoisParser
 
     private void LoadServerTemplates(string whoisServer)
     {
-        // Fast check outside the lock — avoid taking the lock when already loaded.
+        // Fast check outside the lock  -  avoid taking the lock when already loaded.
         if (Templates.ContainsTag(whoisServer)) return;
 
         lock (_loadLock)

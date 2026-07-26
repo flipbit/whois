@@ -6,7 +6,7 @@ namespace Whois.Security.Internal;
 /// Pure managed Ed25519 signature verification.
 ///
 /// Derived from the Chaos.NaCl library (MIT) and RFC 8032.
-/// Only verification is implemented — no key generation or signing.
+/// Only verification is implemented  -  no key generation or signing.
 /// </summary>
 internal static class ManagedEd25519
 {
