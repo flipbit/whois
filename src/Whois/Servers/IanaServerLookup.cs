@@ -62,7 +62,7 @@ public class IanaServerLookup : IWhoisServerLookup
         {
             Content = content,
             DomainName = new HostName(tld),
-            Status = WhoisStatus.Unknown,
+            Status = RegistrationStatus.Unknown,
         };
     }
 

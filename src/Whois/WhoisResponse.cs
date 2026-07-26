@@ -28,7 +28,7 @@ public class WhoisResponse
     /// <summary>
     /// Returns the status of this WHOIS lookup
     /// </summary>
-    public WhoisStatus Status { get; set; }
+    public RegistrationStatus Status { get; set; }
 
     /// <summary>
     /// Gets the domain name
@@ -142,7 +142,7 @@ public class WhoisResponse
     {
         return new WhoisResponse
         {
-            Status = WhoisStatus.Found,
+            Status = RegistrationStatus.Found,
             Registrar = new Registrar
             {
                 WhoisServer = new HostName(hostName),

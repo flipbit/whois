@@ -1,6 +1,6 @@
 namespace Whois;
 
-public enum WhoisStatus
+public enum RegistrationStatus
 {
     Unknown,
     Found,

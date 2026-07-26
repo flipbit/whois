@@ -67,7 +67,7 @@ public class WhoisParser
             return new WhoisResponse
             {
                 Content = content,
-                Status = WhoisStatus.Unknown,
+                Status = RegistrationStatus.Unknown,
             };
         }
 
@@ -125,7 +125,7 @@ public class WhoisParser
         return new WhoisResponse
         {
             Content = content,
-            Status = WhoisStatus.Unknown,
+            Status = RegistrationStatus.Unknown,
         };
     }
 
