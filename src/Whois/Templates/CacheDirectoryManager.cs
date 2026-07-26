@@ -94,7 +94,7 @@ internal sealed class CacheDirectoryManager
                     return false;
                 }
 
-                var entryPath = entry.FullName;
+                var entryPath = entry.FullName; // CodeQL [cs/zipslip] False positive: path is validated below (IsPathRooted + StartsWith canonical target check)
 
                 // Reject entries with an absolute path component
                 if (Path.IsPathRooted(entryPath))
