@@ -1,0 +1,29 @@
+
+Whois Server Version 2.1.7
+
+Domain Name:                GOOGLE.CO.TH
+Registrar:                  THNIC
+Name Server:                NS3.GOOGLE.COM
+Name Server:                NS1.GOOGLE.COM
+Name Server:                NS4.GOOGLE.COM
+Name Server:                NS2.GOOGLE.COM
+DNSSEC:                     unsigned
+Status:                     ACTIVE
+Updated date:               06 Sep 2025
+Created date:               08 Oct 2004
+Exp date:                   07 Oct 2026
+Domain Holder Organization: Google LLC (กูเกิล แอลแอลซี)
+Domain Holder Street:       Personal Information
+Domain Holder Country:      US
+
+Tech Contact:               Personal Information
+Tech Organization:          Personal Information
+Tech Street:                Personal Information
+Tech Country:               Personal Information
+
+>>> Last updated on Sun, 12 Jul 2026 19:25:58 UTC+7 <<<
+
+If you have a legitimate interest in viewing the non-public WHOIS details, send your request and the reasons for your request to staff@thnic.co.th and specify the domain name in the subject line. We will review that request and may ask for supporting documentation and explanation.
+
+For more information please visit: https://www.thnic.co.th/whois
+

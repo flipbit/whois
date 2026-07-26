@@ -1,180 +1,178 @@
-using System;
 using Xunit;
 using Whois.Parsers;
 
-namespace Whois.Parsing.Whois.Iana.Org.Tld
+namespace Whois.Parsing.Whois.Iana.Org.Tld;
+
+public class TldParsingTests : ParsingTests
 {
-    public class TldParsingTests : ParsingTests
+    private readonly WhoisParser parser;
+
+    public TldParsingTests()
     {
-        private WhoisParser parser;
 
-        public TldParsingTests()
-        {
+        parser = new WhoisParser();
+    }
 
-            parser = new WhoisParser();
-        }
+    [Fact]
+    public void Test_found_be()
+    {
+        var sample = SampleReader.Read("whois.iana.org", "tld", "found", "be.txt");
+        var response = parser.Parse("whois.iana.org", sample);
 
-        [Fact]
-        public void Test_found_be()
-        {
-            var sample = SampleReader.Read("whois.iana.org", "tld", "be.txt");
-            var response = parser.Parse("whois.iana.org", sample);
+        Assert.True(sample.Length > 0);
+        Assert.Equal(WhoisStatus.Found, response.Status);
 
-            Assert.True(sample.Length > 0);
-            Assert.Equal(WhoisStatus.Found, response.Status);
+        Assert.Equal(0, response.ParsingErrors);
+        Assert.Equal("whois.iana.org/found/01", response.TemplateName);
 
-            Assert.Equal(0, response.ParsingErrors);
-            Assert.Equal("whois.iana.org/Found01", response.TemplateName);
+        Assert.Equal("be", response.DomainName.ToString());
 
-            Assert.Equal("be", response.DomainName.ToString());
+        // Registrar Details
+        Assert.Equal("whois.dns.be", response.Registrar.WhoisServer.Value);
 
-            // Registrar Details
-            Assert.Equal("whois.dns.be", response.Registrar.WhoisServer.Value);
+        Assert.Equal(new DateTime(2014, 07, 30, 00, 00, 00, 000, DateTimeKind.Utc), response.Updated);
+        Assert.Equal(new DateTime(1988, 08, 05, 00, 00, 00, 000, DateTimeKind.Utc), response.Registered);
 
-            Assert.Equal(new DateTime(2014, 07, 30, 00, 00, 00, 000, DateTimeKind.Utc), response.Updated);
-            Assert.Equal(new DateTime(1988, 08, 05, 00, 00, 00, 000, DateTimeKind.Utc), response.Registered);
+        // Registrant Details
+        Assert.Equal("DNS Belgium vzw/asbl", response.Registrant.Organization);
 
-             // Registrant Details
-            Assert.Equal("DNS Belgium vzw/asbl", response.Registrant.Organization);
-
-             // Registrant Address
-            Assert.Equal(3, response.Registrant.Address.Count);
-            Assert.Equal("Ubicenter, Philipssite 5, bus 13", response.Registrant.Address[0]);
-            Assert.Equal("Leuven  3001", response.Registrant.Address[1]);
-            Assert.Equal("Belgium", response.Registrant.Address[2]);
+        // Registrant Address
+        Assert.Equal(3, response.Registrant.Address.Count);
+        Assert.Equal("Ubicenter, Philipssite 5, bus 13", response.Registrant.Address[0]);
+        Assert.Equal("Leuven  3001", response.Registrant.Address[1]);
+        Assert.Equal("Belgium", response.Registrant.Address[2]);
 
 
-             // AdminContact Details
-            Assert.Equal("Philip Du Bois", response.AdminContact.Name);
-            Assert.Equal("+32 16 28 49 70", response.AdminContact.TelephoneNumber);
-            Assert.Equal("+32 16 28 49 71", response.AdminContact.FaxNumber);
-            Assert.Equal("legal@dnsbelgium.be", response.AdminContact.Email);
+        // AdminContact Details
+        Assert.Equal("Philip Du Bois", response.AdminContact.Name);
+        Assert.Equal("+32 16 28 49 70", response.AdminContact.TelephoneNumber);
+        Assert.Equal("+32 16 28 49 71", response.AdminContact.FaxNumber);
+        Assert.Equal("legal@dnsbelgium.be", response.AdminContact.Email);
 
-             // AdminContact Address
-            Assert.Equal(3, response.AdminContact.Address.Count);
-            Assert.Equal("Ubicenter, Philipssite 5, bus 13", response.AdminContact.Address[0]);
-            Assert.Equal("Leuven  3001", response.AdminContact.Address[1]);
-            Assert.Equal("Belgium", response.AdminContact.Address[2]);
-
-
-             // TechnicalContact Details
-            Assert.Equal("David Goelen", response.TechnicalContact.Name);
-            Assert.Equal("+32 16 28 49 70", response.TechnicalContact.TelephoneNumber);
-            Assert.Equal("+32 16 28 49 71", response.TechnicalContact.FaxNumber);
-            Assert.Equal("tech@dnsbelgium.be", response.TechnicalContact.Email);
-
-             // TechnicalContact Address
-            Assert.Equal(3, response.TechnicalContact.Address.Count);
-            Assert.Equal("Ubicenter, Philipssite 5, bus 13", response.TechnicalContact.Address[0]);
-            Assert.Equal("Leuven  3001", response.TechnicalContact.Address[1]);
-            Assert.Equal("Belgium", response.TechnicalContact.Address[2]);
+        // AdminContact Address
+        Assert.Equal(3, response.AdminContact.Address.Count);
+        Assert.Equal("Ubicenter, Philipssite 5, bus 13", response.AdminContact.Address[0]);
+        Assert.Equal("Leuven  3001", response.AdminContact.Address[1]);
+        Assert.Equal("Belgium", response.AdminContact.Address[2]);
 
 
-            // Nameservers
-            Assert.Equal(6, response.NameServers.Count);
-            Assert.Equal("a.ns.dns.be", response.NameServers[0]);
-            Assert.Equal("b.ns.dns.be", response.NameServers[1]);
-            Assert.Equal("c.ns.dns.be", response.NameServers[2]);
-            Assert.Equal("d.ns.dns.be", response.NameServers[3]);
-            Assert.Equal("x.ns.dns.be", response.NameServers[4]);
-            Assert.Equal("y.ns.dns.be", response.NameServers[5]);
+        // TechnicalContact Details
+        Assert.Equal("David Goelen", response.TechnicalContact.Name);
+        Assert.Equal("+32 16 28 49 70", response.TechnicalContact.TelephoneNumber);
+        Assert.Equal("+32 16 28 49 71", response.TechnicalContact.FaxNumber);
+        Assert.Equal("tech@dnsbelgium.be", response.TechnicalContact.Email);
 
-            // Domain Status
-            Assert.Equal(1, response.DomainStatus.Count);
-            Assert.Equal("ACTIVE", response.DomainStatus[0]);
-
-            Assert.Equal(33, response.FieldsParsed);
-        }
-
-        [Fact]
-        public void Test_found_com()
-        {
-            var sample = SampleReader.Read("whois.iana.org", "tld", "com.txt");
-            var response = parser.Parse("whois.iana.org", sample);
-
-            Assert.True(sample.Length > 0);
-            Assert.Equal(WhoisStatus.Found, response.Status);
-
-            Assert.Equal(0, response.ParsingErrors);
-            Assert.Equal("whois.iana.org/Found01", response.TemplateName);
-
-            Assert.Equal("com", response.DomainName.ToString());
-
-            // Registrar Details
-            Assert.Equal("whois.verisign-grs.com", response.Registrar.WhoisServer.Value);
-
-            Assert.Equal(new DateTime(2012, 02, 15, 00, 00, 00, 000, DateTimeKind.Utc), response.Updated);
-            Assert.Equal(new DateTime(1985, 01, 01, 00, 00, 00, 000, DateTimeKind.Utc), response.Registered);
-
-             // Registrant Details
-            Assert.Equal("VeriSign Global Registry Services", response.Registrant.Organization);
-
-             // Registrant Address
-            Assert.Equal(3, response.Registrant.Address.Count);
-            Assert.Equal("12061 Bluemont Way", response.Registrant.Address[0]);
-            Assert.Equal("Reston Virginia 20190", response.Registrant.Address[1]);
-            Assert.Equal("United States", response.Registrant.Address[2]);
+        // TechnicalContact Address
+        Assert.Equal(3, response.TechnicalContact.Address.Count);
+        Assert.Equal("Ubicenter, Philipssite 5, bus 13", response.TechnicalContact.Address[0]);
+        Assert.Equal("Leuven  3001", response.TechnicalContact.Address[1]);
+        Assert.Equal("Belgium", response.TechnicalContact.Address[2]);
 
 
-             // AdminContact Details
-            Assert.Equal("Registry Customer Service", response.AdminContact.Name);
-            Assert.Equal("+1 703 925-6999", response.AdminContact.TelephoneNumber);
-            Assert.Equal("+1 703 948 3978", response.AdminContact.FaxNumber);
-            Assert.Equal("info@verisign-grs.com", response.AdminContact.Email);
+        // Nameservers
+        Assert.Equal(6, response.NameServers.Count);
+        Assert.Equal("a.ns.dns.be", response.NameServers[0]);
+        Assert.Equal("b.ns.dns.be", response.NameServers[1]);
+        Assert.Equal("c.ns.dns.be", response.NameServers[2]);
+        Assert.Equal("d.ns.dns.be", response.NameServers[3]);
+        Assert.Equal("x.ns.dns.be", response.NameServers[4]);
+        Assert.Equal("y.ns.dns.be", response.NameServers[5]);
 
-             // AdminContact Address
-            Assert.Equal(3, response.AdminContact.Address.Count);
-            Assert.Equal("12061 Bluemont Way", response.AdminContact.Address[0]);
-            Assert.Equal("Reston Virginia 20190", response.AdminContact.Address[1]);
-            Assert.Equal("United States", response.AdminContact.Address[2]);
+        // Domain Status
+        Assert.Equal(1, response.DomainStatus.Count);
+        Assert.Equal("ACTIVE", response.DomainStatus[0]);
+
+        Assert.Equal(33, response.FieldsParsed);
+    }
+
+    [Fact]
+    public void Test_found_com()
+    {
+        var sample = SampleReader.Read("whois.iana.org", "tld", "found", "com.txt");
+        var response = parser.Parse("whois.iana.org", sample);
+
+        Assert.True(sample.Length > 0);
+        Assert.Equal(WhoisStatus.Found, response.Status);
+
+        Assert.Equal(0, response.ParsingErrors);
+        Assert.Equal("whois.iana.org/found/01", response.TemplateName);
+
+        Assert.Equal("com", response.DomainName.ToString());
+
+        // Registrar Details
+        Assert.Equal("whois.verisign-grs.com", response.Registrar.WhoisServer.Value);
+
+        Assert.Equal(new DateTime(2012, 02, 15, 00, 00, 00, 000, DateTimeKind.Utc), response.Updated);
+        Assert.Equal(new DateTime(1985, 01, 01, 00, 00, 00, 000, DateTimeKind.Utc), response.Registered);
+
+        // Registrant Details
+        Assert.Equal("VeriSign Global Registry Services", response.Registrant.Organization);
+
+        // Registrant Address
+        Assert.Equal(3, response.Registrant.Address.Count);
+        Assert.Equal("12061 Bluemont Way", response.Registrant.Address[0]);
+        Assert.Equal("Reston Virginia 20190", response.Registrant.Address[1]);
+        Assert.Equal("United States", response.Registrant.Address[2]);
 
 
-             // TechnicalContact Details
-            Assert.Equal("Registry Customer Service", response.TechnicalContact.Name);
-            Assert.Equal("+1 703 925-6999", response.TechnicalContact.TelephoneNumber);
-            Assert.Equal("+1 703 948 3978", response.TechnicalContact.FaxNumber);
-            Assert.Equal("info@verisign-grs.com", response.TechnicalContact.Email);
+        // AdminContact Details
+        Assert.Equal("Registry Customer Service", response.AdminContact.Name);
+        Assert.Equal("+1 703 925-6999", response.AdminContact.TelephoneNumber);
+        Assert.Equal("+1 703 948 3978", response.AdminContact.FaxNumber);
+        Assert.Equal("info@verisign-grs.com", response.AdminContact.Email);
 
-             // TechnicalContact Address
-            Assert.Equal(3, response.TechnicalContact.Address.Count);
-            Assert.Equal("12061 Bluemont Way", response.TechnicalContact.Address[0]);
-            Assert.Equal("Reston Virginia 20190", response.TechnicalContact.Address[1]);
-            Assert.Equal("United States", response.TechnicalContact.Address[2]);
+        // AdminContact Address
+        Assert.Equal(3, response.AdminContact.Address.Count);
+        Assert.Equal("12061 Bluemont Way", response.AdminContact.Address[0]);
+        Assert.Equal("Reston Virginia 20190", response.AdminContact.Address[1]);
+        Assert.Equal("United States", response.AdminContact.Address[2]);
 
 
-            // Nameservers
-            Assert.Equal(13, response.NameServers.Count);
-            Assert.Equal("a.gtld-servers.net", response.NameServers[0]);
-            Assert.Equal("b.gtld-servers.net", response.NameServers[1]);
-            Assert.Equal("c.gtld-servers.net", response.NameServers[2]);
-            Assert.Equal("d.gtld-servers.net", response.NameServers[3]);
-            Assert.Equal("e.gtld-servers.net", response.NameServers[4]);
-            Assert.Equal("f.gtld-servers.net", response.NameServers[5]);
-            Assert.Equal("g.gtld-servers.net", response.NameServers[6]);
-            Assert.Equal("h.gtld-servers.net", response.NameServers[7]);
-            Assert.Equal("i.gtld-servers.net", response.NameServers[8]);
-            Assert.Equal("j.gtld-servers.net", response.NameServers[9]);
-            Assert.Equal("k.gtld-servers.net", response.NameServers[10]);
-            Assert.Equal("l.gtld-servers.net", response.NameServers[11]);
-            Assert.Equal("m.gtld-servers.net", response.NameServers[12]);
+        // TechnicalContact Details
+        Assert.Equal("Registry Customer Service", response.TechnicalContact.Name);
+        Assert.Equal("+1 703 925-6999", response.TechnicalContact.TelephoneNumber);
+        Assert.Equal("+1 703 948 3978", response.TechnicalContact.FaxNumber);
+        Assert.Equal("info@verisign-grs.com", response.TechnicalContact.Email);
 
-            // Domain Status
-            Assert.Equal(1, response.DomainStatus.Count);
-            Assert.Equal("ACTIVE", response.DomainStatus[0]);
+        // TechnicalContact Address
+        Assert.Equal(3, response.TechnicalContact.Address.Count);
+        Assert.Equal("12061 Bluemont Way", response.TechnicalContact.Address[0]);
+        Assert.Equal("Reston Virginia 20190", response.TechnicalContact.Address[1]);
+        Assert.Equal("United States", response.TechnicalContact.Address[2]);
 
-            Assert.Equal(40, response.FieldsParsed);
-        }
 
-        [Fact]
-        public void Test_not_assigned()
-        {
-            var sample = SampleReader.Read("whois.iana.org", "tld", "not_assigned.txt");
-            var response = parser.Parse("whois.iana.org", sample);
+        // Nameservers
+        Assert.Equal(13, response.NameServers.Count);
+        Assert.Equal("a.gtld-servers.net", response.NameServers[0]);
+        Assert.Equal("b.gtld-servers.net", response.NameServers[1]);
+        Assert.Equal("c.gtld-servers.net", response.NameServers[2]);
+        Assert.Equal("d.gtld-servers.net", response.NameServers[3]);
+        Assert.Equal("e.gtld-servers.net", response.NameServers[4]);
+        Assert.Equal("f.gtld-servers.net", response.NameServers[5]);
+        Assert.Equal("g.gtld-servers.net", response.NameServers[6]);
+        Assert.Equal("h.gtld-servers.net", response.NameServers[7]);
+        Assert.Equal("i.gtld-servers.net", response.NameServers[8]);
+        Assert.Equal("j.gtld-servers.net", response.NameServers[9]);
+        Assert.Equal("k.gtld-servers.net", response.NameServers[10]);
+        Assert.Equal("l.gtld-servers.net", response.NameServers[11]);
+        Assert.Equal("m.gtld-servers.net", response.NameServers[12]);
 
-            Assert.True(sample.Length > 0);
-            Assert.Equal(WhoisStatus.NotAssigned, response.Status);
+        // Domain Status
+        Assert.Equal(1, response.DomainStatus.Count);
+        Assert.Equal("ACTIVE", response.DomainStatus[0]);
 
-            AssertWriter.Write(response);
-        }
+        Assert.Equal(40, response.FieldsParsed);
+    }
+
+    [Fact]
+    public void Test_not_assigned()
+    {
+        var sample = SampleReader.Read("whois.iana.org", "tld", "not-assigned", "not_assigned.txt");
+        var response = parser.Parse("whois.iana.org", sample);
+
+        Assert.True(sample.Length > 0);
+        Assert.Equal(WhoisStatus.NotAssigned, response.Status);
+
+        AssertWriter.Write(response);
     }
 }

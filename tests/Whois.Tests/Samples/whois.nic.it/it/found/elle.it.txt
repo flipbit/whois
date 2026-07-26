@@ -1,0 +1,61 @@
+
+*********************************************************************
+* Please note that the following result could be a subgroup of      *
+* the data contained in the database.                               *
+*                                                                   *
+* Additional information can be visualized at:                      *
+* http://web-whois.nic.it                                           *
+*********************************************************************
+
+Domain:             elle.it
+Status:             ok
+Signed:             no
+Created:            1996-01-29 00:00:00
+Last Update:        2025-11-21 11:22:31
+Expire Date:        2026-10-19
+
+Registrant
+  Organization:     HACHETTE FILIPACCHI PRESSE
+  Address:          2 rue des Cevennes
+                    Paris
+                    75015
+                    Ile-de-France
+                    FR
+  Created:          2017-09-20 13:26:57
+  Last Update:      2026-03-25 22:48:26
+
+Admin Contact
+  Name:             Domain Admin
+  Organization:     HACHETTE FILIPACCHI PRESSE
+  Address:          2 rue des Cevennes
+                    Paris
+                    75015
+                    Ile-de-France
+                    FR
+  Created:          2017-09-20 13:26:57
+  Last Update:      2026-03-25 22:48:26
+
+Technical Contacts
+  Name:             Domain Tech
+  Organization:     Lagardere News
+  Address:          4/10 Avenue Andre Malraux
+                    Levallois-Perret
+                    92300
+                    N.D.
+                    FR
+  Created:          2019-07-04 17:21:44
+  Last Update:      2022-04-06 14:38:07
+
+Registrar
+  Organization:     Gandi SAS
+  Name:             GANDI-REG
+  Web:              http://www.gandi.net
+  DNSSEC:           no
+
+
+Nameservers
+  ns-354.awsdns-44.com
+  ns-1422.awsdns-49.org
+  ns-927.awsdns-51.net
+  ns-1608.awsdns-09.co.uk
+

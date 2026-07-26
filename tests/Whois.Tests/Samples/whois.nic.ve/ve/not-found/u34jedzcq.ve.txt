@@ -1,0 +1,10 @@
+%  Servidor whois del Centro de Información de Red de Venezuela (NIC.VE)
+%  Este servidor contiene información autoritativa exclusivamente de dominios .ve
+% 
+% Whoisd Server Version: 3.12.1
+
+%ERROR:101: no entries found
+% 
+% No entries found.
+
+

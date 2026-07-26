@@ -1,0 +1,16 @@
+---
+#
+# .sm Parsing Template
+#
+name: whois.nic.sm/sm/not-found/01
+
+# Use this template for queries to whois.nic.sm:
+tag: whois.nic.sm
+tag: sm
+
+# Set query response type:
+set: Status = NotFound
+
+hint: No entries found.
+---
+No entries found.

@@ -1,0 +1,61 @@
+
+*********************************************************************
+* Please note that the following result could be a subgroup of      *
+* the data contained in the database.                               *
+*                                                                   *
+* Additional information can be visualized at:                      *
+* http://web-whois.nic.it                                           *
+*********************************************************************
+
+Domain:             bunkerfilm.it
+Status:             ok
+Signed:             no
+Created:            2013-01-22 16:25:46
+Last Update:        2026-02-07 00:52:16
+Expire Date:        2027-01-22
+
+Registrant
+  Organization:     Bunker Film di Francesco Cacchiani
+  Address:          via Ilio Barontini, 1b
+                    SCANDICCI
+                    50018
+                    FI
+                    IT
+  Created:          2013-01-22 16:25:45
+  Last Update:      2013-01-22 16:25:45
+
+Admin Contact
+  Name:             Francesco Cacchiani
+  Organization:     Bunker Film di Francesco Cacchiani
+  Address:          Via Ilio Barontini, 1b
+                    SCANDICCI
+                    50018
+                    FI
+                    IT
+  Created:          2013-01-22 16:25:46
+  Last Update:      2013-01-22 16:25:46
+
+Technical Contacts
+  Name:             Francesco Cacchiani
+  Organization:     Bunker Film di Francesco Cacchiani
+  Address:          Via Ilio Barontini, 1b
+                    SCANDICCI
+                    50018
+                    FI
+                    IT
+  Created:          2013-01-22 16:25:46
+  Last Update:      2013-01-22 16:25:46
+
+Registrar
+  Organization:     Aruba s.p.a.
+  Name:             ARUBA-REG
+  Web:              http://www.aruba.it
+  DNSSEC:           yes
+
+
+Nameservers
+  dns.technorail.com
+  dns2.technorail.com
+  dns3.arubadns.net
+  dns4.arubadns.cz
+

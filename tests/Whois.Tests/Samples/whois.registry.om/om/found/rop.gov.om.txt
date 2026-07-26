@@ -1,0 +1,19 @@
+Domain Name: rop.gov.om
+Registry Domain ID: D0C816FDD009886FB4BEC631D5BC20B46-OMREG
+Registrar WHOIS Server:
+Registrar URL: http://www.omantel.om
+Registrar: Oman Telecommunication Company (Omantel)
+Registrar IANA ID: 700000007
+Registrar Abuse Contact Email:
+Registrant Name: Ahmed  Al Khanbashi
+Registrant Organization: Royal Oman Police ( Civil Defence and ambulance authority )
+Registrant Email: ahmed.k@rop.gov.om
+Admin Organization: Royal Oman Police ( Civil Defence and ambulance authority )
+Name Server: ns4.ict.omantel.om
+Name Server: ns3.ict.omantel.om
+URL of the ICANN Whois Inaccuracy Complaint Form: https://www.icann.org/wicf/
+>>> Last update of WHOIS database: 2026-07-12T12:34:25Z <<<
+
+https://tra.gov.om
+
+

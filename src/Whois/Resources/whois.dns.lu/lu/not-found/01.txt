@@ -1,0 +1,17 @@
+---
+#
+# .lu Parsing Template
+#
+name: whois.dns.lu/lu/not-found/01
+
+# Use this template for queries to whois.dns.lu:
+tag: whois.dns.lu
+tag: lu
+
+# Set query response type:
+set: Status = NotFound
+
+hint: No such domain
+---
+% WHOIS { DomainName : IsDomainName, ToHostName }
+% No such domain

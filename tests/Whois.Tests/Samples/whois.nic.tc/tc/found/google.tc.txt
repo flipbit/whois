@@ -1,0 +1,18 @@
+Domain Name: google.tc
+WHOIS Server: whois.nic.tc
+Creation Date: 2014-12-24T05:00:00.0Z
+Registry Expiry Date: 2026-12-24T05:00:00.0Z
+Sponsoring Registrar: Isimtescil Bilisim A.S.
+Domain Status: ok
+Name Server: ns1.google.tc
+Name Server: ns2.google.tc
+DNSSEC: unsigned
+Additional Section
+Sponsoring Registrar URL: https://www.isimtescil.net
+Sponsoring Registrar Address: Tantavi mah. Mentesoglu cad.  Terra Plaza No:25 Kat:2
+Sponsoring Registrar Country: TR
+Sponsoring Registrar Customer Service Email: destek@isimtescil.net
+&gt;&gt;&gt; Last update of WHOIS database: 2026-07-12T12:32:08.206Z &lt;&lt;&lt;
+
+The data in the WHOIS database of TC Registry is provided by NICTC Registry LTD for information purposes, and to assist persons in obtaining information about or related to domain name registration records. By submitting a WHOIS query, you agree that you will use this data only for lawful purposes and that, under no circumstances, you will use this data to enable high volume, automated, electronic processes that apply to NICTC Registry or its systems. NIC TC Registry LTD reserves the right to modify these terms.
+By submitting this query, you agree to abide by this policy.

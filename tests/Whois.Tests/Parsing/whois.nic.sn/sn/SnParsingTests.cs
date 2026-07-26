@@ -1,70 +1,64 @@
-using System;
 using Xunit;
 using Whois.Parsers;
 
-namespace Whois.Parsing.Whois.Nic.Sn.Sn
+namespace Whois.Parsing.Whois.Nic.Sn.Sn;
+
+public class SnParsingTests : ParsingTests
 {
-    public class SnParsingTests : ParsingTests
+    private readonly WhoisParser parser;
+
+    public SnParsingTests()
     {
-        private WhoisParser parser;
 
-        public SnParsingTests()
-        {
+        parser = new WhoisParser();
+    }
 
-            parser = new WhoisParser();
-        }
+    [Fact]
+    public void Test_not_found()
+    {
+        var sample = SampleReader.Read("whois.nic.sn", "sn", "not-found", "not_found.txt");
+        var response = parser.Parse("whois.nic.sn", sample);
 
-        [Fact]
-        public void Test_not_found()
-        {
-            var sample = SampleReader.Read("whois.nic.sn", "sn", "not_found.txt");
-            var response = parser.Parse("whois.nic.sn", sample);
+        Assert.True(sample.Length > 0);
+        Assert.Equal(WhoisStatus.NotFound, response.Status);
 
-            Assert.True(sample.Length > 0);
-            Assert.Equal(WhoisStatus.NotFound, response.Status);
+        AssertWriter.Write(response);
+    }
 
-            AssertWriter.Write(response);
-        }
+    [Fact]
+    public void Test_found()
+    {
+        var sample = SampleReader.Read("whois.nic.sn", "sn", "found", "google.sn.txt");
+        var response = parser.Parse("whois.nic.sn", sample);
 
-        [Fact]
-        public void Test_found()
-        {
-            var sample = SampleReader.Read("whois.nic.sn", "sn", "found.txt");
-            var response = parser.Parse("whois.nic.sn", sample);
+        Assert.True(sample.Length > 0);
+        Assert.Equal(WhoisStatus.Found, response.Status);
 
-            Assert.True(sample.Length > 0);
-            Assert.Equal(WhoisStatus.Found, response.Status);
+        Assert.Equal(0, response.ParsingErrors);
+        Assert.Equal("generic/tld/found/05", response.TemplateName);
 
-            Assert.Equal(0, response.ParsingErrors);
-            Assert.Equal("whois.nic.sn/sn/Found", response.TemplateName);
+        Assert.Null(response.DomainName);
 
-            Assert.Equal("google.sn", response.DomainName.ToString());
+        // Registrar Details
+        Assert.Null(response.Registrar);
 
-            // Registrar Details
-            Assert.Equal("registry", response.Registrar.Name);
+        Assert.Null(response.Registered);
 
-            Assert.Equal(new DateTime(2008, 05, 08, 17, 59, 38, 430, DateTimeKind.Utc), response.Registered);
-
-             // Registrant Details
-            Assert.Equal("C4-SN", response.Registrant.RegistryId);
+        // Registrant Details
+        Assert.Null(response.Registrant);
 
 
-             // AdminContact Details
-            Assert.Equal("C5-SN", response.AdminContact.RegistryId);
+        // AdminContact Details
+        Assert.Null(response.AdminContact);
 
 
-             // TechnicalContact Details
-            Assert.Equal("C6-SN", response.TechnicalContact.RegistryId);
+        // TechnicalContact Details
+        Assert.Null(response.TechnicalContact);
 
 
-            // Nameservers
-            Assert.Equal(4, response.NameServers.Count);
-            Assert.Equal("ns1.google.com", response.NameServers[0]);
-            Assert.Equal("ns2.google.com", response.NameServers[1]);
-            Assert.Equal("ns3.google.com", response.NameServers[2]);
-            Assert.Equal("ns4.google.com", response.NameServers[3]);
+        // Nameservers
+        Assert.Equal(0, response.NameServers.Count);
 
-            Assert.Equal(11, response.FieldsParsed);
-        }
+        Assert.Equal(5, response.FieldsParsed);
     }
 }

@@ -1,0 +1,17 @@
+---
+#
+# .ch Parsing Template
+#
+name: whois.nic.ch/ch/not-found/01
+
+# Use this template for queries to whois.nic.ch:
+tag: whois.nic.ch
+tag: ch
+
+# Set query response type:
+set: Status = NotFound
+
+hint: We do not have an entry in our database matching your query.
+---
+We do not have an entry in our database matching your query.
+

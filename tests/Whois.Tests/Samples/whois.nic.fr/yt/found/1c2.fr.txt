@@ -1,0 +1,100 @@
+%%
+%% This is the AFNIC Whois server.
+%%
+%% complete date format: YYYY-MM-DDThh:mm:ssZ
+%%
+%% Rights restricted by copyright.
+%% See https://www.afnic.fr/en/domain-names-and-support/everything-there-is-to-know-about-domain-names/find-a-domain-name-or-a-holder-using-whois/
+%%
+%%
+
+domain:                        1c2.fr
+status:                        ACTIVE
+eppstatus:                     active
+hold:                          NO
+holder-c:                      U19286-FRNIC
+admin-c:                       US4344-FRNIC
+tech-c:                        OVH5-FRNIC
+registrar:                     OVH
+Expiry Date:                   2027-04-14T22:07:08Z
+created:                       2004-05-20T11:28:40Z
+last-update:                   2026-05-31T22:09:45.78969Z
+source:                        FRNIC
+
+nserver:                       dns111.ovh.net
+nserver:                       ns111.ovh.net
+source:                        FRNIC
+
+registrar:                     OVH
+address:                       2 Rue Kellermann
+address:                       59100 ROUBAIX
+country:                       FR
+phone:                         +33.899701761
+fax-no:                        +33.320200958
+e-mail:                        support@ovh.net
+website:                       http://www.ovh.com
+anonymous:                     No
+registered:                    1999-10-18T00:00:00Z
+source:                        FRNIC
+
+nic-hdl:                       U19286-FRNIC
+type:                          ORGANIZATION
+contact:                       1C2
+address:                       20-22, rue Louis Armand
+address:                       75015 Paris
+country:                       FR
+phone:                         +33.130624006
+e-mail:                        jmr@1c2.com
+registrar:                     OVH
+anonymous:                     NO
+obsoleted:                     NO
+eppstatus:                     associated
+eppstatus:                     active
+eligstatus:                    ok
+eligsource:                    REGISTRY
+eligdate:                      2020-04-15T00:00:00Z
+reachstatus:                   ok
+reachmedia:                    email
+reachsource:                   REGISTRY
+reachdate:                     2020-04-15T00:00:00Z
+source:                        FRNIC
+
+nic-hdl:                       US4344-FRNIC
+type:                          ORGANIZATION
+contact:                       1C2 SAS
+address:                       1C2 SAS
+address:                       20-22 rue Louis Armand
+address:                       75015 Paris
+country:                       FR
+phone:                         +33.609101220
+e-mail:                        yi9nf1wu0b002j0m3lzl@k.o-w-o.info
+registrar:                     OVH
+anonymous:                     NO
+obsoleted:                     NO
+eppstatus:                     associated
+eppstatus:                     active
+eligstatus:                    not identified
+reachstatus:                   not identified
+source:                        FRNIC
+
+nic-hdl:                       OVH5-FRNIC
+type:                          ORGANIZATION
+contact:                       OVH NET
+address:                       OVH
+address:                       140, quai du Sartel
+address:                       59100 Roubaix
+country:                       FR
+phone:                         +33.899701761
+e-mail:                        tech@ovh.net
+registrar:                     OVH
+changed:                       2026-07-12T11:55:01.135454Z
+anonymous:                     NO
+obsoleted:                     NO
+eppstatus:                     associated
+eppstatus:                     active
+eligstatus:                    not identified
+reachstatus:                   not identified
+source:                        FRNIC
+
+>>> Last update of WHOIS database: 2026-07-12T12:34:24.933777Z <<<
+

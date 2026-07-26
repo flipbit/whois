@@ -1,0 +1,42 @@
+% Copyright (c) Nic.br - Use of this data is governed by the Use and
+% Privacy Policy at https://registro.br/upp . Distribution,
+% commercialization, reproduction, and use for advertising or similar
+% purposes are expressly prohibited.
+% 2026-07-12T09:34:27-03:00 - 2003:fe:7f09:5c36:c53c:1b2:2254:6fc1
+
+domain:      google.com.br
+owner:       Google Brasil Internet Ltda
+ownerid:     06.990.590/0001-23
+responsible: Domain Administrator
+country:     BR
+owner-c:     DOADM17
+tech-c:      DOADM17
+nserver:     ns1.google.com
+nsstat:      20260711 AA
+nslastaa:    20260711
+nserver:     ns2.google.com
+nsstat:      20260711 AA
+nslastaa:    20260711
+nserver:     ns3.google.com
+nsstat:      20260711 AA
+nslastaa:    20260711
+nserver:     ns4.google.com
+nsstat:      20260711 AA
+nslastaa:    20260711
+created:     19990518 #162310
+changed:     20260421
+expires:     20270518
+status:      published
+
+nic-hdl-br:  DOADM17
+person:      Domain Admin
+e-mail:      ccops@markmonitor.com
+country:     BR
+created:     20100520
+changed:     20220228
+
+% Security and mail abuse issues should also be addressed to cert.br,
+% respectivelly to cert@cert.br and mail-abuse@cert.br
+%
+% whois.registro.br only accepts exact match queries for domains,
+% registrants, contacts, tickets, providers, IPs, and ASNs.

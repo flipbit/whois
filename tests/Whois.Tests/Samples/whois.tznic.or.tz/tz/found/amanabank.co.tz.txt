@@ -1,0 +1,26 @@
+%  https://karibu.tz/media/WHOIS_TERMS_TOU.pdf
+% 
+% Whoisd Server Version: 3.15.0
+% Timestamp: Sun Jul 12 15:34:27 2026
+
+domain:       amanabank.co.tz
+registrant:   AB2-EXTREME
+admin-c:      AB2-EXTREME
+nsset:        20251024202903-EXTREME
+registrar:    REG-ZESHA
+registered:   28.04.2011 19:27:26
+changed:      30.03.2026 13:23:06
+expire:       28.04.2031
+
+contact:      AB2-EXTREME
+registrar:    REG-ZESHA
+created:      24.04.2012 18:53:07
+
+nsset:        20251024202903-EXTREME
+nserver:      benedict.ns.cloudflare.com 
+nserver:      raquel.ns.cloudflare.com 
+tech-c:       AB2-EXTREME
+registrar:    REG-ZESHA
+created:      25.10.2025 00:29:03
+
+

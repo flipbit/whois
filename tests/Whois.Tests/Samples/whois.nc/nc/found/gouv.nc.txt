@@ -1,0 +1,15 @@
+OPT Whois v3.0.0
+
+Domain                   : gouv.nc
+Created on               : 1999-10-20T00:00:00.000Z
+Expires on               : 2027-10-20
+Last updated on          : 2022-09-19T02:11:35.000Z
+
+Domain server 1          : ns4.gouv.nc
+Domain server 2          : ns5.gouv.nc
+Domain server 3          : ns-cloud-c1.googledomains.com
+Domain server 4          : ns-cloud-c2.googledomains.com
+Domain server 5          : ns-cloud-c3.googledomains.com
+Domain server 6          : ns-cloud-c4.googledomains.com
+
+Registrar                : NONE

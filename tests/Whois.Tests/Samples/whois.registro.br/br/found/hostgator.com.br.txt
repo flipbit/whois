@@ -1,0 +1,36 @@
+% Copyright (c) Nic.br - Use of this data is governed by the Use and
+% Privacy Policy at https://registro.br/upp . Distribution,
+% commercialization, reproduction, and use for advertising or similar
+% purposes are expressly prohibited.
+% 2026-07-12T09:34:27-03:00 - 2003:fe:7f09:5c36:c53c:1b2:2254:6fc1
+
+domain:      hostgator.com.br
+owner:       Hostgator Brasil Ltda
+ownerid:     15.754.475/0001-40
+responsible: Andr� Carvalho Zica
+country:     BR
+owner-c:     HOBRA
+tech-c:      HOBRA
+nserver:     jessica.ns.cloudflare.com
+nsstat:      20260711 AA
+nslastaa:    20260711
+nserver:     ray.ns.cloudflare.com
+nsstat:      20260711 AA
+nslastaa:    20260711
+created:     20050912 #2351856
+changed:     20260506
+expires:     20330912
+status:      published
+
+nic-hdl-br:  HOBRA
+person:      Hostgator Brasil
+e-mail:      registrobr@hostgator.com.br
+country:     BR
+created:     20071207
+changed:     20230314
+
+% Security and mail abuse issues should also be addressed to cert.br,
+% respectivelly to cert@cert.br and mail-abuse@cert.br
+%
+% whois.registro.br only accepts exact match queries for domains,
+% registrants, contacts, tickets, providers, IPs, and ASNs.

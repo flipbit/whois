@@ -1,0 +1,42 @@
+Domain Name: google.hn
+Registry Domain ID: 801220-CoCCA
+Registrar URL: http://www.markmonitor.com
+Updated Date: 2026-02-03T10:42:11Z
+Creation Date: 2003-03-07T05:00:00Z
+Registry Expiry Date: 2027-03-07T05:00:00Z
+Registrar Registration Expiration Date: 2027-03-07T05:00:00Z
+Registrar: MarkMonitor
+Registrar Street Address: 1120 S. Rackham Way, Suite 300
+Registrar City: Meridian
+Registrar State: Idaho
+Registrar Postal Code: 83642
+Registrar Email: ccops@markmonitor.com
+Domain Status: active https://icann.org/epp#active
+Domain Status: clientTransferProhibited https://icann.org/epp#clientTransferProhibited
+Domain Status: clientUpdateProhibited https://icann.org/epp#clientUpdateProhibited
+Domain Status: clientDeleteProhibited https://icann.org/epp#clientDeleteProhibited
+Registry Registrant ID: 1671988-CoCCA
+Registrant Name: Domain Administrator
+Registrant Street: 1600 Amphitheatre Parkway
+Registrant City: Mountain View
+Registrant State/Province: CA
+Registrant Postal Code: 94043
+Registrant Country: US
+Registrant Email: dns-admin@google.com
+Registrant Phone: +1.6502530000
+Name Server: ns1.google.com
+Name Server: ns2.google.com
+DNSSEC: unsigned
+>>> Last update of WHOIS database: 2026-07-12T12:27:41.983Z <<<
+
+For more information on domain status codes, please visit https://icann.org/epp
+
+Términos de Uso: NIC.HN no se hace responsable por la veracidad de los datos proporcionados, ya que los mismos fueron proporcionados por los Registrantes y Usuarios del Servicio de Registro. La información desplegada ha sido proporcionada por el Administrador de Nombre de Dominio que corresponda, dicha información no es generada por NIC.HN.
+
+Queda absolutamente prohibido su uso para otros propósitos, incluyendo el envío de Correos Electrónicos no solicitados con fines publicitarios o de promoción de productos y servicios (SPAM) sin mediar la autorización de los afectados y de NIC.HN.
+
+La base de datos generada a partir del sistema de delegación, está protegida por las leyes de Propiedad Intelectual y todos los tratados internacionales sobre la materia.
+
+Si necesita mayor información sobre los registros aquí mostrados, favor de comunicarse a contacto@nic.hn
+
+

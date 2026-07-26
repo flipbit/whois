@@ -1,0 +1,16 @@
+---
+#
+# .eu.org Parsing Template
+#
+name: whois.eu.org/eu.org/not-found/01
+
+# Use this template for queries to whois.eu.org:
+tag: whois.eu.org
+tag: eu.org
+
+# Set query response type:
+set: Status = NotFound
+
+hint: Key not found
+---
+Key not found

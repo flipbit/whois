@@ -1,0 +1,20 @@
+---
+#
+# .kr Parsing Template
+#
+name: whois.kr/kr/not-found/01
+
+# Use this template for queries to whois.kr:
+tag: whois.kr
+tag: kr
+
+# End tokens on new lines
+terminateOnNewLine: true
+
+# Set query response type:
+set: Status = NotFound
+
+hint: Above domain name is not registered to KRNIC.
+---
+query : { DomainName : IsDomainName, ToHostName }
+

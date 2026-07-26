@@ -1,0 +1,81 @@
+Whois Server Version 3.3.2
+
+Domain Name: google.st
+Registrar: Markmonitor Inc.
+Name Server: ns3.google.com
+Name Server: ns1.google.com
+Name Server: ns4.google.com
+Name Server: ns2.google.com
+Status: clientDeleteProhibited, clientTransferProhibited, clientUpdateProhibited
+Updated Date: 2026-05-14
+Creation Date: 2004-06-15
+Expiration Date: 2027-06-15
+
+>>> Last update of whois database: 2026-07-12T12:34:26Z <<<
+
+The data in the WHOIS database is protected by copyright.
+
+By submitting a WHOIS query, you agree that you will use this data only for lawful purposes according with the terms and policy that is publicly available on https://www.nic.st/terms-of-service and that, under no circumstances will you use this data to allow, enable, or otherwise support the transmission of mass unsolicited, commercial advertising or solicitations via direct mail, electronic mail, or by telephone; in contravention of any applicable data and privacy protection laws; or to enable high volume, automated, electronic processes that apply to the registry (or its systems).
+Compilation, repackaging, dissemination, or other use of the WHOIS database in its entirety, or of a substantial portion thereof, is not allowed without ST Registry prior written permission.
+By executing this query, in any manner whatsoever, you agree to abide by these terms. In some limited cases, domains that might appear as available in whois might not actually be available as they could be already registered and the whois not yet updated and/or they could be part of the Restricted list. In this cases, performing a check through your Registrar's (EPP check) will give you the actual status of the domain.
+
+ST Registry reserves the right to modify or change these conditions at any time without prior or subsequent notification of any kind.
+
+DOMAIN: google.st
+
+REGISTRATION-SERVICE-PROVIDER: Markmonitor Inc.
+URL: www.markmonitor.com
+
+created-date:    2004-06-15 18:24:45
+updated-date:    2026-05-14 10:25:52
+expiration-date: 2027-06-15 18:24:45
+
+registrant-organization: Google LLC
+registrant-name:         Domain Administrator (mm-171195)
+registrant-street:       1600 Amphitheatre Parkway
+registrant-city:         Mountain View
+registrant-state:        CA
+registrant-zip:          94043
+registrant-country:      US
+registrant-phone:        +1.6502530000
+registrant-fax:          +1.6502530001
+registrant-email:        dns-admin@google.com
+
+admin-organization: Google LLC
+admin-name:         Domain Administrator (mm-171195)
+admin-street:       1600 Amphitheatre Parkway
+admin-city:         Mountain View
+admin-state:        CA
+admin-zip:          94043
+admin-country:      US
+admin-phone:        +1.6502530000
+admin-fax:          +1.6502530001
+admin-email:        dns-admin@google.com
+
+tech-organization: Google LLC
+tech-name:         Domain Administrator (mm-171195)
+tech-street:       1600 Amphitheatre Parkway
+tech-city:         Mountain View
+tech-state:        CA
+tech-zip:          94043
+tech-country:      US
+tech-phone:        +1.6502530000
+tech-fax:          +1.6502530001
+tech-email:        dns-admin@google.com
+
+billing-organization: Mark Monitor
+billing-name:         Domain Provisioning (MAR52541B369EEFE)
+billing-street:       10400 Overland Road
+billing-city:         Boise
+billing-state:        
+billing-zip:          83709
+billing-country:      US
+billing-phone:        
+billing-fax:          
+billing-email:        ccops@markmonitor.com
+
+nameserver: ns3.google.com
+nameserver: ns1.google.com
+nameserver: ns4.google.com
+nameserver: ns2.google.com
+

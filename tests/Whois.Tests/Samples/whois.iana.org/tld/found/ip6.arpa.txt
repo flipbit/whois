@@ -1,0 +1,53 @@
+% IANA WHOIS server
+% for more information on IANA, visit http://www.iana.org
+% This query returned 1 object
+
+domain:       IP6.ARPA
+
+organisation: Internet Architecture Board (IAB)
+address:      c/o IETF Administration LLC
+address:      1000 N. West St.
+address:      Suite 1200
+address:      Wilmington Delaware 19801
+address:      United States
+
+contact:      administrative
+name:         Internet Architecture Board (IAB)
+organisation: Internet Architecture Board (IAB)
+address:      c/o IETF Administration LLC
+address:      1000 N. West St.
+address:      Suite 1200
+address:      Wilmington DE 19801
+address:      United States
+phone:        +1 510 492 4080
+fax-no:       +1 510 492 4001
+e-mail:       iab@iab.org
+
+contact:      technical
+name:         Internet Assigned Numbers Authority (IANA)
+organisation: Internet Corporation for Assigned Names and Numbers (ICANN)
+address:      12025 Waterfront Drive
+address:      Suite 300
+address:      Los Angeles CA 90094
+address:      United States
+phone:        +1 310 301 5800
+fax-no:       +1 310 823 8649
+e-mail:       tld-contact@iana.org
+
+nserver:      A.IP6-SERVERS.ARPA 199.180.182.53 2620:37:e000::53
+nserver:      B.IP6-SERVERS.ARPA 199.253.182.182 2001:500:86::86
+nserver:      C.IP6-SERVERS.ARPA 196.216.169.11 2001:43f8:110::11
+nserver:      D.IP6-SERVERS.ARPA 200.7.86.53 2001:13c7:7012::53
+nserver:      E.IP6-SERVERS.ARPA 2001:dd8:6::101 203.119.86.101
+nserver:      F.IP6-SERVERS.ARPA 193.0.9.2 2a13:27c0:30::2
+ds-rdata:     13880 8 2 068554EFCB5861F42AF93EF8E79C442A86C16FC5652E6B6D2419ED527F344D17
+ds-rdata:     45094 8 2 E6B54E0A20CE1EDBFCB6879C02F5782059CECB043A31D804A04AFA51AF01D5FB
+ds-rdata:     64060 8 2 8A11501086330132BE2C23F22DEDF0634AD5FF668B4AA1988E172C6A2A4E5F7B
+
+remarks:      This domain is administered as part of the .ARPA zone
+remarks:      management, described at https://iana.org/domains/arpa
+
+created:      2001-11-10
+changed:      2025-07-10
+source:       IANA
+

@@ -1,0 +1,78 @@
+% Request from 2003:fe:7f09:5c36:c53c:1b2:2254:6fc1
+% This is the Ukrainian Whois query server #G.
+% The Whois is subject to Terms of use
+% See https://hostmaster.ua/services/
+%
+% IN THE PROCESS OF DELEGATION OF A DOMAIN NAME,
+% THE REGISTRANT IS AN ENTITY WHO USES AND MANAGES A CERTAIN DOMAIN NAME,
+% AND THE REGISTRAR IS A BUSINESS ENTITY THAT PROVIDES THE REGISTRANT
+% WITH THE SERVICES NECESSARY FOR THE TECHNICAL MAINTENANCE OF THE REGISTRATION AND OPERATION OF THE DOMAIN NAME.
+% FOR INFORMATION ABOUT THE REGISTRANT OF THE DOMAIN NAME, YOU SHOULD CONTACT THE REGISTRAR.
+
+domain:           oogle.com.ua
+dom-public:       NO
+mnt-by:           ua.danesco
+nserver:          ns1.parkingcrew.net
+nserver:          ns2.parkingcrew.net
+status:           clientHold
+created:          2017-01-03 13:07:45+02
+modified:         2026-06-17 21:17:26+03
+expires:          2033-01-03 13:07:45+02
+source:           UAEPP
+
+% Registrar:
+% ==========
+registrar:        ua.danesco
+organization:     DANESCO TRADING LTD.
+organization-loc: DANESCO TRADING LTD.
+url:              https://danesconames.com
+city:             Lemesos
+country:          CY
+abuse-url:        https://danesconames.com/help/abuse
+abuse-email:      abuse@danesconames.com
+abuse-phone:      +35797816286
+abuse-postal:     Kampiou 17, Agios Athanasios, 4106, Lemesos, Cyprus
+source:           UAEPP
+
+% Registrant:
+% ===========
+person:           not published
+e-mail:           not published
+address:          not published
+phone:            not published
+mnt-by:           ua.danesco
+status:           ok
+status:           linked
+created:          2024-02-25 22:37:07+02
+source:           UAEPP
+
+
+% Administrative Contacts:
+% =======================
+person:           not published
+e-mail:           not published
+address:          not published
+phone:            not published
+mnt-by:           ua.danesco
+status:           ok
+status:           linked
+created:          2024-02-25 22:37:07+02
+source:           UAEPP
+
+
+% Technical Contacts:
+% ===================
+person:           not published
+e-mail:           not published
+address:          not published
+phone:            not published
+mnt-by:           ua.danesco
+status:           ok
+status:           linked
+created:          2024-02-25 22:37:07+02
+source:           UAEPP
+
+
+
+% Query time:     2 msec
+

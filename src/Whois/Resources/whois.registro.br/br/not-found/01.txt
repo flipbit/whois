@@ -1,0 +1,16 @@
+---
+#
+# .br Parsing Template
+#
+name: whois.registro.br/br/not-found/01
+
+# Use this template for queries to whois.registro.br:
+tag: whois.registro.br
+tag: br
+
+# Set query response type:
+set: Status = NotFound
+
+hint: No match for
+---
+% No match for { DomainName : IsDomainName, ToHostName, EOL }

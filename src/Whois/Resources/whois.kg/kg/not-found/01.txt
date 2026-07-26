@@ -1,0 +1,19 @@
+---
+#
+# .kg Parsing Template
+#
+name: whois.kg/kg/not-found/01
+
+# Use this template for queries to whois.kg:
+tag: whois.kg
+tag: kg
+
+# End tokens on new lines
+terminateOnNewLine: true
+
+# Set query response type:
+set: Status = NotFound
+
+hint: Data not found
+---
+Domain { DomainName : IsDomainName, ToHostName }

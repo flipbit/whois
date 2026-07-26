@@ -1,0 +1,17 @@
+---
+#
+# .de Parsing Template
+#
+name: whois.denic.de/de/invalid/01
+
+# Use this template for queries to whois.denic.de:
+tag: whois.denic.de
+tag: de
+
+# Set query response type:
+set: Status = Invalid
+
+hint: Status: invalid
+---
+Domain: { DomainName : IsDomainName, ToHostName, EOL }
+Status: { DomainStatus ? : EOL }

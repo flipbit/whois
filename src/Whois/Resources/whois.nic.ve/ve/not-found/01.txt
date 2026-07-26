@@ -1,0 +1,16 @@
+---
+#
+# .ve Parsing Template
+#
+name: whois.nic.ve/ve/not-found/01
+
+# Use this template for queries to whois.nic.ve:
+tag: whois.nic.ve
+tag: ve
+
+# Set query response type:
+set: Status = NotFound
+
+hint: No match
+---
+No match for "{ DomainName : IsDomainName, ToHostName }".

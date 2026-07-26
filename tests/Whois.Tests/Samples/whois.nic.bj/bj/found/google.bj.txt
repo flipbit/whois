@@ -1,0 +1,68 @@
+Domain Name: google.bj
+Registry Domain ID: 154-CoCCA
+Updated Date: 2025-12-28T15:41:24.764Z
+Creation Date: 2015-01-29T11:16:22.808Z
+Registry Expiry Date: 2027-01-29T11:16:22.854Z
+Registrar Registration Expiration Date: 2027-01-29T11:16:22.854Z
+Domain Status: clientDeleteProhibited https://icann.org/epp#clientDeleteProhibited
+Domain Status: clientTransferProhibited https://icann.org/epp#clientTransferProhibited
+Registry Registrant ID: z0rSQ-zNnev
+Registrant Name: Domain Administrator
+Registrant Organization: Google LLC
+Registrant Street: 1600 Amphitheatre Parkway
+Registrant Street: 1600 Amphitheatre Parkway
+Registrant City: Mountain View
+Registrant State/Province: CA
+Registrant Postal Code: 94043
+Registrant Country: US
+Registrant Phone: +1.6502530000
+Registrant Fax: +1.6502530001
+Registrant Email: dns-admin@google.com
+Registry Admin ID: LdlZe-PDJAj
+Admin Name: Redacted | Registry Policy
+Admin Organization: Afriregister S.A
+Admin Street: Redacted | Registry Policy
+Admin City: Redacted | Registry Policy
+Admin Postal Code: Redacted | Registry Policy
+Admin Country: BJ
+Admin Phone: Redacted | Registry Policy
+Admin Email: Redacted | Registry Policy
+Registry Tech ID: V9Pae-0uiEo
+Tech Name: Domain Administrator
+Tech Organization: Google LLC
+Tech Street: Redacted | Registry Policy
+Tech Street: Redacted | Registry Policy
+Tech City: Redacted | Registry Policy
+Tech State/Province: Redacted | Registry Policy
+Tech Postal Code: Redacted | Registry Policy
+Tech Country: US
+Tech Phone: +1.6502530000
+Tech Fax: +1.6502530001
+Tech Email: dns-admin@google.com
+Registry Billing ID: E4rA9-Z9GHX
+Billing Name: Redacted | Registry Policy
+Billing Organization: Markmonitor Inc.
+Billing Street: Redacted | Registry Policy
+Billing Street: Redacted | Registry Policy
+Billing City: Redacted | Registry Policy
+Billing State/Province: Redacted | Registry Policy
+Billing Postal Code: Redacted | Registry Policy
+Billing Country: US
+Billing Phone: Redacted | Registry Policy
+Billing Fax: Redacted | Registry Policy
+Billing Email: Redacted | Registry Policy
+Registrar: AFRIREGISTER_ENTREPRISE
+Name Server: ns1.google.com
+Name Server: ns2.google.com
+Name Server: ns3.google.com
+Name Server: ns4.google.com
+DNSSEC: unsigned
+>>> Last update of WHOIS database: 2026-07-12T11:34:44.608Z <<<
+
+For more information on EPP status codes, please visit https://icann.org/epp
+
+TERMS OF USE: You are not authorized to access or query our WHOIS database through the use of electronic processes that are high-volume and automated.  THis WHOIS database is provided by as a service to the internet community.
+
+The data is for information purposes only. We do not guarantee its accuracy. By submitting a WHOIS query, you agree to abide by the following terms of use: You agree that you may use this Data only for lawful purposes and that under no circumstances will you use this Data to: (1) allow, enable, or otherwise support the transmission of mass unsolicited, commercial advertising or solicitations via e-mail, telephone, or facsimile; or (2) enable high volume, automated, electronic processes.
+
+The compilation, repackaging, dissemination or other use of this Data is expressly prohibited.

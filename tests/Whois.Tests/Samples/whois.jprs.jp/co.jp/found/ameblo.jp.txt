@@ -1,0 +1,32 @@
+[ JPRS database provides information on network administration. Its use is    ]
+[ restricted to network administration purposes. For further information,     ]
+[ use 'whois -h whois.jprs.jp help'. To suppress Japanese output, add'/e'     ]
+[ at the end of command, e.g. 'whois -h whois.jprs.jp xxx/e'.                 ]
+Domain Information: [ドメイン情報]
+[Domain Name]                   AMEBLO.JP
+
+[登録者名]                      田中淳
+[Registrant]                    Atsushi Tanaka
+
+[Name Server]                   ns-1218.awsdns-24.org
+[Name Server]                   ns-124.awsdns-15.com
+[Name Server]                   ns-863.awsdns-43.net
+[Name Server]                   ns-2038.awsdns-62.co.uk
+[Signing Key]                   
+
+[登録年月日]                    2004/07/30
+[有効期限]                      2026/07/31
+[状態]                          Active
+[最終更新]                      2026/06/24 18:25:26 (JST)
+
+Contact Information: [公開連絡窓口]
+[名前]                          田中 淳
+[Name]                          Atsushi Tanaka
+[Email]                         dns-ssl-info@ext.cyberagent.co.jp
+[Web Page]                       
+[郵便番号]                       
+[住所]                           
+[Postal Address]                 
+[電話番号]                      03-5459-0202
+[FAX番号]                       03-5459-0222
+

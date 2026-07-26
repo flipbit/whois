@@ -1,0 +1,58 @@
+NIC Whois server for cTLDs : .tn , .تونس
+All rights reserved
+Copyright "Tunisian Internet Agency - https://whois.ati.tn
+Supported ccTLDs : .tn , .تونس
+Sectorial domains : .com.tn,.ens.tn,.fin.tn,.gov.tn,.ind.tn,.intl.tn,.nat.tn,.net.tn,.org.tn,.info.tn,.perso.tn,.tourism.tn,.mincom.tn
+
+Domain name.........: google.tn
+Details:
+Creation date.......: 05-12-2018 11:02:02 GMT+1
+Domain status.......: Active
+Registrar...........: ELB
+
+Owner Contact
+Name................: Google LLC
+First name..........: 
+Address.............: 1600 Amphitheatre Parkway, Mountain View, CA 94043 US
+address2............: 
+City................: 
+stateProvince.......: 
+Zip code............: 
+Country.............: 
+Phone...............: +1.6502530000
+Fax.................: +1.6502530001
+Email...............: dns-admin@google.com
+
+Administrativ contact
+Name................: Abu ghazalah intellectual property
+First name..........: 
+Address.............: P.O.Box 1, Montplaisir 1073, Tunis, Tunisia
+address2............: 
+City................: 
+stateProvince.......: 
+Zip code............: 
+Country.............: 
+Phone...............: 71 90 3141
+Fax.................: 71 90 9426
+Email...............: tunisia@agip.com
+
+Technical contact
+Name................: MarkMonitor Inc.
+First name..........: 
+Address.............: 391 N. Ancestor Pl., Boise, ID 83704 US
+address2............: 
+City................: 
+stateProvince.......: 
+Zip code............: 
+Country.............: 
+Phone...............: +1.2083895740
+Fax.................: +1.2083895771
+Email...............: ccops@markmonitor.com
+dnssec..............: unsigned
+
+DNS servers
+Name................: ns4.google.com.
+Name................: ns1.google.com.
+Name................: ns3.google.com.
+Name................: ns2.google.com.
+

@@ -1,0 +1,16 @@
+---
+#
+# .so Parsing Template
+#
+name: whois.nic.so/so/not-found/01
+
+# Use this template for queries to whois.nic.so:
+tag: whois.nic.so
+tag: so
+
+# Set query response type:
+set: Status = NotFound
+
+hint: Not found
+---
+Not found: { DomainName : IsDomainName, ToHostName }

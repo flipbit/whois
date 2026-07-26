@@ -1,0 +1,13 @@
+OPT Whois v3.0.0
+
+Domain                   : rya.nc
+Created on               : 2015-10-30T12:09:21.000Z
+Expires on               : 2026-10-30
+Last updated on          : 2021-10-27T13:28:02.000Z
+
+Domain server 1          : ns-360.awsdns-45.com
+Domain server 2          : ns-769.awsdns-32.net
+Domain server 3          : ns-1083.awsdns-07.org
+Domain server 4          : ns-1657.awsdns-15.co.uk
+
+Registrar                : NONE

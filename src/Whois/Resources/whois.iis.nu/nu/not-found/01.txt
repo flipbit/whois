@@ -1,0 +1,16 @@
+---
+#
+# .nu Parsing Template
+#
+name: whois.iis.nu/nu/not-found/01
+
+# Use this template for queries to whois.iis.nu:
+tag: whois.iis.nu
+tag: nu
+
+# Set query response type:
+set: Status = NotFound
+
+hint: not found
+---
+domain "{ DomainName : IsDomainName, ToHostName }" not found.

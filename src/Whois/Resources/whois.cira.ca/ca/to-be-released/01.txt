@@ -1,0 +1,18 @@
+---
+#
+# .ca Parsing Template
+#
+name: whois.cira.ca/ca/to-be-released/01
+
+# Use this template for queries to whois.cira.ca:
+tag: whois.cira.ca
+tag: ca
+
+# Set query response type:
+set: Status = ToBeReleased
+
+hint: TBR Release date:      
+---
+Domain name:           { DomainName : IsDomainName, ToHostName, EOL }
+Domain status:         { DomainStatus ? : Repeating, EOL }
+TBR Release date:      

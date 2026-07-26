@@ -1,0 +1,16 @@
+---
+#
+# .dm Parsing Template
+#
+name: whois.nic.dm/dm/not-found/01
+
+# Use this template for queries to whois.nic.dm:
+tag: whois.nic.dm
+tag: dm
+
+# Set query response type:
+set: Status = NotFound
+
+hint: not found...
+---
+not found...

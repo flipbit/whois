@@ -1,0 +1,40 @@
+Domain Name: fnb.co.za
+Registry Domain ID: 1zw3s_DOMAIN-CO.ZA
+Registrar WHOIS Server: whois.lexsynergy.com
+Registrar URL: https://www.lexsynergy.com
+Updated Date: 2025-12-01T23:41:53Z
+Creation Date: 1994-12-31T22:00:00Z
+Registry Expiry Date: 2026-12-31T22:00:00Z
+Registrar Registration Expiration Date: 2026-12-31T22:00:00Z
+Registrar: Lexsynergy Limited
+Registrar IANA ID: 1466
+Registrar Abuse Contact Email: abuse@lexsynergy.com
+Registrar Abuse Contact Phone: +44.2031370459
+Reseller: 
+Domain Status: clientTransferProhibited https://icann.org/epp#clientTransferProhibited
+Registrant Organization: FirstRand Bank Limited
+Registrant Country: ZA
+Registrant Email: Please contact the RDDS service of the listed Registrar for Registrant, Admin, or Tech contact information.
+Admin Email: Please contact the RDDS service of the listed Registrar for Registrant, Admin, or Tech contact information.
+Tech Email: Please contact the RDDS service of the listed Registrar for Registrant, Admin, or Tech contact information.
+Billing Email: Please contact the RDDS service of the listed Registrar for Registrant, Admin, or Tech contact information.
+Name Server: ns01.fnbconnect.co.za
+Name Server: ns02.fnbconnect.co.za
+Name Server: ns03.fnbconnect.co.za
+Name Server: ns04.fnbconnect.co.za
+DNSSEC: unsigned
+
+URL of the ICANN Whois Inaccuracy Complaint Form: https://www.icann.org/wicf/
+>>> Last update of WHOIS database: 2026-07-12T12:34:25Z <<<
+
+For more information on Whois status codes, please visit https://icann.org/epp
+
+# --
+
+# For more information on Whois status codes, please visit https://icann.org/epp
+
+# ZARC Complaint/s Procedure and Form: https://zarc.web.za/wp-content/uploads/2025/08/ZA-SLD_Takedown_Policy.docx.pdf
+# The use of this Whois facility is subject to the following terms and
+# conditions. https://zarc.web.za/whois-terms-and-conditions
+# Copyright (c) ZARC 1995-2026
+

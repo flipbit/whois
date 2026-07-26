@@ -1,0 +1,30 @@
+Domain Name: tcd.ie
+Registry Domain ID: 779092-IEDR
+Registrar WHOIS Server: whois.weare.ie
+Registrar URL: https://www.heanet.ie/services/hosting/domain-registration
+Updated Date: 2025-10-08T12:51:51Z
+Creation Date: 1999-08-23T23:00:00Z
+Registry Expiry Date: 2026-08-24T12:44:01Z
+Registrar: HEAnet
+Registrar IANA ID: not applicable
+Registrar Abuse Contact Email: noc@heanet.ie
+Registrar Abuse Contact Phone: +353.16609040
+Domain Status: ok https://icann.org/epp#ok
+Registry Registrant ID: 444633-IEDR
+Registrant Name: REDACTED FOR PRIVACY
+Registry Admin ID: 1431-IEDR
+Registry Tech ID: 1431-IEDR
+Registry Billing ID: REDACTED FOR PRIVACY
+Name Server: auth-ns1.tcd.ie
+Name Server: auth-ns2.tcd.ie
+Name Server: auth-ns2.ucd.ie
+Name Server: auth-ns3.tcd.ie
+DNSSEC: unsigned
+>>> Last update of WHOIS database: 2026-07-12T12:34:27Z <<<
+
+% Important Notice
+% If you believe that information published on this page is incorrect, or should not be published,please contact your Registrar, or the .IE Registration Services Department who will advise you further.
+% You can also contact your Registrar or .IE if your Registrant name is not showing and you would like it to be published.
+% Our contact information is available at https://www.weare.ie/contact-us/
+% Rights restricted by copyright: https://www.weare.ie/registrant-terms-conditions-policy/
+% Do not remove this notice

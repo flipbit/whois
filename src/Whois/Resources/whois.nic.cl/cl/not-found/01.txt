@@ -1,0 +1,16 @@
+---
+#
+# .cl Parsing Template
+#
+name: whois.nic.cl/cl/not-found/01
+
+# Use this template for queries to whois.nic.cl:
+tag: whois.nic.cl
+tag: cl
+
+# Set query response type:
+set: Status = NotFound
+
+hint: no existe
+---
+{ DomainName : IsDomainName, ToHostName }: no existe

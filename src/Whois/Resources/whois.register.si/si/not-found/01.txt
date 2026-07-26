@@ -1,0 +1,16 @@
+---
+#
+# .si Parsing Template
+#
+name: whois.register.si/si/not-found/01
+
+# Use this template for queries to whois.register.si:
+tag: whois.register.si
+tag: si
+
+# Set query response type:
+set: Status = NotFound
+
+hint: No entries found for the selected source(s).
+---
+% No entries found for the selected source(s).

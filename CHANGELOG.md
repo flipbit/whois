@@ -5,7 +5,7 @@ All notable changes to this project will be documented in this file.
 The format is based on [Keep a Changelog](https://keepachangelog.com/en/1.0.0/),
 and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0.html).
 
-## [Unreleased] — v4.0.0
+## [Unreleased]  -  v4.0.0
 
 ### Added
 - `CancellationToken` support on all async methods
@@ -19,8 +19,8 @@ and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0
 - `.editorconfig` with project code style conventions
 
 ### Changed
-- `TcpReader` is now stateless — no `IDisposable` needed
-- `LookupAsync()` renamed to `Lookup()` — async-only, no `Async` suffix needed
+- `TcpReader` is now stateless  -  no `IDisposable` needed
+- `LookupAsync()` renamed to `Lookup()`  -  async-only, no `Async` suffix needed
 - `WhoisOptions` now uses inline property defaults instead of a static `Defaults` object
 - Test framework migrated from NUnit/Moq to xUnit/NSubstitute
 - Console tool uses `System.Text.Json` instead of `Newtonsoft.Json`
@@ -29,27 +29,27 @@ and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0
 - `ITcpReader.Read` signature now includes `CancellationToken` parameter
 
 ### Removed
-- Sync `Lookup()` methods — use `await lookup.Lookup(...)` instead
+- Sync `Lookup()` methods  -  use `await lookup.Lookup(...)` instead
 - `AsyncHelper` class
 - `IDisposable` from `IWhoisLookup`, `ITcpReader`, and `IWhoisServerLookup`
 - `net452` target framework
-- `LibLog` dependency — replaced with `Microsoft.Extensions.Logging`
+- `LibLog` dependency  -  replaced with `Microsoft.Extensions.Logging`
 - `Microsoft.CSharp` dependency
 - `Newtonsoft.Json` from console app
 - AppVeyor CI (`appveyor.yml`)
-- `WhoisOptions.Defaults` static property — use `new WhoisOptions()` instead
+- `WhoisOptions.Defaults` static property  -  use `new WhoisOptions()` instead
 - `WhoisOptions.Clone()` method
 
 ### Breaking Changes
-- All public async methods renamed from `*Async()` to the base name (e.g. `LookupAsync` → `Lookup`)
-- `ITcpReader.Read` signature changed — `CancellationToken` parameter added
-- `WhoisOptions.Defaults` removed — use `new WhoisOptions()` for defaults
+- All public async methods renamed from `*Async()` to the base name (e.g. `LookupAsync` -> `Lookup`)
+- `ITcpReader.Read` signature changed  -  `CancellationToken` parameter added
+- `WhoisOptions.Defaults` removed  -  use `new WhoisOptions()` for defaults
 - `WhoisOptions.Clone()` removed
 - `IWhoisLookup`, `ITcpReader`, and `IWhoisServerLookup` no longer implement `IDisposable`
 
 ---
 
-## [3.x] — Historical
+## [3.x]  -  Historical
 
 ### Dependency Updates
 - Bump `Serilog` from 2.11.0 to 2.12.0
@@ -66,12 +66,12 @@ and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0
 
 ### Fixed
 - `SampleReader` path separators for cross-platform CI compatibility
-- Mojibake in test expectations — corrected Unicode encoding
+- Mojibake in test expectations  -  corrected Unicode encoding
 - Template syntax errors in `.by` and `.gov` templates
 
 ---
 
-## [Pre-3.x] — Legacy
+## [Pre-3.x]  -  Legacy
 
 - Upgrade to .NET Standard 2.0 (dropped .NET 3.5 / .NET 2.0 era code)
 - Externalised Tokenizer as an independent library

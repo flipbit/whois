@@ -1,0 +1,16 @@
+---
+#
+# .mo Parsing Template
+#
+name: whois.monic.mo/mo/not-found/01
+
+# Use this template for queries to whois.monic.mo:
+tag: whois.monic.mo
+tag: mo
+
+# Set query response type:
+set: Status = NotFound
+
+hint: No match
+---
+No match for "{ DomainName : IsDomainName, ToHostName }".

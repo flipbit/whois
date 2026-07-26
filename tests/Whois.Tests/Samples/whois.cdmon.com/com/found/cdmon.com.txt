@@ -1,0 +1,80 @@
+Domain Name: CDMON.COM
+Registry Domain ID: 75960845_DOMAIN_COM-VRSN
+Registrar WHOIS Server: whois.cdmon.com
+Registrar URL: https://www.cdmon.com
+Updated Date: 2018-10-25T12:11:22Z
+Creation Date: 2001-08-12T15:02:57Z
+Registrar Registration Expiration Date: 2034-08-12T15:02:53Z
+Registrar: 10DENCEHISPAHARD, S.L
+Registrar IANA ID: 1403
+Registrar Abuse Contact Email: abuse@cdmon.com
+Registrar Abuse Contact Phone: +34.935677577
+Domain Status: clientUpdateProhibited https://www.icann.org/epp#clientUpdateProhibited
+Domain Status: clientDeleteProhibited https://www.icann.org/epp#clientDeleteProhibited
+Domain Status: clientTransferProhibited https://www.icann.org/epp#clientTransferProhibited
+Registry Registrant ID: REDACTED FOR PRIVACY
+Registrant Name: REDACTED FOR PRIVACY
+Registrant Organization: 10dencehispahard,s.l.
+Registrant Street: REDACTED FOR PRIVACY
+Registrant City: REDACTED FOR PRIVACY
+Registrant State/Province: Barcelona
+Registrant Country: ES
+Registrant Postal Code: REDACTED FOR PRIVACY
+Registrant Phone: REDACTED FOR PRIVACY
+Registrant Phone Ext: REDACTED FOR PRIVACY
+Registrant Fax: REDACTED FOR PRIVACY
+Registrant Fax Ext: REDACTED FOR PRIVACY
+Registrant Email: http://www.whoiscontactsprotection.com/
+Registry Admin ID: REDACTED FOR PRIVACY
+Admin Name: REDACTED FOR PRIVACY
+Admin Organization: REDACTED FOR PRIVACY
+Admin Street: REDACTED FOR PRIVACY
+Admin City: REDACTED FOR PRIVACY
+Admin State/Province: REDACTED FOR PRIVACY
+Admin Country: REDACTED FOR PRIVACY
+Admin Postal Code: REDACTED FOR PRIVACY
+Admin Phone: REDACTED FOR PRIVACY
+Admin Phone Ext: REDACTED FOR PRIVACY
+Admin Fax: REDACTED FOR PRIVACY
+Admin Fax Ext: REDACTED FOR PRIVACY
+Admin Email: http://www.whoiscontactsprotection.com/
+Registry Tech ID: REDACTED FOR PRIVACY
+Tech Name: REDACTED FOR PRIVACY
+Tech Organization: REDACTED FOR PRIVACY
+Tech Street: REDACTED FOR PRIVACY
+Tech City: REDACTED FOR PRIVACY
+Tech State/Province: REDACTED FOR PRIVACY
+Tech Country: REDACTED FOR PRIVACY
+Tech Postal Code: REDACTED FOR PRIVACY
+Tech Phone: REDACTED FOR PRIVACY
+Tech Phone Ext: REDACTED FOR PRIVACY
+Tech Fax: REDACTED FOR PRIVACY
+Tech Fax Ext: REDACTED FOR PRIVACY
+Tech Email: http://www.whoiscontactsprotection.com/
+Name Server: ns-1123.cdmon.com
+Name Server: ns-1740.cdmon.com
+Name Server: ns-61.cdmon.com
+Name Server: ns-635.cdmon.com
+DNSSEC: unsigned
+URL of the ICANN WHOIS Data Problem Reporting System: http://wdprs.internic.net/
+>>> Last update of whois database: 2026-07-12T14:34:25+0200 <<<
+
+For more information on Whois status codes, please visit https://www.icann.org/resources/pages/epp-status-codes-2014-06-16-en
+
+
+The information in this whois database is provided for the sole purpose 
+of assisting you in obtaining information about domain name registration records.
+This information is available "as is," and we do not guarantee its accuracy.
+By submitting a whois query, you agree that you will use this data only for
+lawful purposes and that, under no circumstances will you use this data to: (1)
+enable high volume, automated, electronic processes that stress or load this whois
+database system providing you this information; or (2) allow, enable, or otherwise
+support the transmission of mass, unsolicited, commercial advertising or solicitations
+via facsimile, electronic mail, or by telephone to entities other than your own existing
+customers.  The compilation, repackaging, dissemination or other use of this data
+is expressly prohibited without prior written consent from 10Dencehispahard SL.
+
+
+10Dencehispahard SL reserves the right to modify these terms at any
+time. By submitting an inquiry, you agree to these terms of usage
+and limitations of warranty.

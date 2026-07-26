@@ -1,0 +1,17 @@
+---
+#
+# .tm Parsing Template
+#
+name: whois.nic.tm/tm/not-found/01
+
+# Use this template for queries to whois.nic.tm:
+tag: whois.nic.tm
+tag: tm
+
+# Set query response type:
+set: Status = NotFound
+
+hint: is available for purchase
+---
+
+Domain { DomainName : IsDomainName, ToHostName } is available for purchase

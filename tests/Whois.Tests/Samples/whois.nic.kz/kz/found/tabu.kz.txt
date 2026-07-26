@@ -1,0 +1,40 @@
+Whois Server for the KZ top level domain name.
+This server is maintained by KazNIC Organization, a ccTLD manager for Kazakhstan Republic.
+
+Domain Name............: tabu.kz
+
+Organization Using Domain Name
+Name...................: Viktor Pokussov
+Organization Name......: Private Person
+Street Address.........: 99-1 Masanchi Str.
+City...................: Almaty
+State..................: Almaty
+Postal Code............: 050013
+Country................: KZ
+
+Administrative Contact/Agent
+NIC Handle.............: PS-KZ-1574611172
+Name...................: Viktor Pokussov
+Phone Number...........: +7.7717161816 
+Fax Number.............: +7.7717161816 
+Email Address..........: v@victor.kz
+
+Nameserver in listed order
+
+Primary server.........: ns2.ps.kz
+Primary ip address.....: 195.210.46.172, 2a00:5da0:1:1::172
+
+Secondary server.......: ns1.ps.kz
+Secondary ip address...: 195.210.46.194, 2a00:5da0:0:1::194
+
+Secondary server.......: ns3.ps.kz
+Secondary ip address...: 31.210.174.104
+
+
+Domain created: 2019-11-24 16:59:32 (GMT+0:00)
+Last modified : 
+Domain status : clientTransferProhibited - 
+                clientRenewProhibited - 
+                
+Registar created: ICPS
+Current Registar: ICPS

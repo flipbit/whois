@@ -1,0 +1,59 @@
+
+*********************************************************************
+* Please note that the following result could be a subgroup of      *
+* the data contained in the database.                               *
+*                                                                   *
+* Additional information can be visualized at:                      *
+* http://web-whois.nic.it                                           *
+*********************************************************************
+
+Domain:             chiara.it
+Status:             ok
+Signed:             no
+Created:            2012-03-01 23:47:01
+Last Update:        2026-03-19 00:49:20
+Expire Date:        2027-03-03
+
+Registrant
+  Organization:     Puglia.com Srls
+  Address:          Via 16 Settembre 1959, n. 8
+                    Barletta
+                    76121
+                    BT
+                    IT
+  Created:          2017-01-12 08:57:09
+  Last Update:      2019-06-24 20:26:37
+
+Admin Contact
+  Name:             Puglia.com Srls
+  Organization:     Puglia.com Srls
+  Address:          Via 16 Settembre 1959, n. 8
+                    Barletta
+                    76121
+                    BT
+                    IT
+  Created:          2017-01-12 08:57:09
+  Last Update:      2019-06-24 20:26:37
+
+Technical Contacts
+  Name:             Puglia.com Srls
+  Organization:     Puglia.com Srls
+  Address:          Via 16 Settembre 1959, n. 8
+                    Barletta
+                    76121
+                    BT
+                    IT
+  Created:          2017-01-12 08:57:09
+  Last Update:      2019-06-24 20:26:37
+
+Registrar
+  Organization:     NameCase GmbH
+  Name:             NAMECASE-REG
+  Web:              http://www.namecase.com
+  DNSSEC:           no
+
+
+Nameservers
+  lunlun.ns.giantpanda.com
+  yangyang.ns.giantpanda.com
+

@@ -1,0 +1,77 @@
+============================================================================
+Whois du Registre .SN
+Les informations fournies par ce service ne sont qu'à titre informatif.
+
+Les données collectées via le formulaire d'enregistrement sont traitées exclusivement à des fins liées au traitement des domaines conformément à la RFC 3912 par le NIC Sénégal.
+
+En application des dispositions de la loi n°2008-12 du 25 janvier 2008 portant sur la protection des données à caractère personnel, vous pouvez exercer vos droits d'accès, d'opposition, de rectification et de suppression auprès du NIC Sénégal - abuse(at)nic.sn.
+============================================================================
+
+Domain ID:                     DOM000000003329-SN
+Nom de domaine:                google.sn
+Date de création:              2003-03-22T00:00:00Z
+Dernière modification:         2025-12-06T17:12:28.294803Z
+Date d'expiration:             2026-12-31T12:00:00Z
+Registrar:                     MARKMONITOR Inc.
+Statut:                        actif
+
+[TECH_C]
+ID Contact:                    GL115
+Type:                          Organisation
+Nom:                           Google LLC
+Adresse:                       1600 Amphitheatre Parkway
+Code postal:                   94043
+Ville:                         Mountain View
+Pays:                          US
+Téléphone:                     +1.6502530000
+Fax:                           +1.6502530001
+Courriel:                      dns-admin@google.com
+Dernière modification:         2023-01-25T00:49:13.328706Z
+
+[ADMIN_C]
+ID Contact:                    GL115
+Type:                          Organisation
+Nom:                           Google LLC
+Adresse:                       1600 Amphitheatre Parkway
+Code postal:                   94043
+Ville:                         Mountain View
+Pays:                          US
+Téléphone:                     +1.6502530000
+Fax:                           +1.6502530001
+Courriel:                      dns-admin@google.com
+Dernière modification:         2023-01-25T00:49:13.328706Z
+
+[HOLDER]
+ID Contact:                    GL115
+Type:                          Organisation
+Nom:                           Google LLC
+Adresse:                       1600 Amphitheatre Parkway
+Code postal:                   94043
+Ville:                         Mountain View
+Pays:                          US
+Téléphone:                     +1.6502530000
+Fax:                           +1.6502530001
+Courriel:                      dns-admin@google.com
+Dernière modification:         2023-01-25T00:49:13.328706Z
+
+[BILLING_C]
+ID Contact:                    DA212
+Type:                          Organisation
+Nom:                           MarkMonitor
+Adresse:                       1120 S. Rackham Way,Suite 300
+Code postal:                   83642
+Ville:                         Meridian
+Pays:                          US
+Téléphone:                     +1.2083895740
+Courriel:                      ccopsbilling@markmonitor.com
+Dernière modification:         2023-09-20T20:11:47.52723Z
+
+Serveur de noms:               ns1.google.com
+Serveur de noms:               ns2.google.com
+Serveur de noms:               ns3.google.com
+Serveur de noms:               ns4.google.com
+
+DNSSEC:                        unsigned
+
+>>> Last update of WHOIS database: 2026-07-12T12:34:25.822549Z <<<
+

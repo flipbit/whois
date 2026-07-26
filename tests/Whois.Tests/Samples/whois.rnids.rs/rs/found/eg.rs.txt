@@ -1,0 +1,44 @@
+
+% The data in the Whois database are provided by RNIDS
+% for information purposes only and to assist persons in obtaining
+% information about or related to a domain name registration record. 
+% Data in the database are created by registrants and we do not guarantee 
+% their accuracy. We reserve the right to remove access 
+% for entities abusing the data, without notice.
+% All timestamps are given in Serbian local time. 
+%
+Domain name: eg.rs
+Domain status: Active https://www.rnids.rs/en/domain-name-status-codes#Active
+Registration date: 22.10.2010 10:20:31
+Modification date: 04.10.2025 09:31:52
+Expiration date: 22.10.2026 10:20:31
+Confirmed: 22.10.2010 10:20:31
+Registrar: GAMA Electronics d.o.o.
+
+
+Registrant: Executive Group
+Address: Radoja Dakića 27, Zemun, Serbia
+Postal Code: 11080
+ID Number: 20029412
+Tax ID: 103827182
+
+Administrative contact: Executive Group
+Address: Radoja Dakića 27, Zemun, Serbia
+Postal Code: 11080
+ID Number: 20029412
+Tax ID: 
+
+Technical contact: Executive Group
+Address: Radoja Dakića 27, Zemun, Serbia
+Postal Code: 11080
+ID Number: 20029412
+Tax ID: 
+
+
+DNS: zen.beograd.com - 217.24.17.44
+DNS: nsz.beograd.com - 217.24.18.88
+
+
+DNSSEC signed: no
+
+Whois Timestamp: 12.07.2026 14:34:25

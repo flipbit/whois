@@ -1,24 +1,21 @@
 using System.Text;
-using System.Threading;
-using System.Threading.Tasks;
 
-namespace Whois.Net
+namespace Whois.Net;
+
+/// <summary>
+/// Fakes out TCP responses for testing
+/// </summary>
+internal class FakeTcpReader : ITcpReader
 {
-    /// <summary>
-    /// Fakes out TCP responses for testing
-    /// </summary>
-    internal class FakeTcpReader : ITcpReader
+    private readonly string response;
+
+    public FakeTcpReader(string response)
     {
-        private readonly string response;
+        this.response = response;
+    }
 
-        public FakeTcpReader(string response)
-        {
-            this.response = response;
-        }
-
-        public Task<string> Read(string url, int port, string command, Encoding encoding, int timeoutSeconds, CancellationToken cancellationToken = default)
-        {
-            return Task.FromResult(response);
-        }
+    public Task<string> Read(string url, int port, string command, Encoding encoding, int timeoutSeconds, CancellationToken cancellationToken = default)
+    {
+        return Task.FromResult(response);
     }
 }

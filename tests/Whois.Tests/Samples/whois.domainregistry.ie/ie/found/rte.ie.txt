@@ -1,0 +1,29 @@
+Domain Name: rte.ie
+Registry Domain ID: 672279-IEDR
+Registrar WHOIS Server: whois.weare.ie
+Registrar URL: https://www.blacknight.com
+Updated Date: 2026-04-19T21:57:59Z
+Creation Date: 2000-02-11T00:00:00Z
+Registry Expiry Date: 2034-03-31T13:20:07Z
+Registrar: Blacknight Solutions
+Registrar IANA ID: not applicable
+Registrar Abuse Contact Email: abuse@blacknight.com
+Registrar Abuse Contact Phone: +353.599183072
+Domain Status: ok https://icann.org/epp#ok
+Registry Registrant ID: 354955-IEDR
+Registrant Name: RTE Commercial Enterprises Limited
+Registry Admin ID: 202753-IEDR
+Registry Tech ID: 3159-IEDR
+Registry Billing ID: REDACTED FOR PRIVACY
+Name Server: blue.foundationdns.com
+Name Server: blue.foundationdns.net
+Name Server: blue.foundationdns.org
+DNSSEC: signedDelegation
+>>> Last update of WHOIS database: 2026-07-12T12:34:04Z <<<
+
+% Important Notice
+% If you believe that information published on this page is incorrect, or should not be published,please contact your Registrar, or the .IE Registration Services Department who will advise you further.
+% You can also contact your Registrar or .IE if your Registrant name is not showing and you would like it to be published.
+% Our contact information is available at https://www.weare.ie/contact-us/
+% Rights restricted by copyright: https://www.weare.ie/registrant-terms-conditions-policy/
+% Do not remove this notice

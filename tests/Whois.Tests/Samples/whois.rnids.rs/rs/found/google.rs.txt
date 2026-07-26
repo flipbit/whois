@@ -1,0 +1,47 @@
+
+% The data in the Whois database are provided by RNIDS
+% for information purposes only and to assist persons in obtaining
+% information about or related to a domain name registration record. 
+% Data in the database are created by registrants and we do not guarantee 
+% their accuracy. We reserve the right to remove access 
+% for entities abusing the data, without notice.
+% All timestamps are given in Serbian local time. 
+%
+Domain name: google.rs
+Domain status: Active https://www.rnids.rs/en/domain-name-status-codes#Active
+Domain status: clientUpdateProhibited https://www.rnids.rs/en/domain-name-status-codes#ClientUpdateProhibited
+Registration date: 10.03.2008 12:31:19
+Modification date: 17.02.2026 22:18:21
+Expiration date: 10.03.2027 12:31:19
+Confirmed: 10.03.2008 12:31:19
+Registrar: Webglobe d.o.o.
+
+
+Registrant: Google LLC
+Address: 1600 Amphitheatre Parkway, Mountain View, CA 94043, United States of America
+Postal Code: 
+ID Number: -
+Tax ID: 
+
+Administrative contact: Drustvo za marketing Google DOO
+Address: Marsala Birjuzova 47/18, Beograd, Serbia
+Postal Code: 
+ID Number: 20365099
+Tax ID: 
+
+Technical contact: MarkMonitor, Inc.
+Address: 3540 East Longwing Lane, Suite 300, Meridian, ID 83646, United States of America
+Postal Code: 
+ID Number: -
+Tax ID: 
+
+
+DNS: ns1.google.com - 
+DNS: ns2.google.com - 
+DNS: ns3.google.com - 216.239.36.10
+DNS: ns4.google.com - 216.239.38.10
+
+
+DNSSEC signed: no
+
+Whois Timestamp: 12.07.2026 14:34:25

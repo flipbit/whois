@@ -1,0 +1,79 @@
+
+----------------------------------------------------------------------
+Whois server by HKIRC
+----------------------------------------------------------------------
+.hk top level Domain names can be registered via HKIRC-Accredited Registrars.
+Go to https://www.hkirc.hk/content.jsp?id=280 for details.
+----------------------------------------------------------------------
+
+Domain Name Information:
+
+Domain Name:  BRIGHTER.COM.HK 
+Contract Version:  Old Contract  
+Domain Name Commencement Date: 23-12-1998
+Expiry Date: null 
+Re-registration Status:  Complete   
+Domain Status: Active
+
+DNSSEC:
+  unsigned  
+
+Registrar Name: Hong Kong Domain Name Registration Company Limited
+
+Registrar Contact Information: Email: enquiry@hkdnr.hk                       Hotline: +852 2319 1313
+
+Reseller: 
+
+CDN Variant / Punycode
+
+
+Registrant Contact Information:
+
+Company English Name (It should be the same as the registered/corporation name on your Business Register Certificate or relevant documents): THE BRIGHTER CO
+Company Chinese name:  - 
+Country: Hong Kong (HK)
+Email:  qhau@neotech-hk.com 
+
+Name Servers Information:
+
+NS5.HOSTINGSPEED.NET
+NS2.HOSTINGSPEED.NET
+
+
+Status Information:
+
+Domain Prohibit Status: 
+
+
+-------------------------------------------------------------------------------
+ The Registry contains ONLY .com.hk, .net.hk, .edu.hk, .org.hk,
+ .gov.hk, idv.hk. and .hk $domains.
+-------------------------------------------------------------------------------
+
+WHOIS Terms of Use
+By using this WHOIS search enquiry service you agree to these terms of use.
+The data in HKDNR's WHOIS search engine is for informational purposes only and HKDNR does not guarantee the accuracy of the data. The data is provided to assist people obtaining information about the registration record of domain names registered by HKDNR. You agree to use the data for lawful purposes only.
+
+In light of the General Data Protection Regulation, HKIRC reserves the right to not make available certain data on this WHOIS search enquiry.
+
+You are not authorised to use high-volume, electronic or automated processes to access, query or harvest data from this WHOIS search enquiry service.
+
+You agree that you will not and will not allow anyone else to:
+
+a.    use the data for mass unsolicited commercial advertising of any sort via any media including telephone, email or fax; or
+
+b.    enable high volume, automated or electronic processes that apply to HKDNR or its computer systems including the WHOIS search enquiry service; or
+
+c.    without the prior written consent of HKDNR compile, repackage, disseminate, disclose to any third party or use the data for a purpose other than obtaining information about a domain name registration record; or
+
+d.    use such data to derive an economic benefit for yourself.
+
+HKIRC in its sole discretion may terminate your access to the WHOIS search enquiry service (including but not limited to blocking your IP address) at any time due to, including but not limited to, excessive use of the WHOIS search enquiry service.
+
+HKDNR may modify these terms of use at any time by publishing the modified terms of use on its website.
+
+
+
+
+
+

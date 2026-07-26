@@ -1,0 +1,17 @@
+Domain Name: tld.sy
+Domain ID: 7-sy
+WHOIS Server: 
+Referral URL: 
+Creation Date: 2010-12-02T16:01:27.664Z
+Registry Expiry Date: 2055-12-30T22:00:00.0Z
+Sponsoring Registrar: ?????? ??????? ?????? ????? ?????????
+Sponsoring Registrar IANA ID: 
+Domain Status: ok
+Registrant Email: domain@tld.sy
+Billing Email: domain@tld.sy
+Name Server: ns4.tld.sy
+Name Server: ns3.tld.sy
+DNSSEC: unsigned
+>>> Last update of WHOIS database: 2026-07-12T12:30:10.870Z <<<
+
+

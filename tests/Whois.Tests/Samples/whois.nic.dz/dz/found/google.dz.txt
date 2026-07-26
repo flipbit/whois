@@ -1,0 +1,14 @@
+% This is the WHOIS server for Example Registry.
+% Queries are subject to terms of use.
+%
+Domain Name:    GOOGLE.DZ
+Registrar:      wissal
+Registrant:     GOOGLE LLC
+Admin Name:    Domain Administrator
+Admin Email:      dns-admin@google.com
+Tech Name:   Domain Administrator
+Tech Email:     dns-admin@google.com
+Creation Date:  2007-01-10
+Expiry Date:    N/A
+
+% Query served at 2026-07-12T13:34:01.66825687+01:00

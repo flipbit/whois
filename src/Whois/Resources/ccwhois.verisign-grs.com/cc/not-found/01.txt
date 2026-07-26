@@ -1,0 +1,17 @@
+---
+#
+# .cc Parsing Template
+#
+name: ccwhois.verisign-grs.com/cc/not-found/01
+
+# Use this template for queries to ccwhois.verisign-grs.com:
+tag: ccwhois.verisign-grs.com
+tag: cc
+
+# Set query response type:
+set: Status = NotFound
+
+# Must contain
+hint: No match
+---
+No match for "{ DomainName : IsDomainName, ToHostName }".

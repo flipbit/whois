@@ -1,0 +1,16 @@
+---
+#
+# .pt Parsing Template
+#
+name: whois.dns.pt/pt/not-found/01
+
+# Use this template for queries to whois.dns.pt:
+tag: whois.dns.pt
+tag: pt
+
+# Set query response type:
+set: Status = NotFound
+
+hint: no match
+---
+{ DomainName : IsDomainName, ToHostName } no match

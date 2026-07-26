@@ -1,0 +1,18 @@
+---
+#
+# .ax Parsing Template
+#
+name: whois.ax/ax/not-found/01
+
+# Use this template for queries to whois.ax:
+tag: whois.ax
+tag: ax
+
+# Set query response type:
+set: Status = NotFound
+
+# Must contain:
+hint: No records
+---
+No records matching { DomainName : IsDomainName, ToHostName, EOL } found.
+

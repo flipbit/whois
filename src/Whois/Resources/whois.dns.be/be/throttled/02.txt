@@ -1,0 +1,17 @@
+---
+#
+# .be Parsing Template
+#
+name: whois.dns.be/be/throttled/02
+
+# Use this template for queries to whois.dns.be:
+tag: whois.dns.be
+tag: be
+
+# Set query response type:
+set: Status = Throttled
+
+hint:Excessive querying 
+---
+Excessive querying
+

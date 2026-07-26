@@ -1,0 +1,44 @@
+
+% The data in the Whois database are provided by RNIDS
+% for information purposes only and to assist persons in obtaining
+% information about or related to a domain name registration record. 
+% Data in the database are created by registrants and we do not guarantee 
+% their accuracy. We reserve the right to remove access 
+% for entities abusing the data, without notice.
+% All timestamps are given in Serbian local time. 
+%
+Domain name: saj.rs
+Domain status: Active https://www.rnids.rs/en/domain-name-status-codes#Active
+Registration date: 20.07.2020 16:16:09
+Modification date: 06.07.2026 20:36:15
+Expiration date: 20.07.2027 16:16:09
+Confirmed: 20.07.2020 16:18:06
+Registrar: Gransy d.o.o.
+
+
+Registrant: Tool Domains Ltd
+Address: 19 Kozyak St., Fl.17, Apt. 51, Sofia, Bulgaria
+Postal Code: 1407
+ID Number: BG203146022
+Tax ID: 
+
+Administrative contact: Tool Domains Ltd
+Address: 19 Kozyak St., Fl.17, Apt. 51, Sofia, Bulgaria
+Postal Code: 1407
+ID Number: BG203146022
+Tax ID: 
+
+Technical contact: Tool Domains Ltd
+Address: 19 Kozyak St., Fl.17, Apt. 51, Sofia, Bulgaria
+Postal Code: 1407
+ID Number: BG203146022
+Tax ID: 
+
+
+DNS: ns1.parkingcrew.net - 
+DNS: ns2.parkingcrew.net - 
+
+
+DNSSEC signed: no
+
+Whois Timestamp: 12.07.2026 14:34:25

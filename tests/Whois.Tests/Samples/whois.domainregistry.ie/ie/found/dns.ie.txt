@@ -1,0 +1,28 @@
+Domain Name: dns.ie
+Registry Domain ID: 631298-IEDR
+Registrar WHOIS Server: whois.weare.ie
+Registrar URL: http://www.irishdomains.com
+Updated Date: 2025-09-03T16:32:32Z
+Creation Date: 2002-02-20T00:00:00Z
+Registry Expiry Date: 2034-02-20T16:26:50Z
+Registrar: Irish Domains
+Registrar IANA ID: not applicable
+Registrar Abuse Contact Email: abuse@irishdomains.com
+Registrar Abuse Contact Phone: +353.18507000
+Domain Status: ok https://icann.org/epp#ok
+Registry Registrant ID: 544464-IEDR
+Registrant Name: Irish Domains Limited
+Registry Admin ID: 546276-IEDR
+Registry Tech ID: 541303-IEDR
+Registry Billing ID: REDACTED FOR PRIVACY
+Name Server: cloe.ns.cloudflare.com
+Name Server: eoin.ns.cloudflare.com
+DNSSEC: unsigned
+>>> Last update of WHOIS database: 2026-07-12T12:34:27Z <<<
+
+% Important Notice
+% If you believe that information published on this page is incorrect, or should not be published,please contact your Registrar, or the .IE Registration Services Department who will advise you further.
+% You can also contact your Registrar or .IE if your Registrant name is not showing and you would like it to be published.
+% Our contact information is available at https://www.weare.ie/contact-us/
+% Rights restricted by copyright: https://www.weare.ie/registrant-terms-conditions-policy/
+% Do not remove this notice

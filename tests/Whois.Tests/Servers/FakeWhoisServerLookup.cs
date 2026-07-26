@@ -1,23 +1,19 @@
-using System.Threading;
-using System.Threading.Tasks;
+namespace Whois.Servers;
 
-namespace Whois.Servers
+/// <summary>
+/// Fake class used for testing.
+/// </summary>
+internal class FakeWhoisServerLookup : IWhoisServerLookup
 {
-    /// <summary>
-    /// Fake class used for testing.
-    /// </summary>
-    internal class FakeWhoisServerLookup : IWhoisServerLookup
+    public Task<WhoisResponse> Lookup(WhoisRequest request, CancellationToken cancellationToken = default)
     {
-        public Task<WhoisResponse> Lookup(WhoisRequest request, CancellationToken cancellationToken = default)
+        return Task.FromResult(new WhoisResponse
         {
-            return Task.FromResult(new WhoisResponse
+            DomainName = new HostName("com"),
+            Registrar = new Registrar
             {
-                DomainName = new HostName("com"),
-                Registrar = new Registrar
-                {
-                    WhoisServer = new HostName("test.whois.com")
-                }
-            });
-        }
+                WhoisServer = new HostName("test.whois.com"),
+            },
+        });
     }
 }

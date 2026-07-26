@@ -1,0 +1,28 @@
+Domain Name: canon.com.sg
+Unicode Name: canon.com.sg
+Updated Date: 2026-02-07T16:08:25Z
+Creation Date: 1996-01-08T16:00:00Z
+Registry Expiry Date: 2027-01-08T16:00:00Z
+Registrar: Singnet Pte Ltd
+Domain Status: ok https://icann.org/epp#ok
+VerifiedID Status: VerifiedID@SG-Not Required
+Registry Lock:
+Registrant Name: CANON SINGAPORE PTE. LTD.
+Admin Name: CANON SINGAPORE PTE. LTD.
+Tech Name: SingNet Hostmaster
+Tech Email: hostmaster@singnet.com.sg
+Name Server: ns1.canon.net
+Name Server: ns1.jp.canon.com
+Name Server: ns2.canon.net
+Name Server: ns2.jp.canon.com
+Name Server: ns3.jp.canon.com
+DNSSEC: unsigned
+>>> Last update of WHOIS database: 2026-07-12T12:34:26Z <<<
+
+For more information on Whois status codes, please visit https://icann.org/epp
+
+% ----------------------------------------------------------------------
+% SGNIC WHOIS Server
+% ----------------------------------------------------------------------
+%
+% This data is provided for information purposes only.

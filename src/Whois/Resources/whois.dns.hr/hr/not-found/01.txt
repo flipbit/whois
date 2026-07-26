@@ -1,0 +1,16 @@
+---
+#
+# .hr Parsing Template
+#
+name: whois.dns.hr/hr/not-found/01
+
+# Use this template for queries to whois.dns.hr:
+tag: whois.dns.hr
+tag: hr
+
+# Set query response type:
+set: Status = NotFound
+
+hint: no entries found
+---
+%ERROR: no entries found

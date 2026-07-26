@@ -1,51 +1,48 @@
-using System;
 using System.Text.Json;
-using System.Threading.Tasks;
 using CommandLine;
 using Microsoft.Extensions.Logging;
 
-namespace Whois
+namespace Whois;
+
+internal class Program
 {
-    class Program
+    private static async Task Main(string[] args)
     {
-        static async Task Main(string[] args)
+        await Parser.Default.ParseArguments<Options>(args)
+            .WithParsedAsync(RunLookup).ConfigureAwait(false);
+    }
+
+    private static async Task RunLookup(Options options)
+    {
+        using var loggerFactory = LoggerFactory.Create(builder =>
         {
-            await Parser.Default.ParseArguments<Options>(args)
-                .WithParsedAsync(RunLookup);
-        }
+            builder.AddConsole();
+            builder.SetMinimumLevel(LogLevel.Error);
+        });
 
-        private static async Task RunLookup(Options options)
+        var logger = loggerFactory.CreateLogger<WhoisLookup>();
+        var whoisOptions = Microsoft.Extensions.Options.Options.Create(new WhoisOptions());
+        var lookup = new WhoisLookup(whoisOptions, logger);
+
+        var response = await lookup.Lookup(options.Query!).ConfigureAwait(false);
+
+        if (options.ConvertToJson)
         {
-            using var loggerFactory = LoggerFactory.Create(builder =>
-            {
-                builder.AddConsole();
-                builder.SetMinimumLevel(LogLevel.Error);
-            });
-
-            var logger = loggerFactory.CreateLogger<WhoisLookup>();
-            var whoisOptions = Microsoft.Extensions.Options.Options.Create(new WhoisOptions());
-            var lookup = new WhoisLookup(whoisOptions, logger);
-
-            var response = await lookup.Lookup(options.Query!);
-
-            if (options.ConvertToJson)
-            {
-                var json = JsonSerializer.Serialize(response, new JsonSerializerOptions { WriteIndented = true });
-                Console.WriteLine(json);
-            }
-            else
-            {
-                Console.WriteLine(response.Content);
-            }
+            var json = JsonSerializer.Serialize(response, new JsonSerializerOptions { WriteIndented = true });
+            Console.WriteLine(json);
         }
-
-        public class Options
+        else
         {
-            [Value(0, Required = true, MetaName = "Domain Name")]
-            public string? Query { get; set; }
-
-            [Option('j', "json", HelpText = "Show JSON")]
-            public bool ConvertToJson { get; set; }
+            Console.WriteLine(response.Content);
         }
+    }
+
+    public class Options
+    {
+        [Value(0, Required = true, MetaName = "Domain Name")]
+        public string? Query { get; set; }
+
+        [Option('j', "json", HelpText = "Show JSON")]
+        public bool ConvertToJson { get; set; }
     }
 }

@@ -1,0 +1,98 @@
+% Request from 2003:fe:7f09:5c36:c53c:1b2:2254:6fc1
+% This is the Ukrainian Whois query server #G.
+% The Whois is subject to Terms of use
+% See https://hostmaster.ua/services/
+%
+% IN THE PROCESS OF DELEGATION OF A DOMAIN NAME,
+% THE REGISTRANT IS AN ENTITY WHO USES AND MANAGES A CERTAIN DOMAIN NAME,
+% AND THE REGISTRAR IS A BUSINESS ENTITY THAT PROVIDES THE REGISTRANT
+% WITH THE SERVICES NECESSARY FOR THE TECHNICAL MAINTENANCE OF THE REGISTRATION AND OPERATION OF THE DOMAIN NAME.
+% FOR INFORMATION ABOUT THE REGISTRANT OF THE DOMAIN NAME, YOU SHOULD CONTACT THE REGISTRAR.
+
+domain:           kyivstar.ua
+dom-public:       NO
+license:          85311
+mnt-by:           ua.visti
+nserver:          ns20.kyivstar.net
+nserver:          ns21.kyivstar.net
+nserver:          ns22.kyivstar.net
+status:           ok
+created:          2002-09-03 00:00:00+03
+modified:         2025-08-12 10:01:31+03
+expires:          2026-09-03 12:18:52+03
+source:           UAEPP
+
+% Registrar:
+% ==========
+registrar:        ua.visti
+organization:     ElVisti Information Center LLC
+organization-loc: ТОВ "ІЦ ЕЛВІСТІ"
+url:              http://www.visti.net/
+city:             Kyiv
+country:          UA
+abuse-email:      abuse@visti.net
+abuse-phone:      +380.442399091
+abuse-postal:     Shymanovskogo str. 2/1, Kyiv, 02125, Ukraine
+abuse-postal-loc: вул. Віталія Шимановського, буд. 2/1, м. Київ, 02125, Україна
+source:           UAEPP
+
+% Registrant:
+% ===========
+person:           Private joint-stock company Kyivstar
+organization:     Private joint-stock company Kyivstar
+e-mail:           hostmaster@kyivstar.net
+address:          Chervonozoryanyi Av. 51
+address:          KYIV
+postal-code:      03110
+country:          UA
+country-loc:      UA
+phone:            +380.442473939
+fax:              +380.442473954
+mnt-by:           ua.visti
+status:           ok
+status:           linked
+created:          2014-03-31 17:42:39+03
+source:           UAEPP
+
+
+% Administrative Contacts:
+% =======================
+person:           Private joint-stock company Kyivstar
+organization:     Private joint-stock company Kyivstar
+e-mail:           hostmaster@kyivstar.net
+address:          Chervonozoryanyi Av. 51
+address:          KYIV
+postal-code:      03110
+country:          UA
+country-loc:      UA
+phone:            +380.442473939
+fax:              +380.442473954
+mnt-by:           ua.visti
+status:           ok
+status:           linked
+created:          2014-03-31 17:42:39+03
+source:           UAEPP
+
+
+% Technical Contacts:
+% ===================
+person:           Private joint-stock company Kyivstar
+organization:     Private joint-stock company Kyivstar
+e-mail:           hostmaster@kyivstar.net
+address:          Chervonozoryanyi Av. 51
+address:          KYIV
+postal-code:      03110
+country:          UA
+country-loc:      UA
+phone:            +380.442473939
+fax:              +380.442473954
+mnt-by:           ua.visti
+status:           ok
+status:           linked
+created:          2014-03-31 17:42:39+03
+source:           UAEPP
+
+
+
+% Query time:     2 msec
+

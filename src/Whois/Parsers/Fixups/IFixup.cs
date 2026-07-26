@@ -1,21 +1,20 @@
-﻿using Tokens;
+using Tokens;
 
-namespace Whois.Parsers.Fixups
+namespace Whois.Parsers.Fixups;
+
+/// <summary>
+/// Helper class to fix up data on a WHOIS result
+/// </summary>
+public interface IFixup
 {
     /// <summary>
-    /// Helper class to fix up data on a WHOIS result
+    /// Determines if this Fixup can be applied to the given response.
     /// </summary>
-    public interface IFixup
-    {
-        /// <summary>
-        /// Determines if this Fixup can be applied to the given response.
-        /// </summary>
-        bool CanFixup(TokenizeResult<WhoisResponse> result);
+    public bool CanFixup(TokenizeResult result);
 
-        /// <summary>
-        /// Fixes the given result.
-        /// </summary>
-        void Fixup(TokenizeResult<WhoisResponse> result);
+    /// <summary>
+    /// Fixes the given result.
+    /// </summary>
+    public void Fixup(TokenizeResult result, WhoisResponse response);
 
-    }
 }

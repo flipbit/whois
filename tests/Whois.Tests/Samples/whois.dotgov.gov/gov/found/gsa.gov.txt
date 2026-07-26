@@ -1,0 +1,76 @@
+Domain Name: gsa.gov
+Registrar WHOIS Server: whois.nic.gov
+Registrar URL: https://get.gov
+Updated Date: 2025-11-06T13:44:47Z
+Creation Date: 1997-10-02T01:29:24Z
+Registry Expiry Date: 2026-09-02T12:26:47Z
+Registrar: get.gov
+Registrar IANA ID: 8888888
+Registrar Abuse Contact Email:
+Registrar Abuse Contact Phone:
+Domain Status: serverTransferProhibited https://icann.org/epp#serverTransferProhibited
+Registry Registrant ID: REDACTED FOR PRIVACY
+Registrant Name: REDACTED FOR PRIVACY
+Registrant Organization: REDACTED FOR PRIVACY
+Registrant Street: REDACTED FOR PRIVACY
+Registrant Street: REDACTED FOR PRIVACY
+Registrant City: REDACTED FOR PRIVACY
+Registrant State/Province: REDACTED FOR PRIVACY
+Registrant Postal Code: REDACTED FOR PRIVACY
+Registrant Country: REDACTED FOR PRIVACY
+Registrant Phone: REDACTED FOR PRIVACY
+Registrant Fax: REDACTED FOR PRIVACY
+Registrant Email: REDACTED FOR PRIVACY
+Registry Admin ID: REDACTED FOR PRIVACY
+Admin Name: REDACTED FOR PRIVACY
+Admin Organization: REDACTED FOR PRIVACY
+Admin Street: REDACTED FOR PRIVACY
+Admin Street: REDACTED FOR PRIVACY
+Admin City: REDACTED FOR PRIVACY
+Admin State/Province: REDACTED FOR PRIVACY
+Admin Postal Code: REDACTED FOR PRIVACY
+Admin Country: REDACTED FOR PRIVACY
+Admin Phone: REDACTED FOR PRIVACY
+Admin Fax: REDACTED FOR PRIVACY
+Admin Email: REDACTED FOR PRIVACY
+Registry Tech ID: REDACTED FOR PRIVACY
+Tech Name: REDACTED FOR PRIVACY
+Tech Organization: REDACTED FOR PRIVACY
+Tech Street: REDACTED FOR PRIVACY
+Tech Street: REDACTED FOR PRIVACY
+Tech City: REDACTED FOR PRIVACY
+Tech State/Province: REDACTED FOR PRIVACY
+Tech Postal Code: REDACTED FOR PRIVACY
+Tech Country: REDACTED FOR PRIVACY
+Tech Phone: REDACTED FOR PRIVACY
+Tech Email: REDACTED FOR PRIVACY
+Registry Security ID: REDACTED FOR PRIVACY
+Security Name: REDACTED FOR PRIVACY
+Security Organization: REDACTED FOR PRIVACY
+Security Street: REDACTED FOR PRIVACY
+Security City: REDACTED FOR PRIVACY
+Security State/Province: REDACTED FOR PRIVACY
+Security Postal Code: REDACTED FOR PRIVACY
+Security Country: REDACTED FOR PRIVACY
+Security Phone: REDACTED FOR PRIVACY
+Security Email: gsa-vulnerability-reports@gsa.gov
+Name Server: dns.gsa.gov
+Name Server: dns2.gsa.gov
+Name Server: dns3.gsa.gov
+Name Server: dns4.gsa.gov
+Name Server: dns5.gsa.gov
+DNSSEC: signedDelegation
+>>> Last update of WHOIS database: 2026-07-12T12:34:29Z <<<
+
+For more information on Whois status codes, please visit https://icann.org/epp
+
+WHOIS information is provided by the registry solely for query-based,
+informational purposes. Any information provided is "as is" without any
+guarantee of accuracy. You may not use such information to (a) allow,
+enable, or otherwise support the transmission of mass unsolicited,
+commercial advertising or solicitations; (b) enable high volume, automated,
+electronic processes that access the registry's systems or any
+ICANN-Accredited Registrar, except as reasonably necessary to register
+domain names or modify existing registrations; or (c) engage in or support
+unlawful behavior. We reserve the right to restrict or deny your access to
+the WHOIS database, and may modify these terms at any time.

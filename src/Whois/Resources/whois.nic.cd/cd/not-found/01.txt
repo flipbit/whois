@@ -1,0 +1,20 @@
+---
+#
+# .cd Parsing Template
+#
+name: whois.nic.cd/cd/not-found/01
+
+# Use this template for queries to whois.nic.cd:
+tag: whois.nic.cd
+tag: cd
+
+# End tokens on new lines
+terminateOnNewLine: true
+
+# Set query response type:
+set: Status = NotFound
+
+hint: Domain Status:
+---
+Domain Name: { DomainName : IsDomainName, ToHostName }
+Domain Status: { DomainStatus ? : Repeating, CleanDomainStatus }

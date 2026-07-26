@@ -1,0 +1,2 @@
+Domain: xn--tstdomain-failed-nserver-qbc.de
+Status: invalid

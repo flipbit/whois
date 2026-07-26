@@ -1,0 +1,102 @@
+%%
+%% This is the AFNIC Whois server.
+%%
+%% complete date format: YYYY-MM-DDThh:mm:ssZ
+%%
+%% Rights restricted by copyright.
+%% See https://www.afnic.fr/en/domain-names-and-support/everything-there-is-to-know-about-domain-names/find-a-domain-name-or-a-holder-using-whois/
+%%
+%%
+
+domain:                        hotel.fr
+status:                        ACTIVE
+eppstatus:                     active
+hold:                          NO
+holder-c:                      ST37915-FRNIC
+admin-c:                       AS104450-FRNIC
+tech-c:                        OVH5-FRNIC
+registrar:                     OVH
+Expiry Date:                   2028-04-07T11:17:40Z
+created:                       2000-04-11T22:00:00Z
+last-update:                   2025-12-29T22:32:48.632006Z
+source:                        FRNIC
+
+nserver:                       dns107.ovh.net
+nserver:                       ns107.ovh.net
+source:                        FRNIC
+
+key1-tag:                      56789
+key1-algo:                     8 [RSASHA256]
+key1-dgst-t:                   2 [SHA256]
+key1-dgst:                     43DD065066977279F650719BDB3FB3A89C251254538631C6170F533158229AF6
+source:                        FRNIC
+
+registrar:                     OVH
+address:                       2 Rue Kellermann
+address:                       59100 ROUBAIX
+country:                       FR
+phone:                         +33.899701761
+fax-no:                        +33.320200958
+e-mail:                        support@ovh.net
+website:                       http://www.ovh.com
+anonymous:                     No
+registered:                    1999-10-18T00:00:00Z
+source:                        FRNIC
+
+nic-hdl:                       ST37915-FRNIC
+type:                          ORGANIZATION
+contact:                       STAR 3
+address:                       34, rue Bergere
+address:                       75009 Paris
+country:                       FR
+phone:                         +33.144511112
+fax-no:                        +33.144511123
+e-mail:                        48c80964ab9bf9f034d9e24c306e5035-s3461@contact.gandi.net
+registrar:                     OVH
+anonymous:                     NO
+obsoleted:                     NO
+eppstatus:                     associated
+eppstatus:                     active
+eligstatus:                    not identified
+reachstatus:                   not identified
+source:                        FRNIC
+
+nic-hdl:                       AS104450-FRNIC
+type:                          ORGANIZATION
+contact:                       Astotel SAS
+address:                       Astotel SAS
+address:                       28 rue de Caumartin
+address:                       75009 PARIS
+country:                       FR
+phone:                         +33.142661515
+e-mail:                        n34eqyb0zrtqlfdrio97@n.o-w-o.info
+registrar:                     OVH
+anonymous:                     NO
+obsoleted:                     NO
+eppstatus:                     associated
+eppstatus:                     active
+eligstatus:                    not identified
+reachstatus:                   not identified
+source:                        FRNIC
+
+nic-hdl:                       OVH5-FRNIC
+type:                          ORGANIZATION
+contact:                       OVH NET
+address:                       OVH
+address:                       140, quai du Sartel
+address:                       59100 Roubaix
+country:                       FR
+phone:                         +33.899701761
+e-mail:                        tech@ovh.net
+registrar:                     OVH
+changed:                       2026-07-12T11:55:01.135454Z
+anonymous:                     NO
+obsoleted:                     NO
+eppstatus:                     associated
+eppstatus:                     active
+eligstatus:                    not identified
+reachstatus:                   not identified
+source:                        FRNIC
+
+>>> Last update of WHOIS database: 2026-07-12T12:34:25.899965Z <<<
+
