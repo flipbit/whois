@@ -22,7 +22,6 @@ public class SnParsingTests : ParsingTests
         Assert.True(sample.Length > 0);
         Assert.Equal(WhoisStatus.NotFound, response.Status);
 
-        AssertWriter.Write(response);
     }
 
     [Fact]

@@ -22,7 +22,6 @@ public class BiParsingTests : ParsingTests
         Assert.True(sample.Length > 0);
         Assert.Equal(WhoisStatus.NotFound, response.Status);
 
-        AssertWriter.Write(response);
         Assert.Equal(0, response.ParsingErrors);
         Assert.Equal("generic/tld/not-found/04", response.TemplateName);
 

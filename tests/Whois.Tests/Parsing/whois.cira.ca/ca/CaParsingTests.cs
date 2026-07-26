@@ -138,7 +138,6 @@ public class CaParsingTests : ParsingTests
 
         Assert.Equal(27, response.FieldsParsed);
 
-        AssertWriter.Write(response);
     }
 
     [Fact(Skip = "Template update deferred - WHOIS response format changed")]

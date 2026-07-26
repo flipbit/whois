@@ -22,7 +22,6 @@ public class AcUkParsingTests : ParsingTests
         Assert.True(sample.Length > 0);
         Assert.Equal(WhoisStatus.NotFound, response.Status);
 
-        AssertWriter.Write(response);
         Assert.Equal(0, response.ParsingErrors);
         Assert.Equal("whois.ja.net/not-found/01", response.TemplateName);
 

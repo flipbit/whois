@@ -128,7 +128,6 @@ public class CfParsingTests : ParsingTests
         Assert.True(sample.Length > 0);
         Assert.Equal(WhoisStatus.Found, response.Status);
 
-        AssertWriter.Write(response);
         Assert.Equal(0, response.ParsingErrors);
         Assert.Equal("whois.dot.cf/cf/found/01", response.TemplateName);
 

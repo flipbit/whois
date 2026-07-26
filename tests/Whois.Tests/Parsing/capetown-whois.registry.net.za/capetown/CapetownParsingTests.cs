@@ -23,7 +23,6 @@ public class CapetownParsingTests : ParsingTests
         Assert.Equal(WhoisStatus.NotFound, response.Status);
         Assert.Equal("nosuchdomain.capetown", response.DomainName.ToString());
 
-        AssertWriter.Write(response);
     }
 
     [Fact]

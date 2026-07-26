@@ -22,7 +22,6 @@ public class GsParsingTests : ParsingTests
         Assert.True(sample.Length > 0);
         Assert.Equal(WhoisStatus.NotFound, response.Status);
 
-        AssertWriter.Write(response);
         Assert.Equal(0, response.ParsingErrors);
         Assert.Equal("whois.nic.gs/gs/not-found/01", response.TemplateName);
 

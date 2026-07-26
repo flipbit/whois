@@ -135,7 +135,6 @@ public class EeParsingTests : ParsingTests
         Assert.True(sample.Length > 0);
         Assert.Equal(WhoisStatus.Found, response.Status);
 
-        AssertWriter.Write(response);
         Assert.Equal(0, response.ParsingErrors);
         Assert.Equal("whois.tld.ee/ee/found/01", response.TemplateName);
 
