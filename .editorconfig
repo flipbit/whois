@@ -160,6 +160,9 @@ dotnet_diagnostic.CA1859.severity = warning
 
 # Use ConfigureAwait(false) in library code
 dotnet_diagnostic.CA2007.severity = warning
+
+# Use TryGetValue instead of ContainsKey + indexer
+dotnet_diagnostic.CA1853.severity = warning
 [*.{xml,csproj,props,targets}]
 indent_size = 2
 

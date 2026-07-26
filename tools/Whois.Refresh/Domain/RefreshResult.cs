@@ -63,13 +63,11 @@ public class RefreshResults
 
         foreach (var (serverName, tlds) in Results)
         {
-            if (!registry.Servers.ContainsKey(serverName))
+            if (!registry.Servers.TryGetValue(serverName, out var registryServer))
             {
                 serversToRemove.Add(serverName);
                 continue;
             }
-
-            var registryServer = registry.Servers[serverName];
 
             foreach (var (tld, statuses) in tlds)
             {
