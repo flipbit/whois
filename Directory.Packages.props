@@ -21,6 +21,7 @@
     <!-- Core library extras -->
     <PackageVersion Include="System.Text.Json" Version="9.0.7" />
     <PackageVersion Include="PolySharp" Version="1.15.0" />
+    <PackageVersion Include="Tokenizer" Version="3.0.0" />
 
     <!-- Analyzers -->
     <PackageVersion Include="Meziantou.Analyzer" Version="3.0.122" />

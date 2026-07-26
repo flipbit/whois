@@ -38,7 +38,7 @@
     <PackageReference Include="Microsoft.Extensions.Options" />
     <PackageReference Include="Microsoft.Extensions.Options.ConfigurationExtensions" />
     <PackageReference Include="Microsoft.Extensions.Http" />
-    <ProjectReference Include="..\..\..\tokenizer\src\Tokenizer\Tokenizer.csproj" />
+    <PackageReference Include="Tokenizer" />
     <PackageReference Include="Microsoft.SourceLink.GitHub" PrivateAssets="All" />
   </ItemGroup>
 
