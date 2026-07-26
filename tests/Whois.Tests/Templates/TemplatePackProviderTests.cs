@@ -204,6 +204,7 @@ public class TemplatePackProviderTests : IDisposable
         Assert.Equal(Version2, result.Version);
         Assert.Null(result.Error);
         Assert.Equal(Version2, provider.Status.CurrentVersion);
+        Assert.Equal(["metadata", "zip", "sig"], callOrder);
     }
 
     // =========================================================================
