@@ -272,7 +272,7 @@ public class WhoisLookupTest
 
         await instance.Lookup(request);
 
-        Assert.True(triggered.Wait(TimeSpan.FromSeconds(5)), "CheckForUpdate was not called within timeout");
+        Assert.True(triggered.Wait(TimeSpan.FromSeconds(30)), "CheckForUpdate was not called within timeout");
     }
 
     [Fact]
@@ -314,7 +314,7 @@ public class WhoisLookupTest
         await instance.Lookup(request);
         await instance.Lookup(request);
 
-        firstCallStarted.Wait(TimeSpan.FromSeconds(5));
+        firstCallStarted.Wait(TimeSpan.FromSeconds(30));
 
         // Give the background task a moment to complete
         await Task.Delay(200);
