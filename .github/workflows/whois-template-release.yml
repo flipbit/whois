@@ -66,7 +66,7 @@ jobs:
           if [ -f ./previous/manifest.json ]; then
             PREV_FLAG="--previous-manifest ./previous/manifest.json"
           fi
-          dotnet run --project tools/WhoisRefresh -- package . --version "${{ steps.version.outputs.version }}" $PREV_FLAG --output ./artifacts
+          dotnet run --project tools/Whois.Refresh -- package . --version "${{ steps.version.outputs.version }}" $PREV_FLAG --output ./artifacts
 
       - name: Sign template pack
         env:

@@ -1,0 +1,21 @@
+<Project Sdk="Microsoft.NET.Sdk">
+  <PropertyGroup>
+    <TargetFramework>net10.0</TargetFramework>
+    <RootNamespace>Whois.Refresh.Tests</RootNamespace>
+    <!-- MA0053: Test classes don't need to be sealed -->
+    <!-- MA0004: ConfigureAwait is not relevant in test code -->
+    <!-- MA0026: TODO comments are allowed in tests -->
+    <!-- MA0003: Named parameters are optional in test assertions -->
+    <!-- MA0074: Assert.Contains(string, string) has no StringComparison overload in xUnit -->
+    <NoWarn>$(NoWarn);MA0053;MA0004;MA0026;MA0003;MA0074</NoWarn>
+  </PropertyGroup>
+  <ItemGroup>
+    <PackageReference Include="Microsoft.NET.Test.Sdk" />
+    <PackageReference Include="xunit" />
+    <PackageReference Include="xunit.runner.visualstudio" />
+    <PackageReference Include="NSubstitute" />
+  </ItemGroup>
+  <ItemGroup>
+    <ProjectReference Include="..\..\tools\Whois.Refresh\Whois.Refresh.csproj" />
+  </ItemGroup>
+</Project>

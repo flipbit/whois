@@ -26,7 +26,7 @@
       <_Parameter1>Whois.Tests</_Parameter1>
     </AssemblyAttribute>
     <AssemblyAttribute Include="System.Runtime.CompilerServices.InternalsVisibleToAttribute">
-      <_Parameter1>WhoisRefresh.Tests</_Parameter1>
+      <_Parameter1>Whois.Refresh.Tests</_Parameter1>
     </AssemblyAttribute>
   </ItemGroup>
 

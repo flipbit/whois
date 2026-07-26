@@ -34,7 +34,7 @@ jobs:
         env:
           GH_TOKEN: ${{ secrets.GITHUB_TOKEN }}
         run: |
-          RESULTS_FILE="tools/WhoisRefresh/refresh-results.json"
+          RESULTS_FILE="tools/Whois.Refresh/refresh-results.json"
           if [ ! -f "$RESULTS_FILE" ]; then
             echo "::warning::No refresh-results.json baseline found"
             exit 0
@@ -77,11 +77,11 @@ jobs:
           fi
 
       - name: Run refresh
-        run: dotnet run --project tools/WhoisRefresh -- refresh .
+        run: dotnet run --project tools/Whois.Refresh -- refresh .
 
       - name: Run detect
         id: detect
-        run: dotnet run --project tools/WhoisRefresh -- detect .
+        run: dotnet run --project tools/Whois.Refresh -- detect .
         continue-on-error: true
 
       - name: Handle results
@@ -112,7 +112,7 @@ jobs:
             fi
 
             git checkout -B "$BRANCH"
-            git add tools/WhoisRefresh/refresh-results.json tests/Whois.Tests/Samples/ tools/WhoisRefresh/drift-report.json tools/WhoisRefresh/drift-report.md
+            git add tools/Whois.Refresh/refresh-results.json tests/Whois.Tests/Samples/ tools/Whois.Refresh/drift-report.json tools/Whois.Refresh/drift-report.md
 
             if ! git diff --cached --quiet; then
               git commit -m "chore: update refresh results and drift report (${BRANCH_DATE})"
@@ -125,7 +125,7 @@ jobs:
 
             # Check for existing PR
             EXISTING_PR=$(gh pr list --head "$BRANCH" --json number --jq '.[0].number // ""')
-            BODY_FILE="tools/WhoisRefresh/drift-report.md"
+            BODY_FILE="tools/Whois.Refresh/drift-report.md"
 
             if [ -n "$EXISTING_PR" ]; then
               gh pr edit "$EXISTING_PR" --body-file "$BODY_FILE"
@@ -142,7 +142,7 @@ jobs:
             # No breakages, but samples changed
             BRANCH="refresh/${BRANCH_DATE}"
             git checkout -B "$BRANCH"
-            git add tools/WhoisRefresh/refresh-results.json tests/Whois.Tests/Samples/
+            git add tools/Whois.Refresh/refresh-results.json tests/Whois.Tests/Samples/
 
             if ! git diff --cached --quiet; then
               git commit -m "chore: update WHOIS samples (${BRANCH_DATE})"
