@@ -34,3 +34,7 @@ packages
 !packages/repositories.config
 cache/
 .vs/
+.DS_Store
+.claude
+*.DotSettings.user
+.cursor

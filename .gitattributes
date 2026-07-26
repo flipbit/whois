@@ -1,0 +1,19 @@
+# Enforce LF line endings for all text files
+* text=auto eol=lf
+
+# Explicit text files
+*.cs text diff=csharp
+*.txt text
+*.md text
+*.json text
+*.xml text
+*.yml text
+*.yaml text
+*.sln text eol=lf
+*.csproj text eol=lf
+*.props text eol=lf
+*.targets text eol=lf
+
+# Binary files
+*.png binary
+*.ico binary

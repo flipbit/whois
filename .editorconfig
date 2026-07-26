@@ -9,6 +9,11 @@ trim_trailing_whitespace = true
 insert_final_newline = true
 
 [*.cs]
+# Default all analyzer diagnostics to silent. Only rules explicitly set to
+# warning below will fire. This prevents Meziantou and AnalysisLevel defaults
+# from breaking the build with rules we haven't reviewed yet.
+dotnet_analyzer_diagnostic.severity = silent
+
 # Allman braces
 csharp_new_line_before_open_brace = all
 csharp_new_line_before_else = true
@@ -51,6 +56,7 @@ dotnet_diagnostic.IDE0055.severity = warning
 dotnet_diagnostic.IDE1006.severity = warning
 
 # Namespace must match folder structure
+dotnet_style_namespace_match_folder = true
 dotnet_diagnostic.IDE0130.severity = warning
 
 # --- Naming conventions ---
@@ -90,7 +96,7 @@ dotnet_naming_rule.private_fields_should_be_camel_case.symbols = private_fields
 dotnet_naming_rule.private_fields_should_be_camel_case.style = underscore_camel_case
 dotnet_naming_rule.private_fields_should_be_camel_case.severity = warning
 dotnet_naming_symbols.private_fields.applicable_kinds = field
-dotnet_naming_symbols.private_fields.applicable_accessibilities = private
+dotnet_naming_symbols.private_fields.applicable_accessibilities = private, protected, private_protected
 dotnet_naming_style.underscore_camel_case.required_prefix = _
 dotnet_naming_style.underscore_camel_case.capitalization = camel_case
 
