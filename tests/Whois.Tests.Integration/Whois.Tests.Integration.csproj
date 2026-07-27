@@ -17,6 +17,11 @@
   </ItemGroup>
   <ItemGroup>
     <ProjectReference Include="..\..\src\Whois\Whois.csproj" />
+    <ProjectReference Include="..\..\tools\Whois.Refresh\Whois.Refresh.csproj" Condition="'$(TargetFramework)' == 'net10.0'" />
+  </ItemGroup>
+  <ItemGroup Condition="'$(TargetFramework)' != 'net10.0'">
+    <Compile Remove="Domains\RdapDomainTests.cs" />
+    <Compile Remove="Domains\WhoisDomainTests.cs" />
   </ItemGroup>
   <ItemGroup>
     <Folder Include="Properties\" />
