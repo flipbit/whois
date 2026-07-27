@@ -110,6 +110,10 @@ internal sealed class WhoisProtocolClient : IProtocolClient
 
             // Follow referral to next server
             whoisServer = record.WhoisServer?.Value;
+            if (whoisServer != null)
+            {
+                _logger.LogDebug("WHOIS: following referral to {Server}", whoisServer);
+            }
         }
 
         if (bestRecord == null)

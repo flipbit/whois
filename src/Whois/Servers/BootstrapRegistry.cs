@@ -34,6 +34,7 @@ public class BootstrapRegistry : IBootstrapRegistry
     {
         var data = _data.Value;
         data.Rdap.TryGetValue(tld.ToLowerInvariant(), out var url);
+        _logger.LogDebug("Bootstrap: RDAP lookup for TLD {Tld}: {Result}", tld, url != null ? "hit" : "miss");
         return Task.FromResult<string?>(url);
     }
 
@@ -41,6 +42,7 @@ public class BootstrapRegistry : IBootstrapRegistry
     {
         var data = _data.Value;
         data.Whois.TryGetValue(tld.ToLowerInvariant(), out var server);
+        _logger.LogDebug("Bootstrap: WHOIS lookup for TLD {Tld}: {Result}", tld, server != null ? "hit" : "miss");
         return Task.FromResult<string?>(server);
     }
 
@@ -62,7 +64,7 @@ public class BootstrapRegistry : IBootstrapRegistry
             var rdap = ParseBootstrapJson(ResourceReader.GetContent(RdapResourceName));
             var whois = ParseWhoisBootstrapJson(ResourceReader.GetContent(WhoisResourceName));
 
-            _logger.LogDebug(
+            _logger.LogInformation(
                 "Bootstrap registry loaded: {RdapCount} RDAP endpoints, {WhoisCount} WHOIS servers",
                 rdap.Count, whois.Count);
 
