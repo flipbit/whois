@@ -2,6 +2,7 @@ using Microsoft.Extensions.DependencyInjection;
 using Microsoft.Extensions.Options;
 using Whois.Net;
 using Whois.Parsers;
+using Whois.Protocols;
 using Whois.Templates;
 using Xunit;
 
@@ -89,5 +90,21 @@ public class WhoisServiceCollectionExtensionsTests
         var second = provider.GetRequiredService<WhoisParser>();
 
         Assert.Same(first, second);
+    }
+
+    [Fact]
+    public void AddWhois_RegistersBothProtocolClients()
+    {
+        var services = new ServiceCollection();
+        services.AddLogging();
+        services.AddWhois();
+        var provider = services.BuildServiceProvider();
+
+        var protocolClients = provider.GetRequiredService<IEnumerable<IProtocolClient>>().ToList();
+
+        Assert.NotEmpty(protocolClients);
+        Assert.Equal(2, protocolClients.Count);
+        Assert.Single(protocolClients.OfType<WhoisProtocolClient>());
+        Assert.Single(protocolClients.OfType<RdapProtocolClient>());
     }
 }
