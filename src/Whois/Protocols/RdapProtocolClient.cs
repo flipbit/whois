@@ -68,18 +68,17 @@ internal sealed class RdapProtocolClient : IProtocolClient
             HttpResponseMessage? httpResponse = null;
             for (var hop = 0; ; hop++)
             {
+                if (hop > 0 && hop > MaxRedirects)
+                {
+                    throw new WhoisException(FormattableString.Invariant($"RDAP request exceeded maximum redirect limit of {MaxRedirects}: {url}"));
+                }
+
                 httpResponse?.Dispose();
                 httpResponse = await _httpClient.GetAsync(url, cts.Token).ConfigureAwait(false);
 
                 var redirectCode = (int)httpResponse.StatusCode;
                 if (redirectCode is 301 or 302 or 307 or 308)
                 {
-                    if (hop >= MaxRedirects)
-                    {
-                        httpResponse.Dispose();
-                        throw new WhoisException(FormattableString.Invariant($"RDAP request exceeded maximum redirect limit of {MaxRedirects}: {url}"));
-                    }
-
                     var location = httpResponse.Headers.Location?.ToString()
                         ?? throw new WhoisException($"RDAP redirect response missing Location header: {url}");
 

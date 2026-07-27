@@ -164,14 +164,16 @@ public class RdapProtocolClientTests
         bootstrap.GetRdapBaseUrl("com", Arg.Any<CancellationToken>())
             .Returns("https://rdap.example.com/");
 
-        // Always redirects -- creates an infinite chain that should be cut off at 5.
-        var handler = new RedirectHandler("https://rdap.other.com/domain/loop.com");
+        // Always redirects -- creates an infinite chain that should be cut off at MaxRedirects + 1 (6 total requests).
+        var handler = new CountingRedirectHandler("https://rdap.other.com/domain/loop.com");
         var httpClient = new HttpClient(handler);
         var client = new RdapProtocolClient(httpClient, bootstrap, new WhoisOptions());
         var request = new WhoisRequest("loop.com");
 
         var ex = await Assert.ThrowsAsync<WhoisException>(() => client.Query(request, CancellationToken.None));
         Assert.Contains("redirect", ex.Message, StringComparison.OrdinalIgnoreCase);
+        // Verify exactly 6 requests were made: 1 original + 5 redirects before throwing
+        Assert.Equal(6, handler.RequestCount);
     }
 
     [Fact]
@@ -243,6 +245,28 @@ public class RdapProtocolClientTests
 
         protected override Task<HttpResponseMessage> SendAsync(HttpRequestMessage request, CancellationToken cancellationToken)
         {
+            var response = new HttpResponseMessage(HttpStatusCode.Moved);
+            response.Headers.Location = new Uri(_location);
+            return Task.FromResult(response);
+        }
+    }
+
+    /// <summary>
+    /// Counts HTTP requests while always returning a 301 redirect to <c>location</c>.
+    /// </summary>
+    private sealed class CountingRedirectHandler : HttpMessageHandler
+    {
+        private readonly string _location;
+        public int RequestCount { get; private set; }
+
+        public CountingRedirectHandler(string location)
+        {
+            _location = location;
+        }
+
+        protected override Task<HttpResponseMessage> SendAsync(HttpRequestMessage request, CancellationToken cancellationToken)
+        {
+            RequestCount++;
             var response = new HttpResponseMessage(HttpStatusCode.Moved);
             response.Headers.Location = new Uri(_location);
             return Task.FromResult(response);
