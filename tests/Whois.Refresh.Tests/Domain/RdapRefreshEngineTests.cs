@@ -22,7 +22,7 @@ public class RdapRefreshEngineTests
     public async Task RunAsync_SuccessfulQuery_RecordsFieldsExtracted()
     {
         using var handler = new FakeHandler(HttpStatusCode.OK, ValidRdapResponse);
-        using var engine = CreateEngine(handler);
+        var engine = CreateEngine(handler);
         var registry = CreateRegistry("rdap.example.com", "com",
             rdapBaseUrl: "https://rdap.example.com/",
             domains: new Dictionary<string, IList<string>>(StringComparer.Ordinal) { ["found"] = ["example.com"] });
@@ -38,7 +38,7 @@ public class RdapRefreshEngineTests
     public async Task RunAsync_HttpError_RecordsError()
     {
         using var handler = new FakeHandler(HttpStatusCode.InternalServerError, "error");
-        using var engine = CreateEngine(handler);
+        var engine = CreateEngine(handler);
         var registry = CreateRegistry("rdap.example.com", "com",
             rdapBaseUrl: "https://rdap.example.com/",
             domains: new Dictionary<string, IList<string>>(StringComparer.Ordinal) { ["found"] = ["example.com"] });
@@ -53,7 +53,7 @@ public class RdapRefreshEngineTests
     public async Task RunAsync_NotFound_RecordsNotFoundStatus()
     {
         using var handler = new FakeHandler(HttpStatusCode.NotFound, "");
-        using var engine = CreateEngine(handler);
+        var engine = CreateEngine(handler);
         var registry = CreateRegistry("rdap.example.com", "com",
             rdapBaseUrl: "https://rdap.example.com/",
             domains: new Dictionary<string, IList<string>>(StringComparer.Ordinal) { ["not-found"] = ["nonexistent.com"] });
@@ -69,7 +69,7 @@ public class RdapRefreshEngineTests
     public async Task RunAsync_SkipsStaticEntries()
     {
         using var handler = new FakeHandler(HttpStatusCode.OK, ValidRdapResponse);
-        using var engine = CreateEngine(handler);
+        var engine = CreateEngine(handler);
         var servers = new Dictionary<string, ServerEntry>(StringComparer.Ordinal)
         {
             ["rdap.static.com"] = new("com", IsStatic: true, null,
@@ -87,7 +87,7 @@ public class RdapRefreshEngineTests
     public async Task RunAsync_MissingRdapBaseUrl_RecordsError()
     {
         using var handler = new FakeHandler(HttpStatusCode.OK, ValidRdapResponse);
-        using var engine = CreateEngine(handler);
+        var engine = CreateEngine(handler);
         var registry = CreateRegistry("rdap.example.com", "com",
             rdapBaseUrl: null,
             domains: new Dictionary<string, IList<string>>(StringComparer.Ordinal) { ["found"] = ["example.com"] });
@@ -103,9 +103,8 @@ public class RdapRefreshEngineTests
 
     private static RdapRefreshEngine CreateEngine(HttpMessageHandler handler)
     {
-#pragma warning disable CA2000 // HttpClient ownership transfers to RdapRefreshEngine; caller disposes engine
-        var client = new HttpClient(handler);
-        return new RdapRefreshEngine(client);
+#pragma warning disable CA2000 // HttpClient lifetime managed by test scope
+        return new RdapRefreshEngine(new HttpClient(handler));
 #pragma warning restore CA2000
     }
 

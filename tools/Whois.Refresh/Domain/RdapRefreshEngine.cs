@@ -7,7 +7,7 @@ public record RdapRefreshEngineOptions(
     TimeSpan DelayBetweenQueries,
     int QueryTimeoutSeconds);
 
-public class RdapRefreshEngine : IDisposable
+public class RdapRefreshEngine
 {
     private readonly HttpClient _httpClient;
 
@@ -15,8 +15,6 @@ public class RdapRefreshEngine : IDisposable
     {
         _httpClient = httpClient;
     }
-
-    public void Dispose() => _httpClient.Dispose();
 
     public async Task<RefreshResults> RunAsync(
         DomainRegistryData registry,
