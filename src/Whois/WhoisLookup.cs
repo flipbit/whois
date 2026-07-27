@@ -91,8 +91,8 @@ public class WhoisLookup : IWhoisLookup
         _logger = NullLogger<WhoisLookup>.Instance;
         _bootstrap = bootstrap;
 
-        _whoisClient = clients.FirstOrDefault(c => c.Protocol == LookupProtocol.Whois)!;
-        _rdapClient = clients.FirstOrDefault(c => c.Protocol == LookupProtocol.Rdap)!;
+        _whoisClient = clients.First(c => c.Protocol == LookupProtocol.Whois);
+        _rdapClient = clients.First(c => c.Protocol == LookupProtocol.Rdap);
     }
 
     /// <summary>

@@ -127,10 +127,16 @@ public class WhoisLookupTest
         bootstrap.GetRdapBaseUrl("uk", Arg.Any<CancellationToken>())
             .Returns((string?)null);
 
+        var whoisClient = Substitute.For<IProtocolClient>();
+        whoisClient.Protocol.Returns(LookupProtocol.Whois);
+
+        var rdapClient = Substitute.For<IProtocolClient>();
+        rdapClient.Protocol.Returns(LookupProtocol.Rdap);
+
         var lookup = new WhoisLookup(
             new WhoisOptions(),
             bootstrap,
-            []);
+            [whoisClient, rdapClient]);
 
         var request = new WhoisRequest("example.uk") { PreferredProtocol = ProtocolPreference.Rdap };
 
@@ -180,7 +186,14 @@ public class WhoisLookupTest
     public async Task Lookup_EmptyQuery_ThrowsArgumentNullException()
     {
         var bootstrap = Substitute.For<IBootstrapRegistry>();
-        var lookup = new WhoisLookup(new WhoisOptions(), bootstrap, []);
+
+        var whoisClient = Substitute.For<IProtocolClient>();
+        whoisClient.Protocol.Returns(LookupProtocol.Whois);
+
+        var rdapClient = Substitute.For<IProtocolClient>();
+        rdapClient.Protocol.Returns(LookupProtocol.Rdap);
+
+        var lookup = new WhoisLookup(new WhoisOptions(), bootstrap, [whoisClient, rdapClient]);
 
         await Assert.ThrowsAsync<ArgumentNullException>(() => lookup.Lookup(string.Empty));
     }
