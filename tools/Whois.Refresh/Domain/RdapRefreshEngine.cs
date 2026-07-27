@@ -1,32 +1,26 @@
 using System.Globalization;
-using System.Net.Sockets;
-using System.Text;
-using Whois.Net;
-using Whois.Parsers;
-using Whois.Refresh.Infrastructure;
+using Whois.Protocols;
 
 namespace Whois.Refresh.Domain;
 
-public record RefreshEngineOptions(
-    string SamplesBasePath,
+public record RdapRefreshEngineOptions(
     TimeSpan DelayBetweenQueries,
-    int QueryTimeoutSeconds,
-    int MaxResponseBytes);
+    int QueryTimeoutSeconds);
 
-public class WhoisRefreshEngine
+public class RdapRefreshEngine : IDisposable
 {
-    private readonly ITcpReader _tcpReader;
-    private readonly IFileSystem _fileSystem;
+    private readonly HttpClient _httpClient;
 
-    public WhoisRefreshEngine(ITcpReader tcpReader, IFileSystem fileSystem)
+    public RdapRefreshEngine(HttpClient httpClient)
     {
-        _tcpReader = tcpReader;
-        _fileSystem = fileSystem;
+        _httpClient = httpClient;
     }
+
+    public void Dispose() => _httpClient.Dispose();
 
     public async Task<RefreshResults> RunAsync(
         DomainRegistryData registry,
-        RefreshEngineOptions options,
+        RdapRefreshEngineOptions options,
         CancellationToken cancellationToken)
     {
         var results = new RefreshResults
@@ -47,7 +41,7 @@ public class WhoisRefreshEngine
 
     private async Task ProcessRateGroupAsync(
         IGrouping<string, KeyValuePair<string, ServerEntry>> group,
-        RefreshEngineOptions options,
+        RdapRefreshEngineOptions options,
         RefreshResults results,
         CancellationToken cancellationToken)
     {
@@ -61,12 +55,14 @@ public class WhoisRefreshEngine
                 {
                     if (!isFirst && options.DelayBetweenQueries > TimeSpan.Zero)
                     {
-                        await Task.Delay(options.DelayBetweenQueries, cancellationToken).ConfigureAwait(false);
+                        await Task.Delay(options.DelayBetweenQueries, cancellationToken)
+                            .ConfigureAwait(false);
                     }
                     isFirst = false;
 
                     var domainResult = await QueryDomainAsync(
-                        serverName, server.Tld, status, domain, options, cancellationToken).ConfigureAwait(false);
+                        serverName, server, status, domain, options, cancellationToken)
+                        .ConfigureAwait(false);
 
                     RecordResult(results, serverName, server.Tld, status, domain, domainResult);
                 }
@@ -75,84 +71,95 @@ public class WhoisRefreshEngine
     }
 
     private async Task<DomainResult> QueryDomainAsync(
-        string serverName, string tld, string status, string domain,
-        RefreshEngineOptions options, CancellationToken cancellationToken)
+        string serverName, ServerEntry server, string status, string domain,
+        RdapRefreshEngineOptions options, CancellationToken cancellationToken)
     {
         var result = new DomainResult
         {
             Timestamp = DateTimeOffset.UtcNow,
         };
 
+        if (server.RdapBaseUrl == null)
+        {
+            result.Error = new QueryError
+            {
+                Type = QueryErrorType.Unknown,
+                Message = "No rdapBaseUrl configured for server",
+                Detail = serverName,
+            };
+            return result;
+        }
+
+        var encodedDomain = Uri.EscapeDataString(domain);
+        var url = $"{server.RdapBaseUrl.TrimEnd('/')}/domain/{encodedDomain}";
+
         try
         {
-            var response = await _tcpReader.Read(
-                serverName, 43, $"{domain}\r\n",
-                Encoding.UTF8, options.QueryTimeoutSeconds, cancellationToken).ConfigureAwait(false);
+            using var cts = CancellationTokenSource.CreateLinkedTokenSource(cancellationToken);
+            cts.CancelAfter(TimeSpan.FromSeconds(options.QueryTimeoutSeconds));
 
-            if (response.Length > options.MaxResponseBytes)
+            using var response = await _httpClient.GetAsync(url, cts.Token).ConfigureAwait(false);
+
+            if (response.StatusCode == System.Net.HttpStatusCode.NotFound)
+            {
+                result.ActualStatus = "not-found";
+                return result;
+            }
+
+            if ((int)response.StatusCode == 429)
             {
                 result.Error = new QueryError
                 {
-                    Type = QueryErrorType.ResponseTooLarge,
-                    Message = string.Format(CultureInfo.InvariantCulture, "Response size {0} exceeds maximum {1}", response.Length, options.MaxResponseBytes),
-                    Detail = $"{serverName}:43",
+                    Type = QueryErrorType.RateLimited,
+                    Message = "Rate limited (HTTP 429)",
+                    Detail = url,
                 };
-                response = response[..options.MaxResponseBytes];
+                return result;
             }
 
-            // Parse response
-            var parser = new WhoisParser();
-            var parsed = parser.Parse(serverName, response);
+            if (!response.IsSuccessStatusCode)
+            {
+                result.Error = new QueryError
+                {
+                    Type = QueryErrorType.Unknown,
+                    Message = string.Format(CultureInfo.InvariantCulture,
+                        "HTTP {0}", (int)response.StatusCode),
+                    Detail = url,
+                };
+                return result;
+            }
 
-            result.MatchedTemplate = parsed.TemplateName;
+            var json = await response.Content.ReadAsStringAsync(cts.Token).ConfigureAwait(false);
+            var parsed = RdapParser.Parse(json);
+
             result.ExtractedFields = GetExtractedFieldNames(parsed);
 
-            // Determine actual status for save directory
             var actualStatus = MapRegistrationStatus(parsed.Status);
-            var saveStatus = actualStatus ?? status;
-            if (actualStatus != null && !string.Equals(actualStatus, status, StringComparison.OrdinalIgnoreCase))
+            if (actualStatus != null
+                && !string.Equals(actualStatus, status, StringComparison.OrdinalIgnoreCase))
             {
                 result.ActualStatus = actualStatus;
             }
-
-            // Save response to the actual status directory
-            var dir = Path.Combine(options.SamplesBasePath, serverName, tld, saveStatus);
-            if (!_fileSystem.DirectoryExists(dir))
-            {
-                _fileSystem.CreateDirectory(dir);
-            }
-            var filePath = Path.Combine(dir, $"{domain}.txt");
-            await _fileSystem.WriteAllTextAsync(filePath, response, cancellationToken).ConfigureAwait(false);
-
-            if (result.Error == null && parsed.TemplateName == null)
-            {
-                result.Error = new QueryError
-                {
-                    Type = QueryErrorType.ParseFailure,
-                    Message = "No template matched",
-                    Detail = $"{serverName}/{tld}/{status}/{domain}",
-                };
-            }
         }
-        catch (OperationCanceledException)
+        catch (OperationCanceledException) when (!cancellationToken.IsCancellationRequested)
         {
             result.Error = new QueryError
             {
                 Type = QueryErrorType.Timeout,
                 Message = "Query timed out",
-                Detail = $"{serverName}:43",
+                Detail = url,
             };
         }
-        catch (SocketException ex)
+        catch (HttpRequestException ex)
         {
             result.Error = new QueryError
             {
                 Type = QueryErrorType.ConnectionRefused,
                 Message = ex.Message,
-                Detail = $"{serverName}:43",
+                Detail = url,
             };
         }
-#pragma warning disable CA1031 // Catch-all: WHOIS queries may fail with any exception; classify as unknown error
+#pragma warning disable CA1031 // Catch-all for RDAP queries; classify as unknown error
         catch (Exception ex)
 #pragma warning restore CA1031
         {
@@ -160,29 +167,28 @@ public class WhoisRefreshEngine
             {
                 Type = QueryErrorType.Unknown,
                 Message = ex.Message,
-                Detail = $"{serverName}:43",
+                Detail = url,
             };
         }
 
         return result;
     }
 
-    private static List<string> GetExtractedFieldNames(Whois.Protocols.WhoisRecord parsed)
+    private static List<string> GetExtractedFieldNames(DomainInfo parsed)
     {
         var fields = new List<string>();
         if (parsed.DomainName != null) fields.Add("DomainName");
+        if (parsed.RegistryDomainId != null) fields.Add("RegistryDomainId");
         if (parsed.Registrar != null) fields.Add("Registrar");
-        if (parsed.Registered != null) fields.Add("Registered");
-        if (parsed.Updated != null) fields.Add("Updated");
-        if (parsed.Expiration != null) fields.Add("Expiration");
+        if (parsed.Registered.HasValue) fields.Add("Registered");
+        if (parsed.Updated.HasValue) fields.Add("Updated");
+        if (parsed.Expiration.HasValue) fields.Add("Expiration");
         if (parsed.NameServers.Count > 0) fields.Add("NameServers");
         if (parsed.DomainStatus.Count > 0) fields.Add("DomainStatus");
         if (parsed.Registrant != null) fields.Add("Registrant");
         if (parsed.TechnicalContact != null) fields.Add("TechnicalContact");
         if (parsed.AdminContact != null) fields.Add("AdminContact");
         if (parsed.BillingContact != null) fields.Add("BillingContact");
-        if (parsed.DnsSecStatus != null) fields.Add("DnsSecStatus");
-        if (parsed.RegistryDomainId != null) fields.Add("RegistryDomainId");
         return fields;
     }
 
@@ -191,25 +197,9 @@ public class WhoisRefreshEngine
         RegistrationStatus.Found => "found",
         RegistrationStatus.NotFound => "not-found",
         RegistrationStatus.Throttled => "throttled",
-        RegistrationStatus.Reserved => "reserved",
-        RegistrationStatus.Suspended => "suspended",
         RegistrationStatus.Inactive => "inactive",
-        RegistrationStatus.Expired => "expired",
-        RegistrationStatus.Blocked => "blocked",
-        RegistrationStatus.Deactivated => "deactivated",
-        RegistrationStatus.Error => "error",
-        RegistrationStatus.Failed => "failed",
-        RegistrationStatus.Invalid => "invalid",
         RegistrationStatus.Locked => "locked",
-        RegistrationStatus.NotAssigned => "not-assigned",
-        RegistrationStatus.NotAvailable => "not-available",
-        RegistrationStatus.OutOfService => "out-of-service",
         RegistrationStatus.PendingDelete => "pending-delete",
-        RegistrationStatus.Quarantined => "quarantined",
-        RegistrationStatus.Redemption => "redemption",
-        RegistrationStatus.ToBeReleased => "to-be-released",
-        RegistrationStatus.Unavailable => "unavailable",
-        RegistrationStatus.Unconfirmed => "unconfirmed",
         RegistrationStatus.Unknown => null,
         _ => null,
     };

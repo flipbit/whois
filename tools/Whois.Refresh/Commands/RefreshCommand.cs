@@ -61,7 +61,7 @@ public class RefreshCommand : AsyncCommand<RefreshSettings>
             QueryTimeoutSeconds: settings.TimeoutSeconds,
             MaxResponseBytes: settings.MaxResponseBytes);
 
-        var engine = new RefreshEngine(_tcpReader, _fileSystem);
+        var engine = new WhoisRefreshEngine(_tcpReader, _fileSystem);
         var results = await engine.RunAsync(registry, options, CancellationToken.None).ConfigureAwait(false);
 
         // Prune removed domains

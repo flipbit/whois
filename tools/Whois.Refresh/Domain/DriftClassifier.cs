@@ -89,7 +89,7 @@ public static class DriftClassifier
                 [], currentResult.ExtractedFields);
         }
 
-        // Status mismatch (ActualStatus set by RefreshEngine when parsed status differs from expected)
+        // Status mismatch (ActualStatus set by WhoisRefreshEngine when parsed status differs from expected)
         if (currentResult.ActualStatus != null && !string.Equals(currentResult.ActualStatus, status, StringComparison.OrdinalIgnoreCase))
         {
             return new DriftEntry(server, tld, status, domain,

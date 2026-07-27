@@ -27,7 +27,7 @@ public class RefreshEngineTests
             }),
         });
 
-    private RefreshEngine CreateEngine() => new(_tcpReader, _fileSystem);
+    private WhoisRefreshEngine CreateEngine() => new(_tcpReader, _fileSystem);
 
     [Fact]
     public async Task RunAsync_SingleDomain_QueriesAndSavesResponse()

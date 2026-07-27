@@ -61,6 +61,10 @@ public static class DomainRegistry
             var rateGroup = serverObj.TryGetProperty("rateGroup", out var rgProp) && rgProp.ValueKind != JsonValueKind.Null
                 ? rgProp.GetString()
                 : null;
+            var rdapBaseUrl = serverObj.TryGetProperty("rdapBaseUrl", out var rdapProp)
+                && rdapProp.ValueKind != JsonValueKind.Null
+                ? rdapProp.GetString()
+                : null;
 
             var domains = new Dictionary<string, IList<string>>(StringComparer.Ordinal);
             var domainsObj = serverObj.GetProperty("domains");
@@ -98,7 +102,7 @@ public static class DomainRegistry
                 domains[status] = domainList;
             }
 
-            servers[serverName] = new ServerEntry(tld, isStatic, rateGroup, domains);
+            servers[serverName] = new ServerEntry(tld, isStatic, rateGroup, domains, rdapBaseUrl);
         }
 
         return new DomainRegistryData(servers);
