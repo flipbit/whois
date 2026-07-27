@@ -48,7 +48,16 @@ public static class WhoisServiceCollectionExtensions
             new WhoisParser(server => sp.GetRequiredService<ITemplatePackProvider>().GetCachedTemplatePath(server)));
 
         // Bootstrap registry
-        services.AddSingleton<IBootstrapRegistry, BootstrapRegistry>();
+        services.AddHttpClient("BootstrapRegistry");
+        services.AddSingleton<IBootstrapRegistry>(sp =>
+        {
+            var factory = sp.GetRequiredService<IHttpClientFactory>();
+            var options = sp.GetRequiredService<IOptions<WhoisOptions>>().Value;
+            return new BootstrapRegistry(
+                factory.CreateClient("BootstrapRegistry"),
+                options,
+                sp.GetRequiredService<ILogger<BootstrapRegistry>>());
+        });
 
         // Protocol clients
         services.AddTransient<ITcpReader, TcpReader>();

@@ -26,7 +26,10 @@ public class WhoisLookup : IWhoisLookup
     private int _autoUpdateTriggered;
 
     // --- Static shared instances for non-DI use ---
-    private static readonly Lazy<BootstrapRegistry> SharedBootstrap = new(() => new BootstrapRegistry());
+    private static readonly Lazy<HttpClient> SharedHttpClient = new(NetStandardShims.CreatePooledHttpClient);
+
+    private static readonly Lazy<BootstrapRegistry> SharedBootstrap = new(() =>
+        new BootstrapRegistry(SharedHttpClient.Value, new WhoisOptions()));
 
     private static readonly Lazy<TemplatePackProvider> SharedPackProvider = new(() =>
     {
@@ -39,8 +42,6 @@ public class WhoisLookup : IWhoisLookup
 
     private static readonly Lazy<WhoisParser> SharedParser = new(() =>
         new WhoisParser(server => SharedPackProvider.Value.GetCachedTemplatePath(server)));
-
-    private static readonly Lazy<HttpClient> SharedHttpClient = new(NetStandardShims.CreatePooledHttpClient);
 
     /// <summary>
     /// Initializes a new instance with default options (non-DI).

@@ -5,71 +5,174 @@ using Microsoft.Extensions.Logging.Abstractions;
 namespace Whois.Servers;
 
 /// <summary>
-/// Provides server discovery for both RDAP and WHOIS protocols using embedded IANA bootstrap data.
-/// Loads from embedded JSON resources on first access (lazy, thread-safe). No network calls.
-///
-/// Disk caching and network refresh are intentionally deferred -- the current implementation
-/// uses embedded snapshots only. Future versions may add automatic refresh from the IANA
-/// bootstrap endpoints and local disk caching of updated data.
+/// Provides server discovery for both RDAP and WHOIS protocols.
+/// RDAP data is fetched from IANA at runtime and cached in memory.
+/// WHOIS data is loaded from an embedded resource (no IANA JSON endpoint exists).
 /// </summary>
 public class BootstrapRegistry : IBootstrapRegistry
 {
-    private const string RdapResourceName = "Whois.Resources.bootstrap.rdap-dns.json";
     private const string WhoisResourceName = "Whois.Resources.bootstrap.whois-dns.json";
+    private const int MaxResponseSizeChars = 1 * 1024 * 1024; // 1 MB
 
+    private readonly HttpClient _httpClient;
+    private readonly WhoisOptions _options;
     private readonly ILogger<BootstrapRegistry> _logger;
-    private volatile Lazy<(Dictionary<string, string> Rdap, Dictionary<string, string> Whois)> _data;
 
-    public BootstrapRegistry() : this(NullLogger<BootstrapRegistry>.Instance)
+#pragma warning disable CA2213 // SemaphoreSlim: singleton lifetime, no Dispose on IBootstrapRegistry by design
+    private readonly SemaphoreSlim _rdapLock = new(1, 1);
+#pragma warning restore CA2213
+    private volatile Dictionary<string, string>? _rdapCache;
+    private readonly Lazy<Dictionary<string, string>> _whoisCache;
+
+    public BootstrapRegistry(HttpClient httpClient, WhoisOptions options)
+        : this(httpClient, options, NullLogger<BootstrapRegistry>.Instance)
     {
     }
 
-    public BootstrapRegistry(ILogger<BootstrapRegistry> logger)
+    public BootstrapRegistry(HttpClient httpClient, WhoisOptions options,
+        ILogger<BootstrapRegistry> logger)
     {
+        _httpClient = httpClient;
+        _options = options;
         _logger = logger;
-        _data = CreateLazy();
+        _whoisCache = new Lazy<Dictionary<string, string>>(
+            () => ParseWhoisBootstrapJson(ResourceReader.GetContent(WhoisResourceName)));
     }
 
-    public Task<string?> GetRdapBaseUrl(string tld, CancellationToken ct)
+    public async Task<string?> GetRdapBaseUrl(string tld, CancellationToken ct)
     {
-        var data = _data.Value;
-        data.Rdap.TryGetValue(tld, out var url);
+        var cache = await EnsureRdapCacheAsync(ct).ConfigureAwait(false);
+        cache.TryGetValue(tld, out var url);
         _logger.LogDebug("Bootstrap: RDAP lookup for TLD {Tld}: {Result}", tld, url != null ? "hit" : "miss");
-        return Task.FromResult<string?>(url);
+        return url;
     }
 
     public Task<string?> GetWhoisServer(string tld, CancellationToken ct)
     {
-        var data = _data.Value;
-        data.Whois.TryGetValue(tld, out var server);
+        var data = _whoisCache.Value;
+        data.TryGetValue(tld, out var server);
         _logger.LogDebug("Bootstrap: WHOIS lookup for TLD {Tld}: {Result}", tld, server != null ? "hit" : "miss");
         return Task.FromResult<string?>(server);
     }
 
-    /// <summary>
-    /// Reloads the bootstrap data from embedded resources, clearing the current in-memory
-    /// cache. This does not fetch updated data from the network -- it reloads the same
-    /// embedded snapshots bundled with the library.
-    /// </summary>
     public Task Refresh(CancellationToken ct)
     {
-        _data = CreateLazy();
+        _rdapCache = null;
+        _logger.LogInformation("Bootstrap cache cleared");
         return Task.CompletedTask;
     }
 
-    private Lazy<(Dictionary<string, string> Rdap, Dictionary<string, string> Whois)> CreateLazy()
+    private async Task<Dictionary<string, string>> EnsureRdapCacheAsync(CancellationToken ct)
     {
-        return new Lazy<(Dictionary<string, string>, Dictionary<string, string>)>(() =>
+        var cache = _rdapCache;
+        if (cache != null) return cache;
+
+        await _rdapLock.WaitAsync(ct).ConfigureAwait(false);
+        try
         {
-            var rdap = ParseBootstrapJson(ResourceReader.GetContent(RdapResourceName));
-            var whois = ParseWhoisBootstrapJson(ResourceReader.GetContent(WhoisResourceName));
+            // Double-check after acquiring lock
+            cache = _rdapCache;
+            if (cache != null) return cache;
 
+            cache = await FetchRdapBootstrapAsync(ct).ConfigureAwait(false);
+            _rdapCache = cache;
+            return cache;
+        }
+        finally
+        {
+            _rdapLock.Release();
+        }
+    }
+
+    private async Task<Dictionary<string, string>> FetchRdapBootstrapAsync(CancellationToken ct)
+    {
+        var url = _options.RdapBootstrapUrl;
+        _logger.LogDebug("Bootstrap: fetching RDAP data from {Url}", url);
+
+        var sw = System.Diagnostics.Stopwatch.StartNew();
+
+        using var cts = CancellationTokenSource.CreateLinkedTokenSource(ct);
+        cts.CancelAfter(TimeSpan.FromSeconds(_options.TimeoutSeconds));
+
+        HttpResponseMessage response;
+        try
+        {
+            response = await _httpClient.GetAsync(url, cts.Token).ConfigureAwait(false);
+        }
+        catch (OperationCanceledException) when (!ct.IsCancellationRequested)
+        {
+            throw new WhoisException(
+                FormattableString.Invariant(
+                    $"RDAP bootstrap fetch timed out after {_options.TimeoutSeconds}s: {url}"));
+        }
+        catch (HttpRequestException ex)
+        {
+            _logger.LogError(ex, "Bootstrap: fetch failed for {Url}", url);
+            throw new WhoisException(
+                $"RDAP bootstrap fetch failed for {url}: {ex.Message}", ex);
+        }
+
+        using (response)
+        {
+            if (!response.IsSuccessStatusCode)
+            {
+                var contentType = response.Content.Headers.ContentType?.ToString() ?? "(none)";
+                _logger.LogError(
+                    "Bootstrap: RDAP fetch returned HTTP {StatusCode}, Content-Type: {ContentType}",
+                    (int)response.StatusCode, contentType);
+                var statusCode = (int)response.StatusCode;
+                throw new WhoisException(
+                    FormattableString.Invariant(
+                        $"RDAP bootstrap fetch returned HTTP {statusCode} (Content-Type: {contentType}): {url}"));
+            }
+
+            var json = await ReadWithSizeLimit(response, MaxResponseSizeChars, cts.Token)
+                .ConfigureAwait(false);
+
+            Dictionary<string, string> result;
+            try
+            {
+                result = ParseBootstrapJson(json);
+            }
+            catch (JsonException ex)
+            {
+                throw new WhoisException(
+                    $"Failed to parse RDAP bootstrap JSON from {url}: {ex.Message}", ex);
+            }
+
+            sw.Stop();
             _logger.LogInformation(
-                "Bootstrap registry loaded: {RdapCount} RDAP endpoints, {WhoisCount} WHOIS servers",
-                rdap.Count, whois.Count);
+                "Bootstrap: loaded {Count} RDAP endpoints in {Duration}ms from {Url}",
+                result.Count, sw.ElapsedMilliseconds, url);
 
-            return (rdap, whois);
-        });
+            return result;
+        }
+    }
+
+    private static async Task<string> ReadWithSizeLimit(
+        HttpResponseMessage response, int maxChars, CancellationToken ct)
+    {
+        using var stream = await Net.NetStandardShims.ReadAsStreamAsync(response.Content, ct)
+            .ConfigureAwait(false);
+        using var reader = new System.IO.StreamReader(stream, System.Text.Encoding.UTF8);
+        var buffer = new char[8192];
+        var sb = new System.Text.StringBuilder(
+            (int)Math.Min(response.Content.Headers.ContentLength ?? 1024, maxChars));
+        int charsRead;
+
+        while ((charsRead = await reader.ReadAsync(buffer, 0, buffer.Length).ConfigureAwait(false)) > 0)
+        {
+            ct.ThrowIfCancellationRequested();
+            sb.Append(buffer, 0, charsRead);
+            if (sb.Length > maxChars)
+            {
+                throw new WhoisException(
+                    FormattableString.Invariant(
+                        $"RDAP bootstrap response exceeds maximum size of {maxChars} characters"));
+            }
+        }
+
+        return sb.ToString();
     }
 
     /// <summary>

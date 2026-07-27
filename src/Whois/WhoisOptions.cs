@@ -48,6 +48,12 @@ public class WhoisOptions
     public ProtocolPreference PreferredProtocol { get; set; } = ProtocolPreference.Auto;
 
     /// <summary>
+    /// URL to fetch RDAP bootstrap data from. Defaults to the IANA registry.
+    /// Override for testing or air-gapped deployments using a local mirror.
+    /// </summary>
+    public string RdapBootstrapUrl { get; set; } = "https://data.iana.org/rdap/dns.json";
+
+    /// <summary>
     /// Gets the default cache directory for template packs.
     /// </summary>
     internal static string GetDefaultCacheDirectory() =>

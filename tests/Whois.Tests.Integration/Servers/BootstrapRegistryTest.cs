@@ -3,13 +3,20 @@ using Whois.Servers;
 
 namespace Whois;
 
-public class BootstrapRegistryTest
+public class BootstrapRegistryTest : IDisposable
 {
+    private readonly HttpClient _httpClient;
     private readonly BootstrapRegistry registry;
 
     public BootstrapRegistryTest()
     {
-        registry = new BootstrapRegistry();
+        _httpClient = new HttpClient();
+        registry = new BootstrapRegistry(_httpClient, new WhoisOptions());
+    }
+
+    public void Dispose()
+    {
+        _httpClient.Dispose();
     }
 
     [Fact]
