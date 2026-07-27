@@ -259,13 +259,14 @@ internal sealed class RdapProtocolClient : IProtocolClient
         return false;
     }
 
-    private static async Task<string> ReadWithSizeLimit(HttpResponseMessage response, int maxChars, CancellationToken ct)
+    internal static async Task<string> ReadWithSizeLimit(HttpResponseMessage response, int maxChars, CancellationToken ct)
     {
         // Use the shim -- the outer CancellationTokenSource handles timeout via GetAsync.
         using var stream = await NetStandardShims.ReadAsStreamAsync(response.Content, ct).ConfigureAwait(false);
         using var reader = new StreamReader(stream, Encoding.UTF8);
         var buffer = new char[8192];
-        var sb = new StringBuilder();
+        var capacity = (int)Math.Min(response.Content.Headers.ContentLength ?? 1024, maxChars);
+        var sb = new StringBuilder(capacity);
         int charsRead;
 
         while ((charsRead = await reader.ReadAsync(buffer, 0, buffer.Length).ConfigureAwait(false)) > 0)

@@ -8,6 +8,70 @@ namespace Whois;
 
 public class RdapProtocolClientTests
 {
+    // ReadWithSizeLimit tests
+
+    [Fact]
+    public async Task ReadWithSizeLimit_EmptyResponse_ReturnsEmptyString()
+    {
+        var response = new HttpResponseMessage(HttpStatusCode.OK)
+        {
+            Content = new StringContent(string.Empty),
+        };
+
+        var result = await RdapProtocolClient.ReadWithSizeLimit(response, 2048, CancellationToken.None);
+
+        Assert.Equal(string.Empty, result);
+    }
+
+    [Fact]
+    public async Task ReadWithSizeLimit_ResponseAtLimit_ReturnsContent()
+    {
+        const int maxChars = 1000;
+        var content = new string('x', maxChars);
+        var response = new HttpResponseMessage(HttpStatusCode.OK)
+        {
+            Content = new StringContent(content),
+        };
+
+        var result = await RdapProtocolClient.ReadWithSizeLimit(response, maxChars, CancellationToken.None);
+
+        Assert.Equal(maxChars, result.Length);
+        Assert.Equal(content, result);
+    }
+
+    [Fact]
+    public async Task ReadWithSizeLimit_ResponseExceedsLimit_Throws()
+    {
+        const int maxChars = 1000;
+        var content = new string('x', maxChars + 1);
+        var response = new HttpResponseMessage(HttpStatusCode.OK)
+        {
+            Content = new StringContent(content),
+        };
+
+        var ex = await Assert.ThrowsAsync<WhoisException>(
+            () => RdapProtocolClient.ReadWithSizeLimit(response, maxChars, CancellationToken.None));
+
+        Assert.Contains("exceeds maximum size", ex.Message, StringComparison.Ordinal);
+    }
+
+    [Fact]
+    public async Task ReadWithSizeLimit_WithContentLength_PreallocatesBuffer()
+    {
+        const int maxChars = 10000;
+        var content = new string('x', 500);
+        var response = new HttpResponseMessage(HttpStatusCode.OK)
+        {
+            Content = new StringContent(content),
+        };
+        // Simulate Content-Length header
+        response.Content.Headers.ContentLength = 500;
+
+        var result = await RdapProtocolClient.ReadWithSizeLimit(response, maxChars, CancellationToken.None);
+
+        Assert.Equal(content, result);
+    }
+
     // ValidateUrl tests
 
     [Fact]
