@@ -206,6 +206,10 @@ internal sealed class RdapProtocolClient : IProtocolClient
 
         // Reject IP literal hosts that resolve to private/loopback/link-local addresses (SSRF prevention).
         // Hostname-based hosts are not validated here -- DNS resolution happens at request time.
+        // NOTE: This means a DNS rebinding attack is theoretically possible. We accept this risk because:
+        // (1) RDAP URLs come from embedded IANA bootstrap data, not user input;
+        // (2) Full mitigation via ConnectCallback would require SocketsHttpHandler (unavailable on netstandard2.0);
+        // (3) Low probability attack for this library's threat model.
         if (System.Net.IPAddress.TryParse(uri.Host, out var ip))
         {
             if (IsPrivateOrReservedAddress(ip))
