@@ -122,6 +122,24 @@ public class RdapProtocolClientTests
         await Assert.ThrowsAsync<WhoisException>(() => client.Query(request, CancellationToken.None));
     }
 
+    [Fact]
+    public async Task Query_SlowResponseBody_TimesOut()
+    {
+        var bootstrap = Substitute.For<IBootstrapRegistry>();
+        bootstrap.GetRdapBaseUrl("com", Arg.Any<CancellationToken>())
+            .Returns("https://rdap.example.com/");
+
+        var handler = new SlowBodyStreamHandler();
+        var httpClient = new HttpClient(handler);
+        var options = new WhoisOptions { TimeoutSeconds = 1 };
+        var client = new RdapProtocolClient(httpClient, bootstrap, options);
+        var request = new WhoisRequest("slow.com");
+
+        var ex = await Assert.ThrowsAsync<WhoisException>(() => client.Query(request, CancellationToken.None));
+        // The exception should contain "timed out" because the body read respects the timeout token
+        Assert.Contains("timed out", ex.Message, StringComparison.OrdinalIgnoreCase);
+    }
+
     private sealed class FakeHttpHandler : HttpMessageHandler
     {
         private readonly HttpStatusCode _statusCode;
@@ -140,6 +158,73 @@ public class RdapProtocolClientTests
                 Content = new StringContent(_content),
             };
             return Task.FromResult(response);
+        }
+    }
+
+    private sealed class SlowBodyStreamHandler : HttpMessageHandler
+    {
+        protected override Task<HttpResponseMessage> SendAsync(HttpRequestMessage request, CancellationToken cancellationToken)
+        {
+            var response = new HttpResponseMessage(HttpStatusCode.OK)
+            {
+                Content = new StreamContent(new SlowStream()),
+            };
+            return Task.FromResult(response);
+        }
+    }
+
+    private sealed class SlowStream : Stream
+    {
+        public override bool CanRead => true;
+        public override bool CanSeek => false;
+        public override bool CanWrite => false;
+        public override long Length => throw new NotSupportedException();
+        public override long Position
+        {
+            get => throw new NotSupportedException();
+            set => throw new NotSupportedException();
+        }
+
+        public override void Flush()
+        {
+        }
+
+        public override int Read(byte[] buffer, int offset, int count)
+        {
+            // Synchronous read - just block for a long time
+            System.Threading.Thread.Sleep(5000);
+            return 0;
+        }
+
+        public override async Task<int> ReadAsync(byte[] buffer, int offset, int count, CancellationToken cancellationToken)
+        {
+            // Asynchronous read with cancellation support
+            // Delay for 5 seconds, which should exceed the 1 second timeout
+            try
+            {
+                await Task.Delay(5000, cancellationToken).ConfigureAwait(false);
+            }
+            catch (OperationCanceledException)
+            {
+                // Re-throw to let the caller handle the cancellation
+                throw;
+            }
+            return 0;
+        }
+
+        public override long Seek(long offset, SeekOrigin origin)
+        {
+            throw new NotSupportedException();
+        }
+
+        public override void SetLength(long value)
+        {
+            throw new NotSupportedException();
+        }
+
+        public override void Write(byte[] buffer, int offset, int count)
+        {
+            throw new NotSupportedException();
         }
     }
 }

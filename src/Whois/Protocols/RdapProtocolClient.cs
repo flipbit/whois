@@ -61,10 +61,79 @@ internal sealed class RdapProtocolClient : IProtocolClient
         using var cts = CancellationTokenSource.CreateLinkedTokenSource(ct);
         cts.CancelAfter(TimeSpan.FromSeconds(timeout));
 
-        HttpResponseMessage httpResponse;
         try
         {
-            httpResponse = await _httpClient.GetAsync(url, cts.Token).ConfigureAwait(false);
+            using var httpResponse = await _httpClient.GetAsync(url, cts.Token).ConfigureAwait(false);
+
+            var statusCode = (int)httpResponse.StatusCode;
+            _logger.LogDebug("RDAP: received HTTP {StatusCode} from {Url}", statusCode, url);
+
+            if (httpResponse.StatusCode == System.Net.HttpStatusCode.NotFound)
+            {
+                sw.Stop();
+                return new ProtocolResponse
+                {
+                    RawContent = string.Empty,
+                    Protocol = LookupProtocol.Rdap,
+                    Response = new DomainInfo
+                    {
+                        DomainName = hostName,
+                        Status = RegistrationStatus.NotFound,
+                    },
+                    Diagnostics = new LookupDiagnostics
+                    {
+                        ServerUrl = url,
+                        HttpStatusCode = statusCode,
+                        Duration = sw.Elapsed,
+                    },
+                };
+            }
+
+            if (statusCode == 429)
+            {
+                sw.Stop();
+                return new ProtocolResponse
+                {
+                    RawContent = string.Empty,
+                    Protocol = LookupProtocol.Rdap,
+                    Response = new DomainInfo
+                    {
+                        DomainName = hostName,
+                        Status = RegistrationStatus.Throttled,
+                    },
+                    Diagnostics = new LookupDiagnostics
+                    {
+                        ServerUrl = url,
+                        HttpStatusCode = statusCode,
+                        Duration = sw.Elapsed,
+                    },
+                };
+            }
+
+            if (!httpResponse.IsSuccessStatusCode)
+            {
+                throw new WhoisException(FormattableString.Invariant($"RDAP server returned HTTP {statusCode} for {url}"));
+            }
+
+            var json = await ReadWithSizeLimit(httpResponse, MaxResponseSizeChars, cts.Token).ConfigureAwait(false);
+
+            var domainInfo = RdapParser.Parse(json);
+
+            sw.Stop();
+
+            return new ProtocolResponse
+            {
+                RawContent = json,
+                Protocol = LookupProtocol.Rdap,
+                Response = domainInfo,
+                Diagnostics = new LookupDiagnostics
+                {
+                    FieldsParsed = CountFields(domainInfo),
+                    ServerUrl = url,
+                    HttpStatusCode = statusCode,
+                    Duration = sw.Elapsed,
+                },
+            };
         }
         catch (OperationCanceledException) when (!ct.IsCancellationRequested)
         {
@@ -74,76 +143,6 @@ internal sealed class RdapProtocolClient : IProtocolClient
         {
             throw new WhoisException($"RDAP request failed for {url}: {ex.Message}", ex);
         }
-
-        var statusCode = (int)httpResponse.StatusCode;
-        _logger.LogDebug("RDAP: received HTTP {StatusCode} from {Url}", statusCode, url);
-
-        if (httpResponse.StatusCode == System.Net.HttpStatusCode.NotFound)
-        {
-            sw.Stop();
-            return new ProtocolResponse
-            {
-                RawContent = string.Empty,
-                Protocol = LookupProtocol.Rdap,
-                Response = new DomainInfo
-                {
-                    DomainName = hostName,
-                    Status = RegistrationStatus.NotFound,
-                },
-                Diagnostics = new LookupDiagnostics
-                {
-                    ServerUrl = url,
-                    HttpStatusCode = statusCode,
-                    Duration = sw.Elapsed,
-                },
-            };
-        }
-
-        if (statusCode == 429)
-        {
-            sw.Stop();
-            return new ProtocolResponse
-            {
-                RawContent = string.Empty,
-                Protocol = LookupProtocol.Rdap,
-                Response = new DomainInfo
-                {
-                    DomainName = hostName,
-                    Status = RegistrationStatus.Throttled,
-                },
-                Diagnostics = new LookupDiagnostics
-                {
-                    ServerUrl = url,
-                    HttpStatusCode = statusCode,
-                    Duration = sw.Elapsed,
-                },
-            };
-        }
-
-        if (!httpResponse.IsSuccessStatusCode)
-        {
-            throw new WhoisException(FormattableString.Invariant($"RDAP server returned HTTP {statusCode} for {url}"));
-        }
-
-        var json = await ReadWithSizeLimit(httpResponse, MaxResponseSizeChars, ct).ConfigureAwait(false);
-
-        var domainInfo = RdapParser.Parse(json);
-
-        sw.Stop();
-
-        return new ProtocolResponse
-        {
-            RawContent = json,
-            Protocol = LookupProtocol.Rdap,
-            Response = domainInfo,
-            Diagnostics = new LookupDiagnostics
-            {
-                FieldsParsed = CountFields(domainInfo),
-                ServerUrl = url,
-                HttpStatusCode = statusCode,
-                Duration = sw.Elapsed,
-            },
-        };
     }
 
     private static void ValidateQuery(string query)
