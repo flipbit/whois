@@ -189,7 +189,7 @@ internal sealed class RdapProtocolClient : IProtocolClient
         }
     }
 
-    private static void ValidateUrl(string url)
+    internal static void ValidateUrl(string url)
     {
         if (!Uri.TryCreate(url, UriKind.Absolute, out var uri))
         {
@@ -222,7 +222,7 @@ internal sealed class RdapProtocolClient : IProtocolClient
         }
     }
 
-    private static bool IsPrivateOrReservedAddress(System.Net.IPAddress ip)
+    internal static bool IsPrivateOrReservedAddress(System.Net.IPAddress ip)
     {
         // Normalize IPv4-mapped IPv6 addresses (e.g., ::ffff:127.0.0.1) to IPv4.
         if (ip.IsIPv4MappedToIPv6)
@@ -233,22 +233,27 @@ internal sealed class RdapProtocolClient : IProtocolClient
         if (ip.AddressFamily == System.Net.Sockets.AddressFamily.InterNetwork)
         {
             // IPv4: check loopback (127.0.0.0/8), link-local (169.254.0.0/16),
-            // and RFC 1918 private ranges (10.0.0.0/8, 172.16.0.0/12, 192.168.0.0/16).
+            // RFC 1918 private ranges (10.0.0.0/8, 172.16.0.0/12, 192.168.0.0/16),
+            // this-network (0.0.0.0/8), and CGNAT shared address (100.64.0.0/10).
             var bytes = ip.GetAddressBytes();
-            return bytes[0] == 127
-                || (bytes[0] == 169 && bytes[1] == 254)
+            return bytes[0] == 0
                 || bytes[0] == 10
+                || bytes[0] == 127
+                || (bytes[0] == 100 && bytes[1] >= 64 && bytes[1] <= 127)
+                || (bytes[0] == 169 && bytes[1] == 254)
                 || (bytes[0] == 172 && bytes[1] >= 16 && bytes[1] <= 31)
                 || (bytes[0] == 192 && bytes[1] == 168);
         }
 
         if (ip.AddressFamily == System.Net.Sockets.AddressFamily.InterNetworkV6)
         {
-            // IPv6: check loopback (::1) and link-local (fe80::/10).
+            // IPv6: check loopback (::1), link-local (fe80::/10), and ULA (fc00::/7).
             if (ip.Equals(System.Net.IPAddress.IPv6Loopback)) return true;
             var bytes = ip.GetAddressBytes();
             // fe80::/10 -- first 10 bits are 1111111010
-            return bytes[0] == 0xfe && (bytes[1] & 0xc0) == 0x80;
+            if (bytes[0] == 0xfe && (bytes[1] & 0xc0) == 0x80) return true;
+            // fc00::/7 -- ULA, first 7 bits are 1111110
+            return (bytes[0] & 0xfe) == 0xfc;
         }
 
         return false;

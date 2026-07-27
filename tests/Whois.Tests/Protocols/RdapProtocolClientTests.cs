@@ -8,6 +8,111 @@ namespace Whois;
 
 public class RdapProtocolClientTests
 {
+    // ValidateUrl tests
+
+    [Fact]
+    public void ValidateUrl_HttpScheme_Throws()
+    {
+        var ex = Assert.Throws<WhoisException>(() => RdapProtocolClient.ValidateUrl("http://rdap.example.com/domain/foo.com"));
+        Assert.Contains("HTTPS", ex.Message, StringComparison.OrdinalIgnoreCase);
+    }
+
+    [Fact]
+    public void ValidateUrl_NonDefaultPort_Throws()
+    {
+        var ex = Assert.Throws<WhoisException>(() => RdapProtocolClient.ValidateUrl("https://rdap.example.com:8443/domain/foo.com"));
+        Assert.Contains("443", ex.Message, StringComparison.Ordinal);
+    }
+
+    [Fact]
+    public void ValidateUrl_ValidHttpsUrl_DoesNotThrow()
+    {
+        // Should not throw
+        RdapProtocolClient.ValidateUrl("https://rdap.example.com/domain/foo.com");
+    }
+
+    [Fact]
+    public void ValidateUrl_ValidHttpsUrlWithExplicit443_DoesNotThrow()
+    {
+        // Port 443 explicitly is the same as default; should not throw.
+        RdapProtocolClient.ValidateUrl("https://rdap.example.com:443/domain/foo.com");
+    }
+
+    // IsPrivateOrReservedAddress tests -- existing ranges
+
+    [Theory]
+    [InlineData("127.0.0.1")]       // loopback
+    [InlineData("10.0.0.1")]        // RFC 1918 /8
+    [InlineData("172.16.0.1")]      // RFC 1918 /12
+    [InlineData("172.31.255.255")]  // RFC 1918 /12 upper bound
+    [InlineData("192.168.1.1")]     // RFC 1918 /16
+    [InlineData("169.254.1.1")]     // link-local
+    public void IsPrivateOrReservedAddress_ExistingReservedRanges_ReturnsTrue(string address)
+    {
+        var ip = System.Net.IPAddress.Parse(address);
+        Assert.True(RdapProtocolClient.IsPrivateOrReservedAddress(ip));
+    }
+
+    // IsPrivateOrReservedAddress tests -- new ranges
+
+    [Theory]
+    [InlineData("0.0.0.1")]         // 0.0.0.0/8 this-network
+    [InlineData("0.255.255.255")]   // 0.0.0.0/8 upper bound
+    [InlineData("100.64.0.1")]      // CGNAT 100.64.0.0/10
+    [InlineData("100.127.255.255")] // CGNAT upper bound
+    public void IsPrivateOrReservedAddress_NewReservedRanges_ReturnsTrue(string address)
+    {
+        var ip = System.Net.IPAddress.Parse(address);
+        Assert.True(RdapProtocolClient.IsPrivateOrReservedAddress(ip));
+    }
+
+    // IsPrivateOrReservedAddress tests -- IPv6
+
+    [Theory]
+    [InlineData("::1")]             // IPv6 loopback
+    [InlineData("fe80::1")]         // IPv6 link-local
+    [InlineData("fc00::1")]         // IPv6 ULA fc00::/7
+    [InlineData("fdff:ffff:ffff:ffff:ffff:ffff:ffff:ffff")] // IPv6 ULA fd upper bound
+    public void IsPrivateOrReservedAddress_IPv6ReservedAddresses_ReturnsTrue(string address)
+    {
+        var ip = System.Net.IPAddress.Parse(address);
+        Assert.True(RdapProtocolClient.IsPrivateOrReservedAddress(ip));
+    }
+
+    [Fact]
+    public void IsPrivateOrReservedAddress_IPv4MappedLoopback_ReturnsTrue()
+    {
+        // ::ffff:127.0.0.1 is IPv4-mapped IPv6 loopback -- must be caught.
+        var ip = System.Net.IPAddress.Parse("::ffff:127.0.0.1");
+        Assert.True(RdapProtocolClient.IsPrivateOrReservedAddress(ip));
+    }
+
+    [Fact]
+    public void IsPrivateOrReservedAddress_PublicIpv4_ReturnsFalse()
+    {
+        var ip = System.Net.IPAddress.Parse("8.8.8.8");
+        Assert.False(RdapProtocolClient.IsPrivateOrReservedAddress(ip));
+    }
+
+    [Fact]
+    public void IsPrivateOrReservedAddress_PublicIpv6_ReturnsFalse()
+    {
+        // 2001:4860:4860::8888 is Google's public DNS over IPv6
+        var ip = System.Net.IPAddress.Parse("2001:4860:4860::8888");
+        Assert.False(RdapProtocolClient.IsPrivateOrReservedAddress(ip));
+    }
+
+    // Boundary tests to avoid off-by-one errors in new ranges
+
+    [Theory]
+    [InlineData("100.63.255.255")]  // just below CGNAT range
+    [InlineData("100.128.0.0")]     // just above CGNAT range
+    public void IsPrivateOrReservedAddress_JustOutsideCgnat_ReturnsFalse(string address)
+    {
+        var ip = System.Net.IPAddress.Parse(address);
+        Assert.False(RdapProtocolClient.IsPrivateOrReservedAddress(ip));
+    }
+
     [Theory]
     [InlineData("example/com")]
     [InlineData("example?com")]
