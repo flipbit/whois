@@ -182,6 +182,7 @@ public class RdapProtocolClientTests
     [InlineData("example?com")]
     [InlineData("example#com")]
     [InlineData("example @com")]
+    [InlineData("example\\com")]
     public async Task Query_InvalidQueryChars_Throws(string query)
     {
         var bootstrap = Substitute.For<IBootstrapRegistry>();

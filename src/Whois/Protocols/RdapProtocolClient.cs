@@ -183,7 +183,7 @@ internal sealed class RdapProtocolClient : IProtocolClient
 
     private static void ValidateQuery(string query)
     {
-        if (query.IndexOfAny(['/', '?', '#', '@', ' ', '\t', '\n', '\r']) >= 0)
+        if (query.IndexOfAny(['/', '?', '#', '@', ' ', '\t', '\n', '\r', '\\']) >= 0)
         {
             throw new WhoisException($"Invalid characters in RDAP query: {query}");
         }
