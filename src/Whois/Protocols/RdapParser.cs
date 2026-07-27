@@ -5,6 +5,11 @@ namespace Whois.Protocols;
 /// <summary>
 /// Parses RFC 9083 RDAP JSON responses into <see cref="DomainInfo"/>.
 /// </summary>
+/// <remarks>
+/// Pure static design: no logger or state. Unrecognized or malformed fields
+/// are skipped via null checks and TryGetProperty. JsonDocument.Parse exceptions
+/// propagate to callers (no error suppression).
+/// </remarks>
 internal static class RdapParser
 {
     /// <summary>
