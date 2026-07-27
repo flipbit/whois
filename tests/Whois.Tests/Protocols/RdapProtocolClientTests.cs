@@ -365,6 +365,26 @@ public class RdapProtocolClientTests
         Assert.Equal(RegistrationStatus.Found, response.Response.Status);
     }
 
+    [Fact]
+    public async Task Query_HttpRequestException_WrapsInWhoisException()
+    {
+        var bootstrap = Substitute.For<IBootstrapRegistry>();
+        bootstrap.GetRdapBaseUrl("com", Arg.Any<CancellationToken>())
+            .Returns("https://rdap.example.com/");
+
+        var handler = new HttpRequestExceptionHandler("Connection reset by peer");
+        var httpClient = new HttpClient(handler);
+        var client = new RdapProtocolClient(httpClient, bootstrap, new WhoisOptions());
+        var request = new WhoisRequest("example.com");
+
+        var ex = await Assert.ThrowsAsync<WhoisException>(() => client.Query(request, CancellationToken.None));
+
+        Assert.Contains("RDAP request failed", ex.Message, StringComparison.Ordinal);
+        Assert.Contains("Connection reset by peer", ex.Message, StringComparison.Ordinal);
+        Assert.IsType<HttpRequestException>(ex.InnerException);
+        Assert.Equal("Connection reset by peer", ex.InnerException.Message);
+    }
+
     /// <summary>
     /// Returns a 301 redirect for the first <c>redirectCount</c> calls, then a 200 OK with <c>okBody</c>.
     /// </summary>
@@ -527,6 +547,24 @@ public class RdapProtocolClientTests
         public override void Write(byte[] buffer, int offset, int count)
         {
             throw new NotSupportedException();
+        }
+    }
+
+    /// <summary>
+    /// Throws HttpRequestException to simulate network failures.
+    /// </summary>
+    private sealed class HttpRequestExceptionHandler : HttpMessageHandler
+    {
+        private readonly string _message;
+
+        public HttpRequestExceptionHandler(string message)
+        {
+            _message = message;
+        }
+
+        protected override Task<HttpResponseMessage> SendAsync(HttpRequestMessage request, CancellationToken cancellationToken)
+        {
+            throw new HttpRequestException(_message);
         }
     }
 }
