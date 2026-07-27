@@ -19,78 +19,135 @@ public class RefreshSettings : CommandSettings
 
     [CommandOption("--max-response")]
     public int MaxResponseBytes { get; set; } = 65536;
+
+    [CommandOption("--protocol")]
+    public string? Protocol { get; set; }
 }
 
 public class RefreshCommand : AsyncCommand<RefreshSettings>
 {
     private readonly ITcpReader _tcpReader;
     private readonly IFileSystem _fileSystem;
+    private readonly HttpClient _httpClient;
 
-    public RefreshCommand(ITcpReader tcpReader, IFileSystem fileSystem)
+    public RefreshCommand(ITcpReader tcpReader, IFileSystem fileSystem, HttpClient httpClient)
     {
         _tcpReader = tcpReader;
         _fileSystem = fileSystem;
+        _httpClient = httpClient;
     }
 
     public override async Task<int> ExecuteAsync(CommandContext context, RefreshSettings settings)
     {
         var toolDir = Path.Combine(settings.RepoRoot, "tools", "Whois.Refresh");
-        var registryPath = Path.Combine(toolDir, "domains-whois.jsonc");
-        var resultsPath = Path.Combine(toolDir, "refresh-results.json");
         var samplesPath = Path.Combine(settings.RepoRoot, "tests", "Whois.Tests", "Samples");
 
-        if (!File.Exists(registryPath))
+        var runWhois = settings.Protocol == null
+            || string.Equals(settings.Protocol, "whois", StringComparison.OrdinalIgnoreCase);
+        var runRdap = settings.Protocol == null
+            || string.Equals(settings.Protocol, "rdap", StringComparison.OrdinalIgnoreCase);
+
+        var whoisSuccesses = 0;
+        var whoisErrors = 0;
+        var rdapSuccesses = 0;
+        var rdapErrors = 0;
+
+        if (runWhois)
         {
-            ConsoleOutput.WriteError($"domains-whois.jsonc not found at {registryPath}");
-            return 1;
+            var registryPath = Path.Combine(toolDir, "domains-whois.jsonc");
+            var resultsPath = Path.Combine(toolDir, "refresh-results.json");
+
+            if (!File.Exists(registryPath))
+            {
+                ConsoleOutput.WriteError($"domains-whois.jsonc not found at {registryPath}");
+                return 1;
+            }
+
+            var registry = await DomainRegistry.LoadFromFileAsync(registryPath).ConfigureAwait(false);
+            var queryable = registry.Servers.Where(s => !s.Value.IsStatic).ToList();
+            var totalDomains = queryable.SelectMany(s => s.Value.Domains.Values).Sum(d => d.Count);
+
+            ConsoleOutput.WriteInfo(string.Format(CultureInfo.InvariantCulture,
+                "WHOIS: querying {0} domains across {1} servers...", totalDomains, queryable.Count));
+
+            var options = new RefreshEngineOptions(
+                SamplesBasePath: samplesPath,
+                DelayBetweenQueries: TimeSpan.FromMilliseconds(settings.DelayMs),
+                QueryTimeoutSeconds: settings.TimeoutSeconds,
+                MaxResponseBytes: settings.MaxResponseBytes);
+
+            var engine = new WhoisRefreshEngine(_tcpReader, _fileSystem);
+            var results = await engine.RunAsync(registry, options, CancellationToken.None).ConfigureAwait(false);
+            results.Prune(registry);
+
+            var json = RefreshResults.Serialize(results);
+            await _fileSystem.WriteAllTextAsync(resultsPath, json).ConfigureAwait(false);
+
+            (whoisSuccesses, whoisErrors) = CountResults(results);
         }
 
-        var registry = await DomainRegistry.LoadFromFileAsync(registryPath).ConfigureAwait(false);
+        if (runRdap)
+        {
+            var registryPath = Path.Combine(toolDir, "domains-rdap.jsonc");
+            var resultsPath = Path.Combine(toolDir, "refresh-results-rdap.json");
 
-        var queryableServers = registry.Servers.Count(s => !s.Value.IsStatic);
-        var totalDomains = registry.Servers
-            .Where(s => !s.Value.IsStatic)
-            .SelectMany(s => s.Value.Domains.Values)
-            .Sum(d => d.Count);
+            if (!File.Exists(registryPath))
+            {
+                ConsoleOutput.WriteError($"domains-rdap.jsonc not found at {registryPath}");
+                return 1;
+            }
 
-        ConsoleOutput.WriteInfo(string.Format(CultureInfo.InvariantCulture, "Querying {0} domains across {1} servers...", totalDomains, queryableServers));
+            var registry = await DomainRegistry.LoadFromFileAsync(registryPath).ConfigureAwait(false);
+            var queryable = registry.Servers.Where(s => !s.Value.IsStatic).ToList();
+            var totalDomains = queryable.SelectMany(s => s.Value.Domains.Values).Sum(d => d.Count);
 
-        var options = new RefreshEngineOptions(
-            SamplesBasePath: samplesPath,
-            DelayBetweenQueries: TimeSpan.FromMilliseconds(settings.DelayMs),
-            QueryTimeoutSeconds: settings.TimeoutSeconds,
-            MaxResponseBytes: settings.MaxResponseBytes);
+            ConsoleOutput.WriteInfo(string.Format(CultureInfo.InvariantCulture,
+                "RDAP: querying {0} domains across {1} servers...", totalDomains, queryable.Count));
 
-        var engine = new WhoisRefreshEngine(_tcpReader, _fileSystem);
-        var results = await engine.RunAsync(registry, options, CancellationToken.None).ConfigureAwait(false);
+            var options = new RdapRefreshEngineOptions(
+                DelayBetweenQueries: TimeSpan.FromMilliseconds(settings.DelayMs),
+                QueryTimeoutSeconds: settings.TimeoutSeconds);
 
-        // Prune removed domains
-        results.Prune(registry);
+            var engine = new RdapRefreshEngine(_httpClient);
+            var results = await engine.RunAsync(registry, options, CancellationToken.None).ConfigureAwait(false);
+            results.Prune(registry);
 
-        // Write results
-        var json = RefreshResults.Serialize(results);
-        await _fileSystem.WriteAllTextAsync(resultsPath, json).ConfigureAwait(false);
+            var json = RefreshResults.Serialize(results);
+            await _fileSystem.WriteAllTextAsync(resultsPath, json).ConfigureAwait(false);
+
+            (rdapSuccesses, rdapErrors) = CountResults(results);
+        }
 
         // Summary
-        var errors = results.Results.Values
-            .SelectMany(t => t.Values)
-            .SelectMany(s => s.Values)
-            .SelectMany(d => d.Values)
-            .Count(r => r.Error != null);
+        var parts = new List<string>();
+        if (runWhois)
+            parts.Add(string.Format(CultureInfo.InvariantCulture,
+                "WHOIS: {0} succeeded, {1} failed", whoisSuccesses, whoisErrors));
+        if (runRdap)
+            parts.Add(string.Format(CultureInfo.InvariantCulture,
+                "RDAP: {0} succeeded, {1} failed", rdapSuccesses, rdapErrors));
 
-        var successes = results.Results.Values
-            .SelectMany(t => t.Values)
-            .SelectMany(s => s.Values)
-            .SelectMany(d => d.Values)
-            .Count(r => r.Error == null);
+        ConsoleOutput.WriteSuccess(string.Format(CultureInfo.InvariantCulture,
+            "Refresh complete: {0}", string.Join(". ", parts)));
 
-        ConsoleOutput.WriteSuccess(string.Format(CultureInfo.InvariantCulture, "Refresh complete: {0} succeeded, {1} failed", successes, errors));
-
-        if (errors > 0)
+        var totalErrors = whoisErrors + rdapErrors;
+        if (totalErrors > 0)
         {
-            ConsoleOutput.WriteWarning(string.Format(CultureInfo.InvariantCulture, "{0} queries failed — check refresh-results.json for details", errors));
+            ConsoleOutput.WriteWarning(string.Format(CultureInfo.InvariantCulture,
+                "{0} queries failed -- check refresh-results*.json for details", totalErrors));
         }
 
         return 0;
+    }
+
+    private static (int Successes, int Errors) CountResults(RefreshResults results)
+    {
+        var all = results.Results.Values
+            .SelectMany(t => t.Values)
+            .SelectMany(s => s.Values)
+            .SelectMany(d => d.Values)
+            .ToList();
+
+        return (all.Count(r => r.Error == null), all.Count(r => r.Error != null));
     }
 }
