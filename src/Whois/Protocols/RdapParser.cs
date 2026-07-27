@@ -77,15 +77,15 @@ internal static class RdapParser
                 {
                     registrant = ParseContact(entity);
                 }
-                else if (roles.Contains("technical"))
+                if (roles.Contains("technical"))
                 {
                     techContact = ParseContact(entity);
                 }
-                else if (roles.Contains("administrative"))
+                if (roles.Contains("administrative"))
                 {
                     adminContact = ParseContact(entity);
                 }
-                else if (roles.Contains("billing"))
+                if (roles.Contains("billing"))
                 {
                     billingContact = ParseContact(entity);
                 }

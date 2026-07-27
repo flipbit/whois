@@ -252,4 +252,40 @@ public class RdapParserTests
 
         Assert.Equal("2138514_DOMAIN_COM-VRSN", info.RegistryDomainId);
     }
+
+    [Fact]
+    public void Parse_EntityWithMultipleRoles_PopulatesAllRoles()
+    {
+        var json = """
+        {
+            "objectClassName": "domain",
+            "ldhName": "example.com",
+            "status": ["active"],
+            "entities": [
+                {
+                    "objectClassName": "entity",
+                    "roles": ["registrant", "administrative"],
+                    "handle": "entity-123",
+                    "vcardArray": [
+                        "vcard",
+                        [
+                            ["version", {}, "text", "4.0"],
+                            ["fn", {}, "text", "Multi-Role User"],
+                            ["email", {}, "text", "user@example.com"]
+                        ]
+                    ]
+                }
+            ]
+        }
+        """;
+
+        var info = RdapParser.Parse(json);
+
+        Assert.NotNull(info.Registrant);
+        Assert.Equal("Multi-Role User", info.Registrant!.Name);
+        Assert.Equal("user@example.com", info.Registrant.Email);
+        Assert.NotNull(info.AdminContact);
+        Assert.Equal("Multi-Role User", info.AdminContact!.Name);
+        Assert.Equal("user@example.com", info.AdminContact.Email);
+    }
 }
