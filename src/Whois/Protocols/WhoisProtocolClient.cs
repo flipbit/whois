@@ -9,6 +9,8 @@ namespace Whois.Protocols;
 
 internal sealed class WhoisProtocolClient : IProtocolClient
 {
+    private const int MaxReferralDepth = 10;
+
     private readonly ITcpReader _tcpReader;
     private readonly IBootstrapRegistry _bootstrap;
     private readonly WhoisParser _parser;
@@ -79,7 +81,11 @@ internal sealed class WhoisProtocolClient : IProtocolClient
             referralChain.Add(whoisServer);
 
             // Depth limit
-            if (visitedServers.Count > 255) break;
+            if (visitedServers.Count > MaxReferralDepth)
+            {
+                _logger.LogWarning("WHOIS: referral depth limit ({MaxDepth}) reached for {Query}", MaxReferralDepth, request.Query);
+                break;
+            }
 
             // Build query (Japanese domains return English results with /e suffix)
             var query = request.Query;

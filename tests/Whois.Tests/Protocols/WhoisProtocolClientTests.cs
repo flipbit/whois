@@ -167,7 +167,7 @@ public class WhoisProtocolClientTests
     [Fact]
     public async Task Query_DepthLimitExceeded_StopsChain()
     {
-        // Each server in the chain refers to the next unique server; once 255 unique
+        // Each server in the chain refers to the next unique server; once 10 unique
         // servers have been visited the depth guard fires and the loop terminates.
         var tcpReader = Substitute.For<ITcpReader>();
         var bootstrap = Substitute.For<IBootstrapRegistry>();
@@ -198,11 +198,11 @@ public class WhoisProtocolClientTests
         var client = new WhoisProtocolClient(tcpReader, bootstrap, parser, options);
         var request = new WhoisRequest("example.com");
 
-        // This must complete rather than loop forever; the depth guard (> 255) stops it.
+        // This must complete rather than loop forever; the depth guard (> 10) stops it.
         var response = await client.Query(request, CancellationToken.None);
 
-        // 256 unique servers are visited (indices 0..255) before the guard breaks the loop
-        Assert.Equal(256, response.Diagnostics.ReferralChain.Count);
+        // 11 unique servers are visited (indices 0..10) before the guard breaks the loop
+        Assert.Equal(11, response.Diagnostics.ReferralChain.Count);
     }
 
     [Fact]
