@@ -62,7 +62,7 @@ public class RdapRefreshEngineTests
 
         var domainResult = results.Results["rdap.example.com"]["com"]["not-found"]["nonexistent.com"];
         Assert.Null(domainResult.Error);
-        Assert.Equal("not-found", domainResult.ActualStatus ?? "not-found");
+        Assert.Equal("not-found", domainResult.ActualStatus);
     }
 
     [Fact]
