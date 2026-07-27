@@ -1,3 +1,4 @@
+using System.Text.Json;
 using Whois.Protocols;
 using Xunit;
 
@@ -287,5 +288,100 @@ public class RdapParserTests
         Assert.NotNull(info.AdminContact);
         Assert.Equal("Multi-Role User", info.AdminContact!.Name);
         Assert.Equal("user@example.com", info.AdminContact.Email);
+    }
+
+    // M13: malformed JSON
+    [Fact]
+    public void Parse_MalformedJson_ThrowsJsonException()
+    {
+        Assert.ThrowsAny<JsonException>(() => RdapParser.Parse("not json"));
+    }
+
+    // M14: MapStatus coverage via Parse
+    [Theory]
+    [InlineData("active", RegistrationStatus.Found)]
+    [InlineData("inactive", RegistrationStatus.Inactive)]
+    [InlineData("locked", RegistrationStatus.Locked)]
+    [InlineData("pending delete", RegistrationStatus.PendingDelete)]
+    [InlineData("redemption period", RegistrationStatus.Redemption)]
+    [InlineData("pending create", RegistrationStatus.Other)]
+    [InlineData("pending renew", RegistrationStatus.Other)]
+    [InlineData("pending restore", RegistrationStatus.Other)]
+    [InlineData("pending transfer", RegistrationStatus.Other)]
+    [InlineData("pending update", RegistrationStatus.Other)]
+    [InlineData("client transfer prohibited", RegistrationStatus.Found)]
+    public void Parse_StatusMapping_ReturnsExpectedStatus(string statusValue, RegistrationStatus expected)
+    {
+        var json = $$"""{"objectClassName":"domain","ldhName":"test.com","status":["{{statusValue}}"]}""";
+
+        var info = RdapParser.Parse(json);
+
+        Assert.Equal(expected, info.Status);
+    }
+
+    [Fact]
+    public void Parse_EmptyStatusArray_ReturnsUnknown()
+    {
+        var json = """{"objectClassName":"domain","ldhName":"test.com","status":[]}""";
+
+        var info = RdapParser.Parse(json);
+
+        Assert.Equal(RegistrationStatus.Unknown, info.Status);
+    }
+
+    [Fact]
+    public void Parse_MissingStatusProperty_ReturnsUnknown()
+    {
+        var json = """{"objectClassName":"domain","ldhName":"test.com"}""";
+
+        var info = RdapParser.Parse(json);
+
+        Assert.Equal(RegistrationStatus.Unknown, info.Status);
+    }
+
+    // L7: unicodeName fallback when ldhName is absent
+    [Fact]
+    public void Parse_UnicodeName_WithNoLdhName_ParsesDomainName()
+    {
+        var json = """{"objectClassName":"domain","unicodeName":"example.com","status":["active"]}""";
+
+        var info = RdapParser.Parse(json);
+
+        Assert.NotNull(info.DomainName);
+        Assert.Equal("example.com", info.DomainName!.Value.ToLowerInvariant());
+    }
+
+    // L8: billing contact
+    [Fact]
+    public void Parse_BillingEntity_PopulatesBillingContact()
+    {
+        var json = """
+        {
+            "objectClassName": "domain",
+            "ldhName": "example.com",
+            "status": ["active"],
+            "entities": [
+                {
+                    "objectClassName": "entity",
+                    "roles": ["billing"],
+                    "handle": "billing-123",
+                    "vcardArray": [
+                        "vcard",
+                        [
+                            ["version", {}, "text", "4.0"],
+                            ["fn", {}, "text", "Billing Contact"],
+                            ["email", {}, "text", "billing@example.com"]
+                        ]
+                    ]
+                }
+            ]
+        }
+        """;
+
+        var info = RdapParser.Parse(json);
+
+        Assert.NotNull(info.BillingContact);
+        Assert.Equal("Billing Contact", info.BillingContact!.Name);
+        Assert.Equal("billing@example.com", info.BillingContact.Email);
     }
 }
