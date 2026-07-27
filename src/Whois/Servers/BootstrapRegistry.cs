@@ -33,7 +33,7 @@ public class BootstrapRegistry : IBootstrapRegistry
     public Task<string?> GetRdapBaseUrl(string tld, CancellationToken ct)
     {
         var data = _data.Value;
-        data.Rdap.TryGetValue(tld.ToLowerInvariant(), out var url);
+        data.Rdap.TryGetValue(tld, out var url);
         _logger.LogDebug("Bootstrap: RDAP lookup for TLD {Tld}: {Result}", tld, url != null ? "hit" : "miss");
         return Task.FromResult<string?>(url);
     }
@@ -41,7 +41,7 @@ public class BootstrapRegistry : IBootstrapRegistry
     public Task<string?> GetWhoisServer(string tld, CancellationToken ct)
     {
         var data = _data.Value;
-        data.Whois.TryGetValue(tld.ToLowerInvariant(), out var server);
+        data.Whois.TryGetValue(tld, out var server);
         _logger.LogDebug("Bootstrap: WHOIS lookup for TLD {Tld}: {Result}", tld, server != null ? "hit" : "miss");
         return Task.FromResult<string?>(server);
     }
