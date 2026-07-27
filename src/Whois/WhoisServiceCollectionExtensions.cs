@@ -37,7 +37,7 @@ public static class WhoisServiceCollectionExtensions
         services.AddSingleton<CacheDirectoryManager>(sp =>
         {
             var options = sp.GetRequiredService<IOptions<WhoisOptions>>().Value;
-            var dir = options.TemplateCacheDirectory ?? GetDefaultCacheDirectory();
+            var dir = options.TemplateCacheDirectory ?? WhoisOptions.GetDefaultCacheDirectory();
             return new CacheDirectoryManager(dir, sp.GetRequiredService<ILogger<CacheDirectoryManager>>());
         });
 
@@ -81,9 +81,4 @@ public static class WhoisServiceCollectionExtensions
                 sp.GetRequiredService<ITemplatePackProvider>()));
     }
 
-    private static string GetDefaultCacheDirectory() =>
-        Path.Combine(
-            Environment.GetFolderPath(Environment.SpecialFolder.LocalApplicationData),
-            "Whois",
-            "templates");
 }

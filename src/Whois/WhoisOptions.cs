@@ -46,4 +46,13 @@ public class WhoisOptions
     /// The preferred lookup protocol. Defaults to Auto (RDAP when available, falls back to WHOIS).
     /// </summary>
     public ProtocolPreference PreferredProtocol { get; set; } = ProtocolPreference.Auto;
+
+    /// <summary>
+    /// Gets the default cache directory for template packs.
+    /// </summary>
+    internal static string GetDefaultCacheDirectory() =>
+        Path.Combine(
+            Environment.GetFolderPath(Environment.SpecialFolder.LocalApplicationData),
+            "Whois",
+            "templates");
 }

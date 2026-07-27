@@ -31,7 +31,7 @@ public class WhoisLookup : IWhoisLookup
     private static readonly Lazy<TemplatePackProvider> SharedPackProvider = new(() =>
     {
         var options = new WhoisOptions();
-        var cacheDir = GetDefaultCacheDirectory();
+        var cacheDir = WhoisOptions.GetDefaultCacheDirectory();
         var cache = new CacheDirectoryManager(cacheDir, NullLogger<CacheDirectoryManager>.Instance);
         var state = new TemplateUpdateState(cache, NullLogger<TemplateUpdateState>.Instance);
         return new TemplatePackProvider(options, NullLogger<TemplatePackProvider>.Instance, cache, state);
@@ -207,9 +207,4 @@ public class WhoisLookup : IWhoisLookup
         }
     }
 
-    private static string GetDefaultCacheDirectory() =>
-        Path.Combine(
-            Environment.GetFolderPath(Environment.SpecialFolder.LocalApplicationData),
-            "Whois",
-            "templates");
 }
