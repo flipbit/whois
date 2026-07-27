@@ -83,7 +83,7 @@ internal sealed class WhoisProtocolClient : IProtocolClient
 
             // Build query (Japanese domains return English results with /e suffix)
             var query = request.Query;
-            if (query.EndsWith("jp", StringComparison.Ordinal)) query += "/e";
+            if (query.EndsWith(".jp", StringComparison.Ordinal)) query += "/e";
 
             // Download
             var content = await _tcpReader.Read(

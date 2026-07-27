@@ -68,4 +68,31 @@ public class WhoisProtocolClientTests
         Assert.Equal("google.com", response.Response.DomainName!.ToString());
         Assert.Equal(2, response.Diagnostics.ReferralChain.Count);
     }
+
+    [Fact]
+    public async Task Query_DomainEndingInJpWithoutDot_DoesNotAddEnglishSuffix()
+    {
+        var tcpReader = Substitute.For<ITcpReader>();
+        var bootstrap = Substitute.For<IBootstrapRegistry>();
+        var parser = new WhoisParser();
+        var sampleReader = new SampleReader();
+        var options = new WhoisOptions();
+
+        bootstrap.GetWhoisServer("nejp", Arg.Any<CancellationToken>())
+            .Returns("whois.example.com");
+
+        var sample = sampleReader.Read("whois.markmonitor.com", "com", "found", "found.txt");
+        tcpReader
+            .Read("whois.example.com", 43, "example.nejp", Encoding.UTF8, 10, Arg.Any<CancellationToken>())
+            .Returns(sample);
+
+        var client = new WhoisProtocolClient(tcpReader, bootstrap, parser, options);
+        var request = new WhoisRequest("example.nejp");
+
+        await client.Query(request, CancellationToken.None);
+
+        // Verify that the query sent to tcpReader was without the /e suffix
+        await tcpReader.Received(1).Read(
+            "whois.example.com", 43, "example.nejp", Encoding.UTF8, 10, Arg.Any<CancellationToken>());
+    }
 }
