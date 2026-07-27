@@ -124,6 +124,7 @@ internal sealed class RdapProtocolClient : IProtocolClient
 
             if (statusCode == 429)
             {
+                _logger.LogWarning("RDAP: rate limited (HTTP 429) by {Url}, Retry-After: {RetryAfter}", url, finalResponse.Headers.RetryAfter);
                 sw.Stop();
                 return new ProtocolResponse
                 {
@@ -145,6 +146,7 @@ internal sealed class RdapProtocolClient : IProtocolClient
 
             if (!finalResponse.IsSuccessStatusCode)
             {
+                _logger.LogWarning("RDAP: server returned HTTP {StatusCode} for {Url}", statusCode, url);
                 throw new WhoisException(FormattableString.Invariant($"RDAP server returned HTTP {statusCode} for {url}"));
             }
 
@@ -174,6 +176,7 @@ internal sealed class RdapProtocolClient : IProtocolClient
         }
         catch (HttpRequestException ex)
         {
+            _logger.LogError(ex, "RDAP: transport failure for {Url}", url);
             throw new WhoisException($"RDAP request failed for {url}: {ex.Message}", ex);
         }
     }
