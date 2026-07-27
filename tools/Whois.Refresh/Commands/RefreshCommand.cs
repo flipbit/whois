@@ -35,13 +35,13 @@ public class RefreshCommand : AsyncCommand<RefreshSettings>
     public override async Task<int> ExecuteAsync(CommandContext context, RefreshSettings settings)
     {
         var toolDir = Path.Combine(settings.RepoRoot, "tools", "Whois.Refresh");
-        var registryPath = Path.Combine(toolDir, "domains.jsonc");
+        var registryPath = Path.Combine(toolDir, "domains-whois.jsonc");
         var resultsPath = Path.Combine(toolDir, "refresh-results.json");
         var samplesPath = Path.Combine(settings.RepoRoot, "tests", "Whois.Tests", "Samples");
 
         if (!File.Exists(registryPath))
         {
-            ConsoleOutput.WriteError($"domains.jsonc not found at {registryPath}");
+            ConsoleOutput.WriteError($"domains-whois.jsonc not found at {registryPath}");
             return 1;
         }
 

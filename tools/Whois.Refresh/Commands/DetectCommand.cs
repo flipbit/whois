@@ -25,7 +25,7 @@ public class DetectCommand : AsyncCommand<DetectSettings>
     public override async Task<int> ExecuteAsync(CommandContext context, DetectSettings settings)
     {
         var toolDir = Path.Combine(settings.RepoRoot, "tools", "Whois.Refresh");
-        var registryPath = Path.Combine(toolDir, "domains.jsonc");
+        var registryPath = Path.Combine(toolDir, "domains-whois.jsonc");
         var resultsPath = Path.Combine(toolDir, "refresh-results.json");
 
         if (!_fileSystem.FileExists(resultsPath))

@@ -20,7 +20,7 @@ public class BootstrapCommand : AsyncCommand<BootstrapSettings>
     {
         var parsingTestsDir = Path.Combine(settings.RepoRoot, "tests", "Whois.Tests", "Parsing");
         var outputPath = settings.OutputPath
-            ?? Path.Combine(settings.RepoRoot, "tools", "Whois.Refresh", "domains.jsonc");
+            ?? Path.Combine(settings.RepoRoot, "tools", "Whois.Refresh", "domains-whois.jsonc");
 
         if (!Directory.Exists(parsingTestsDir))
         {
