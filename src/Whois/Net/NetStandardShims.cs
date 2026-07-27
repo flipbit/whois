@@ -16,13 +16,34 @@ internal static class NetStandardShims
     public static HttpClient CreatePooledHttpClient()
     {
 #if NETSTANDARD2_0
-        return new HttpClient(new HttpClientHandler { MaxAutomaticRedirections = 5 });
+        return new HttpClient(new HttpClientHandler { AllowAutoRedirect = false });
 #else
         return new HttpClient(new SocketsHttpHandler
         {
             PooledConnectionLifetime = TimeSpan.FromMinutes(2),
-            MaxAutomaticRedirections = 5,
+            AllowAutoRedirect = false,
         });
+#endif
+    }
+#pragma warning restore CA2000
+
+    /// <summary>
+    /// Creates an <see cref="HttpMessageHandler"/> suitable for use as a named <c>HttpClient</c> primary
+    /// handler when registered via DI. Auto-redirect is disabled so the caller can validate redirect
+    /// targets before following them. On net8.0+, uses <c>SocketsHttpHandler</c> with connection pooling.
+    /// On netstandard2.0, falls back to a plain <c>HttpClientHandler</c>.
+    /// </summary>
+#pragma warning disable CA2000 // Handler ownership transfers to HttpClientFactory
+    public static HttpMessageHandler CreateNonRedirectingHandler()
+    {
+#if NETSTANDARD2_0
+        return new HttpClientHandler { AllowAutoRedirect = false };
+#else
+        return new SocketsHttpHandler
+        {
+            AllowAutoRedirect = false,
+            PooledConnectionLifetime = TimeSpan.FromMinutes(2),
+        };
 #endif
     }
 #pragma warning restore CA2000

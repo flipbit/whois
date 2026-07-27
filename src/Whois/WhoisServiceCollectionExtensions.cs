@@ -52,7 +52,8 @@ public static class WhoisServiceCollectionExtensions
 
         // Protocol clients
         services.AddTransient<ITcpReader, TcpReader>();
-        services.AddHttpClient("RdapProtocolClient");
+        services.AddHttpClient("RdapProtocolClient")
+            .ConfigurePrimaryHttpMessageHandler(NetStandardShims.CreateNonRedirectingHandler);
         services.AddTransient<IProtocolClient, WhoisProtocolClient>(sp =>
             new WhoisProtocolClient(
                 sp.GetRequiredService<ITcpReader>(),

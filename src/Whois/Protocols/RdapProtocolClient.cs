@@ -36,6 +36,8 @@ internal sealed class RdapProtocolClient : IProtocolClient
         _logger = logger;
     }
 
+    private const int MaxRedirects = 5;
+
     public LookupProtocol Protocol => LookupProtocol.Rdap;
 
     public async Task<ProtocolResponse> Query(WhoisRequest request, CancellationToken ct)
@@ -63,12 +65,44 @@ internal sealed class RdapProtocolClient : IProtocolClient
 
         try
         {
-            using var httpResponse = await _httpClient.GetAsync(url, cts.Token).ConfigureAwait(false);
+            HttpResponseMessage? httpResponse = null;
+            for (var hop = 0; ; hop++)
+            {
+                httpResponse?.Dispose();
+                httpResponse = await _httpClient.GetAsync(url, cts.Token).ConfigureAwait(false);
 
-            var statusCode = (int)httpResponse.StatusCode;
+                var redirectCode = (int)httpResponse.StatusCode;
+                if (redirectCode is 301 or 302 or 307 or 308)
+                {
+                    if (hop >= MaxRedirects)
+                    {
+                        httpResponse.Dispose();
+                        throw new WhoisException(FormattableString.Invariant($"RDAP request exceeded maximum redirect limit of {MaxRedirects}: {url}"));
+                    }
+
+                    var location = httpResponse.Headers.Location?.ToString()
+                        ?? throw new WhoisException($"RDAP redirect response missing Location header: {url}");
+
+                    // Resolve relative Location URIs against the current URL.
+                    if (!Uri.IsWellFormedUriString(location, UriKind.Absolute))
+                    {
+                        location = new Uri(new Uri(url), location).ToString();
+                    }
+
+                    ValidateUrl(location);
+                    url = location;
+                    _logger.LogDebug("RDAP: following redirect to {Url} (hop {Hop})", url, hop + 1);
+                    continue;
+                }
+
+                break;
+            }
+
+            using var finalResponse = httpResponse!;
+            var statusCode = (int)finalResponse.StatusCode;
             _logger.LogDebug("RDAP: received HTTP {StatusCode} from {Url}", statusCode, url);
 
-            if (httpResponse.StatusCode == System.Net.HttpStatusCode.NotFound)
+            if (finalResponse.StatusCode == System.Net.HttpStatusCode.NotFound)
             {
                 sw.Stop();
                 return new ProtocolResponse
@@ -110,12 +144,12 @@ internal sealed class RdapProtocolClient : IProtocolClient
                 };
             }
 
-            if (!httpResponse.IsSuccessStatusCode)
+            if (!finalResponse.IsSuccessStatusCode)
             {
                 throw new WhoisException(FormattableString.Invariant($"RDAP server returned HTTP {statusCode} for {url}"));
             }
 
-            var json = await ReadWithSizeLimit(httpResponse, MaxResponseSizeChars, cts.Token).ConfigureAwait(false);
+            var json = await ReadWithSizeLimit(finalResponse, MaxResponseSizeChars, cts.Token).ConfigureAwait(false);
 
             var domainInfo = RdapParser.Parse(json);
 

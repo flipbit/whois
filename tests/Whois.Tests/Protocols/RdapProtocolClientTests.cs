@@ -140,6 +140,115 @@ public class RdapProtocolClientTests
         Assert.Contains("timed out", ex.Message, StringComparison.OrdinalIgnoreCase);
     }
 
+    [Fact]
+    public async Task Query_RedirectToPrivateIp_Throws()
+    {
+        var bootstrap = Substitute.For<IBootstrapRegistry>();
+        bootstrap.GetRdapBaseUrl("com", Arg.Any<CancellationToken>())
+            .Returns("https://rdap.example.com/");
+
+        // First response is a 301 redirect to a private IP address.
+        var handler = new RedirectHandler("https://192.168.1.1/domain/evil.com");
+        var httpClient = new HttpClient(handler);
+        var client = new RdapProtocolClient(httpClient, bootstrap, new WhoisOptions());
+        var request = new WhoisRequest("evil.com");
+
+        var ex = await Assert.ThrowsAsync<WhoisException>(() => client.Query(request, CancellationToken.None));
+        Assert.Contains("private or reserved", ex.Message, StringComparison.OrdinalIgnoreCase);
+    }
+
+    [Fact]
+    public async Task Query_RedirectChainExceedsLimit_Throws()
+    {
+        var bootstrap = Substitute.For<IBootstrapRegistry>();
+        bootstrap.GetRdapBaseUrl("com", Arg.Any<CancellationToken>())
+            .Returns("https://rdap.example.com/");
+
+        // Always redirects -- creates an infinite chain that should be cut off at 5.
+        var handler = new RedirectHandler("https://rdap.other.com/domain/loop.com");
+        var httpClient = new HttpClient(handler);
+        var client = new RdapProtocolClient(httpClient, bootstrap, new WhoisOptions());
+        var request = new WhoisRequest("loop.com");
+
+        var ex = await Assert.ThrowsAsync<WhoisException>(() => client.Query(request, CancellationToken.None));
+        Assert.Contains("redirect", ex.Message, StringComparison.OrdinalIgnoreCase);
+    }
+
+    [Fact]
+    public async Task Query_ValidRedirectChain_Succeeds()
+    {
+        var bootstrap = Substitute.For<IBootstrapRegistry>();
+        bootstrap.GetRdapBaseUrl("com", Arg.Any<CancellationToken>())
+            .Returns("https://rdap.example.com/");
+
+        var json = File.ReadAllText(Path.Combine("..", "..", "..", "Samples", "rdap", "google-com.json"));
+
+        // Redirect twice then return 200 OK.
+        var handler = new RedirectThenOkHandler(redirectCount: 2, location: "https://rdap.other.com/domain/google.com", okBody: json);
+        var httpClient = new HttpClient(handler);
+        var client = new RdapProtocolClient(httpClient, bootstrap, new WhoisOptions());
+        var request = new WhoisRequest("google.com");
+
+        var response = await client.Query(request, CancellationToken.None);
+
+        Assert.Equal(RegistrationStatus.Found, response.Response.Status);
+    }
+
+    /// <summary>
+    /// Returns a 301 redirect for the first <c>redirectCount</c> calls, then a 200 OK with <c>okBody</c>.
+    /// </summary>
+    private sealed class RedirectThenOkHandler : HttpMessageHandler
+    {
+        private readonly int _redirectCount;
+        private readonly string _location;
+        private readonly string _okBody;
+        private int _callCount;
+
+        public RedirectThenOkHandler(int redirectCount, string location, string okBody)
+        {
+            _redirectCount = redirectCount;
+            _location = location;
+            _okBody = okBody;
+        }
+
+        protected override Task<HttpResponseMessage> SendAsync(HttpRequestMessage request, CancellationToken cancellationToken)
+        {
+            _callCount++;
+            if (_callCount <= _redirectCount)
+            {
+                var redirect = new HttpResponseMessage(HttpStatusCode.Moved);
+                redirect.Headers.Location = new Uri(_location);
+                return Task.FromResult(redirect);
+            }
+
+            var ok = new HttpResponseMessage(HttpStatusCode.OK)
+            {
+                Content = new StringContent(_okBody),
+            };
+            return Task.FromResult(ok);
+        }
+    }
+
+    /// <summary>
+    /// Always returns a 301 redirect to <c>location</c>, used to trigger SSRF check or exceed the redirect limit.
+    /// </summary>
+    private sealed class RedirectHandler : HttpMessageHandler
+    {
+        private readonly string _location;
+
+        public RedirectHandler(string location)
+        {
+            _location = location;
+        }
+
+        protected override Task<HttpResponseMessage> SendAsync(HttpRequestMessage request, CancellationToken cancellationToken)
+        {
+            var response = new HttpResponseMessage(HttpStatusCode.Moved);
+            response.Headers.Location = new Uri(_location);
+            return Task.FromResult(response);
+        }
+    }
+
     private sealed class FakeHttpHandler : HttpMessageHandler
     {
         private readonly HttpStatusCode _statusCode;
