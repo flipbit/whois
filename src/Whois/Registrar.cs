@@ -3,7 +3,7 @@ namespace Whois;
 /// <summary>
 /// Represents a domain name registrar.
 /// </summary>
-public class Registrar
+public sealed class Registrar
 {
     /// <summary>
     /// The registrar name.

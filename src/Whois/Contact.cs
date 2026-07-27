@@ -3,7 +3,7 @@ namespace Whois;
 /// <summary>
 /// Represents a contact associated with a domain registration.
 /// </summary>
-public class Contact
+public sealed class Contact
 {
     /// <summary>
     /// The registry's identifier for this contact.

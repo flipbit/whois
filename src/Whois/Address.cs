@@ -5,7 +5,7 @@ namespace Whois;
 /// <see cref="Lines"/> is always populated regardless of data source.
 /// Structured fields are populated when available (e.g. from RDAP) and null otherwise.
 /// </summary>
-public class Address
+public sealed class Address
 {
     /// <summary>
     /// Address formatted as display lines. Always populated for both WHOIS and RDAP sources.

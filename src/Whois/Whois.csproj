@@ -10,6 +10,7 @@
    <PackageTags>whois lookup parsing</PackageTags>
    <Description>A .NET Standard 2.0, .NET 8, and .NET 10 WHOIS Lookup and Parsing Library</Description>
    <PackageReadmeFile>README.md</PackageReadmeFile>
+   <PackageIcon>icon.png</PackageIcon>
    <Copyright>Chris Wood 2021</Copyright>
    <RootNamespace>Whois</RootNamespace>
 
@@ -54,5 +55,6 @@
 
   <ItemGroup>
     <None Include="..\..\README.md" Pack="true" PackagePath="\" />
+    <None Include="icon.png" Pack="true" PackagePath="\" />
   </ItemGroup>
 </Project>

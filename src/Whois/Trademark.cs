@@ -3,7 +3,7 @@ namespace Whois;
 /// <summary>
 /// Represents trademark information embedded in a domain registration.
 /// </summary>
-public class Trademark
+public sealed class Trademark
 {
     /// <summary>
     /// The trademark name.
