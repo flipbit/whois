@@ -42,10 +42,10 @@ public class RefreshCommand : AsyncCommand<RefreshSettings>
         var toolDir = Path.Combine(settings.RepoRoot, "tools", "Whois.Refresh");
         var samplesPath = Path.Combine(settings.RepoRoot, "tests", "Whois.Tests", "Samples");
 
-        var runWhois = settings.Protocol == null
-            || string.Equals(settings.Protocol, "whois", StringComparison.OrdinalIgnoreCase);
-        var runRdap = settings.Protocol == null
-            || string.Equals(settings.Protocol, "rdap", StringComparison.OrdinalIgnoreCase);
+        var parsedProtocol = Enum.TryParse<LookupProtocol>(settings.Protocol, ignoreCase: true, out var p)
+            ? (LookupProtocol?)p : null;
+        var runWhois = parsedProtocol is null or LookupProtocol.Whois;
+        var runRdap = parsedProtocol is null or LookupProtocol.Rdap;
 
         var whoisSuccesses = 0;
         var whoisErrors = 0;

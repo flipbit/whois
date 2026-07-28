@@ -108,7 +108,7 @@ public class WhoisRefreshEngine
             result.ExtractedFields = GetExtractedFieldNames(parsed);
 
             // Determine actual status for save directory
-            var actualStatus = MapRegistrationStatus(parsed.Status);
+            var actualStatus = DomainRegistry.MapRegistrationStatus(parsed.Status);
             var saveStatus = actualStatus ?? status;
             if (actualStatus != null && !string.Equals(actualStatus, status, StringComparison.OrdinalIgnoreCase))
             {
@@ -185,34 +185,6 @@ public class WhoisRefreshEngine
         if (parsed.RegistryDomainId != null) fields.Add("RegistryDomainId");
         return fields;
     }
-
-    private static string? MapRegistrationStatus(RegistrationStatus status) => status switch
-    {
-        RegistrationStatus.Found => "found",
-        RegistrationStatus.NotFound => "not-found",
-        RegistrationStatus.Throttled => "throttled",
-        RegistrationStatus.Reserved => "reserved",
-        RegistrationStatus.Suspended => "suspended",
-        RegistrationStatus.Inactive => "inactive",
-        RegistrationStatus.Expired => "expired",
-        RegistrationStatus.Blocked => "blocked",
-        RegistrationStatus.Deactivated => "deactivated",
-        RegistrationStatus.Error => "error",
-        RegistrationStatus.Failed => "failed",
-        RegistrationStatus.Invalid => "invalid",
-        RegistrationStatus.Locked => "locked",
-        RegistrationStatus.NotAssigned => "not-assigned",
-        RegistrationStatus.NotAvailable => "not-available",
-        RegistrationStatus.OutOfService => "out-of-service",
-        RegistrationStatus.PendingDelete => "pending-delete",
-        RegistrationStatus.Quarantined => "quarantined",
-        RegistrationStatus.Redemption => "redemption",
-        RegistrationStatus.ToBeReleased => "to-be-released",
-        RegistrationStatus.Unavailable => "unavailable",
-        RegistrationStatus.Unconfirmed => "unconfirmed",
-        RegistrationStatus.Unknown => null,
-        _ => null,
-    };
 
     private static void RecordResult(
         RefreshResults results, string server, string tld, string status,

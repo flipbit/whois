@@ -20,6 +20,8 @@ public class BootstrapSettings : CommandSettings
 
 public class BootstrapCommand : AsyncCommand<BootstrapSettings>
 {
+    private static readonly string IanaRdapBootstrapUrl = new WhoisOptions().RdapBootstrapUrl;
+
     private readonly HttpClient _httpClient;
 
     public BootstrapCommand(HttpClient httpClient)
@@ -29,7 +31,8 @@ public class BootstrapCommand : AsyncCommand<BootstrapSettings>
 
     public override async Task<int> ExecuteAsync(CommandContext context, BootstrapSettings settings)
     {
-        if (string.Equals(settings.Protocol, "rdap", StringComparison.OrdinalIgnoreCase))
+        if (Enum.TryParse<LookupProtocol>(settings.Protocol, ignoreCase: true, out var protocol)
+            && protocol == LookupProtocol.Rdap)
         {
             return await SeedRdapAsync(settings).ConfigureAwait(false);
         }
@@ -47,7 +50,7 @@ public class BootstrapCommand : AsyncCommand<BootstrapSettings>
         // Fetch IANA RDAP bootstrap data
         AnsiConsole.MarkupLine("Fetching IANA RDAP bootstrap data...");
         var rdapJson = await _httpClient.GetStringAsync(
-            "https://data.iana.org/rdap/dns.json").ConfigureAwait(false);
+            IanaRdapBootstrapUrl).ConfigureAwait(false);
         var rdapEndpoints = BootstrapRegistry.ParseBootstrapJson(rdapJson);
         AnsiConsole.MarkupLine("Found [green]{0}[/] TLDs with RDAP endpoints", rdapEndpoints.Count);
 

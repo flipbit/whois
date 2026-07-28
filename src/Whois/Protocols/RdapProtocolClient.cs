@@ -9,7 +9,17 @@ namespace Whois.Protocols;
 
 internal sealed class RdapProtocolClient : IProtocolClient
 {
-    private const int MaxResponseSizeChars = 2 * 1024 * 1024; // 2 MB
+    // HTTP status codes as int constants for netstandard2.0 compatibility
+    // (HttpStatusCode.TooManyRequests and PermanentRedirect are not available).
+    private const int HttpMovedPermanently = 301;
+    private const int HttpFound = 302;
+    private const int HttpTemporaryRedirect = 307;
+    private const int HttpPermanentRedirect = 308;
+    private const int HttpTooManyRequests = 429;
+
+    private const int DefaultHttpsPort = 443;
+    private const int StreamingBufferSize = 8192;
+    private const int DefaultStringBuilderCapacity = 1024;
 
     private readonly HttpClient _httpClient;
     private readonly IBootstrapRegistry _bootstrap;
@@ -36,7 +46,6 @@ internal sealed class RdapProtocolClient : IProtocolClient
         _logger = logger;
     }
 
-    private const int MaxRedirects = 5;
 
     public LookupProtocol Protocol => LookupProtocol.Rdap;
 
@@ -68,16 +77,17 @@ internal sealed class RdapProtocolClient : IProtocolClient
             HttpResponseMessage? httpResponse = null;
             for (var hop = 0; ; hop++)
             {
-                if (hop > 0 && hop > MaxRedirects)
+                if (hop > 0 && hop > _options.MaxRdapRedirects)
                 {
-                    throw new WhoisException(FormattableString.Invariant($"RDAP request exceeded maximum redirect limit of {MaxRedirects}: {url}"));
+                    throw new WhoisException(FormattableString.Invariant($"RDAP request exceeded maximum redirect limit of {_options.MaxRdapRedirects}: {url}"));
                 }
 
                 httpResponse?.Dispose();
                 httpResponse = await _httpClient.GetAsync(url, cts.Token).ConfigureAwait(false);
 
                 var redirectCode = (int)httpResponse.StatusCode;
-                if (redirectCode is 301 or 302 or 307 or 308)
+                if (redirectCode is HttpMovedPermanently or HttpFound
+                    or HttpTemporaryRedirect or HttpPermanentRedirect)
                 {
                     var location = httpResponse.Headers.Location?.ToString()
                         ?? throw new WhoisException($"RDAP redirect response missing Location header: {url}");
@@ -122,7 +132,7 @@ internal sealed class RdapProtocolClient : IProtocolClient
                 };
             }
 
-            if (statusCode == 429)
+            if (statusCode == HttpTooManyRequests)
             {
                 _logger.LogWarning("RDAP: rate limited (HTTP 429) by {Url}, Retry-After: {RetryAfter}", url, finalResponse.Headers.RetryAfter);
                 sw.Stop();
@@ -150,7 +160,7 @@ internal sealed class RdapProtocolClient : IProtocolClient
                 throw new WhoisException(FormattableString.Invariant($"RDAP server returned HTTP {statusCode} for {url}"));
             }
 
-            var json = await ReadWithSizeLimit(finalResponse, MaxResponseSizeChars, cts.Token).ConfigureAwait(false);
+            var json = await ReadWithSizeLimit(finalResponse, _options.MaxRdapResponseSize, cts.Token).ConfigureAwait(false);
 
             var domainInfo = RdapParser.Parse(json);
 
@@ -201,8 +211,9 @@ internal sealed class RdapProtocolClient : IProtocolClient
             throw new WhoisException($"RDAP URL must use HTTPS: {url}");
         }
 
-        // Reject non-default ports -- RDAP must use the standard HTTPS port 443.
-        if (uri.Port != 443 && uri.Port != -1)
+        // Reject non-default ports -- RDAP must use the standard HTTPS port.
+        // Uri.Port returns -1 when no explicit port is specified (i.e. using the scheme default).
+        if (uri.Port != DefaultHttpsPort && uri.Port != -1)
         {
             throw new WhoisException($"RDAP URL must use the default HTTPS port (443): {url}");
         }
@@ -264,8 +275,8 @@ internal sealed class RdapProtocolClient : IProtocolClient
         // Use the shim -- the outer CancellationTokenSource handles timeout via GetAsync.
         using var stream = await NetStandardShims.ReadAsStreamAsync(response.Content, ct).ConfigureAwait(false);
         using var reader = new StreamReader(stream, Encoding.UTF8);
-        var buffer = new char[8192];
-        var capacity = (int)Math.Min(response.Content.Headers.ContentLength ?? 1024, maxChars);
+        var buffer = new char[StreamingBufferSize];
+        var capacity = (int)Math.Min(response.Content.Headers.ContentLength ?? DefaultStringBuilderCapacity, maxChars);
         var sb = new StringBuilder(capacity);
         int charsRead;
 

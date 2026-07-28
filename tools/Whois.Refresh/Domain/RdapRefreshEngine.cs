@@ -9,6 +9,8 @@ public record RdapRefreshEngineOptions(
 
 public class RdapRefreshEngine
 {
+    private const int HttpTooManyRequests = 429;
+
     private readonly HttpClient _httpClient;
 
     public RdapRefreshEngine(HttpClient httpClient)
@@ -100,11 +102,12 @@ public class RdapRefreshEngine
 
             if (response.StatusCode == System.Net.HttpStatusCode.NotFound)
             {
-                result.ActualStatus = "not-found";
+                result.ActualStatus = DomainRegistry.MapRegistrationStatus(
+                    Whois.RegistrationStatus.NotFound);
                 return result;
             }
 
-            if ((int)response.StatusCode == 429)
+            if ((int)response.StatusCode == HttpTooManyRequests)
             {
                 result.Error = new QueryError
                 {
@@ -132,7 +135,7 @@ public class RdapRefreshEngine
 
             result.ExtractedFields = GetExtractedFieldNames(parsed);
 
-            var actualStatus = MapRegistrationStatus(parsed.Status);
+            var actualStatus = DomainRegistry.MapRegistrationStatus(parsed.Status);
             if (actualStatus != null
                 && !string.Equals(actualStatus, status, StringComparison.OrdinalIgnoreCase))
             {
@@ -189,18 +192,6 @@ public class RdapRefreshEngine
         if (parsed.BillingContact != null) fields.Add("BillingContact");
         return fields;
     }
-
-    private static string? MapRegistrationStatus(RegistrationStatus status) => status switch
-    {
-        RegistrationStatus.Found => "found",
-        RegistrationStatus.NotFound => "not-found",
-        RegistrationStatus.Throttled => "throttled",
-        RegistrationStatus.Inactive => "inactive",
-        RegistrationStatus.Locked => "locked",
-        RegistrationStatus.PendingDelete => "pending-delete",
-        RegistrationStatus.Unknown => null,
-        _ => null,
-    };
 
     private static void RecordResult(
         RefreshResults results, string server, string tld, string status,

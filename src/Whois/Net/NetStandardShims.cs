@@ -7,6 +7,8 @@ namespace Whois.Net;
 
 internal static class NetStandardShims
 {
+    private static readonly TimeSpan PooledConnectionLifetime = TimeSpan.FromMinutes(2);
+
     /// <summary>
     /// Creates an <see cref="HttpClient"/> with connection pooling where the runtime supports it.
     /// On net8.0+, uses <c>SocketsHttpHandler</c> with a 2-minute pooled connection lifetime.
@@ -20,7 +22,7 @@ internal static class NetStandardShims
 #else
         return new HttpClient(new SocketsHttpHandler
         {
-            PooledConnectionLifetime = TimeSpan.FromMinutes(2),
+            PooledConnectionLifetime = PooledConnectionLifetime,
             AllowAutoRedirect = false,
         });
 #endif
@@ -42,7 +44,7 @@ internal static class NetStandardShims
         return new SocketsHttpHandler
         {
             AllowAutoRedirect = false,
-            PooledConnectionLifetime = TimeSpan.FromMinutes(2),
+            PooledConnectionLifetime = PooledConnectionLifetime,
         };
 #endif
     }

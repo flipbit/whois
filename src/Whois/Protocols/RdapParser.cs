@@ -12,6 +12,79 @@ namespace Whois.Protocols;
 /// </remarks>
 internal static class RdapParser
 {
+    // RFC 9083 JSON property names
+    private const string PropLdhName = "ldhName";
+    private const string PropUnicodeName = "unicodeName";
+    private const string PropHandle = "handle";
+    private const string PropStatus = "status";
+    private const string PropEvents = "events";
+    private const string PropEventAction = "eventAction";
+    private const string PropEventDate = "eventDate";
+    private const string PropNameservers = "nameservers";
+    private const string PropSecureDns = "secureDNS";
+    private const string PropDelegationSigned = "delegationSigned";
+    private const string PropEntities = "entities";
+    private const string PropRoles = "roles";
+    private const string PropVcardArray = "vcardArray";
+    private const string PropRemarks = "remarks";
+    private const string PropDescription = "description";
+    private const string PropLinks = "links";
+    private const string PropRel = "rel";
+    private const string PropHref = "href";
+
+    // RFC 9083 event action values
+    private const string EventRegistration = "registration";
+    private const string EventLastChanged = "last changed";
+    private const string EventExpiration = "expiration";
+
+    // RFC 9083 entity role values
+    private const string RoleRegistrar = "registrar";
+    private const string RoleRegistrant = "registrant";
+    private const string RoleTechnical = "technical";
+    private const string RoleAdministrative = "administrative";
+    private const string RoleBilling = "billing";
+    private const string RoleAbuse = "abuse";
+
+    // RFC 9083 status values
+    private const string StatusActive = "active";
+    private const string StatusInactive = "inactive";
+    private const string StatusLocked = "locked";
+    private const string StatusPendingDelete = "pending delete";
+    private const string StatusRedemptionPeriod = "redemption period";
+    private const string StatusPendingCreate = "pending create";
+    private const string StatusPendingRenew = "pending renew";
+    private const string StatusPendingRestore = "pending restore";
+    private const string StatusPendingTransfer = "pending transfer";
+    private const string StatusPendingUpdate = "pending update";
+
+    // DNSSEC status strings
+    private const string DnsSecSigned = "signedDelegation";
+    private const string DnsSecUnsigned = "unsigned";
+
+    // Link relation values
+    private const string RelAbout = "about";
+    private const string RelSelf = "self";
+
+    // jCard (RFC 7095) property names
+    private const string VcardFn = "fn";
+    private const string VcardOrg = "org";
+    private const string VcardEmail = "email";
+    private const string VcardTel = "tel";
+    private const string VcardAdr = "adr";
+
+    // jCard adr value array indices per RFC 6350 (Section 6.3.1):
+    // [PO Box, Extended, Street, City, Region, PostalCode, Country]
+    private const int JCardAdrStreet = 2;
+    private const int JCardAdrCity = 3;
+    private const int JCardAdrRegion = 4;
+    private const int JCardAdrPostalCode = 5;
+    private const int JCardAdrCountry = 6;
+    private const int JCardAdrMinLength = 7;
+
+    // Minimum element counts for jCard structure
+    private const int MinVCardArrayEntries = 2;
+    private const int MinVCardPropertyElements = 4;
+
     /// <summary>
     /// Parses an RDAP JSON response string into a DomainInfo.
     /// </summary>
@@ -20,77 +93,77 @@ internal static class RdapParser
         using var doc = JsonDocument.Parse(json);
         var root = doc.RootElement;
 
-        var domainName = GetString(root, "ldhName");
-        var unicodeName = GetString(root, "unicodeName");
-        var handle = GetString(root, "handle");
+        var domainName = GetString(root, PropLdhName);
+        var unicodeName = GetString(root, PropUnicodeName);
+        var handle = GetString(root, PropHandle);
 
-        var statusList = GetStringArray(root, "status");
+        var statusList = GetStringArray(root, PropStatus);
         var registrationStatus = MapStatus(statusList);
 
         DateTime? registered = null, updated = null, expiration = null;
-        if (root.TryGetProperty("events", out var events))
+        if (root.TryGetProperty(PropEvents, out var events))
         {
             foreach (var evt in events.EnumerateArray())
             {
-                var action = GetString(evt, "eventAction");
-                var dateStr = GetString(evt, "eventDate");
+                var action = GetString(evt, PropEventAction);
+                var dateStr = GetString(evt, PropEventDate);
                 if (dateStr == null || !DateTime.TryParse(dateStr, provider: null, System.Globalization.DateTimeStyles.RoundtripKind, out var date)) continue;
 
                 switch (action)
                 {
-                    case "registration": registered = date.ToUniversalTime(); break;
-                    case "last changed": updated = date.ToUniversalTime(); break;
-                    case "expiration": expiration = date.ToUniversalTime(); break;
+                    case EventRegistration: registered = date.ToUniversalTime(); break;
+                    case EventLastChanged: updated = date.ToUniversalTime(); break;
+                    case EventExpiration: expiration = date.ToUniversalTime(); break;
                 }
             }
         }
 
         var nameServers = new List<string>();
-        if (root.TryGetProperty("nameservers", out var ns))
+        if (root.TryGetProperty(PropNameservers, out var ns))
         {
             foreach (var server in ns.EnumerateArray())
             {
-                var name = GetString(server, "ldhName");
+                var name = GetString(server, PropLdhName);
                 if (name != null) nameServers.Add(name);
             }
         }
 
         string? dnsSecStatus = null;
-        if (root.TryGetProperty("secureDNS", out var secureDns))
+        if (root.TryGetProperty(PropSecureDns, out var secureDns))
         {
-            if (secureDns.TryGetProperty("delegationSigned", out var ds))
+            if (secureDns.TryGetProperty(PropDelegationSigned, out var ds))
             {
-                dnsSecStatus = ds.GetBoolean() ? "signedDelegation" : "unsigned";
+                dnsSecStatus = ds.GetBoolean() ? DnsSecSigned : DnsSecUnsigned;
             }
         }
 
         Registrar? registrar = null;
         Contact? registrant = null, techContact = null, adminContact = null, billingContact = null;
 
-        if (root.TryGetProperty("entities", out var entities))
+        if (root.TryGetProperty(PropEntities, out var entities))
         {
             foreach (var entity in entities.EnumerateArray())
             {
-                var roles = GetStringArray(entity, "roles");
+                var roles = GetStringArray(entity, PropRoles);
 
-                if (roles.Contains("registrar"))
+                if (roles.Contains(RoleRegistrar))
                 {
                     registrar = ParseRegistrar(entity);
                 }
 
-                if (roles.Contains("registrant"))
+                if (roles.Contains(RoleRegistrant))
                 {
                     registrant = ParseContact(entity);
                 }
-                if (roles.Contains("technical"))
+                if (roles.Contains(RoleTechnical))
                 {
                     techContact = ParseContact(entity);
                 }
-                if (roles.Contains("administrative"))
+                if (roles.Contains(RoleAdministrative))
                 {
                     adminContact = ParseContact(entity);
                 }
-                if (roles.Contains("billing"))
+                if (roles.Contains(RoleBilling))
                 {
                     billingContact = ParseContact(entity);
                 }
@@ -98,12 +171,12 @@ internal static class RdapParser
         }
 
         string? remarks = null;
-        if (root.TryGetProperty("remarks", out var remarksArr))
+        if (root.TryGetProperty(PropRemarks, out var remarksArr))
         {
             var descriptions = new List<string>();
             foreach (var remark in remarksArr.EnumerateArray())
             {
-                if (remark.TryGetProperty("description", out var desc))
+                if (remark.TryGetProperty(PropDescription, out var desc))
                 {
                     foreach (var line in desc.EnumerateArray())
                     {
@@ -143,32 +216,32 @@ internal static class RdapParser
 
     private static Registrar ParseRegistrar(JsonElement entity)
     {
-        var name = GetVcardProperty(entity, "fn");
-        var handle = GetString(entity, "handle");
+        var name = GetVcardProperty(entity, VcardFn);
+        var handle = GetString(entity, PropHandle);
 
         string? abuseEmail = null, abusePhone = null;
-        if (entity.TryGetProperty("entities", out var subEntities))
+        if (entity.TryGetProperty(PropEntities, out var subEntities))
         {
             foreach (var sub in subEntities.EnumerateArray())
             {
-                var roles = GetStringArray(sub, "roles");
-                if (roles.Contains("abuse"))
+                var roles = GetStringArray(sub, PropRoles);
+                if (roles.Contains(RoleAbuse))
                 {
-                    abuseEmail = GetVcardProperty(sub, "email");
-                    abusePhone = GetVcardProperty(sub, "tel");
+                    abuseEmail = GetVcardProperty(sub, VcardEmail);
+                    abusePhone = GetVcardProperty(sub, VcardTel);
                 }
             }
         }
 
         string? url = null;
-        if (entity.TryGetProperty("links", out var links))
+        if (entity.TryGetProperty(PropLinks, out var links))
         {
             foreach (var link in links.EnumerateArray())
             {
-                var rel = GetString(link, "rel");
-                if (rel == "about" || rel == "self")
+                var rel = GetString(link, PropRel);
+                if (rel == RelAbout || rel == RelSelf)
                 {
-                    var href = GetString(link, "href");
+                    var href = GetString(link, PropHref);
                     if (href != null)
                     {
                         url = href;
@@ -190,15 +263,15 @@ internal static class RdapParser
 
     private static Contact ParseContact(JsonElement entity)
     {
-        var name = GetVcardProperty(entity, "fn");
-        var org = GetVcardProperty(entity, "org");
-        var email = GetVcardProperty(entity, "email");
-        var phone = GetVcardProperty(entity, "tel");
+        var name = GetVcardProperty(entity, VcardFn);
+        var org = GetVcardProperty(entity, VcardOrg);
+        var email = GetVcardProperty(entity, VcardEmail);
+        var phone = GetVcardProperty(entity, VcardTel);
         var address = ParseJcardAddress(entity);
 
         return new Contact
         {
-            RegistryId = GetString(entity, "handle"),
+            RegistryId = GetString(entity, PropHandle),
             Name = name,
             Organization = org,
             Email = email,
@@ -209,25 +282,24 @@ internal static class RdapParser
 
     private static Address? ParseJcardAddress(JsonElement entity)
     {
-        if (!entity.TryGetProperty("vcardArray", out var vcardArray)) return null;
+        if (!entity.TryGetProperty(PropVcardArray, out var vcardArray)) return null;
 
         var entries = vcardArray.EnumerateArray().ToArray();
-        if (entries.Length < 2) return null;
+        if (entries.Length < MinVCardArrayEntries) return null;
 
         foreach (var prop in entries[1].EnumerateArray())
         {
             var propArr = prop.EnumerateArray().ToArray();
-            if (propArr.Length < 4) continue;
-            if (propArr[0].GetString() != "adr") continue;
+            if (propArr.Length < MinVCardPropertyElements) continue;
+            if (propArr[0].GetString() != VcardAdr) continue;
 
-            // jCard adr value: [PO Box, Extended, Street, City, Region, PostalCode, Country]
             var value = propArr[3];
             if (value.ValueKind != JsonValueKind.Array) continue;
 
             var parts = value.EnumerateArray().ToArray();
-            if (parts.Length < 7) continue;
+            if (parts.Length < JCardAdrMinLength) continue;
 
-            var streetVal = parts[2];
+            var streetVal = parts[JCardAdrStreet];
             List<string>? streetLines = null;
             if (streetVal.ValueKind == JsonValueKind.Array)
             {
@@ -245,10 +317,10 @@ internal static class RdapParser
                 if (!string.IsNullOrWhiteSpace(s)) streetLines = [s!];
             }
 
-            var city = parts[3].GetString();
-            var region = parts[4].GetString();
-            var postalCode = parts[5].GetString();
-            var country = parts[6].GetString();
+            var city = parts[JCardAdrCity].GetString();
+            var region = parts[JCardAdrRegion].GetString();
+            var postalCode = parts[JCardAdrPostalCode].GetString();
+            var country = parts[JCardAdrCountry].GetString();
 
             var lines = new List<string>();
             if (streetLines != null) lines.AddRange(streetLines);
@@ -275,15 +347,15 @@ internal static class RdapParser
 
     private static string? GetVcardProperty(JsonElement entity, string propertyName)
     {
-        if (!entity.TryGetProperty("vcardArray", out var vcardArray)) return null;
+        if (!entity.TryGetProperty(PropVcardArray, out var vcardArray)) return null;
 
         var entries = vcardArray.EnumerateArray().ToArray();
-        if (entries.Length < 2) return null;
+        if (entries.Length < MinVCardArrayEntries) return null;
 
         foreach (var prop in entries[1].EnumerateArray())
         {
             var propArr = prop.EnumerateArray().ToArray();
-            if (propArr.Length < 4) continue;
+            if (propArr.Length < MinVCardPropertyElements) continue;
             if (propArr[0].GetString() != propertyName) continue;
 
             var value = propArr[3];
@@ -301,16 +373,16 @@ internal static class RdapParser
         {
             switch (status)
             {
-                case "active": return RegistrationStatus.Found;
-                case "inactive": return RegistrationStatus.Inactive;
-                case "locked": return RegistrationStatus.Locked;
-                case "pending delete": return RegistrationStatus.PendingDelete;
-                case "redemption period": return RegistrationStatus.Redemption;
-                case "pending create":
-                case "pending renew":
-                case "pending restore":
-                case "pending transfer":
-                case "pending update":
+                case StatusActive: return RegistrationStatus.Found;
+                case StatusInactive: return RegistrationStatus.Inactive;
+                case StatusLocked: return RegistrationStatus.Locked;
+                case StatusPendingDelete: return RegistrationStatus.PendingDelete;
+                case StatusRedemptionPeriod: return RegistrationStatus.Redemption;
+                case StatusPendingCreate:
+                case StatusPendingRenew:
+                case StatusPendingRestore:
+                case StatusPendingTransfer:
+                case StatusPendingUpdate:
                     return RegistrationStatus.Other;
             }
         }

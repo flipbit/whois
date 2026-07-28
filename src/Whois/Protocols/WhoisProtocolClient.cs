@@ -9,7 +9,8 @@ namespace Whois.Protocols;
 
 internal sealed class WhoisProtocolClient : IProtocolClient
 {
-    private const int MaxReferralDepth = 10;
+    private const string JapanTldSuffix = ".jp";
+    private const string JapanEnglishQuerySuffix = "/e";
 
     private readonly ITcpReader _tcpReader;
     private readonly IBootstrapRegistry _bootstrap;
@@ -81,15 +82,15 @@ internal sealed class WhoisProtocolClient : IProtocolClient
             referralChain.Add(whoisServer);
 
             // Depth limit
-            if (visitedServers.Count > MaxReferralDepth)
+            if (visitedServers.Count > _options.MaxWhoisReferralDepth)
             {
-                _logger.LogWarning("WHOIS: referral depth limit ({MaxDepth}) reached for {Query}", MaxReferralDepth, request.Query);
+                _logger.LogWarning("WHOIS: referral depth limit ({MaxDepth}) reached for {Query}", _options.MaxWhoisReferralDepth, request.Query);
                 break;
             }
 
             // Build query (Japanese domains return English results with /e suffix)
             var query = request.Query;
-            if (query.EndsWith(".jp", StringComparison.Ordinal)) query += "/e";
+            if (query.EndsWith(JapanTldSuffix, StringComparison.Ordinal)) query += JapanEnglishQuerySuffix;
 
             // Download
             var content = await _tcpReader.Read(

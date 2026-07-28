@@ -12,7 +12,9 @@ namespace Whois.Servers;
 public class BootstrapRegistry : IBootstrapRegistry
 {
     private const string WhoisResourceName = "Whois.Resources.bootstrap.whois-dns.json";
-    private const int MaxResponseSizeChars = 1 * 1024 * 1024; // 1 MB
+    private const string BootstrapServicesProperty = "services";
+    private const int StreamingBufferSize = 8192;
+    private const int DefaultStringBuilderCapacity = 1024;
 
     private readonly HttpClient _httpClient;
     private readonly WhoisOptions _options;
@@ -126,7 +128,7 @@ public class BootstrapRegistry : IBootstrapRegistry
                         $"RDAP bootstrap fetch returned HTTP {statusCode} (Content-Type: {contentType}): {url}"));
             }
 
-            var json = await ReadWithSizeLimit(response, MaxResponseSizeChars, cts.Token)
+            var json = await ReadWithSizeLimit(response, _options.MaxBootstrapResponseSize, cts.Token)
                 .ConfigureAwait(false);
 
             Dictionary<string, string> result;
@@ -155,9 +157,9 @@ public class BootstrapRegistry : IBootstrapRegistry
         using var stream = await Net.NetStandardShims.ReadAsStreamAsync(response.Content, ct)
             .ConfigureAwait(false);
         using var reader = new System.IO.StreamReader(stream, System.Text.Encoding.UTF8);
-        var buffer = new char[8192];
+        var buffer = new char[StreamingBufferSize];
         var sb = new System.Text.StringBuilder(
-            (int)Math.Min(response.Content.Headers.ContentLength ?? 1024, maxChars));
+            (int)Math.Min(response.Content.Headers.ContentLength ?? DefaultStringBuilderCapacity, maxChars));
         int charsRead;
 
         while ((charsRead = await reader.ReadAsync(buffer, 0, buffer.Length).ConfigureAwait(false)) > 0)
@@ -184,7 +186,7 @@ public class BootstrapRegistry : IBootstrapRegistry
         var result = new Dictionary<string, string>(StringComparer.OrdinalIgnoreCase);
         using var doc = JsonDocument.Parse(json);
 
-        if (!doc.RootElement.TryGetProperty("services", out var services)) return result;
+        if (!doc.RootElement.TryGetProperty(BootstrapServicesProperty, out var services)) return result;
 
         foreach (var service in services.EnumerateArray())
         {
@@ -230,7 +232,7 @@ public class BootstrapRegistry : IBootstrapRegistry
         var result = new Dictionary<string, string>(StringComparer.OrdinalIgnoreCase);
         using var doc = JsonDocument.Parse(json);
 
-        if (!doc.RootElement.TryGetProperty("services", out var services)) return result;
+        if (!doc.RootElement.TryGetProperty(BootstrapServicesProperty, out var services)) return result;
 
         foreach (var service in services.EnumerateArray())
         {
