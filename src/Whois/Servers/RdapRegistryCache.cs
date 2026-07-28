@@ -5,91 +5,81 @@ using Microsoft.Extensions.Logging.Abstractions;
 namespace Whois.Servers;
 
 /// <summary>
-/// Provides server discovery for both RDAP and WHOIS protocols.
-/// RDAP data is fetched from IANA at runtime and cached in memory.
-/// WHOIS data is loaded from an embedded resource (no IANA JSON endpoint exists).
+/// Fetches and caches RDAP bootstrap data from IANA.
+/// The full TLD-to-URL mapping is fetched on first use and cached until
+/// <see cref="WhoisOptions.TldServerCacheDuration"/> expires or <see cref="ClearCache"/> is called.
 /// </summary>
-public class BootstrapRegistry : IBootstrapRegistry
+public class RdapRegistryCache : IRdapRegistryCache
 {
-    private const string WhoisResourceName = "Whois.Resources.bootstrap.whois-dns.json";
     private const string BootstrapServicesProperty = "services";
     private const int StreamingBufferSize = 8192;
     private const int DefaultStringBuilderCapacity = 1024;
 
     private readonly HttpClient _httpClient;
     private readonly WhoisOptions _options;
-    private readonly ILogger<BootstrapRegistry> _logger;
+    private readonly ILogger<RdapRegistryCache> _logger;
 
-#pragma warning disable CA2213 // SemaphoreSlim: singleton lifetime, no Dispose on IBootstrapRegistry by design
-    private readonly SemaphoreSlim _rdapLock = new(1, 1);
+#pragma warning disable CA2213 // SemaphoreSlim: singleton lifetime, no Dispose needed
+    private readonly SemaphoreSlim _lock = new(1, 1);
 #pragma warning restore CA2213
-    private volatile Dictionary<string, string>? _rdapCache;
-    private readonly Lazy<Dictionary<string, string>> _whoisCache;
+    private volatile Dictionary<string, string>? _cache;
+    private DateTime _cachedAt;
 
-    public BootstrapRegistry(HttpClient httpClient, WhoisOptions options)
-        : this(httpClient, options, NullLogger<BootstrapRegistry>.Instance)
+    public RdapRegistryCache(HttpClient httpClient, WhoisOptions options)
+        : this(httpClient, options, NullLogger<RdapRegistryCache>.Instance)
     {
     }
 
-    public BootstrapRegistry(HttpClient httpClient, WhoisOptions options,
-        ILogger<BootstrapRegistry> logger)
+    public RdapRegistryCache(HttpClient httpClient, WhoisOptions options,
+        ILogger<RdapRegistryCache> logger)
     {
         _httpClient = httpClient;
         _options = options;
         _logger = logger;
-        _whoisCache = new Lazy<Dictionary<string, string>>(
-            () => ParseWhoisBootstrapJson(ResourceReader.GetContent(WhoisResourceName)));
     }
 
-    public async Task<string?> GetRdapBaseUrl(string tld, CancellationToken ct)
+    public async Task<string?> GetBaseUrl(string tld, CancellationToken ct = default)
     {
-        var cache = await EnsureRdapCacheAsync(ct).ConfigureAwait(false);
+        var cache = await EnsureCacheAsync(ct).ConfigureAwait(false);
         cache.TryGetValue(tld, out var url);
-        _logger.LogDebug("Bootstrap: RDAP lookup for TLD {Tld}: {Result}", tld, url != null ? "hit" : "miss");
+        _logger.LogDebug("RDAP registry: lookup for TLD {Tld}: {Result}", tld, url != null ? "hit" : "miss");
         return url;
     }
 
-    public Task<string?> GetWhoisServer(string tld, CancellationToken ct)
+    public void ClearCache()
     {
-        var data = _whoisCache.Value;
-        data.TryGetValue(tld, out var server);
-        _logger.LogDebug("Bootstrap: WHOIS lookup for TLD {Tld}: {Result}", tld, server != null ? "hit" : "miss");
-        return Task.FromResult<string?>(server);
+        _cache = null;
+        _logger.LogInformation("RDAP registry cache cleared");
     }
 
-    public Task Refresh(CancellationToken ct)
+    private async Task<Dictionary<string, string>> EnsureCacheAsync(CancellationToken ct)
     {
-        _rdapCache = null;
-        _logger.LogInformation("Bootstrap cache cleared");
-        return Task.CompletedTask;
-    }
+        var cache = _cache;
+        if (cache != null && DateTime.UtcNow - _cachedAt < _options.TldServerCacheDuration)
+            return cache;
 
-    private async Task<Dictionary<string, string>> EnsureRdapCacheAsync(CancellationToken ct)
-    {
-        var cache = _rdapCache;
-        if (cache != null) return cache;
-
-        await _rdapLock.WaitAsync(ct).ConfigureAwait(false);
+        await _lock.WaitAsync(ct).ConfigureAwait(false);
         try
         {
-            // Double-check after acquiring lock
-            cache = _rdapCache;
-            if (cache != null) return cache;
+            cache = _cache;
+            if (cache != null && DateTime.UtcNow - _cachedAt < _options.TldServerCacheDuration)
+                return cache;
 
-            cache = await FetchRdapBootstrapAsync(ct).ConfigureAwait(false);
-            _rdapCache = cache;
+            cache = await FetchBootstrapAsync(ct).ConfigureAwait(false);
+            _cache = cache;
+            _cachedAt = DateTime.UtcNow;
             return cache;
         }
         finally
         {
-            _rdapLock.Release();
+            _lock.Release();
         }
     }
 
-    private async Task<Dictionary<string, string>> FetchRdapBootstrapAsync(CancellationToken ct)
+    private async Task<Dictionary<string, string>> FetchBootstrapAsync(CancellationToken ct)
     {
         var url = _options.RdapBootstrapUrl;
-        _logger.LogDebug("Bootstrap: fetching RDAP data from {Url}", url);
+        _logger.LogDebug("RDAP registry: fetching bootstrap data from {Url}", url);
 
         var sw = System.Diagnostics.Stopwatch.StartNew();
 
@@ -109,7 +99,7 @@ public class BootstrapRegistry : IBootstrapRegistry
         }
         catch (HttpRequestException ex)
         {
-            _logger.LogError(ex, "Bootstrap: fetch failed for {Url}", url);
+            _logger.LogError(ex, "RDAP registry: fetch failed for {Url}", url);
             throw new WhoisException(
                 $"RDAP bootstrap fetch failed for {url}: {ex.Message}", ex);
         }
@@ -120,7 +110,7 @@ public class BootstrapRegistry : IBootstrapRegistry
             {
                 var contentType = response.Content.Headers.ContentType?.ToString() ?? "(none)";
                 _logger.LogError(
-                    "Bootstrap: RDAP fetch returned HTTP {StatusCode}, Content-Type: {ContentType}",
+                    "RDAP registry: fetch returned HTTP {StatusCode}, Content-Type: {ContentType}",
                     (int)response.StatusCode, contentType);
                 var statusCode = (int)response.StatusCode;
                 throw new WhoisException(
@@ -144,7 +134,7 @@ public class BootstrapRegistry : IBootstrapRegistry
 
             sw.Stop();
             _logger.LogInformation(
-                "Bootstrap: loaded {Count} RDAP endpoints in {Duration}ms from {Url}",
+                "RDAP registry: loaded {Count} endpoints in {Duration}ms from {Url}",
                 result.Count, sw.ElapsedMilliseconds, url);
 
             return result;
@@ -216,41 +206,6 @@ public class BootstrapRegistry : IBootstrapRegistry
                 if (tldStr != null)
                 {
                     result[tldStr.ToLowerInvariant()] = baseUrl;
-                }
-            }
-        }
-
-        return result;
-    }
-
-    /// <summary>
-    /// Parses a WHOIS server bootstrap JSON file (same structure as IANA RDAP bootstrap),
-    /// returning a map of TLD to WHOIS server hostname.
-    /// </summary>
-    internal static Dictionary<string, string> ParseWhoisBootstrapJson(string json)
-    {
-        var result = new Dictionary<string, string>(StringComparer.OrdinalIgnoreCase);
-        using var doc = JsonDocument.Parse(json);
-
-        if (!doc.RootElement.TryGetProperty(BootstrapServicesProperty, out var services)) return result;
-
-        foreach (var service in services.EnumerateArray())
-        {
-            var entries = service.EnumerateArray().ToArray();
-            if (entries.Length < 2) continue;
-
-            var tlds = entries[0];
-            var servers = entries[1];
-
-            var server = servers.EnumerateArray().FirstOrDefault().GetString();
-            if (server == null) continue;
-
-            foreach (var tld in tlds.EnumerateArray())
-            {
-                var tldStr = tld.GetString();
-                if (tldStr != null)
-                {
-                    result[tldStr.ToLowerInvariant()] = server;
                 }
             }
         }

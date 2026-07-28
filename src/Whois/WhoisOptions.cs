@@ -69,9 +69,14 @@ public class WhoisOptions
     public int MaxRdapResponseSize { get; set; } = 2 * 1024 * 1024;
 
     /// <summary>
-    /// Maximum size in characters for an RDAP bootstrap JSON download.
+    /// Maximum size in characters for the RDAP bootstrap JSON download.
     /// </summary>
-    public int MaxBootstrapResponseSize { get; set; } = 1 * 1024 * 1024;
+    public int MaxRdapBootstrapResponseSize { get; set; } = 1 * 1024 * 1024;
+
+    /// <summary>
+    /// How long to cache TLD-to-server mappings before re-fetching. Used by both RDAP and WHOIS caches.
+    /// </summary>
+    public TimeSpan TldServerCacheDuration { get; set; } = TimeSpan.FromHours(24);
 
     /// <summary>
     /// Gets the default cache directory for template packs.
