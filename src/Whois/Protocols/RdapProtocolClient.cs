@@ -22,26 +22,26 @@ internal sealed class RdapProtocolClient : IProtocolClient
     private const int DefaultStringBuilderCapacity = 1024;
 
     private readonly HttpClient _httpClient;
-    private readonly IBootstrapRegistry _bootstrap;
+    private readonly IRdapRegistryCache _rdapRegistry;
     private readonly WhoisOptions _options;
     private readonly ILogger<RdapProtocolClient> _logger;
 
     public RdapProtocolClient(
         HttpClient httpClient,
-        IBootstrapRegistry bootstrap,
+        IRdapRegistryCache rdapRegistry,
         WhoisOptions options)
-        : this(httpClient, bootstrap, options, NullLogger<RdapProtocolClient>.Instance)
+        : this(httpClient, rdapRegistry, options, NullLogger<RdapProtocolClient>.Instance)
     {
     }
 
     public RdapProtocolClient(
         HttpClient httpClient,
-        IBootstrapRegistry bootstrap,
+        IRdapRegistryCache rdapRegistry,
         WhoisOptions options,
         ILogger<RdapProtocolClient> logger)
     {
         _httpClient = httpClient;
-        _bootstrap = bootstrap;
+        _rdapRegistry = rdapRegistry;
         _options = options;
         _logger = logger;
     }
@@ -56,7 +56,7 @@ internal sealed class RdapProtocolClient : IProtocolClient
         ValidateQuery(request.Query);
 
         var tld = HostName.TryParse(request.Query, out var hostName) ? hostName!.Tld : request.Query;
-        var baseUrl = await _bootstrap.GetRdapBaseUrl(tld, ct).ConfigureAwait(false);
+        var baseUrl = await _rdapRegistry.GetBaseUrl(tld, ct).ConfigureAwait(false);
         if (baseUrl == null)
         {
             throw new WhoisException($"No RDAP endpoint available for TLD: {tld}");

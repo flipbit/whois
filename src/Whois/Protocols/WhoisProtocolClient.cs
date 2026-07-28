@@ -13,29 +13,29 @@ internal sealed class WhoisProtocolClient : IProtocolClient
     private const string JapanEnglishQuerySuffix = "/e";
 
     private readonly ITcpReader _tcpReader;
-    private readonly IBootstrapRegistry _bootstrap;
+    private readonly IIanaServerLookup _ianaLookup;
     private readonly WhoisParser _parser;
     private readonly WhoisOptions _options;
     private readonly ILogger<WhoisProtocolClient> _logger;
 
     public WhoisProtocolClient(
         ITcpReader tcpReader,
-        IBootstrapRegistry bootstrap,
+        IIanaServerLookup ianaLookup,
         WhoisParser parser,
         WhoisOptions options)
-        : this(tcpReader, bootstrap, parser, options, NullLogger<WhoisProtocolClient>.Instance)
+        : this(tcpReader, ianaLookup, parser, options, NullLogger<WhoisProtocolClient>.Instance)
     {
     }
 
     public WhoisProtocolClient(
         ITcpReader tcpReader,
-        IBootstrapRegistry bootstrap,
+        IIanaServerLookup ianaLookup,
         WhoisParser parser,
         WhoisOptions options,
         ILogger<WhoisProtocolClient> logger)
     {
         _tcpReader = tcpReader;
-        _bootstrap = bootstrap;
+        _ianaLookup = ianaLookup;
         _parser = parser;
         _options = options;
         _logger = logger;
@@ -59,7 +59,7 @@ internal sealed class WhoisProtocolClient : IProtocolClient
         else
         {
             var tld = HostName.TryParse(request.Query, out var hostName) ? hostName!.Tld : request.Query;
-            whoisServer = await _bootstrap.GetWhoisServer(tld, ct).ConfigureAwait(false);
+            whoisServer = await _ianaLookup.GetWhoisServer(tld, ct).ConfigureAwait(false);
             if (whoisServer == null)
             {
                 throw new WhoisException($"No WHOIS server found for TLD: {tld}");

@@ -10,8 +10,9 @@ public class WhoisLookupTest
     [Fact]
     public async Task Lookup_AutoProtocol_UsesRdapWhenAvailable()
     {
-        var bootstrap = Substitute.For<IBootstrapRegistry>();
-        bootstrap.GetRdapBaseUrl("com", Arg.Any<CancellationToken>())
+        var rdapRegistry = Substitute.For<IRdapRegistryCache>();
+        var ianaLookup = Substitute.For<IIanaServerLookup>();
+        rdapRegistry.GetBaseUrl("com", Arg.Any<CancellationToken>())
             .Returns("https://rdap.verisign.com/com/v1/");
 
         var rdapClient = Substitute.For<IProtocolClient>();
@@ -34,7 +35,8 @@ public class WhoisLookupTest
 
         var lookup = new WhoisLookup(
             new WhoisOptions(),
-            bootstrap,
+            rdapRegistry,
+            ianaLookup,
             [whoisClient, rdapClient]);
 
         var result = await lookup.Lookup("google.com");
@@ -46,10 +48,11 @@ public class WhoisLookupTest
     [Fact]
     public async Task Lookup_AutoProtocol_FallsBackToWhoisWhenNoRdap()
     {
-        var bootstrap = Substitute.For<IBootstrapRegistry>();
-        bootstrap.GetRdapBaseUrl("uk", Arg.Any<CancellationToken>())
+        var rdapRegistry = Substitute.For<IRdapRegistryCache>();
+        var ianaLookup = Substitute.For<IIanaServerLookup>();
+        rdapRegistry.GetBaseUrl("uk", Arg.Any<CancellationToken>())
             .Returns((string?)null);
-        bootstrap.GetWhoisServer("uk", Arg.Any<CancellationToken>())
+        ianaLookup.GetWhoisServer("uk", Arg.Any<CancellationToken>())
             .Returns("whois.nic.uk");
 
         var whoisClient = Substitute.For<IProtocolClient>();
@@ -72,7 +75,8 @@ public class WhoisLookupTest
 
         var lookup = new WhoisLookup(
             new WhoisOptions(),
-            bootstrap,
+            rdapRegistry,
+            ianaLookup,
             [whoisClient, rdapClient]);
 
         var result = await lookup.Lookup("example.uk");
@@ -83,10 +87,11 @@ public class WhoisLookupTest
     [Fact]
     public async Task Lookup_ForceWhois_UsesWhoisEvenWhenRdapAvailable()
     {
-        var bootstrap = Substitute.For<IBootstrapRegistry>();
-        bootstrap.GetRdapBaseUrl("com", Arg.Any<CancellationToken>())
+        var rdapRegistry = Substitute.For<IRdapRegistryCache>();
+        var ianaLookup = Substitute.For<IIanaServerLookup>();
+        rdapRegistry.GetBaseUrl("com", Arg.Any<CancellationToken>())
             .Returns("https://rdap.verisign.com/com/v1/");
-        bootstrap.GetWhoisServer("com", Arg.Any<CancellationToken>())
+        ianaLookup.GetWhoisServer("com", Arg.Any<CancellationToken>())
             .Returns("whois.verisign-grs.com");
 
         var whoisClient = Substitute.For<IProtocolClient>();
@@ -111,7 +116,8 @@ public class WhoisLookupTest
 
         var lookup = new WhoisLookup(
             new WhoisOptions(),
-            bootstrap,
+            rdapRegistry,
+            ianaLookup,
             [whoisClient, rdapClient]);
 
         var result = await lookup.Lookup(request);
@@ -123,8 +129,9 @@ public class WhoisLookupTest
     [Fact]
     public async Task Lookup_ForceRdap_ThrowsWhenNotAvailable()
     {
-        var bootstrap = Substitute.For<IBootstrapRegistry>();
-        bootstrap.GetRdapBaseUrl("uk", Arg.Any<CancellationToken>())
+        var rdapRegistry = Substitute.For<IRdapRegistryCache>();
+        var ianaLookup = Substitute.For<IIanaServerLookup>();
+        rdapRegistry.GetBaseUrl("uk", Arg.Any<CancellationToken>())
             .Returns((string?)null);
 
         var whoisClient = Substitute.For<IProtocolClient>();
@@ -135,7 +142,8 @@ public class WhoisLookupTest
 
         var lookup = new WhoisLookup(
             new WhoisOptions(),
-            bootstrap,
+            rdapRegistry,
+            ianaLookup,
             [whoisClient, rdapClient]);
 
         var request = new WhoisRequest("example.uk") { PreferredProtocol = ProtocolPreference.Rdap };
@@ -146,10 +154,11 @@ public class WhoisLookupTest
     [Fact]
     public async Task Lookup_GlobalPreferredProtocol_UsedWhenRequestProtocolIsNull()
     {
-        var bootstrap = Substitute.For<IBootstrapRegistry>();
-        bootstrap.GetRdapBaseUrl("com", Arg.Any<CancellationToken>())
+        var rdapRegistry = Substitute.For<IRdapRegistryCache>();
+        var ianaLookup = Substitute.For<IIanaServerLookup>();
+        rdapRegistry.GetBaseUrl("com", Arg.Any<CancellationToken>())
             .Returns("https://rdap.verisign.com/com/v1/");
-        bootstrap.GetWhoisServer("com", Arg.Any<CancellationToken>())
+        ianaLookup.GetWhoisServer("com", Arg.Any<CancellationToken>())
             .Returns("whois.verisign-grs.com");
 
         var whoisClient = Substitute.For<IProtocolClient>();
@@ -174,7 +183,7 @@ public class WhoisLookupTest
         var options = new WhoisOptions { PreferredProtocol = ProtocolPreference.Whois };
         var request = new WhoisRequest("google.com"); // PreferredProtocol is null
 
-        var lookup = new WhoisLookup(options, bootstrap, [whoisClient, rdapClient]);
+        var lookup = new WhoisLookup(options, rdapRegistry, ianaLookup, [whoisClient, rdapClient]);
 
         var result = await lookup.Lookup(request);
 
@@ -185,7 +194,8 @@ public class WhoisLookupTest
     [Fact]
     public async Task Lookup_EmptyQuery_ThrowsArgumentNullException()
     {
-        var bootstrap = Substitute.For<IBootstrapRegistry>();
+        var rdapRegistry = Substitute.For<IRdapRegistryCache>();
+        var ianaLookup = Substitute.For<IIanaServerLookup>();
 
         var whoisClient = Substitute.For<IProtocolClient>();
         whoisClient.Protocol.Returns(LookupProtocol.Whois);
@@ -193,8 +203,28 @@ public class WhoisLookupTest
         var rdapClient = Substitute.For<IProtocolClient>();
         rdapClient.Protocol.Returns(LookupProtocol.Rdap);
 
-        var lookup = new WhoisLookup(new WhoisOptions(), bootstrap, [whoisClient, rdapClient]);
+        var lookup = new WhoisLookup(new WhoisOptions(), rdapRegistry, ianaLookup, [whoisClient, rdapClient]);
 
         await Assert.ThrowsAsync<ArgumentNullException>(() => lookup.Lookup(string.Empty));
+    }
+
+    [Fact]
+    public void ClearCache_DelegatesToBothCaches()
+    {
+        var rdapRegistry = Substitute.For<IRdapRegistryCache>();
+        var ianaLookup = Substitute.For<IIanaServerLookup>();
+
+        var whoisClient = Substitute.For<IProtocolClient>();
+        whoisClient.Protocol.Returns(LookupProtocol.Whois);
+
+        var rdapClient = Substitute.For<IProtocolClient>();
+        rdapClient.Protocol.Returns(LookupProtocol.Rdap);
+
+        var lookup = new WhoisLookup(new WhoisOptions(), rdapRegistry, ianaLookup, [whoisClient, rdapClient]);
+
+        lookup.ClearCache();
+
+        rdapRegistry.Received(1).ClearCache();
+        ianaLookup.Received(1).ClearCache();
     }
 }

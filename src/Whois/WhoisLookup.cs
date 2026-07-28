@@ -16,7 +16,8 @@ namespace Whois;
 public class WhoisLookup : IWhoisLookup
 {
     private readonly ILogger<WhoisLookup> _logger;
-    private readonly IBootstrapRegistry _bootstrap;
+    private readonly IRdapRegistryCache _rdapRegistry;
+    private readonly IIanaServerLookup _ianaLookup;
     private readonly IProtocolClient _whoisClient;
     private readonly IProtocolClient _rdapClient;
     private readonly WhoisOptions _options;
@@ -28,8 +29,11 @@ public class WhoisLookup : IWhoisLookup
     // --- Static shared instances for non-DI use ---
     private static readonly Lazy<HttpClient> SharedHttpClient = new(NetStandardShims.CreatePooledHttpClient);
 
-    private static readonly Lazy<BootstrapRegistry> SharedBootstrap = new(() =>
-        new BootstrapRegistry(SharedHttpClient.Value, new WhoisOptions()));
+    private static readonly Lazy<RdapRegistryCache> SharedRdapRegistry = new(() =>
+        new RdapRegistryCache(SharedHttpClient.Value, new WhoisOptions()));
+
+    private static readonly Lazy<IanaServerLookup> SharedIanaLookup = new(() =>
+        new IanaServerLookup(new TcpReader(), new WhoisOptions()));
 
     private static readonly Lazy<TemplatePackProvider> SharedPackProvider = new(() =>
     {
@@ -57,25 +61,27 @@ public class WhoisLookup : IWhoisLookup
     {
         _options = options;
         _logger = NullLogger<WhoisLookup>.Instance;
-        _bootstrap = SharedBootstrap.Value;
+        _rdapRegistry = SharedRdapRegistry.Value;
+        _ianaLookup = SharedIanaLookup.Value;
         _packProvider = SharedPackProvider.Value;
 
         var parser = SharedParser.Value;
         var tcpReader = new TcpReader();
-        _whoisClient = new WhoisProtocolClient(tcpReader, _bootstrap, parser, options);
-        _rdapClient = new RdapProtocolClient(SharedHttpClient.Value, _bootstrap, options);
+        _whoisClient = new WhoisProtocolClient(tcpReader, _ianaLookup, parser, options);
+        _rdapClient = new RdapProtocolClient(SharedHttpClient.Value, _rdapRegistry, options);
     }
 
     /// <summary>
     /// DI constructor via Options pattern.
     /// </summary>
     internal WhoisLookup(IOptions<WhoisOptions> options, ILogger<WhoisLookup> logger,
-        IBootstrapRegistry bootstrap, IEnumerable<IProtocolClient> clients,
-        ITemplatePackProvider packProvider)
+        IRdapRegistryCache rdapRegistry, IIanaServerLookup ianaLookup,
+        IEnumerable<IProtocolClient> clients, ITemplatePackProvider packProvider)
     {
         _options = options.Value;
         _logger = logger;
-        _bootstrap = bootstrap;
+        _rdapRegistry = rdapRegistry;
+        _ianaLookup = ianaLookup;
         _packProvider = packProvider;
 
         var clientList = clients.ToList();
@@ -86,11 +92,13 @@ public class WhoisLookup : IWhoisLookup
     /// <summary>
     /// Test constructor -- explicit dependencies for protocol client testing.
     /// </summary>
-    internal WhoisLookup(WhoisOptions options, IBootstrapRegistry bootstrap, IList<IProtocolClient> clients)
+    internal WhoisLookup(WhoisOptions options, IRdapRegistryCache rdapRegistry,
+        IIanaServerLookup ianaLookup, IList<IProtocolClient> clients)
     {
         _options = options;
         _logger = NullLogger<WhoisLookup>.Instance;
-        _bootstrap = bootstrap;
+        _rdapRegistry = rdapRegistry;
+        _ianaLookup = ianaLookup;
 
         _whoisClient = clients.First(c => c.Protocol == LookupProtocol.Whois);
         _rdapClient = clients.First(c => c.Protocol == LookupProtocol.Rdap);
@@ -103,12 +111,13 @@ public class WhoisLookup : IWhoisLookup
     {
         _options = new WhoisOptions();
         _logger = NullLogger<WhoisLookup>.Instance;
-        _bootstrap = SharedBootstrap.Value;
+        _rdapRegistry = SharedRdapRegistry.Value;
+        _ianaLookup = SharedIanaLookup.Value;
         _packProvider = packProvider;
 
         var tcpReader = new TcpReader();
-        _whoisClient = new WhoisProtocolClient(tcpReader, _bootstrap, parser, _options);
-        _rdapClient = new RdapProtocolClient(SharedHttpClient.Value, _bootstrap, _options);
+        _whoisClient = new WhoisProtocolClient(tcpReader, _ianaLookup, parser, _options);
+        _rdapClient = new RdapProtocolClient(SharedHttpClient.Value, _rdapRegistry, _options);
     }
 
     /// <summary>
@@ -194,18 +203,25 @@ public class WhoisLookup : IWhoisLookup
                 return _whoisClient;
 
             case ProtocolPreference.Rdap:
-                var rdapUrl = await _bootstrap.GetRdapBaseUrl(tld, ct).ConfigureAwait(false);
+                var rdapUrl = await _rdapRegistry.GetBaseUrl(tld, ct).ConfigureAwait(false);
                 if (rdapUrl == null)
                     throw new WhoisException($"RDAP is not available for TLD: {tld}");
                 return _rdapClient;
 
             case ProtocolPreference.Auto:
             default:
-                var autoRdapUrl = await _bootstrap.GetRdapBaseUrl(tld, ct).ConfigureAwait(false);
+                var autoRdapUrl = await _rdapRegistry.GetBaseUrl(tld, ct).ConfigureAwait(false);
                 if (autoRdapUrl != null)
                     return _rdapClient;
                 return _whoisClient;
         }
+    }
+
+    public void ClearCache()
+    {
+        _rdapRegistry.ClearCache();
+        _ianaLookup.ClearCache();
+        _logger.LogInformation("All server discovery caches cleared");
     }
 
 }

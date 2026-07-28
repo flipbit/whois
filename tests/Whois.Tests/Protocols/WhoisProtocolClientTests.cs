@@ -17,12 +17,12 @@ public class WhoisProtocolClientTests
     public async Task Query_ValidDomain_ReturnsProtocolResponse()
     {
         var tcpReader = Substitute.For<ITcpReader>();
-        var bootstrap = Substitute.For<IBootstrapRegistry>();
+        var ianaLookup = Substitute.For<IIanaServerLookup>();
         var parser = new WhoisParser();
         var sampleReader = new SampleReader();
         var options = new WhoisOptions();
 
-        bootstrap.GetWhoisServer("com", Arg.Any<CancellationToken>())
+        ianaLookup.GetWhoisServer("com", Arg.Any<CancellationToken>())
             .Returns("whois.markmonitor.com");
 
         var sample = sampleReader.Read("whois.markmonitor.com", "com", "found", "found.txt");
@@ -30,7 +30,7 @@ public class WhoisProtocolClientTests
             .Read("whois.markmonitor.com", 43, "google.com", DefaultEncoding, DefaultTimeout, Arg.Any<CancellationToken>())
             .Returns(sample);
 
-        var client = new WhoisProtocolClient(tcpReader, bootstrap, parser, options);
+        var client = new WhoisProtocolClient(tcpReader, ianaLookup, parser, options);
         var request = new WhoisRequest("google.com");
 
         var response = await client.Query(request, CancellationToken.None);
@@ -45,12 +45,12 @@ public class WhoisProtocolClientTests
     public async Task Query_FollowsReferralChain()
     {
         var tcpReader = Substitute.For<ITcpReader>();
-        var bootstrap = Substitute.For<IBootstrapRegistry>();
+        var ianaLookup = Substitute.For<IIanaServerLookup>();
         var parser = new WhoisParser();
         var sampleReader = new SampleReader();
         var options = new WhoisOptions();
 
-        bootstrap.GetWhoisServer("com", Arg.Any<CancellationToken>())
+        ianaLookup.GetWhoisServer("com", Arg.Any<CancellationToken>())
             .Returns("whois.verisign-grs.com");
 
         var intermediateResult = sampleReader.Read("whois.verisign-grs.com", "com", "found", "found_status_registered.txt");
@@ -63,7 +63,7 @@ public class WhoisProtocolClientTests
             .Read("whois.markmonitor.com", 43, "google.com", DefaultEncoding, DefaultTimeout, Arg.Any<CancellationToken>())
             .Returns(authoritativeResult);
 
-        var client = new WhoisProtocolClient(tcpReader, bootstrap, parser, options);
+        var client = new WhoisProtocolClient(tcpReader, ianaLookup, parser, options);
         var request = new WhoisRequest("google.com");
 
         var response = await client.Query(request, CancellationToken.None);
@@ -76,12 +76,12 @@ public class WhoisProtocolClientTests
     public async Task Query_DomainEndingInJpWithoutDot_DoesNotAddEnglishSuffix()
     {
         var tcpReader = Substitute.For<ITcpReader>();
-        var bootstrap = Substitute.For<IBootstrapRegistry>();
+        var ianaLookup = Substitute.For<IIanaServerLookup>();
         var parser = new WhoisParser();
         var sampleReader = new SampleReader();
         var options = new WhoisOptions();
 
-        bootstrap.GetWhoisServer("nejp", Arg.Any<CancellationToken>())
+        ianaLookup.GetWhoisServer("nejp", Arg.Any<CancellationToken>())
             .Returns("whois.example.com");
 
         var sample = sampleReader.Read("whois.markmonitor.com", "com", "found", "found.txt");
@@ -89,7 +89,7 @@ public class WhoisProtocolClientTests
             .Read("whois.example.com", 43, "example.nejp", DefaultEncoding, DefaultTimeout, Arg.Any<CancellationToken>())
             .Returns(sample);
 
-        var client = new WhoisProtocolClient(tcpReader, bootstrap, parser, options);
+        var client = new WhoisProtocolClient(tcpReader, ianaLookup, parser, options);
         var request = new WhoisRequest("example.nejp");
 
         await client.Query(request, CancellationToken.None);
@@ -103,11 +103,11 @@ public class WhoisProtocolClientTests
     public async Task Query_JpDomain_AppendsEnglishSuffix()
     {
         var tcpReader = Substitute.For<ITcpReader>();
-        var bootstrap = Substitute.For<IBootstrapRegistry>();
+        var ianaLookup = Substitute.For<IIanaServerLookup>();
         var parser = new WhoisParser();
         var options = new WhoisOptions();
 
-        bootstrap.GetWhoisServer("jp", Arg.Any<CancellationToken>())
+        ianaLookup.GetWhoisServer("jp", Arg.Any<CancellationToken>())
             .Returns("whois.jprs.jp");
 
         // Return a simple WHOIS response with no referral
@@ -116,7 +116,7 @@ public class WhoisProtocolClientTests
             .Read("whois.jprs.jp", 43, "example.jp/e", DefaultEncoding, DefaultTimeout, Arg.Any<CancellationToken>())
             .Returns(content);
 
-        var client = new WhoisProtocolClient(tcpReader, bootstrap, parser, options);
+        var client = new WhoisProtocolClient(tcpReader, ianaLookup, parser, options);
         var request = new WhoisRequest("example.jp");
 
         await client.Query(request, CancellationToken.None);
@@ -130,11 +130,11 @@ public class WhoisProtocolClientTests
     public async Task Query_ReferralLoopDetected_StopsChain()
     {
         var tcpReader = Substitute.For<ITcpReader>();
-        var bootstrap = Substitute.For<IBootstrapRegistry>();
+        var ianaLookup = Substitute.For<IIanaServerLookup>();
         var parser = new WhoisParser();
         var options = new WhoisOptions();
 
-        bootstrap.GetWhoisServer("com", Arg.Any<CancellationToken>())
+        ianaLookup.GetWhoisServer("com", Arg.Any<CancellationToken>())
             .Returns("whois.server-a.com");
 
         // server-a refers to server-b
@@ -149,7 +149,7 @@ public class WhoisProtocolClientTests
             .Read("whois.server-b.com", 43, "example.com", DefaultEncoding, DefaultTimeout, Arg.Any<CancellationToken>())
             .Returns(serverBContent);
 
-        var client = new WhoisProtocolClient(tcpReader, bootstrap, parser, options);
+        var client = new WhoisProtocolClient(tcpReader, ianaLookup, parser, options);
         var request = new WhoisRequest("example.com");
 
         var response = await client.Query(request, CancellationToken.None);
@@ -170,11 +170,11 @@ public class WhoisProtocolClientTests
         // Each server in the chain refers to the next unique server; once 10 unique
         // servers have been visited the depth guard fires and the loop terminates.
         var tcpReader = Substitute.For<ITcpReader>();
-        var bootstrap = Substitute.For<IBootstrapRegistry>();
+        var ianaLookup = Substitute.For<IIanaServerLookup>();
         var parser = new WhoisParser();
         var options = new WhoisOptions();
 
-        bootstrap.GetWhoisServer("com", Arg.Any<CancellationToken>())
+        ianaLookup.GetWhoisServer("com", Arg.Any<CancellationToken>())
             .Returns("whois.node-0.com");
 
         // Dynamic callback: each call receives a server index via the hostname and
@@ -195,7 +195,7 @@ public class WhoisProtocolClientTests
                     $"Domain Name: example.com\r\nRegistrar WHOIS Server: whois.node-{nextIndex}.com\r\nRegistrar: Node {index}\r\n");
             });
 
-        var client = new WhoisProtocolClient(tcpReader, bootstrap, parser, options);
+        var client = new WhoisProtocolClient(tcpReader, ianaLookup, parser, options);
         var request = new WhoisRequest("example.com");
 
         // This must complete rather than loop forever; the depth guard (> 10) stops it.
@@ -209,7 +209,7 @@ public class WhoisProtocolClientTests
     public async Task Query_CustomWhoisServer_BypassesBootstrap()
     {
         var tcpReader = Substitute.For<ITcpReader>();
-        var bootstrap = Substitute.For<IBootstrapRegistry>();
+        var ianaLookup = Substitute.For<IIanaServerLookup>();
         var parser = new WhoisParser();
         var options = new WhoisOptions();
 
@@ -218,7 +218,7 @@ public class WhoisProtocolClientTests
             .Read("whois.custom.com", 43, "example.com", DefaultEncoding, DefaultTimeout, Arg.Any<CancellationToken>())
             .Returns(content);
 
-        var client = new WhoisProtocolClient(tcpReader, bootstrap, parser, options);
+        var client = new WhoisProtocolClient(tcpReader, ianaLookup, parser, options);
         var request = new WhoisRequest("example.com")
         {
             WhoisServer = new HostName("whois.custom.com"),
@@ -227,7 +227,7 @@ public class WhoisProtocolClientTests
         await client.Query(request, CancellationToken.None);
 
         // Bootstrap must never be consulted when WhoisServer is supplied explicitly
-        await bootstrap.DidNotReceiveWithAnyArgs().GetWhoisServer(default!, default);
+        await ianaLookup.DidNotReceiveWithAnyArgs().GetWhoisServer(default!, default);
         await tcpReader.Received(1).Read(
             "whois.custom.com", 43, "example.com", DefaultEncoding, DefaultTimeout, Arg.Any<CancellationToken>());
     }
@@ -236,11 +236,11 @@ public class WhoisProtocolClientTests
     public async Task Query_FollowReferrerFalse_StopsAfterFirstServer()
     {
         var tcpReader = Substitute.For<ITcpReader>();
-        var bootstrap = Substitute.For<IBootstrapRegistry>();
+        var ianaLookup = Substitute.For<IIanaServerLookup>();
         var parser = new WhoisParser();
         var options = new WhoisOptions();
 
-        bootstrap.GetWhoisServer("com", Arg.Any<CancellationToken>())
+        ianaLookup.GetWhoisServer("com", Arg.Any<CancellationToken>())
             .Returns("whois.first.com");
 
         // First server response contains a referral to a second server
@@ -249,7 +249,7 @@ public class WhoisProtocolClientTests
             .Read("whois.first.com", 43, "example.com", DefaultEncoding, DefaultTimeout, Arg.Any<CancellationToken>())
             .Returns(firstContent);
 
-        var client = new WhoisProtocolClient(tcpReader, bootstrap, parser, options);
+        var client = new WhoisProtocolClient(tcpReader, ianaLookup, parser, options);
         var request = new WhoisRequest("example.com")
         {
             FollowReferrer = false,
@@ -270,11 +270,11 @@ public class WhoisProtocolClientTests
     public async Task Query_EmptyResponseFromServer_ReturnsUnknownStatus()
     {
         var tcpReader = Substitute.For<ITcpReader>();
-        var bootstrap = Substitute.For<IBootstrapRegistry>();
+        var ianaLookup = Substitute.For<IIanaServerLookup>();
         var parser = new WhoisParser();
         var options = new WhoisOptions();
 
-        bootstrap.GetWhoisServer("com", Arg.Any<CancellationToken>())
+        ianaLookup.GetWhoisServer("com", Arg.Any<CancellationToken>())
             .Returns("whois.empty.com");
 
         // Server returns empty content; no fields can be parsed
@@ -282,7 +282,7 @@ public class WhoisProtocolClientTests
             .Read("whois.empty.com", 43, "example.com", DefaultEncoding, DefaultTimeout, Arg.Any<CancellationToken>())
             .Returns(string.Empty);
 
-        var client = new WhoisProtocolClient(tcpReader, bootstrap, parser, options);
+        var client = new WhoisProtocolClient(tcpReader, ianaLookup, parser, options);
         var request = new WhoisRequest("example.com");
 
         var response = await client.Query(request, CancellationToken.None);
@@ -294,14 +294,14 @@ public class WhoisProtocolClientTests
     public async Task Query_NoBootstrapServerFound_ThrowsWhoisException()
     {
         var tcpReader = Substitute.For<ITcpReader>();
-        var bootstrap = Substitute.For<IBootstrapRegistry>();
+        var ianaLookup = Substitute.For<IIanaServerLookup>();
         var parser = new WhoisParser();
         var options = new WhoisOptions();
 
-        bootstrap.GetWhoisServer("unknown", Arg.Any<CancellationToken>())
+        ianaLookup.GetWhoisServer("unknown", Arg.Any<CancellationToken>())
             .Returns((string?)null);
 
-        var client = new WhoisProtocolClient(tcpReader, bootstrap, parser, options);
+        var client = new WhoisProtocolClient(tcpReader, ianaLookup, parser, options);
         var request = new WhoisRequest("example.unknown");
 
         var ex = await Assert.ThrowsAsync<WhoisException>(() =>

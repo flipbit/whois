@@ -47,16 +47,26 @@ public static class WhoisServiceCollectionExtensions
         services.AddSingleton<WhoisParser>(sp =>
             new WhoisParser(server => sp.GetRequiredService<ITemplatePackProvider>().GetCachedTemplatePath(server)));
 
-        // Bootstrap registry
-        services.AddHttpClient("BootstrapRegistry");
-        services.AddSingleton<IBootstrapRegistry>(sp =>
+        // RDAP registry cache
+        services.AddHttpClient("RdapRegistryCache");
+        services.AddSingleton<IRdapRegistryCache>(sp =>
         {
             var factory = sp.GetRequiredService<IHttpClientFactory>();
             var options = sp.GetRequiredService<IOptions<WhoisOptions>>().Value;
-            return new BootstrapRegistry(
-                factory.CreateClient("BootstrapRegistry"),
+            return new RdapRegistryCache(
+                factory.CreateClient("RdapRegistryCache"),
                 options,
-                sp.GetRequiredService<ILogger<BootstrapRegistry>>());
+                sp.GetRequiredService<ILogger<RdapRegistryCache>>());
+        });
+
+        // IANA server lookup
+        services.AddSingleton<IIanaServerLookup>(sp =>
+        {
+            var options = sp.GetRequiredService<IOptions<WhoisOptions>>().Value;
+            return new IanaServerLookup(
+                sp.GetRequiredService<ITcpReader>(),
+                options,
+                sp.GetRequiredService<ILogger<IanaServerLookup>>());
         });
 
         // Protocol clients
@@ -66,7 +76,7 @@ public static class WhoisServiceCollectionExtensions
         services.AddTransient<IProtocolClient, WhoisProtocolClient>(sp =>
             new WhoisProtocolClient(
                 sp.GetRequiredService<ITcpReader>(),
-                sp.GetRequiredService<IBootstrapRegistry>(),
+                sp.GetRequiredService<IIanaServerLookup>(),
                 sp.GetRequiredService<WhoisParser>(),
                 sp.GetRequiredService<IOptions<WhoisOptions>>().Value,
                 sp.GetRequiredService<ILogger<WhoisProtocolClient>>()));
@@ -75,7 +85,7 @@ public static class WhoisServiceCollectionExtensions
             var factory = sp.GetRequiredService<IHttpClientFactory>();
             return new RdapProtocolClient(
                 factory.CreateClient("RdapProtocolClient"),
-                sp.GetRequiredService<IBootstrapRegistry>(),
+                sp.GetRequiredService<IRdapRegistryCache>(),
                 sp.GetRequiredService<IOptions<WhoisOptions>>().Value,
                 sp.GetRequiredService<ILogger<RdapProtocolClient>>());
         });
@@ -85,7 +95,8 @@ public static class WhoisServiceCollectionExtensions
             new WhoisLookup(
                 sp.GetRequiredService<IOptions<WhoisOptions>>(),
                 sp.GetRequiredService<ILogger<WhoisLookup>>(),
-                sp.GetRequiredService<IBootstrapRegistry>(),
+                sp.GetRequiredService<IRdapRegistryCache>(),
+                sp.GetRequiredService<IIanaServerLookup>(),
                 sp.GetRequiredService<IEnumerable<IProtocolClient>>(),
                 sp.GetRequiredService<ITemplatePackProvider>()));
     }

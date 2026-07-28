@@ -7,4 +7,9 @@ public interface IWhoisLookup
 {
     public Task<LookupResult<DomainInfo>> Lookup(string domain, CancellationToken ct = default);
     public Task<LookupResult<DomainInfo>> Lookup(WhoisRequest request, CancellationToken ct = default);
+
+    /// <summary>
+    /// Clears all cached server discovery data (both RDAP and WHOIS).
+    /// </summary>
+    public void ClearCache();
 }

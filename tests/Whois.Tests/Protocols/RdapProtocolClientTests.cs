@@ -185,11 +185,11 @@ public class RdapProtocolClientTests
     [InlineData("example\\com")]
     public async Task Query_InvalidQueryChars_Throws(string query)
     {
-        var bootstrap = Substitute.For<IBootstrapRegistry>();
-        bootstrap.GetRdapBaseUrl("com", Arg.Any<CancellationToken>())
+        var rdapRegistry = Substitute.For<IRdapRegistryCache>();
+        rdapRegistry.GetBaseUrl("com", Arg.Any<CancellationToken>())
             .Returns("https://rdap.example.com/");
 
-        var client = new RdapProtocolClient(new HttpClient(), bootstrap, new WhoisOptions());
+        var client = new RdapProtocolClient(new HttpClient(), rdapRegistry, new WhoisOptions());
         var request = new WhoisRequest(query);
 
         await Assert.ThrowsAsync<WhoisException>(() => client.Query(request, CancellationToken.None));
@@ -198,11 +198,11 @@ public class RdapProtocolClientTests
     [Fact]
     public async Task Query_NoRdapEndpoint_Throws()
     {
-        var bootstrap = Substitute.For<IBootstrapRegistry>();
-        bootstrap.GetRdapBaseUrl("xyz", Arg.Any<CancellationToken>())
+        var rdapRegistry = Substitute.For<IRdapRegistryCache>();
+        rdapRegistry.GetBaseUrl("xyz", Arg.Any<CancellationToken>())
             .Returns((string?)null);
 
-        var client = new RdapProtocolClient(new HttpClient(), bootstrap, new WhoisOptions());
+        var client = new RdapProtocolClient(new HttpClient(), rdapRegistry, new WhoisOptions());
         var request = new WhoisRequest("example.xyz");
 
         var ex = await Assert.ThrowsAsync<WhoisException>(() => client.Query(request, CancellationToken.None));
@@ -212,8 +212,8 @@ public class RdapProtocolClientTests
     [Fact]
     public void Protocol_ReturnsRdap()
     {
-        var bootstrap = Substitute.For<IBootstrapRegistry>();
-        var client = new RdapProtocolClient(new HttpClient(), bootstrap, new WhoisOptions());
+        var rdapRegistry = Substitute.For<IRdapRegistryCache>();
+        var client = new RdapProtocolClient(new HttpClient(), rdapRegistry, new WhoisOptions());
 
         Assert.Equal(LookupProtocol.Rdap, client.Protocol);
     }
@@ -221,13 +221,13 @@ public class RdapProtocolClientTests
     [Fact]
     public async Task Query_Http404_ReturnsNotFound()
     {
-        var bootstrap = Substitute.For<IBootstrapRegistry>();
-        bootstrap.GetRdapBaseUrl("com", Arg.Any<CancellationToken>())
+        var rdapRegistry = Substitute.For<IRdapRegistryCache>();
+        rdapRegistry.GetBaseUrl("com", Arg.Any<CancellationToken>())
             .Returns("https://rdap.example.com/");
 
         var handler = new FakeHttpHandler(HttpStatusCode.NotFound, string.Empty);
         var httpClient = new HttpClient(handler);
-        var client = new RdapProtocolClient(httpClient, bootstrap, new WhoisOptions());
+        var client = new RdapProtocolClient(httpClient, rdapRegistry, new WhoisOptions());
         var request = new WhoisRequest("notfound.com");
 
         var response = await client.Query(request, CancellationToken.None);
@@ -240,13 +240,13 @@ public class RdapProtocolClientTests
     [Fact]
     public async Task Query_Http429_ReturnsThrottled()
     {
-        var bootstrap = Substitute.For<IBootstrapRegistry>();
-        bootstrap.GetRdapBaseUrl("com", Arg.Any<CancellationToken>())
+        var rdapRegistry = Substitute.For<IRdapRegistryCache>();
+        rdapRegistry.GetBaseUrl("com", Arg.Any<CancellationToken>())
             .Returns("https://rdap.example.com/");
 
         var handler = new FakeHttpHandler((HttpStatusCode)429, string.Empty);
         var httpClient = new HttpClient(handler);
-        var client = new RdapProtocolClient(httpClient, bootstrap, new WhoisOptions());
+        var client = new RdapProtocolClient(httpClient, rdapRegistry, new WhoisOptions());
         var request = new WhoisRequest("throttled.com");
 
         var response = await client.Query(request, CancellationToken.None);
@@ -258,14 +258,14 @@ public class RdapProtocolClientTests
     [Fact]
     public async Task Query_ValidResponse_ParsesDomainInfo()
     {
-        var bootstrap = Substitute.For<IBootstrapRegistry>();
-        bootstrap.GetRdapBaseUrl("com", Arg.Any<CancellationToken>())
+        var rdapRegistry = Substitute.For<IRdapRegistryCache>();
+        rdapRegistry.GetBaseUrl("com", Arg.Any<CancellationToken>())
             .Returns("https://rdap.example.com/");
 
         var json = File.ReadAllText(Path.Combine("..", "..", "..", "Samples", "rdap", "google-com.json"));
         var handler = new FakeHttpHandler(HttpStatusCode.OK, json);
         var httpClient = new HttpClient(handler);
-        var client = new RdapProtocolClient(httpClient, bootstrap, new WhoisOptions());
+        var client = new RdapProtocolClient(httpClient, rdapRegistry, new WhoisOptions());
         var request = new WhoisRequest("google.com");
 
         var response = await client.Query(request, CancellationToken.None);
@@ -280,13 +280,13 @@ public class RdapProtocolClientTests
     [Fact]
     public async Task Query_ServerError_Throws()
     {
-        var bootstrap = Substitute.For<IBootstrapRegistry>();
-        bootstrap.GetRdapBaseUrl("com", Arg.Any<CancellationToken>())
+        var rdapRegistry = Substitute.For<IRdapRegistryCache>();
+        rdapRegistry.GetBaseUrl("com", Arg.Any<CancellationToken>())
             .Returns("https://rdap.example.com/");
 
         var handler = new FakeHttpHandler(HttpStatusCode.InternalServerError, string.Empty);
         var httpClient = new HttpClient(handler);
-        var client = new RdapProtocolClient(httpClient, bootstrap, new WhoisOptions());
+        var client = new RdapProtocolClient(httpClient, rdapRegistry, new WhoisOptions());
         var request = new WhoisRequest("example.com");
 
         await Assert.ThrowsAsync<WhoisException>(() => client.Query(request, CancellationToken.None));
@@ -295,14 +295,14 @@ public class RdapProtocolClientTests
     [Fact]
     public async Task Query_SlowResponseBody_TimesOut()
     {
-        var bootstrap = Substitute.For<IBootstrapRegistry>();
-        bootstrap.GetRdapBaseUrl("com", Arg.Any<CancellationToken>())
+        var rdapRegistry = Substitute.For<IRdapRegistryCache>();
+        rdapRegistry.GetBaseUrl("com", Arg.Any<CancellationToken>())
             .Returns("https://rdap.example.com/");
 
         var handler = new SlowBodyStreamHandler();
         var httpClient = new HttpClient(handler);
         var options = new WhoisOptions { TimeoutSeconds = 1 };
-        var client = new RdapProtocolClient(httpClient, bootstrap, options);
+        var client = new RdapProtocolClient(httpClient, rdapRegistry, options);
         var request = new WhoisRequest("slow.com");
 
         var ex = await Assert.ThrowsAsync<WhoisException>(() => client.Query(request, CancellationToken.None));
@@ -313,14 +313,14 @@ public class RdapProtocolClientTests
     [Fact]
     public async Task Query_RedirectToPrivateIp_Throws()
     {
-        var bootstrap = Substitute.For<IBootstrapRegistry>();
-        bootstrap.GetRdapBaseUrl("com", Arg.Any<CancellationToken>())
+        var rdapRegistry = Substitute.For<IRdapRegistryCache>();
+        rdapRegistry.GetBaseUrl("com", Arg.Any<CancellationToken>())
             .Returns("https://rdap.example.com/");
 
         // First response is a 301 redirect to a private IP address.
         var handler = new RedirectHandler("https://192.168.1.1/domain/evil.com");
         var httpClient = new HttpClient(handler);
-        var client = new RdapProtocolClient(httpClient, bootstrap, new WhoisOptions());
+        var client = new RdapProtocolClient(httpClient, rdapRegistry, new WhoisOptions());
         var request = new WhoisRequest("evil.com");
 
         var ex = await Assert.ThrowsAsync<WhoisException>(() => client.Query(request, CancellationToken.None));
@@ -330,14 +330,14 @@ public class RdapProtocolClientTests
     [Fact]
     public async Task Query_RedirectChainExceedsLimit_Throws()
     {
-        var bootstrap = Substitute.For<IBootstrapRegistry>();
-        bootstrap.GetRdapBaseUrl("com", Arg.Any<CancellationToken>())
+        var rdapRegistry = Substitute.For<IRdapRegistryCache>();
+        rdapRegistry.GetBaseUrl("com", Arg.Any<CancellationToken>())
             .Returns("https://rdap.example.com/");
 
         // Always redirects -- creates an infinite chain that should be cut off at MaxRedirects + 1 (6 total requests).
         var handler = new CountingRedirectHandler("https://rdap.other.com/domain/loop.com");
         var httpClient = new HttpClient(handler);
-        var client = new RdapProtocolClient(httpClient, bootstrap, new WhoisOptions());
+        var client = new RdapProtocolClient(httpClient, rdapRegistry, new WhoisOptions());
         var request = new WhoisRequest("loop.com");
 
         var ex = await Assert.ThrowsAsync<WhoisException>(() => client.Query(request, CancellationToken.None));
@@ -349,8 +349,8 @@ public class RdapProtocolClientTests
     [Fact]
     public async Task Query_ValidRedirectChain_Succeeds()
     {
-        var bootstrap = Substitute.For<IBootstrapRegistry>();
-        bootstrap.GetRdapBaseUrl("com", Arg.Any<CancellationToken>())
+        var rdapRegistry = Substitute.For<IRdapRegistryCache>();
+        rdapRegistry.GetBaseUrl("com", Arg.Any<CancellationToken>())
             .Returns("https://rdap.example.com/");
 
         var json = File.ReadAllText(Path.Combine("..", "..", "..", "Samples", "rdap", "google-com.json"));
@@ -358,7 +358,7 @@ public class RdapProtocolClientTests
         // Redirect twice then return 200 OK.
         var handler = new RedirectThenOkHandler(redirectCount: 2, location: "https://rdap.other.com/domain/google.com", okBody: json);
         var httpClient = new HttpClient(handler);
-        var client = new RdapProtocolClient(httpClient, bootstrap, new WhoisOptions());
+        var client = new RdapProtocolClient(httpClient, rdapRegistry, new WhoisOptions());
         var request = new WhoisRequest("google.com");
 
         var response = await client.Query(request, CancellationToken.None);
@@ -369,13 +369,13 @@ public class RdapProtocolClientTests
     [Fact]
     public async Task Query_HttpRequestException_WrapsInWhoisException()
     {
-        var bootstrap = Substitute.For<IBootstrapRegistry>();
-        bootstrap.GetRdapBaseUrl("com", Arg.Any<CancellationToken>())
+        var rdapRegistry = Substitute.For<IRdapRegistryCache>();
+        rdapRegistry.GetBaseUrl("com", Arg.Any<CancellationToken>())
             .Returns("https://rdap.example.com/");
 
         var handler = new HttpRequestExceptionHandler("Connection reset by peer");
         var httpClient = new HttpClient(handler);
-        var client = new RdapProtocolClient(httpClient, bootstrap, new WhoisOptions());
+        var client = new RdapProtocolClient(httpClient, rdapRegistry, new WhoisOptions());
         var request = new WhoisRequest("example.com");
 
         var ex = await Assert.ThrowsAsync<WhoisException>(() => client.Query(request, CancellationToken.None));

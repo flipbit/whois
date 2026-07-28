@@ -51,7 +51,7 @@ public class BootstrapCommand : AsyncCommand<BootstrapSettings>
         AnsiConsole.MarkupLine("Fetching IANA RDAP bootstrap data...");
         var rdapJson = await _httpClient.GetStringAsync(
             IanaRdapBootstrapUrl).ConfigureAwait(false);
-        var rdapEndpoints = BootstrapRegistry.ParseBootstrapJson(rdapJson);
+        var rdapEndpoints = RdapRegistryCache.ParseBootstrapJson(rdapJson);
         AnsiConsole.MarkupLine("Found [green]{0}[/] TLDs with RDAP endpoints", rdapEndpoints.Count);
 
         // Load existing WHOIS domains for cross-reference
