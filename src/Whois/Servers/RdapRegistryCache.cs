@@ -124,7 +124,7 @@ public class RdapRegistryCache : IRdapRegistryCache
             Dictionary<string, string> result;
             try
             {
-                result = (Dictionary<string, string>)ParseBootstrapJson(json);
+                result = ParseBootstrapJson(json);
             }
             catch (JsonException ex)
             {
@@ -171,7 +171,7 @@ public class RdapRegistryCache : IRdapRegistryCache
     /// Parses an IANA RDAP bootstrap JSON file, returning a map of TLD to HTTPS base URL.
     /// Only HTTPS URLs are accepted; entries with no HTTPS URL are skipped.
     /// </summary>
-    public static IDictionary<string, string> ParseBootstrapJson(string json)
+    internal static Dictionary<string, string> ParseBootstrapJson(string json)
     {
         var result = new Dictionary<string, string>(StringComparer.OrdinalIgnoreCase);
         using var doc = JsonDocument.Parse(json);
