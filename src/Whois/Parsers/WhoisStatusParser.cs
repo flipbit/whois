@@ -74,6 +74,6 @@ public class WhoisStatusParser
 
     private static bool Equals(string? status, string value)
     {
-        return string.Compare(status, value, StringComparison.InvariantCultureIgnoreCase) == 0;
+        return string.Compare(status, value, StringComparison.OrdinalIgnoreCase) == 0;
     }
 }
