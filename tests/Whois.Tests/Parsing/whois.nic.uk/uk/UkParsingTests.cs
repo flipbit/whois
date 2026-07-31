@@ -20,7 +20,7 @@ public class UkParsingTests : ParsingTests
         var response = parser.Parse("whois.nic.uk", sample);
 
         Assert.True(sample.Length > 0);
-        Assert.Equal(WhoisStatus.Found, response.Status);
+        Assert.Equal(RegistrationStatus.Found, response.Status);
 
         Assert.Equal(0, response.ParsingErrors);
         Assert.Equal("whois.nic.uk/uk/found/01", response.TemplateName);
@@ -66,7 +66,7 @@ public class UkParsingTests : ParsingTests
         var response = parser.Parse("whois.nic.uk", sample);
 
         Assert.True(sample.Length > 0);
-        Assert.Equal(WhoisStatus.Found, response.Status);
+        Assert.Equal(RegistrationStatus.Found, response.Status);
 
         Assert.Equal(0, response.ParsingErrors);
         Assert.Equal("whois.nic.uk/uk/found/01", response.TemplateName);
@@ -103,7 +103,7 @@ public class UkParsingTests : ParsingTests
         var response = parser.Parse("whois.nic.uk", sample);
 
         Assert.True(sample.Length > 0);
-        Assert.Equal(WhoisStatus.Found, response.Status);
+        Assert.Equal(RegistrationStatus.Found, response.Status);
 
         Assert.Equal(0, response.ParsingErrors);
         Assert.Equal("whois.nic.uk/uk/found/01", response.TemplateName);
@@ -145,7 +145,7 @@ public class UkParsingTests : ParsingTests
         var response = parser.Parse("whois.nic.uk", sample);
 
         Assert.True(sample.Length > 0);
-        Assert.Equal(WhoisStatus.Found, response.Status);
+        Assert.Equal(RegistrationStatus.Found, response.Status);
 
         Assert.Equal(0, response.ParsingErrors);
         Assert.Equal("whois.nic.uk/uk/found/01", response.TemplateName);
@@ -190,7 +190,7 @@ public class UkParsingTests : ParsingTests
         var response = parser.Parse("whois.nic.uk", sample);
 
         Assert.True(sample.Length > 0);
-        Assert.Equal(WhoisStatus.Found, response.Status);
+        Assert.Equal(RegistrationStatus.Found, response.Status);
 
         Assert.Equal(0, response.ParsingErrors);
         Assert.Equal("whois.nic.uk/uk/found/01", response.TemplateName);
@@ -235,7 +235,7 @@ public class UkParsingTests : ParsingTests
         var response = parser.Parse("whois.nic.uk", sample);
 
         Assert.True(sample.Length > 0);
-        Assert.Equal(WhoisStatus.NotFound, response.Status);
+        Assert.Equal(RegistrationStatus.NotFound, response.Status);
 
         Assert.Equal(0, response.ParsingErrors);
         Assert.Equal("whois.nic.uk/uk/not-found/01", response.TemplateName);
@@ -252,7 +252,7 @@ public class UkParsingTests : ParsingTests
         var response = parser.Parse("whois.nic.uk", sample);
 
         Assert.True(sample.Length > 0);
-        Assert.Equal(WhoisStatus.Other, response.Status);
+        Assert.Equal(RegistrationStatus.Other, response.Status);
 
         Assert.Equal(0, response.ParsingErrors);
         Assert.Equal("whois.nic.uk/uk/found/01", response.TemplateName);
@@ -299,7 +299,7 @@ public class UkParsingTests : ParsingTests
         var response = parser.Parse("whois.nic.uk", sample);
 
         Assert.True(sample.Length > 0);
-        Assert.Equal(WhoisStatus.Reserved, response.Status);
+        Assert.Equal(RegistrationStatus.Reserved, response.Status);
 
         Assert.Equal(0, response.ParsingErrors);
         Assert.Equal("whois.nic.uk/uk/found/01", response.TemplateName);
@@ -345,7 +345,7 @@ public class UkParsingTests : ParsingTests
         var response = parser.Parse("whois.nic.uk", sample);
 
         Assert.True(sample.Length > 0);
-        Assert.Equal(WhoisStatus.Other, response.Status);
+        Assert.Equal(RegistrationStatus.Other, response.Status);
 
         Assert.Equal(0, response.ParsingErrors);
         Assert.Equal("whois.nic.uk/uk/found/01", response.TemplateName);
@@ -391,7 +391,7 @@ public class UkParsingTests : ParsingTests
         var response = parser.Parse("whois.nic.uk", sample);
 
         Assert.True(sample.Length > 0);
-        Assert.Equal(WhoisStatus.Other, response.Status);
+        Assert.Equal(RegistrationStatus.Other, response.Status);
 
         Assert.Equal(0, response.ParsingErrors);
         Assert.Equal("whois.nic.uk/uk/found/01", response.TemplateName);
@@ -437,7 +437,7 @@ public class UkParsingTests : ParsingTests
         var response = parser.Parse("whois.nic.uk", sample);
 
         Assert.True(sample.Length > 0);
-        Assert.Equal(WhoisStatus.Found, response.Status);
+        Assert.Equal(RegistrationStatus.Found, response.Status);
 
         Assert.Equal(0, response.ParsingErrors);
         Assert.Equal("whois.nic.uk/uk/found/01", response.TemplateName);
@@ -485,7 +485,7 @@ public class UkParsingTests : ParsingTests
         var response = parser.Parse("whois.nic.uk", sample);
 
         Assert.True(sample.Length > 0);
-        Assert.Equal(WhoisStatus.Suspended, response.Status);
+        Assert.Equal(RegistrationStatus.Suspended, response.Status);
 
         Assert.Equal(0, response.ParsingErrors);
         Assert.Equal("whois.nic.uk/uk/found/01", response.TemplateName);
@@ -526,7 +526,7 @@ public class UkParsingTests : ParsingTests
         var response = parser.Parse("whois.nic.uk", sample);
 
         Assert.True(sample.Length > 0);
-        Assert.Equal(WhoisStatus.Throttled, response.Status);
+        Assert.Equal(RegistrationStatus.Throttled, response.Status);
 
         Assert.Equal(0, response.ParsingErrors);
         Assert.Equal("whois.nic.uk/uk/throttled/01", response.TemplateName);
@@ -543,7 +543,7 @@ public class UkParsingTests : ParsingTests
         var response = parser.Parse("whois.nic.uk", sample);
 
         Assert.True(sample.Length > 0);
-        Assert.Equal(WhoisStatus.NotFound, response.Status);
+        Assert.Equal(RegistrationStatus.NotFound, response.Status);
 
         Assert.Equal(0, response.ParsingErrors);
         Assert.Equal("whois.nic.uk/uk/not-found/01", response.TemplateName);
@@ -560,7 +560,7 @@ public class UkParsingTests : ParsingTests
         var response = parser.Parse("whois.nic.uk", sample);
 
         Assert.True(sample.Length > 0);
-        Assert.Equal(WhoisStatus.Invalid, response.Status);
+        Assert.Equal(RegistrationStatus.Invalid, response.Status);
 
         Assert.Equal(0, response.ParsingErrors);
         Assert.Equal("whois.nic.uk/uk/invalid/01", response.TemplateName);
@@ -577,7 +577,7 @@ public class UkParsingTests : ParsingTests
         var response = parser.Parse("whois.nic.uk", sample);
 
         Assert.True(sample.Length > 0);
-        Assert.Equal(WhoisStatus.Found, response.Status);
+        Assert.Equal(RegistrationStatus.Found, response.Status);
 
         Assert.Equal(0, response.ParsingErrors);
         Assert.Equal("whois.nic.uk/uk/found/01", response.TemplateName);
@@ -625,7 +625,7 @@ public class UkParsingTests : ParsingTests
         var response = parser.Parse("whois.nic.uk", sample);
 
         Assert.True(sample.Length > 0);
-        Assert.Equal(WhoisStatus.Reserved, response.Status);
+        Assert.Equal(RegistrationStatus.Reserved, response.Status);
 
         Assert.Equal(0, response.ParsingErrors);
         Assert.Equal("whois.nic.uk/uk/found/01", response.TemplateName);
@@ -670,7 +670,7 @@ public class UkParsingTests : ParsingTests
         var sample = SampleReader.Read("whois.nic.uk", "uk", "suspended", "suspended_status_suspended.txt");
         var response = parser.Parse("whois.nic.uk", sample);
 
-        Assert.Equal(WhoisStatus.Suspended, response.Status);
+        Assert.Equal(RegistrationStatus.Suspended, response.Status);
 
         Assert.Equal(0, response.ParsingErrors);
         Assert.Equal("whois.nic.uk/uk/found/01", response.TemplateName);

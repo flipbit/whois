@@ -1,11 +1,12 @@
 using Tokens;
+using Whois.Protocols;
 
 namespace Whois.Parsers.Fixups;
 
 /// <summary>
 /// Extracts referential contact details from WHOIS responses
 /// </summary>
-public class MultipleContactFixup : IFixup
+internal class MultipleContactFixup : IFixup
 {
     public virtual bool CanFixup(TokenizeResult result)
     {
@@ -20,58 +21,57 @@ public class MultipleContactFixup : IFixup
                string.Equals(result.Template.Name, "whois.nic.at/at/found/01", StringComparison.Ordinal);
     }
 
-    public void Fixup(TokenizeResult result, WhoisResponse response)
+    public void Fixup(TokenizeResult result, WhoisRecord record)
     {
-
-        if (TryGetRegistrant(result.Tokens.Matches, response, out var registrant))
+        if (TryGetRegistrant(result.Tokens.Matches, record, out var registrant))
         {
-            response.Registrant = registrant;
+            record.Registrant = registrant;
         }
 
         // Lookup Ids
-        if (TryGetContactId(response.AdminContact, result.Tokens.Matches, "admin", out var adminContactId))
+        if (TryGetContactId(record.AdminContact, result.Tokens.Matches, "admin", out var adminContactId))
         {
-            response.AdminContact = new Contact { RegistryId = adminContactId };
+            record.AdminContact = new WhoisContact { RegistryId = adminContactId };
         }
 
-        if (TryGetContactId(response.Registrant, result.Tokens.Matches, "registrant", out var registrantId))
+        if (TryGetContactId(record.Registrant, result.Tokens.Matches, "registrant", out var registrantId))
         {
-            response.Registrant = new Contact { RegistryId = registrantId };
+            record.Registrant = new WhoisContact { RegistryId = registrantId };
         }
 
-        if (TryGetContactId(response.BillingContact, result.Tokens.Matches, "billing", out var billingContactId))
+        if (TryGetContactId(record.BillingContact, result.Tokens.Matches, "billing", out var billingContactId))
         {
-            response.BillingContact = new Contact { RegistryId = billingContactId };
+            record.BillingContact = new WhoisContact { RegistryId = billingContactId };
         }
 
-        if (TryGetContactId(response.TechnicalContact, result.Tokens.Matches, "tech", out var techContactId))
+        if (TryGetContactId(record.TechnicalContact, result.Tokens.Matches, "tech", out var techContactId))
         {
-            response.TechnicalContact = new Contact { RegistryId = techContactId };
+            record.TechnicalContact = new WhoisContact { RegistryId = techContactId };
         }
 
-        if (TryGetContact(response.AdminContact, result.Tokens.Matches, out var adminContact))
+        if (TryGetContact(record.AdminContact, result.Tokens.Matches, out var adminContact))
         {
-            response.AdminContact = adminContact;
+            record.AdminContact = adminContact;
         }
 
-        if (TryGetContact(response.TechnicalContact, result.Tokens.Matches, out var technicalContact))
+        if (TryGetContact(record.TechnicalContact, result.Tokens.Matches, out var technicalContact))
         {
-            response.TechnicalContact = technicalContact;
+            record.TechnicalContact = technicalContact;
         }
 
-        if (TryGetContact(response.ZoneContact, result.Tokens.Matches, out var zoneContact))
+        if (TryGetContact(record.ZoneContact, result.Tokens.Matches, out var zoneContact))
         {
-            response.ZoneContact = zoneContact;
+            record.ZoneContact = zoneContact;
         }
 
-        if (TryGetContact(response.BillingContact, result.Tokens.Matches, out var billingContact))
+        if (TryGetContact(record.BillingContact, result.Tokens.Matches, out var billingContact))
         {
-            response.BillingContact = billingContact;
+            record.BillingContact = billingContact;
         }
 
-        if (TryGetContact(response.Registrant, result.Tokens.Matches, out var registrantContact))
+        if (TryGetContact(record.Registrant, result.Tokens.Matches, out var registrantContact))
         {
-            response.Registrant = registrantContact;
+            record.Registrant = registrantContact;
         }
     }
 
@@ -83,7 +83,7 @@ public class MultipleContactFixup : IFixup
         return contactIdMatch?.Location.Paragraph;
     }
 
-    protected virtual bool TryGetRegistrant(IReadOnlyList<TokenMatch> matches, WhoisResponse response, out Contact? contact)
+    protected virtual bool TryGetRegistrant(IReadOnlyList<TokenMatch> matches, WhoisRecord record, out WhoisContact? contact)
     {
         contact = null;
 
@@ -91,7 +91,7 @@ public class MultipleContactFixup : IFixup
 
         if (!paragraph.HasValue) return false;
 
-        contact = new Contact();
+        contact = new WhoisContact();
         var count = 0;
 
         foreach (var match in matches)
@@ -128,12 +128,12 @@ public class MultipleContactFixup : IFixup
                 case "Changed":
                     var changedDto = (DateTimeOffset)match.Value;
                     var dateTime = changedDto.UtcDateTime;
-                    if (dateTime > response.Updated ||
-                        !response.Updated.HasValue) response.Updated = dateTime;
+                    if (dateTime > record.Updated ||
+                        !record.Updated.HasValue) record.Updated = dateTime;
                     break;
 
                 case "Created":
-                    response.Registered = ((DateTimeOffset)match.Value).UtcDateTime;
+                    record.Registered = ((DateTimeOffset)match.Value).UtcDateTime;
                     break;
             }
         }
@@ -141,7 +141,7 @@ public class MultipleContactFixup : IFixup
         return count > 0;
     }
 
-    protected virtual bool TryGetContact(Contact? input, IReadOnlyList<TokenMatch> matches, out Contact? contact)
+    protected virtual bool TryGetContact(WhoisContact? input, IReadOnlyList<TokenMatch> matches, out WhoisContact? contact)
     {
         contact = null;
 
@@ -158,7 +158,7 @@ public class MultipleContactFixup : IFixup
 
         var paragraph = contactIdMatch.Location.Paragraph;
 
-        contact = new Contact();
+        contact = new WhoisContact();
 
         foreach (var match in matches)
         {
@@ -203,7 +203,7 @@ public class MultipleContactFixup : IFixup
         return true;
     }
 
-    protected virtual bool TryGetContactId(Contact? input, IReadOnlyList<TokenMatch> matches, string name, out string? contactId)
+    protected virtual bool TryGetContactId(WhoisContact? input, IReadOnlyList<TokenMatch> matches, string name, out string? contactId)
     {
         contactId = null;
 

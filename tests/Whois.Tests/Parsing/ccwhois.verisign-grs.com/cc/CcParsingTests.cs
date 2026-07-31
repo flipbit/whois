@@ -20,7 +20,7 @@ public class CcParsingTests : ParsingTests
         var response = parser.Parse("ccwhois.verisign-grs.com", sample);
 
         Assert.True(sample.Length > 0);
-        Assert.Equal(WhoisStatus.Found, response.Status);
+        Assert.Equal(RegistrationStatus.Found, response.Status);
 
         Assert.Equal("m4r0c-s3curity.cc", response.DomainName.ToString());
 
@@ -44,7 +44,7 @@ public class CcParsingTests : ParsingTests
         var response = parser.Parse("ccwhois.verisign-grs.com", sample);
 
         Assert.True(sample.Length > 0);
-        Assert.Equal(WhoisStatus.NotFound, response.Status);
+        Assert.Equal(RegistrationStatus.NotFound, response.Status);
         Assert.Equal("u34jedzcq.cc", response.DomainName.ToString());
     }
 
@@ -55,7 +55,7 @@ public class CcParsingTests : ParsingTests
         var response = parser.Parse("ccwhois.verisign-grs.com", sample);
 
         Assert.True(sample.Length > 0);
-        Assert.Equal(WhoisStatus.Found, response.Status);
+        Assert.Equal(RegistrationStatus.Found, response.Status);
 
         Assert.Equal("google.cc", response.DomainName.ToString());
         Assert.Equal("86420657_DOMAIN_CC-VRSN", response.RegistryDomainId);

@@ -20,7 +20,7 @@ public class MxParsingTests : ParsingTests
         var response = parser.Parse("whois.nic.mx", sample);
 
         Assert.True(sample.Length > 0);
-        Assert.Equal(WhoisStatus.Found, response.Status);
+        Assert.Equal(RegistrationStatus.Found, response.Status);
 
         Assert.Equal(0, response.ParsingErrors);
         Assert.Equal("whois.nic.mx/mx/found/01", response.TemplateName);
@@ -88,7 +88,7 @@ public class MxParsingTests : ParsingTests
         var response = parser.Parse("whois.nic.mx", sample);
 
         Assert.True(sample.Length > 0);
-        Assert.Equal(WhoisStatus.NotFound, response.Status);
+        Assert.Equal(RegistrationStatus.NotFound, response.Status);
 
         Assert.Equal(0, response.ParsingErrors);
         Assert.Equal("whois.nic.mx/mx/not-found/01", response.TemplateName);
@@ -103,7 +103,7 @@ public class MxParsingTests : ParsingTests
         var response = parser.Parse("whois.nic.mx", sample);
 
         Assert.True(sample.Length > 0);
-        Assert.Equal(WhoisStatus.Found, response.Status);
+        Assert.Equal(RegistrationStatus.Found, response.Status);
 
         Assert.Equal(0, response.ParsingErrors);
         Assert.Equal("whois.nic.mx/mx/found/01", response.TemplateName);

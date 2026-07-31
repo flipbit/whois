@@ -20,7 +20,7 @@ public class ComParsingTests : ParsingTests
         var response = parser.Parse("whois.verisign-grs.com", sample);
 
         Assert.True(sample.Length > 0);
-        Assert.Equal(WhoisStatus.Found, response.Status);
+        Assert.Equal(RegistrationStatus.Found, response.Status);
 
         Assert.Equal(0, response.ParsingErrors);
         Assert.Equal("generic/tld/found/02", response.TemplateName);
@@ -50,7 +50,7 @@ public class ComParsingTests : ParsingTests
         var response = parser.Parse("whois.verisign-grs.com", sample);
 
         Assert.True(sample.Length > 0);
-        Assert.Equal(WhoisStatus.PendingDelete, response.Status);
+        Assert.Equal(RegistrationStatus.PendingDelete, response.Status);
 
         Assert.Equal(0, response.ParsingErrors);
         Assert.Equal("generic/tld/found/02", response.TemplateName);
@@ -83,7 +83,7 @@ public class ComParsingTests : ParsingTests
         var response = parser.Parse("whois.verisign-grs.com", sample);
 
         Assert.True(sample.Length > 0);
-        Assert.Equal(WhoisStatus.NotFound, response.Status);
+        Assert.Equal(RegistrationStatus.NotFound, response.Status);
 
         Assert.Equal(0, response.ParsingErrors);
         Assert.Equal("generic/tld/not-found/07", response.TemplateName);
@@ -100,7 +100,7 @@ public class ComParsingTests : ParsingTests
         var response = parser.Parse("whois.verisign-grs.com", sample);
 
         Assert.True(sample.Length > 0);
-        Assert.Equal(WhoisStatus.Found, response.Status);
+        Assert.Equal(RegistrationStatus.Found, response.Status);
 
         Assert.Equal(23, response.FieldsParsed);
         Assert.Equal(0, response.ParsingErrors);

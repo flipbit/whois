@@ -20,7 +20,7 @@ public class SxParsingTests : ParsingTests
         var response = parser.Parse("whois.sx", sample);
 
         Assert.True(sample.Length > 0);
-        Assert.Equal(WhoisStatus.Found, response.Status);
+        Assert.Equal(RegistrationStatus.Found, response.Status);
 
         Assert.Equal(0, response.ParsingErrors);
         Assert.Equal("generic/tld/found/01", response.TemplateName);
@@ -37,7 +37,7 @@ public class SxParsingTests : ParsingTests
         var response = parser.Parse("whois.sx", sample);
 
         Assert.True(sample.Length > 0);
-        Assert.Equal(WhoisStatus.NotFound, response.Status);
+        Assert.Equal(RegistrationStatus.NotFound, response.Status);
 
         Assert.Equal(0, response.ParsingErrors);
         Assert.Equal("whois.sx/sx/not-found/01", response.TemplateName);
@@ -54,7 +54,7 @@ public class SxParsingTests : ParsingTests
         var response = parser.Parse("whois.sx", sample);
 
         Assert.True(sample.Length > 0);
-        Assert.Equal(WhoisStatus.Found, response.Status);
+        Assert.Equal(RegistrationStatus.Found, response.Status);
 
         Assert.Equal(0, response.ParsingErrors);
         Assert.Equal("generic/tld/found/01", response.TemplateName);
@@ -132,7 +132,7 @@ public class SxParsingTests : ParsingTests
         var response = parser.Parse("whois.sx", sample);
 
         Assert.True(sample.Length > 0);
-        Assert.Equal(WhoisStatus.Unavailable, response.Status);
+        Assert.Equal(RegistrationStatus.Unavailable, response.Status);
 
         Assert.Equal(0, response.ParsingErrors);
         Assert.Equal("whois.sx/sx/unavailable/01", response.TemplateName);

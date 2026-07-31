@@ -20,7 +20,7 @@ public class SeNetParsingTests : ParsingTests
         var response = parser.Parse("whois.centralnic.com", sample);
 
         Assert.True(sample.Length > 0);
-        Assert.Equal(WhoisStatus.NotFound, response.Status);
+        Assert.Equal(RegistrationStatus.NotFound, response.Status);
 
         Assert.Equal(0, response.ParsingErrors);
         Assert.Equal("whois.centralnic.com/not-found/01", response.TemplateName);
@@ -35,7 +35,7 @@ public class SeNetParsingTests : ParsingTests
         var response = parser.Parse("whois.centralnic.com", sample);
 
         Assert.True(sample.Length > 0);
-        Assert.Equal(WhoisStatus.Found, response.Status);
+        Assert.Equal(RegistrationStatus.Found, response.Status);
 
         Assert.Equal(0, response.ParsingErrors);
         Assert.Equal("whois.centralnic.com/found/01", response.TemplateName);

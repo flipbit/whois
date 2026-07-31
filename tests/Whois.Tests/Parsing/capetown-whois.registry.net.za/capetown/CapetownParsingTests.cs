@@ -20,7 +20,7 @@ public class CapetownParsingTests : ParsingTests
         var response = parser.Parse("capetown-whois.registry.net.za", sample);
 
         Assert.True(sample.Length > 0);
-        Assert.Equal(WhoisStatus.NotFound, response.Status);
+        Assert.Equal(RegistrationStatus.NotFound, response.Status);
         Assert.Equal("nosuchdomain.capetown", response.DomainName.ToString());
 
     }
@@ -32,7 +32,7 @@ public class CapetownParsingTests : ParsingTests
         var response = parser.Parse("capetown-whois.registry.net.za", sample);
 
         Assert.True(sample.Length > 0);
-        Assert.Equal(WhoisStatus.Found, response.Status);
+        Assert.Equal(RegistrationStatus.Found, response.Status);
 
         Assert.Equal("registry.capetown", response.DomainName.ToString());
         Assert.Equal("dom_3K3-9999", response.RegistryDomainId);

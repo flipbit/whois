@@ -4,4 +4,5 @@ public record ServerEntry(
     string Tld,
     bool IsStatic,
     string? RateGroup,
-    IDictionary<string, IList<string>> Domains);
+    IDictionary<string, IList<string>> Domains,
+    string? RdapBaseUrl = null);

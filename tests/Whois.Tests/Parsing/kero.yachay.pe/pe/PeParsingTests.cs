@@ -20,7 +20,7 @@ public class PeParsingTests : ParsingTests
         var response = parser.Parse("kero.yachay.pe", sample);
 
         Assert.True(sample.Length > 0);
-        Assert.Equal(WhoisStatus.Throttled, response.Status);
+        Assert.Equal(RegistrationStatus.Throttled, response.Status);
         Assert.Equal(1, response.FieldsParsed);
         Assert.Equal(0, response.ParsingErrors);
     }
@@ -32,7 +32,7 @@ public class PeParsingTests : ParsingTests
         var response = parser.Parse("kero.yachay.pe", sample);
 
         Assert.True(sample.Length > 0);
-        Assert.Equal(WhoisStatus.NotFound, response.Status);
+        Assert.Equal(RegistrationStatus.NotFound, response.Status);
 
         Assert.Equal(2, response.FieldsParsed);
         Assert.Equal(0, response.ParsingErrors);
@@ -49,7 +49,7 @@ public class PeParsingTests : ParsingTests
         var response = parser.Parse("kero.yachay.pe", sample);
 
         Assert.True(sample.Length > 0);
-        Assert.Equal(WhoisStatus.NotAssigned, response.Status);
+        Assert.Equal(RegistrationStatus.NotAssigned, response.Status);
 
         Assert.Equal(7, response.FieldsParsed);
         Assert.Equal(0, response.ParsingErrors);
@@ -75,7 +75,7 @@ public class PeParsingTests : ParsingTests
         var response = parser.Parse("kero.yachay.pe", sample);
 
         Assert.True(sample.Length > 0);
-        Assert.Equal(WhoisStatus.Found, response.Status);
+        Assert.Equal(RegistrationStatus.Found, response.Status);
 
         Assert.Equal(13, response.FieldsParsed);
         Assert.Equal(0, response.ParsingErrors);
@@ -107,7 +107,7 @@ public class PeParsingTests : ParsingTests
         var response = parser.Parse("kero.yachay.pe", sample);
 
         Assert.True(sample.Length > 0);
-        Assert.Equal(WhoisStatus.Suspended, response.Status);
+        Assert.Equal(RegistrationStatus.Suspended, response.Status);
 
         Assert.Equal(11, response.FieldsParsed);
         Assert.Equal(0, response.ParsingErrors);

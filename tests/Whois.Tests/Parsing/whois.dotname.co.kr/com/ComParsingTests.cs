@@ -21,7 +21,7 @@ public class ComParsingTests : ParsingTests
         var response = parser.Parse("whois.dotname.co.kr", sample);
 
         Assert.True(sample.Length > 0);
-        Assert.Equal(WhoisStatus.Found, response.Status);
+        Assert.Equal(RegistrationStatus.Found, response.Status);
 
         Assert.Equal(0, response.ParsingErrors);
         Assert.Equal("generic/tld/found/02", response.TemplateName);

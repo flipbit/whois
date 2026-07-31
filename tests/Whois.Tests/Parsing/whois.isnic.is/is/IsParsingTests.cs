@@ -20,7 +20,7 @@ public class IsParsingTests : ParsingTests
         var response = parser.Parse("whois.isnic.is", sample);
 
         Assert.True(sample.Length > 0);
-        Assert.Equal(WhoisStatus.NotFound, response.Status);
+        Assert.Equal(RegistrationStatus.NotFound, response.Status);
 
         Assert.Equal(0, response.ParsingErrors);
         Assert.Equal("whois.isnic.is/is/not-found/01", response.TemplateName);
@@ -37,7 +37,7 @@ public class IsParsingTests : ParsingTests
         var response = parser.Parse("whois.isnic.is", sample);
 
         Assert.True(sample.Length > 0);
-        Assert.Equal(WhoisStatus.Found, response.Status);
+        Assert.Equal(RegistrationStatus.Found, response.Status);
 
         Assert.Equal(0, response.ParsingErrors);
         Assert.Equal("generic/tld/found/04", response.TemplateName);

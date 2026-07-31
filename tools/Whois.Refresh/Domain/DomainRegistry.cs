@@ -61,6 +61,10 @@ public static class DomainRegistry
             var rateGroup = serverObj.TryGetProperty("rateGroup", out var rgProp) && rgProp.ValueKind != JsonValueKind.Null
                 ? rgProp.GetString()
                 : null;
+            var rdapBaseUrl = serverObj.TryGetProperty("rdapBaseUrl", out var rdapProp)
+                && rdapProp.ValueKind != JsonValueKind.Null
+                ? rdapProp.GetString()
+                : null;
 
             var domains = new Dictionary<string, IList<string>>(StringComparer.Ordinal);
             var domainsObj = serverObj.GetProperty("domains");
@@ -98,7 +102,7 @@ public static class DomainRegistry
                 domains[status] = domainList;
             }
 
-            servers[serverName] = new ServerEntry(tld, isStatic, rateGroup, domains);
+            servers[serverName] = new ServerEntry(tld, isStatic, rateGroup, domains, rdapBaseUrl);
         }
 
         return new DomainRegistryData(servers);
@@ -118,6 +122,38 @@ public static class DomainRegistry
                 $"Invalid domain name '{domain}': contains path separator or traversal sequence");
         }
     }
+
+    /// <summary>
+    /// Maps a <see cref="Whois.RegistrationStatus"/> enum value to its JSONC status key string.
+    /// Returns null for <see cref="Whois.RegistrationStatus.Unknown"/> and unrecognized values.
+    /// </summary>
+    public static string? MapRegistrationStatus(Whois.RegistrationStatus status) => status switch
+    {
+        Whois.RegistrationStatus.Found => "found",
+        Whois.RegistrationStatus.NotFound => "not-found",
+        Whois.RegistrationStatus.Throttled => "throttled",
+        Whois.RegistrationStatus.Reserved => "reserved",
+        Whois.RegistrationStatus.Suspended => "suspended",
+        Whois.RegistrationStatus.Inactive => "inactive",
+        Whois.RegistrationStatus.Expired => "expired",
+        Whois.RegistrationStatus.Blocked => "blocked",
+        Whois.RegistrationStatus.Deactivated => "deactivated",
+        Whois.RegistrationStatus.Error => "error",
+        Whois.RegistrationStatus.Failed => "failed",
+        Whois.RegistrationStatus.Invalid => "invalid",
+        Whois.RegistrationStatus.Locked => "locked",
+        Whois.RegistrationStatus.NotAssigned => "not-assigned",
+        Whois.RegistrationStatus.NotAvailable => "not-available",
+        Whois.RegistrationStatus.OutOfService => "out-of-service",
+        Whois.RegistrationStatus.PendingDelete => "pending-delete",
+        Whois.RegistrationStatus.Quarantined => "quarantined",
+        Whois.RegistrationStatus.Redemption => "redemption",
+        Whois.RegistrationStatus.ToBeReleased => "to-be-released",
+        Whois.RegistrationStatus.Unavailable => "unavailable",
+        Whois.RegistrationStatus.Unconfirmed => "unconfirmed",
+        Whois.RegistrationStatus.Unknown => null,
+        _ => null,
+    };
 
     private static void ValidatePathComponent(string value, string fieldName)
     {

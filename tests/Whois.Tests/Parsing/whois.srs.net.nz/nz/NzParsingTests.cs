@@ -20,7 +20,7 @@ public class NzParsingTests : ParsingTests
         var response = parser.Parse("whois.srs.net.nz", sample);
 
         Assert.True(sample.Length > 0);
-        Assert.Equal(WhoisStatus.Found, response.Status);
+        Assert.Equal(RegistrationStatus.Found, response.Status);
 
         Assert.Equal(0, response.ParsingErrors);
         Assert.Equal("generic/tld/found/02", response.TemplateName);
@@ -71,7 +71,7 @@ public class NzParsingTests : ParsingTests
         var response = parser.Parse("whois.srs.net.nz", sample);
 
         Assert.True(sample.Length > 0);
-        Assert.Equal(WhoisStatus.Throttled, response.Status);
+        Assert.Equal(RegistrationStatus.Throttled, response.Status);
 
         Assert.Equal(0, response.ParsingErrors);
         Assert.Equal("whois.srs.net.nz/nz/found/01", response.TemplateName);
@@ -92,7 +92,7 @@ public class NzParsingTests : ParsingTests
         var response = parser.Parse("whois.srs.net.nz", sample);
 
         Assert.True(sample.Length > 0);
-        Assert.Equal(WhoisStatus.NotFound, response.Status);
+        Assert.Equal(RegistrationStatus.NotFound, response.Status);
 
         Assert.Equal(0, response.ParsingErrors);
         Assert.Equal("whois.srs.net.nz/nz/found/01", response.TemplateName);
@@ -113,7 +113,7 @@ public class NzParsingTests : ParsingTests
         var response = parser.Parse("whois.srs.net.nz", sample);
 
         Assert.True(sample.Length > 0);
-        Assert.Equal(WhoisStatus.Invalid, response.Status);
+        Assert.Equal(RegistrationStatus.Invalid, response.Status);
 
         Assert.Equal(0, response.ParsingErrors);
         Assert.Equal("whois.srs.net.nz/nz/found/01", response.TemplateName);
@@ -134,7 +134,7 @@ public class NzParsingTests : ParsingTests
         var response = parser.Parse("whois.srs.net.nz", sample);
 
         Assert.True(sample.Length > 0);
-        Assert.Equal(WhoisStatus.Found, response.Status);
+        Assert.Equal(RegistrationStatus.Found, response.Status);
 
         Assert.Equal(0, response.ParsingErrors);
         Assert.Equal("generic/tld/found/02", response.TemplateName);

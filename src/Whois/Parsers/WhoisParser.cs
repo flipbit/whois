@@ -1,11 +1,12 @@
 using Tokens;
 using Tokens.Exceptions;
 using Whois.Parsers.Fixups;
+using Whois.Protocols;
 
 namespace Whois.Parsers;
 
 /// <summary>
-/// Parser to turn WHOIS server responses into <see cref="WhoisResponse"/>
+/// Parser to turn WHOIS server responses into <see cref="WhoisRecord"/>
 /// objects.
 /// </summary>
 public class WhoisParser
@@ -17,29 +18,17 @@ public class WhoisParser
 #pragma warning disable MA0158 // System.Threading.Lock is not available on netstandard2.0 / net8.0
     private readonly object _loadLock = new();
 #pragma warning restore MA0158
-    private readonly Func<string, string?>? _cacheResolver;
 
     /// <summary>
     /// Creates a new instance of the <see cref="WhoisParser"/> class.
     /// </summary>
-    public WhoisParser() : this(cacheResolver: null)
-    {
-    }
-
-    /// <summary>
-    /// Creates a new instance of the <see cref="WhoisParser"/> class with an optional cache resolver.
-    /// When <paramref name="cacheResolver"/> is non-null, it is called with the WHOIS server name
-    /// to retrieve a directory path containing pre-cached template files. When it returns null,
-    /// embedded resources are used instead.
-    /// </summary>
-    public WhoisParser(Func<string, string?>? cacheResolver)
+    public WhoisParser()
     {
         var options = new TokenizerOptions()
             .WithTransformer<CleanDomainStatusTransformer>()
             .WithTransformer<ToHostNameTransformer>();
 
         _matcher = new TemplateMatcher(options);
-        _cacheResolver = cacheResolver;
         FixUps = new List<IFixup>();
 
         // Register default FixUps
@@ -55,19 +44,19 @@ public class WhoisParser
     /// <summary>
     /// Template Fixups
     /// </summary>
-    public IList<IFixup> FixUps { get; }
+    internal IList<IFixup> FixUps { get; }
 
     /// <summary>
     /// Parses the WHOIS server response for the given server and TLD.
     /// </summary>
-    public WhoisResponse Parse(string whoisServer, string content)
+    internal WhoisRecord Parse(string whoisServer, string content)
     {
         if (string.IsNullOrEmpty(content))
         {
-            return new WhoisResponse
+            return new WhoisRecord
             {
                 Content = content,
-                Status = WhoisStatus.Unknown,
+                Status = RegistrationStatus.Unknown,
             };
         }
 
@@ -88,15 +77,15 @@ public class WhoisParser
 
         if (match != null)
         {
-            WhoisResponse value;
+            WhoisRecord value;
             var assignmentErrors = 0;
             try
             {
-                value = match.Assign<WhoisResponse>();
+                value = match.Assign<WhoisRecord>();
             }
             catch (AssignmentFailedException ex)
             {
-                value = (WhoisResponse)ex.PartialResult!;
+                value = (WhoisRecord)ex.PartialResult!;
                 assignmentErrors = ex.Errors.Count;
             }
 
@@ -122,10 +111,10 @@ public class WhoisParser
             return value;
         }
 
-        return new WhoisResponse
+        return new WhoisRecord
         {
             Content = content,
-            Status = WhoisStatus.Unknown,
+            Status = RegistrationStatus.Unknown,
         };
     }
 
@@ -167,20 +156,6 @@ public class WhoisParser
         {
             // Double-checked locking: re-verify under the lock before loading.
             if (Templates.ContainsTag(whoisServer)) return;
-
-            if (_cacheResolver != null)
-            {
-                var directoryPath = _cacheResolver(whoisServer);
-                if (directoryPath != null)
-                {
-                    foreach (var file in Directory.GetFiles(directoryPath, "*.txt"))
-                    {
-                        var content = File.ReadAllText(file);
-                        _matcher.RegisterTemplate(content);
-                    }
-                    return;
-                }
-            }
 
             var templateNames = ResourceReader.GetNames(whoisServer);
 

@@ -20,7 +20,7 @@ public class SeParsingTests : ParsingTests
         var response = parser.Parse("whois.iis.se", sample);
 
         Assert.True(sample.Length > 0);
-        Assert.Equal(WhoisStatus.Found, response.Status);
+        Assert.Equal(RegistrationStatus.Found, response.Status);
 
         Assert.Equal(0, response.ParsingErrors);
         Assert.Equal("whois.iis.se/se/found/01", response.TemplateName);
@@ -69,7 +69,7 @@ public class SeParsingTests : ParsingTests
         var response = parser.Parse("whois.iis.se", sample);
 
         Assert.True(sample.Length > 0);
-        Assert.Equal(WhoisStatus.Found, response.Status);
+        Assert.Equal(RegistrationStatus.Found, response.Status);
 
         Assert.Equal(0, response.ParsingErrors);
         Assert.Equal("whois.iis.se/se/found/01", response.TemplateName);
@@ -101,7 +101,7 @@ public class SeParsingTests : ParsingTests
         var response = parser.Parse("whois.iis.se", sample);
 
         Assert.True(sample.Length > 0);
-        Assert.Equal(WhoisStatus.Found, response.Status);
+        Assert.Equal(RegistrationStatus.Found, response.Status);
 
         Assert.Equal(0, response.ParsingErrors);
         Assert.Equal("whois.iis.se/se/found/01", response.TemplateName);
@@ -138,7 +138,7 @@ public class SeParsingTests : ParsingTests
         var response = parser.Parse("whois.iis.se", sample);
 
         Assert.True(sample.Length > 0);
-        Assert.Equal(WhoisStatus.NotAssigned, response.Status);
+        Assert.Equal(RegistrationStatus.NotAssigned, response.Status);
 
         Assert.Equal(0, response.ParsingErrors);
         Assert.Equal("whois.iis.se/se/found/01", response.TemplateName);
@@ -166,7 +166,7 @@ public class SeParsingTests : ParsingTests
         var response = parser.Parse("whois.iis.se", sample);
 
         Assert.True(sample.Length > 0);
-        Assert.Equal(WhoisStatus.NotFound, response.Status);
+        Assert.Equal(RegistrationStatus.NotFound, response.Status);
 
         Assert.Equal(0, response.ParsingErrors);
         Assert.Equal("whois.iis.se/se/not-found/01", response.TemplateName);
@@ -184,7 +184,7 @@ public class SeParsingTests : ParsingTests
         var response = parser.Parse("whois.iis.se", sample);
 
         Assert.True(sample.Length > 0);
-        Assert.Equal(WhoisStatus.Found, response.Status);
+        Assert.Equal(RegistrationStatus.Found, response.Status);
 
         Assert.Equal(0, response.ParsingErrors);
         Assert.Equal("whois.iis.se/se/found/01", response.TemplateName);
@@ -223,7 +223,7 @@ public class SeParsingTests : ParsingTests
         var response = parser.Parse("whois.iis.se", sample);
 
         Assert.True(sample.Length > 0);
-        Assert.Equal(WhoisStatus.Deactivated, response.Status);
+        Assert.Equal(RegistrationStatus.Deactivated, response.Status);
 
         Assert.Equal(0, response.ParsingErrors);
         Assert.Equal("whois.iis.se/se/found/01", response.TemplateName);
@@ -260,7 +260,7 @@ public class SeParsingTests : ParsingTests
         var response = parser.Parse("whois.iis.se", sample);
 
         Assert.True(sample.Length > 0);
-        Assert.Equal(WhoisStatus.NotFound, response.Status);
+        Assert.Equal(RegistrationStatus.NotFound, response.Status);
 
         Assert.Equal(0, response.ParsingErrors);
         Assert.Equal("whois.iis.se/se/not-found/01", response.TemplateName);
@@ -278,7 +278,7 @@ public class SeParsingTests : ParsingTests
         var response = parser.Parse("whois.iis.se", sample);
 
         Assert.True(sample.Length > 0);
-        Assert.Equal(WhoisStatus.Found, response.Status);
+        Assert.Equal(RegistrationStatus.Found, response.Status);
 
         Assert.Equal(0, response.ParsingErrors);
         Assert.Equal("whois.iis.se/se/found/01", response.TemplateName);

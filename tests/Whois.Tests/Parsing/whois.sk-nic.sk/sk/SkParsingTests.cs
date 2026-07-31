@@ -20,7 +20,7 @@ public class SkParsingTests : ParsingTests
         var response = parser.Parse("whois.sk-nic.sk", sample);
 
         Assert.True(sample.Length > 0);
-        Assert.Equal(WhoisStatus.Other, response.Status);
+        Assert.Equal(RegistrationStatus.Other, response.Status);
 
         Assert.Equal(0, response.ParsingErrors);
         Assert.Equal("whois.sk-nic.sk/sk/found/01", response.TemplateName);
@@ -71,7 +71,7 @@ public class SkParsingTests : ParsingTests
         var response = parser.Parse("whois.sk-nic.sk", sample);
 
         Assert.True(sample.Length > 0);
-        Assert.Equal(WhoisStatus.Expired, response.Status);
+        Assert.Equal(RegistrationStatus.Expired, response.Status);
 
         Assert.Equal(0, response.ParsingErrors);
         Assert.Equal("whois.sk-nic.sk/sk/found/01", response.TemplateName);
@@ -124,7 +124,7 @@ public class SkParsingTests : ParsingTests
         var response = parser.Parse("whois.sk-nic.sk", sample);
 
         Assert.True(sample.Length > 0);
-        Assert.Equal(WhoisStatus.Other, response.Status);
+        Assert.Equal(RegistrationStatus.Other, response.Status);
 
         Assert.Equal(0, response.ParsingErrors);
         Assert.Equal("whois.sk-nic.sk/sk/found/01", response.TemplateName);
@@ -159,7 +159,7 @@ public class SkParsingTests : ParsingTests
         var response = parser.Parse("whois.sk-nic.sk", sample);
 
         Assert.True(sample.Length > 0);
-        Assert.Equal(WhoisStatus.Found, response.Status);
+        Assert.Equal(RegistrationStatus.Found, response.Status);
 
         Assert.Equal(0, response.ParsingErrors);
         Assert.Equal("generic/tld/found/02", response.TemplateName);
@@ -198,7 +198,7 @@ public class SkParsingTests : ParsingTests
         var response = parser.Parse("whois.sk-nic.sk", sample);
 
         Assert.True(sample.Length > 0);
-        Assert.Equal(WhoisStatus.Found, response.Status);
+        Assert.Equal(RegistrationStatus.Found, response.Status);
 
         Assert.Equal(0, response.ParsingErrors);
         Assert.Equal("generic/tld/found/02", response.TemplateName);
@@ -237,7 +237,7 @@ public class SkParsingTests : ParsingTests
         var response = parser.Parse("whois.sk-nic.sk", sample);
 
         Assert.True(sample.Length > 0);
-        Assert.Equal(WhoisStatus.Other, response.Status);
+        Assert.Equal(RegistrationStatus.Other, response.Status);
 
         Assert.Equal(0, response.ParsingErrors);
         Assert.Equal("whois.sk-nic.sk/sk/found/01", response.TemplateName);
@@ -288,7 +288,7 @@ public class SkParsingTests : ParsingTests
         var response = parser.Parse("whois.sk-nic.sk", sample);
 
         Assert.True(sample.Length > 0);
-        Assert.Equal(WhoisStatus.Other, response.Status);
+        Assert.Equal(RegistrationStatus.Other, response.Status);
 
         Assert.Equal(0, response.ParsingErrors);
         Assert.Equal("whois.sk-nic.sk/sk/found/01", response.TemplateName);
@@ -338,7 +338,7 @@ public class SkParsingTests : ParsingTests
         var response = parser.Parse("whois.sk-nic.sk", sample);
 
         Assert.True(sample.Length > 0);
-        Assert.Equal(WhoisStatus.NotFound, response.Status);
+        Assert.Equal(RegistrationStatus.NotFound, response.Status);
 
         Assert.Equal(0, response.ParsingErrors);
         Assert.Equal("whois.sk-nic.sk/sk/not-found/01", response.TemplateName);
@@ -353,7 +353,7 @@ public class SkParsingTests : ParsingTests
         var response = parser.Parse("whois.sk-nic.sk", sample);
 
         Assert.True(sample.Length > 0);
-        Assert.Equal(WhoisStatus.Found, response.Status);
+        Assert.Equal(RegistrationStatus.Found, response.Status);
 
         Assert.Equal(0, response.ParsingErrors);
         Assert.Equal("whois.sk-nic.sk/sk/found/01", response.TemplateName);

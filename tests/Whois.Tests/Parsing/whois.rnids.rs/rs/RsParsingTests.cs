@@ -20,7 +20,7 @@ public class RsParsingTests : ParsingTests
         var response = parser.Parse("whois.rnids.rs", sample);
 
         Assert.True(sample.Length > 0);
-        Assert.Equal(WhoisStatus.Found, response.Status);
+        Assert.Equal(RegistrationStatus.Found, response.Status);
 
         Assert.Equal(0, response.ParsingErrors);
         Assert.Equal("whois.rnids.rs/rs/found/01", response.TemplateName);
@@ -51,7 +51,7 @@ public class RsParsingTests : ParsingTests
         var response = parser.Parse("whois.rnids.rs", sample);
 
         Assert.True(sample.Length > 0);
-        Assert.Equal(WhoisStatus.Found, response.Status);
+        Assert.Equal(RegistrationStatus.Found, response.Status);
 
         Assert.Equal(0, response.ParsingErrors);
         Assert.Equal("whois.rnids.rs/rs/found/01", response.TemplateName);
@@ -84,7 +84,7 @@ public class RsParsingTests : ParsingTests
         var response = parser.Parse("whois.rnids.rs", sample);
 
         Assert.True(sample.Length > 0);
-        Assert.Equal(WhoisStatus.Expired, response.Status);
+        Assert.Equal(RegistrationStatus.Expired, response.Status);
 
         Assert.Equal(0, response.ParsingErrors);
         Assert.Equal("whois.rnids.rs/rs/found/01", response.TemplateName);
@@ -121,7 +121,7 @@ public class RsParsingTests : ParsingTests
         var response = parser.Parse("whois.rnids.rs", sample);
 
         Assert.True(sample.Length > 0);
-        Assert.Equal(WhoisStatus.Found, response.Status);
+        Assert.Equal(RegistrationStatus.Found, response.Status);
 
         Assert.Equal(0, response.ParsingErrors);
         Assert.Equal("whois.rnids.rs/rs/found/01", response.TemplateName);
@@ -156,7 +156,7 @@ public class RsParsingTests : ParsingTests
         var response = parser.Parse("whois.rnids.rs", sample);
 
         Assert.True(sample.Length > 0);
-        Assert.Equal(WhoisStatus.Locked, response.Status);
+        Assert.Equal(RegistrationStatus.Locked, response.Status);
 
         Assert.Equal(0, response.ParsingErrors);
         Assert.Equal("whois.rnids.rs/rs/found/01", response.TemplateName);
@@ -195,7 +195,7 @@ public class RsParsingTests : ParsingTests
         var response = parser.Parse("whois.rnids.rs", sample);
 
         Assert.True(sample.Length > 0);
-        Assert.Equal(WhoisStatus.NotFound, response.Status);
+        Assert.Equal(RegistrationStatus.NotFound, response.Status);
 
         Assert.Equal(0, response.ParsingErrors);
         Assert.Equal("whois.rnids.rs/rs/not-found/01", response.TemplateName);
@@ -210,7 +210,7 @@ public class RsParsingTests : ParsingTests
         var response = parser.Parse("whois.rnids.rs", sample);
 
         Assert.True(sample.Length > 0);
-        Assert.Equal(WhoisStatus.Found, response.Status);
+        Assert.Equal(RegistrationStatus.Found, response.Status);
 
         Assert.Equal(0, response.ParsingErrors);
         Assert.Equal("whois.rnids.rs/rs/found/01", response.TemplateName);

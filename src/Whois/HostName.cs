@@ -72,21 +72,6 @@ public class HostName
         return FromPunyCode(Value);
     }
 
-    public bool IsEqualTo(HostName other)
-    {
-        if (other == null) return false;
-
-        return string.Compare(Value, other.Value, StringComparison.InvariantCultureIgnoreCase) == 0;
-    }
-
-    /// <summary>
-    /// Parses the given value and returns a <see cref="HostName"/>.
-    /// </summary>
-    public static HostName Parse(string value)
-    {
-        return new HostName(value);
-    }
-
     /// <summary>
     /// Attempts to parse the given value into a <see cref="HostName"/>.  Returns
     /// true if successful.

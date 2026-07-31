@@ -20,7 +20,7 @@ public class CfParsingTests : ParsingTests
         var response = parser.Parse("whois.dot.cf", sample);
 
         Assert.True(sample.Length > 0);
-        Assert.Equal(WhoisStatus.Found, response.Status);
+        Assert.Equal(RegistrationStatus.Found, response.Status);
 
         Assert.Equal(0, response.ParsingErrors);
         Assert.Equal("whois.dot.cf/cf/found/01", response.TemplateName);
@@ -111,7 +111,7 @@ public class CfParsingTests : ParsingTests
         var response = parser.Parse("whois.dot.cf", sample);
 
         Assert.True(sample.Length > 0);
-        Assert.Equal(WhoisStatus.NotFound, response.Status);
+        Assert.Equal(RegistrationStatus.NotFound, response.Status);
 
         Assert.Equal(0, response.ParsingErrors);
         Assert.Equal("whois.dot.cf/cf/not-found/01", response.TemplateName);
@@ -126,7 +126,7 @@ public class CfParsingTests : ParsingTests
         var response = parser.Parse("whois.dot.cf", sample);
 
         Assert.True(sample.Length > 0);
-        Assert.Equal(WhoisStatus.Found, response.Status);
+        Assert.Equal(RegistrationStatus.Found, response.Status);
 
         Assert.Equal(0, response.ParsingErrors);
         Assert.Equal("whois.dot.cf/cf/found/01", response.TemplateName);

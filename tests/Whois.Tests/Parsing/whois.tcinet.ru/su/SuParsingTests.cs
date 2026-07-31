@@ -20,7 +20,7 @@ public class SuParsingTests : ParsingTests
         var response = parser.Parse("whois.tcinet.ru", sample);
 
         Assert.True(sample.Length > 0);
-        Assert.Equal(WhoisStatus.NotFound, response.Status);
+        Assert.Equal(RegistrationStatus.NotFound, response.Status);
 
         Assert.Equal(0, response.ParsingErrors);
         Assert.Equal("whois.tcinet.ru/not-found/01", response.TemplateName);
@@ -35,7 +35,7 @@ public class SuParsingTests : ParsingTests
         var response = parser.Parse("whois.tcinet.ru", sample);
 
         Assert.True(sample.Length > 0);
-        Assert.Equal(WhoisStatus.Found, response.Status);
+        Assert.Equal(RegistrationStatus.Found, response.Status);
 
         Assert.Equal(0, response.ParsingErrors);
         Assert.Equal("whois.tcinet.ru/found/01", response.TemplateName);

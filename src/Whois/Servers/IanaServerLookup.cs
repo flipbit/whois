@@ -1,113 +1,83 @@
+using System.Collections.Concurrent;
+using System.Text;
 using Microsoft.Extensions.Logging;
 using Microsoft.Extensions.Logging.Abstractions;
-using Tokens;
 using Whois.Net;
-using Whois.Parsers;
 
 namespace Whois.Servers;
 
 /// <summary>
-/// Class to lookup a WHOIS server for a TLD from IANA
+/// Discovers WHOIS servers by querying whois.iana.org over TCP port 43.
+/// Results are cached per-TLD with a configurable TTL.
 /// </summary>
-public class IanaServerLookup : IWhoisServerLookup
+public class IanaServerLookup : IIanaServerLookup
 {
-    private const string IanaUrl = "whois.iana.org";
+    private const string IanaHost = "whois.iana.org";
+    private const int WhoisPort = 43;
 
+    private readonly ITcpReader _tcpReader;
+    private readonly WhoisOptions _options;
     private readonly ILogger<IanaServerLookup> _logger;
-    private readonly Lazy<TemplateMatcher> _ianaTemplate;
+    private readonly ConcurrentDictionary<string, (string? Server, DateTime FetchedAt)> _cache = new(StringComparer.OrdinalIgnoreCase);
 
-    /// <summary>
-    /// The <see cref="ITcpReader"/> to use for network requests
-    /// </summary>
-    public ITcpReader TcpReader { get; set; }
-
-    /// <summary>
-    /// Creates a new instance of the IANA Server Lookup
-    /// </summary>
-    public IanaServerLookup() : this(new TcpReader(), NullLogger<IanaServerLookup>.Instance)
+    public IanaServerLookup(ITcpReader tcpReader, WhoisOptions options)
+        : this(tcpReader, options, NullLogger<IanaServerLookup>.Instance)
     {
     }
 
-    public IanaServerLookup(ITcpReader tcpReader) : this(tcpReader, NullLogger<IanaServerLookup>.Instance)
+    public IanaServerLookup(ITcpReader tcpReader, WhoisOptions options,
+        ILogger<IanaServerLookup> logger)
     {
-    }
-
-    public IanaServerLookup(ITcpReader tcpReader, ILogger<IanaServerLookup> logger)
-    {
-        _ianaTemplate = new Lazy<TemplateMatcher>(CreateIanaTemplate);
-        TcpReader = tcpReader;
+        _tcpReader = tcpReader;
+        _options = options;
         _logger = logger;
     }
 
-    public async Task<WhoisResponse> Lookup(WhoisRequest request, CancellationToken cancellationToken = default)
+    public async Task<string?> GetWhoisServer(string tld, CancellationToken ct = default)
     {
-        var tld = GetTld(request.Query);
+        var normalizedTld = tld.ToLowerInvariant();
 
-        var content = await Download(tld, request, cancellationToken).ConfigureAwait(false);
-
-        // Reflect the raw response onto a ParsedWhoisServer object
-        var matcher = _ianaTemplate.Value;
-        var result = matcher.Tokenize(content);
-
-        if (result.Success)
+        if (_cache.TryGetValue(normalizedTld, out var entry) &&
+            DateTime.UtcNow - entry.FetchedAt < _options.TldServerCacheDuration)
         {
-            var match = result.BestMatch!.Assign<WhoisResponse>();
-
-            match.Content = content;
-
-            return match;
+            _logger.LogDebug("IANA lookup: cache hit for TLD {Tld}: {Server}", tld, entry.Server ?? "(none)");
+            return entry.Server;
         }
 
-        return new WhoisResponse
-        {
-            Content = content,
-            DomainName = new HostName(tld),
-            Status = WhoisStatus.Unknown,
-        };
+        var response = await _tcpReader.Read(
+            IanaHost, WhoisPort, normalizedTld, Encoding.UTF8, _options.TimeoutSeconds, ct).ConfigureAwait(false);
+
+        var server = ParseWhoisServer(response);
+        _cache[normalizedTld] = (server, DateTime.UtcNow);
+
+        _logger.LogDebug("IANA lookup: fetched server for TLD {Tld}: {Server}", tld, server ?? "(none)");
+        return server;
     }
 
-    private async Task<string> Download(string tld, WhoisRequest request, CancellationToken cancellationToken)
+    public void ClearCache()
     {
-        _logger.LogDebug("Looking up Root TLD server for {Tld} from {IanaUrl}", tld, IanaUrl);
-
-        var response = await TcpReader.Read(IanaUrl, 43, tld.ToUpperInvariant(), request.Encoding, request.TimeoutSeconds, cancellationToken).ConfigureAwait(false);
-
-        _logger.LogDebug("Received {ByteCount:###,###,##0} byte(s).", response.Length);
-
-        return response;
+        _cache.Clear();
+        _logger.LogInformation("IANA server lookup cache cleared");
     }
 
-    private TemplateMatcher CreateIanaTemplate()
+    /// <summary>
+    /// Parses the 'whois:' field from an IANA WHOIS response.
+    /// Returns null if the field is not present or empty.
+    /// </summary>
+    internal static string? ParseWhoisServer(string response)
     {
-        var options = new TokenizerOptions()
-            .WithTransformer<CleanDomainStatusTransformer>()
-            .WithTransformer<ToHostNameTransformer>();
-
-        var matcher = new TemplateMatcher(options);
-
-        var resourceNames = ResourceReader.GetNames("whois.iana.org");
-
-        foreach (var resourceName in resourceNames)
+        using var reader = new StringReader(response);
+        string? line;
+        while ((line = reader.ReadLine()) != null)
         {
-            var content = ResourceReader.GetContent(resourceName);
+            var trimmed = line.TrimStart();
+            if (!trimmed.StartsWith("whois:", StringComparison.OrdinalIgnoreCase))
+                continue;
 
-            matcher.RegisterTemplate(content);
+            var value = trimmed.Substring("whois:".Length).Trim();
+            return value.Length > 0 ? value : null;
         }
 
-        return matcher;
-    }
-
-    private static string GetTld(string domain)
-    {
-        var tld = domain;
-
-        if (!string.IsNullOrEmpty(domain))
-        {
-            var parts = domain.Split('.');
-
-            if (parts.Length > 1) tld = parts[parts.Length - 1];
-        }
-
-        return tld;
+        return null;
     }
 }

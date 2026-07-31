@@ -20,7 +20,7 @@ public class ReParsingTests : ParsingTests
         var response = parser.Parse("whois.nic.re", sample);
 
         Assert.True(sample.Length > 0);
-        Assert.Equal(WhoisStatus.Found, response.Status);
+        Assert.Equal(RegistrationStatus.Found, response.Status);
 
         Assert.Equal(0, response.ParsingErrors);
         Assert.Equal("generic/tld/found/05", response.TemplateName);
@@ -98,7 +98,7 @@ public class ReParsingTests : ParsingTests
         var response = parser.Parse("whois.nic.re", sample);
 
         Assert.True(sample.Length > 0);
-        Assert.Equal(WhoisStatus.Throttled, response.Status);
+        Assert.Equal(RegistrationStatus.Throttled, response.Status);
 
         Assert.Equal(0, response.ParsingErrors);
         Assert.Equal("generic/tld/throttled/02", response.TemplateName);
@@ -113,7 +113,7 @@ public class ReParsingTests : ParsingTests
         var response = parser.Parse("whois.nic.re", sample);
 
         Assert.True(sample.Length > 0);
-        Assert.Equal(WhoisStatus.NotFound, response.Status);
+        Assert.Equal(RegistrationStatus.NotFound, response.Status);
 
         Assert.Equal(0, response.ParsingErrors);
         Assert.Equal("generic/tld/not-found/06", response.TemplateName);
@@ -128,7 +128,7 @@ public class ReParsingTests : ParsingTests
         var response = parser.Parse("whois.nic.re", sample);
 
         Assert.True(sample.Length > 0);
-        Assert.Equal(WhoisStatus.Found, response.Status);
+        Assert.Equal(RegistrationStatus.Found, response.Status);
 
         Assert.Equal(0, response.ParsingErrors);
         Assert.Equal("generic/tld/found/05", response.TemplateName);

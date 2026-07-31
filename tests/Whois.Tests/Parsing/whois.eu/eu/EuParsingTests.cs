@@ -20,7 +20,7 @@ public class EuParsingTests : ParsingTests
         var response = parser.Parse("whois.eu", sample);
 
         Assert.True(sample.Length > 0);
-        Assert.Equal(WhoisStatus.Found, response.Status);
+        Assert.Equal(RegistrationStatus.Found, response.Status);
 
         Assert.Equal(0, response.ParsingErrors);
         Assert.Equal("whois.eu/eu/found/01", response.TemplateName);
@@ -44,7 +44,7 @@ public class EuParsingTests : ParsingTests
         var response = parser.Parse("whois.eu", sample);
 
         Assert.True(sample.Length > 0);
-        Assert.Equal(WhoisStatus.Throttled, response.Status);
+        Assert.Equal(RegistrationStatus.Throttled, response.Status);
 
         Assert.Equal(0, response.ParsingErrors);
         Assert.Equal("whois.eu/eu/throttled/01", response.TemplateName);
@@ -59,7 +59,7 @@ public class EuParsingTests : ParsingTests
         var response = parser.Parse("whois.eu", sample);
 
         Assert.True(sample.Length > 0);
-        Assert.Equal(WhoisStatus.NotFound, response.Status);
+        Assert.Equal(RegistrationStatus.NotFound, response.Status);
 
         Assert.Equal(0, response.ParsingErrors);
         Assert.Equal("whois.eu/eu/not-found/01", response.TemplateName);
@@ -76,7 +76,7 @@ public class EuParsingTests : ParsingTests
         var response = parser.Parse("whois.eu", sample);
 
         Assert.True(sample.Length > 0);
-        Assert.Equal(WhoisStatus.Found, response.Status);
+        Assert.Equal(RegistrationStatus.Found, response.Status);
 
         Assert.Equal(0, response.ParsingErrors);
         Assert.Equal("whois.eu/eu/found/01", response.TemplateName);

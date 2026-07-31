@@ -1,378 +1,313 @@
-using System.Text;
 using NSubstitute;
-using Whois.Net;
-using Whois.Parsers;
+using Whois.Protocols;
 using Whois.Servers;
-using Whois.Templates;
 using Xunit;
 
 namespace Whois;
 
 public class WhoisLookupTest
 {
-    private readonly WhoisLookup lookup;
-
-    private readonly IWhoisServerLookup whoisServerLookup;
-    private readonly ITcpReader tcpReader;
-    private readonly SampleReader sampleReader;
-
-    public WhoisLookupTest()
+    [Fact]
+    public async Task Lookup_AutoProtocol_UsesRdapWhenAvailable()
     {
-        whoisServerLookup = Substitute.For<IWhoisServerLookup>();
-        tcpReader = Substitute.For<ITcpReader>();
-        sampleReader = new SampleReader();
+        var rdapRegistry = Substitute.For<IRdapRegistryCache>();
+        var ianaLookup = Substitute.For<IIanaServerLookup>();
+        rdapRegistry.GetBaseUrl("com", Arg.Any<CancellationToken>())
+            .Returns("https://rdap.verisign.com/com/v1/");
 
-        lookup = new WhoisLookup
-        {
-            TcpReader = tcpReader,
-            ServerLookup = whoisServerLookup,
-        };
+        var rdapClient = Substitute.For<IProtocolClient>();
+        rdapClient.Protocol.Returns(LookupProtocol.Rdap);
+        rdapClient.Query(Arg.Any<WhoisRequest>(), Arg.Any<CancellationToken>())
+            .Returns(new ProtocolResponse
+            {
+                RawContent = "{}",
+                Protocol = LookupProtocol.Rdap,
+                Response = new DomainInfo
+                {
+                    DomainName = new HostName("google.com"),
+                    Status = RegistrationStatus.Found,
+                },
+                Diagnostics = new LookupDiagnostics(),
+            });
+
+        var whoisClient = Substitute.For<IProtocolClient>();
+        whoisClient.Protocol.Returns(LookupProtocol.Whois);
+
+        var lookup = new WhoisLookup(
+            new WhoisOptions(),
+            rdapRegistry,
+            ianaLookup,
+            [whoisClient, rdapClient]);
+
+        var result = await lookup.Lookup("google.com");
+
+        Assert.Equal(LookupProtocol.Rdap, result.Protocol);
+        Assert.Equal("google.com", result.Response.DomainName!.ToString());
     }
 
     [Fact]
-    public async Task TestLookupDomain()
+    public async Task Lookup_AutoProtocol_FallsBackToWhoisWhenNoRdap()
     {
-        var request = new WhoisRequest("google.com");
+        var rdapRegistry = Substitute.For<IRdapRegistryCache>();
+        var ianaLookup = Substitute.For<IIanaServerLookup>();
+        rdapRegistry.GetBaseUrl("uk", Arg.Any<CancellationToken>())
+            .Returns((string?)null);
+        ianaLookup.GetWhoisServer("uk", Arg.Any<CancellationToken>())
+            .Returns("whois.nic.uk");
 
-        var rootServer = new WhoisResponse
-        {
-            DomainName = new HostName("com"),
-            Registrar = new Registrar { WhoisServer = new HostName("whois.markmonitor.com"), },
-        };
+        var whoisClient = Substitute.For<IProtocolClient>();
+        whoisClient.Protocol.Returns(LookupProtocol.Whois);
+        whoisClient.Query(Arg.Any<WhoisRequest>(), Arg.Any<CancellationToken>())
+            .Returns(new ProtocolResponse
+            {
+                RawContent = "Domain Name: example.uk",
+                Protocol = LookupProtocol.Whois,
+                Response = new DomainInfo
+                {
+                    DomainName = new HostName("example.uk"),
+                    Status = RegistrationStatus.Found,
+                },
+                Diagnostics = new LookupDiagnostics { ServerUrl = "whois.nic.uk" },
+            });
 
-        whoisServerLookup.Lookup(request, Arg.Any<CancellationToken>()).Returns(rootServer);
+        var rdapClient = Substitute.For<IProtocolClient>();
+        rdapClient.Protocol.Returns(LookupProtocol.Rdap);
 
-        tcpReader
-            .Read("whois.markmonitor.com", 43, "google.com", Encoding.UTF8, 10, Arg.Any<CancellationToken>())
-            .Returns(sampleReader.Read("whois.markmonitor.com", "com", "found", "found.txt"));
+        var lookup = new WhoisLookup(
+            new WhoisOptions(),
+            rdapRegistry,
+            ianaLookup,
+            [whoisClient, rdapClient]);
+
+        var result = await lookup.Lookup("example.uk");
+
+        Assert.Equal(LookupProtocol.Whois, result.Protocol);
+    }
+
+    [Fact]
+    public async Task Lookup_ForceWhois_UsesWhoisEvenWhenRdapAvailable()
+    {
+        var rdapRegistry = Substitute.For<IRdapRegistryCache>();
+        var ianaLookup = Substitute.For<IIanaServerLookup>();
+        rdapRegistry.GetBaseUrl("com", Arg.Any<CancellationToken>())
+            .Returns("https://rdap.verisign.com/com/v1/");
+        ianaLookup.GetWhoisServer("com", Arg.Any<CancellationToken>())
+            .Returns("whois.verisign-grs.com");
+
+        var whoisClient = Substitute.For<IProtocolClient>();
+        whoisClient.Protocol.Returns(LookupProtocol.Whois);
+        whoisClient.Query(Arg.Any<WhoisRequest>(), Arg.Any<CancellationToken>())
+            .Returns(new ProtocolResponse
+            {
+                RawContent = "Domain Name: GOOGLE.COM",
+                Protocol = LookupProtocol.Whois,
+                Response = new DomainInfo
+                {
+                    DomainName = new HostName("google.com"),
+                    Status = RegistrationStatus.Found,
+                },
+                Diagnostics = new LookupDiagnostics(),
+            });
+
+        var rdapClient = Substitute.For<IProtocolClient>();
+        rdapClient.Protocol.Returns(LookupProtocol.Rdap);
+
+        var request = new WhoisRequest("google.com") { PreferredProtocol = ProtocolPreference.Whois };
+
+        var lookup = new WhoisLookup(
+            new WhoisOptions(),
+            rdapRegistry,
+            ianaLookup,
+            [whoisClient, rdapClient]);
 
         var result = await lookup.Lookup(request);
 
-        Assert.Equal("google.com", result.DomainName.ToString());
-        Assert.Equal(WhoisStatus.Found, result.Status);
+        Assert.Equal(LookupProtocol.Whois, result.Protocol);
+        await rdapClient.DidNotReceive().Query(Arg.Any<WhoisRequest>(), Arg.Any<CancellationToken>());
     }
 
     [Fact]
-    public async Task TestLookupDomainWithIntermediateServer()
+    public async Task Lookup_ForceRdap_ThrowsWhenNotAvailable()
     {
-        var request = new WhoisRequest("google.com");
-        var intermediateResult = sampleReader.Read("whois.verisign-grs.com", "com", "found", "found_status_registered.txt");
-        var authoritativeResult = sampleReader.Read("whois.markmonitor.com", "com", "found", "found.txt");
+        var rdapRegistry = Substitute.For<IRdapRegistryCache>();
+        var ianaLookup = Substitute.For<IIanaServerLookup>();
+        rdapRegistry.GetBaseUrl("uk", Arg.Any<CancellationToken>())
+            .Returns((string?)null);
 
-        var rootServer = new WhoisResponse
-        {
-            DomainName = new HostName("com"),
-            Registrar = new Registrar { WhoisServer = new HostName("whois.verisign-grs.com"), },
-        };
+        var whoisClient = Substitute.For<IProtocolClient>();
+        whoisClient.Protocol.Returns(LookupProtocol.Whois);
 
-        whoisServerLookup.Lookup(request, Arg.Any<CancellationToken>()).Returns(rootServer);
+        var rdapClient = Substitute.For<IProtocolClient>();
+        rdapClient.Protocol.Returns(LookupProtocol.Rdap);
 
-        tcpReader
-            .Read("whois.verisign-grs.com", 43, "google.com", Encoding.UTF8, 10, Arg.Any<CancellationToken>())
-            .Returns(intermediateResult);
+        var lookup = new WhoisLookup(
+            new WhoisOptions(),
+            rdapRegistry,
+            ianaLookup,
+            [whoisClient, rdapClient]);
 
-        tcpReader
-            .Read("whois.markmonitor.com", 43, "google.com", Encoding.UTF8, 10, Arg.Any<CancellationToken>())
-            .Returns(authoritativeResult);
+        var request = new WhoisRequest("example.uk") { PreferredProtocol = ProtocolPreference.Rdap };
+
+        await Assert.ThrowsAsync<WhoisException>(() => lookup.Lookup(request));
+    }
+
+    [Fact]
+    public async Task Lookup_GlobalPreferredProtocol_UsedWhenRequestProtocolIsNull()
+    {
+        var rdapRegistry = Substitute.For<IRdapRegistryCache>();
+        var ianaLookup = Substitute.For<IIanaServerLookup>();
+        rdapRegistry.GetBaseUrl("com", Arg.Any<CancellationToken>())
+            .Returns("https://rdap.verisign.com/com/v1/");
+        ianaLookup.GetWhoisServer("com", Arg.Any<CancellationToken>())
+            .Returns("whois.verisign-grs.com");
+
+        var whoisClient = Substitute.For<IProtocolClient>();
+        whoisClient.Protocol.Returns(LookupProtocol.Whois);
+        whoisClient.Query(Arg.Any<WhoisRequest>(), Arg.Any<CancellationToken>())
+            .Returns(new ProtocolResponse
+            {
+                RawContent = "Domain Name: GOOGLE.COM",
+                Protocol = LookupProtocol.Whois,
+                Response = new DomainInfo
+                {
+                    DomainName = new HostName("google.com"),
+                    Status = RegistrationStatus.Found,
+                },
+                Diagnostics = new LookupDiagnostics(),
+            });
+
+        var rdapClient = Substitute.For<IProtocolClient>();
+        rdapClient.Protocol.Returns(LookupProtocol.Rdap);
+
+        // Global option forces WHOIS; request leaves PreferredProtocol null (inherits global).
+        var options = new WhoisOptions { PreferredProtocol = ProtocolPreference.Whois };
+        var request = new WhoisRequest("google.com"); // PreferredProtocol is null
+
+        var lookup = new WhoisLookup(options, rdapRegistry, ianaLookup, [whoisClient, rdapClient]);
 
         var result = await lookup.Lookup(request);
 
-        Assert.Equal("google.com", result.DomainName.ToString());
-        Assert.Equal(WhoisStatus.Found, result.Status);
-
-        Assert.Equal(authoritativeResult, result.Content);
-        Assert.Equal(intermediateResult, result.Referrer.Content);
-        Assert.Equal(rootServer, result.Referrer.Referrer);
+        Assert.Equal(LookupProtocol.Whois, result.Protocol);
+        await rdapClient.DidNotReceive().Query(Arg.Any<WhoisRequest>(), Arg.Any<CancellationToken>());
     }
 
     [Fact]
-    public async Task TestLookupDomainDontFollowReferrer()
+    public async Task Lookup_LeadingDot_NormalizesToDomainWithoutDot()
     {
-        var request = new WhoisRequest { Query = "google.com", FollowReferrer = false };
-        var intermediateResult = sampleReader.Read("whois.verisign-grs.com", "com", "found", "found_status_registered.txt");
+        var rdapRegistry = Substitute.For<IRdapRegistryCache>();
+        var ianaLookup = Substitute.For<IIanaServerLookup>();
+        rdapRegistry.GetBaseUrl("com", Arg.Any<CancellationToken>())
+            .Returns("https://rdap.verisign.com/com/v1/");
 
-        var rootServer = new WhoisResponse
-        {
-            DomainName = new HostName("com"),
-            Registrar = new Registrar { WhoisServer = new HostName("whois.verisign-grs.com"), },
-        };
+        var rdapClient = Substitute.For<IProtocolClient>();
+        rdapClient.Protocol.Returns(LookupProtocol.Rdap);
+        rdapClient.Query(Arg.Any<WhoisRequest>(), Arg.Any<CancellationToken>())
+            .Returns(callInfo =>
+            {
+                var req = callInfo.ArgAt<WhoisRequest>(0);
+                return new ProtocolResponse
+                {
+                    RawContent = "{}",
+                    Protocol = LookupProtocol.Rdap,
+                    Response = new DomainInfo
+                    {
+                        DomainName = new HostName(req.Query),
+                        Status = RegistrationStatus.Found,
+                    },
+                    Diagnostics = new LookupDiagnostics(),
+                };
+            });
 
-        whoisServerLookup.Lookup(request, Arg.Any<CancellationToken>()).Returns(rootServer);
+        var whoisClient = Substitute.For<IProtocolClient>();
+        whoisClient.Protocol.Returns(LookupProtocol.Whois);
 
-        tcpReader
-            .Read("whois.verisign-grs.com", 43, "google.com", Encoding.UTF8, 10, Arg.Any<CancellationToken>())
-            .Returns(intermediateResult);
+        var lookup = new WhoisLookup(
+            new WhoisOptions(),
+            rdapRegistry,
+            ianaLookup,
+            [whoisClient, rdapClient]);
 
-        var result = await lookup.Lookup(request);
+        var result = await lookup.Lookup(".example.com");
 
-        Assert.Equal("google.com", result.DomainName.ToString());
-        Assert.Equal(WhoisStatus.Found, result.Status);
-
-        Assert.Equal(intermediateResult, result.Content);
-        Assert.Equal(rootServer, result.Referrer);
+        // The leading dot should be stripped before querying
+        await rdapClient.Received(1).Query(
+            Arg.Is<WhoisRequest>(r => r.Query == "example.com"),
+            Arg.Any<CancellationToken>());
     }
 
     [Fact]
-    public async Task TestLookupDomainSpecifyRootServer()
+    public async Task Lookup_EmptyQuery_ThrowsArgumentNullException()
     {
-        var request = new WhoisRequest { Query = "google.com", WhoisServer = "whois.markmonitor.com" };
-        var authoritativeResult = sampleReader.Read("whois.markmonitor.com", "com", "found", "found.txt");
+        var rdapRegistry = Substitute.For<IRdapRegistryCache>();
+        var ianaLookup = Substitute.For<IIanaServerLookup>();
 
-        tcpReader
-            .Read("whois.markmonitor.com", 43, "google.com", Encoding.UTF8, 10, Arg.Any<CancellationToken>())
-            .Returns(authoritativeResult);
+        var whoisClient = Substitute.For<IProtocolClient>();
+        whoisClient.Protocol.Returns(LookupProtocol.Whois);
 
-        var result = await lookup.Lookup(request);
+        var rdapClient = Substitute.For<IProtocolClient>();
+        rdapClient.Protocol.Returns(LookupProtocol.Rdap);
 
-        Assert.Equal("google.com", result.DomainName.ToString());
-        Assert.Equal(WhoisStatus.Found, result.Status);
+        var lookup = new WhoisLookup(new WhoisOptions(), rdapRegistry, ianaLookup, [whoisClient, rdapClient]);
 
-        Assert.Equal(authoritativeResult, result.Content);
-        Assert.Equal("whois.markmonitor.com", result.Referrer.WhoisServer.Value);
-
-        await whoisServerLookup.DidNotReceive().Lookup(request, Arg.Any<CancellationToken>());
-    }
-
-    [Fact]
-    public async Task TestLookupTld()
-    {
-        var request = new WhoisRequest(".com");
-
-        var rootServer = new WhoisResponse
-        {
-            DomainName = new HostName("com"),
-            Registrar = new Registrar { WhoisServer = new HostName("whois.markmonitor.com"), },
-        };
-
-        whoisServerLookup.Lookup(request, Arg.Any<CancellationToken>()).Returns(rootServer);
-
-        var result = await lookup.Lookup(request);
-
-        Assert.Equal(rootServer, result);
-    }
-
-    [Fact]
-    public async Task TestLookupDomainWithEmptyQuery()
-    {
         await Assert.ThrowsAsync<ArgumentNullException>(() => lookup.Lookup(string.Empty));
     }
 
     [Fact]
-    public async Task TestLookupDomainWithNullQuery()
+    public async Task Lookup_RdapProtocol_QueriesRegistryOnlyOnce()
     {
-        await Assert.ThrowsAsync<ArgumentNullException>(() => lookup.Lookup(null, Encoding.UTF8));
-    }
+        var rdapRegistry = Substitute.For<IRdapRegistryCache>();
+        var ianaLookup = Substitute.For<IIanaServerLookup>();
+        rdapRegistry.GetBaseUrl("com", Arg.Any<CancellationToken>())
+            .Returns("https://rdap.verisign.com/com/v1/");
 
-    /// <summary>
-    /// When looking up a WHOIS domain, we follow a chain of responses:
-    ///
-    ///   Root Server > Intermediate Server > Authoritative Server
-    ///
-    /// Sometimes the response at the end of the chain contains less information than an
-    /// intermediate step.  In this case, we return the response with the most information
-    /// </summary>
-    [Fact]
-    public async Task TestLookupDomainUseBestResponse()
-    {
-        // Setup our initial request
-        var request = new WhoisRequest { Query = "fark.co", FollowReferrer = true };
-
-        // Setup the inital root server response
-        var rootServer = new WhoisResponse
-        {
-            DomainName = new HostName("co"),
-            Registrar = new Registrar { WhoisServer = new HostName("whois.nic.co"), },
-        };
-        whoisServerLookup.Lookup(request, Arg.Any<CancellationToken>()).Returns(rootServer);
-
-        // Setup the intermediate server response
-        var intermediateResult = sampleReader.Read("whois.nic.co", "co", "found", "fark.co.txt");
-        tcpReader
-            .Read("whois.nic.co", 43, "fark.co", Encoding.UTF8, 10, Arg.Any<CancellationToken>())
-            .Returns(intermediateResult);
-
-        // Setup the authoritative server response
-        // Note: this contains less data than the intermediate response, so should be ignored
-        var authoritativeResult = sampleReader.Read("whois.dynadot.com", "co", "found", "fark.co.txt");
-        tcpReader
-            .Read("whois.dynadot.com", 43, "fark.co", Encoding.UTF8, 10, Arg.Any<CancellationToken>())
-            .Returns(authoritativeResult);
-
-        var result = await lookup.Lookup(request);
-
-        Assert.Equal("fark.co", result.DomainName.ToString());
-        Assert.Equal(WhoisStatus.Found, result.Status);
-
-        Assert.Equal(intermediateResult, result.Content);
-        Assert.Equal(rootServer, result.Referrer);
-    }
-
-    [Fact]
-    public void TemplateStatus_DefaultsToEmbedded()
-    {
-        var instance = new WhoisLookup();
-
-        Assert.Equal(TemplateSource.Embedded, instance.TemplateStatus.Source);
-        Assert.Equal("embedded", instance.TemplateStatus.CurrentVersion);
-    }
-
-    [Fact]
-    public async Task UpdateTemplates_DelegatesToPackProvider()
-    {
-        var packProvider = Substitute.For<ITemplatePackProvider>();
-        var parser = new WhoisParser();
-        var expected = new TemplateUpdateResult(TemplateUpdateOutcome.AlreadyUpToDate, "1.0.0", null);
-        packProvider.CheckForUpdate(Arg.Any<CancellationToken>()).Returns(expected);
-
-        var instance = new WhoisLookup(packProvider, parser)
-        {
-            TcpReader = tcpReader,
-            ServerLookup = whoisServerLookup,
-        };
-
-        var result = await instance.UpdateTemplates();
-
-        Assert.Equal(expected, result);
-        await packProvider.Received(1).CheckForUpdate(Arg.Any<CancellationToken>());
-    }
-
-    [Fact]
-    public async Task Lookup_WithAutoUpdate_TriggersBackgroundCheck()
-    {
-        var packProvider = Substitute.For<ITemplatePackProvider>();
-        var parser = new WhoisParser();
-        using var triggered = new ManualResetEventSlim(false);
-
-        packProvider.CheckForUpdate(Arg.Any<CancellationToken>())
-            .Returns(callInfo =>
+        var rdapClient = Substitute.For<IProtocolClient>();
+        rdapClient.Protocol.Returns(LookupProtocol.Rdap);
+        rdapClient.Query(Arg.Any<WhoisRequest>(), Arg.Any<CancellationToken>())
+            .Returns(new ProtocolResponse
             {
-                triggered.Set();
-                return new TemplateUpdateResult(TemplateUpdateOutcome.AlreadyUpToDate, "1.0.0", null);
+                RawContent = "{}",
+                Protocol = LookupProtocol.Rdap,
+                Response = new DomainInfo
+                {
+                    DomainName = new HostName("google.com"),
+                    Status = RegistrationStatus.Found,
+                },
+                Diagnostics = new LookupDiagnostics(),
             });
 
-        packProvider.Status.Returns(new TemplateStatus("embedded", TemplateSource.Embedded, null, null, null, false));
+        var whoisClient = Substitute.For<IProtocolClient>();
+        whoisClient.Protocol.Returns(LookupProtocol.Whois);
 
-        var request = new WhoisRequest("google.com");
-        var rootServer = new WhoisResponse
-        {
-            DomainName = new HostName("com"),
-            Registrar = new Registrar { WhoisServer = new HostName("whois.markmonitor.com") },
-        };
-        whoisServerLookup.Lookup(request, Arg.Any<CancellationToken>()).Returns(rootServer);
-        tcpReader
-            .Read("whois.markmonitor.com", 43, "google.com", Encoding.UTF8, 10, Arg.Any<CancellationToken>())
-            .Returns(sampleReader.Read("whois.markmonitor.com", "com", "found", "found.txt"));
+        var request = new WhoisRequest("google.com") { PreferredProtocol = ProtocolPreference.Rdap };
 
-        var instance = new WhoisLookup(packProvider, parser)
-        {
-            Options = { AutoUpdateTemplates = true },
-            TcpReader = tcpReader,
-            ServerLookup = whoisServerLookup,
-        };
+        var lookup = new WhoisLookup(
+            new WhoisOptions(),
+            rdapRegistry,
+            ianaLookup,
+            [whoisClient, rdapClient]);
 
-        await instance.Lookup(request);
+        await lookup.Lookup(request);
 
-        Assert.True(triggered.Wait(TimeSpan.FromSeconds(30)), "CheckForUpdate was not called within timeout");
+        await rdapRegistry.Received(1).GetBaseUrl("com", Arg.Any<CancellationToken>());
     }
 
     [Fact]
-    public async Task Lookup_MultipleCallsWithAutoUpdate_TriggersOnce()
+    public void ClearCache_DelegatesToBothCaches()
     {
-        var packProvider = Substitute.For<ITemplatePackProvider>();
-        var parser = new WhoisParser();
-        var callCount = 0;
-        using var firstCallStarted = new ManualResetEventSlim(false);
+        var rdapRegistry = Substitute.For<IRdapRegistryCache>();
+        var ianaLookup = Substitute.For<IIanaServerLookup>();
 
-        packProvider.CheckForUpdate(Arg.Any<CancellationToken>())
-            .Returns(callInfo =>
-            {
-                Interlocked.Increment(ref callCount);
-                firstCallStarted.Set();
-                return new TemplateUpdateResult(TemplateUpdateOutcome.AlreadyUpToDate, "1.0.0", null);
-            });
+        var whoisClient = Substitute.For<IProtocolClient>();
+        whoisClient.Protocol.Returns(LookupProtocol.Whois);
 
-        packProvider.Status.Returns(new TemplateStatus("embedded", TemplateSource.Embedded, null, null, null, false));
+        var rdapClient = Substitute.For<IProtocolClient>();
+        rdapClient.Protocol.Returns(LookupProtocol.Rdap);
 
-        var request = new WhoisRequest("google.com");
-        var rootServer = new WhoisResponse
-        {
-            DomainName = new HostName("com"),
-            Registrar = new Registrar { WhoisServer = new HostName("whois.markmonitor.com") },
-        };
-        whoisServerLookup.Lookup(request, Arg.Any<CancellationToken>()).Returns(rootServer);
-        tcpReader
-            .Read("whois.markmonitor.com", 43, "google.com", Encoding.UTF8, 10, Arg.Any<CancellationToken>())
-            .Returns(sampleReader.Read("whois.markmonitor.com", "com", "found", "found.txt"));
+        var lookup = new WhoisLookup(new WhoisOptions(), rdapRegistry, ianaLookup, [whoisClient, rdapClient]);
 
-        var instance = new WhoisLookup(packProvider, parser)
-        {
-            Options = { AutoUpdateTemplates = true },
-            TcpReader = tcpReader,
-            ServerLookup = whoisServerLookup,
-        };
+        lookup.ClearCache();
 
-        await instance.Lookup(request);
-        await instance.Lookup(request);
-
-        firstCallStarted.Wait(TimeSpan.FromSeconds(30));
-
-        // Give the background task a moment to complete
-        await Task.Delay(200);
-
-        Assert.Equal(1, callCount);
-    }
-
-    [Fact]
-    public async Task Lookup_WithAutoUpdate_DoesNotBlockQuery()
-    {
-        var packProvider = Substitute.For<ITemplatePackProvider>();
-        var parser = new WhoisParser();
-        using var checkForUpdateBlocked = new ManualResetEventSlim(false);
-        using var checkForUpdateStarted = new ManualResetEventSlim(false);
-
-        packProvider.CheckForUpdate(Arg.Any<CancellationToken>())
-            .Returns(callInfo =>
-            {
-                checkForUpdateStarted.Set();
-                // Block until signaled (simulating a long-running update check)
-                checkForUpdateBlocked.Wait(TimeSpan.FromSeconds(10));
-                return new TemplateUpdateResult(TemplateUpdateOutcome.AlreadyUpToDate, "1.0.0", null);
-            });
-
-        packProvider.Status.Returns(new TemplateStatus("embedded", TemplateSource.Embedded, null, null, null, false));
-
-        var request = new WhoisRequest("google.com");
-        var rootServer = new WhoisResponse
-        {
-            DomainName = new HostName("com"),
-            Registrar = new Registrar { WhoisServer = new HostName("whois.markmonitor.com") },
-        };
-        whoisServerLookup.Lookup(request, Arg.Any<CancellationToken>()).Returns(rootServer);
-        tcpReader
-            .Read("whois.markmonitor.com", 43, "google.com", Encoding.UTF8, 10, Arg.Any<CancellationToken>())
-            .Returns(sampleReader.Read("whois.markmonitor.com", "com", "found", "found.txt"));
-
-        var instance = new WhoisLookup(packProvider, parser)
-        {
-            Options = { AutoUpdateTemplates = true },
-            TcpReader = tcpReader,
-            ServerLookup = whoisServerLookup,
-        };
-
-        // Call Lookup - should return promptly even though CheckForUpdate is blocked
-        var lookupTask = instance.Lookup(request);
-        var completedWithinTimeout = await Task.WhenAny(
-            lookupTask,
-            Task.Delay(TimeSpan.FromSeconds(5))
-        ) == lookupTask;
-
-        Assert.True(completedWithinTimeout, "Lookup did not complete within timeout - it was blocked by CheckForUpdate");
-
-        var result = await lookupTask.ConfigureAwait(false);
-        Assert.Equal("google.com", result.DomainName.ToString());
-        Assert.Equal(WhoisStatus.Found, result.Status);
-
-        // Signal the background check to complete (cleanup)
-        checkForUpdateBlocked.Set();
+        rdapRegistry.Received(1).ClearCache();
+        ianaLookup.Received(1).ClearCache();
     }
 }

@@ -20,7 +20,7 @@ public class JeParsingTests : ParsingTests
         var response = parser.Parse("whois.je", sample);
 
         Assert.True(sample.Length > 0);
-        Assert.Equal(WhoisStatus.NotFound, response.Status);
+        Assert.Equal(RegistrationStatus.NotFound, response.Status);
 
         Assert.Equal(0, response.ParsingErrors);
         Assert.Equal("generic/tld/not-found/01", response.TemplateName);
@@ -40,7 +40,7 @@ public class JeParsingTests : ParsingTests
         var response = parser.Parse("whois.je", sample);
 
         Assert.True(sample.Length > 0);
-        Assert.Equal(WhoisStatus.Found, response.Status);
+        Assert.Equal(RegistrationStatus.Found, response.Status);
 
         Assert.Equal(0, response.ParsingErrors);
         Assert.Equal("whois.je/je/found/01", response.TemplateName);

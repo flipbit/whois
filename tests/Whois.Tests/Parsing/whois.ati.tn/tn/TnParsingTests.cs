@@ -20,7 +20,7 @@ public class TnParsingTests : ParsingTests
         var response = parser.Parse("whois.ati.tn", sample);
 
         Assert.True(sample.Length > 0);
-        Assert.Equal(WhoisStatus.Found, response.Status);
+        Assert.Equal(RegistrationStatus.Found, response.Status);
 
         Assert.Equal(18, response.FieldsParsed);
         Assert.Equal(0, response.ParsingErrors);
@@ -68,7 +68,7 @@ public class TnParsingTests : ParsingTests
         var response = parser.Parse("whois.ati.tn", sample);
 
         Assert.True(sample.Length > 0);
-        Assert.Equal(WhoisStatus.NotFound, response.Status);
+        Assert.Equal(RegistrationStatus.NotFound, response.Status);
 
         Assert.Equal(2, response.FieldsParsed);
         Assert.Equal(0, response.ParsingErrors);
@@ -84,7 +84,7 @@ public class TnParsingTests : ParsingTests
         var response = parser.Parse("whois.ati.tn", sample);
 
         Assert.True(sample.Length > 0);
-        Assert.Equal(WhoisStatus.Found, response.Status);
+        Assert.Equal(RegistrationStatus.Found, response.Status);
 
         Assert.Equal(23, response.FieldsParsed);
         Assert.Equal(0, response.ParsingErrors);

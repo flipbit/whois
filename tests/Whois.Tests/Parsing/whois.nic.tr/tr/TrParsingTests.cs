@@ -20,7 +20,7 @@ public class TrParsingTests : ParsingTests
         var response = parser.Parse("whois.nic.tr", sample);
 
         Assert.True(sample.Length > 0);
-        Assert.Equal(WhoisStatus.Found, response.Status);
+        Assert.Equal(RegistrationStatus.Found, response.Status);
 
         Assert.Equal(0, response.ParsingErrors);
         Assert.Equal("whois.nic.tr/tr/found/01", response.TemplateName);
@@ -91,7 +91,7 @@ public class TrParsingTests : ParsingTests
         var response = parser.Parse("whois.nic.tr", sample);
 
         Assert.True(sample.Length > 0);
-        Assert.Equal(WhoisStatus.Found, response.Status);
+        Assert.Equal(RegistrationStatus.Found, response.Status);
 
         Assert.Equal(0, response.ParsingErrors);
         Assert.Equal("whois.nic.tr/tr/found/01", response.TemplateName);
@@ -139,7 +139,7 @@ public class TrParsingTests : ParsingTests
         var response = parser.Parse("whois.nic.tr", sample);
 
         Assert.True(sample.Length > 0);
-        Assert.Equal(WhoisStatus.Found, response.Status);
+        Assert.Equal(RegistrationStatus.Found, response.Status);
 
         Assert.Equal(0, response.ParsingErrors);
         Assert.Equal("whois.nic.tr/tr/found/01", response.TemplateName);
@@ -218,7 +218,7 @@ public class TrParsingTests : ParsingTests
         var response = parser.Parse("whois.nic.tr", sample);
 
         Assert.True(sample.Length > 0);
-        Assert.Equal(WhoisStatus.Found, response.Status);
+        Assert.Equal(RegistrationStatus.Found, response.Status);
 
         Assert.Equal(0, response.ParsingErrors);
         Assert.Equal("whois.nic.tr/tr/found/01", response.TemplateName);
@@ -265,7 +265,7 @@ public class TrParsingTests : ParsingTests
         var response = parser.Parse("whois.nic.tr", sample);
 
         Assert.True(sample.Length > 0);
-        Assert.Equal(WhoisStatus.Found, response.Status);
+        Assert.Equal(RegistrationStatus.Found, response.Status);
 
         Assert.Equal(0, response.ParsingErrors);
         Assert.Equal("whois.nic.tr/tr/found/01", response.TemplateName);
@@ -335,7 +335,7 @@ public class TrParsingTests : ParsingTests
         var response = parser.Parse("whois.nic.tr", sample);
 
         Assert.True(sample.Length > 0);
-        Assert.Equal(WhoisStatus.Found, response.Status);
+        Assert.Equal(RegistrationStatus.Found, response.Status);
 
         Assert.Equal(0, response.ParsingErrors);
         Assert.Equal("whois.nic.tr/tr/found/01", response.TemplateName);
@@ -407,7 +407,7 @@ public class TrParsingTests : ParsingTests
         var response = parser.Parse("whois.nic.tr", sample);
 
         Assert.True(sample.Length > 0);
-        Assert.Equal(WhoisStatus.Found, response.Status);
+        Assert.Equal(RegistrationStatus.Found, response.Status);
 
         Assert.Equal(0, response.ParsingErrors);
         Assert.Equal("whois.nic.tr/tr/found/01", response.TemplateName);
@@ -482,7 +482,7 @@ public class TrParsingTests : ParsingTests
         var response = parser.Parse("whois.nic.tr", sample);
 
         Assert.True(sample.Length > 0);
-        Assert.Equal(WhoisStatus.Error, response.Status);
+        Assert.Equal(RegistrationStatus.Error, response.Status);
 
         Assert.Equal(0, response.ParsingErrors);
         Assert.Equal("whois.nic.tr/tr/error/01", response.TemplateName);
@@ -497,7 +497,7 @@ public class TrParsingTests : ParsingTests
         var response = parser.Parse("whois.nic.tr", sample);
 
         Assert.True(sample.Length > 0);
-        Assert.Equal(WhoisStatus.NotFound, response.Status);
+        Assert.Equal(RegistrationStatus.NotFound, response.Status);
 
         Assert.Equal(0, response.ParsingErrors);
         Assert.Equal("whois.nic.tr/tr/not-found/01", response.TemplateName);
@@ -514,7 +514,7 @@ public class TrParsingTests : ParsingTests
         var response = parser.Parse("whois.nic.tr", sample);
 
         Assert.True(sample.Length > 0);
-        Assert.Equal(WhoisStatus.Error, response.Status);
+        Assert.Equal(RegistrationStatus.Error, response.Status);
 
         Assert.Equal(0, response.ParsingErrors);
         Assert.Equal("whois.nic.tr/tr/error/01", response.TemplateName);
@@ -529,7 +529,7 @@ public class TrParsingTests : ParsingTests
         var response = parser.Parse("whois.nic.tr", sample);
 
         Assert.True(sample.Length > 0);
-        Assert.Equal(WhoisStatus.Found, response.Status);
+        Assert.Equal(RegistrationStatus.Found, response.Status);
 
         Assert.Equal(0, response.ParsingErrors);
         Assert.Equal("whois.nic.tr/tr/found/01", response.TemplateName);

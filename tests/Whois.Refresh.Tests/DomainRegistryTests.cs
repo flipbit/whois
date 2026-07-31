@@ -31,7 +31,7 @@ public class DomainRegistryTests
         Assert.False(server.IsStatic);
         Assert.Null(server.RateGroup);
         Assert.Equal(2, server.Domains["found"].Count);
-        Assert.Contains("google.co.uk", server.Domains["found"]);
+        Assert.Contains(server.Domains["found"], d => d == "google.co.uk");
         Assert.Single(server.Domains["not-found"]);
     }
 

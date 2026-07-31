@@ -20,7 +20,7 @@ public class NlParsingTests : ParsingTests
         var response = parser.Parse("whois.domain-registry.nl", sample);
 
         Assert.True(sample.Length > 0);
-        Assert.Equal(WhoisStatus.Found, response.Status);
+        Assert.Equal(RegistrationStatus.Found, response.Status);
 
         Assert.Equal(0, response.ParsingErrors);
         Assert.Equal("whois.domain-registry.nl/nl/found/02", response.TemplateName);
@@ -49,7 +49,7 @@ public class NlParsingTests : ParsingTests
         var response = parser.Parse("whois.domain-registry.nl", sample);
 
         Assert.True(sample.Length > 0);
-        Assert.Equal(WhoisStatus.NotAssigned, response.Status);
+        Assert.Equal(RegistrationStatus.NotAssigned, response.Status);
 
         Assert.Equal(0, response.ParsingErrors);
         Assert.Equal("whois.domain-registry.nl/nl/found/02", response.TemplateName);
@@ -78,7 +78,7 @@ public class NlParsingTests : ParsingTests
         var response = parser.Parse("whois.domain-registry.nl", sample);
 
         Assert.True(sample.Length > 0);
-        Assert.Equal(WhoisStatus.Throttled, response.Status);
+        Assert.Equal(RegistrationStatus.Throttled, response.Status);
 
         Assert.Equal(0, response.ParsingErrors);
         Assert.Equal("whois.domain-registry.nl/nl/throttled/01", response.TemplateName);
@@ -93,7 +93,7 @@ public class NlParsingTests : ParsingTests
         var response = parser.Parse("whois.domain-registry.nl", sample);
 
         Assert.True(sample.Length > 0);
-        Assert.Equal(WhoisStatus.Throttled, response.Status);
+        Assert.Equal(RegistrationStatus.Throttled, response.Status);
 
         Assert.Equal(0, response.ParsingErrors);
         Assert.Equal("whois.domain-registry.nl/nl/throttled/02", response.TemplateName);
@@ -108,7 +108,7 @@ public class NlParsingTests : ParsingTests
         var response = parser.Parse("whois.domain-registry.nl", sample);
 
         Assert.True(sample.Length > 0);
-        Assert.Equal(WhoisStatus.Unavailable, response.Status);
+        Assert.Equal(RegistrationStatus.Unavailable, response.Status);
 
         Assert.Equal(0, response.ParsingErrors);
         Assert.Equal("whois.domain-registry.nl/nl/unavailable/01", response.TemplateName);
@@ -123,7 +123,7 @@ public class NlParsingTests : ParsingTests
         var response = parser.Parse("whois.domain-registry.nl", sample);
 
         Assert.True(sample.Length > 0);
-        Assert.Equal(WhoisStatus.NotFound, response.Status);
+        Assert.Equal(RegistrationStatus.NotFound, response.Status);
 
         Assert.Equal(0, response.ParsingErrors);
         Assert.Equal("whois.domain-registry.nl/nl/not-found/01", response.TemplateName);
@@ -140,7 +140,7 @@ public class NlParsingTests : ParsingTests
         var response = parser.Parse("whois.domain-registry.nl", sample);
 
         Assert.True(sample.Length > 0);
-        Assert.Equal(WhoisStatus.Quarantined, response.Status);
+        Assert.Equal(RegistrationStatus.Quarantined, response.Status);
 
         Assert.Equal(0, response.ParsingErrors);
         Assert.Equal("whois.domain-registry.nl/nl/found/02", response.TemplateName);
@@ -162,7 +162,7 @@ public class NlParsingTests : ParsingTests
         var response = parser.Parse("whois.domain-registry.nl", sample);
 
         Assert.True(sample.Length > 0);
-        Assert.Equal(WhoisStatus.Found, response.Status);
+        Assert.Equal(RegistrationStatus.Found, response.Status);
 
         Assert.Equal(0, response.ParsingErrors);
         Assert.Equal("whois.domain-registry.nl/nl/found/01", response.TemplateName);

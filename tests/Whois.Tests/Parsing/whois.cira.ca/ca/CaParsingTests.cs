@@ -20,7 +20,7 @@ public class CaParsingTests : ParsingTests
         var response = parser.Parse("whois.cira.ca", sample);
 
         Assert.True(sample.Length > 0);
-        Assert.Equal(WhoisStatus.Found, response.Status);
+        Assert.Equal(RegistrationStatus.Found, response.Status);
 
         Assert.Equal(0, response.ParsingErrors);
         Assert.Equal("generic/tld/found/01", response.TemplateName);
@@ -80,7 +80,7 @@ public class CaParsingTests : ParsingTests
         var response = parser.Parse("whois.cira.ca", sample);
 
         Assert.True(sample.Length > 0);
-        Assert.Equal(WhoisStatus.NotAssigned, response.Status);
+        Assert.Equal(RegistrationStatus.NotAssigned, response.Status);
 
         Assert.Equal(0, response.ParsingErrors);
         Assert.Equal("whois.cira.ca/ca/found/01", response.TemplateName);
@@ -147,7 +147,7 @@ public class CaParsingTests : ParsingTests
         var response = parser.Parse("whois.cira.ca", sample);
 
         Assert.True(sample.Length > 0);
-        Assert.Equal(WhoisStatus.NotFound, response.Status);
+        Assert.Equal(RegistrationStatus.NotFound, response.Status);
 
         Assert.Equal(0, response.ParsingErrors);
         Assert.Equal("whois.cira.ca/ca/not-found/01", response.TemplateName);
@@ -168,7 +168,7 @@ public class CaParsingTests : ParsingTests
         var response = parser.Parse("whois.cira.ca", sample);
 
         Assert.True(sample.Length > 0);
-        Assert.Equal(WhoisStatus.PendingDelete, response.Status);
+        Assert.Equal(RegistrationStatus.PendingDelete, response.Status);
 
         Assert.Equal(0, response.ParsingErrors);
         Assert.Equal("whois.cira.ca/ca/found/01", response.TemplateName);
@@ -202,7 +202,7 @@ public class CaParsingTests : ParsingTests
         var response = parser.Parse("whois.cira.ca", sample);
 
         Assert.True(sample.Length > 0);
-        Assert.Equal(WhoisStatus.Redemption, response.Status);
+        Assert.Equal(RegistrationStatus.Redemption, response.Status);
 
         Assert.Equal(0, response.ParsingErrors);
         Assert.Equal("whois.cira.ca/ca/found/01", response.TemplateName);
@@ -263,7 +263,7 @@ public class CaParsingTests : ParsingTests
         var response = parser.Parse("whois.cira.ca", sample);
 
         Assert.True(sample.Length > 0);
-        Assert.Equal(WhoisStatus.Found, response.Status);
+        Assert.Equal(RegistrationStatus.Found, response.Status);
 
         Assert.Equal(0, response.ParsingErrors);
         Assert.Equal("generic/tld/found/01", response.TemplateName);
@@ -326,7 +326,7 @@ public class CaParsingTests : ParsingTests
         var response = parser.Parse("whois.cira.ca", sample);
 
         Assert.True(sample.Length > 0);
-        Assert.Equal(WhoisStatus.ToBeReleased, response.Status);
+        Assert.Equal(RegistrationStatus.ToBeReleased, response.Status);
 
         Assert.Equal(0, response.ParsingErrors);
         Assert.Equal("whois.cira.ca/ca/to-be-released/01", response.TemplateName);
@@ -348,7 +348,7 @@ public class CaParsingTests : ParsingTests
         var response = parser.Parse("whois.cira.ca", sample);
 
         Assert.True(sample.Length > 0);
-        Assert.Equal(WhoisStatus.Unavailable, response.Status);
+        Assert.Equal(RegistrationStatus.Unavailable, response.Status);
 
         Assert.Equal(0, response.ParsingErrors);
         Assert.Equal("whois.cira.ca/ca/unavailable/01", response.TemplateName);
@@ -365,7 +365,7 @@ public class CaParsingTests : ParsingTests
         var response = parser.Parse("whois.cira.ca", sample);
 
         Assert.True(sample.Length > 0);
-        Assert.Equal(WhoisStatus.NotFound, response.Status);
+        Assert.Equal(RegistrationStatus.NotFound, response.Status);
 
         Assert.Equal(0, response.ParsingErrors);
         Assert.Equal("whois.cira.ca/ca/not-found/01", response.TemplateName);
@@ -386,7 +386,7 @@ public class CaParsingTests : ParsingTests
         var response = parser.Parse("whois.cira.ca", sample);
 
         Assert.True(sample.Length > 0);
-        Assert.Equal(WhoisStatus.Unavailable, response.Status);
+        Assert.Equal(RegistrationStatus.Unavailable, response.Status);
 
         Assert.Equal(0, response.ParsingErrors);
         Assert.Equal("whois.cira.ca/ca/unavailable/01", response.TemplateName);
@@ -403,7 +403,7 @@ public class CaParsingTests : ParsingTests
         var response = parser.Parse("whois.cira.ca", sample);
 
         Assert.True(sample.Length > 0);
-        Assert.Equal(WhoisStatus.Found, response.Status);
+        Assert.Equal(RegistrationStatus.Found, response.Status);
 
         Assert.Equal(0, response.ParsingErrors);
         Assert.Equal("whois.cira.ca/ca/found/01", response.TemplateName);

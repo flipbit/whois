@@ -74,7 +74,7 @@ public class DetectCommandTests
         Assert.Equal(DriftClassification.NoMatch, entries[0].Classification);
 
         await reporter.Received(1).ReportAsync(
-            Arg.Is<IList<DriftEntry>>(e => e.Count == 1),
+            Arg.Is<IList<DriftEntry>>(e => e != null && e.Count == 1),
             Arg.Any<string>(),
             Arg.Any<string>(),
             Arg.Any<CancellationToken>());

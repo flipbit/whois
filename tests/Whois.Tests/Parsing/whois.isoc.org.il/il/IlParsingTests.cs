@@ -20,7 +20,7 @@ public class IlParsingTests : ParsingTests
         var response = parser.Parse("whois.isoc.org.il", sample);
 
         Assert.True(sample.Length > 0);
-        Assert.Equal(WhoisStatus.NotFound, response.Status);
+        Assert.Equal(RegistrationStatus.NotFound, response.Status);
 
         Assert.Equal(0, response.ParsingErrors);
         Assert.Equal("whois.isoc.org.il/il/not-found/01", response.TemplateName);
@@ -35,7 +35,7 @@ public class IlParsingTests : ParsingTests
         var response = parser.Parse("whois.isoc.org.il", sample);
 
         Assert.True(sample.Length > 0);
-        Assert.Equal(WhoisStatus.Found, response.Status);
+        Assert.Equal(RegistrationStatus.Found, response.Status);
 
         Assert.Equal(0, response.ParsingErrors);
         Assert.Equal("whois.isoc.org.il/il/found/01", response.TemplateName);
@@ -125,7 +125,7 @@ public class IlParsingTests : ParsingTests
         var response = parser.Parse("whois.isoc.org.il", sample);
 
         Assert.True(sample.Length > 0);
-        Assert.Equal(WhoisStatus.Locked, response.Status);
+        Assert.Equal(RegistrationStatus.Locked, response.Status);
 
         Assert.Equal(0, response.ParsingErrors);
         Assert.Equal("whois.isoc.org.il/il/found/01", response.TemplateName);
@@ -224,7 +224,7 @@ public class IlParsingTests : ParsingTests
         var response = parser.Parse("whois.isoc.org.il", sample);
 
         Assert.True(sample.Length > 0);
-        Assert.Equal(WhoisStatus.NotFound, response.Status);
+        Assert.Equal(RegistrationStatus.NotFound, response.Status);
 
         Assert.Equal(0, response.ParsingErrors);
         Assert.Equal("whois.isoc.org.il/il/not-found/01", response.TemplateName);
@@ -239,7 +239,7 @@ public class IlParsingTests : ParsingTests
         var response = parser.Parse("whois.isoc.org.il", sample);
 
         Assert.True(sample.Length > 0);
-        Assert.Equal(WhoisStatus.Locked, response.Status);
+        Assert.Equal(RegistrationStatus.Locked, response.Status);
 
         Assert.Equal(0, response.ParsingErrors);
         Assert.Equal("whois.isoc.org.il/il/found/01", response.TemplateName);

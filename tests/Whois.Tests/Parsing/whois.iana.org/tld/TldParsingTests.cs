@@ -20,7 +20,7 @@ public class TldParsingTests : ParsingTests
         var response = parser.Parse("whois.iana.org", sample);
 
         Assert.True(sample.Length > 0);
-        Assert.Equal(WhoisStatus.Found, response.Status);
+        Assert.Equal(RegistrationStatus.Found, response.Status);
 
         Assert.Equal(0, response.ParsingErrors);
         Assert.Equal("whois.iana.org/found/01", response.TemplateName);
@@ -92,7 +92,7 @@ public class TldParsingTests : ParsingTests
         var response = parser.Parse("whois.iana.org", sample);
 
         Assert.True(sample.Length > 0);
-        Assert.Equal(WhoisStatus.Found, response.Status);
+        Assert.Equal(RegistrationStatus.Found, response.Status);
 
         Assert.Equal(0, response.ParsingErrors);
         Assert.Equal("whois.iana.org/found/01", response.TemplateName);
@@ -171,7 +171,7 @@ public class TldParsingTests : ParsingTests
         var response = parser.Parse("whois.iana.org", sample);
 
         Assert.True(sample.Length > 0);
-        Assert.Equal(WhoisStatus.NotAssigned, response.Status);
+        Assert.Equal(RegistrationStatus.NotAssigned, response.Status);
 
     }
 }

@@ -13,12 +13,12 @@ public record RefreshEngineOptions(
     int QueryTimeoutSeconds,
     int MaxResponseBytes);
 
-public class RefreshEngine
+public class WhoisRefreshEngine
 {
     private readonly ITcpReader _tcpReader;
     private readonly IFileSystem _fileSystem;
 
-    public RefreshEngine(ITcpReader tcpReader, IFileSystem fileSystem)
+    public WhoisRefreshEngine(ITcpReader tcpReader, IFileSystem fileSystem)
     {
         _tcpReader = tcpReader;
         _fileSystem = fileSystem;
@@ -108,7 +108,7 @@ public class RefreshEngine
             result.ExtractedFields = GetExtractedFieldNames(parsed);
 
             // Determine actual status for save directory
-            var actualStatus = MapWhoisStatus(parsed.Status);
+            var actualStatus = DomainRegistry.MapRegistrationStatus(parsed.Status);
             var saveStatus = actualStatus ?? status;
             if (actualStatus != null && !string.Equals(actualStatus, status, StringComparison.OrdinalIgnoreCase))
             {
@@ -167,7 +167,7 @@ public class RefreshEngine
         return result;
     }
 
-    private static List<string> GetExtractedFieldNames(Whois.WhoisResponse parsed)
+    private static List<string> GetExtractedFieldNames(Whois.Protocols.WhoisRecord parsed)
     {
         var fields = new List<string>();
         if (parsed.DomainName != null) fields.Add("DomainName");
@@ -185,34 +185,6 @@ public class RefreshEngine
         if (parsed.RegistryDomainId != null) fields.Add("RegistryDomainId");
         return fields;
     }
-
-    private static string? MapWhoisStatus(Whois.WhoisStatus status) => status switch
-    {
-        Whois.WhoisStatus.Found => "found",
-        Whois.WhoisStatus.NotFound => "not-found",
-        Whois.WhoisStatus.Throttled => "throttled",
-        Whois.WhoisStatus.Reserved => "reserved",
-        Whois.WhoisStatus.Suspended => "suspended",
-        Whois.WhoisStatus.Inactive => "inactive",
-        Whois.WhoisStatus.Expired => "expired",
-        Whois.WhoisStatus.Blocked => "blocked",
-        Whois.WhoisStatus.Deactivated => "deactivated",
-        Whois.WhoisStatus.Error => "error",
-        Whois.WhoisStatus.Failed => "failed",
-        Whois.WhoisStatus.Invalid => "invalid",
-        Whois.WhoisStatus.Locked => "locked",
-        Whois.WhoisStatus.NotAssigned => "not-assigned",
-        Whois.WhoisStatus.NotAvailable => "not-available",
-        Whois.WhoisStatus.OutOfService => "out-of-service",
-        Whois.WhoisStatus.PendingDelete => "pending-delete",
-        Whois.WhoisStatus.Quarantined => "quarantined",
-        Whois.WhoisStatus.Redemption => "redemption",
-        Whois.WhoisStatus.ToBeReleased => "to-be-released",
-        Whois.WhoisStatus.Unavailable => "unavailable",
-        Whois.WhoisStatus.Unconfirmed => "unconfirmed",
-        Whois.WhoisStatus.Unknown => null,
-        _ => null,
-    };
 
     private static void RecordResult(
         RefreshResults results, string server, string tld, string status,

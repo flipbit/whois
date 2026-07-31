@@ -20,7 +20,7 @@ public class KzParsingTests : ParsingTests
         var response = parser.Parse("whois.nic.kz", sample);
 
         Assert.True(sample.Length > 0);
-        Assert.Equal(WhoisStatus.NotFound, response.Status);
+        Assert.Equal(RegistrationStatus.NotFound, response.Status);
 
         Assert.Equal(0, response.ParsingErrors);
         Assert.Equal("whois.nic.kz/kz/not-found/01", response.TemplateName);
@@ -35,7 +35,7 @@ public class KzParsingTests : ParsingTests
         var response = parser.Parse("whois.nic.kz", sample);
 
         Assert.True(sample.Length > 0);
-        Assert.Equal(WhoisStatus.Found, response.Status);
+        Assert.Equal(RegistrationStatus.Found, response.Status);
 
         Assert.Equal(0, response.ParsingErrors);
         Assert.Equal("whois.nic.kz/kz/found/01", response.TemplateName);
@@ -88,7 +88,7 @@ public class KzParsingTests : ParsingTests
         var response = parser.Parse("whois.nic.kz", sample);
 
         Assert.True(sample.Length > 0);
-        Assert.Equal(WhoisStatus.Found, response.Status);
+        Assert.Equal(RegistrationStatus.Found, response.Status);
 
         Assert.Equal(0, response.ParsingErrors);
         Assert.Equal("whois.nic.kz/kz/found/01", response.TemplateName);
@@ -141,7 +141,7 @@ public class KzParsingTests : ParsingTests
         var response = parser.Parse("whois.nic.kz", sample);
 
         Assert.True(sample.Length > 0);
-        Assert.Equal(WhoisStatus.Found, response.Status);
+        Assert.Equal(RegistrationStatus.Found, response.Status);
 
         Assert.Equal(0, response.ParsingErrors);
         Assert.Equal("whois.nic.kz/kz/found/01", response.TemplateName);
@@ -193,7 +193,7 @@ public class KzParsingTests : ParsingTests
         var response = parser.Parse("whois.nic.kz", sample);
 
         Assert.True(sample.Length > 0);
-        Assert.Equal(WhoisStatus.NotFound, response.Status);
+        Assert.Equal(RegistrationStatus.NotFound, response.Status);
 
         Assert.Equal(0, response.ParsingErrors);
         Assert.Equal("whois.nic.kz/kz/not-found/01", response.TemplateName);
@@ -209,7 +209,7 @@ public class KzParsingTests : ParsingTests
         var response = parser.Parse("whois.nic.kz", sample);
 
         Assert.True(sample.Length > 0);
-        Assert.Equal(WhoisStatus.Found, response.Status);
+        Assert.Equal(RegistrationStatus.Found, response.Status);
 
         Assert.Equal(0, response.ParsingErrors);
         Assert.Equal("whois.nic.kz/kz/found/01", response.TemplateName);

@@ -23,22 +23,39 @@ public class WhoisOptions
     public bool FollowReferrer { get; set; } = true;
 
     /// <summary>
-    /// Whether to automatically check for and apply template updates in the background.
+    /// The preferred lookup protocol. Defaults to Auto (RDAP when available, falls back to WHOIS).
     /// </summary>
-    public bool AutoUpdateTemplates { get; set; } = false;
+    public ProtocolPreference PreferredProtocol { get; set; } = ProtocolPreference.Auto;
 
     /// <summary>
-    /// Directory where cached template packs are stored. Defaults to a system temp path when null.
+    /// URL to fetch RDAP bootstrap data from. Defaults to the IANA registry.
+    /// Override for testing or air-gapped deployments using a local mirror.
     /// </summary>
-    public string? TemplateCacheDirectory { get; set; }
+    public string RdapBootstrapUrl { get; set; } = "https://data.iana.org/rdap/dns.json";
 
     /// <summary>
-    /// How often to check for template updates when <see cref="AutoUpdateTemplates"/> is enabled.
+    /// Maximum number of HTTP redirects to follow for RDAP requests.
     /// </summary>
-    public TimeSpan TemplateUpdateCheckInterval { get; set; } = TimeSpan.FromHours(24);
+    public int MaxRdapRedirects { get; set; } = 5;
 
     /// <summary>
-    /// URL of the GitHub Releases page used to download template packs. Uses the default release URL when null.
+    /// Maximum number of WHOIS referral hops to follow (e.g. Verisign to registrar).
     /// </summary>
-    public string? TemplateReleaseUrl { get; set; }
+    public int MaxWhoisReferralDepth { get; set; } = 10;
+
+    /// <summary>
+    /// Maximum size in characters for an RDAP response body. Responses exceeding this limit are rejected.
+    /// </summary>
+    public int MaxRdapResponseSize { get; set; } = 2 * 1024 * 1024;
+
+    /// <summary>
+    /// Maximum size in characters for the RDAP bootstrap JSON download.
+    /// </summary>
+    public int MaxRdapBootstrapResponseSize { get; set; } = 1 * 1024 * 1024;
+
+    /// <summary>
+    /// How long to cache TLD-to-server mappings before re-fetching. Used by both RDAP and WHOIS caches.
+    /// </summary>
+    public TimeSpan TldServerCacheDuration { get; set; } = TimeSpan.FromHours(24);
+
 }

@@ -1,70 +1,62 @@
 namespace Whois;
 
 /// <summary>
-/// Represents a contact who is responsible for administering a TLD
+/// Represents a contact associated with a domain registration.
 /// </summary>
-public class Contact
+public sealed class Contact
 {
     /// <summary>
-    /// Initializes a new instance of the <see cref="Contact"/> class.
+    /// The registry's identifier for this contact.
     /// </summary>
-    public Contact()
-    {
-        Address = new List<string>();
-    }
+    public string? RegistryId { get; init; }
 
     /// <summary>
-    /// The Registrars Id for this contact
+    /// The contact name.
     /// </summary>
-    public string? RegistryId { get; set; }
+    public string? Name { get; init; }
 
     /// <summary>
-    /// Gets or sets the name.
+    /// The organization name.
     /// </summary>
-    public string? Name { get; set; }
+    public string? Organization { get; init; }
 
     /// <summary>
-    /// Gets or sets the organization.
+    /// The postal address.
     /// </summary>
-    public string? Organization { get; set; }
+    public Address? Address { get; init; }
 
     /// <summary>
-    /// Gets or sets the address.
+    /// The telephone number.
     /// </summary>
-    public IList<string> Address { get; }
+    public string? TelephoneNumber { get; init; }
 
     /// <summary>
-    /// Gets or sets the telephone number.
+    /// The telephone number extension.
     /// </summary>
-    public string? TelephoneNumber { get; set; }
+    public string? TelephoneNumberExt { get; init; }
 
     /// <summary>
-    /// The Telephone Number extenstion.
+    /// The fax number.
     /// </summary>
-    public string? TelephoneNumberExt { get; set; }
+    public string? FaxNumber { get; init; }
 
     /// <summary>
-    /// Gets or sets the fax number.
+    /// The fax number extension.
     /// </summary>
-    public string? FaxNumber { get; set; }
+    public string? FaxNumberExt { get; init; }
 
     /// <summary>
-    /// The Fax Number Extension.
+    /// The email address.
     /// </summary>
-    public string? FaxNumberExt { get; set; }
-
-    /// <summary>
-    /// Gets or sets the email.
-    /// </summary>
-    public string? Email { get; set; }
+    public string? Email { get; init; }
 
     /// <summary>
     /// The date the contact was created, if available.
     /// </summary>
-    public DateTime? Created { get; set; }
+    public DateTime? Created { get; init; }
 
     /// <summary>
     /// The date the contact was last updated, if available.
     /// </summary>
-    public DateTime? Updated { get; set; }
+    public DateTime? Updated { get; init; }
 }

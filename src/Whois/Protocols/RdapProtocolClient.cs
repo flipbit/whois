@@ -1,0 +1,305 @@
+using System.Diagnostics;
+using Microsoft.Extensions.Logging;
+using Microsoft.Extensions.Logging.Abstractions;
+using Whois.Net;
+using Whois.Servers;
+
+namespace Whois.Protocols;
+
+internal sealed class RdapProtocolClient : IProtocolClient
+{
+    // HTTP status codes as int constants for netstandard2.0 compatibility
+    // (HttpStatusCode.TooManyRequests and PermanentRedirect are not available).
+    private const int HttpMovedPermanently = 301;
+    private const int HttpFound = 302;
+    private const int HttpTemporaryRedirect = 307;
+    private const int HttpPermanentRedirect = 308;
+    private const int HttpTooManyRequests = 429;
+
+    private const int DefaultHttpsPort = 443;
+    private readonly HttpClient _httpClient;
+    private readonly IRdapRegistryCache _rdapRegistry;
+    private readonly WhoisOptions _options;
+    private readonly ILogger<RdapProtocolClient> _logger;
+
+    public RdapProtocolClient(
+        HttpClient httpClient,
+        IRdapRegistryCache rdapRegistry,
+        WhoisOptions options)
+        : this(httpClient, rdapRegistry, options, NullLogger<RdapProtocolClient>.Instance)
+    {
+    }
+
+    public RdapProtocolClient(
+        HttpClient httpClient,
+        IRdapRegistryCache rdapRegistry,
+        WhoisOptions options,
+        ILogger<RdapProtocolClient> logger)
+    {
+        _httpClient = httpClient;
+        _rdapRegistry = rdapRegistry;
+        _options = options;
+        _logger = logger;
+    }
+
+
+    public LookupProtocol Protocol => LookupProtocol.Rdap;
+
+    public async Task<ProtocolResponse> Query(WhoisRequest request, CancellationToken ct)
+    {
+        var sw = Stopwatch.StartNew();
+
+        ValidateQuery(request.Query);
+
+        var tld = HostName.TryParse(request.Query, out var hostName) ? hostName!.Tld : request.Query;
+        var baseUrl = request.RdapBaseUrl
+            ?? await _rdapRegistry.GetBaseUrl(tld, ct).ConfigureAwait(false);
+        if (baseUrl == null)
+        {
+            throw new WhoisException($"No RDAP endpoint available for TLD: {tld}");
+        }
+
+        var encodedQuery = Uri.EscapeDataString(request.Query);
+        var url = $"{baseUrl.TrimEnd('/')}/domain/{encodedQuery}";
+        ValidateUrl(url);
+
+        _logger.LogDebug("RDAP: querying {Url}", url);
+
+        var timeout = request.TimeoutSeconds ?? _options.TimeoutSeconds;
+        using var cts = CancellationTokenSource.CreateLinkedTokenSource(ct);
+        cts.CancelAfter(TimeSpan.FromSeconds(timeout));
+
+        try
+        {
+            HttpResponseMessage? httpResponse = null;
+            for (var hop = 0; ; hop++)
+            {
+                if (hop > 0 && hop > _options.MaxRdapRedirects)
+                {
+                    throw new WhoisException(FormattableString.Invariant($"RDAP request exceeded maximum redirect limit of {_options.MaxRdapRedirects}: {url}"));
+                }
+
+                httpResponse?.Dispose();
+                httpResponse = await _httpClient.GetAsync(url, cts.Token).ConfigureAwait(false);
+
+                var redirectCode = (int)httpResponse.StatusCode;
+                if (redirectCode is HttpMovedPermanently or HttpFound
+                    or HttpTemporaryRedirect or HttpPermanentRedirect)
+                {
+                    var location = httpResponse.Headers.Location?.ToString()
+                        ?? throw new WhoisException($"RDAP redirect response missing Location header: {url}");
+
+                    // Resolve relative Location URIs against the current URL.
+                    if (!Uri.IsWellFormedUriString(location, UriKind.Absolute))
+                    {
+                        location = new Uri(new Uri(url), location).ToString();
+                    }
+
+                    ValidateUrl(location);
+                    url = location;
+                    _logger.LogDebug("RDAP: following redirect to {Url} (hop {Hop})", url, hop + 1);
+                    continue;
+                }
+
+                break;
+            }
+
+            using var finalResponse = httpResponse!;
+            var statusCode = (int)finalResponse.StatusCode;
+            _logger.LogDebug("RDAP: received HTTP {StatusCode} from {Url}", statusCode, url);
+
+            if (finalResponse.StatusCode == System.Net.HttpStatusCode.NotFound)
+            {
+                sw.Stop();
+                return new ProtocolResponse
+                {
+                    RawContent = string.Empty,
+                    Protocol = LookupProtocol.Rdap,
+                    Response = new DomainInfo
+                    {
+                        DomainName = hostName,
+                        Status = RegistrationStatus.NotFound,
+                    },
+                    Diagnostics = new LookupDiagnostics
+                    {
+                        ServerUrl = url,
+                        HttpStatusCode = statusCode,
+                        Duration = sw.Elapsed,
+                    },
+                };
+            }
+
+            if (statusCode == HttpTooManyRequests)
+            {
+                _logger.LogWarning("RDAP: rate limited (HTTP 429) by {Url}, Retry-After: {RetryAfter}", url, finalResponse.Headers.RetryAfter);
+                sw.Stop();
+                return new ProtocolResponse
+                {
+                    RawContent = string.Empty,
+                    Protocol = LookupProtocol.Rdap,
+                    Response = new DomainInfo
+                    {
+                        DomainName = hostName,
+                        Status = RegistrationStatus.Throttled,
+                    },
+                    Diagnostics = new LookupDiagnostics
+                    {
+                        ServerUrl = url,
+                        HttpStatusCode = statusCode,
+                        Duration = sw.Elapsed,
+                    },
+                };
+            }
+
+            if (!finalResponse.IsSuccessStatusCode)
+            {
+                _logger.LogWarning("RDAP: server returned HTTP {StatusCode} for {Url}", statusCode, url);
+                throw new WhoisException(FormattableString.Invariant($"RDAP server returned HTTP {statusCode} for {url}"));
+            }
+
+            var json = await NetStandardShims.ReadWithSizeLimit(finalResponse, _options.MaxRdapResponseSize, cts.Token).ConfigureAwait(false);
+
+            var domainInfo = RdapParser.Parse(json);
+
+            sw.Stop();
+
+            return new ProtocolResponse
+            {
+                RawContent = json,
+                Protocol = LookupProtocol.Rdap,
+                Response = domainInfo,
+                Diagnostics = new LookupDiagnostics
+                {
+                    FieldsParsed = CountFields(domainInfo),
+                    ServerUrl = url,
+                    HttpStatusCode = statusCode,
+                    Duration = sw.Elapsed,
+                },
+            };
+        }
+        catch (OperationCanceledException) when (!ct.IsCancellationRequested)
+        {
+            _logger.LogWarning("RDAP: request timed out after {Timeout}s for {Url}", timeout, url);
+            throw new WhoisException(FormattableString.Invariant($"RDAP request timed out after {timeout} seconds: {url}"));
+        }
+        catch (HttpRequestException ex)
+        {
+            _logger.LogError(ex, "RDAP: transport failure for {Url}", url);
+            throw new WhoisException($"RDAP request failed for {url}: {ex.Message}", ex);
+        }
+    }
+
+    private static void ValidateQuery(string query)
+    {
+        if (query.IndexOfAny(['/', '?', '#', '@', ' ', '\t', '\n', '\r', '\\']) >= 0)
+        {
+            throw new WhoisException($"Invalid characters in RDAP query: {query}");
+        }
+    }
+
+    internal static void ValidateUrl(string url)
+    {
+        if (!Uri.TryCreate(url, UriKind.Absolute, out var uri))
+        {
+            throw new WhoisException($"Invalid RDAP URL: {url}");
+        }
+
+        if (!string.Equals(uri.Scheme, "https", StringComparison.OrdinalIgnoreCase))
+        {
+            throw new WhoisException($"RDAP URL must use HTTPS: {url}");
+        }
+
+        // Reject non-default ports -- RDAP must use the standard HTTPS port.
+        // Uri.Port returns -1 when no explicit port is specified (i.e. using the scheme default).
+        if (uri.Port != DefaultHttpsPort && uri.Port != -1)
+        {
+            throw new WhoisException($"RDAP URL must use the default HTTPS port (443): {url}");
+        }
+
+        // Reject IP literal hosts that resolve to private/loopback/link-local addresses (SSRF prevention).
+        // Hostname-based hosts are not validated here -- DNS resolution happens at request time.
+        // NOTE: This means a DNS rebinding attack is theoretically possible. We accept this risk because:
+        // (1) RDAP URLs come from embedded IANA bootstrap data, not user input;
+        // (2) Full mitigation via ConnectCallback would require SocketsHttpHandler (unavailable on netstandard2.0);
+        // (3) Low probability attack for this library's threat model.
+        if (System.Net.IPAddress.TryParse(uri.Host, out var ip))
+        {
+            if (IsPrivateOrReservedAddress(ip))
+            {
+                throw new WhoisException($"RDAP URL targets a private or reserved IP address: {url}");
+            }
+        }
+    }
+
+    internal static bool IsPrivateOrReservedAddress(System.Net.IPAddress ip)
+    {
+        // Normalize IPv4-mapped IPv6 addresses (e.g., ::ffff:127.0.0.1) to IPv4.
+        if (ip.IsIPv4MappedToIPv6)
+        {
+            ip = ip.MapToIPv4();
+        }
+
+        if (ip.AddressFamily == System.Net.Sockets.AddressFamily.InterNetwork)
+        {
+            return IsPrivateOrReservedIPv4(ip);
+        }
+
+        if (ip.AddressFamily == System.Net.Sockets.AddressFamily.InterNetworkV6)
+        {
+            return IsPrivateOrReservedIPv6(ip);
+        }
+
+        return false;
+    }
+
+    private static bool IsPrivateOrReservedIPv4(System.Net.IPAddress ip)
+    {
+        var bytes = ip.GetAddressBytes();
+
+        // this-network (0.0.0.0/8)
+        if (bytes[0] == 0) return true;
+        // RFC 1918 (10.0.0.0/8)
+        if (bytes[0] == 10) return true;
+        // loopback (127.0.0.0/8)
+        if (bytes[0] == 127) return true;
+        // CGNAT shared address (100.64.0.0/10)
+        if (bytes[0] == 100 && bytes[1] >= 64 && bytes[1] <= 127) return true;
+        // link-local (169.254.0.0/16)
+        if (bytes[0] == 169 && bytes[1] == 254) return true;
+        // RFC 1918 (172.16.0.0/12)
+        if (bytes[0] == 172 && bytes[1] >= 16 && bytes[1] <= 31) return true;
+        // RFC 1918 (192.168.0.0/16)
+        if (bytes[0] == 192 && bytes[1] == 168) return true;
+
+        return false;
+    }
+
+    private static bool IsPrivateOrReservedIPv6(System.Net.IPAddress ip)
+    {
+        // loopback (::1)
+        if (ip.Equals(System.Net.IPAddress.IPv6Loopback)) return true;
+
+        var bytes = ip.GetAddressBytes();
+        // fe80::/10 -- first 10 bits are 1111111010
+        if (bytes[0] == 0xfe && (bytes[1] & 0xc0) == 0x80) return true;
+        // fc00::/7 -- ULA, first 7 bits are 1111110
+        return (bytes[0] & 0xfe) == 0xfc;
+    }
+
+    private static int CountFields(DomainInfo info)
+    {
+        var count = 0;
+        if (info.DomainName != null) count++;
+        if (info.RegistryDomainId != null) count++;
+        if (info.Registered.HasValue) count++;
+        if (info.Updated.HasValue) count++;
+        if (info.Expiration.HasValue) count++;
+        if (info.Registrar != null) count++;
+        if (info.Registrant != null) count++;
+        if (info.TechnicalContact != null) count++;
+        if (info.AdminContact != null) count++;
+        count += info.NameServers.Count;
+        count += info.DomainStatus.Count;
+        return count;
+    }
+}

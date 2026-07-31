@@ -1,11 +1,12 @@
 using Tokens;
+using Whois.Protocols;
 
 namespace Whois.Parsers.Fixups;
 
 /// <summary>
 /// Extracts referential contact details from WHOIS responses
 /// </summary>
-public class WhoisIsocOrgIlFixup : MultipleContactFixup
+internal sealed class WhoisIsocOrgIlFixup : MultipleContactFixup
 {
     public override bool CanFixup(TokenizeResult result)
     {
@@ -13,7 +14,7 @@ public class WhoisIsocOrgIlFixup : MultipleContactFixup
         return string.Equals(result.Template.Name, "whois.isoc.org.il/il/found/01", StringComparison.Ordinal);
     }
 
-    protected override bool TryGetRegistrant(IReadOnlyList<TokenMatch> matches, WhoisResponse response, out Contact? contact)
+    protected override bool TryGetRegistrant(IReadOnlyList<TokenMatch> matches, WhoisRecord record, out WhoisContact? contact)
     {
         contact = null;
 
@@ -27,7 +28,7 @@ public class WhoisIsocOrgIlFixup : MultipleContactFixup
 
         var paragraph = contactIdMatch.Location.Paragraph;
 
-        contact = new Contact();
+        contact = new WhoisContact();
         var count = 0;
 
         foreach (var match in matches)
@@ -63,8 +64,8 @@ public class WhoisIsocOrgIlFixup : MultipleContactFixup
 
                 case "Changed":
                     var dateTime = ((DateTimeOffset)match.Value).UtcDateTime;
-                    if (dateTime > response.Updated || !response.Updated.HasValue) response.Updated = dateTime;
-                    if (dateTime < response.Registered || !response.Registered.HasValue) response.Registered = dateTime;
+                    if (dateTime > record.Updated || !record.Updated.HasValue) record.Updated = dateTime;
+                    if (dateTime < record.Registered || !record.Registered.HasValue) record.Registered = dateTime;
                     break;
             }
         }
@@ -72,7 +73,7 @@ public class WhoisIsocOrgIlFixup : MultipleContactFixup
         return count > 0;
     }
 
-    protected override bool TryGetContact(Contact? input, IReadOnlyList<TokenMatch> matches, out Contact? contact)
+    protected override bool TryGetContact(WhoisContact? input, IReadOnlyList<TokenMatch> matches, out WhoisContact? contact)
     {
         contact = null;
 
@@ -89,7 +90,7 @@ public class WhoisIsocOrgIlFixup : MultipleContactFixup
 
         var paragraph = contactIdMatch.Location.Paragraph;
 
-        contact = new Contact();
+        contact = new WhoisContact();
 
         foreach (var match in matches)
         {

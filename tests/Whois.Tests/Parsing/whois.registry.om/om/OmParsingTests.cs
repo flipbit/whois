@@ -20,7 +20,7 @@ public class OmParsingTests : ParsingTests
         var response = parser.Parse("whois.registry.om", sample);
 
         Assert.True(sample.Length > 0);
-        Assert.Equal(WhoisStatus.NotFound, response.Status);
+        Assert.Equal(RegistrationStatus.NotFound, response.Status);
 
         Assert.Equal(0, response.ParsingErrors);
         Assert.Equal("whois.registry.om/om/not-found/01", response.TemplateName);
@@ -35,7 +35,7 @@ public class OmParsingTests : ParsingTests
         var response = parser.Parse("whois.registry.om", sample);
 
         Assert.True(sample.Length > 0);
-        Assert.Equal(WhoisStatus.Found, response.Status);
+        Assert.Equal(RegistrationStatus.Found, response.Status);
 
         Assert.Equal(0, response.ParsingErrors);
         Assert.Equal("generic/tld/found/01", response.TemplateName);
@@ -79,7 +79,7 @@ public class OmParsingTests : ParsingTests
         var response = parser.Parse("whois.registry.om", sample);
 
         Assert.True(sample.Length > 0);
-        Assert.Equal(WhoisStatus.Reserved, response.Status);
+        Assert.Equal(RegistrationStatus.Reserved, response.Status);
 
         Assert.Equal(0, response.ParsingErrors);
         Assert.Equal("whois.registry.om/om/reserved/01", response.TemplateName);

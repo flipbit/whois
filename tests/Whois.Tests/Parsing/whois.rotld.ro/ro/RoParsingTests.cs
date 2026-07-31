@@ -20,7 +20,7 @@ public class RoParsingTests : ParsingTests
         var response = parser.Parse("whois.rotld.ro", sample);
 
         Assert.True(sample.Length > 0);
-        Assert.Equal(WhoisStatus.Found, response.Status);
+        Assert.Equal(RegistrationStatus.Found, response.Status);
 
         Assert.Equal(0, response.ParsingErrors);
         Assert.Equal("whois.rotld.ro/ro/found/01", response.TemplateName);
@@ -53,7 +53,7 @@ public class RoParsingTests : ParsingTests
         var response = parser.Parse("whois.rotld.ro", sample);
 
         Assert.True(sample.Length > 0);
-        Assert.Equal(WhoisStatus.NotFound, response.Status);
+        Assert.Equal(RegistrationStatus.NotFound, response.Status);
 
         Assert.Equal(0, response.ParsingErrors);
         Assert.Equal("whois.rotld.ro/ro/not-found/01", response.TemplateName);
@@ -68,7 +68,7 @@ public class RoParsingTests : ParsingTests
         var response = parser.Parse("whois.rotld.ro", sample);
 
         Assert.True(sample.Length > 0);
-        Assert.Equal(WhoisStatus.Found, response.Status);
+        Assert.Equal(RegistrationStatus.Found, response.Status);
 
         Assert.Equal(0, response.ParsingErrors);
         Assert.Equal("whois.rotld.ro/ro/found/01", response.TemplateName);

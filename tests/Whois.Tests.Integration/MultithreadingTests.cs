@@ -22,19 +22,17 @@ public class MultithreadingTests
         {
             Console.WriteLine($"Looking Up: {domain.DomainName}");
 
-            WhoisResponse response = null;
-
             try
             {
-                response = await lookup.Lookup(domain.DomainName);
+                var result = await lookup.Lookup(domain.DomainName);
 
-                Console.WriteLine($"Looked Up: {domain.DomainName}, Status: {response.Status}, Size: {response.Content.Length}");
+                Console.WriteLine($"Looked Up: {domain.DomainName}, Protocol: {result.Protocol}, Size: {result.RawContent.Length}");
             }
 #pragma warning disable CA1031 // Catch-all: integration test continues on any network/parse error
             catch (Exception e)
 #pragma warning restore CA1031
             {
-                Console.WriteLine($"FAIL: {response?.DomainName}: {e.Message}");
+                Console.WriteLine($"FAIL: {domain.DomainName}: {e.Message}");
             }
             Thread.Sleep(1000);
         }
@@ -46,7 +44,7 @@ public class MultithreadingTests
         var domains = new SampleReader().ReadSampleDomains();
 
         var queue = new ConcurrentQueue<SampleDomain>(domains);
-        var responses = new ConcurrentBag<WhoisResponse>();
+        var responses = new ConcurrentBag<LookupResult<DomainInfo>>();
 
         var tasks = Enumerable.Range(1, 25).Select(async i =>
         {
@@ -58,11 +56,11 @@ public class MultithreadingTests
 
                 try
                 {
-                    var response = await lookup.Lookup(domain.DomainName).ConfigureAwait(false);
+                    var result = await lookup.Lookup(domain.DomainName).ConfigureAwait(false);
 
-                    if (response != null)
+                    if (result != null)
                     {
-                        responses.Add(response);
+                        responses.Add(result);
                     }
                     else
                     {
@@ -80,9 +78,9 @@ public class MultithreadingTests
 
         await Task.WhenAll(tasks);
 
-        foreach (var response in responses)
+        foreach (var result in responses)
         {
-            Console.WriteLine($"Looked Up: {response.DomainName}, Status: {response.Status}, Size: {response.ContentLength}");
+            Console.WriteLine($"Looked Up: {result.Response.DomainName}, Protocol: {result.Protocol}, Size: {result.RawContent.Length}");
         }
     }
 }

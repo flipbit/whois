@@ -20,7 +20,7 @@ public class KeParsingTests : ParsingTests
         var response = parser.Parse("whois.kenic.or.ke", sample);
 
         Assert.True(sample.Length > 0);
-        Assert.Equal(WhoisStatus.NotFound, response.Status);
+        Assert.Equal(RegistrationStatus.NotFound, response.Status);
 
         Assert.Equal(0, response.ParsingErrors);
         Assert.Equal("whois.kenic.or.ke/ke/found/01", response.TemplateName);
@@ -41,7 +41,7 @@ public class KeParsingTests : ParsingTests
         var response = parser.Parse("whois.kenic.or.ke", sample);
 
         Assert.True(sample.Length > 0);
-        Assert.Equal(WhoisStatus.Invalid, response.Status);
+        Assert.Equal(RegistrationStatus.Invalid, response.Status);
 
         Assert.Equal(0, response.ParsingErrors);
         Assert.Equal("whois.kenic.or.ke/ke/found/01", response.TemplateName);
@@ -62,7 +62,7 @@ public class KeParsingTests : ParsingTests
         var response = parser.Parse("whois.kenic.or.ke", sample);
 
         Assert.True(sample.Length > 0);
-        Assert.Equal(WhoisStatus.Found, response.Status);
+        Assert.Equal(RegistrationStatus.Found, response.Status);
 
         Assert.Equal(0, response.ParsingErrors);
         Assert.Equal("whois.kenic.or.ke/ke/found/01", response.TemplateName);

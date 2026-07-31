@@ -134,8 +134,8 @@ public class BootstrapCommandTests
         var server = registry.Servers["whois.nic.uk"];
         Assert.Equal("uk", server.Tld);
         Assert.Equal(2, server.Domains["found"].Count); // deduplicated
-        Assert.Contains("netbenefit.co.uk", server.Domains["found"]);
-        Assert.Contains("bbc.co.uk", server.Domains["found"]);
+        Assert.Contains(server.Domains["found"], d => d == "netbenefit.co.uk");
+        Assert.Contains(server.Domains["found"], d => d == "bbc.co.uk");
         Assert.Single(server.Domains["not-found"]);
     }
 }

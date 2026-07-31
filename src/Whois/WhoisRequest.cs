@@ -3,20 +3,10 @@ using System.Text;
 namespace Whois;
 
 /// <summary>
-///  Represents a request to query WHOIS information
+/// Represents a request to query WHOIS information
 /// </summary>
 public class WhoisRequest
 {
-    /// <summary>
-    /// Creates an empty query with the default options
-    /// </summary>
-    public WhoisRequest()
-    {
-    }
-
-    /// <summary>
-    /// Creates a request for the given query with the default options
-    /// </summary>
     public WhoisRequest(string query)
     {
         Query = query;
@@ -25,26 +15,37 @@ public class WhoisRequest
     /// <summary>
     /// The WHOIS query, typically the domain name
     /// </summary>
-    public string Query { get; set; } = string.Empty;
+    public string Query { get; }
 
     /// <summary>
     /// The encoding to use whilst reading data from the WHOIS server
     /// </summary>
-    public Encoding Encoding { get; set; } = Encoding.UTF8;
+    public Encoding? Encoding { get; init; }
 
     /// <summary>
     /// The network timeout to use whilst reading data from the WHOIS server
     /// </summary>
-    public int TimeoutSeconds { get; set; } = 10;
+    public int? TimeoutSeconds { get; init; }
 
     /// <summary>
-    /// Is true, then referral links within WHOIS responses will be followed.
+    /// If true, referral links within WHOIS responses will be followed.
     /// </summary>
-    public bool FollowReferrer { get; set; } = true;
+    public bool? FollowReferrer { get; init; }
 
     /// <summary>
-    /// If set, the given WHOIS server will be queried.  If blank, the WHOIS
+    /// The preferred lookup protocol.
+    /// </summary>
+    public ProtocolPreference? PreferredProtocol { get; init; }
+
+    /// <summary>
+    /// If set, the given WHOIS server will be queried. If null, the WHOIS
     /// server for the domain TLD will be attempted to be found automatically.
     /// </summary>
-    public string? WhoisServer { get; set; }
+    public HostName? WhoisServer { get; init; }
+
+    /// <summary>
+    /// Pre-resolved RDAP base URL. Set internally by the orchestrator to
+    /// avoid a redundant registry lookup in the protocol client.
+    /// </summary>
+    internal string? RdapBaseUrl { get; set; }
 }

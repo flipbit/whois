@@ -1,30 +1,28 @@
-using Xunit;
+using Whois.Net;
 using Whois.Servers;
+using Xunit;
 
 namespace Whois;
 
 public class IanaServerLookupTest
 {
-    private readonly IanaServerLookup lookup;
-
-    public IanaServerLookupTest()
+    [Fact]
+    public async Task GetWhoisServer_Com_ReturnsVerisign()
     {
-        lookup = new IanaServerLookup();
+        var lookup = new IanaServerLookup(new TcpReader(), new WhoisOptions());
+
+        var server = await lookup.GetWhoisServer("com", CancellationToken.None);
+
+        Assert.Equal("whois.verisign-grs.com", server);
     }
 
     [Fact]
-    public async Task TestLookupCom()
+    public async Task GetWhoisServer_Br_ReturnsRegistroBr()
     {
-        var result = await lookup.Lookup(new WhoisRequest("com"));
+        var lookup = new IanaServerLookup(new TcpReader(), new WhoisOptions());
 
-        Assert.Equal("whois.verisign-grs.com", result.Registrar.WhoisServer.ToString());
-    }
+        var server = await lookup.GetWhoisServer("br", CancellationToken.None);
 
-    [Fact]
-    public async Task TestLookupComBr()
-    {
-        var result = await lookup.Lookup(new WhoisRequest("br"));
-
-        Assert.Equal("whois.registro.br", result.Registrar.WhoisServer.ToString());
+        Assert.Equal("whois.registro.br", server);
     }
 }

@@ -20,7 +20,7 @@ public class VgParsingTests : ParsingTests
         var response = parser.Parse("ccwhois.ksregistry.net", sample);
 
         Assert.True(sample.Length > 0);
-        Assert.Equal(WhoisStatus.NotFound, response.Status);
+        Assert.Equal(RegistrationStatus.NotFound, response.Status);
     }
 
     [Fact]
@@ -30,7 +30,7 @@ public class VgParsingTests : ParsingTests
         var response = parser.Parse("ccwhois.ksregistry.net", sample);
 
         Assert.True(sample.Length > 0);
-        Assert.Equal(WhoisStatus.Found, response.Status);
+        Assert.Equal(RegistrationStatus.Found, response.Status);
         Assert.Equal("google.vg", response.DomainName.ToString());
 
         Assert.Equal(new DateTime(2013, 3, 1, 0, 2, 14), response.Updated);

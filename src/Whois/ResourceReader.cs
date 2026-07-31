@@ -5,11 +5,6 @@ namespace Whois;
 /// </summary>
 public class ResourceReader
 {
-    public static string GetName(string whoisServer, string tld, string name)
-    {
-        return $"{GetResourcePrefix(whoisServer, tld)}{name}.txt";
-    }
-
     /// <summary>
     /// Gets the embedded resource names for the given WHOIS server and TLD.
     /// </summary>

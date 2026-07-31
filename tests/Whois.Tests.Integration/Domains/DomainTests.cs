@@ -60,6 +60,6 @@ changed:     20180226
 %
 % whois.registro.br accepts only direct match queries. Types
 % of queries are: domain (.br), registrant (tax ID), ticket,
-% provider, contact handle (ID), CIDR block, IP and ASN.", result.Content);
+% provider, contact handle (ID), CIDR block, IP and ASN.", result.RawContent);
     }
 }
