@@ -4,7 +4,7 @@ namespace Whois;
 /// Wraps the result of a domain or network lookup, including the structured response,
 /// protocol used, raw content, and diagnostics.
 /// </summary>
-public class LookupResult<T>
+public sealed class LookupResult<T>
 {
     public LookupResult(T response, LookupProtocol protocol, string rawContent, LookupDiagnostics diagnostics)
     {

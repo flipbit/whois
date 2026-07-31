@@ -3,7 +3,7 @@ namespace Whois;
 /// <summary>
 /// Contains diagnostic metadata about how a lookup was performed.
 /// </summary>
-public class LookupDiagnostics
+public sealed class LookupDiagnostics
 {
     /// <summary>
     /// The number of fields successfully parsed from the response.
