@@ -241,31 +241,49 @@ internal sealed class RdapProtocolClient : IProtocolClient
 
         if (ip.AddressFamily == System.Net.Sockets.AddressFamily.InterNetwork)
         {
-            // IPv4: check loopback (127.0.0.0/8), link-local (169.254.0.0/16),
-            // RFC 1918 private ranges (10.0.0.0/8, 172.16.0.0/12, 192.168.0.0/16),
-            // this-network (0.0.0.0/8), and CGNAT shared address (100.64.0.0/10).
-            var bytes = ip.GetAddressBytes();
-            return bytes[0] == 0
-                || bytes[0] == 10
-                || bytes[0] == 127
-                || (bytes[0] == 100 && bytes[1] >= 64 && bytes[1] <= 127)
-                || (bytes[0] == 169 && bytes[1] == 254)
-                || (bytes[0] == 172 && bytes[1] >= 16 && bytes[1] <= 31)
-                || (bytes[0] == 192 && bytes[1] == 168);
+            return IsPrivateOrReservedIPv4(ip);
         }
 
         if (ip.AddressFamily == System.Net.Sockets.AddressFamily.InterNetworkV6)
         {
-            // IPv6: check loopback (::1), link-local (fe80::/10), and ULA (fc00::/7).
-            if (ip.Equals(System.Net.IPAddress.IPv6Loopback)) return true;
-            var bytes = ip.GetAddressBytes();
-            // fe80::/10 -- first 10 bits are 1111111010
-            if (bytes[0] == 0xfe && (bytes[1] & 0xc0) == 0x80) return true;
-            // fc00::/7 -- ULA, first 7 bits are 1111110
-            return (bytes[0] & 0xfe) == 0xfc;
+            return IsPrivateOrReservedIPv6(ip);
         }
 
         return false;
+    }
+
+    private static bool IsPrivateOrReservedIPv4(System.Net.IPAddress ip)
+    {
+        var bytes = ip.GetAddressBytes();
+
+        // this-network (0.0.0.0/8)
+        if (bytes[0] == 0) return true;
+        // RFC 1918 (10.0.0.0/8)
+        if (bytes[0] == 10) return true;
+        // loopback (127.0.0.0/8)
+        if (bytes[0] == 127) return true;
+        // CGNAT shared address (100.64.0.0/10)
+        if (bytes[0] == 100 && bytes[1] >= 64 && bytes[1] <= 127) return true;
+        // link-local (169.254.0.0/16)
+        if (bytes[0] == 169 && bytes[1] == 254) return true;
+        // RFC 1918 (172.16.0.0/12)
+        if (bytes[0] == 172 && bytes[1] >= 16 && bytes[1] <= 31) return true;
+        // RFC 1918 (192.168.0.0/16)
+        if (bytes[0] == 192 && bytes[1] == 168) return true;
+
+        return false;
+    }
+
+    private static bool IsPrivateOrReservedIPv6(System.Net.IPAddress ip)
+    {
+        // loopback (::1)
+        if (ip.Equals(System.Net.IPAddress.IPv6Loopback)) return true;
+
+        var bytes = ip.GetAddressBytes();
+        // fe80::/10 -- first 10 bits are 1111111010
+        if (bytes[0] == 0xfe && (bytes[1] & 0xc0) == 0x80) return true;
+        // fc00::/7 -- ULA, first 7 bits are 1111110
+        return (bytes[0] & 0xfe) == 0xfc;
     }
 
     private static int CountFields(DomainInfo info)
