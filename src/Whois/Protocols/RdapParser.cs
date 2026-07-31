@@ -216,7 +216,7 @@ internal static class RdapParser
 
     private static Registrar ParseRegistrar(JsonElement entity)
     {
-        var name = GetVcardProperty(entity, VcardFn);
+        var vcard = ExtractVCardProperties(entity);
         var handle = GetString(entity, PropHandle);
 
         string? abuseEmail = null, abusePhone = null;
@@ -227,8 +227,9 @@ internal static class RdapParser
                 var roles = GetStringArray(sub, PropRoles);
                 if (roles.Contains(RoleAbuse))
                 {
-                    abuseEmail = GetVcardProperty(sub, VcardEmail);
-                    abusePhone = GetVcardProperty(sub, VcardTel);
+                    var abuseVcard = ExtractVCardProperties(sub);
+                    abuseEmail = abuseVcard.Email;
+                    abusePhone = abuseVcard.Tel;
                 }
             }
         }
@@ -253,7 +254,7 @@ internal static class RdapParser
 
         return new Registrar
         {
-            Name = name,
+            Name = vcard.Fn,
             IanaId = handle,
             Url = url,
             AbuseEmail = abuseEmail,
@@ -263,106 +264,115 @@ internal static class RdapParser
 
     private static Contact ParseContact(JsonElement entity)
     {
-        var name = GetVcardProperty(entity, VcardFn);
-        var org = GetVcardProperty(entity, VcardOrg);
-        var email = GetVcardProperty(entity, VcardEmail);
-        var phone = GetVcardProperty(entity, VcardTel);
-        var address = ParseJcardAddress(entity);
+        var vcard = ExtractVCardProperties(entity);
 
         return new Contact
         {
             RegistryId = GetString(entity, PropHandle),
-            Name = name,
-            Organization = org,
-            Email = email,
-            TelephoneNumber = phone,
-            Address = address,
+            Name = vcard.Fn,
+            Organization = vcard.Org,
+            Email = vcard.Email,
+            TelephoneNumber = vcard.Tel,
+            Address = vcard.Address,
         };
     }
 
-    private static Address? ParseJcardAddress(JsonElement entity)
+    /// <summary>
+    /// Iterates the jCard property array once, extracting all needed properties
+    /// (fn, org, email, tel, adr) in a single pass.
+    /// </summary>
+    private static (string? Fn, string? Org, string? Email, string? Tel, Address? Address)
+        ExtractVCardProperties(JsonElement entity)
     {
-        if (!entity.TryGetProperty(PropVcardArray, out var vcardArray)) return null;
+        if (!entity.TryGetProperty(PropVcardArray, out var vcardArray))
+            return default;
 
         var entries = vcardArray.EnumerateArray().ToArray();
-        if (entries.Length < MinVCardArrayEntries) return null;
+        if (entries.Length < MinVCardArrayEntries)
+            return default;
+
+        string? fn = null, org = null, email = null, tel = null;
+        Address? address = null;
 
         foreach (var prop in entries[1].EnumerateArray())
         {
             var propArr = prop.EnumerateArray().ToArray();
             if (propArr.Length < MinVCardPropertyElements) continue;
-            if (propArr[0].GetString() != VcardAdr) continue;
 
+            var propName = propArr[0].GetString();
             var value = propArr[3];
-            if (value.ValueKind != JsonValueKind.Array) continue;
 
-            var parts = value.EnumerateArray().ToArray();
-            if (parts.Length < JCardAdrMinLength) continue;
-
-            var streetVal = parts[JCardAdrStreet];
-            List<string>? streetLines = null;
-            if (streetVal.ValueKind == JsonValueKind.Array)
+            switch (propName)
             {
-                streetLines = new List<string>();
-                foreach (var line in streetVal.EnumerateArray())
-                {
-                    var s = line.GetString();
-                    if (!string.IsNullOrWhiteSpace(s)) streetLines.Add(s!);
-                }
-                if (streetLines.Count == 0) streetLines = null;
+                case VcardFn:
+                    fn ??= value.ValueKind == JsonValueKind.String ? value.GetString() : value.ToString();
+                    break;
+                case VcardOrg:
+                    org ??= value.ValueKind == JsonValueKind.String ? value.GetString() : value.ToString();
+                    break;
+                case VcardEmail:
+                    email ??= value.ValueKind == JsonValueKind.String ? value.GetString() : value.ToString();
+                    break;
+                case VcardTel:
+                    tel ??= value.ValueKind == JsonValueKind.String ? value.GetString() : value.ToString();
+                    break;
+                case VcardAdr:
+                    address ??= ParseAdrValue(value);
+                    break;
             }
-            else if (streetVal.ValueKind == JsonValueKind.String)
-            {
-                var s = streetVal.GetString();
-                if (!string.IsNullOrWhiteSpace(s)) streetLines = [s!];
-            }
-
-            var city = parts[JCardAdrCity].GetString();
-            var region = parts[JCardAdrRegion].GetString();
-            var postalCode = parts[JCardAdrPostalCode].GetString();
-            var country = parts[JCardAdrCountry].GetString();
-
-            var lines = new List<string>();
-            if (streetLines != null) lines.AddRange(streetLines);
-            if (!string.IsNullOrWhiteSpace(city)) lines.Add(city!);
-            if (!string.IsNullOrWhiteSpace(region)) lines.Add(region!);
-            if (!string.IsNullOrWhiteSpace(postalCode)) lines.Add(postalCode!);
-            if (!string.IsNullOrWhiteSpace(country)) lines.Add(country!);
-
-            if (lines.Count == 0) return null;
-
-            return new Address
-            {
-                Lines = lines.AsReadOnly(),
-                Street = streetLines?.AsReadOnly(),
-                City = string.IsNullOrWhiteSpace(city) ? null : city,
-                Region = string.IsNullOrWhiteSpace(region) ? null : region,
-                PostalCode = string.IsNullOrWhiteSpace(postalCode) ? null : postalCode,
-                Country = string.IsNullOrWhiteSpace(country) ? null : country,
-            };
         }
 
-        return null;
+        return (fn, org, email, tel, address);
     }
 
-    private static string? GetVcardProperty(JsonElement entity, string propertyName)
+    private static Address? ParseAdrValue(JsonElement value)
     {
-        if (!entity.TryGetProperty(PropVcardArray, out var vcardArray)) return null;
+        if (value.ValueKind != JsonValueKind.Array) return null;
 
-        var entries = vcardArray.EnumerateArray().ToArray();
-        if (entries.Length < MinVCardArrayEntries) return null;
+        var parts = value.EnumerateArray().ToArray();
+        if (parts.Length < JCardAdrMinLength) return null;
 
-        foreach (var prop in entries[1].EnumerateArray())
+        var streetVal = parts[JCardAdrStreet];
+        List<string>? streetLines = null;
+        if (streetVal.ValueKind == JsonValueKind.Array)
         {
-            var propArr = prop.EnumerateArray().ToArray();
-            if (propArr.Length < MinVCardPropertyElements) continue;
-            if (propArr[0].GetString() != propertyName) continue;
-
-            var value = propArr[3];
-            return value.ValueKind == JsonValueKind.String ? value.GetString() : value.ToString();
+            streetLines = new List<string>();
+            foreach (var line in streetVal.EnumerateArray())
+            {
+                var s = line.GetString();
+                if (!string.IsNullOrWhiteSpace(s)) streetLines.Add(s!);
+            }
+            if (streetLines.Count == 0) streetLines = null;
+        }
+        else if (streetVal.ValueKind == JsonValueKind.String)
+        {
+            var s = streetVal.GetString();
+            if (!string.IsNullOrWhiteSpace(s)) streetLines = [s!];
         }
 
-        return null;
+        var city = parts[JCardAdrCity].GetString();
+        var region = parts[JCardAdrRegion].GetString();
+        var postalCode = parts[JCardAdrPostalCode].GetString();
+        var country = parts[JCardAdrCountry].GetString();
+
+        var lines = new List<string>();
+        if (streetLines != null) lines.AddRange(streetLines);
+        if (!string.IsNullOrWhiteSpace(city)) lines.Add(city!);
+        if (!string.IsNullOrWhiteSpace(region)) lines.Add(region!);
+        if (!string.IsNullOrWhiteSpace(postalCode)) lines.Add(postalCode!);
+        if (!string.IsNullOrWhiteSpace(country)) lines.Add(country!);
+
+        if (lines.Count == 0) return null;
+
+        return new Address
+        {
+            Lines = lines.AsReadOnly(),
+            Street = streetLines?.AsReadOnly(),
+            City = string.IsNullOrWhiteSpace(city) ? null : city,
+            Region = string.IsNullOrWhiteSpace(region) ? null : region,
+            PostalCode = string.IsNullOrWhiteSpace(postalCode) ? null : postalCode,
+            Country = string.IsNullOrWhiteSpace(country) ? null : country,
+        };
     }
 
     private static RegistrationStatus MapStatus(List<string> statuses)
