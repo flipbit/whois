@@ -209,6 +209,45 @@ public class WhoisLookupTest
     }
 
     [Fact]
+    public async Task Lookup_RdapProtocol_QueriesRegistryOnlyOnce()
+    {
+        var rdapRegistry = Substitute.For<IRdapRegistryCache>();
+        var ianaLookup = Substitute.For<IIanaServerLookup>();
+        rdapRegistry.GetBaseUrl("com", Arg.Any<CancellationToken>())
+            .Returns("https://rdap.verisign.com/com/v1/");
+
+        var rdapClient = Substitute.For<IProtocolClient>();
+        rdapClient.Protocol.Returns(LookupProtocol.Rdap);
+        rdapClient.Query(Arg.Any<WhoisRequest>(), Arg.Any<CancellationToken>())
+            .Returns(new ProtocolResponse
+            {
+                RawContent = "{}",
+                Protocol = LookupProtocol.Rdap,
+                Response = new DomainInfo
+                {
+                    DomainName = new HostName("google.com"),
+                    Status = RegistrationStatus.Found,
+                },
+                Diagnostics = new LookupDiagnostics(),
+            });
+
+        var whoisClient = Substitute.For<IProtocolClient>();
+        whoisClient.Protocol.Returns(LookupProtocol.Whois);
+
+        var request = new WhoisRequest("google.com") { PreferredProtocol = ProtocolPreference.Rdap };
+
+        var lookup = new WhoisLookup(
+            new WhoisOptions(),
+            rdapRegistry,
+            ianaLookup,
+            [whoisClient, rdapClient]);
+
+        await lookup.Lookup(request);
+
+        await rdapRegistry.Received(1).GetBaseUrl("com", Arg.Any<CancellationToken>());
+    }
+
+    [Fact]
     public void ClearCache_DelegatesToBothCaches()
     {
         var rdapRegistry = Substitute.For<IRdapRegistryCache>();

@@ -116,7 +116,7 @@ public class WhoisLookup : IWhoisLookup
         // Determine protocol
         var preference = request.PreferredProtocol ?? _options.PreferredProtocol;
         var tld = hostName!.Tld;
-        var client = await SelectClient(preference, tld, ct).ConfigureAwait(false);
+        var (client, rdapBaseUrl) = await SelectClient(preference, tld, ct).ConfigureAwait(false);
 
         _logger.LogDebug("Lookup {Query}: using {Protocol} protocol", query, client.Protocol);
 
@@ -127,6 +127,7 @@ public class WhoisLookup : IWhoisLookup
             TimeoutSeconds = request.TimeoutSeconds,
             FollowReferrer = request.FollowReferrer,
             WhoisServer = request.WhoisServer,
+            RdapBaseUrl = rdapBaseUrl,
         };
 
         var response = await client.Query(effectiveRequest, ct).ConfigureAwait(false);
@@ -138,25 +139,26 @@ public class WhoisLookup : IWhoisLookup
             response.Diagnostics);
     }
 
-    private async Task<IProtocolClient> SelectClient(ProtocolPreference preference, string tld, CancellationToken ct)
+    private async Task<(IProtocolClient Client, string? RdapBaseUrl)> SelectClient(
+        ProtocolPreference preference, string tld, CancellationToken ct)
     {
         switch (preference)
         {
             case ProtocolPreference.Whois:
-                return _whoisClient;
+                return (_whoisClient, null);
 
             case ProtocolPreference.Rdap:
                 var rdapUrl = await _rdapRegistry.GetBaseUrl(tld, ct).ConfigureAwait(false);
                 if (rdapUrl == null)
                     throw new WhoisException($"RDAP is not available for TLD: {tld}");
-                return _rdapClient;
+                return (_rdapClient, rdapUrl);
 
             case ProtocolPreference.Auto:
             default:
                 var autoRdapUrl = await _rdapRegistry.GetBaseUrl(tld, ct).ConfigureAwait(false);
                 if (autoRdapUrl != null)
-                    return _rdapClient;
-                return _whoisClient;
+                    return (_rdapClient, autoRdapUrl);
+                return (_whoisClient, null);
         }
     }
 

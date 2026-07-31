@@ -42,4 +42,10 @@ public class WhoisRequest
     /// server for the domain TLD will be attempted to be found automatically.
     /// </summary>
     public HostName? WhoisServer { get; init; }
+
+    /// <summary>
+    /// Pre-resolved RDAP base URL. Set internally by the orchestrator to
+    /// avoid a redundant registry lookup in the protocol client.
+    /// </summary>
+    internal string? RdapBaseUrl { get; set; }
 }

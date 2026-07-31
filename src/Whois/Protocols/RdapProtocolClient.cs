@@ -52,7 +52,8 @@ internal sealed class RdapProtocolClient : IProtocolClient
         ValidateQuery(request.Query);
 
         var tld = HostName.TryParse(request.Query, out var hostName) ? hostName!.Tld : request.Query;
-        var baseUrl = await _rdapRegistry.GetBaseUrl(tld, ct).ConfigureAwait(false);
+        var baseUrl = request.RdapBaseUrl
+            ?? await _rdapRegistry.GetBaseUrl(tld, ct).ConfigureAwait(false);
         if (baseUrl == null)
         {
             throw new WhoisException($"No RDAP endpoint available for TLD: {tld}");
