@@ -92,6 +92,8 @@ public class RdapRegistryCache : IRdapRegistryCache
         }
         catch (OperationCanceledException) when (!ct.IsCancellationRequested)
         {
+            _logger.LogError("RDAP registry: bootstrap fetch timed out after {Timeout}s for {Url}",
+                _options.TimeoutSeconds, url);
             throw new WhoisException(
                 FormattableString.Invariant(
                     $"RDAP bootstrap fetch timed out after {_options.TimeoutSeconds}s: {url}"));
@@ -128,6 +130,7 @@ public class RdapRegistryCache : IRdapRegistryCache
             }
             catch (JsonException ex)
             {
+                _logger.LogError(ex, "RDAP registry: failed to parse bootstrap JSON from {Url}", url);
                 throw new WhoisException(
                     $"Failed to parse RDAP bootstrap JSON from {url}: {ex.Message}", ex);
             }

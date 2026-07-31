@@ -125,7 +125,16 @@ public class WhoisLookup : IWhoisLookup
             RdapBaseUrl = rdapBaseUrl,
         };
 
-        var response = await client.Query(effectiveRequest, ct).ConfigureAwait(false);
+        ProtocolResponse response;
+        try
+        {
+            response = await client.Query(effectiveRequest, ct).ConfigureAwait(false);
+        }
+        catch (Exception ex) when (ex is not OperationCanceledException)
+        {
+            _logger.LogWarning(ex, "Lookup failed for {Query} using {Protocol}", query, client.Protocol);
+            throw;
+        }
 
         return new LookupResult<DomainInfo>(
             response.Response,
@@ -153,6 +162,7 @@ public class WhoisLookup : IWhoisLookup
                 var autoRdapUrl = await _rdapRegistry.GetBaseUrl(tld, ct).ConfigureAwait(false);
                 if (autoRdapUrl != null)
                     return (_rdapClient, autoRdapUrl);
+                _logger.LogInformation("RDAP not available for TLD {Tld}, falling back to WHOIS", tld);
                 return (_whoisClient, null);
         }
     }

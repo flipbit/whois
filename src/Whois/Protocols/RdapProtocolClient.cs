@@ -179,6 +179,7 @@ internal sealed class RdapProtocolClient : IProtocolClient
         }
         catch (OperationCanceledException) when (!ct.IsCancellationRequested)
         {
+            _logger.LogWarning("RDAP: request timed out after {Timeout}s for {Url}", timeout, url);
             throw new WhoisException(FormattableString.Invariant($"RDAP request timed out after {timeout} seconds: {url}"));
         }
         catch (HttpRequestException ex)
