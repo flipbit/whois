@@ -43,7 +43,6 @@ public class WhoisStatusParser
         if (Equals(status, "Registration request being processed.")) return RegistrationStatus.Other;
         if (Equals(status, "No longer required")) return RegistrationStatus.Other;
         if (Equals(status, "SUSPENDIDO")) return RegistrationStatus.Suspended;
-        if (Equals(status, "Suspended")) return RegistrationStatus.Other;
         if (Equals(status, "DOM_WARN")) return RegistrationStatus.Other;
         if (Equals(status, "DOM_TA")) return RegistrationStatus.Other;
         if (Equals(status, "DOM_LNOT")) return RegistrationStatus.Other;
