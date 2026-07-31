@@ -27,6 +27,7 @@
     <PackageVersion Include="Meziantou.Analyzer" Version="3.0.125" />
 
     <!-- Test -->
+    <PackageVersion Include="Microsoft.Extensions.Configuration" Version="10.0.10" />
     <PackageVersion Include="Microsoft.NET.Test.Sdk" Version="17.5.0" />
     <PackageVersion Include="Microsoft.Extensions.DependencyInjection" Version="10.0.9" />
     <PackageVersion Include="Microsoft.Extensions.Logging" Version="10.0.9" />

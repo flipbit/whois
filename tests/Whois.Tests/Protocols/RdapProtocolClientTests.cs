@@ -366,6 +366,50 @@ public class RdapProtocolClientTests
         Assert.Equal(RegistrationStatus.Found, response.Response.Status);
     }
 
+    // M7: redirect codes 302/307/308
+    [Theory]
+    [InlineData(302)]
+    [InlineData(307)]
+    [InlineData(308)]
+    public async Task Query_RedirectCodes_FollowsRedirect(int statusCode)
+    {
+        var rdapRegistry = Substitute.For<IRdapRegistryCache>();
+        rdapRegistry.GetBaseUrl("com", Arg.Any<CancellationToken>())
+            .Returns("https://rdap.example.com/");
+
+        var json = File.ReadAllText(Path.Combine("..", "..", "..", "Samples", "rdap", "google-com.json"));
+
+        var handler = new RedirectThenOkHandler(
+            redirectCount: 1,
+            location: "https://rdap.other.com/domain/google.com",
+            okBody: json,
+            redirectStatusCode: (System.Net.HttpStatusCode)statusCode);
+        var httpClient = new HttpClient(handler);
+        var client = new RdapProtocolClient(httpClient, rdapRegistry, new WhoisOptions());
+        var request = new WhoisRequest("google.com");
+
+        var response = await client.Query(request, CancellationToken.None);
+
+        Assert.Equal(RegistrationStatus.Found, response.Response.Status);
+    }
+
+    // M8: missing Location header on redirect
+    [Fact]
+    public async Task Query_RedirectMissingLocation_Throws()
+    {
+        var rdapRegistry = Substitute.For<IRdapRegistryCache>();
+        rdapRegistry.GetBaseUrl("com", Arg.Any<CancellationToken>())
+            .Returns("https://rdap.example.com/");
+
+        var handler = new NoLocationRedirectHandler();
+        var httpClient = new HttpClient(handler);
+        var client = new RdapProtocolClient(httpClient, rdapRegistry, new WhoisOptions());
+        var request = new WhoisRequest("example.com");
+
+        var ex = await Assert.ThrowsAsync<WhoisException>(() => client.Query(request, CancellationToken.None));
+        Assert.Contains("Location", ex.Message, StringComparison.OrdinalIgnoreCase);
+    }
+
     [Fact]
     public async Task Query_HttpRequestException_WrapsInWhoisException()
     {
@@ -394,13 +438,16 @@ public class RdapProtocolClientTests
         private readonly int _redirectCount;
         private readonly string _location;
         private readonly string _okBody;
+        private readonly HttpStatusCode _redirectStatusCode;
         private int _callCount;
 
-        public RedirectThenOkHandler(int redirectCount, string location, string okBody)
+        public RedirectThenOkHandler(int redirectCount, string location, string okBody,
+            HttpStatusCode redirectStatusCode = HttpStatusCode.Moved)
         {
             _redirectCount = redirectCount;
             _location = location;
             _okBody = okBody;
+            _redirectStatusCode = redirectStatusCode;
         }
 
         protected override Task<HttpResponseMessage> SendAsync(HttpRequestMessage request, CancellationToken cancellationToken)
@@ -408,7 +455,7 @@ public class RdapProtocolClientTests
             _callCount++;
             if (_callCount <= _redirectCount)
             {
-                var redirect = new HttpResponseMessage(HttpStatusCode.Moved);
+                var redirect = new HttpResponseMessage(_redirectStatusCode);
                 redirect.Headers.Location = new Uri(_location);
                 return Task.FromResult(redirect);
             }
@@ -418,6 +465,16 @@ public class RdapProtocolClientTests
                 Content = new StringContent(_okBody),
             };
             return Task.FromResult(ok);
+        }
+    }
+
+    private sealed class NoLocationRedirectHandler : HttpMessageHandler
+    {
+        protected override Task<HttpResponseMessage> SendAsync(HttpRequestMessage request, CancellationToken cancellationToken)
+        {
+            var response = new HttpResponseMessage(HttpStatusCode.Moved);
+            // No Location header set
+            return Task.FromResult(response);
         }
     }
 

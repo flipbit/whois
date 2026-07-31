@@ -351,6 +351,50 @@ public class RdapParserTests
         Assert.Equal("example.com", info.DomainName!.Value.ToLowerInvariant());
     }
 
+    // M5: multi-remark joining
+    [Fact]
+    public void Parse_MultipleRemarks_JoinsDescriptions()
+    {
+        var json = """
+        {
+            "objectClassName": "domain",
+            "ldhName": "example.com",
+            "status": ["active"],
+            "remarks": [
+                {"description": ["First remark line 1", "First remark line 2"]},
+                {"description": ["Second remark line 1"]}
+            ]
+        }
+        """;
+
+        var info = RdapParser.Parse(json);
+
+        Assert.NotNull(info.Remarks);
+        Assert.Contains("First remark line 1", info.Remarks!, StringComparison.Ordinal);
+        Assert.Contains("First remark line 2", info.Remarks!, StringComparison.Ordinal);
+        Assert.Contains("Second remark line 1", info.Remarks!, StringComparison.Ordinal);
+        // All lines joined with newline
+        Assert.Equal("First remark line 1\nFirst remark line 2\nSecond remark line 1", info.Remarks);
+    }
+
+    // M6: DNSSEC delegationSigned true
+    [Fact]
+    public void Parse_DnssecSigned_ReturnsSignedDelegation()
+    {
+        var json = """
+        {
+            "objectClassName": "domain",
+            "ldhName": "example.com",
+            "status": ["active"],
+            "secureDNS": {"delegationSigned": true}
+        }
+        """;
+
+        var info = RdapParser.Parse(json);
+
+        Assert.Equal("signedDelegation", info.DnsSecStatus);
+    }
+
     // L8: billing contact
     [Fact]
     public void Parse_BillingEntity_PopulatesBillingContact()

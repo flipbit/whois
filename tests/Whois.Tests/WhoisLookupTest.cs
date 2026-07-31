@@ -192,6 +192,50 @@ public class WhoisLookupTest
     }
 
     [Fact]
+    public async Task Lookup_LeadingDot_NormalizesToDomainWithoutDot()
+    {
+        var rdapRegistry = Substitute.For<IRdapRegistryCache>();
+        var ianaLookup = Substitute.For<IIanaServerLookup>();
+        rdapRegistry.GetBaseUrl("com", Arg.Any<CancellationToken>())
+            .Returns("https://rdap.verisign.com/com/v1/");
+
+        var rdapClient = Substitute.For<IProtocolClient>();
+        rdapClient.Protocol.Returns(LookupProtocol.Rdap);
+        rdapClient.Query(Arg.Any<WhoisRequest>(), Arg.Any<CancellationToken>())
+            .Returns(callInfo =>
+            {
+                var req = callInfo.ArgAt<WhoisRequest>(0);
+                return new ProtocolResponse
+                {
+                    RawContent = "{}",
+                    Protocol = LookupProtocol.Rdap,
+                    Response = new DomainInfo
+                    {
+                        DomainName = new HostName(req.Query),
+                        Status = RegistrationStatus.Found,
+                    },
+                    Diagnostics = new LookupDiagnostics(),
+                };
+            });
+
+        var whoisClient = Substitute.For<IProtocolClient>();
+        whoisClient.Protocol.Returns(LookupProtocol.Whois);
+
+        var lookup = new WhoisLookup(
+            new WhoisOptions(),
+            rdapRegistry,
+            ianaLookup,
+            [whoisClient, rdapClient]);
+
+        var result = await lookup.Lookup(".example.com");
+
+        // The leading dot should be stripped before querying
+        await rdapClient.Received(1).Query(
+            Arg.Is<WhoisRequest>(r => r.Query == "example.com"),
+            Arg.Any<CancellationToken>());
+    }
+
+    [Fact]
     public async Task Lookup_EmptyQuery_ThrowsArgumentNullException()
     {
         var rdapRegistry = Substitute.For<IRdapRegistryCache>();

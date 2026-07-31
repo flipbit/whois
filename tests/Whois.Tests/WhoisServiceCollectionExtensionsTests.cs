@@ -1,3 +1,4 @@
+using Microsoft.Extensions.Configuration;
 using Microsoft.Extensions.DependencyInjection;
 using Microsoft.Extensions.Options;
 using Whois.Net;
@@ -62,6 +63,27 @@ public class WhoisServiceCollectionExtensionsTests
         var second = provider.GetRequiredService<WhoisParser>();
 
         Assert.Same(first, second);
+    }
+
+    [Fact]
+    public void AddWhois_WithIConfiguration_BindsOptions()
+    {
+        var config = new ConfigurationBuilder()
+            .AddInMemoryCollection(new Dictionary<string, string?>(StringComparer.Ordinal)
+            {
+                ["TimeoutSeconds"] = "42",
+                ["FollowReferrer"] = "false",
+            })
+            .Build();
+
+        var services = new ServiceCollection();
+        services.AddLogging();
+        services.AddWhois(config);
+        var provider = services.BuildServiceProvider();
+
+        var options = provider.GetRequiredService<IOptions<WhoisOptions>>();
+        Assert.Equal(42, options.Value.TimeoutSeconds);
+        Assert.False(options.Value.FollowReferrer);
     }
 
     [Fact]

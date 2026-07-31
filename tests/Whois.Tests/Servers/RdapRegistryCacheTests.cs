@@ -172,6 +172,29 @@ public class RdapRegistryCacheTests
         Assert.False(result.ContainsKey("httponly"));
     }
 
+    [Fact]
+    public async Task GetBaseUrl_Timeout_ThrowsWhoisException()
+    {
+        var handler = new TimeoutHandler();
+        var options = new WhoisOptions { TimeoutSeconds = 1 };
+        var cache = new RdapRegistryCache(new HttpClient(handler), options);
+
+        var ex = await Assert.ThrowsAsync<WhoisException>(
+            () => cache.GetBaseUrl("com", CancellationToken.None));
+        Assert.Contains("timed out", ex.Message, StringComparison.OrdinalIgnoreCase);
+    }
+
+    [Fact]
+    public async Task GetBaseUrl_HttpRequestException_ThrowsWhoisException()
+    {
+        var handler = new ThrowingHandler();
+        var cache = new RdapRegistryCache(new HttpClient(handler), new WhoisOptions());
+
+        var ex = await Assert.ThrowsAsync<WhoisException>(
+            () => cache.GetBaseUrl("com", CancellationToken.None));
+        Assert.Contains("fetch failed", ex.Message, StringComparison.OrdinalIgnoreCase);
+    }
+
     // --- Test helpers ---
 
     private static RdapRegistryCache CreateCacheWithResponse(HttpStatusCode statusCode, string body)
@@ -259,6 +282,23 @@ public class RdapRegistryCacheTests
                 Content = new StringContent(_body, Encoding.UTF8, "application/json"),
             };
             return response;
+        }
+    }
+
+    private sealed class TimeoutHandler : HttpMessageHandler
+    {
+        protected override async Task<HttpResponseMessage> SendAsync(HttpRequestMessage request, CancellationToken ct)
+        {
+            await Task.Delay(TimeSpan.FromSeconds(10), ct).ConfigureAwait(false);
+            return new HttpResponseMessage(HttpStatusCode.OK);
+        }
+    }
+
+    private sealed class ThrowingHandler : HttpMessageHandler
+    {
+        protected override Task<HttpResponseMessage> SendAsync(HttpRequestMessage request, CancellationToken ct)
+        {
+            throw new HttpRequestException("Connection refused");
         }
     }
 }
