@@ -12,8 +12,6 @@ namespace Whois.Servers;
 public class RdapRegistryCache : IRdapRegistryCache
 {
     private const string BootstrapServicesProperty = "services";
-    private const int StreamingBufferSize = 8192;
-    private const int DefaultStringBuilderCapacity = 1024;
 
     private readonly HttpClient _httpClient;
     private readonly WhoisOptions _options;
@@ -119,7 +117,8 @@ public class RdapRegistryCache : IRdapRegistryCache
                         $"RDAP bootstrap fetch returned HTTP {statusCode} (Content-Type: {contentType}): {url}"));
             }
 
-            var json = await ReadWithSizeLimit(response, _options.MaxRdapBootstrapResponseSize, cts.Token)
+            var json = await Net.NetStandardShims.ReadWithSizeLimit(
+                    response, _options.MaxRdapBootstrapResponseSize, cts.Token)
                 .ConfigureAwait(false);
 
             Dictionary<string, string> result;
@@ -140,32 +139,6 @@ public class RdapRegistryCache : IRdapRegistryCache
 
             return result;
         }
-    }
-
-    private static async Task<string> ReadWithSizeLimit(
-        HttpResponseMessage response, int maxChars, CancellationToken ct)
-    {
-        using var stream = await Net.NetStandardShims.ReadAsStreamAsync(response.Content, ct)
-            .ConfigureAwait(false);
-        using var reader = new System.IO.StreamReader(stream, System.Text.Encoding.UTF8);
-        var buffer = new char[StreamingBufferSize];
-        var sb = new System.Text.StringBuilder(
-            (int)Math.Min(response.Content.Headers.ContentLength ?? DefaultStringBuilderCapacity, maxChars));
-        int charsRead;
-
-        while ((charsRead = await reader.ReadAsync(buffer, 0, buffer.Length).ConfigureAwait(false)) > 0)
-        {
-            ct.ThrowIfCancellationRequested();
-            sb.Append(buffer, 0, charsRead);
-            if (sb.Length > maxChars)
-            {
-                throw new WhoisException(
-                    FormattableString.Invariant(
-                        $"RDAP bootstrap response exceeds maximum size of {maxChars} characters"));
-            }
-        }
-
-        return sb.ToString();
     }
 
     /// <summary>

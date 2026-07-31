@@ -8,7 +8,7 @@ namespace Whois;
 
 public class RdapProtocolClientTests
 {
-    // ReadWithSizeLimit tests
+    // ReadWithSizeLimit tests (moved to NetStandardShims)
 
     [Fact]
     public async Task ReadWithSizeLimit_EmptyResponse_ReturnsEmptyString()
@@ -18,7 +18,7 @@ public class RdapProtocolClientTests
             Content = new StringContent(string.Empty),
         };
 
-        var result = await RdapProtocolClient.ReadWithSizeLimit(response, 2048, CancellationToken.None);
+        var result = await Net.NetStandardShims.ReadWithSizeLimit(response, 2048, CancellationToken.None);
 
         Assert.Equal(string.Empty, result);
     }
@@ -33,7 +33,7 @@ public class RdapProtocolClientTests
             Content = new StringContent(content),
         };
 
-        var result = await RdapProtocolClient.ReadWithSizeLimit(response, maxChars, CancellationToken.None);
+        var result = await Net.NetStandardShims.ReadWithSizeLimit(response, maxChars, CancellationToken.None);
 
         Assert.Equal(maxChars, result.Length);
         Assert.Equal(content, result);
@@ -50,7 +50,7 @@ public class RdapProtocolClientTests
         };
 
         var ex = await Assert.ThrowsAsync<WhoisException>(
-            () => RdapProtocolClient.ReadWithSizeLimit(response, maxChars, CancellationToken.None));
+            () => Net.NetStandardShims.ReadWithSizeLimit(response, maxChars, CancellationToken.None));
 
         Assert.Contains("exceeds maximum size", ex.Message, StringComparison.Ordinal);
     }
@@ -67,7 +67,7 @@ public class RdapProtocolClientTests
         // Simulate Content-Length header
         response.Content.Headers.ContentLength = 500;
 
-        var result = await RdapProtocolClient.ReadWithSizeLimit(response, maxChars, CancellationToken.None);
+        var result = await Net.NetStandardShims.ReadWithSizeLimit(response, maxChars, CancellationToken.None);
 
         Assert.Equal(content, result);
     }

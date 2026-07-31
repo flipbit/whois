@@ -1,5 +1,4 @@
 using System.Diagnostics;
-using System.Text;
 using Microsoft.Extensions.Logging;
 using Microsoft.Extensions.Logging.Abstractions;
 using Whois.Net;
@@ -18,9 +17,6 @@ internal sealed class RdapProtocolClient : IProtocolClient
     private const int HttpTooManyRequests = 429;
 
     private const int DefaultHttpsPort = 443;
-    private const int StreamingBufferSize = 8192;
-    private const int DefaultStringBuilderCapacity = 1024;
-
     private readonly HttpClient _httpClient;
     private readonly IRdapRegistryCache _rdapRegistry;
     private readonly WhoisOptions _options;
@@ -160,7 +156,7 @@ internal sealed class RdapProtocolClient : IProtocolClient
                 throw new WhoisException(FormattableString.Invariant($"RDAP server returned HTTP {statusCode} for {url}"));
             }
 
-            var json = await ReadWithSizeLimit(finalResponse, _options.MaxRdapResponseSize, cts.Token).ConfigureAwait(false);
+            var json = await NetStandardShims.ReadWithSizeLimit(finalResponse, _options.MaxRdapResponseSize, cts.Token).ConfigureAwait(false);
 
             var domainInfo = RdapParser.Parse(json);
 
@@ -268,29 +264,6 @@ internal sealed class RdapProtocolClient : IProtocolClient
         }
 
         return false;
-    }
-
-    internal static async Task<string> ReadWithSizeLimit(HttpResponseMessage response, int maxChars, CancellationToken ct)
-    {
-        // Use the shim -- the outer CancellationTokenSource handles timeout via GetAsync.
-        using var stream = await NetStandardShims.ReadAsStreamAsync(response.Content, ct).ConfigureAwait(false);
-        using var reader = new StreamReader(stream, Encoding.UTF8);
-        var buffer = new char[StreamingBufferSize];
-        var capacity = (int)Math.Min(response.Content.Headers.ContentLength ?? DefaultStringBuilderCapacity, maxChars);
-        var sb = new StringBuilder(capacity);
-        int charsRead;
-
-        while ((charsRead = await reader.ReadAsync(buffer, 0, buffer.Length).ConfigureAwait(false)) > 0)
-        {
-            ct.ThrowIfCancellationRequested();
-            sb.Append(buffer, 0, charsRead);
-            if (sb.Length > maxChars)
-            {
-                throw new WhoisException(FormattableString.Invariant($"RDAP response exceeds maximum size of {maxChars} characters"));
-            }
-        }
-
-        return sb.ToString();
     }
 
     private static int CountFields(DomainInfo info)

@@ -1,10 +1,13 @@
 using System.Net.Sockets;
+using System.Text;
 
 namespace Whois.Net;
 
 internal static class NetStandardShims
 {
     private static readonly TimeSpan PooledConnectionLifetime = TimeSpan.FromMinutes(2);
+    private const int StreamingBufferSize = 8192;
+    private const int DefaultStringBuilderCapacity = 1024;
 
     /// <summary>
     /// Creates an <see cref="HttpClient"/> with connection pooling where the runtime supports it.
@@ -85,5 +88,35 @@ internal static class NetStandardShims
 #else
         return content.ReadAsStreamAsync(ct);
 #endif
+    }
+
+    /// <summary>
+    /// Reads an HTTP response body into a string, enforcing a maximum character limit.
+    /// Streams the response to avoid loading the full content-length into memory up front.
+    /// </summary>
+    internal static async Task<string> ReadWithSizeLimit(
+        HttpResponseMessage response, int maxChars, CancellationToken ct)
+    {
+        using var stream = await ReadAsStreamAsync(response.Content, ct).ConfigureAwait(false);
+        using var reader = new StreamReader(stream, Encoding.UTF8);
+        var buffer = new char[StreamingBufferSize];
+        var capacity = (int)Math.Min(
+            response.Content.Headers.ContentLength ?? DefaultStringBuilderCapacity, maxChars);
+        var sb = new StringBuilder(capacity);
+        int charsRead;
+
+        while ((charsRead = await reader.ReadAsync(buffer, 0, buffer.Length).ConfigureAwait(false)) > 0)
+        {
+            ct.ThrowIfCancellationRequested();
+            sb.Append(buffer, 0, charsRead);
+            if (sb.Length > maxChars)
+            {
+                throw new WhoisException(
+                    FormattableString.Invariant(
+                        $"Response exceeds maximum size of {maxChars} characters"));
+            }
+        }
+
+        return sb.ToString();
     }
 }
