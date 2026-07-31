@@ -23,7 +23,7 @@ public class RdapRegistryCache : IRdapRegistryCache
     private readonly SemaphoreSlim _lock = new(1, 1);
 #pragma warning restore CA2213
     private volatile Dictionary<string, string>? _cache;
-    private DateTime _cachedAt;
+    private long _cachedAtTicks;
 
     public RdapRegistryCache(HttpClient httpClient, WhoisOptions options)
         : this(httpClient, options, NullLogger<RdapRegistryCache>.Instance)
@@ -48,6 +48,7 @@ public class RdapRegistryCache : IRdapRegistryCache
 
     public void ClearCache()
     {
+        Interlocked.Exchange(ref _cachedAtTicks, 0);
         _cache = null;
         _logger.LogInformation("RDAP registry cache cleared");
     }
@@ -55,19 +56,19 @@ public class RdapRegistryCache : IRdapRegistryCache
     private async Task<Dictionary<string, string>> EnsureCacheAsync(CancellationToken ct)
     {
         var cache = _cache;
-        if (cache != null && DateTime.UtcNow - _cachedAt < _options.TldServerCacheDuration)
+        if (cache != null && DateTime.UtcNow.Ticks - Interlocked.Read(ref _cachedAtTicks) < _options.TldServerCacheDuration.Ticks)
             return cache;
 
         await _lock.WaitAsync(ct).ConfigureAwait(false);
         try
         {
             cache = _cache;
-            if (cache != null && DateTime.UtcNow - _cachedAt < _options.TldServerCacheDuration)
+            if (cache != null && DateTime.UtcNow.Ticks - Interlocked.Read(ref _cachedAtTicks) < _options.TldServerCacheDuration.Ticks)
                 return cache;
 
             cache = await FetchBootstrapAsync(ct).ConfigureAwait(false);
             _cache = cache;
-            _cachedAt = DateTime.UtcNow;
+            Interlocked.Exchange(ref _cachedAtTicks, DateTime.UtcNow.Ticks);
             return cache;
         }
         finally
