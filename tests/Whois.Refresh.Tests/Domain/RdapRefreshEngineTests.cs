@@ -31,7 +31,7 @@ public class RdapRefreshEngineTests
 
         var domainResult = results.Results["rdap.example.com"]["com"]["found"]["example.com"];
         Assert.Null(domainResult.Error);
-        Assert.Contains("DomainName", domainResult.ExtractedFields);
+        Assert.Contains(domainResult.ExtractedFields, f => f == "DomainName");
     }
 
     [Fact]

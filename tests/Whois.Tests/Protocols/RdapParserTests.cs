@@ -204,7 +204,7 @@ public class RdapParserTests
 
         Assert.NotNull(info.Registrant);
         Assert.NotNull(info.Registrant!.Address);
-        Assert.Contains("123 Main St", info.Registrant.Address!.Lines);
+        Assert.Contains(info.Registrant.Address!.Lines, l => l == "123 Main St");
         Assert.Equal("Springfield", info.Registrant.Address.City);
         Assert.Equal("IL", info.Registrant.Address.Region);
         Assert.Equal("62701", info.Registrant.Address.PostalCode);
@@ -240,7 +240,7 @@ public class RdapParserTests
 
         Assert.NotNull(info.Registrant);
         Assert.NotNull(info.Registrant!.Address);
-        Assert.Contains("456 Oak Ave", info.Registrant.Address!.Lines);
+        Assert.Contains(info.Registrant.Address!.Lines, l => l == "456 Oak Ave");
         Assert.Equal("Chicago", info.Registrant.Address.City);
     }
 
