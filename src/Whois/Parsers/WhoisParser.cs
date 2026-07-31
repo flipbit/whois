@@ -18,29 +18,17 @@ public class WhoisParser
 #pragma warning disable MA0158 // System.Threading.Lock is not available on netstandard2.0 / net8.0
     private readonly object _loadLock = new();
 #pragma warning restore MA0158
-    private readonly Func<string, string?>? _cacheResolver;
 
     /// <summary>
     /// Creates a new instance of the <see cref="WhoisParser"/> class.
     /// </summary>
-    public WhoisParser() : this(cacheResolver: null)
-    {
-    }
-
-    /// <summary>
-    /// Creates a new instance of the <see cref="WhoisParser"/> class with an optional cache resolver.
-    /// When <paramref name="cacheResolver"/> is non-null, it is called with the WHOIS server name
-    /// to retrieve a directory path containing pre-cached template files. When it returns null,
-    /// embedded resources are used instead.
-    /// </summary>
-    public WhoisParser(Func<string, string?>? cacheResolver)
+    public WhoisParser()
     {
         var options = new TokenizerOptions()
             .WithTransformer<CleanDomainStatusTransformer>()
             .WithTransformer<ToHostNameTransformer>();
 
         _matcher = new TemplateMatcher(options);
-        _cacheResolver = cacheResolver;
         FixUps = new List<IFixup>();
 
         // Register default FixUps
@@ -168,20 +156,6 @@ public class WhoisParser
         {
             // Double-checked locking: re-verify under the lock before loading.
             if (Templates.ContainsTag(whoisServer)) return;
-
-            if (_cacheResolver != null)
-            {
-                var directoryPath = _cacheResolver(whoisServer);
-                if (directoryPath != null)
-                {
-                    foreach (var file in Directory.GetFiles(directoryPath, "*.txt"))
-                    {
-                        var content = File.ReadAllText(file);
-                        _matcher.RegisterTemplate(content);
-                    }
-                    return;
-                }
-            }
 
             var templateNames = ResourceReader.GetNames(whoisServer);
 

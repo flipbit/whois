@@ -46,59 +46,6 @@ public class WhoisParserCacheTests : IDisposable
     }
 
     [Fact]
-    public void LoadServerTemplates_WithCacheResolver_UsesCache()
-    {
-        const string serverTag = "whois.cache.example";
-        WriteTemplate("whois.cache.example", "found.txt", serverTag);
-
-        var resolverCalled = false;
-        string? Resolver(string server)
-        {
-            resolverCalled = true;
-            return Path.Combine(_tempDir, server);
-        }
-
-        var parser = new WhoisParser(Resolver);
-        parser.Parse(serverTag, "Domain Name: test.example");
-
-        Assert.True(resolverCalled);
-        Assert.True(parser.Templates.ContainsTag(serverTag));
-    }
-
-    [Fact]
-    public void LoadServerTemplates_WithNullResolver_UsesEmbeddedResources()
-    {
-        var parser = new WhoisParser(cacheResolver: null);
-        parser.Parse("whois.iana.org", "domain: int");
-
-        Assert.True(parser.Templates.ContainsTag("whois.iana.org"));
-    }
-
-    [Fact]
-    public void LoadServerTemplates_AlreadyLoaded_DoesNotReload()
-    {
-        const string serverTag = "whois.once.example";
-        WriteTemplate("whois.once.example", "original.txt", serverTag);
-
-        var resolverCallCount = 0;
-        string? Resolver(string server)
-        {
-            resolverCallCount++;
-            return Path.Combine(_tempDir, server);
-        }
-
-        var parser = new WhoisParser(Resolver);
-
-        parser.Parse(serverTag, "Domain Name: first.example");
-        var firstTemplateCount = parser.Templates.Count;
-
-        parser.Parse(serverTag, "Domain Name: second.example");
-
-        Assert.Equal(1, resolverCallCount);
-        Assert.Equal(firstTemplateCount, parser.Templates.Count);
-    }
-
-    [Fact]
     public async Task Parse_ConcurrentCalls_ThreadSafe()
     {
         var servers = new[] { "whois.iana.org", "whois.ja.net" };

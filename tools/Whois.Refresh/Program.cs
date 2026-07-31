@@ -24,8 +24,6 @@ app.Configure(config =>
         .WithDescription("Query live WHOIS servers and save responses");
     config.AddCommand<DetectCommand>("detect")
         .WithDescription("Compare refresh results against baseline, detect drift");
-    config.AddCommand<PackageCommand>("package")
-        .WithDescription("Build a versioned template pack zip with manifest");
 });
 
 return await app.RunAsync(args).ConfigureAwait(false);

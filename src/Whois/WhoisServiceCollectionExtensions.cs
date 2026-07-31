@@ -6,7 +6,6 @@ using Whois.Net;
 using Whois.Parsers;
 using Whois.Protocols;
 using Whois.Servers;
-using Whois.Templates;
 
 namespace Whois;
 
@@ -31,21 +30,7 @@ public static class WhoisServiceCollectionExtensions
 
     private static void RegisterCoreServices(IServiceCollection services)
     {
-        // Template infrastructure
-        services.AddHttpClient("TemplatePackProvider");
-
-        services.AddSingleton<CacheDirectoryManager>(sp =>
-        {
-            var options = sp.GetRequiredService<IOptions<WhoisOptions>>().Value;
-            var dir = options.TemplateCacheDirectory ?? WhoisOptions.GetDefaultCacheDirectory();
-            return new CacheDirectoryManager(dir, sp.GetRequiredService<ILogger<CacheDirectoryManager>>());
-        });
-
-        services.AddSingleton<TemplateUpdateState>();
-        services.AddSingleton<ITemplatePackProvider, TemplatePackProvider>();
-
-        services.AddSingleton<WhoisParser>(sp =>
-            new WhoisParser(server => sp.GetRequiredService<ITemplatePackProvider>().GetCachedTemplatePath(server)));
+        services.AddSingleton<WhoisParser>();
 
         // RDAP registry cache
         services.AddHttpClient("RdapRegistryCache");
@@ -97,8 +82,7 @@ public static class WhoisServiceCollectionExtensions
                 sp.GetRequiredService<ILogger<WhoisLookup>>(),
                 sp.GetRequiredService<IRdapRegistryCache>(),
                 sp.GetRequiredService<IIanaServerLookup>(),
-                sp.GetRequiredService<IEnumerable<IProtocolClient>>(),
-                sp.GetRequiredService<ITemplatePackProvider>()));
+                sp.GetRequiredService<IEnumerable<IProtocolClient>>()));
     }
 
 }
