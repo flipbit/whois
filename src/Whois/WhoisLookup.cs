@@ -21,15 +21,6 @@ public class WhoisLookup : IWhoisLookup
     private readonly IProtocolClient _rdapClient;
     private readonly WhoisOptions _options;
 
-    // --- Static shared instances for non-DI use ---
-    private static readonly Lazy<HttpClient> SharedHttpClient = new(NetStandardShims.CreatePooledHttpClient);
-
-    private static readonly Lazy<RdapRegistryCache> SharedRdapRegistry = new(() =>
-        new RdapRegistryCache(SharedHttpClient.Value, new WhoisOptions()));
-
-    private static readonly Lazy<IanaServerLookup> SharedIanaLookup = new(() =>
-        new IanaServerLookup(new TcpReader(), new WhoisOptions()));
-
     private static readonly Lazy<WhoisParser> SharedParser = new(() => new WhoisParser());
 
     /// <summary>
@@ -41,18 +32,22 @@ public class WhoisLookup : IWhoisLookup
 
     /// <summary>
     /// Initializes a new instance with the given options (non-DI).
+    /// Each instance creates its own cache infrastructure that respects
+    /// the provided options (timeouts, cache durations, etc.).
     /// </summary>
     public WhoisLookup(WhoisOptions options)
     {
         _options = options;
         _logger = NullLogger<WhoisLookup>.Instance;
-        _rdapRegistry = SharedRdapRegistry.Value;
-        _ianaLookup = SharedIanaLookup.Value;
+
+        var httpClient = NetStandardShims.CreatePooledHttpClient();
+        _rdapRegistry = new RdapRegistryCache(httpClient, options);
+        _ianaLookup = new IanaServerLookup(new TcpReader(), options);
 
         var parser = SharedParser.Value;
         var tcpReader = new TcpReader();
         _whoisClient = new WhoisProtocolClient(tcpReader, _ianaLookup, parser, options);
-        _rdapClient = new RdapProtocolClient(SharedHttpClient.Value, _rdapRegistry, options);
+        _rdapClient = new RdapProtocolClient(httpClient, _rdapRegistry, options);
     }
 
     /// <summary>
