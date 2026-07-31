@@ -17,7 +17,6 @@
   </PropertyGroup>
   <ItemGroup>
     <EmbeddedResource Include="Resources\**\*.txt" />
-    <EmbeddedResource Include="Resources\**\*.json" />
   </ItemGroup>
   <ItemGroup>
     <Folder Include="Properties\" />
