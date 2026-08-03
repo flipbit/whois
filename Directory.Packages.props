@@ -24,7 +24,7 @@
     <PackageVersion Include="Tokenizer" Version="3.0.0" />
 
     <!-- Analyzers -->
-    <PackageVersion Include="Meziantou.Analyzer" Version="3.0.137" />
+    <PackageVersion Include="Meziantou.Analyzer" Version="3.0.138" />
 
     <!-- Test -->
     <PackageVersion Include="Microsoft.Extensions.Configuration" Version="10.0.10" />
