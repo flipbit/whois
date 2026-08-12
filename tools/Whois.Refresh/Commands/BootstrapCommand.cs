@@ -29,7 +29,7 @@ public class BootstrapCommand : AsyncCommand<BootstrapSettings>
         _httpClient = httpClient;
     }
 
-    public override async Task<int> ExecuteAsync(CommandContext context, BootstrapSettings settings)
+    protected override async Task<int> ExecuteAsync(CommandContext context, BootstrapSettings settings, CancellationToken cancellationToken)
     {
         if (Enum.TryParse<LookupProtocol>(settings.Protocol, ignoreCase: true, out var protocol)
             && protocol == LookupProtocol.Rdap)

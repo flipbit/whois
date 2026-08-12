@@ -37,7 +37,7 @@ public class RefreshCommand : AsyncCommand<RefreshSettings>
         _httpClient = httpClient;
     }
 
-    public override async Task<int> ExecuteAsync(CommandContext context, RefreshSettings settings)
+    protected override async Task<int> ExecuteAsync(CommandContext context, RefreshSettings settings, CancellationToken cancellationToken)
     {
         var toolDir = Path.Combine(settings.RepoRoot, "tools", "Whois.Refresh");
         var samplesPath = Path.Combine(settings.RepoRoot, "tests", "Whois.Tests", "Samples");
@@ -77,11 +77,11 @@ public class RefreshCommand : AsyncCommand<RefreshSettings>
                 MaxResponseBytes: settings.MaxResponseBytes);
 
             var engine = new WhoisRefreshEngine(_tcpReader, _fileSystem);
-            var results = await engine.RunAsync(registry, options, CancellationToken.None).ConfigureAwait(false);
+            var results = await engine.RunAsync(registry, options, cancellationToken).ConfigureAwait(false);
             results.Prune(registry);
 
             var json = RefreshResults.Serialize(results);
-            await _fileSystem.WriteAllTextAsync(resultsPath, json).ConfigureAwait(false);
+            await _fileSystem.WriteAllTextAsync(resultsPath, json, cancellationToken).ConfigureAwait(false);
 
             (whoisSuccesses, whoisErrors) = CountResults(results);
         }
@@ -109,11 +109,11 @@ public class RefreshCommand : AsyncCommand<RefreshSettings>
                 QueryTimeoutSeconds: settings.TimeoutSeconds);
 
             var engine = new RdapRefreshEngine(_httpClient);
-            var results = await engine.RunAsync(registry, options, CancellationToken.None).ConfigureAwait(false);
+            var results = await engine.RunAsync(registry, options, cancellationToken).ConfigureAwait(false);
             results.Prune(registry);
 
             var json = RefreshResults.Serialize(results);
-            await _fileSystem.WriteAllTextAsync(resultsPath, json).ConfigureAwait(false);
+            await _fileSystem.WriteAllTextAsync(resultsPath, json, cancellationToken).ConfigureAwait(false);
 
             (rdapSuccesses, rdapErrors) = CountResults(results);
         }

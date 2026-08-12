@@ -3,6 +3,11 @@ updates:
 - package-ecosystem: nuget
   directory: "/"
   schedule:
-    interval: daily
+    interval: weekly
+    day: monday
     time: "04:00"
   open-pull-requests-limit: 10
+  groups:
+    all-nuget-updates:
+      patterns:
+        - "*"
