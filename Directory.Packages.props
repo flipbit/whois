@@ -5,9 +5,9 @@
   <ItemGroup>
     <!-- Core library -->
 <PackageVersion Include="Microsoft.SourceLink.GitHub" Version="10.0.102" />
-    <PackageVersion Include="Microsoft.Extensions.Logging.Abstractions" Version="10.0.10" />
+    <PackageVersion Include="Microsoft.Extensions.Logging.Abstractions" Version="10.0.11" />
     <PackageVersion Include="Microsoft.Extensions.Options" Version="10.0.10" />
-    <PackageVersion Include="Microsoft.Extensions.DependencyInjection.Abstractions" Version="10.0.10" />
+    <PackageVersion Include="Microsoft.Extensions.DependencyInjection.Abstractions" Version="10.0.11" />
     <PackageVersion Include="Microsoft.Extensions.Options.ConfigurationExtensions" Version="10.0.10" />
 
     <!-- Console app -->
