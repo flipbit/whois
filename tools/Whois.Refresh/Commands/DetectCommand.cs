@@ -22,7 +22,7 @@ public class DetectCommand : AsyncCommand<DetectSettings>
         _fileSystem = fileSystem;
     }
 
-    public override async Task<int> ExecuteAsync(CommandContext context, DetectSettings settings)
+    protected override async Task<int> ExecuteAsync(CommandContext context, DetectSettings settings, CancellationToken cancellationToken)
     {
         var toolDir = Path.Combine(settings.RepoRoot, "tools", "Whois.Refresh");
         var registryPath = Path.Combine(toolDir, "domains-whois.jsonc");
@@ -35,11 +35,11 @@ public class DetectCommand : AsyncCommand<DetectSettings>
         }
 
         var registry = await DomainRegistry.LoadFromFileAsync(registryPath).ConfigureAwait(false);
-        var currentJson = await _fileSystem.ReadAllTextAsync(resultsPath).ConfigureAwait(false);
+        var currentJson = await _fileSystem.ReadAllTextAsync(resultsPath, cancellationToken).ConfigureAwait(false);
         var current = RefreshResults.Deserialize(currentJson);
 
         var detector = new DriftDetector(_reporter, _fileSystem);
-        var entries = await detector.DetectAsync(current, settings.RepoRoot, "tools/Whois.Refresh", CancellationToken.None).ConfigureAwait(false);
+        var entries = await detector.DetectAsync(current, settings.RepoRoot, "tools/Whois.Refresh", cancellationToken).ConfigureAwait(false);
 
         var isCi = string.Equals(Environment.GetEnvironmentVariable("GITHUB_ACTIONS"), "true", StringComparison.Ordinal);
         OutputResults(entries, isCi);
@@ -48,8 +48,8 @@ public class DetectCommand : AsyncCommand<DetectSettings>
         {
             var jsonReport = DriftReportGenerator.ToJson(entries);
             var mdReport = DriftReportGenerator.ToMarkdown(entries);
-            await _fileSystem.WriteAllTextAsync(Path.Combine(toolDir, "drift-report.json"), jsonReport).ConfigureAwait(false);
-            await _fileSystem.WriteAllTextAsync(Path.Combine(toolDir, "drift-report.md"), mdReport).ConfigureAwait(false);
+            await _fileSystem.WriteAllTextAsync(Path.Combine(toolDir, "drift-report.json"), jsonReport, cancellationToken).ConfigureAwait(false);
+            await _fileSystem.WriteAllTextAsync(Path.Combine(toolDir, "drift-report.md"), mdReport, cancellationToken).ConfigureAwait(false);
         }
 
         return entries.Any(e => e.Severity == DriftSeverity.Breakage) ? 1 : 0;
