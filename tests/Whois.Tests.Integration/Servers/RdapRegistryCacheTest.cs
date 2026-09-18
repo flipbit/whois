@@ -25,6 +25,6 @@ public class RdapRegistryCacheTest : IDisposable
         var result = await _cache.GetBaseUrl("com", CancellationToken.None);
 
         Assert.NotNull(result);
-        Assert.StartsWith("https://", result);
+        Assert.StartsWith("https://", result, StringComparison.Ordinal);
     }
 }

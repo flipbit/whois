@@ -3,61 +3,70 @@
 </p>
 
 # Whois
-[![GitHub Stars](https://img.shields.io/github/stars/flipbit/whois.svg)](https://github.com/flipbit/whois/stargazers) [![GitHub Issues](https://img.shields.io/github/issues/flipbit/whois.svg)](https://github.com/flipbit/whois/issues) [![NuGet Version](https://img.shields.io/nuget/v/whois.svg)](https://www.nuget.org/packages/Whois/) [![NuGet Downloads](https://img.shields.io/nuget/dt/whois.svg)](https://www.nuget.org/packages/Whois/) 
+[![GitHub Stars](https://img.shields.io/github/stars/flipbit/whois.svg)](https://github.com/flipbit/whois/stargazers) [![GitHub Issues](https://img.shields.io/github/issues/flipbit/whois.svg)](https://github.com/flipbit/whois/issues) [![NuGet Version](https://img.shields.io/nuget/v/whois.svg)](https://www.nuget.org/packages/Whois/) [![NuGet Downloads](https://img.shields.io/nuget/dt/whois.svg)](https://www.nuget.org/packages/Whois/) [![License: MIT](https://img.shields.io/badge/License-MIT-blue.svg)](https://github.com/flipbit/whois/blob/main/LICENSE.txt)
 
-Query and parse WHOIS domain registration information with this library for .NET Standard 2.0, .NET 8, and .NET 10.
+Query and parse WHOIS and RDAP domain registration data with this library for .NET Standard 2.0, .NET 8, and .NET 10.
 
 ```csharp
-// Create a WhoisLookup instance
 var lookup = new WhoisLookup();
 
-// Query github.com
-var response = await lookup.Lookup("github.com");
+var result = await lookup.Lookup("github.com");
 
-// Output the response
-Console.WriteLine(response.Content);
-
-// Domain Name: github.com
-// Registry Domain ID: 1264983250_DOMAIN_COM-VRSN
-// Registrar WHOIS Server: whois.markmonitor.com
-// Registrar URL: http://www.markmonitor.com
-// ...
+Console.WriteLine(result.Response.DomainName);     // github.com
+Console.WriteLine(result.Response.Registrar?.Name); // MarkMonitor Inc.
+Console.WriteLine(result.Response.Expiration);      // 2024-10-09T07:00:00Z
+Console.WriteLine(result.Protocol);                 // Rdap (or Whois)
 ```
 
-### Parsing
+### RDAP Support
 
-WHOIS data is parsed into objects using extensible [Tokenizer](https://github.com/flipbit/tokenizer) templates.
+The library supports [RDAP](https://about.rdap.org/) (Registration Data Access Protocol), the modern replacement for WHOIS. RDAP uses HTTPS and returns structured JSON rather than free-form text.
+
+By default, the library picks the best available protocol automatically - RDAP where it's supported, falling back to WHOIS. You can force a specific protocol with a `WhoisRequest`:
 
 ```csharp
-// Query github.com
-var response = await lookup.Lookup("github.com");
+// Force RDAP
+var result = await lookup.Lookup(new WhoisRequest("github.com")
+{
+    PreferredProtocol = ProtocolPreference.Rdap
+});
 
-// Convert the response to JSON
-var json = JsonSerializer.Serialize(response, new JsonSerializerOptions { WriteIndented = true });
+// Force legacy WHOIS
+var result = await lookup.Lookup(new WhoisRequest("github.com")
+{
+    PreferredProtocol = ProtocolPreference.Whois
+});
+```
 
-// Output the json 
+Both protocols return the same `LookupResult<DomainInfo>` type, so your code doesn't need to care which one was used. `result.Protocol` tells you which was selected, and `result.RawContent` gives you the raw response (WHOIS text or RDAP JSON).
+
+### Structured Data
+
+Both WHOIS and RDAP responses are parsed into the same `DomainInfo` object:
+
+```csharp
+var result = await lookup.Lookup("github.com");
+
+var json = JsonSerializer.Serialize(result.Response, new JsonSerializerOptions { WriteIndented = true });
 Console.WriteLine(json);
 
 // {
-//   "ContentLength": 3730,
-//   "Status": 1,
-//   "DomainName": {
-//     "IsPunyCode": false,
-//     "IsTld": false,
-//     "Tld": "com",
-//     "Value": "github.com"
-//   },
+//   "DomainName": "github.com",
 //   "RegistryDomainId": "1264983250_DOMAIN_COM-VRSN",
+//   "Status": "Registered",
 //   "DomainStatus": [
-//     "clientUpdateProhibited",
+//     "clientDeleteProhibited",
 //     "clientTransferProhibited",
-//     "clientDeleteProhibited"
+//     "clientUpdateProhibited"
 //   ],
 //   "Registered": "2007-10-09T18:20:50Z",
-//   "Updated": "2020-09-08T09:18:27Z",
-//   "Expiration": "2022-10-09T07:00:00Z",
-// ...
+//   "Updated": "2024-09-08T09:18:27Z",
+//   "Expiration": "2026-10-09T07:00:00Z",
+//   ...
+// }
 ```
+
+WHOIS text responses are parsed using extensible [Tokenizer](https://github.com/flipbit/tokenizer) templates. RDAP responses are parsed directly from the JSON.
 
 ### CancellationToken Support
 
@@ -77,7 +86,8 @@ Configure the lookup per-instance using the options constructor parameter:
 var lookup = new WhoisLookup(new WhoisOptions
 {
     TimeoutSeconds = 30,
-    FollowReferrer = true
+    FollowReferrer = true,
+    PreferredProtocol = ProtocolPreference.Auto // default: RDAP where available, WHOIS fallback
 });
 ```
 
@@ -102,7 +112,7 @@ Inject `IWhoisLookup` into your services:
 ```csharp
 public class MyService(IWhoisLookup whoisLookup)
 {
-    public async Task<WhoisResponse> CheckDomain(string domain, CancellationToken ct)
+    public async Task<LookupResult<DomainInfo>> CheckDomain(string domain, CancellationToken ct)
         => await whoisLookup.Lookup(domain, ct);
 }
 ```
@@ -133,11 +143,11 @@ lookup.Parser.ClearTemplates();
 lookup.Parser.AddTemplate("Domain: { DomainName$ }", "Simple Pattern");
 ```
 
-See the [existing patterns](https://github.com/flipbit/whois/blob/master/src/Whois/Resources/generic/tld/Found02.txt) and [Tokenizer](https://github.com/flipbit/tokenizer) documentation for information about creating patterns.  You can also add validation and transformation functions to your patterns.
+See the [existing patterns](https://github.com/flipbit/whois/blob/main/src/Whois/Resources/generic/tld/found/02.txt) and [Tokenizer](https://github.com/flipbit/tokenizer) documentation for information about creating patterns.  You can also add validation and transformation functions to your patterns.
 
 ### Networking
 
-The library communicates via an `ITcpReader` interface.  The [default implementation](https://github.com/flipbit/whois/blob/master/src/Whois/Net/TcpReader.cs) will talk directly to a WHOIS server over port 43.  You can change this behaviour by creating a new `ITcpReader` implementation and passing it to the constructor:
+The library communicates via an `ITcpReader` interface.  The [default implementation](https://github.com/flipbit/whois/blob/main/src/Whois/Net/TcpReader.cs) will talk directly to a WHOIS server over port 43.  You can change this behaviour by creating a new `ITcpReader` implementation and passing it to the constructor:
 
 ```csharp        
 // Create a custom ITcpReader implementation
@@ -168,6 +178,14 @@ You can install the library via the NuGet GUI or by entering the following comma
     
 The source code is available on Github and can be downloaded and compiled.
 
-### Further Reading
+## Contributing
 
-Further details about how the library works can be found on [this blog post](http://flipbit.co.uk/2009/06/querying-whois-server-data-with-c.html).
+See [CONTRIBUTING.md](https://github.com/flipbit/whois/blob/main/CONTRIBUTING.md) for guidelines on building, testing, and submitting changes.
+
+## Security
+
+To report a security vulnerability, please use [GitHub Security Advisories](https://github.com/flipbit/whois/security/advisories/new). See [SECURITY.md](https://github.com/flipbit/whois/blob/main/SECURITY.md) for guidance on timeouts and rate limiting.
+
+## License
+
+MIT. See [LICENSE.txt](https://github.com/flipbit/whois/blob/main/LICENSE.txt).

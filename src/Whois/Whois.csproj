@@ -6,12 +6,12 @@
    <PackageVersion>4.0.0-beta.1</PackageVersion>
    <Authors>Chris Wood</Authors>
    <Company>flipbit.co.uk</Company>
-   <PackageProjectUrl>http://github.com/flipbit/whois</PackageProjectUrl>
+   <PackageProjectUrl>https://github.com/flipbit/whois</PackageProjectUrl>
    <PackageTags>whois lookup parsing</PackageTags>
    <Description>A .NET Standard 2.0, .NET 8, and .NET 10 WHOIS Lookup and Parsing Library</Description>
    <PackageReadmeFile>README.md</PackageReadmeFile>
    <PackageIcon>icon.png</PackageIcon>
-   <Copyright>Chris Wood 2021</Copyright>
+   <Copyright>Chris Wood 2026</Copyright>
    <RootNamespace>Whois</RootNamespace>
 
   </PropertyGroup>
@@ -49,11 +49,12 @@
   </ItemGroup>
 
   <PropertyGroup>
-    <PackageLicenseExpression>MIT</PackageLicenseExpression>
+    <PackageLicenseFile>LICENSE.txt</PackageLicenseFile>
   </PropertyGroup>
 
   <ItemGroup>
     <None Include="..\..\README.md" Pack="true" PackagePath="\" />
+    <None Include="..\..\LICENSE.txt" Pack="true" PackagePath="\" />
     <None Include="icon.png" Pack="true" PackagePath="\" />
   </ItemGroup>
 </Project>
