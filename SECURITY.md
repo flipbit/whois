@@ -10,7 +10,9 @@ Don't open a public issue for security vulnerabilities.
 
 WHOIS queries are sent over TCP port 43 as unencrypted plaintext. Both the query and the response travel without encryption, so they can be observed by anyone on the network path. RDAP queries use HTTPS.
 
-WHOIS server responses should not be treated as trusted input. If you're displaying response data in a web page or other user-facing context, sanitise the content appropriately to avoid injection attacks.
+WHOIS and RDAP responses contain registrant-supplied data - anyone can register a domain and set the registrant name, organisation, address, and contact details to arbitrary strings. These values appear verbatim in the response and should be treated as untrusted input.
+
+If you're displaying fields like `response.Registrant.Name` in a web page, sanitise them to prevent XSS. If you're interpolating them into database queries, use parameterised queries. The same applies to RDAP responses.
 
 ## Timeouts and Cancellation
 
