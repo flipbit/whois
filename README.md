@@ -143,11 +143,11 @@ lookup.Parser.ClearTemplates();
 lookup.Parser.AddTemplate("Domain: { DomainName$ }", "Simple Pattern");
 ```
 
-See the [existing patterns](https://github.com/flipbit/whois/blob/master/src/Whois/Resources/generic/tld/Found02.txt) and [Tokenizer](https://github.com/flipbit/tokenizer) documentation for information about creating patterns.  You can also add validation and transformation functions to your patterns.
+See the [existing patterns](https://github.com/flipbit/whois/blob/main/src/Whois/Resources/generic/tld/found/02.txt) and [Tokenizer](https://github.com/flipbit/tokenizer) documentation for information about creating patterns.  You can also add validation and transformation functions to your patterns.
 
 ### Networking
 
-The library communicates via an `ITcpReader` interface.  The [default implementation](https://github.com/flipbit/whois/blob/master/src/Whois/Net/TcpReader.cs) will talk directly to a WHOIS server over port 43.  You can change this behaviour by creating a new `ITcpReader` implementation and passing it to the constructor:
+The library communicates via an `ITcpReader` interface.  The [default implementation](https://github.com/flipbit/whois/blob/main/src/Whois/Net/TcpReader.cs) will talk directly to a WHOIS server over port 43.  You can change this behaviour by creating a new `ITcpReader` implementation and passing it to the constructor:
 
 ```csharp        
 // Create a custom ITcpReader implementation
