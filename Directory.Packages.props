@@ -24,11 +24,11 @@
     <PackageVersion Include="Tokenizer" Version="3.0.0" />
 
     <!-- Analyzers -->
-    <PackageVersion Include="Meziantou.Analyzer" Version="3.0.257" />
+    <PackageVersion Include="Meziantou.Analyzer" Version="3.0.259" />
 
     <!-- Test -->
     <PackageVersion Include="Microsoft.Extensions.Configuration" Version="10.0.12" />
-    <PackageVersion Include="Microsoft.NET.Test.Sdk" Version="18.10.0" />
+    <PackageVersion Include="Microsoft.NET.Test.Sdk" Version="18.10.1" />
     <PackageVersion Include="Microsoft.Extensions.DependencyInjection" Version="10.0.12" />
     <PackageVersion Include="Microsoft.Extensions.Logging" Version="10.0.12" />
     <PackageVersion Include="xunit" Version="2.9.3" />
