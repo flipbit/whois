@@ -167,9 +167,9 @@ public class DriftClassifierTests
 
         var markdown = DriftReportGenerator.ToMarkdown(entries);
 
-        Assert.Contains("google.co.uk", markdown);
-        Assert.Contains("Breakage", markdown);
-        Assert.Contains("No match", markdown);
+        Assert.Contains("google.co.uk", markdown, StringComparison.Ordinal);
+        Assert.Contains("Breakage", markdown, StringComparison.Ordinal);
+        Assert.Contains("No match", markdown, StringComparison.Ordinal);
     }
 
     [Fact]

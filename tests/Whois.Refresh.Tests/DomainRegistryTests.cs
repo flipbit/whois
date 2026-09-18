@@ -99,7 +99,7 @@ public class DomainRegistryTests
 
         var ex = await Assert.ThrowsAsync<DomainRegistryValidationException>(
             () => DomainRegistry.LoadAsync(jsonc));
-        Assert.Contains("../etc/passwd", ex.Message);
+        Assert.Contains("../etc/passwd", ex.Message, StringComparison.Ordinal);
     }
 
     [Fact]
@@ -118,7 +118,7 @@ public class DomainRegistryTests
 
         var ex = await Assert.ThrowsAsync<DomainRegistryValidationException>(
             () => DomainRegistry.LoadAsync(jsonc));
-        Assert.Contains("foo\\bar.uk", ex.Message);
+        Assert.Contains("foo\\bar.uk", ex.Message, StringComparison.Ordinal);
     }
 
     [Fact]
@@ -161,9 +161,9 @@ public class DomainRegistryTests
 
         var ex = await Assert.ThrowsAsync<DomainRegistryValidationException>(
             () => DomainRegistry.LoadAsync(jsonc));
-        Assert.Contains("google.co.uk", ex.Message);
-        Assert.Contains("found", ex.Message);
-        Assert.Contains("not-found", ex.Message);
+        Assert.Contains("google.co.uk", ex.Message, StringComparison.Ordinal);
+        Assert.Contains("found", ex.Message, StringComparison.Ordinal);
+        Assert.Contains("not-found", ex.Message, StringComparison.Ordinal);
     }
 
     [Fact]
@@ -184,7 +184,7 @@ public class DomainRegistryTests
 
         var ex = await Assert.ThrowsAsync<DomainRegistryValidationException>(
             () => DomainRegistry.LoadAsync(jsonc));
-        Assert.Contains("active", ex.Message);
+        Assert.Contains("active", ex.Message, StringComparison.Ordinal);
     }
 
     [Theory]
@@ -206,8 +206,8 @@ public class DomainRegistryTests
 
         var ex = await Assert.ThrowsAsync<DomainRegistryValidationException>(
             () => DomainRegistry.LoadAsync(jsonc));
-        Assert.Contains("server name", ex.Message);
-        Assert.Contains(expectedInMessage, ex.Message);
+        Assert.Contains("server name", ex.Message, StringComparison.Ordinal);
+        Assert.Contains(expectedInMessage, ex.Message, StringComparison.Ordinal);
     }
 
     [Theory]
@@ -229,8 +229,8 @@ public class DomainRegistryTests
 
         var ex = await Assert.ThrowsAsync<DomainRegistryValidationException>(
             () => DomainRegistry.LoadAsync(jsonc));
-        Assert.Contains("tld", ex.Message);
-        Assert.Contains(expectedInMessage, ex.Message);
+        Assert.Contains("tld", ex.Message, StringComparison.Ordinal);
+        Assert.Contains(expectedInMessage, ex.Message, StringComparison.Ordinal);
     }
 
     [Fact]
