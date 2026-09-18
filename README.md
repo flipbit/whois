@@ -3,7 +3,7 @@
 </p>
 
 # Whois
-[![GitHub Stars](https://img.shields.io/github/stars/flipbit/whois.svg)](https://github.com/flipbit/whois/stargazers) [![GitHub Issues](https://img.shields.io/github/issues/flipbit/whois.svg)](https://github.com/flipbit/whois/issues) [![NuGet Version](https://img.shields.io/nuget/v/whois.svg)](https://www.nuget.org/packages/Whois/) [![NuGet Downloads](https://img.shields.io/nuget/dt/whois.svg)](https://www.nuget.org/packages/Whois/) 
+[![GitHub Stars](https://img.shields.io/github/stars/flipbit/whois.svg)](https://github.com/flipbit/whois/stargazers) [![GitHub Issues](https://img.shields.io/github/issues/flipbit/whois.svg)](https://github.com/flipbit/whois/issues) [![NuGet Version](https://img.shields.io/nuget/v/whois.svg)](https://www.nuget.org/packages/Whois/) [![NuGet Downloads](https://img.shields.io/nuget/dt/whois.svg)](https://www.nuget.org/packages/Whois/) [![License: MIT](https://img.shields.io/badge/License-MIT-blue.svg)](https://github.com/flipbit/whois/blob/main/LICENSE.txt)
 
 Query and parse WHOIS domain registration information with this library for .NET Standard 2.0, .NET 8, and .NET 10.
 
@@ -168,6 +168,14 @@ You can install the library via the NuGet GUI or by entering the following comma
     
 The source code is available on Github and can be downloaded and compiled.
 
-### Further Reading
+## Contributing
 
-Further details about how the library works can be found on [this blog post](http://flipbit.co.uk/2009/06/querying-whois-server-data-with-c.html).
+See [CONTRIBUTING.md](https://github.com/flipbit/whois/blob/main/CONTRIBUTING.md) for guidelines on building, testing, and submitting changes.
+
+## Security
+
+To report a security vulnerability, please use [GitHub Security Advisories](https://github.com/flipbit/whois/security/advisories/new). See [SECURITY.md](https://github.com/flipbit/whois/blob/main/SECURITY.md) for guidance on timeouts and rate limiting.
+
+## License
+
+MIT. See [LICENSE.txt](https://github.com/flipbit/whois/blob/main/LICENSE.txt).
