@@ -21,6 +21,11 @@ public sealed class Registrar
     public string? Url { get; init; }
 
     /// <summary>
+    /// The abuse contact name.
+    /// </summary>
+    public string? AbuseName { get; init; }
+
+    /// <summary>
     /// The abuse contact email.
     /// </summary>
     public string? AbuseEmail { get; init; }

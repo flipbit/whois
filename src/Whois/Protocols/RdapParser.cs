@@ -219,7 +219,7 @@ internal static class RdapParser
         var vcard = ExtractVCardProperties(entity);
         var handle = GetString(entity, PropHandle);
 
-        string? abuseEmail = null, abusePhone = null;
+        string? abuseEmail = null, abuseName = null, abusePhone = null;
         if (entity.TryGetProperty(PropEntities, out var subEntities))
         {
             foreach (var sub in subEntities.EnumerateArray())
@@ -229,6 +229,7 @@ internal static class RdapParser
                 {
                     var abuseVcard = ExtractVCardProperties(sub);
                     abuseEmail = abuseVcard.Email;
+                    abuseName = abuseVcard.Fn;
                     abusePhone = abuseVcard.Tel;
                 }
             }
@@ -258,6 +259,7 @@ internal static class RdapParser
             IanaId = handle,
             Url = url,
             AbuseEmail = abuseEmail,
+            AbuseName = abuseName,
             AbuseTelephoneNumber = abusePhone,
         };
     }
