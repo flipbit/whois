@@ -93,8 +93,9 @@ internal sealed class WhoisProtocolClient : IProtocolClient
             if (query.EndsWith(JapanTldSuffix, StringComparison.Ordinal)) query += JapanEnglishQuerySuffix;
 
             // Download
+            var port = request.Port ?? 43;
             var content = await _tcpReader.Read(
-                whoisServer, 43, query, encoding, timeout, ct).ConfigureAwait(false);
+                whoisServer, port, query, encoding, timeout, ct).ConfigureAwait(false);
 
             _logger.LogDebug("WHOIS: downloaded {ByteCount} bytes from {Server}", content.Length, whoisServer);
 

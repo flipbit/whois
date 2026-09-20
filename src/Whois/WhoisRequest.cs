@@ -44,6 +44,11 @@ public class WhoisRequest
     public HostName? WhoisServer { get; init; }
 
     /// <summary>
+    /// If set, overrides the default port (43) used for WHOIS TCP connections.
+    /// </summary>
+    public int? Port { get; init; }
+
+    /// <summary>
     /// Pre-resolved RDAP base URL. Set internally by the orchestrator to
     /// avoid a redundant registry lookup in the protocol client.
     /// </summary>

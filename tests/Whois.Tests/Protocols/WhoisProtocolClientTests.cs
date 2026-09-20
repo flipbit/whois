@@ -310,4 +310,57 @@ public class WhoisProtocolClientTests
         Assert.Contains("unknown", ex.Message, StringComparison.Ordinal);
         await tcpReader.DidNotReceiveWithAnyArgs().Read(default!, default, default!, default!, default, default);
     }
+
+    [Fact]
+    public async Task Query_CustomPort_PassesPortToTcpReader()
+    {
+        var tcpReader = Substitute.For<ITcpReader>();
+        var ianaLookup = Substitute.For<IIanaServerLookup>();
+        var parser = new WhoisParser();
+        var options = new WhoisOptions();
+
+        ianaLookup.GetWhoisServer("com", Arg.Any<CancellationToken>())
+            .Returns("whois.example.com");
+
+        var content = "Domain Name: example.com\r\nRegistrar: Example Registrar\r\n";
+        tcpReader
+            .Read("whois.example.com", 4343, "example.com", DefaultEncoding, DefaultTimeout, Arg.Any<CancellationToken>())
+            .Returns(content);
+
+        var client = new WhoisProtocolClient(tcpReader, ianaLookup, parser, options);
+        var request = new WhoisRequest("example.com")
+        {
+            Port = 4343,
+        };
+
+        await client.Query(request, CancellationToken.None);
+
+        await tcpReader.Received(1).Read(
+            "whois.example.com", 4343, "example.com", DefaultEncoding, DefaultTimeout, Arg.Any<CancellationToken>());
+    }
+
+    [Fact]
+    public async Task Query_NoPortSet_UsesDefaultPort43()
+    {
+        var tcpReader = Substitute.For<ITcpReader>();
+        var ianaLookup = Substitute.For<IIanaServerLookup>();
+        var parser = new WhoisParser();
+        var options = new WhoisOptions();
+
+        ianaLookup.GetWhoisServer("com", Arg.Any<CancellationToken>())
+            .Returns("whois.example.com");
+
+        var content = "Domain Name: example.com\r\nRegistrar: Example Registrar\r\n";
+        tcpReader
+            .Read("whois.example.com", 43, "example.com", DefaultEncoding, DefaultTimeout, Arg.Any<CancellationToken>())
+            .Returns(content);
+
+        var client = new WhoisProtocolClient(tcpReader, ianaLookup, parser, options);
+        var request = new WhoisRequest("example.com");
+
+        await client.Query(request, CancellationToken.None);
+
+        await tcpReader.Received(1).Read(
+            "whois.example.com", 43, "example.com", DefaultEncoding, DefaultTimeout, Arg.Any<CancellationToken>());
+    }
 }
