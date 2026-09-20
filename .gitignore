@@ -38,3 +38,4 @@ cache/
 .claude
 *.DotSettings.user
 .cursor
+.worktrees
