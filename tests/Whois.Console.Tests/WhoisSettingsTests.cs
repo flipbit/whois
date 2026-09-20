@@ -111,6 +111,28 @@ public class WhoisSettingsTests
     }
 
     [Fact]
+    public async Task Json_ParsesShortFlag()
+    {
+        var (app, lookup) = BuildApp();
+
+        var exitCode = await app.RunAsync(["example.com", "-j"]);
+
+        Assert.Equal(0, exitCode);
+        await lookup.Received(1).Lookup(Arg.Any<WhoisRequest>(), Arg.Any<CancellationToken>());
+    }
+
+    [Fact]
+    public async Task Json_ParsesLongFlag()
+    {
+        var (app, lookup) = BuildApp();
+
+        var exitCode = await app.RunAsync(["example.com", "--json"]);
+
+        Assert.Equal(0, exitCode);
+        await lookup.Received(1).Lookup(Arg.Any<WhoisRequest>(), Arg.Any<CancellationToken>());
+    }
+
+    [Fact]
     public async Task RdapAndWhois_AreMutuallyExclusive()
     {
         var (app, _) = BuildApp();
