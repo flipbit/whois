@@ -13,4 +13,12 @@ internal sealed class WhoisSettings : CommandSettings
     [CommandOption("-j|--json")]
     [Description("Output result as JSON")]
     public bool Json { get; set; }
+
+    [CommandOption("-h|--host")]
+    [Description("Override WHOIS server")]
+    public string? Host { get; set; }
+
+    [CommandOption("-p|--port")]
+    [Description("Override port (default 43)")]
+    public int? Port { get; set; }
 }

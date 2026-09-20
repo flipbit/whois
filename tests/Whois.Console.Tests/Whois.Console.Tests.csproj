@@ -14,6 +14,7 @@
     <PackageReference Include="xunit" />
     <PackageReference Include="xunit.runner.visualstudio" />
     <PackageReference Include="NSubstitute" />
+    <PackageReference Include="Spectre.Console.Testing" />
   </ItemGroup>
   <ItemGroup>
     <ProjectReference Include="..\..\src\Whois.Console\Whois.Console.csproj" />

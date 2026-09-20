@@ -31,5 +31,8 @@
     <Folder Include="Properties\" />
   </ItemGroup>
 
+  <ItemGroup>
+    <InternalsVisibleTo Include="Whois.Console.Tests" />
+  </ItemGroup>
 
 </Project>

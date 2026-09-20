@@ -9,23 +9,19 @@
     <PackageVersion Include="Microsoft.Extensions.Options" Version="10.0.12" />
     <PackageVersion Include="Microsoft.Extensions.DependencyInjection.Abstractions" Version="10.0.12" />
     <PackageVersion Include="Microsoft.Extensions.Options.ConfigurationExtensions" Version="10.0.12" />
-
     <!-- Console app -->
     <PackageVersion Include="Spectre.Console" Version="0.57.2" />
     <PackageVersion Include="Spectre.Console.Cli" Version="0.55.0" />
     <PackageVersion Include="Microsoft.Extensions.Logging.Console" Version="10.0.12" />
-
     <PackageVersion Include="Microsoft.Extensions.Http" Version="10.0.12" />
-
     <!-- Core library extras -->
     <PackageVersion Include="System.Text.Json" Version="10.0.12" />
     <PackageVersion Include="PolySharp" Version="1.16.0" />
     <PackageVersion Include="Tokenizer" Version="3.0.0" />
-
     <!-- Analyzers -->
     <PackageVersion Include="Meziantou.Analyzer" Version="3.0.259" />
-
     <!-- Test -->
+    <PackageVersion Include="Spectre.Console.Testing" Version="0.57.2" />
     <PackageVersion Include="Microsoft.Extensions.Configuration" Version="10.0.12" />
     <PackageVersion Include="Microsoft.NET.Test.Sdk" Version="18.10.1" />
     <PackageVersion Include="Microsoft.Extensions.DependencyInjection" Version="10.0.12" />

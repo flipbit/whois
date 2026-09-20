@@ -6,10 +6,22 @@ namespace Whois.Commands;
 
 internal sealed class WhoisCommand : AsyncCommand<WhoisSettings>
 {
+    private readonly IWhoisLookup _lookup;
+
+    public WhoisCommand(IWhoisLookup lookup)
+    {
+        _lookup = lookup;
+    }
+
     protected override async Task<int> ExecuteAsync(CommandContext context, WhoisSettings settings, CancellationToken cancellationToken)
     {
-        var lookup = new WhoisLookup();
-        var result = await lookup.Lookup(settings.Query, cancellationToken).ConfigureAwait(false);
+        var request = new WhoisRequest(settings.Query)
+        {
+            WhoisServer = settings.Host != null ? new HostName(settings.Host) : null,
+            Port = settings.Port,
+        };
+
+        var result = await _lookup.Lookup(request, cancellationToken).ConfigureAwait(false);
 
         if (settings.Json)
         {

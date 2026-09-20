@@ -1,9 +1,11 @@
 using Microsoft.Extensions.DependencyInjection;
 using Spectre.Console.Cli;
+using Whois;
 using Whois.Commands;
 using Whois.Infrastructure;
 
 var services = new ServiceCollection();
+services.AddWhois();
 
 var registrar = new TypeRegistrar(services);
 var app = new CommandApp<WhoisCommand>(registrar);
