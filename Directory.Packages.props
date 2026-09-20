@@ -11,8 +11,7 @@
     <PackageVersion Include="Microsoft.Extensions.Options.ConfigurationExtensions" Version="10.0.12" />
 
     <!-- Console app -->
-    <PackageVersion Include="CommandLineParser" Version="2.9.1" />
-    <PackageVersion Include="Spectre.Console" Version="0.57.2" />
+<PackageVersion Include="Spectre.Console" Version="0.57.2" />
     <PackageVersion Include="Spectre.Console.Cli" Version="0.55.0" />
     <PackageVersion Include="Microsoft.Extensions.Logging.Console" Version="10.0.12" />
 

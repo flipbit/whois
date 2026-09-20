@@ -1,39 +1,16 @@
-using System.Text.Json;
-using CommandLine;
+using Microsoft.Extensions.DependencyInjection;
+using Spectre.Console.Cli;
+using Whois.Commands;
+using Whois.Infrastructure;
 
-namespace Whois;
+var services = new ServiceCollection();
 
-internal class Program
+var registrar = new TypeRegistrar(services);
+var app = new CommandApp<WhoisCommand>(registrar);
+
+app.Configure(config =>
 {
-    private static async Task Main(string[] args)
-    {
-        await Parser.Default.ParseArguments<Options>(args)
-            .WithParsedAsync(RunLookup).ConfigureAwait(false);
-    }
+    config.SetApplicationName("dotnet-whois");
+});
 
-    private static async Task RunLookup(Options options)
-    {
-        var lookup = new WhoisLookup();
-
-        var result = await lookup.Lookup(options.Query!).ConfigureAwait(false);
-
-        if (options.ConvertToJson)
-        {
-            var json = JsonSerializer.Serialize(result.Response, new JsonSerializerOptions { WriteIndented = true });
-            Console.WriteLine(json);
-        }
-        else
-        {
-            Console.WriteLine(result.RawContent);
-        }
-    }
-
-    public class Options
-    {
-        [Value(0, Required = true, MetaName = "Domain Name")]
-        public string? Query { get; set; }
-
-        [Option('j', "json", HelpText = "Show JSON")]
-        public bool ConvertToJson { get; set; }
-    }
-}
+return await app.RunAsync(args).ConfigureAwait(false);
