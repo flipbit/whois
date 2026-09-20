@@ -73,4 +73,16 @@ public class WhoisSettingsTests
             Arg.Is<WhoisRequest>(r => r.Port == 4343),
             Arg.Any<CancellationToken>());
     }
+
+    [Fact]
+    public async Task Timeout_ParsesFlag()
+    {
+        var (app, lookup) = BuildApp();
+
+        await app.RunAsync(["example.com", "--timeout", "30"]);
+
+        await lookup.Received(1).Lookup(
+            Arg.Is<WhoisRequest>(r => r.TimeoutSeconds == 30),
+            Arg.Any<CancellationToken>());
+    }
 }

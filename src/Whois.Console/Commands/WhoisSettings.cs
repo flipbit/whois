@@ -21,4 +21,8 @@ internal sealed class WhoisSettings : CommandSettings
     [CommandOption("-p|--port")]
     [Description("Override port (default 43)")]
     public int? Port { get; set; }
+
+    [CommandOption("--timeout")]
+    [Description("Query timeout in seconds")]
+    public int? Timeout { get; set; }
 }

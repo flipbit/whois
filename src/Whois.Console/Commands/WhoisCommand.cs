@@ -19,6 +19,7 @@ internal sealed class WhoisCommand : AsyncCommand<WhoisSettings>
         {
             WhoisServer = settings.Host != null ? new HostName(settings.Host) : null,
             Port = settings.Port,
+            TimeoutSeconds = settings.Timeout,
         };
 
         var result = await _lookup.Lookup(request, cancellationToken).ConfigureAwait(false);
