@@ -1,4 +1,5 @@
 using System.ComponentModel;
+using Spectre.Console;
 using Spectre.Console.Cli;
 
 namespace Whois.Commands;
@@ -25,4 +26,22 @@ internal sealed class WhoisSettings : CommandSettings
     [CommandOption("--timeout")]
     [Description("Query timeout in seconds")]
     public int? Timeout { get; set; }
+
+    [CommandOption("--rdap")]
+    [Description("Force RDAP protocol")]
+    public bool Rdap { get; set; }
+
+    [CommandOption("--whois")]
+    [Description("Force WHOIS protocol")]
+    public bool ForceWhois { get; set; }
+
+    public override ValidationResult Validate()
+    {
+        if (Rdap && ForceWhois)
+        {
+            return ValidationResult.Error("Cannot specify both --rdap and --whois");
+        }
+
+        return ValidationResult.Success();
+    }
 }

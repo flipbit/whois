@@ -85,4 +85,39 @@ public class WhoisSettingsTests
             Arg.Is<WhoisRequest>(r => r.TimeoutSeconds == 30),
             Arg.Any<CancellationToken>());
     }
+
+    [Fact]
+    public async Task Rdap_ParsesFlag()
+    {
+        var (app, lookup) = BuildApp();
+
+        await app.RunAsync(["example.com", "--rdap"]);
+
+        await lookup.Received(1).Lookup(
+            Arg.Is<WhoisRequest>(r => r.PreferredProtocol == ProtocolPreference.Rdap),
+            Arg.Any<CancellationToken>());
+    }
+
+    [Fact]
+    public async Task Whois_ParsesFlag()
+    {
+        var (app, lookup) = BuildApp();
+
+        await app.RunAsync(["example.com", "--whois"]);
+
+        await lookup.Received(1).Lookup(
+            Arg.Is<WhoisRequest>(r => r.PreferredProtocol == ProtocolPreference.Whois),
+            Arg.Any<CancellationToken>());
+    }
+
+    [Fact]
+    public async Task RdapAndWhois_AreMutuallyExclusive()
+    {
+        var (app, _) = BuildApp();
+
+        var ex = await Assert.ThrowsAsync<CommandRuntimeException>(
+            () => app.RunAsync(["example.com", "--rdap", "--whois"]));
+
+        Assert.Contains("Cannot specify both --rdap and --whois", ex.Message, StringComparison.Ordinal);
+    }
 }

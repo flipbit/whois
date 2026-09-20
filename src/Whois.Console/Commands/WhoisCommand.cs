@@ -15,11 +15,16 @@ internal sealed class WhoisCommand : AsyncCommand<WhoisSettings>
 
     protected override async Task<int> ExecuteAsync(CommandContext context, WhoisSettings settings, CancellationToken cancellationToken)
     {
+        var protocol = settings.Rdap ? ProtocolPreference.Rdap
+            : settings.ForceWhois ? ProtocolPreference.Whois
+            : (ProtocolPreference?)null;
+
         var request = new WhoisRequest(settings.Query)
         {
             WhoisServer = settings.Host != null ? new HostName(settings.Host) : null,
             Port = settings.Port,
             TimeoutSeconds = settings.Timeout,
+            PreferredProtocol = protocol,
         };
 
         var result = await _lookup.Lookup(request, cancellationToken).ConfigureAwait(false);
