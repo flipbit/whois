@@ -2,18 +2,9 @@
   <PropertyGroup>
    <TargetFrameworks>netstandard2.0;net8.0;net10.0</TargetFrameworks>
    <GeneratePackageOnBuild>true</GeneratePackageOnBuild>
-   <Version>4.0.0-beta.1</Version>
-   <PackageVersion>4.0.0-beta.1</PackageVersion>
-   <Authors>Chris Wood</Authors>
-   <Company>flipbit.co.uk</Company>
-   <PackageProjectUrl>https://github.com/flipbit/whois</PackageProjectUrl>
-   <PackageTags>whois lookup parsing</PackageTags>
    <Description>A .NET Standard 2.0, .NET 8, and .NET 10 WHOIS Lookup and Parsing Library</Description>
    <PackageReadmeFile>README.md</PackageReadmeFile>
-   <PackageIcon>icon.png</PackageIcon>
-   <Copyright>Chris Wood 2026</Copyright>
    <RootNamespace>Whois</RootNamespace>
-
   </PropertyGroup>
   <ItemGroup>
     <EmbeddedResource Include="Resources\**\*.txt" />
@@ -47,10 +38,6 @@
     <PackageReference Include="Microsoft.Extensions.Http" />
     <PackageReference Include="Tokenizer" />
   </ItemGroup>
-
-  <PropertyGroup>
-    <PackageLicenseFile>LICENSE.txt</PackageLicenseFile>
-  </PropertyGroup>
 
   <ItemGroup>
     <None Include="..\..\README.md" Pack="true" PackagePath="\" />
