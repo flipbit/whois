@@ -10,11 +10,9 @@
     <PackAsTool>true</PackAsTool>
     <ToolCommandName>dotnet-whois</ToolCommandName>
     <GeneratePackageOnBuild>true</GeneratePackageOnBuild>
-    <Version>0.0.1-alpha1</Version>
     <PackageId>dotnet-whois</PackageId>
-    <Authors>Chris Wood</Authors>
-    <Company>flipbit.co.uk</Company>
-    <Product>.NET WHOIS Lookup</Product>
+    <Description>A cross-platform .NET tool for querying WHOIS and RDAP domain registration data</Description>
+    <PackageReadmeFile>README.md</PackageReadmeFile>
   </PropertyGroup>
 
   <ItemGroup>
@@ -28,14 +26,11 @@
   </ItemGroup>
 
   <ItemGroup>
-    <Folder Include="Properties\" />
-  </ItemGroup>
-
-  <ItemGroup>
     <InternalsVisibleTo Include="Whois.Console.Tests" />
   </ItemGroup>
 
   <ItemGroup>
+    <None Include="..\..\README.md" Pack="true" PackagePath="\" />
     <None Include="..\..\LICENSE.txt" Pack="true" PackagePath="\" />
     <None Include="..\Whois\icon.png" Pack="true" PackagePath="\" />
   </ItemGroup>
