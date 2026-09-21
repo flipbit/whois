@@ -173,4 +173,65 @@ public class IanaServerLookupTests
 
         Assert.Null(server);
     }
+
+    // IANA response for .uk -- has a whois: field but the value is empty
+    private const string IanaResponseEmptyWhois = """
+        % IANA WHOIS server
+
+        domain:       UK
+
+        organisation: Nominet UK
+
+        whois:
+
+        status:       ACTIVE
+
+        created:      1985-07-24
+        source:       IANA
+        """;
+
+    [Fact]
+    public async Task GetWhoisServer_EmptyWhoisField_ReturnsFallback()
+    {
+        var tcpReader = Substitute.For<ITcpReader>();
+        tcpReader.Read("whois.iana.org", 43, "uk", Arg.Any<Encoding>(),
+                Arg.Any<int>(), Arg.Any<CancellationToken>())
+            .Returns(IanaResponseEmptyWhois);
+
+        var lookup = new IanaServerLookup(tcpReader, new WhoisOptions());
+
+        var server = await lookup.GetWhoisServer("uk", CancellationToken.None);
+
+        Assert.Equal("whois.nic.uk", server);
+    }
+
+    [Fact]
+    public async Task GetWhoisServer_NoWhoisField_ReturnsFallbackForKnownTld()
+    {
+        var tcpReader = Substitute.For<ITcpReader>();
+        tcpReader.Read("whois.iana.org", 43, "cd", Arg.Any<Encoding>(),
+                Arg.Any<int>(), Arg.Any<CancellationToken>())
+            .Returns(IanaResponseNoWhois);
+
+        var lookup = new IanaServerLookup(tcpReader, new WhoisOptions());
+
+        var server = await lookup.GetWhoisServer("cd", CancellationToken.None);
+
+        Assert.Equal("whois.nic.cd", server);
+    }
+
+    [Fact]
+    public async Task GetWhoisServer_NoWhoisField_ReturnsNullForUnknownTld()
+    {
+        var tcpReader = Substitute.For<ITcpReader>();
+        tcpReader.Read("whois.iana.org", 43, "zzz", Arg.Any<Encoding>(),
+                Arg.Any<int>(), Arg.Any<CancellationToken>())
+            .Returns(IanaResponseNoWhois);
+
+        var lookup = new IanaServerLookup(tcpReader, new WhoisOptions());
+
+        var server = await lookup.GetWhoisServer("zzz", CancellationToken.None);
+
+        Assert.Null(server);
+    }
 }

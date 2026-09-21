@@ -15,6 +15,22 @@ public class IanaServerLookup : IIanaServerLookup
     private const string IanaHost = "whois.iana.org";
     private const int WhoisPort = 43;
 
+    /// <summary>
+    /// WHOIS servers for TLDs where IANA does not advertise a server.
+    /// These registries have working WHOIS services but IANA's response
+    /// contains an empty or missing 'whois:' field.
+    /// </summary>
+    private static readonly Dictionary<string, string> FallbackServers = new(StringComparer.OrdinalIgnoreCase)
+    {
+        ["cd"] = "whois.nic.cd",
+        ["info"] = "whois.afilias.net",
+        ["jobs"] = "whois.nic.jobs",
+        ["pro"] = "whois.afilias.net",
+        ["sl"] = "whois.nic.sl",
+        ["travel"] = "whois.nic.travel",
+        ["uk"] = "whois.nic.uk",
+    };
+
     private readonly ITcpReader _tcpReader;
     private readonly WhoisOptions _options;
     private readonly ILogger<IanaServerLookup> _logger;
@@ -47,7 +63,8 @@ public class IanaServerLookup : IIanaServerLookup
         var response = await _tcpReader.Read(
             IanaHost, WhoisPort, normalizedTld, Encoding.UTF8, _options.TimeoutSeconds, ct).ConfigureAwait(false);
 
-        var server = ParseWhoisServer(response);
+        var server = ParseWhoisServer(response)
+            ?? (FallbackServers.TryGetValue(normalizedTld, out var fallback) ? fallback : null);
         _cache[normalizedTld] = (server, DateTime.UtcNow);
 
         _logger.LogDebug("IANA lookup: fetched server for TLD {Tld}: {Server}", tld, server ?? "(none)");
