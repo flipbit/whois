@@ -13,6 +13,7 @@ var app = new CommandApp<WhoisCommand>(registrar);
 app.Configure(config =>
 {
     config.SetApplicationName("dotnet-whois");
+    config.SetHelpProvider(new WhoisHelpProvider(config.Settings));
 });
 
 return await app.RunAsync(args).ConfigureAwait(false);
