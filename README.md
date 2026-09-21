@@ -178,6 +178,51 @@ You can install the library via the NuGet GUI or by entering the following comma
     
 The source code is available on Github and can be downloaded and compiled.
 
+## CLI Tool
+
+`dotnet-whois` is a cross-platform command-line tool for querying WHOIS and RDAP domain registration data.
+
+### Install
+
+```bash
+# Global install
+dotnet tool install -g dotnet-whois
+
+# Or restore from the repo's tool manifest
+dotnet tool restore
+```
+
+### Usage
+
+```bash
+# Look up a domain (raw WHOIS/RDAP output)
+dotnet-whois example.com
+
+# JSON output
+dotnet-whois example.com -j
+
+# Force a specific protocol
+dotnet-whois example.com --rdap
+dotnet-whois example.com --whois
+
+# Override WHOIS server and port
+dotnet-whois example.com -h whois.verisign-grs.com -p 43
+
+# Set query timeout (seconds)
+dotnet-whois example.com --timeout 10
+```
+
+### Flags
+
+| Flag | Description |
+|------|-------------|
+| `-j`, `--json` | Output result as JSON |
+| `-h`, `--host` | Override WHOIS server |
+| `-p`, `--port` | Override port (default 43) |
+| `--timeout` | Query timeout in seconds |
+| `--rdap` | Force RDAP protocol |
+| `--whois` | Force WHOIS protocol |
+
 ## Contributing
 
 See [CONTRIBUTING.md](https://github.com/flipbit/whois/blob/main/CONTRIBUTING.md) for guidelines on building, testing, and submitting changes.
