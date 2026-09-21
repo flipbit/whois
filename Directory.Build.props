@@ -12,6 +12,11 @@
     <Authors>Chris Wood</Authors>
     <Company>flipbit.co.uk</Company>
     <Copyright>Copyright 2026 Chris Wood</Copyright>
+    <Version>4.0.0-beta.1</Version>
+    <PackageProjectUrl>https://github.com/flipbit/whois</PackageProjectUrl>
+    <PackageLicenseFile>LICENSE.txt</PackageLicenseFile>
+    <PackageIcon>icon.png</PackageIcon>
+    <PackageTags>whois lookup parsing rdap</PackageTags>
   </PropertyGroup>
 
   <!-- Source Link and symbol packages -->

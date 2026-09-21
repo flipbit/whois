@@ -35,4 +35,9 @@
     <InternalsVisibleTo Include="Whois.Console.Tests" />
   </ItemGroup>
 
+  <ItemGroup>
+    <None Include="..\..\LICENSE.txt" Pack="true" PackagePath="\" />
+    <None Include="..\Whois\icon.png" Pack="true" PackagePath="\" />
+  </ItemGroup>
+
 </Project>
