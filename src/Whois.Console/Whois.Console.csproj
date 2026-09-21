@@ -13,6 +13,7 @@
     <PackageId>dotnet-whois</PackageId>
     <Description>A cross-platform .NET tool for querying WHOIS and RDAP domain registration data</Description>
     <PackageReadmeFile>README.md</PackageReadmeFile>
+    <IncludeSymbols>false</IncludeSymbols>
   </PropertyGroup>
 
   <ItemGroup>
