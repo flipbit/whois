@@ -16,7 +16,8 @@
         "found": [
           "google.nl"
         ]
-      }
+      },
+      "static": true
     },
     "rdap.nic.re": {
       "tld": "re",
@@ -61,22 +62,24 @@
         "found": [
           "google.biz"
         ]
-      }
+      },
+      "static": true
     },
     "rdap.dns.pl": {
       "tld": "pl",
       "rdapBaseUrl": "https://rdap.dns.pl/",
       "domains": {
-        "found": [
+        "not-found": [
           "08.pl"
         ]
-      }
+      },
+      "static": true
     },
     "rdap.nic.xxx": {
       "tld": "xxx",
       "rdapBaseUrl": "https://rdap.nic.xxx/",
       "domains": {
-        "found": [
+        "not-found": [
           "masala.xxx"
         ]
       }
@@ -97,7 +100,8 @@
         "found": [
           "toplevel.design"
         ]
-      }
+      },
+      "static": true
     },
     "rdap.registry.coop": {
       "tld": "coop",
@@ -139,7 +143,7 @@
       "tld": "joburg",
       "rdapBaseUrl": "https://rdap.nic.joburg/rdap/",
       "domains": {
-        "found": [
+        "not-found": [
           "usedautos.joburg"
         ]
       }
@@ -148,7 +152,7 @@
       "tld": "cx",
       "rdapBaseUrl": "https://rdap.nic.cx/",
       "domains": {
-        "found": [
+        "redemption": [
           "communication.cx"
         ]
       }
@@ -211,7 +215,7 @@
       "tld": "post",
       "rdapBaseUrl": "https://rdap.identitydigital.services/rdap/",
       "domains": {
-        "found": [
+        "not-found": [
           "posteitaliane.post"
         ]
       }
@@ -223,13 +227,14 @@
         "found": [
           "google.na"
         ]
-      }
+      },
+      "static": true
     },
     "rdap.radix.host": {
       "tld": "pw",
       "rdapBaseUrl": "https://rdap.radix.host/rdap/",
       "domains": {
-        "found": [
+        "inactive": [
           "google.pw"
         ]
       }
@@ -241,7 +246,8 @@
         "found": [
           "google.ht"
         ]
-      }
+      },
+      "static": true
     },
     "tld-rdap.verisign.com": {
       "tld": "name",
@@ -292,19 +298,21 @@
       "tld": "no",
       "rdapBaseUrl": "https://rdap.norid.no/",
       "domains": {
-        "found": [
+        "not-found": [
           "google.no"
         ]
-      }
+      },
+      "static": true
     },
     "rdap.nic.sn": {
       "tld": "sn",
       "rdapBaseUrl": "https://rdap.nic.sn/whois43/",
       "domains": {
-        "found": [
+        "not-found": [
           "google.sn"
         ]
-      }
+      },
+      "static": true
     },
     "rdap.nic.tattoo": {
       "tld": "tattoo",
@@ -313,7 +321,8 @@
         "found": [
           "nic.tattoo"
         ]
-      }
+      },
+      "static": true
     },
     "ccrdap.twnic.tw": {
       "tld": "tw",
@@ -322,7 +331,8 @@
         "found": [
           "google.com.tw"
         ]
-      }
+      },
+      "static": true
     },
     "rdap.nic.tv": {
       "tld": "tv",
@@ -331,7 +341,8 @@
         "found": [
           "google.tv"
         ]
-      }
+      },
+      "static": true
     },
     "rdap.ca.fury.ca": {
       "tld": "ca",
@@ -484,7 +495,8 @@
         "found": [
           "google.cm"
         ]
-      }
+      },
+      "static": true
     },
     "rdap.nic.pm": {
       "tld": "pm",
@@ -511,13 +523,14 @@
         "found": [
           "google.samsung"
         ]
-      }
+      },
+      "static": true
     },
     "pubapi.registry.google": {
       "tld": "ads",
       "rdapBaseUrl": "https://pubapi.registry.google/rdap/",
       "domains": {
-        "found": [
+        "not-found": [
           "google.ads"
         ]
       }
@@ -526,7 +539,7 @@
       "tld": "merck",
       "rdapBaseUrl": "https://rdap-merck.dns.business/rdap/",
       "domains": {
-        "found": [
+        "not-found": [
           "google.merck"
         ]
       }
@@ -535,7 +548,7 @@
       "tld": "alibaba",
       "rdapBaseUrl": "https://rdap.aliregistry.cn/rdap/",
       "domains": {
-        "found": [
+        "not-found": [
           "google.alibaba"
         ]
       }
@@ -553,7 +566,7 @@
       "tld": "jnj",
       "rdapBaseUrl": "https://rdap.centralnicregistry.com/jnj/",
       "domains": {
-        "found": [
+        "not-found": [
           "google.jnj"
         ]
       }
@@ -562,7 +575,7 @@
       "tld": "crown",
       "rdapBaseUrl": "https://rdap.crown.fury.ca/rdap/",
       "domains": {
-        "found": [
+        "not-found": [
           "google.crown"
         ]
       }
@@ -589,7 +602,7 @@
       "tld": "bridgestone",
       "rdapBaseUrl": "https://rdap.gmoregistry.net/rdap/",
       "domains": {
-        "found": [
+        "not-found": [
           "google.bridgestone"
         ]
       }
@@ -598,7 +611,7 @@
       "tld": "bom",
       "rdapBaseUrl": "https://rdap.gtlds.nic.br/",
       "domains": {
-        "found": [
+        "not-found": [
           "google.bom"
         ]
       }
@@ -607,7 +620,7 @@
       "tld": "int",
       "rdapBaseUrl": "https://rdap.iana.org/",
       "domains": {
-        "found": [
+        "not-found": [
           "google.int"
         ]
       }
@@ -625,7 +638,7 @@
       "tld": "lb",
       "rdapBaseUrl": "https://rdap.lbdr.org.lb/",
       "domains": {
-        "found": [
+        "not-found": [
           "google.lb"
         ]
       }
@@ -634,7 +647,7 @@
       "tld": "mls",
       "rdapBaseUrl": "https://rdap.mls.fury.ca/rdap/",
       "domains": {
-        "found": [
+        "not-found": [
           "google.mls"
         ]
       }
@@ -643,7 +656,7 @@
       "tld": "blockbuster",
       "rdapBaseUrl": "https://rdap.mobile-registry.com/rdap/",
       "domains": {
-        "found": [
+        "not-found": [
           "google.blockbuster"
         ]
       }
@@ -652,7 +665,7 @@
       "tld": "sina",
       "rdapBaseUrl": "https://rdap.ngtld.cn/",
       "domains": {
-        "found": [
+        "not-found": [
           "google.sina"
         ]
       }
@@ -664,7 +677,8 @@
         "found": [
           "google.aaa"
         ]
-      }
+      },
+      "static": true
     },
     "rdap.nic.aarp": {
       "tld": "aarp",
@@ -673,13 +687,14 @@
         "found": [
           "google.aarp"
         ]
-      }
+      },
+      "static": true
     },
     "rdap.nic.able": {
       "tld": "able",
       "rdapBaseUrl": "https://rdap.nic.able/",
       "domains": {
-        "found": [
+        "not-found": [
           "google.able"
         ]
       }
@@ -691,13 +706,14 @@
         "found": [
           "google.abogado"
         ]
-      }
+      },
+      "static": true
     },
     "rdap.nic.abudhabi": {
       "tld": "abudhabi",
       "rdapBaseUrl": "https://rdap.nic.abudhabi/",
       "domains": {
-        "found": [
+        "not-found": [
           "google.abudhabi"
         ]
       }
@@ -709,13 +725,14 @@
         "found": [
           "google.accountant"
         ]
-      }
+      },
+      "static": true
     },
     "rdap.nic.aco": {
       "tld": "aco",
       "rdapBaseUrl": "https://rdap.nic.aco/",
       "domains": {
-        "found": [
+        "not-found": [
           "google.aco"
         ]
       }
@@ -736,7 +753,8 @@
         "found": [
           "google.adult"
         ]
-      }
+      },
+      "static": true
     },
     "rdap.nic.aetna": {
       "tld": "aetna",
@@ -745,7 +763,8 @@
         "found": [
           "google.aetna"
         ]
-      }
+      },
+      "static": true
     },
     "rdap.nic.afl": {
       "tld": "afl",
@@ -754,7 +773,8 @@
         "found": [
           "google.afl"
         ]
-      }
+      },
+      "static": true
     },
     "rdap.nic.africa": {
       "tld": "africa",
@@ -772,7 +792,8 @@
         "found": [
           "google.aig"
         ]
-      }
+      },
+      "static": true
     },
     "rdap.nic.airtel": {
       "tld": "airtel",
@@ -781,7 +802,8 @@
         "found": [
           "google.airtel"
         ]
-      }
+      },
+      "static": true
     },
     "rdap.nic.ally": {
       "tld": "ally",
@@ -790,7 +812,8 @@
         "found": [
           "google.ally"
         ]
-      }
+      },
+      "static": true
     },
     "rdap.nic.alsace": {
       "tld": "alsace",
@@ -805,7 +828,7 @@
       "tld": "alstom",
       "rdapBaseUrl": "https://rdap.nic.alstom/",
       "domains": {
-        "found": [
+        "not-found": [
           "google.alstom"
         ]
       }
@@ -817,7 +840,8 @@
         "found": [
           "google.americanexpress"
         ]
-      }
+      },
+      "static": true
     },
     "rdap.nic.americanfamily": {
       "tld": "americanfamily",
@@ -826,7 +850,8 @@
         "found": [
           "google.americanfamily"
         ]
-      }
+      },
+      "static": true
     },
     "rdap.nic.amex": {
       "tld": "amex",
@@ -835,7 +860,8 @@
         "found": [
           "google.amex"
         ]
-      }
+      },
+      "static": true
     },
     "rdap.nic.amfam": {
       "tld": "amfam",
@@ -844,7 +870,8 @@
         "found": [
           "google.amfam"
         ]
-      }
+      },
+      "static": true
     },
     "rdap.nic.amica": {
       "tld": "amica",
@@ -853,7 +880,8 @@
         "found": [
           "google.amica"
         ]
-      }
+      },
+      "static": true
     },
     "rdap.nic.amsterdam": {
       "tld": "amsterdam",
@@ -871,13 +899,14 @@
         "found": [
           "google.analytics"
         ]
-      }
+      },
+      "static": true
     },
     "rdap.nic.anz": {
       "tld": "anz",
       "rdapBaseUrl": "https://rdap.nic.anz/",
       "domains": {
-        "found": [
+        "not-found": [
           "google.anz"
         ]
       }
@@ -886,7 +915,7 @@
       "tld": "apple",
       "rdapBaseUrl": "https://rdap.nic.apple/",
       "domains": {
-        "found": [
+        "not-found": [
           "google.apple"
         ]
       }
@@ -895,7 +924,7 @@
       "tld": "aquarelle",
       "rdapBaseUrl": "https://rdap.nic.aquarelle/",
       "domains": {
-        "found": [
+        "not-found": [
           "google.aquarelle"
         ]
       }
@@ -913,7 +942,7 @@
       "tld": "arab",
       "rdapBaseUrl": "https://rdap.nic.arab/",
       "domains": {
-        "found": [
+        "not-found": [
           "google.arab"
         ]
       }
@@ -925,7 +954,8 @@
         "found": [
           "google.aramco"
         ]
-      }
+      },
+      "static": true
     },
     "rdap.nic.athleta": {
       "tld": "athleta",
@@ -934,7 +964,8 @@
         "found": [
           "google.athleta"
         ]
-      }
+      },
+      "static": true
     },
     "rdap.nic.auspost": {
       "tld": "auspost",
@@ -943,7 +974,8 @@
         "found": [
           "google.auspost"
         ]
-      }
+      },
+      "static": true
     },
     "rdap.nic.axa": {
       "tld": "axa",
@@ -952,7 +984,8 @@
         "found": [
           "google.axa"
         ]
-      }
+      },
+      "static": true
     },
     "rdap.nic.banamex": {
       "tld": "banamex",
@@ -961,7 +994,8 @@
         "found": [
           "google.banamex"
         ]
-      }
+      },
+      "static": true
     },
     "rdap.nic.bank": {
       "tld": "bank",
@@ -970,7 +1004,8 @@
         "found": [
           "google.bank"
         ]
-      }
+      },
+      "static": true
     },
     "rdap.nic.barcelona": {
       "tld": "barcelona",
@@ -988,7 +1023,8 @@
         "found": [
           "google.baseball"
         ]
-      }
+      },
+      "static": true
     },
     "rdap.nic.basketball": {
       "tld": "basketball",
@@ -997,13 +1033,14 @@
         "found": [
           "google.basketball"
         ]
-      }
+      },
+      "static": true
     },
     "rdap.nic.bauhaus": {
       "tld": "bauhaus",
       "rdapBaseUrl": "https://rdap.nic.bauhaus/",
       "domains": {
-        "found": [
+        "not-found": [
           "google.bauhaus"
         ]
       }
@@ -1021,7 +1058,7 @@
       "tld": "bcn",
       "rdapBaseUrl": "https://rdap.nic.bcn/",
       "domains": {
-        "found": [
+        "not-found": [
           "google.bcn"
         ]
       }
@@ -1030,7 +1067,7 @@
       "tld": "beer",
       "rdapBaseUrl": "https://rdap.nic.beer/",
       "domains": {
-        "found": [
+        "inactive": [
           "google.beer"
         ]
       }
@@ -1051,7 +1088,8 @@
         "found": [
           "google.bharti"
         ]
-      }
+      },
+      "static": true
     },
     "rdap.nic.bible": {
       "tld": "bible",
@@ -1060,7 +1098,8 @@
         "found": [
           "google.bible"
         ]
-      }
+      },
+      "static": true
     },
     "rdap.nic.bid": {
       "tld": "bid",
@@ -1069,7 +1108,8 @@
         "found": [
           "google.bid"
         ]
-      }
+      },
+      "static": true
     },
     "rdap.nic.blackfriday": {
       "tld": "blackfriday",
@@ -1078,13 +1118,14 @@
         "found": [
           "google.blackfriday"
         ]
-      }
+      },
+      "static": true
     },
     "rdap.nic.booking": {
       "tld": "booking",
       "rdapBaseUrl": "https://rdap.nic.booking/",
       "domains": {
-        "found": [
+        "not-found": [
           "google.booking"
         ]
       }
@@ -1093,7 +1134,7 @@
       "tld": "bostik",
       "rdapBaseUrl": "https://rdap.nic.bostik/",
       "domains": {
-        "found": [
+        "not-found": [
           "google.bostik"
         ]
       }
@@ -1105,13 +1146,14 @@
         "found": [
           "google.boston"
         ]
-      }
+      },
+      "static": true
     },
     "rdap.nic.brussels": {
       "tld": "brussels",
       "rdapBaseUrl": "https://rdap.nic.brussels/",
       "domains": {
-        "found": [
+        "inactive": [
           "google.brussels"
         ]
       }
@@ -1123,7 +1165,8 @@
         "found": [
           "google.buzz"
         ]
-      }
+      },
+      "static": true
     },
     "rdap.nic.bzh": {
       "tld": "bzh",
@@ -1141,7 +1184,8 @@
         "found": [
           "google.calvinklein"
         ]
-      }
+      },
+      "static": true
     },
     "rdap.nic.capitalone": {
       "tld": "capitalone",
@@ -1150,7 +1194,8 @@
         "found": [
           "google.capitalone"
         ]
-      }
+      },
+      "static": true
     },
     "rdap.nic.caravan": {
       "tld": "caravan",
@@ -1159,7 +1204,8 @@
         "found": [
           "google.caravan"
         ]
-      }
+      },
+      "static": true
     },
     "rdap.nic.casa": {
       "tld": "casa",
@@ -1168,7 +1214,8 @@
         "found": [
           "google.casa"
         ]
-      }
+      },
+      "static": true
     },
     "rdap.nic.catholic": {
       "tld": "catholic",
@@ -1177,7 +1224,8 @@
         "found": [
           "google.catholic"
         ]
-      }
+      },
+      "static": true
     },
     "rdap.nic.cba": {
       "tld": "cba",
@@ -1186,7 +1234,8 @@
         "found": [
           "google.cba"
         ]
-      }
+      },
+      "static": true
     },
     "rdap.nic.cbn": {
       "tld": "cbn",
@@ -1195,7 +1244,8 @@
         "found": [
           "google.cbn"
         ]
-      }
+      },
+      "static": true
     },
     "rdap.nic.cbre": {
       "tld": "cbre",
@@ -1204,7 +1254,8 @@
         "found": [
           "google.cbre"
         ]
-      }
+      },
+      "static": true
     },
     "rdap.nic.chase": {
       "tld": "chase",
@@ -1213,7 +1264,8 @@
         "found": [
           "google.chase"
         ]
-      }
+      },
+      "static": true
     },
     "rdap.nic.chintai": {
       "tld": "chintai",
@@ -1222,7 +1274,8 @@
         "found": [
           "google.chintai"
         ]
-      }
+      },
+      "static": true
     },
     "rdap.nic.cisco": {
       "tld": "cisco",
@@ -1231,7 +1284,8 @@
         "found": [
           "google.cisco"
         ]
-      }
+      },
+      "static": true
     },
     "rdap.nic.citi": {
       "tld": "citi",
@@ -1240,7 +1294,8 @@
         "found": [
           "google.citi"
         ]
-      }
+      },
+      "static": true
     },
     "rdap.nic.club": {
       "tld": "club",
@@ -1249,7 +1304,8 @@
         "found": [
           "google.club"
         ]
-      }
+      },
+      "static": true
     },
     "rdap.nic.commbank": {
       "tld": "commbank",
@@ -1258,7 +1314,8 @@
         "found": [
           "google.commbank"
         ]
-      }
+      },
+      "static": true
     },
     "rdap.nic.compare": {
       "tld": "compare",
@@ -1267,7 +1324,8 @@
         "found": [
           "google.compare"
         ]
-      }
+      },
+      "static": true
     },
     "rdap.nic.cooking": {
       "tld": "cooking",
@@ -1276,7 +1334,8 @@
         "found": [
           "google.cooking"
         ]
-      }
+      },
+      "static": true
     },
     "rdap.nic.corsica": {
       "tld": "corsica",
@@ -1294,7 +1353,8 @@
         "found": [
           "google.courses"
         ]
-      }
+      },
+      "static": true
     },
     "rdap.nic.cpa": {
       "tld": "cpa",
@@ -1303,7 +1363,8 @@
         "found": [
           "google.cpa"
         ]
-      }
+      },
+      "static": true
     },
     "rdap.nic.cr": {
       "tld": "cr",
@@ -1312,7 +1373,8 @@
         "found": [
           "google.cr"
         ]
-      }
+      },
+      "static": true
     },
     "rdap.nic.cricket": {
       "tld": "cricket",
@@ -1321,7 +1383,8 @@
         "found": [
           "google.cricket"
         ]
-      }
+      },
+      "static": true
     },
     "rdap.nic.cuisinella": {
       "tld": "cuisinella",
@@ -1330,7 +1393,8 @@
         "found": [
           "google.cuisinella"
         ]
-      }
+      },
+      "static": true
     },
     "rdap.nic.cv": {
       "tld": "cv",
@@ -1348,7 +1412,8 @@
         "found": [
           "google.date"
         ]
-      }
+      },
+      "static": true
     },
     "rdap.nic.dds": {
       "tld": "dds",
@@ -1357,7 +1422,8 @@
         "found": [
           "google.dds"
         ]
-      }
+      },
+      "static": true
     },
     "rdap.nic.dell": {
       "tld": "dell",
@@ -1366,7 +1432,8 @@
         "found": [
           "google.dell"
         ]
-      }
+      },
+      "static": true
     },
     "rdap.nic.download": {
       "tld": "download",
@@ -1375,13 +1442,14 @@
         "found": [
           "google.download"
         ]
-      }
+      },
+      "static": true
     },
     "rdap.nic.dubai": {
       "tld": "dubai",
       "rdapBaseUrl": "https://rdap.nic.dubai/",
       "domains": {
-        "found": [
+        "not-found": [
           "google.dubai"
         ]
       }
@@ -1393,7 +1461,8 @@
         "found": [
           "google.dupont"
         ]
-      }
+      },
+      "static": true
     },
     "rdap.nic.earth": {
       "tld": "earth",
@@ -1402,13 +1471,14 @@
         "found": [
           "google.earth"
         ]
-      }
+      },
+      "static": true
     },
     "rdap.nic.erni": {
       "tld": "erni",
       "rdapBaseUrl": "https://rdap.nic.erni/",
       "domains": {
-        "found": [
+        "not-found": [
           "google.erni"
         ]
       }
@@ -1417,7 +1487,7 @@
       "tld": "eurovision",
       "rdapBaseUrl": "https://rdap.nic.eurovision/",
       "domains": {
-        "found": [
+        "not-found": [
           "google.eurovision"
         ]
       }
@@ -1438,7 +1508,8 @@
         "found": [
           "google.faith"
         ]
-      }
+      },
+      "static": true
     },
     "rdap.nic.farmers": {
       "tld": "farmers",
@@ -1447,7 +1518,8 @@
         "found": [
           "google.farmers"
         ]
-      }
+      },
+      "static": true
     },
     "rdap.nic.fashion": {
       "tld": "fashion",
@@ -1456,7 +1528,8 @@
         "found": [
           "google.fashion"
         ]
-      }
+      },
+      "static": true
     },
     "rdap.nic.ferrero": {
       "tld": "ferrero",
@@ -1465,7 +1538,8 @@
         "found": [
           "google.ferrero"
         ]
-      }
+      },
+      "static": true
     },
     "rdap.nic.film": {
       "tld": "film",
@@ -1474,13 +1548,14 @@
         "found": [
           "google.film"
         ]
-      }
+      },
+      "static": true
     },
     "rdap.nic.firmdale": {
       "tld": "firmdale",
       "rdapBaseUrl": "https://rdap.nic.firmdale/",
       "domains": {
-        "found": [
+        "not-found": [
           "google.firmdale"
         ]
       }
@@ -1492,7 +1567,8 @@
         "found": [
           "google.fishing"
         ]
-      }
+      },
+      "static": true
     },
     "rdap.nic.fit": {
       "tld": "fit",
@@ -1501,7 +1577,8 @@
         "found": [
           "google.fit"
         ]
-      }
+      },
+      "static": true
     },
     "rdap.nic.flickr": {
       "tld": "flickr",
@@ -1510,7 +1587,8 @@
         "found": [
           "google.flickr"
         ]
-      }
+      },
+      "static": true
     },
     "rdap.nic.flir": {
       "tld": "flir",
@@ -1519,7 +1597,8 @@
         "found": [
           "google.flir"
         ]
-      }
+      },
+      "static": true
     },
     "rdap.nic.ford": {
       "tld": "ford",
@@ -1528,7 +1607,8 @@
         "found": [
           "google.ford"
         ]
-      }
+      },
+      "static": true
     },
     "rdap.nic.fox": {
       "tld": "fox",
@@ -1537,7 +1617,8 @@
         "found": [
           "google.fox"
         ]
-      }
+      },
+      "static": true
     },
     "rdap.nic.fr": {
       "tld": "fr",
@@ -1555,7 +1636,8 @@
         "found": [
           "google.frontier"
         ]
-      }
+      },
+      "static": true
     },
     "rdap.nic.ftr": {
       "tld": "ftr",
@@ -1564,7 +1646,8 @@
         "found": [
           "google.ftr"
         ]
-      }
+      },
+      "static": true
     },
     "rdap.nic.gal": {
       "tld": "gal",
@@ -1582,7 +1665,8 @@
         "found": [
           "google.gap"
         ]
-      }
+      },
+      "static": true
     },
     "rdap.nic.garden": {
       "tld": "garden",
@@ -1591,7 +1675,8 @@
         "found": [
           "google.garden"
         ]
-      }
+      },
+      "static": true
     },
     "rdap.nic.gay": {
       "tld": "gay",
@@ -1600,7 +1685,8 @@
         "found": [
           "google.gay"
         ]
-      }
+      },
+      "static": true
     },
     "rdap.nic.gdn": {
       "tld": "gdn",
@@ -1615,7 +1701,7 @@
       "tld": "gea",
       "rdapBaseUrl": "https://rdap.nic.gea/",
       "domains": {
-        "found": [
+        "not-found": [
           "google.gea"
         ]
       }
@@ -1627,13 +1713,14 @@
         "found": [
           "google.george"
         ]
-      }
+      },
+      "static": true
     },
     "rdap.nic.gmx": {
       "tld": "gmx",
       "rdapBaseUrl": "https://rdap.nic.gmx/",
       "domains": {
-        "found": [
+        "not-found": [
           "google.gmx"
         ]
       }
@@ -1645,7 +1732,8 @@
         "found": [
           "google.godaddy"
         ]
-      }
+      },
+      "static": true
     },
     "rdap.nic.grainger": {
       "tld": "grainger",
@@ -1654,7 +1742,8 @@
         "found": [
           "google.grainger"
         ]
-      }
+      },
+      "static": true
     },
     "rdap.nic.grocery": {
       "tld": "grocery",
@@ -1663,7 +1752,8 @@
         "found": [
           "google.grocery"
         ]
-      }
+      },
+      "static": true
     },
     "rdap.nic.hamburg": {
       "tld": "hamburg",
@@ -1681,7 +1771,8 @@
         "found": [
           "google.hbo"
         ]
-      }
+      },
+      "static": true
     },
     "rdap.nic.health": {
       "tld": "health",
@@ -1699,7 +1790,8 @@
         "found": [
           "google.homegoods"
         ]
-      }
+      },
+      "static": true
     },
     "rdap.nic.homesense": {
       "tld": "homesense",
@@ -1708,7 +1800,8 @@
         "found": [
           "google.homesense"
         ]
-      }
+      },
+      "static": true
     },
     "rdap.nic.horse": {
       "tld": "horse",
@@ -1717,7 +1810,8 @@
         "found": [
           "google.horse"
         ]
-      }
+      },
+      "static": true
     },
     "rdap.nic.hotels": {
       "tld": "hotels",
@@ -1726,7 +1820,8 @@
         "found": [
           "google.hotels"
         ]
-      }
+      },
+      "static": true
     },
     "rdap.nic.hsbc": {
       "tld": "hsbc",
@@ -1735,7 +1830,8 @@
         "found": [
           "google.hsbc"
         ]
-      }
+      },
+      "static": true
     },
     "rdap.nic.hyatt": {
       "tld": "hyatt",
@@ -1744,7 +1840,8 @@
         "found": [
           "google.hyatt"
         ]
-      }
+      },
+      "static": true
     },
     "rdap.nic.ibm": {
       "tld": "ibm",
@@ -1753,13 +1850,14 @@
         "found": [
           "google.ibm"
         ]
-      }
+      },
+      "static": true
     },
     "rdap.nic.ifm": {
       "tld": "ifm",
       "rdapBaseUrl": "https://rdap.nic.ifm/",
       "domains": {
-        "found": [
+        "not-found": [
           "google.ifm"
         ]
       }
@@ -1768,7 +1866,7 @@
       "tld": "ikano",
       "rdapBaseUrl": "https://rdap.nic.ikano/v1/",
       "domains": {
-        "found": [
+        "not-found": [
           "google.ikano"
         ]
       }
@@ -1780,7 +1878,8 @@
         "found": [
           "google.ink"
         ]
-      }
+      },
+      "static": true
     },
     "rdap.nic.insurance": {
       "tld": "insurance",
@@ -1789,7 +1888,8 @@
         "found": [
           "google.insurance"
         ]
-      }
+      },
+      "static": true
     },
     "rdap.nic.intuit": {
       "tld": "intuit",
@@ -1798,13 +1898,14 @@
         "found": [
           "google.intuit"
         ]
-      }
+      },
+      "static": true
     },
     "rdap.nic.ipiranga": {
       "tld": "ipiranga",
       "rdapBaseUrl": "https://rdap.nic.ipiranga/",
       "domains": {
-        "found": [
+        "not-found": [
           "google.ipiranga"
         ]
       }
@@ -1816,7 +1917,8 @@
         "found": [
           "google.itau"
         ]
-      }
+      },
+      "static": true
     },
     "rdap.nic.jmp": {
       "tld": "jmp",
@@ -1825,7 +1927,8 @@
         "found": [
           "google.jmp"
         ]
-      }
+      },
+      "static": true
     },
     "rdap.nic.jpmorgan": {
       "tld": "jpmorgan",
@@ -1834,13 +1937,14 @@
         "found": [
           "google.jpmorgan"
         ]
-      }
+      },
+      "static": true
     },
     "rdap.nic.jprs": {
       "tld": "jprs",
       "rdapBaseUrl": "https://rdap.nic.jprs/rdap/",
       "domains": {
-        "found": [
+        "not-found": [
           "google.jprs"
         ]
       }
@@ -1852,7 +1956,8 @@
         "found": [
           "google.kpmg"
         ]
-      }
+      },
+      "static": true
     },
     "rdap.nic.krd": {
       "tld": "krd",
@@ -1861,13 +1966,14 @@
         "found": [
           "google.krd"
         ]
-      }
+      },
+      "static": true
     },
     "rdap.nic.lacaixa": {
       "tld": "lacaixa",
       "rdapBaseUrl": "https://rdap.nic.lacaixa/",
       "domains": {
-        "found": [
+        "not-found": [
           "google.lacaixa"
         ]
       }
@@ -1879,13 +1985,14 @@
         "found": [
           "google.lanxess"
         ]
-      }
+      },
+      "static": true
     },
     "rdap.nic.latrobe": {
       "tld": "latrobe",
       "rdapBaseUrl": "https://rdap.nic.latrobe/",
       "domains": {
-        "found": [
+        "not-found": [
           "google.latrobe"
         ]
       }
@@ -1897,13 +2004,14 @@
         "found": [
           "google.law"
         ]
-      }
+      },
+      "static": true
     },
     "rdap.nic.leclerc": {
       "tld": "leclerc",
       "rdapBaseUrl": "https://rdap.nic.leclerc/",
       "domains": {
-        "found": [
+        "not-found": [
           "google.leclerc"
         ]
       }
@@ -1915,7 +2023,8 @@
         "found": [
           "google.lifeinsurance"
         ]
-      }
+      },
+      "static": true
     },
     "rdap.nic.lilly": {
       "tld": "lilly",
@@ -1924,7 +2033,8 @@
         "found": [
           "google.lilly"
         ]
-      }
+      },
+      "static": true
     },
     "rdap.nic.lincoln": {
       "tld": "lincoln",
@@ -1933,13 +2043,14 @@
         "found": [
           "google.lincoln"
         ]
-      }
+      },
+      "static": true
     },
     "rdap.nic.loan": {
       "tld": "loan",
       "rdapBaseUrl": "https://rdap.nic.loan/",
       "domains": {
-        "found": [
+        "inactive": [
           "google.loan"
         ]
       }
@@ -1960,7 +2071,8 @@
         "found": [
           "google.luxe"
         ]
-      }
+      },
+      "static": true
     },
     "rdap.nic.ly": {
       "tld": "ly",
@@ -1984,7 +2096,7 @@
       "tld": "man",
       "rdapBaseUrl": "https://rdap.nic.man/",
       "domains": {
-        "found": [
+        "not-found": [
           "google.man"
         ]
       }
@@ -1993,7 +2105,7 @@
       "tld": "mango",
       "rdapBaseUrl": "https://rdap.nic.mango/",
       "domains": {
-        "found": [
+        "not-found": [
           "google.mango"
         ]
       }
@@ -2005,7 +2117,8 @@
         "found": [
           "google.marshalls"
         ]
-      }
+      },
+      "static": true
     },
     "rdap.nic.mattel": {
       "tld": "mattel",
@@ -2014,7 +2127,8 @@
         "found": [
           "google.mattel"
         ]
-      }
+      },
+      "static": true
     },
     "rdap.nic.melbourne": {
       "tld": "melbourne",
@@ -2023,7 +2137,8 @@
         "found": [
           "google.melbourne"
         ]
-      }
+      },
+      "static": true
     },
     "rdap.nic.men": {
       "tld": "men",
@@ -2032,7 +2147,8 @@
         "found": [
           "google.men"
         ]
-      }
+      },
+      "static": true
     },
     "rdap.nic.menu": {
       "tld": "menu",
@@ -2041,7 +2157,8 @@
         "found": [
           "google.menu"
         ]
-      }
+      },
+      "static": true
     },
     "rdap.nic.merckmsd": {
       "tld": "merckmsd",
@@ -2050,7 +2167,8 @@
         "found": [
           "google.merckmsd"
         ]
-      }
+      },
+      "static": true
     },
     "rdap.nic.miami": {
       "tld": "miami",
@@ -2059,7 +2177,8 @@
         "found": [
           "google.miami"
         ]
-      }
+      },
+      "static": true
     },
     "rdap.nic.mint": {
       "tld": "mint",
@@ -2068,7 +2187,8 @@
         "found": [
           "google.mint"
         ]
-      }
+      },
+      "static": true
     },
     "rdap.nic.ml": {
       "tld": "ml",
@@ -2086,13 +2206,14 @@
         "found": [
           "google.mlb"
         ]
-      }
+      },
+      "static": true
     },
     "rdap.nic.mma": {
       "tld": "mma",
       "rdapBaseUrl": "https://rdap.nic.mma/",
       "domains": {
-        "found": [
+        "not-found": [
           "google.mma"
         ]
       }
@@ -2104,7 +2225,8 @@
         "found": [
           "google.moe"
         ]
-      }
+      },
+      "static": true
     },
     "rdap.nic.monash": {
       "tld": "monash",
@@ -2113,7 +2235,8 @@
         "found": [
           "google.monash"
         ]
-      }
+      },
+      "static": true
     },
     "rdap.nic.moto": {
       "tld": "moto",
@@ -2122,7 +2245,8 @@
         "found": [
           "google.moto"
         ]
-      }
+      },
+      "static": true
     },
     "rdap.nic.msd": {
       "tld": "msd",
@@ -2131,7 +2255,8 @@
         "found": [
           "google.msd"
         ]
-      }
+      },
+      "static": true
     },
     "rdap.nic.nba": {
       "tld": "nba",
@@ -2140,7 +2265,8 @@
         "found": [
           "google.nba"
         ]
-      }
+      },
+      "static": true
     },
     "rdap.nic.netbank": {
       "tld": "netbank",
@@ -2149,7 +2275,8 @@
         "found": [
           "google.netbank"
         ]
-      }
+      },
+      "static": true
     },
     "rdap.nic.netflix": {
       "tld": "netflix",
@@ -2158,7 +2285,8 @@
         "found": [
           "google.netflix"
         ]
-      }
+      },
+      "static": true
     },
     "rdap.nic.neustar": {
       "tld": "neustar",
@@ -2167,7 +2295,8 @@
         "found": [
           "google.neustar"
         ]
-      }
+      },
+      "static": true
     },
     "rdap.nic.nfl": {
       "tld": "nfl",
@@ -2176,7 +2305,8 @@
         "found": [
           "google.nfl"
         ]
-      }
+      },
+      "static": true
     },
     "rdap.nic.nike": {
       "tld": "nike",
@@ -2185,7 +2315,8 @@
         "found": [
           "google.nike"
         ]
-      }
+      },
+      "static": true
     },
     "rdap.nic.norton": {
       "tld": "norton",
@@ -2194,7 +2325,8 @@
         "found": [
           "google.norton"
         ]
-      }
+      },
+      "static": true
     },
     "rdap.nic.nrw": {
       "tld": "nrw",
@@ -2209,7 +2341,7 @@
       "tld": "ntt",
       "rdapBaseUrl": "https://rdap.nic.ntt/rdap/",
       "domains": {
-        "found": [
+        "not-found": [
           "google.ntt"
         ]
       }
@@ -2221,7 +2353,8 @@
         "found": [
           "google.nyc"
         ]
-      }
+      },
+      "static": true
     },
     "rdap.nic.olayan": {
       "tld": "olayan",
@@ -2230,7 +2363,8 @@
         "found": [
           "google.olayan"
         ]
-      }
+      },
+      "static": true
     },
     "rdap.nic.olayangroup": {
       "tld": "olayangroup",
@@ -2239,7 +2373,8 @@
         "found": [
           "google.olayangroup"
         ]
-      }
+      },
+      "static": true
     },
     "rdap.nic.one": {
       "tld": "one",
@@ -2248,7 +2383,8 @@
         "found": [
           "google.one"
         ]
-      }
+      },
+      "static": true
     },
     "rdap.nic.open": {
       "tld": "open",
@@ -2257,7 +2393,8 @@
         "found": [
           "google.open"
         ]
-      }
+      },
+      "static": true
     },
     "rdap.nic.osaka": {
       "tld": "osaka",
@@ -2266,7 +2403,8 @@
         "found": [
           "google.osaka"
         ]
-      }
+      },
+      "static": true
     },
     "rdap.nic.ovh": {
       "tld": "ovh",
@@ -2293,7 +2431,8 @@
         "found": [
           "google.party"
         ]
-      }
+      },
+      "static": true
     },
     "rdap.nic.pfizer": {
       "tld": "pfizer",
@@ -2302,13 +2441,14 @@
         "found": [
           "google.pfizer"
         ]
-      }
+      },
+      "static": true
     },
     "rdap.nic.pg": {
       "tld": "pg",
       "rdapBaseUrl": "https://rdap.nic.pg/",
       "domains": {
-        "found": [
+        "not-found": [
           "google.pg"
         ]
       }
@@ -2320,7 +2460,8 @@
         "found": [
           "google.philips"
         ]
-      }
+      },
+      "static": true
     },
     "rdap.nic.photo": {
       "tld": "photo",
@@ -2329,7 +2470,8 @@
         "found": [
           "google.photo"
         ]
-      }
+      },
+      "static": true
     },
     "rdap.nic.physio": {
       "tld": "physio",
@@ -2338,7 +2480,8 @@
         "found": [
           "google.physio"
         ]
-      }
+      },
+      "static": true
     },
     "rdap.nic.ping": {
       "tld": "ping",
@@ -2347,7 +2490,8 @@
         "found": [
           "google.ping"
         ]
-      }
+      },
+      "static": true
     },
     "rdap.nic.politie": {
       "tld": "politie",
@@ -2356,7 +2500,8 @@
         "found": [
           "google.politie"
         ]
-      }
+      },
+      "static": true
     },
     "rdap.nic.porn": {
       "tld": "porn",
@@ -2365,13 +2510,14 @@
         "found": [
           "google.porn"
         ]
-      }
+      },
+      "static": true
     },
     "rdap.nic.praxi": {
       "tld": "praxi",
       "rdapBaseUrl": "https://rdap.nic.praxi/",
       "domains": {
-        "found": [
+        "not-found": [
           "google.praxi"
         ]
       }
@@ -2383,7 +2529,8 @@
         "found": [
           "google.pru"
         ]
-      }
+      },
+      "static": true
     },
     "rdap.nic.prudential": {
       "tld": "prudential",
@@ -2392,7 +2539,8 @@
         "found": [
           "google.prudential"
         ]
-      }
+      },
+      "static": true
     },
     "rdap.nic.quebec": {
       "tld": "quebec",
@@ -2410,7 +2558,8 @@
         "found": [
           "google.racing"
         ]
-      }
+      },
+      "static": true
     },
     "rdap.nic.radio": {
       "tld": "radio",
@@ -2428,7 +2577,8 @@
         "found": [
           "google.review"
         ]
-      }
+      },
+      "static": true
     },
     "rdap.nic.rodeo": {
       "tld": "rodeo",
@@ -2437,7 +2587,8 @@
         "found": [
           "google.rodeo"
         ]
-      }
+      },
+      "static": true
     },
     "rdap.nic.rugby": {
       "tld": "rugby",
@@ -2446,13 +2597,14 @@
         "found": [
           "google.rugby"
         ]
-      }
+      },
+      "static": true
     },
     "rdap.nic.sakura": {
       "tld": "sakura",
       "rdapBaseUrl": "https://rdap.nic.sakura/rdap/",
       "domains": {
-        "found": [
+        "not-found": [
           "google.sakura"
         ]
       }
@@ -2464,7 +2616,8 @@
         "found": [
           "google.samsclub"
         ]
-      }
+      },
+      "static": true
     },
     "rdap.nic.sandvik": {
       "tld": "sandvik",
@@ -2473,7 +2626,8 @@
         "found": [
           "google.sandvik"
         ]
-      }
+      },
+      "static": true
     },
     "rdap.nic.sandvikcoromant": {
       "tld": "sandvikcoromant",
@@ -2482,13 +2636,14 @@
         "found": [
           "google.sandvikcoromant"
         ]
-      }
+      },
+      "static": true
     },
     "rdap.nic.sap": {
       "tld": "sap",
       "rdapBaseUrl": "https://rdap.nic.sap/",
       "domains": {
-        "found": [
+        "not-found": [
           "google.sap"
         ]
       }
@@ -2500,13 +2655,14 @@
         "found": [
           "google.sas"
         ]
-      }
+      },
+      "static": true
     },
     "rdap.nic.scb": {
       "tld": "scb",
       "rdapBaseUrl": "https://rdap.nic.scb/",
       "domains": {
-        "found": [
+        "not-found": [
           "google.scb"
         ]
       }
@@ -2515,7 +2671,7 @@
       "tld": "schaeffler",
       "rdapBaseUrl": "https://rdap.nic.schaeffler/",
       "domains": {
-        "found": [
+        "not-found": [
           "google.schaeffler"
         ]
       }
@@ -2527,7 +2683,8 @@
         "found": [
           "google.schmidt"
         ]
-      }
+      },
+      "static": true
     },
     "rdap.nic.science": {
       "tld": "science",
@@ -2536,7 +2693,8 @@
         "found": [
           "google.science"
         ]
-      }
+      },
+      "static": true
     },
     "rdap.nic.scot": {
       "tld": "scot",
@@ -2560,7 +2718,7 @@
       "tld": "seat",
       "rdapBaseUrl": "https://rdap.nic.seat/",
       "domains": {
-        "found": [
+        "not-found": [
           "google.seat"
         ]
       }
@@ -2572,7 +2730,8 @@
         "found": [
           "google.seek"
         ]
-      }
+      },
+      "static": true
     },
     "rdap.nic.select": {
       "tld": "select",
@@ -2581,7 +2740,8 @@
         "found": [
           "google.select"
         ]
-      }
+      },
+      "static": true
     },
     "rdap.nic.seven": {
       "tld": "seven",
@@ -2590,7 +2750,8 @@
         "found": [
           "google.seven"
         ]
-      }
+      },
+      "static": true
     },
     "rdap.nic.sex": {
       "tld": "sex",
@@ -2599,13 +2760,14 @@
         "found": [
           "google.sex"
         ]
-      }
+      },
+      "static": true
     },
     "rdap.nic.sncf": {
       "tld": "sncf",
       "rdapBaseUrl": "https://rdap.nic.sncf/",
       "domains": {
-        "found": [
+        "not-found": [
           "google.sncf"
         ]
       }
@@ -2632,7 +2794,7 @@
       "tld": "staples",
       "rdapBaseUrl": "https://rdap.nic.staples/",
       "domains": {
-        "found": [
+        "not-found": [
           "google.staples"
         ]
       }
@@ -2644,7 +2806,8 @@
         "found": [
           "google.statefarm"
         ]
-      }
+      },
+      "static": true
     },
     "rdap.nic.stream": {
       "tld": "stream",
@@ -2653,7 +2816,8 @@
         "found": [
           "google.stream"
         ]
-      }
+      },
+      "static": true
     },
     "rdap.nic.study": {
       "tld": "study",
@@ -2662,7 +2826,8 @@
         "found": [
           "google.study"
         ]
-      }
+      },
+      "static": true
     },
     "rdap.nic.sucks": {
       "tld": "sucks",
@@ -2671,7 +2836,8 @@
         "found": [
           "google.sucks"
         ]
-      }
+      },
+      "static": true
     },
     "rdap.nic.surf": {
       "tld": "surf",
@@ -2680,13 +2846,14 @@
         "found": [
           "google.surf"
         ]
-      }
+      },
+      "static": true
     },
     "rdap.nic.swiss": {
       "tld": "swiss",
       "rdapBaseUrl": "https://rdap.nic.swiss/",
       "domains": {
-        "found": [
+        "not-found": [
           "google.swiss"
         ]
       }
@@ -2698,7 +2865,8 @@
         "found": [
           "google.sydney"
         ]
-      }
+      },
+      "static": true
     },
     "rdap.nic.tab": {
       "tld": "tab",
@@ -2707,7 +2875,8 @@
         "found": [
           "google.tab"
         ]
-      }
+      },
+      "static": true
     },
     "rdap.nic.taipei": {
       "tld": "taipei",
@@ -2716,7 +2885,8 @@
         "found": [
           "google.taipei"
         ]
-      }
+      },
+      "static": true
     },
     "rdap.nic.target": {
       "tld": "target",
@@ -2725,7 +2895,8 @@
         "found": [
           "google.target"
         ]
-      }
+      },
+      "static": true
     },
     "rdap.nic.tdk": {
       "tld": "tdk",
@@ -2734,7 +2905,8 @@
         "found": [
           "google.tdk"
         ]
-      }
+      },
+      "static": true
     },
     "rdap.nic.teva": {
       "tld": "teva",
@@ -2743,7 +2915,8 @@
         "found": [
           "google.teva"
         ]
-      }
+      },
+      "static": true
     },
     "rdap.nic.tf": {
       "tld": "tf",
@@ -2761,7 +2934,8 @@
         "found": [
           "google.tjmaxx"
         ]
-      }
+      },
+      "static": true
     },
     "rdap.nic.tjx": {
       "tld": "tjx",
@@ -2770,7 +2944,8 @@
         "found": [
           "google.tjx"
         ]
-      }
+      },
+      "static": true
     },
     "rdap.nic.tkmaxx": {
       "tld": "tkmaxx",
@@ -2779,13 +2954,14 @@
         "found": [
           "google.tkmaxx"
         ]
-      }
+      },
+      "static": true
     },
     "rdap.nic.total": {
       "tld": "total",
       "rdapBaseUrl": "https://rdap.nic.total/",
       "domains": {
-        "found": [
+        "not-found": [
           "google.total"
         ]
       }
@@ -2797,7 +2973,8 @@
         "found": [
           "google.trade"
         ]
-      }
+      },
+      "static": true
     },
     "rdap.nic.tube": {
       "tld": "tube",
@@ -2833,7 +3010,8 @@
         "found": [
           "google.vip"
         ]
-      }
+      },
+      "static": true
     },
     "rdap.nic.vivo": {
       "tld": "vivo",
@@ -2842,13 +3020,14 @@
         "found": [
           "google.vivo"
         ]
-      }
+      },
+      "static": true
     },
     "rdap.nic.vlaanderen": {
       "tld": "vlaanderen",
       "rdapBaseUrl": "https://rdap.nic.vlaanderen/",
       "domains": {
-        "found": [
+        "inactive": [
           "google.vlaanderen"
         ]
       }
@@ -2860,7 +3039,8 @@
         "found": [
           "google.vodka"
         ]
-      }
+      },
+      "static": true
     },
     "rdap.nic.voting": {
       "tld": "voting",
@@ -2869,13 +3049,14 @@
         "found": [
           "google.voting"
         ]
-      }
+      },
+      "static": true
     },
     "rdap.nic.walmart": {
       "tld": "walmart",
       "rdapBaseUrl": "https://rdap.nic.walmart/",
       "domains": {
-        "found": [
+        "not-found": [
           "google.walmart"
         ]
       }
@@ -2887,7 +3068,8 @@
         "found": [
           "google.walter"
         ]
-      }
+      },
+      "static": true
     },
     "rdap.nic.weather": {
       "tld": "weather",
@@ -2896,7 +3078,8 @@
         "found": [
           "google.weather"
         ]
-      }
+      },
+      "static": true
     },
     "rdap.nic.weatherchannel": {
       "tld": "weatherchannel",
@@ -2905,7 +3088,8 @@
         "found": [
           "google.weatherchannel"
         ]
-      }
+      },
+      "static": true
     },
     "rdap.nic.webcam": {
       "tld": "webcam",
@@ -2914,13 +3098,14 @@
         "found": [
           "google.webcam"
         ]
-      }
+      },
+      "static": true
     },
     "rdap.nic.wedding": {
       "tld": "wedding",
       "rdapBaseUrl": "https://rdap.nic.wedding/",
       "domains": {
-        "found": [
+        "not-found": [
           "google.wedding"
         ]
       }
@@ -2941,7 +3126,8 @@
         "found": [
           "google.wiki"
         ]
-      }
+      },
+      "static": true
     },
     "rdap.nic.williamhill": {
       "tld": "williamhill",
@@ -2950,13 +3136,14 @@
         "found": [
           "google.williamhill"
         ]
-      }
+      },
+      "static": true
     },
     "rdap.nic.win": {
       "tld": "win",
       "rdapBaseUrl": "https://rdap.nic.win/",
       "domains": {
-        "found": [
+        "inactive": [
           "google.win"
         ]
       }
@@ -2968,7 +3155,8 @@
         "found": [
           "google.winners"
         ]
-      }
+      },
+      "static": true
     },
     "rdap.nic.woodside": {
       "tld": "woodside",
@@ -2977,7 +3165,8 @@
         "found": [
           "google.woodside"
         ]
-      }
+      },
+      "static": true
     },
     "rdap.nic.work": {
       "tld": "work",
@@ -2986,7 +3175,8 @@
         "found": [
           "google.work"
         ]
-      }
+      },
+      "static": true
     },
     "rdap.nic.wtc": {
       "tld": "wtc",
@@ -2995,7 +3185,8 @@
         "found": [
           "google.wtc"
         ]
-      }
+      },
+      "static": true
     },
     "rdap.nic.xerox": {
       "tld": "xerox",
@@ -3004,7 +3195,8 @@
         "found": [
           "google.xerox"
         ]
-      }
+      },
+      "static": true
     },
     "rdap.nic.xn--80aqecdr1a": {
       "tld": "xn--80aqecdr1a",
@@ -3013,13 +3205,14 @@
         "found": [
           "google.xn--80aqecdr1a"
         ]
-      }
+      },
+      "static": true
     },
     "rdap.nic.xn--80asehdb": {
       "tld": "xn--80asehdb",
       "rdapBaseUrl": "https://rdap.nic.xn--80asehdb/",
       "domains": {
-        "found": [
+        "not-found": [
           "google.xn--80asehdb"
         ]
       }
@@ -3028,7 +3221,7 @@
       "tld": "xn--80aswg",
       "rdapBaseUrl": "https://rdap.nic.xn--80aswg/",
       "domains": {
-        "found": [
+        "not-found": [
           "google.xn--80aswg"
         ]
       }
@@ -3040,7 +3233,8 @@
         "found": [
           "google.xn--g2xx48c"
         ]
-      }
+      },
+      "static": true
     },
     "rdap.nic.xn--kcrx77d1x4a": {
       "tld": "xn--kcrx77d1x4a",
@@ -3049,7 +3243,8 @@
         "found": [
           "google.xn--kcrx77d1x4a"
         ]
-      }
+      },
+      "static": true
     },
     "rdap.nic.xn--mgba3a3ejt": {
       "tld": "xn--mgba3a3ejt",
@@ -3058,7 +3253,8 @@
         "found": [
           "google.xn--mgba3a3ejt"
         ]
-      }
+      },
+      "static": true
     },
     "rdap.nic.xn--mgba7c0bbn0a": {
       "tld": "xn--mgba7c0bbn0a",
@@ -3067,13 +3263,14 @@
         "found": [
           "google.xn--mgba7c0bbn0a"
         ]
-      }
+      },
+      "static": true
     },
     "rdap.nic.xn--mgbab2bd": {
       "tld": "xn--mgbab2bd",
       "rdapBaseUrl": "https://rdap.nic.xn--mgbab2bd/",
       "domains": {
-        "found": [
+        "not-found": [
           "google.xn--mgbab2bd"
         ]
       }
@@ -3082,7 +3279,7 @@
       "tld": "xn--mgbca7dzdo",
       "rdapBaseUrl": "https://rdap.nic.xn--mgbca7dzdo/",
       "domains": {
-        "found": [
+        "not-found": [
           "google.xn--mgbca7dzdo"
         ]
       }
@@ -3094,7 +3291,8 @@
         "found": [
           "google.xn--mgbi4ecexp"
         ]
-      }
+      },
+      "static": true
     },
     "rdap.nic.xn--ngbc5azd": {
       "tld": "xn--ngbc5azd",
@@ -3103,13 +3301,14 @@
         "found": [
           "google.xn--ngbc5azd"
         ]
-      }
+      },
+      "static": true
     },
     "rdap.nic.xn--ngbrx": {
       "tld": "xn--ngbrx",
       "rdapBaseUrl": "https://rdap.nic.xn--ngbrx/",
       "domains": {
-        "found": [
+        "not-found": [
           "google.xn--ngbrx"
         ]
       }
@@ -3118,7 +3317,7 @@
       "tld": "xn--p1acf",
       "rdapBaseUrl": "https://rdap.nic.xn--p1acf/",
       "domains": {
-        "found": [
+        "not-found": [
           "google.xn--p1acf"
         ]
       }
@@ -3130,13 +3329,14 @@
         "found": [
           "google.xn--tiq49xqyj"
         ]
-      }
+      },
+      "static": true
     },
     "rdap.nic.yandex": {
       "tld": "yandex",
       "rdapBaseUrl": "https://rdap.nic.yandex/rdap/",
       "domains": {
-        "found": [
+        "not-found": [
           "google.yandex"
         ]
       }
@@ -3148,13 +3348,14 @@
         "found": [
           "google.yoga"
         ]
-      }
+      },
+      "static": true
     },
     "rdap.nic.zm": {
       "tld": "zm",
       "rdapBaseUrl": "https://rdap.nic.zm/",
       "domains": {
-        "found": [
+        "not-found": [
           "google.zm"
         ]
       }
@@ -3217,7 +3418,7 @@
       "tld": "kfh",
       "rdapBaseUrl": "https://rdap.registry.kfh/rdap/",
       "domains": {
-        "found": [
+        "not-found": [
           "google.kfh"
         ]
       }
@@ -3235,7 +3436,7 @@
       "tld": "music",
       "rdapBaseUrl": "https://rdap.registryservices.music/rdap/",
       "domains": {
-        "found": [
+        "not-found": [
           "google.music"
         ]
       }
@@ -3262,7 +3463,7 @@
       "tld": "xn--clchc0ea0b2g2a9gcd",
       "rdapBaseUrl": "https://rdap.ta.sgnic.sg/rdap/",
       "domains": {
-        "found": [
+        "not-found": [
           "google.xn--clchc0ea0b2g2a9gcd"
         ]
       }
@@ -3274,7 +3475,8 @@
         "found": [
           "google.anquan"
         ]
-      }
+      },
+      "static": true
     },
     "rdap.tonicregistry.to": {
       "tld": "to",
@@ -3289,7 +3491,7 @@
       "tld": "xn--mxtq1m",
       "rdapBaseUrl": "https://rdap.twnic.tw/rdap/",
       "domains": {
-        "found": [
+        "not-found": [
           "google.xn--mxtq1m"
         ]
       }
@@ -3325,7 +3527,7 @@
       "tld": "xn--yfro4i67o",
       "rdapBaseUrl": "https://rdap.zh.sgnic.sg/rdap/",
       "domains": {
-        "found": [
+        "not-found": [
           "google.xn--yfro4i67o"
         ]
       }
@@ -3355,7 +3557,8 @@
         "found": [
           "google.mtr"
         ]
-      }
+      },
+      "static": true
     },
     "whois.nic.tatar": {
       "tld": "tatar",
@@ -3370,7 +3573,7 @@
       "tld": "xn--d1acj3b",
       "rdapBaseUrl": "https://whois.nic.xn--d1acj3b/rdap/",
       "domains": {
-        "found": [
+        "not-found": [
           "google.xn--d1acj3b"
         ]
       }
