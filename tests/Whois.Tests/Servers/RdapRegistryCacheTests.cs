@@ -195,6 +195,120 @@ public class RdapRegistryCacheTests
         Assert.Contains("fetch failed", ex.Message, StringComparison.OrdinalIgnoreCase);
     }
 
+    // --- IP bootstrap tests ---
+
+    private const string ValidIpv4BootstrapJson = """
+        {
+          "version": "1.0",
+          "services": [
+            [["8.0.0.0/8", "8.8.0.0/16"], ["https://rdap.arin.net/registry/"]],
+            [["2.0.0.0/8"], ["https://rdap.ripe.net/"]],
+            [["1.0.0.0/8"], ["https://rdap.apnic.net/"]]
+          ]
+        }
+        """;
+
+    private const string ValidIpv6BootstrapJson = """
+        {
+          "version": "1.0",
+          "services": [
+            [["2001:4800::/23"], ["https://rdap.arin.net/registry/"]],
+            [["2001:600::/23"], ["https://rdap.ripe.net/"]]
+          ]
+        }
+        """;
+
+    [Fact]
+    public async Task GetBaseUrl_IPv4_ReturnsCorrectRir()
+    {
+        var handler = new RoutingHandler(new Dictionary<string, string>(StringComparer.Ordinal)
+        {
+            ["https://data.iana.org/rdap/ipv4.json"] = ValidIpv4BootstrapJson,
+        });
+        var cache = new RdapRegistryCache(new HttpClient(handler), new WhoisOptions());
+
+        var url = await cache.GetBaseUrl(IPAddress.Parse("8.8.8.8"), CancellationToken.None);
+
+        Assert.Equal("https://rdap.arin.net/registry/", url);
+    }
+
+    [Fact]
+    public async Task GetBaseUrl_IPv4_LongestPrefixMatch()
+    {
+        // 8.8.4.4 matches both 8.0.0.0/8 and 8.8.0.0/16 -- should pick /16
+        var handler = new RoutingHandler(new Dictionary<string, string>(StringComparer.Ordinal)
+        {
+            ["https://data.iana.org/rdap/ipv4.json"] = ValidIpv4BootstrapJson,
+        });
+        var cache = new RdapRegistryCache(new HttpClient(handler), new WhoisOptions());
+
+        var url = await cache.GetBaseUrl(IPAddress.Parse("8.8.4.4"), CancellationToken.None);
+
+        // 8.8.4.4 matches 8.8.0.0/16 (longest) and 8.0.0.0/8
+        Assert.Equal("https://rdap.arin.net/registry/", url);
+    }
+
+    [Fact]
+    public async Task GetBaseUrl_IPv4_NoMatch_ReturnsNull()
+    {
+        var handler = new RoutingHandler(new Dictionary<string, string>(StringComparer.Ordinal)
+        {
+            ["https://data.iana.org/rdap/ipv4.json"] = ValidIpv4BootstrapJson,
+        });
+        var cache = new RdapRegistryCache(new HttpClient(handler), new WhoisOptions());
+
+        var url = await cache.GetBaseUrl(IPAddress.Parse("192.168.1.1"), CancellationToken.None);
+
+        Assert.Null(url);
+    }
+
+    [Fact]
+    public async Task GetBaseUrl_IPv6_ReturnsCorrectRir()
+    {
+        var handler = new RoutingHandler(new Dictionary<string, string>(StringComparer.Ordinal)
+        {
+            ["https://data.iana.org/rdap/ipv6.json"] = ValidIpv6BootstrapJson,
+        });
+        var cache = new RdapRegistryCache(new HttpClient(handler), new WhoisOptions());
+
+        var url = await cache.GetBaseUrl(IPAddress.Parse("2001:4860:4860::8888"), CancellationToken.None);
+
+        Assert.Equal("https://rdap.arin.net/registry/", url);
+    }
+
+    [Fact]
+    public async Task GetBaseUrl_IP_CachesAfterFirstFetch()
+    {
+        var handler = new RoutingHandler(new Dictionary<string, string>(StringComparer.Ordinal)
+        {
+            ["https://data.iana.org/rdap/ipv4.json"] = ValidIpv4BootstrapJson,
+        });
+        var cache = new RdapRegistryCache(new HttpClient(handler), new WhoisOptions());
+
+        await cache.GetBaseUrl(IPAddress.Parse("8.8.8.8"), CancellationToken.None);
+        await cache.GetBaseUrl(IPAddress.Parse("1.1.1.1"), CancellationToken.None);
+
+        Assert.Equal(1, handler.CallCount);
+    }
+
+    [Fact]
+    public async Task ClearCache_IP_NextCallRefetches()
+    {
+        var handler = new RoutingHandler(new Dictionary<string, string>(StringComparer.Ordinal)
+        {
+            ["https://data.iana.org/rdap/ipv4.json"] = ValidIpv4BootstrapJson,
+        });
+        var cache = new RdapRegistryCache(new HttpClient(handler), new WhoisOptions());
+
+        await cache.GetBaseUrl(IPAddress.Parse("8.8.8.8"), CancellationToken.None);
+        Assert.Equal(1, handler.CallCount);
+
+        cache.ClearCache();
+
+        await cache.GetBaseUrl(IPAddress.Parse("8.8.8.8"), CancellationToken.None);
+        Assert.Equal(2, handler.CallCount);
+    }
+
     // --- Test helpers ---
 
     private static RdapRegistryCache CreateCacheWithResponse(HttpStatusCode statusCode, string body)
@@ -299,6 +413,33 @@ public class RdapRegistryCacheTests
         protected override Task<HttpResponseMessage> SendAsync(HttpRequestMessage request, CancellationToken ct)
         {
             throw new HttpRequestException("Connection refused");
+        }
+    }
+
+    private sealed class RoutingHandler : HttpMessageHandler
+    {
+        private readonly Dictionary<string, string> _responses;
+        private int _callCount;
+
+        public int CallCount => _callCount;
+
+        public RoutingHandler(Dictionary<string, string> responses)
+        {
+            _responses = responses;
+        }
+
+        protected override Task<HttpResponseMessage> SendAsync(HttpRequestMessage request, CancellationToken ct)
+        {
+            Interlocked.Increment(ref _callCount);
+            var url = request.RequestUri!.ToString();
+            if (_responses.TryGetValue(url, out var body))
+            {
+                return Task.FromResult(new HttpResponseMessage(HttpStatusCode.OK)
+                {
+                    Content = new StringContent(body, Encoding.UTF8, "application/json"),
+                });
+            }
+            return Task.FromResult(new HttpResponseMessage(HttpStatusCode.NotFound));
         }
     }
 }

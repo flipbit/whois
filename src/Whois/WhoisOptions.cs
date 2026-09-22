@@ -58,4 +58,14 @@ public class WhoisOptions
     /// </summary>
     public TimeSpan TldServerCacheDuration { get; set; } = TimeSpan.FromHours(24);
 
+    /// <summary>
+    /// URL to fetch RDAP IPv4 bootstrap data from. Defaults to the IANA registry.
+    /// </summary>
+    public string RdapIpv4BootstrapUrl { get; set; } = "https://data.iana.org/rdap/ipv4.json";
+
+    /// <summary>
+    /// URL to fetch RDAP IPv6 bootstrap data from. Defaults to the IANA registry.
+    /// </summary>
+    public string RdapIpv6BootstrapUrl { get; set; } = "https://data.iana.org/rdap/ipv6.json";
+
 }
