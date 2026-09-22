@@ -3,32 +3,22 @@ using System.Text;
 namespace Whois;
 
 /// <summary>
-/// Represents a request to query WHOIS information
+/// Base class for all lookup requests, containing shared options.
 /// </summary>
-public class WhoisRequest
+public abstract class LookupRequest
 {
-    public WhoisRequest(string query)
-    {
-        Query = query;
-    }
-
     /// <summary>
-    /// The WHOIS query, typically the domain name
-    /// </summary>
-    public string Query { get; }
-
-    /// <summary>
-    /// The encoding to use whilst reading data from the WHOIS server
+    /// The encoding to use when reading data from WHOIS servers.
     /// </summary>
     public Encoding? Encoding { get; init; }
 
     /// <summary>
-    /// The network timeout to use whilst reading data from the WHOIS server
+    /// The network timeout in seconds.
     /// </summary>
     public int? TimeoutSeconds { get; init; }
 
     /// <summary>
-    /// If true, referral links within WHOIS responses will be followed.
+    /// If true, referral links within responses will be followed.
     /// </summary>
     public bool? FollowReferrer { get; init; }
 
@@ -38,13 +28,12 @@ public class WhoisRequest
     public ProtocolPreference? PreferredProtocol { get; init; }
 
     /// <summary>
-    /// If set, the given WHOIS server will be queried. If null, the WHOIS
-    /// server for the domain TLD will be attempted to be found automatically.
+    /// If set, overrides automatic server discovery.
     /// </summary>
     public HostName? WhoisServer { get; init; }
 
     /// <summary>
-    /// If set, overrides the default port (43) used for WHOIS TCP connections.
+    /// If set, overrides the default port (43) for WHOIS TCP connections.
     /// </summary>
     public int? Port { get; init; }
 

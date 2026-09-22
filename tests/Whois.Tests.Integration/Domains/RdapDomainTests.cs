@@ -47,7 +47,7 @@ public class RdapDomainTests
         string serverName, string domain, string expectedStatus)
     {
         var lookup = new WhoisLookup();
-        var request = new WhoisRequest(domain)
+        var request = new DomainRequest(domain)
         {
             PreferredProtocol = ProtocolPreference.Rdap,
         };

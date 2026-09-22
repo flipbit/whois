@@ -13,7 +13,7 @@ public class WhoisSettingsTests
     {
         var lookup = Substitute.For<IWhoisLookup>();
         var emptyResult = new LookupResult<DomainInfo>(new DomainInfo(), LookupProtocol.Whois, string.Empty, new LookupDiagnostics());
-        lookup.Lookup(Arg.Any<WhoisRequest>(), Arg.Any<CancellationToken>())
+        lookup.Lookup(Arg.Any<DomainRequest>(), Arg.Any<CancellationToken>())
               .Returns(Task.FromResult(emptyResult));
 
         var services = new ServiceCollection();
@@ -34,7 +34,7 @@ public class WhoisSettingsTests
         await app.RunAsync(["example.com", "-h", "whois.verisign-grs.com"]);
 
         await lookup.Received(1).Lookup(
-            Arg.Is<WhoisRequest>(r => r.WhoisServer != null && r.WhoisServer.Value == "whois.verisign-grs.com"),
+            Arg.Is<DomainRequest>(r => r.WhoisServer != null && r.WhoisServer.Value == "whois.verisign-grs.com"),
             Arg.Any<CancellationToken>());
     }
 
@@ -46,7 +46,7 @@ public class WhoisSettingsTests
         await app.RunAsync(["example.com", "--host", "whois.verisign-grs.com"]);
 
         await lookup.Received(1).Lookup(
-            Arg.Is<WhoisRequest>(r => r.WhoisServer != null && r.WhoisServer.Value == "whois.verisign-grs.com"),
+            Arg.Is<DomainRequest>(r => r.WhoisServer != null && r.WhoisServer.Value == "whois.verisign-grs.com"),
             Arg.Any<CancellationToken>());
     }
 
@@ -58,7 +58,7 @@ public class WhoisSettingsTests
         await app.RunAsync(["example.com", "-p", "4343"]);
 
         await lookup.Received(1).Lookup(
-            Arg.Is<WhoisRequest>(r => r.Port == 4343),
+            Arg.Is<DomainRequest>(r => r.Port == 4343),
             Arg.Any<CancellationToken>());
     }
 
@@ -70,7 +70,7 @@ public class WhoisSettingsTests
         await app.RunAsync(["example.com", "--port", "4343"]);
 
         await lookup.Received(1).Lookup(
-            Arg.Is<WhoisRequest>(r => r.Port == 4343),
+            Arg.Is<DomainRequest>(r => r.Port == 4343),
             Arg.Any<CancellationToken>());
     }
 
@@ -82,7 +82,7 @@ public class WhoisSettingsTests
         await app.RunAsync(["example.com", "--timeout", "30"]);
 
         await lookup.Received(1).Lookup(
-            Arg.Is<WhoisRequest>(r => r.TimeoutSeconds == 30),
+            Arg.Is<DomainRequest>(r => r.TimeoutSeconds == 30),
             Arg.Any<CancellationToken>());
     }
 
@@ -94,7 +94,7 @@ public class WhoisSettingsTests
         await app.RunAsync(["example.com", "--rdap"]);
 
         await lookup.Received(1).Lookup(
-            Arg.Is<WhoisRequest>(r => r.PreferredProtocol == ProtocolPreference.Rdap),
+            Arg.Is<DomainRequest>(r => r.PreferredProtocol == ProtocolPreference.Rdap),
             Arg.Any<CancellationToken>());
     }
 
@@ -106,7 +106,7 @@ public class WhoisSettingsTests
         await app.RunAsync(["example.com", "--whois"]);
 
         await lookup.Received(1).Lookup(
-            Arg.Is<WhoisRequest>(r => r.PreferredProtocol == ProtocolPreference.Whois),
+            Arg.Is<DomainRequest>(r => r.PreferredProtocol == ProtocolPreference.Whois),
             Arg.Any<CancellationToken>());
     }
 
@@ -118,7 +118,7 @@ public class WhoisSettingsTests
         var exitCode = await app.RunAsync(["example.com", "-j"]);
 
         Assert.Equal(0, exitCode);
-        await lookup.Received(1).Lookup(Arg.Any<WhoisRequest>(), Arg.Any<CancellationToken>());
+        await lookup.Received(1).Lookup(Arg.Any<DomainRequest>(), Arg.Any<CancellationToken>());
     }
 
     [Fact]
@@ -129,7 +129,7 @@ public class WhoisSettingsTests
         var exitCode = await app.RunAsync(["example.com", "--json"]);
 
         Assert.Equal(0, exitCode);
-        await lookup.Received(1).Lookup(Arg.Any<WhoisRequest>(), Arg.Any<CancellationToken>());
+        await lookup.Received(1).Lookup(Arg.Any<DomainRequest>(), Arg.Any<CancellationToken>());
     }
 
     [Fact]

@@ -13,5 +13,5 @@ internal interface IProtocolClient
     /// <summary>
     /// Queries for the given domain using this protocol.
     /// </summary>
-    public Task<ProtocolResponse> Query(WhoisRequest request, CancellationToken ct);
+    public Task<ProtocolResponse> Query(LookupRequest request, CancellationToken ct);
 }

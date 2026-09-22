@@ -43,22 +43,23 @@ internal sealed class WhoisProtocolClient : IProtocolClient
 
     public LookupProtocol Protocol => LookupProtocol.Whois;
 
-    public async Task<ProtocolResponse> Query(WhoisRequest request, CancellationToken ct)
+    public async Task<ProtocolResponse> Query(LookupRequest request, CancellationToken ct)
     {
+        var domainRequest = (DomainRequest)request;
         var sw = Stopwatch.StartNew();
-        var encoding = request.Encoding ?? _options.Encoding;
-        var timeout = request.TimeoutSeconds ?? _options.TimeoutSeconds;
-        var followReferrer = request.FollowReferrer ?? _options.FollowReferrer;
+        var encoding = domainRequest.Encoding ?? _options.Encoding;
+        var timeout = domainRequest.TimeoutSeconds ?? _options.TimeoutSeconds;
+        var followReferrer = domainRequest.FollowReferrer ?? _options.FollowReferrer;
 
         // Determine starting server
         string? whoisServer;
-        if (request.WhoisServer != null)
+        if (domainRequest.WhoisServer != null)
         {
-            whoisServer = request.WhoisServer.Value;
+            whoisServer = domainRequest.WhoisServer.Value;
         }
         else
         {
-            var tld = HostName.TryParse(request.Query, out var hostName) ? hostName!.Tld : request.Query;
+            var tld = HostName.TryParse(domainRequest.Query, out var hostName) ? hostName!.Tld : domainRequest.Query;
             whoisServer = await _ianaLookup.GetWhoisServer(tld, ct).ConfigureAwait(false);
             if (whoisServer == null)
             {
@@ -84,16 +85,16 @@ internal sealed class WhoisProtocolClient : IProtocolClient
             // Depth limit
             if (visitedServers.Count > _options.MaxWhoisReferralDepth)
             {
-                _logger.LogWarning("WHOIS: referral depth limit ({MaxDepth}) reached for {Query}", _options.MaxWhoisReferralDepth, request.Query);
+                _logger.LogWarning("WHOIS: referral depth limit ({MaxDepth}) reached for {Query}", _options.MaxWhoisReferralDepth, domainRequest.Query);
                 break;
             }
 
             // Build query (Japanese domains return English results with /e suffix)
-            var query = request.Query;
+            var query = domainRequest.Query;
             if (query.EndsWith(JapanTldSuffix, StringComparison.Ordinal)) query += JapanEnglishQuerySuffix;
 
             // Download
-            var port = request.Port ?? 43;
+            var port = domainRequest.Port ?? 43;
             var content = await _tcpReader.Read(
                 whoisServer, port, query, encoding, timeout, ct).ConfigureAwait(false);
 
@@ -126,7 +127,7 @@ internal sealed class WhoisProtocolClient : IProtocolClient
 
         if (bestRecord == null)
         {
-            throw new WhoisException($"No WHOIS response received for {request.Query}");
+            throw new WhoisException($"No WHOIS response received for {domainRequest.Query}");
         }
 
         sw.Stop();

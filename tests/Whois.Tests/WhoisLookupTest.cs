@@ -17,7 +17,7 @@ public class WhoisLookupTest
 
         var rdapClient = Substitute.For<IProtocolClient>();
         rdapClient.Protocol.Returns(LookupProtocol.Rdap);
-        rdapClient.Query(Arg.Any<WhoisRequest>(), Arg.Any<CancellationToken>())
+        rdapClient.Query(Arg.Any<DomainRequest>(), Arg.Any<CancellationToken>())
             .Returns(new ProtocolResponse
             {
                 RawContent = "{}",
@@ -57,7 +57,7 @@ public class WhoisLookupTest
 
         var whoisClient = Substitute.For<IProtocolClient>();
         whoisClient.Protocol.Returns(LookupProtocol.Whois);
-        whoisClient.Query(Arg.Any<WhoisRequest>(), Arg.Any<CancellationToken>())
+        whoisClient.Query(Arg.Any<DomainRequest>(), Arg.Any<CancellationToken>())
             .Returns(new ProtocolResponse
             {
                 RawContent = "Domain Name: example.uk",
@@ -96,7 +96,7 @@ public class WhoisLookupTest
 
         var whoisClient = Substitute.For<IProtocolClient>();
         whoisClient.Protocol.Returns(LookupProtocol.Whois);
-        whoisClient.Query(Arg.Any<WhoisRequest>(), Arg.Any<CancellationToken>())
+        whoisClient.Query(Arg.Any<DomainRequest>(), Arg.Any<CancellationToken>())
             .Returns(new ProtocolResponse
             {
                 RawContent = "Domain Name: GOOGLE.COM",
@@ -112,7 +112,7 @@ public class WhoisLookupTest
         var rdapClient = Substitute.For<IProtocolClient>();
         rdapClient.Protocol.Returns(LookupProtocol.Rdap);
 
-        var request = new WhoisRequest("google.com") { PreferredProtocol = ProtocolPreference.Whois };
+        var request = new DomainRequest("google.com") { PreferredProtocol = ProtocolPreference.Whois };
 
         var lookup = new WhoisLookup(
             new WhoisOptions(),
@@ -123,7 +123,7 @@ public class WhoisLookupTest
         var result = await lookup.Lookup(request);
 
         Assert.Equal(LookupProtocol.Whois, result.Protocol);
-        await rdapClient.DidNotReceive().Query(Arg.Any<WhoisRequest>(), Arg.Any<CancellationToken>());
+        await rdapClient.DidNotReceive().Query(Arg.Any<DomainRequest>(), Arg.Any<CancellationToken>());
     }
 
     [Fact]
@@ -146,7 +146,7 @@ public class WhoisLookupTest
             ianaLookup,
             [whoisClient, rdapClient]);
 
-        var request = new WhoisRequest("example.uk") { PreferredProtocol = ProtocolPreference.Rdap };
+        var request = new DomainRequest("example.uk") { PreferredProtocol = ProtocolPreference.Rdap };
 
         await Assert.ThrowsAsync<WhoisException>(() => lookup.Lookup(request));
     }
@@ -163,7 +163,7 @@ public class WhoisLookupTest
 
         var whoisClient = Substitute.For<IProtocolClient>();
         whoisClient.Protocol.Returns(LookupProtocol.Whois);
-        whoisClient.Query(Arg.Any<WhoisRequest>(), Arg.Any<CancellationToken>())
+        whoisClient.Query(Arg.Any<DomainRequest>(), Arg.Any<CancellationToken>())
             .Returns(new ProtocolResponse
             {
                 RawContent = "Domain Name: GOOGLE.COM",
@@ -181,14 +181,14 @@ public class WhoisLookupTest
 
         // Global option forces WHOIS; request leaves PreferredProtocol null (inherits global).
         var options = new WhoisOptions { PreferredProtocol = ProtocolPreference.Whois };
-        var request = new WhoisRequest("google.com"); // PreferredProtocol is null
+        var request = new DomainRequest("google.com"); // PreferredProtocol is null
 
         var lookup = new WhoisLookup(options, rdapRegistry, ianaLookup, [whoisClient, rdapClient]);
 
         var result = await lookup.Lookup(request);
 
         Assert.Equal(LookupProtocol.Whois, result.Protocol);
-        await rdapClient.DidNotReceive().Query(Arg.Any<WhoisRequest>(), Arg.Any<CancellationToken>());
+        await rdapClient.DidNotReceive().Query(Arg.Any<DomainRequest>(), Arg.Any<CancellationToken>());
     }
 
     [Fact]
@@ -201,10 +201,10 @@ public class WhoisLookupTest
 
         var rdapClient = Substitute.For<IProtocolClient>();
         rdapClient.Protocol.Returns(LookupProtocol.Rdap);
-        rdapClient.Query(Arg.Any<WhoisRequest>(), Arg.Any<CancellationToken>())
+        rdapClient.Query(Arg.Any<DomainRequest>(), Arg.Any<CancellationToken>())
             .Returns(callInfo =>
             {
-                var req = callInfo.ArgAt<WhoisRequest>(0);
+                var req = callInfo.ArgAt<DomainRequest>(0);
                 return new ProtocolResponse
                 {
                     RawContent = "{}",
@@ -231,7 +231,7 @@ public class WhoisLookupTest
 
         // The leading dot should be stripped before querying
         await rdapClient.Received(1).Query(
-            Arg.Is<WhoisRequest>(r => r.Query == "example.com"),
+            Arg.Is<DomainRequest>(r => r.Query == "example.com"),
             Arg.Any<CancellationToken>());
     }
 
@@ -262,7 +262,7 @@ public class WhoisLookupTest
 
         var rdapClient = Substitute.For<IProtocolClient>();
         rdapClient.Protocol.Returns(LookupProtocol.Rdap);
-        rdapClient.Query(Arg.Any<WhoisRequest>(), Arg.Any<CancellationToken>())
+        rdapClient.Query(Arg.Any<DomainRequest>(), Arg.Any<CancellationToken>())
             .Returns(new ProtocolResponse
             {
                 RawContent = "{}",
@@ -278,7 +278,7 @@ public class WhoisLookupTest
         var whoisClient = Substitute.For<IProtocolClient>();
         whoisClient.Protocol.Returns(LookupProtocol.Whois);
 
-        var request = new WhoisRequest("google.com") { PreferredProtocol = ProtocolPreference.Rdap };
+        var request = new DomainRequest("google.com") { PreferredProtocol = ProtocolPreference.Rdap };
 
         var lookup = new WhoisLookup(
             new WhoisOptions(),

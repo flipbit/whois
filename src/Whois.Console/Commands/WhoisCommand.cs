@@ -19,7 +19,7 @@ internal sealed class WhoisCommand : AsyncCommand<WhoisSettings>
             : settings.ForceWhois ? ProtocolPreference.Whois
             : (ProtocolPreference?)null;
 
-        var request = new WhoisRequest(settings.Query)
+        var request = new DomainRequest(settings.Query)
         {
             WhoisServer = settings.Host != null ? new HostName(settings.Host) : null,
             Port = settings.Port,

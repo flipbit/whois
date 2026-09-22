@@ -112,7 +112,7 @@ public class IanaWhoisServerCoverageTest
 
                 // Skip multi-level TLDs (e.g. co.za) -- IANA only knows the parent TLD,
                 // and the real lookup extracts the last label from the domain anyway
-                if (tld.Contains('.')) continue;
+                if (tld.Contains('.', StringComparison.Ordinal)) continue;
 
                 if (seen.Add(tld))
                 {

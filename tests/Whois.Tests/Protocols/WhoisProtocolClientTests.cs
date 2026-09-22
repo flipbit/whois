@@ -31,7 +31,7 @@ public class WhoisProtocolClientTests
             .Returns(sample);
 
         var client = new WhoisProtocolClient(tcpReader, ianaLookup, parser, options);
-        var request = new WhoisRequest("google.com");
+        var request = new DomainRequest("google.com");
 
         var response = await client.Query(request, CancellationToken.None);
 
@@ -64,7 +64,7 @@ public class WhoisProtocolClientTests
             .Returns(authoritativeResult);
 
         var client = new WhoisProtocolClient(tcpReader, ianaLookup, parser, options);
-        var request = new WhoisRequest("google.com");
+        var request = new DomainRequest("google.com");
 
         var response = await client.Query(request, CancellationToken.None);
 
@@ -90,7 +90,7 @@ public class WhoisProtocolClientTests
             .Returns(sample);
 
         var client = new WhoisProtocolClient(tcpReader, ianaLookup, parser, options);
-        var request = new WhoisRequest("example.nejp");
+        var request = new DomainRequest("example.nejp");
 
         await client.Query(request, CancellationToken.None);
 
@@ -117,7 +117,7 @@ public class WhoisProtocolClientTests
             .Returns(content);
 
         var client = new WhoisProtocolClient(tcpReader, ianaLookup, parser, options);
-        var request = new WhoisRequest("example.jp");
+        var request = new DomainRequest("example.jp");
 
         await client.Query(request, CancellationToken.None);
 
@@ -150,7 +150,7 @@ public class WhoisProtocolClientTests
             .Returns(serverBContent);
 
         var client = new WhoisProtocolClient(tcpReader, ianaLookup, parser, options);
-        var request = new WhoisRequest("example.com");
+        var request = new DomainRequest("example.com");
 
         var response = await client.Query(request, CancellationToken.None);
 
@@ -196,7 +196,7 @@ public class WhoisProtocolClientTests
             });
 
         var client = new WhoisProtocolClient(tcpReader, ianaLookup, parser, options);
-        var request = new WhoisRequest("example.com");
+        var request = new DomainRequest("example.com");
 
         // This must complete rather than loop forever; the depth guard (> 10) stops it.
         var response = await client.Query(request, CancellationToken.None);
@@ -219,7 +219,7 @@ public class WhoisProtocolClientTests
             .Returns(content);
 
         var client = new WhoisProtocolClient(tcpReader, ianaLookup, parser, options);
-        var request = new WhoisRequest("example.com")
+        var request = new DomainRequest("example.com")
         {
             WhoisServer = new HostName("whois.custom.com"),
         };
@@ -250,7 +250,7 @@ public class WhoisProtocolClientTests
             .Returns(firstContent);
 
         var client = new WhoisProtocolClient(tcpReader, ianaLookup, parser, options);
-        var request = new WhoisRequest("example.com")
+        var request = new DomainRequest("example.com")
         {
             FollowReferrer = false,
         };
@@ -283,7 +283,7 @@ public class WhoisProtocolClientTests
             .Returns(string.Empty);
 
         var client = new WhoisProtocolClient(tcpReader, ianaLookup, parser, options);
-        var request = new WhoisRequest("example.com");
+        var request = new DomainRequest("example.com");
 
         var response = await client.Query(request, CancellationToken.None);
 
@@ -302,7 +302,7 @@ public class WhoisProtocolClientTests
             .Returns((string?)null);
 
         var client = new WhoisProtocolClient(tcpReader, ianaLookup, parser, options);
-        var request = new WhoisRequest("example.unknown");
+        var request = new DomainRequest("example.unknown");
 
         var ex = await Assert.ThrowsAsync<WhoisException>(() =>
             client.Query(request, CancellationToken.None));
@@ -328,7 +328,7 @@ public class WhoisProtocolClientTests
             .Returns(content);
 
         var client = new WhoisProtocolClient(tcpReader, ianaLookup, parser, options);
-        var request = new WhoisRequest("example.com")
+        var request = new DomainRequest("example.com")
         {
             Port = 4343,
         };
@@ -356,7 +356,7 @@ public class WhoisProtocolClientTests
             .Returns(content);
 
         var client = new WhoisProtocolClient(tcpReader, ianaLookup, parser, options);
-        var request = new WhoisRequest("example.com");
+        var request = new DomainRequest("example.com");
 
         await client.Query(request, CancellationToken.None);
 

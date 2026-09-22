@@ -190,7 +190,7 @@ public class RdapProtocolClientTests
             .Returns("https://rdap.example.com/");
 
         var client = new RdapProtocolClient(new HttpClient(), rdapRegistry, new WhoisOptions());
-        var request = new WhoisRequest(query);
+        var request = new DomainRequest(query);
 
         await Assert.ThrowsAsync<WhoisException>(() => client.Query(request, CancellationToken.None));
     }
@@ -203,7 +203,7 @@ public class RdapProtocolClientTests
             .Returns((string?)null);
 
         var client = new RdapProtocolClient(new HttpClient(), rdapRegistry, new WhoisOptions());
-        var request = new WhoisRequest("example.xyz");
+        var request = new DomainRequest("example.xyz");
 
         var ex = await Assert.ThrowsAsync<WhoisException>(() => client.Query(request, CancellationToken.None));
         Assert.Contains("No RDAP endpoint", ex.Message, StringComparison.Ordinal);
@@ -228,7 +228,7 @@ public class RdapProtocolClientTests
         var handler = new FakeHttpHandler(HttpStatusCode.NotFound, string.Empty);
         var httpClient = new HttpClient(handler);
         var client = new RdapProtocolClient(httpClient, rdapRegistry, new WhoisOptions());
-        var request = new WhoisRequest("notfound.com");
+        var request = new DomainRequest("notfound.com");
 
         var response = await client.Query(request, CancellationToken.None);
 
@@ -247,7 +247,7 @@ public class RdapProtocolClientTests
         var handler = new FakeHttpHandler((HttpStatusCode)429, string.Empty);
         var httpClient = new HttpClient(handler);
         var client = new RdapProtocolClient(httpClient, rdapRegistry, new WhoisOptions());
-        var request = new WhoisRequest("throttled.com");
+        var request = new DomainRequest("throttled.com");
 
         var response = await client.Query(request, CancellationToken.None);
 
@@ -266,7 +266,7 @@ public class RdapProtocolClientTests
         var handler = new FakeHttpHandler(HttpStatusCode.OK, json);
         var httpClient = new HttpClient(handler);
         var client = new RdapProtocolClient(httpClient, rdapRegistry, new WhoisOptions());
-        var request = new WhoisRequest("google.com");
+        var request = new DomainRequest("google.com");
 
         var response = await client.Query(request, CancellationToken.None);
 
@@ -287,7 +287,7 @@ public class RdapProtocolClientTests
         var handler = new FakeHttpHandler(HttpStatusCode.InternalServerError, string.Empty);
         var httpClient = new HttpClient(handler);
         var client = new RdapProtocolClient(httpClient, rdapRegistry, new WhoisOptions());
-        var request = new WhoisRequest("example.com");
+        var request = new DomainRequest("example.com");
 
         await Assert.ThrowsAsync<WhoisException>(() => client.Query(request, CancellationToken.None));
     }
@@ -303,7 +303,7 @@ public class RdapProtocolClientTests
         var httpClient = new HttpClient(handler);
         var options = new WhoisOptions { TimeoutSeconds = 1 };
         var client = new RdapProtocolClient(httpClient, rdapRegistry, options);
-        var request = new WhoisRequest("slow.com");
+        var request = new DomainRequest("slow.com");
 
         var ex = await Assert.ThrowsAsync<WhoisException>(() => client.Query(request, CancellationToken.None));
         // The exception should contain "timed out" because the body read respects the timeout token
@@ -321,7 +321,7 @@ public class RdapProtocolClientTests
         var handler = new RedirectHandler("https://192.168.1.1/domain/evil.com");
         var httpClient = new HttpClient(handler);
         var client = new RdapProtocolClient(httpClient, rdapRegistry, new WhoisOptions());
-        var request = new WhoisRequest("evil.com");
+        var request = new DomainRequest("evil.com");
 
         var ex = await Assert.ThrowsAsync<WhoisException>(() => client.Query(request, CancellationToken.None));
         Assert.Contains("private or reserved", ex.Message, StringComparison.OrdinalIgnoreCase);
@@ -338,7 +338,7 @@ public class RdapProtocolClientTests
         var handler = new CountingRedirectHandler("https://rdap.other.com/domain/loop.com");
         var httpClient = new HttpClient(handler);
         var client = new RdapProtocolClient(httpClient, rdapRegistry, new WhoisOptions());
-        var request = new WhoisRequest("loop.com");
+        var request = new DomainRequest("loop.com");
 
         var ex = await Assert.ThrowsAsync<WhoisException>(() => client.Query(request, CancellationToken.None));
         Assert.Contains("redirect", ex.Message, StringComparison.OrdinalIgnoreCase);
@@ -359,7 +359,7 @@ public class RdapProtocolClientTests
         var handler = new RedirectThenOkHandler(redirectCount: 2, location: "https://rdap.other.com/domain/google.com", okBody: json);
         var httpClient = new HttpClient(handler);
         var client = new RdapProtocolClient(httpClient, rdapRegistry, new WhoisOptions());
-        var request = new WhoisRequest("google.com");
+        var request = new DomainRequest("google.com");
 
         var response = await client.Query(request, CancellationToken.None);
 
@@ -386,7 +386,7 @@ public class RdapProtocolClientTests
             redirectStatusCode: (System.Net.HttpStatusCode)statusCode);
         var httpClient = new HttpClient(handler);
         var client = new RdapProtocolClient(httpClient, rdapRegistry, new WhoisOptions());
-        var request = new WhoisRequest("google.com");
+        var request = new DomainRequest("google.com");
 
         var response = await client.Query(request, CancellationToken.None);
 
@@ -404,7 +404,7 @@ public class RdapProtocolClientTests
         var handler = new NoLocationRedirectHandler();
         var httpClient = new HttpClient(handler);
         var client = new RdapProtocolClient(httpClient, rdapRegistry, new WhoisOptions());
-        var request = new WhoisRequest("example.com");
+        var request = new DomainRequest("example.com");
 
         var ex = await Assert.ThrowsAsync<WhoisException>(() => client.Query(request, CancellationToken.None));
         Assert.Contains("Location", ex.Message, StringComparison.OrdinalIgnoreCase);
@@ -420,7 +420,7 @@ public class RdapProtocolClientTests
         var handler = new HttpRequestExceptionHandler("Connection reset by peer");
         var httpClient = new HttpClient(handler);
         var client = new RdapProtocolClient(httpClient, rdapRegistry, new WhoisOptions());
-        var request = new WhoisRequest("example.com");
+        var request = new DomainRequest("example.com");
 
         var ex = await Assert.ThrowsAsync<WhoisException>(() => client.Query(request, CancellationToken.None));
 

@@ -45,27 +45,28 @@ internal sealed class RdapProtocolClient : IProtocolClient
 
     public LookupProtocol Protocol => LookupProtocol.Rdap;
 
-    public async Task<ProtocolResponse> Query(WhoisRequest request, CancellationToken ct)
+    public async Task<ProtocolResponse> Query(LookupRequest request, CancellationToken ct)
     {
+        var domainRequest = (DomainRequest)request;
         var sw = Stopwatch.StartNew();
 
-        ValidateQuery(request.Query);
+        ValidateQuery(domainRequest.Query);
 
-        var tld = HostName.TryParse(request.Query, out var hostName) ? hostName!.Tld : request.Query;
-        var baseUrl = request.RdapBaseUrl
+        var tld = HostName.TryParse(domainRequest.Query, out var hostName) ? hostName!.Tld : domainRequest.Query;
+        var baseUrl = domainRequest.RdapBaseUrl
             ?? await _rdapRegistry.GetBaseUrl(tld, ct).ConfigureAwait(false);
         if (baseUrl == null)
         {
             throw new WhoisException($"No RDAP endpoint available for TLD: {tld}");
         }
 
-        var encodedQuery = Uri.EscapeDataString(request.Query);
+        var encodedQuery = Uri.EscapeDataString(domainRequest.Query);
         var url = $"{baseUrl.TrimEnd('/')}/domain/{encodedQuery}";
         ValidateUrl(url);
 
         _logger.LogDebug("RDAP: querying {Url}", url);
 
-        var timeout = request.TimeoutSeconds ?? _options.TimeoutSeconds;
+        var timeout = domainRequest.TimeoutSeconds ?? _options.TimeoutSeconds;
         using var cts = CancellationTokenSource.CreateLinkedTokenSource(ct);
         cts.CancelAfter(TimeSpan.FromSeconds(timeout));
 

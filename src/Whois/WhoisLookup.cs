@@ -89,10 +89,10 @@ public class WhoisLookup : IWhoisLookup
 
     public Task<LookupResult<DomainInfo>> Lookup(string domain, CancellationToken ct = default)
     {
-        return Lookup(new WhoisRequest(domain), ct);
+        return Lookup(new DomainRequest(domain), ct);
     }
 
-    public async Task<LookupResult<DomainInfo>> Lookup(WhoisRequest request, CancellationToken ct = default)
+    public async Task<LookupResult<DomainInfo>> Lookup(DomainRequest request, CancellationToken ct = default)
     {
         if (string.IsNullOrEmpty(request.Query))
         {
@@ -116,7 +116,7 @@ public class WhoisLookup : IWhoisLookup
         _logger.LogDebug("Lookup {Query}: using {Protocol} protocol", query, client.Protocol);
 
         // Execute query
-        var effectiveRequest = new WhoisRequest(query)
+        var effectiveRequest = new DomainRequest(query)
         {
             Encoding = request.Encoding,
             TimeoutSeconds = request.TimeoutSeconds,
