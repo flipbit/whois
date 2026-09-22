@@ -45,28 +45,42 @@ internal sealed class WhoisProtocolClient : IProtocolClient
 
     public async Task<ProtocolResponse> Query(LookupRequest request, CancellationToken ct)
     {
-        var domainRequest = (DomainRequest)request;
         var sw = Stopwatch.StartNew();
-        var encoding = domainRequest.Encoding ?? _options.Encoding;
-        var timeout = domainRequest.TimeoutSeconds ?? _options.TimeoutSeconds;
-        var followReferrer = domainRequest.FollowReferrer ?? _options.FollowReferrer;
+        var encoding = request.Encoding ?? _options.Encoding;
+        var timeout = request.TimeoutSeconds ?? _options.TimeoutSeconds;
+        var followReferrer = request.FollowReferrer ?? _options.FollowReferrer;
 
         // Determine starting server
         string? whoisServer;
-        if (domainRequest.WhoisServer != null)
+        if (request.WhoisServer != null)
         {
-            whoisServer = domainRequest.WhoisServer.Value;
+            whoisServer = request.WhoisServer.Value;
+        }
+        else if (request is IpRequest ipReq)
+        {
+            whoisServer = await _ianaLookup.GetWhoisServer(ipReq.Address, ct).ConfigureAwait(false);
+            if (whoisServer == null)
+                throw new WhoisException($"No WHOIS server found for IP: {ipReq.Address.ToString()}");
         }
         else
         {
-            var tld = HostName.TryParse(domainRequest.Query, out var hostName) ? hostName!.Tld : domainRequest.Query;
+            var domainReq = (DomainRequest)request;
+            var tld = HostName.TryParse(domainReq.Query, out var hostName) ? hostName!.Tld : domainReq.Query;
             whoisServer = await _ianaLookup.GetWhoisServer(tld, ct).ConfigureAwait(false);
             if (whoisServer == null)
-            {
                 throw new WhoisException($"No WHOIS server found for TLD: {tld}");
-            }
         }
 
+        if (request is IpRequest ipRequest)
+        {
+            return await QueryIp(ipRequest, whoisServer, encoding, timeout, sw, ct).ConfigureAwait(false);
+        }
+
+        return await QueryDomain((DomainRequest)request, whoisServer, encoding, timeout, followReferrer, sw, ct).ConfigureAwait(false);
+    }
+
+    private async Task<ProtocolResponse> QueryDomain(DomainRequest request, string? whoisServer, System.Text.Encoding encoding, int timeout, bool followReferrer, Stopwatch sw, CancellationToken ct)
+    {
         var referralChain = new List<string>();
         var visitedServers = new HashSet<string>(StringComparer.OrdinalIgnoreCase);
         WhoisRecord? bestRecord = null;
@@ -85,16 +99,16 @@ internal sealed class WhoisProtocolClient : IProtocolClient
             // Depth limit
             if (visitedServers.Count > _options.MaxWhoisReferralDepth)
             {
-                _logger.LogWarning("WHOIS: referral depth limit ({MaxDepth}) reached for {Query}", _options.MaxWhoisReferralDepth, domainRequest.Query);
+                _logger.LogWarning("WHOIS: referral depth limit ({MaxDepth}) reached for {Query}", _options.MaxWhoisReferralDepth, request.Query);
                 break;
             }
 
             // Build query (Japanese domains return English results with /e suffix)
-            var query = domainRequest.Query;
+            var query = request.Query;
             if (query.EndsWith(JapanTldSuffix, StringComparison.Ordinal)) query += JapanEnglishQuerySuffix;
 
             // Download
-            var port = domainRequest.Port ?? 43;
+            var port = request.Port ?? 43;
             var content = await _tcpReader.Read(
                 whoisServer, port, query, encoding, timeout, ct).ConfigureAwait(false);
 
@@ -127,7 +141,7 @@ internal sealed class WhoisProtocolClient : IProtocolClient
 
         if (bestRecord == null)
         {
-            throw new WhoisException($"No WHOIS response received for {domainRequest.Query}");
+            throw new WhoisException($"No WHOIS response received for {request.Query}");
         }
 
         sw.Stop();
@@ -136,8 +150,56 @@ internal sealed class WhoisProtocolClient : IProtocolClient
         {
             RawContent = bestContent!,
             Protocol = LookupProtocol.Whois,
-            Response = WhoisRecordMapper.ToDomainInfo(bestRecord),
-            Diagnostics = WhoisRecordMapper.ToDiagnostics(
+            Response = WhoisRecordMapper.Map(bestRecord),
+            Diagnostics = WhoisRecordMapper.MapDiagnostics(
+                bestRecord, bestServer!, sw.Elapsed, referralChain.AsReadOnly()),
+        };
+    }
+
+    private async Task<ProtocolResponse> QueryIp(IpRequest request, string? whoisServer, System.Text.Encoding encoding, int timeout, Stopwatch sw, CancellationToken ct)
+    {
+        var referralChain = new List<string>();
+        var visitedServers = new HashSet<string>(StringComparer.OrdinalIgnoreCase);
+        IpRecord? bestRecord = null;
+        string? bestServer = null;
+        string? bestContent = null;
+        var queryString = request.Address.ToString();
+
+        if (whoisServer != null)
+        {
+            ct.ThrowIfCancellationRequested();
+
+            visitedServers.Add(whoisServer);
+            referralChain.Add(whoisServer);
+
+            // Download
+            var port = request.Port ?? 43;
+            var content = await _tcpReader.Read(
+                whoisServer, port, queryString, encoding, timeout, ct).ConfigureAwait(false);
+
+            _logger.LogDebug("WHOIS: downloaded {ByteCount} bytes from {Server}", content.Length, whoisServer);
+
+            // Parse
+            var record = _parser.Parse<IpRecord>(whoisServer, content);
+
+            bestRecord = record;
+            bestServer = whoisServer;
+            bestContent = content;
+        }
+
+        if (bestRecord == null)
+        {
+            throw new WhoisException($"No WHOIS response received for {queryString}");
+        }
+
+        sw.Stop();
+
+        return new ProtocolResponse
+        {
+            RawContent = bestContent!,
+            Protocol = LookupProtocol.Whois,
+            Response = WhoisRecordMapper.Map(bestRecord),
+            Diagnostics = WhoisRecordMapper.MapDiagnostics(
                 bestRecord, bestServer!, sw.Elapsed, referralChain.AsReadOnly()),
         };
     }

@@ -6,7 +6,7 @@ namespace Whois;
 public class WhoisRecordMapperTests
 {
     [Fact]
-    public void ToDomainInfo_MapsAllFields()
+    public void Map_MapsAllFields()
     {
         var record = new WhoisRecord
         {
@@ -37,7 +37,7 @@ public class WhoisRecordMapperTests
         record.Registrant.Address.Add("123 Main St");
         record.Registrant.Address.Add("Springfield, IL 62701");
 
-        var info = WhoisRecordMapper.ToDomainInfo(record);
+        var info = WhoisRecordMapper.Map(record);
 
         Assert.Equal("example.com", info.DomainName!.Value);
         Assert.Equal("D123", info.RegistryDomainId);
@@ -63,7 +63,7 @@ public class WhoisRecordMapperTests
     }
 
     [Fact]
-    public void ToDomainInfo_NullContacts_MapsToNull()
+    public void Map_NullContacts_MapsToNull()
     {
         var record = new WhoisRecord
         {
@@ -71,7 +71,7 @@ public class WhoisRecordMapperTests
             Status = RegistrationStatus.NotFound,
         };
 
-        var info = WhoisRecordMapper.ToDomainInfo(record);
+        var info = WhoisRecordMapper.Map(record);
 
         Assert.Null(info.Registrant);
         Assert.Null(info.AdminContact);
@@ -82,20 +82,20 @@ public class WhoisRecordMapperTests
     }
 
     [Fact]
-    public void ToDomainInfo_EmptyAddress_MapsToNull()
+    public void Map_EmptyAddress_MapsToNull()
     {
         var record = new WhoisRecord
         {
             Registrant = new WhoisContact { Name = "John" },
         };
 
-        var info = WhoisRecordMapper.ToDomainInfo(record);
+        var info = WhoisRecordMapper.Map(record);
 
         Assert.Null(info.Registrant!.Address);
     }
 
     [Fact]
-    public void ToDiagnostics_MapsAllFields()
+    public void MapDiagnostics_MapsAllFields()
     {
         var record = new WhoisRecord
         {
@@ -106,7 +106,7 @@ public class WhoisRecordMapperTests
         var duration = TimeSpan.FromMilliseconds(342);
         var chain = new List<string> { "whois.verisign.com", "whois.test.com" }.AsReadOnly();
 
-        var diag = WhoisRecordMapper.ToDiagnostics(record, "whois.test.com", duration, chain);
+        var diag = WhoisRecordMapper.MapDiagnostics(record, "whois.test.com", duration, chain);
 
         Assert.Equal(15, diag.FieldsParsed);
         Assert.Equal(2, diag.ParsingErrors);

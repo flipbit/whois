@@ -51,13 +51,17 @@ public class WhoisParser
     /// </summary>
     internal WhoisRecord Parse(string whoisServer, string content)
     {
+        return Parse<WhoisRecord>(whoisServer, content);
+    }
+
+    /// <summary>
+    /// Parses the WHOIS server response, assigning fields to type T.
+    /// </summary>
+    internal T Parse<T>(string whoisServer, string content) where T : class, new()
+    {
         if (string.IsNullOrEmpty(content))
         {
-            return new WhoisRecord
-            {
-                Content = content,
-                Status = RegistrationStatus.Unknown,
-            };
+            return new T();
         }
 
         LoadServerTemplates(whoisServer);
@@ -77,45 +81,62 @@ public class WhoisParser
 
         if (match != null)
         {
-            WhoisRecord value;
+            T value;
             var assignmentErrors = 0;
             try
             {
-                value = match.Assign<WhoisRecord>();
+                value = match.Assign<T>();
             }
             catch (AssignmentFailedException ex)
             {
-                value = (WhoisRecord)ex.PartialResult!;
+                value = (T)ex.PartialResult!;
                 assignmentErrors = ex.Errors.Count;
             }
 
-            // Perform extended processing on parsed data
-            // via FixUps.
-            foreach (var fixup in FixUps)
-            {
-                if (fixup.CanFixup(match))
-                {
-                    fixup.Fixup(match, value);
-                }
-            }
-
-            value.Content = content;
-            value.FieldsParsed = match.Tokens.Matches.Count;
-            value.ParsingErrors = match.Exceptions.Count + assignmentErrors;
-            value.TemplateName = match.Template.Name;
-
-            var status = WhoisStatusParser.Parse(whoisServer, value.DomainStatus.FirstOrDefault(), value.Status);
-
-            value.Status = status;
+            SetDiagnostics(value, whoisServer, content, match, assignmentErrors);
 
             return value;
         }
 
-        return new WhoisRecord
+        return new T();
+    }
+
+    private void SetDiagnostics<T>(T value, string whoisServer, string content, TokenizeResult match, int assignmentErrors)
+    {
+        var fieldsParsed = match.Tokens.Matches.Count;
+        var parsingErrors = match.Exceptions.Count + assignmentErrors;
+        var templateName = match.Template.Name;
+
+        if (value is WhoisRecord whois)
         {
-            Content = content,
-            Status = RegistrationStatus.Unknown,
-        };
+            // Perform extended processing on parsed data via FixUps.
+            foreach (var fixup in FixUps)
+            {
+                if (fixup.CanFixup(match))
+                {
+                    fixup.Fixup(match, whois);
+                }
+            }
+
+            whois.Content = content;
+            whois.FieldsParsed = fieldsParsed;
+            whois.ParsingErrors = parsingErrors;
+            whois.TemplateName = templateName;
+
+            var status = WhoisStatusParser.Parse(
+                whoisServer,
+                whois.DomainStatus.FirstOrDefault(),
+                whois.Status);
+
+            whois.Status = status;
+        }
+        else if (value is IpRecord ip)
+        {
+            ip.Content = content;
+            ip.FieldsParsed = fieldsParsed;
+            ip.ParsingErrors = parsingErrors;
+            ip.TemplateName = templateName;
+        }
     }
 
     public void AddTemplate(string content, string name)

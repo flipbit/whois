@@ -5,7 +5,7 @@ namespace Whois.Protocols;
 /// </summary>
 internal static class WhoisRecordMapper
 {
-    public static DomainInfo ToDomainInfo(WhoisRecord record)
+    public static DomainInfo Map(WhoisRecord record)
     {
         return new DomainInfo
         {
@@ -29,7 +29,36 @@ internal static class WhoisRecordMapper
         };
     }
 
-    public static LookupDiagnostics ToDiagnostics(WhoisRecord record, string serverUrl, TimeSpan duration, IReadOnlyList<string> referralChain)
+    public static LookupDiagnostics MapDiagnostics(WhoisRecord record, string serverUrl, TimeSpan duration, IReadOnlyList<string> referralChain)
+    {
+        return new LookupDiagnostics
+        {
+            FieldsParsed = record.FieldsParsed,
+            ParsingErrors = record.ParsingErrors,
+            TemplateName = record.TemplateName,
+            ServerUrl = serverUrl,
+            Duration = duration,
+            ReferralChain = referralChain,
+        };
+    }
+
+    public static IpInfo Map(IpRecord record)
+    {
+        return new IpInfo
+        {
+            Network = record.Network,
+            Cidr = record.Cidr,
+            NetName = record.NetName,
+            Organization = record.Organization,
+            Country = record.Country,
+            Status = record.Status,
+            Registered = record.Registered,
+            Updated = record.Updated,
+            Remarks = record.Remarks,
+        };
+    }
+
+    public static LookupDiagnostics MapDiagnostics(IpRecord record, string serverUrl, TimeSpan duration, IReadOnlyList<string> referralChain)
     {
         return new LookupDiagnostics
         {

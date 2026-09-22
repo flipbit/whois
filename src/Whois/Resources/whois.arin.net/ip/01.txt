@@ -1,0 +1,29 @@
+---
+#
+# ARIN IP Parsing Template
+#
+name: whois.arin.net/ip/01
+
+# Use this template for queries to whois.arin.net:
+tag: whois.arin.net
+
+# Allow lines to appear out of order
+outOfOrder: true
+
+# End tokens on new lines
+terminateOnNewLine: true
+
+# Use token preamble on current line only
+trimPreambleBeforeNewLine: true
+
+# Set query response type:
+set: Status = Found
+---
+
+NetRange:{ Network : Trim }
+CIDR:{ Cidr : Trim }
+NetName:{ NetName : Trim }
+Organization:{ Organization : Trim }
+Country:{ Country : Trim }
+RegDate:{ Registered : Trim, ToDateTimeUtc("yyyy-MM-dd") }
+Updated:{ Updated : Trim, ToDateTimeUtc("yyyy-MM-dd") }
