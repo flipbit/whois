@@ -271,8 +271,9 @@ public class RdapProtocolClientTests
         var response = await client.Query(request, CancellationToken.None);
 
         Assert.Equal(LookupProtocol.Rdap, response.Protocol);
-        Assert.Equal(RegistrationStatus.Found, response.Response.Status);
-        Assert.NotNull(response.Response.Registrar);
+        var domain = (DomainInfo)response.Response;
+        Assert.Equal(RegistrationStatus.Found, domain.Status);
+        Assert.NotNull(domain.Registrar);
         Assert.Equal(200, response.Diagnostics.HttpStatusCode);
         Assert.NotEmpty(response.RawContent);
     }

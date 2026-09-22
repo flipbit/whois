@@ -287,7 +287,14 @@ internal sealed class RdapProtocolClient : IProtocolClient
         return (bytes[0] & 0xfe) == 0xfc;
     }
 
-    private static int CountFields(DomainInfo info)
+    private static int CountFields(IRegistrationInfo info)
+    {
+        if (info is DomainInfo domain) return CountDomainFields(domain);
+        if (info is IpInfo ip) return CountIpFields(ip);
+        return 0;
+    }
+
+    private static int CountDomainFields(DomainInfo info)
     {
         var count = 0;
         if (info.DomainName != null) count++;
@@ -301,6 +308,23 @@ internal sealed class RdapProtocolClient : IProtocolClient
         if (info.AdminContact != null) count++;
         count += info.NameServers.Count;
         count += info.DomainStatus.Count;
+        return count;
+    }
+
+    private static int CountIpFields(IpInfo info)
+    {
+        var count = 0;
+        if (info.Network != null) count++;
+        if (info.Cidr != null) count++;
+        if (info.NetName != null) count++;
+        if (info.Organization != null) count++;
+        if (info.Country != null) count++;
+        if (info.Rir != null) count++;
+        if (info.Registered.HasValue) count++;
+        if (info.Updated.HasValue) count++;
+        if (info.AbuseContact != null) count++;
+        if (info.AdminContact != null) count++;
+        if (info.TechnicalContact != null) count++;
         return count;
     }
 }

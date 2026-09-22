@@ -7,6 +7,6 @@ internal sealed class ProtocolResponse
 {
     public required string RawContent { get; init; }
     public required LookupProtocol Protocol { get; init; }
-    public required DomainInfo Response { get; init; }
+    public required IRegistrationInfo Response { get; init; }
     public required LookupDiagnostics Diagnostics { get; init; }
 }

@@ -137,7 +137,7 @@ public class WhoisLookup : IWhoisLookup
         }
 
         return new LookupResult<DomainInfo>(
-            response.Response,
+            (DomainInfo)response.Response,
             response.Protocol,
             response.RawContent,
             response.Diagnostics);

@@ -36,8 +36,9 @@ public class WhoisProtocolClientTests
         var response = await client.Query(request, CancellationToken.None);
 
         Assert.Equal(LookupProtocol.Whois, response.Protocol);
-        Assert.Equal("google.com", response.Response.DomainName!.ToString());
-        Assert.Equal(RegistrationStatus.Found, response.Response.Status);
+        var domain = (DomainInfo)response.Response;
+        Assert.Equal("google.com", domain.DomainName!.ToString());
+        Assert.Equal(RegistrationStatus.Found, domain.Status);
         Assert.NotEmpty(response.RawContent);
     }
 
@@ -68,7 +69,8 @@ public class WhoisProtocolClientTests
 
         var response = await client.Query(request, CancellationToken.None);
 
-        Assert.Equal("google.com", response.Response.DomainName!.ToString());
+        var domain = (DomainInfo)response.Response;
+        Assert.Equal("google.com", domain.DomainName!.ToString());
         Assert.Equal(2, response.Diagnostics.ReferralChain.Count);
     }
 
