@@ -320,7 +320,9 @@ public class RdapRegistryCache : IRdapRegistryCache
                 var cidr = prefix.GetString();
                 if (cidr == null) continue;
 
-                var slashIndex = cidr.IndexOf('/', StringComparison.Ordinal);
+#pragma warning disable MA0089 // string.IndexOf(char) overload not available with StringComparison on netstandard2.0
+                var slashIndex = cidr.IndexOf("/", StringComparison.Ordinal);
+#pragma warning restore MA0089
                 if (slashIndex < 0) continue;
 
                 if (!IPAddress.TryParse(cidr[..slashIndex], out var prefixAddr)) continue;
