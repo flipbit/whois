@@ -1,0 +1,3342 @@
+{
+  "version": "2026-09-22T23:12:52.228754+00:00",
+  "results": {
+    "rdap.verisign.com": {
+      "com": {
+        "found": {
+          "cdmon.com": {
+            "timestamp": "2026-09-22T23:12:52.235612+00:00",
+            "matchedTemplate": null,
+            "extractedFields": [
+              "DomainName",
+              "RegistryDomainId",
+              "Registrar",
+              "Registered",
+              "Updated",
+              "Expiration",
+              "NameServers",
+              "DomainStatus"
+            ],
+            "error": null,
+            "actualStatus": null
+          }
+        }
+      }
+    },
+    "rdap.nic.cx": {
+      "cx": {
+        "redemption": {
+          "communication.cx": {
+            "timestamp": "2026-09-22T23:12:52.235677+00:00",
+            "matchedTemplate": null,
+            "extractedFields": [
+              "DomainName",
+              "RegistryDomainId",
+              "Registrar",
+              "Registered",
+              "Updated",
+              "Expiration",
+              "NameServers",
+              "DomainStatus"
+            ],
+            "error": null,
+            "actualStatus": null
+          }
+        }
+      }
+    },
+    "rdap.nic.tel": {
+      "tel": {
+        "found": {
+          "google.tel": {
+            "timestamp": "2026-09-22T23:12:52.235625+00:00",
+            "matchedTemplate": null,
+            "extractedFields": [
+              "DomainName",
+              "RegistryDomainId",
+              "Registrar",
+              "Registered",
+              "Updated",
+              "Expiration",
+              "NameServers",
+              "DomainStatus",
+              "Registrant",
+              "TechnicalContact",
+              "AdminContact",
+              "BillingContact"
+            ],
+            "error": null,
+            "actualStatus": null
+          }
+        }
+      }
+    },
+    "rdap.hostmaster.ua": {
+      "ua": {
+        "found": {
+          "fcbank.com.ua": {
+            "timestamp": "2026-09-22T23:12:52.235739+00:00",
+            "matchedTemplate": null,
+            "extractedFields": [
+              "DomainName",
+              "RegistryDomainId",
+              "Registrar",
+              "Registered",
+              "Updated",
+              "Expiration",
+              "NameServers",
+              "DomainStatus",
+              "Registrant"
+            ],
+            "error": null,
+            "actualStatus": null
+          }
+        }
+      }
+    },
+    "rdap.registry.gy": {
+      "gy": {
+        "found": {
+          "google.gy": {
+            "timestamp": "2026-09-22T23:12:52.235735+00:00",
+            "matchedTemplate": null,
+            "extractedFields": [
+              "DomainName",
+              "RegistryDomainId",
+              "Registrar",
+              "Registered",
+              "Updated",
+              "Expiration",
+              "NameServers",
+              "DomainStatus",
+              "Registrant",
+              "TechnicalContact",
+              "AdminContact",
+              "BillingContact"
+            ],
+            "error": null,
+            "actualStatus": null
+          }
+        }
+      }
+    },
+    "rdap.nic.re": {
+      "re": {
+        "found": {
+          "nic.re": {
+            "timestamp": "2026-09-22T23:12:52.235566+00:00",
+            "matchedTemplate": null,
+            "extractedFields": [
+              "DomainName",
+              "RegistryDomainId",
+              "Registrar",
+              "Registered",
+              "Updated",
+              "Expiration",
+              "NameServers",
+              "DomainStatus",
+              "Registrant",
+              "TechnicalContact",
+              "AdminContact"
+            ],
+            "error": null,
+            "actualStatus": null
+          }
+        }
+      }
+    },
+    "rdap.centralnic.com": {
+      "fm": {
+        "found": {
+          "google.fm": {
+            "timestamp": "2026-09-22T23:12:52.235672+00:00",
+            "matchedTemplate": null,
+            "extractedFields": [
+              "DomainName",
+              "RegistryDomainId",
+              "Registrar",
+              "Registered",
+              "Updated",
+              "Expiration",
+              "NameServers",
+              "DomainStatus",
+              "Registrant",
+              "TechnicalContact"
+            ],
+            "error": null,
+            "actualStatus": null
+          }
+        }
+      }
+    },
+    "rdap.nic.wf": {
+      "wf": {
+        "found": {
+          "nic.wf": {
+            "timestamp": "2026-09-22T23:12:52.235607+00:00",
+            "matchedTemplate": null,
+            "extractedFields": [
+              "DomainName",
+              "RegistryDomainId",
+              "Registrar",
+              "Registered",
+              "Updated",
+              "Expiration",
+              "NameServers",
+              "DomainStatus",
+              "Registrant",
+              "TechnicalContact",
+              "AdminContact"
+            ],
+            "error": null,
+            "actualStatus": null
+          }
+        }
+      }
+    },
+    "tld-rdap.verisign.com": {
+      "name": {
+        "found": {
+          "carletti.name": {
+            "timestamp": "2026-09-22T23:12:52.235725+00:00",
+            "matchedTemplate": null,
+            "extractedFields": [
+              "DomainName",
+              "RegistryDomainId",
+              "Registrar",
+              "Registered",
+              "Updated",
+              "Expiration",
+              "NameServers",
+              "DomainStatus"
+            ],
+            "error": null,
+            "actualStatus": null
+          }
+        }
+      }
+    },
+    "rdap.nic.hn": {
+      "hn": {
+        "found": {
+          "google.hn": {
+            "timestamp": "2026-09-22T23:12:52.235719+00:00",
+            "matchedTemplate": null,
+            "extractedFields": [
+              "DomainName",
+              "RegistryDomainId",
+              "Registrar",
+              "Registered",
+              "Updated",
+              "Expiration",
+              "NameServers",
+              "DomainStatus",
+              "Registrant",
+              "TechnicalContact",
+              "AdminContact",
+              "BillingContact"
+            ],
+            "error": null,
+            "actualStatus": null
+          }
+        }
+      }
+    },
+    "rdap.fi": {
+      "fi": {
+        "found": {
+          "google.fi": {
+            "timestamp": "2026-09-22T23:12:52.235732+00:00",
+            "matchedTemplate": null,
+            "extractedFields": [
+              "DomainName",
+              "Registered",
+              "Updated",
+              "Expiration",
+              "NameServers",
+              "DomainStatus",
+              "Registrant"
+            ],
+            "error": null,
+            "actualStatus": null
+          }
+        }
+      }
+    },
+    "rdap.nic.as": {
+      "as": {
+        "found": {
+          "google.as": {
+            "timestamp": "2026-09-22T23:12:52.235721+00:00",
+            "matchedTemplate": null,
+            "extractedFields": [
+              "DomainName",
+              "RegistryDomainId",
+              "Registrar",
+              "Registered",
+              "Expiration",
+              "NameServers",
+              "DomainStatus"
+            ],
+            "error": null,
+            "actualStatus": null
+          }
+        }
+      }
+    },
+    "rdap.nic.gs": {
+      "gs": {
+        "found": {
+          "google.gs": {
+            "timestamp": "2026-09-22T23:12:52.235752+00:00",
+            "matchedTemplate": null,
+            "extractedFields": [
+              "DomainName",
+              "RegistryDomainId",
+              "Registrar",
+              "Registered",
+              "Updated",
+              "Expiration",
+              "NameServers",
+              "DomainStatus",
+              "Registrant",
+              "TechnicalContact",
+              "AdminContact",
+              "BillingContact"
+            ],
+            "error": null,
+            "actualStatus": null
+          }
+        }
+      }
+    },
+    "rdap.nominet.uk": {
+      "wed": {
+        "found": {
+          "nic.wed": {
+            "timestamp": "2026-09-22T23:12:52.235729+00:00",
+            "matchedTemplate": null,
+            "extractedFields": [
+              "DomainName",
+              "RegistryDomainId",
+              "Registrar",
+              "Registered",
+              "Expiration",
+              "NameServers",
+              "DomainStatus",
+              "Registrant",
+              "TechnicalContact",
+              "AdminContact"
+            ],
+            "error": null,
+            "actualStatus": null
+          }
+        }
+      }
+    },
+    "rdap.nic.nf": {
+      "nf": {
+        "found": {
+          "google.nf": {
+            "timestamp": "2026-09-22T23:12:52.235747+00:00",
+            "matchedTemplate": null,
+            "extractedFields": [
+              "DomainName",
+              "RegistryDomainId",
+              "Registrar",
+              "Registered",
+              "Updated",
+              "Expiration",
+              "NameServers",
+              "DomainStatus",
+              "Registrant",
+              "TechnicalContact",
+              "AdminContact",
+              "BillingContact"
+            ],
+            "error": null,
+            "actualStatus": null
+          }
+        }
+      }
+    },
+    "rdap.nic.yt": {
+      "yt": {
+        "found": {
+          "1c2.fr": {
+            "timestamp": "2026-09-22T23:12:52.235679+00:00",
+            "matchedTemplate": null,
+            "extractedFields": [],
+            "error": null,
+            "actualStatus": "not-found"
+          }
+        }
+      }
+    },
+    "rdap.nic.cat": {
+      "cat": {
+        "found": {
+          "abril.cat": {
+            "timestamp": "2026-09-22T23:12:52.23568+00:00",
+            "matchedTemplate": null,
+            "extractedFields": [
+              "DomainName",
+              "RegistryDomainId",
+              "Registrar",
+              "Registered",
+              "Updated",
+              "Expiration",
+              "NameServers",
+              "DomainStatus",
+              "Registrant"
+            ],
+            "error": null,
+            "actualStatus": null
+          }
+        }
+      }
+    },
+    "rdap.publicinterestregistry.org": {
+      "org": {
+        "found": {
+          "google.org": {
+            "timestamp": "2026-09-22T23:12:52.235674+00:00",
+            "matchedTemplate": null,
+            "extractedFields": [
+              "DomainName",
+              "Registrar",
+              "Registered",
+              "Updated",
+              "Expiration",
+              "NameServers",
+              "DomainStatus"
+            ],
+            "error": null,
+            "actualStatus": null
+          }
+        }
+      }
+    },
+    "rdap.register.si": {
+      "si": {
+        "found": {
+          "google.si": {
+            "timestamp": "2026-09-22T23:12:52.235751+00:00",
+            "matchedTemplate": null,
+            "extractedFields": [
+              "DomainName",
+              "RegistryDomainId",
+              "Registrar",
+              "Registered",
+              "Updated",
+              "Expiration",
+              "NameServers",
+              "DomainStatus"
+            ],
+            "error": null,
+            "actualStatus": null
+          }
+        }
+      }
+    },
+    "rdap.identitydigital.services": {
+      "post": {
+        "not-found": {
+          "posteitaliane.post": {
+            "timestamp": "2026-09-22T23:12:52.235722+00:00",
+            "matchedTemplate": null,
+            "extractedFields": [],
+            "error": null,
+            "actualStatus": "not-found"
+          }
+        }
+      }
+    },
+    "rdap.nic.museum": {
+      "museum": {
+        "found": {
+          "musedoma.museum": {
+            "timestamp": "2026-09-22T23:12:52.235736+00:00",
+            "matchedTemplate": null,
+            "extractedFields": [
+              "DomainName",
+              "RegistryDomainId",
+              "Registrar",
+              "Registered",
+              "Updated",
+              "Expiration",
+              "NameServers",
+              "DomainStatus",
+              "Registrant",
+              "TechnicalContact",
+              "AdminContact",
+              "BillingContact"
+            ],
+            "error": null,
+            "actualStatus": null
+          }
+        }
+      }
+    },
+    "rdap.gmoregistry.net": {
+      "bridgestone": {
+        "not-found": {
+          "google.bridgestone": {
+            "timestamp": "2026-09-22T23:12:52.235775+00:00",
+            "matchedTemplate": null,
+            "extractedFields": [],
+            "error": null,
+            "actualStatus": "not-found"
+          }
+        }
+      }
+    },
+    "pubapi.registry.google": {
+      "ads": {
+        "not-found": {
+          "google.ads": {
+            "timestamp": "2026-09-22T23:12:52.235763+00:00",
+            "matchedTemplate": null,
+            "extractedFields": [],
+            "error": null,
+            "actualStatus": "not-found"
+          }
+        }
+      }
+    },
+    "rdap.nic.cz": {
+      "cz": {
+        "found": {
+          "google.cz": {
+            "timestamp": "2026-09-22T23:12:52.235738+00:00",
+            "matchedTemplate": null,
+            "extractedFields": [
+              "DomainName",
+              "RegistryDomainId",
+              "Registrar",
+              "Registered",
+              "Updated",
+              "Expiration",
+              "NameServers",
+              "DomainStatus",
+              "Registrant",
+              "AdminContact"
+            ],
+            "error": null,
+            "actualStatus": null
+          }
+        }
+      }
+    },
+    "rdap.nic.pm": {
+      "pm": {
+        "found": {
+          "nic.pm": {
+            "timestamp": "2026-09-22T23:12:52.235761+00:00",
+            "matchedTemplate": null,
+            "extractedFields": [
+              "DomainName",
+              "RegistryDomainId",
+              "Registrar",
+              "Registered",
+              "Updated",
+              "Expiration",
+              "NameServers",
+              "DomainStatus",
+              "Registrant",
+              "TechnicalContact",
+              "AdminContact"
+            ],
+            "error": null,
+            "actualStatus": null
+          }
+        }
+      }
+    },
+    "rdap.centralnicregistry.com": {
+      "jnj": {
+        "not-found": {
+          "google.jnj": {
+            "timestamp": "2026-09-22T23:12:52.23577+00:00",
+            "matchedTemplate": null,
+            "extractedFields": [],
+            "error": null,
+            "actualStatus": "not-found"
+          }
+        }
+      }
+    },
+    "rdap.nic.ms": {
+      "ms": {
+        "found": {
+          "google.ms": {
+            "timestamp": "2026-09-22T23:12:52.235748+00:00",
+            "matchedTemplate": null,
+            "extractedFields": [
+              "DomainName",
+              "RegistryDomainId",
+              "Registrar",
+              "Registered",
+              "Updated",
+              "Expiration",
+              "NameServers",
+              "DomainStatus"
+            ],
+            "error": null,
+            "actualStatus": null
+          }
+        }
+      }
+    },
+    "rdap.cctld.uz": {
+      "uz": {
+        "found": {
+          "google.uz": {
+            "timestamp": "2026-09-22T23:12:52.235683+00:00",
+            "matchedTemplate": null,
+            "extractedFields": [
+              "DomainName",
+              "RegistryDomainId",
+              "Registrar",
+              "Registered",
+              "Updated",
+              "Expiration",
+              "NameServers",
+              "DomainStatus",
+              "Registrant",
+              "TechnicalContact",
+              "AdminContact",
+              "BillingContact"
+            ],
+            "error": null,
+            "actualStatus": null
+          }
+        }
+      }
+    },
+    "rdap.nic.gov": {
+      "gov": {
+        "found": {
+          "gsa.gov": {
+            "timestamp": "2026-09-22T23:12:52.235753+00:00",
+            "matchedTemplate": null,
+            "extractedFields": [
+              "DomainName",
+              "RegistryDomainId",
+              "Registrar",
+              "Registered",
+              "Updated",
+              "Expiration",
+              "NameServers",
+              "DomainStatus",
+              "Registrant",
+              "TechnicalContact",
+              "AdminContact"
+            ],
+            "error": null,
+            "actualStatus": null
+          }
+        }
+      }
+    },
+    "rdap.lbdr.org.lb": {
+      "lb": {
+        "not-found": {
+          "google.lb": {
+            "timestamp": "2026-09-22T23:12:52.235781+00:00",
+            "matchedTemplate": null,
+            "extractedFields": [],
+            "error": null,
+            "actualStatus": "not-found"
+          }
+        }
+      }
+    },
+    "rdap.registry.coop": {
+      "coop": {
+        "found": {
+          "calgary.coop": {
+            "timestamp": "2026-09-22T23:12:52.235624+00:00",
+            "matchedTemplate": null,
+            "extractedFields": [
+              "DomainName",
+              "RegistryDomainId",
+              "Registrar",
+              "Registered",
+              "Updated",
+              "Expiration",
+              "NameServers",
+              "DomainStatus",
+              "Registrant"
+            ],
+            "error": null,
+            "actualStatus": null
+          }
+        }
+      }
+    },
+    "rdap.isnic.is": {
+      "is": {
+        "found": {
+          "google.is": {
+            "timestamp": "2026-09-22T23:12:52.235762+00:00",
+            "matchedTemplate": null,
+            "extractedFields": [
+              "DomainName",
+              "RegistryDomainId",
+              "Registered",
+              "Updated",
+              "NameServers",
+              "DomainStatus",
+              "Registrant",
+              "TechnicalContact",
+              "AdminContact",
+              "BillingContact"
+            ],
+            "error": null,
+            "actualStatus": null
+          }
+        }
+      }
+    },
+    "rdap.ca.fury.ca": {
+      "ca": {
+        "found": {
+          "glu.ca": {
+            "timestamp": "2026-09-22T23:12:52.235734+00:00",
+            "matchedTemplate": null,
+            "extractedFields": [
+              "DomainName",
+              "RegistryDomainId",
+              "Registrar",
+              "Registered",
+              "Updated",
+              "Expiration",
+              "NameServers",
+              "DomainStatus",
+              "Registrant",
+              "TechnicalContact"
+            ],
+            "error": null,
+            "actualStatus": null
+          }
+        }
+      }
+    },
+    "rdap.flexireg.net": {
+      "moscow": {
+        "found": {
+          "google.moscow": {
+            "timestamp": "2026-09-22T23:12:52.235774+00:00",
+            "matchedTemplate": null,
+            "extractedFields": [
+              "DomainName",
+              "RegistryDomainId",
+              "Registrar",
+              "Registered",
+              "Updated",
+              "Expiration",
+              "NameServers",
+              "DomainStatus",
+              "Registrant",
+              "TechnicalContact",
+              "AdminContact",
+              "BillingContact"
+            ],
+            "error": null,
+            "actualStatus": null
+          }
+        }
+      }
+    },
+    "rdap.radix.host": {
+      "pw": {
+        "inactive": {
+          "google.pw": {
+            "timestamp": "2026-09-22T23:12:52.235724+00:00",
+            "matchedTemplate": null,
+            "extractedFields": [
+              "DomainName",
+              "RegistryDomainId",
+              "Registrar",
+              "Registered",
+              "Updated",
+              "Expiration",
+              "DomainStatus"
+            ],
+            "error": null,
+            "actualStatus": null
+          }
+        }
+      }
+    },
+    "rdap.nic.aco": {
+      "aco": {
+        "not-found": {
+          "google.aco": {
+            "timestamp": "2026-09-22T23:12:52.23579+00:00",
+            "matchedTemplate": null,
+            "extractedFields": [],
+            "error": null,
+            "actualStatus": "not-found"
+          }
+        }
+      }
+    },
+    "rdap.nic.net.ng": {
+      "ng": {
+        "found": {
+          "nic.net.ng": {
+            "timestamp": "2026-09-22T23:12:52.235682+00:00",
+            "matchedTemplate": null,
+            "extractedFields": [
+              "DomainName",
+              "RegistryDomainId",
+              "Registrar",
+              "Registered",
+              "Updated",
+              "Expiration",
+              "NameServers",
+              "DomainStatus",
+              "Registrant",
+              "AdminContact"
+            ],
+            "error": null,
+            "actualStatus": null
+          }
+        }
+      }
+    },
+    "rdap.nic.amsterdam": {
+      "amsterdam": {
+        "found": {
+          "google.amsterdam": {
+            "timestamp": "2026-09-22T23:12:52.235797+00:00",
+            "matchedTemplate": null,
+            "extractedFields": [
+              "DomainName",
+              "RegistryDomainId",
+              "Registrar",
+              "Registered",
+              "Updated",
+              "Expiration",
+              "NameServers",
+              "DomainStatus",
+              "Registrant",
+              "TechnicalContact",
+              "AdminContact"
+            ],
+            "error": null,
+            "actualStatus": null
+          }
+        }
+      }
+    },
+    "rdap.nic.aquarelle": {
+      "aquarelle": {
+        "not-found": {
+          "google.aquarelle": {
+            "timestamp": "2026-09-22T23:12:52.235802+00:00",
+            "matchedTemplate": null,
+            "extractedFields": [],
+            "error": null,
+            "actualStatus": "not-found"
+          }
+        }
+      }
+    },
+    "rdap.nic.apple": {
+      "apple": {
+        "not-found": {
+          "google.apple": {
+            "timestamp": "2026-09-22T23:12:52.2358+00:00",
+            "matchedTemplate": null,
+            "extractedFields": [],
+            "error": null,
+            "actualStatus": "not-found"
+          }
+        }
+      }
+    },
+    "rdap.nixiregistry.in": {
+      "in": {
+        "found": {
+          "google.in": {
+            "timestamp": "2026-09-22T23:12:52.235611+00:00",
+            "matchedTemplate": null,
+            "extractedFields": [
+              "DomainName",
+              "RegistryDomainId",
+              "Registrar",
+              "Registered",
+              "Updated",
+              "Expiration",
+              "NameServers",
+              "DomainStatus",
+              "Registrant",
+              "TechnicalContact",
+              "AdminContact",
+              "BillingContact"
+            ],
+            "error": null,
+            "actualStatus": null
+          }
+        }
+      }
+    },
+    "rdap.nic.bauhaus": {
+      "bauhaus": {
+        "not-found": {
+          "google.bauhaus": {
+            "timestamp": "2026-09-22T23:12:52.235808+00:00",
+            "matchedTemplate": null,
+            "extractedFields": [],
+            "error": null,
+            "actualStatus": "not-found"
+          }
+        }
+      }
+    },
+    "rdap.nic.alstom": {
+      "alstom": {
+        "not-found": {
+          "google.alstom": {
+            "timestamp": "2026-09-22T23:12:52.235796+00:00",
+            "matchedTemplate": null,
+            "extractedFields": [],
+            "error": null,
+            "actualStatus": "not-found"
+          }
+        }
+      }
+    },
+    "rdap.nic.alsace": {
+      "alsace": {
+        "found": {
+          "google.alsace": {
+            "timestamp": "2026-09-22T23:12:52.235795+00:00",
+            "matchedTemplate": null,
+            "extractedFields": [
+              "DomainName",
+              "RegistryDomainId",
+              "Registrar",
+              "Registered",
+              "Updated",
+              "Expiration",
+              "NameServers",
+              "DomainStatus",
+              "Registrant",
+              "TechnicalContact",
+              "AdminContact",
+              "BillingContact"
+            ],
+            "error": null,
+            "actualStatus": null
+          }
+        }
+      }
+    },
+    "rdap.nic.ad": {
+      "ad": {
+        "found": {
+          "google.ad": {
+            "timestamp": "2026-09-22T23:12:52.235791+00:00",
+            "matchedTemplate": null,
+            "extractedFields": [
+              "DomainName",
+              "RegistryDomainId",
+              "Registrar",
+              "Registered",
+              "Updated",
+              "Expiration",
+              "NameServers",
+              "DomainStatus",
+              "Registrant",
+              "TechnicalContact",
+              "AdminContact",
+              "BillingContact"
+            ],
+            "error": null,
+            "actualStatus": null
+          }
+        }
+      }
+    },
+    "rdap.kenic.or.ke": {
+      "ke": {
+        "found": {
+          "google.co.ke": {
+            "timestamp": "2026-09-22T23:12:52.235728+00:00",
+            "matchedTemplate": null,
+            "extractedFields": [
+              "DomainName",
+              "RegistryDomainId",
+              "Registrar",
+              "Registered",
+              "Updated",
+              "Expiration",
+              "NameServers",
+              "DomainStatus"
+            ],
+            "error": null,
+            "actualStatus": null
+          }
+        }
+      }
+    },
+    "rdap.nic.bcn": {
+      "bcn": {
+        "not-found": {
+          "google.bcn": {
+            "timestamp": "2026-09-22T23:12:52.23581+00:00",
+            "matchedTemplate": null,
+            "extractedFields": [],
+            "error": null,
+            "actualStatus": "not-found"
+          }
+        }
+      }
+    },
+    "rdap.crown.fury.ca": {
+      "crown": {
+        "not-found": {
+          "google.crown": {
+            "timestamp": "2026-09-22T23:12:52.235771+00:00",
+            "matchedTemplate": null,
+            "extractedFields": [],
+            "error": null,
+            "actualStatus": "not-found"
+          }
+        }
+      }
+    },
+    "rdap.blog.fury.ca": {
+      "blog": {
+        "found": {
+          "google.blog": {
+            "timestamp": "2026-09-22T23:12:52.235769+00:00",
+            "matchedTemplate": null,
+            "extractedFields": [
+              "DomainName",
+              "RegistryDomainId",
+              "Registrar",
+              "Registered",
+              "Updated",
+              "Expiration",
+              "NameServers",
+              "DomainStatus",
+              "Registrant",
+              "TechnicalContact"
+            ],
+            "error": null,
+            "actualStatus": null
+          }
+        }
+      }
+    },
+    "rdap.eco.fury.ca": {
+      "eco": {
+        "found": {
+          "google.eco": {
+            "timestamp": "2026-09-22T23:12:52.235773+00:00",
+            "matchedTemplate": null,
+            "extractedFields": [
+              "DomainName",
+              "RegistryDomainId",
+              "Registrar",
+              "Registered",
+              "Updated",
+              "Expiration",
+              "NameServers",
+              "DomainStatus",
+              "Registrant",
+              "TechnicalContact"
+            ],
+            "error": null,
+            "actualStatus": null
+          }
+        }
+      }
+    },
+    "rdap.nic.berlin": {
+      "berlin": {
+        "found": {
+          "google.berlin": {
+            "timestamp": "2026-09-22T23:12:52.235814+00:00",
+            "matchedTemplate": null,
+            "extractedFields": [
+              "DomainName",
+              "RegistryDomainId",
+              "Registrar",
+              "Registered",
+              "Updated",
+              "Expiration",
+              "NameServers",
+              "DomainStatus",
+              "Registrant",
+              "TechnicalContact",
+              "AdminContact"
+            ],
+            "error": null,
+            "actualStatus": null
+          }
+        }
+      }
+    },
+    "rdap.nic.barcelona": {
+      "barcelona": {
+        "found": {
+          "google.barcelona": {
+            "timestamp": "2026-09-22T23:12:52.235806+00:00",
+            "matchedTemplate": null,
+            "extractedFields": [
+              "DomainName",
+              "RegistryDomainId",
+              "Registrar",
+              "Registered",
+              "Updated",
+              "Expiration",
+              "NameServers",
+              "DomainStatus",
+              "Registrant",
+              "TechnicalContact",
+              "AdminContact",
+              "BillingContact"
+            ],
+            "error": null,
+            "actualStatus": null
+          }
+        }
+      }
+    },
+    "rdap.nic.xxx": {
+      "xxx": {
+        "not-found": {
+          "masala.xxx": {
+            "timestamp": "2026-09-22T23:12:52.23562+00:00",
+            "matchedTemplate": null,
+            "extractedFields": [],
+            "error": null,
+            "actualStatus": "not-found"
+          }
+        }
+      }
+    },
+    "rdap.nic.bostik": {
+      "bostik": {
+        "not-found": {
+          "google.bostik": {
+            "timestamp": "2026-09-22T23:12:52.235816+00:00",
+            "matchedTemplate": null,
+            "extractedFields": [],
+            "error": null,
+            "actualStatus": "not-found"
+          }
+        }
+      }
+    },
+    "rdap.nic.brussels": {
+      "brussels": {
+        "inactive": {
+          "google.brussels": {
+            "timestamp": "2026-09-22T23:12:52.235817+00:00",
+            "matchedTemplate": null,
+            "extractedFields": [
+              "DomainName",
+              "RegistryDomainId",
+              "Registrar",
+              "Registered",
+              "Updated",
+              "Expiration",
+              "DomainStatus",
+              "Registrant",
+              "TechnicalContact"
+            ],
+            "error": null,
+            "actualStatus": null
+          }
+        }
+      }
+    },
+    "rdap.mobile-registry.com": {
+      "blockbuster": {
+        "not-found": {
+          "google.blockbuster": {
+            "timestamp": "2026-09-22T23:12:52.235784+00:00",
+            "matchedTemplate": null,
+            "extractedFields": [],
+            "error": null,
+            "actualStatus": "not-found"
+          }
+        }
+      }
+    },
+    "rdap.mls.fury.ca": {
+      "mls": {
+        "not-found": {
+          "google.mls": {
+            "timestamp": "2026-09-22T23:12:52.235783+00:00",
+            "matchedTemplate": null,
+            "extractedFields": [],
+            "error": null,
+            "actualStatus": "not-found"
+          }
+        }
+      }
+    },
+    "rdap.nic.bayern": {
+      "bayern": {
+        "found": {
+          "google.bayern": {
+            "timestamp": "2026-09-22T23:12:52.235809+00:00",
+            "matchedTemplate": null,
+            "extractedFields": [
+              "DomainName",
+              "RegistryDomainId",
+              "Registrar",
+              "Registered",
+              "Updated",
+              "Expiration",
+              "NameServers",
+              "DomainStatus",
+              "Registrant",
+              "TechnicalContact",
+              "AdminContact"
+            ],
+            "error": null,
+            "actualStatus": null
+          }
+        }
+      }
+    },
+    "rdap.kiwi.fury.ca": {
+      "kiwi": {
+        "found": {
+          "google.kiwi": {
+            "timestamp": "2026-09-22T23:12:52.23578+00:00",
+            "matchedTemplate": null,
+            "extractedFields": [
+              "DomainName",
+              "RegistryDomainId",
+              "Registrar",
+              "Registered",
+              "Updated",
+              "Expiration",
+              "NameServers",
+              "DomainStatus",
+              "Registrant",
+              "TechnicalContact"
+            ],
+            "error": null,
+            "actualStatus": null
+          }
+        }
+      }
+    },
+    "rdap.nic.gal": {
+      "gal": {
+        "found": {
+          "google.gal": {
+            "timestamp": "2026-09-22T23:12:52.235832+00:00",
+            "matchedTemplate": null,
+            "extractedFields": [
+              "DomainName",
+              "RegistryDomainId",
+              "Registrar",
+              "Registered",
+              "Updated",
+              "Expiration",
+              "NameServers",
+              "DomainStatus",
+              "Registrant",
+              "TechnicalContact",
+              "AdminContact",
+              "BillingContact"
+            ],
+            "error": null,
+            "actualStatus": null
+          }
+        }
+      }
+    },
+    "rdap.ngtld.cn": {
+      "sina": {
+        "not-found": {
+          "google.sina": {
+            "timestamp": "2026-09-22T23:12:52.235785+00:00",
+            "matchedTemplate": null,
+            "extractedFields": [],
+            "error": null,
+            "actualStatus": "not-found"
+          }
+        }
+      }
+    },
+    "whois.nic.xn--d1acj3b": {
+      "xn--d1acj3b": {
+        "not-found": {
+          "google.xn--d1acj3b": {
+            "timestamp": "2026-09-22T23:12:52.235981+00:00",
+            "matchedTemplate": null,
+            "extractedFields": [],
+            "error": null,
+            "actualStatus": "not-found"
+          }
+        }
+      }
+    },
+    "whois.nic.tatar": {
+      "tatar": {
+        "found": {
+          "google.tatar": {
+            "timestamp": "2026-09-22T23:12:52.235978+00:00",
+            "matchedTemplate": null,
+            "extractedFields": [
+              "DomainName",
+              "Registrar",
+              "Registered",
+              "Updated",
+              "Expiration",
+              "NameServers",
+              "DomainStatus",
+              "Registrant",
+              "TechnicalContact"
+            ],
+            "error": null,
+            "actualStatus": null
+          }
+        }
+      }
+    },
+    "rdap.nic.bzh": {
+      "bzh": {
+        "found": {
+          "google.bzh": {
+            "timestamp": "2026-09-22T23:12:52.235819+00:00",
+            "matchedTemplate": null,
+            "extractedFields": [
+              "DomainName",
+              "RegistryDomainId",
+              "Registrar",
+              "Registered",
+              "Updated",
+              "Expiration",
+              "NameServers",
+              "DomainStatus",
+              "Registrant",
+              "TechnicalContact",
+              "AdminContact",
+              "BillingContact"
+            ],
+            "error": null,
+            "actualStatus": null
+          }
+        }
+      }
+    },
+    "rdap.nic.eurovision": {
+      "eurovision": {
+        "not-found": {
+          "google.eurovision": {
+            "timestamp": "2026-09-22T23:12:52.235827+00:00",
+            "matchedTemplate": null,
+            "extractedFields": [],
+            "error": null,
+            "actualStatus": "not-found"
+          }
+        }
+      }
+    },
+    "rdap.nic.corsica": {
+      "corsica": {
+        "found": {
+          "google.corsica": {
+            "timestamp": "2026-09-22T23:12:52.23582+00:00",
+            "matchedTemplate": null,
+            "extractedFields": [
+              "DomainName",
+              "RegistryDomainId",
+              "Registrar",
+              "Registered",
+              "Updated",
+              "Expiration",
+              "NameServers",
+              "DomainStatus",
+              "Registrant",
+              "TechnicalContact",
+              "AdminContact",
+              "BillingContact"
+            ],
+            "error": null,
+            "actualStatus": null
+          }
+        }
+      }
+    },
+    "rdap.nic.hamburg": {
+      "hamburg": {
+        "found": {
+          "google.hamburg": {
+            "timestamp": "2026-09-22T23:12:52.235839+00:00",
+            "matchedTemplate": null,
+            "extractedFields": [
+              "DomainName",
+              "RegistryDomainId",
+              "Registrar",
+              "Registered",
+              "Updated",
+              "Expiration",
+              "NameServers",
+              "DomainStatus",
+              "Registrant",
+              "TechnicalContact",
+              "AdminContact"
+            ],
+            "error": null,
+            "actualStatus": null
+          }
+        }
+      }
+    },
+    "rdap.sgnic.sg": {
+      "sg": {
+        "found": {
+          "canon.com.sg": {
+            "timestamp": "2026-09-22T23:12:52.23574+00:00",
+            "matchedTemplate": null,
+            "extractedFields": [
+              "DomainName",
+              "RegistryDomainId",
+              "Registrar",
+              "Registered",
+              "Updated",
+              "Expiration",
+              "NameServers",
+              "DomainStatus",
+              "Registrant",
+              "TechnicalContact",
+              "AdminContact",
+              "BillingContact"
+            ],
+            "error": null,
+            "actualStatus": null
+          }
+        }
+      }
+    },
+    "rdap.nic.fr": {
+      "fr": {
+        "found": {
+          "google.fr": {
+            "timestamp": "2026-09-22T23:12:52.235831+00:00",
+            "matchedTemplate": null,
+            "extractedFields": [
+              "DomainName",
+              "RegistryDomainId",
+              "Registrar",
+              "Registered",
+              "Updated",
+              "Expiration",
+              "NameServers",
+              "DomainStatus",
+              "Registrant",
+              "TechnicalContact",
+              "AdminContact"
+            ],
+            "error": null,
+            "actualStatus": null
+          }
+        }
+      }
+    },
+    "rdap.thains.co.th": {
+      "th": {
+        "found": {
+          "google.co.th": {
+            "timestamp": "2026-09-22T23:12:52.235727+00:00",
+            "matchedTemplate": null,
+            "extractedFields": [
+              "DomainName",
+              "RegistryDomainId",
+              "Registrar",
+              "Registered",
+              "Updated",
+              "Expiration",
+              "NameServers",
+              "DomainStatus",
+              "Registrant",
+              "TechnicalContact",
+              "AdminContact"
+            ],
+            "error": null,
+            "actualStatus": null
+          }
+        }
+      }
+    },
+    "rdap.nic.abudhabi": {
+      "abudhabi": {
+        "not-found": {
+          "google.abudhabi": {
+            "timestamp": "2026-09-22T23:12:52.235788+00:00",
+            "matchedTemplate": null,
+            "extractedFields": [],
+            "error": null,
+            "actualStatus": "not-found"
+          }
+        }
+      }
+    },
+    "rdap.registro.br": {
+      "br": {
+        "found": {
+          "001hosting.com.br": {
+            "timestamp": "2026-09-22T23:12:52.235749+00:00",
+            "matchedTemplate": null,
+            "extractedFields": [
+              "DomainName",
+              "RegistryDomainId",
+              "Registered",
+              "Updated",
+              "Expiration",
+              "NameServers",
+              "DomainStatus",
+              "Registrant",
+              "TechnicalContact"
+            ],
+            "error": null,
+            "actualStatus": null
+          }
+        }
+      }
+    },
+    "rdap.nic.gmx": {
+      "gmx": {
+        "not-found": {
+          "google.gmx": {
+            "timestamp": "2026-09-22T23:12:52.235836+00:00",
+            "matchedTemplate": null,
+            "extractedFields": [],
+            "error": null,
+            "actualStatus": "not-found"
+          }
+        }
+      }
+    },
+    "rdap.nic.eus": {
+      "eus": {
+        "found": {
+          "google.eus": {
+            "timestamp": "2026-09-22T23:12:52.235828+00:00",
+            "matchedTemplate": null,
+            "extractedFields": [
+              "DomainName",
+              "RegistryDomainId",
+              "Registrar",
+              "Registered",
+              "Updated",
+              "Expiration",
+              "NameServers",
+              "DomainStatus",
+              "Registrant",
+              "TechnicalContact",
+              "AdminContact",
+              "BillingContact"
+            ],
+            "error": null,
+            "actualStatus": null
+          }
+        }
+      }
+    },
+    "rdap.nic.gea": {
+      "gea": {
+        "not-found": {
+          "google.gea": {
+            "timestamp": "2026-09-22T23:12:52.235835+00:00",
+            "matchedTemplate": null,
+            "extractedFields": [],
+            "error": null,
+            "actualStatus": "not-found"
+          }
+        }
+      }
+    },
+    "rdap.nic.ikano": {
+      "ikano": {
+        "not-found": {
+          "google.ikano": {
+            "timestamp": "2026-09-22T23:12:52.235842+00:00",
+            "matchedTemplate": null,
+            "extractedFields": [],
+            "error": null,
+            "actualStatus": "not-found"
+          }
+        }
+      }
+    },
+    "rdap.nic.lacaixa": {
+      "lacaixa": {
+        "not-found": {
+          "google.lacaixa": {
+            "timestamp": "2026-09-22T23:12:52.235846+00:00",
+            "matchedTemplate": null,
+            "extractedFields": [],
+            "error": null,
+            "actualStatus": "not-found"
+          }
+        }
+      }
+    },
+    "rdap.nic.ifm": {
+      "ifm": {
+        "not-found": {
+          "google.ifm": {
+            "timestamp": "2026-09-22T23:12:52.235841+00:00",
+            "matchedTemplate": null,
+            "extractedFields": [],
+            "error": null,
+            "actualStatus": "not-found"
+          }
+        }
+      }
+    },
+    "rdap.nic.leclerc": {
+      "leclerc": {
+        "not-found": {
+          "google.leclerc": {
+            "timestamp": "2026-09-22T23:12:52.23585+00:00",
+            "matchedTemplate": null,
+            "extractedFields": [],
+            "error": null,
+            "actualStatus": "not-found"
+          }
+        }
+      }
+    },
+    "rdap.nic.mango": {
+      "mango": {
+        "not-found": {
+          "google.mango": {
+            "timestamp": "2026-09-22T23:12:52.235858+00:00",
+            "matchedTemplate": null,
+            "extractedFields": [],
+            "error": null,
+            "actualStatus": "not-found"
+          }
+        }
+      }
+    },
+    "rdap.nic.quebec": {
+      "quebec": {
+        "found": {
+          "google.quebec": {
+            "timestamp": "2026-09-22T23:12:52.235871+00:00",
+            "matchedTemplate": null,
+            "extractedFields": [
+              "DomainName",
+              "RegistryDomainId",
+              "Registrar",
+              "Registered",
+              "Updated",
+              "Expiration",
+              "DomainStatus",
+              "Registrant",
+              "TechnicalContact",
+              "AdminContact",
+              "BillingContact"
+            ],
+            "error": null,
+            "actualStatus": null
+          }
+        }
+      }
+    },
+    "rdap.nic.madrid": {
+      "madrid": {
+        "found": {
+          "google.madrid": {
+            "timestamp": "2026-09-22T23:12:52.235855+00:00",
+            "matchedTemplate": null,
+            "extractedFields": [
+              "DomainName",
+              "RegistryDomainId",
+              "Registrar",
+              "Registered",
+              "Updated",
+              "Expiration",
+              "NameServers",
+              "DomainStatus",
+              "Registrant",
+              "TechnicalContact",
+              "AdminContact"
+            ],
+            "error": null,
+            "actualStatus": null
+          }
+        }
+      }
+    },
+    "rdap.nic.mma": {
+      "mma": {
+        "not-found": {
+          "google.mma": {
+            "timestamp": "2026-09-22T23:12:52.23586+00:00",
+            "matchedTemplate": null,
+            "extractedFields": [],
+            "error": null,
+            "actualStatus": "not-found"
+          }
+        }
+      }
+    },
+    "rdap.nic.arab": {
+      "arab": {
+        "not-found": {
+          "google.arab": {
+            "timestamp": "2026-09-22T23:12:52.235805+00:00",
+            "matchedTemplate": null,
+            "extractedFields": [],
+            "error": null,
+            "actualStatus": "not-found"
+          }
+        }
+      }
+    },
+    "rdap.iana.org": {
+      "int": {
+        "not-found": {
+          "google.int": {
+            "timestamp": "2026-09-22T23:12:52.235779+00:00",
+            "matchedTemplate": null,
+            "extractedFields": [],
+            "error": null,
+            "actualStatus": "not-found"
+          }
+        }
+      }
+    },
+    "rdap.nic.sap": {
+      "sap": {
+        "not-found": {
+          "google.sap": {
+            "timestamp": "2026-09-22T23:12:52.235876+00:00",
+            "matchedTemplate": null,
+            "extractedFields": [],
+            "error": null,
+            "actualStatus": "not-found"
+          }
+        }
+      }
+    },
+    "rdap.aliregistry.cn": {
+      "alibaba": {
+        "not-found": {
+          "google.alibaba": {
+            "timestamp": "2026-09-22T23:12:52.235767+00:00",
+            "matchedTemplate": null,
+            "extractedFields": [],
+            "error": null,
+            "actualStatus": "not-found"
+          }
+        }
+      }
+    },
+    "rdap.nic.africa": {
+      "africa": {
+        "found": {
+          "google.africa": {
+            "timestamp": "2026-09-22T23:12:52.235793+00:00",
+            "matchedTemplate": null,
+            "extractedFields": [
+              "DomainName",
+              "Registrar",
+              "Registered",
+              "Updated",
+              "Expiration",
+              "NameServers",
+              "DomainStatus",
+              "Registrant",
+              "TechnicalContact",
+              "BillingContact"
+            ],
+            "error": null,
+            "actualStatus": null
+          }
+        }
+      }
+    },
+    "rdap.nic.scot": {
+      "scot": {
+        "found": {
+          "google.scot": {
+            "timestamp": "2026-09-22T23:12:52.23588+00:00",
+            "matchedTemplate": null,
+            "extractedFields": [
+              "DomainName",
+              "RegistryDomainId",
+              "Registrar",
+              "Registered",
+              "Updated",
+              "Expiration",
+              "DomainStatus",
+              "Registrant",
+              "TechnicalContact",
+              "AdminContact",
+              "BillingContact"
+            ],
+            "error": null,
+            "actualStatus": null
+          }
+        }
+      }
+    },
+    "rdap-merck.dns.business": {
+      "merck": {
+        "not-found": {
+          "google.merck": {
+            "timestamp": "2026-09-22T23:12:52.235765+00:00",
+            "matchedTemplate": null,
+            "extractedFields": [],
+            "error": null,
+            "actualStatus": "not-found"
+          }
+        }
+      }
+    },
+    "rdap.gtlds.nic.br": {
+      "bom": {
+        "not-found": {
+          "google.bom": {
+            "timestamp": "2026-09-22T23:12:52.235776+00:00",
+            "matchedTemplate": null,
+            "extractedFields": [],
+            "error": null,
+            "actualStatus": "not-found"
+          }
+        }
+      }
+    },
+    "rdap.nic.paris": {
+      "paris": {
+        "found": {
+          "google.paris": {
+            "timestamp": "2026-09-22T23:12:52.235867+00:00",
+            "matchedTemplate": null,
+            "extractedFields": [
+              "DomainName",
+              "RegistryDomainId",
+              "Registrar",
+              "Registered",
+              "Updated",
+              "Expiration",
+              "NameServers",
+              "DomainStatus",
+              "Registrant",
+              "TechnicalContact",
+              "AdminContact",
+              "BillingContact"
+            ],
+            "error": null,
+            "actualStatus": null
+          }
+        }
+      }
+    },
+    "rdap.nic.ovh": {
+      "ovh": {
+        "found": {
+          "google.ovh": {
+            "timestamp": "2026-09-22T23:12:52.235865+00:00",
+            "matchedTemplate": null,
+            "extractedFields": [
+              "DomainName",
+              "RegistryDomainId",
+              "Registrar",
+              "Registered",
+              "Updated",
+              "Expiration",
+              "NameServers",
+              "DomainStatus",
+              "Registrant",
+              "TechnicalContact",
+              "AdminContact",
+              "BillingContact"
+            ],
+            "error": null,
+            "actualStatus": null
+          }
+        }
+      }
+    },
+    "rdap.nic.able": {
+      "able": {
+        "not-found": {
+          "google.able": {
+            "timestamp": "2026-09-22T23:12:52.235787+00:00",
+            "matchedTemplate": null,
+            "extractedFields": [],
+            "error": null,
+            "actualStatus": "not-found"
+          }
+        }
+      }
+    },
+    "rdap.nic.cv": {
+      "cv": {
+        "found": {
+          "google.cv": {
+            "timestamp": "2026-09-22T23:12:52.235822+00:00",
+            "matchedTemplate": null,
+            "extractedFields": [
+              "DomainName",
+              "RegistryDomainId",
+              "Registrar",
+              "Registered",
+              "Updated",
+              "Expiration",
+              "NameServers",
+              "DomainStatus"
+            ],
+            "error": null,
+            "actualStatus": null
+          }
+        }
+      }
+    },
+    "rdap.nic.seat": {
+      "seat": {
+        "not-found": {
+          "google.seat": {
+            "timestamp": "2026-09-22T23:12:52.235882+00:00",
+            "matchedTemplate": null,
+            "extractedFields": [],
+            "error": null,
+            "actualStatus": "not-found"
+          }
+        }
+      }
+    },
+    "rdap.nic.ss": {
+      "ss": {
+        "found": {
+          "google.ss": {
+            "timestamp": "2026-09-22T23:12:52.235887+00:00",
+            "matchedTemplate": null,
+            "extractedFields": [
+              "DomainName",
+              "RegistryDomainId",
+              "Registrar",
+              "Registered",
+              "Updated",
+              "Expiration",
+              "NameServers",
+              "DomainStatus"
+            ],
+            "error": null,
+            "actualStatus": null
+          }
+        }
+      }
+    },
+    "rdap.nic.sd": {
+      "sd": {
+        "found": {
+          "google.sd": {
+            "timestamp": "2026-09-22T23:12:52.235881+00:00",
+            "matchedTemplate": null,
+            "extractedFields": [
+              "DomainName",
+              "RegistryDomainId",
+              "Registrar",
+              "Registered",
+              "Updated",
+              "Expiration",
+              "NameServers",
+              "DomainStatus"
+            ],
+            "error": null,
+            "actualStatus": null
+          }
+        }
+      }
+    },
+    "rdap.nic.schaeffler": {
+      "schaeffler": {
+        "not-found": {
+          "google.schaeffler": {
+            "timestamp": "2026-09-22T23:12:52.235878+00:00",
+            "matchedTemplate": null,
+            "extractedFields": [],
+            "error": null,
+            "actualStatus": "not-found"
+          }
+        }
+      }
+    },
+    "rdap.nic.capetown": {
+      "capetown": {
+        "found": {
+          "registry.capetown": {
+            "timestamp": "2026-09-22T23:12:52.23249+00:00",
+            "matchedTemplate": null,
+            "extractedFields": [
+              "DomainName",
+              "Registrar",
+              "Registered",
+              "Updated",
+              "Expiration",
+              "NameServers",
+              "DomainStatus",
+              "Registrant",
+              "TechnicalContact",
+              "BillingContact"
+            ],
+            "error": null,
+            "actualStatus": null
+          }
+        }
+      }
+    },
+    "whois.kyregistry.ky": {
+      "ky": {
+        "found": {
+          "google.ky": {
+            "timestamp": "2026-09-22T23:12:52.235976+00:00",
+            "matchedTemplate": null,
+            "extractedFields": [
+              "DomainName",
+              "RegistryDomainId",
+              "Registrar",
+              "Registered",
+              "Updated",
+              "Expiration",
+              "NameServers",
+              "DomainStatus",
+              "Registrant",
+              "TechnicalContact",
+              "AdminContact",
+              "BillingContact"
+            ],
+            "error": null,
+            "actualStatus": null
+          }
+        }
+      }
+    },
+    "rdap.nic.dubai": {
+      "dubai": {
+        "not-found": {
+          "google.dubai": {
+            "timestamp": "2026-09-22T23:12:52.235823+00:00",
+            "matchedTemplate": null,
+            "extractedFields": [],
+            "error": null,
+            "actualStatus": "not-found"
+          }
+        }
+      }
+    },
+    "rdap.nic.sncf": {
+      "sncf": {
+        "not-found": {
+          "google.sncf": {
+            "timestamp": "2026-09-22T23:12:52.235883+00:00",
+            "matchedTemplate": null,
+            "extractedFields": [],
+            "error": null,
+            "actualStatus": "not-found"
+          }
+        }
+      }
+    },
+    "rdap.nic.anz": {
+      "anz": {
+        "not-found": {
+          "google.anz": {
+            "timestamp": "2026-09-22T23:12:52.235799+00:00",
+            "matchedTemplate": null,
+            "extractedFields": [],
+            "error": null,
+            "actualStatus": "not-found"
+          }
+        }
+      }
+    },
+    "rdap.nic.ly": {
+      "ly": {
+        "found": {
+          "google.ly": {
+            "timestamp": "2026-09-22T23:12:52.235854+00:00",
+            "matchedTemplate": null,
+            "extractedFields": [
+              "DomainName",
+              "RegistryDomainId",
+              "Registrar",
+              "Registered",
+              "Updated",
+              "Expiration",
+              "NameServers",
+              "DomainStatus"
+            ],
+            "error": null,
+            "actualStatus": null
+          }
+        }
+      }
+    },
+    "rdap.nic.nrw": {
+      "nrw": {
+        "found": {
+          "google.nrw": {
+            "timestamp": "2026-09-22T23:12:52.235863+00:00",
+            "matchedTemplate": null,
+            "extractedFields": [
+              "DomainName",
+              "RegistryDomainId",
+              "Registrar",
+              "Registered",
+              "Updated",
+              "Expiration",
+              "NameServers",
+              "DomainStatus",
+              "Registrant",
+              "TechnicalContact",
+              "AdminContact",
+              "BillingContact"
+            ],
+            "error": null,
+            "actualStatus": null
+          }
+        }
+      }
+    },
+    "rdap.nic.tube": {
+      "tube": {
+        "found": {
+          "google.tube": {
+            "timestamp": "2026-09-22T23:12:52.235894+00:00",
+            "matchedTemplate": null,
+            "extractedFields": [
+              "DomainName",
+              "RegistryDomainId",
+              "Registrar",
+              "Registered",
+              "Updated",
+              "Expiration",
+              "NameServers",
+              "DomainStatus",
+              "Registrant",
+              "TechnicalContact",
+              "AdminContact",
+              "BillingContact"
+            ],
+            "error": null,
+            "actualStatus": null
+          }
+        }
+      }
+    },
+    "rdap.nic.total": {
+      "total": {
+        "not-found": {
+          "google.total": {
+            "timestamp": "2026-09-22T23:12:52.235893+00:00",
+            "matchedTemplate": null,
+            "extractedFields": [],
+            "error": null,
+            "actualStatus": "not-found"
+          }
+        }
+      }
+    },
+    "rdap.nic.pg": {
+      "pg": {
+        "not-found": {
+          "google.pg": {
+            "timestamp": "2026-09-22T23:12:52.235868+00:00",
+            "matchedTemplate": null,
+            "extractedFields": [],
+            "error": null,
+            "actualStatus": "not-found"
+          }
+        }
+      }
+    },
+    "rdap.nic.erni": {
+      "erni": {
+        "not-found": {
+          "google.erni": {
+            "timestamp": "2026-09-22T23:12:52.235825+00:00",
+            "matchedTemplate": null,
+            "extractedFields": [],
+            "error": null,
+            "actualStatus": "not-found"
+          }
+        }
+      }
+    },
+    "whois.sr": {
+      "sr": {
+        "found": {
+          "google.sr": {
+            "timestamp": "2026-09-22T23:12:52.235982+00:00",
+            "matchedTemplate": null,
+            "extractedFields": [
+              "DomainName",
+              "RegistryDomainId",
+              "Registrar",
+              "Registered",
+              "Updated",
+              "Expiration",
+              "NameServers",
+              "DomainStatus",
+              "Registrant",
+              "TechnicalContact",
+              "AdminContact",
+              "BillingContact"
+            ],
+            "error": null,
+            "actualStatus": null
+          }
+        }
+      }
+    },
+    "rdap.nic.tf": {
+      "tf": {
+        "found": {
+          "google.tf": {
+            "timestamp": "2026-09-22T23:12:52.235891+00:00",
+            "matchedTemplate": null,
+            "extractedFields": [
+              "DomainName",
+              "RegistryDomainId",
+              "Registrar",
+              "Registered",
+              "Updated",
+              "Expiration",
+              "NameServers",
+              "DomainStatus",
+              "Registrant",
+              "TechnicalContact",
+              "AdminContact"
+            ],
+            "error": null,
+            "actualStatus": null
+          }
+        }
+      }
+    },
+    "rdap.nic.vlaanderen": {
+      "vlaanderen": {
+        "inactive": {
+          "google.vlaanderen": {
+            "timestamp": "2026-09-22T23:12:52.235899+00:00",
+            "matchedTemplate": null,
+            "extractedFields": [
+              "DomainName",
+              "RegistryDomainId",
+              "Registrar",
+              "Registered",
+              "Updated",
+              "Expiration",
+              "DomainStatus",
+              "Registrant",
+              "TechnicalContact"
+            ],
+            "error": null,
+            "actualStatus": null
+          }
+        }
+      }
+    },
+    "rdap.nic.versicherung": {
+      "versicherung": {
+        "found": {
+          "google.versicherung": {
+            "timestamp": "2026-09-22T23:12:52.235896+00:00",
+            "matchedTemplate": null,
+            "extractedFields": [
+              "DomainName",
+              "RegistryDomainId",
+              "Registrar",
+              "Registered",
+              "Expiration",
+              "NameServers",
+              "DomainStatus",
+              "Registrant",
+              "TechnicalContact",
+              "AdminContact"
+            ],
+            "error": null,
+            "actualStatus": null
+          }
+        }
+      }
+    },
+    "rdap.nic.firmdale": {
+      "firmdale": {
+        "not-found": {
+          "google.firmdale": {
+            "timestamp": "2026-09-22T23:12:52.235829+00:00",
+            "matchedTemplate": null,
+            "extractedFields": [],
+            "error": null,
+            "actualStatus": "not-found"
+          }
+        }
+      }
+    },
+    "rdap.nic.swiss": {
+      "swiss": {
+        "not-found": {
+          "google.swiss": {
+            "timestamp": "2026-09-22T23:12:52.23589+00:00",
+            "matchedTemplate": null,
+            "extractedFields": [],
+            "error": null,
+            "actualStatus": "not-found"
+          }
+        }
+      }
+    },
+    "rdap.nic.joburg": {
+      "joburg": {
+        "not-found": {
+          "usedautos.joburg": {
+            "timestamp": "2026-09-22T23:12:52.235676+00:00",
+            "matchedTemplate": null,
+            "extractedFields": [],
+            "error": null,
+            "actualStatus": "not-found"
+          }
+        }
+      }
+    },
+    "rdap.nic.man": {
+      "man": {
+        "not-found": {
+          "google.man": {
+            "timestamp": "2026-09-22T23:12:52.235857+00:00",
+            "matchedTemplate": null,
+            "extractedFields": [],
+            "error": null,
+            "actualStatus": "not-found"
+          }
+        }
+      }
+    },
+    "rdap.nic.xn--mgbab2bd": {
+      "xn--mgbab2bd": {
+        "not-found": {
+          "google.xn--mgbab2bd": {
+            "timestamp": "2026-09-22T23:12:52.235909+00:00",
+            "matchedTemplate": null,
+            "extractedFields": [],
+            "error": null,
+            "actualStatus": "not-found"
+          }
+        }
+      }
+    },
+    "rdap.nic.booking": {
+      "booking": {
+        "not-found": {
+          "google.booking": {
+            "timestamp": "2026-09-22T23:12:52.235815+00:00",
+            "matchedTemplate": null,
+            "extractedFields": [],
+            "error": null,
+            "actualStatus": "not-found"
+          }
+        }
+      }
+    },
+    "rdap.nic.xn--80asehdb": {
+      "xn--80asehdb": {
+        "not-found": {
+          "google.xn--80asehdb": {
+            "timestamp": "2026-09-22T23:12:52.235906+00:00",
+            "matchedTemplate": null,
+            "extractedFields": [],
+            "error": null,
+            "actualStatus": "not-found"
+          }
+        }
+      }
+    },
+    "rdap.nic.beer": {
+      "beer": {
+        "inactive": {
+          "google.beer": {
+            "timestamp": "2026-09-22T23:12:52.235811+00:00",
+            "matchedTemplate": null,
+            "extractedFields": [
+              "DomainName",
+              "Registrar",
+              "Registered",
+              "Updated",
+              "Expiration",
+              "DomainStatus",
+              "Registrant",
+              "TechnicalContact"
+            ],
+            "error": null,
+            "actualStatus": null
+          }
+        }
+      }
+    },
+    "rdap.nic.xn--p1acf": {
+      "xn--p1acf": {
+        "not-found": {
+          "google.xn--p1acf": {
+            "timestamp": "2026-09-22T23:12:52.235913+00:00",
+            "matchedTemplate": null,
+            "extractedFields": [],
+            "error": null,
+            "actualStatus": "not-found"
+          }
+        }
+      }
+    },
+    "rdap.cctld.au": {
+      "au": {
+        "found": {
+          "google.com.au": {
+            "timestamp": "2026-09-22T23:12:52.235622+00:00",
+            "matchedTemplate": null,
+            "extractedFields": [
+              "DomainName",
+              "RegistryDomainId",
+              "Registrar",
+              "Updated",
+              "NameServers",
+              "DomainStatus"
+            ],
+            "error": null,
+            "actualStatus": null
+          }
+        }
+      }
+    },
+    "rdap.nic.whoswho": {
+      "whoswho": {
+        "found": {
+          "google.whoswho": {
+            "timestamp": "2026-09-22T23:12:52.235903+00:00",
+            "matchedTemplate": null,
+            "extractedFields": [
+              "DomainName",
+              "RegistryDomainId",
+              "Registrar",
+              "Registered",
+              "Updated",
+              "Expiration",
+              "DomainStatus",
+              "Registrant",
+              "TechnicalContact",
+              "AdminContact",
+              "BillingContact"
+            ],
+            "error": null,
+            "actualStatus": null
+          }
+        }
+      }
+    },
+    "rdap.ryce-rsp.com": {
+      "cologne": {
+        "found": {
+          "google.cologne": {
+            "timestamp": "2026-09-22T23:12:52.235965+00:00",
+            "matchedTemplate": null,
+            "extractedFields": [
+              "DomainName",
+              "Registrar",
+              "Registered",
+              "Updated",
+              "Expiration",
+              "NameServers",
+              "DomainStatus",
+              "Registrant",
+              "TechnicalContact",
+              "BillingContact"
+            ],
+            "error": null,
+            "actualStatus": null
+          }
+        }
+      }
+    },
+    "restwhois.ngtld.cn": {
+      "xn--1qqw23a": {
+        "found": {
+          "google.xn--1qqw23a": {
+            "timestamp": "2026-09-22T23:12:52.235975+00:00",
+            "matchedTemplate": null,
+            "extractedFields": [
+              "DomainName",
+              "RegistryDomainId",
+              "Registrar",
+              "Registered",
+              "Updated",
+              "Expiration",
+              "NameServers",
+              "DomainStatus"
+            ],
+            "error": null,
+            "actualStatus": null
+          }
+        }
+      }
+    },
+    "rdap.nic.xn--80aswg": {
+      "xn--80aswg": {
+        "not-found": {
+          "google.xn--80aswg": {
+            "timestamp": "2026-09-22T23:12:52.235908+00:00",
+            "matchedTemplate": null,
+            "extractedFields": [],
+            "error": null,
+            "actualStatus": "not-found"
+          }
+        }
+      }
+    },
+    "rdap.nic.ml": {
+      "ml": {
+        "found": {
+          "google.ml": {
+            "timestamp": "2026-09-22T23:12:52.235859+00:00",
+            "matchedTemplate": null,
+            "extractedFields": [
+              "DomainName",
+              "RegistryDomainId",
+              "Registrar",
+              "Registered",
+              "Updated",
+              "Expiration",
+              "NameServers",
+              "DomainStatus"
+            ],
+            "error": null,
+            "actualStatus": null
+          }
+        }
+      }
+    },
+    "rdap.nic.locker": {
+      "locker": {
+        "found": {
+          "google.locker": {
+            "timestamp": "2026-09-22T23:12:52.235853+00:00",
+            "matchedTemplate": null,
+            "extractedFields": [
+              "DomainName",
+              "RegistryDomainId",
+              "Registrar",
+              "Registered",
+              "Updated",
+              "Expiration",
+              "NameServers",
+              "DomainStatus",
+              "Registrant"
+            ],
+            "error": null,
+            "actualStatus": null
+          }
+        }
+      }
+    },
+    "rdap.nic.zm": {
+      "zm": {
+        "not-found": {
+          "google.zm": {
+            "timestamp": "2026-09-22T23:12:52.235916+00:00",
+            "matchedTemplate": null,
+            "extractedFields": [],
+            "error": null,
+            "actualStatus": "not-found"
+          }
+        }
+      }
+    },
+    "rdap.nic.durban": {
+      "durban": {
+        "found": {
+          "wordpress.durban": {
+            "timestamp": "2026-09-22T23:12:52.235756+00:00",
+            "matchedTemplate": null,
+            "extractedFields": [
+              "DomainName",
+              "Registrar",
+              "Registered",
+              "Updated",
+              "Expiration",
+              "NameServers",
+              "DomainStatus",
+              "Registrant",
+              "TechnicalContact",
+              "BillingContact"
+            ],
+            "error": null,
+            "actualStatus": null
+          }
+        }
+      }
+    },
+    "rdap.zh.sgnic.sg": {
+      "xn--yfro4i67o": {
+        "not-found": {
+          "google.xn--yfro4i67o": {
+            "timestamp": "2026-09-22T23:12:52.235974+00:00",
+            "matchedTemplate": null,
+            "extractedFields": [],
+            "error": null,
+            "actualStatus": "not-found"
+          }
+        }
+      }
+    },
+    "rdap.y.net.ye": {
+      "ye": {
+        "found": {
+          "google.ye": {
+            "timestamp": "2026-09-22T23:12:52.235971+00:00",
+            "matchedTemplate": null,
+            "extractedFields": [
+              "DomainName",
+              "RegistryDomainId",
+              "Registrar",
+              "Registered",
+              "Updated",
+              "Expiration",
+              "NameServers",
+              "DomainStatus"
+            ],
+            "error": null,
+            "actualStatus": null
+          }
+        }
+      }
+    },
+    "rdap.nic.ipiranga": {
+      "ipiranga": {
+        "not-found": {
+          "google.ipiranga": {
+            "timestamp": "2026-09-22T23:12:52.235844+00:00",
+            "matchedTemplate": null,
+            "extractedFields": [],
+            "error": null,
+            "actualStatus": "not-found"
+          }
+        }
+      }
+    },
+    "rdap.nic.health": {
+      "health": {
+        "found": {
+          "google.health": {
+            "timestamp": "2026-09-22T23:12:52.23584+00:00",
+            "matchedTemplate": null,
+            "extractedFields": [
+              "DomainName",
+              "Registrar",
+              "Registered",
+              "Updated",
+              "Expiration",
+              "NameServers",
+              "DomainStatus",
+              "Registrant",
+              "TechnicalContact"
+            ],
+            "error": null,
+            "actualStatus": null
+          }
+        }
+      }
+    },
+    "rdap.nic.ar": {
+      "ar": {
+        "found": {
+          "google.ar": {
+            "timestamp": "2026-09-22T23:12:52.235804+00:00",
+            "matchedTemplate": null,
+            "extractedFields": [
+              "DomainName",
+              "RegistryDomainId",
+              "Registrar",
+              "Registered",
+              "Updated",
+              "Expiration",
+              "NameServers",
+              "DomainStatus",
+              "Registrant"
+            ],
+            "error": null,
+            "actualStatus": null
+          }
+        }
+      }
+    },
+    "rdap.uniregistry.net": {
+      "link": {
+        "found": {
+          "google.link": {
+            "timestamp": "2026-09-22T23:12:52.23597+00:00",
+            "matchedTemplate": null,
+            "extractedFields": [
+              "DomainName",
+              "RegistryDomainId",
+              "Registrar",
+              "Registered",
+              "Updated",
+              "Expiration",
+              "NameServers",
+              "DomainStatus"
+            ],
+            "error": null,
+            "actualStatus": null
+          }
+        }
+      }
+    },
+    "rdap.nic.sport": {
+      "sport": {
+        "found": {
+          "google.sport": {
+            "timestamp": "2026-09-22T23:12:52.235885+00:00",
+            "matchedTemplate": null,
+            "extractedFields": [
+              "DomainName",
+              "RegistryDomainId",
+              "Registrar",
+              "Registered",
+              "Updated",
+              "Expiration",
+              "NameServers",
+              "DomainStatus",
+              "Registrant",
+              "TechnicalContact",
+              "AdminContact",
+              "BillingContact"
+            ],
+            "error": null,
+            "actualStatus": null
+          }
+        }
+      }
+    },
+    "rdap.nic.loan": {
+      "loan": {
+        "inactive": {
+          "google.loan": {
+            "timestamp": "2026-09-22T23:12:52.235852+00:00",
+            "matchedTemplate": null,
+            "extractedFields": [
+              "DomainName",
+              "Registrar",
+              "Registered",
+              "Updated",
+              "Expiration",
+              "DomainStatus",
+              "Registrant",
+              "TechnicalContact"
+            ],
+            "error": null,
+            "actualStatus": null
+          }
+        }
+      }
+    },
+    "rdap.nic.latrobe": {
+      "latrobe": {
+        "not-found": {
+          "google.latrobe": {
+            "timestamp": "2026-09-22T23:12:52.235848+00:00",
+            "matchedTemplate": null,
+            "extractedFields": [],
+            "error": null,
+            "actualStatus": "not-found"
+          }
+        }
+      }
+    },
+    "rdap.nic.praxi": {
+      "praxi": {
+        "not-found": {
+          "google.praxi": {
+            "timestamp": "2026-09-22T23:12:52.235869+00:00",
+            "matchedTemplate": null,
+            "extractedFields": [],
+            "error": null,
+            "actualStatus": "not-found"
+          }
+        }
+      }
+    },
+    "rdap.nic.vi": {
+      "vi": {
+        "found": {
+          "google.vi": {
+            "timestamp": "2026-09-22T23:12:52.235898+00:00",
+            "matchedTemplate": null,
+            "extractedFields": [
+              "DomainName",
+              "RegistryDomainId",
+              "Registrar",
+              "Registered",
+              "Updated",
+              "Expiration",
+              "NameServers",
+              "DomainStatus"
+            ],
+            "error": null,
+            "actualStatus": null
+          }
+        }
+      }
+    },
+    "rdap.nic.yandex": {
+      "yandex": {
+        "not-found": {
+          "google.yandex": {
+            "timestamp": "2026-09-22T23:12:52.235915+00:00",
+            "matchedTemplate": null,
+            "extractedFields": [],
+            "error": null,
+            "actualStatus": "not-found"
+          }
+        }
+      }
+    },
+    "rdap.nic.scb": {
+      "scb": {
+        "not-found": {
+          "google.scb": {
+            "timestamp": "2026-09-22T23:12:52.235877+00:00",
+            "matchedTemplate": null,
+            "extractedFields": [],
+            "error": null,
+            "actualStatus": "not-found"
+          }
+        }
+      }
+    },
+    "rdap.registry.bar": {
+      "bar": {
+        "found": {
+          "google.bar": {
+            "timestamp": "2026-09-22T23:12:52.235917+00:00",
+            "matchedTemplate": null,
+            "extractedFields": [
+              "DomainName",
+              "RegistryDomainId",
+              "Registrar",
+              "Registered",
+              "Updated",
+              "Expiration",
+              "NameServers",
+              "DomainStatus"
+            ],
+            "error": null,
+            "actualStatus": null
+          }
+        }
+      }
+    },
+    "rdap.registry.click": {
+      "click": {
+        "found": {
+          "google.click": {
+            "timestamp": "2026-09-22T23:12:52.235952+00:00",
+            "matchedTemplate": null,
+            "extractedFields": [
+              "DomainName",
+              "RegistryDomainId",
+              "Registrar",
+              "Registered",
+              "Updated",
+              "Expiration",
+              "NameServers",
+              "DomainStatus"
+            ],
+            "error": null,
+            "actualStatus": null
+          }
+        }
+      }
+    },
+    "rdap.zdnsgtld.com": {
+      "xn--45q11c": {
+        "found": {
+          "google.xn--45q11c": {
+            "timestamp": "2026-09-22T23:12:52.235972+00:00",
+            "matchedTemplate": null,
+            "extractedFields": [
+              "DomainName",
+              "RegistryDomainId",
+              "Registrar",
+              "Registered",
+              "Updated",
+              "Expiration",
+              "NameServers",
+              "DomainStatus",
+              "Registrant",
+              "TechnicalContact",
+              "AdminContact"
+            ],
+            "error": null,
+            "actualStatus": null
+          }
+        }
+      }
+    },
+    "rdap.nic.gdn": {
+      "gdn": {
+        "found": {
+          "google.gdn": {
+            "timestamp": "2026-09-22T23:12:52.235833+00:00",
+            "matchedTemplate": null,
+            "extractedFields": [
+              "DomainName",
+              "RegistryDomainId",
+              "Registrar",
+              "Registered",
+              "Updated",
+              "Expiration",
+              "NameServers",
+              "DomainStatus",
+              "Registrant"
+            ],
+            "error": null,
+            "actualStatus": null
+          }
+        }
+      }
+    },
+    "rdap.registry.cloud": {
+      "cloud": {
+        "found": {
+          "google.cloud": {
+            "timestamp": "2026-09-22T23:12:52.235953+00:00",
+            "matchedTemplate": null,
+            "extractedFields": [
+              "DomainName",
+              "RegistryDomainId",
+              "Registrar",
+              "Registered",
+              "Updated",
+              "Expiration",
+              "NameServers",
+              "DomainStatus"
+            ],
+            "error": null,
+            "actualStatus": null
+          }
+        }
+      }
+    },
+    "rdap.nic.xn--ngbrx": {
+      "xn--ngbrx": {
+        "not-found": {
+          "google.xn--ngbrx": {
+            "timestamp": "2026-09-22T23:12:52.235912+00:00",
+            "matchedTemplate": null,
+            "extractedFields": [],
+            "error": null,
+            "actualStatus": "not-found"
+          }
+        }
+      }
+    },
+    "rdap.nic.xn--mgbca7dzdo": {
+      "xn--mgbca7dzdo": {
+        "not-found": {
+          "google.xn--mgbca7dzdo": {
+            "timestamp": "2026-09-22T23:12:52.235911+00:00",
+            "matchedTemplate": null,
+            "extractedFields": [],
+            "error": null,
+            "actualStatus": "not-found"
+          }
+        }
+      }
+    },
+    "rdap.registryservices.music": {
+      "music": {
+        "not-found": {
+          "google.music": {
+            "timestamp": "2026-09-22T23:12:52.235961+00:00",
+            "matchedTemplate": null,
+            "extractedFields": [],
+            "error": null,
+            "actualStatus": "not-found"
+          }
+        }
+      }
+    },
+    "rdap.registry.kfh": {
+      "kfh": {
+        "not-found": {
+          "google.kfh": {
+            "timestamp": "2026-09-22T23:12:52.235959+00:00",
+            "matchedTemplate": null,
+            "extractedFields": [],
+            "error": null,
+            "actualStatus": "not-found"
+          }
+        }
+      }
+    },
+    "rdap.registry.hiphop": {
+      "hiphop": {
+        "found": {
+          "google.hiphop": {
+            "timestamp": "2026-09-22T23:12:52.235957+00:00",
+            "matchedTemplate": null,
+            "extractedFields": [
+              "DomainName",
+              "RegistryDomainId",
+              "Registrar",
+              "Registered",
+              "Updated",
+              "Expiration",
+              "NameServers",
+              "DomainStatus"
+            ],
+            "error": null,
+            "actualStatus": null
+          }
+        }
+      }
+    },
+    "rdap.registry.love": {
+      "love": {
+        "found": {
+          "google.love": {
+            "timestamp": "2026-09-22T23:12:52.23596+00:00",
+            "matchedTemplate": null,
+            "extractedFields": [
+              "DomainName",
+              "RegistryDomainId",
+              "Registrar",
+              "Registered",
+              "Updated",
+              "Expiration",
+              "NameServers",
+              "DomainStatus"
+            ],
+            "error": null,
+            "actualStatus": null
+          }
+        }
+      }
+    },
+    "rdap.registry.gift": {
+      "gift": {
+        "found": {
+          "google.gift": {
+            "timestamp": "2026-09-22T23:12:52.235956+00:00",
+            "matchedTemplate": null,
+            "extractedFields": [
+              "DomainName",
+              "RegistryDomainId",
+              "Registrar",
+              "Registered",
+              "Updated",
+              "Expiration",
+              "NameServers",
+              "DomainStatus"
+            ],
+            "error": null,
+            "actualStatus": null
+          }
+        }
+      }
+    },
+    "rdap.tonicregistry.to": {
+      "to": {
+        "found": {
+          "google.to": {
+            "timestamp": "2026-09-22T23:12:52.235967+00:00",
+            "matchedTemplate": null,
+            "extractedFields": [
+              "DomainName",
+              "RegistryDomainId",
+              "Registrar",
+              "Registered",
+              "Updated",
+              "Expiration",
+              "NameServers",
+              "DomainStatus"
+            ],
+            "error": null,
+            "actualStatus": null
+          }
+        }
+      }
+    },
+    "rdap.nic.jprs": {
+      "jprs": {
+        "not-found": {
+          "google.jprs": {
+            "timestamp": "2026-09-22T23:12:52.235845+00:00",
+            "matchedTemplate": null,
+            "extractedFields": [],
+            "error": null,
+            "actualStatus": "not-found"
+          }
+        }
+      }
+    },
+    "rdap.nic.staples": {
+      "staples": {
+        "not-found": {
+          "google.staples": {
+            "timestamp": "2026-09-22T23:12:52.235889+00:00",
+            "matchedTemplate": null,
+            "extractedFields": [],
+            "error": null,
+            "actualStatus": "not-found"
+          }
+        }
+      }
+    },
+    "rdap.nic.ntt": {
+      "ntt": {
+        "not-found": {
+          "google.ntt": {
+            "timestamp": "2026-09-22T23:12:52.235864+00:00",
+            "matchedTemplate": null,
+            "extractedFields": [],
+            "error": null,
+            "actualStatus": "not-found"
+          }
+        }
+      }
+    },
+    "rdap.nic.sakura": {
+      "sakura": {
+        "not-found": {
+          "google.sakura": {
+            "timestamp": "2026-09-22T23:12:52.235874+00:00",
+            "matchedTemplate": null,
+            "extractedFields": [],
+            "error": null,
+            "actualStatus": "not-found"
+          }
+        }
+      }
+    },
+    "rdap.nic.walmart": {
+      "walmart": {
+        "not-found": {
+          "google.walmart": {
+            "timestamp": "2026-09-22T23:12:52.2359+00:00",
+            "matchedTemplate": null,
+            "extractedFields": [],
+            "error": null,
+            "actualStatus": "not-found"
+          }
+        }
+      }
+    },
+    "rdap.nic.wedding": {
+      "wedding": {
+        "not-found": {
+          "google.wedding": {
+            "timestamp": "2026-09-22T23:12:52.235902+00:00",
+            "matchedTemplate": null,
+            "extractedFields": [],
+            "error": null,
+            "actualStatus": "not-found"
+          }
+        }
+      }
+    },
+    "rdap.nic.win": {
+      "win": {
+        "inactive": {
+          "google.win": {
+            "timestamp": "2026-09-22T23:12:52.235904+00:00",
+            "matchedTemplate": null,
+            "extractedFields": [
+              "DomainName",
+              "Registrar",
+              "Registered",
+              "Updated",
+              "Expiration",
+              "DomainStatus",
+              "Registrant",
+              "TechnicalContact"
+            ],
+            "error": null,
+            "actualStatus": null
+          }
+        }
+      }
+    },
+    "rdap.ta.sgnic.sg": {
+      "xn--clchc0ea0b2g2a9gcd": {
+        "not-found": {
+          "google.xn--clchc0ea0b2g2a9gcd": {
+            "timestamp": "2026-09-22T23:12:52.235966+00:00",
+            "matchedTemplate": null,
+            "extractedFields": [],
+            "error": null,
+            "actualStatus": "not-found"
+          }
+        }
+      }
+    },
+    "www.rdap.fj": {
+      "fj": {
+        "found": {
+          "google.com.fj": {
+            "timestamp": "2026-09-22T23:12:52.235742+00:00",
+            "matchedTemplate": null,
+            "extractedFields": [
+              "DomainName",
+              "RegistryDomainId",
+              "Registrar",
+              "Registered",
+              "Updated",
+              "Expiration",
+              "NameServers",
+              "DomainStatus"
+            ],
+            "error": null,
+            "actualStatus": null
+          }
+        }
+      }
+    },
+    "rdap.pandi.id": {
+      "id": {
+        "found": {
+          "google.co.id": {
+            "timestamp": "2026-09-22T23:12:52.235755+00:00",
+            "matchedTemplate": null,
+            "extractedFields": [
+              "DomainName",
+              "RegistryDomainId",
+              "Registrar",
+              "Registered",
+              "Updated",
+              "Expiration",
+              "NameServers",
+              "DomainStatus"
+            ],
+            "error": null,
+            "actualStatus": null
+          }
+        }
+      }
+    },
+    "rdap.registry.ec": {
+      "ec": {
+        "found": {
+          "google.ec": {
+            "timestamp": "2026-09-22T23:12:52.235955+00:00",
+            "matchedTemplate": null,
+            "extractedFields": [
+              "DomainName",
+              "RegistryDomainId",
+              "Registrar",
+              "Registered",
+              "Updated",
+              "Expiration",
+              "DomainStatus",
+              "Registrant",
+              "AdminContact"
+            ],
+            "error": null,
+            "actualStatus": null
+          }
+        }
+      }
+    },
+    "rdap.ricta.org.rw": {
+      "rw": {
+        "found": {
+          "google.rw": {
+            "timestamp": "2026-09-22T23:12:52.235964+00:00",
+            "matchedTemplate": null,
+            "extractedFields": [
+              "DomainName",
+              "RegistryDomainId",
+              "Registrar",
+              "Registered",
+              "Updated",
+              "Expiration",
+              "NameServers",
+              "DomainStatus",
+              "Registrant",
+              "TechnicalContact",
+              "AdminContact",
+              "BillingContact"
+            ],
+            "error": null,
+            "actualStatus": null
+          }
+        }
+      }
+    },
+    "rdap.tznic.or.tz": {
+      "tz": {
+        "found": {
+          "dailynews.co.tz": {
+            "timestamp": "2026-09-22T23:12:52.235745+00:00",
+            "matchedTemplate": null,
+            "extractedFields": [
+              "DomainName",
+              "RegistryDomainId",
+              "Registrar",
+              "Registered",
+              "Updated",
+              "Expiration",
+              "NameServers",
+              "DomainStatus",
+              "Registrant",
+              "AdminContact"
+            ],
+            "error": null,
+            "actualStatus": null
+          }
+        }
+      }
+    },
+    "rdap.twnic.tw": {
+      "xn--mxtq1m": {
+        "not-found": {
+          "google.xn--mxtq1m": {
+            "timestamp": "2026-09-22T23:12:52.235969+00:00",
+            "matchedTemplate": null,
+            "extractedFields": [],
+            "error": null,
+            "actualStatus": "not-found"
+          }
+        }
+      }
+    },
+    "rdap.nic.radio": {
+      "radio": {
+        "found": {
+          "google.radio": {
+            "timestamp": "2026-09-22T23:12:52.235872+00:00",
+            "matchedTemplate": null,
+            "extractedFields": [],
+            "error": {
+              "type": "timeout",
+              "message": "Query timed out",
+              "detail": "https://rdap.nic.radio/domain/google.radio"
+            },
+            "actualStatus": null
+          }
+        }
+      }
+    }
+  }
+}
