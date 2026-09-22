@@ -56,10 +56,7 @@ public class WhoisDomainTests
         Assert.Equal(LookupProtocol.Whois, result.Protocol);
 
         var expected = MapStatus(expectedStatus);
-        if (expected != RegistrationStatus.Unknown)
-        {
-            Assert.Equal(expected, result.Response.Status);
-        }
+        Assert.Equal(expected, result.Response.Status);
 
         if (expected == RegistrationStatus.Found)
         {
@@ -74,6 +71,26 @@ public class WhoisDomainTests
         "found" => RegistrationStatus.Found,
         "not-found" => RegistrationStatus.NotFound,
         "throttled" => RegistrationStatus.Throttled,
+        "expired" => RegistrationStatus.Expired,
+        "pending-delete" => RegistrationStatus.PendingDelete,
+        "reserved" => RegistrationStatus.Reserved,
+        "suspended" => RegistrationStatus.Suspended,
+        "not-assigned" => RegistrationStatus.NotAssigned,
+        "invalid" => RegistrationStatus.Invalid,
+        "inactive" => RegistrationStatus.Inactive,
+        "locked" => RegistrationStatus.Locked,
+        "quarantined" => RegistrationStatus.Quarantined,
+        "out-of-service" => RegistrationStatus.OutOfService,
+        "not-available" => RegistrationStatus.NotAvailable,
+        "deactivated" => RegistrationStatus.Deactivated,
+        "failed" => RegistrationStatus.Failed,
+        "unconfirmed" => RegistrationStatus.Unconfirmed,
+        "unavailable" => RegistrationStatus.Unavailable,
+        "to-be-released" => RegistrationStatus.ToBeReleased,
+        "redemption" => RegistrationStatus.Redemption,
+        "blocked" => RegistrationStatus.Blocked,
+        "error" => RegistrationStatus.Error,
+        "other" => RegistrationStatus.Other,
         _ => RegistrationStatus.Unknown,
     };
 }
