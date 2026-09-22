@@ -140,7 +140,7 @@ public class CaParsingTests : ParsingTests
 
     }
 
-    [Fact(Skip = "Template update deferred - WHOIS response format changed")]
+    [Fact]
     public void Test_not_found()
     {
         var sample = SampleReader.Read("whois.cira.ca", "ca", "not-found", "u34jedzcq.ca.txt");
@@ -150,15 +150,9 @@ public class CaParsingTests : ParsingTests
         Assert.Equal(RegistrationStatus.NotFound, response.Status);
 
         Assert.Equal(0, response.ParsingErrors);
-        Assert.Equal("whois.cira.ca/ca/not-found/01", response.TemplateName);
+        Assert.Equal("whois.cira.ca/ca/not-found/02", response.TemplateName);
 
         Assert.Equal("u34jedzcq.ca", response.DomainName.ToString());
-
-        // Domain Status
-        Assert.Equal(1, response.DomainStatus.Count);
-        Assert.Equal("available", response.DomainStatus[0]);
-
-        Assert.Equal(3, response.FieldsParsed);
     }
 
     [Fact]

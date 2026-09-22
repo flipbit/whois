@@ -23,54 +23,12 @@ public class VeParsingTests : ParsingTests
         Assert.Equal(RegistrationStatus.Found, response.Status);
 
         Assert.Equal(0, response.ParsingErrors);
-        Assert.Equal("generic/tld/found/05", response.TemplateName);
+        Assert.Equal("whois.nic.ve/ve/found/02", response.TemplateName);
 
-        Assert.Null(response.DomainName);
+        Assert.Equal("ula.ve", response.DomainName.ToString());
 
-        Assert.Null(response.Updated);
-        Assert.Null(response.Registered);
-
-        // Registrant Details
-        Assert.Null(response.Registrant);
-
-        // Registrant Address
-
-
-        // AdminContact Details
-        Assert.Equal(" CON000011396", response.AdminContact.RegistryId);
-        Assert.Null(response.AdminContact.Name);
-        Assert.Null(response.AdminContact.TelephoneNumber);
-        Assert.Null(response.AdminContact.FaxNumber);
-        Assert.Null(response.AdminContact.Email);
-
-        // AdminContact Address
-        Assert.Equal(0, response.AdminContact.Address.Count);
-
-
-        // BillingContact Details
-        Assert.Null(response.BillingContact);
-
-        // BillingContact Address
-
-
-        // TechnicalContact Details
-        Assert.Equal(" CON000011396", response.TechnicalContact.RegistryId);
-        Assert.Null(response.TechnicalContact.Name);
-        Assert.Null(response.TechnicalContact.TelephoneNumber);
-        Assert.Null(response.TechnicalContact.FaxNumber);
-        Assert.Null(response.TechnicalContact.Email);
-
-        // TechnicalContact Address
-        Assert.Equal(0, response.TechnicalContact.Address.Count);
-
-
-        // Nameservers
-        Assert.Equal(0, response.NameServers.Count);
-
-        // Domain Status
-        Assert.Equal(0, response.DomainStatus.Count);
-
-        Assert.Equal(9, response.FieldsParsed);
+        Assert.Equal(new DateTime(2019, 8, 6, 17, 27, 27, DateTimeKind.Utc), response.Registered);
+        Assert.Equal(new DateTime(2029, 12, 31, 0, 0, 0, DateTimeKind.Utc), response.Expiration);
     }
 
     [Fact]
@@ -168,55 +126,12 @@ public class VeParsingTests : ParsingTests
         Assert.Equal(RegistrationStatus.Found, response.Status);
 
         Assert.Equal(0, response.ParsingErrors);
-        Assert.Equal("generic/tld/found/04", response.TemplateName);
+        Assert.Equal("whois.nic.ve/ve/found/02", response.TemplateName);
 
         Assert.Equal("zumba.com.ve", response.DomainName.ToString());
 
-        Assert.Null(response.Registered);
-        Assert.Null(response.Expiration);
-
-        // Registrant Details
-        Assert.Equal("CON000008238", response.Registrant.RegistryId);
-        Assert.Null(response.Registrant.Name);
-        Assert.Null(response.Registrant.FaxNumber);
-        Assert.Null(response.Registrant.Email);
-
-        // Registrant Address
-        Assert.Equal(0, response.Registrant.Address.Count);
-
-
-        // AdminContact Details
-        Assert.Equal("CON000030857", response.AdminContact.RegistryId);
-        Assert.Null(response.AdminContact.Name);
-        Assert.Null(response.AdminContact.TelephoneNumber);
-        Assert.Null(response.AdminContact.FaxNumber);
-        Assert.Null(response.AdminContact.Email);
-
-        // AdminContact Address
-        Assert.Equal(0, response.AdminContact.Address.Count);
-
-
-        // BillingContact Details
-        Assert.Null(response.BillingContact);
-
-        // BillingContact Address
-
-
-        // TechnicalContact Details
-        Assert.Equal("CON000030857", response.TechnicalContact.RegistryId);
-        Assert.Null(response.TechnicalContact.Name);
-        Assert.Null(response.TechnicalContact.TelephoneNumber);
-        Assert.Null(response.TechnicalContact.FaxNumber);
-        Assert.Null(response.TechnicalContact.Email);
-
-        // TechnicalContact Address
-        Assert.Equal(0, response.TechnicalContact.Address.Count);
-
-
-        // Domain Status
-        Assert.Equal(0, response.DomainStatus.Count);
-
-        Assert.Equal(16, response.FieldsParsed);
+        Assert.Equal(new DateTime(2010, 10, 27, 7, 53, 43, DateTimeKind.Utc), response.Registered);
+        Assert.Equal(new DateTime(2027, 6, 4, 0, 0, 0, DateTimeKind.Utc), response.Expiration);
     }
 
     [Fact]

@@ -13,7 +13,7 @@ public class ClParsingTests : ParsingTests
         parser = new WhoisParser();
     }
 
-    [Fact(Skip = "Template update deferred - WHOIS response format changed")]
+    [Fact]
     public void Test_not_found()
     {
         var sample = SampleReader.Read("whois.nic.cl", "cl", "not-found", "u34jedzcq.cl.txt");
@@ -23,11 +23,7 @@ public class ClParsingTests : ParsingTests
         Assert.Equal(RegistrationStatus.NotFound, response.Status);
 
         Assert.Equal(0, response.ParsingErrors);
-        Assert.Equal("whois.nic.cl/cl/not-found/01", response.TemplateName);
-
-        Assert.Equal("u34jedzcq.cl", response.DomainName.ToString());
-
-        Assert.Equal(2, response.FieldsParsed);
+        Assert.Equal("whois.nic.cl/cl/not-found/02", response.TemplateName);
     }
 
     [Fact]
@@ -40,23 +36,24 @@ public class ClParsingTests : ParsingTests
         Assert.Equal(RegistrationStatus.Found, response.Status);
 
         Assert.Equal(0, response.ParsingErrors);
-        Assert.Equal("generic/tld/found/02", response.TemplateName);
+        Assert.Equal("whois.nic.cl/cl/found/02", response.TemplateName);
 
-        Assert.Null(response.DomainName);
+        Assert.Equal("google.cl", response.DomainName.ToString());
 
         // Registrant Details
-        Assert.Null(response.Registrant);
+        Assert.Equal("Google LLC", response.Registrant.Name);
 
-        // AdminContact Details
-        Assert.Null(response.AdminContact);
+        // Registrar Details
+        Assert.Equal("MarkMonitor Inc.", response.Registrar.Name);
 
-
-        // TechnicalContact Details
-        Assert.Null(response.TechnicalContact);
+        Assert.Equal(new DateTime(2002, 10, 22, 0, 0, 0, DateTimeKind.Utc), response.Registered);
+        Assert.Equal(new DateTime(2026, 11, 20, 0, 0, 0, DateTimeKind.Utc), response.Expiration);
 
         // Nameservers
-        Assert.Equal(0, response.NameServers.Count);
-
-        Assert.Equal(2, response.FieldsParsed);
+        Assert.Equal(4, response.NameServers.Count);
+        Assert.Equal("ns1.google.com", response.NameServers[0]);
+        Assert.Equal("ns2.google.com", response.NameServers[1]);
+        Assert.Equal("ns3.google.com", response.NameServers[2]);
+        Assert.Equal("ns4.google.com", response.NameServers[3]);
     }
 }

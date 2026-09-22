@@ -23,7 +23,7 @@ public class GgParsingTests : ParsingTests
         Assert.Equal(RegistrationStatus.NotFound, response.Status);
 
         Assert.Equal(0, response.ParsingErrors);
-        Assert.Equal("generic/tld/not-found/01", response.TemplateName);
+        Assert.Equal("whois.gg/gg/not-found/01", response.TemplateName);
 
         Assert.Null(response.DomainName);
 

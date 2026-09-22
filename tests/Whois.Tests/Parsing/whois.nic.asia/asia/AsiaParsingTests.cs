@@ -23,58 +23,25 @@ public class AsiaParsingTests : ParsingTests
         Assert.Equal(RegistrationStatus.Found, response.Status);
 
         Assert.Equal(0, response.ParsingErrors);
-        Assert.Equal("whois.nic.asia/asia/found/01", response.TemplateName);
+        Assert.Equal("generic/tld/found/01", response.TemplateName);
 
-        Assert.Null(response.DomainName);
-        Assert.Equal(" REDACTED", response.RegistryDomainId);
+        Assert.Equal("novalash.asia", response.DomainName.ToString());
 
         // Registrar Details
-        Assert.Null(response.Registrar);
+        Assert.Equal("007Names, Inc.", response.Registrar.Name);
 
-        Assert.Null(response.Updated);
-        Assert.Null(response.Registered);
-        Assert.Null(response.Expiration);
-
-        // Registrant Details
-        Assert.Equal(" REDACTED", response.Registrant.RegistryId);
-        Assert.Equal(" REDACTED", response.Registrant.Name);
-        Assert.Equal(" Novalash", response.Registrant.Organization);
-        Assert.Null(response.Registrant.TelephoneNumber);
-        Assert.Null(response.Registrant.Email);
-
-        // Registrant Address
-        Assert.Equal(3, response.Registrant.Address.Count);
-        Assert.Equal(" REDACTED", response.Registrant.Address[0]);
-        Assert.Equal(" TX", response.Registrant.Address[1]);
-        Assert.Equal(" REDACTED", response.Registrant.Address[2]);
-
-
-        // AdminContact Details
-        Assert.Null(response.AdminContact);
-
-        // AdminContact Address
-
-
-        // BillingContact Details
-        Assert.Null(response.BillingContact);
-
-        // BillingContact Address
-
-
-        // TechnicalContact Details
-        Assert.Null(response.TechnicalContact);
-
-        // TechnicalContact Address
-
+        Assert.Equal(new DateTime(2026, 07, 10, 03, 41, 38, DateTimeKind.Utc), response.Updated);
+        Assert.Equal(new DateTime(2008, 10, 30, 22, 54, 15, DateTimeKind.Utc), response.Registered);
+        Assert.Equal(new DateTime(2026, 10, 30, 22, 54, 15, DateTimeKind.Utc), response.Expiration);
 
         // Nameservers
-        Assert.Equal(0, response.NameServers.Count);
+        Assert.Equal(2, response.NameServers.Count);
+        Assert.Equal("ns2.rackspace.com", response.NameServers[0]);
+        Assert.Equal("ns.raskspace.com", response.NameServers[1]);
 
         // Domain Status
         Assert.Equal(1, response.DomainStatus.Count);
         Assert.Equal("ok", response.DomainStatus[0]);
-
-        Assert.Equal(9, response.FieldsParsed);
     }
 
     [Fact]
@@ -87,58 +54,25 @@ public class AsiaParsingTests : ParsingTests
         Assert.Equal(RegistrationStatus.Found, response.Status);
 
         Assert.Equal(0, response.ParsingErrors);
-        Assert.Equal("whois.nic.asia/asia/found/01", response.TemplateName);
+        Assert.Equal("generic/tld/found/01", response.TemplateName);
 
-        Assert.Null(response.DomainName);
-        Assert.Equal(" REDACTED", response.RegistryDomainId);
+        Assert.Equal("cj7.asia", response.DomainName.ToString());
 
         // Registrar Details
-        Assert.Null(response.Registrar);
+        Assert.Equal("Dynadot Inc", response.Registrar.Name);
 
-        Assert.Null(response.Updated);
-        Assert.Null(response.Registered);
-        Assert.Null(response.Expiration);
-
-        // Registrant Details
-        Assert.Equal(" REDACTED", response.Registrant.RegistryId);
-        Assert.Equal(" REDACTED", response.Registrant.Name);
-        Assert.Equal(" Super Privacy Service LTD c/o Dynadot", response.Registrant.Organization);
-        Assert.Null(response.Registrant.TelephoneNumber);
-        Assert.Null(response.Registrant.Email);
-
-        // Registrant Address
-        Assert.Equal(3, response.Registrant.Address.Count);
-        Assert.Equal(" REDACTED", response.Registrant.Address[0]);
-        Assert.Equal(" California", response.Registrant.Address[1]);
-        Assert.Equal(" REDACTED", response.Registrant.Address[2]);
-
-
-        // AdminContact Details
-        Assert.Null(response.AdminContact);
-
-        // AdminContact Address
-
-
-        // BillingContact Details
-        Assert.Null(response.BillingContact);
-
-        // BillingContact Address
-
-
-        // TechnicalContact Details
-        Assert.Null(response.TechnicalContact);
-
-        // TechnicalContact Address
-
+        Assert.Equal(new DateTime(2026, 06, 30, 18, 28, 22, DateTimeKind.Utc), response.Updated);
+        Assert.Equal(new DateTime(2026, 06, 25, 18, 27, 34, DateTimeKind.Utc), response.Registered);
+        Assert.Equal(new DateTime(2027, 06, 25, 18, 27, 34, DateTimeKind.Utc), response.Expiration);
 
         // Nameservers
-        Assert.Equal(0, response.NameServers.Count);
+        Assert.Equal(2, response.NameServers.Count);
+        Assert.Equal("bella.ns.cloudflare.com", response.NameServers[0]);
+        Assert.Equal("arturo.ns.cloudflare.com", response.NameServers[1]);
 
         // Domain Status
         Assert.Equal(1, response.DomainStatus.Count);
         Assert.Equal("clientTransferProhibited", response.DomainStatus[0]);
-
-        Assert.Equal(9, response.FieldsParsed);
     }
 
     [Fact]

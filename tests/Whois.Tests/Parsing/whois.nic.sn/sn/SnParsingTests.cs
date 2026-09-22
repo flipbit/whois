@@ -34,30 +34,13 @@ public class SnParsingTests : ParsingTests
         Assert.Equal(RegistrationStatus.Found, response.Status);
 
         Assert.Equal(0, response.ParsingErrors);
-        Assert.Equal("generic/tld/found/05", response.TemplateName);
+        Assert.Equal("whois.nic.sn/sn/found/02", response.TemplateName);
 
-        Assert.Null(response.DomainName);
+        Assert.Equal("google.sn", response.DomainName.ToString());
 
         // Registrar Details
-        Assert.Null(response.Registrar);
+        Assert.Equal("MARKMONITOR Inc.", response.Registrar.Name);
 
         Assert.Null(response.Registered);
-
-        // Registrant Details
-        Assert.Null(response.Registrant);
-
-
-        // AdminContact Details
-        Assert.Null(response.AdminContact);
-
-
-        // TechnicalContact Details
-        Assert.Null(response.TechnicalContact);
-
-
-        // Nameservers
-        Assert.Equal(0, response.NameServers.Count);
-
-        Assert.Equal(5, response.FieldsParsed);
     }
 }

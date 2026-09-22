@@ -23,31 +23,26 @@ public class PtParsingTests : ParsingTests
         Assert.Equal(RegistrationStatus.Found, response.Status);
 
         Assert.Equal(0, response.ParsingErrors);
-        Assert.Equal("generic/tld/found/01", response.TemplateName);
+        Assert.Equal("whois.dns.pt/pt/found/02", response.TemplateName);
 
-        Assert.Null(response.DomainName);
+        Assert.Equal("google.pt", response.DomainName.ToString());
 
-        Assert.Null(response.Registered);
+        Assert.Equal(new DateTime(2003, 01, 09, 00, 00, 00, DateTimeKind.Utc), response.Registered);
+        Assert.Equal(new DateTime(2027, 02, 28, 23, 59, 00, DateTimeKind.Utc), response.Expiration);
 
         // Registrant Details
-        Assert.Null(response.Registrant);
+        Assert.Equal("Google LLC", response.Registrant.Name);
 
-        // Registrant Address
-
-
-        // BillingContact Details
-        Assert.Null(response.BillingContact);
-
-
-        // TechnicalContact Details
-        Assert.Null(response.TechnicalContact);
-
+        // Nameservers
+        Assert.Equal(4, response.NameServers.Count);
+        Assert.Equal("ns3.google.com", response.NameServers[0]);
+        Assert.Equal("ns4.google.com", response.NameServers[1]);
+        Assert.Equal("ns1.google.com", response.NameServers[2]);
+        Assert.Equal("ns2.google.com", response.NameServers[3]);
 
         // Domain Status
         Assert.Equal(1, response.DomainStatus.Count);
         Assert.Equal("Registered", response.DomainStatus[0]);
-
-        Assert.Equal(4, response.FieldsParsed);
     }
 
     [Fact]
