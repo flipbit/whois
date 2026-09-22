@@ -47,26 +47,46 @@ internal sealed class RdapProtocolClient : IProtocolClient
 
     public async Task<ProtocolResponse> Query(LookupRequest request, CancellationToken ct)
     {
-        var domainRequest = (DomainRequest)request;
         var sw = Stopwatch.StartNew();
 
-        ValidateQuery(domainRequest.Query);
+        string baseUrl;
+        string url;
+        HostName? hostName = null;
 
-        var tld = HostName.TryParse(domainRequest.Query, out var hostName) ? hostName!.Tld : domainRequest.Query;
-        var baseUrl = domainRequest.RdapBaseUrl
-            ?? await _rdapRegistry.GetBaseUrl(tld, ct).ConfigureAwait(false);
-        if (baseUrl == null)
+        if (request is DomainRequest domainRequest)
         {
-            throw new WhoisException($"No RDAP endpoint available for TLD: {tld}");
+            ValidateQuery(domainRequest.Query);
+            var tld = HostName.TryParse(domainRequest.Query, out hostName) ? hostName!.Tld : domainRequest.Query;
+            var resolvedBase = domainRequest.RdapBaseUrl
+                ?? await _rdapRegistry.GetBaseUrl(tld, ct).ConfigureAwait(false);
+            if (resolvedBase == null)
+                throw new WhoisException($"No RDAP endpoint available for TLD: {tld}");
+            baseUrl = resolvedBase;
+            var encodedQuery = Uri.EscapeDataString(domainRequest.Query);
+            url = $"{baseUrl.TrimEnd('/')}/domain/{encodedQuery}";
         }
-
-        var encodedQuery = Uri.EscapeDataString(domainRequest.Query);
-        var url = $"{baseUrl.TrimEnd('/')}/domain/{encodedQuery}";
+        else if (request is IpRequest ipRequest)
+        {
+            var resolvedBase = request.RdapBaseUrl
+                ?? await _rdapRegistry.GetBaseUrl(ipRequest.Address, ct).ConfigureAwait(false);
+            if (resolvedBase == null)
+            {
+                var addrStr = ipRequest.Address.ToString();
+                throw new WhoisException($"No RDAP endpoint available for IP: {addrStr}");
+            }
+            baseUrl = resolvedBase;
+            var encodedQuery = Uri.EscapeDataString(ipRequest.Address.ToString());
+            url = $"{baseUrl.TrimEnd('/')}/ip/{encodedQuery}";
+        }
+        else
+        {
+            throw new WhoisException($"Unsupported request type: {request.GetType().Name}");
+        }
         ValidateUrl(url);
 
         _logger.LogDebug("RDAP: querying {Url}", url);
 
-        var timeout = domainRequest.TimeoutSeconds ?? _options.TimeoutSeconds;
+        var timeout = request.TimeoutSeconds ?? _options.TimeoutSeconds;
         using var cts = CancellationTokenSource.CreateLinkedTokenSource(ct);
         cts.CancelAfter(TimeSpan.FromSeconds(timeout));
 
@@ -112,15 +132,14 @@ internal sealed class RdapProtocolClient : IProtocolClient
             if (finalResponse.StatusCode == System.Net.HttpStatusCode.NotFound)
             {
                 sw.Stop();
+                IRegistrationInfo notFoundResponse = request is IpRequest
+                    ? new IpInfo { Status = RegistrationStatus.NotFound }
+                    : new DomainInfo { DomainName = hostName, Status = RegistrationStatus.NotFound };
                 return new ProtocolResponse
                 {
                     RawContent = string.Empty,
                     Protocol = LookupProtocol.Rdap,
-                    Response = new DomainInfo
-                    {
-                        DomainName = hostName,
-                        Status = RegistrationStatus.NotFound,
-                    },
+                    Response = notFoundResponse,
                     Diagnostics = new LookupDiagnostics
                     {
                         ServerUrl = url,
@@ -134,15 +153,14 @@ internal sealed class RdapProtocolClient : IProtocolClient
             {
                 _logger.LogWarning("RDAP: rate limited (HTTP 429) by {Url}, Retry-After: {RetryAfter}", url, finalResponse.Headers.RetryAfter);
                 sw.Stop();
+                IRegistrationInfo throttledResponse = request is IpRequest
+                    ? new IpInfo { Status = RegistrationStatus.Throttled }
+                    : new DomainInfo { DomainName = hostName, Status = RegistrationStatus.Throttled };
                 return new ProtocolResponse
                 {
                     RawContent = string.Empty,
                     Protocol = LookupProtocol.Rdap,
-                    Response = new DomainInfo
-                    {
-                        DomainName = hostName,
-                        Status = RegistrationStatus.Throttled,
-                    },
+                    Response = throttledResponse,
                     Diagnostics = new LookupDiagnostics
                     {
                         ServerUrl = url,
@@ -160,7 +178,9 @@ internal sealed class RdapProtocolClient : IProtocolClient
 
             var json = await NetStandardShims.ReadWithSizeLimit(finalResponse, _options.MaxRdapResponseSize, cts.Token).ConfigureAwait(false);
 
-            var domainInfo = RdapParser.Parse(json);
+            IRegistrationInfo parsedResponse = request is IpRequest
+                ? RdapParser.ParseIpNetwork(json)
+                : RdapParser.Parse(json);
 
             sw.Stop();
 
@@ -168,10 +188,10 @@ internal sealed class RdapProtocolClient : IProtocolClient
             {
                 RawContent = json,
                 Protocol = LookupProtocol.Rdap,
-                Response = domainInfo,
+                Response = parsedResponse,
                 Diagnostics = new LookupDiagnostics
                 {
-                    FieldsParsed = CountFields(domainInfo),
+                    FieldsParsed = CountFields(parsedResponse),
                     ServerUrl = url,
                     HttpStatusCode = statusCode,
                     Duration = sw.Elapsed,

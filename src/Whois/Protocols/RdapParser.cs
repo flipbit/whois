@@ -32,6 +32,17 @@ internal static class RdapParser
     private const string PropRel = "rel";
     private const string PropHref = "href";
 
+    // IP network specific property names (RFC 9083 Section 5.4)
+    private const string PropStartAddress = "startAddress";
+    private const string PropEndAddress = "endAddress";
+    private const string PropName = "name";
+    private const string PropCountry = "country";
+    private const string PropPort43 = "port43";
+    private const string PropCidr0Cidrs = "cidr0_cidrs";
+    private const string PropV4Prefix = "v4prefix";
+    private const string PropV6Prefix = "v6prefix";
+    private const string PropLength = "length";
+
     // RFC 9083 event action values
     private const string EventRegistration = "registration";
     private const string EventLastChanged = "last changed";
@@ -170,25 +181,7 @@ internal static class RdapParser
             }
         }
 
-        string? remarks = null;
-        if (root.TryGetProperty(PropRemarks, out var remarksArr))
-        {
-            var descriptions = new List<string>();
-            foreach (var remark in remarksArr.EnumerateArray())
-            {
-                if (remark.TryGetProperty(PropDescription, out var desc))
-                {
-                    foreach (var line in desc.EnumerateArray())
-                    {
-                        var s = line.GetString();
-                        if (s != null) descriptions.Add(s);
-                    }
-                }
-            }
-#pragma warning disable MA0089 // string.Join(char) overload not available on netstandard2.0
-            if (descriptions.Count > 0) remarks = string.Join("\n", descriptions);
-#pragma warning restore MA0089
-        }
+        var remarks = ParseRemarks(root);
 
         HostName? parsedDomainName = null;
         var nameToUse = domainName ?? unicodeName;
@@ -212,6 +205,133 @@ internal static class RdapParser
             DnsSecStatus = dnsSecStatus,
             Remarks = remarks,
         };
+    }
+
+    /// <summary>
+    /// Parses an RDAP IP network JSON response string into an IpInfo.
+    /// </summary>
+    public static IpInfo ParseIpNetwork(string json)
+    {
+        using var doc = JsonDocument.Parse(json);
+        var root = doc.RootElement;
+
+        var startAddress = GetString(root, PropStartAddress);
+        var endAddress = GetString(root, PropEndAddress);
+        var network = startAddress != null && endAddress != null
+            ? $"{startAddress} - {endAddress}" : null;
+
+        var cidr = ParseCidr(root);
+        var netName = GetString(root, PropName);
+        var country = GetString(root, PropCountry);
+        var port43 = GetString(root, PropPort43);
+
+        var statusList = GetStringArray(root, PropStatus);
+        var status = MapStatus(statusList);
+
+        DateTime? registered = null, updated = null;
+        if (root.TryGetProperty(PropEvents, out var events))
+        {
+            foreach (var evt in events.EnumerateArray())
+            {
+                var action = GetString(evt, PropEventAction);
+                var dateStr = GetString(evt, PropEventDate);
+                if (dateStr == null || !DateTime.TryParse(dateStr, provider: null,
+                    System.Globalization.DateTimeStyles.RoundtripKind, out var date)) continue;
+
+                switch (action)
+                {
+                    case EventRegistration: registered = date.ToUniversalTime(); break;
+                    case EventLastChanged: updated = date.ToUniversalTime(); break;
+                }
+            }
+        }
+
+        string? organization = null;
+        Contact? abuseContact = null, adminContact = null, techContact = null;
+
+        if (root.TryGetProperty(PropEntities, out var entities))
+        {
+            foreach (var entity in entities.EnumerateArray())
+            {
+                var roles = GetStringArray(entity, PropRoles);
+
+                if (roles.Contains(RoleRegistrant))
+                {
+                    var vcard = ExtractVCardProperties(entity);
+                    organization = vcard.Org ?? vcard.Fn;
+                }
+                if (roles.Contains(RoleAbuse))
+                {
+                    abuseContact = ParseContact(entity);
+                }
+                if (roles.Contains(RoleAdministrative))
+                {
+                    adminContact = ParseContact(entity);
+                }
+                if (roles.Contains(RoleTechnical))
+                {
+                    techContact = ParseContact(entity);
+                }
+            }
+        }
+
+        var remarks = ParseRemarks(root);
+
+        return new IpInfo
+        {
+            Network = network,
+            Cidr = cidr,
+            NetName = netName,
+            Organization = organization,
+            Country = country,
+            Rir = port43,
+            Status = status,
+            Registered = registered,
+            Updated = updated,
+            Remarks = remarks,
+            AbuseContact = abuseContact,
+            AdminContact = adminContact,
+            TechnicalContact = techContact,
+        };
+    }
+
+    private static string? ParseCidr(JsonElement root)
+    {
+        if (!root.TryGetProperty(PropCidr0Cidrs, out var cidrs)) return null;
+
+        foreach (var cidr in cidrs.EnumerateArray())
+        {
+            var v4 = GetString(cidr, PropV4Prefix);
+            var v6 = GetString(cidr, PropV6Prefix);
+            var prefix = v4 ?? v6;
+            if (prefix != null && cidr.TryGetProperty(PropLength, out var len))
+            {
+                return FormattableString.Invariant($"{prefix}/{len.GetInt32()}");
+            }
+        }
+
+        return null;
+    }
+
+    private static string? ParseRemarks(JsonElement root)
+    {
+        if (!root.TryGetProperty(PropRemarks, out var remarksArr)) return null;
+
+        var descriptions = new List<string>();
+        foreach (var remark in remarksArr.EnumerateArray())
+        {
+            if (remark.TryGetProperty(PropDescription, out var desc))
+            {
+                foreach (var line in desc.EnumerateArray())
+                {
+                    var s = line.GetString();
+                    if (s != null) descriptions.Add(s);
+                }
+            }
+        }
+#pragma warning disable MA0089 // string.Join(char) overload not available on netstandard2.0
+        return descriptions.Count > 0 ? string.Join("\n", descriptions) : null;
+#pragma warning restore MA0089
     }
 
     private static Registrar ParseRegistrar(JsonElement entity)
