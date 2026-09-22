@@ -1,3 +1,4 @@
+using System.Net;
 using Microsoft.Extensions.Logging;
 using Microsoft.Extensions.Logging.Abstractions;
 using Microsoft.Extensions.Options;
@@ -141,6 +142,87 @@ public class WhoisLookup : IWhoisLookup
             response.Protocol,
             response.RawContent,
             response.Diagnostics);
+    }
+
+    /// <inheritdoc/>
+    public Task<LookupResult<IpInfo>> Lookup(IPAddress address, CancellationToken ct = default)
+    {
+        return Lookup(new IpRequest(address), ct);
+    }
+
+    /// <inheritdoc/>
+    public async Task<LookupResult<IpInfo>> Lookup(IpRequest request, CancellationToken ct = default)
+    {
+        var preference = request.PreferredProtocol ?? _options.PreferredProtocol;
+        var (client, rdapBaseUrl) = await SelectClientForIp(preference, request.Address, ct).ConfigureAwait(false);
+
+        _logger.LogDebug("Lookup {Query}: using {Protocol} protocol", request.Address, client.Protocol);
+
+        var effectiveRequest = new IpRequest(request.Address)
+        {
+            Encoding = request.Encoding,
+            TimeoutSeconds = request.TimeoutSeconds,
+            FollowReferrer = request.FollowReferrer,
+            WhoisServer = request.WhoisServer,
+            Port = request.Port,
+            RdapBaseUrl = rdapBaseUrl,
+        };
+
+        ProtocolResponse response;
+        try
+        {
+            response = await client.Query(effectiveRequest, ct).ConfigureAwait(false);
+        }
+        catch (Exception ex) when (ex is not OperationCanceledException)
+        {
+            _logger.LogWarning(ex, "Lookup failed for {Query} using {Protocol}", request.Address, client.Protocol);
+            throw;
+        }
+
+        return new LookupResult<IpInfo>(
+            (IpInfo)response.Response,
+            response.Protocol,
+            response.RawContent,
+            response.Diagnostics);
+    }
+
+    /// <inheritdoc/>
+    public async Task<LookupResult<IRegistrationInfo>> Query(string query, CancellationToken ct = default)
+    {
+        if (IPAddress.TryParse(query, out var ip))
+        {
+            var ipResult = await Lookup(ip, ct).ConfigureAwait(false);
+            return new LookupResult<IRegistrationInfo>(
+                ipResult.Response, ipResult.Protocol, ipResult.RawContent, ipResult.Diagnostics);
+        }
+
+        var domainResult = await Lookup(query, ct).ConfigureAwait(false);
+        return new LookupResult<IRegistrationInfo>(
+            domainResult.Response, domainResult.Protocol, domainResult.RawContent, domainResult.Diagnostics);
+    }
+
+    private async Task<(IProtocolClient Client, string? RdapBaseUrl)> SelectClientForIp(
+        ProtocolPreference preference, IPAddress address, CancellationToken ct)
+    {
+        switch (preference)
+        {
+            case ProtocolPreference.Whois:
+                return (_whoisClient, null);
+
+            case ProtocolPreference.Rdap:
+                var rdapUrl = await _rdapRegistry.GetBaseUrl(address, ct).ConfigureAwait(false);
+                if (rdapUrl == null)
+                    throw new WhoisException(FormattableString.Invariant($"RDAP is not available for IP: {address}"));
+                return (_rdapClient, rdapUrl);
+
+            case ProtocolPreference.Auto:
+            default:
+                var autoRdapUrl = await _rdapRegistry.GetBaseUrl(address, ct).ConfigureAwait(false);
+                if (autoRdapUrl != null)
+                    return (_rdapClient, autoRdapUrl);
+                _logger.LogInformation("RDAP not available for IP {Address}, falling back to WHOIS", address);
+                return (_whoisClient, null);
+        }
     }
 
     private async Task<(IProtocolClient Client, string? RdapBaseUrl)> SelectClient(

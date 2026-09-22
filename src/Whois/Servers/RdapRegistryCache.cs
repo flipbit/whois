@@ -1,3 +1,4 @@
+using System.Net;
 using System.Text.Json;
 using Microsoft.Extensions.Logging;
 using Microsoft.Extensions.Logging.Abstractions;
@@ -42,6 +43,13 @@ public class RdapRegistryCache : IRdapRegistryCache
         cache.TryGetValue(tld, out var url);
         _logger.LogDebug("RDAP registry: lookup for TLD {Tld}: {Result}", tld, url != null ? "hit" : "miss");
         return url;
+    }
+
+    /// <inheritdoc/>
+    public Task<string?> GetBaseUrl(IPAddress address, CancellationToken ct = default)
+    {
+        // IP RDAP bootstrap is implemented in Task 6.
+        throw new NotImplementedException("IP RDAP bootstrap not yet implemented.");
     }
 
     public void ClearCache()
