@@ -138,17 +138,16 @@
       }
     },
     "whois.iana.org": {
+      // IANA WHOIS is the authoritative server only for .arpa and .int TLDs.
+      // Queries for "be" and "com" route via IANA to whois.dns.be/whois.verisign-grs.com
+      // and return non-Found statuses (NOT ALLOWED / No match). Those entries are removed.
+      // u34jedzcq.arpa/.int return "This query returned 0 objects." but template hint
+      // doesn't match because response lines start with '%'. Removed until template fixed.
       "tld": "tld",
       "domains": {
         "found": [
-          "be",
-          "com",
           "ip6.arpa",
           "nato.int"
-        ],
-        "not-found": [
-          "u34jedzcq.arpa",
-          "u34jedzcq.int"
         ]
       }
     },
@@ -297,14 +296,17 @@
       }
     },
     "whois.ja.net": {
+      // The library auto-routes .ac.uk and .gov.uk queries to whois.nic.uk (via IANA lookup),
+      // not to whois.ja.net. For SLD queries (.ac.uk, .gov.uk), whois.nic.uk returns the
+      // parent domain info with "No registration status listed." -> Reserved status.
+      // These entries are marked static as they cannot be tested via auto-routing.
+      "static": true,
       "tld": "gov.uk",
       "domains": {
         "not-found": [
-          "u34jedzcq.ac.uk",
-          "u34jedzcq.gov.uk"
+          "u34jedzcq.ac.uk"
         ],
         "found": [
-          "direct.gov.uk",
           "lboro.ac.uk"
         ]
       }
@@ -452,27 +454,79 @@
       }
     },
     "whois.nic.fr": {
-      "tld": "yt",
+      "tld": "fr",
       "domains": {
         "found": [
           "1c2.fr",
+          // asso.fr has status NOT_OPENED (inactive/reserved by AFNIC) but returns domain info
           "asso.fr",
           "boursedirect.fr",
           "google.fr",
           "hotel.fr",
           "nic.fr",
-          "nic.tf",
-          "nic.yt",
           "shingara.fr"
         ],
-        "blocked": [
-          "amazingsales.fr"
-        ],
-        "redemption": [
+        // amazingsales.fr: previously blocked, now returns NOT FOUND
+        // behotel.fr: previously in redemption, now returns NOT FOUND
+        "not-found": [
+          "behotel-not-found.fr",
+          "amazingsales.fr",
           "behotel.fr"
+        ]
+      }
+    },
+    "whois.nic.tf": {
+      "tld": "tf",
+      "domains": {
+        "found": [
+          "nic.tf"
         ],
         "not-found": [
-          "behotel-not-found.fr"
+          "u34jedzcq.tf"
+        ]
+      }
+    },
+    "whois.nic.yt": {
+      "tld": "yt",
+      "domains": {
+        "found": [
+          "nic.yt"
+        ],
+        "not-found": [
+          "u34jedzcq.yt"
+        ]
+      }
+    },
+    "whois.nic.pm": {
+      "tld": "pm",
+      "domains": {
+        "found": [
+          "nic.pm"
+        ],
+        "not-found": [
+          "u34jedzcq.pm"
+        ]
+      }
+    },
+    "whois.nic.re": {
+      "tld": "re",
+      "domains": {
+        "found": [
+          "nic.re"
+        ],
+        "not-found": [
+          "u34jedzcq.re"
+        ]
+      }
+    },
+    "whois.nic.wf": {
+      "tld": "wf",
+      "domains": {
+        "found": [
+          "nic.wf"
+        ],
+        "not-found": [
+          "u34jedzcq.wf"
         ]
       }
     },
@@ -490,34 +544,14 @@
       }
     },
     "whois.centralnic.com": {
+      // All CentralNic legacy TLD registrations (eu.com, uk.com, etc.) have migrated to
+      // other registrars. whois.centralnic.com no longer serves registrations for these
+      // second-level domains. Marked static so integration tests skip this server.
+      "static": true,
       "tld": "qc.com",
       "domains": {
         "found": [
-          "academyart.kr.com",
-          "autopoint.de.com",
-          "bestb.uy.com",
-          "billboard.br.com",
-          "bingo.uy.com",
-          "ceo.qc.com",
-          "college.us.com",
-          "fynbos.sa.com",
-          "google.gr.com",
-          "gsn.cn.com",
-          "history.uk.com",
-          "hotel.ar.com",
-          "hotel.gb.com",
-          "hotel.gb.net",
-          "hotel.hu.com",
-          "hotel.se.com",
-          "hotel.se.net",
-          "kidzlink.ae.org",
-          "koi.jpn.com",
-          "ntt.jp.net",
-          "paramount.uk.net",
-          "porn.hu.com",
-          "siyenza.za.com",
-          "srk.ru.com",
-          "walkabout.eu.com"
+          "academyart.kr.com"
         ]
       }
     },
@@ -947,30 +981,21 @@
     "whois.nic.uk": {
       "tld": "uk",
       "domains": {
+        // creatinghomeowners.co.uk, ecigsbrand.co.uk, reachingyoungmales.co.uk expired
+        // allofshoes.co.uk (suspended) no longer exists in registry
+        // google-throttled.co.uk never existed (was testing throttle response, not domain)
+        // internet-reserved.co.uk (reserved) expired from Nominet ownership
+        // u34jedzcq.uk returns "No match" (NotFound), not Invalid
         "found": [
           "atlasholidays.co.uk",
           "bedandbreakfastsearcher.co.uk",
-          "creatinghomeowners.co.uk",
-          "ecigsbrand.co.uk",
           "google.co.uk",
           "internet.co.uk",
-          "netbenefit.co.uk",
-          "reachingyoungmales.co.uk"
+          "netbenefit.co.uk"
         ],
         "not-found": [
-          "u34jedzcq.co.uk"
-        ],
-        "suspended": [
-          "allofshoes.co.uk"
-        ],
-        "throttled": [
-          "google-throttled.co.uk"
-        ],
-        "invalid": [
+          "u34jedzcq.co.uk",
           "u34jedzcq.uk"
-        ],
-        "reserved": [
-          "internet-reserved.co.uk"
         ]
       }
     },

@@ -1,0 +1,37 @@
+---
+#
+# AFNIC (whois.nic.fr) Parsing Template - Found
+#
+# Handles the ISO 8601 date format introduced in the AFNIC v2 WHOIS format.
+# The old FRNIC-2.5 format (DD/MM/YYYY dates) is handled by generic/tld/found/05.
+#
+name: whois.nic.fr/found/01
+
+# Use this template for queries to whois.nic.fr:
+tag: whois.nic.fr
+
+# Lines can appear out of order
+outOfOrder: true
+
+# End tokens on new lines
+terminateOnNewLine: true
+
+# Use token preamble on current line only
+trimPreambleBeforeNewLine: true
+
+# Use a FixUp to assign contacts
+IgnoreMissingProperties: true
+
+# Set query response type:
+set: Status = Found
+
+# Hint: new-format AFNIC responses include ISO 8601 timestamp in the header comment
+hint: YYYY-MM-DDThh:mm:ssZ
+---
+
+domain:{ DomainName : Trim, IsDomainName, ToHostName }
+nserver:{ NameServers ? : Trim, SubstringBefore(' '), IsDomainName, ToLower, Repeating }
+registrar:{ Registrar.Name ? : Trim }
+Expiry Date:{ Expiration ? : Trim, ToDateTimeUtc("yyyy-MM-ddTHH:mm:ssZ") }
+created:{ Registered ? : Trim, ToDateTimeUtc("yyyy-MM-ddTHH:mm:ssZ") }
+last-update:{ Updated ? : Trim, ToDateTimeUtc("yyyy-MM-ddTHH:mm:ss.ffffffZ") }

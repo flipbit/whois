@@ -1,0 +1,37 @@
+---
+#
+# AFNIC (whois.nic.yt) Parsing Template - Found
+#
+# Mayotte (.yt) is operated by AFNIC using the same
+# WHOIS format as whois.nic.fr.
+#
+name: whois.nic.fr/found/01
+
+# Use this template for queries to whois.nic.yt:
+tag: whois.nic.yt
+
+# Lines can appear out of order
+outOfOrder: true
+
+# End tokens on new lines
+terminateOnNewLine: true
+
+# Use token preamble on current line only
+trimPreambleBeforeNewLine: true
+
+# Use a FixUp to assign contacts
+IgnoreMissingProperties: true
+
+# Set query response type:
+set: Status = Found
+
+# Hint: AFNIC responses include ISO 8601 timestamp in the header comment
+hint: YYYY-MM-DDThh:mm:ssZ
+---
+
+domain:{ DomainName : Trim, IsDomainName, ToHostName }
+nserver:{ NameServers ? : Trim, SubstringBefore(' '), IsDomainName, ToLower, Repeating }
+registrar:{ Registrar.Name ? : Trim }
+Expiry Date:{ Expiration ? : Trim, ToDateTimeUtc("yyyy-MM-ddTHH:mm:ssZ") }
+created:{ Registered ? : Trim, ToDateTimeUtc("yyyy-MM-ddTHH:mm:ssZ") }
+last-update:{ Updated ? : Trim, ToDateTimeUtc("yyyy-MM-ddTHH:mm:ss.ffffffZ") }

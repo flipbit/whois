@@ -1,0 +1,74 @@
+---
+#
+# CentralNic ICANN-format Parsing Template
+#
+# CentralNic migrated to the standard ICANN WHOIS format (matching the
+# Verisign .com format) sometime in 2024-2025. This template handles
+# the new format. The old format (found/01.txt) is retained for existing
+# unit test samples.
+#
+name: whois.centralnic.com/found/02
+
+# Use this template for queries to whois.centralnic.com:
+tag: whois.centralnic.com
+
+# Supported TLDs
+tag: ae.org
+tag: ar.com
+tag: br.com
+tag: cn.com
+tag: de.com
+tag: eu.com
+tag: gb.com
+tag: gb.net
+tag: gr.com
+tag: hu.com
+tag: jp.net
+tag: jpn.com
+tag: kr.com
+tag: no.com
+tag: qc.com
+tag: ru.com
+tag: sa.com
+tag: se.com
+tag: se.net
+tag: uk.com
+tag: uk.net
+tag: us.com
+tag: us.org
+tag: uy.com
+tag: za.com
+
+# Allow lines to appear out of order
+outOfOrder: true
+
+# End tokens on new lines
+terminateOnNewLine: true
+
+# Use token preamble on current line only
+trimPreambleBeforeNewLine: true
+
+# Set query response type:
+set: Status = Found
+
+# Hint: new-format responses contain "Registry Domain ID:" (old format used "Domain ID:")
+hint: Registry Domain ID:
+---
+
+Domain Name:{ DomainName : Trim, IsDomainName, ToHostName }
+Registry Domain ID:{ RegistryDomainId : Trim }
+
+Creation Date:{ Registered : ToDateTimeUtc("yyyy-MM-ddTHH:mm:ss.fZ") }
+Updated Date:{ Updated : ToDateTimeUtc("yyyy-MM-ddTHH:mm:ss.fZ") }
+Registry Expiry Date:{ Expiration : ToDateTimeUtc("yyyy-MM-ddTHH:mm:ss.fZ") }
+
+Registrar:{ Registrar.Name : Trim }
+Registrar IANA ID:{ Registrar.IanaId : Trim, IsNumeric }
+Registrar WHOIS Server:{ Registrar.WhoisServer : Trim, RemoveEnd('/'), IsDomainName, ToHostName }
+Registrar URL:{ Registrar.Url : Trim, IsLooseAbsoluteUrl, ToLower }
+Registrar Abuse Contact Email:{ Registrar.AbuseEmail : Trim, IsEmail }
+Registrar Abuse Contact Phone:{ Registrar.AbuseTelephoneNumber : Trim, IsPhoneNumber }
+
+Domain Status:{ DomainStatus : Repeating, CleanDomainStatus }
+Name Server:{ NameServers : Trim, IsDomainName, ToLower, Repeating }
+DNSSEC:{ DnsSecStatus : Trim }
