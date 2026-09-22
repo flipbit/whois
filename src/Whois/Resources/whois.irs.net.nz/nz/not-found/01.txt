@@ -1,0 +1,19 @@
+---
+#
+# .nz Parsing Template - Not Found
+#
+name: whois.irs.net.nz/nz/not-found/01
+
+# Use this template for queries to whois.irs.net.nz:
+tag: whois.irs.net.nz
+tag: nz
+
+# End tokens on new lines
+terminateOnNewLine: true
+
+# Set query response type:
+set: Status = NotFound
+
+hint: Not found:
+---
+Not found: { DomainName ? : IsDomainName, ToHostName }

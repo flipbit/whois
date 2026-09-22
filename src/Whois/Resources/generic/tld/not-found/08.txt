@@ -1,0 +1,18 @@
+---
+#
+# Generic TLD Parsing Template
+#
+name: generic/tld/not-found/08
+
+# Use this template for catch-all parsing:
+tag: catch-all
+
+# End tokens on new lines
+terminateOnNewLine: true
+
+# Set query response type:
+set: Status = NotFound
+
+hint: Not found:
+---
+Not found: { DomainName ? : IsDomainName, ToHostName }

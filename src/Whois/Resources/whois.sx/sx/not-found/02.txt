@@ -1,0 +1,22 @@
+---
+#
+# .sx Parsing Template - Not Found (new format)
+#
+# New format response: "Not found: u34jedzcq.sx"
+# Old format response: "Status: AVAILABLE (No match for domain "...")" (handled by not-found/01)
+#
+name: whois.sx/sx/not-found/02
+
+# Use this template for queries to whois.sx:
+tag: whois.sx
+tag: sx
+
+# End tokens on new lines
+terminateOnNewLine: true
+
+# Set query response type:
+set: Status = NotFound
+
+hint: Not found:
+---
+Not found: { DomainName ? : IsDomainName, ToHostName }

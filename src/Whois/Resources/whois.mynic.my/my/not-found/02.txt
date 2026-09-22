@@ -1,0 +1,19 @@
+---
+#
+# .my Parsing Template - Not Found (new format)
+#
+name: whois.mynic.my/my/not-found/02
+
+# Use this template for queries to whois.mynic.my:
+tag: whois.mynic.my
+tag: my
+
+# End tokens on new lines
+terminateOnNewLine: true
+
+# Set query response type:
+set: Status = NotFound
+
+hint: is available for registration
+---
+>>> Domain { DomainName ? : IsDomainName, ToHostName } is available for registration

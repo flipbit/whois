@@ -1,0 +1,33 @@
+---
+#
+# .pt Parsing Template - Found (new format)
+#
+# New format response: "Domain: google.pt\nDomain Status: Registered\n..."
+# Old format had Portuguese/English headers (handled by found/01).
+#
+name: whois.dns.pt/pt/found/02
+
+# Use this template for queries to whois.dns.pt:
+tag: whois.dns.pt
+tag: pt
+
+# Allow lines to appear out of order
+outOfOrder: true
+
+# End tokens on new lines
+terminateOnNewLine: true
+
+# Use token preamble on current line only
+trimPreambleBeforeNewLine: true
+
+# Set query response type:
+set: Status = Found
+
+hint: Domain Status: Registered
+---
+Domain:{ DomainName : Trim, IsDomainName, ToHostName }
+Domain Status:{ DomainStatus ? : Trim, SubstringBefore(' ') }
+Creation Date:{ Registered ? : Trim, ToDateTimeUtc("dd/MM/yyyy HH:mm:ss") }
+Expiration Date:{ Expiration ? : Trim, ToDateTimeUtc("dd/MM/yyyy HH:mm:ss") }
+Owner Name:{ Registrant.Name ? : Trim }
+Name Server:{ NameServers ? : Trim, SubstringBefore(' '), IsDomainName, ToLower, Repeating }

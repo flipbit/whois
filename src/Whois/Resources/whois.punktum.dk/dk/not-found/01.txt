@@ -1,0 +1,16 @@
+---
+#
+# .dk Parsing Template
+#
+name: whois.punktum.dk/dk/not-found/01
+
+# Use this template for queries to whois.punktum.dk (formerly whois.dk-hostmaster.dk):
+tag: whois.punktum.dk
+tag: dk
+
+# Set query response type:
+set: Status = NotFound
+
+hint: No entries found for the selected source.
+---
+No entries found for the selected source.

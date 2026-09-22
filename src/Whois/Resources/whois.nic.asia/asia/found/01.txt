@@ -16,6 +16,9 @@ terminateOnNewLine: true
 
 # Set query response type:
 set: Status = Found
+
+# Old .asia format used "Domain Create Date:" - new format uses "Creation Date:" (handled by catch-all)
+hint: Domain Create Date:
 ---
 Domain ID:{ RegistryDomainId ? }
 Domain Name:{ DomainName : IsDomainName, ToHostName }

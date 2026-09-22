@@ -1,0 +1,16 @@
+---
+#
+# .tattoo Parsing Template - Not Found
+#
+name: whois.nic.tattoo/tattoo/not-found/01
+
+# Use this template for queries to whois.nic.tattoo:
+tag: whois.nic.tattoo
+tag: tattoo
+
+# Set query response type:
+set: Status = NotFound
+
+hint: No Data Found
+---
+No Data Found

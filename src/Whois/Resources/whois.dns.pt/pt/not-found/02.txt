@@ -1,0 +1,19 @@
+---
+#
+# .pt Parsing Template - Not Found (new format)
+#
+# New format response: "u34jedzcq.pt - No Match"
+# Old format: "{domain} no match" (handled by not-found/01)
+#
+name: whois.dns.pt/pt/not-found/02
+
+# Use this template for queries to whois.dns.pt:
+tag: whois.dns.pt
+tag: pt
+
+# Set query response type:
+set: Status = NotFound
+
+hint: No Match
+---
+{ DomainName ? : IsDomainName, ToHostName } - No Match

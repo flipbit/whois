@@ -1,0 +1,39 @@
+---
+#
+# .gg Parsing Template - Found (Island Networks format)
+#
+# Format: multi-line with indented values under section headers.
+# Date example: "Registered on 30th April 2003 at 00:00:00.000"
+#
+name: whois.gg/gg/found/01
+
+# Use this template for queries to whois.gg:
+tag: whois.gg
+tag: gg
+
+# End tokens on new lines
+terminateOnNewLine: true
+
+# Set query response type:
+set: Status = Found
+
+hint: Registration status:
+---
+Domain:
+     { DomainName : IsDomainName, ToHostName }
+
+Domain Status:
+     { DomainStatus ? : Repeating, CleanDomainStatus }
+
+Registrant:
+     { Registrant.Name ? }
+
+Registrar:
+     { Registrar.Name ? : SubstringBefore(' (') }
+
+Relevant dates:
+     Registered on { Registered ? : SubstringBefore(' at '), Replace('st ',' '), Replace('nd ',' '), Replace('rd ',' '), Replace('th ',' '), ToDateTimeUtc("d MMMM yyyy", "d MMM yyyy") }
+
+Name servers:
+     { NameServers ? : IsDomainName, ToLower, Repeating }
+

@@ -1,0 +1,20 @@
+---
+#
+# .ca Parsing Template - Unavailable (new format)
+#
+# New format response: "Error code: 01044\nError message: The domain name requested has usage restrictions..."
+#
+name: whois.cira.ca/ca/unavailable/02
+
+# Use this template for queries to whois.cira.ca:
+tag: whois.cira.ca
+tag: ca
+
+# Set query response type:
+set: Status = Unavailable
+
+hint: Error code:
+hint: Error message:
+---
+Error code:{ DomainStatus ? : Trim }
+Error message:{ DomainStatus ? : Trim }

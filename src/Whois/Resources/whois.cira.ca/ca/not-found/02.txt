@@ -1,0 +1,19 @@
+---
+#
+# .ca Parsing Template
+#
+name: whois.cira.ca/ca/not-found/02
+
+# Use this template for queries to whois.cira.ca:
+tag: whois.cira.ca
+tag: ca
+
+# End tokens on new lines
+terminateOnNewLine: true
+
+# Set query response type:
+set: Status = NotFound
+
+hint: Not found:
+---
+Not found: { DomainName ? : IsDomainName, ToHostName }

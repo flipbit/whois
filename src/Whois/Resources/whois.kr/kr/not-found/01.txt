@@ -14,7 +14,7 @@ terminateOnNewLine: true
 # Set query response type:
 set: Status = NotFound
 
-hint: Above domain name is not registered to KRNIC.
+hint: was not found in the Registry
 ---
 query : { DomainName : IsDomainName, ToHostName }
 

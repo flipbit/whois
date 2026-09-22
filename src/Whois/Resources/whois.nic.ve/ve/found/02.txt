@@ -1,0 +1,25 @@
+---
+#
+# .ve Parsing Template - Found (new FRED format)
+#
+name: whois.nic.ve/ve/found/02
+
+# Use this template for queries to whois.nic.ve:
+tag: whois.nic.ve
+tag: ve
+
+# Allow lines to appear out of order
+outOfOrder: true
+
+# End tokens on new lines
+terminateOnNewLine: true
+
+# Set query response type:
+set: Status = Found
+
+hint: domain:
+hint: expire:
+---
+domain:       { DomainName : IsDomainName, ToHostName }
+registered:   { Registered ? : ToDateTimeUtc("dd.MM.yyyy HH:mm:ss") }
+expire:       { Expiration ? : ToDateTimeUtc("dd.MM.yyyy") }

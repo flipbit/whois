@@ -1,0 +1,16 @@
+---
+#
+# .tv Parsing Template - Not Found
+#
+name: whois.nic.tv/tv/not-found/01
+
+# Use this template for queries to whois.nic.tv:
+tag: whois.nic.tv
+tag: tv
+
+# Set query response type:
+set: Status = NotFound
+
+hint: No Data Found
+---
+No Data Found

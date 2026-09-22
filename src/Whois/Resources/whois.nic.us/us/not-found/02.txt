@@ -1,0 +1,16 @@
+---
+#
+# .us Parsing Template - Not Found (new format)
+#
+name: whois.nic.us/us/not-found/02
+
+# Use this template for queries to whois.nic.us:
+tag: whois.nic.us
+tag: us
+
+# Set query response type:
+set: Status = NotFound
+
+hint: No Data Found
+---
+No Data Found

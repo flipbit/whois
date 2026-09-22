@@ -1,0 +1,39 @@
+---
+#
+# .je Parsing Template - Found (new Island Networks format)
+#
+# New format: multi-line with indented values under section headers.
+# Old format had "Query: {domain}" on same line (handled by found/01).
+#
+name: whois.je/je/found/02
+
+# Use this template for queries to whois.je:
+tag: whois.je
+tag: je
+
+# End tokens on new lines
+terminateOnNewLine: true
+
+# Set query response type:
+set: Status = Found
+
+hint: Registration status:
+---
+Domain:
+     { DomainName : IsDomainName, ToHostName }
+
+Domain Status:
+     { DomainStatus ? : Repeating, CleanDomainStatus }
+
+Registrant:
+     { Registrant.Name ? }
+
+Registrar:
+     { Registrar.Name ? : SubstringBefore(' (') }
+
+Relevant dates:
+     Registered on { Registered ? : SubstringBefore(' at '), Replace('st ',' '), Replace('nd ',' '), Replace('rd ',' '), Replace('th ',' '), ToDateTimeUtc("d MMMM yyyy", "d MMM yyyy") }
+
+Name servers:
+     { NameServers ? : IsDomainName, ToLower, Repeating }
+

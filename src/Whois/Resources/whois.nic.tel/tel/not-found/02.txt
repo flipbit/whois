@@ -1,0 +1,16 @@
+---
+#
+# .tel Parsing Template - Not Found (new format)
+#
+name: whois.nic.tel/tel/not-found/02
+
+# Use this template for queries to whois.nic.tel:
+tag: whois.nic.tel
+tag: tel
+
+# Set query response type:
+set: Status = NotFound
+
+hint: The queried object does not exist
+---
+The queried object does not exist: no matching objects found

@@ -14,7 +14,7 @@ terminateOnNewLine: true
 # Set query response type:
 set: Status = NotFound
 
-hint: Domain Status:
+hint: No Object Found
 ---
 Domain Name: { DomainName : IsDomainName, ToHostName }
 Domain Status: { DomainStatus ? : Repeating, CleanDomainStatus }

@@ -1,0 +1,19 @@
+---
+#
+# .co.ca Parsing Template - Not Found (new format)
+#
+# New format response: "Domain is available."
+# Old format response: "u34jedzcq.co.ca is available." (handled by not-found/01)
+#
+name: whois.co.ca/co.ca/not-found/02
+
+# Use this template for queries to whois.co.ca:
+tag: whois.co.ca
+tag: co.ca
+
+# Set query response type:
+set: Status = NotFound
+
+hint: Domain is available.
+---
+Domain is available.

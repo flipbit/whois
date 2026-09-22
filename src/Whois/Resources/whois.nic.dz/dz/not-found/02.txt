@@ -1,0 +1,19 @@
+---
+#
+# .dz Parsing Template - Not Found (new format)
+#
+name: whois.nic.dz/dz/not-found/02
+
+# Use this template for queries to whois.nic.dz:
+tag: whois.nic.dz
+tag: dz
+
+# End tokens on new lines
+terminateOnNewLine: true
+
+# Set query response type:
+set: Status = NotFound
+
+hint: No match for domain
+---
+% No match for domain '{ DomainName ? : IsDomainName, ToHostName }'.

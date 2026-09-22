@@ -1,0 +1,23 @@
+---
+#
+# .sn Parsing Template - Found (French format)
+#
+name: whois.nic.sn/sn/found/02
+
+# Use this template for queries to whois.nic.sn:
+tag: whois.nic.sn
+tag: sn
+
+# Allow lines to appear out of order
+outOfOrder: true
+
+# End tokens on new lines
+terminateOnNewLine: true
+
+# Set query response type:
+set: Status = Found
+
+hint: Nom de domaine:
+---
+Nom de domaine:                { DomainName : IsDomainName, ToHostName }
+Registrar:                     { Registrar.Name ? }

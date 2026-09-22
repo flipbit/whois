@@ -1,0 +1,32 @@
+---
+#
+# .cl Parsing Template - Found (new format)
+#
+# New format response: "Registrant name: ...\nRegistrar name: ...\n..."
+# (no domain name field in response)
+#
+name: whois.nic.cl/cl/found/02
+
+# Use this template for queries to whois.nic.cl:
+tag: whois.nic.cl
+tag: cl
+
+# Allow lines to appear out of order
+outOfOrder: true
+
+# End tokens on new lines
+terminateOnNewLine: true
+
+# Set query response type:
+set: Status = Found
+
+hint: Registrant name:
+hint: Registrar name:
+---
+Registrant name: { Registrant.Name ? }
+Registrar name: { Registrar.Name ? }
+Registrar URL: { Registrar.Url ? : IsLooseAbsoluteUrl }
+Creation date: { Registered ? : Trim, SubstringBefore(' '), ToDateTimeUtc("yyyy-MM-dd") }
+Expiration date: { Expiration ? : Trim, SubstringBefore(' '), ToDateTimeUtc("yyyy-MM-dd") }
+Name server: { NameServers ? : IsDomainName, ToLower, Repeating }
+%% See { DomainName ? : SubstringAfter('?d='), Trim, IsDomainName, ToHostName }

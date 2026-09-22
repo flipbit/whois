@@ -25,6 +25,8 @@ public class IanaServerLookup : IIanaServerLookup
         ["cd"] = "whois.nic.cd",
         ["info"] = "whois.afilias.net",
         ["jobs"] = "whois.nic.jobs",
+        ["lc"] = "whois.afilias-grs.info",
+        ["mobi"] = "whois.dotmobiregistry.net",
         ["pro"] = "whois.afilias.net",
         ["sl"] = "whois.nic.sl",
         ["travel"] = "whois.nic.travel",

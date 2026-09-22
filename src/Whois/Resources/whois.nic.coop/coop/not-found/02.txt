@@ -1,0 +1,19 @@
+---
+#
+# .coop Parsing Template - Not Found (new format)
+#
+# New format response: ">>> Domain u34jedzcq.coop is available for registration"
+# Old format: "No domain records were found to match ..." (handled by not-found/01)
+#
+name: whois.nic.coop/coop/not-found/02
+
+# Use this template for queries to whois.nic.coop:
+tag: whois.nic.coop
+tag: coop
+
+# Set query response type:
+set: Status = NotFound
+
+hint: is available for registration
+---
+>>> Domain { DomainName ? : IsDomainName, ToHostName } is available for registration

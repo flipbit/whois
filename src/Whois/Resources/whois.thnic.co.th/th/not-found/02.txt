@@ -1,0 +1,19 @@
+---
+#
+# .th Parsing Template - Not Found (new format)
+#
+# New format response: "% No match found."
+# Old format: "% No match for \"{domain}\"." (handled by not-found/01)
+#
+name: whois.thnic.co.th/th/not-found/02
+
+# Use this template for queries to whois.thnic.co.th:
+tag: whois.thnic.co.th
+tag: th
+
+# Set query response type:
+set: Status = NotFound
+
+hint: No match found
+---
+% No match found.
