@@ -53,6 +53,8 @@ public class WhoisIpTests
         Assert.Equal(LookupProtocol.Whois, result.Protocol);
         Assert.Equal(RegistrationStatus.Found, result.Response.Status);
         Assert.NotNull(result.Response.Network);
+        // NetName and Country are not asserted for IPv6: not all RIR WHOIS servers
+        // populate these fields in IPv6 responses. Tighten after observing results.
         Assert.NotEmpty(result.RawContent);
 
         _ = rirHint; // used as test case label

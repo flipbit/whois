@@ -39,9 +39,9 @@ public class RdapIpTests
     [InlineData("2a00:1450:4001::1", "RIPE")]
     [InlineData("2400:cb00:2048::1", "APNIC")]
     [InlineData("2800:3f0:4001::1", "LACNIC")]
-    // AFRINIC IPv6 omitted: AFRINIC RDAP intermittently returns HTTP 404 for all tested
-    // IPv6 prefixes regardless of allocation status -- a known infrastructure issue on their
-    // side. AFRINIC IPv4 RDAP coverage is provided in RdapIpLookup_IPv4.
+    // AFRINIC omitted: AFRINIC RDAP intermittently returns HTTP 404 for all tested
+    // IPv6 prefixes -- a known infrastructure issue on their side.
+    // AFRINIC coverage is provided via WHOIS in WhoisIpTests.
     [Trait("Category", "Integration")]
     public async Task RdapIpLookup_IPv6(string ipStr, string rirHint)
     {
