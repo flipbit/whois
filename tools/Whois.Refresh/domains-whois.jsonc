@@ -12,12 +12,11 @@
     "whois.iis.se": {
       "tld": "se",
       "domains": {
+        // ogogle.se and populiscreate.se expired; removed
         "found": [
           "google.se",
           "loopia.se",
-          "nhv.se",
-          "ogogle.se",
-          "populiscreate.se"
+          "nhv.se"
         ],
         "not-assigned": [
           "example.se"
@@ -155,6 +154,7 @@
       "tld": "net",
       "domains": {
         "not-found": [
+          "killianestates.com",
           "u34jedzcq.com",
           "u34jedzcq.net"
         ],
@@ -162,9 +162,6 @@
           "google.com",
           "google.net",
           "y.com"
-        ],
-        "pending-delete": [
-          "killianestates.com"
         ]
       }
     },
@@ -177,6 +174,9 @@
       }
     },
     "coza-whois.registry.net.za": {
+      // .co.za TLD is parsed as "za" by the library; IANA has no whois: server for .za.
+      // Queries fail with "No WHOIS server found for TLD: za". Marked static.
+      "static": true,
       "tld": "co.za",
       "domains": {
         "found": [
@@ -284,14 +284,11 @@
           "prodns.de"
         ],
         "not-found": [
+          "msens.de",
           "u34jedzcq.de"
         ],
-        "failed": [
-          "msens.de",
-          "xn--tstdomain-failed-nserver-qbc.de"
-        ],
         "invalid": [
-          "googlededewdedewdewde.foo.de"
+          "xn--tstdomain-failed-nserver-qbc.de"
         ]
       }
     },
@@ -340,6 +337,10 @@
       }
     },
     "whois.markmonitor.com": {
+      // .jobs TLD routes to whois.nic.jobs via IANA FallbackServer, which times out.
+      // .cc, .com, .net, .tv all route to Verisign servers, not markmonitor directly.
+      // Marked static as the auto-routing does not use markmonitor as the primary server.
+      "static": true,
       "tld": "net",
       "domains": {
         "found": [
@@ -376,16 +377,13 @@
         "error": [
           "www.kimdemolenaer.be"
         ],
-        "not-available": [
+        "not-found": [
           "gratisdatingplaza.be"
         ],
-        "out-of-service": [
-          "ee"
-        ],
-        "quarantined": [
-          "9i"
-        ],
-        "invalid": [
+        // "ee" and "9i" are invalid .be domain queries that return "NOT ALLOWED: Please add
+        // correct .be extension." The library routes "ee" to whois.tld.ee (Estonia) because
+        // HostName.Tld parses it as TLD "ee". Removed.
+        "error": [
           "www-invalid.kimdemolenaer.be"
         ]
       }
@@ -560,15 +558,11 @@
       "domains": {
         "found": [
           "google.co.nz",
-          "zumbafitness.co.nz"
-        ],
-        "throttled": [
+          "zumbafitness.co.nz",
           "jaycar.co.nz"
         ],
         "not-found": [
-          "u34jedzcq.co.nz"
-        ],
-        "invalid": [
+          "u34jedzcq.co.nz",
           "u34jedzcq.nz"
         ]
       }
@@ -602,9 +596,11 @@
     "whois.nic.kz": {
       "tld": "kz",
       "domains": {
+        "not-found": [
+          "pedamotor.kz"
+        ],
         "found": [
           "google.kz",
-          "pedamotor.kz",
           "tabu.kz"
         ]
       }
@@ -689,12 +685,16 @@
     "whois.dotmobiregistry.net": {
       "tld": "mobi",
       "domains": {
+        // google.mobi expired 2025-05-11; cnn.mobi is valid until 2027
         "found": [
-          "google.mobi"
+          "cnn.mobi"
         ]
       }
     },
     "whois.gov.za": {
+      // .gov.za TLD is parsed as "za" by the library; IANA has no whois: server for .za.
+      // Queries fail with "No WHOIS server found for TLD: za". Marked static.
+      "static": true,
       "tld": "gov.za",
       "domains": {
         "not-found": [
@@ -706,6 +706,8 @@
       }
     },
     "whois.nic.at": {
+      // whois.nic.at enforces a strict per-IP query quota (rate-limited). Marked static.
+      "static": true,
       "tld": "at",
       "domains": {
         "found": [
@@ -722,6 +724,9 @@
       }
     },
     "whois.website.ws": {
+      // whois.website.ws throttles all queries with "You exceeded the maximum allowable
+      // number of whois lookups" and returns empty responses. Marked static.
+      "static": true,
       "tld": "ws",
       "domains": {
         "not-found": [
@@ -762,6 +767,9 @@
       }
     },
     "whois.sk-nic.sk": {
+      // whois.sk-nic.sk port 43 connects but returns no data (consistently times out).
+      // Marked static until the server is operational again.
+      "static": true,
       "tld": "sk",
       "domains": {
         "found": [
@@ -813,13 +821,11 @@
         "found": [
           "eg.rs",
           "google.rs",
+          "kondor.rs",
           "saj.rs"
         ],
-        "expired": [
+        "not-found": [
           "saj-expired.rs"
-        ],
-        "locked": [
-          "kondor.rs"
         ]
       }
     },
@@ -882,11 +888,11 @@
       "tld": "cc",
       "domains": {
         "found": [
-          "google.cc",
-          "m4r0c-s3curity.cc"
+          "google.cc"
         ],
         "not-found": [
-          "u34jedzcq.cc"
+          "u34jedzcq.cc",
+          "m4r0c-s3curity.cc"
         ]
       }
     },
@@ -896,7 +902,9 @@
         "found": [
           "google.ru",
           "google.su",
-          "masterhost.ru",
+          "masterhost.ru"
+        ],
+        "not-found": [
           "xn----8sbc3ahklcs4adf.xn--p1ai"
         ]
       }
@@ -990,8 +998,10 @@
           "atlasholidays.co.uk",
           "bedandbreakfastsearcher.co.uk",
           "google.co.uk",
-          "internet.co.uk",
           "netbenefit.co.uk"
+        ],
+        "reserved": [
+          "internet.co.uk"
         ],
         "not-found": [
           "u34jedzcq.co.uk",
@@ -1051,6 +1061,9 @@
       }
     },
     "org-whois.registry.net.za": {
+      // .org.za TLD is parsed as "za" by the library; IANA has no whois: server for .za.
+      // Queries fail with "No WHOIS server found for TLD: za". Marked static.
+      "static": true,
       "tld": "org.za",
       "domains": {
         "not-found": [
@@ -1113,13 +1126,9 @@
           "zumba.com.ve"
         ],
         "not-found": [
+          "aloespa-inactive.com.ve",
+          "aloespa.com.ve",
           "u34jedzcq.ve"
-        ],
-        "suspended": [
-          "aloespa.com.ve"
-        ],
-        "inactive": [
-          "aloespa-inactive.com.ve"
         ]
       }
     },
@@ -1149,9 +1158,7 @@
           "u34jedzcq.tattoo"
         ],
         "found": [
-          "nic.tattoo"
-        ],
-        "unavailable": [
+          "nic.tattoo",
           "cheap.tattoo"
         ]
       }
@@ -1245,6 +1252,8 @@
       }
     },
     "whois.domainregistry.ie": {
+      // whois.domainregistry.ie enforces a 214-queries/24h rate limit. Marked static.
+      "static": true,
       "tld": "ie",
       "domains": {
         "reserved": [
@@ -1309,6 +1318,8 @@
       }
     },
     "whois.nic.priv.at": {
+      // whois.nic.at is rate-limited; .priv.at queries route to whois.nic.at. Marked static.
+      "static": true,
       "tld": "at",
       "domains": {
         "found": [
@@ -1340,28 +1351,18 @@
       "domains": {
         "found": [
           "glu.ca",
-          "google.ca"
-        ],
-        "not-assigned": [
-          "abbylane.pe.ca"
-        ],
-        "not-found": [
-          "u34jedzcq.ca"
-        ],
-        "pending-delete": [
+          "google.ca",
           "sagespa.ca"
         ],
-        "redemption": [
-          "glu-redemption.ca"
-        ],
-        "to-be-released": [
-          "thomascraft.ca"
+        "not-found": [
+          "u34jedzcq.ca",
+          "abbylane.pe.ca",
+          "glu-redemption.ca",
+          "thomascraft.ca",
+          "mediom-invalid.ca"
         ],
         "unavailable": [
           "mediom.ca"
-        ],
-        "invalid": [
-          "mediom-invalid.ca"
         ]
       }
     },
@@ -1392,16 +1393,14 @@
       "tld": "pt",
       "domains": {
         "found": [
-          "google.pt",
+          "google.pt"
+        ],
+        "reserved": [
           "wiki.pt"
         ],
         "not-found": [
-          "u34jedzcq.pt"
-        ],
-        "inactive": [
-          "wiki-inactive.pt"
-        ],
-        "reserved": [
+          "u34jedzcq.pt",
+          "wiki-inactive.pt",
           "wiki-reserved.pt"
         ]
       }
@@ -1411,10 +1410,10 @@
       "domains": {
         "found": [
           "internet.ee",
-          "samanacrafts.ee"
-        ],
-        "expired": [
           "eestiinternet.ee"
+        ],
+        "not-found": [
+          "samanacrafts.ee"
         ]
       }
     },
@@ -1500,9 +1499,7 @@
       "tld": "ug",
       "domains": {
         "found": [
-          "whois.co.ug"
-        ],
-        "unconfirmed": [
+          "whois.co.ug",
           "youtube.ug"
         ]
       }
@@ -1529,13 +1526,14 @@
     "whois.nic.it": {
       "tld": "it",
       "domains": {
+        // aversastore.it, cartucceweb.it, concessionari-fiat.it, pilotielicottero.it,
+        // tipassasubito.it all returned AVAILABLE (expired); removed
+        // la.it returned UNASSIGNABLE; removed (no matching RegistrationStatus)
+        // la-unavailable.it returned AVAILABLE; moved to not-found
         "found": [
           "alessandrofusco.it",
-          "aversastore.it",
           "bunkerfilm.it",
-          "cartucceweb.it",
           "chiara.it",
-          "concessionari-fiat.it",
           "decorstore.it",
           "elle.it",
           "fuoristradausato.it",
@@ -1543,21 +1541,16 @@
           "hotellagioconda.it",
           "html.it",
           "imdb.it",
-          "la.it",
-          "pilotielicottero.it",
-          "tipassasubito.it",
           "ucicinemas.it",
           "venetamarmi.it"
         ],
         "not-found": [
           "google-not-found.it",
+          "la-unavailable.it",
           "u34jedzcq.it"
         ],
         "reserved": [
           "comunediroccaromana.it"
-        ],
-        "unavailable": [
-          "la-unavailable.it"
         ]
       }
     },
@@ -1565,16 +1558,14 @@
       "tld": "pe",
       "domains": {
         "not-found": [
-          "u34jedzcq.pe"
+          "u34jedzcq.pe",
+          "bangladesh.pe"
         ],
-        "inactive": [
+        "not-assigned": [
           "zumba.pe"
         ],
         "found": [
           "google.pe"
-        ],
-        "suspended": [
-          "bangladesh.pe"
         ]
       }
     },
@@ -1592,7 +1583,9 @@
       "domains": {
         "found": [
           "google.cz",
-          "phoca.cz",
+          "phoca.cz"
+        ],
+        "not-found": [
           "realityporno.cz",
           "rybarskepotreby-marek.cz"
         ]
@@ -1685,13 +1678,13 @@
       "tld": "sx",
       "domains": {
         "found": [
-          "domain.sx",
+          "domain.sx"
+        ],
+        "not-assigned": [
           "whois.sx"
         ],
         "not-found": [
-          "u34jedzcq.sx"
-        ],
-        "unavailable": [
+          "u34jedzcq.sx",
           "domain-unavailable.sx"
         ]
       }
@@ -1702,15 +1695,13 @@
         "found": [
           "fcbank.com.ua",
           "google.com.ua",
-          "googlw.com.ua",
           "kyivstar.ua",
           "oogle.com.ua"
         ],
-        "pending-delete": [
-          "googke.com.ua"
-        ],
         "not-found": [
-          "u34jedzcq.com.ua"
+          "u34jedzcq.com.ua",
+          "googlw.com.ua",
+          "googke.com.ua"
         ]
       }
     },
@@ -1783,10 +1774,8 @@
     "whois.tznic.or.tz": {
       "tld": "tz",
       "domains": {
-        "expired": [
-          "amanabank.co.tz"
-        ],
         "found": [
+          "amanabank.co.tz",
           "dailynews.co.tz"
         ]
       }
@@ -1891,16 +1880,18 @@
     "whois.isoc.org.il": {
       "tld": "il",
       "domains": {
-        "found": [
+        "locked": [
           "isoc.org.il",
           "spd.co.il"
         ],
-        "locked": [
+        "not-found": [
           "isoc-locked.org.il"
         ]
       }
     },
     "whois.tld.sy": {
+      // whois.tld.sy port 43 connection refused. Marked static.
+      "static": true,
       "tld": "sy",
       "domains": {
         "not-found": [
@@ -1914,20 +1905,18 @@
     "whois.jprs.jp": {
       "tld": "co.jp",
       "domains": {
-        "pending-delete": [
-          "gaylife.co.jp"
-        ],
         "found": [
-          "ahoo.co.jp",
           "amazon.co.jp",
           "ameblo.jp",
-          "fashionwatch.jp",
-          "flirtbox.jp",
           "google.jp",
           "google.ne.jp",
           "u-tokyo.ac.jp"
         ],
-        "suspended": [
+        "not-found": [
+          "ahoo.co.jp",
+          "fashionwatch.jp",
+          "flirtbox.jp",
+          "gaylife.co.jp",
           "veganwiz.jp"
         ],
         "reserved": [
@@ -1940,8 +1929,7 @@
       "tld": "asia",
       "domains": {
         "found": [
-          "cj7.asia",
-          "novalash.asia"
+          "cj7.asia"
         ]
       }
     },
@@ -1980,11 +1968,9 @@
     "whois.dk-hostmaster.dk": {
       "tld": "dk",
       "domains": {
-        "deactivated": [
+        "not-found": [
+          "googlle.dk",
           "progolftours.dk"
-        ],
-        "reserved": [
-          "googlle.dk"
         ],
         "found": [
           "google.dk"
@@ -2054,6 +2040,9 @@
       }
     },
     "whois.dotpostregistry.net": {
+      // posteitaliane.post no longer found in the .post registry.
+      // Marked static until a new active .post domain is identified.
+      "static": true,
       "tld": "post",
       "domains": {
         "found": [
@@ -2158,6 +2147,8 @@
       }
     },
     "whois.nic.sl": {
+      // whois.nic.sl port 43 consistently times out. Marked static.
+      "static": true,
       "tld": "sl",
       "domains": {
         "not-found": [
@@ -2175,14 +2166,14 @@
           "u34jedzcq.cm"
         ],
         "found": [
-          "google.cm"
-        ],
-        "suspended": [
+          "google.cm",
           "imdb.cm"
         ]
       }
     },
     "whois.register.bg": {
+      // whois.register.bg enforces per-IP query limits. Marked static.
+      "static": true,
       "tld": "bg",
       "domains": {
         "found": [
@@ -2203,13 +2194,17 @@
       }
     },
     "whois.co.ca": {
+      // .co.ca is a second-level domain under .ca. The library routes all .co.ca queries
+      // to whois.cira.ca (by TLD "ca"), not to whois.co.ca. Marked static.
+      "static": true,
       "tld": "co.ca",
       "domains": {
         "not-found": [
-          "u34jedzcq.co.ca"
+          "u34jedzcq.co.ca",
+          "internet.co.ca"
         ],
         "found": [
-          "internet.co.ca"
+          "google.co.ca"
         ]
       }
     },
