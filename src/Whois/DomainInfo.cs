@@ -3,7 +3,7 @@ namespace Whois;
 /// <summary>
 /// Contains structured domain registration data from a WHOIS or RDAP lookup.
 /// </summary>
-public sealed class DomainInfo
+public sealed class DomainInfo : IRegistrationInfo
 {
     /// <summary>
     /// The queried domain name.
