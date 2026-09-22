@@ -12,6 +12,12 @@ public interface IIanaServerLookup
     public Task<string?> GetWhoisServer(string tld, CancellationToken ct = default);
 
     /// <summary>
+    /// Gets the WHOIS server for the given IP address by querying IANA.
+    /// Results are not cached.
+    /// </summary>
+    public Task<string?> GetWhoisServer(System.Net.IPAddress address, CancellationToken ct = default);
+
+    /// <summary>
     /// Clears all cached TLD-to-server mappings. Subsequent lookups will re-query IANA.
     /// </summary>
     public void ClearCache();

@@ -234,4 +234,65 @@ public class IanaServerLookupTests
 
         Assert.Null(server);
     }
+
+    // IP address tests (refer: field for IP routing)
+    private const string ArinReferralResponse = """
+        % IANA WHOIS server
+
+        refer:        whois.arin.net
+
+        inetnum:      8.0.0.0 - 8.255.255.255
+        organisation: ARIN
+        status:       ALLOCATED
+
+        source:       IANA
+        """;
+
+    [Fact]
+    public async Task GetWhoisServer_IPv4_ReturnsRir()
+    {
+        var tcpReader = Substitute.For<ITcpReader>();
+        tcpReader.Read("whois.iana.org", 43, "8.8.8.8",
+                Arg.Any<Encoding>(), Arg.Any<int>(), Arg.Any<CancellationToken>())
+            .Returns(ArinReferralResponse);
+
+        var lookup = new IanaServerLookup(tcpReader, new WhoisOptions());
+
+        var server = await lookup.GetWhoisServer(System.Net.IPAddress.Parse("8.8.8.8"));
+
+        Assert.Equal("whois.arin.net", server);
+    }
+
+    [Fact]
+    public async Task GetWhoisServer_IPv6_QueriesIana()
+    {
+        var tcpReader = Substitute.For<ITcpReader>();
+        tcpReader.Read("whois.iana.org", 43, "2001:4860:4860::8888",
+                Arg.Any<Encoding>(), Arg.Any<int>(), Arg.Any<CancellationToken>())
+            .Returns(ArinReferralResponse);
+
+        var lookup = new IanaServerLookup(tcpReader, new WhoisOptions());
+
+        var server = await lookup.GetWhoisServer(System.Net.IPAddress.Parse("2001:4860:4860::8888"));
+
+        Assert.Equal("whois.arin.net", server);
+    }
+
+    [Fact]
+    public async Task GetWhoisServer_Ip_NoCaching()
+    {
+        var tcpReader = Substitute.For<ITcpReader>();
+        tcpReader.Read("whois.iana.org", 43, Arg.Any<string>(),
+                Arg.Any<Encoding>(), Arg.Any<int>(), Arg.Any<CancellationToken>())
+            .Returns(ArinReferralResponse);
+
+        var lookup = new IanaServerLookup(tcpReader, new WhoisOptions());
+
+        await lookup.GetWhoisServer(System.Net.IPAddress.Parse("8.8.8.8"));
+        await lookup.GetWhoisServer(System.Net.IPAddress.Parse("8.8.8.8"));
+
+        // Two calls = two TCP queries (no caching for IP)
+        await tcpReader.Received(2).Read("whois.iana.org", 43, "8.8.8.8",
+            Arg.Any<Encoding>(), Arg.Any<int>(), Arg.Any<CancellationToken>());
+    }
 }

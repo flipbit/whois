@@ -229,7 +229,7 @@ public class WhoisProtocolClientTests
         await client.Query(request, CancellationToken.None);
 
         // Bootstrap must never be consulted when WhoisServer is supplied explicitly
-        await ianaLookup.DidNotReceiveWithAnyArgs().GetWhoisServer(default!, default);
+        await ianaLookup.DidNotReceiveWithAnyArgs().GetWhoisServer((string)default!, default);
         await tcpReader.Received(1).Read(
             "whois.custom.com", 43, "example.com", DefaultEncoding, DefaultTimeout, Arg.Any<CancellationToken>());
     }

@@ -71,6 +71,19 @@ public class IanaServerLookup : IIanaServerLookup
         return server;
     }
 
+    public async Task<string?> GetWhoisServer(System.Net.IPAddress address, CancellationToken ct = default)
+    {
+        var query = address.ToString();
+
+        var response = await _tcpReader.Read(
+            IanaHost, WhoisPort, query, Encoding.UTF8, _options.TimeoutSeconds, ct).ConfigureAwait(false);
+
+        var server = ParseWhoisServer(response);
+
+        _logger.LogDebug("IANA lookup: fetched server for IP {Address}: {Server}", address, server ?? "(none)");
+        return server;
+    }
+
     public void ClearCache()
     {
         _cache.Clear();
@@ -78,8 +91,9 @@ public class IanaServerLookup : IIanaServerLookup
     }
 
     /// <summary>
-    /// Parses the 'whois:' field from an IANA WHOIS response.
-    /// Returns null if the field is not present or empty.
+    /// Parses the 'whois:' or 'refer:' field from an IANA WHOIS response.
+    /// For TLD queries, looks for 'whois:'; for IP queries, looks for 'refer:'.
+    /// Returns null if neither field is present or empty.
     /// </summary>
     internal static string? ParseWhoisServer(string response)
     {
@@ -88,13 +102,24 @@ public class IanaServerLookup : IIanaServerLookup
         while ((line = reader.ReadLine()) != null)
         {
             var trimmed = line.TrimStart();
-            if (!trimmed.StartsWith("whois:", StringComparison.OrdinalIgnoreCase))
-                continue;
+            var server = ExtractFieldValue(trimmed, "whois:");
+            if (server != null)
+                return server;
 
-            var value = trimmed.Substring("whois:".Length).Trim();
-            return value.Length > 0 ? value : null;
+            server = ExtractFieldValue(trimmed, "refer:");
+            if (server != null)
+                return server;
         }
 
         return null;
+    }
+
+    private static string? ExtractFieldValue(string trimmedLine, string fieldName)
+    {
+        if (!trimmedLine.StartsWith(fieldName, StringComparison.OrdinalIgnoreCase))
+            return null;
+
+        var value = trimmedLine.Substring(fieldName.Length).Trim();
+        return value.Length > 0 ? value : null;
     }
 }
