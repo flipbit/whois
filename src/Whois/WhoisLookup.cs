@@ -123,6 +123,7 @@ public class WhoisLookup : IWhoisLookup
             TimeoutSeconds = request.TimeoutSeconds,
             FollowReferrer = request.FollowReferrer,
             WhoisServer = request.WhoisServer,
+            Port = request.Port,
             RdapBaseUrl = rdapBaseUrl,
         };
 
