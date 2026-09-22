@@ -1,0 +1,29 @@
+---
+#
+# LACNIC IP Parsing Template
+#
+name: whois.lacnic.net/ip/01
+
+# Use this template for queries to whois.lacnic.net:
+tag: whois.lacnic.net
+
+# Allow lines to appear out of order
+outOfOrder: true
+
+# End tokens on new lines
+terminateOnNewLine: true
+
+# Use token preamble on current line only
+trimPreambleBeforeNewLine: true
+
+# Set query response type:
+set: Status = Found
+---
+
+inetnum:{ Network : Trim }
+inet6num:{ Network : Trim }
+owner:{ Organization : Trim }
+netname:{ NetName : Trim }
+country:{ Country : Trim }
+created:{ Registered : Trim, ToDateTimeUtc("yyyyMMdd") }
+changed:{ Updated : Trim, ToDateTimeUtc("yyyyMMdd") }

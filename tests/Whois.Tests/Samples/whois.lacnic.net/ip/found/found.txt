@@ -1,0 +1,39 @@
+% IP Client: 93.219.67.140
+ 
+% Joint Whois - whois.lacnic.net
+%  This server accepts single ASN, IPv4 or IPv6 queries
+
+% LACNIC resource: whois.lacnic.net
+
+
+% Copyright LACNIC lacnic.net
+%  The data below is provided for information purposes
+%  and to assist persons in obtaining information about or
+%  related to AS and IP numbers registrations
+%  By submitting a whois query, you agree to use this data
+%  only for lawful purposes.
+%  2026-09-22 09:59:19 (Z Z)
+
+inetnum:     200.0.0.0/21
+status:      allocated
+owner:       HOCOL S.A.
+ownerid:     CO-HOSA-LACNIC
+address:     Bocagrande Carrerea 3a. No. 8-06\nApartado Aereo 0083\nCartagena
+country:     CO
+owner-c:     GE5-ARIN
+created:     19930511
+changed:     19991012
+source:      ARIN-HISTORIC
+
+nic-hdl:     GE5-ARIN
+person:      German Escobar
+e-mail:      
+address:     HOCOL S.A.\nBocagrande Carrerea 3a. No. 8-06\nApartado Aereo 0083\nCartagena
+country:     CO
+phone:       (57) 53 656770
+source:      ARIN-HISTORIC
+
+% whois.lacnic.net accepts only direct match queries.
+% Types of queries are: POCs, ownerid, CIDR blocks, IP
+% and AS numbers.
+

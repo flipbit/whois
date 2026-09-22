@@ -1,0 +1,29 @@
+---
+#
+# RIPE IP Parsing Template
+#
+name: whois.ripe.net/ip/01
+
+# Use this template for queries to whois.ripe.net:
+tag: whois.ripe.net
+
+# Allow lines to appear out of order
+outOfOrder: true
+
+# End tokens on new lines
+terminateOnNewLine: true
+
+# Use token preamble on current line only
+trimPreambleBeforeNewLine: true
+
+# Set query response type:
+set: Status = Found
+---
+
+inetnum:{ Network : Trim }
+inet6num:{ Network : Trim }
+netname:{ NetName : Trim }
+descr:{ Organization : Trim }
+country:{ Country : Trim }
+created:{ Registered : Trim, ToDateTimeUtc("yyyy-MM-dd'T'HH:mm:ss'Z'") }
+last-modified:{ Updated : Trim, ToDateTimeUtc("yyyy-MM-dd'T'HH:mm:ss'Z'") }

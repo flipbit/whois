@@ -1,0 +1,28 @@
+---
+#
+# APNIC IP Parsing Template
+#
+name: whois.apnic.net/ip/01
+
+# Use this template for queries to whois.apnic.net:
+tag: whois.apnic.net
+
+# Allow lines to appear out of order
+outOfOrder: true
+
+# End tokens on new lines
+terminateOnNewLine: true
+
+# Use token preamble on current line only
+trimPreambleBeforeNewLine: true
+
+# Set query response type:
+set: Status = Found
+---
+
+inetnum:{ Network : Trim }
+inet6num:{ Network : Trim }
+netname:{ NetName : Trim }
+descr:{ Organization : Trim }
+country:{ Country : Trim }
+last-modified:{ Updated : Trim, ToDateTimeUtc("yyyy-MM-dd'T'HH:mm:ss'Z'") }

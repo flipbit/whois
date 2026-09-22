@@ -1,0 +1,45 @@
+inetnum:        2.0.0.0 - 2.0.255.255
+netname:        ORCL-AMER-OCI-2
+country:        US
+admin-c:        ORCL1-RIPE
+tech-c:         ORCL1-RIPE
+status:         SUB-ALLOCATED PA
+org:            ORG-OAI2-RIPE
+mnt-by:         ORCL-MNT
+created:        2024-10-04T14:19:24Z
+last-modified:  2024-10-04T14:21:15Z
+source:         RIPE
+
+organisation:   ORG-OAI2-RIPE
+org-name:       Oracle America Inc.
+country:        US
+reg-nr:         2101822 (Delaware)
+org-type:       OTHER
+address:        2300 Oracle Way Austin, TX 78741 USA
+abuse-c:        AR17199-RIPE
+mnt-ref:        ORCL-MNT
+mnt-by:         ORCL-MNT
+created:        2023-05-02T20:16:11Z
+last-modified:  2026-05-13T06:31:52Z
+source:         RIPE # Filtered
+
+role:           Domain Administrator
+address:        500 Oracle Parkway, M/S 501ip3
+address:        Redwood Shores
+address:        CA, 94065
+admin-c:        RN3825-RIPE
+admin-c:        CM16298-RIPE
+admin-c:        MP29448-RIPE
+admin-c:        JH27328-RIPE
+admin-c:        GB21983-RIPE
+admin-c:        SS33835-RIPE
+abuse-mailbox:  domain-contact_ww_grp@oracle.com
+nic-hdl:        ORCL1-RIPE
+mnt-by:         ORCL-MNT
+created:        2016-03-15T11:29:38Z
+last-modified:  2019-02-06T16:27:54Z
+source:         RIPE # Filtered
+
+% This query was served by the RIPE Database Query Service version 1.124.1 (BUSA)
+
+

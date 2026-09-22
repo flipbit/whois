@@ -1,0 +1,32 @@
+% This is the AfriNIC Whois server.
+% The AFRINIC whois database is subject to  the following terms of Use. See https://afrinic.net/whois/terms
+
+% Note: this output has been filtered.
+%       To receive output for a database update, use the "-B" flag.
+
+% Information related to '41.0.0.0 - 41.0.255.255'
+
+% No abuse contact registered for 41.0.0.0 - 41.0.255.255
+
+inetnum:        41.0.0.0 - 41.0.255.255
+netname:        Vodacom_Enterprise_Networks_NSA
+descr:          The IP Block 41.0.0.0/16 has been assigned to Vodacom Bussiness for ISP bussiness (Shared ENS/NSA)
+country:        ZA
+admin-c:        JH2-AFRINIC
+tech-c:         JH2-AFRINIC
+status:         ASSIGNED PA
+remarks:        Vodacom Bussiness (ASN 36994)
+remarks:        abuse@vodacombusiness.co.za
+mnt-by:         VODACOM-MNT
+source:         AFRINIC # Filtered
+parent:         41.0.0.0 - 41.31.255.255
+
+person:         Jacques Hendricks
+address:        Vodacom PTY (Ltd)
+phone:          tel:+27-21-940-9498
+nic-hdl:        JH2-AFRINIC
+mnt-by:         GENERATED-HXZNUNMTWGLLJHI8IRLJWOUQLU1JTPYU-MNT
+source:         AFRINIC # Filtered
+
+
+

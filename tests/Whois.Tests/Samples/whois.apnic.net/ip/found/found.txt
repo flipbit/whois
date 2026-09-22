@@ -1,0 +1,100 @@
+% [whois.apnic.net]
+% Whois data copyright terms    http://www.apnic.net/db/dbcopyright.html
+
+% Information related to '1.1.1.0 - 1.1.1.255'
+
+% Abuse contact for '1.1.1.0 - 1.1.1.255' is 'helpdesk@apnic.net'
+
+inetnum:        1.1.1.0 - 1.1.1.255
+netname:        APNIC-LABS
+descr:          APNIC and Cloudflare DNS Resolver project
+descr:          Routed globally by AS13335/Cloudflare
+descr:          Research prefix for APNIC Labs
+country:        AU
+org:            ORG-ARAD1-AP
+admin-c:        AIC3-AP
+tech-c:         AIC3-AP
+abuse-c:        AA1412-AP
+status:         ASSIGNED PORTABLE
+remarks:        ---------------
+remarks:        All Cloudflare abuse reporting can be done via
+remarks:        resolver-abuse@cloudflare.com
+remarks:        ---------------
+mnt-by:         APNIC-HM
+mnt-routes:     MAINT-APNICRANDNET
+mnt-irt:        IRT-APNICRANDNET-AU
+last-modified:  2023-04-26T22:57:58Z
+mnt-lower:      MAINT-APNICRANDNET
+source:         APNIC
+
+irt:            IRT-APNICRANDNET-AU
+address:        PO Box 3646
+address:        South Brisbane, QLD 4101
+address:        Australia
+e-mail:         helpdesk@apnic.net
+abuse-mailbox:  helpdesk@apnic.net
+admin-c:        AR302-AP
+tech-c:         AR302-AP
+auth:           # Filtered
+remarks:        helpdesk@apnic.net was validated on 2021-02-09
+mnt-by:         MAINT-APNICRANDNET
+last-modified:  2025-11-18T00:26:57Z
+source:         APNIC
+
+organisation:   ORG-ARAD1-AP
+org-name:       APNIC Research and Development
+org-type:       LIR
+country:        AU
+address:        6 Cordelia St
+phone:          +61-7-38583100
+fax-no:         +61-7-38583199
+e-mail:         helpdesk@apnic.net
+mnt-ref:        APNIC-HM
+mnt-by:         APNIC-HM
+last-modified:  2023-09-05T02:15:19Z
+source:         APNIC
+
+role:           ABUSE APNICRANDNETAU
+country:        ZZ
+address:        PO Box 3646
+address:        South Brisbane, QLD 4101
+address:        Australia
+phone:          +000000000
+e-mail:         helpdesk@apnic.net
+admin-c:        AR302-AP
+tech-c:         AR302-AP
+nic-hdl:        AA1412-AP
+remarks:        Generated from irt object IRT-APNICRANDNET-AU
+remarks:        helpdesk@apnic.net was validated on 2021-02-09
+abuse-mailbox:  helpdesk@apnic.net
+mnt-by:         APNIC-ABUSE
+last-modified:  2025-05-28T03:31:35Z
+source:         APNIC
+
+role:           APNICRANDNET Infrastructure Contact
+address:        6 Cordelia St
+                South Brisbane
+                QLD 4101
+country:        AU
+phone:          +61 7 3858 3100
+e-mail:         research@apnic.net
+admin-c:        AIC3-AP
+tech-c:         AIC3-AP
+nic-hdl:        AIC3-AP
+mnt-by:         MAINT-APNICRANDNET
+last-modified:  2024-07-18T04:37:37Z
+source:         APNIC
+
+% Information related to '1.1.1.0/24AS13335'
+
+route:          1.1.1.0/24
+origin:         AS13335
+descr:          APNIC Research and Development
+                6 Cordelia St
+mnt-by:         MAINT-APNICRANDNET
+last-modified:  2023-04-26T02:42:44Z
+source:         APNIC
+
+% This query was served by the APNIC Whois Service version 1.88.48 (WHOIS-UK2)
+
+
