@@ -13,7 +13,7 @@
     <!-- Console app -->
     <PackageVersion Include="CommandLineParser" Version="2.9.1" />
     <PackageVersion Include="Spectre.Console" Version="0.57.2" />
-    <PackageVersion Include="Spectre.Console.Cli" Version="0.55.0" />
+    <PackageVersion Include="Spectre.Console.Cli" Version="0.57.2" />
     <PackageVersion Include="Microsoft.Extensions.Logging.Console" Version="10.0.12" />
 
     <PackageVersion Include="Microsoft.Extensions.Http" Version="10.0.12" />
@@ -24,7 +24,7 @@
     <PackageVersion Include="Tokenizer" Version="3.0.0" />
 
     <!-- Analyzers -->
-    <PackageVersion Include="Meziantou.Analyzer" Version="3.0.266" />
+    <PackageVersion Include="Meziantou.Analyzer" Version="3.0.294" />
 
     <!-- Test -->
     <PackageVersion Include="Microsoft.Extensions.Configuration" Version="10.0.12" />
@@ -34,6 +34,6 @@
     <PackageVersion Include="xunit" Version="2.9.3" />
     <PackageVersion Include="xunit.runner.visualstudio" Version="4.0.0" />
     <PackageVersion Include="NSubstitute" Version="6.2.0" />
-    <PackageVersion Include="coverlet.collector" Version="10.0.1" />
+    <PackageVersion Include="coverlet.collector" Version="10.1.0" />
   </ItemGroup>
 </Project>
