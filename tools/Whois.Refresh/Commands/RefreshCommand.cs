@@ -37,7 +37,7 @@ public class RefreshCommand : AsyncCommand<RefreshSettings>
         _httpClient = httpClient;
     }
 
-    protected override async Task<int> ExecuteAsync(CommandContext context, RefreshSettings settings, CancellationToken cancellationToken)
+    public override async Task<int> ExecuteAsync(CommandContext context, RefreshSettings settings, CancellationToken cancellationToken)
     {
         var toolDir = Path.Combine(settings.RepoRoot, "tools", "Whois.Refresh");
         var samplesPath = Path.Combine(settings.RepoRoot, "tests", "Whois.Tests", "Samples");
