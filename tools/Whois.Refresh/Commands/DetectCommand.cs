@@ -22,7 +22,7 @@ public class DetectCommand : AsyncCommand<DetectSettings>
         _fileSystem = fileSystem;
     }
 
-    protected override async Task<int> ExecuteAsync(CommandContext context, DetectSettings settings, CancellationToken cancellationToken)
+    public override async Task<int> ExecuteAsync(CommandContext context, DetectSettings settings, CancellationToken cancellationToken)
     {
         var toolDir = Path.Combine(settings.RepoRoot, "tools", "Whois.Refresh");
         var registryPath = Path.Combine(toolDir, "domains-whois.jsonc");
